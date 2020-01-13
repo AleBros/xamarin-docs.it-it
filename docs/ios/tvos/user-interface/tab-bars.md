@@ -56,14 +56,14 @@ Ogni categoria (scheda) nella barra delle schede è rappresentata da un elemento
 
 ## <a name="tab-bars-and-storyboards"></a>Barre di tabulazione e storyboard
 
-Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare le barre delle schede in un'app Xamarin.tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Avviare una nuova app Novell. tvOS e selezionare **tvOS** > **app** > **app a schede**: 
+1. Avviare una nuova app Xamarin.tvOS e selezionare **tvOS** > **app** > **app a schede**: 
 
     [![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
-1. Seguire tutte le istruzioni per creare una nuova soluzione Novell. tvOS.
+1. Seguire tutte le istruzioni per creare una nuova soluzione Xamarin.tvOS.
 1. Nella **riquadro della soluzione**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Per modificare l' **icona** o il **titolo** di una determinata categoria, selezionare l' **elemento della barra schede** per il **controller di visualizzazione** nella struttura del **documento**:
 
@@ -85,10 +85,10 @@ Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS con
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Avviare una nuova app Novell. tvOS e selezionare **tvOS** > **app** > **app a schede**: 
+1. Avviare una nuova app Xamarin.tvOS e selezionare **tvOS** > **app** > **app a schede**: 
 
     [![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
-1. Seguire tutte le istruzioni per creare una nuova soluzione Novell. tvOS.
+1. Seguire tutte le istruzioni per creare una nuova soluzione Xamarin.tvOS.
 1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Per modificare l' **icona** o il **titolo** di una determinata categoria, selezionare l' **elemento della barra schede** per il **controller di visualizzazione** nella struttura del **documento**:
 
@@ -142,7 +142,7 @@ Utilizzare la proprietà `Title` della `UITabBarItem` per modificare il titolo e
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato la progettazione e l'uso del controller della barra schede all'interno di un'app Novell. tvOS.
+Questo articolo ha trattato la progettazione e l'uso del controller della barra schede all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -15,7 +15,7 @@ ms.locfileid: "73024022"
 ---
 # <a name="configuration"></a>Configurazione
 
-Per usare SQLite nell'applicazione Novell. Android, è necessario determinare il percorso del file corretto per il file di database.
+Per usare SQLite nell'applicazione Xamarin.Android, è necessario determinare il percorso del file corretto per il file di database.
 
 ## <a name="database-file-path"></a>Percorso file di database
 
@@ -69,4 +69,4 @@ Tutti gli accessi al database (letture, Scritture, aggiornamenti e così via) de
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 22. Animazione
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 22. Animazione'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 22. Animazione'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
@@ -18,7 +18,7 @@ ms.locfileid: "70771004"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
-Si è visto che è possibile creare il proprio animazioni tramite il timer di xamarin. Forms o `Task.Delay`, ma è in genere più semplice usando le funzionalità di animazione fornite da xamarin. Forms. Tre classi implementano queste animazioni:
+Si è visto che è possibile creare il proprio animazioni tramite il timer di Xamarin.Forms o `Task.Delay`, ma è in genere più semplice usando le funzionalità di animazione fornite da Xamarin.Forms. Tre classi implementano queste animazioni:
 
 - [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions), l'approccio generale
 - [`Animation`](xref:Xamarin.Forms.Animation), più versatile ma più difficile
@@ -136,7 +136,7 @@ Il [ **TryAwaitableAnimation** ](https://github.com/xamarin/xamarin-forms-book-s
 
 ## <a name="deeper-into-animations"></a>Dettagli della gestione delle animazioni
 
-Il sistema di animazione di xamarin. Forms può essere un po' di confusione. Oltre al `Easing` comprende il sistema di animazione (classe), il `ViewExtensions`, `Animation`, e `AnimationExtension` classi.
+Il sistema di animazione di Xamarin.Forms può essere un po' di confusione. Oltre al `Easing` comprende il sistema di animazione (classe), il `ViewExtensions`, `Animation`, e `AnimationExtension` classi.
 
 ### <a name="viewextensions-class"></a>Classe ViewExtensions
 

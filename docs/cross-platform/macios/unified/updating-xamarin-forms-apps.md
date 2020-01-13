@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento delle app Novell. Forms esistenti
-description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. Forms dal API classica al API unificata.
+title: Aggiornamento delle app Xamarin.Forms esistenti
+description: Questo documento descrive i passaggi da seguire per aggiornare un'app Xamarin.Forms dal API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: davidortinau
@@ -13,12 +13,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/01/2019
 ms.locfileid: "73425468"
 ---
-# <a name="updating-existing-xamarinforms-apps"></a>Aggiornamento delle app Novell. Forms esistenti
+# <a name="updating-existing-xamarinforms-apps"></a>Aggiornamento delle app Xamarin.Forms esistenti
 
-_Seguire questa procedura per aggiornare un'app Novell. Forms esistente per usare il API unificata e l'aggiornamento alla versione 1.3.1_
+_Seguire questa procedura per aggiornare un'app Xamarin.Forms esistente per usare il API unificata e l'aggiornamento alla versione 1.3.1_
 
 > [!IMPORTANT]
-> Poiché Novell. Forms 1.3.1 è la prima versione che supporta il API unificata, è necessario aggiornare l'intera soluzione in modo da usare la versione più recente allo stesso tempo della migrazione dell'app iOS a Unified. Questo significa che, oltre ad aggiornare il progetto iOS per il supporto unificato, sarà necessario modificare anche il codice in _tutti_ i progetti della soluzione.
+> Poiché Xamarin.Forms 1.3.1 è la prima versione che supporta il API unificata, è necessario aggiornare l'intera soluzione in modo da usare la versione più recente allo stesso tempo della migrazione dell'app iOS a Unified. Questo significa che, oltre ad aggiornare il progetto iOS per il supporto unificato, sarà necessario modificare anche il codice in _tutti_ i progetti della soluzione.
 
 L'aggiornamento viene eseguito in due passaggi:
 
@@ -28,9 +28,9 @@ L'aggiornamento viene eseguito in due passaggi:
 
     - Aggiornare le API native iOS come descritto nelle istruzioni per l' [aggiornamento di app iOS](~/cross-platform/macios/unified/updating-ios-apps.md) (in particolare nel renderer personalizzato o nel codice del servizio di dipendenza).
 
-2. Aggiornare l'intera soluzione a Novell. Forms versione 1,3.
+2. Aggiornare l'intera soluzione a Xamarin.Forms versione 1,3.
 
-    1. Installare il pacchetto NuGet Novell. Forms 1.3.1.
+    1. Installare il pacchetto NuGet Xamarin.Forms 1.3.1.
 
     2. Aggiornare la classe `App` nel codice condiviso.
 
@@ -42,18 +42,18 @@ L'aggiornamento viene eseguito in due passaggi:
 
 ## <a name="1-ios-app-unified-migration"></a>1. app iOS (migrazione unificata)
 
-Parte della migrazione richiede l'aggiornamento di Novell. Forms alla versione 1,3, che supporta il API unificata. Per poter creare i riferimenti corretti all'assembly, è necessario prima aggiornare il progetto iOS per l'uso del API unificata.
+Parte della migrazione richiede l'aggiornamento di Xamarin.Forms alla versione 1,3, che supporta il API unificata. Per poter creare i riferimenti corretti all'assembly, è necessario prima aggiornare il progetto iOS per l'uso del API unificata.
 
 ### <a name="migration-tool"></a>Strumento di migrazione
 
-Fare clic sul progetto iOS in modo che sia selezionato, quindi scegliere **progetto > Esegui migrazione a Novell. iOS API unificata...** e accettare il messaggio di avviso visualizzato.
+Fare clic sul progetto iOS in modo che sia selezionato, quindi scegliere **progetto > Esegui migrazione a Xamarin.iOS API unificata...** e accettare il messaggio di avviso visualizzato.
 
 ![](updating-xamarin-forms-apps-images/beta-tool1.png "Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears")
 
 Questa operazione verrà automaticamente:
 
 - Modificare il tipo di progetto per supportare l'API Unified a 64 bit.
-- Modificare il riferimento al Framework in **Novell. iOS** (sostituendo il vecchio riferimento **MonoTouch** ).
+- Modificare il riferimento al Framework in **Xamarin.iOS** (sostituendo il vecchio riferimento **MonoTouch** ).
 - Modificare i riferimenti allo spazio dei nomi nel codice per rimuovere il prefisso `MonoTouch`.
 - Aggiornare il file **csproj** per usare le destinazioni di compilazione corrette per la API unificata.
 
@@ -63,26 +63,26 @@ Questa operazione verrà automaticamente:
 
 Se è stato aggiunto codice nativo iOS aggiuntivo, ad esempio renderer personalizzati o servizi di dipendenza, potrebbe essere necessario eseguire correzioni aggiuntive del codice manuale. Ricompilare l'applicazione e fare riferimento alle istruzioni per l' [aggiornamento di app iOS esistenti](~/cross-platform/macios/unified/updating-ios-apps.md) per ulteriori informazioni sulle modifiche che potrebbero essere necessarie. [Questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) aiuteranno anche a identificare le modifiche necessarie.
 
-## <a name="2-xamarinforms-131-update"></a>2. Novell. Forms 1.3.1 Update
+## <a name="2-xamarinforms-131-update"></a>2. Xamarin.Forms 1.3.1 Update
 
-Dopo che l'app iOS è stata aggiornata alla API unificata, è necessario aggiornare il resto della soluzione a Novell. Forms versione 1.3.1. vale a dire:
+Dopo che l'app iOS è stata aggiornata alla API unificata, è necessario aggiornare il resto della soluzione a Xamarin.Forms versione 1.3.1. vale a dire:
 
-- Aggiornamento del pacchetto NuGet Novell. Forms in ogni progetto.
-- Modifica del codice per l'uso delle nuove classi Novell. Forms `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android) e `FormsApplicationPage` (Windows Phone).
+- Aggiornamento del pacchetto NuGet Xamarin.Forms in ogni progetto.
+- Modifica del codice per l'uso delle nuove classi Xamarin.Forms `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android) e `FormsApplicationPage` (Windows Phone).
 
 Questi passaggi sono illustrati di seguito:
 
 ### <a name="21-update-nuget-in-all-projects"></a>2,1 aggiornare NuGet in tutti i progetti
 
-Aggiornare Novell. Forms a 1.3.1 versione preliminare usando Gestione pacchetti NuGet per tutti i progetti nella soluzione: PCL (se presente), iOS, Android e Windows Phone. Si consiglia di **eliminare e aggiungere nuovamente** il pacchetto NuGet Novell. Forms per eseguire l'aggiornamento alla versione 1,3.
+Aggiornare Xamarin.Forms a 1.3.1 versione preliminare usando Gestione pacchetti NuGet per tutti i progetti nella soluzione: PCL (se presente), iOS, Android e Windows Phone. Si consiglia di **eliminare e aggiungere nuovamente** il pacchetto NuGet Xamarin.Forms per eseguire l'aggiornamento alla versione 1,3.
 
 > [!NOTE]
-> Novell. Forms versione 1.3.1 è attualmente in versione non *definitiva*. Ciò significa che è necessario selezionare l'opzione di **versione non definitiva** in NuGet (tramite una casella di controllo in Visual Studio per Mac o in un elenco a discesa in Visual Studio) per visualizzare la versione provvisoria più recente.
+> Xamarin.Forms versione 1.3.1 è attualmente in versione non *definitiva*. Ciò significa che è necessario selezionare l'opzione di **versione non definitiva** in NuGet (tramite una casella di controllo in Visual Studio per Mac o in un elenco a discesa in Visual Studio) per visualizzare la versione provvisoria più recente.
 
 > [!IMPORTANT]
-> Se si usa Visual Studio, verificare che sia installata la versione più recente di gestione pacchetti NuGet. Nelle versioni precedenti di NuGet in Visual Studio la versione unificata di Novell. Forms 1.3.1 non viene installata correttamente. Passare a **strumenti > estensioni e aggiornamenti...** e fare clic sull'elenco **installato** per verificare che **Gestione pacchetti NuGet per Visual Studio** sia almeno la versione 2.8.5. Se è precedente, fare clic sull'elenco **aggiornamenti** per scaricare la versione più recente.
+> Se si usa Visual Studio, verificare che sia installata la versione più recente di gestione pacchetti NuGet. Nelle versioni precedenti di NuGet in Visual Studio la versione unificata di Xamarin.Forms 1.3.1 non viene installata correttamente. Passare a **strumenti > estensioni e aggiornamenti...** e fare clic sull'elenco **installato** per verificare che **Gestione pacchetti NuGet per Visual Studio** sia almeno la versione 2.8.5. Se è precedente, fare clic sull'elenco **aggiornamenti** per scaricare la versione più recente.
 
-Dopo aver aggiornato il pacchetto NuGet a Novell. Forms 1.3.1, apportare le modifiche seguenti in ogni progetto per eseguire l'aggiornamento alla nuova classe `Xamarin.Forms.Application`.
+Dopo aver aggiornato il pacchetto NuGet a Xamarin.Forms 1.3.1, apportare le modifiche seguenti in ogni progetto per eseguire l'aggiornamento alla nuova classe `Xamarin.Forms.Application`.
 
 ### <a name="22-portable-class-library-or-shared-project"></a>2,2 libreria di classi portabile (o progetto condiviso)
 
@@ -176,7 +176,7 @@ Di seguito è riportato un esempio aggiornato: è necessario modificare solo que
 Modificare il file **MainPage.XAML.cs** in modo che:
 
 - La classe eredita da `FormsApplicationPage`, anziché `PhoneApplicationPage` precedentemente.
-- `LoadApplication` viene chiamato con una nuova istanza della classe Novell. Forms `App`. Potrebbe essere necessario qualificare il riferimento in modo completo poiché Windows Phone dispone di una propria classe `App` già definita.
+- `LoadApplication` viene chiamato con una nuova istanza della classe Xamarin.Forms `App`. Potrebbe essere necessario qualificare il riferimento in modo completo poiché Windows Phone dispone di una propria classe `App` già definita.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -194,11 +194,11 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 ### <a name="troubleshooting"></a>Troubleshooting
 
-In alcuni casi verrà visualizzato un errore simile al seguente dopo l'aggiornamento del pacchetto NuGet Novell. Forms. Si verifica quando NuGet Updater non rimuove completamente i riferimenti alle versioni precedenti dai file **csproj** .
+In alcuni casi verrà visualizzato un errore simile al seguente dopo l'aggiornamento del pacchetto NuGet Xamarin.Forms. Si verifica quando NuGet Updater non rimuove completamente i riferimenti alle versioni precedenti dai file **csproj** .
 
->IL\_PROJECT. csproj: errore: questo progetto fa riferimento ai pacchetti NuGet mancanti nel computer. Abilitare il ripristino del pacchetto NuGet per scaricarli.  Per ulteriori informazioni, vedere https://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è.. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + Net45 + WP80 + MonoAndroid10 + MonoTouch10/Novell. Forms. targets. (Progetto\_)
+>IL\_PROJECT. csproj: errore: questo progetto fa riferimento ai pacchetti NuGet mancanti nel computer. Abilitare il ripristino del pacchetto NuGet per scaricarli.  Per ulteriori informazioni, vedere https://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è.. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + Net45 + WP80 + MonoAndroid10 + MonoTouch10/Xamarin.Forms. targets. (Progetto\_)
 
-Per correggere questi errori, aprire il file **csproj** in un editor di testo e cercare gli elementi `<Target` che fanno riferimento a versioni precedenti di Novell. Forms, ad esempio l'elemento mostrato di seguito. È necessario eliminare manualmente questo intero elemento dal file **csproj** e salvare le modifiche.
+Per correggere questi errori, aprire il file **csproj** in un editor di testo e cercare gli elementi `<Target` che fanno riferimento a versioni precedenti di Xamarin.Forms, ad esempio l'elemento mostrato di seguito. È necessario eliminare manualmente questo intero elemento dal file **csproj** e salvare le modifiche.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -213,7 +213,7 @@ Il progetto deve essere compilato correttamente una volta rimossi i riferimenti 
 
 ## <a name="considerations"></a>Considerazioni
 
-Quando si converte un progetto Novell. Forms esistente dal API classica al nuovo API unificata se tale app si basa su uno o più componenti o pacchetti NuGet, tenere presente le considerazioni seguenti.
+Quando si converte un progetto Xamarin.Forms esistente dal API classica al nuovo API unificata se tale app si basa su uno o più componenti o pacchetti NuGet, tenere presente le considerazioni seguenti.
 
 ### <a name="components"></a>Componenti
 
@@ -226,17 +226,17 @@ Anche se sono state apportate modifiche a NuGet per lavorare con il supporto API
 Fino a quel momento, come per i componenti, è necessario cambiare il pacchetto NuGet incluso nel progetto in una versione che supporta le API unificate ed eseguire una compilazione pulita in seguito.
 
 > [!IMPORTANT]
-> Se è presente un errore nel formato _"errore 3: non è possibile includere sia ' MonoTouch. dll ' che ' Novell. iOS. dll ' nello stesso progetto Novell. iOS. viene fatto riferimento in modo esplicito a' Novell. iOS. dll ', mentre a' MonoTouch. dll ' fa riferimento ' xxx, Version = 0.0.000, culture = neutral, PublicKeyToken = null ' "_ dopo la conversione dell'applicazione nelle API unificate, è in genere dovuto alla presenza di un componente o di un pacchetto NuGet nel progetto che non è stato aggiornato al API unificata. È necessario rimuovere il componente/NuGet esistente, eseguire l'aggiornamento a una versione che supporta le API unificate ed eseguire una compilazione pulita.
+> Se è presente un errore nel formato _"errore 3: non è possibile includere sia ' MonoTouch. dll ' che ' Xamarin.iOS. dll ' nello stesso progetto Xamarin.iOS. viene fatto riferimento in modo esplicito a' Xamarin.iOS. dll ', mentre a' MonoTouch. dll ' fa riferimento ' xxx, Version = 0.0.000, culture = neutral, PublicKeyToken = null ' "_ dopo la conversione dell'applicazione nelle API unificate, è in genere dovuto alla presenza di un componente o di un pacchetto NuGet nel progetto che non è stato aggiornato al API unificata. È necessario rimuovere il componente/NuGet esistente, eseguire l'aggiornamento a una versione che supporta le API unificate ed eseguire una compilazione pulita.
 
-## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione delle build a 64 bit delle app Novell. iOS
+## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione delle build a 64 bit delle app Xamarin.iOS
 
-Per un'applicazione per dispositivi mobili Novell. iOS che è stata convertita nel API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit dalle opzioni dell'app. Per istruzioni dettagliate sull'abilitazione di compilazioni a 64 bit, vedere la pagina relativa all' **Abilitazione delle build a 64 bit delle app Novell. iOS** del documento sulle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md#enable-64)
+Per un'applicazione per dispositivi mobili Xamarin.iOS che è stata convertita nel API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit dalle opzioni dell'app. Per istruzioni dettagliate sull'abilitazione di compilazioni a 64 bit, vedere la pagina relativa all' **Abilitazione delle build a 64 bit delle app Xamarin.iOS** del documento sulle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md#enable-64)
 
 ## <a name="summary"></a>Riepilogo
 
-L'applicazione Novell. Forms deve ora essere aggiornata alla versione 1.3.1 e all'app iOS migrata al API unificata (che supporta le architetture a 64 bit sulla piattaforma iOS).
+L'applicazione Xamarin.Forms deve ora essere aggiornata alla versione 1.3.1 e all'app iOS migrata al API unificata (che supporta le architetture a 64 bit sulla piattaforma iOS).
 
-Come indicato in precedenza, se l'app Novell. Forms include codice nativo, ad esempio renderer personalizzati o servizi di dipendenza, potrebbe essere necessario aggiornare anche per usare i nuovi tipi [introdotti nella API unificata](~/cross-platform/macios/index.md).
+Come indicato in precedenza, se l'app Xamarin.Forms include codice nativo, ad esempio renderer personalizzati o servizi di dipendenza, potrebbe essere necessario aggiornare anche per usare i nuovi tipi [introdotti nella API unificata](~/cross-platform/macios/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

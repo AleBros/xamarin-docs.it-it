@@ -20,4 +20,4 @@ le app watchos e le app tvOS _richiedono_ bitcode quando vengono inviate all'App
 
 >Bundle non valido. l'app non può essere elaborata perché le opzioni non consentite per l'incorporamento in bitcode vengono rilevate nell'invio. È probabile che non si stia compilando l'app con la cassetta di stato fornita in Xcode.
 
-La soluzione a questo problema consiste nel compilare le applicazioni con Xcode 9 e la versione più recente di Novell. iOS.
+La soluzione a questo problema consiste nel compilare le applicazioni con Xcode 9 e la versione più recente di Xamarin.iOS.

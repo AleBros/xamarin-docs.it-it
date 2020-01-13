@@ -57,7 +57,7 @@ Il risultato è che lo stile di presentazione modali in un' [ `Page` ](xref:Xama
 [![](page-presentation-style-images/modal-presentation-style-small.png "Stili di presentazione modale in un iPad")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Stili di presentazione modale in un iPad")
 
 > [!NOTE]
-> Le pagine che utilizzano questo specifico della piattaforma per impostare lo stile di presentazione modale è necessario usare navigazione modale. Per altre informazioni, vedere [xamarin. Forms pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+> Le pagine che utilizzano questo specifico della piattaforma per impostare lo stile di presentazione modale è necessario usare navigazione modale. Per altre informazioni, vedere [Xamarin.Forms pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

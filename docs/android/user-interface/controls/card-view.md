@@ -1,6 +1,6 @@
 ---
 title: CardView
-description: Il widget CardView è un componente dell'interfaccia utente che presenta il contenuto del testo e dell'immagine nelle visualizzazioni simili a quelle delle schede. Questa guida illustra come usare e personalizzare CardView in applicazioni Novell. Android mantenendo la compatibilità con le versioni precedenti di Android.
+description: Il widget CardView è un componente dell'interfaccia utente che presenta il contenuto del testo e dell'immagine nelle visualizzazioni simili a quelle delle schede. Questa guida illustra come usare e personalizzare CardView in applicazioni Xamarin.Android mantenendo la compatibilità con le versioni precedenti di Android.
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029274"
 ---
-# <a name="xamarinandroid-cardview"></a>Novell. Android CardView
+# <a name="xamarinandroid-cardview"></a>Xamarin.Android CardView
 
-_Il widget CardView è un componente dell'interfaccia utente che presenta il contenuto del testo e dell'immagine nelle visualizzazioni simili a quelle delle schede. Questa guida illustra come usare e personalizzare CardView in applicazioni Novell. Android mantenendo la compatibilità con le versioni precedenti di Android._
+_Il widget CardView è un componente dell'interfaccia utente che presenta il contenuto del testo e dell'immagine nelle visualizzazioni simili a quelle delle schede. Questa guida illustra come usare e personalizzare CardView in applicazioni Xamarin.Android mantenendo la compatibilità con le versioni precedenti di Android._
 
 ## <a name="overview"></a>Panoramica
 
@@ -24,7 +24,7 @@ Il widget `Cardview`, introdotto in Android 5,0 (Lollipop), è un componente del
 
 ![App di esempio che usa un CardView per ogni destinazione di viaggio](card-view-images/01-cardview-example.png)
 
-Questa guida illustra come aggiungere il pacchetto di `CardView` al progetto Novell. Android, come aggiungere `CardView` al layout e come personalizzare l'aspetto dei `CardView` nell'app. Questa guida fornisce inoltre un elenco dettagliato degli attributi di `CardView` che è possibile modificare, inclusi gli attributi che consentono di usare `CardView` versioni di Android precedenti a Android 5,0 Lollipop.
+Questa guida illustra come aggiungere il pacchetto di `CardView` al progetto Xamarin.Android, come aggiungere `CardView` al layout e come personalizzare l'aspetto dei `CardView` nell'app. Questa guida fornisce inoltre un elenco dettagliato degli attributi di `CardView` che è possibile modificare, inclusi gli attributi che consentono di usare `CardView` versioni di Android precedenti a Android 5,0 Lollipop.
 
 <a name="requirements" />
 
@@ -32,7 +32,7 @@ Questa guida illustra come aggiungere il pacchetto di `CardView` al progetto Nov
 
 Per usare le nuove funzionalità di Android 5,0 e versioni successive (incluso `CardView`) nelle app basate su Novell, è necessario quanto segue:
 
-- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite il Android SDK Manager.
 

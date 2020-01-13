@@ -1,6 +1,6 @@
 ---
-title: Selezione Novell. Forms
-description: Il selettore Novell. Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe Picker per selezionare un elemento di testo da un elenco di dati.
+title: Selezione Xamarin.Forms
+description: Il selettore Xamarin.Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe Picker per selezionare un elemento di testo da un elenco di dati.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72695994"
 ---
-# <a name="xamarinforms-picker"></a>Selezione Novell. Forms
+# <a name="xamarinforms-picker"></a>Selezione Xamarin.Forms
 
 _La visualizzazione selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._
 
-Il [`Picker`](xref:Xamarin.Forms.Picker) Novell. Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. `Picker` definisce le proprietà seguenti:
+Il [`Picker`](xref:Xamarin.Forms.Picker) Xamarin.Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. `Picker` definisce le proprietà seguenti:
 
 - [`Title`](xref:Xamarin.Forms.Picker.Title) di tipo `string`, il cui valore predefinito è `null`.
 - `TitleColor` di tipo [`Color`](xref:Xamarin.Forms.Color), il colore utilizzato per visualizzare il testo `Title`.

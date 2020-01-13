@@ -256,12 +256,12 @@ Per eseguire il test in un dispositivo, modificare la lingua nell'app **Impostaz
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo illustra le nozioni di base della localizzazione di applicazioni Android usando la gestione delle risorse incorporata. Sono disponibili altre informazioni su i18n e l10n per le app iOS, Android e multipiattaforma (incluse Novell. Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
+Questo articolo illustra le nozioni di base della localizzazione di applicazioni Android usando la gestione delle risorse incorporata. Sono disponibili altre informazioni su i18n e l10n per le app iOS, Android e multipiattaforma (incluse Xamarin.Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Tasky (localizzato nel codice) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Localizzazione di Android con risorse](https://developer.android.com/guide/topics/resources/localization.html)
 - [Panoramica della localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
-- [Localizzazione di Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Localizzazione di Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localizzazione in iOS](~/ios/app-fundamentals/localization/index.md)

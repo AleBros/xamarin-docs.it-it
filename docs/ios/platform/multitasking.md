@@ -1,5 +1,5 @@
 ---
-title: Multitasking per iPad in Novell. iOS
+title: Multitasking per iPad in Xamarin.iOS
 description: iOS 9 supporta due app in esecuzione allo stesso tempo, usando la visualizzazione della diapositiva o della divisione. Supporta anche la riproduzione video in immagini.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031646"
 ---
-# <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in Novell. iOS
+# <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in Xamarin.iOS
 
 _iOS 9 supporta due app in esecuzione allo stesso tempo, usando la visualizzazione della diapositiva o della divisione. Supporta anche la riproduzione video in immagini._
 
@@ -35,7 +35,7 @@ Esistono diversi aspetti da considerare quando si [supporta il multitasking nell
 
 Gli sviluppatori di app possono anche [rifiutare esplicitamente il multitasking](#Opting-Out-of-Multitasking), inclusa [la disabilitazione della riproduzione video PIP](#Disabling-PIP-Video-Playback).
 
-Questo articolo illustra i passaggi necessari per assicurarsi che l'app Novell. iOS venga eseguita correttamente in un ambiente a più attività o come rifiutare esplicitamente il multitasking, se non è una soluzione ottimale per l'app.
+Questo articolo illustra i passaggi necessari per assicurarsi che l'app Xamarin.iOS venga eseguita correttamente in un ambiente a più attività o come rifiutare esplicitamente il multitasking, se non è una soluzione ottimale per l'app.
 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
@@ -66,9 +66,9 @@ La funzionalità di scorrimento consente all'utente di selezionare una seconda a
 
 [![](multitasking-images/about01.png "The Slide Over panel")](multitasking-images/about01.png#lightbox)
 
-La cosa principale da ricordare è che l'utente decide quali due app verranno eseguite side-by-side e che lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, è necessario eseguire alcune operazioni per assicurarsi che l'app Novell. iOS venga eseguita correttamente in un pannello di scorrimento:
+La cosa principale da ricordare è che l'utente decide quali due app verranno eseguite side-by-side e che lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, è necessario eseguire alcune operazioni per assicurarsi che l'app Xamarin.iOS venga eseguita correttamente in un pannello di scorrimento:
 
-- **Usare le classi di layout e di ridimensionamento** automatico: poiché è ora possibile eseguire l'app Novell. iOS nel pannello laterale della diapositiva, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+- **Usare le classi di layout e di ridimensionamento** automatico: poiché è ora possibile eseguire l'app Xamarin.iOS nel pannello laterale della diapositiva, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Usare le risorse in modo efficiente** : poiché l'app può ora condividere il sistema con un'altra app in esecuzione, è fondamentale che l'app usi le risorse di sistema in modo efficiente. Quando la memoria diventa di tipo sparse, il sistema interrompe automaticamente l'app che sta consumando la maggior parte della memoria. Per altri dettagli, vedere la [Guida all'efficienza energetica Apple per le app iOS](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) .
 
 La funzionalità di scorrimento è disponibile solo in un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Per altre informazioni sulla preparazione dell'app per la diapositiva, vedere la pagina relativa all' [adozione di miglioramenti multitasking nella](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) documentazione di Apple.
@@ -81,9 +81,9 @@ Nell'hardware iPad supportato (solo iPad Air 2, iPad Mini 4 e iPad Pro), l'utent
 
 [![](multitasking-images/about02.png "The Split View")](multitasking-images/about02.png#lightbox)
 
-Analogamente alla diapositiva, l'utente decide quali due app verranno eseguite side-by-side e di nuovo, lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, la visualizzazione divisa pone requisiti simili in un'app Novell. iOS:
+Analogamente alla diapositiva, l'utente decide quali due app verranno eseguite side-by-side e di nuovo, lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, la visualizzazione divisa pone requisiti simili in un'app Xamarin.iOS:
 
-- **Usare le classi di layout e di ridimensionamento** automatico: poiché l'app Novell. iOS può ora essere eseguita in modalità a schermo intero a dimensione specificata dall'utente, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+- **Usare le classi di layout e di ridimensionamento** automatico: poiché l'app Xamarin.iOS può ora essere eseguita in modalità a schermo intero a dimensione specificata dall'utente, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Usare le risorse in modo efficiente** : poiché l'app può ora condividere il sistema con un'altra app in esecuzione, è fondamentale che l'app usi le risorse di sistema in modo efficiente. Quando la memoria diventa di tipo sparse, il sistema interrompe automaticamente l'app che sta consumando la maggior parte della memoria. Per altri dettagli, vedere la [Guida all'efficienza energetica Apple per le app iOS](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) .
 
 Per altre informazioni sulla preparazione dell'app per la visualizzazione divisa, vedere l'articolo relativo ai [miglioramenti del multitasking nella](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) documentazione per iPad.
@@ -106,11 +106,11 @@ Immagine in immagine è disponibile solo in un iPad Pro, iPad Air, iPad Air 2, i
 
 ## <a name="supporting-multitasking-in-your-app"></a>Supporto di multitasking nell'app
 
-Per qualsiasi app Novell. iOS esistente, il multitasking di supporto è un'attività trasparente, purché l'app segua già le guide di progettazione e le procedure consigliate di Apple per iOS 8. Ciò significa che l'app deve usare gli storyboard con il layout automatico e le classi di dimensioni per i layout dell'interfaccia utente. per ulteriori informazioni, vedere l' [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per qualsiasi app Xamarin.iOS esistente, il multitasking di supporto è un'attività trasparente, purché l'app segua già le guide di progettazione e le procedure consigliate di Apple per iOS 8. Ciò significa che l'app deve usare gli storyboard con il layout automatico e le classi di dimensioni per i layout dell'interfaccia utente. per ulteriori informazioni, vedere l' [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 Per queste app, sono necessarie modifiche minime o nulle per supportare il multitasking e comportarsi in modo ottimale. Se l'interfaccia utente dell'app è stata creata usando altri metodi, ad esempio il posizionamento diretto e il C# ridimensionamento degli elementi dell'interfaccia utente nel codice o se si basa su dimensioni o orientamenti specifici dello schermo del dispositivo, sarà necessario apportare modifiche significative per supportare correttamente il multitasking di iOS 9.
 
-Per supportare il multitasking iOS 9 in qualsiasi nuova app Novell. iOS, usare di nuovo gli storyboard con layout automatico e le classi di dimensioni per tutti i layout dell'interfaccia utente dell'app e implementare le istruzioni nelle sezioni riportate di seguito.
+Per supportare il multitasking iOS 9 in qualsiasi nuova app Xamarin.iOS, usare di nuovo gli storyboard con layout automatico e le classi di dimensioni per tutti i layout dell'interfaccia utente dell'app e implementare le istruzioni nelle sezioni riportate di seguito.
 
 <a name="Screen-Size-Considerations" />
 
@@ -204,7 +204,7 @@ Per un'implementazione di esempio, vedere l' [app multitasking](https://docs.mic
 
 Anche per le app che usano già le guide di progettazione e le procedure consigliate di iOS 8, una gestione efficiente delle risorse può comunque costituire un problema. In iOS 9, le app non hanno più l'uso esclusivo di memoria, CPU o altre risorse di sistema.
 
-Di conseguenza, è necessario ottimizzare l'app Novell. iOS per usare in modo efficace le risorse di sistema o la terminazione in situazioni di memoria insufficiente. Questo vale anche per le app che rifiutano esplicitamente il multitasking, perché una seconda app potrebbe ancora essere eseguita in una diapositiva sopra il pannello o in un'immagine nella finestra immagine che richiede risorse aggiuntive o che la frequenza di aggiornamento scenda sotto 60 fotogrammi al secondo.
+Di conseguenza, è necessario ottimizzare l'app Xamarin.iOS per usare in modo efficace le risorse di sistema o la terminazione in situazioni di memoria insufficiente. Questo vale anche per le app che rifiutano esplicitamente il multitasking, perché una seconda app potrebbe ancora essere eseguita in una diapositiva sopra il pannello o in un'immagine nella finestra immagine che richiede risorse aggiuntive o che la frequenza di aggiornamento scenda sotto 60 fotogrammi al secondo.
 
 Prendere in considerazione le azioni dell'utente seguenti e le relative implicazioni:
 
@@ -226,7 +226,7 @@ Per altre informazioni sulla gestione delle risorse, vedere la [Guida all'effici
 
 Mentre Apple suggerisce che tutte le app iOS 9 supportano il multitasking, è possibile che non esistano anche motivi specifici per un'app, ad esempio giochi o app per fotocamere che richiedono il corretto funzionamento dello schermo intero.
 
-Per consentire all'app Novell. iOS di rifiutare esplicitamente l'esecuzione in un pannello di scorrimento o in modalità di visualizzazione divisa, modificare il file **info. plist** del progetto e selezionare **richiede schermo intero**:
+Per consentire all'app Xamarin.iOS di rifiutare esplicitamente l'esecuzione in un pannello di scorrimento o in modalità di visualizzazione divisa, modificare il file **info. plist** del progetto e selezionare **richiede schermo intero**:
 
 [![](multitasking-images/fullscreen01.png "Opting Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
@@ -249,7 +249,7 @@ Per rifiutare esplicitamente la riproduzione video PIP, eseguire le operazioni s
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato i passaggi necessari per assicurarsi che un'app Novell. iOS venga eseguita e si comporti correttamente nella nuova funzionalità multitasking di iOS 9 per gli iPad. Inoltre, ha trattato la rinuncia al multitasking per le app in cui non è una scelta ottimale.
+Questo articolo ha trattato i passaggi necessari per assicurarsi che un'app Xamarin.iOS venga eseguita e si comporti correttamente nella nuova funzionalità multitasking di iOS 9 per gli iPad. Inoltre, ha trattato la rinuncia al multitasking per le app in cui non è una scelta ottimale.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

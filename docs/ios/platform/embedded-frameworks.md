@@ -1,6 +1,6 @@
 ---
-title: Framework incorporati in Novell. iOS
-description: Questo documento descrive come condividere il codice con Framework incorporati in un'applicazione Novell. iOS. Questa operazione può essere eseguita con lo strumento mTouch o i riferimenti nativi.
+title: Framework incorporati in Xamarin.iOS
+description: Questo documento descrive come condividere il codice con Framework incorporati in un'applicazione Xamarin.iOS. Questa operazione può essere eseguita con lo strumento mTouch o i riferimenti nativi.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032541"
 ---
-# <a name="embedded-frameworks-in-xamarinios"></a>Framework incorporati in Novell. iOS
+# <a name="embedded-frameworks-in-xamarinios"></a>Framework incorporati in Xamarin.iOS
 
 _Questo documento descrive in che modo gli sviluppatori di applicazioni possono incorporare i Framework utente nelle proprie app._
 
 Con iOS 8,0 Apple ha reso possibile la creazione di un Framework incorporato per condividere il codice tra le estensioni dell'app e l'app principale in Xcode.
 
-Novell. iOS 9,0 aggiunge il supporto per l'utilizzo di questi Framework incorporati (creati con Xcode) nelle app Novell. iOS. ***Non** sarà possibile creare Framework incorporati da qualsiasi tipo di progetto Novell. iOS, utilizzare solo framework nativi (Objective-C) esistenti.*
+Xamarin.iOS 9,0 aggiunge il supporto per l'utilizzo di questi Framework incorporati (creati con Xcode) nelle app Xamarin.iOS. ***Non** sarà possibile creare Framework incorporati da qualsiasi tipo di progetto Xamarin.iOS, utilizzare solo framework nativi (Objective-C) esistenti.*
 
-Esistono due modi per utilizzare i Framework in Novell. iOS:
+Esistono due modi per utilizzare i Framework in Xamarin.iOS:
 
 - Passare il Framework allo strumento mTouch, aggiungendo il codice seguente agli argomenti mTouch aggiuntivi nelle opzioni di **compilazione iOS** del progetto:
 
@@ -62,7 +62,7 @@ Nelle future versioni di Visual Studio per Mac e Novell Tools per Visual Studio 
 
 ## <a name="the-mono-runtime"></a>Runtime di mono
 
-Internamente Novell. iOS sfrutta questa funzionalità per eseguire il collegamento al runtime di mono come Framework, anziché collegare il runtime di mono in modo statico in ogni estensione e nell'app contenitore.
+Internamente Xamarin.iOS sfrutta questa funzionalità per eseguire il collegamento al runtime di mono come Framework, anziché collegare il runtime di mono in modo statico in ogni estensione e nell'app contenitore.
 
 Questa operazione viene eseguita automaticamente se l'app contenitore è un'app unificata, contiene estensioni e la distribuzione di destinazione è iOS 8,0 o versione successiva.
 
@@ -73,4 +73,4 @@ Questo comportamento può essere sostituito dallo sviluppatore di app, aggiungen
 - `--mono:static`: i collegamenti al runtime Mono in modo statico.
 - `--mono:framework`: collega al runtime di mono come Framework.
 
-Uno scenario per il collegamento con il runtime di mono come Framework anche per le app senza estensioni consiste nel ridurre le dimensioni del file eseguibile, in modo da superare le limitazioni di dimensione imposte da Apple sull'eseguibile. Per riferimento, il runtime di mono aggiunge approssimativamente 1.7 MB per architettura (a partire da Novell. iOS 8,12, ma varia tra le versioni e anche tra le app). Mono Framework aggiunge circa 2,3 MB per architettura, il che significa che per un'app con una singola architettura senza estensioni, il collegamento dell'app con il runtime di mono come Framework ridurrà il file eseguibile di ~ 1.7 MB, ma aggiungerà un Framework ~ 2,3 MB, risultante in una complessivamente di ~ 0.6 MB di app di dimensioni maggiori.
+Uno scenario per il collegamento con il runtime di mono come Framework anche per le app senza estensioni consiste nel ridurre le dimensioni del file eseguibile, in modo da superare le limitazioni di dimensione imposte da Apple sull'eseguibile. Per riferimento, il runtime di mono aggiunge approssimativamente 1.7 MB per architettura (a partire da Xamarin.iOS 8,12, ma varia tra le versioni e anche tra le app). Mono Framework aggiunge circa 2,3 MB per architettura, il che significa che per un'app con una singola architettura senza estensioni, il collegamento dell'app con il runtime di mono come Framework ridurrà il file eseguibile di ~ 1.7 MB, ma aggiungerà un Framework ~ 2,3 MB, risultante in una complessivamente di ~ 0.6 MB di app di dimensioni maggiori.

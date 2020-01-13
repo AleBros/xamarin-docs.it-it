@@ -1,6 +1,6 @@
 ---
-title: Stili dinamici in xamarin. Forms
-description: Questo articolo illustra come un'applicazione xamarin. Forms possa rispondere alle modifiche di stile in modo dinamico in fase di esecuzione usando le risorse dinamiche.
+title: Stili dinamici in Xamarin.Forms
+description: Questo articolo illustra come un'applicazione Xamarin.Forms possa rispondere alle modifiche di stile in modo dinamico in fase di esecuzione usando le risorse dinamiche.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70228198"
 ---
-# <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici in xamarin. Forms
+# <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 

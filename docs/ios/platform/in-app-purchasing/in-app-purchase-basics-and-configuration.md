@@ -1,6 +1,6 @@
 ---
-title: Nozioni di base e configurazione di acquisto in-app in Novell. iOS
-description: Questo documento descrive gli acquisti in-app in Novell. iOS, illustrando le informazioni rilevanti su regole, configurazione e iTunes Connect.
+title: Nozioni di base e configurazione di acquisto in-app in Xamarin.iOS
+description: Questo documento descrive gli acquisti in-app in Xamarin.iOS, illustrando le informazioni rilevanti su regole, configurazione e iTunes Connect.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032375"
 ---
-# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Novell. iOS
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Xamarin.iOS
 
 Per implementare gli acquisti in-app, è necessario che l'applicazione utilizzi l'API StoreKit sul dispositivo. StoreKit gestisce tutte le comunicazioni con i server iTunes di Apple per ottenere informazioni sui prodotti ed eseguire transazioni. Il profilo di provisioning deve essere configurato per l'acquisto in-app e le informazioni sul prodotto devono essere immesse in iTunes Connect.
 
@@ -79,10 +79,10 @@ Immettere un valore appropriato per la *Descrizione*, in modo da poter identific
 
 #### <a name="bundle-identifierapp-id-suffix-format"></a>Formato identificatore bundle/suffisso ID app
 
-È possibile usare qualsiasi stringa per l'identificatore del **bundle** (purché sia univoco nell'account). Tuttavia, Apple consiglia di seguire il formato DNS inverso anziché usare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo usa com. Novell. storekit. testing per l'identificatore del bundle, ma sarebbe ugualmente valido usare un identificatore come my_store_example (anche se Apple non lo consiglia).
+È possibile usare qualsiasi stringa per l'identificatore del **bundle** (purché sia univoco nell'account). Tuttavia, Apple consiglia di seguire il formato DNS inverso anziché usare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo usa com. Xamarin.storekit. testing per l'identificatore del bundle, ma sarebbe ugualmente valido usare un identificatore come my_store_example (anche se Apple non lo consiglia).
 
 > [!IMPORTANT]
-> Apple consente inoltre di aggiungere un asterisco jolly alla fine di un **identificatore del bundle** , in modo da poter usare un singolo ID app per più applicazioni, ma _non è possibile usare gli ID app con caratteri jolly per AppPurchase_. Un esempio di identificatore di bundle con carta jolly potrebbe essere com. Novell. *
+> Apple consente inoltre di aggiungere un asterisco jolly alla fine di un **identificatore del bundle** , in modo da poter usare un singolo ID app per più applicazioni, ma _non è possibile usare gli ID app con caratteri jolly per AppPurchase_. Un esempio di identificatore di bundle con carta jolly potrebbe essere com. Xamarin.*
 
 #### <a name="enabling-app-services"></a>Abilitazione dei servizi app
 

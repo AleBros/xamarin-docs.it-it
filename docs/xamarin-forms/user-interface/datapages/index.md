@@ -1,6 +1,6 @@
 ---
-title: Pagine Web di Novell. Forms
-description: Questo articolo presenta le pagine dei dati di Novell. Forms, che forniscono un'API per associare in modo rapido e semplice un'origine dati alle visualizzazioni predefinite.
+title: Pagine Web di Xamarin.Forms
+description: Questo articolo presenta le pagine dei dati di Xamarin.Forms, che forniscono un'API per associare in modo rapido e semplice un'origine dati alle visualizzazioni predefinite.
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
@@ -14,14 +14,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75727940"
 ---
-# <a name="xamarinforms-datapages"></a>Pagine Web di Novell. Forms
+# <a name="xamarinforms-datapages"></a>Pagine Web di Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
+> Per il rendering delle pagine Web è necessario un riferimento al tema Xamarin.Forms. Ciò comporta l'installazione del pacchetto NuGet [Xamarin.Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Xamarin.Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin.Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
-Le pagine Web di Novell. Forms sono state annunciate a evolve 2016 e sono disponibili come anteprima per consentire ai clienti di provare e fornire commenti e suggerimenti.
+Le pagine Web di Xamarin.Forms sono state annunciate a evolve 2016 e sono disponibili come anteprima per consentire ai clienti di provare e fornire commenti e suggerimenti.
 
 DataPages forniscono un'API per rapidamente e facilmente associare un'origine dati per le viste predefinite. Gli elementi dell'elenco e le pagine di dettaglio eseguiranno automaticamente il rendering dei dati e possono essere personalizzati mediante temi.
 
@@ -33,7 +33,7 @@ Per informazioni su come funziona la demo introduttiva di evolve, vedere la [Gui
 
 Le origini dati e le pagine di dati associate consentono agli sviluppatori di utilizzare in modo rapido e semplice un'origine dati supportata e di eseguirne il rendering utilizzando il ponteggi incorporato dell'interfaccia utente che può essere personalizzato con i temi.
 
-Le pagine Web vengono aggiunte a un'applicazione Novell. Forms includendo il pacchetto NuGet **Novell. Forms. Pages** .
+Le pagine Web vengono aggiunte a un'applicazione Xamarin.Forms includendo il pacchetto NuGet **Xamarin.Forms. Pages** .
 
 ### <a name="data-sources"></a>Data Sources
 
@@ -61,9 +61,9 @@ Per esempi, vedere la Guida di [riferimento ai controlli DataPages](controls.md)
 
 ### <a name="under-the-hood"></a>Dietro le quinte
 
-Un'origine dati Novell. Forms aderisce all'interfaccia `IDataSource`.
+Un'origine dati Xamarin.Forms aderisce all'interfaccia `IDataSource`.
 
-L'infrastruttura Novell. Forms interagisce con un'origine dati tramite le proprietà seguenti:
+L'infrastruttura Xamarin.Forms interagisce con un'origine dati tramite le proprietà seguenti:
 
 * `Data`: elenco di sola lettura degli elementi di dati che è possibile visualizzare.
 * `IsLoading`: valore booleano che indica se i dati sono caricati e disponibili per il rendering.

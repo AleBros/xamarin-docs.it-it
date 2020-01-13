@@ -1,6 +1,6 @@
 ---
-title: ProgressBar di Novell. Forms
-description: Il ProgressBar Novell. Forms è un controllo che rappresenta visivamente lo stato di avanzamento come barra orizzontale riempita in base a una proprietà float.
+title: ProgressBar di Xamarin.Forms
+description: Il ProgressBar Xamarin.Forms è un controllo che rappresenta visivamente lo stato di avanzamento come barra orizzontale riempita in base a una proprietà float.
 ms.prod: xamarin
 ms.assetId: C2F85FED-797C-466B-A0FD-E73CFB79B267
 ms.technology: xamarin-forms
@@ -14,10 +14,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73201938"
 ---
-# <a name="xamarinforms-progressbar"></a>ProgressBar di Novell. Forms
+# <a name="xamarinforms-progressbar"></a>ProgressBar di Xamarin.Forms
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
-Il controllo [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) Novell. Forms rappresenta visivamente lo stato di avanzamento come barra orizzontale riempita a una percentuale rappresentata da un valore `float`. La classe `ProgressBar` eredita da [`View`](xref:Xamarin.Forms.View).
+Il controllo [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) Xamarin.Forms rappresenta visivamente lo stato di avanzamento come barra orizzontale riempita a una percentuale rappresentata da un valore `float`. La classe `ProgressBar` eredita da [`View`](xref:Xamarin.Forms.View).
 
 Gli screenshot seguenti mostrano un `ProgressBar` in iOS e Android:
 
@@ -79,7 +79,7 @@ Il metodo `ProgressTo` aggiunge un'animazione al `ProgressBar` dal valore di `Pr
 await progressBar.ProgressTo(0.75, 500, Easing.Linear);
 ```
 
-Per ulteriori informazioni sull'enumerazione `Easing`, vedere [interpolazione di funzioni in Novell. Forms](~/xamarin-forms/user-interface/animation/easing.md).
+Per ulteriori informazioni sull'enumerazione `Easing`, vedere [interpolazione di funzioni in Xamarin.Forms](~/xamarin-forms/user-interface/animation/easing.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

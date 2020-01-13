@@ -1,5 +1,5 @@
 ---
-title: Rilevamento del dito multitocco in Novell. Android
+title: Rilevamento del dito multitocco in Xamarin.Android
 description: Questo argomento illustra come tenere traccia degli eventi di tocco da più dita
 ms.prod: xamarin
 ms.assetid: 048D51F9-BD6C-4B44-8C53-CCEF276FC5CC

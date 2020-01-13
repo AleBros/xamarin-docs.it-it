@@ -17,7 +17,7 @@ ms.locfileid: "73029776"
 
 Oltre ai requisiti della Guida [introduttiva a Java](~/tools/dotnet-embedding/get-started/java/index.md) , è necessario anche:
 
-- [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+- [Xamarin.Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
 - [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1,8
 
 Come panoramica, viene:
@@ -143,7 +143,7 @@ android {
 }
 ```
 
-Novell. Android carica attualmente assembly .NET direttamente dall'APK, ma richiede che gli assembly non vengano compressi.
+Xamarin.Android carica attualmente assembly .NET direttamente dall'APK, ma richiede che gli assembly non vengano compressi.
 
 Se questa configurazione non è presente, l'app si arresterà in modo anomalo all'avvio e stampa qualcosa di simile alla console:
 
@@ -165,7 +165,7 @@ Si noti che cosa è successo qui:
 
 Per il corretto funzionamento di questo esempio, nell'APK finale sono configurati tutti gli elementi seguenti:
 
-- Novell. Android è configurato all'avvio dell'applicazione
+- Xamarin.Android è configurato all'avvio dell'applicazione
 - Assembly .NET inclusi in **Asset/assembly**
 - Modifiche a **file AndroidManifest. XML** per C# le attività e così via.
 - Risorse e asset Android dalle librerie .NET
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Limitazioni correnti in Android
 
-A questo punto, se si esegue la sottoclasse `Java.Lang.Object`, Novell. Android genererà lo stub Java (Android Callable Wrapper) invece dell'incorporamento di .NET. Per questo motivo, è necessario seguire le stesse regole per l' C# esportazione in Java come Novell. Android. Esempio:
+A questo punto, se si esegue la sottoclasse `Java.Lang.Object`, Xamarin.Android genererà lo stub Java (Android Callable Wrapper) invece dell'incorporamento di .NET. Per questo motivo, è necessario seguire le stesse regole per l' C# esportazione in Java come Xamarin.Android. Esempio:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -235,7 +235,7 @@ ViewSubclass v = new ViewSubclass(this);
 v.apply("Hello");
 ```
 
-Scopri di più sull' [integrazione Java con Novell. Android](~/android/platform/java-integration/index.md).
+Scopri di più sull' [integrazione Java con Xamarin.Android](~/android/platform/java-integration/index.md).
 
 ## <a name="multiple-assemblies"></a>Più assembly
 

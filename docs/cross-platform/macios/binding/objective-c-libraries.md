@@ -15,7 +15,7 @@ ms.locfileid: "73016297"
 ---
 # <a name="binding-objective-c-libraries"></a>Binding di librerie Objective-C
 
-Quando si usa Novell. iOS o Novell. Mac, è possibile che si verifichino casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile usare i progetti di binding Novell per C# creare un'associazione alle librerie Objective-C native. Il progetto usa gli stessi strumenti usati per portare le API iOS e Mac C#.
+Quando si usa Xamarin.iOS o Xamarin.Mac, è possibile che si verifichino casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile usare i progetti di binding Novell per C# creare un'associazione alle librerie Objective-C native. Il progetto usa gli stessi strumenti usati per portare le API iOS e Mac C#.
 
 In questo documento viene descritto come associare le API Objective-C, se si stanno associando solo le API C, è necessario utilizzare il meccanismo .NET standard per questo [Framework P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/).
 Informazioni dettagliate su come collegare in modo statico una libreria C sono disponibili nella pagina [linking native Libraries](~/ios/platform/native-interop.md) .
@@ -36,20 +36,20 @@ Questa pagina descrive come usare un'associazione iOS, tuttavia le associazioni 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Il modo più semplice per creare un'associazione consiste nel creare un progetto di binding Novell. iOS.
+Il modo più semplice per creare un'associazione consiste nel creare un progetto di binding Xamarin.iOS.
 Questa operazione può essere eseguita da Visual Studio per Mac selezionando il tipo di progetto, la libreria **> iOS > libreria bindings**:
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Il modo più semplice per creare un'associazione consiste nel creare un progetto di binding Novell. iOS.
+Il modo più semplice per creare un'associazione consiste nel creare un progetto di binding Xamarin.iOS.
 È possibile eseguire questa operazione da Visual Studio in Windows selezionando il tipo di progetto, **visual C# > iOS > bindings Library (iOS)** :
 
 [![](objective-c-libraries-images/00vs-sml.png "iOS Bindings Library iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
-> Nota: i progetti di binding per **Novell. Mac** sono supportati solo in Visual Studio per Mac.
+> Nota: i progetti di binding per **Xamarin.Mac** sono supportati solo in Visual Studio per Mac.
 
 -----
 
@@ -168,7 +168,7 @@ Tuttavia, poiché l'interfaccia viene utilizzata come ossatura per generare una 
 ### <a name="binding-methods"></a>Metodi di associazione
 
 L'associazione più semplice che è possibile eseguire è associare un metodo. È sufficiente dichiarare un metodo nell'interfaccia con le C# convenzioni di denominazione e decorare il metodo con la [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
-attributo. L'attributo [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) viene collegato al C# nome con il nome Objective-C nel runtime Novell. iOS. Il parametro della [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+attributo. L'attributo [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) viene collegato al C# nome con il nome Objective-C nel runtime Xamarin.iOS. Il parametro della [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
 attribute è il nome del selettore Objective-C. Ecco alcuni esempi:
 
 ```csharp
@@ -325,12 +325,12 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>Protocolli di binding
 
-Come descritto nel documento di progettazione dell'API, nella sezione relativa alla [discussione di modelli e protocolli](~/ios/internals/api-design/index.md#models), Novell. iOS esegue il mapping dei protocolli Objective-C in classi contrassegnate con il [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+Come descritto nel documento di progettazione dell'API, nella sezione relativa alla [discussione di modelli e protocolli](~/ios/internals/api-design/index.md#models), Xamarin.iOS esegue il mapping dei protocolli Objective-C in classi contrassegnate con il [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
 attributo. Viene in genere utilizzato quando si implementano classi delegate Objective-C.
 
 La differenza sostanziale tra una classe associata regolare e una classe Delegate è che la classe delegata potrebbe avere uno o più metodi facoltativi.
 
-Si consideri ad esempio la classe `UIKit` `UIAccelerometerDelegate`, questo è il modo in cui viene associato in Novell. iOS:
+Si consideri ad esempio la classe `UIKit` `UIAccelerometerDelegate`, questo è il modo in cui viene associato in Xamarin.iOS:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -346,7 +346,7 @@ attributo per il metodo. In questo modo l'utente dell'implementazione fornirà e
 
 In generale, i protocolli vengono utilizzati nelle classi che rispondono ai messaggi. Questa operazione viene in genere eseguita in Objective-C assegnando alla proprietà "delegate" un'istanza di un oggetto che risponde ai metodi nel protocollo.
 
-La convenzione in Novell. iOS prevede il supporto dello stile a regime di controllo libero di Objective-C, in cui qualsiasi istanza di un `NSObject` può essere assegnata al delegato e anche per esporre una versione fortemente tipizzata. Per questo motivo, in genere viene fornita una proprietà `Delegate` fortemente tipizzata e una `WeakDelegate` con tipizzazione debole. Generalmente si associa la versione debolmente tipizzata con [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)e si usa l'attributo [`[Wrap]`](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute) per fornire la versione fortemente tipizzata.
+La convenzione in Xamarin.iOS prevede il supporto dello stile a regime di controllo libero di Objective-C, in cui qualsiasi istanza di un `NSObject` può essere assegnata al delegato e anche per esporre una versione fortemente tipizzata. Per questo motivo, in genere viene fornita una proprietà `Delegate` fortemente tipizzata e una `WeakDelegate` con tipizzazione debole. Generalmente si associa la versione debolmente tipizzata con [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)e si usa l'attributo [`[Wrap]`](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute) per fornire la versione fortemente tipizzata.
 
 Viene illustrato come è stato associato il `UIAccelerometer` classe:
 
@@ -465,7 +465,7 @@ Non è importante se l'interfaccia viene implementata in modo implicito o esplic
 In Objective-C è possibile estendere le classi con nuovi metodi, analogamente ai C#metodi di estensione di Spirit. Quando è presente uno di questi metodi, è possibile usare il [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 
 attributo per contrassegnare il metodo come ricevitore del messaggio Objective-C.
 
-In Novell. iOS, ad esempio, sono stati associati i metodi di estensione definiti in `NSString` quando `UIKit` viene importato come metodi nel `NSStringDrawingExtensions`, come indicato di seguito:
+In Xamarin.iOS, ad esempio, sono stati associati i metodi di estensione definiti in `NSString` quando `UIKit` viene importato come metodi nel `NSStringDrawingExtensions`, come indicato di seguito:
 
 ```csharp
 [Category, BaseType (typeof (NSString))]
@@ -676,7 +676,7 @@ Per visualizzare i tipi di conversione supportati, vedere la documentazione [`[B
 
 Le notifiche sono messaggi che vengono inviati all'`NSNotificationCenter.DefaultCenter` e vengono usati come meccanismo per trasmettere i messaggi da una parte dell'applicazione a un'altra. Gli sviluppatori sottoscrivono le notifiche in genere tramite il metodo [AddObserver](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})) di [NSNotificationCenter](xref:Foundation.NSNotificationCenter). Quando un'applicazione invia un messaggio al centro notifiche, in genere contiene un payload archiviato nel dizionario [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) . Questo dizionario è debolmente tipizzato e il recupero di informazioni è soggetto a errori, in quanto gli utenti devono in genere leggere nella documentazione le chiavi disponibili sul dizionario e i tipi di valori che possono essere archiviati nel dizionario. La presenza di chiavi viene talvolta utilizzata anche come valore booleano.
 
-Il generatore di binding Novell. iOS fornisce supporto per gli sviluppatori per associare le notifiche. A tale scopo, impostare il [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
+Il generatore di binding Xamarin.iOS fornisce supporto per gli sviluppatori per associare le notifiche. A tale scopo, impostare il [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
 attributo in una proprietà che è stato anche contrassegnato con un [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
 Property (può essere pubblico o privato).
 
@@ -1023,9 +1023,9 @@ Questa sezione illustra come viene eseguito il mapping tra i tipi C# Objective-C
 
 ### <a name="simple-types"></a>Tipi semplici
 
-La tabella seguente illustra come eseguire il mapping dei tipi dal mondo Objective-C e CocoaTouch al mondo Novell. iOS:
+La tabella seguente illustra come eseguire il mapping dei tipi dal mondo Objective-C e CocoaTouch al mondo Xamarin.iOS:
 
-|Nome del tipo Objective-C|Tipo di API unificata Novell. iOS|
+|Nome del tipo Objective-C|Tipo di API unificata Xamarin.iOS|
 |---|---|
 |`BOOL`, `GLboolean`|`bool`|
 |`NSInteger`|`nint`|
@@ -1055,7 +1055,7 @@ La tabella seguente illustra come eseguire il mapping dei tipi dal mondo Objecti
 
 ### <a name="arrays"></a>Matrici
 
-Il runtime di Novell. iOS gestisce automaticamente la conversione C# di matrici in `NSArrays` ed esegue la conversione, quindi, ad esempio, il metodo di Objective-C immaginaria che restituisce un `NSArray` di `UIViews`:
+Il runtime di Xamarin.iOS gestisce automaticamente la conversione C# di matrici in `NSArrays` ed esegue la conversione, quindi, ad esempio, il metodo di Objective-C immaginaria che restituisce un `NSArray` di `UIViews`:
 
 ```csharp
 // Get the peer views - untyped
@@ -1220,7 +1220,7 @@ Questa operazione può essere usata anche quando si verificano limitazioni nel g
 
 Le classi Objective-C in genere trasmettono notifiche o richiedono informazioni inviando un messaggio su una classe Delegate (delegato Objective-C).
 
-Questo modello, sebbene sia completamente supportato e esposto da Novell. iOS può talvolta risultare complesso. Novell. iOS espone il C# modello di eventi e un sistema di callback di metodo nella classe che può essere usata in queste situazioni. Questo consente l'esecuzione di codice simile al seguente:
+Questo modello, sebbene sia completamente supportato e esposto da Xamarin.iOS può talvolta risultare complesso. Xamarin.iOS espone il C# modello di eventi e un sistema di callback di metodo nella classe che può essere usata in queste situazioni. Questo consente l'esecuzione di codice simile al seguente:
 
 ```csharp
 button.Clicked += delegate {
@@ -1230,7 +1230,7 @@ button.Clicked += delegate {
 
 Il generatore di associazione è in grado di ridurre la quantità di tipizzazione necessaria per eseguire il mapping del modello C# Objective-C al modello.
 
-A partire da Novell. iOS 1,4 sarà possibile anche indicare al generatore di produrre binding per uno specifico delegati Objective-C ed esporre il delegato come C# eventi e proprietà nel tipo di host.
+A partire da Xamarin.iOS 1,4 sarà possibile anche indicare al generatore di produrre binding per uno specifico delegati Objective-C ed esporre il delegato come C# eventi e proprietà nel tipo di host.
 
 Questo processo include due classi, ovvero la classe host che è quella che attualmente genera eventi e li invia all'`Delegate` o `WeakDelegate` e alla classe delegata effettiva.
 
@@ -1328,7 +1328,7 @@ viene usato per specificare l'argomento di input che verrà restituito.
 
 Se si stanno associando API che non fanno parte dell'applicazione, è necessario assicurarsi che il file eseguibile sia collegato a queste librerie.
 
-È necessario informare Novell. iOS come collegare le librerie. questa operazione può essere eseguita modificando la configurazione della build per richiamare il comando `mtouch` con alcuni argomenti di compilazione aggiuntivi che specificano come collegare le nuove librerie usando l'opzione "-gcc_flags", seguita da una stringa racchiusa tra virgolette che contiene tutte le librerie aggiuntive necessarie per il programma, in questo modo:
+È necessario informare Xamarin.iOS come collegare le librerie. questa operazione può essere eseguita modificando la configurazione della build per richiamare il comando `mtouch` con alcuni argomenti di compilazione aggiuntivi che specificano come collegare le nuove librerie usando l'opzione "-gcc_flags", seguita da una stringa racchiusa tra virgolette che contiene tutte le librerie aggiuntive necessarie per il programma, in questo modo:
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load -lSystemLibrary -framework CFNetwork -ObjC"
@@ -1347,7 +1347,7 @@ Quando si usa il [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding
 [assembly: LinkWith ("libMyLibrary.a", LinkTarget.ArmV6 | LinkTarget.ArmV7 | LinkTarget.Simulator, ForceLoad = true, IsCxx = true)]
 ```
 
-Ci si potrebbe chiedere, perché è necessario `-force_load` comando e il motivo è che il flag-ObjC, anche se compila il codice in, non mantiene i metadati necessari per supportare le categorie (l'eliminazione del codice indesiderato del linker/compilatore), che è necessario in fase di esecuzione per Novell. iOS.
+Ci si potrebbe chiedere, perché è necessario `-force_load` comando e il motivo è che il flag-ObjC, anche se compila il codice in, non mantiene i metadati necessari per supportare le categorie (l'eliminazione del codice indesiderato del linker/compilatore), che è necessario in fase di esecuzione per Xamarin.iOS.
 
 <a name="Assisted_References" />
 
@@ -1397,7 +1397,7 @@ class Demo {
 
 ## <a name="inheriting-protocols"></a>Protocolli di ereditarietà
 
-A partire da Novell. iOS v 3.2, è supportata l'ereditarietà da protocolli contrassegnati con la proprietà [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) . Questa operazione è utile in alcuni modelli di API, ad esempio in `MapKit` in cui il protocollo di `MKOverlay`, eredita dal protocollo `MKAnnotation` ed è adottato da un certo numero di classi che ereditano da `NSObject`.
+A partire da Xamarin.iOS v 3.2, è supportata l'ereditarietà da protocolli contrassegnati con la proprietà [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) . Questa operazione è utile in alcuni modelli di API, ad esempio in `MapKit` in cui il protocollo di `MKOverlay`, eredita dal protocollo `MKAnnotation` ed è adottato da un certo numero di classi che ereditano da `NSObject`.
 
 Storicamente è necessario copiare il protocollo in ogni implementazione, ma in questi casi ora è possibile che la classe `MKShape` erediti dal protocollo di `MKOverlay` e generi tutti i metodi richiesti automaticamente.
 

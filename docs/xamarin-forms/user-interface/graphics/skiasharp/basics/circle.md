@@ -1,6 +1,6 @@
 ---
 title: Disegnare un cerchio semplice in SkiaSharp
-description: Questo articolo illustra le nozioni di base di disegno di SkiaSharp, tra cui Canvas e oggetti disegno, nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra le nozioni di base di disegno di SkiaSharp, tra cui Canvas e oggetti disegno, nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
@@ -20,7 +20,7 @@ ms.locfileid: "75545634"
 
 _Apprendere le nozioni di base di disegno di SkiaSharp, tra cui Canvas e disegnare gli oggetti_
 
-Questo articolo vengono illustrati i concetti di creazione grafica in xamarin. Forms con SkiaSharp, compresa la creazione di un' `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e l'utilizzo un `SKPaint` oggetto per specificare colori e altri disegno attributi.
+Questo articolo vengono illustrati i concetti di creazione grafica in Xamarin.Forms con SkiaSharp, compresa la creazione di un' `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e l'utilizzo un `SKPaint` oggetto per specificare colori e altri disegno attributi.
 
 Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma contiene tutto il codice di esempio per questa serie di articoli di SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe delle pagine [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice illustra come disegnare un cerchio al centro della pagina con un raggio pari a 100 pixel. Il contorno del cerchio è rosso e l'interno del cerchio è blu.
 
@@ -46,7 +46,7 @@ public SimpleCirclePage()
 }
 ```
 
-Il `SKCanvasView` occupa l'intera area del contenuto della pagina. In alternativa, è possibile combinare un `SKCanvasView` con altri xamarin. Forms `View` derivati, come si vedrà in altri esempi.
+Il `SKCanvasView` occupa l'intera area del contenuto della pagina. In alternativa, è possibile combinare un `SKCanvasView` con altri Xamarin.Forms `View` derivati, come si vedrà in altri esempi.
 
 Il `PaintSurface` gestore dell'evento è in cui si svolgono tutti il disegno. Questo metodo può essere chiamato più volte durante l'esecuzione del programma, pertanto è necessario gestire tutte le informazioni necessarie per ricreare il grafico visualizzato:
 
@@ -108,7 +108,7 @@ Il [ `Style` ](xref:SkiaSharp.SKPaint.Style) proprietà indica che si desidera *
 
 Il valore predefinito è `Fill`. Utilizzare la terza opzione per disegnare la linea e riempire l'area interna con lo stesso colore.
 
-Impostare il [ `Color` ](xref:SkiaSharp.SKPaint.Color) la proprietà su un valore di tipo [ `SKColor` ](xref:SkiaSharp.SKColor). Un modo per ottenere un `SKColor` valore è convertendo un xamarin. Forms `Color` valore a un `SKColor` valore usando il metodo di estensione [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). Il [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe la `SkiaSharp.Views.Forms` dello spazio dei nomi include altri metodi per la conversione tra valori di xamarin. Forms e SkiaSharp.
+Impostare il [ `Color` ](xref:SkiaSharp.SKPaint.Color) la proprietà su un valore di tipo [ `SKColor` ](xref:SkiaSharp.SKColor). Un modo per ottenere un `SKColor` valore è convertendo un Xamarin.Forms `Color` valore a un `SKColor` valore usando il metodo di estensione [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). Il [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe la `SkiaSharp.Views.Forms` dello spazio dei nomi include altri metodi per la conversione tra valori di Xamarin.Forms e SkiaSharp.
 
 Il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà indica lo spessore della linea. In questo caso è impostato su 25 pixel.
 
@@ -156,7 +156,7 @@ Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle
 
 Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere più sottili e vi è un buon motivo per cui: metà della larghezza della riga è nascosto dai cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
-Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
+Nell'esempio successivo nel [l'integrazione con Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

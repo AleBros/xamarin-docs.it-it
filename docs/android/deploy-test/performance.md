@@ -16,7 +16,7 @@ ms.locfileid: "73021406"
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
-_Sono disponibili diverse tecniche per migliorare le prestazioni delle applicazioni compilate con Novell. Android. Collettivamente queste tecniche possono ridurre notevolmente la quantità di lavoro eseguita da una CPU e la quantità di memoria utilizzata da un'applicazione. Questo articolo descrive e illustra queste tecniche._
+_Sono disponibili diverse tecniche per migliorare le prestazioni delle applicazioni compilate con Xamarin.Android. Collettivamente queste tecniche possono ridurre notevolmente la quantità di lavoro eseguita da una CPU e la quantità di memoria utilizzata da un'applicazione. Questo articolo descrive e illustra queste tecniche._
 
 ## <a name="performance-overview"></a>Panoramica sulle prestazioni
 

@@ -1,6 +1,6 @@
 ---
-title: TextKit in Novell. iOS
-description: Questo documento descrive come usare TextKit in Novell. iOS. TextKit fornisce funzionalità avanzate di rendering e layout del testo.
+title: TextKit in Xamarin.iOS
+description: Questo documento descrive come usare TextKit in Xamarin.iOS. TextKit fornisce funzionalità avanzate di rendering e layout del testo.
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031416"
 ---
-# <a name="textkit-in-xamarinios"></a>TextKit in Novell. iOS
+# <a name="textkit-in-xamarinios"></a>TextKit in Xamarin.iOS
 
 TextKit è una nuova API che offre funzionalità avanzate per il layout e il rendering del testo. Si basa sul Framework di testo principale di basso livello, ma è molto più semplice da usare rispetto al testo principale.
 

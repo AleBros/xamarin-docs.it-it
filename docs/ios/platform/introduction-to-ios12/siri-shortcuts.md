@@ -1,5 +1,5 @@
 ---
-title: Collegamenti Siri in Novell. iOS
+title: Collegamenti Siri in Xamarin.iOS
 description: Questo documento descrive come usare i collegamenti Siri in iOS 12. Viene illustrato NSUserActivities, gli Intent personalizzati, l'assegnazione di scelte rapide vocali, i collegamenti pertinenti e altro ancora.
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031877"
 ---
-# <a name="siri-shortcuts-in-xamarinios"></a>Collegamenti Siri in Novell. iOS
+# <a name="siri-shortcuts-in-xamarinios"></a>Collegamenti Siri in Xamarin.iOS
 
 In [iOS 10](~/ios/platform/sirikit/index.md)Apple ha introdotto SiriKit, che consente di creare messaggi di posta elettronica, chiamate VoIP, pagamenti, allenamenti, prenotazioni di corse e app per la ricerca di foto che interagiscono con Siri.
 
@@ -72,7 +72,7 @@ Il file **info. plist** contiene anche quanto segue:
 </array>
 ```
 
-Questo `NSUserActivityTypes` coppia chiave/valore indica che Soup chef sa come gestire una `OrderSoupIntent`e un [`NSUserActivity`](xref:Foundation.NSUserActivity) avere un [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType) di "com. Novell. SoupChef. viewMenu".
+Questo `NSUserActivityTypes` coppia chiave/valore indica che Soup chef sa come gestire una `OrderSoupIntent`e un [`NSUserActivity`](xref:Foundation.NSUserActivity) avere un [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType) di "com. Xamarin.SoupChef. viewMenu".
 
 Le attività e gli Intent personalizzati passati all'app stessa, in contrapposizione alle estensioni, vengono gestiti nella `AppDelegate` ( [`UIApplicationDelegate`](xref:UIKit.UIApplicationDelegate) dal metodo [`ContinueUserActivity`](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) .
 
@@ -89,7 +89,7 @@ Il file **titles. plist** nel progetto **SoupChef** contiene gli elementi seguen
 <true/>
 ```
 
-Questa configurazione indica che l'app usa il gruppo di app "Group. com. Novell. SoupChef". L'estensione dell'app **SoupChefIntents** usa lo stesso gruppo di app, che consente la condivisione dei due progetti [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
+Questa configurazione indica che l'app usa il gruppo di app "Group. com. Xamarin.SoupChef". L'estensione dell'app **SoupChefIntents** usa lo stesso gruppo di app, che consente la condivisione dei due progetti [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 dati.
 
 La chiave di `com.apple.developer.siri` indica che l'app interagisce con Siri.
@@ -242,7 +242,7 @@ Il codice generato include:
 
 ### <a name="creating-a-binding-to-the-custom-intent"></a>Creazione di un'associazione alla finalità personalizzata
 
-Per usare il codice generato da Xcode in un'app Novell. iOS, creare un' C# associazione.
+Per usare il codice generato da Xcode in un'app Xamarin.iOS, creare un' C# associazione.
 
 #### <a name="creating-a-static-library-and-c-binding-definitions"></a>Creazione di una libreria statica C# e delle definizioni di associazione
 
@@ -285,7 +285,7 @@ Per altre informazioni sulla creazione di una libreria statica e sull'uso di Obj
 
 #### <a name="creating-a-bindings-library"></a>Creazione di una libreria bindings
 
-Con la libreria statica e le C# definizioni di binding create, il componente rimanente necessario per utilizzare il codice correlato all'intento generato da Xcode in un progetto Novell. iOS è una libreria di binding.
+Con la libreria statica e le C# definizioni di binding create, il componente rimanente necessario per utilizzare il codice correlato all'intento generato da Xcode in un progetto Xamarin.iOS è una libreria di binding.
 
 Nel [repository di Soup chef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef)aprire il file **SoupChef. sln** . Tra le altre cose, questa soluzione contiene **OrderSoupIntentBinding**, una libreria di binding per la libreria statica generata in precedenza.
 
@@ -411,7 +411,7 @@ void RemoveDonation(MenuItem menuItem)
 
 ### <a name="creating-an-intents-extension"></a>Creazione di un'estensione per Intent
 
-Il codice che viene eseguito quando Siri richiama un preventivo viene inserito in un'estensione per Intent, che può essere aggiunto come nuovo progetto alla stessa soluzione di un'app Novell. iOS esistente, ad esempio Soup chef. Nella soluzione **SoupChef** l'estensione è denominata **SoupChefIntents**.
+Il codice che viene eseguito quando Siri richiama un preventivo viene inserito in un'estensione per Intent, che può essere aggiunto come nuovo progetto alla stessa soluzione di un'app Xamarin.iOS esistente, ad esempio Soup chef. Nella soluzione **SoupChef** l'estensione è denominata **SoupChefIntents**.
 
 #### <a name="soupchefintents-infoplist-and-entitlementsplist"></a>SoupChefIntents-info. plist e diritti. plist
 

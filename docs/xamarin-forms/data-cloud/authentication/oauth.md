@@ -1,6 +1,6 @@
 ---
 title: AuthenticateUsers con un provider di identità
-description: Questo articolo illustra come usare AUTH per gestire il processo di autenticazione in un'applicazione xamarin. Forms.
+description: Questo articolo illustra come usare AUTH per gestire il processo di autenticazione in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "75487633"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
-_Novell. auth è un SDK multipiattaforma per l'autenticazione degli utenti e l'archiviazione dei relativi account. Sono inclusi gli autenticatori OAuth che forniscono supporto per l'utilizzo di provider di identità quali Google, Microsoft, Facebook e Twitter. Questo articolo illustra come usare Novell. auth per gestire il processo di autenticazione in un'applicazione Novell. Forms._
+_Xamarin.auth è un SDK multipiattaforma per l'autenticazione degli utenti e l'archiviazione dei relativi account. Sono inclusi gli autenticatori OAuth che forniscono supporto per l'utilizzo di provider di identità quali Google, Microsoft, Facebook e Twitter. Questo articolo illustra come usare Xamarin.auth per gestire il processo di autenticazione in un'applicazione Xamarin.Forms._
 
 OAuth è uno standard aperto per l'autenticazione e consente a un proprietario della risorsa notificare a un provider di risorse che deve essere concesso l'autorizzazione a terze parti per accedere alle informazioni senza condividere l'identità dei proprietari di risorse. Un esempio di questo sarebbe possibile consentire a un utente notificare a un provider di identità (ad esempio, Google, Microsoft, Facebook o Twitter) che deve essere concesso l'autorizzazione a un'applicazione per accedere ai dati, senza condividere l'identità dell'utente. Viene comunemente utilizzato come un approccio per gli utenti per l'accesso ai siti Web e alle applicazioni tramite un provider di identità, ma senza dover esporre la password per il sito Web o l'applicazione.
 
@@ -56,7 +56,7 @@ L'applicazione effettua una richiesta di autenticazione a Google usando il `OAut
 
 ### <a name="setup"></a>Programma di installazione
 
-Deve essere creato un progetto Console API Google per l'integrazione di accesso di Google con un'applicazione xamarin. Forms. Per ottenere questo risultato, è possibile procedere come segue:
+Deve essere creato un progetto Console API Google per l'integrazione di accesso di Google con un'applicazione Xamarin.Forms. Per ottenere questo risultato, è possibile procedere come segue:
 
 1. Andare alla [Console di Google API](https://console.developers.google.com) sito Web e accedere con le credenziali dell'account Google.
 1. Dall'elenco a discesa progetto, selezionare un progetto esistente o crearne uno nuovo.
@@ -245,7 +245,7 @@ Per altre informazioni, vedere [chiama un'API di Google](https://developers.goog
 Archivia in modo sicuro AUTH `Account` gli oggetti in un account di archiviano in modo che le applicazioni non sono sempre necessario ripetere l'autenticazione degli utenti. Il `AccountStore` classe è responsabile per l'archiviazione delle informazioni sull'account e supportata da servizi di Keychain in iOS e il `KeyStore` classe in Android.
 
 > [!IMPORTANT]
-> La classe `AccountStore` in Novell. auth è stata deprecata ed è invece necessario usare la classe Novell. Essentials `SecureStorage`. Per altre informazioni, vedere [migrazione da AccountStore a Novell. Essentials SecureStorage](https://github.com/xamarin/Xamarin.Auth/wiki/Migrating-from-AccountStore-to-Xamarin.Essentials-SecureStorage).
+> La classe `AccountStore` in Xamarin.auth è stata deprecata ed è invece necessario usare la classe Xamarin.Essentials `SecureStorage`. Per altre informazioni, vedere [migrazione da AccountStore a Xamarin.Essentials SecureStorage](https://github.com/xamarin/Xamarin.Auth/wiki/Migrating-from-AccountStore-to-Xamarin.Essentials-SecureStorage).
 
 Il codice seguente esempio viene illustrato come un `Account` oggetto viene salvato in modo sicuro:
 
@@ -265,17 +265,17 @@ Il `FindAccountsForService` metodo restituisce un `IEnumerable` insieme di `Acco
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-- In Android, se si riceve una notifica di tipo avviso popup quando si chiude il browser dopo l'autenticazione e si desidera arrestare la notifica di tipo avviso popup, aggiungere il codice seguente al progetto Android dopo l'inizializzazione di Novell. auth:
+- In Android, se si riceve una notifica di tipo avviso popup quando si chiude il browser dopo l'autenticazione e si desidera arrestare la notifica di tipo avviso popup, aggiungere il codice seguente al progetto Android dopo l'inizializzazione di Xamarin.auth:
 
 ```csharp
 Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
 ```
 
-- In Android, se il browser non si chiude automaticamente, una soluzione temporanea è eseguire il downgrade del pacchetto Novell. auth alla versione 1.5.0.3. Quindi, aggiungere [PCL Crypto v 2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) al progetto Android.
+- In Android, se il browser non si chiude automaticamente, una soluzione temporanea è eseguire il downgrade del pacchetto Xamarin.auth alla versione 1.5.0.3. Quindi, aggiungere [PCL Crypto v 2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) al progetto Android.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare AUTH per gestire il processo di autenticazione in un'applicazione xamarin. Forms. AUTH fornisce il `OAuth2Authenticator` e `OAuth2Request` classi utilizzate dalle applicazioni xamarin. Forms per utilizzare i provider di identità, ad esempio Google, Microsoft, Facebook e Twitter.
+Questo articolo ha illustrato come usare AUTH per gestire il processo di autenticazione in un'applicazione Xamarin.Forms. AUTH fornisce il `OAuth2Authenticator` e `OAuth2Request` classi utilizzate dalle applicazioni Xamarin.Forms per utilizzare i provider di identità, ad esempio Google, Microsoft, Facebook e Twitter.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

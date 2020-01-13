@@ -1,6 +1,6 @@
 ---
 title: Interfacce utente in iOS
-description: Questo documento contiene collegamenti a guide che descrivono come creare interfacce utente nell'app Novell. iOS. Le guide collegate coprono l'aspetto dell'API, la creazione di oggetti dell'interfaccia utente, le opzioni di layout e altro ancora.
+description: Questo documento contiene collegamenti a guide che descrivono come creare interfacce utente nell'app Xamarin.iOS. Le guide collegate coprono l'aspetto dell'API, la creazione di oggetti dell'interfaccia utente, le opzioni di layout e altro ancora.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
@@ -22,7 +22,7 @@ iOS consente di usare con le API UIAppearance molti attributi visivi dei control
 
 ## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[Creazione di oggetti dell'interfaccia utente](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
-Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Novell. iOS. `UIKit` è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
+Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Xamarin.iOS. `UIKit` è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opzioni di layout](~/ios/user-interface/ios-ui/layout-options.md)
 
@@ -30,7 +30,7 @@ Esistono due meccanismi diversi per controllare il layout quando una visualizzaz
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
-Questo articolo illustra i nuovi tipi di feedback tattili disponibili in iOS 10 e come implementarli in Novell. iOS.
+Questo articolo illustra i nuovi tipi di feedback tattili disponibili in iOS 10 e come implementarli in Xamarin.iOS.
 
 ## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[Utilizzo del thread dell'interfaccia utente](~/ios/user-interface/ios-ui/ui-thread.md)
 

@@ -12,7 +12,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/26/2019
 ms.locfileid: "74536493"
 ---
-# <a name="xamarinessentials-platform-extensions"></a>Novell. Essentials: estensioni della piattaforma
+# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: estensioni della piattaforma
 
 Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici. 
 

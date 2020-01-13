@@ -1,6 +1,6 @@
 ---
-title: Visualizzazione di avvisi in Novell. iOS
-description: Questo documento descrive come visualizzare gli avvisi in Novell. iOS usando le API UIAlertController introdotte in iOS 8.
+title: Visualizzazione di avvisi in Xamarin.iOS
+description: Questo documento descrive come visualizzare gli avvisi in Xamarin.iOS usando le API UIAlertController introdotte in iOS 8.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022094"
 ---
-# <a name="displaying-alerts-in-xamarinios"></a>Visualizzazione di avvisi in Novell. iOS
+# <a name="displaying-alerts-in-xamarinios"></a>Visualizzazione di avvisi in Xamarin.iOS
 
 A partire da iOS 8, UIAlertController ha completato la sostituzione di UIActionSheet e UIAlertView che ora sono deprecate.
 

@@ -17,7 +17,7 @@ ms.locfileid: "73016306"
 
 Questo documento descrive l'elenco degli attributi che è possibile usare per annotare i file del contratto API per guidare l'associazione e il codice generato
 
-I contratti API Novell. iOS e Novell. Mac sono scritti C# principalmente come definizioni di interfaccia che definiscono il modo in cui il codice Objective-C viene C#esposto. Il processo implica una combinazione di dichiarazioni di interfaccia, oltre ad alcune definizioni di tipo di base che il contratto API potrebbe richiedere. Per un'introduzione ai tipi di binding, vedere la Guida complementare per l' [associazione di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md).
+I contratti API Xamarin.iOS e Xamarin.Mac sono scritti C# principalmente come definizioni di interfaccia che definiscono il modo in cui il codice Objective-C viene C#esposto. Il processo implica una combinazione di dichiarazioni di interfaccia, oltre ad alcune definizioni di tipo di base che il contratto API potrebbe richiedere. Per un'introduzione ai tipi di binding, vedere la Guida complementare per l' [associazione di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md).
 
 ## <a name="type-definitions"></a>Definizioni di tipo
 
@@ -33,9 +33,9 @@ interface MyType : [Protocol1, Protocol2] {
 Ogni interfaccia nella definizione del contratto con l'attributo [`[BaseType]`](#BaseTypeAttribute) che dichiara il tipo di base per l'oggetto generato. Nella dichiarazione precedente viene generato un tipo C# di classe `MyType` che si associa a un tipo Objective-C denominato`MyType`.
 
 Se si specificano tipi dopo TypeName (nell'esempio precedente `Protocol1` e `Protocol2`) utilizzando la sintassi di ereditarietà dell'interfaccia, il contenuto di tali interfacce verrà inline come se facessero parte del contratto per `MyType`.
-Il modo in cui Novell. iOS emerge che un tipo adotta un protocollo consiste nell'incorporare tutti i metodi e le proprietà dichiarati nel protocollo nel tipo stesso.
+Il modo in cui Xamarin.iOS emerge che un tipo adotta un protocollo consiste nell'incorporare tutti i metodi e le proprietà dichiarati nel protocollo nel tipo stesso.
 
-Di seguito viene illustrato come definire la dichiarazione Objective-C per `UITextField` in un contratto Novell. iOS:
+Di seguito viene illustrato come definire la dichiarazione Objective-C per `UITextField` in un contratto Xamarin.iOS:
 
 ```objc
 @interface UITextField : UIControl <UITextInput> {
@@ -55,7 +55,7 @@ interface UITextField : UITextInput {
 
 ### <a name="generating-events"></a>Generazione di eventi
 
-Una funzionalità della progettazione dell'API Novell. iOS e Novell. Mac è che le classi delegate Objective-C C# vengono mappate come eventi e callback. Gli utenti possono scegliere in base alle singole istanze se vogliono adottare il modello di programmazione Objective-C, assegnando a proprietà come `Delegate` un'istanza di una classe che implementa i vari metodi che il runtime di Objective-C chiamerebbe oppure scegliendo il C#: eventi e proprietà di stile.
+Una funzionalità della progettazione dell'API Xamarin.iOS e Xamarin.Mac è che le classi delegate Objective-C C# vengono mappate come eventi e callback. Gli utenti possono scegliere in base alle singole istanze se vogliono adottare il modello di programmazione Objective-C, assegnando a proprietà come `Delegate` un'istanza di una classe che implementa i vari metodi che il runtime di Objective-C chiamerebbe oppure scegliendo il C#: eventi e proprietà di stile.
 
 Ecco un esempio di come usare il modello Objective-C:
 
@@ -211,7 +211,7 @@ public interface UIAccelerometerDelegate {
 
 Se si applica questo attributo quando vengono create nuove istanze di questa classe, l'istanza di tale oggetto verrà mantenuta fino a quando non viene richiamato il metodo a cui fa riferimento il `KeepRefUntil`. Questa operazione è utile per migliorare l'usabilità delle API, quando non si vuole che l'utente mantenga un riferimento a un oggetto per l'uso del codice. Il valore di questa proprietà è il nome di un metodo nella classe `Delegate`, quindi è necessario usare questa combinazione anche con le proprietà `Events` e `Delegates`.
 
-Nell'esempio seguente viene illustrato come viene usato da `UIActionSheet` in Novell. iOS:
+Nell'esempio seguente viene illustrato come viene usato da `UIActionSheet` in Xamarin.iOS:
 
 ```csharp
 [BaseType (typeof (NSObject), KeepRefUntil="Dismissed")]
@@ -366,7 +366,7 @@ Per impostazione predefinita, i membri che fanno parte di un protocollo non sono
 
 L'attributo `[Abstract]` può essere applicato ai metodi o alle proprietà e fa in modo che il generatore contrassegni il membro generato come astratto e che la classe sia una classe astratta.
 
-Il codice seguente è tratto da Novell. iOS:
+Il codice seguente è tratto da Xamarin.iOS:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -602,7 +602,7 @@ interface MyProtocol {
 }
 ```
 
-A partire da Novell. iOS 7,0 è stata incorporata una nuova e migliorata funzionalità di associazione del protocollo.  Tutte le definizioni che contengono l'attributo `[Protocol]` genereranno tre classi di supporto che migliorano notevolmente il modo in cui si utilizzano i protocolli:
+A partire da Xamarin.iOS 7,0 è stata incorporata una nuova e migliorata funzionalità di associazione del protocollo.  Tutte le definizioni che contengono l'attributo `[Protocol]` genereranno tre classi di supporto che migliorano notevolmente il modo in cui si utilizzano i protocolli:
 
 ```csharp
 // Full method implementation, contains all methods
@@ -709,7 +709,7 @@ Gli attributi in questa sezione vengono applicati a singoli membri di un tipo: p
 
 ### <a name="alignattribute"></a>AlignAttribute
 
-Utilizzato per specificare il valore di allineamento per i tipi restituiti della proprietà. Determinate proprietà accettano puntatori a indirizzi che devono essere allineati a determinati limiti (in Novell. iOS questo accade ad esempio con alcune proprietà `GLKBaseEffect` che devono essere allineate a 16 byte). È possibile usare questa proprietà per decorare il getter e usare il valore di allineamento. Questa operazione viene in genere utilizzata con i tipi di `OpenTK.Vector4` e `OpenTK.Matrix4` quando si integrano con le API Objective-C.
+Utilizzato per specificare il valore di allineamento per i tipi restituiti della proprietà. Determinate proprietà accettano puntatori a indirizzi che devono essere allineati a determinati limiti (in Xamarin.iOS questo accade ad esempio con alcune proprietà `GLKBaseEffect` che devono essere allineate a 16 byte). È possibile usare questa proprietà per decorare il getter e usare il valore di allineamento. Questa operazione viene in genere utilizzata con i tipi di `OpenTK.Vector4` e `OpenTK.Matrix4` quando si integrano con le API Objective-C.
 
 Esempio:
 
@@ -755,11 +755,11 @@ public partial class UIToolbar {
 }
 ```
 
-### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Novell. iOS 5,4)
+### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Xamarin.iOS 5,4)
 
 Usare il `[AutoReleaseAttribute]` su metodi e proprietà per eseguire il wrapping della chiamata al metodo in un `NSAutoReleasePool`.
 
-In Objective-C sono disponibili alcuni metodi che restituiscono valori aggiunti al `NSAutoReleasePool`predefinito. Per impostazione predefinita, questi passeranno al thread `NSAutoReleasePool`, ma poiché Novell. iOS mantiene anche un riferimento agli oggetti fino a quando l'oggetto gestito si trova, potrebbe non essere necessario mantenere un riferimento aggiuntivo nel `NSAutoReleasePool` che verrà svuotato solo finché il thread non restituisce controllare al thread successivo oppure tornare al ciclo principale.
+In Objective-C sono disponibili alcuni metodi che restituiscono valori aggiunti al `NSAutoReleasePool`predefinito. Per impostazione predefinita, questi passeranno al thread `NSAutoReleasePool`, ma poiché Xamarin.iOS mantiene anche un riferimento agli oggetti fino a quando l'oggetto gestito si trova, potrebbe non essere necessario mantenere un riferimento aggiuntivo nel `NSAutoReleasePool` che verrà svuotato solo finché il thread non restituisce controllare al thread successivo oppure tornare al ciclo principale.
 
 Questo attributo viene applicato ad esempio in proprietà complesse, ad esempio `UIImage.FromFile`, che restituisce gli oggetti che sono stati aggiunti al `NSAutoReleasePool`predefinito. Senza questo attributo, le immagini vengono conservate fino a quando il thread non ha restituito il controllo al ciclo principale. UF il thread era un tipo di Downloader in background che è sempre attivo e in attesa di lavoro, le immagini non vengono mai rilasciate.
 
@@ -936,7 +936,7 @@ bool Visible { [Bind ("isVisible")] get; set; }
 
 ### <a name="asyncattribute"></a>AsyncAttribute
 
-Disponibile solo in Novell. iOS 6,3 e versioni successive.
+Disponibile solo in Xamarin.iOS 6,3 e versioni successive.
 
 Questo attributo può essere applicato ai metodi che accettano un gestore di completamento come ultimo argomento.
 
@@ -1043,7 +1043,7 @@ interface DatabaseConnection {
 
 ### <a name="exportattribute"></a>ExportAttribute
 
-L'attributo `[Export]` viene usato per contrassegnare un metodo o una proprietà da esporre al runtime di Objective-C. Questo attributo viene condiviso tra lo strumento di associazione e i runtime Novell. iOS e Novell. Mac effettivi. Per i metodi, il parametro viene passato Verbatim al codice generato, per le proprietà, vengono generate le esportazioni getter e setter in base alla dichiarazione di base. per informazioni su come modificare il comportamento dello strumento di associazione, vedere la sezione nella [`[BindAttribute]`](#BindAttribute) .
+L'attributo `[Export]` viene usato per contrassegnare un metodo o una proprietà da esporre al runtime di Objective-C. Questo attributo viene condiviso tra lo strumento di associazione e i runtime Xamarin.iOS e Xamarin.Mac effettivi. Per i metodi, il parametro viene passato Verbatim al codice generato, per le proprietà, vengono generate le esportazioni getter e setter in base alla dichiarazione di base. per informazioni su come modificare il comportamento dello strumento di associazione, vedere la sezione nella [`[BindAttribute]`](#BindAttribute) .
 
 Sintassi:
 
@@ -1150,7 +1150,7 @@ public NSObject this [NSObject idx] {
 
 Questo attributo contrassegna il campo sottostante per una proprietà che deve essere annotata con l'attributo .NET `[ThreadStatic]`. Questa operazione è utile se il campo è una variabile thread-static.
 
-### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Novell. iOS 6.0.6)
+### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
 
 Questo attributo renderà un metodo che supporta le eccezioni native (Objective-C).
 Anziché chiamare direttamente `objc_msgSend`, la chiamata passa attraverso un trampolino personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling in eccezioni gestite.
@@ -1250,7 +1250,7 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
 In alcuni casi, non esiste alcuna costante associata al valore passato nel dizionario.  Apple a volte usa costanti simboli pubbliche e talvolta usa costanti di stringa.  Per impostazione predefinita, l'attributo [`[Export]`](#ExportAttribute) nella classe `EventArgs` fornita utilizzerà il nome specificato come simbolo pubblico da cercare in fase di esecuzione.  In caso contrario, è preferibile eseguire la ricerca come costante di stringa, quindi passare il valore `ArgumentSemantic.Assign` all'attributo Export.
 
-**Novità in Novell. iOS 8,4**
+**Novità in Xamarin.iOS 8,4**
 
 In alcuni casi, le notifiche iniziano senza alcun argomento, pertanto l'uso di [`[Notification]`](#NotificationAttribute) senza argomenti è accettabile.  Tuttavia, a volte verranno introdotti i parametri della notifica.  Per supportare questo scenario, l'attributo può essere applicato più volte.
 
@@ -1366,7 +1366,7 @@ void Demo ();
 
 ### <a name="proxyattribute"></a>ProxyAttribute
 
-Questo attributo viene applicato ai valori restituiti per contrassegnarli come oggetti proxy. Alcune API Objective-C restituiscono oggetti proxy che non possono essere distinti dalle associazioni utente. L'effetto di questo attributo consiste nel contrassegnare l'oggetto come un oggetto `DirectBinding`. Per uno scenario in Novell. Mac, è possibile vedere la [discussione su questo bug](https://bugzilla.novell.com/show_bug.cgi?id=670844).
+Questo attributo viene applicato ai valori restituiti per contrassegnarli come oggetti proxy. Alcune API Objective-C restituiscono oggetti proxy che non possono essere distinti dalle associazioni utente. L'effetto di questo attributo consiste nel contrassegnare l'oggetto come un oggetto `DirectBinding`. Per uno scenario in Xamarin.Mac, è possibile vedere la [discussione su questo bug](https://bugzilla.novell.com/show_bug.cgi?id=670844).
 
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
@@ -1384,7 +1384,7 @@ Se il valore di `doAdd` è true, il parametro viene aggiunto al `__mt_{0}_var Li
 
 Per un esempio, vedere [Foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
-### <a name="releaseattribute-xamarinios-60"></a>ReleaseAttribute (Novell. iOS 6,0)
+### <a name="releaseattribute-xamarinios-60"></a>ReleaseAttribute (Xamarin.iOS 6,0)
 
 Questo può essere applicato ai tipi restituiti per indicare che il generatore deve chiamare `Release` sull'oggetto prima di restituirlo. Questa operazione è necessaria solo quando un metodo fornisce un oggetto mantenuto (in contrapposizione a un oggetto autorelease, che è lo scenario più comune)
 
@@ -1396,7 +1396,7 @@ Esempio:
 NSObject GetAndRetainObject ();
 ```
 
-Questo attributo viene inoltre propagato al codice generato, in modo che il runtime di Novell. iOS sappia che deve mantenere l'oggetto quando viene restituito a Objective-C da tale funzione.
+Questo attributo viene inoltre propagato al codice generato, in modo che il runtime di Xamarin.iOS sappia che deve mantenere l'oggetto quando viene restituito a Objective-C da tale funzione.
 
 ### <a name="sealedattribute"></a>SealedAttribute
 
@@ -1416,7 +1416,7 @@ Usare questo attributo per contrassegnare le proprietà i cui valori sono tempor
 
 ### <a name="wrapattribute"></a>WrapAttribute
 
-Nella progettazione delle associazioni Novell. iOS/Novell. Mac, l'attributo `[Wrap]` viene usato per eseguire il wrapping di un oggetto tipizzato in modo debole con un oggetto fortemente tipizzato. Questa operazione viene eseguita principalmente con gli oggetti delegati Objective-C, generalmente dichiarati come di tipo `id` o `NSObject`. La convenzione usata da Novell. iOS e Novell. Mac consiste nell'esporre tali delegati o origini dati come di tipo `NSObject` e vengono denominati usando la convenzione "vulnerabile" + il nome esposto. Una proprietà `id delegate` da Objective-C verrebbe esposta come una proprietà `NSObject WeakDelegate { get; set; }` nel file di contratto dell'API.
+Nella progettazione delle associazioni Xamarin.iOS/Xamarin.Mac, l'attributo `[Wrap]` viene usato per eseguire il wrapping di un oggetto tipizzato in modo debole con un oggetto fortemente tipizzato. Questa operazione viene eseguita principalmente con gli oggetti delegati Objective-C, generalmente dichiarati come di tipo `id` o `NSObject`. La convenzione usata da Xamarin.iOS e Xamarin.Mac consiste nell'esporre tali delegati o origini dati come di tipo `NSObject` e vengono denominati usando la convenzione "vulnerabile" + il nome esposto. Una proprietà `id delegate` da Objective-C verrebbe esposta come una proprietà `NSObject WeakDelegate { get; set; }` nel file di contratto dell'API.
 
 Tuttavia, in genere, il valore assegnato a questo delegato è di un tipo sicuro, quindi viene esposto il tipo forte e viene applicato l'attributo `[Wrap]`, ovvero gli utenti possono scegliere di usare i tipi deboli se hanno bisogno di un controllo accurato o se devono ricorrere a trucchi di basso livello oppure possono utilizzare la proprietà fortemente tipizzata per la maggior parte delle operazioni.
 
@@ -1829,7 +1829,7 @@ Questo attributo viene applicato a livello di assembly, ad esempio ciò che vien
 [assembly: LinkWith ("libCorePlot-CocoaTouch.a", LinkTarget.ArmV7 | LinkTarget.ArmV7s | LinkTarget.Simulator, Frameworks = "CoreGraphics QuartzCore", ForceLoad = true)]
 ```
 
-Quando si utilizza l'attributo `[LinkWith]`, il `libraryName` specificato viene incorporato nell'assembly risultante, consentendo agli utenti di fornire una singola DLL che contiene sia le dipendenze non gestite sia i flag della riga di comando necessari per utilizzare correttamente la libreria da Novell. iOS.
+Quando si utilizza l'attributo `[LinkWith]`, il `libraryName` specificato viene incorporato nell'assembly risultante, consentendo agli utenti di fornire una singola DLL che contiene sia le dipendenze non gestite sia i flag della riga di comando necessari per utilizzare correttamente la libreria da Xamarin.iOS.
 
 È anche possibile non fornire un `libraryName`, nel qual caso l'attributo `LinkWith` può essere usato solo per specificare flag del linker aggiuntivi:
 
@@ -1841,7 +1841,7 @@ Quando si utilizza l'attributo `[LinkWith]`, il `libraryName` specificato viene 
 
 Questi costruttori consentono di specificare la libreria da collegare e incorporare nell'assembly risultante, le destinazioni supportate supportate dalla libreria e gli eventuali flag di libreria facoltativi necessari per il collegamento alla libreria.
 
-Si noti che l'argomento `LinkTarget` viene dedotto da Novell. iOS e non è necessario impostarlo.
+Si noti che l'argomento `LinkTarget` viene dedotto da Xamarin.iOS e non è necessario impostarlo.
 
 Esempi:
 
@@ -1875,7 +1875,7 @@ Impostare questa proprietà su true se l'eseguibile risultante deve essere compi
 
 Nome della libreria non gestita da aggregare. Si tratta di un file con estensione ". a" e può contenere codice oggetto per più piattaforme (ad esempio, ARM e x86 per il simulatore).
 
-Le versioni precedenti di Novell. iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
+Le versioni precedenti di Xamarin.iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
 
 #### <a name="linkwithattributelinkerflags"></a>LinkWithAttribute.LinkerFlags
 
@@ -1885,7 +1885,7 @@ Ad esempio, se la libreria nativa richiede libxml2 e zlib, impostare la stringa 
 
 #### <a name="linkwithattributelinktarget"></a>LinkWithAttribute. LinkTarget
 
-Le versioni precedenti di Novell. iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
+Le versioni precedenti di Xamarin.iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
 
 #### <a name="linkwithattributeneedsgccexceptionhandling"></a>LinkWithAttribute.NeedsGccExceptionHandling
 
@@ -1893,7 +1893,7 @@ Impostare questa proprietà su true se la libreria da collegare richiede la libr
 
 #### <a name="linkwithattributesmartlink"></a>LinkWithAttribute. SmartLink
 
-Il `SmartLink` proprietà deve essere impostato su true per consentire a Novell. iOS di determinare se `ForceLoad` è obbligatorio o meno.
+Il `SmartLink` proprietà deve essere impostato su true per consentire a Xamarin.iOS di determinare se `ForceLoad` è obbligatorio o meno.
 
 #### <a name="linkwithattributeweakframeworks"></a>LinkWithAttribute.WeakFrameworks
 
@@ -1961,7 +1961,7 @@ Corrisponde a `clang` [`__attribute__((objc_requires_super))`](https://clang.llv
 
 ### <a name="zerocopystringsattribute"></a>ZeroCopyStringsAttribute
 
-Disponibile solo in Novell. iOS 5,4 e versioni successive.
+Disponibile solo in Xamarin.iOS 5,4 e versioni successive.
 
 Questo attributo indica al generatore che l'associazione per la libreria specifica (se applicata con `[assembly:]`) o il tipo deve usare il marshalling della stringa di copia zero veloce. Questo attributo equivale a passare l'opzione della riga di comando `--zero-copy` al generatore.
 
@@ -1994,7 +1994,7 @@ interface MyBinding {
 
 ## <a name="strongly-typed-dictionaries"></a>Dizionari fortemente tipizzati
 
-Con Novell. iOS 8,0 è stato introdotto il supporto per creare facilmente classi fortemente tipizzate che racchiudono `NSDictionaries`.
+Con Xamarin.iOS 8,0 è stato introdotto il supporto per creare facilmente classi fortemente tipizzate che racchiudono `NSDictionaries`.
 
 Sebbene sia sempre stato possibile usare il tipo di dati [DictionaryContainer](xref:Foundation.DictionaryContainer) insieme a un'API manuale, ora è molto più semplice eseguire questa operazione.  Per altre informazioni, vedere [emersione dei tipi forti](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 

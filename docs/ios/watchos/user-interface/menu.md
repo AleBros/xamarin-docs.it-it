@@ -73,7 +73,7 @@ Usare il metodo `AddMenuItem` come illustrato:
 AddMenuItem (WKMenuItemIcon.Accept, "Yes", new ObjCRuntime.Selector ("tapped"));
 ```
 
-L'API del kit di controllo Novell. iOS richiede attualmente una `selector` per il metodo `AdMenuItem`, che deve essere dichiarata come segue:
+L'API del kit di controllo Xamarin.iOS richiede attualmente una `selector` per il metodo `AdMenuItem`, che deve essere dichiarata come segue:
 
 ```csharp
 [Export("tapped")]

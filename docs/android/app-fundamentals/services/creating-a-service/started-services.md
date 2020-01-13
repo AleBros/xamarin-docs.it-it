@@ -1,5 +1,5 @@
 ---
-title: Avvio dei servizi con Novell. Android
+title: Avvio dei servizi con Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73024770"
 ---
-# <a name="started-services-with-xamarinandroid"></a>Avvio dei servizi con Novell. Android
+# <a name="started-services-with-xamarinandroid"></a>Avvio dei servizi con Xamarin.Android
 
 ## <a name="started-services-overview"></a>Panoramica dei servizi avviati
 

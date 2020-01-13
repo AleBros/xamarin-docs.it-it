@@ -132,7 +132,7 @@ Prima di poter usare i servizi GCM nell'app, è prima necessario acquisire le cr
 
     [![creazione di un progetto XamarinGCM](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
-2. Immettere quindi il nome del pacchetto per l'app (in questo esempio, il nome del pacchetto è **com. Novell. gcmexample**) e fare clic su **continua per scegliere e configurare i servizi**:
+2. Immettere quindi il nome del pacchetto per l'app (in questo esempio, il nome del pacchetto è **com. Xamarin.gcmexample**) e fare clic su **continua per scegliere e configurare i servizi**:
 
     [![immissione del nome del pacchetto](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png#lightbox)
 

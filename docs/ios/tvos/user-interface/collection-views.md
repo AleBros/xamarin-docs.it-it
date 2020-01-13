@@ -90,7 +90,7 @@ Inoltre, il controller di visualizzazione della raccolta fornisce metodi sottopo
 
 ## <a name="collection-views-and-storyboards"></a>Viste e storyboard della raccolta
 
-Il modo più semplice per usare una visualizzazione di raccolta nell'app Novell. tvOS consiste nell'aggiungerne uno allo storyboard. Come esempio rapido, verrà creata un'app di esempio che presenta un'immagine, un titolo e un pulsante di selezione. Se l'utente fa clic sul pulsante Seleziona, viene visualizzata una visualizzazione raccolta che consente all'utente di scegliere una nuova immagine. Quando si sceglie un'immagine, la visualizzazione della raccolta viene chiusa e verrà visualizzata la nuova immagine e il titolo.
+Il modo più semplice per usare una visualizzazione di raccolta nell'app Xamarin.tvOS consiste nell'aggiungerne uno allo storyboard. Come esempio rapido, verrà creata un'app di esempio che presenta un'immagine, un titolo e un pulsante di selezione. Se l'utente fa clic sul pulsante Seleziona, viene visualizzata una visualizzazione raccolta che consente all'utente di scegliere una nuova immagine. Quando si sceglie un'immagine, la visualizzazione della raccolta viene chiusa e verrà visualizzata la nuova immagine e il titolo.
 
 Eseguire le operazioni seguenti:
 
@@ -821,7 +821,7 @@ Aggiunto di recente alle visualizzazioni di raccolta per iOS 9 è stata la possi
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata illustrata la progettazione e l'uso delle visualizzazioni di raccolta all'interno di un'app Novell. tvOS. In primo luogo, sono stati discussi tutti gli elementi che costituiscono la visualizzazione di raccolta. Successivamente, è stato illustrato come progettare e implementare una visualizzazione di raccolta utilizzando uno storyboard. Infine, vengono forniti collegamenti alle informazioni sulla creazione di layout personalizzati e sul riordinamento degli elementi.
+In questo articolo è stata illustrata la progettazione e l'uso delle visualizzazioni di raccolta all'interno di un'app Xamarin.tvOS. In primo luogo, sono stati discussi tutti gli elementi che costituiscono la visualizzazione di raccolta. Successivamente, è stato illustrato come progettare e implementare una visualizzazione di raccolta utilizzando uno storyboard. Infine, vengono forniti collegamenti alle informazioni sulla creazione di layout personalizzati e sul riordinamento degli elementi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

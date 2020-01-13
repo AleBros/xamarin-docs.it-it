@@ -1,6 +1,6 @@
 ---
-title: Testo in xamarin. Forms
-description: Xamarin. Forms ha tre visualizzazioni principali per l'utilizzo di testo e questo articolo illustra come usarle per immettere e visualizzare il testo nelle applicazioni xamarin. Forms.
+title: Testo in Xamarin.Forms
+description: Xamarin.Forms ha tre visualizzazioni principali per l'utilizzo di testo e questo articolo illustra come usarle per immettere e visualizzare il testo nelle applicazioni Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70227968"
 ---
-# <a name="text-in-xamarinforms"></a>Testo in xamarin. Forms
+# <a name="text-in-xamarinforms"></a>Testo in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Con xamarin. Forms è possibile immettere o visualizzare il testo._
+_Con Xamarin.Forms è possibile immettere o visualizzare il testo._
 
-Xamarin. Forms ha tre visualizzazioni principali per l'utilizzo di testo:
+Xamarin.Forms ha tre visualizzazioni principali per l'utilizzo di testo:
 
 - **[Etichetta](#Label)**  &mdash; per la presentazione di testo su una o più righe. È possibile visualizzare il testo con più opzioni di formattazione nella stessa riga.
 - **[Immissione](#Entry)**  &mdash; per l'immissione di testo che occupa una sola riga. Immissione include una modalità password.

@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'applicazione Novell. iOS tramite l'API Elements
+title: Creazione di un'applicazione Xamarin.iOS tramite l'API Elements
 description: Questo articolo si basa sulle informazioni presentate nella finestra di dialogo Introduzione a MonoTouch. Viene presentata una procedura dettagliata che illustra come usare il MonoTouch. Dialog (MT. D) elementi API per iniziare rapidamente a creare un'applicazione con MT. D.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002374"
 ---
-# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Elements
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creazione di un'applicazione Xamarin.iOS tramite l'API Elements
 
 _Questo articolo si basa sulle informazioni presentate nella finestra di dialogo Introduzione a MonoTouch. Viene presentata una procedura dettagliata che illustra come usare il MonoTouch. Dialog (MT. D) elementi API per iniziare rapidamente a creare un'applicazione con MT. D._
 
@@ -24,7 +24,7 @@ In questa procedura dettagliata verrà usato il MT. D elementi API per creare un
 
 ## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
-Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
+Mt. D viene distribuito con Xamarin.iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Xamarin.iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
 
 ## <a name="elements-api-walkthrough"></a>Procedura dettagliata per l'API elementi
 

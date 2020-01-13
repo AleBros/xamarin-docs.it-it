@@ -16,7 +16,7 @@ ms.locfileid: "73030412"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Novell
 
-In alcuni casi potrebbe essere necessario visualizzare una serie di pagine o immagini nell'app Novell. tvOS. Un controllo pagina è stato progettato per indicare in modo chiaro quale pagina di un utente si trova al di fuori del numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su uno sfondo scuro a forma ovale. Nella pagina corrente viene visualizzato un punto pieno, tutte le altre pagine vengono visualizzate come punti vuoti. Il controllo pagina Ritaglia i punti più esterni se sono presenti troppi per adattarsi all'area di sfondo.
+In alcuni casi potrebbe essere necessario visualizzare una serie di pagine o immagini nell'app Xamarin.tvOS. Un controllo pagina è stato progettato per indicare in modo chiaro quale pagina di un utente si trova al di fuori del numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su uno sfondo scuro a forma ovale. Nella pagina corrente viene visualizzato un punto pieno, tutte le altre pagine vengono visualizzate come punti vuoti. Il controllo pagina Ritaglia i punti più esterni se sono presenti troppi per adattarsi all'area di sfondo.
 
 [![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
 
@@ -31,7 +31,7 @@ Quando si usa un controllo pagina, Apple presenta i suggerimenti seguenti:
 
 ## <a name="page-controls-and-storyboards"></a>Controlli e storyboard della pagina
 
-Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare i controlli pagina in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -162,7 +162,7 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato la progettazione e l'uso del controllo pagina all'interno di un'app Novell. tvOS.
+Questo articolo ha trattato la progettazione e l'uso del controllo pagina all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

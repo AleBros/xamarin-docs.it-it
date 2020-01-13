@@ -1,6 +1,6 @@
 ---
 title: Installazione del supporto tvOS in Novell
-description: Questo articolo illustra il supporto per tvOS in Xcode 9 e Novell. iOS 11 e fornisce brevi istruzioni su come ottenere la configurazione per sviluppare app tvOS con Novell.
+description: Questo articolo illustra il supporto per tvOS in Xcode 9 e Xamarin.iOS 11 e fornisce brevi istruzioni su come ottenere la configurazione per sviluppare app tvOS con Novell.
 ms.prod: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
 ms.technology: xamarin-ios
@@ -21,9 +21,9 @@ ms.locfileid: "73030705"
 
 Apple ha rilasciato Apple TV 4K e tvOS 11. La piattaforma Apple TV è aperta agli sviluppatori, consentendo loro di creare app immersive avanzate e di rilasciarle tramite l'App Store di Apple TV incorporata.
 
-Novell. iOS 11 e versioni successive supportano tvOS 11 SDK fornito con la versione di Xcode 9 di Apple.
+Xamarin.iOS 11 e versioni successive supportano tvOS 11 SDK fornito con la versione di Xcode 9 di Apple.
 
-- [Note sulla versione di Novell. iOS](https://docs.microsoft.com/xamarin/ios/release-notes/)
+- [Note sulla versione di Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/release-notes/)
 - [Note sulla versione di Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)
 
 ## <a name="installation"></a>Installazione

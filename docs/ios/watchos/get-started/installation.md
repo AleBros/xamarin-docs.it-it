@@ -27,13 +27,13 @@ watchos 1 ha richiesto in origine OS X Yosemite (10,10) con Xcode 7.
 
 Un'app Watch è costituita da tre progetti:
 
-- **Progetto di app iPhone Novell. iOS** : si tratta di un normale progetto iPhone, che può essere uno qualsiasi dei modelli Novell. iOS. L'app Watch e la relativa estensione verranno raggruppate all'interno del progetto principale.
+- **Progetto di app iPhone Xamarin.iOS** : si tratta di un normale progetto iPhone, che può essere uno qualsiasi dei modelli Xamarin.iOS. L'app Watch e la relativa estensione verranno raggruppate all'interno del progetto principale.
 
 - **Progetto di estensione Watch** : contiene il codice, ad esempio le classi controller, per l'app Watch.
 
 - **Progetto di app Watch** : contiene il file dello storyboard dell'interfaccia utente con tutte le risorse dell'interfaccia utente per l'app Watch.
 
-La soluzione di [esempio Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) ha un aspetto simile al seguente in Novell. studio:
+La soluzione di [esempio Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) ha un aspetto simile al seguente in Xamarin.studio:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

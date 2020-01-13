@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 24. Navigazione tra le pagine
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 24. Navigazione tra le pagine'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 24. Navigazione tra le pagine'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
@@ -135,7 +135,7 @@ Il *domestica* pagina facilmente accessibili i metodi pubblici e le proprietà n
 
 ### <a name="messagingcenter"></a>MessagingCenter
 
-Xamarin. Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe offre un altro modo per due pagine comunicare tra loro. I messaggi sono identificati da una stringa di testo e possono essere accompagnati da qualsiasi oggetto.
+Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe offre un altro modo per due pagine comunicare tra loro. I messaggi sono identificati da una stringa di testo e possono essere accompagnati da qualsiasi oggetto.
 
 È necessario sottoscriverli un programma che desidera ricevere messaggi da un determinato tipo usando [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) e specificare una funzione di callback. In un secondo momento è possibile annullare la sottoscrizione chiamando [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*). La funzione di richiamata riceve qualsiasi messaggio inviato dal tipo specificato con il nome specificato inviato tramite il [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) (metodo).
 

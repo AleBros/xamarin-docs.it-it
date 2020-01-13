@@ -1,6 +1,6 @@
 ---
-title: Configurazione di SQLite in Novell. iOS
-description: Questo documento descrive come determinare il percorso di un file di database SQLite in un'applicazione Novell. iOS. Questi concetti sono rilevanti a prescindere dal meccanismo di accesso ai dati selezionato.
+title: Configurazione di SQLite in Xamarin.iOS
+description: Questo documento descrive come determinare il percorso di un file di database SQLite in un'applicazione Xamarin.iOS. Questi concetti sono rilevanti a prescindere dal meccanismo di accesso ai dati selezionato.
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009058"
 ---
-# <a name="configuring-sqlite-in-xamarinios"></a>Configurazione di SQLite in Novell. iOS
+# <a name="configuring-sqlite-in-xamarinios"></a>Configurazione di SQLite in Xamarin.iOS
 
-Per usare SQLite nell'applicazione Novell. iOS, è necessario determinare il percorso del file corretto per il file di database.
+Per usare SQLite nell'applicazione Xamarin.iOS, è necessario determinare il percorso del file corretto per il file di database.
 
 ## <a name="database-file-path"></a>Percorso file di database
 
@@ -70,4 +70,4 @@ Tutti gli accessi al database (letture, Scritture, aggiornamenti e così via) de
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -16,7 +16,7 @@ ms.locfileid: "70770754"
 ---
 # <a name="enterprise-app-navigation"></a>Esplorazione di app aziendali
 
-Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa in seguito a modifiche dello stato basato su logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVC (Model-View-ViewModel), in quanto devono essere soddisfatte le seguenti difficoltà:
+Xamarin.Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa in seguito a modifiche dello stato basato su logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVC (Model-View-ViewModel), in quanto devono essere soddisfatte le seguenti difficoltà:
 
 - Come identificare la vista a cui spostarsi, usando un approccio che non introduce un accoppiamento stretto e dipendenze tra le visualizzazioni.
 - Viene creata un'istanza e viene inizializzata la modalità di coordinamento del processo in base al quale è possibile spostarsi nella visualizzazione. Quando si usa MVVM, è necessario creare un'istanza del modello di visualizzazione e visualizzazione e associarlo tra loro tramite il contesto di associazione della visualizzazione. Quando un'app usa un contenitore di inserimento delle dipendenze, la creazione di istanze di viste e modelli di visualizzazione potrebbe richiedere un meccanismo di costruzione specifico.
@@ -85,7 +85,7 @@ La `ViewModelBase` classe archivia l' `NavigationService` istanza di in `Navigat
 
 ### <a name="handling-navigation-requests"></a>Gestione delle richieste di navigazione
 
-Novell. Forms fornisce [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) la classe, che implementa un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Xamarin.Forms fornisce [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) la classe, che implementa un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 Invece di usare direttamente [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) la classe, l'app eShopOnContainers esegue il wrapping `NavigationPage` della classe nella `CustomNavigationView` classe, come illustrato nell'esempio di codice seguente:
 
@@ -302,7 +302,7 @@ Un'app potrebbe dover interagire con l'utente durante un'operazione di navigazio
 
 ## <a name="summary"></a>Riepilogo
 
-Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
+Xamarin.Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
 
 In questo capitolo è `NavigationService` stata presentata una classe, che viene utilizzata per eseguire l'esplorazione del primo modello di visualizzazione dai modelli di visualizzazione. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite test automatizzati. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business.
 

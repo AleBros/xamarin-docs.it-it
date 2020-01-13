@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028857"
 ---
-# <a name="xamarinandroid-listview-parts-and-functionality"></a>Parti e funzionalità di ListView di Novell. Android
+# <a name="xamarinandroid-listview-parts-and-functionality"></a>Parti e funzionalità di ListView di Xamarin.Android
 
 Una `ListView` è costituita dalle parti seguenti:
 

@@ -22,7 +22,7 @@ _Il sistema operativo Android usa i provider di contenuti per facilitare l'acces
 
 Un *ContentProvider* incapsula un repository di dati e fornisce un'API per accedervi. Il provider è incluso in un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione e la gestione dei dati. Il vantaggio principale dell'utilizzo di un provider di contenuti è consentire ad altre applicazioni di accedere facilmente ai dati incapsulati utilizzando un oggetto client del provider (denominato *ContentResolver*). Insieme, un provider di contenuti e un resolver del contenuto offrono un'API tra applicazioni coerente per l'accesso ai dati semplice da compilare e utilizzare. Qualsiasi applicazione può scegliere di utilizzare `ContentProviders` per gestire i dati internamente, nonché esporli ad altre applicazioni.
 
-Un `ContentProvider` è necessario anche per l'applicazione per fornire suggerimenti di ricerca personalizzati o per fornire la possibilità di copiare dati complessi dall'applicazione per incollarli in altre applicazioni. Questo documento illustra come accedere e compilare `ContentProviders` con Novell. Android.
+Un `ContentProvider` è necessario anche per l'applicazione per fornire suggerimenti di ricerca personalizzati o per fornire la possibilità di copiare dati complessi dall'applicazione per incollarli in altre applicazioni. Questo documento illustra come accedere e compilare `ContentProviders` con Xamarin.Android.
 
 La struttura di questa sezione è la seguente:
 

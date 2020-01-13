@@ -1,6 +1,6 @@
 ---
-title: Introduzione all'archiviazione dei dati nelle app Novell. iOS
-description: Questo documento descrive i vari metodi di archiviazione dei dati in un'applicazione Novell. iOS e fornisce informazioni specifiche sui vantaggi di SQLite.
+title: Introduzione all'archiviazione dei dati nelle app Xamarin.iOS
+description: Questo documento descrive i vari metodi di archiviazione dei dati in un'applicazione Xamarin.iOS e fornisce informazioni specifiche sui vantaggi di SQLite.
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73008341"
 ---
-# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione all'archiviazione dei dati nelle app Novell. iOS
+# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione all'archiviazione dei dati nelle app Xamarin.iOS
 
 ## <a name="when-to-use-a-database"></a>Quando utilizzare un database
 
@@ -67,4 +67,4 @@ Per ulteriori informazioni, vedere la case study di [lavoro](~/cross-platform/ap
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

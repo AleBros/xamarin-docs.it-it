@@ -1,5 +1,5 @@
 ---
-title: Novell. Android ListView e ciclo di vita delle attività
+title: Xamarin.Android ListView e ciclo di vita delle attività
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028943"
 ---
-# <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>Novell. Android ListView e ciclo di vita delle attività
+# <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>Xamarin.Android ListView e ciclo di vita delle attività
 
 Le attività passano attraverso determinati stati durante l'esecuzione dell'applicazione, ad esempio l'avvio, l'esecuzione, la sospensione e l'arresto. Per altre informazioni e linee guida specifiche sulla gestione delle transizioni di stato, vedere l' [esercitazione ciclo](~/android/app-fundamentals/activity-lifecycle/index.md)di vita delle attività.
 È importante comprendere il ciclo di vita delle attività e inserire il codice `ListView` nei percorsi corretti.

@@ -44,10 +44,10 @@ public abstract class AbstractClass : Java.Lang.Object
 Ecco i dettagli per eseguire questa operazione:
 
 - `[Register]` genera un nome di pacchetto piacevole in Java. si otterrà un nome di pacchetto generato automaticamente senza di esso.
-- La sottoclasse `Java.Lang.Object` segnala l'incorporamento di .NET per eseguire la classe tramite il generatore Java Novell. Android.
+- La sottoclasse `Java.Lang.Object` segnala l'incorporamento di .NET per eseguire la classe tramite il generatore Java Xamarin.Android.
 - Costruttore vuoto: è quello che si intende usare dal codice Java.
-- `(IntPtr, JniHandleOwnership)` Costruttore: è ciò che Novell. Android userà per la creazione C#dell'equivalente degli oggetti Java.
-- `[Export]` segnala a Novell. Android di esporre il metodo a Java. È anche possibile modificare il nome del metodo, poiché il mondo Java mi piace usare i metodi minuscoli.
+- `(IntPtr, JniHandleOwnership)` Costruttore: è ciò che Xamarin.Android userà per la creazione C#dell'equivalente degli oggetti Java.
+- `[Export]` segnala a Xamarin.Android di esporre il metodo a Java. È anche possibile modificare il nome del metodo, poiché il mondo Java mi piace usare i metodi minuscoli.
 
 Successivamente, si crea un C# metodo per testare lo scenario:
 
@@ -97,9 +97,9 @@ Se questo unit test è stato eseguito così com'è, l'errore potrebbe essere sim
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-Ciò che manca qui è un tipo di `Invoker`. Si tratta di una sottoclasse di `AbstractClass` che C# Invia le chiamate a Java. Se un oggetto Java entra nel C# mondo e il tipo C# equivalente è abstract, Novell. Android cerca automaticamente un C# tipo con il suffisso`Invoker`per l'uso all' C# interno del codice.
+Ciò che manca qui è un tipo di `Invoker`. Si tratta di una sottoclasse di `AbstractClass` che C# Invia le chiamate a Java. Se un oggetto Java entra nel C# mondo e il tipo C# equivalente è abstract, Xamarin.Android cerca automaticamente un C# tipo con il suffisso`Invoker`per l'uso all' C# interno del codice.
 
-Novell. Android usa questo modello di `Invoker` per i progetti di associazione Java tra le altre cose.
+Xamarin.Android usa questo modello di `Invoker` per i progetti di associazione Java tra le altre cose.
 
 Di seguito è illustrata l'implementazione di `AbstractClassInvoker`:
 
@@ -150,17 +150,17 @@ C'è molto da fare qui:
 - Aggiunta `class_ref` per conservare il riferimento JNI alla classe Java che sottoclassi la C# classe
 - Aggiunta `id_gettext` per conservare il riferimento JNI al metodo Java `getText`
 - È stato incluso un costruttore `(IntPtr, JniHandleOwnership)`
-- Implementato `ThresholdType` e `ThresholdClass` come requisito per Novell. Android per conoscere i dettagli relativi al `Invoker`
+- Implementato `ThresholdType` e `ThresholdClass` come requisito per Xamarin.Android per conoscere i dettagli relativi al `Invoker`
 - `GetText` necessario per cercare il metodo Java `getText` con la firma JNI appropriata e chiamarlo
 - `Dispose` è necessario solo per cancellare il riferimento a `class_ref`
 
 Dopo l'aggiunta di questa classe e la generazione di un nuovo AAR, il unit test passerà. Come si può notare, questo modello per le richiamate non è *ideale*, ma fattibile.
 
-Per informazioni dettagliate sull'interoperabilità Java, vedere la documentazione straordinaria di [Novell. Android](~/android/platform/java-integration/working-with-jni.md) in questo argomento.
+Per informazioni dettagliate sull'interoperabilità Java, vedere la documentazione straordinaria di [Xamarin.Android](~/android/platform/java-integration/working-with-jni.md) in questo argomento.
 
 ## <a name="interfaces"></a>Interfacce
 
-Le interfacce sono molto le stesse delle classi astratte, ad eccezione di un dettaglio: Novell. Android non genera Java per questi elementi. Questo è dovuto al fatto che prima dell'incorporamento di .NET non ci sono molti scenari in C# cui Java implementa un'interfaccia.
+Le interfacce sono molto le stesse delle classi astratte, ad eccezione di un dettaglio: Xamarin.Android non genera Java per questi elementi. Questo è dovuto al fatto che prima dell'incorporamento di .NET non ci sono molti scenari in C# cui Java implementa un'interfaccia.
 
 Supponiamo che sia presente l'interfaccia C# seguente:
 
@@ -173,9 +173,9 @@ public interface IJavaCallback : IJavaObject
 }
 ```
 
-`IJavaObject` segnala all'incorporamento di .NET che si tratta di un'interfaccia Novell. Android, ma in caso contrario è esattamente uguale a una classe `abstract`.
+`IJavaObject` segnala all'incorporamento di .NET che si tratta di un'interfaccia Xamarin.Android, ma in caso contrario è esattamente uguale a una classe `abstract`.
 
-Poiché Novell. Android non genera attualmente il codice Java per questa interfaccia, aggiungere il codice Java seguente al C# progetto:
+Poiché Xamarin.Android non genera attualmente il codice Java per questa interfaccia, aggiungere il codice Java seguente al C# progetto:
 
 ```java
 package mono.embeddinator.android;
@@ -267,7 +267,7 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-Se è stata seguita la classe `abstract` esempio precedente, il funzionamento è a eccezione di un dettaglio: _Novell. Android non esegue la ricerca del `Invoker`_.
+Se è stata seguita la classe `abstract` esempio precedente, il funzionamento è a eccezione di un dettaglio: _Xamarin.Android non esegue la ricerca del `Invoker`_.
 
 Per risolvere questo problema, modificare C# la classe in modo che sia`abstract`:
 
@@ -275,19 +275,19 @@ Per risolvere questo problema, modificare C# la classe in modo che sia`abstract`
 public abstract class VirtualClass : Java.Lang.Object
 ```
 
-Questo scenario non è ideale, ma si tratta di uno scenario funzionante. Novell. Android preleverà il `VirtualClassInvoker` e Java potrà usare `@Override` sul metodo.
+Questo scenario non è ideale, ma si tratta di uno scenario funzionante. Xamarin.Android preleverà il `VirtualClassInvoker` e Java potrà usare `@Override` sul metodo.
 
 ## <a name="callbacks-in-the-future"></a>Callback in futuro
 
 Ci sono un paio di cose che è possibile fare per migliorare questi scenari:
 
 1. `throws Throwable` sui C# costruttori è stato corretto [in questa richiesta](https://github.com/xamarin/java.interop/pull/170)pull.
-1. Rendere il generatore Java nelle interfacce di supporto Novell. Android.
+1. Rendere il generatore Java nelle interfacce di supporto Xamarin.Android.
     - In questo modo si elimina la necessità di aggiungere un file di origine Java con un'azione di compilazione di `AndroidJavaSource`.
-1. Fare in modo che Novell. Android carichi un `Invoker` per le classi virtuali.
+1. Fare in modo che Xamarin.Android carichi un `Invoker` per le classi virtuali.
     - In questo modo si elimina la necessità di contrassegnare la classe nell'esempio `virtual` `abstract`.
 1. Genera automaticamente classi di `Invoker` per l'incorporamento di .NET
-    - Questa operazione sarà complicata, ma fattibile. Novell. Android sta già eseguendo un'operazione simile a questa per i progetti di associazione Java.
+    - Questa operazione sarà complicata, ma fattibile. Xamarin.Android sta già eseguendo un'operazione simile a questa per i progetti di associazione Java.
 
 Qui è necessario eseguire numerose operazioni, ma questi miglioramenti all'incorporamento di .NET sono possibili.
 

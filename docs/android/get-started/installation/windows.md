@@ -21,7 +21,7 @@ _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.A
 ## <a name="overview"></a>Panoramica
 
 Poiché Xamarin è ora incluso gratuitamente in tutte le edizioni di Visual Studio e non richiede una licenza separata, è possibile usare il programma di installazione di Visual Studio per scaricare e installare gli strumenti di Xamarin.Android.
-(L'installazione manuale e i passaggi di licenza richiesti per le versioni precedenti di Novell. Android non sono più necessari). In questa guida si apprenderà quanto segue:
+(L'installazione manuale e i passaggi di licenza richiesti per le versioni precedenti di Xamarin.Android non sono più necessari). In questa guida si apprenderà quanto segue:
 
 - Configurare percorsi personalizzati per Java Development Kit, Android SDK e Android NDK.
 

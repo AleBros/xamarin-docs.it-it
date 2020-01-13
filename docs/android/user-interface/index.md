@@ -1,6 +1,6 @@
 ---
-title: Creazione dell'interfaccia utente con Novell. Android
-description: Creazione di interfacce utente per le app Novell. Android
+title: Creazione dell'interfaccia utente con Xamarin.Android
+description: Creazione di interfacce utente per le app Xamarin.Android
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028998"
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
-Le sezioni seguenti illustrano i diversi strumenti e i blocchi predefiniti usati per comporre le interfacce utente nelle app Novell. Android.
+Le sezioni seguenti illustrano i diversi strumenti e i blocchi predefiniti usati per comporre le interfacce utente nelle app Xamarin.Android.
 
 ## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 

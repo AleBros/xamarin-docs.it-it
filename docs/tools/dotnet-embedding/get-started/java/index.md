@@ -35,13 +35,13 @@ Per Windows:
 
 Per Android:
 
-* [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+* [Xamarin.Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
 * [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1,8
 
 È possibile usare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/) per modificare e compilare il C# codice.
 
 > [!NOTE]
-> Le versioni precedenti di Xcode, Visual Studio, Novell. Android, Android Studio e mono _potrebbero_ funzionare, ma non sono testate e non sono supportate.
+> Le versioni precedenti di Xcode, Visual Studio, Xamarin.Android, Android Studio e mono _potrebbero_ funzionare, ma non sono testate e non sono supportate.
 
 ## <a name="installation"></a>Installazione
 

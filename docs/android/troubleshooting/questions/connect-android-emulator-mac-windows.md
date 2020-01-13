@@ -96,7 +96,7 @@ Una piccola attenzione: se si usa la porta `5555` per la porta locale, `adb` ril
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>La tecnica alternativa che usa `adb -H` non è ancora supportata
 
 In teoria, un altro approccio consiste nell'usare la funzionalità incorporata di `adb`per connettersi a un server di `adb` in esecuzione in un computer remoto (vedere ad esempio [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)).
-Tuttavia, le estensioni dell'IDE Novell. Android attualmente non forniscono un modo per configurare tale opzione.
+Tuttavia, le estensioni dell'IDE Xamarin.Android attualmente non forniscono un modo per configurare tale opzione.
 
 ## <a name="contact-information"></a>Informazioni di contatto
 

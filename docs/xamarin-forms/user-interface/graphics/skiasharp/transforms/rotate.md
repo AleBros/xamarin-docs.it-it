@@ -255,7 +255,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il `revolveDegrees` e `rotateDegrees` campi vengono animati. Questo programma Usa una tecnica di animazione differenti basata su xamarin. Forms [ `Animation` ](xref:Xamarin.Forms.Animation) classe. (Questa classe viene descritta [capitolo 22 *creazione di App per dispositivi mobili con xamarin. Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) i `OnAppearing` override vengono creati due `Animation` gli oggetti con i metodi di callback e lo chiama `Commit` su di essi per una durata animazione:
+Il `revolveDegrees` e `rotateDegrees` campi vengono animati. Questo programma Usa una tecnica di animazione differenti basata su Xamarin.Forms [ `Animation` ](xref:Xamarin.Forms.Animation) classe. (Questa classe viene descritta [capitolo 22 *creazione di App per dispositivi mobili con Xamarin.Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) i `OnAppearing` override vengono creati due `Animation` gli oggetti con i metodi di callback e lo chiama `Commit` su di essi per una durata animazione:
 
 ```csharp
 protected override void OnAppearing()

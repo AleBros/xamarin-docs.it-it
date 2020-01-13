@@ -1,6 +1,6 @@
 ---
-title: Controlli standard in Novell. Mac
-description: Questo articolo illustra come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Novell. Mac. Viene descritto come aggiungerli a un'interfaccia con Interface Builder e interagire con essi nel codice.
+title: Controlli standard in Xamarin.Mac
+description: Questo articolo illustra come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Xamarin.Mac. Viene descritto come aggiungerli a un'interfaccia con Interface Builder e interagire con essi nel codice.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73008361"
 ---
-# <a name="standard-controls-in-xamarinmac"></a>Controlli standard in Novell. Mac
+# <a name="standard-controls-in-xamarinmac"></a>Controlli standard in Xamarin.Mac
 
-_Questo articolo illustra come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Novell. Mac. Viene descritto come aggiungerli a un'interfaccia con Interface Builder e interagire con essi nel codice._
+_Questo articolo illustra come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Xamarin.Mac. Viene descritto come aggiungerli a un'interfaccia con Interface Builder e interagire con essi nel codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi controlli AppKit che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire i controlli AppKit (o, facoltativamente, crearli C# direttamente nel codice).
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi controlli AppKit che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire i controlli AppKit (o, facoltativamente, crearli C# direttamente nel codice).
 
-I controlli AppKit sono gli elementi dell'interfaccia utente usati per creare l'interfaccia utente dell'applicazione Novell. Mac. Sono costituiti da elementi quali pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati e generano azioni immediate o risultati visibili quando un utente li manipola.
+I controlli AppKit sono gli elementi dell'interfaccia utente usati per creare l'interfaccia utente dell'applicazione Xamarin.Mac. Sono costituiti da elementi quali pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati e generano azioni immediate o risultati visibili quando un utente li manipola.
 
 [![](standard-controls-images/intro01.png "The example app main screen")](standard-controls-images/intro01.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso dei controlli AppKit in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso dei controlli AppKit in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Controls_and_Views" />
 
@@ -71,7 +71,7 @@ Per ulteriori informazioni, vedere la sezione [informazioni sui controlli e sull
 
 ## <a name="creating-a-user-interface-in-interface-builder"></a>Creazione di un'interfaccia utente in Interface Builder
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
+Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
 
 [![](standard-controls-images/edit01.png "Selecting the Main Storyboard in the Solution Explorer")](standard-controls-images/edit01.png#lightbox)
 
@@ -193,7 +193,7 @@ namespace AppKit
 }
 ```
 
-Dove l'istruzione `[Register("SourceListView")]` espone la classe `SourceListView` a Objective-C in modo che sia possibile utilizzare in Interface Builder. Per altre informazioni, vedere la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento interno di [Novell. Mac](~/mac/internals/how-it-works.md) , spiega i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Dove l'istruzione `[Register("SourceListView")]` espone la classe `SourceListView` a Objective-C in modo che sia possibile utilizzare in Interface Builder. Per altre informazioni, vedere la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento interno di [Xamarin.Mac](~/mac/internals/how-it-works.md) , spiega i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 Con il codice precedente, è possibile trascinare un controllo AppKit del tipo di base che si sta estendendo nell'area di progettazione (nell'esempio riportato di seguito, un **elenco di origine**), passare a **Identity Inspector** e impostare la **classe personalizzata** sul nome che è stato esposto a Objective-C (ad esempio `SourceListView`):
 
@@ -221,7 +221,7 @@ Per altre informazioni sull'uso di **Outlet** e **azioni**, vedere la sezione [O
 
 ### <a name="synchronizing-changes-with-xcode"></a>Sincronizzazione delle modifiche con Xcode
 
-Quando si torna al Visual Studio per Mac da Xcode, tutte le modifiche apportate in Xcode verranno sincronizzate automaticamente con il progetto Novell. Mac.
+Quando si torna al Visual Studio per Mac da Xcode, tutte le modifiche apportate in Xcode verranno sincronizzate automaticamente con il progetto Xamarin.Mac.
 
 Se si seleziona il `SplitViewController.designer.cs` nel **Esplora soluzioni** , sarà possibile vedere come l' **Outlet** e l' **azione** sono stati collegati nel C# codice:
 
@@ -261,7 +261,7 @@ Come si può notare, Visual Studio per Mac resta in attesa delle modifiche appor
 Normalmente non sarà mai necessario aprire il `SplitViewController.designer.cs`, ma è stato presentato solo a scopo didattico.
 
 > [!IMPORTANT]
-> Nella maggior parte dei casi, Visual Studio per Mac visualizzerà automaticamente tutte le modifiche apportate in Xcode e le sincronizza con il progetto Novell. Mac. Se la sincronizzazione non viene eseguita automaticamente, tornare a Xcode e quindi di nuovo in Visual Studio per Mac. Questa operazione avvia solitamente un ciclo di sincronizzazione.
+> Nella maggior parte dei casi, Visual Studio per Mac visualizzerà automaticamente tutte le modifiche apportate in Xcode e le sincronizza con il progetto Xamarin.Mac. Se la sincronizzazione non viene eseguita automaticamente, tornare a Xcode e quindi di nuovo in Visual Studio per Mac. Questa operazione avvia solitamente un ciclo di sincronizzazione.
 
 <a name="Working_with_Buttons" />
 
@@ -577,7 +577,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 Un `NSTextView` fornisce un'area di visualizzazione e modifica di testo completa con formattazione incorporata. Analogamente a una `NSTextField`, utilizzare la proprietà `StringValue` per leggere o impostare il valore dell'area.
 
-Per un esempio di un esempio complesso di uso delle visualizzazioni di testo in un'app Novell. Mac, vedere l' [app di esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
+Per un esempio di un esempio complesso di uso delle visualizzazioni di testo in un'app Xamarin.Mac, vedere l' [app di esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
 
 Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati indicati i collegamenti delle tecnologie e dei metodi principali alle informazioni corrispondenti nelle guide di Xamarin.Mac.
 
@@ -630,9 +630,9 @@ Selezionare ogni scheda nella **gerarchia dell'interfaccia** per impostarne il *
 
 ## <a name="data-binding-appkit-controls"></a>Data Binding AppKit controlli
 
-Usando le tecniche di codifica e data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+Usando le tecniche di codifica e data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
-Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
+Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Xamarin.Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
 
 Per altre informazioni, vedere la sezione [Data Binding semplice](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) del data binding e la documentazione relativa al [codice chiave-valore](~/mac/app-fundamentals/databinding.md) .
 
@@ -640,7 +640,7 @@ Per altre informazioni, vedere la sezione [Data Binding semplice](~/mac/app-fund
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato in dettaglio come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Novell. Mac. È stato illustrato come aggiungerli a una progettazione dell'interfaccia utente in Interface Builder di Xcode, esponendoli al codice tramite Outlet e azioni e utilizzando i C# controlli AppKit nel codice.
+Questo articolo ha illustrato in dettaglio come usare i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati in un'applicazione Xamarin.Mac. È stato illustrato come aggiungerli a una progettazione dell'interfaccia utente in Interface Builder di Xcode, esponendoli al codice tramite Outlet e azioni e utilizzando i C# controlli AppKit nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

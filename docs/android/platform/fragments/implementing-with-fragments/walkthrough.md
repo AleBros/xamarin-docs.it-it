@@ -1,5 +1,5 @@
 ---
-title: Procedura dettagliata per i frammenti di Novell. Android-parte 1
+title: Procedura dettagliata per i frammenti di Xamarin.Android-parte 1
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
@@ -16,7 +16,7 @@ ms.locfileid: "73027408"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>Procedura dettagliata per i frammenti &ndash; telefono
 
-Questa è la prima parte di una procedura dettagliata che creerà un'app Novell. Android destinata a un dispositivo Android con orientamento verticale. In questa procedura dettagliata viene illustrato come creare frammenti in Novell. Android e come aggiungerli a un esempio.
+Questa è la prima parte di una procedura dettagliata che creerà un'app Xamarin.Android destinata a un dispositivo Android con orientamento verticale. In questa procedura dettagliata viene illustrato come creare frammenti in Xamarin.Android e come aggiungerli a un esempio.
 
 [![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
@@ -29,14 +29,14 @@ Per questa app verranno create le classi seguenti:
 
 ## <a name="1-create-the-android-project"></a>1. creare il progetto Android
 
-Creare un nuovo progetto Novell. Android denominato **FragmentSample**.
+Creare un nuovo progetto Xamarin.Android denominato **FragmentSample**.
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![creare un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[![creare un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![la creazione di un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[![la creazione di un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
 Si consiglia di selezionare **lo sviluppo moderno** per questa procedura dettagliata.
 

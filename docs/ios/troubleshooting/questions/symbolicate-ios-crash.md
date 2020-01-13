@@ -39,5 +39,5 @@ Quando si compila un'app iOS con Visual Studio per Mac o Visual Studio 2017, il 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [File di arresto anomalo Symbolicating iOS (Novell. iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- [File di arresto anomalo Symbolicating iOS (Xamarin.iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [Demistificazione dei log di arresto anomalo dell'applicazione iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)

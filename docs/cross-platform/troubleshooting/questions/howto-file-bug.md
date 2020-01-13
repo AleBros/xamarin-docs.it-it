@@ -59,7 +59,7 @@ OR
 
     1. Per gli errori che si verificano durante la compilazione o il debug di un progetto iOS da Visual Studio, eseguire la **guida > novell > log zip** dopo aver raggiunto l'errore e includere il file con estensione zip risultante nel report dei bug.
 
-    1. Per le eccezioni o gli arresti anomali nelle app Android o iOS, includere i [log di debug pertinenti per le app Novell. Android e Novell. iOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
+    1. Per le eccezioni o gli arresti anomali nelle app Android o iOS, includere i [log di debug pertinenti per le app Xamarin.Android e Xamarin.iOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
 
 1. <a name="note-5" />[ *^* ](#ref-5) se possibile per un problema specifico, un'opzione consiste nel ricreare il problema aggiungendo un numero ridotto di file dalla soluzione originale in una soluzione completamente nuova. Il team di Novell sarà spesso in grado di analizzare i problemi anche nei test case più grandi (presupponendo che i passaggi da riprodurre siano illustrati in modo chiaro), ma i test case più semplici offrono la migliore probabilità che il bug venga risolto rapidamente.
 

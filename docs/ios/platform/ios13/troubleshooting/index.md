@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031704"
 ---
-# <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 13 e Novell. iOS
+# <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 13 e Xamarin.iOS
 
 ## <a name="updating-to-xcode-11-stops-the-simulator-from-launching"></a>L'aggiornamento a Xcode 11 interrompe l'avvio del simulatore
 

@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607632"
 ---
-# <a name="xamarinios-samples"></a>Esempi di Novell. iOS
+# <a name="xamarinios-samples"></a>Esempi di Xamarin.iOS
 
 App di esempio e demo di codice multipiattaforma Xamarin.iOS per iniziare a creare app per dispositivi mobili con C# e Xamarin.
 
-[Tutti gli esempi di Novell. iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS)
+[Tutti gli esempi di Xamarin.iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS)
 
 :::row:::
       :::column:::
@@ -70,4 +70,4 @@ Illustra come usare molte visualizzazioni e controlli nel framework UIKit su tvO
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app di esempio Novell iOS e demo di codice, vedere [tutti gli esempi di Novell. iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS).
+Per il set completo di app di esempio Novell iOS e demo di codice, vedere [tutti gli esempi di Xamarin.iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS).

@@ -1,6 +1,6 @@
 ---
 title: Uso delle viste tabella tvOS in Novell
-description: In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Novell. tvOS.
+description: In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73022197"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Novell
 
-_In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Novell. tvOS._
+_In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Xamarin.tvOS._
 
 In tvOS, una vista tabella viene presentata come una singola colonna di righe di scorrimento che può essere facoltativamente organizzata in gruppi o sezioni. Le visualizzazioni di tabella devono essere usate quando è necessario visualizzare in modo efficiente una grande quantità di dati per l'utente, in modo chiaro e comprensibile.
 
@@ -64,7 +64,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo delle celle di visualizzaz
 
 ## <a name="working-with-table-views"></a>Utilizzo delle visualizzazioni di tabella
 
-Il modo più semplice per usare le visualizzazioni di tabella in un'app Novell. tvOS consiste nel crearlo e modificarne l'aspetto nella finestra di progettazione dell'interfaccia.
+Il modo più semplice per usare le visualizzazioni di tabella in un'app Xamarin.tvOS consiste nel crearlo e modificarne l'aspetto nella finestra di progettazione dell'interfaccia.
 
 Per iniziare, eseguire le operazioni seguenti:
 
@@ -951,7 +951,7 @@ Poiché tvOS è basato su iOS, le visualizzazioni di tabella e i controller di v
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata illustrata la progettazione e l'utilizzo di viste di tabella all'interno di un'app Novell. tvOS. In e è stato presentato un esempio di utilizzo di una visualizzazione tabella all'interno di una visualizzazione divisa, ovvero l'utilizzo tipico di una vista tabella in un'app tvOS.
+In questo articolo è stata illustrata la progettazione e l'utilizzo di viste di tabella all'interno di un'app Xamarin.tvOS. In e è stato presentato un esempio di utilizzo di una visualizzazione tabella all'interno di una visualizzazione divisa, ovvero l'utilizzo tipico di una vista tabella in un'app tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

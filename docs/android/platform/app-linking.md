@@ -38,7 +38,7 @@ Questa guida illustra come configurare un'applicazione Android 6,0 e come creare
 
 ## <a name="requirements"></a>Requisiti di
 
-Questa guida richiede Novell. Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
+Questa guida richiede Xamarin.Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
 
 Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Novell. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
 
@@ -53,7 +53,7 @@ La configurazione di collegamenti app in Android 6,0 prevede due passaggi princi
 
 ### <a name="configuring-the-intent-filter"></a>Configurazione del filtro preventivo
 
-È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Novell. Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
+È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Xamarin.Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
 
 - **`Intent.ActionView`** &ndash; questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
 - **`Categories`** &ndash; il filtro preventivo deve registrare sia Intent **[. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che Intent **[. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web.

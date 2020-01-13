@@ -88,7 +88,7 @@ Una volta creata una libreria di .NET Standard, è possibile aggiungervi un rife
 
 -----
 
-## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET Standard e Novell. Forms per lo sviluppatore .NET (video)
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET Standard e Xamarin.Forms per lo sviluppatore .NET (video)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 

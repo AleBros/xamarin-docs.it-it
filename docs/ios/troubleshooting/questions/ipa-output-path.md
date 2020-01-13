@@ -46,7 +46,7 @@ Questi passaggi funzioneranno per qualsiasi progetto iOS che usa il motore di co
 
 ## <a name="notes"></a>Note
 
-- La proprietà `CreateIpaDependsOn` viene definita nel file `Xamarin.iOS.Common.targets` che fa parte di Novell. iOS. Si comporta come descritto nella sezione override delle [destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) dell'articolo [procedura: estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- La proprietà `CreateIpaDependsOn` viene definita nel file `Xamarin.iOS.Common.targets` che fa parte di Xamarin.iOS. Si comporta come descritto nella sezione override delle [destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) dell'articolo [procedura: estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - Se si preferisce, è possibile utilizzare un'attività di **spostamento** anziché un'attività di **copia** . Se si sceglie questa opzione e si esegue la compilazione in Windows, sarà necessario usare il nome completo dell'attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con le attività di compilazione XamarinVS.
 
@@ -81,6 +81,6 @@ Questi passaggi funzioneranno per qualsiasi progetto iOS che usa il motore di co
 
 ## <a name="notes"></a>Note
 
-- La proprietà `CreateIpaDependsOn` viene definita nel file `Xamarin.iOS.Common.targets` che fa parte di Novell. iOS. t si comporta come descritto nella sezione [override delle destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) dell'articolo [procedura: estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- La proprietà `CreateIpaDependsOn` viene definita nel file `Xamarin.iOS.Common.targets` che fa parte di Xamarin.iOS. t si comporta come descritto nella sezione [override delle destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) dell'articolo [procedura: estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - Se si preferisce, è possibile utilizzare un'attività di **spostamento** anziché un'attività di **copia** . Se si sceglie questa opzione e si esegue la compilazione in Windows, sarà necessario usare il nome completo dell'attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con le attività di compilazione XamarinVS.

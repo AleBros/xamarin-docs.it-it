@@ -1,6 +1,6 @@
 ---
 title: Disegno a mano libera in SkiaSharp
-description: Questo articolo illustra come usare le dita per disegnare nell'area di disegno di SkiaSharp in un'applicazione xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come usare le dita per disegnare nell'area di disegno di SkiaSharp in un'applicazione Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
@@ -24,7 +24,7 @@ Un `SKPath` oggetto può essere continuamente aggiornato e visualizzato. Questa 
 
 ![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
 
-Il supporto per il tocco in xamarin. Forms non consente di rilevamento delle singole dita sullo schermo, in modo che un effetto di tocco di rilevamento di xamarin. Forms è stato sviluppato per fornire il supporto di tocco aggiuntive. Questo effetto è descritto nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Il programma di esempio [ **Touch-rilevamento effetto demo** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) include due pagine che utilizzano SkiaSharp, tra cui un programma dipingere.
+Il supporto per il tocco in Xamarin.Forms non consente di rilevamento delle singole dita sullo schermo, in modo che un effetto di tocco di rilevamento di Xamarin.Forms è stato sviluppato per fornire il supporto di tocco aggiuntive. Questo effetto è descritto nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Il programma di esempio [ **Touch-rilevamento effetto demo** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) include due pagine che utilizzano SkiaSharp, tra cui un programma dipingere.
 
 Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) soluzione include questo evento di tocco di rilevamento. Il progetto di libreria .NET Standard include la `TouchEffect` (classe), il `TouchActionType` enumerazione, la `TouchActionEventHandler` delegato e il `TouchActionEventArgs` classe. Ognuno dei progetti della piattaforma include un' `TouchEffect` classe per la piattaforma, il progetto iOS contiene anche un `TouchRecognizer` classe.
 
@@ -136,7 +136,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-I punti che accompagnano gli eventi di rilevamento di tocco sono coordinate di xamarin. Forms; questi devono essere convertiti alle coordinate di SkiaSharp, quali sono i pixel. Lo scopo del `ConvertToPixel` (metodo).
+I punti che accompagnano gli eventi di rilevamento di tocco sono coordinate di Xamarin.Forms; questi devono essere convertiti alle coordinate di SkiaSharp, quali sono i pixel. Lo scopo del `ConvertToPixel` (metodo).
 
 Il `PaintSurface` gestore quindi semplicemente esegue il rendering di entrambe le raccolte dei percorsi. Sotto i percorsi in corso verranno visualizzati i percorsi completati in precedenza:
 

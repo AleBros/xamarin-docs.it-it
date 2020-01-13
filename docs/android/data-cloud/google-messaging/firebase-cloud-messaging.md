@@ -20,7 +20,7 @@ _Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra
 
 [immagine del Hero![Firebase Cloud Messaging](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
 
-Questo argomento fornisce una panoramica generale del modo in cui Firebase Cloud Messaging instrada i messaggi tra l'app Novell. Android e un server app e fornisce una procedura dettagliata per l'acquisizione delle credenziali in modo che l'app possa usare i servizi FCM.
+Questo argomento fornisce una panoramica generale del modo in cui Firebase Cloud Messaging instrada i messaggi tra l'app Xamarin.Android e un server app e fornisce una procedura dettagliata per l'acquisizione delle credenziali in modo che l'app possa usare i servizi FCM.
 
 ## <a name="overview"></a>Panoramica
 
@@ -47,7 +47,7 @@ FCM usa le credenziali seguenti per identificare il server app e l'app client e 
 - <a name="fcm-in-action-registration-token"></a>Il **token di registrazione** &ndash; il token di *registrazione* (noto anche come *ID istanza*) è l'identità FCM dell'app client in un determinato dispositivo. Il token di registrazione viene generato in fase di esecuzione &ndash; l'app riceve un token di registrazione quando viene registrato per la prima volta con FCM mentre è in esecuzione in un dispositivo. Il token di registrazione autorizza un'istanza dell'app client (in esecuzione su quel particolare dispositivo) a ricevere i messaggi da FCM.
     Un esempio di token di registrazione è `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS`, ovvero una stringa molto lungo.
 
-La [configurazione di Firebase Cloud Messaging](#setup_fcm) (più avanti in questa guida) fornisce istruzioni dettagliate per la creazione di un progetto e la generazione di queste credenziali. Quando si crea un nuovo progetto nella [console di Firebase](https://console.firebase.google.com/), viene creato un file di credenziali denominato **Google-services. JSON** &ndash; aggiungere questo file al progetto Novell. Android come descritto in [notifiche remote con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
+La [configurazione di Firebase Cloud Messaging](#setup_fcm) (più avanti in questa guida) fornisce istruzioni dettagliate per la creazione di un progetto e la generazione di queste credenziali. Quando si crea un nuovo progetto nella [console di Firebase](https://console.firebase.google.com/), viene creato un file di credenziali denominato **Google-services. JSON** &ndash; aggiungere questo file al progetto Xamarin.Android come descritto in [notifiche remote con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 Le sezioni seguenti illustrano come usare queste credenziali quando le app client comunicano con i server app tramite FCM.
 
@@ -125,7 +125,7 @@ Prima di poter usare i servizi FCM nell'app, è necessario creare un nuovo proge
 
     [![aggiungere Firebase all'app Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
-4. Nella schermata successiva immettere il nome del pacchetto dell'app. In questo esempio, il nome del pacchetto è **com. Novell. fcmexample**. Questo valore deve corrispondere al nome del pacchetto dell'app Android. È anche possibile immettere un nome alternativo per l'app nel campo del **soprannome dell'app** :
+4. Nella schermata successiva immettere il nome del pacchetto dell'app. In questo esempio, il nome del pacchetto è **com. Xamarin.fcmexample**. Questo valore deve corrispondere al nome del pacchetto dell'app Android. È anche possibile immettere un nome alternativo per l'app nel campo del **soprannome dell'app** :
 
     [![immissione dell'esempio di FCM come nome alternativo dell'app](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 

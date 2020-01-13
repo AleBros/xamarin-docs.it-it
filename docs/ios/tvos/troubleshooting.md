@@ -28,23 +28,23 @@ La versione corrente del supporto tvOS di Novell presenta i seguenti problemi no
 - **Mono Framework** : crittografia mono 4,3. ProtectedData non riesce a decrittografare i dati da mono 4,2. Di conseguenza, i pacchetti NuGet non vengono ripristinati con l'errore `Data unprotection failed` quando viene configurata un'origine NuGet protetta.
   - **Soluzione alternativa** : in Visual Studio per Mac è necessario aggiungere tutte le origini dei pacchetti NuGet che usano l'autenticazione della password prima di ritentare il ripristino dei pacchetti.
 - **Visual Studio per Mac w/ F# componente aggiuntivo** : errore durante la creazione di F# un modello Android in Windows. Questa operazione dovrebbe continuare a funzionare correttamente in Mac.
-- **Novell. Mac** : quando si esegue il progetto di modello unificato Novell. Mac con il Framework di destinazione impostato su `Unsupported`, è possibile che venga visualizzata la `Could not connect to the debugger` popup.
+- **Xamarin.Mac** : quando si esegue il progetto di modello unificato Xamarin.Mac con il Framework di destinazione impostato su `Unsupported`, è possibile che venga visualizzata la `Could not connect to the debugger` popup.
   - **Potenziale soluzione alternativa** : eseguire il downgrade della versione di mono Framework disponibile nel canale stabile.
-- **Novell Visual studio & Novell. iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, è possibile che venga visualizzato l'errore `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`.
+- **Novell Visual studio & Xamarin.iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, è possibile che venga visualizzato l'errore `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`.
 
 Segnalare eventuali bug trovati su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ## <a name="troubleshooting"></a>Troubleshooting
 
-Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 9 con Novell. tvOS e la soluzione a questi problemi:
+Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 9 con Xamarin.tvOS e la soluzione a questi problemi:
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Eseguibile non valido: il file eseguibile non contiene bitcode
 
-Quando si tenta di inviare un'app Novell. tvOS all'App Store di Apple TV, è possibile che venga ricevuto un messaggio di errore nel formato _"eseguibile non valido. il file eseguibile non contiene bitcode"_ .
+Quando si tenta di inviare un'app Xamarin.tvOS all'App Store di Apple TV, è possibile che venga ricevuto un messaggio di errore nel formato _"eseguibile non valido. il file eseguibile non contiene bitcode"_ .
 
 Per risolvere questo problema, eseguire le operazioni seguenti:
 
-1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul file di progetto Novell. tvOS nella **Esplora soluzioni** e scegliere **Opzioni**.
+1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul file di progetto Xamarin.tvOS nella **Esplora soluzioni** e scegliere **Opzioni**.
 2. Selezionare **compilazione tvOS** e assicurarsi che la configurazione di **rilascio** sia la seguente: 
 
     [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
@@ -53,7 +53,7 @@ Per risolvere questo problema, eseguire le operazioni seguenti:
 
 ### <a name="verifying-that-your-tvos-app-contains-bitcode"></a>Verifica per verificare se l'app tvOS contiene bitcode
 
-Per verificare che la compilazione dell'app Novell. tvOS contenga bitcode, aprire l'app Terminal e immettere quanto segue:
+Per verificare che la compilazione dell'app Xamarin.tvOS contenga bitcode, aprire l'app Terminal e immettere quanto segue:
 
 ```csharp
 otool -l /path/to/your/tv.app/tv
@@ -131,7 +131,7 @@ Se si usa una libreria di terze parti (ad esempio monogame) e la compilazione de
 
 ### <a name="itms-90471-error-the-large-icon-is-missing"></a>Errore ITMS-90471. Icona grande mancante
 
-Se viene ricevuto un messaggio nel formato "errore ITMS-90471. L'icona grande è mancante "durante il tentativo di inviare un'app Novell. tvOS all'App Store di Apple TV per la versione, controllare quanto segue:
+Se viene ricevuto un messaggio nel formato "errore ITMS-90471. L'icona grande è mancante "durante il tentativo di inviare un'app Xamarin.tvOS all'App Store di Apple TV per la versione, controllare quanto segue:
 
 1. Assicurarsi di aver incluso gli asset icone grandi nel file `Assets.car` creato usando la documentazione delle icone dell' [app](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
 2. Assicurarsi di aver incluso il file di `Assets.car` dalla documentazione sull' [uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) nel bundle di applicazioni finale.
@@ -144,7 +144,7 @@ Oppure
 
 I controller dei giochi possono essere usati per migliorare la giocabilità e fornire un'idea di coinvolgimento in un gioco. Possono anche essere usati per controllare l'interfaccia standard di Apple TV, in modo che l'utente non debba passare tra il controller remoto e il controller.
 
-Se si sta inviando un'app Novell. tvOS con il supporto del controller di gioco all'App Store di Apple TV e si sta ricevendo un messaggio di errore nel formato seguente:
+Se si sta inviando un'app Xamarin.tvOS con il supporto del controller di gioco all'App Store di Apple TV e si sta ricevendo un messaggio di errore nel formato seguente:
 
 _Sono stati individuati uno o più problemi con il recapito recente per "nome app". Il recapito ha avuto esito positivo, ma è possibile risolvere i problemi seguenti durante la distribuzione successiva:_
 
@@ -179,7 +179,7 @@ Per ulteriori informazioni, vedere la sezione [Working with Game Controllers](~/
 
 ### <a name="incompatible-target-framework-netportable-versionv45-profileprofile78"></a>Framework di destinazione incompatibile:. NetPortable, Version = v 4.5, profile = Profile78
 
-Quando si tenta di includere una libreria di classi portabile (PCL) in un progetto Novell. tvOS, è possibile che venga ricevuto un messaggio nel formato seguente:
+Quando si tenta di includere una libreria di classi portabile (PCL) in un progetto Xamarin.tvOS, è possibile che venga ricevuto un messaggio nel formato seguente:
 
 _Framework di destinazione incompatibile:. NetPortable, Version = v 4.5, profile = Profile78_
 
@@ -198,7 +198,7 @@ Nel percorso seguente:
 
 Si noti che il numero di profilo nel percorso deve corrispondere al numero di profilo della libreria di classi portabile (PCL).
 
-Con questo file, dovrebbe essere possibile aggiungere correttamente il file PCL al progetto Novell. tvOS.
+Con questo file, dovrebbe essere possibile aggiungere correttamente il file PCL al progetto Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

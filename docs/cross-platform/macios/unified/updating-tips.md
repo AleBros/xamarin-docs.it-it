@@ -101,7 +101,7 @@ Di seguito sono riportati altri esempi di errori comuni, insieme alla soluzione:
 
 Correzione: in genere significa che il progetto fa riferimento a un componente o a un pacchetto NuGet che non è stato compilato con l'API unificata. È necessario eliminare e aggiungere nuovamente tutti i componenti e i pacchetti NuGet. Se l'errore non viene risolto, è possibile che la libreria esterna non supporti ancora il API unificata.
 
-**Errore MT0034: non è possibile includere sia ' MonoTouch. dll ' che ' Novell. iOS. dll ' nello stesso progetto Novell. iOS. viene fatto riferimento in modo esplicito a' Novell. iOS. dll ', mentre ' MonoTouch. dll ' fa riferimento a' Novell. mobile, Version = 0.6.3.0, Culture = neutral, PublicKeyToken = null '.**
+**Errore MT0034: non è possibile includere sia ' MonoTouch. dll ' che ' Xamarin.iOS. dll ' nello stesso progetto Xamarin.iOS. viene fatto riferimento in modo esplicito a' Xamarin.iOS. dll ', mentre ' MonoTouch. dll ' fa riferimento a' Xamarin.mobile, Version = 0.6.3.0, Culture = neutral, PublicKeyToken = null '.**
 
 Correzione: eliminare il componente che causa questo errore e aggiungerlo di nuovo al progetto.
 
@@ -203,7 +203,7 @@ class BasicPinAnnotation : MKAnnotation
 - [Aggiornamento di app](~/cross-platform/macios/unified/updating-apps.md)
 - [Aggiornamento di app iOS](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Aggiornamento di app Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
-- [Aggiornamento delle app Novell. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+- [Aggiornamento delle app Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Aggiornamento di binding](~/cross-platform/macios/unified/update-binding.md)
 - [Utilizzo di tipi nativi nelle app multipiattaforma](~/cross-platform/macios/native-types-cross-platform.md)
 - [Differenze rispetto a API unificata classiche](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

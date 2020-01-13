@@ -1,6 +1,6 @@
 ---
-title: Icone alternative per le app in Novell. iOS
-description: Questo documento descrive come usare icone alternative dell'app in Novell. iOS. Viene illustrato come aggiungere queste icone a un progetto Novell. iOS, come modificare il file INFO. plist e come gestire l'icona dell'app a livello di codice.
+title: Icone alternative per le app in Xamarin.iOS
+description: Questo documento descrive come usare icone alternative dell'app in Xamarin.iOS. Viene illustrato come aggiungere queste icone a un progetto Xamarin.iOS, come modificare il file INFO. plist e come gestire l'icona dell'app a livello di codice.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73004308"
 ---
-# <a name="alternate-app-icons-in-xamarinios"></a>Icone alternative per le app in Novell. iOS
+# <a name="alternate-app-icons-in-xamarinios"></a>Icone alternative per le app in Xamarin.iOS
 
-_Questo articolo illustra l'uso di icone alternative per le app in Novell. iOS._
+_Questo articolo illustra l'uso di icone alternative per le app in Xamarin.iOS._
 
 Apple ha aggiunto diversi miglioramenti a iOS 10,3 che consentono a un'app di gestire la relativa icona:
 
@@ -29,9 +29,9 @@ Apple ha aggiunto diversi miglioramenti a iOS 10,3 che consentono a un'app di ge
 
 <a name="Adding-Alternate-Icons" />
 
-## <a name="adding-alternate-icons-to-a-xamarinios-project"></a>Aggiunta di icone alternative a un progetto Novell. iOS
+## <a name="adding-alternate-icons-to-a-xamarinios-project"></a>Aggiunta di icone alternative a un progetto Xamarin.iOS
 
-Per consentire a un'app di passare a un'icona alternativa, è necessario includere una raccolta di immagini icona nel progetto app Novell. iOS. Queste immagini non possono essere aggiunte al progetto usando il tipico metodo di `Assets.xcassets`, ma devono essere aggiunte direttamente alla cartella **Resources** .
+Per consentire a un'app di passare a un'icona alternativa, è necessario includere una raccolta di immagini icona nel progetto app Xamarin.iOS. Queste immagini non possono essere aggiunte al progetto usando il tipico metodo di `Assets.xcassets`, ma devono essere aggiunte direttamente alla cartella **Resources** .
 
 Procedere come descritto di seguito:
 
@@ -109,7 +109,7 @@ O come questo se aperto in un editor di testo:
 
 ## <a name="managing-the-apps-icon"></a>Gestione dell'icona dell'app 
 
-Con le immagini icona incluse nel progetto Novell. iOS e il file **info. plist** configurato correttamente, lo sviluppatore può usare una delle numerose nuove funzionalità aggiunte a iOS 10,3 per controllare l'icona dell'app.
+Con le immagini icona incluse nel progetto Xamarin.iOS e il file **info. plist** configurato correttamente, lo sviluppatore può usare una delle numerose nuove funzionalità aggiunte a iOS 10,3 per controllare l'icona dell'app.
 
 La proprietà `SupportsAlternateIcons` della classe `UIApplication` consente allo sviluppatore di verificare se un'app supporta icone alternative. Esempio:
 
@@ -168,7 +168,7 @@ Se l'utente torna all'icona principale, verrà visualizzato un avviso simile al 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato l'aggiunta di icone di app alternative a un progetto Novell. iOS e l'uso all'interno dell'app.
+Questo articolo ha trattato l'aggiunta di icone di app alternative a un progetto Xamarin.iOS e l'uso all'interno dell'app.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

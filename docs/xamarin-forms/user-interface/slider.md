@@ -1,6 +1,6 @@
 ---
-title: Dispositivo di scorrimento di xamarin. Forms
-description: Il dispositivo di scorrimento di xamarin. Forms è una barra orizzontale che può essere modificata dall'utente per selezionare un valore double da un intervallo continuo. Questo articolo illustra come usare la classe dispositivo di scorrimento per selezionare un valore da un intervallo di valori continui.
+title: Dispositivo di scorrimento di Xamarin.Forms
+description: Il dispositivo di scorrimento di Xamarin.Forms è una barra orizzontale che può essere modificata dall'utente per selezionare un valore double da un intervallo continuo. Questo articolo illustra come usare la classe dispositivo di scorrimento per selezionare un valore da un intervallo di valori continui.
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/30/2019
 ms.locfileid: "75545582"
 ---
-# <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di xamarin. Forms
+# <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Usare un dispositivo di scorrimento per selezionare da un intervallo di valori continui._
 
-Xamarin. Forms [ `Slider` ](xref:Xamarin.Forms.Slider) è una barra orizzontale che può essere modificata dall'utente per selezionare un `double` valore dall'intervallo continuo.
+Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) è una barra orizzontale che può essere modificata dall'utente per selezionare un `double` valore dall'intervallo continuo.
 
 Il `Slider` definisce tre proprietà di tipo `double`:
 
@@ -299,7 +299,7 @@ Ad esempio, per l'intervallo predefinito di 0 e 1, il `StepFrequency` è imposta
 
 ### <a name="the-stepslider-solution"></a>La soluzione StepSlider
 
-Un `StepSlider` più versatile viene illustrato nel [capitolo 27. Renderer personalizzati](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro creazione di *app per dispositivi mobili con Novell. Forms*. Il `StepSlider` è simile a `Slider` ma si aggiungerà un `Steps` proprietà per specificare il numero di valori tra `Minimum` e `Maximum`.
+Un `StepSlider` più versatile viene illustrato nel [capitolo 27. Renderer personalizzati](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro creazione di *app per dispositivi mobili con Xamarin.Forms*. Il `StepSlider` è simile a `Slider` ma si aggiungerà un `Steps` proprietà per specificare il numero di valori tra `Minimum` e `Maximum`.
 
 ## <a name="sliders-for-color-selection"></a>Dispositivi di scorrimento per la selezione dei colori
 

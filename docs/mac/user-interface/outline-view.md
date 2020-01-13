@@ -1,6 +1,6 @@
 ---
-title: Strutturare le visualizzazioni in Novell. Mac
-description: Questo articolo illustra l'uso delle visualizzazioni struttura in un'applicazione Novell. Mac. Descrive la creazione e la gestione delle visualizzazioni struttura in Xcode e Interface Builder e l'uso a livello di codice.
+title: Strutturare le visualizzazioni in Xamarin.Mac
+description: Questo articolo illustra l'uso delle visualizzazioni struttura in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle visualizzazioni struttura in Xcode e Interface Builder e l'uso a livello di codice.
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73004335"
 ---
-# <a name="outline-views-in-xamarinmac"></a>Strutturare le visualizzazioni in Novell. Mac
+# <a name="outline-views-in-xamarinmac"></a>Strutturare le visualizzazioni in Xamarin.Mac
 
-_Questo articolo illustra l'uso delle visualizzazioni struttura in un'applicazione Novell. Mac. Descrive la creazione e la gestione delle visualizzazioni struttura in Xcode e Interface Builder e l'uso a livello di codice._
+_Questo articolo illustra l'uso delle visualizzazioni struttura in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle visualizzazioni struttura in Xcode e Interface Builder e l'uso a livello di codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere alle stesse visualizzazioni struttura che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare la _Interface Builder_ di Xcode per creare e gestire le visualizzazioni struttura (o, facoltativamente, crearle direttamente nel C# codice).
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere alle stesse visualizzazioni struttura che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare la _Interface Builder_ di Xcode per creare e gestire le visualizzazioni struttura (o, facoltativamente, crearle direttamente nel C# codice).
 
 Una visualizzazione struttura è un tipo di tabella che consente all'utente di espandere o comprimere righe di dati gerarchici. Analogamente a una visualizzazione tabella, una visualizzazione struttura consente di visualizzare i dati per un set di elementi correlati, con righe che rappresentano singoli elementi e colonne che rappresentano gli attributi di tali elementi. Diversamente da una vista tabella, gli elementi in una visualizzazione struttura non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
 
 [![](outline-view-images/populate03.png "An example app run")](outline-view-images/populate03.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso delle visualizzazioni struttura in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso delle visualizzazioni struttura in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Outline_Views" />
 
@@ -36,7 +36,7 @@ Una visualizzazione struttura è un tipo di tabella che consente all'utente di e
 
 Se un elemento in una visualizzazione struttura contiene altri elementi, può essere espanso o compresso dall'utente. Un elemento espandibile Visualizza un triangolo di divulgazione, che punta a destra quando l'elemento viene compresso e punta verso il basso quando l'elemento viene espanso. Se si fa clic sul triangolo di divulgazione, l'elemento viene espanso o compresso.
 
-La visualizzazione struttura (`NSOutlineView`) è una sottoclasse della visualizzazione tabella (`NSTableView`) e, di conseguenza, eredita gran parte del suo comportamento dalla relativa classe padre. Di conseguenza, molte operazioni supportate da una vista tabella, ad esempio la selezione di righe o colonne, il riposizionamento delle colonne tramite il trascinamento delle intestazioni di colonna e così via, sono supportate anche da una visualizzazione struttura. Un'applicazione Novell. Mac ha il controllo di queste funzionalità e può configurare i parametri della visualizzazione struttura (nel codice o Interface Builder) per consentire o impedire determinate operazioni.
+La visualizzazione struttura (`NSOutlineView`) è una sottoclasse della visualizzazione tabella (`NSTableView`) e, di conseguenza, eredita gran parte del suo comportamento dalla relativa classe padre. Di conseguenza, molte operazioni supportate da una vista tabella, ad esempio la selezione di righe o colonne, il riposizionamento delle colonne tramite il trascinamento delle intestazioni di colonna e così via, sono supportate anche da una visualizzazione struttura. Un'applicazione Xamarin.Mac ha il controllo di queste funzionalità e può configurare i parametri della visualizzazione struttura (nel codice o Interface Builder) per consentire o impedire determinate operazioni.
 
 Una visualizzazione struttura non archivia i propri dati, ma si basa su un'origine dati (`NSOutlineViewDataSource`) per fornire le righe e le colonne necessarie, in base alle esigenze.
 
@@ -48,7 +48,7 @@ Poiché una visualizzazione struttura condivide gran parte del comportamento e d
 
 ## <a name="creating-and-maintaining-outline-views-in-xcode"></a>Creazione e gestione delle visualizzazioni struttura in Xcode
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
+Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
 
 [![](outline-view-images/edit01.png "Selecting the main storyboard")](outline-view-images/edit01.png#lightbox)
 
@@ -97,7 +97,7 @@ Selezionare la visualizzazione struttura nella **gerarchia dell'interfaccia** e 
 - **Tronca l'ultima riga visibile** : se `true`, la cella verrà troncata nei dati non può rientrare nei limiti.
 
 > [!IMPORTANT]
-> A meno che non si stia gestendo un'applicazione Novell. Mac legacy, è consigliabile usare `NSView` visualizzazioni struttura basate su `NSCell` viste di tabella basate su. `NSCell` è considerato Legacy e potrebbe non essere supportato in futuro.
+> A meno che non si stia gestendo un'applicazione Xamarin.Mac legacy, è consigliabile usare `NSView` visualizzazioni struttura basate su `NSCell` viste di tabella basate su. `NSCell` è considerato Legacy e potrebbe non essere supportato in futuro.
 
 Selezionare una colonna della tabella nella **gerarchia dell'interfaccia** e le proprietà seguenti sono disponibili nel **controllo attributi**:
 
@@ -672,9 +672,9 @@ Per ulteriori informazioni, vedere la sezione [using images with Outline views](
 
 ## <a name="data-binding-outline-views"></a>Viste struttura di data binding
 
-Usando le tecniche di codifica e data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+Usando le tecniche di codifica e data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
-Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
+Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Xamarin.Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
 
 Per ulteriori informazioni, vedere la sezione relativa all' [associazione dati della visualizzazione struttura](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) del data binding e della documentazione relativa al [codice chiave-valore](~/mac/app-fundamentals/databinding.md) .
 
@@ -682,7 +682,7 @@ Per ulteriori informazioni, vedere la sezione relativa all' [associazione dati d
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni struttura in un'applicazione Novell. Mac. Sono stati osservati i diversi tipi e usi delle visualizzazioni struttura, come creare e gestire le visualizzazioni struttura nel Interface Builder di Xcode e come usare le visualizzazioni struttura C# nel codice.
+Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni struttura in un'applicazione Xamarin.Mac. Sono stati osservati i diversi tipi e usi delle visualizzazioni struttura, come creare e gestire le visualizzazioni struttura nel Interface Builder di Xcode e come usare le visualizzazioni struttura C# nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

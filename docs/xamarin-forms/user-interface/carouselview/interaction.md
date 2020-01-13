@@ -1,5 +1,5 @@
 ---
-title: Interazione CarouselView di Novell. Forms
+title: Interazione CarouselView di Xamarin.Forms
 description: È possibile accedere all'elemento attualmente visualizzato in un CarouselView tramite le proprietà CurrentItem e position.
 ms.prod: xamarin
 ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72749797"
 ---
-# <a name="xamarinforms-carouselview-interaction"></a>Interazione CarouselView di Novell. Forms
+# <a name="xamarinforms-carouselview-interaction"></a>Interazione CarouselView di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 

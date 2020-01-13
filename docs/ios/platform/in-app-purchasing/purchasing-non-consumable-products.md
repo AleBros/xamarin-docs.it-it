@@ -1,6 +1,6 @@
 ---
-title: Acquisto di prodotti non utilizzabili in Novell. iOS
-description: Questo documento descrive i prodotti non utilizzabili in Novell. iOS, che sono funzionalità acquistate da un utente che rimane disponibile per un periodo illimitato, indipendentemente dal dispositivo.
+title: Acquisto di prodotti non utilizzabili in Xamarin.iOS
+description: Questo documento descrive i prodotti non utilizzabili in Xamarin.iOS, che sono funzionalità acquistate da un utente che rimane disponibile per un periodo illimitato, indipendentemente dal dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032318"
 ---
-# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti non utilizzabili in Novell. iOS
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti non utilizzabili in Xamarin.iOS
 
 I prodotti non consumabili sono di proprietà del cliente. Si prevede che l'utente potrà sempre accedervi, anche se il dispositivo viene smarrito o rubato o se ne acquista uno nuovo. Sono utili per libri, problemi di riviste, livelli di gioco, filtri foto, funzionalità Pro e così via. Una volta che un utente ha acquistato un prodotto non utilizzabile, non è mai necessario pagarlo di nuovo. Se il codice consente di provare accidentalmente, StoreKit visualizzerà un messaggio che indica che è già stato acquistato.
 

@@ -40,7 +40,7 @@ Ad esempio, è possibile aggiungere testo a un'etichetta che in genere contiene 
 
 In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML non visualizzerà nulla per l'etichetta. Viene invece visualizzato "nome!" dove l'etichetta avrà dati reali in fase di esecuzione.
 
-È possibile usare `d:` con qualsiasi attributo per un controllo Novell. Forms, ad esempio i colori, le dimensioni del carattere e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
+È possibile usare `d:` con qualsiasi attributo per un controllo Xamarin.Forms, ad esempio i colori, le dimensioni del carattere e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
 
 ```xaml
 <d:Button Text="Design Time Button" />
@@ -137,7 +137,7 @@ Se non si desidera aggiungere i dati della fase di progettazione ai singoli cont
 
 ### <a name="requirements"></a>Requisiti
 
-I dati della fase di progettazione richiedono una versione minima di Novell. Forms 3,6.
+I dati della fase di progettazione richiedono una versione minima di Xamarin.Forms 3,6.
 
 ### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>IntelliSense mostra le linee ondulate nei dati della fase di progettazione
 

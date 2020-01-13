@@ -283,9 +283,9 @@ Si tratta di un **avviso** che indica che l'elemento `E` non viene generato perc
 
 <a name="EM1053" />
 
-### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053: la `E` di destinazione non è supportata per Novell. iOS e Novell. Mac. Solo l'opzione `framework` è considerata supportata e deve essere usata.
+### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053: la `E` di destinazione non è supportata per Xamarin.iOS e Xamarin.Mac. Solo l'opzione `framework` è considerata supportata e deve essere usata.
 
-Si tratta di un **avviso** che indica che la destinazione `E` è considerata non supportata per i casi d'uso Novell. iOS e Novell. Mac. 
+Si tratta di un **avviso** che indica che la destinazione `E` è considerata non supportata per i casi d'uso Xamarin.iOS e Xamarin.Mac. 
 
 Il consumo di librerie di incorporamento .NET statiche o dinamiche può richiedere passaggi aggiuntivi o modifiche di lavoro e deve essere evitato nella maggior parte dei casi d'uso.
 

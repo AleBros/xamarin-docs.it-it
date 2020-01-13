@@ -1,6 +1,6 @@
 ---
 title: Applicazione di stili alle app Xamarin.Forms con Cascading Style Sheets (CSS)
-description: Xamarin. Forms supporta gli elementi visivi di stile usando Cascading Style Sheets (CSS).
+description: Xamarin.Forms supporta gli elementi visivi di stile usando Cascading Style Sheets (CSS).
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
 ms.technology: xamarin-forms
@@ -15,13 +15,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490051"
 ---
-# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App xamarin. Forms con Cascading Style Sheets (CSS)
+# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App Xamarin.Forms con Cascading Style Sheets (CSS)
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
-_Xamarin. Forms supporta gli elementi visivi di stile usando Cascading Style Sheets (CSS)._
+_Xamarin.Forms supporta gli elementi visivi di stile usando Cascading Style Sheets (CSS)._
 
-Applicazioni xamarin. Forms possono essere personalizzati con stili con CSS. Un foglio di stile è costituito da un elenco di regole, con ogni regola costituito da uno o più selettori e un blocco di dichiarazione. Un blocco di dichiarazione è costituito da un elenco di dichiarazioni di parentesi graffe, con ogni dichiarazione costituito da una proprietà, i due punti e un valore. Quando sono presenti più dichiarazioni in un blocco, viene inserito un punto e virgola come separatore. Esempio di codice seguente mostra alcuni CSS conforme a xamarin. Forms:
+Applicazioni Xamarin.Forms possono essere personalizzati con stili con CSS. Un foglio di stile è costituito da un elenco di regole, con ogni regola costituito da uno o più selettori e un blocco di dichiarazione. Un blocco di dichiarazione è costituito da un elenco di dichiarazioni di parentesi graffe, con ogni dichiarazione costituito da una proprietà, i due punti e un valore. Quando sono presenti più dichiarazioni in un blocco, viene inserito un punto e virgola come separatore. Esempio di codice seguente mostra alcuni CSS conforme a Xamarin.Forms:
 
 ```css
 navigationpage {
@@ -71,10 +71,10 @@ stacklayout>image {
 }
 ```
 
-In xamarin. Forms, fogli di stile CSS vengono analizzati e valutati in fase di esecuzione, anziché come fase di compilazione e i fogli di stile vengono nuovamente analizzati in uso.
+In Xamarin.Forms, fogli di stile CSS vengono analizzati e valutati in fase di esecuzione, anziché come fase di compilazione e i fogli di stile vengono nuovamente analizzati in uso.
 
 > [!NOTE]
-> Attualmente tutti gli stili che sono possibili eseguire con lo stile di XAML non può essere eseguiti con CSS. Tuttavia, gli stili XAML consente di integrare CSS per le proprietà che non sono attualmente supportate da xamarin. Forms. Per altre informazioni sugli stili XAML, vedere [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
+> Attualmente tutti gli stili che sono possibili eseguire con lo stile di XAML non può essere eseguiti con CSS. Tuttavia, gli stili XAML consente di integrare CSS per le proprietà che non sono attualmente supportate da Xamarin.Forms. Per altre informazioni sugli stili XAML, vedere [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
 Il [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) illustra l'uso di CSS per applicare uno stile a una semplice app di esempio e viene illustrato negli screenshot seguenti:
 
@@ -184,7 +184,7 @@ Elementi nella struttura visiva possono essere selezionati da classe di base con
 Questo selettore identifica eventuali [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) elementi che utilizzano il foglio di stile e imposta lo sfondo di colore per `lightgray`.
 
 > [!NOTE]
-> Il `^base` selettore è specifico di xamarin. Forms e non fa parte della specifica di CSS.
+> Il `^base` selettore è specifico di Xamarin.Forms e non fa parte della specifica di CSS.
 
 ### <a name="selecting-an-element-by-name"></a>Selezione di un elemento in base al nome
 
@@ -317,7 +317,7 @@ Questo selettore identifica eventuali [ `Image` ](xref:Xamarin.Forms.Image) gli 
 
 ## <a name="selector-reference"></a>Riferimento del selettore
 
-I selettori CSS seguenti sono supportati da xamarin. Forms:
+I selettori CSS seguenti sono supportati da Xamarin.Forms:
 
 |Selector|Esempio|Descrizione|
 |---|---|---|
@@ -348,7 +348,7 @@ I selettori seguenti non sono attualmente supportati:
 
 ## <a name="property-reference"></a>Riferimento proprietà
 
-Le proprietà CSS seguenti sono supportate da xamarin. Forms (nelle **valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
+Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nelle **valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
 
 |Gli|Si applica al|Valori|Esempio|
 |---|---|---|---|
@@ -413,9 +413,9 @@ Inoltre, vi è alcun `inherit` ereditarietà valore e pertanto non è supportato
 
 La destinazione di `Span` elementi presenta un problema noto che impedisce la destinazione degli stili CSS in base all'elemento e al nome (usando il simbolo di `#`). L'elemento `Span` deriva da `GestureElement`, che non dispone della proprietà `StyleClass` in modo che gli intervalli non supportino la destinazione della classe CSS. Per altre informazioni, vedere [non è possibile applicare lo stile CSS al controllo span](https://github.com/xamarin/Xamarin.Forms/issues/5979).
 
-### <a name="xamarinforms-specific-properties"></a>Proprietà specifiche di Novell. Forms
+### <a name="xamarinforms-specific-properties"></a>Proprietà specifiche di Xamarin.Forms
 
-Sono supportate anche le seguenti proprietà CSS specifiche xamarin. Forms (nel **i valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
+Sono supportate anche le seguenti proprietà CSS specifiche Xamarin.Forms (nel **i valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
 
 |Gli|Si applica al|Valori|Esempio|
 |---|---|---|---|
@@ -434,9 +434,9 @@ Sono supportate anche le seguenti proprietà CSS specifiche xamarin. Forms (nel 
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
 |`-xf-visual`|`VisualElement`|_Stringa_ \| `initial` |`-xf-visual: material;`|
 
-### <a name="xamarinforms-shell-specific-properties"></a>Proprietà specifiche della shell Novell. Forms
+### <a name="xamarinforms-shell-specific-properties"></a>Proprietà specifiche della shell Xamarin.Forms
 
-Sono supportate anche le proprietà CSS specifiche della shell Novell. Forms (nella colonna **valori** , i tipi sono in _corsivo_, mentre i valori letterali stringa sono `gray`):
+Sono supportate anche le proprietà CSS specifiche della shell Xamarin.Forms (nella colonna **valori** , i tipi sono in _corsivo_, mentre i valori letterali stringa sono `gray`):
 
 |Gli|Si applica al|Valori|Esempio|
 |---|---|---|---|
@@ -456,7 +456,7 @@ Sono supportate anche le proprietà CSS specifiche della shell Novell. Forms (ne
 
 Nell'esempio `color` sono supportati i valori:
 
-- `X11` [i colori](https://en.wikipedia.org/wiki/X11_color_names/), che corrisponde al colori CSS, i colori predefiniti UWP e xamarin. Forms colori. Si noti che questi valori di colore sono maiuscole e minuscole.
+- `X11` [i colori](https://en.wikipedia.org/wiki/X11_color_names/), che corrisponde al colori CSS, i colori predefiniti UWP e Xamarin.Forms colori. Si noti che questi valori di colore sono maiuscole e minuscole.
 - HEX colori: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
 - i colori RGB: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. I valori sono nell'intervallo 0-255 o 0% al 100%.
 - i colori RGBA: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. Il valore di opacità è compreso nell'intervallo tra 0,0-1,0.
@@ -487,11 +487,11 @@ Maiuscole e minuscole seguenti `namedsize` sono supportati i valori:
 
 Il significato esatto di ogni `namedsize` valore è dipendente dalla piattaforma e dipendenti dalla vista.
 
-## <a name="css-in-xamarinforms-with-xamarinuniversity"></a>CSS in xamarin. Forms con Xamarin.University
+## <a name="css-in-xamarinforms-with-xamarinuniversity"></a>CSS in Xamarin.Forms con Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Novell. Forms 3,0 video CSS**
+**Xamarin.Forms 3,0 video CSS**
 
 ## <a name="related-links"></a>Collegamenti correlati
 

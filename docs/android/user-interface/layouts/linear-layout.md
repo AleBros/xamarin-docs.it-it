@@ -1,5 +1,5 @@
 ---
-title: Novell. Android LinearLayout
+title: Xamarin.Android LinearLayout
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028949"
 ---
-# <a name="xamarinandroid-linearlayout"></a>Novell. Android LinearLayout
+# <a name="xamarinandroid-linearlayout"></a>Xamarin.Android LinearLayout
 
 [`LinearLayout`](xref:Android.Widget.LinearLayout) è un [`ViewGroup`](xref:Android.Views.ViewGroup)
 che visualizza [`View`](xref:Android.Views.View) figlio

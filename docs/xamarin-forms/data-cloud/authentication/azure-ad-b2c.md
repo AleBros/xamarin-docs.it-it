@@ -105,7 +105,7 @@ public static class Constants
 
 ## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Usare Microsoft Authentication Library (MSAL) per l'autenticazione
 
-Il pacchetto NuGet Microsoft Authentication Library (MSAL) deve essere aggiunto al progetto condiviso .NET Standard e ai progetti di piattaforma in una soluzione Novell. Forms. MSAL include una classe `PublicClientApplicationBuilder` che costruisce un oggetto che aderisce all'interfaccia `IPublicClientApplication`. MSAL utilizza le clausole `With` per fornire parametri aggiuntivi al costruttore e ai metodi di autenticazione.
+Il pacchetto NuGet Microsoft Authentication Library (MSAL) deve essere aggiunto al progetto condiviso .NET Standard e ai progetti di piattaforma in una soluzione Xamarin.Forms. MSAL include una classe `PublicClientApplicationBuilder` che costruisce un oggetto che aderisce all'interfaccia `IPublicClientApplication`. MSAL utilizza le clausole `With` per fornire parametri aggiuntivi al costruttore e ai metodi di autenticazione.
 
 Nel progetto di esempio, il code-behind per **app. XAML** definisce proprietà statiche denominate `AuthenticationClient` e `UIParent`e crea un'istanza dell'oggetto `AuthenticationClient` nel costruttore. La clausola `WithIosKeychainSecurityGroup` fornisce un nome di gruppo di sicurezza per le applicazioni iOS. La clausola `WithB2CAuthority` fornisce l' **autorità**o i criteri predefiniti che verranno usati per autenticare gli utenti. La clausola `WithRedirectUri` indica all'istanza di hub di notifica di Azure l'URI di Reindirizzamento da usare se sono specificati più URI. Nell'esempio seguente viene illustrato come creare un'istanza della `PublicClientApplication`:
 

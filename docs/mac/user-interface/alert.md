@@ -1,6 +1,6 @@
 ---
-title: Avvisi in Novell. Mac
-description: Questo articolo illustra l'uso degli avvisi in un'applicazione Novell. Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente.
+title: Avvisi in Xamarin.Mac
+description: Questo articolo illustra l'uso degli avvisi in un'applicazione Xamarin.Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
@@ -14,17 +14,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001524"
 ---
-# <a name="alerts-in-xamarinmac"></a>Avvisi in Novell. Mac
+# <a name="alerts-in-xamarinmac"></a>Avvisi in Xamarin.Mac
 
-_Questo articolo illustra l'uso degli avvisi in un'applicazione Novell. Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente._
+_Questo articolo illustra l'uso degli avvisi in un'applicazione Xamarin.Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, si ha accesso agli stessi avvisi che uno sviluppatore lavora in *Objective-C* e *Xcode* . 
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, si ha accesso agli stessi avvisi che uno sviluppatore lavora in *Objective-C* e *Xcode* . 
 
 Un avviso è un tipo speciale di finestra di dialogo che viene visualizzato quando si verifica un problema grave, ad esempio un errore, o come un avviso, ad esempio la preparazione dell'eliminazione di un file. Poiché un avviso è una finestra di dialogo, richiede anche una risposta utente prima che possa essere chiusa.
 
 [![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso degli avvisi in un'applicazione Novell. Mac. 
+In questo articolo verranno illustrate le nozioni di base sull'uso degli avvisi in un'applicazione Xamarin.Mac. 
 
 <a name="Introduction_to_Alerts" />
 
@@ -47,7 +47,7 @@ Per altre informazioni, vedere la sezione [avvisi](https://developer.apple.com/l
 
 ## <a name="anatomy-of-an-alert"></a>Anatomia di un avviso
 
-Come indicato in precedenza, gli avvisi devono essere visualizzati all'utente dell'applicazione quando si verifica un problema grave o come avviso alla potenziale perdita di dati, ad esempio la chiusura di un file non salvato. In Novell. Mac viene creato un avviso nel C# codice, ad esempio:
+Come indicato in precedenza, gli avvisi devono essere visualizzati all'utente dell'applicazione quando si verifica un problema grave o come avviso alla potenziale perdita di dati, ad esempio la chiusura di un file non salvato. In Xamarin.Mac viene creato un avviso nel C# codice, ad esempio:
 
 ```csharp
 var alert = new NSAlert () {
@@ -267,7 +267,7 @@ Se si esegue questo codice, verranno visualizzati gli elementi seguenti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso degli avvisi in un'applicazione Novell. Mac. Abbiamo visto i diversi tipi e usi degli avvisi, come creare e personalizzare gli avvisi e come usare gli avvisi nel C# codice.
+Questo articolo ha esaminato in dettaglio l'uso degli avvisi in un'applicazione Xamarin.Mac. Abbiamo visto i diversi tipi e usi degli avvisi, come creare e personalizzare gli avvisi e come usare gli avvisi nel C# codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

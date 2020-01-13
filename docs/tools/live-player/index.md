@@ -1,6 +1,6 @@
 ---
-title: Xamarin Live Player per Novell. Forms
-description: Questo documento illustra i Xamarin Live Player per Novell. Forms, che descrive l'installazione, l'app Xamarin Live Player, gli esempi da usare con Xamarin Live Player, limitazioni e risoluzione dei problemi.
+title: Xamarin Live Player per Xamarin.Forms
+description: Questo documento illustra i Xamarin Live Player per Xamarin.Forms, che descrive l'installazione, l'app Xamarin Live Player, gli esempi da usare con Xamarin Live Player, limitazioni e risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: davidortinau
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029664"
 ---
-# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player per Novell. Forms
+# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player per Xamarin.Forms
 
 Poiché il codice sorgente viene interpretato, è possibile che si raggiungano le [limitazioni](limitations.md) dopo un certo periodo di tempo ed è necessario compilare completamente l'app per il dispositivo o l'emulatore.
 

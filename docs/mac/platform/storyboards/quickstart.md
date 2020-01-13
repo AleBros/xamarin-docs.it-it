@@ -1,6 +1,6 @@
 ---
-title: Storyboard in Novell. Mac-Avvio rapido
-description: Questo documento fornisce un'introduzione introduttiva alla creazione di interfacce utente macOS con storyboard in Novell. Mac. Viene descritto come creare un segue e creare una finestra delle preferenze.
+title: Storyboard in Xamarin.Mac-Avvio rapido
+description: Questo documento fornisce un'introduzione introduttiva alla creazione di interfacce utente macOS con storyboard in Xamarin.Mac. Viene descritto come creare un segue e creare una finestra delle preferenze.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026208"
 ---
-# <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboard in Novell. Mac-Avvio rapido
+# <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboard in Xamarin.Mac-Avvio rapido
 
-Come introduzione rapida all'uso degli storyboard per definire l'interfaccia utente di un'app Novell. Mac, iniziamo un nuovo progetto Novell. Mac. Selezionare **Mac** > **App** > **App Cocoa** e fare clic sul pulsante **Avanti**:
+Come introduzione rapida all'uso degli storyboard per definire l'interfaccia utente di un'app Xamarin.Mac, iniziamo un nuovo progetto Xamarin.Mac. Selezionare **Mac** > **App** > **App Cocoa** e fare clic sul pulsante **Avanti**:
 
 [![](quickstart-images/qs01.png "Adding a new Cocoa App")](quickstart-images/qs01.png#lightbox)
 
@@ -120,7 +120,7 @@ Se si salvano le modifiche, tornare alla Visual Studio per Mac, eseguire l'app e
 
 [![](quickstart-images/qs22.png "An example of the segue running")](quickstart-images/qs22.png#lightbox)
 
-Si potrebbe notare che questa non è simile a una finestra di dialogo preferenza app macOS standard. Per risolvere questo problema, includere due file di immagine nella cartella `Resources` dell'app Novell. Mac nella **Esplora soluzioni** e tornare al Interface Builder di Xcode.
+Si potrebbe notare che questa non è simile a una finestra di dialogo preferenza app macOS standard. Per risolvere questo problema, includere due file di immagine nella cartella `Resources` dell'app Xamarin.Mac nella **Esplora soluzioni** e tornare al Interface Builder di Xcode.
 
 Selezionare il controller di visualizzazione a schede e cambiare **lo stile** sulla **barra degli strumenti**: 
 

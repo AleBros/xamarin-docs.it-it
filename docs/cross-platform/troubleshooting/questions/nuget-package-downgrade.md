@@ -25,7 +25,7 @@ Visual Studio per Mac & Visual Studio includono funzionalità per la selezione d
 
     > Install-Package [PackageName]-Version [scheda per il menu versione]
 
-È anche possibile copiare e incollare il comando esatto dalla pagina NuGet del pacchetto. Esempio per Novell. Forms: [https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
+È anche possibile copiare e incollare il comando esatto dalla pagina NuGet del pacchetto. Esempio per Xamarin.Forms: [https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
@@ -36,11 +36,11 @@ Visual Studio per Mac & Visual Studio includono funzionalità per la selezione d
 
 ### <a name="examples"></a>Esempi 
 
-- Elenca tutti i pacchetti Novell. Forms: 
+- Elenca tutti i pacchetti Xamarin.Forms: 
 
     `Xamarin.Forms version:`
 
-- Elenca tutti i pacchetti Novell. Forms 1.4. x: 
+- Elenca tutti i pacchetti Xamarin.Forms 1.4. x: 
 
     `Xamarin.Forms version:1.4`
 

@@ -87,9 +87,9 @@ Se non viene usato nessuno dei due metodi precedenti, il frammento presuppone l'
 
 ### <a name="package-name-case"></a>Case nome pacchetto
 
-Android non consente caratteri maiuscoli nei nomi dei pacchetti; verrà generata un'eccezione quando si tenta di ingrandire la vista se il nome di un pacchetto contiene un carattere maiuscolo. Tuttavia, Novell. Android è più indulgente e tollera i caratteri maiuscoli nello spazio dei nomi.
+Android non consente caratteri maiuscoli nei nomi dei pacchetti; verrà generata un'eccezione quando si tenta di ingrandire la vista se il nome di un pacchetto contiene un carattere maiuscolo. Tuttavia, Xamarin.Android è più indulgente e tollera i caratteri maiuscoli nello spazio dei nomi.
 
-Ad esempio, entrambi i frammenti di codice seguenti funzioneranno con Novell. Android. Tuttavia, il secondo frammento di codice causerà la generazione di un `android.view.InflateException` da parte di un'applicazione Android pura basata su Java.
+Ad esempio, entrambi i frammenti di codice seguenti funzioneranno con Xamarin.Android. Tuttavia, il secondo frammento di codice causerà la generazione di un `android.view.InflateException` da parte di un'applicazione Android pura basata su Java.
 
 ```xml
 <fragment class="com.example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />

@@ -1,5 +1,5 @@
 ---
-title: Autorizzazioni in Novell. Android
+title: Autorizzazioni in Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025451"
 ---
-# <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Novell. Android
+# <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Xamarin.Android
 
 ## <a name="overview"></a>Panoramica
 
@@ -44,7 +44,7 @@ L'intero flusso di lavoro per la verifica e la richiesta delle autorizzazioni è
 
 La libreria di supporto Android consente di eseguire il backporting di alcune delle nuove API per le autorizzazioni per le versioni precedenti di Android. Queste API sottoportate controlleranno automaticamente la versione di Android nel dispositivo, pertanto non è necessario eseguire ogni volta un controllo a livello di API.  
 
-Questo documento illustra come aggiungere autorizzazioni a un'applicazione Novell. Android e in che modo le app destinate a Android 6,0 (API level 23) o versione successiva devono eseguire un controllo delle autorizzazioni di Runtime.
+Questo documento illustra come aggiungere autorizzazioni a un'applicazione Xamarin.Android e in che modo le app destinate a Android 6,0 (API level 23) o versione successiva devono eseguire un controllo delle autorizzazioni di Runtime.
 
 > [!NOTE]
 > È possibile che le autorizzazioni per l'hardware possano influenzare il modo in cui l'app viene filtrata in base Google Play. Ad esempio, se l'app richiede l'autorizzazione per la fotocamera, Google Play non visualizzerà l'app nella Google Play Store su un dispositivo in cui non è installata una fotocamera.
@@ -53,7 +53,7 @@ Questo documento illustra come aggiungere autorizzazioni a un'applicazione Novel
 
 ## <a name="requirements"></a>Requisiti
 
-Si consiglia vivamente che i progetti Novell. Android includano il pacchetto NuGet [Novell. Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Questo pacchetto backporting le API specifiche per le versioni precedenti di Android, offrendo un'interfaccia comune senza la necessità di verificare costantemente la versione di Android su cui è in esecuzione l'app.
+Si consiglia vivamente che i progetti Xamarin.Android includano il pacchetto NuGet [Xamarin.Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Questo pacchetto backporting le API specifiche per le versioni precedenti di Android, offrendo un'interfaccia comune senza la necessità di verificare costantemente la versione di Android su cui è in esecuzione l'app.
 
 ## <a name="requesting-system-permissions"></a>Richiesta delle autorizzazioni di sistema
 
@@ -109,7 +109,7 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'element
     
 -----
 
-Novell. Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, vengono `INTERNET` e `READ_EXTERNAL_STORAGE`due autorizzazioni rilevanti. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
+Xamarin.Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, vengono `INTERNET` e `READ_EXTERNAL_STORAGE`due autorizzazioni rilevanti. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
 
 Per le app destinate a Android 5.1 (livello API 22) o inferiore, non è necessario eseguire altre operazioni. Le app che verranno eseguite in Android 6,0 (API 23 Level 23) o versioni successive dovrebbero passare alla sezione successiva su come eseguire i controlli delle autorizzazioni in fase di esecuzione. 
 
@@ -213,4 +213,4 @@ Questa guida ha illustrato come aggiungere e verificare le autorizzazioni in un 
 
 - [Elenco di autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html)
 - [App di esempio per le autorizzazioni di runtime](https://github.com/xamarin/monodroid-samples/tree/master/android-m/RuntimePermissions)
-- [Gestione delle autorizzazioni in Novell. Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)
+- [Gestione delle autorizzazioni in Xamarin.Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)

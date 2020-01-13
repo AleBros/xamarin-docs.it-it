@@ -1,5 +1,5 @@
 ---
-title: Indicatore attività in Novell. Forms
+title: Indicatore attività in Xamarin.Forms
 description: Il controllo ActivityIndicator indica agli utenti che l'applicazione è impegnata in un'attività di lunga durata, senza fornire indicazioni sullo stato di avanzamento. Questo articolo illustra come usare un ActivityIndicator in XAML e codice.
 ms.prod: xamarin
 ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
@@ -14,10 +14,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/11/2019
 ms.locfileid: "70887436"
 ---
-# <a name="xamarinforms-activityindicator"></a>Novell. Forms ActivityIndicator
+# <a name="xamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-Il controllo Novell. [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata. Diversamente da [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), l'oggetto `ActivityIndicator` non indica lo stato di avanzamento. `ActivityIndicator` Eredita [da`View`](xref:Xamarin.Forms.View).
+Il controllo Xamarin.[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata. Diversamente da [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), l'oggetto `ActivityIndicator` non indica lo stato di avanzamento. `ActivityIndicator` Eredita [da`View`](xref:Xamarin.Forms.View).
 
 Gli screenshot seguenti mostrano un `ActivityIndicator` controllo su iOS e Android:
 

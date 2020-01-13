@@ -100,7 +100,7 @@ Si noti che `OnAuthenticationError` verrà richiamato quando l'analisi dell'impr
 
 ## <a name="help-codes-and-error-message-ids"></a>Codici della guida e ID del messaggio di errore 
 
-È possibile trovare un elenco e una descrizione dei codici di errore e dei codici della guida nella [documentazione di Android SDK](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) per la classe FingerprintManager. Novell. Android rappresenta questi valori con il `Android.Hardware.Fingerprints.FingerprintState` enum:
+È possibile trovare un elenco e una descrizione dei codici di errore e dei codici della guida nella [documentazione di Android SDK](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) per la classe FingerprintManager. Xamarin.Android rappresenta questi valori con il `Android.Hardware.Fingerprints.FingerprintState` enum:
 
 - **`AcquiredGood`** &ndash; (valore 0) l'immagine acquisita è stata corretta.
 

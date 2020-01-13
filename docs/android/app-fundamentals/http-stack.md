@@ -1,6 +1,6 @@
 ---
 title: Stack HttpClient e selettore di implementazione SSL/TLS per Android
-description: Lo stack HttpClient e i selettori di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dalle app Novell. Android.
+description: Lo stack HttpClient e i selettori di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dalle app Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73019239"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Stack HttpClient e selettore di implementazione SSL/TLS per Android
 
-Lo stack HttpClient e i selettori di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dalle app Novell. Android.
+Lo stack HttpClient e i selettori di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dalle app Xamarin.Android.
 
 I progetti devono fare riferimento all'assembly **System .NET. http** .
 
@@ -27,7 +27,7 @@ I progetti devono fare riferimento all'assembly **System .NET. http** .
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-La configurazione di Novell. Android HttpClient è in **Opzioni progetto > opzioni Android**, quindi fare clic sul pulsante **Opzioni avanzate** .
+La configurazione di Xamarin.Android HttpClient è in **Opzioni progetto > opzioni Android**, quindi fare clic sul pulsante **Opzioni avanzate** .
 
 Queste sono le impostazioni consigliate per il supporto di TLS 1,2:
 
@@ -35,7 +35,7 @@ Queste sono le impostazioni consigliate per il supporto di TLS 1,2:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-La configurazione di Novell. Android HttpClient è in **Opzioni progetto > compila > impostazioni di compilazione Android** e fare clic sulla scheda **generale** .
+La configurazione di Xamarin.Android HttpClient è in **Opzioni progetto > compila > impostazioni di compilazione Android** e fare clic sulla scheda **generale** .
 
 Queste sono le impostazioni consigliate per il supporto di TLS 1,2:
 
@@ -62,7 +62,7 @@ AndroidClientHandler è il nuovo gestore che delega il codice Java/OS nativo anz
 
 ### <a name="managed-httpclienthandler"></a>Gestito (HttpClientHandler)
 
-Managed handler è il gestore HttpClient completamente gestito che è stato fornito con le versioni precedenti di Novell. Android.
+Managed handler è il gestore HttpClient completamente gestito che è stato fornito con le versioni precedenti di Xamarin.Android.
 
 #### <a name="pros"></a>I professionisti
 
@@ -85,7 +85,7 @@ La scelta tra `AndroidClientHandler` e `HttpClientHandler` dipende dalle esigenz
 
 `HttpClientHandler` è una scelta ottimale se è necessario il supporto di TLS 1.2 e versioni successive, ma deve supportare versioni di Android precedenti a Android 4,1. È anche una scelta ottimale se è necessario il supporto di TLS 1.2 + per `WebClient`.
 
-A partire da Novell. Android 8,3, `HttpClientHandler` il valore predefinito è noioso SSL (`btls`) come provider TLS sottostante. Il provider TLS SSL noioso offre i vantaggi seguenti:
+A partire da Xamarin.Android 8,3, `HttpClientHandler` il valore predefinito è noioso SSL (`btls`) come provider TLS sottostante. Il provider TLS SSL noioso offre i vantaggi seguenti:
 
 - Supporta TLS 1.2 +.
 - Supporta tutte le versioni di Android.
@@ -93,11 +93,11 @@ A partire da Novell. Android 8,3, `HttpClientHandler` il valore predefinito è n
 
 Lo svantaggio dell'uso di SSL noioso come provider TLS sottostante è la possibilità di aumentare le dimensioni dell'APK risultante (aggiunge circa 1 MB di dimensioni APK aggiuntive per ogni ABI supportato).
 
-A partire da Novell. Android 8,3, il provider TLS predefinito è noioso SSL (`btls`). Se non si vuole usare la crittografia SSL noiosa, è possibile ripristinare l'implementazione SSL gestita cronologicamente impostando la proprietà `$(AndroidTlsProvider)` su `legacy` (per ulteriori informazioni sull'impostazione delle proprietà di compilazione, vedere [processo di compilazione](~/android/deploy-test/building-apps/build-process.md)).
+A partire da Xamarin.Android 8,3, il provider TLS predefinito è noioso SSL (`btls`). Se non si vuole usare la crittografia SSL noiosa, è possibile ripristinare l'implementazione SSL gestita cronologicamente impostando la proprietà `$(AndroidTlsProvider)` su `legacy` (per ulteriori informazioni sull'impostazione delle proprietà di compilazione, vedere [processo di compilazione](~/android/deploy-test/building-apps/build-process.md)).
 
 ### <a name="programatically-using-androidclienthandler"></a>A livello con `AndroidClientHandler`
 
-Il `Xamarin.Android.Net.AndroidClientHandler` è un'implementazione di `HttpMessageHandler` in modo specifico per Novell. Android.
+Il `Xamarin.Android.Net.AndroidClientHandler` è un'implementazione di `HttpMessageHandler` in modo specifico per Xamarin.Android.
 Le istanze di questa classe utilizzeranno l'implementazione di `java.net.URLConnection` nativa per tutte le connessioni HTTP. In teoria, verrà fornito un aumento delle prestazioni HTTP e delle dimensioni APK più piccole.
 
 Questo frammento di codice è un esempio di come specificare in modo esplicito una singola istanza della classe `HttpClient`:
@@ -136,19 +136,19 @@ Tuttavia, se l' **implementazione di HttpClient** è impostata su `AndroidHttpCl
 
 ## <a name="other-ways-to-control-ssltls-configuration"></a>Altri modi per controllare la configurazione di SSL/TLS
 
-Esistono tre modi in cui un'applicazione Novell. Android è in grado di controllare le impostazioni TLS:
+Esistono tre modi in cui un'applicazione Xamarin.Android è in grado di controllare le impostazioni TLS:
 
 1. Selezionare l'implementazione di HttpClient e la libreria TLS predefinita nelle opzioni del progetto.
 2. A livello con `Xamarin.Android.Net.AndroidClientHandler`.
 3. Dichiarare le variabili di ambiente (facoltativo).
 
-Tra le tre scelte, l'approccio consigliato consiste nell'usare le opzioni del progetto Novell. Android per dichiarare i `HttpMessageHandler` predefiniti e TLS per l'intera app. Quindi, se necessario, creare un'istanza di `Xamarin.Android.Net.AndroidClientHandler` oggetti a livello di codice. Queste opzioni sono descritte in precedenza.
+Tra le tre scelte, l'approccio consigliato consiste nell'usare le opzioni del progetto Xamarin.Android per dichiarare i `HttpMessageHandler` predefiniti e TLS per l'intera app. Quindi, se necessario, creare un'istanza di `Xamarin.Android.Net.AndroidClientHandler` oggetti a livello di codice. Queste opzioni sono descritte in precedenza.
 
 La terza opzione &ndash; uso delle variabili di ambiente &ndash; è illustrata di seguito.
 
 ### <a name="declare-environment-variables"></a>Dichiarare le variabili di ambiente
 
-Sono disponibili due variabili di ambiente correlate all'uso di TLS in Novell. Android:
+Sono disponibili due variabili di ambiente correlate all'uso di TLS in Xamarin.Android:
 
 - `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; questa variabile di ambiente dichiara il `HttpMessageHandler` predefinito che verrà usato dall'applicazione. Esempio:
 
@@ -174,7 +174,7 @@ Questa variabile di ambiente viene impostata aggiungendo un _file di ambiente_ a
 
 -----
 
-Per altre informazioni sulle variabili di ambiente e su Novell. Android, vedere la guida dell' [ambiente Novell. Android](~/android/deploy-test/environment.md) .
+Per altre informazioni sulle variabili di ambiente e su Xamarin.Android, vedere la guida dell' [ambiente Xamarin.Android](~/android/deploy-test/environment.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

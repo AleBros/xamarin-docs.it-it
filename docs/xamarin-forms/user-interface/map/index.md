@@ -1,6 +1,6 @@
 ---
-title: Mappa di Novell. Forms
-description: Il controllo mappa Visualizza una mappa e richiede il pacchetto NuGet Novell. Forms. maps.
+title: Mappa di Xamarin.Forms
+description: Il controllo mappa Visualizza una mappa e richiede il pacchetto NuGet Xamarin.Forms. maps.
 ms.prod: xamarin
 ms.assetid: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/01/2019
 ms.locfileid: "73425589"
 ---
-# <a name="xamarinforms-map"></a>Mappa di Novell. Forms
+# <a name="xamarinforms-map"></a>Mappa di Xamarin.Forms
 
 ## <a name="initialization-and-configurationsetupmd"></a>[Inizializzazione e configurazione](setup.md)
 
-Il pacchetto NuGet [Novell. Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione per l'applicazione.
+Il pacchetto NuGet [Xamarin.Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione per l'applicazione.
 
 ## <a name="map-controlmapmd"></a>[controllo mappa](map.md)
 
@@ -42,4 +42,4 @@ La classe [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) esegue la conversione t
 
 ## <a name="launch-the-native-map-appnative-map-appmd"></a>[Avviare l'app mappa nativa](native-map-app.md)
 
-L'app map nativa in ogni piattaforma può essere avviata da un'applicazione Novell. Forms dalla classe Novell. Essentials `Launcher`.
+L'app map nativa in ogni piattaforma può essere avviata da un'applicazione Xamarin.Forms dalla classe Xamarin.Essentials `Launcher`.

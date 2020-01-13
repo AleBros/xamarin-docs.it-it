@@ -32,4 +32,4 @@ le app iPad ora possono usare più finestre create da diverse interazioni.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Note sulla versione di Novell. iOS 13](/xamarin/ios/release-notes/13/13.0)
+- [Note sulla versione di Xamarin.iOS 13](/xamarin/ios/release-notes/13/13.0)

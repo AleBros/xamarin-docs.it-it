@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms AbsoluteLayout
-description: Questo articolo illustra come usare la classe AbsoluteLayout xamarin. Forms per creare interfacce utente di impaginazione. Questa classe posizione e dimensioni proporzionale alle dimensioni e posizione o per i valori assoluti di elementi figlio.
+title: Xamarin.Forms AbsoluteLayout
+description: Questo articolo illustra come usare la classe AbsoluteLayout Xamarin.Forms per creare interfacce utente di impaginazione. Questa classe posizione e dimensioni proporzionale alle dimensioni e posizione o per i valori assoluti di elementi figlio.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69888536"
 ---
-# <a name="xamarinforms-absolutelayout"></a>Xamarin. Forms AbsoluteLayout
+# <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
@@ -290,7 +290,7 @@ Si noti che `AbsoluteLayout`s sono annidate, in quanto in alcuni casi i layout d
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di App per dispositivi mobili con xamarin. Forms, il capitolo 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
+- [Creazione di App per dispositivi mobili con Xamarin.Forms, il capitolo 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
 - [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
 - [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 - [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

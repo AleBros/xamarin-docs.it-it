@@ -23,9 +23,9 @@ In questo documento vengono illustrati diversi modi per interagire con i API uni
 
 ## <a name="when-to-use-the-native-types"></a>Quando usare i tipi nativi
 
-Le API unificate Novell. iOS e Novell. Mac includono ancora i tipi di dati `int`, `uint` e `float`, oltre ai tipi di `RectangleF`, `SizeF` e `PointF`. Questi tipi di dati esistenti devono continuare a essere usati in qualsiasi codice condiviso e multipiattaforma. I nuovi tipi di dati nativi devono essere usati solo quando si effettua una chiamata a un'API Mac o iOS in cui è necessario il supporto per i tipi compatibili con l'architettura.
+Le API unificate Xamarin.iOS e Xamarin.Mac includono ancora i tipi di dati `int`, `uint` e `float`, oltre ai tipi di `RectangleF`, `SizeF` e `PointF`. Questi tipi di dati esistenti devono continuare a essere usati in qualsiasi codice condiviso e multipiattaforma. I nuovi tipi di dati nativi devono essere usati solo quando si effettua una chiamata a un'API Mac o iOS in cui è necessario il supporto per i tipi compatibili con l'architettura.
 
-A seconda della natura del codice condiviso, in alcuni casi potrebbe essere necessario che il codice multipiattaforma debba gestire i tipi di dati `nint`, `nuint` e `nfloat`. Ad esempio: una libreria che gestisce le trasformazioni su dati rettangolari che in precedenza utilizzavano `System.Drawing.RectangleF` per condividere le funzionalità tra le versioni Novell. iOS e Novell. Android di un'app, doveva essere aggiornata per gestire i tipi nativi in iOS.
+A seconda della natura del codice condiviso, in alcuni casi potrebbe essere necessario che il codice multipiattaforma debba gestire i tipi di dati `nint`, `nuint` e `nfloat`. Ad esempio: una libreria che gestisce le trasformazioni su dati rettangolari che in precedenza utilizzavano `System.Drawing.RectangleF` per condividere le funzionalità tra le versioni Xamarin.iOS e Xamarin.Android di un'app, doveva essere aggiornata per gestire i tipi nativi in iOS.
 
 Il modo in cui queste modifiche vengono gestite dipende dalle dimensioni e dalla complessità dell'applicazione e dalla modalità di condivisione del codice utilizzata, come si vedrà nelle sezioni seguenti.
 
@@ -57,7 +57,7 @@ In base a questi fattori, i tipi di soluzioni seguenti possono essere implementa
 
 #### <a name="using-duplicate-methods"></a>Uso di metodi duplicati
 
-Eseguire l'esempio di una raccolta che esegue trasformazioni sui dati rettangolari specificati sopra. Se la libreria contiene solo uno o due metodi molto semplici, è possibile scegliere di creare versioni duplicate di questi metodi per Novell. iOS e Novell. Android. Esempio:
+Eseguire l'esempio di una raccolta che esegue trasformazioni sui dati rettangolari specificati sopra. Se la libreria contiene solo uno o due metodi molto semplici, è possibile scegliere di creare versioni duplicate di questi metodi per Xamarin.iOS e Xamarin.Android. Esempio:
 
 ```csharp
 using System;
@@ -212,7 +212,7 @@ Se il codice viene compilato ed eseguito in un dispositivo non API unificata, il
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Uso delle conversioni di tipi nell'app front-end
 
-Nel caso in cui le applicazioni front-end eseguano solo un numero limitato di chiamate alla libreria di codice condivisa, un'altra soluzione potrebbe essere lasciare invariata la libreria e eseguire il cast del tipo nell'applicazione Novell. iOS o Novell. Mac quando si chiama la routine esistente. Esempio:
+Nel caso in cui le applicazioni front-end eseguano solo un numero limitato di chiamate alla libreria di codice condivisa, un'altra soluzione potrebbe essere lasciare invariata la libreria e eseguire il cast del tipo nell'applicazione Xamarin.iOS o Xamarin.Mac quando si chiama la routine esistente. Esempio:
 
 ```csharp
 using NativeShared;
@@ -226,20 +226,20 @@ Se l'applicazione consumer effettua centinaia di chiamate alla libreria di codic
 
 In base all'architettura dell'applicazione, potrebbe essere necessario usare una o più delle soluzioni precedenti per supportare i tipi di dati nativi (dove necessario) nel codice multipiattaforma.
 
-## <a name="xamarinforms-applications"></a>Applicazioni Novell. Forms
+## <a name="xamarinforms-applications"></a>Applicazioni Xamarin.Forms
 
-Per usare Novell. Forms per le interfacce utente multipiattaforma che saranno condivise anche con un'applicazione API unificata, è necessario quanto segue:
+Per usare Xamarin.Forms per le interfacce utente multipiattaforma che saranno condivise anche con un'applicazione API unificata, è necessario quanto segue:
 
-- L'intera soluzione deve usare la versione 1.3.1 (o successiva) del pacchetto NuGet Novell. Forms.
-- Per tutti i rendering personalizzati di Novell. iOS, usare gli stessi tipi di soluzioni presentati in precedenza in base alla modalità di condivisione del codice dell'interfaccia utente (progetto condiviso o PCL).
+- L'intera soluzione deve usare la versione 1.3.1 (o successiva) del pacchetto NuGet Xamarin.Forms.
+- Per tutti i rendering personalizzati di Xamarin.iOS, usare gli stessi tipi di soluzioni presentati in precedenza in base alla modalità di condivisione del codice dell'interfaccia utente (progetto condiviso o PCL).
 
 Come in un'applicazione standard multipiattaforma, i tipi di dati a 32 bit esistenti devono essere usati in qualsiasi codice condiviso e multipiattaforma per la maggior parte delle situazioni. I nuovi tipi di dati nativi devono essere usati solo quando si effettua una chiamata a un'API Mac o iOS in cui è necessario il supporto per i tipi compatibili con l'architettura.
 
-Per altri dettagli, vedere la documentazione relativa all' [aggiornamento delle app Novell. Forms esistenti](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) .
+Per altri dettagli, vedere la documentazione relativa all' [aggiornamento delle app Xamarin.Forms esistenti](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) .
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato quando utilizzare i tipi di dati nativi in un'applicazione API unificata e le relative implicazioni multipiattaforma. Sono state presentate diverse soluzioni che possono essere usate nelle situazioni in cui è necessario usare i nuovi tipi di dati nativi nelle librerie multipiattaforma. È stata anche illustrata una guida rapida per supportare le API unificate nelle applicazioni multipiattaforma Novell. Forms.
+In questo articolo è stato illustrato quando utilizzare i tipi di dati nativi in un'applicazione API unificata e le relative implicazioni multipiattaforma. Sono state presentate diverse soluzioni che possono essere usate nelle situazioni in cui è necessario usare i nuovi tipi di dati nativi nelle librerie multipiattaforma. È stata anche illustrata una guida rapida per supportare le API unificate nelle applicazioni multipiattaforma Xamarin.Forms.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

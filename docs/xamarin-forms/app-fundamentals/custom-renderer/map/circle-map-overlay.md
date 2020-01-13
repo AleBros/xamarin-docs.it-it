@@ -249,7 +249,7 @@ namespace MapOverlay.Droid
 }
 ```
 
-Il metodo `OnElementChanged` recupera i dati del cerchio personalizzato, purché il renderer personalizzato sia collegato a un nuovo elemento Novell. Forms. Quando l'istanza `GoogleMap` è disponibile, verrà richiamato il metodo `OnMapReady` con il quale viene creato il cerchio creando un'istanza di un oggetto `CircleOptions` che specifica il centro del cerchio e il raggio del cerchio in metri. Il cerchio viene quindi aggiunto alla mappa chiamando il metodo `NativeMap.AddCircle`.
+Il metodo `OnElementChanged` recupera i dati del cerchio personalizzato, purché il renderer personalizzato sia collegato a un nuovo elemento Xamarin.Forms. Quando l'istanza `GoogleMap` è disponibile, verrà richiamato il metodo `OnMapReady` con il quale viene creato il cerchio creando un'istanza di un oggetto `CircleOptions` che specifica il centro del cerchio e il raggio del cerchio in metri. Il cerchio viene quindi aggiunto alla mappa chiamando il metodo `NativeMap.AddCircle`.
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creazione del renderer personalizzato sulla piattaforma UWP (Universal Windows Platform)
 

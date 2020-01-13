@@ -1,5 +1,5 @@
 ---
-title: Caricamento di XAML in fase di esecuzione in Novell. Forms
+title: Caricamento di XAML in fase di esecuzione in Xamarin.Forms
 description: XAML può essere caricato e analizzato in fase di esecuzione con i metodi di estensione LoadFromXaml.
 ms.prod: xamarin
 ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68657247"
 ---
-# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Caricamento di XAML in fase di esecuzione in Novell. Forms
+# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Caricamento di XAML in fase di esecuzione in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
@@ -22,7 +22,7 @@ Lo [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) spazio dei nomi [`LoadFromXam
 
 ## <a name="background"></a>Sfondo
 
-Quando viene costruita una classe XAML Novell. Forms, [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) il metodo viene chiamato indirettamente. Questo problema si verifica perché il file code-behind per una classe XAML `InitializeComponent` chiama il metodo dal relativo costruttore:
+Quando viene costruita una classe XAML Xamarin.Forms, [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) il metodo viene chiamato indirettamente. Questo problema si verifica perché il file code-behind per una classe XAML `InitializeComponent` chiama il metodo dal relativo costruttore:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -48,7 +48,7 @@ Il `InitializeComponent` metodo chiama il [`LoadFromXaml`](xref:Xamarin.Forms.Xa
 
 ## <a name="loading-xaml-at-runtime"></a>Caricamento di XAML in fase di esecuzione
 
-I [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) metodi sono `public`, quindi possono essere chiamati dalle applicazioni Novell. Forms per caricare e analizzare XAML in fase di esecuzione. Questo consente scenari come un'applicazione che Scarica XAML da un servizio Web, creando la vista richiesta dal codice XAML e visualizzandola nell'applicazione.
+I [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) metodi sono `public`, quindi possono essere chiamati dalle applicazioni Xamarin.Forms per caricare e analizzare XAML in fase di esecuzione. Questo consente scenari come un'applicazione che Scarica XAML da un servizio Web, creando la vista richiesta dal codice XAML e visualizzandola nell'applicazione.
 
 > [!WARNING]
 > Il caricamento del codice XAML in fase di esecuzione comporta un notevole costo in termini di prestazioni e deve essere evitato.

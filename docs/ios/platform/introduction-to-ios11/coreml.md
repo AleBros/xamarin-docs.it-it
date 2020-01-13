@@ -1,5 +1,5 @@
 ---
-title: Introduzione a CoreML in Novell. iOS
+title: Introduzione a CoreML in Xamarin.iOS
 description: Questo documento descrive CoreML, che consente l'apprendimento automatico in iOS. Questo documento illustra come iniziare a usare CoreML e come usarlo con il Framework di visione.
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032205"
 ---
-# <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in Novell. iOS
+# <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in Xamarin.iOS
 
 CoreML offre l'apprendimento automatico per iOS: le app possono sfruttare i modelli di apprendimento automatico con training per eseguire tutti i tipi di attività, dalla risoluzione dei problemi al riconoscimento delle immagini.
 

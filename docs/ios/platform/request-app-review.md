@@ -1,6 +1,6 @@
 ---
-title: Richiedi la revisione dell'app in Novell. iOS
-description: Questo articolo descrive il metodo RequestReview aggiunto da Apple in iOS 10 e illustra come implementarlo in Novell. iOS.
+title: Richiedi la revisione dell'app in Xamarin.iOS
+description: Questo articolo descrive il metodo RequestReview aggiunto da Apple in iOS 10 e illustra come implementarlo in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031606"
 ---
-# <a name="request-app-review-in-xamarinios"></a>Richiedi la revisione dell'app in Novell. iOS
+# <a name="request-app-review-in-xamarinios"></a>Richiedi la revisione dell'app in Xamarin.iOS
 
-_Questo articolo illustra il metodo RequestReview aggiunto da Apple in iOS 10 e come implementarlo in Novell. iOS._
+_Questo articolo illustra il metodo RequestReview aggiunto da Apple in iOS 10 e come implementarlo in Xamarin.iOS._
 
 Una novità di iOS 10,3, il metodo `RequestReview()` consente a un'app per iOS di richiedere all'utente di valutarla o esaminarla. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà l'intero processo di valutazione e revisione per lo sviluppatore. Poiché questo processo è regolato dai criteri dell'app Store, è possibile che venga visualizzato un avviso.
 
@@ -28,7 +28,7 @@ Sebbene il `RequestReview()` metodo statico della classe `SKStoreReviewControlle
 
 Ad esempio, un'app potrebbe richiedere una verifica dopo che è stata avviata un determinato numero di volte o una partita potrebbe richiedere una verifica dopo che il giocatore ha completato un livello.
 
-Per richiedere una revisione non appena viene completata l'avvio di un'app Novell. iOS, apportare le modifiche seguenti al file di `AppDelegate.cs`:
+Per richiedere una revisione non appena viene completata l'avvio di un'app Xamarin.iOS, apportare le modifiche seguenti al file di `AppDelegate.cs`:
 
 ```csharp
 using Foundation;
@@ -67,7 +67,7 @@ Oltre al nuovo metodo di `RequestReview`, lo sviluppatore può comunque fornire 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il metodo RequestReview aggiunto da Apple in iOS 10 e come implementarlo in Novell. iOS.
+Questo articolo ha illustrato il metodo RequestReview aggiunto da Apple in iOS 10 e come implementarlo in Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

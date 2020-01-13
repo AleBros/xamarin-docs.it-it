@@ -1,5 +1,5 @@
 ---
-title: MenuItem Novell. Forms
+title: MenuItem Xamarin.Forms
 description: La classe MenuItem viene utilizzata per creare voci di menu per menu come i menu di scelta rapida dell'elemento ListView e i menu a comparsa dell'applicazione shell.
 ms.prod: xamarin
 ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72531017"
 ---
-# <a name="xamarinforms-menuitem"></a>MenuItem Novell. Forms
+# <a name="xamarinforms-menuitem"></a>MenuItem Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
-La classe Novell. Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce voci di menu per menu come `ListView` menu di scelta rapida dell'elemento e menu a comparsa dell'applicazione shell.
+La classe Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce voci di menu per menu come `ListView` menu di scelta rapida dell'elemento e menu a comparsa dell'applicazione shell.
 
 Gli screenshot seguenti mostrano oggetti `MenuItem` in un menu di scelta rapida `ListView` in iOS e Android:
 
@@ -195,7 +195,7 @@ public MenuItemXamlMvvmPage()
 
 !["Screenshot dell'icona MenuItem in Android"](menuitem-images/menuitem-android-icon.png "Screenshot dell'icona MenuItem in Android")
 
-Per altre informazioni sull'uso delle immagini in Novell. Forms, vedere [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md).
+Per altre informazioni sull'uso delle immagini in Xamarin.Forms, vedere [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="cross-platform-context-menu-behavior"></a>Comportamento del menu di scelta rapida multipiattaforma
 
@@ -216,4 +216,4 @@ In UWP, il menu di scelta rapida viene attivato facendo clic con il pulsante des
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Demo MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
-* [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)
+* [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

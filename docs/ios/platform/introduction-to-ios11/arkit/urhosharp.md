@@ -1,6 +1,6 @@
 ---
-title: Uso di ARKit con UrhoSharp in Novell. iOS
-description: Questo documento descrive come configurare un'app ARKit in Novell. iOS, quindi esamina come viene eseguito il rendering dei frame, come modificare la fotocamera, come rilevare i piani, come usare l'illuminazione e altro ancora. Viene inoltre illustrato UrhoSharp e la scrittura di codice per HoloLens.
+title: Uso di ARKit con UrhoSharp in Xamarin.iOS
+description: Questo documento descrive come configurare un'app ARKit in Xamarin.iOS, quindi esamina come viene eseguito il rendering dei frame, come modificare la fotocamera, come rilevare i piani, come usare l'illuminazione e altro ancora. Viene inoltre illustrato UrhoSharp e la scrittura di codice per HoloLens.
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032242"
 ---
-# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in Novell. iOS
+# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in Xamarin.iOS
 
 Con l'introduzione di [ARKit](https://developer.apple.com/arkit/), Apple ha reso semplice per gli sviluppatori la creazione di applicazioni di realtà aumentata. ARKit è in grado di tenere traccia della posizione esatta del dispositivo e di rilevare le varie superfici del mondo ed è quindi lo sviluppatore a fondere i dati provenienti da ARKit nel codice.
 

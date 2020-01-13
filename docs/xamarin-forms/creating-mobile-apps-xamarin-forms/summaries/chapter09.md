@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
@@ -19,13 +19,13 @@ ms.locfileid: "61334561"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
 In alcuni casi è necessario eseguire il codice che varia in base alla piattaforma. In questo capitolo illustra le tecniche.
 
 ## <a name="preprocessing-in-the-shared-asset-project"></a>Pre-elaborazione nel progetto condiviso
 
-Un progetto Asset condivise xamarin. Forms possono eseguire codice diverso per ogni piattaforma usando le direttive del preprocessore c# `#if`, `#elif`, e `endif`. Questa situazione è illustrata nel [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
+Un progetto Asset condivise Xamarin.Forms possono eseguire codice diverso per ogni piattaforma usando le direttive del preprocessore c# `#if`, `#elif`, e `endif`. Questa situazione è illustrata nel [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
 [![Schermata triplo della variabile formattato paragrafo](images/ch09fg01-small.png "modello di dispositivo e sistema operativo")](images/ch09fg01-large.png#lightbox "modello di dispositivo e sistema operativo")
 
@@ -40,7 +40,7 @@ Tuttavia, il codice risultante può essere confusa e difficili da leggere.
 > [!NOTE] 
 > Librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
 
-Una libreria non è in genere accedere alle classi nei progetti di applicazione. Sembra che impediscono la tecnica illustrata in questa restrizione **PlatInfoSap2** perché non venga usato in una libreria. Tuttavia, xamarin. Forms contiene una classe denominata [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) che usa la reflection .NET per accedere alle classi pubbliche nel progetto dell'applicazione dalla libreria.
+Una libreria non è in genere accedere alle classi nei progetti di applicazione. Sembra che impediscono la tecnica illustrata in questa restrizione **PlatInfoSap2** perché non venga usato in una libreria. Tuttavia, Xamarin.Forms contiene una classe denominata [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) che usa la reflection .NET per accedere alle classi pubbliche nel progetto dell'applicazione dalla libreria.
 
 La libreria è necessario definire un `interface` con i membri che deve essere utilizzato in ogni piattaforma. Quindi, ognuna delle piattaforme contiene un'implementazione di tale interfaccia. La classe che implementa l'interfaccia deve essere identificata con un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) a livello di assembly.
 

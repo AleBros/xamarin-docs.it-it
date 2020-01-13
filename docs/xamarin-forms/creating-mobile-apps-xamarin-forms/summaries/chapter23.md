@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 23. I trigger e comportamenti
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 23. I trigger e comportamenti'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 23. I trigger e comportamenti'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
@@ -156,7 +156,7 @@ Il [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 Il [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe la **Xamarin.FormsBook.Toolkit** libreria deriva da `ContentView`, definisce un `IsToggled` proprietà e incorpora un `ToggleBehavior` per l'elemento toggle per la logica. Questo rende più semplice definire l'interruttore in XAML, come dimostrato dal [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) esempio.
 
-Il [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) include un [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) classe che deriva da `ToggleBase` e Usa un [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)classi per costruire un interruttore che è simile a xamarin. Forms `Switch`.
+Il [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) include un [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) classe che deriva da `ToggleBase` e Usa un [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)classi per costruire un interruttore che è simile a Xamarin.Forms `Switch`.
 
 Oggetto [ `RotateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs) nel **Xamarin.FormsBook.Toolkit** fornisce un'animazione utilizzata per rendere una levetta animato nel [ **LeverToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle)esempio.
 

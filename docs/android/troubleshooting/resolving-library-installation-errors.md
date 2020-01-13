@@ -21,7 +21,7 @@ _In alcuni casi, è possibile che si verifichino errori durante l'installazione 
 
 ## <a name="overview"></a>Panoramica
 
-Durante la compilazione di un progetto di app Novell. Android, è possibile che vengano generati errori di compilazione quando Visual Studio o Visual Studio per Mac tentano di scaricare e installare le librerie di dipendenze. Molti di questi errori sono causati da problemi di connettività di rete, danneggiamento dei file o problemi di controllo delle versioni. Questa guida descrive gli errori più comuni di installazione della libreria di supporto e fornisce i passaggi per risolvere questi problemi e ricreare il progetto dell'app. 
+Durante la compilazione di un progetto di app Xamarin.Android, è possibile che vengano generati errori di compilazione quando Visual Studio o Visual Studio per Mac tentano di scaricare e installare le librerie di dipendenze. Molti di questi errori sono causati da problemi di connettività di rete, danneggiamento dei file o problemi di controllo delle versioni. Questa guida descrive gli errori più comuni di installazione della libreria di supporto e fornisce i passaggi per risolvere questi problemi e ricreare il progetto dell'app. 
 
 ## <a name="errors-while-downloading-m2repository"></a>Errori durante il download di m2Repository
 

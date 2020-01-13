@@ -1,5 +1,5 @@
 ---
-title: Perché il progetto Novell. Forms. Maps Android ha esito negativo con un errore di livello superiore imprevisto COMPILETODALVIK?
+title: Perché il progetto Xamarin.Forms. Maps Android ha esito negativo con un errore di livello superiore imprevisto COMPILETODALVIK?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70759973"
 ---
-# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Perché il progetto Novell. Forms. Maps Android ha esito negativo con un errore di livello superiore imprevisto COMPILETODALVIK?
+# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Perché il progetto Xamarin.Forms. Maps Android ha esito negativo con un errore di livello superiore imprevisto COMPILETODALVIK?
 
-Questo errore può essere visualizzato nel riquadro degli errori di Visual Studio per Mac o nella finestra di output di compilazione di Visual Studio; nei progetti Android con Novell. Forms. maps.
+Questo errore può essere visualizzato nel riquadro degli errori di Visual Studio per Mac o nella finestra di output di compilazione di Visual Studio; nei progetti Android con Xamarin.Forms. maps.
 
-Questo problema viene risolto in genere aumentando le dimensioni dell'heap Java per il progetto Novell. Android. Per aumentare le dimensioni dell'heap, attenersi alla procedura seguente:
+Questo problema viene risolto in genere aumentando le dimensioni dell'heap Java per il progetto Xamarin.Android. Per aumentare le dimensioni dell'heap, attenersi alla procedura seguente:
 
 ## <a name="visual-studio"></a>Visual Studio
 

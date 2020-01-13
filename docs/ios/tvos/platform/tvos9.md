@@ -1,6 +1,6 @@
 ---
 title: Introduzione a tvOS 9
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 9 per gli sviluppatori Novell. tvOS.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
@@ -16,15 +16,15 @@ ms.locfileid: "73030540"
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
-_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 9 per gli sviluppatori Novell. tvOS._
+_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS._
 
 Apple ha rilasciato la quarta generazione dell'hardware Apple TV con una riprogettata, abilitata per il tocco in remoto, che esegue il nuovo sistema operativo tvOS (basato su iOS 9).
 
 Per la prima volta, tvOS apre la piattaforma Apple TV allo sviluppatore, consentendo di creare app complete e immersive e di rilasciarle tramite l'App Store di Apple TV incorporata in un processo simile all'esperienza di scrittura e rilascio di app per iOS con l'app iTunes Negozio.
 
-Se si ha familiarità con lo sviluppo di Novell. iOS, si dovrebbe trovare la transizione a tvOS abbastanza semplice. La maggior parte delle API e delle funzionalità sono le stesse, ma molte API comuni non sono disponibili, ad esempio WebKit. Inoltre, l'utilizzo del con Siri Remote pone alcune difficoltà di progettazione che non sono presenti nei dispositivi iOS basati su touchscreen.
+Se si ha familiarità con lo sviluppo di Xamarin.iOS, si dovrebbe trovare la transizione a tvOS abbastanza semplice. La maggior parte delle API e delle funzionalità sono le stesse, ma molte API comuni non sono disponibili, ad esempio WebKit. Inoltre, l'utilizzo del con Siri Remote pone alcune difficoltà di progettazione che non sono presenti nei dispositivi iOS basati su touchscreen.
 
-Questa guida offre un'introduzione a tutte le API nuove e modificate disponibili in tvOS 9 per gli sviluppatori Novell. tvOS. Per altre informazioni su tvOS, vedere la pagina relativa allo sviluppo di Apple [per la nuova documentazione di Apple TV](https://developer.apple.com/tvos/) .
+Questa guida offre un'introduzione a tutte le API nuove e modificate disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS. Per altre informazioni su tvOS, vedere la pagina relativa allo sviluppo di Apple [per la nuova documentazione di Apple TV](https://developer.apple.com/tvos/) .
 
 <a name="Supported-and-Unsupported-Capabilities" />
 
@@ -100,9 +100,9 @@ Per ulteriori informazioni, vedere la documentazione di [Siri Remote and Bluetoo
 
 Proprio come lo sviluppo per iOS, la nuova tvOS richiederà il profilo di provisioning appropriato sia per lo sviluppo che per la distribuzione, in base all'appartenenza al team e alle identità di firma già stabilite con Apple.
 
-Il provisioning appropriato è necessario anche per accedere alle funzionalità di tvOS, ad esempio gli archivi dati iCloud KVS o CloudKit. Per informazioni sul supporto di iCloud nelle app Novell. tvOS, vedere le [risorse e l'archivio dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) .
+Il provisioning appropriato è necessario anche per accedere alle funzionalità di tvOS, ad esempio gli archivi dati iCloud KVS o CloudKit. Per informazioni sul supporto di iCloud nelle app Xamarin.tvOS, vedere le [risorse e l'archivio dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) .
 
-I profili di provisioning vengono creati e installati nello stesso modo in cui funzionano con le app Novell. iOS. Per ulteriori informazioni, vedere la documentazione relativa al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) iOS.
+I profili di provisioning vengono creati e installati nello stesso modo in cui funzionano con le app Xamarin.iOS. Per ulteriori informazioni, vedere la documentazione relativa al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) iOS.
 
 <a name="Apple-TV-Apps" />
 
@@ -114,11 +114,11 @@ Il nuovo hardware Apple TV e tvOS 9 supportano due tipi di app: app tradizionali
 
 ### <a name="traditional-apps"></a>App tradizionali
 
-Le app tradizionali vengono acquistate dall'App Store di Apple TV e sono installate direttamente nel dispositivo. Queste app possono essere giochi, utilità o app multimediali sviluppate usando gli stessi Framework e tecniche delle app Novell. iOS.
+Le app tradizionali vengono acquistate dall'App Store di Apple TV e sono installate direttamente nel dispositivo. Queste app possono essere giochi, utilità o app multimediali sviluppate usando gli stessi Framework e tecniche delle app Xamarin.iOS.
 
 Le app Apple TV hanno una dimensione massima di 200 MB e possono scaricare altri 2 GB di contenuti usando risorse su richiesta. Per ulteriori informazioni, vedere le [risorse e l'archivio dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) .
 
-Vedere il [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md) per acquisire familiarità con gli strumenti e i concetti necessari per sviluppare app TvOS con Novell. tvOS.
+Vedere il [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md) per acquisire familiarità con gli strumenti e i concetti necessari per sviluppare app TvOS con Xamarin.tvOS.
 
 <a name="Summary" />
 
@@ -140,7 +140,7 @@ Inoltre, l'esperienza utente complessiva è notevolmente diversa rispetto alle a
 
 ### <a name="working-with-focus-and-parallax-images"></a>Uso delle immagini di stato attivo e parallasse
 
-Come indicato in precedenza, gli utenti dell'app Novell. tvOS non interagiranno con l'interfaccia direttamente come con iOS, in cui toccano le immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando Siri remote. Per presentare e gestire questa interazione con l'utente, Apple TV usa un modello basato sullo stato attivo. 
+Come indicato in precedenza, gli utenti dell'app Xamarin.tvOS non interagiranno con l'interfaccia direttamente come con iOS, in cui toccano le immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando Siri remote. Per presentare e gestire questa interazione con l'utente, Apple TV usa un modello basato sullo stato attivo. 
 
 Quando si modifica lo stato attivo, vengono usate animazioni e effetti delicati, ad esempio l'effetto di parallasse sulle immagini, per identificare chiaramente l'elemento dell'interfaccia utente che attualmente ha lo stato attivo.
 
@@ -166,7 +166,7 @@ Per ulteriori informazioni, vedere la documentazione relativa [all'utilizzo di i
 
 ### <a name="the-top-shelf"></a>Scaffale superiore
 
-Se l'utente ha inserito l'app Novell. tvOS nella parte superiore della schermata iniziale di Apple TV, viene visualizzata un'immagine di grandi dimensioni superiore quando l'utente seleziona l'app. Questa immagine dovrebbe evidenziare le funzionalità dell'app o fornire collegamenti diretti al relativo contenuto.
+Se l'utente ha inserito l'app Xamarin.tvOS nella parte superiore della schermata iniziale di Apple TV, viene visualizzata un'immagine di grandi dimensioni superiore quando l'utente seleziona l'app. Questa immagine dovrebbe evidenziare le funzionalità dell'app o fornire collegamenti diretti al relativo contenuto.
 
 [![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
 

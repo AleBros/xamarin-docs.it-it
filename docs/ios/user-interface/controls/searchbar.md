@@ -1,6 +1,6 @@
 ---
-title: Barre di ricerca in Novell. iOS
-description: Questo documento descrive come usare le barre di ricerca in Novell. iOS. Viene illustrato come creare barre di ricerca a livello di codice e in uno storyboard.
+title: Barre di ricerca in Xamarin.iOS
+description: Questo documento descrive come usare le barre di ricerca in Xamarin.iOS. Viene illustrato come creare barre di ricerca a livello di codice e in uno storyboard.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021975"
 ---
-# <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Novell. iOS
+# <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Xamarin.iOS
 
 UISearchBar viene usato per eseguire la ricerca in un elenco di valori.
 

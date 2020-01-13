@@ -1,5 +1,5 @@
 ---
-title: PhotoKit in Novell. iOS
+title: PhotoKit in Xamarin.iOS
 description: Questo documento descrive PhotoKit, illustrando gli oggetti del modello, come eseguire query sui dati del modello e salvare le modifiche apportate alla raccolta foto.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/31/2019
 ms.locfileid: "75558807"
 ---
-# <a name="photokit-in-xamarinios"></a>PhotoKit in Novell. iOS
+# <a name="photokit-in-xamarinios"></a>PhotoKit in Xamarin.iOS
 
 [![scaricare l'esempio](~/media/shared/download.png) scaricare un esempio di codice](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp/)
 

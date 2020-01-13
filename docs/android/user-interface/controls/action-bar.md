@@ -1,5 +1,5 @@
 ---
-title: ActionBar per Novell. Android
+title: ActionBar per Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488959"
 ---
-# <a name="actionbar-for-xamarinandroid"></a>ActionBar per Novell. Android
+# <a name="actionbar-for-xamarinandroid"></a>ActionBar per Xamarin.Android
 
 Quando si usa `TabActivity`, il codice per creare le icone di tabulazione non ha alcun effetto quando viene eseguito sul Framework Android 4,0. Sebbene funzioni come nelle versioni di Android precedenti alla 2,3, il `TabActivity` classe è stato deprecato in 4,0. È stato introdotto un nuovo modo per creare un'interfaccia a schede che usa il Barra delle azioni, che verrà illustrato di seguito.
 

@@ -1,5 +1,5 @@
 ---
-title: Uso di azioni di riga in Novell. iOS
+title: Uso di azioni di riga in Xamarin.iOS
 description: Questa guida illustra come creare azioni di scorrimento personalizzate per le righe della tabella con UISwipeActionsConfiguration o UITableViewRowAction
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021860"
 ---
-# <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Novell. iOS
+# <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Xamarin.iOS
 
 _Questa guida illustra come creare azioni di scorrimento personalizzate per le righe della tabella con UISwipeActionsConfiguration o UITableViewRowAction_
 

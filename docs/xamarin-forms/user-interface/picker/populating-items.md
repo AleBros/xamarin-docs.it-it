@@ -22,7 +22,7 @@ _La visualizzazione di selezione è un controllo per la selezione di un elemento
 
 ## <a name="populating-a-picker-with-data"></a>Popolamento di un selettore con i dati
 
-Prima di xamarin. Forms 2.3.4, il processo per l'inserimento in una [`Picker`](xref:Xamarin.Forms.Picker) con i dati è stata per aggiungere i dati da visualizzare per la sola lettura [`Items`](xref:Xamarin.Forms.Picker.Items) raccolta, che è di tipo `IList<string>`. Ogni elemento della raccolta deve essere di tipo `string`. È possibile aggiungere elementi in XAML inizializzando il `Items` con un elenco di proprietà `x:String` elementi:
+Prima di Xamarin.Forms 2.3.4, il processo per l'inserimento in una [`Picker`](xref:Xamarin.Forms.Picker) con i dati è stata per aggiungere i dati da visualizzare per la sola lettura [`Items`](xref:Xamarin.Forms.Picker.Items) raccolta, che è di tipo `IList<string>`. Ogni elemento della raccolta deve essere di tipo `string`. È possibile aggiungere elementi in XAML inizializzando il `Items` con un elenco di proprietà `x:String` elementi:
 
 ```xaml
 <Picker Title="Select a monkey"

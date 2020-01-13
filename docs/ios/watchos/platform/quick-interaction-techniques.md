@@ -1,6 +1,6 @@
 ---
 title: Tecniche di interazione rapida per watchos 3 in Novell
-description: Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch.
+description: Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Xamarin.iOS per Apple Watch.
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73028182"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 
-_Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch._
+_Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Xamarin.iOS per Apple Watch._
 
 Fornire interazioni utente rapide è essenziale per la creazione di applicazioni e complicazioni di Apple Watch accattivanti. Una novità di watchos 3, Apple ha aggiunto il supporto per i riconoscitori di movimento, l'accesso alla Digital Crown e le nuove tecniche di notifica e navigazione degli utenti. Questo, insieme al supporto aggiunto sia per SceneKit che per SpriteKit, consente allo sviluppatore di creare con facilità interfacce accattivanti e accattivanti, rapide e reattive.
 
@@ -350,7 +350,7 @@ Apple suggerisce quanto segue:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch.
+Questo articolo ha trattato le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Xamarin.iOS per Apple Watch.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

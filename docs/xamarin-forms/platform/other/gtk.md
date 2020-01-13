@@ -1,6 +1,6 @@
 ---
 title: 'Installazione della piattaforma GTK #'
-description: 'Novell. Forms ora dispone del supporto in anteprima per la piattaforma GTK #'
+description: 'Xamarin.Forms ora dispone del supporto in anteprima per la piattaforma GTK #'
 ms.prod: xamarin
 ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
 ms.technology: xamarin-forms
@@ -18,15 +18,15 @@ ms.locfileid: "73005919"
 
 ![Anteprima](~/media/shared/preview.png)
 
-Novell. Forms ora include il supporto in anteprima per le app GTK #. GTK # è un toolkit di interfaccia utente grafica che collega il toolkit GTK + e un'ampia gamma di librerie GNOME, consentendo lo sviluppo di app grafiche GNOME completamente native usando Mono e .NET. Questo articolo illustra come aggiungere un progetto GTK # a una soluzione Novell. Forms.
+Xamarin.Forms ora include il supporto in anteprima per le app GTK #. GTK # è un toolkit di interfaccia utente grafica che collega il toolkit GTK + e un'ampia gamma di librerie GNOME, consentendo lo sviluppo di app grafiche GNOME completamente native usando Mono e .NET. Questo articolo illustra come aggiungere un progetto GTK # a una soluzione Xamarin.Forms.
 
 > [!IMPORTANT]
-> Il supporto di Novell. Forms per GTK # è fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Novell. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+> Il supporto di Xamarin.Forms per GTK # è fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-Prima di iniziare, creare una nuova soluzione Novell. Forms oppure usare una soluzione Novell. Forms esistente, ad esempio [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
+Prima di iniziare, creare una nuova soluzione Xamarin.Forms oppure usare una soluzione Xamarin.Forms esistente, ad esempio [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
 > [!NOTE]
-> Sebbene questo articolo sia incentrato sull'aggiunta di un'app GTK # a una soluzione Novell. Forms in VS2017 e Visual Studio per Mac, può essere eseguita anche in [MonoDevelop](https://www.monodevelop.com/) per Linux.
+> Sebbene questo articolo sia incentrato sull'aggiunta di un'app GTK # a una soluzione Xamarin.Forms in VS2017 e Visual Studio per Mac, può essere eseguita anche in [MonoDevelop](https://www.monodevelop.com/) per Linux.
 
 ## <a name="adding-a-gtk-app"></a>Aggiunta di un'app GTK #
 
@@ -46,19 +46,19 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
     Premere il pulsante **OK** per creare il progetto.
 
-4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto GTK e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** e cercare **Novell. Forms** 3,0 o versione successiva.
+4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto GTK e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** e cercare **Xamarin.Forms** 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/win/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms")
-
-    Selezionare il pacchetto e fare clic sul pulsante **Installa** .
-
-5. A questo punto, cercare il pacchetto **Novell. Forms. Platform. GTK** 3,0 o versione successiva.
-
-    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
+    ![Selezionare il pacchetto NuGet Xamarin.Forms](gtk-images/win/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Xamarin.Forms")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
-6. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome della soluzione e scegliere **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Novell. Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Novell. Forms usata dal progetto GTK.
+5. A questo punto, cercare il pacchetto **Xamarin.Forms. Platform. GTK** 3,0 o versione successiva.
+
+    ![Selezionare il pacchetto NuGet Xamarin.Forms. Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Xamarin.Forms. Platform. GTK")
+
+    Selezionare il pacchetto e fare clic sul pulsante **Installa** .
+
+6. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome della soluzione e scegliere **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Xamarin.Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Xamarin.Forms usata dal progetto GTK.
 
 7. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti** nel progetto GTK. Nella finestra di dialogo **Gestione riferimenti** selezionare **progetti** a sinistra e selezionare la casella di controllo accanto al progetto .NET standard o condiviso:
 
@@ -101,7 +101,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
     }
     ```
 
-    Questo codice inizializza GTK # e Novell. Forms, crea una finestra dell'applicazione ed esegue l'app.
+    Questo codice inizializza GTK # e Xamarin.Forms, crea una finestra dell'applicazione ed esegue l'app.
 
 11. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto GTK e scegliere **Proprietà**.
 
@@ -117,23 +117,23 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
 Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul desktop Mac:
 
-1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sulla soluzione Novell. Forms e scegliere **aggiungi > Aggiungi nuovo progetto.**
+1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sulla soluzione Xamarin.Forms e scegliere **aggiungi > Aggiungi nuovo progetto.**
 
 2. Nella finestra **nuovo progetto** scegliere **altri > .net > progetto GTK # 2,0** e fare clic su **Avanti**.
 
 3. Digitare un nome per il progetto con un'estensione **GTK** , ad esempio **GameOfLife. GTK**, quindi fare clic su **Crea**.
 
-4. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet novell. Forms 3,0 o versione successiva.
+4. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet Xamarin.Forms 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/mac/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms")
+    ![Selezionare il pacchetto NuGet Xamarin.Forms](gtk-images/mac/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Xamarin.Forms")
 
-5. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet Novell. Forms. Platform. GTK 3,0 o versione successiva.
+5. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet Xamarin.Forms. Platform. GTK 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/mac/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
+    ![Selezionare il pacchetto NuGet Xamarin.Forms. Platform. GTK](gtk-images/mac/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Xamarin.Forms. Platform. GTK")
 
-6. Aggiornare gli altri progetti della piattaforma in modo che usino la stessa versione di Novell. Forms usata dal progetto GTK.
+6. Aggiornare gli altri progetti della piattaforma in modo che usino la stessa versione di Xamarin.Forms usata dal progetto GTK.
 
-7. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **References > Edit References...** per il progetto GTK e aggiungere un riferimento al progetto Novell. Forms (.NET standard o progetto condiviso).
+7. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **References > Edit References...** per il progetto GTK e aggiungere un riferimento al progetto Xamarin.Forms (.NET standard o progetto condiviso).
 
     ![Fare riferimento al progetto condiviso](gtk-images/mac/reference-shared-project.png "Fare riferimento al progetto condiviso")
 
@@ -166,7 +166,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul des
     }
     ```
 
-    Questo codice inizializza GTK # e Novell. Forms, crea una finestra dell'applicazione ed esegue l'app.
+    Questo codice inizializza GTK # e Xamarin.Forms, crea una finestra dell'applicazione ed esegue l'app.
 
 9. Nel **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto GTK e selezionare **Imposta come progetto di avvio**.
 
@@ -180,7 +180,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul des
 
 ### <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
-È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da XAML o dal codice. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in GTK #. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.GTK` (che corrisponde alla stringa "GTK"). Se esiste una corrispondenza, l'applicazione è in esecuzione in GTK #.
+È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Xamarin.Forms da XAML o dal codice. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in GTK #. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.GTK` (che corrisponde alla stringa "GTK"). Se esiste una corrispondenza, l'applicazione è in esecuzione in GTK #.
 
 In XAML è possibile usare il tag `OnPlatform` per selezionare un valore della proprietà specifico per la piattaforma:
 
@@ -205,7 +205,7 @@ window.SetApplicationIcon("icon.png");
 
 ### <a name="themes"></a>Themes
 
-Per GTK # è disponibile un'ampia gamma di temi che possono essere usati da un'app Novell. Forms:
+Per GTK # è disponibile un'ampia gamma di temi che possono essere usati da un'app Xamarin.Forms:
 
 ```csharp
 GtkThemes.Init ();
@@ -214,7 +214,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>Form nativi
 
-I moduli nativi consentono a Novell. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)pagine derivate da essere utilizzate da progetti nativi, inclusi i progetti GTK #. Questa operazione può essere eseguita creando un'istanza della pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage)e trasformandola nel tipo GTK # nativo usando il metodo di estensione `CreateContainer`:
+I moduli nativi consentono a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)pagine derivate da essere utilizzate da progetti nativi, inclusi i progetti GTK #. Questa operazione può essere eseguita creando un'istanza della pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage)e trasformandola nel tipo GTK # nativo usando il metodo di estensione `CreateContainer`:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

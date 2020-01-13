@@ -1,6 +1,6 @@
 ---
-title: Creazione di interfacce utente iOS nel codice in Novell. iOS
-description: Questo documento descrive come usare il codice per creare un'interfaccia utente per un'app Novell. iOS. Vengono illustrati i controller di visualizzazione, la compilazione di una gerarchia di visualizzazione, la gestione di una rotazione e altro ancora.
+title: Creazione di interfacce utente iOS nel codice in Xamarin.iOS
+description: Questo documento descrive come usare il codice per creare un'interfaccia utente per un'app Xamarin.iOS. Vengono illustrati i controller di visualizzazione, la compilazione di una gerarchia di visualizzazione, la gestione di una rotazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010329"
 ---
-# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creazione di interfacce utente iOS nel codice in Novell. iOS
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creazione di interfacce utente iOS nel codice in Xamarin.iOS
 
 L'interfaccia utente di un'app iOS è simile a una vetrina: l'applicazione in genere ottiene una finestra, ma può riempire la finestra con il numero di oggetti necessario e gli oggetti e le disposizioni possono essere modificati a seconda di ciò che l'app vuole visualizzare. Gli oggetti di questo scenario, ovvero gli elementi visibili per l'utente, sono chiamati visualizzazioni. Per compilare una singola schermata in un'applicazione, le visualizzazioni sono sovrapposte l'una all'altra in una gerarchia di visualizzazione del contenuto e la gerarchia viene gestita da un unico controller di visualizzazione. Le applicazioni con più schermate hanno più gerarchie di visualizzazione del contenuto, ognuna con un proprio controller di visualizzazione, e l'applicazione inserisce visualizzazioni nella finestra per creare gerarchie di visualizzazione del contenuto diverse in base alla schermata visualizzata dall'utente.
 

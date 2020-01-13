@@ -1,6 +1,6 @@
 ---
 title: Introduzione a macOS Sierra
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in macOS Sierra per gli sviluppatori Novell. Mac.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in macOS Sierra per gli sviluppatori Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
@@ -54,7 +54,7 @@ Le app macOS moderne, ad esempio il Web browser Safari di Apple, le pagine di El
 
 [![un esempio di finestra Mac a schede](images/content08.png)](images/content08.png#lightbox)
 
-La guida per la [creazione di app MacOS moderne](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app MacOS moderna in Novell. Mac.
+La guida per la [creazione di app MacOS moderne](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app MacOS moderna in Xamarin.Mac.
 
 <a name="CloudKit-Data-Sharing" />
 

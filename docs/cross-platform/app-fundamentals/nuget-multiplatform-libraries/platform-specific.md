@@ -19,7 +19,7 @@ I progetti di libreria multipiattaforma destinati a piattaforme specifiche, ad e
 
 NuGet può contenere sia codice specifico per iOS che Android, nonché codice .NET comune a entrambi.
 
-Vengono creati più assembly e incorporati in un singolo pacchetto NuGet. Gli standard NuGet assicurano che il pacchetto possa essere aggiunto a tutti i tipi di progetto supportati, ad esempio i progetti Novell. iOS e Android.
+Vengono creati più assembly e incorporati in un singolo pacchetto NuGet. Gli standard NuGet assicurano che il pacchetto possa essere aggiunto a tutti i tipi di progetto supportati, ad esempio i progetti Xamarin.iOS e Android.
 
 ## <a name="steps-to-create-a-cross-platform-library-nuget"></a>Passaggi per creare una libreria multipiattaforma NuGet
 

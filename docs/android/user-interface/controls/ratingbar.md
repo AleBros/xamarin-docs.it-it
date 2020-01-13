@@ -1,5 +1,5 @@
 ---
-title: Novell. Android RatingBar
+title: Xamarin.Android RatingBar
 description: Come aggiungere un widget RatingBar a un'attività Android.
 ms.prod: xamarin
 ms.assetid: d7a1f9bb-926d-4f93-9e8e-0fa933e330e7
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029150"
 ---
-# <a name="xamarinandroid-ratingbar"></a>Novell. Android RatingBar
+# <a name="xamarinandroid-ratingbar"></a>Xamarin.Android RatingBar
 
 Un RatingBar è un widget dell'interfaccia utente che visualizza una valutazione da una a cinque stelle. L'utente può selezionare una classificazione mediante taping su una stella in questa sezione. verrà creato un widget che consente all'utente di fornire una classificazione, con il widget [`RatingBar`](xref:Android.Widget.RatingBar) .
 

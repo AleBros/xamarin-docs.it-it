@@ -1,5 +1,5 @@
 ---
-title: Introduzione a ARKit in Novell. iOS
+title: Introduzione a ARKit in Xamarin.iOS
 description: Questo documento descrive la realtà aumentata in iOS 11 con ARKit. Viene illustrato come aggiungere un modello 3D a un'app, configurare la visualizzazione, implementare un delegato della sessione, posizionare il modello 3D nel mondo e sospendere la sessione di realtà aumentata.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032254"
 ---
-# <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in Novell. iOS
+# <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in Xamarin.iOS
 
 _Realtà aumentata per iOS 11_
 

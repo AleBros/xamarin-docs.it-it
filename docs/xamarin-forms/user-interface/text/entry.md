@@ -1,6 +1,6 @@
 ---
-title: Voce Novell. Forms
-description: Questo articolo illustra come usare la classe di immissione Novell. Forms per accettare l'input di testo o password a riga singola in un'applicazione.
+title: Voce Xamarin.Forms
+description: Questo articolo illustra come usare la classe di immissione Xamarin.Forms per accettare l'input di testo o password a riga singola in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697067"
 ---
-# <a name="xamarinforms-entry"></a>Voce Novell. Forms
+# <a name="xamarinforms-entry"></a>Voce Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Input di testo o password a riga singola_
 
-Il [`Entry`](xref:Xamarin.Forms.Entry) Novell. Forms viene utilizzato per l'input di testo a riga singola. Il `Entry`, ad esempio la visualizzazione [`Editor`](xref:Xamarin.Forms.Editor) , supporta più tipi di tastiera. Inoltre, il `Entry` può essere usato come campo password.
+Il [`Entry`](xref:Xamarin.Forms.Entry) Xamarin.Forms viene utilizzato per l'input di testo a riga singola. Il `Entry`, ad esempio la visualizzazione [`Editor`](xref:Xamarin.Forms.Editor) , supporta più tipi di tastiera. Inoltre, il `Entry` può essere usato come campo password.
 
 ## <a name="display-customization"></a>Personalizzazione della visualizzazione
 

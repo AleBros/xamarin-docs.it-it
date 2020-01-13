@@ -1,6 +1,6 @@
 ---
-title: HomeKit in Novell. iOS
-description: HomeKit è il Framework di Apple per il controllo dei dispositivi di automazione domestica. Questo articolo presenta HomeKit e illustra la configurazione di accessori di test nel simulatore di accessori HomeKit e la scrittura di una semplice app Novell. iOS per interagire con questi accessori.
+title: HomeKit in Xamarin.iOS
+description: HomeKit è il Framework di Apple per il controllo dei dispositivi di automazione domestica. Questo articolo presenta HomeKit e illustra la configurazione di accessori di test nel simulatore di accessori HomeKit e la scrittura di una semplice app Xamarin.iOS per interagire con questi accessori.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032424"
 ---
-# <a name="homekit-in-xamarinios"></a>HomeKit in Novell. iOS
+# <a name="homekit-in-xamarinios"></a>HomeKit in Xamarin.iOS
 
-_HomeKit è il Framework di Apple per il controllo dei dispositivi di automazione domestica. Questo articolo presenta HomeKit e illustra la configurazione di accessori di test nel simulatore di accessori HomeKit e la scrittura di una semplice app Novell. iOS per interagire con questi accessori._
+_HomeKit è il Framework di Apple per il controllo dei dispositivi di automazione domestica. Questo articolo presenta HomeKit e illustra la configurazione di accessori di test nel simulatore di accessori HomeKit e la scrittura di una semplice app Xamarin.iOS per interagire con questi accessori._
 
 [![](homekit-images/accessory01.png "An example HomeKit enabled App")](homekit-images/accessory01.png#lightbox)
 
 Apple ha introdotto HomeKit in iOS 8 come metodo per integrare facilmente più dispositivi di automazione della casa da diversi fornitori in un'unica unità coerente. Con la promozione di un protocollo comune per l'individuazione, la configurazione e il controllo dei dispositivi di automazione domestica, HomeKit consente ai dispositivi di fornitori non correlati di collaborare, il tutto senza che i singoli fornitori debbano coordinare le attività.
 
-Con HomeKit è possibile creare un'app Novell. iOS che controlla qualsiasi dispositivo abilitato per HomeKit senza usare le API o le app fornite dal fornitore. Utilizzando HomeKit, è possibile eseguire le operazioni seguenti:
+Con HomeKit è possibile creare un'app Xamarin.iOS che controlla qualsiasi dispositivo abilitato per HomeKit senza usare le API o le app fornite dal fornitore. Utilizzando HomeKit, è possibile eseguire le operazioni seguenti:
 
 - Individuare i nuovi dispositivi di Home Automation abilitati per HomeKit e aggiungerli a un database che sarà mantenuto in tutti i dispositivi iOS dell'utente.
 - Configurare, configurare, visualizzare e controllare qualsiasi dispositivo nel database di _configurazione_di HomeKit Home.
@@ -48,7 +48,7 @@ La raccolta Home è archiviata in un database di configurazione Home che verrà 
 
 ## <a name="provisioning-a-homekit-app"></a>Provisioning di un'app HomeKit
 
-A causa dei requisiti di sicurezza imposti da HomeKit, un'app Novell. iOS che usa il Framework HomeKit deve essere configurata correttamente nel portale Apple Developer e nel file di progetto Novell. iOS.
+A causa dei requisiti di sicurezza imposti da HomeKit, un'app Xamarin.iOS che usa il Framework HomeKit deve essere configurata correttamente nel portale Apple Developer e nel file di progetto Xamarin.iOS.
 
 Procedere come descritto di seguito:
 
@@ -63,7 +63,7 @@ Procedere come descritto di seguito:
 
     [![](homekit-images/provision02.png "Create a new development provisioning profile for the app")](homekit-images/provision02.png#lightbox)
 7. Scaricare e installare il nuovo profilo di provisioning o usare Xcode per scaricare e installare il profilo.
-8. Modificare le opzioni del progetto Novell. iOS e assicurarsi di usare il profilo di provisioning appena creato: 
+8. Modificare le opzioni del progetto Xamarin.iOS e assicurarsi di usare il profilo di provisioning appena creato: 
 
     [![](homekit-images/provision03.png "Select provisioning profile just created")](homekit-images/provision03.png#lightbox)
 9. Modificare quindi il file **info. plist** e assicurarsi di usare l'ID app usato per creare il profilo di provisioning: 
@@ -121,7 +121,7 @@ Per avviare il simulatore di accessori HomeKit e creare alcuni accessori virtual
     [![](homekit-images/simulator07.png "Configuring the required settings")](homekit-images/simulator07.png#lightbox)
 7. Ripetere i passaggi precedenti per creare uno di ogni tipo di dispositivo di automazione domestica virtuale supportato da HomeKit.
 
-Con alcuni accessori HomeKit virtuali di esempio creati e configurati, è ora possibile utilizzare e controllare questi dispositivi dall'app Novell. iOS.
+Con alcuni accessori HomeKit virtuali di esempio creati e configurati, è ora possibile utilizzare e controllare questi dispositivi dall'app Xamarin.iOS.
 
 ## <a name="configuring-the-infoplist-file"></a>Configurazione del file INFO. plist
 
@@ -147,7 +147,7 @@ Per impostare questa chiave, eseguire le operazioni seguenti:
 
 ## <a name="connecting-to-homekit"></a>Connessione a HomeKit
 
-Per comunicare con HomeKit, l'app Novell. iOS deve prima creare un'istanza della classe `HMHomeManager`. Il responsabile principale è il punto di ingresso centrale in HomeKit ed è responsabile della fornitura di un elenco di Home page disponibili, dell'aggiornamento e della gestione dell'elenco e della restituzione della _Home Page principale_dell'utente.
+Per comunicare con HomeKit, l'app Xamarin.iOS deve prima creare un'istanza della classe `HMHomeManager`. Il responsabile principale è il punto di ingresso centrale in HomeKit ed è responsabile della fornitura di un elenco di Home page disponibili, dell'aggiornamento e della gestione dell'elenco e della restituzione della _Home Page principale_dell'utente.
 
 L'oggetto `HMHome` contiene tutte le informazioni relative a una Home page, incluse eventuali chat, gruppi o zone che possono contenere, insieme a tutti gli accessori di automazione domestica installati. Prima di poter eseguire qualsiasi operazione in HomeKit, è necessario creare almeno un `HMHome` e assegnarlo come Home Page principale.
 
@@ -155,7 +155,7 @@ L'app è responsabile di verificare se esiste una Home Page principale e di crea
 
 ### <a name="adding-a-home-manager"></a>Aggiunta di un gestore Home
 
-Per aggiungere HomeKit Awareness a un'app Novell. iOS, modificare il file **AppDelegate.cs** per modificarlo e renderlo simile al seguente:
+Per aggiungere HomeKit Awareness a un'app Xamarin.iOS, modificare il file **AppDelegate.cs** per modificarlo e renderlo simile al seguente:
 
 ```csharp
 using HomeKit;
@@ -269,7 +269,7 @@ Se la Home page è stata creata correttamente, è necessario chiamare il metodo 
 
 ## <a name="finding-new-accessories"></a>Ricerca di nuovi accessori
 
-Una volta che una Home Page principale è stata definita o caricata da Home Manager, l'app Novell. iOS può chiamare il `HMAccessoryBrowser` per trovare eventuali nuovi accessori di automazione della casa e aggiungerli a una Home page.
+Una volta che una Home Page principale è stata definita o caricata da Home Manager, l'app Xamarin.iOS può chiamare il `HMAccessoryBrowser` per trovare eventuali nuovi accessori di automazione della casa e aggiungerli a una Home page.
 
 Chiamare il metodo `StartSearchingForNewAccessories` per iniziare a cercare nuovi accessori e il metodo di `StopSearchingForNewAccessories` al termine.
 
@@ -663,7 +663,7 @@ Deve modificare lo stato della luce nel simulatore di accessori HomeKit. Se il v
 
 ## <a name="advanced-homekit-features"></a>Funzionalità avanzate di HomeKit
 
-Questo articolo ha trattato le funzionalità di base necessarie per l'uso di accessori HomeKit in un'app Novell. iOS. Esistono tuttavia diverse funzionalità avanzate di HomeKit che non sono descritte in questa introduzione:
+Questo articolo ha trattato le funzionalità di base necessarie per l'uso di accessori HomeKit in un'app Xamarin.iOS. Esistono tuttavia diverse funzionalità avanzate di HomeKit che non sono descritte in questa introduzione:
 
 - **Rooms** : gli accessori abilitati per HomeKit possono essere organizzati facoltativamente in chat room dall'utente finale. Questo consente a HomeKit di presentare gli accessori in modo da semplificare la comprensione e l'utilizzo da parte dell'utente. Per altre informazioni sulla creazione e sulla gestione delle chat, vedere la documentazione di Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) .
 - **Zones** : le camere possono essere organizzate facoltativamente in zone dall'utente finale. Una zona fa riferimento a una raccolta di chat che l'utente può considerare come una singola unità. Ad esempio: verso il basso, al di sotto o in seminterrato. Anche in questo caso, questo consente a HomeKit di presentare e usare gli accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e la gestione delle zone, vedere la documentazione di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) .
@@ -674,7 +674,7 @@ Poiché queste funzionalità usano le stesse tecniche illustrate in precedenza, 
 
 ## <a name="homekit-app-review-guidelines"></a>Linee guida per la revisione dell'app HomeKit
 
-Prima di inviare un'app Novell. iOS abilitata per HomeKit a iTunes Connect per la versione in iTunes App Store, assicurarsi di seguire le linee guida di Apple per le app abilitate per HomeKit:
+Prima di inviare un'app Xamarin.iOS abilitata per HomeKit a iTunes Connect per la versione in iTunes App Store, assicurarsi di seguire le linee guida di Apple per le app abilitate per HomeKit:
 
 - Lo scopo principale dell'app _deve_ essere l'automazione domestica se si usa il Framework HomeKit.
 - Il testo di marketing dell'app deve notificare agli utenti che HomeKit è in uso e che devono fornire un'informativa sulla privacy.
@@ -703,7 +703,7 @@ Per altre informazioni sulle nuove funzionalità di HomeKit in iOS 9, vedere l' 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha introdotto il Framework di automazione HomeKit Home di Apple. È stato illustrato come configurare e configurare i dispositivi di test usando il simulatore di accessori HomeKit e come creare una semplice app Novell. iOS per individuare, comunicare e controllare i dispositivi di automazione domestica usando HomeKit.
+Questo articolo ha introdotto il Framework di automazione HomeKit Home di Apple. È stato illustrato come configurare e configurare i dispositivi di test usando il simulatore di accessori HomeKit e come creare una semplice app Xamarin.iOS per individuare, comunicare e controllare i dispositivi di automazione domestica usando HomeKit.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

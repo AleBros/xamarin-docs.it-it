@@ -1,6 +1,6 @@
 ---
-title: 'Procedura dettagliata: uso di touch in Novell. iOS'
-description: Questo documento descrive come gestire il tocco nelle applicazioni Novell. iOS, illustrando le interazioni tocco di esempio, i riconoscitori di movimento e i riconoscitori di movimento personalizzati.
+title: 'Procedura dettagliata: uso di touch in Xamarin.iOS'
+description: Questo documento descrive come gestire il tocco nelle applicazioni Xamarin.iOS, illustrando le interazioni tocco di esempio, i riconoscitori di movimento e i riconoscitori di movimento personalizzati.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009407"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: uso di touch in Novell. iOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: uso di touch in Xamarin.iOS
 
 In questa procedura dettagliata viene illustrato come scrivere codice che risponde a diversi tipi di eventi di tocco. Ogni esempio è contenuto in una schermata separata:
 

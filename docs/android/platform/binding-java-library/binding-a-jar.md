@@ -1,6 +1,6 @@
 ---
 title: Associazione di un file JAR
-description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File JAR.
+description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File JAR.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
@@ -16,11 +16,11 @@ ms.locfileid: "73027767"
 ---
 # <a name="binding-a-jar"></a>Associazione di un file JAR
 
-_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File JAR._
+_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File JAR._
 
 ## <a name="overview"></a>Panoramica
 
-La community Android offre molte librerie Java che è possibile usare nell'app. Queste librerie Java sono spesso impacchettate in. Formato JAR (Java Archive), ma è possibile creare il pacchetto a. JAR it in una *libreria di binding Java* in modo che la relativa funzionalità sia disponibile per le app Novell. Android. Lo scopo della libreria dei binding Java è quello di rendere le API in. File JAR disponibile per C# il codice tramite wrapper di codice generati automaticamente.
+La community Android offre molte librerie Java che è possibile usare nell'app. Queste librerie Java sono spesso impacchettate in. Formato JAR (Java Archive), ma è possibile creare il pacchetto a. JAR it in una *libreria di binding Java* in modo che la relativa funzionalità sia disponibile per le app Xamarin.Android. Lo scopo della libreria dei binding Java è quello di rendere le API in. File JAR disponibile per C# il codice tramite wrapper di codice generati automaticamente.
 
 Gli strumenti Novell possono generare una libreria di binding da uno o più input. File JAR. Libreria di binding (. Assembly DLL) contiene gli elementi seguenti: 
 
@@ -35,7 +35,7 @@ La [creazione di associazioni usando i metadati](~/android/platform/binding-java
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Nella procedura dettagliata seguente verrà creata una libreria di binding per [Picasso](https://square.github.io/picasso/), un dispositivo Android molto diffuso. JAR che fornisce funzionalità di caricamento di immagini e memorizzazione nella cache. Usare i passaggi seguenti per associare **Picasso-2. x.x. x. jar** per creare un nuovo assembly .NET che è possibile usare in un progetto Novell. Android: 
+Nella procedura dettagliata seguente verrà creata una libreria di binding per [Picasso](https://square.github.io/picasso/), un dispositivo Android molto diffuso. JAR che fornisce funzionalità di caricamento di immagini e memorizzazione nella cache. Usare i passaggi seguenti per associare **Picasso-2. x.x. x. jar** per creare un nuovo assembly .NET che è possibile usare in un progetto Xamarin.Android: 
 
 1. Creare un nuovo progetto di libreria di binding Java.
 
@@ -115,7 +115,7 @@ Infine, compilare la libreria Bindings. Sebbene sia possibile visualizzare alcun
 
 ### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
-Per utilizzare questo. DLL nell'app Novell. Android, seguire questa procedura:
+Per utilizzare questo. DLL nell'app Xamarin.Android, seguire questa procedura:
 
 1. Aggiungere un riferimento alla libreria dei binding.
 
@@ -123,7 +123,7 @@ Per utilizzare questo. DLL nell'app Novell. Android, seguire questa procedura:
 
 Nei passaggi seguenti verrà creata un'app minima che usa la libreria Bindings per scaricare e visualizzare un'immagine in un `ImageView`; il "sollevamento intensivo" viene eseguito dal codice che risiede in. File JAR. 
 
-Per prima cosa, creare una nuova app Novell. Android che utilizza la libreria Bindings. Fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. assegnare al nuovo progetto il nome **BindingTest**. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. Tuttavia, l'app che utilizza la libreria dei binding può invece risiedere in una soluzione diversa: 
+Per prima cosa, creare una nuova app Xamarin.Android che utilizza la libreria Bindings. Fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. assegnare al nuovo progetto il nome **BindingTest**. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. Tuttavia, l'app che utilizza la libreria dei binding può invece risiedere in una soluzione diversa: 
 
 [![aggiungere un nuovo progetto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
@@ -185,7 +185,7 @@ Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e dopo 
 
 [![screenshot di BindingTest in esecuzione](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
-La procedura è stata completata. La libreria Java è stata associata correttamente. JAR e usarlo nell'app Novell. Android.
+La procedura è stata completata. La libreria Java è stata associata correttamente. JAR e usarlo nell'app Xamarin.Android.
 
 ## <a name="summary"></a>Riepilogo
 

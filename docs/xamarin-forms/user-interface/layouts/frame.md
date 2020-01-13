@@ -1,6 +1,6 @@
 ---
-title: Frame Novell. Forms
-description: La classe frame Novell. Forms è un layout utilizzato per eseguire il wrapping di una vista o di un layout con un bordo che può essere configurato con il colore, l'ombreggiatura e altre opzioni.
+title: Frame Xamarin.Forms
+description: La classe frame Xamarin.Forms è un layout utilizzato per eseguire il wrapping di una vista o di un layout con un bordo che può essere configurato con il colore, l'ombreggiatura e altre opzioni.
 ms.prod: xamarin
 ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "69976493"
 ---
-# <a name="xamarinforms-frame"></a>Frame Novell. Forms
+# <a name="xamarinforms-frame"></a>Frame Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
-La classe [`Frame`](xref:Xamarin.Forms.Frame) Novell. Forms è un layout utilizzato per eseguire il wrapping di una visualizzazione con un bordo che può essere configurato con il colore, l'ombreggiatura e altre opzioni. I frame vengono comunemente usati per creare bordi intorno ai controlli, ma possono essere usati per creare un'interfaccia utente più complessa. Per ulteriori informazioni, vedere [utilizzo avanzato dei frame](#advanced-frame-usage).
+La classe [`Frame`](xref:Xamarin.Forms.Frame) Xamarin.Forms è un layout utilizzato per eseguire il wrapping di una visualizzazione con un bordo che può essere configurato con il colore, l'ombreggiatura e altre opzioni. I frame vengono comunemente usati per creare bordi intorno ai controlli, ma possono essere usati per creare un'interfaccia utente più complessa. Per ulteriori informazioni, vedere [utilizzo avanzato dei frame](#advanced-frame-usage).
 
 Lo screenshot seguente mostra `Frame` controlli in iOS e Android:
 
@@ -186,7 +186,7 @@ Frame circleImageFrame = new Frame
 };
 ```
 
-È necessario aggiungere l'immagine **outdoor. jpg** a ogni progetto di piattaforma e il modo in cui questa operazione viene eseguita varia in base alla piattaforma. Per altre informazioni, vedere [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md).
+È necessario aggiungere l'immagine **outdoor. jpg** a ogni progetto di piattaforma e il modo in cui questa operazione viene eseguita varia in base alla piattaforma. Per altre informazioni, vedere [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
 > [!NOTE]
 > Gli angoli arrotondati hanno un comportamento leggermente diverso nelle diverse piattaforme. Il `Margin` dell'oggetto `Image` deve essere la metà della differenza tra la larghezza dell'immagine e la larghezza del fotogramma padre e deve essere negativo per centrare uniformemente l'immagine all'interno dell'oggetto `Frame`. Tuttavia, la larghezza e l'altezza richieste non sono garantite, quindi le proprietà `Margin`, `HeightRequest` e `WidthRequest` potrebbero essere modificate in base alle dimensioni dell'immagine e ad altre opzioni di layout.
@@ -194,4 +194,4 @@ Frame circleImageFrame = new Frame
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Demo frame](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
-* [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)
+* [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

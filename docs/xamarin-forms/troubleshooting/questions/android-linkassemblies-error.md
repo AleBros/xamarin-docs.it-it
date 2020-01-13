@@ -16,7 +16,7 @@ ms.locfileid: "69528371"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto
 
-È possibile che venga visualizzato un `The "LinkAssemblies" task failed unexpectedly` messaggio di errore quando si compila un progetto Novell. Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. Ulteriori informazioni: [Novell. Forms per i requisiti di Android](~/get-started/requirements.md#android))
+È possibile che venga visualizzato un `The "LinkAssemblies" task failed unexpectedly` messaggio di errore quando si compila un progetto Xamarin.Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. Ulteriori informazioni: [Xamarin.Forms per i requisiti di Android](~/get-started/requirements.md#android))
 
 La risoluzione di questo problema consiste nel verificare che siano disponibili le versioni di Android SDK supportate più recenti e impostare il **Framework di destinazione** sulla piattaforma installata più recente. Si consiglia inoltre di impostare la versione di **Android di destinazione** sull'ultima piattaforma installata e la **versione minima di Android** sull'API 19 o successiva. Questa operazione è considerata la configurazione supportata.
 

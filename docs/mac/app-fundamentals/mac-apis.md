@@ -1,6 +1,6 @@
 ---
-title: API macOS per sviluppatori Novell. Mac
-description: Questo documento descrive come leggere i selettori Objective-C e come trovare i metodi C# corrispondenti in un'app Novell. Mac.
+title: API macOS per sviluppatori Xamarin.Mac
+description: Questo documento descrive come leggere i selettori Objective-C e come trovare i metodi C# corrispondenti in un'app Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030068"
 ---
-# <a name="macos-apis-for-xamarinmac-developers"></a>API macOS per sviluppatori Novell. Mac
+# <a name="macos-apis-for-xamarinmac-developers"></a>API macOS per sviluppatori Xamarin.Mac
 
 ## <a name="overview"></a>Panoramica
 
-Per la maggior parte del tempo di sviluppo con Novell. Mac, è possibile pensare, leggere e scrivere C# senza preoccuparsi delle API Objective-C sottostanti. Tuttavia, a volte è necessario leggere la documentazione dell'API da Apple, tradurre una risposta da Stack Overflow a una soluzione per il problema oppure confrontarla con un esempio esistente.
+Per la maggior parte del tempo di sviluppo con Xamarin.Mac, è possibile pensare, leggere e scrivere C# senza preoccuparsi delle API Objective-C sottostanti. Tuttavia, a volte è necessario leggere la documentazione dell'API da Apple, tradurre una risposta da Stack Overflow a una soluzione per il problema oppure confrontarla con un esempio esistente.
 
 ## <a name="reading-enough-objective-c-to-be-dangerous"></a>Lettura di un numero sufficiente di Objective-C come pericoloso
 
@@ -36,7 +36,7 @@ La dichiarazione può essere letta da sinistra a destra:
 - `(NSIndexSet *)rowIndexes` è il primo parametro e con il tipo. Il primo parametro è nel formato: `(Type) pararmName`
 - `atPoint:(NSPoint)mouseDownPoint` è il secondo parametro e il relativo tipo. Ogni parametro dopo il primo è il formato: `selectorPart:(Type) pararmName`
 - Il nome completo di questo selettore di messaggi è: `canDragRowsWithIndexes:atPoint:`. Si noti la `:` alla fine. è importante.
-- Il binding Novell. Mac C# effettivo è:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- Il binding Xamarin.Mac C# effettivo è:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 Questa chiamata al selettore può essere letta nello stesso modo:
 
@@ -66,9 +66,9 @@ Ora che è stato trovato il selettore Objective-C che è necessario richiamare, 
     - Fare clic con il pulsante destro del mouse su `NSTableView`, passare a dichiarazione in assembly browser
     - Cerca il selettore in questione
 
-3. È possibile usare la [documentazione online dell'API Novell. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+3. È possibile usare la [documentazione online dell'API Xamarin.Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 
-4. Miguel fornisce una visualizzazione "Rosetta Stone" delle API di Novell. Mac [in cui è](https://tirania.org/tmp/rosetta.html) possibile eseguire ricerche per un'API specifica. Se l'API non è specifica di AppKit o macOS, potrebbe trovarlo qui.
+4. Miguel fornisce una visualizzazione "Rosetta Stone" delle API di Xamarin.Mac [in cui è](https://tirania.org/tmp/rosetta.html) possibile eseguire ricerche per un'API specifica. Se l'API non è specifica di AppKit o macOS, potrebbe trovarlo qui.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

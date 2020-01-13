@@ -1,6 +1,6 @@
 ---
 title: Layout
-description: Definizione della struttura visiva dell'app Novell. Android
+description: Definizione della struttura visiva dell'app Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 2BA72B0E-230D-4F98-B4D5-4EFB0D479789
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028961"
 ---
-# <a name="xamarinandroid-layouts"></a>Layout di Novell. Android
+# <a name="xamarinandroid-layouts"></a>Layout di Xamarin.Android
 
-I layout vengono usati per disporre gli elementi che costituiscono l'interfaccia dell'interfaccia utente di una schermata, ad esempio un'attività. Le sezioni seguenti illustrano come usare i layout usati più di frequente nelle app Novell. Android.
+I layout vengono usati per disporre gli elementi che costituiscono l'interfaccia dell'interfaccia utente di una schermata, ad esempio un'attività. Le sezioni seguenti illustrano come usare i layout usati più di frequente nelle app Xamarin.Android.
 
 - [LinearLayout](~/android/user-interface/layouts/linear-layout.md) è un gruppo di visualizzazioni che visualizza gli elementi di visualizzazione figlio in una direzione lineare, verticalmente o orizzontalmente.
 

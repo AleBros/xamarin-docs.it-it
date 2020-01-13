@@ -1,5 +1,5 @@
 ---
-title: SpriteKit in Novell. iOS
+title: SpriteKit in Xamarin.iOS
 description: Questo documento descrive SpriteKit, il Framework di grafica 2D di Apple che si integra con SceneKit, incorpora la fisica e l'animazione, include il supporto per l'illuminazione e l'ombreggiatura e altro ancora. SpriteKit può essere usato per creare giochi 2D.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032477"
 ---
-# <a name="spritekit-in-xamarinios"></a>SpriteKit in Novell. iOS
+# <a name="spritekit-in-xamarinios"></a>SpriteKit in Xamarin.iOS
 
 SpriteKit, il Framework di grafica 2D di Apple, presenta alcune nuove interessanti funzionalità in iOS 8 e OS X Yosemite. Sono inclusi l'integrazione con SceneKit, il supporto dello shader, l'illuminazione, le ombre, i vincoli, la generazione normale della mappa e i miglioramenti della fisica. In particolare, le nuove funzionalità di fisica facilitano l'aggiunta di effetti realistici a un gioco.
 

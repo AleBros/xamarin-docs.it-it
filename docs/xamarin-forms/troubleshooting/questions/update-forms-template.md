@@ -16,7 +16,7 @@ ms.locfileid: "73005386"
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?
 
-Questa guida usa il modello di libreria .NET Standard Novell. Forms come esempio, ma lo stesso metodo generale funzionerà anche per il modello di progetto condiviso Novell. Forms. Questa guida è stata scritta con l'esempio di aggiornamento da Novell. Forms 1.5.1.6471 a 2.1.0.6529, ma gli stessi passaggi sono possibili per impostare altre versioni come valore predefinito.
+Questa guida usa il modello di libreria .NET Standard Xamarin.Forms come esempio, ma lo stesso metodo generale funzionerà anche per il modello di progetto condiviso Xamarin.Forms. Questa guida è stata scritta con l'esempio di aggiornamento da Xamarin.Forms 1.5.1.6471 a 2.1.0.6529, ma gli stessi passaggi sono possibili per impostare altre versioni come valore predefinito.
 
 1. Copiare il modello originale `.zip` da:
 
@@ -24,7 +24,7 @@ Questa guida usa il modello di libreria .NET Standard Novell. Forms come esempio
 
 2. Decomprimere il `.zip` in un percorso temporaneo.
 
-3. Modificare tutte le occorrenze della versione precedente del pacchetto Novell. Forms nella nuova versione che si vuole usare.
+3. Modificare tutte le occorrenze della versione precedente del pacchetto Xamarin.Forms nella nuova versione che si vuole usare.
     * `FormsTemplate\FormsTemplate.vstemplate`
     * `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
     * `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`

@@ -1,5 +1,5 @@
 ---
-title: Annotazioni e sovrimpressioni in Novell. iOS
+title: Annotazioni e sovrimpressioni in Xamarin.iOS
 description: Questo articolo presenta una procedura dettagliata che illustra come usare le funzionalità di annotazione e sovrapposizione del kit mappa. Viene illustrato come aggiungere una mappa a un'applicazione che visualizza un'annotazione e una sovrapposizione nella posizione della conferenza Novell evolve 2013.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022008"
 ---
-# <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Novell. iOS
+# <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Xamarin.iOS
 
 L'applicazione che verrà compilata in questa procedura dettagliata è illustrata di seguito:
 

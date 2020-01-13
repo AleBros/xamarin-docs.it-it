@@ -1,6 +1,6 @@
 ---
-title: Accesso al file System in Novell. iOS
-description: Questo documento descrive come usare la file system in Novell. iOS. Vengono illustrate le directory, la lettura di file, la serializzazione XML e JSON, l'applicazione sandbox, la condivisione di file tramite iTunes e altro ancora.
+title: Accesso al file System in Xamarin.iOS
+description: Questo documento descrive come usare la file system in Xamarin.iOS. Vengono illustrate le directory, la lettura di file, la serializzazione XML e JSON, l'applicazione sandbox, la condivisione di file tramite iTunes e altro ancora.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
@@ -14,23 +14,23 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010611"
 ---
-# <a name="file-system-access-in-xamarinios"></a>Accesso al file System in Novell. iOS
+# <a name="file-system-access-in-xamarinios"></a>Accesso al file System in Xamarin.iOS
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
 
-È possibile usare Novell. iOS e le classi `System.IO` nella *libreria di classi base .NET* per accedere al file System iOS. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` sottoclassi, che possono fornire un maggiore livello di controllo sulle operazioni sui file, ad esempio la compressione o la ricerca nella posizione all'interno di un file.
+È possibile usare Xamarin.iOS e le classi `System.IO` nella *libreria di classi base .NET* per accedere al file System iOS. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` sottoclassi, che possono fornire un maggiore livello di controllo sulle operazioni sui file, ad esempio la compressione o la ricerca nella posizione all'interno di un file.
 
 iOS impone alcune restrizioni sulle operazioni che un'applicazione può eseguire con la file system per mantenere la sicurezza dei dati di un'applicazione e per proteggere gli utenti da app maligne. Queste restrizioni fanno parte dell' *applicazione sandbox* , ovvero un set di regole che limitano l'accesso di un'applicazione a file, preferenze, risorse di rete, hardware e così via. Un'applicazione è limitata alla lettura e alla scrittura di file all'interno della relativa home directory (percorso installato); non può accedere ai file di un'altra applicazione.
 
 iOS dispone anche di alcune funzionalità specifiche di file system: alcune directory richiedono un trattamento speciale per quanto riguarda i backup e gli aggiornamenti e le applicazioni possono anche condividere file tra loro e l'app **file** (a partire da iOS 11) e tramite iTunes.
 
-Questo articolo illustra le funzionalità e le restrizioni del file system iOS e include un'applicazione di esempio che illustra come usare Novell. iOS per eseguire alcune semplici operazioni di file system:
+Questo articolo illustra le funzionalità e le restrizioni del file system iOS e include un'applicazione di esempio che illustra come usare Xamarin.iOS per eseguire alcune semplici operazioni di file system:
 
 [![un esempio di iOS che esegue alcune semplici operazioni di file system](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
 
 ## <a name="general-file-access"></a>Accesso generale ai file
 
-Novell. iOS consente di usare le classi .NET `System.IO` per file system operazioni in iOS.
+Xamarin.iOS consente di usare le classi .NET `System.IO` per file system operazioni in iOS.
 
 I frammenti di codice seguenti illustrano alcune operazioni comuni sui file. Tutti gli elementi seguenti sono disponibili nel file **SampleCode.cs** nell'applicazione di esempio per questo articolo.
 
@@ -66,7 +66,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Per ulteriori informazioni, vedere la documentazione relativa a [System. XML](xref:System.Xml) e alla [serializzazione](xref:System.Xml.Serialization). Vedere la [documentazione di Novell. iOS](~/ios/deploy-test/linker.md) nel linker: spesso è necessario aggiungere l'attributo `[Preserve]` alle classi che si intende serializzare.
+Per ulteriori informazioni, vedere la documentazione relativa a [System. XML](xref:System.Xml) e alla [serializzazione](xref:System.Xml.Serialization). Vedere la [documentazione di Xamarin.iOS](~/ios/deploy-test/linker.md) nel linker: spesso è necessario aggiungere l'attributo `[Preserve]` alle classi che si intende serializzare.
 
 ### <a name="creating-files-and-directories"></a>Creazione di file e directory
 
@@ -92,7 +92,7 @@ Per altre informazioni, vedere le informazioni di [riferimento sull'API System.i
 
 ### <a name="serializing-json"></a>Serializzazione di JSON
 
-[JSON.NET](http://www.newtonsoft.com/json) è un Framework JSON a prestazioni elevate che funziona con Novell. iOS ed è disponibile in NuGet. Aggiungere il pacchetto NuGet al progetto di applicazione, usando **Aggiungi NuGet** in Visual Studio per Mac:
+[JSON.NET](http://www.newtonsoft.com/json) è un Framework JSON a prestazioni elevate che funziona con Xamarin.iOS ed è disponibile in NuGet. Aggiungere il pacchetto NuGet al progetto di applicazione, usando **Aggiungi NuGet** in Visual Studio per Mac:
 
 [![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
 
@@ -143,7 +143,7 @@ Per altre informazioni sull'uso dei dati JSON in un'applicazione .NET, vedere la
 
 ## <a name="special-considerations"></a>Considerazioni speciali
 
-Nonostante le analogie tra le operazioni di file Novell. iOS e .NET, iOS e Novell. iOS differiscono da .NET in alcuni modi importanti.
+Nonostante le analogie tra le operazioni di file Xamarin.iOS e .NET, iOS e Xamarin.iOS differiscono da .NET in alcuni modi importanti.
 
 ### <a name="making-project-files-accessible-at-runtime"></a>Rendere accessibili i file di progetto in fase di esecuzione
 
@@ -171,7 +171,7 @@ A causa di questa differenza confusa, è consigliabile usare il metodo `System.I
 
 L'accesso dell'applicazione al file system e ad altre risorse come le funzionalità di rete e hardware è limitato per motivi di sicurezza. Questa restrizione è nota come *sandbox dell'applicazione*. In termini di file system, l'applicazione è limitata alla creazione e all'eliminazione di file e directory nella relativa home directory.
 
-La home directory è una posizione univoca nel file system in cui sono archiviati l'applicazione e tutti i relativi dati. Non è possibile scegliere (o modificare) il percorso della Home Directory per l'applicazione. Tuttavia, iOS e Novell. iOS forniscono proprietà e metodi per gestire i file e le directory all'interno di.
+La home directory è una posizione univoca nel file system in cui sono archiviati l'applicazione e tutti i relativi dati. Non è possibile scegliere (o modificare) il percorso della Home Directory per l'applicazione. Tuttavia, iOS e Xamarin.iOS forniscono proprietà e metodi per gestire i file e le directory all'interno di.
 
 ## <a name="the-application-bundle"></a>Il bundle dell'applicazione
 
@@ -352,7 +352,7 @@ Le altre directory possono anche essere copiate e inserite nella nuova Home Dire
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato che file system operazioni con Novell. iOS sono simili a qualsiasi altra applicazione .NET. È stata inoltre introdotta l'applicazione sandbox e sono state esaminate le implicazioni di sicurezza che causa. Si è quindi esplorato il concetto di bundle dell'applicazione. Infine, è stata enumerata le directory specializzate disponibili per l'applicazione e ne sono stati descritti i ruoli durante gli aggiornamenti dell'applicazione e i backup.
+Questo articolo ha illustrato che file system operazioni con Xamarin.iOS sono simili a qualsiasi altra applicazione .NET. È stata inoltre introdotta l'applicazione sandbox e sono state esaminate le implicazioni di sicurezza che causa. Si è quindi esplorato il concetto di bundle dell'applicazione. Infine, è stata enumerata le directory specializzate disponibili per l'applicazione e ne sono stati descritti i ruoli durante gli aggiornamenti dell'applicazione e i backup.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

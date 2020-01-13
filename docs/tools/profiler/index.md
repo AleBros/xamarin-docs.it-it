@@ -55,11 +55,11 @@ Il Xamarin Profiler fornisce agli sviluppatori un modo per profilare le applicaz
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Xamarin.iOS, Xamarin.Android e Xamarin.Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le app Xamarin.Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -326,9 +326,9 @@ Selezionare **Update (Aggiorna** ) per continuare.
 
 Il Garbage Collector [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) viene usato per tutte le piattaforme Novell.
 
-SGen è un GC generazionale, che alloca gli oggetti di un'applicazione in tre heap: Nursery, heap principale e spazio Large Object. Ciò consente un'esecuzione più rapida delle Garbage Collection. SGen è attualmente il GC predefinito per le applicazioni unificate Novell. Android e Novell. iOS.
+SGen è un GC generazionale, che alloca gli oggetti di un'applicazione in tre heap: Nursery, heap principale e spazio Large Object. Ciò consente un'esecuzione più rapida delle Garbage Collection. SGen è attualmente il GC predefinito per le applicazioni unificate Xamarin.Android e Xamarin.iOS.
 
-Applicazione Novell. iOS che usa il API classica usato il GC Boehm, un Garbage Collector conservativo e non generazionale. Poiché è conservativa, è meno probabile liberare la memoria disponibile, che può produrre risultati non accurati quando si usa il profiler. Per questo motivo, non è possibile usare lo strumento allocazioni con Boehm Garbage Collector.
+Applicazione Xamarin.iOS che usa il API classica usato il GC Boehm, un Garbage Collector conservativo e non generazionale. Poiché è conservativa, è meno probabile liberare la memoria disponibile, che può produrre risultati non accurati quando si usa il profiler. Per questo motivo, non è possibile usare lo strumento allocazioni con Boehm Garbage Collector.
 
 Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Novell non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Novell non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
 

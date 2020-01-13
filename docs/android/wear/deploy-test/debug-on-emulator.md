@@ -1,6 +1,6 @@
 ---
 title: Eseguire il debug di Android Wear in un emulatore
-description: Questi articoli illustrano come eseguire il debug di un'applicazione Novell. Android Wear in un emulatore.
+description: Questi articoli illustrano come eseguire il debug di un'applicazione Xamarin.Android Wear in un emulatore.
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028675"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Eseguire il debug di Android Wear in un emulatore
 
-_Questi articoli illustrano come eseguire il debug di un'applicazione Novell. Android Wear in un emulatore._
+_Questi articoli illustrano come eseguire il debug di un'applicazione Xamarin.Android Wear in un emulatore._
 
 ## <a name="debug-wear-on-emulator-overview"></a>Panoramica dell'uso di debug nell'emulatore
 
@@ -36,7 +36,7 @@ Dopo aver creato un dispositivo virtuale Android Wear, è possibile sceglierlo d
 
 [![scelta di un AVD Wear nel menu dispositivo di Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
-Dopo l'avvio dell'emulatore Android, Novell. Android distribuirà l'app Wear nell'emulatore. L'emulatore esegue l'app con l'immagine del dispositivo virtuale configurato.
+Dopo l'avvio dell'emulatore Android, Xamarin.Android distribuirà l'app Wear nell'emulatore. L'emulatore esegue l'app con l'immagine del dispositivo virtuale configurato.
 
 Non sorprendere se viene visualizzato inizialmente questo (o un altro schermo interstiziale). L'avvio dell'emulatore Watch può richiedere qualche minuto: 
 

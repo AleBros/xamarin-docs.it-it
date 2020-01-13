@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: Confronto tra controlli dell'interfaccia utente
-description: Questo documento fornisce un confronto tra i controlli dell'interfaccia utente tra Novell. Forms, Windows Forms e WPF. Sono inoltre disponibili collegamenti ad altra documentazione che confronta WPF con Novell. Forms.
+description: Questo documento fornisce un confronto tra i controlli dell'interfaccia utente tra Xamarin.Forms, Windows Forms e WPF. Sono inoltre disponibili collegamenti ad altra documentazione che confronta WPF con Xamarin.Forms.
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
@@ -14,9 +14,9 @@ ms.locfileid: "73016500"
 ---
 # <a name="ui-controls-comparison"></a>Confronto tra controlli dell'interfaccia utente
 
-Di seguito è riportato un confronto tra i controlli Novell. Forms con Windows Forms e WPF, basati su [questa tabella](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).
+Di seguito è riportato un confronto tra i controlli Xamarin.Forms con Windows Forms e WPF, basati su [questa tabella](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).
 
-Ulteriori informazioni sulle [analogie e le differenze tra WPF e Novell. Forms](wpf.md) consentono di aggiornare le informazioni sul desktop per lo sviluppo di app per dispositivi mobili.
+Ulteriori informazioni sulle [analogie e le differenze tra WPF e Xamarin.Forms](wpf.md) consentono di aggiornare le informazioni sul desktop per lo sviluppo di app per dispositivi mobili.
 
 |Windows Form|WPF|Xamarin.Forms|
 |--- |--- |--- |

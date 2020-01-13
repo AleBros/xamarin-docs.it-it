@@ -1,6 +1,6 @@
 ---
-title: Transazioni e verifica in Novell. iOS
-description: Questo documento descrive come consentire il ripristino degli acquisti precedenti in un'app Novell. iOS. Vengono inoltre illustrati i modi per proteggere gli acquisti e i prodotti distribuiti dal server.
+title: Transazioni e verifica in Xamarin.iOS
+description: Questo documento descrive come consentire il ripristino degli acquisti precedenti in un'app Xamarin.iOS. Vengono inoltre illustrati i modi per proteggere gli acquisti e i prodotti distribuiti dal server.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032292"
 ---
-# <a name="transactions-and-verification-in-xamarinios"></a>Transazioni e verifica in Novell. iOS
+# <a name="transactions-and-verification-in-xamarinios"></a>Transazioni e verifica in Xamarin.iOS
 
 ## <a name="restoring-past-transactions"></a>Ripristino di transazioni passate
 

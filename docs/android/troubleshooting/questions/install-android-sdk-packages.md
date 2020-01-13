@@ -16,7 +16,7 @@ ms.locfileid: "73026954"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>Quali pacchetti di Android SDK è necessario installare?
 
-L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Sebbene i singoli sviluppatori debbano variare, i pacchetti seguenti saranno in genere necessari per lo sviluppo con Novell. Android:
+L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Sebbene i singoli sviluppatori debbano variare, i pacchetti seguenti saranno in genere necessari per lo sviluppo con Xamarin.Android:
 
 ## <a name="tools"></a>Strumenti
 

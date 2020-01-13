@@ -1,6 +1,6 @@
 ---
 title: Estensioni di Markup XAML
-description: L'articolo illustra come usare le estensioni di markup XAML di xamarin. Forms per estendere la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da origini diverse dalle stringhe di testo letterale.
+description: L'articolo illustra come usare le estensioni di markup XAML di Xamarin.Forms per estendere la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da origini diverse dalle stringhe di testo letterale.
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
@@ -50,7 +50,7 @@ Questo articolo è diviso in due parti:
 
 ## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Utilizzo di estensioni di markup XAML](consuming.md)  
 
-Usare le estensioni di markup XAML definite in xamarin. Forms.
+Usare le estensioni di markup XAML definite in Xamarin.Forms.
 
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Creazione di estensioni di markup XAML](creating.md)
 
@@ -59,7 +59,7 @@ Scrittura delle estensioni di markup XAML personalizzate.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Estensioni di markup (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
-- [Capitolo di estensioni di markup XAML dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Capitolo di estensioni di markup XAML dal libro di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Stili dinamici](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

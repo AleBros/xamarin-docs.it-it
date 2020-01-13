@@ -1,6 +1,6 @@
 ---
-title: Nozioni di base su XAML di Novell. Forms
-description: Questa guida illustra come iniziare a usare XAML multipiattaforma per dispositivi mobili. XAML consente agli sviluppatori di definire interfacce utente nelle applicazioni Novell. Forms usando markup anziché codice.
+title: Nozioni di base su XAML di Xamarin.Forms
+description: Questa guida illustra come iniziare a usare XAML multipiattaforma per dispositivi mobili. XAML consente agli sviluppatori di definire interfacce utente nelle applicazioni Xamarin.Forms usando markup anziché codice.
 ms.prod: xamarin
 ms.custom: video
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
@@ -15,15 +15,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/08/2019
 ms.locfileid: "73842850"
 ---
-# <a name="xamarinforms-xaml-basics"></a>Nozioni di base su XAML di Novell. Forms
+# <a name="xamarinforms-xaml-basics"></a>Nozioni di base su XAML di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 EXtensible Application Markup Language (XAML) è un linguaggio basato su XML creato da Microsoft come alternativa alla programmazione di codice per la creazione di istanze e l'inizializzazione di oggetti e l'organizzazione di tali oggetti nelle gerarchie padre-figlio. XAML è stato adattato a diverse tecnologie all'interno di .NET Framework, ma ha trovato la maggior utilità nella definizione del layout delle interfacce utente all'interno del Windows Presentation Foundation (WPF), di Silverlight, della Windows Runtime e delle finestre universali Platform (UWP).
 
-XAML consente agli sviluppatori di definire interfacce utente nelle applicazioni Novell. Forms usando markup anziché codice. XAML non è mai necessario in un programma Novell. Forms, ma spesso è più conciso e visivamente coerente rispetto al codice equivalente e potenzialmente utilizzabile come strumento. XAML è particolarmente adatto per l'uso con l'architettura dell'applicazione MVVM (Model-View-ViewModel) più diffusa: XAML definisce la vista collegata al codice ViewModel tramite associazioni dati basate su XAML.
+XAML consente agli sviluppatori di definire interfacce utente nelle applicazioni Xamarin.Forms usando markup anziché codice. XAML non è mai necessario in un programma Xamarin.Forms, ma spesso è più conciso e visivamente coerente rispetto al codice equivalente e potenzialmente utilizzabile come strumento. XAML è particolarmente adatto per l'uso con l'architettura dell'applicazione MVVM (Model-View-ViewModel) più diffusa: XAML definisce la vista collegata al codice ViewModel tramite associazioni dati basate su XAML.
 
-All'interno di un file XAML, lo sviluppatore Novell. Forms può definire interfacce utente usando tutte le visualizzazioni, i layout e le pagine di Novell. Forms, nonché le classi personalizzate. Il file XAML può essere compilato o incorporato nell'eseguibile. In entrambi i casi, le informazioni XAML vengono analizzate in fase di compilazione per individuare gli oggetti denominati e di nuovo in fase di esecuzione per creare un'istanza e inizializzare gli oggetti e per stabilire collegamenti tra questi oggetti e il codice di programmazione.
+All'interno di un file XAML, lo sviluppatore Xamarin.Forms può definire interfacce utente usando tutte le visualizzazioni, i layout e le pagine di Xamarin.Forms, nonché le classi personalizzate. Il file XAML può essere compilato o incorporato nell'eseguibile. In entrambi i casi, le informazioni XAML vengono analizzate in fase di compilazione per individuare gli oggetti denominati e di nuovo in fase di esecuzione per creare un'istanza e inizializzare gli oggetti e per stabilire collegamenti tra questi oggetti e il codice di programmazione.
 
 XAML presenta diversi vantaggi rispetto al codice equivalente:
 
@@ -34,12 +34,12 @@ XAML presenta diversi vantaggi rispetto al codice equivalente:
 Sono inoltre disponibili svantaggi, principalmente correlati a limitazioni intrinseche ai linguaggi di markup:
 
 - XAML non può contenere codice. Tutti i gestori eventi devono essere definiti in un file di codice.
-- XAML non può contenere cicli per l'elaborazione ripetitiva. Tuttavia, diversi oggetti visivi Novell. Forms, in particolare [`ListView`](xref:Xamarin.Forms.ListView) , possono generare più elementi figlio in base agli oggetti nella raccolta di `ItemsSource`.
+- XAML non può contenere cicli per l'elaborazione ripetitiva. Tuttavia, diversi oggetti visivi Xamarin.Forms, in particolare [`ListView`](xref:Xamarin.Forms.ListView) , possono generare più elementi figlio in base agli oggetti nella raccolta di `ItemsSource`.
 - XAML non può contenere l'elaborazione condizionale (Tuttavia, un'associazione dati può fare riferimento a un convertitore di associazioni basato sul codice che consente efficacemente un'elaborazione condizionale).
 - XAML non è in genere in grado di creare istanze di classi che non definiscono un costruttore senza parametri. In alcuni casi, tuttavia, è possibile aggirare questa restrizione.
 - XAML non è in genere in grado di chiamare metodi. Questa restrizione può talvolta essere superata.
 
-Non esiste ancora una finestra di progettazione visiva per la generazione di XAML nelle applicazioni Novell. Forms. Tutto il codice XAML deve essere scritto manualmente, ma è presente un visualizzatore [Anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). I programmatori nuovi per XAML potrebbero voler compilare ed eseguire le applicazioni in modo frequente, in particolare dopo qualsiasi elemento che potrebbe non essere corretto. Anche gli sviluppatori con molta esperienza in XAML sanno che la sperimentazione è gratificante.
+Non esiste ancora una finestra di progettazione visiva per la generazione di XAML nelle applicazioni Xamarin.Forms. Tutto il codice XAML deve essere scritto manualmente, ma è presente un visualizzatore [Anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). I programmatori nuovi per XAML potrebbero voler compilare ed eseguire le applicazioni in modo frequente, in particolare dopo qualsiasi elemento che potrebbe non essere corretto. Anche gli sviluppatori con molta esperienza in XAML sanno che la sperimentazione è gratificante.
 
 XAML è fondamentalmente XML, ma XAML presenta alcune funzionalità di sintassi univoche. I più importanti sono:
 
@@ -51,9 +51,9 @@ Queste funzionalità *non* sono estensioni XML. Il codice XAML è interamente va
 
 ## <a name="requirements"></a>Requisiti
 
-Questo articolo presuppone una certa familiarità con Novell. Forms. Questo articolo presuppone inoltre una certa familiarità con XML, inclusa la comprensione dell'uso delle dichiarazioni dello spazio dei nomi XML e dei termini *elemento*, *tag*e *attributo*.
+Questo articolo presuppone una certa familiarità con Xamarin.Forms. Questo articolo presuppone inoltre una certa familiarità con XML, inclusa la comprensione dell'uso delle dichiarazioni dello spazio dei nomi XML e dei termini *elemento*, *tag*e *attributo*.
 
-Quando si ha familiarità con Novell. Forms e XML, iniziare a leggere la [parte 1. Introduzione con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
+Quando si ha familiarità con Xamarin.Forms e XML, iniziare a leggere la [parte 1. Introduzione con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

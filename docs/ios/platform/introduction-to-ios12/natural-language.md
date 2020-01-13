@@ -1,5 +1,5 @@
 ---
-title: Uso del Framework del linguaggio naturale con Novell. iOS
+title: Uso del Framework del linguaggio naturale con Xamarin.iOS
 description: Questo documento descrive il Framework del linguaggio naturale. Introdotta in iOS 12, il Framework del linguaggio naturale è l'API iOS preferita da usare per il riconoscimento della lingua, le parti dell'identificazione vocale e il riconoscimento delle entità denominate.
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031991"
 ---
-# <a name="using-the-natural-language-framework-with-xamarinios"></a>Uso del Framework del linguaggio naturale con Novell. iOS
+# <a name="using-the-natural-language-framework-with-xamarinios"></a>Uso del Framework del linguaggio naturale con Xamarin.iOS
 
 Introdotta in iOS 12, il Framework del linguaggio naturale consente l'elaborazione del linguaggio naturale nel dispositivo. Supporta il riconoscimento della lingua, la suddivisione in token e l'assegnazione di tag. La suddivisione in token suddivide il testo in parole, frasi o paragrafi del componente; l'assegnazione di tag identifica parti di sintesi vocale, persone, luoghi e organizzazioni.
 
@@ -24,7 +24,7 @@ La classe [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) è ancora dis
 
 ## <a name="sample-app-xamarinnl"></a>App di esempio: XamarinNL
 
-Per informazioni su come usare il Framework del linguaggio naturale con Novell. iOS, vedere l'app di [esempio XamarinNL](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl).
+Per informazioni su come usare il Framework del linguaggio naturale con Xamarin.iOS, vedere l'app di [esempio XamarinNL](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl).
 Questa app di esempio illustra come usare il Framework del linguaggio naturale per:
 
 - [Riconosci le lingue](#recognizing-languages).

@@ -1,6 +1,6 @@
 ---
-title: Stili del testo di xamarin. Forms
-description: Questo articolo illustra come stile del testo nelle applicazioni xamarin. Forms. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
+title: Stili del testo di Xamarin.Forms
+description: Questo articolo illustra come stile del testo nelle applicazioni Xamarin.Forms. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70770243"
 ---
-# <a name="xamarinforms-text-styles"></a>Stili del testo di xamarin. Forms
+# <a name="xamarinforms-text-styles"></a>Stili del testo di Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Stile del testo in xamarin. Forms_
+_Stile del testo in Xamarin.Forms_
 
 Stili sono utilizzabile per regolare l'aspetto di etichette, le voci e gli editor. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
 Stili possono essere assegnati un `Key` e applicate in modo selettivo usando un controllo specifico `Style` proprietà.
@@ -27,7 +27,7 @@ Stili possono essere assegnati un `Key` e applicate in modo selettivo usando un 
 
 ## <a name="built-in-styles"></a>Stili predefiniti
 
-Xamarin. Forms include numerose [incorporati](xref:Xamarin.Forms.Device.Styles) stili per scenari comuni:
+Xamarin.Forms include numerose [incorporati](xref:Xamarin.Forms.Device.Styles) stili per scenari comuni:
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -147,7 +147,7 @@ Per garantire l'accessibilità, assicurarsi che gli stili predefiniti vengono ut
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
+- [Creazione di App per dispositivi mobili con Xamarin.Forms, capitolo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Stili](~/xamarin-forms/user-interface/styles/index.md)
 - [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Stile di visualizzazione](xref:Xamarin.Forms.Style)

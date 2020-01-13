@@ -77,7 +77,7 @@ L'assembly generato dal progetto di app Wear non viene usato come riferimento a 
 
 ## <a name="manual-packaging"></a>Creazione manuale del pacchetto
 
-È possibile scrivere app Android Wear in Novell. Android prima della versione 5,0, ma è necessario seguire le istruzioni per la creazione manuale del pacchetto per distribuire l'app: 
+È possibile scrivere app Android Wear in Xamarin.Android prima della versione 5,0, ma è necessario seguire le istruzioni per la creazione manuale del pacchetto per distribuire l'app: 
 
 1. Assicurarsi che i progetti di progetto e palmare (telefono) indossabili abbiano lo stesso numero di versione e il nome del pacchetto.
 

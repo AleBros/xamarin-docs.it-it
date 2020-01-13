@@ -35,7 +35,7 @@ Viene inoltre illustrato il modo in cui Visual Studio per Mac e Xcode Interface 
 
 ## <a name="ios-architectureiosinternalsarchitecturemd"></a>[Architettura iOS](~/ios/internals/architecture.md)
 
-Le applicazioni Novell. iOS vengono eseguite nell'ambiente di esecuzione mono e usano la compilazione AOT (Full ahead of Time) C# per compilare il codice nel linguaggio assembly ARM. Questa guida esamina Novell. iOS a un livello basso
+Le applicazioni Xamarin.iOS vengono eseguite nell'ambiente di esecuzione mono e usano la compilazione AOT (Full ahead of Time) C# per compilare il codice nel linguaggio assembly ARM. Questa guida esamina Xamarin.iOS a un livello basso
 
 ## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
 
@@ -43,4 +43,4 @@ Note e utilizzo per chiamare direttamente i selettori Objective-C (metodi).
 
 ## <a name="limitationslimitationsmd"></a>[Limitazioni](limitations.md)
 
-Insidie e limitazioni da tenere presenti con Novell. iOS.
+Insidie e limitazioni da tenere presenti con Xamarin.iOS.

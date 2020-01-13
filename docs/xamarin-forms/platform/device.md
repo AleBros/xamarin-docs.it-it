@@ -1,6 +1,6 @@
 ---
-title: Classe del dispositivo Novell. Forms
-description: Questo articolo illustra come usare la classe di dispositivi Novell. Forms, per un controllo con granularità fine sulle funzionalità e i layout in base alla piattaforma.
+title: Classe del dispositivo Xamarin.Forms
+description: Questo articolo illustra come usare la classe di dispositivi Xamarin.Forms, per un controllo con granularità fine sulle funzionalità e i layout in base alla piattaforma.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697193"
 ---
-# <a name="xamarinforms-device-class"></a>Classe del dispositivo Novell. Forms
+# <a name="xamarinforms-device-class"></a>Classe del dispositivo Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
@@ -24,9 +24,9 @@ Oltre ai metodi e alle proprietà per il codice di destinazione con tipi e dimen
 
 ## <a name="providing-platform-specific-values"></a>Fornire valori specifici della piattaforma
 
-Prima di Novell. Forms 2.3.4, è possibile ottenere la piattaforma in cui è in esecuzione l'applicazione esaminando la proprietà [`Device.OS`](xref:Xamarin.Forms.Device.OS) e confrontandolo con l'enumerazione [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)e [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) valori. Analogamente, è possibile usare uno degli overload [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) per fornire valori specifici della piattaforma a un controllo.
+Prima di Xamarin.Forms 2.3.4, è possibile ottenere la piattaforma in cui è in esecuzione l'applicazione esaminando la proprietà [`Device.OS`](xref:Xamarin.Forms.Device.OS) e confrontandolo con l'enumerazione [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)e [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) valori. Analogamente, è possibile usare uno degli overload [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) per fornire valori specifici della piattaforma a un controllo.
 
-Tuttavia, poiché Novell. Forms 2.3.4 queste API sono state deprecate e sostituite. La classe [`Device`](xref:Xamarin.Forms.Device) ora contiene costanti di stringa pubbliche che identificano le piattaforme: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone` (deprecato), `Device.WinRT` (deprecato), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP)e [1](xref:Xamarin.Forms.Device.macOS). Analogamente, gli overload [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sono stati sostituiti con le API [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) e [`On`](xref:Xamarin.Forms.On) .
+Tuttavia, poiché Xamarin.Forms 2.3.4 queste API sono state deprecate e sostituite. La classe [`Device`](xref:Xamarin.Forms.Device) ora contiene costanti di stringa pubbliche che identificano le piattaforme: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone` (deprecato), `Device.WinRT` (deprecato), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP)e [1](xref:Xamarin.Forms.Device.macOS). Analogamente, gli overload [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sono stati sostituiti con le API [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) e [`On`](xref:Xamarin.Forms.On) .
 
 In C#i valori specifici della piattaforma possono essere forniti creando un'istruzione `switch` sulla proprietà [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) e quindi specificando `case` istruzioni per le piattaforme richieste:
 
@@ -157,7 +157,7 @@ someLabel.FontSize = Device.OnPlatform (
 
 ## <a name="devicestarttimer"></a>Device. StartTimer
 
-La classe `Device` dispone anche di un metodo `StartTimer` che fornisce un modo semplice per attivare attività dipendenti dal tempo che funzionano nel codice comune di Novell. Forms, inclusa una libreria di .NET Standard. Passare un `TimeSpan` per impostare l'intervallo e restituire `true` per impedire l'esecuzione del timer oppure `false` arrestarlo dopo la chiamata corrente.
+La classe `Device` dispone anche di un metodo `StartTimer` che fornisce un modo semplice per attivare attività dipendenti dal tempo che funzionano nel codice comune di Xamarin.Forms, inclusa una libreria di .NET Standard. Passare un `TimeSpan` per impostare l'intervallo e restituire `true` per impedire l'esecuzione del timer oppure `false` arrestarlo dopo la chiamata corrente.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () =>

@@ -29,7 +29,7 @@ Oltre al titolo (visualizzato al centro), le barre di navigazione possono conten
 
 ## <a name="navigation-bars-and-storyboards"></a>Barre di spostamento e storyboard
 
-Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare le barre di navigazione in un'app Xamarin.tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -129,7 +129,7 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha spiegato come progettare e usare le barre di navigazione all'interno di un'app Novell. tvOS.
+Questo articolo ha spiegato come progettare e usare le barre di navigazione all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

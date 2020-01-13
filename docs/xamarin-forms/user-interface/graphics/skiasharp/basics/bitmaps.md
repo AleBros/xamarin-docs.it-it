@@ -1,6 +1,6 @@
 ---
 title: Nozioni fondamentali sulla bitmap in SkiaSharp
-description: Questo articolo illustra come caricare le bitmap in SkiaSharp da diverse origini e visualizzarle nelle applicazioni Novell. Forms e illustra questa operazione con il codice di esempio.
+description: Questo articolo illustra come caricare le bitmap in SkiaSharp da diverse origini e visualizzarle nelle applicazioni Xamarin.Forms e illustra questa operazione con il codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
@@ -119,7 +119,7 @@ Questo `Stream` oggetto può essere passato direttamente al metodo `SKBitmap.Dec
 
 ## <a name="loading-a-bitmap-from-the-photo-library"></a>Caricamento di una bitmap dalla raccolta foto
 
-È anche possibile che l'utente carichi una foto dalla libreria immagini del dispositivo. Questa funzionalità non viene fornita da Novell. Forms. Il processo richiede un servizio di dipendenza, ad esempio quello descritto nell'articolo [selezione di una foto dalla raccolta immagini](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
+È anche possibile che l'utente carichi una foto dalla libreria immagini del dispositivo. Questa funzionalità non viene fornita da Xamarin.Forms. Il processo richiede un servizio di dipendenza, ad esempio quello descritto nell'articolo [selezione di una foto dalla raccolta immagini](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
 
 Il file **IPhotoLibrary.cs** nel progetto **SkiaSharpFormsDemos** e i tre file **Photolibrary.cs** nei progetti della piattaforma sono stati adattati a partire da questo articolo. Inoltre, il file Android **MainActivity.cs** è stato modificato come descritto nell'articolo e al progetto iOS è stata assegnata l'autorizzazione per accedere alla raccolta foto con due righe verso la fine del file **info. plist** .
 

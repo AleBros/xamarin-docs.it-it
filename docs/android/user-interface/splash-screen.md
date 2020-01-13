@@ -36,7 +36,7 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 ## <a name="requirements"></a>Requisiti di
 
-Questa guida presuppone che l'applicazione abbia come destinazione l'API Android livello 21 o versione successiva. L'applicazione deve avere anche i pacchetti NuGet **Novell. Android. support. v4** e **Novell. Android. support. V7. AppCompat** aggiunti al progetto.
+Questa guida presuppone che l'applicazione abbia come destinazione l'API Android livello 21 o versione successiva. L'applicazione deve avere anche i pacchetti NuGet **Xamarin.Android. support. v4** e **Xamarin.Android. support. V7. AppCompat** aggiunti al progetto.
 
 Tutto il codice e il codice XML in questa guida sono disponibili nel progetto di esempio [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) per questa guida.
 

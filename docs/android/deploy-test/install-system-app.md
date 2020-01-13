@@ -16,7 +16,7 @@ ms.locfileid: "73028062"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 
-_Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Novell. Android come applicazione di sistema. Questa guida è valida per gli autori di immagini ROM Android personalizzate. Non verrà illustrato come creare una ROM personalizzata._
+_Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida è valida per gli autori di immagini ROM Android personalizzate. Non verrà illustrato come creare una ROM personalizzata._
 
 ## <a name="system-app"></a>App di sistema
 

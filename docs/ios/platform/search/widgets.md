@@ -190,7 +190,7 @@ Oltre a impostare la dimensione richiesta per ogni stato (compresso o espanso), 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto i miglioramenti apportati da Apple al sistema widget in iOS 10 e ha illustrato come implementarli in Novell. iOS.
+Questo articolo ha descritto i miglioramenti apportati da Apple al sistema widget in iOS 10 e ha illustrato come implementarli in Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

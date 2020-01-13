@@ -35,7 +35,7 @@ ms.locfileid: "73013166"
     - Xamarin Studio
     - Programma di installazione di Novell
 - [Output di compilazione dettagliato](#verbose-build-output-logs)
-- [Log di debug per le app Novell. Android e Novell. iOS](#debug-logs-for-xamarin-apps)
+- [Log di debug per le app Xamarin.Android e Xamarin.iOS](#debug-logs-for-xamarin-apps)
   - Log logcat Android `adb`
   - log del simulatore iOS (su Mac)
   - log del dispositivo iOS (su Mac)
@@ -148,7 +148,7 @@ Questi sono i log del programma di installazione `XamarinInstaller.dmg`.
      - Visual Studio (Windows): Visualizza **output > > Visualizza output da: compilazione**
      - Visual Studio per Mac: **visualizza > rilievi > errori > output di compilazione (tabulazione)**
 
-## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />i log di debug per le app Novell. Android e Novell. iOS
+## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />i log di debug per le app Xamarin.Android e Xamarin.iOS
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 

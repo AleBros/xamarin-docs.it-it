@@ -1,6 +1,6 @@
 ---
-title: Eseguire una ricerca con core Spotlight in Novell. iOS
-description: Questo documento descrive come usare Spotlight principale in un'applicazione Novell. iOS per fornire collegamenti al contenuto in-app. Viene illustrato come creare, ripristinare, aggiornare ed eliminare elementi disponibili per la ricerca.
+title: Eseguire una ricerca con core Spotlight in Xamarin.iOS
+description: Questo documento descrive come usare Spotlight principale in un'applicazione Xamarin.iOS per fornire collegamenti al contenuto in-app. Viene illustrato come creare, ripristinare, aggiornare ed eliminare elementi disponibili per la ricerca.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031579"
 ---
-# <a name="search-with-core-spotlight-in-xamarinios"></a>Eseguire una ricerca con core Spotlight in Novell. iOS
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Eseguire una ricerca con core Spotlight in Xamarin.iOS
 
 Core Spotlight è un nuovo Framework per iOS 9 che presenta un'API simile a un database per aggiungere, modificare o eliminare collegamenti al contenuto all'interno dell'app. Gli elementi che sono stati aggiunti con la finestra Spotlight principale saranno disponibili nella ricerca Spotlight nel dispositivo iOS.
 

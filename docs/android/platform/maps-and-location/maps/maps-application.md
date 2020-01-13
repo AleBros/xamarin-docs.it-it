@@ -1,6 +1,6 @@
 ---
 title: Avvio dell'applicazione Maps
-description: Come avviare l'applicazione Maps predefinita dall'app Novell. Android.
+description: Come avviare l'applicazione Maps predefinita dall'app Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
@@ -16,11 +16,11 @@ ms.locfileid: "73027072"
 ---
 # <a name="launching-the-maps-application"></a>Avvio dell'applicazione Maps
 
-Il modo più semplice per lavorare con le mappe in Novell. Android consiste nell'utilizzare l'applicazione Maps predefinita illustrata di seguito:
+Il modo più semplice per lavorare con le mappe in Xamarin.Android consiste nell'utilizzare l'applicazione Maps predefinita illustrata di seguito:
 
 [schermata di esempio![dell'app Google Maps predefinita](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
-Quando si usa l'applicazione Maps, la mappa non sarà inclusa nell'applicazione. All'applicazione viene invece avviata l'applicazione Maps e viene caricata esternamente la mappa. La sezione successiva esamina come usare Novell. Android per avviare mappe come quella precedente.
+Quando si usa l'applicazione Maps, la mappa non sarà inclusa nell'applicazione. All'applicazione viene invece avviata l'applicazione Maps e viene caricata esternamente la mappa. La sezione successiva esamina come usare Xamarin.Android per avviare mappe come quella precedente.
 
 ## <a name="creating-the-intent"></a>Creazione della finalità
 
@@ -54,7 +54,7 @@ Per ulteriori informazioni sugli schemi URI Geo, vedere [la pagina relativa alla
 
 ## <a name="street-view"></a>Visualizzazione via
 
-Oltre allo schema geografico, Android supporta anche il caricamento di viste via da uno scopo. Di seguito è riportato un esempio di applicazione di visualizzazione via, avviata da Novell. Android:
+Oltre allo schema geografico, Android supporta anche il caricamento di viste via da uno scopo. Di seguito è riportato un esempio di applicazione di visualizzazione via, avviata da Xamarin.Android:
 
 [schermata di esempio![di una visualizzazione via](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 

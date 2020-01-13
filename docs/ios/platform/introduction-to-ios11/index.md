@@ -22,7 +22,7 @@ iOS 11 include molte nuove funzionalità e miglioramenti in diversi Framework:
 
 ## <a name="preparing-your-app-for-ios-11updating-your-appindexmd"></a>[Preparazione dell'app per iOS 11](updating-your-app/index.md)
 
-Apple ha introdotto aggiornamenti dell'architettura, nuove modifiche visive e un processo aggiornato di iTunes Connect per iOS 11. Usare questa guida per assicurarsi che l'app Novell. iOS sia preparata per la nuova versione.
+Apple ha introdotto aggiornamenti dell'architettura, nuove modifiche visive e un processo aggiornato di iTunes Connect per iOS 11. Usare questa guida per assicurarsi che l'app Xamarin.iOS sia preparata per la nuova versione.
 
 ## <a name="arkitarkitindexmd"></a>[ARKit](arkit/index.md)
 

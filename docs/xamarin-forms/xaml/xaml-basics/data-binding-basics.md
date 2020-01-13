@@ -18,13 +18,13 @@ ms.locfileid: "70767621"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-_Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in una causa una modifica in altro. Questo è uno strumento molto utile e mentre i data binding può essere definito completamente nel codice, XAML fornisce tasti di scelta rapida e convenience. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato._
+_Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in una causa una modifica in altro. Questo è uno strumento molto utile e mentre i data binding può essere definito completamente nel codice, XAML fornisce tasti di scelta rapida e convenience. Di conseguenza, una delle estensioni di markup più importanti in Xamarin.Forms è associato._
 
 ## <a name="data-bindings"></a>Associazioni dati
 
 Le associazioni dati connettono le proprietà di due oggetti, denominati il *origine* e il *destinazione*. Nel codice sono necessari due passaggi: La `BindingContext` proprietà dell'oggetto di destinazione deve essere impostata sull'oggetto di origine e il `SetBinding` metodo (spesso usato in combinazione con la `Binding` classe) deve essere chiamato sull'oggetto di destinazione per associare una proprietà di tale oggetto a una proprietà dell'origine oggetto.
 
-La proprietà di destinazione deve essere una proprietà associabile, il che significa che l'oggetto di destinazione deve derivare da `BindableObject`. La documentazione online di xamarin. Forms indica le proprietà che sono proprietà associabili. Una proprietà del `Label` , ad esempio `Text` associata con la proprietà associabile `TextProperty`.
+La proprietà di destinazione deve essere una proprietà associabile, il che significa che l'oggetto di destinazione deve derivare da `BindableObject`. La documentazione online di Xamarin.Forms indica le proprietà che sono proprietà associabili. Una proprietà del `Label` , ad esempio `Text` associata con la proprietà associabile `TextProperty`.
 
 Nel markup, è anche necessario eseguire gli stessi due passaggi richiesti nel codice, ad eccezione del fatto che il `Binding` estensione di markup prende il posto del `SetBinding` chiamare e `Binding` classe.
 
@@ -94,7 +94,7 @@ Text="{Binding Value,
 
 Eseguire le operazioni pratica.
 
-Si noti che il `StringFormat` proprietà nella seconda `Binding` estensione di markup. In xamarin. Forms, le associazioni non eseguono alcuna conversione implicita del tipo e se è necessario visualizzare un oggetto non di tipo stringa sotto forma di stringa deve fornire un convertitore di tipi o usare `StringFormat`. Dietro le quinte, il metodo statico `String.Format` metodo viene usato per implementare `StringFormat`. Questo metodo è potenzialmente un problema, perché comportano la parentesi graffe, che vengono usate anche per delimitare le estensioni di markup specifiche di formato .NET. In questo modo viene creata un rischio di confondere il parser XAML. Per evitare questo problema, inserire l'intera stringa di formattazione tra virgolette singole:
+Si noti che il `StringFormat` proprietà nella seconda `Binding` estensione di markup. In Xamarin.Forms, le associazioni non eseguono alcuna conversione implicita del tipo e se è necessario visualizzare un oggetto non di tipo stringa sotto forma di stringa deve fornire un convertitore di tipi o usare `StringFormat`. Dietro le quinte, il metodo statico `String.Format` metodo viene usato per implementare `StringFormat`. Questo metodo è potenzialmente un problema, perché comportano la parentesi graffe, che vengono usate anche per delimitare le estensioni di markup specifiche di formato .NET. In questo modo viene creata un rischio di confondere il parser XAML. Per evitare questo problema, inserire l'intera stringa di formattazione tra virgolette singole:
 
 ```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -216,7 +216,7 @@ Tuttavia, gli elementi nel `ListView` raccolta può essere visualizzata come vuo
 
 Molto spesso, è opportuno creare una cella personalizzata per questi elementi usando il `ViewCell` classe. Questo processo è un po' complessa nel codice, ma in XAML diventa molto semplice.
 
-Il XamlSamples progetto include una classe denominata `NamedColor`. Ogni `NamedColor` oggetto presenta `Name` e `FriendlyName` delle proprietà di tipo `string`e un `Color` vlastnosti typu `Color`. È inoltre `NamedColor` ha 141 ReadOnly campi statici di tipo `Color` corrispondente per i colori definiti in xamarin. Forms `Color` classe. Un costruttore statico crea un' `IEnumerable<NamedColor>` raccolta che contiene `NamedColor` oggetti corrispondenti a questi campi statici e di assegnarlo ai relativi statici pubblici `All` proprietà.
+Il XamlSamples progetto include una classe denominata `NamedColor`. Ogni `NamedColor` oggetto presenta `Name` e `FriendlyName` delle proprietà di tipo `string`e un `Color` vlastnosti typu `Color`. È inoltre `NamedColor` ha 141 ReadOnly campi statici di tipo `Color` corrispondente per i colori definiti in Xamarin.Forms `Color` classe. Un costruttore statico crea un' `IEnumerable<NamedColor>` raccolta che contiene `NamedColor` oggetti corrispondenti a questi campi statici e di assegnarlo ai relativi statici pubblici `All` proprietà.
 
 Impostare il metodo statico `NamedColor.All` proprietà per il `ItemsSource` di un `ListView` è facile usando il `x:Static` estensione di markup:
 
@@ -337,7 +337,7 @@ Si noti l'uso di `OnPlatform` per definire le dimensioni di un `BoxView` e l'alt
 
 ## <a name="binding-value-converters"></a>Convertitori di valori di associazione
 
-Il precedente **ListView Demo** file XAML consente di visualizzare i singoli `R`, `G`, e `B` le proprietà di xamarin. Forms `Color` struttura. Queste proprietà sono di tipo `double` e compreso tra 0 e 1. Se si desidera visualizzare i valori esadecimali, è possibile utilizzare semplicemente `StringFormat` con una formattazione specifica "X2". Che funziona solo per i numeri interi e oltre, la `double` i valori devono essere moltiplicati per 255.
+Il precedente **ListView Demo** file XAML consente di visualizzare i singoli `R`, `G`, e `B` le proprietà di Xamarin.Forms `Color` struttura. Queste proprietà sono di tipo `double` e compreso tra 0 e 1. Se si desidera visualizzare i valori esadecimali, è possibile utilizzare semplicemente `StringFormat` con una formattazione specifica "X2". Che funziona solo per i numeri interi e oltre, la `double` i valori devono essere moltiplicati per 255.
 
 Questo problema è stato risolto con un *convertitore*, definita anche come una *convertitore di associazioni*. Si tratta di una classe che implementa il `IValueConverter` interfaccia, che significa che ha due metodi denominati `Convert` e `ConvertBack`. Il `Convert` metodo viene chiamato quando un valore viene trasferito dall'origine alla destinazione; le `ConvertBack` viene chiamato per i trasferimenti dalla destinazione all'origine in `OneWayToSource` o `TwoWay` associazioni:
 

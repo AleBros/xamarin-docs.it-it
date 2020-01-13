@@ -1,6 +1,6 @@
 ---
-title: Compilazione ahead of Time di Novell. Mac
-description: In questo documento viene descritta la compilazione anticipata in Novell. Mac. Viene confrontata la compilazione AOT con la compilazione JIT, viene illustrato come abilitare AOT e viene esaminata l'AOT ibrida.
+title: Compilazione ahead of Time di Xamarin.Mac
+description: In questo documento viene descritta la compilazione anticipata in Xamarin.Mac. Viene confrontata la compilazione AOT con la compilazione JIT, viene illustrato come abilitare AOT e viene esaminata l'AOT ibrida.
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029973"
 ---
-# <a name="xamarinmac-ahead-of-time-compilation"></a>Compilazione ahead of Time di Novell. Mac
+# <a name="xamarinmac-ahead-of-time-compilation"></a>Compilazione ahead of Time di Xamarin.Mac
 
 ## <a name="overview"></a>Panoramica
 

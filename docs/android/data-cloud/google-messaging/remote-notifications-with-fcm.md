@@ -1,6 +1,6 @@
 ---
 title: Notifiche remote con Firebase Cloud Messaging
-description: Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Novell. Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console.
+description: Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console.
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73021639"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
-_Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Novell. Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console._
+_Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console._
 
 ## <a name="fcm-notifications-overview"></a>Panoramica delle notifiche FCM
 
@@ -45,7 +45,7 @@ Per eseguire l'app di esempio, è necessario un dispositivo di test Android o un
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di app
 
-Per iniziare, creare un nuovo progetto Novell. Android vuoto denominato **FCMClient**. Se non si ha familiarità con la creazione di progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
+Per iniziare, creare un nuovo progetto Xamarin.Android vuoto denominato **FCMClient**. Se non si ha familiarità con la creazione di progetti Xamarin.Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 Dopo aver creato la nuova app, il passaggio successivo consiste nell'impostare il nome del pacchetto e installare diversi pacchetti NuGet che verranno usati per la comunicazione con FCM.
 
 ### <a name="set-the-package-name"></a>Imposta il nome del pacchetto
@@ -85,13 +85,13 @@ Durante l'aggiornamento del **manifesto Android**, verificare anche che l'autori
 
 ### <a name="add-the-xamarin-google-play-services-base-package"></a>Aggiungere il pacchetto di base Google Play Services Novell
 
-Poiché la messaggistica cloud Firebase dipende da Google Play Services, è necessario aggiungere il pacchetto NuGet [Google Play Services-base Novell](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Base/) al progetto Novell. Android. Sarà necessaria la versione 29.0.0.2 o successiva.
+Poiché la messaggistica cloud Firebase dipende da Google Play Services, è necessario aggiungere il pacchetto NuGet [Google Play Services-base Novell](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Base/) al progetto Xamarin.Android. Sarà necessaria la versione 29.0.0.2 o successiva.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti > Gestisci pacchetti NuGet...** .
 
-2. Fare clic sulla scheda **Sfoglia** e cercare **Novell. GooglePlayServices. base**.
+2. Fare clic sulla scheda **Sfoglia** e cercare **Xamarin.GooglePlayServices. base**.
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
@@ -101,7 +101,7 @@ Poiché la messaggistica cloud Firebase dipende da Google Play Services, è nece
 
 1. In Visual Studio per Mac fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti...** .
 
-2. Cercare **Novell. GooglePlayServices. base**.
+2. Cercare **Xamarin.GooglePlayServices. base**.
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
@@ -111,13 +111,13 @@ Poiché la messaggistica cloud Firebase dipende da Google Play Services, è nece
 
 Se viene visualizzato un errore durante l'installazione di NuGet, chiudere il progetto **FCMClient** , riaprirlo e riprovare l'installazione di NuGet.
 
-Quando si installa **Novell. GooglePlayServices. base**, vengono installate anche tutte le dipendenze necessarie. Modificare **MainActivity.cs** e aggiungere l'istruzione `using` seguente:
+Quando si installa **Xamarin.GooglePlayServices. base**, vengono installate anche tutte le dipendenze necessarie. Modificare **MainActivity.cs** e aggiungere l'istruzione `using` seguente:
 
 ```csharp
 using Android.Gms.Common;
 ```
 
-Questa istruzione rende la classe `GoogleApiAvailability` in **Novell. GooglePlayServices. base** disponibile per il codice **FCMClient** .
+Questa istruzione rende la classe `GoogleApiAvailability` in **Xamarin.GooglePlayServices. base** disponibile per il codice **FCMClient** .
 `GoogleApiAvailability` viene utilizzata per verificare la presenza di Google Play Services.
 
 ### <a name="add-the-xamarin-firebase-messaging-package"></a>Aggiungere il pacchetto di messaggistica Firebase di Novell
@@ -128,7 +128,7 @@ Per ricevere i messaggi da FCM, è necessario aggiungere il pacchetto NuGet [Nov
 
 1. In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti > Gestisci pacchetti NuGet...** .
 
-2. Cercare **Novell. Firebase. Messaging**.
+2. Cercare **Xamarin.Firebase. Messaging**.
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
@@ -138,7 +138,7 @@ Per ricevere i messaggi da FCM, è necessario aggiungere il pacchetto NuGet [Nov
 
 1. In Visual Studio per Mac fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti...** .
 
-2. Cercare **Novell. Firebase. Messaging**.
+2. Cercare **Xamarin.Firebase. Messaging**.
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
@@ -146,7 +146,7 @@ Per ricevere i messaggi da FCM, è necessario aggiungere il pacchetto NuGet [Nov
 
 -----
 
-Quando si installa **Novell. Firebase. Messaging**, vengono installate anche tutte le dipendenze necessarie.
+Quando si installa **Xamarin.Firebase. Messaging**, vengono installate anche tutte le dipendenze necessarie.
 
 Modificare quindi **MainActivity.cs** e aggiungere le seguenti istruzioni `using`:
 
@@ -156,7 +156,7 @@ using Firebase.Iid;
 using Android.Util;
 ```
 
-Le prime due istruzioni rendono disponibili i tipi nel pacchetto NuGet **Novell. Firebase. Messaging** per il codice **FCMClient** . **Android. util** aggiunge la funzionalità di registrazione che verrà usata per osservare le transazioni con FMS.
+Le prime due istruzioni rendono disponibili i tipi nel pacchetto NuGet **Xamarin.Firebase. Messaging** per il codice **FCMClient** . **Android. util** aggiunge la funzionalità di registrazione che verrà usata per osservare le transazioni con FMS.
 
 ### <a name="add-googleplayservices-json"></a>Aggiungere il file JSON di Google Services
 
@@ -307,7 +307,7 @@ protected override void OnCreate (Bundle bundle)
 [![app indica che Google Play Services è disponibile](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png#lightbox)
 
 Se non si ottiene questo risultato, verificare che il Google Play Services APK sia installato nel dispositivo (per altre informazioni, vedere [configurazione Google Play Services](https://developers.google.com/android/guides/setup)).
-Verificare anche di aver aggiunto il pacchetto **Novell. Google. Play. Services. base** al progetto **FCMClient** , come illustrato in precedenza.
+Verificare anche di aver aggiunto il pacchetto **Xamarin.Google. Play. Services. base** al progetto **FCMClient** , come illustrato in precedenza.
 
 ## <a name="add-the-instance-id-receiver"></a>Aggiungere il ricevitore dell'ID istanza
 
@@ -339,7 +339,7 @@ Questo codice XML esegue le operazioni seguenti:
 
 - Dichiara un'implementazione di `FirebaseInstanceIdInternalReceiver` interna utilizzata per avviare i servizi in modo sicuro.
 
-- L' [ID app](./firebase-cloud-messaging.md#fcm-in-action-app-id) viene archiviato nel file **Google-Services. JSON** [aggiunto al progetto](#add-googleplayservices-json). Le associazioni Firebase di Novell. Android sostituiranno il token `${applicationId}` con l'ID app; l'app client non richiede codice aggiuntivo per fornire l'ID app.
+- L' [ID app](./firebase-cloud-messaging.md#fcm-in-action-app-id) viene archiviato nel file **Google-Services. JSON** [aggiunto al progetto](#add-googleplayservices-json). Le associazioni Firebase di Xamarin.Android sostituiranno il token `${applicationId}` con l'ID app; l'app client non richiede codice aggiuntivo per fornire l'ID app.
 
 Il `FirebaseInstanceIdReceiver` è un `WakefulBroadcastReceiver` che riceve `FirebaseInstanceId` e `FirebaseMessaging` eventi e li recapita alla classe derivata da `FirebaseInstanceIdService`.
 
@@ -505,7 +505,7 @@ Toccare l'icona di notifica per avviare l'app **FCMClient** . Le `Intent` aggiun
 
 [![gli elenchi degli intenti aggiuntivi da chiave, ID messaggio e chiave di compressione](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png#lightbox)
 
-In questo esempio la chiave **from** è impostata sul numero di progetto Firebase dell'app (in questo esempio `41590732`) e **collapse_key** è impostato sul nome del pacchetto (**com. Novell. fcmexample**).
+In questo esempio la chiave **from** è impostata sul numero di progetto Firebase dell'app (in questo esempio `41590732`) e **collapse_key** è impostato sul nome del pacchetto (**com. Xamarin.fcmexample**).
 Se non si riceve un messaggio, provare a eliminare l'app **FCMClient** nel dispositivo o nell'emulatore e ripetere i passaggi precedenti.
 
 > [!NOTE]
@@ -774,7 +774,7 @@ Questa chiamata al metodo elimina l'ID dell'istanza e i dati ad esso associati. 
 
 ## <a name="troubleshooting"></a>Troubleshooting
 
-Di seguito vengono descritti i problemi e le soluzioni alternative che possono verificarsi quando si usa la messaggistica cloud Firebase con Novell. Android.
+Di seguito vengono descritti i problemi e le soluzioni alternative che possono verificarsi quando si usa la messaggistica cloud Firebase con Xamarin.Android.
 
 ### <a name="firebaseapp-is-not-initialized"></a>FirebaseApp non è inizializzato
 
@@ -789,7 +789,7 @@ Si tratta di un problema noto che è possibile risolvere con la pulizia della so
 
 ## <a name="summary"></a>Riepilogo
 
-Questa procedura dettagliata illustra i passaggi per l'implementazione delle notifiche remote di Firebase Cloud Messaging in un'applicazione Novell. Android. Viene descritto come installare i pacchetti necessari per le comunicazioni FCM e viene illustrato come configurare il manifesto Android per l'accesso ai server FCM. Viene fornito codice di esempio che illustra come verificare la presenza di Google Play Services. È stato illustrato come implementare un servizio listener ID istanza che negozia con FCM per un token di registrazione e spiega come questo codice crei notifiche in background mentre l'app è in background. In questo articolo è stato illustrato come sottoscrivere i messaggi dell'argomento e viene fornita un'implementazione di esempio di un servizio di listener di messaggi utilizzato per ricevere e visualizzare le notifiche remote mentre l'applicazione è in esecuzione in primo piano.
+Questa procedura dettagliata illustra i passaggi per l'implementazione delle notifiche remote di Firebase Cloud Messaging in un'applicazione Xamarin.Android. Viene descritto come installare i pacchetti necessari per le comunicazioni FCM e viene illustrato come configurare il manifesto Android per l'accesso ai server FCM. Viene fornito codice di esempio che illustra come verificare la presenza di Google Play Services. È stato illustrato come implementare un servizio listener ID istanza che negozia con FCM per un token di registrazione e spiega come questo codice crei notifiche in background mentre l'app è in background. In questo articolo è stato illustrato come sottoscrivere i messaggi dell'argomento e viene fornita un'implementazione di esempio di un servizio di listener di messaggi utilizzato per ricevere e visualizzare le notifiche remote mentre l'applicazione è in esecuzione in primo piano.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

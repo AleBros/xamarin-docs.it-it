@@ -1,6 +1,6 @@
 ---
-title: Notifiche raggruppate in Novell. iOS
-description: Con iOS 12, è possibile raggruppare le notifiche nel centro notifiche o nella schermata di blocco in base all'applicazione o al thread. Questo documento descrive come inviare notifiche con thread e senza Threading con Novell. iOS.
+title: Notifiche raggruppate in Xamarin.iOS
+description: Con iOS 12, è possibile raggruppare le notifiche nel centro notifiche o nella schermata di blocco in base all'applicazione o al thread. Questo documento descrive come inviare notifiche con thread e senza Threading con Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031947"
 ---
-# <a name="grouped-notifications-in-xamarinios"></a>Notifiche raggruppate in Novell. iOS
+# <a name="grouped-notifications-in-xamarinios"></a>Notifiche raggruppate in Xamarin.iOS
 
 Per impostazione predefinita, iOS 12 inserisce tutte le notifiche di un'app in un gruppo. La schermata di blocco e il centro notifiche visualizzano questo gruppo come stack con la notifica più recente in primo piano. Gli utenti possono espandere il gruppo per visualizzare tutte le notifiche contenute ed eliminare il gruppo nel suo complesso.
 
@@ -22,7 +22,7 @@ Le app possono anche raggruppare le notifiche in base al thread, semplificando l
 
 ## <a name="sample-app-groupednotifications"></a>App di esempio: GroupedNotifications
 
-Per informazioni su come usare le notifiche raggruppate con Novell. iOS, vedere l'app di esempio [GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications) .
+Per informazioni su come usare le notifiche raggruppate con Xamarin.iOS, vedere l'app di esempio [GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications) .
 
 Questa app di esempio simula le conversazioni con diversi amici, inviando una notifica per ogni messaggio e eseguendone il raggruppamento per thread. Viene inoltre illustrato il modo in cui le notifiche senza thread vengono inserite in un gruppo a livello di applicazione.
 
@@ -140,7 +140,7 @@ Tuttavia, non imposta la `ThreadIdentifier` sull'oggetto `UNMutableNotificationC
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [App di esempio-GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
-- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
+- [Framework delle notifiche utente in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Uso delle notifiche raggruppate (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/711/)
 - [Procedure consigliate e novità delle notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)

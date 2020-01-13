@@ -1,6 +1,6 @@
 ---
-title: NSString in Novell. iOS e Novell. Mac
-description: Questo documento descrive come Novell. iOS converte in modo trasparente gli oggetti NSString C# in oggetti stringa, quando ciò non accade.
+title: NSString in Xamarin.iOS e Xamarin.Mac
+description: Questo documento descrive come Xamarin.iOS converte in modo trasparente gli oggetti NSString C# in oggetti stringa, quando ciò non accade.
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022355"
 ---
-# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString in Novell. iOS e Novell. Mac
+# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString in Xamarin.iOS e Xamarin.Mac
 
-La progettazione di Novell. iOS e Novell. Mac chiama l'API use per esporre il tipo di stringa .NET nativo, `string`, per la manipolazione delle stringhe in C# e altri linguaggi di programmazione .NET e per esporre la stringa come tipo di dati esposto dall'api anziché `NSString` tipo di dati.
+La progettazione di Xamarin.iOS e Xamarin.Mac chiama l'API use per esporre il tipo di stringa .NET nativo, `string`, per la manipolazione delle stringhe in C# e altri linguaggi di programmazione .NET e per esporre la stringa come tipo di dati esposto dall'api anziché `NSString` tipo di dati.
 
-Ciò significa che gli sviluppatori non devono necessariamente tenere le stringhe destinate a essere usate per la chiamata a Novell. iOS & API Novell. Mac (unificata) in un tipo speciale (`Foundation.NSString`), è possibile usare `System.String` di mono per tutte le operazioni e ogni volta che un'API in Novell. iOS o Novell. Mac richiede una stringa, l'associazione API si occupa del marshalling delle informazioni.
+Ciò significa che gli sviluppatori non devono necessariamente tenere le stringhe destinate a essere usate per la chiamata a Xamarin.iOS & API Xamarin.Mac (unificata) in un tipo speciale (`Foundation.NSString`), è possibile usare `System.String` di mono per tutte le operazioni e ogni volta che un'API in Xamarin.iOS o Xamarin.Mac richiede una stringa, l'associazione API si occupa del marshalling delle informazioni.
 
 La proprietà "Text" di Objective-C in un `UILabel` di tipo `NSString`, ad esempio, è dichiarata come segue:
 
@@ -26,7 +26,7 @@ La proprietà "Text" di Objective-C in un `UILabel` di tipo `NSString`, ad esemp
 @property(nonatomic, copy) NSString *text
 ```
 
-Questo è esposto in Novell. iOS come:
+Questo è esposto in Xamarin.iOS come:
 
 ```csharp
 class UILabel {
@@ -42,7 +42,7 @@ Sono disponibili alcune API Objective-C di terze parti che non utilizzano un `NS
 
 ## <a name="exceptions-to-the-rule"></a>Eccezioni alla regola
 
-In Novell. iOS e Novell. Mac è stata creata un'eccezione a questa regola. La decisione tra il momento in cui si espongono `string`s e quando si crea un'eccezione ed espone `NSString`s, viene eseguita se il metodo di   `NSString`potrebbe eseguire un confronto del puntatore anziché un confronto di contenuto.
+In Xamarin.iOS e Xamarin.Mac è stata creata un'eccezione a questa regola. La decisione tra il momento in cui si espongono `string`s e quando si crea un'eccezione ed espone `NSString`s, viene eseguita se il metodo di   `NSString`potrebbe eseguire un confronto del puntatore anziché un confronto di contenuto.
 
 Questo problema può verificarsi quando un'API Objective-C usa un `NSString`pubblico  costante come token che rappresenta un'azione, anziché confrontare il contenuto effettivo della stringa.
 
@@ -64,4 +64,4 @@ class Foo {
 }
 ```
 
-Un'altra posizione in cui `NSString`s sono esposte nell'API è come token usati come parametri per determinate API in iOS o OS X che accettano `NSDictionary` oggetti come parametri. Il dizionario contiene in genere chiavi `NSString`. Novell. iOS, per convenzione, assegna un nome alle proprietà `NSString` statiche aggiungendo il nome "Key".
+Un'altra posizione in cui `NSString`s sono esposte nell'API è come token usati come parametri per determinate API in iOS o OS X che accettano `NSDictionary` oggetti come parametri. Il dizionario contiene in genere chiavi `NSString`. Xamarin.iOS, per convenzione, assegna un nome alle proprietà `NSString` statiche aggiungendo il nome "Key".

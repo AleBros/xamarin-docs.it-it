@@ -143,7 +143,7 @@ A questo punto è necessario impostare le proprietà `HorizontalOptions` e `Vert
 
 Il `StaticResource` estensione di markup è sempre delimitato da parentesi graffe e include la chiave del dizionario.
 
-Il nome `StaticResource` lo distingue da `DynamicResource`, supportato anche da Novell. Forms. `DynamicResource` è per chiavi del dizionario associate a valori che potrebbero cambiare in fase di esecuzione, mentre `StaticResource` accede agli elementi dal dizionario una sola volta quando vengono costruiti gli elementi nella pagina.
+Il nome `StaticResource` lo distingue da `DynamicResource`, supportato anche da Xamarin.Forms. `DynamicResource` è per chiavi del dizionario associate a valori che potrebbero cambiare in fase di esecuzione, mentre `StaticResource` accede agli elementi dal dizionario una sola volta quando vengono costruiti gli elementi nella pagina.
 
 Per la proprietà `BorderWidth`, è necessario archiviare un valore Double nel dizionario. XAML definisce in modo appropriato i tag per i tipi di dati comuni, ad esempio `x:Double` e `x:Int32`:
 
@@ -314,7 +314,7 @@ Sebbene sia più comune definire la raccolta `Resources` nella parte superiore d
 
 Si scoprirà che il colore del testo dei pulsanti è ora blu. In pratica, ogni volta che il parser XAML rileva un `StaticResource` estensione di markup, esegue la ricerca nella struttura ad albero visuale e usa il primo `ResourceDictionary` rileva che contiene tale chiave.
 
-Uno dei tipi più comuni di oggetti archiviati nei dizionari risorse è Novell. Forms `Style`, che definisce una raccolta di impostazioni delle proprietà. Gli stili vengono descritti negli [stili](~/xamarin-forms/user-interface/styles/index.md)degli articoli.
+Uno dei tipi più comuni di oggetti archiviati nei dizionari risorse è Xamarin.Forms `Style`, che definisce una raccolta di impostazioni delle proprietà. Gli stili vengono descritti negli [stili](~/xamarin-forms/user-interface/styles/index.md)degli articoli.
 
 A volte gli sviluppatori nuovi a XAML si chiedono se possono inserire un elemento visivo, ad esempio `Label` o `Button` in un `ResourceDictionary`. Sebbene sia certamente possibile, non ha molto senso. Lo scopo della `ResourceDictionary` consiste nel condividere gli oggetti. Non è possibile condividere un elemento visivo. La stessa istanza non può comparire due volte in una singola pagina.
 
@@ -382,7 +382,7 @@ namespace XamlSamples
 
 Per fare riferimento ai campi statici di questa classe nel file XAML, è necessario un modo per indicare all'interno del file XAML in cui si trova il file. Questa operazione viene eseguita con una dichiarazione dello spazio dei nomi XML.
 
-Si ricordi che i file XAML creati come parte del modello XAML Novell. Forms standard contengono due dichiarazioni dello spazio dei nomi XML: una per l'accesso alle classi Novell. Forms e un'altra per fare riferimento a tag e attributi intrinseci a XAML:
+Si ricordi che i file XAML creati come parte del modello XAML Xamarin.Forms standard contengono due dichiarazioni dello spazio dei nomi XML: una per l'accesso alle classi Xamarin.Forms e un'altra per fare riferimento a tag e attributi intrinseci a XAML:
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
@@ -439,7 +439,7 @@ Le dimensioni del `BoxView` risultante rispetto alla schermata sono dipendenti d
 
 ## <a name="other-standard-markup-extensions"></a>Altre estensioni di markup standard
 
-Diverse estensioni di markup sono intrinseche a XAML e sono supportate nei file XAML Novell. Forms. Alcuni di questi non vengono utilizzati molto spesso, ma sono essenziali quando sono necessari:
+Diverse estensioni di markup sono intrinseche a XAML e sono supportate nei file XAML Xamarin.Forms. Alcuni di questi non vengono utilizzati molto spesso, ma sono essenziali quando sono necessari:
 
 - Se per impostazione predefinita una proprietà ha un valore non `null` ma si vuole impostarla su `null`, impostarla sull'estensione di markup `{x:Null}`.
 - Se una proprietà è di tipo `Type`, è possibile assegnarla a un oggetto `Type` usando l'estensione di markup `{x:Type someClass}`.
@@ -451,7 +451,7 @@ Diverse estensioni di markup sono intrinseche a XAML e sono supportate nei file 
 
 Le estensioni di markup possono avere proprietà, ma non sono impostate come attributi XML. In un'estensione di markup le impostazioni delle proprietà sono separate da virgole e nessuna virgoletta viene visualizzata tra parentesi graffe.
 
-Questa operazione può essere illustrata con l'estensione di markup Novell. Forms denominata `ConstraintExpression`, che viene usata con la classe `RelativeLayout`. È possibile specificare la posizione o le dimensioni di una visualizzazione figlio come costante o relativa a un elemento padre o a un'altra visualizzazione denominata. La sintassi della `ConstraintExpression` consente di impostare la posizione o le dimensioni di una visualizzazione utilizzando una `Factor` volte una proprietà di un'altra visualizzazione, oltre a un `Constant`. Qualsiasi elemento più complesso di quello che richiede codice.
+Questa operazione può essere illustrata con l'estensione di markup Xamarin.Forms denominata `ConstraintExpression`, che viene usata con la classe `RelativeLayout`. È possibile specificare la posizione o le dimensioni di una visualizzazione figlio come costante o relativa a un elemento padre o a un'altra visualizzazione denominata. La sintassi della `ConstraintExpression` consente di impostare la posizione o le dimensioni di una visualizzazione utilizzando una `Factor` volte una proprietà di un'altra visualizzazione, oltre a un `Constant`. Qualsiasi elemento più complesso di quello che richiede codice.
 
 Di seguito è riportato un esempio:
 

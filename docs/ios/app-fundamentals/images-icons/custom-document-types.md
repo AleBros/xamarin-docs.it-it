@@ -1,6 +1,6 @@
 ---
-title: Icone personalizzate del documento in Novell. iOS
-description: Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'app Novell. iOS da usare come icona di tipo di documento personalizzato.
+title: Icone personalizzate del documento in Xamarin.iOS
+description: Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'app Xamarin.iOS da usare come icona di tipo di documento personalizzato.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73004228"
 ---
-# <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate del documento in Novell. iOS
+# <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate del documento in Xamarin.iOS
 
-_Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'app Novell. iOS da usare come icona di tipo di documento personalizzato._
+_Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'app Xamarin.iOS da usare come icona di tipo di documento personalizzato._
 
-Se un'app Novell. iOS supporta il caricamento di un tipo di documento specifico, lo sviluppatore può fornire icone che il sistema userà quando rileva il tipo di documento, ad esempio quando un utente mantiene un allegato nell'applicazione di *posta elettronica* , come illustrato di seguito:
+Se un'app Xamarin.iOS supporta il caricamento di un tipo di documento specifico, lo sviluppatore può fornire icone che il sistema userà quando rileva il tipo di documento, ad esempio quando un utente mantiene un allegato nell'applicazione di *posta elettronica* , come illustrato di seguito:
 
  [![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png#lightbox)
 

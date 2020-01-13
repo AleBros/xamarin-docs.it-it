@@ -1,6 +1,6 @@
 ---
 title: Introduzione a iOS 10
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 10 per gli sviluppatori Novell. iOS.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 10 per gli sviluppatori Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
@@ -97,7 +97,7 @@ Per ulteriori informazioni, vedere la Guida [introduttiva a Callkit](~/ios/platf
 
 ## <a name="message-app-integration"></a>Integrazione dell'app Messaggi
 
-iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
+iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Xamarin.iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
 
 - **Sticker pack** : contiene una raccolta di adesivi che l'utente può aggiungere a un messaggio. È possibile creare pacchetti di adesivi senza scrivere codice.
 - **app iMessage** : può presentare un'interfaccia utente personalizzata all'interno dell'app Messages per la selezione di adesivi, l'immissione di testo, inclusi i file multimediali (con conversioni di tipi facoltative) e la creazione, la modifica e l'invio di messaggi di interazione.
@@ -147,7 +147,7 @@ Per ulteriori informazioni, vedere la guida ai [miglioramenti per la sicurezza e
 
 ## <a name="sirikit"></a>SiriKit
 
-Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
+Una novità di iOS 10, SiriKit consente a un'app Xamarin.iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
 SiriKit supporta i seguenti domini del servizio:
 

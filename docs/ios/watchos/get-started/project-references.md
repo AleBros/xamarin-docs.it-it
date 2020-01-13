@@ -41,7 +41,7 @@ Per visualizzare i riferimenti, fare doppio clic sui nodi riferimenti per ogni p
 È anche necessario assicurarsi che gli **identificatori del bundle** siano corretti.
 Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i due progetti Watch con estensioni predefinite di `watchkitextension` e `watchkitapp`, come indicato di seguito (per l'esempio **WatchKitCatalog** ):
 
-- Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`
+- Progetto unificato Xamarin.iOS-`com.xamarin.WatchKitCatalog`
 
 - Progetto di estensione WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
 

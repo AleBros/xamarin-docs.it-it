@@ -1,6 +1,6 @@
 ---
 title: Aggiornamento dell'app a iOS 11
-description: Questo documento contiene collegamenti a diverse guide che descrivono le nuove funzionalità disponibili per gli sviluppatori Novell. iOS con la versione di iOS 11. Ad esempio, aggiornamenti della progettazione visiva, modifiche dell'app Store e aggiornamenti delle icone delle app.
+description: Questo documento contiene collegamenti a diverse guide che descrivono le nuove funzionalità disponibili per gli sviluppatori Xamarin.iOS con la versione di iOS 11. Ad esempio, aggiornamenti della progettazione visiva, modifiche dell'app Store e aggiornamenti delle icone delle app.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73032125"
 ---
 # <a name="updating-your-app-to-ios-11"></a>Aggiornamento dell'app a iOS 11
 
-In iOS 11 Apple ha introdotto aggiornamenti dell'architettura, nuove modifiche visive e un processo aggiornato di iTunes Connect. Questa guida esamina ognuna di queste modifiche per consentire l'aggiornamento dell'app Novell. iOS per iOS 11.
+In iOS 11 Apple ha introdotto aggiornamenti dell'architettura, nuove modifiche visive e un processo aggiornato di iTunes Connect. Questa guida esamina ognuna di queste modifiche per consentire l'aggiornamento dell'app Xamarin.iOS per iOS 11.
 
 ## <a name="architecture-changesarchitecture-changesmd"></a>[Modifiche all'architettura](architecture-changes.md)
 

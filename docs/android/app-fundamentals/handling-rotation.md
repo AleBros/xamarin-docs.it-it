@@ -1,6 +1,6 @@
 ---
 title: Gestione della rotazione
-description: Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Novell. Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento.
+description: Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Xamarin.Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento.
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73019279"
 ---
 # <a name="handling-rotation"></a>Gestione della rotazione
 
-_Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Novell. Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento._
+_Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Xamarin.Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento._
 
 ## <a name="overview"></a>Panoramica
 

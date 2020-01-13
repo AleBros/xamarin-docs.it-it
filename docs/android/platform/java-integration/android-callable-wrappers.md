@@ -1,5 +1,5 @@
 ---
-title: Android Callable Wrapper per Novell. Android
+title: Android Callable Wrapper per Xamarin.Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
@@ -13,11 +13,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73020159"
 ---
-# <a name="android-callable-wrappers-for-xamarinandroid"></a>Android Callable Wrapper per Novell. Android
+# <a name="android-callable-wrappers-for-xamarinandroid"></a>Android Callable Wrapper per Xamarin.Android
 
 Android Callable Wrapper (ACWs) è necessario ogni volta che il runtime di Android richiama codice gestito. Questi wrapper sono necessari perché non è possibile registrare le classi con l'arte (il runtime di Android) in fase di esecuzione. In particolare, la [funzione JNI defineClass ()](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) non è supportata dal runtime di Android.} I wrapper richiamabili Android comportano quindi la mancanza di supporto per la registrazione dei tipi runtime. 
 
-*Ogni volta* Il codice Android deve eseguire un `virtual` o un metodo di interfaccia `overridden` o implementato nel codice gestito, Novell. Android deve fornire un proxy Java in modo che questo metodo venga inviato al tipo gestito appropriato. Questi tipi di proxy Java sono codice Java che ha la stessa classe di base e l'elenco di interfacce Java come tipo gestito, implementando gli stessi costruttori e dichiarando i metodi di interfaccia e di classe base sottoposti a override. 
+*Ogni volta* Il codice Android deve eseguire un `virtual` o un metodo di interfaccia `overridden` o implementato nel codice gestito, Xamarin.Android deve fornire un proxy Java in modo che questo metodo venga inviato al tipo gestito appropriato. Questi tipi di proxy Java sono codice Java che ha la stessa classe di base e l'elenco di interfacce Java come tipo gestito, implementando gli stessi costruttori e dichiarando i metodi di interfaccia e di classe base sottoposti a override. 
 
 Android callable wrapper viene generato dal programma **monodroid. exe** durante il [processo di compilazione](~/android/deploy-test/building-apps/build-process.md): vengono generati per tutti i tipi che (direttamente o indirettamente) ereditano [java. lang. Object](xref:Java.Lang.Object). 
 
@@ -68,13 +68,13 @@ Una volta aggiunta questa impostazione della proprietà, è possibile accedere a
 - [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
 - [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
-La denominazione ACW basata su MD5SUM è stata introdotta in Novell. Android 5,0. Per ulteriori informazioni sulla denominazione degli attributi, vedere [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
+La denominazione ACW basata su MD5SUM è stata introdotta in Xamarin.Android 5,0. Per ulteriori informazioni sulla denominazione degli attributi, vedere [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 
 ## <a name="implementing-interfaces"></a>Implementazione di interfacce
 
 In alcuni casi potrebbe essere necessario implementare un'interfaccia Android, ad esempio [Android. Content. IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Poiché tutte le classi e l'interfaccia Android estendono l'interfaccia [Android. Runtime. IJavaObject](xref:Android.Runtime.IJavaObject) , si pone la domanda: come si implementano `IJavaObject`? 
 
-La domanda è stata risposta in precedenza: il motivo per cui tutti i tipi Android devono implementare `IJavaObject` è in modo che Novell. Android disponga di un Android Callable Wrapper da fornire ad Android, ovvero un proxy Java per il tipo specificato. Poiché **monodroid. exe** cerca solo `Java.Lang.Object` sottoclassi e `Java.Lang.Object` implementa `IJavaObject,` la risposta è ovvia: sottoclasse `Java.Lang.Object`: 
+La domanda è stata risposta in precedenza: il motivo per cui tutti i tipi Android devono implementare `IJavaObject` è in modo che Xamarin.Android disponga di un Android Callable Wrapper da fornire ad Android, ovvero un proxy Java per il tipo specificato. Poiché **monodroid. exe** cerca solo `Java.Lang.Object` sottoclassi e `Java.Lang.Object` implementa `IJavaObject,` la risposta è ovvia: sottoclasse `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {

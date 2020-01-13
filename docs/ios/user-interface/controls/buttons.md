@@ -1,5 +1,5 @@
 ---
-title: Pulsanti in Novell. iOS
+title: Pulsanti in Xamarin.iOS
 description: La classe UIButton viene usata per rappresentare diversi stili di pulsante nelle schermate iOS. Questa guida presenta le diverse opzioni per l'uso dei pulsanti in iOS.
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022118"
 ---
-# <a name="buttons-in-xamarinios"></a>Pulsanti in Novell. iOS
+# <a name="buttons-in-xamarinios"></a>Pulsanti in Xamarin.iOS
 
 In iOS la classe `UIButton` rappresenta un controllo Button.
 

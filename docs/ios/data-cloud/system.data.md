@@ -1,6 +1,6 @@
 ---
-title: System. Data in Novell. iOS
-description: Questo documento descrive come usare System. Data e mono. Data. sqlite. dll per accedere ai dati SQLite in un'applicazione Novell. iOS.
+title: System. Data in Xamarin.iOS
+description: Questo documento descrive come usare System. Data e mono. Data. sqlite. dll per accedere ai dati SQLite in un'applicazione Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016941"
 ---
-# <a name="systemdata-in-xamarinios"></a>System. Data in Novell. iOS
+# <a name="systemdata-in-xamarinios"></a>System. Data in Xamarin.iOS
 
-Novell. iOS 8,10 aggiunge il supporto per [System. Data](xref:System.Data), incluso il provider di `Mono.Data.Sqlite.dll` ADO.NET. Il supporto include l'aggiunta degli [assembly](~/cross-platform/internals/available-assemblies.md)seguenti:
+Xamarin.iOS 8,10 aggiunge il supporto per [System. Data](xref:System.Data), incluso il provider di `Mono.Data.Sqlite.dll` ADO.NET. Il supporto include l'aggiunta degli [assembly](~/cross-platform/internals/available-assemblies.md)seguenti:
 
 - `System.Data.dll`
 - `System.Data.Service.Client.dll`

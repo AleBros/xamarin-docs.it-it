@@ -1,5 +1,5 @@
 ---
-title: API di aspetto in Novell. iOS
+title: API di aspetto in Xamarin.iOS
 description: iOS consente di applicare le impostazioni delle proprietà visive a un livello di classe statico anziché a singoli oggetti in modo che la modifica venga applicata a tutte le istanze di tale controllo nell'applicazione.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003384"
 ---
-# <a name="appearance-api-in-xamarinios"></a>API di aspetto in Novell. iOS
+# <a name="appearance-api-in-xamarinios"></a>API di aspetto in Xamarin.iOS
 
 _iOS consente di applicare le impostazioni delle proprietà visive a un livello di classe statico anziché a singoli oggetti in modo che la modifica venga applicata a tutte le istanze di tale controllo nell'applicazione._
 
-Questa funzionalità è esposta in Novell. iOS tramite una proprietà di `Appearance` statica in tutti i controlli UIKit che lo supportano. L'aspetto visivo (proprietà come il colore tinta e l'immagine di sfondo) può quindi essere facilmente personalizzato per dare all'applicazione un aspetto coerente. L'API di aspetto è stata introdotta in iOS 5 e, mentre alcune parti di esso sono state deprecate in iOS 9, è ancora un metodo efficace per realizzare alcuni effetti di stili e temi nelle app Novell. iOS.
+Questa funzionalità è esposta in Xamarin.iOS tramite una proprietà di `Appearance` statica in tutti i controlli UIKit che lo supportano. L'aspetto visivo (proprietà come il colore tinta e l'immagine di sfondo) può quindi essere facilmente personalizzato per dare all'applicazione un aspetto coerente. L'API di aspetto è stata introdotta in iOS 5 e, mentre alcune parti di esso sono state deprecate in iOS 9, è ancora un metodo efficace per realizzare alcuni effetti di stili e temi nelle app Xamarin.iOS.
 
 ## <a name="overview"></a>Panoramica
 
@@ -67,9 +67,9 @@ progress2.ProgressTintColor = UIColor.FromRGB (66,255,63);
 progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 ```
 
-## <a name="using-uiappearance-in-xamarinforms"></a>Uso di UIAppearance in Novell. Forms
+## <a name="using-uiappearance-in-xamarinforms"></a>Uso di UIAppearance in Xamarin.Forms
 
-L'API di aspetto può essere utile quando si applica [lo stile all'app iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) nelle soluzioni Novell. Forms. Alcune righe della classe `AppDelegate` consentono di implementare una combinazione di colori specifica senza dover creare un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+L'API di aspetto può essere utile quando si applica [lo stile all'app iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) nelle soluzioni Xamarin.Forms. Alcune righe della classe `AppDelegate` consentono di implementare una combinazione di colori specifica senza dover creare un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ### <a name="custom-themes-and-uiappearance"></a>Temi personalizzati e UIAppearance
 
@@ -109,4 +109,4 @@ Per informazioni più dettagliate, vedere [Introduzione all'API di aspetto](~/io
 
 - [Aspetto (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
 - [Informazioni di riferimento sul protocollo UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Aspetto in Novell. Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+- [Aspetto in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

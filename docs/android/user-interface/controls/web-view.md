@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029015"
 ---
-# <a name="xamarinandroid-web-view"></a>Visualizzazione Web Novell. Android
+# <a name="xamarinandroid-web-view"></a>Visualizzazione Web Xamarin.Android
 
 [`WebView`](xref:Android.Webkit.WebView) consente di creare una finestra personalizzata per la visualizzazione di pagine Web (o persino per lo sviluppo di un browser completo). In questa esercitazione verrà creata una semplice [`Activity`](xref:Android.App.Activity)
 che consente di visualizzare ed esplorare le pagine Web.

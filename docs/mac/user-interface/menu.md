@@ -1,6 +1,6 @@
 ---
-title: Menu in Novell. Mac
-description: Questo articolo illustra l'uso dei menu in un'applicazione Novell. Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e Interface Builder e l'uso a livello di codice.
+title: Menu in Xamarin.Mac
+description: Questo articolo illustra l'uso dei menu in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e Interface Builder e l'uso a livello di codice.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026176"
 ---
-# <a name="menus-in-xamarinmac"></a>Menu in Novell. Mac
+# <a name="menus-in-xamarinmac"></a>Menu in Xamarin.Mac
 
-_Questo articolo illustra l'uso dei menu in un'applicazione Novell. Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e Interface Builder e l'uso a livello di codice._
+_Questo articolo illustra l'uso dei menu in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e Interface Builder e l'uso a livello di codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi menu Cocoa che uno sviluppatore lavora in Objective-C e Xcode. Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire le barre dei menu, i menu e le voci di menu oppure, facoltativamente, C# crearli direttamente nel codice.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi menu Cocoa che uno sviluppatore lavora in Objective-C e Xcode. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire le barre dei menu, i menu e le voci di menu oppure, facoltativamente, C# crearli direttamente nel codice.
 
 I menu sono parte integrante dell'esperienza utente di un'applicazione Mac e vengono in genere visualizzati in diverse parti dell'interfaccia utente:
 
@@ -30,9 +30,9 @@ I menu sono parte integrante dell'esperienza utente di un'applicazione Mac e ven
 
 [![Menu di esempio](menu-images/intro01.png "Menu di esempio")](menu-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso delle barre dei menu, dei menu e delle voci di menu di Cocoa in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso delle barre dei menu, dei menu e delle voci di menu di Cocoa in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="the-applications-menu-bar"></a>Barra dei menu dell'applicazione 
 
@@ -58,7 +58,7 @@ Per ulteriori informazioni sulla barra dei menu dell'applicazione e sui menu e l
 
 ### <a name="the-default-application-menu-bar"></a>Barra dei menu dell'applicazione predefinita
 
-Ogni volta che si crea un nuovo progetto Novell. Mac, si ottiene automaticamente una barra dei menu dell'applicazione standard e predefinita che contiene gli elementi tipici di un'applicazione macOS (come descritto nella sezione precedente). La barra dei menu predefinita dell'applicazione viene definita nel file **Main. Storyboard** (insieme al resto dell'interfaccia utente dell'app) sotto il progetto nella **riquadro della soluzione**:  
+Ogni volta che si crea un nuovo progetto Xamarin.Mac, si ottiene automaticamente una barra dei menu dell'applicazione standard e predefinita che contiene gli elementi tipici di un'applicazione macOS (come descritto nella sezione precedente). La barra dei menu predefinita dell'applicazione viene definita nel file **Main. Storyboard** (insieme al resto dell'interfaccia utente dell'app) sotto il progetto nella **riquadro della soluzione**:  
 
 ![Selezionare lo storyboard principale](menu-images/appmenu02.png "Selezionare lo storyboard principale")
 
@@ -88,7 +88,7 @@ In seguito verranno usate le azioni predefinite per abilitare e disabilitare gli
 
 ### <a name="built-in-menu-functionality"></a>Funzionalità del menu predefinito
 
-Se è stata eseguita un'applicazione Novell. Mac appena creata prima di aggiungere elementi o codice dell'interfaccia utente, si noterà che alcuni elementi vengono automaticamente cablati e abilitati per l'utente (con funzionalità completamente integrate automaticamente), ad esempio l'elemento **Quit** nelMenu dell'app:
+Se è stata eseguita un'applicazione Xamarin.Mac appena creata prima di aggiungere elementi o codice dell'interfaccia utente, si noterà che alcuni elementi vengono automaticamente cablati e abilitati per l'utente (con funzionalità completamente integrate automaticamente), ad esempio l'elemento **Quit** nelMenu dell'app:
 
 ![Una voce di menu abilitata](menu-images/appmenu03.png "Una voce di menu abilitata")
 
@@ -104,7 +104,7 @@ Nell' **Editor dei vincoli** aggiungere la visualizzazione di testo ai bordi del
 
 [![Modifica dei conformi](menu-images/appmenu06.png "Modifica dei conformi")](menu-images/appmenu06-large.png#lightbox)
 
-Salvare le modifiche apportate alla progettazione dell'interfaccia utente e tornare alla Visual Studio per Mac per sincronizzare le modifiche con il progetto Novell. Mac. A questo punto, avviare l'applicazione, digitare del testo nella visualizzazione di testo, selezionarla e aprire il menu **modifica** :
+Salvare le modifiche apportate alla progettazione dell'interfaccia utente e tornare alla Visual Studio per Mac per sincronizzare le modifiche con il progetto Xamarin.Mac. A questo punto, avviare l'applicazione, digitare del testo nella visualizzazione di testo, selezionarla e aprire il menu **modifica** :
 
 ![Le voci di menu vengono abilitate/disabilitate automaticamente](menu-images/appmenu07.png "Le voci di menu vengono abilitate/disabilitate automaticamente")
 
@@ -166,7 +166,7 @@ Se si seleziona una sezione di testo e il menu viene riaperto, le due voci del m
 
 ## <a name="enabling-and-responding-to-menu-items-in-code"></a>Abilitazione e risposta alle voci di menu nel codice
 
-Come è stato illustrato in precedenza, con l'aggiunta di elementi specifici dell'interfaccia utente Cocoa alla progettazione dell'interfaccia utente, ad esempio un campo di testo, diverse voci di menu predefinite verranno abilitate e funzioneranno automaticamente, senza dover scrivere codice. Verrà ora esaminato come aggiungere il C# codice al progetto Novell. Mac per abilitare una voce di menu e fornire funzionalità quando l'utente la seleziona.
+Come è stato illustrato in precedenza, con l'aggiunta di elementi specifici dell'interfaccia utente Cocoa alla progettazione dell'interfaccia utente, ad esempio un campo di testo, diverse voci di menu predefinite verranno abilitate e funzioneranno automaticamente, senza dover scrivere codice. Verrà ora esaminato come aggiungere il C# codice al progetto Xamarin.Mac per abilitare una voce di menu e fornire funzionalità quando l'utente la seleziona.
 
 Ad esempio, supponiamo di volere che l'utente sia in grado di usare l'elemento **aperto** nel menu **file** per selezionare una cartella. Poiché si vuole che questa sia una funzione a livello di applicazione e non limitata a una finestra di give o a un elemento dell'interfaccia utente, aggiungeremo il codice per gestirlo nel delegato dell'applicazione.
 
@@ -215,7 +215,7 @@ A questo punto si osserverà la creazione di menu, voci di menu e azioni e la re
 
 ### <a name="working-with-the-open-recent-menu"></a>Uso del menu Apri recenti
 
-Per impostazione predefinita, il menu **file** contiene un elemento **recente aperto** che tiene traccia degli ultimi file aperti dall'utente con l'app. Se si sta creando un'app Novell. Mac basata su `NSDocument`, questo menu verrà gestito automaticamente. Per qualsiasi altro tipo di app Novell. Mac, l'utente sarà responsabile della gestione e della risposta manualmente a questa voce di menu.
+Per impostazione predefinita, il menu **file** contiene un elemento **recente aperto** che tiene traccia degli ultimi file aperti dall'utente con l'app. Se si sta creando un'app Xamarin.Mac basata su `NSDocument`, questo menu verrà gestito automaticamente. Per qualsiasi altro tipo di app Xamarin.Mac, l'utente sarà responsabile della gestione e della risposta manualmente a questa voce di menu.
 
 Per gestire manualmente il menu **Apri recenti** , prima di tutto è necessario informare l'utente che è stato aperto o salvato un nuovo file usando quanto segue:
 
@@ -459,7 +459,7 @@ Salvare le modifiche apportate allo storyboard e tornare a Visual Studio per Mac
 
 ### <a name="adding-editing-and-deleting-menus"></a>Aggiunta, modifica ed eliminazione di menu
 
-Come è stato illustrato nelle sezioni precedenti, un'applicazione Novell. Mac include un numero preimpostato di menu e voci di menu predefiniti a cui i controlli dell'interfaccia utente specifici verranno attivati e risponderanno automaticamente. È stato anche illustrato come aggiungere codice all'applicazione che consentirà e risponderà anche a questi elementi predefiniti.
+Come è stato illustrato nelle sezioni precedenti, un'applicazione Xamarin.Mac include un numero preimpostato di menu e voci di menu predefiniti a cui i controlli dell'interfaccia utente specifici verranno attivati e risponderanno automaticamente. È stato anche illustrato come aggiungere codice all'applicazione che consentirà e risponderà anche a questi elementi predefiniti.
 
 In questa sezione verrà esaminata la rimozione delle voci di menu non necessarie, la riorganizzazione dei menu e l'aggiunta di nuovi menu, voci di menu e azioni.
 
@@ -467,7 +467,7 @@ Fare doppio clic sul file **Main. Storyboard** nel **riquadro della soluzione** 
 
 [![Modifica dell'interfaccia utente in Xcode](menu-images/maint01.png "Modifica dell'interfaccia utente in Xcode")](menu-images/maint01-large.png#lightbox)
 
-Per questa specifica applicazione Novell. Mac non verrà usato il menu **visualizzazione** predefinito, quindi verrà rimosso. Nella **gerarchia di interfaccia** selezionare la voce di menu **Visualizza** che fa parte della barra dei menu principale:
+Per questa specifica applicazione Xamarin.Mac non verrà usato il menu **visualizzazione** predefinito, quindi verrà rimosso. Nella **gerarchia di interfaccia** selezionare la voce di menu **Visualizza** che fa parte della barra dei menu principale:
 
 ![Selezione della voce di menu Visualizza](menu-images/maint02.png "Selezione della voce di menu Visualizza")
 
@@ -720,7 +720,7 @@ Ora che sono state apportate le nozioni di base sull'uso della barra dei menu de
 
 ### <a name="creating-menus-from-code"></a>Creazione di menu dal codice
 
-Oltre a creare menu e voci di menu con Interface Builder di Xcode, è possibile che in alcuni casi un'app Novell. Mac debba creare, modificare o rimuovere un menu, un sottomenu o una voce di menu dal codice.
+Oltre a creare menu e voci di menu con Interface Builder di Xcode, è possibile che in alcuni casi un'app Xamarin.Mac debba creare, modificare o rimuovere un menu, un sottomenu o una voce di menu dal codice.
 
 Nell'esempio seguente viene creata una classe per contenere le informazioni sulle voci di menu e i sottomenu che verranno creati in modo dinamico in tempo reale:
 
@@ -1008,7 +1008,7 @@ Il menu Dock viene visualizzato per l'applicazione Mac quando l'utente fa clic c
 
 Per creare un menu dock personalizzato per l'applicazione, eseguire le operazioni seguenti:
 
-1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul progetto dell'applicazione e scegliere **aggiungi**  > **nuovo file...** Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **definizione di interfaccia vuota**, usare "dockmenu" come **nome** e fare clic sul pulsante **nuovo** per creare il nuovo file **dockmenu. xib** :
+1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul progetto dell'applicazione e scegliere **aggiungi**  > **nuovo file...** Nella finestra di dialogo nuovo file selezionare **Xamarin.Mac**  > **definizione di interfaccia vuota**, usare "dockmenu" come **nome** e fare clic sul pulsante **nuovo** per creare il nuovo file **dockmenu. xib** :
 
     ![Aggiunta di una definizione di interfaccia vuota](menu-images/dock02.png "Aggiunta di una definizione di interfaccia vuota")
 2. Nel **riquadro della soluzione**fare doppio clic sul file **dockmenu. xib** per aprirlo per la modifica in Xcode. Crea un nuovo **menu** con gli elementi seguenti: **Indirizzo**, **Data**, **saluto**e **firma** 
@@ -1070,7 +1070,7 @@ A questo punto, se si esegue l'applicazione e si seleziona un elemento dal popup
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di menu e voci di menu in un'applicazione Novell. Mac. Per prima cosa è stata esaminata la barra dei menu dell'applicazione, quindi è stato esaminato come creare menu contestuali, quindi sono stati esaminati i menu della barra di stato e i menu dock personalizzato. Infine, abbiamo analizzato i menu a comparsa e gli elenchi a discesa.
+Questo articolo ha esaminato in dettaglio l'uso di menu e voci di menu in un'applicazione Xamarin.Mac. Per prima cosa è stata esaminata la barra dei menu dell'applicazione, quindi è stato esaminato come creare menu contestuali, quindi sono stati esaminati i menu della barra di stato e i menu dock personalizzato. Infine, abbiamo analizzato i menu a comparsa e gli elenchi a discesa.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

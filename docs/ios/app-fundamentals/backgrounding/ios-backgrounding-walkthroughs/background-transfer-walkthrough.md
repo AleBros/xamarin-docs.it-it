@@ -1,5 +1,5 @@
 ---
-title: Trasferimento in background e NSURLSession in Novell. iOS
+title: Trasferimento in background e NSURLSession in Xamarin.iOS
 description: Questo documento fornisce una procedura dettagliata che illustra come usare il trasferimento in background e NSUrlSession per avviare il download di un'immagine di grandi dimensioni e continuare il download quando l'app viene posizionata in background.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607828"
 ---
-# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in Novell. iOS
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in Xamarin.iOS
 
 Un trasferimento in background viene avviato tramite la configurazione di un `NSURLSession` in background e l'accodamento delle attività di caricamento o download. Se le attività vengono completate quando l'applicazione è in background, sospesa o terminata, iOS invierà una notifica all'applicazione chiamando il gestore di completamento nel *AppDelegate*dell'applicazione. Il diagramma seguente illustra questo comportamento:
 

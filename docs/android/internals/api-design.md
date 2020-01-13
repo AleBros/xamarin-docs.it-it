@@ -1,5 +1,5 @@
 ---
-title: Principi di progettazione dell'API Novell. Android
+title: Principi di progettazione dell'API Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
@@ -13,15 +13,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028311"
 ---
-# <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione dell'API Novell. Android
+# <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione dell'API Xamarin.Android
 
-Oltre alle librerie di classi base core che fanno parte di mono, Novell. Android viene fornito con binding per varie API Android per consentire agli sviluppatori di creare applicazioni Android Native con mono.
+Oltre alle librerie di classi base core che fanno parte di mono, Xamarin.Android viene fornito con binding per varie API Android per consentire agli sviluppatori di creare applicazioni Android Native con mono.
 
-Alla base di Novell. Android è disponibile un motore di interoperabilità che C# colma il mondo con Java World e fornisce agli sviluppatori l'accesso alle API Java C# da o altri linguaggi .NET.
+Alla base di Xamarin.Android è disponibile un motore di interoperabilità che C# colma il mondo con Java World e fornisce agli sviluppatori l'accesso alle API Java C# da o altri linguaggi .NET.
 
 ## <a name="design-principles"></a>Principi di progettazione
 
-Questi sono alcuni dei principi di progettazione per l'associazione di Novell. Android
+Questi sono alcuni dei principi di progettazione per l'associazione di Xamarin.Android
 
 - Sono conformi alle [linee guida di progettazione .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
@@ -59,7 +59,7 @@ Questi sono alcuni dei principi di progettazione per l'associazione di Novell. A
 
 ## <a name="assemblies"></a>Assembly
 
-Novell. Android include diversi assembly che costituiscono il *profilo monomobile*. Ulteriori informazioni sono contenute nella pagina [assembly](~/cross-platform/internals/available-assemblies.md) .
+Xamarin.Android include diversi assembly che costituiscono il *profilo monomobile*. Ulteriori informazioni sono contenute nella pagina [assembly](~/cross-platform/internals/available-assemblies.md) .
 
 Le associazioni alla piattaforma Android sono contenute nell'assembly `Mono.Android.dll`. Questo assembly contiene l'intera associazione per l'utilizzo di API Android e la comunicazione con la VM di runtime di Android.
 
@@ -137,9 +137,9 @@ button.Click += (sender, e) => {
 };
 ```
 
-Si noti che entrambi i meccanismi precedenti sono disponibili con Novell. Android. È possibile implementare un'interfaccia del listener e associarla a View. SetOnClickListener oppure è possibile associare un delegato creato tramite uno dei paradigmi C# usuali all'evento click.
+Si noti che entrambi i meccanismi precedenti sono disponibili con Xamarin.Android. È possibile implementare un'interfaccia del listener e associarla a View. SetOnClickListener oppure è possibile associare un delegato creato tramite uno dei paradigmi C# usuali all'evento click.
 
-Quando il metodo di callback del listener ha un valore restituito void, vengono creati elementi API basati su un oggetto [EventHandler&lt;TEventArgs&gt;](xref:System.EventHandler`1) delegato. Viene generato un evento come l'esempio precedente per questi tipi di listener. Tuttavia, se il callback del listener restituisce un valore non void e non **booleano** , gli eventi e gli EventHandler non vengono usati. Viene invece generato un delegato specifico per la firma del callback e si aggiungono le proprietà anziché gli eventi. Il motivo è quello di gestire l'ordine di chiamata dei delegati e la gestione delle restituzione. Questo approccio rispecchia le operazioni eseguite con l'API Novell. iOS.
+Quando il metodo di callback del listener ha un valore restituito void, vengono creati elementi API basati su un oggetto [EventHandler&lt;TEventArgs&gt;](xref:System.EventHandler`1) delegato. Viene generato un evento come l'esempio precedente per questi tipi di listener. Tuttavia, se il callback del listener restituisce un valore non void e non **booleano** , gli eventi e gli EventHandler non vengono usati. Viene invece generato un delegato specifico per la firma del callback e si aggiungono le proprietà anziché gli eventi. Il motivo è quello di gestire l'ordine di chiamata dei delegati e la gestione delle restituzione. Questo approccio rispecchia le operazioni eseguite con l'API Xamarin.iOS.
 
 C#gli eventi o le proprietà vengono generati automaticamente solo se il metodo di registrazione di eventi Android:
 
@@ -151,7 +151,7 @@ C#gli eventi o le proprietà vengono generati automaticamente solo se il metodo 
 
 Inoltre, se il metodo dell'interfaccia del listener ha un tipo restituito **booleano** anziché **void**, la sottoclasse *EventArgs* generata conterrà una proprietà *gestita* . Il valore della proprietà *Handled* viene utilizzato come valore restituito per il metodo *listener* e per impostazione predefinita viene `true`.
 
-Ad esempio, il metodo [View. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) di Android accetta l'interfaccia [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e il metodo [View. OnKeyListener. onKey (View, int, fileEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) ha un tipo restituito booleano. Novell. Android genera un evento [View. KeyPress](xref:Android.Views.View.KeyPress) corrispondente, che è un [EventHandler&lt;View. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
+Ad esempio, il metodo [View. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) di Android accetta l'interfaccia [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e il metodo [View. OnKeyListener. onKey (View, int, fileEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) ha un tipo restituito booleano. Xamarin.Android genera un evento [View. KeyPress](xref:Android.Views.View.KeyPress) corrispondente, che è un [EventHandler&lt;View. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
 La classe *KeyEventArgs* a sua volta ha una proprietà [View. KeyEventArgs. Handled](xref:Android.Views.View.KeyEventArgs.Handled) , che viene usata come valore restituito per il metodo *View. OnKeyListener. onKey ()* .
 
 Si prevede di aggiungere overload per altri metodi e ctor per esporre la connessione basata su delegati. Inoltre, i listener con più callback richiedono un'ispezione aggiuntiva per determinare se l'implementazione di singoli callback è ragionevole, quindi la conversione di tali callback viene effettuata quando vengono identificati. Se non è presente alcun evento corrispondente, i listener devono essere usati C#in, ma è necessario riportare l'utilizzo dei delegati. Sono state inoltre eseguite alcune conversioni delle interfacce senza il suffisso "listener" quando era chiaro che trarrebbero vantaggio da un'alternativa del delegato.
@@ -227,7 +227,7 @@ L'interfaccia a *pacchetti* contiene metodi, tipi annidati e costanti. I metodi 
 Le costanti di interfaccia a *pacchetti* sono inserite nel tipo [Android. OS. ParcelableConsts](xref:Android.OS.ParcelableConsts) . I tipi di > T > e Android. OS. [\<ClassLoaderCreator](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) . [Creator\<](https://developer.android.com/reference/android/os/Parcelable.Creator.html) t annidati non sono attualmente associati a causa delle limitazioni del supporto per i generics. Se sono supportate, saranno presenti come interfacce *Android. OS. IParcelableClassLoaderCreator* e *Android. OS. IParcelableCreator* . Ad esempio, l'interfaccia di [Android. OS. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) annidata è associata come interfaccia [Android. OS. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
-> A partire da Novell. Android 1,9, le costanti di interfaccia Java vengono _duplicate_ nel tentativo di semplificare il porting del codice Java. Questo consente di migliorare il porting di codice Java che si basa sulle costanti dell'interfaccia del [provider Android](https://developer.android.com/reference/android/provider/package-summary.html) .
+> A partire da Xamarin.Android 1,9, le costanti di interfaccia Java vengono _duplicate_ nel tentativo di semplificare il porting del codice Java. Questo consente di migliorare il porting di codice Java che si basa sulle costanti dell'interfaccia del [provider Android](https://developer.android.com/reference/android/provider/package-summary.html) .
 
 Oltre ai tipi precedenti, sono disponibili quattro ulteriori modifiche:
 
@@ -245,9 +245,9 @@ Per le interfacce che contengono costanti che implementano altre interfacce che 
 Di conseguenza, l'espressione Java *Mediastore. video. VideoColumns. title* deve essere associata all' C# espressione *Mediastore. video. MediaColumnsConsts. title* , che è difficile da rilevare senza leggere molti documenti Java. In 1,9, l'espressione C# equivalente sarà [*Mediastore. video. VideoColumns. title*](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
 
 Inoltre, si consideri il tipo [Android. OS. bundle](xref:Android.OS.Bundle) , che implementa l'interfaccia java per i *pacchetti* . Poiché implementa l'interfaccia, tutte le costanti su tale interfaccia sono accessibili da "tramite" al tipo di bundle, ad esempio *bundle. CONTENTS_FILE_DESCRIPTOR* è un'espressione Java perfettamente valida.
-In precedenza, per trasferire questa espressione C# a è necessario esaminare tutte le interfacce implementate per vedere da quale tipo deriva *CONTENTS_FILE_DESCRIPTOR* . A partire da Novell. Android 1,9, le classi che implementano le interfacce Java che contengono costanti avranno un tipo *InterfaceConsts* annidato che conterrà tutte le costanti di interfaccia ereditate. Questa operazione consentirà di convertire *bundle. CONTENTS_FILE_DESCRIPTOR* in [*bundle. InterfaceConsts. ContentsFileDescriptor*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
+In precedenza, per trasferire questa espressione C# a è necessario esaminare tutte le interfacce implementate per vedere da quale tipo deriva *CONTENTS_FILE_DESCRIPTOR* . A partire da Xamarin.Android 1,9, le classi che implementano le interfacce Java che contengono costanti avranno un tipo *InterfaceConsts* annidato che conterrà tutte le costanti di interfaccia ereditate. Questa operazione consentirà di convertire *bundle. CONTENTS_FILE_DESCRIPTOR* in [*bundle. InterfaceConsts. ContentsFileDescriptor*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
 
-Infine, i tipi con suffisso *const* , ad esempio *Android. OS. ParcelableConsts* , sono ora obsoleti, oltre ai tipi annidati InterfaceConsts appena introdotti. Verranno rimossi in Novell. Android 3,0.
+Infine, i tipi con suffisso *const* , ad esempio *Android. OS. ParcelableConsts* , sono ora obsoleti, oltre ai tipi annidati InterfaceConsts appena introdotti. Verranno rimossi in Xamarin.Android 3,0.
 
 ## <a name="resources"></a>Risorse
 

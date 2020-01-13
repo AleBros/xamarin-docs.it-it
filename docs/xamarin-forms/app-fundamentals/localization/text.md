@@ -1,6 +1,6 @@
 ---
-title: Localizzazione di stringhe e immagini in Novell. Forms
-description: Le app Novell. Forms possono essere localizzate usando i file di risorse .NET.
+title: Localizzazione di stringhe e immagini in Xamarin.Forms
+description: Le app Xamarin.Forms possono essere localizzate usando i file di risorse .NET.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/16/2019
 ms.locfileid: "74135389"
 ---
-# <a name="xamarinforms-string-and-image-localization"></a>Stringa Novell. Forms e localizzazione di immagini
+# <a name="xamarinforms-string-and-image-localization"></a>Stringa Xamarin.Forms e localizzazione di immagini
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
@@ -25,11 +25,11 @@ La localizzazione è il processo di adattamento di un'applicazione per soddisfar
 
 In .NET Framework è incluso un meccanismo incorporato per la localizzazione di applicazioni tramite [file di risorse RESX](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Un file di risorse archivia testo e altro contenuto come coppie nome/valore che consentono all'applicazione di recuperare il contenuto per una chiave fornita. I file di risorse consentono il contenuto localizzato separato dal codice dell'applicazione.
 
-L'uso di file di risorse per localizzare le applicazioni Novell. Forms richiede l'esecuzione dei passaggi seguenti:
+L'uso di file di risorse per localizzare le applicazioni Xamarin.Forms richiede l'esecuzione dei passaggi seguenti:
 
 1. [Creare file resx](#create-resx-files) contenenti testo tradotto.
 1. Consente di [specificare le impostazioni cultura predefinite](#specify-the-default-culture) nel progetto condiviso.
-1. [Localizzare il testo in Novell. Forms](#localize-text-in-xamarinforms).
+1. [Localizzare il testo in Xamarin.Forms](#localize-text-in-xamarinforms).
 1. [Localizzare le immagini](#localize-images) in base alle impostazioni cultura per ogni piattaforma.
 1. [Localizzare il nome dell'applicazione](#localize-the-application-name) in ogni piattaforma.
 1. [Verifica della localizzazione](#test-localization) in ogni piattaforma.
@@ -146,9 +146,9 @@ Una volta creato un file di risorse predefinito e le impostazioni cultura predef
 
 Per altre informazioni sui file di risorse, vedere [creare file di risorse per le app .NET](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
-## <a name="localize-text-in-xamarinforms"></a>Localizzare il testo in Novell. Forms
+## <a name="localize-text-in-xamarinforms"></a>Localizzare il testo in Xamarin.Forms
 
-Il testo è localizzato in Novell. Forms usando la classe `AppResources` generata. Questa classe è denominata in base al nome del file di risorse predefinito. Poiché il file di risorse del progetto di esempio è denominato **AppResources.cs**, Visual Studio genera una classe corrispondente denominata `AppResources`. Le proprietà statiche vengono generate nella classe `AppResources` per ogni riga del file di risorse. Nella classe di `AppResources` dell'applicazione di esempio vengono generate le proprietà statiche seguenti:
+Il testo è localizzato in Xamarin.Forms usando la classe `AppResources` generata. Questa classe è denominata in base al nome del file di risorse predefinito. Poiché il file di risorse del progetto di esempio è denominato **AppResources.cs**, Visual Studio genera una classe corrispondente denominata `AppResources`. Le proprietà statiche vengono generate nella classe `AppResources` per ogni riga del file di risorse. Nella classe di `AppResources` dell'applicazione di esempio vengono generate le proprietà statiche seguenti:
 
 - AddButton
 - NotesLabel

@@ -1,6 +1,6 @@
 ---
 title: Tema Material
-description: Come eseguire il tema dell'app Novell. Android con il tema materiale
+description: Come eseguire il tema dell'app Xamarin.Android con il tema materiale
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
@@ -40,7 +40,7 @@ Poiché tema materiale è supportato solo in Android 5,0 e versioni successive, 
 
 Gli elementi seguenti sono necessari per usare le nuove funzionalità del tema materiale Android 5,0 nelle app basate su Novell:
 
-- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
+- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite il Android SDK Manager.
 

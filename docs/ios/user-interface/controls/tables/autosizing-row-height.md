@@ -1,6 +1,6 @@
 ---
-title: Ridimensionamento automatico dell'altezza delle righe in Novell. iOS
-description: Questo documento descrive come aggiungere alle app Novell. iOS le righe con le altezze che variano in base al contenuto. Viene illustrato il layout delle celle nella finestra di progettazione iOS e viene abilitata l'altezza di ridimensionamento automatico.
+title: Ridimensionamento automatico dell'altezza delle righe in Xamarin.iOS
+description: Questo documento descrive come aggiungere alle app Xamarin.iOS le righe con le altezze che variano in base al contenuto. Viene illustrato il layout delle celle nella finestra di progettazione iOS e viene abilitata l'altezza di ridimensionamento automatico.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021922"
 ---
-# <a name="auto-sizing-row-height-in-xamarinios"></a>Ridimensionamento automatico dell'altezza delle righe in Novell. iOS
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Ridimensionamento automatico dell'altezza delle righe in Xamarin.iOS
 
 A partire da iOS 8, Apple ha aggiunto la possibilità di creare una visualizzazione tabella (`UITableView`) che può aumentare e ridurre automaticamente l'altezza di una determinata riga in base alla dimensione del contenuto usando il layout automatico, le classi di dimensioni e i vincoli.
 

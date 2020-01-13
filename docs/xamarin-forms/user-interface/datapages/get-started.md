@@ -1,6 +1,6 @@
 ---
 title: Introduzione a DataPages
-description: Questo articolo illustra come iniziare a creare una pagina semplice basato sui dati usando DataPages xamarin. Forms.
+description: Questo articolo illustra come iniziare a creare una pagina semplice basato sui dati usando DataPages Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
@@ -21,7 +21,7 @@ ms.locfileid: "75728304"
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
+> Per il rendering delle pagine Web è necessario un riferimento al tema Xamarin.Forms. Ciò comporta l'installazione del pacchetto NuGet [Xamarin.Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Xamarin.Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin.Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
 Per iniziare a creare una pagina semplice basato sui dati usando l'anteprima DataPages, attenersi alla procedura seguente. Usi questa demo uno stile hardcoded ("eventi") nell'anteprima di compilazioni che funziona solo con il formato JSON specifico nel codice.
 
@@ -29,11 +29,11 @@ Per iniziare a creare una pagina semplice basato sui dati usando l'anteprima Dat
 
 ## <a name="1-add-nuget-packages"></a>1. aggiungere pacchetti NuGet
 
-Aggiungere i pacchetti NuGet ai progetti Novell. Forms .NET Standard Library e Application:
+Aggiungere i pacchetti NuGet ai progetti Xamarin.Forms .NET Standard Library e Application:
 
 - Xamarin.Forms.Pages
 - Xamarin.Forms.Theme.Base
-- Un'implementazione del tema NuGet (ad esempio, Novell. Forms. Theme. Light)
+- Un'implementazione del tema NuGet (ad esempio, Xamarin.Forms. Theme. Light)
 
 ## <a name="2-add-theme-reference"></a>2. Aggiungi riferimento al tema
 
@@ -55,7 +55,7 @@ Nel **app. XAML** , aggiungere una classe personalizzata `xmlns:mytheme` per il 
 
 ## <a name="3-add-a-xaml-page"></a>3. aggiungere una pagina XAML
 
-Aggiungere una nuova pagina XAML per l'applicazione xamarin. Forms, e *modificare la classe di base* dalla `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Questo deve essere eseguita in c# e il XAML:
+Aggiungere una nuova pagina XAML per l'applicazione Xamarin.Forms, e *modificare la classe di base* dalla `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Questo deve essere eseguita in c# e il XAML:
 
 **File c#**
 
@@ -145,7 +145,7 @@ Questa operazione funziona perché lo stile predefinito **"Events"** è presente
 
 ## <a name="5-customize"></a>5. personalizzare
 
-Lo stile ereditato può essere sostituito specificando un modello e utilizzando associazioni all'origine dati. Il codice XAML seguente dichiara un modello personalizzato per ogni riga usando la nuova `ListItemControl` e `{p:DataSourceBinding}` sintassi inclusa in **Novell. Forms. Pages** NuGet:
+Lo stile ereditato può essere sostituito specificando un modello e utilizzando associazioni all'origine dati. Il codice XAML seguente dichiara un modello personalizzato per ogni riga usando la nuova `ListItemControl` e `{p:DataSourceBinding}` sintassi inclusa in **Xamarin.Forms. Pages** NuGet:
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>

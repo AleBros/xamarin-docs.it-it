@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028928"
 ---
-# <a name="using-a-contentprovider-with-xamarinandroid"></a>Uso di ContentProvider con Novell. Android
+# <a name="using-a-contentprovider-with-xamarinandroid"></a>Uso di ContentProvider con Xamarin.Android
 
 CursorAdapter può essere usato anche per visualizzare i dati da un ContentProvider.
 ContentProviders consentono di accedere ai dati esposti da altre applicazioni, inclusi i dati di sistema Android, ad esempio contatti, supporti e informazioni sul calendario.

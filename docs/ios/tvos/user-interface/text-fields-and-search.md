@@ -16,7 +16,7 @@ ms.locfileid: "73022161"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
-Quando necessario, l'app Novell. tvOS può richiedere piccole parti di testo dall'utente (ad esempio ID utente e password) usando un campo di testo e la tastiera sullo schermo:
+Quando necessario, l'app Xamarin.tvOS può richiedere piccole parti di testo dall'utente (ad esempio ID utente e password) usando un campo di testo e la tastiera sullo schermo:
 
 [![](text-fields-and-search-images/intro01.png "Sample Search Field")](text-fields-and-search-images/intro01.png#lightbox)
 
@@ -24,13 +24,13 @@ Facoltativamente, è possibile fornire la funzionalità di ricerca di parole chi
 
 [![](text-fields-and-search-images/intro02.png "Sample Search Results")](text-fields-and-search-images/intro02.png#lightbox)
 
-Questo documento illustra i dettagli dell'uso del testo e dei campi di ricerca in un'app Novell. tvOS.
+Questo documento illustra i dettagli dell'uso del testo e dei campi di ricerca in un'app Xamarin.tvOS.
 
 <a name="About-Text-and-Search-Fields" />
 
 ## <a name="about-text-and-search-fields"></a>Informazioni sui campi testo e cerca
 
-Come indicato in precedenza, se necessario, Novell. tvOS può presentare uno o più campi di testo per raccogliere piccole quantità di testo da parte dell'utente usando uno schermo o una tastiera Bluetooth facoltativa a seconda della versione di tvOS installata dall'utente.
+Come indicato in precedenza, se necessario, Xamarin.tvOS può presentare uno o più campi di testo per raccogliere piccole quantità di testo da parte dell'utente usando uno schermo o una tastiera Bluetooth facoltativa a seconda della versione di tvOS installata dall'utente.
 
 Inoltre, se l'app presenta grandi quantità di contenuto per l'utente (ad esempio musica, filmati o raccolta immagini), potrebbe essere necessario includere un campo di ricerca che consenta all'utente di immettere una piccola quantità di testo per filtrare l'elenco di elementi disponibili.
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla class
 
 ## <a name="working-with-text-fields"></a>Uso dei campi di testo
 
-Il modo più semplice per lavorare con i campi di testo in un'app Novell. tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando iOS designer.
+Il modo più semplice per lavorare con i campi di testo in un'app Xamarin.tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando iOS designer.
 
 Procedere come descritto di seguito:
 
@@ -146,7 +146,7 @@ Facoltativamente, è possibile usare gli eventi `Started` e `Ended` campo di tes
 
 ## <a name="working-with-search-fields"></a>Uso dei campi di ricerca
 
-Il modo più semplice per usare i campi di ricerca in un'app Novell. tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando progettazione interfaccia.
+Il modo più semplice per usare i campi di ricerca in un'app Xamarin.tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando progettazione interfaccia.
 
 Procedere come descritto di seguito:
 
@@ -782,7 +782,7 @@ In qualsiasi momento, l'utente può spostare lo stato attivo su un elemento nei 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha spiegato come progettare e usare i campi di testo e di ricerca all'interno di un'app Novell. tvOS. È stato illustrato come creare il testo e il contenuto della raccolta di ricerca in Interface Designer, mostrando due modi diversi per presentare un campo di ricerca all'utente in tvOS.
+Questo articolo ha spiegato come progettare e usare i campi di testo e di ricerca all'interno di un'app Xamarin.tvOS. È stato illustrato come creare il testo e il contenuto della raccolta di ricerca in Interface Designer, mostrando due modi diversi per presentare un campo di ricerca all'utente in tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

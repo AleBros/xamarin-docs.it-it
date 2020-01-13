@@ -18,13 +18,13 @@ ms.locfileid: "73030741"
 
 ## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuzione di app](~/ios/tvos/deploy-test/app-distribution/index.md)
 
-Questo articolo illustra come configurare, compilare e pubblicare un'app Novell. tvOS per la distribuzione tramite diversi modi, tra cui:
+Questo articolo illustra come configurare, compilare e pubblicare un'app Xamarin.tvOS per la distribuzione tramite diversi modi, tra cui:
 
 - Distribuzione dell'app Store di Apple TV.
 - Distribuzione interna (Enterprise).
 - Distribuzione ad hoc.
 
-Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Novell. tvOS.
+Se si verificano problemi durante l'invio dell'app Xamarin.tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

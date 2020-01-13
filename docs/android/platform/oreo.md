@@ -1,6 +1,6 @@
 ---
 title: Funzionalità di Oreo
-description: Come iniziare a usare Novell. Android per sviluppare app per la versione più recente di Android.
+description: Come iniziare a usare Xamarin.Android per sviluppare app per la versione più recente di Android.
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
@@ -17,13 +17,13 @@ ms.locfileid: "73020004"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
-_Come iniziare a usare Novell. Android per sviluppare app per la versione più recente di Android._
+_Come iniziare a usare Xamarin.Android per sviluppare app per la versione più recente di Android._
 
-[Android 8,0 Oreo](https://developer.android.com/index.html) è la versione più recente di Android disponibile in Google. Android Oreo offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità includono i canali di notifica, le notifiche di notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabili, il riempimento automatico e l'immagine in immagini (PIP). Android Oreo include nuove API per queste nuove funzionalità e queste API sono disponibili per le app Novell. Android quando si usa Novell. Android 8,0 e versioni successive.
+[Android 8,0 Oreo](https://developer.android.com/index.html) è la versione più recente di Android disponibile in Google. Android Oreo offre molte nuove funzionalità interessanti per gli sviluppatori Xamarin.Android. Queste funzionalità includono i canali di notifica, le notifiche di notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabili, il riempimento automatico e l'immagine in immagini (PIP). Android Oreo include nuove API per queste nuove funzionalità e queste API sono disponibili per le app Xamarin.Android quando si usa Xamarin.Android 8,0 e versioni successive.
 
 [![immagine Hero Oreo Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
-Questo articolo è strutturato per iniziare a sviluppare app Novell. Android per Android 8,0 Oreo. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e creare un emulatore (o dispositivo) per il test. Fornisce inoltre una descrizione delle nuove funzionalità di Android 8,0 Oreo, con collegamenti a app di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
+Questo articolo è strutturato per iniziare a sviluppare app Xamarin.Android per Android 8,0 Oreo. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e creare un emulatore (o dispositivo) per il test. Fornisce inoltre una descrizione delle nuove funzionalità di Android 8,0 Oreo, con collegamenti a app di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Xamarin.Android.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -31,25 +31,25 @@ Per usare le funzionalità di Android Oreo nelle app basate su Novell, è necess
 
 - **Visual studio** &ndash; se si usa Windows, è necessaria la versione 15,5 o successiva di Visual Studio.  Se si usa un Mac, è necessario Visual Studio per Mac versione 7.2.0.
 
-- **Novell. android** &ndash; Novell. Android 8,0 o versione successiva deve essere installato e configurato con Visual Studio.
+- **Xamarin.android** &ndash; Xamarin.Android 8,0 o versione successiva deve essere installato e configurato con Visual Studio.
 
 - **Android SDK** &ndash; Android SDK 8,0 (API 26) o versione successiva deve essere installato tramite il Android SDK Manager.
 
 ## <a name="getting-started"></a>Introduzione
 
-Per iniziare a usare Android Oreo con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android Oreo:
+Per iniziare a usare Android Oreo con Xamarin.Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android Oreo:
 
 1. Eseguire l'aggiornamento alla versione più recente di Visual Studio.
 
 2. Installare i pacchetti e gli strumenti di **Android 8.0.0 (API 26)** o versioni successive tramite SDK Manager.
 
-3. Creare un nuovo progetto Novell. Android destinato a Android Oreo (API 26).
+3. Creare un nuovo progetto Xamarin.Android destinato a Android Oreo (API 26).
 
 4. Configurare un emulatore o un dispositivo per testare le app di Android Oreo.
 
 Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
-### <a name="update-visual-studio-and-xamarinandroid"></a>Aggiornare Visual Studio e Novell. Android
+### <a name="update-visual-studio-and-xamarinandroid"></a>Aggiornare Visual Studio e Xamarin.Android
 
 Per aggiungere il supporto di Android Oreo a Visual Studio, eseguire le operazioni seguenti:
 
@@ -71,11 +71,11 @@ Per aggiungere il supporto di Android Oreo a Visual Studio, eseguire le operazio
 
 -----
 
-Per altre informazioni sul supporto di Novell per Android Oreo, vedere le [Note sulla versione di Novell. Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
+Per altre informazioni sul supporto di Novell per Android Oreo, vedere le [Note sulla versione di Xamarin.Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
-Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usare Novell Android SDK Manager per installare la piattaforma SDK per **Android 8,0-Oreo** o versione successiva. È necessario installare anche Android SDK Tools 26,0 o versione successiva.
+Per creare un progetto con Xamarin.Android 8,0, è necessario prima di tutto usare Novell Android SDK Manager per installare la piattaforma SDK per **Android 8,0-Oreo** o versione successiva. È necessario installare anche Android SDK Tools 26,0 o versione successiva.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -103,9 +103,9 @@ Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usa
 
 -----
 
-### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
+### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
 
-Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
+Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 8,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 8,0, è necessario configurare il livello API Android di destinazione del progetto su **android 8,0 (API 26)**. Si consiglia inoltre di impostare il livello di Framework di destinazione su API 26 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -304,7 +304,7 @@ Le app destinate a Android Oreo o versioni successive devono modificare le propr
 
 ## <a name="sample-code"></a>Codice di esempio
 
-Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare le funzionalità di Android Oreo:
+Sono disponibili diversi esempi di Xamarin.Android per illustrare come sfruttare le funzionalità di Android Oreo:
 
 - [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) illustra come usare il nuovo sistema di canali di notifica introdotto in Android Oreo. Questo esempio gestisce due canali di notifica: uno con priorità predefinita e l'altro con priorità elevata.
 
@@ -328,7 +328,7 @@ Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato Android Oreo e spiega come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android in Android Oreo. Fornisce una panoramica delle funzionalità principali disponibili in Android Oreo, con collegamenti ad esempi di codice sorgente per alcune nuove funzionalità. Sono inclusi collegamenti alla documentazione API e agli argomenti per sviluppatori Android che consentono di iniziare a creare app per Android Oreo. Sono state inoltre evidenziate le modifiche più importanti del comportamento di Android Oreo che potrebbero influito sulle app esistenti.
+Questo articolo ha presentato Android Oreo e spiega come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Xamarin.Android in Android Oreo. Fornisce una panoramica delle funzionalità principali disponibili in Android Oreo, con collegamenti ad esempi di codice sorgente per alcune nuove funzionalità. Sono inclusi collegamenti alla documentazione API e agli argomenti per sviluppatori Android che consentono di iniziare a creare app per Android Oreo. Sono state inoltre evidenziate le modifiche più importanti del comportamento di Android Oreo che potrebbero influito sulle app esistenti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

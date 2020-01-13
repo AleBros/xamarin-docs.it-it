@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento di un'app Novell. iOS in background
-description: Questo documento descrive i vari modi per aggiornare un'app Novell. iOS in background, ad esempio il monitoraggio dell'area, il recupero in background e le notifiche remote.
+title: Aggiornamento di un'app Xamarin.iOS in background
+description: Questo documento descrive i vari modi per aggiornare un'app Xamarin.iOS in background, ad esempio il monitoraggio dell'area, il recupero in background e le notifiche remote.
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010704"
 ---
-# <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Novell. iOS in background
+# <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Xamarin.iOS in background
 
 L'aggiornamento in background è il processo di riattivazione di un'applicazione sospesa o non in esecuzione e l'aggiornamento con nuovo contenuto. iOS offre tre opzioni per l'aggiornamento del contenuto in background:
 

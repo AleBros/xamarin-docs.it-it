@@ -1,6 +1,6 @@
 ---
-title: Viste tabella in Novell. Mac
-description: Questo articolo illustra l'uso delle visualizzazioni tabella in un'applicazione Novell. Mac. Viene descritta la creazione di visualizzazioni di tabella in Xcode e Interface Builder e l'interazione con questi elementi nel codice.
+title: Viste tabella in Xamarin.Mac
+description: Questo articolo illustra l'uso delle visualizzazioni tabella in un'applicazione Xamarin.Mac. Viene descritta la creazione di visualizzazioni di tabella in Xcode e Interface Builder e l'interazione con questi elementi nel codice.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73008332"
 ---
-# <a name="table-views-in-xamarinmac"></a>Viste tabella in Novell. Mac
+# <a name="table-views-in-xamarinmac"></a>Viste tabella in Xamarin.Mac
 
-_Questo articolo illustra l'uso delle visualizzazioni tabella in un'applicazione Novell. Mac. Viene descritta la creazione di visualizzazioni di tabella in Xcode e Interface Builder e l'interazione con questi elementi nel codice._
+_Questo articolo illustra l'uso delle visualizzazioni tabella in un'applicazione Xamarin.Mac. Viene descritta la creazione di visualizzazioni di tabella in Xcode e Interface Builder e l'interazione con questi elementi nel codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere alle stesse visualizzazioni di tabella che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le visualizzazioni di tabella (o, facoltativamente, crearle direttamente nel C# codice).
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere alle stesse visualizzazioni di tabella che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le visualizzazioni di tabella (o, facoltativamente, crearle direttamente nel C# codice).
 
 Una vista tabella consente di visualizzare i dati in formato tabulare contenenti una o più colonne di informazioni in più righe. In base al tipo di visualizzazione tabella da creare, l'utente può ordinare in base alla colonna, riorganizzare le colonne, aggiungere colonne, rimuovere colonne o modificare i dati contenuti nella tabella.
 
 [![](table-view-images/intro01.png "An example table")](table-view-images/intro01.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso delle visualizzazioni di tabella in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso delle visualizzazioni di tabella in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Table_Views" />
 
@@ -49,7 +49,7 @@ Per altre informazioni, vedere la sezione [visualizzazioni contenuto](https://de
 
 ## <a name="creating-and-maintaining-table-views-in-xcode"></a>Creazione e gestione di viste tabella in Xcode
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
+Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
 
 [![](table-view-images/edit01.png "Selecting the main storyboard")](table-view-images/edit01.png#lightbox)
 
@@ -93,7 +93,7 @@ Selezionare la visualizzazione tabella nella **gerarchia dell'interfaccia** e le
 - **Tronca l'ultima riga visibile** : se `true`, la cella verrà troncata nei dati non può rientrare nei limiti.
 
 > [!IMPORTANT]
-> A meno che non si stia gestendo un'applicazione Novell. Mac legacy, è consigliabile utilizzare `NSView` viste di tabella basate su `NSCell` viste di tabella basate su. `NSCell` è considerato Legacy e potrebbe non essere supportato in futuro.
+> A meno che non si stia gestendo un'applicazione Xamarin.Mac legacy, è consigliabile utilizzare `NSView` viste di tabella basate su `NSCell` viste di tabella basate su. `NSCell` è considerato Legacy e potrebbe non essere supportato in futuro.
 
 Selezionare una colonna della tabella nella **gerarchia dell'interfaccia** e le proprietà seguenti sono disponibili nel **controllo attributi**:
 
@@ -909,9 +909,9 @@ Se l'utente sceglie Elimina, la riga verrà rimossa e verrà ridisegnato la tabe
 
 ## <a name="data-binding-table-views"></a>Viste tabella di data binding
 
-Usando le tecniche di codifica e data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+Usando le tecniche di codifica e data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
-Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
+Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Xamarin.Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
 
 Per ulteriori informazioni, vedere la sezione relativa all' [associazione dati della vista tabella](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) della documentazione relativa al [Data Binding e alla codifica chiave-valore](~/mac/app-fundamentals/databinding.md) .
 
@@ -919,7 +919,7 @@ Per ulteriori informazioni, vedere la sezione relativa all' [associazione dati d
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni di tabella in un'applicazione Novell. Mac. Sono stati osservati i diversi tipi e usi delle visualizzazioni di tabella, come creare e gestire le visualizzazioni di tabella nel Interface Builder di Xcode e come usare le C# visualizzazioni di tabella nel codice.
+Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni di tabella in un'applicazione Xamarin.Mac. Sono stati osservati i diversi tipi e usi delle visualizzazioni di tabella, come creare e gestire le visualizzazioni di tabella nel Interface Builder di Xcode e come usare le C# visualizzazioni di tabella nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

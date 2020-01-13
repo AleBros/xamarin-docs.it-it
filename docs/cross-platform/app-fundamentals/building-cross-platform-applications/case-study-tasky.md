@@ -105,7 +105,7 @@ L'utilizzo di spazi dei nomi per separare i livelli consente di gestire i riferi
 
 ### <a name="references"></a>Riferimenti
 
-Le librerie di classi portabili devono essere utilizzabili su più piattaforme, ognuna con diversi livelli di supporto per le funzionalità della piattaforma e del Framework. Per questo motivo, esistono alcune limitazioni per i pacchetti e le librerie di Framework che è possibile usare. Ad esempio, Novell. iOS non supporta la parola chiave `dynamic` c#, pertanto una libreria di classi portabile non può usare alcun pacchetto che dipende dal codice dinamico, anche se tale codice funziona in Android. Visual Studio per Mac impedisce di aggiungere i pacchetti e i riferimenti incompatibili, ma è opportuno tenere presenti le limitazioni per evitare le sorprese in un secondo momento.
+Le librerie di classi portabili devono essere utilizzabili su più piattaforme, ognuna con diversi livelli di supporto per le funzionalità della piattaforma e del Framework. Per questo motivo, esistono alcune limitazioni per i pacchetti e le librerie di Framework che è possibile usare. Ad esempio, Xamarin.iOS non supporta la parola chiave `dynamic` c#, pertanto una libreria di classi portabile non può usare alcun pacchetto che dipende dal codice dinamico, anche se tale codice funziona in Android. Visual Studio per Mac impedisce di aggiungere i pacchetti e i riferimenti incompatibili, ma è opportuno tenere presenti le limitazioni per evitare le sorprese in un secondo momento.
 
 Nota: si noterà che i progetti fanno riferimento a librerie di Framework che non sono state usate. Questi riferimenti sono inclusi come parte dei modelli di progetto Novell. Quando le app vengono compilate, il processo di collegamento rimuoverà il codice senza riferimenti, quindi anche se `System.Xml` è stato fatto riferimento, non verrà incluso nell'applicazione finale perché non vengono utilizzate funzioni XML.
 
@@ -253,7 +253,7 @@ Le sezioni rimanenti illustrano i dettagli di implementazione specifici della pi
 
 ## <a name="ios-app"></a>App iOS
 
-Per implementare l'applicazione di attività iOS usando il progetto PCL comune per archiviare e recuperare i dati, sono necessarie solo alcune classi. Il progetto iOS Novell. iOS completo è illustrato di seguito:
+Per implementare l'applicazione di attività iOS usando il progetto PCL comune per archiviare e recuperare i dati, sono necessarie solo alcune classi. Il progetto iOS Xamarin.iOS completo è illustrato di seguito:
 
  ![](case-study-tasky-images/taskyios-solution.png "iOS project is shown here")
 
@@ -265,7 +265,7 @@ Le classi sono illustrate in questo diagramma, raggruppate in livelli.
 
 ### <a name="references"></a>Riferimenti
 
-L'app iOS fa riferimento alle librerie SDK specifiche della piattaforma, ad esempio. Novell. iOS e MonoTouch. Dialog-1.
+L'app iOS fa riferimento alle librerie SDK specifiche della piattaforma, ad esempio. Xamarin.iOS e MonoTouch. Dialog-1.
 
 Deve anche fare riferimento al progetto `TaskyPortableLibrary` PCL.
 L'elenco riferimenti è illustrato di seguito:
@@ -357,7 +357,7 @@ La funzionalità della schermata dei **Dettagli delle attività** , ad esempio i
 
 ## <a name="android-app"></a>App Android
 
-Il progetto Novell. Android completo è illustrato di seguito:
+Il progetto Xamarin.Android completo è illustrato di seguito:
 
  ![](case-study-tasky-images/taskyandroid-solution.png "Android project is pictured here")
 
@@ -369,7 +369,7 @@ Il diagramma classi, con le classi raggruppate per livello:
 
 ### <a name="references"></a>Riferimenti
 
-Il progetto di app Android deve fare riferimento all'assembly Novell. Android specifico della piattaforma per accedere alle classi dal Android SDK.
+Il progetto di app Android deve fare riferimento all'assembly Xamarin.Android specifico della piattaforma per accedere alle classi dal Android SDK.
 
 Deve anche fare riferimento al progetto PCL, ad esempio TaskyPortableLibrary) per accedere ai dati comuni e al codice del livello business.
 

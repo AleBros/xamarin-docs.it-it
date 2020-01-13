@@ -22,7 +22,7 @@ Si noti che la modifica del file di `.ipa` non è necessaria nel normale utilizz
 
 ## <a name="example-removing-a-file-from-a-ipa-archive"></a>Esempio: rimozione di un file da un archivio `.ipa`
 
-Per questo esempio si presuppone che il nome del progetto Novell. iOS sia `iPhoneApp1` e che il `generated session id` sia `cc530d20d6b19da63f6f1c6f67a0a254`
+Per questo esempio si presuppone che il nome del progetto Xamarin.iOS sia `iPhoneApp1` e che il `generated session id` sia `cc530d20d6b19da63f6f1c6f67a0a254`
 
 1. Compilare il file di `.ipa` come di consueto da Visual Studio.
 

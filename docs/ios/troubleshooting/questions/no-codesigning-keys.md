@@ -29,7 +29,7 @@ Se non è stato effettuato il provisioning di un dispositivo iOS in precedenza, 
 > [!NOTE]
 > Questo problema è stato risolto nelle versioni recenti di Novell per Visual Studio. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
-Si è verificato un bug in Novell. Visual Studio 3,11 che ha causato il progetto iOS in un modello Novell. Forms per aggiungere i diritti di coprogettazione. plist alle compilazioni del simulatore; blocco efficace del test tramite il simulatore.
+Si è verificato un bug in Xamarin.Visual Studio 3,11 che ha causato il progetto iOS in un modello Xamarin.Forms per aggiungere i diritti di coprogettazione. plist alle compilazioni del simulatore; blocco efficace del test tramite il simulatore.
 
 ### <a name="how-to-fix"></a>Correzione
 

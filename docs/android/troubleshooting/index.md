@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi relativi a Novell. Android
+title: Risoluzione dei problemi relativi a Xamarin.Android
 description: I documenti in questa sezione riguardano le funzionalità specifiche per la risoluzione dei problemi con Android.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -25,7 +25,7 @@ Suggerimenti e consigli per la risoluzione dei problemi.
 
 ## <a name="frequently-asked-questionsquestionsindexmd"></a>[Domande frequenti](questions/index.md)
 
-Domande frequenti sulla risoluzione dei problemi di Novell. Android.
+Domande frequenti sulla risoluzione dei problemi di Xamarin.Android.
 
 ## <a name="resolving-library-installation-errorsandroidtroubleshootingresolving-library-installation-errorsmd"></a>[Risoluzione degli errori di installazione di librerie](~/android/troubleshooting/resolving-library-installation-errors.md)
 
@@ -37,4 +37,4 @@ A partire da 26.0.1 del Android SDK Tools, Google ha rimosso i gestori di AVD e 
 
 ## <a name="xamarinandroid-errors-referencexamarinandroiderrors-and-warnings"></a>[Informazioni di riferimento sugli errori Xamarin.Android](/xamarin/android/errors-and-warnings/)
 
-Guida di riferimento agli errori, che Mostra gli errori più comuni che possono verificarsi quando si usa Novell. Android in Visual Studio
+Guida di riferimento agli errori, che Mostra gli errori più comuni che possono verificarsi quando si usa Xamarin.Android in Visual Studio

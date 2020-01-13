@@ -1,5 +1,5 @@
 ---
-title: Vincoli di layout a livello di codice in Novell. iOS
+title: Vincoli di layout a livello di codice in Xamarin.iOS
 description: Questa guida illustra come usare i vincoli di layout automatici C# iOS nel codice anziché crearli in iOS designer.
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002181"
 ---
-# <a name="programmatic-layout-constraints-in-xamarinios"></a>Vincoli di layout a livello di codice in Novell. iOS
+# <a name="programmatic-layout-constraints-in-xamarinios"></a>Vincoli di layout a livello di codice in Xamarin.iOS
 
 _Questa guida illustra come usare i vincoli di layout automatici C# iOS nel codice anziché crearli in iOS designer._
 

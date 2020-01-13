@@ -1,6 +1,6 @@
 ---
-title: 'Installazione e configurazione del sistema operativo onXamarin. Android '
-description: Questo articolo illustra i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e i dispositivi per lo sviluppo di Android Wear. Alla fine di questo articolo, si disporrà di un'installazione Novell. Android Wear integrata in Visual Studio per Mac e/o Microsoft Visual Studio e sarà possibile iniziare a creare la prima applicazione Novell. Android Wear.
+title: 'Installazione e configurazione del sistema operativo onXamarin.Android '
+description: Questo articolo illustra i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e i dispositivi per lo sviluppo di Android Wear. Alla fine di questo articolo, si disporrà di un'installazione Xamarin.Android Wear integrata in Visual Studio per Mac e/o Microsoft Visual Studio e sarà possibile iniziare a creare la prima applicazione Xamarin.Android Wear.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028734"
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 
-_Questo articolo illustra i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e i dispositivi per lo sviluppo di Android Wear. Alla fine di questo articolo, si disporrà di un'installazione Novell. Android Wear integrata in Visual Studio per Mac e/o Microsoft Visual Studio e sarà possibile iniziare a creare la prima applicazione Novell. Android Wear._
+_Questo articolo illustra i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e i dispositivi per lo sviluppo di Android Wear. Alla fine di questo articolo, si disporrà di un'installazione Xamarin.Android Wear integrata in Visual Studio per Mac e/o Microsoft Visual Studio e sarà possibile iniziare a creare la prima applicazione Xamarin.Android Wear._
 
 ## <a name="requirements"></a>Requisiti
 
@@ -24,7 +24,7 @@ Per creare app di Android Wear basate su Novell, è necessario quanto segue:
 
 - È necessario **Visual Studio o Visual Studio per Mac** &ndash; visual studio 2017 community o versione successiva.
 
-- **Novell. android** &ndash; Novell. Android 4,17 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Xamarin.android** &ndash; Xamarin.Android 4,17 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - **Android SDK** -Android SDK 5.0.1 (API 21) o versione successiva deve essere installato tramite il gestore di Android SDK.
 
@@ -37,7 +37,7 @@ Per creare app di Android Wear basate su Novell, è necessario quanto segue:
 
 ## <a name="installation"></a>Installazione
 
-Dopo aver installato Novell. Android, seguire questa procedura in modo da essere pronti per compilare e testare le app di Android Wear: 
+Dopo aver installato Xamarin.Android, seguire questa procedura in modo da essere pronti per compilare e testare le app di Android Wear: 
 
 1. Installare gli strumenti e Android SDK necessari.
 2. Configurare un dispositivo di test.

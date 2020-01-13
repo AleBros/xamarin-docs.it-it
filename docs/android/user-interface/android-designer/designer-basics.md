@@ -1,6 +1,6 @@
 ---
-title: Nozioni di base su Novell. Android Designer
-description: In questo argomento vengono presentate le funzionalità di Novell. Android Designer, viene illustrato come avviare la finestra di progettazione, vengono descritte le Area di progettazione e viene illustrato in dettaglio come utilizzare il riquadro proprietà per modificare le proprietà del widget.
+title: Nozioni di base su Xamarin.Android Designer
+description: In questo argomento vengono presentate le funzionalità di Xamarin.Android Designer, viene illustrato come avviare la finestra di progettazione, vengono descritte le Area di progettazione e viene illustrato in dettaglio come utilizzare il riquadro proprietà per modificare le proprietà del widget.
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029508"
 ---
-# <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Novell. Android Designer
+# <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Xamarin.Android Designer
 
-_In questo argomento vengono presentate le funzionalità di Novell. Android Designer, viene illustrato come avviare la finestra di progettazione, vengono descritte le Area di progettazione e viene illustrato in dettaglio come utilizzare il riquadro proprietà per modificare le proprietà del widget._
+_In questo argomento vengono presentate le funzionalità di Xamarin.Android Designer, viene illustrato come avviare la finestra di progettazione, vengono descritte le Area di progettazione e viene illustrato in dettaglio come utilizzare il riquadro proprietà per modificare le proprietà del widget._
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -97,7 +97,7 @@ Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomen
 
 - [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il **selettore di layout alternativo**.
 
-- [Novell. Android designer le funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell' **Editor del tema** e della griglia di **progettazione del materiale**.
+- [Xamarin.Android designer le funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell' **Editor del tema** e della griglia di **progettazione del materiale**.
 
 ### <a name="context-menu-commands"></a>Comandi del menu di scelta rapida
 

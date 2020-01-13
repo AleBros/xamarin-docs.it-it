@@ -1,6 +1,6 @@
 ---
 title: Visualizza popup
-description: In Novell. Forms sono disponibili tre elementi dell'interfaccia utente di tipo popup, un avviso, un foglio di azione e un prompt. Questo articolo illustra l'uso dell'avviso, della finestra delle azioni e delle API di prompt per visualizzare le finestre di dialogo che consentono agli utenti di inviare semplici domande, guidare gli utenti attraverso le attività e visualizzare i prompt.
+description: In Xamarin.Forms sono disponibili tre elementi dell'interfaccia utente di tipo popup, un avviso, un foglio di azione e un prompt. Questo articolo illustra l'uso dell'avviso, della finestra delle azioni e delle API di prompt per visualizzare le finestre di dialogo che consentono agli utenti di inviare semplici domande, guidare gli utenti attraverso le attività e visualizzare i prompt.
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "72971255"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-La visualizzazione di un avviso, la richiesta a un utente di effettuare una scelta o la visualizzazione di un messaggio di richiesta è un'attività comune dell'interfaccia utente. Novell. Forms ha tre metodi sulla classe [`Page`](xref:Xamarin.Forms.Page) per interagire con l'utente tramite un popup: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)e `DisplayPromptAsync`. Il rendering di questi metodi viene eseguito con i controlli nativi di ogni piattaforma.
+La visualizzazione di un avviso, la richiesta a un utente di effettuare una scelta o la visualizzazione di un messaggio di richiesta è un'attività comune dell'interfaccia utente. Xamarin.Forms ha tre metodi sulla classe [`Page`](xref:Xamarin.Forms.Page) per interagire con l'utente tramite un popup: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)e `DisplayPromptAsync`. Il rendering di questi metodi viene eseguito con i controlli nativi di ogni piattaforma.
 
 ## <a name="display-an-alert"></a>Visualizzare un avviso
 

@@ -1,6 +1,6 @@
 ---
-title: Controlli dell'interfaccia utente in Novell. iOS
-description: Questo documento contiene collegamenti a guide che descrivono i vari controlli dell'interfaccia utente iOS disponibili per gli sviluppatori Novell. iOS. Il contenuto collegato illustra gli avvisi, i pulsanti, le visualizzazioni di raccolta, le immagini, i controlli manuali della fotocamera, le mappe, le etichette, i selezionatori, le selezioni di data e altro ancora.
+title: Controlli dell'interfaccia utente in Xamarin.iOS
+description: Questo documento contiene collegamenti a guide che descrivono i vari controlli dell'interfaccia utente iOS disponibili per gli sviluppatori Xamarin.iOS. Il contenuto collegato illustra gli avvisi, i pulsanti, le visualizzazioni di raccolta, le immagini, i controlli manuali della fotocamera, le mappe, le etichette, i selezionatori, le selezioni di data e altro ancora.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663434"
 ---
-# <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in Novell. iOS
+# <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in Xamarin.iOS
 
 Questo documento introduce alcuni dei controlli più comuni dell'interfaccia utente iOS e spiega come usarli.
 
@@ -32,7 +32,7 @@ Le visualizzazioni di raccolta, disponibili nella classe `UICollectionView`, son
 
 ## <a name="imagesimagemd"></a>[Immagini](image.md)
 
-Per aggiungere immagini all'app sono necessari due passaggi: prima di tutto, aggiungere le immagini al progetto; quindi, aggiungere i controlli e il codice per visualizzarli in una schermata. Per informazioni più dettagliate sulla gestione delle immagini in Novell. iOS, vedere l'articolo [utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
+Per aggiungere immagini all'app sono necessari due passaggi: prima di tutto, aggiungere le immagini al progetto; quindi, aggiungere i controlli e il codice per visualizzarli in una schermata. Per informazioni più dettagliate sulla gestione delle immagini in Xamarin.iOS, vedere l'articolo [utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
 
 ## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[Controlli della fotocamera manuali](intro-to-manual-camera-controls.md)
 
@@ -70,7 +70,7 @@ Il controllo di visualizzazione stack (`UIStackView`) sfrutta la potenza del lay
 
 ## <a name="tables-and-cellstablesindexmd"></a>[Tabelle e celle](tables/index.md)
 
-in questa sezione vengono presentate le classi utilizzate per creare e visualizzare le tabelle, quindi vengono forniti esempi di utilizzo in Novell. iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Novell iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
+in questa sezione vengono presentate le classi utilizzate per creare e visualizzare le tabelle, quindi vengono forniti esempi di utilizzo in Xamarin.iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Novell iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
 
 ## <a name="text-inputtext-inputmd"></a>[Input di testo](text-input.md)
 

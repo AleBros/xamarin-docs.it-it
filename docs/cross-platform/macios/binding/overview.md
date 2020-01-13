@@ -35,7 +35,7 @@ Il binding di una libreria Objective-C per l'uso con Novell richiede tre passagg
 
 ## <a name="command-line-bindings"></a>Associazioni della riga di comando
 
-È possibile utilizzare il `btouch-native` per Novell. iOS (o `bmac-native` se si utilizza Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native`per iOS o`bmac-native`per Mac).
+È possibile utilizzare il `btouch-native` per Xamarin.iOS (o `bmac-native` se si utilizza Xamarin.Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native`per iOS o`bmac-native`per Mac).
 
 La sintassi generale per richiamare questi strumenti è la seguente:
 
@@ -75,7 +75,7 @@ Per informazioni su come analizzare le librerie native, i framework nativi e Coc
 
 Per prima cosa, trovare un tipo che si vuole associare. Ai fini della discussione (e semplicità), verrà associato il tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (che è già stato associato a [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è solo per scopi di esempio).
 
-In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare l'attributo `[Register]` per modificare il nome del tipo che Novell. iOS registrerà con il runtime di Objective-C. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
+In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare l'attributo `[Register]` per modificare il nome del tipo che Xamarin.iOS registrerà con il runtime di Objective-C. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {

@@ -107,7 +107,7 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-Sebbene sia possibile passare un nome completo a `nameof`, viene restituito solo l'elemento finale (dopo l'ultimo `.`). Ad esempio, è possibile aggiungere un data binding in Novell. Forms:
+Sebbene sia possibile passare un nome completo a `nameof`, viene restituito solo l'elemento finale (dopo l'ultimo `.`). Ad esempio, è possibile aggiungere un data binding in Xamarin.Forms:
 
 ```csharp
 var myReactiveInstance = new ReactiveType ();

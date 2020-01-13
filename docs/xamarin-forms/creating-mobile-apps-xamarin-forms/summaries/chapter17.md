@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 17. Il controllo della griglia
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 17. Il controllo della griglia'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 17. Il controllo della griglia'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1

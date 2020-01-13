@@ -32,7 +32,7 @@ Infine, il codice deve essere compilato ed eseguito correttamente in tutte le pi
 
 ## <a name="high-level-approach"></a>Approccio di alto livello
 
-La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Novell multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Novell. Forms.
+La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Novell multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Xamarin.Forms.
 
 ![Approccio di alto livello per l'utilizzo diC++ C/con Novell](images/cpp-steps.jpg)
 
@@ -53,11 +53,11 @@ Per semplicità, la procedura dettagliata è destinata solo a un subset di archi
 
 ### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>Fase 2: wrapping delle librerie native con una soluzione di Visual Studio
 
-La fase successiva consiste nel eseguire il wrapping delle librerie native in modo che siano facilmente utilizzabili da .NET. Questa operazione viene eseguita con una soluzione di Visual Studio con quattro progetti. Un progetto condiviso contiene il codice comune. I progetti destinati a ogni Novell. Android, Novell. iOS e .NET Standard consentono di fare riferimento alla libreria in modo indipendente dalla piattaforma.
+La fase successiva consiste nel eseguire il wrapping delle librerie native in modo che siano facilmente utilizzabili da .NET. Questa operazione viene eseguita con una soluzione di Visual Studio con quattro progetti. Un progetto condiviso contiene il codice comune. I progetti destinati a ogni Xamarin.Android, Xamarin.iOS e .NET Standard consentono di fare riferimento alla libreria in modo indipendente dalla piattaforma.
 
 Il wrapper USA '[The Bait and switch Trick](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)', descritto da Paul Betts. Questo non è l'unico modo, ma semplifica la creazione di un riferimento alla libreria evitando la necessità di gestire in modo esplicito le implementazioni specifiche della piattaforma all'interno dell'applicazione stessa. Il trucco è essenzialmente garantire che le destinazioni (.NET Standard, Android, iOS) condividano lo stesso spazio dei nomi, il nome dell'assembly e la struttura della classe. Poiché NuGet preferisce sempre una libreria specifica della piattaforma, la versione .NET Standard non viene mai usata in fase di esecuzione.
 
-La maggior parte delle operazioni in questo passaggio si focalizzerà sull'uso di P/Invoke per chiamare i metodi della libreria nativa e la gestione dei riferimenti agli oggetti sottostanti. L'obiettivo è esporre la funzionalità della libreria al consumer astraendone qualsiasi complessità. Gli sviluppatori Novell. Forms non devono avere conoscenze operative sui lavori interni della libreria non gestita. Dovrebbe sembrare che usi qualsiasi altra libreria gestita C# .
+La maggior parte delle operazioni in questo passaggio si focalizzerà sull'uso di P/Invoke per chiamare i metodi della libreria nativa e la gestione dei riferimenti agli oggetti sottostanti. L'obiettivo è esporre la funzionalità della libreria al consumer astraendone qualsiasi complessità. Gli sviluppatori Xamarin.Forms non devono avere conoscenze operative sui lavori interni della libreria non gestita. Dovrebbe sembrare che usi qualsiasi altra libreria gestita C# .
 
 Infine, l'output di questa fase è costituito da un set di librerie .NET, uno per destinazione, insieme a un documento NuSpec che contiene le informazioni necessarie per compilare il pacchetto nel passaggio successivo.
 
@@ -65,11 +65,11 @@ Infine, l'output di questa fase è costituito da un set di librerie .NET, uno pe
 
 La terza fase sta creando un pacchetto NuGet usando gli artefatti di compilazione del passaggio precedente. Il risultato di questo passaggio è un pacchetto NuGet che può essere utilizzato da un'app Novell. Nella procedura dettagliata viene usata una directory locale che funge da feed NuGet. In produzione, questo passaggio deve pubblicare un pacchetto in un feed NuGet pubblico o privato e deve essere completamente automatizzato.
 
-**Fase 4: utilizzo del pacchetto NuGet da un'app Novell. Forms**
+**Fase 4: utilizzo del pacchetto NuGet da un'app Xamarin.Forms**
 
-Il passaggio finale consiste nel fare riferimento e usare il pacchetto NuGet da un'app Novell. Forms. Questa operazione richiede la configurazione del feed NuGet in Visual Studio per usare il feed definito nel passaggio precedente.
+Il passaggio finale consiste nel fare riferimento e usare il pacchetto NuGet da un'app Xamarin.Forms. Questa operazione richiede la configurazione del feed NuGet in Visual Studio per usare il feed definito nel passaggio precedente.
 
-Una volta configurato il feed, è necessario fare riferimento al pacchetto da ogni progetto nell'app Novell. Forms multipiattaforma. ' The Bait-and-switch Trick ' offre interfacce identiche, quindi la funzionalità della libreria nativa può essere chiamata usando il codice definito in un'unica posizione.
+Una volta configurato il feed, è necessario fare riferimento al pacchetto da ogni progetto nell'app Xamarin.Forms multipiattaforma. ' The Bait-and-switch Trick ' offre interfacce identiche, quindi la funzionalità della libreria nativa può essere chiamata usando il codice definito in un'unica posizione.
 
 Il repository del codice sorgente contiene un [elenco di ulteriori letture](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up) che include articoli su come configurare un feed NuGet privato in Azure DevOps e su come eseguire il push del pacchetto nel feed. Quando si richiede un tempo di installazione inferiore rispetto a una directory locale, questo tipo di feed è migliore in un ambiente di sviluppo team.
 
@@ -250,7 +250,7 @@ A questo punto la cartella **libs** dovrebbe apparire come segue:
     - Collegamento intelligente
 
     > [!NOTE]
-    > L'uso di un tipo di progetto di libreria di associazione insieme a un [riferimento nativo](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incorpora la libreria statica e la consente di collegarsi automaticamente all'app Novell. iOS che vi fa riferimento (anche quando è inclusa tramite un pacchetto NuGet).
+    > L'uso di un tipo di progetto di libreria di associazione insieme a un [riferimento nativo](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incorpora la libreria statica e la consente di collegarsi automaticamente all'app Xamarin.iOS che vi fa riferimento (anche quando è inclusa tramite un pacchetto NuGet).
 
 5. Aprire **ApiDefinition.cs**, eliminando il codice commentato basato su modelli (lasciando solo lo spazio dei nomi `MathFuncs`), quindi eseguire lo stesso passaggio per **structs.cs** 
 
@@ -602,11 +602,11 @@ Una tecnica più affidabile è descritta in [Introduzione ai pacchetti NuGet in 
 
 È preferibile che questo flusso di lavoro sia completamente automatizzato, ad esempio usando [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Per ulteriori informazioni, vedere [Introduzione a Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
 
-## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Utilizzo del wrapper .NET da un'app Novell. Forms
+## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Utilizzo del wrapper .NET da un'app Xamarin.Forms
 
-Per completare la procedura dettagliata, creare un'app **Novell. Forms** per utilizzare il pacchetto appena pubblicato nel feed **NuGet** locale.
+Per completare la procedura dettagliata, creare un'app **Xamarin.Forms** per utilizzare il pacchetto appena pubblicato nel feed **NuGet** locale.
 
-### <a name="creating-the-xamarinforms-project"></a>Creazione del progetto **Novell. Forms**
+### <a name="creating-the-xamarinforms-project"></a>Creazione del progetto **Xamarin.Forms**
 
 1. Aprire una nuova istanza di **Visual Studio per Mac**. Questa operazione può essere eseguita dal **terminale**:
 
@@ -631,7 +631,7 @@ Per completare la procedura dettagliata, creare un'app **Novell. Forms** per uti
 
 6. In **Esplora soluzioni**, **controllare e fare clic** sulla destinazione (**MathFuncsApp. Android** o **MathFuncs. iOS**) per il test iniziale, quindi scegliere **Imposta come progetto di avvio**.
 7. Scegliere il **dispositivo** preferito o il **simulatore**/**emulatore**. 
-8. Eseguire la soluzione (**comando + return**) per verificare che il progetto **Novell. Forms** basato su modelli venga compilato ed eseguito in modo corretto. 
+8. Eseguire la soluzione (**comando + return**) per verificare che il progetto **Xamarin.Forms** basato su modelli venga compilato ed eseguito in modo corretto. 
 
     > [!NOTE]
     > **iOS** (in particolare il simulatore) tende a disporre del tempo di compilazione/distribuzione più rapido.
@@ -663,7 +663,7 @@ Ripetere i passaggi seguenti per ogni progetto (**MathFuncsApp**, **MathFuncsApp
 
 Ora, con un riferimento al pacchetto **MathFuncs** in ogni progetto, le funzioni sono disponibili per il C# codice.
 
-1. Aprire **MainPage.XAML.cs** dall'interno del progetto **Novell. Forms**comune **MathFuncsApp** (a cui fa riferimento sia **MathFuncsApp. Android** che **MathFuncsApp. iOS**).
+1. Aprire **MainPage.XAML.cs** dall'interno del progetto **Xamarin.Forms**comune **MathFuncsApp** (a cui fa riferimento sia **MathFuncsApp. Android** che **MathFuncsApp. iOS**).
 2. Aggiungere istruzioni **using** per **System. Diagnostics** e **MathFuncs** all'inizio del file:
 
     ```csharp
@@ -759,7 +759,7 @@ Ora, con un riferimento al pacchetto **MathFuncs** in ogni progetto, le funzioni
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come creare un'app Novell. Forms che usa librerie native tramite un wrapper .NET comune distribuito tramite un pacchetto NuGet. L'esempio fornito in questa procedura dettagliata è intenzionalmente molto semplicistico per illustrare più facilmente l'approccio. Un'applicazione reale dovrà gestire complessità quali la gestione delle eccezioni, i callback, il marshalling di tipi più complessi e il collegamento ad altre librerie di dipendenze. Una considerazione fondamentale è il processo mediante il quale l'evoluzione del C++ codice è coordinata e sincronizzata con il wrapper e le applicazioni client. Questo processo può variare a seconda che uno o entrambi i problemi siano responsabili di un singolo team. In entrambi i casi, l'automazione è un vero vantaggio. Di seguito sono riportate alcune risorse che forniscono ulteriori informazioni su alcuni concetti chiave insieme ai relativi download. 
+Questo articolo ha illustrato come creare un'app Xamarin.Forms che usa librerie native tramite un wrapper .NET comune distribuito tramite un pacchetto NuGet. L'esempio fornito in questa procedura dettagliata è intenzionalmente molto semplicistico per illustrare più facilmente l'approccio. Un'applicazione reale dovrà gestire complessità quali la gestione delle eccezioni, i callback, il marshalling di tipi più complessi e il collegamento ad altre librerie di dipendenze. Una considerazione fondamentale è il processo mediante il quale l'evoluzione del C++ codice è coordinata e sincronizzata con il wrapper e le applicazioni client. Questo processo può variare a seconda che uno o entrambi i problemi siano responsabili di un singolo team. In entrambi i casi, l'automazione è un vero vantaggio. Di seguito sono riportate alcune risorse che forniscono ulteriori informazioni su alcuni concetti chiave insieme ai relativi download. 
 
 ### <a name="downloads"></a>Download
 

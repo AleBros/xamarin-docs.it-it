@@ -62,7 +62,7 @@ canvas.Clear();
 
 Questo metodo sostituisce tutti i pixel dell'area di disegno con trasparente pixel neri, equivalente a `new SKColor(0, 0, 0, 0)` o nell'intero 0x00000000. Tutti i byte di tutti i pixel vengono inizializzati su zero.
 
-La superficie di disegno di un `SKCanvas` ottenuto una `PaintSurface` gestore potrebbe sembrare hanno uno sfondo bianco, ma solo perché il `SKCanvasView` stesso ha uno sfondo trasparente e la pagina presenta uno sfondo bianco. È possibile illustrare questo fatto a se stessi impostando xamarin. Forms `BackgroundColor` proprietà di `SKCanvasView` a un colore di xamarin. Forms:
+La superficie di disegno di un `SKCanvas` ottenuto una `PaintSurface` gestore potrebbe sembrare hanno uno sfondo bianco, ma solo perché il `SKCanvasView` stesso ha uno sfondo trasparente e la pagina presenta uno sfondo bianco. È possibile illustrare questo fatto a se stessi impostando Xamarin.Forms `BackgroundColor` proprietà di `SKCanvasView` a un colore di Xamarin.Forms:
 
 ```csharp
 canvasView.BackgroundColor = Color.Red;

@@ -1,6 +1,6 @@
 ---
-title: Binding di librerie Mac per Novell. Mac
-description: Questo documento include collegamenti a guide che descrivono come usare le associazioni Objective-C in un'applicazione Novell. Mac, tra cui Objective Sharpie e codice di esempio.
+title: Binding di librerie Mac per Xamarin.Mac
+description: Questo documento include collegamenti a guide che descrivono come usare le associazioni Objective-C in un'applicazione Xamarin.Mac, tra cui Objective Sharpie e codice di esempio.
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029924"
 ---
-# <a name="binding-mac-libraries-for-xamarinmac"></a>Binding di librerie Mac per Novell. Mac
+# <a name="binding-mac-libraries-for-xamarinmac"></a>Binding di librerie Mac per Xamarin.Mac
 
-Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C in Novell. Mac:
+Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C in Xamarin.Mac:
 
 - [**Panoramica**](~/cross-platform/macios/binding/overview.md) -
   descrive il funzionamento dell'associazione.

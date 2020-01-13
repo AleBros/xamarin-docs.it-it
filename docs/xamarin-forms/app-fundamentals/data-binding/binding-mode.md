@@ -61,7 +61,7 @@ La modalità di binding viene specificata con un membro dell'enumerazione [`Bind
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; dati sono disponibili in entrambe le direzioni tra l'origine e la destinazione
 - [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; dati passa dall'origine alla destinazione
 - [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati passa dalla destinazione all'origine
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati passano dall'origine alla destinazione, ma solo quando viene modificato il `BindingContext` (nuovo con Novell. forms 3,0)
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati passano dall'origine alla destinazione, ma solo quando viene modificato il `BindingContext` (nuovo con Xamarin.forms 3,0)
 
 Ogni proprietà con binding ha un valore di binding predefinito che viene impostato quando viene creata la proprietà con binding, ed è disponibile nella proprietà [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) dell'oggetto `BindableProperty`. Questa modalità di binding predefinita indica la modalità attiva quando la proprietà è una destinazione per il data binding.
 

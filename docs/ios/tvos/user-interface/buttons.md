@@ -16,7 +16,7 @@ ms.locfileid: "73030482"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Novell
 
-Utilizzare un'istanza della classe `UIButton` per creare un pulsante selezionabile attivabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione all'oggetto di destinazione Consenti all'app Novell. tvOS di rispondere all'input dell'utente.
+Utilizzare un'istanza della classe `UIButton` per creare un pulsante selezionabile attivabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione all'oggetto di destinazione Consenti all'app Xamarin.tvOS di rispondere all'input dell'utente.
 
 [![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
@@ -59,7 +59,7 @@ Apple presenta i suggerimenti seguenti durante la creazione dei titoli per i pul
 
 ## <a name="buttons-and-storyboards"></a>Pulsanti e storyboard
 
-Il modo più semplice per usare i pulsanti in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando il Xamarin Designer per iOS.
+Il modo più semplice per usare i pulsanti in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando il Xamarin Designer per iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -250,7 +250,7 @@ Utilizzare la proprietà `TintColor` per impostare una tinta del colore applicat
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato la progettazione e l'uso di pulsanti all'interno di un'app Novell. tvOS. È stato illustrato come usare i pulsanti in iOS designer e come creare i pulsanti nel C# codice. Infine, ha illustrato come modificare il titolo di un pulsante e modificarne lo stile e l'aspetto.
+Questo articolo ha trattato la progettazione e l'uso di pulsanti all'interno di un'app Xamarin.tvOS. È stato illustrato come usare i pulsanti in iOS designer e come creare i pulsanti nel C# codice. Infine, ha illustrato come modificare il titolo di un pulsante e modificarne lo stile e l'aspetto.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

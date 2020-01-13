@@ -24,7 +24,7 @@ Questa guida elenca le risorse e i metodi per determinare se la libreria esisten
 Microsoft ha sviluppato una nuova API di reflection da usare nelle librerie di classi portabili. Se si dispone di un codice di Reflection esistente che si desidera spostare in una libreria di classi portabile, potrebbe non funzionare.
 
 ### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
-Novell. iOS e Novell. Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Novell. iOS né Novell. Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi `System.Diagnostics.Tracing` PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
+Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi `System.Diagnostics.Tracing` PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>Pacchetti NuGet & componenti Novell
 ### <a name="how-can-i-update-nugetnuget-updatemd"></a>[Come si aggiorna NuGet?](nuget-update.md)
@@ -34,7 +34,7 @@ Gli aggiornamenti, le estensioni e i componenti aggiuntivi di NuGet sono disponi
 Visual Studio per Mac & Visual Studio includono funzionalità per la selezione di versioni precedenti dei pacchetti e per l'installazione automatica. simile a come funziona l'aggiornamento dei pacchetti.
 
 ### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Errore dei pacchetti mancanti dopo l'aggiornamento dei pacchetti NuGet](nuget-packages-missing.md)
-Questo problema è stato segnalato principalmente per le soluzioni di esempio di Novell. Forms, ma la possibilità di questo problema può verificarsi in qualsiasi progetto che usa pacchetti NuGet.
+Questo problema è stato segnalato principalmente per le soluzioni di esempio di Xamarin.Forms, ma la possibilità di questo problema può verificarsi in qualsiasi progetto che usa pacchetti NuGet.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Unificazione dei componenti di Google Play Services e NuGet](gps-components-nuget.md)
 Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma per semplificare le operazioni per gli sviluppatori, abbiamo ora unificato i nostri componenti e pacchetti NuGet in due. In quasi tutti i casi, è necessario usare Google Play Services. L'unico motivo per usare il pacchetto (Froyo) è la destinazione attiva di Froyo.

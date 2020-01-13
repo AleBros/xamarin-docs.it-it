@@ -48,7 +48,7 @@ Il risultato è che il contenuto della pagina può essere posizionato su un'area
 [![](page-safe-area-images/safe-area-layout.png "Guida Layout Area sicura")](page-safe-area-images/safe-area-layout-large.png#lightbox "Guida Layout Area sicura")
 
 > [!NOTE]
-> Area di sicurezza definita da Apple usato in xamarin. Forms per impostare il [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) proprietà che avrà la precedenza eventuali valori precedenti di questa proprietà che sono stati impostati.
+> Area di sicurezza definita da Apple usato in Xamarin.Forms per impostare il [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) proprietà che avrà la precedenza eventuali valori precedenti di questa proprietà che sono stati impostati.
 
 Area sicura può essere personalizzato tramite il recupero dei relativi [`Thickness`](xref:Xamarin.Forms.Thickness) valore con il `Page.SafeAreaInsets` metodo dal [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi. Può quindi essere modificato come richiesto e riassegnato al `Padding` proprietà nel costruttore della pagina oppure [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) eseguire l'override:
 

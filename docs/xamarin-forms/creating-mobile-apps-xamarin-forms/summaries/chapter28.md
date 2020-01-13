@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 28. Località e mappe
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: riepilogo del capitolo 28. Località e mappe'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: riepilogo del capitolo 28. Località e mappe'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
@@ -19,9 +19,9 @@ ms.locfileid: "72697082"
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
-> Le note in questa pagina indicano le aree in cui Novell. Forms è divergente rispetto al materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è divergente rispetto al materiale presentato nel libro.
 
-Novell. Forms supporta un elemento [`Map`](xref:Xamarin.Forms.Maps.Map) che deriva da `View`. A causa dei requisiti speciali della piattaforma coinvolti nell'uso delle mappe, vengono implementati in un assembly separato, **Novell. Forms. Maps**, e coinvolgono uno spazio dei nomi diverso: `Xamarin.Forms.Maps`.
+Xamarin.Forms supporta un elemento [`Map`](xref:Xamarin.Forms.Maps.Map) che deriva da `View`. A causa dei requisiti speciali della piattaforma coinvolti nell'uso delle mappe, vengono implementati in un assembly separato, **Xamarin.Forms. Maps**, e coinvolgono uno spazio dei nomi diverso: `Xamarin.Forms.Maps`.
 
 ## <a name="the-geographic-coordinate-system"></a>Sistema di coordinate geografico
 
@@ -51,14 +51,14 @@ I servizi map utilizzano una variante della proiezione Mercator denominata `Web 
 
 ## <a name="getting-the-users-location"></a>Ottenere la posizione dell'utente
 
-Le classi `Map` Novell. Forms non includono una funzionalità per ottenere la posizione geografica dell'utente, ma ciò è spesso auspicabile quando si utilizzano le mappe, quindi un servizio di dipendenza deve gestirlo.
+Le classi `Map` Xamarin.Forms non includono una funzionalità per ottenere la posizione geografica dell'utente, ma ciò è spesso auspicabile quando si utilizzano le mappe, quindi un servizio di dipendenza deve gestirlo.
 
 > [!NOTE]
-> Le applicazioni Novell. Forms possono invece usare la classe [`Geolocation`](~/essentials/geolocation.md) inclusa in Novell. Essentials.
+> Le applicazioni Xamarin.Forms possono invece usare la classe [`Geolocation`](~/essentials/geolocation.md) inclusa in Xamarin.Essentials.
 
 ### <a name="the-location-tracker-api"></a>API location tracker
 
-La soluzione [**Novell. FormsBook. Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) contiene il codice per un'API location tracker. La struttura [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) incapsula una latitudine e una longitudine. L'interfaccia [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) definisce due metodi per avviare e sospendere il rilevamento della posizione e un evento quando è disponibile un nuovo percorso.
+La soluzione [**Xamarin.FormsBook. Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) contiene il codice per un'API location tracker. La struttura [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) incapsula una latitudine e una longitudine. L'interfaccia [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) definisce due metodi per avviare e sospendere il rilevamento della posizione e un evento quando è disponibile un nuovo percorso.
 
 #### <a name="the-ios-location-manager"></a>Gestione percorso iOS
 
@@ -78,7 +78,7 @@ L'esempio [**WhereAmI**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ### <a name="the-required-overhead"></a>Overhead obbligatorio
 
-È necessario un sovraccarico per **WhereAmI** per l'uso di location tracker. Per prima cosa, tutti i progetti nella soluzione **WhereAmI** devono avere riferimenti ai progetti corrispondenti in **Novell. FormsBook. Platform**e ogni progetto **WhereAmI** deve chiamare il metodo `Toolkit.Init`.
+È necessario un sovraccarico per **WhereAmI** per l'uso di location tracker. Per prima cosa, tutti i progetti nella soluzione **WhereAmI** devono avere riferimenti ai progetti corrispondenti in **Xamarin.FormsBook. Platform**e ogni progetto **WhereAmI** deve chiamare il metodo `Toolkit.Init`.
 
 È necessario un sovraccarico aggiuntivo specifico della piattaforma, sotto forma di autorizzazioni per il percorso.
 
@@ -94,13 +94,13 @@ Le applicazioni Android che ottengono il percorso dell'utente devono disporre di
 
 Un'applicazione piattaforma UWP (Universal Windows Platform) deve avere una funzionalità del dispositivo `location` contrassegnata nel file Package. appxmanifest.
 
-## <a name="working-with-xamarinformsmaps"></a>Uso di Novell. Forms. Maps
+## <a name="working-with-xamarinformsmaps"></a>Uso di Xamarin.Forms. Maps
 
 Per l'utilizzo della classe `Map` sono necessari diversi requisiti.
 
 ### <a name="the-nuget-package"></a>Pacchetto NuGet
 
-È necessario aggiungere la libreria NuGet **Novell. Forms. Maps** alla soluzione dell'applicazione. Il numero di versione deve corrispondere al pacchetto **Novell. Forms** attualmente installato.
+È necessario aggiungere la libreria NuGet **Xamarin.Forms. Maps** alla soluzione dell'applicazione. Il numero di versione deve corrispondere al pacchetto **Xamarin.Forms** attualmente installato.
 
 ### <a name="initializing-the-maps-package"></a>Inizializzazione del pacchetto Maps
 
@@ -138,7 +138,7 @@ Per disabilitare lo scorrimento orizzontale e verticale, impostare la proprietà
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
 - [`Hybrid`](xref:Xamarin.Forms.Maps.MapType.Hybrid)
 
-Il file [MapTypesPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) Mostra come usare un pulsante di opzione per selezionare il tipo di mappa. Usa la classe [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) nella libreria [**Novell. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) e una classe basata sul file [MapTypeRadioButton. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) .
+Il file [MapTypesPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) Mostra come usare un pulsante di opzione per selezionare il tipo di mappa. Usa la classe [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) nella libreria [**Xamarin.FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) e una classe basata sul file [MapTypeRadioButton. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) .
 
 ### <a name="map-coordinates"></a>Coordinate mappa
 
@@ -173,7 +173,7 @@ Il file [MapCoordinatesPage. XAML](https://github.com/xamarin/xamarin-forms-book
 
 ### <a name="position-extensions"></a>Estensioni posizione
 
-Una nuova libreria per questo libro denominata [**Novell. FormsBook. Toolkit. Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) contiene tipi specifici della mappa ma indipendenti dalla piattaforma. La classe [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) dispone di un metodo `ToString` per `Position` e un metodo per calcolare la distanza tra due valori `Position`.
+Una nuova libreria per questo libro denominata [**Xamarin.FormsBook. Toolkit. Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) contiene tipi specifici della mappa ma indipendenti dalla piattaforma. La classe [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) dispone di un metodo `ToString` per `Position` e un metodo per calcolare la distanza tra due valori `Position`.
 
 ### <a name="setting-an-initial-location"></a>Impostazione di un percorso iniziale
 
@@ -231,7 +231,7 @@ Il programma illustra anche come limitare dinamicamente il numero di pin in base
 
 ## <a name="geocoding-and-back-again"></a>Geocodifica e viceversa
 
-L'assembly [**Novell. Forms. Maps**](xref:Xamarin.Forms.Maps) contiene anche una classe [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) con un metodo [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) che converte un indirizzo di testo in zero o più posizioni geografiche possibili e un altro metodo [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) che esegue la conversione nell'altra direzione.
+L'assembly [**Xamarin.Forms. Maps**](xref:Xamarin.Forms.Maps) contiene anche una classe [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) con un metodo [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) che converte un indirizzo di testo in zero o più posizioni geografiche possibili e un altro metodo [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) che esegue la conversione nell'altra direzione.
 
 Il file [GeocoderRoundTrip. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) e il file code-behind [GeocoderRoundTrip.XAML.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) illustrano questa funzionalità.
 
@@ -239,4 +239,4 @@ Il file [GeocoderRoundTrip. XAML](https://github.com/xamarin/xamarin-forms-book-
 
 - [Capitolo 28 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [Capitolo 28 esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [Mappa di Novell. Forms](~/xamarin-forms/user-interface/map/index.md)
+- [Mappa di Xamarin.Forms](~/xamarin-forms/user-interface/map/index.md)

@@ -1,6 +1,6 @@
 ---
-title: Compressione di file in Novell. iOS
-description: Questo documento descrive come usare l'API libcompression in Novell. iOS. Vengono illustrati il Deflating, il gonfiaggio e i diversi algoritmi supportati.
+title: Compressione di file in Xamarin.iOS
+description: Questo documento descrive come usare l'API libcompression in Xamarin.iOS. Vengono illustrati il Deflating, il gonfiaggio e i diversi algoritmi supportati.
 ms.prod: xamarin
 ms.assetid: 94D05DAB-01E8-4C62-9CEF-9D6417EEA8EB
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/31/2019
 ms.locfileid: "70199517"
 ---
-# <a name="file-compression-in-xamarinios"></a>Compressione di file in Novell. iOS
+# <a name="file-compression-in-xamarinios"></a>Compressione di file in Xamarin.iOS
 
-Le app Novell destinate a iOS 9,0 o macOS 10,11 (e versioni successive) possono usare il _Framework di compressione_ per comprimere (codificare) e decomprimere (decodificare) i dati. Novell. iOS fornisce questo framework dopo l'API Stream. Il Framework di compressione consente agli sviluppatori di interagire con i dati compressi e decompressi come se fossero flussi normali senza la necessità di utilizzare callback o delegati.
+Le app Novell destinate a iOS 9,0 o macOS 10,11 (e versioni successive) possono usare il _Framework di compressione_ per comprimere (codificare) e decomprimere (decodificare) i dati. Xamarin.iOS fornisce questo framework dopo l'API Stream. Il Framework di compressione consente agli sviluppatori di interagire con i dati compressi e decompressi come se fossero flussi normali senza la necessità di utilizzare callback o delegati.
 
 Il Framework di compressione fornisce supporto per gli algoritmi seguenti:
 
@@ -30,7 +30,7 @@ L'uso del Framework di compressione consente agli sviluppatori di eseguire opera
 
 ## <a name="general-file-decompression"></a>Decompressione generale dei file
 
-Il Framework di compressione usa un'API di flusso in Novell. iOS e Novell. Mac. Questa API significa che per comprimere i dati, lo sviluppatore può usare i modelli normali usati in altre API di i/o in .NET. Nell'esempio seguente viene illustrato come decomprimere i dati con il Framework di compressione, che è simile all'API `System.IO.Compression.DeflateStream` disponibile nell'API:
+Il Framework di compressione usa un'API di flusso in Xamarin.iOS e Xamarin.Mac. Questa API significa che per comprimere i dati, lo sviluppatore può usare i modelli normali usati in altre API di i/o in .NET. Nell'esempio seguente viene illustrato come decomprimere i dati con il Framework di compressione, che è simile all'API `System.IO.Compression.DeflateStream` disponibile nell'API:
 
 ```csharp
 // sample zlib data

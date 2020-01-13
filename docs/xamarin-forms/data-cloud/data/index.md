@@ -1,6 +1,6 @@
 ---
-title: Archiviazione locale dei dati di xamarin. Forms
-description: Informazioni su come eseguire file di gestione da codice condiviso di xamarin. Forms e come leggere e scrivere dati in un database SQLite locale usando SQLite.Net.
+title: Archiviazione locale dei dati di Xamarin.Forms
+description: Informazioni su come eseguire file di gestione da codice condiviso di Xamarin.Forms e come leggere e scrivere dati in un database SQLite locale usando SQLite.Net.
 ms.prod: xamarin
 ms.assetid: A324C247-7DA8-4B14-A813-25F85525E32B
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/08/2019
 ms.locfileid: "67659068"
 ---
-# <a name="xamarinforms-local-data-storage"></a>Archiviazione locale dei dati di xamarin. Forms
+# <a name="xamarinforms-local-data-storage"></a>Archiviazione locale dei dati di Xamarin.Forms
 
 ## <a name="filesfilesmd"></a>[File](files.md)
 
-In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate. Questo articolo illustra come eseguire file di gestione da codice condiviso in un'applicazione xamarin. Forms.
+In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate. Questo articolo illustra come eseguire file di gestione da codice condiviso in un'applicazione Xamarin.Forms.
 
 ## <a name="local-databasesdatabasesmd"></a>[Database locali](databases.md)
 

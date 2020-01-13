@@ -18,7 +18,7 @@ ms.locfileid: "73030573"
 
 _Nuove funzionalità disponibili per gli sviluppatori che usano Novell per tvOS 11_
 
-Accedere alle nuove funzionalità di tvOS 11 nelle app Novell. tvOS:
+Accedere alle nuove funzionalità di tvOS 11 nelle app Xamarin.tvOS:
 
 - Supporto per le lingue da destra a sinistra 
 - Supporto dello stato attivo per SceneKit e SpriteKit

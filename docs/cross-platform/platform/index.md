@@ -19,7 +19,7 @@ ms.locfileid: "73014623"
 
 ### <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 
-Nella versione 5 C# di sono state introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Novell. iOS e Novell. Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell.
+Nella versione 5 C# di sono state introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Xamarin.iOS e Xamarin.Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell.
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
 
@@ -31,7 +31,7 @@ Creazione di app per F# dispositivi mobili con e Novell.
 
 ## <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Basic.NET visivi portatili](~/cross-platform/platform/visual-basic/index.md)
 
-Visual Studio supporta la creazione di librerie di classi portabili usando Visual Basic.NET che può quindi essere incorporato in applicazioni Novell. Questo articolo illustra come creare un nuovo Visual Basic PCL e quindi usarlo in un'applicazione di esempio Novell. iOS, Novell. Android e Windows Phone.
+Visual Studio supporta la creazione di librerie di classi portabili usando Visual Basic.NET che può quindi essere incorporato in applicazioni Novell. Questo articolo illustra come creare un nuovo Visual Basic PCL e quindi usarlo in un'applicazione di esempio Xamarin.iOS, Xamarin.Android e Windows Phone.
 
 ## <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Creazione di visualizzazioni HTML con i modelli Razor](~/cross-platform/platform/razor-html-templates/index.md)
 

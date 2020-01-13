@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 13. Bitmap
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 13. Bitmap'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 13. Bitmap'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
@@ -19,11 +19,11 @@ ms.locfileid: "61334621"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
-Xamarin. Forms [ `Image` ](xref:Xamarin.Forms.Image) elemento consente di visualizzare una bitmap. Tutte le piattaforme di xamarin. Forms supportano i formati di file JPEG, PNG, GIF e BMP.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) elemento consente di visualizzare una bitmap. Tutte le piattaforme di Xamarin.Forms supportano i formati di file JPEG, PNG, GIF e BMP.
 
-Le bitmap in xamarin. Forms provengono da quattro posizioni:
+Le bitmap in Xamarin.Forms provengono da quattro posizioni:
 
 - Tramite il web come specificato da un URL
 - Incorporato come risorsa nella libreria condivisa
@@ -93,7 +93,7 @@ Il [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 Il [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) esempio consente all'utente di esplorare le immagini predefinite archiviate sul sito web di Xamarin. Usa .NET [ `WebRequest` ](xref:System.Net.WebRequest) classe per scaricare un file JSON con l'elenco delle bitmap.
 
 > [!NOTE]
-> Programmi di xamarin. Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. 
+> Programmi di Xamarin.Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. 
 
 Il programma Usa un' [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) per indicare che un elemento sta succedendo. Quando viene caricato ogni bitmap, di sola lettura [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) proprietà della `Image` è `true`. Il `IsLoading` proprietà è supportata da una proprietà associabile, pertanto un `PropertyChanged` evento viene generato quando tale proprietà viene modificata. Associa un gestore per questo evento, il programma e Usa l'impostazione corrente di `IsLoaded` per impostare il [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) proprietà del `ActivityIndicator`.
 
@@ -107,13 +107,13 @@ Il [ **BitmapStreams** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ### <a name="generating-bitmaps-at-run-time"></a>Generazione di immagini bitmap in fase di esecuzione
 
-Tutte le piattaforme di xamarin. Forms supportano il formato di file BMP non compresso, facili da creare nel codice e quindi archiviare in un `MemoryStream`. Questa tecnica consente di creare modo algoritmico bitmap in fase di esecuzione, come implementato nel [ `BmpMaker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) classe la **Xamrin.FormsBook.Toolkit** libreria.
+Tutte le piattaforme di Xamarin.Forms supportano il formato di file BMP non compresso, facili da creare nel codice e quindi archiviare in un `MemoryStream`. Questa tecnica consente di creare modo algoritmico bitmap in fase di esecuzione, come implementato nel [ `BmpMaker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) classe la **Xamrin.FormsBook.Toolkit** libreria.
 
 Il "eseguire in prima persona" [ **DiyGradientBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) esempio dimostra l'uso di `BmpMaker` per creare una bitmap con un'immagine della sfumatura.
 
 ## <a name="platform-specific-bitmaps"></a>Bitmap specifiche della piattaforma
 
-Tutte le piattaforme di xamarin. Forms consentono di archiviare le immagini bitmap negli assembly di applicazione della piattaforma. Quando è recuperato da un'applicazione xamarin. Forms, tali bitmap piattaforma sono di tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Viene utilizzato per:
+Tutte le piattaforme di Xamarin.Forms consentono di archiviare le immagini bitmap negli assembly di applicazione della piattaforma. Quando è recuperato da un'applicazione Xamarin.Forms, tali bitmap piattaforma sono di tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Viene utilizzato per:
 
 - il [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) proprietà di [`MenuItem`](xref:Xamarin.Forms.MenuItem)
 - il [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) proprietà di [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
@@ -163,13 +163,13 @@ Per una mappa di bit deve essere sottoposto a rendering in un quadrato di pollic
 - drawable-xxhdpi/jpg 480 pixel quadrati
 - drawable-xxxhdpi o jpg a 640 pixel quadrati
 
-La mappa di bit sarà sempre il rendering in 160 unità indipendenti dal dispositivo. (Il modello di soluzione xamarin. Forms standard include solo il hdpi xhdpi e le cartelle xxhdpi.)
+La mappa di bit sarà sempre il rendering in 160 unità indipendenti dal dispositivo. (Il modello di soluzione Xamarin.Forms standard include solo il hdpi xhdpi e le cartelle xxhdpi.)
 
 Il progetto UWP supporta uno schema di denominazione mappa di bit costituita da un fattore di scala espressa in pixel per ogni unità indipendenti dal dispositivo espressa in percentuale, ad esempio:
 
 - MyImage.scale-200.jpg 320 pixel quadrati
 
-Solo alcuni percentuali sono valide. I programmi di esempio per questo libro includono solo le immagini con **scalabilità-200** suffissi, ma i modelli di soluzione xamarin. Forms correnti includono **scala 100**, **scala-125**, **scalabilità-150**, e **scalabilità-400**.
+Solo alcuni percentuali sono valide. I programmi di esempio per questo libro includono solo le immagini con **scalabilità-200** suffissi, ma i modelli di soluzione Xamarin.Forms correnti includono **scala 100**, **scala-125**, **scalabilità-150**, e **scalabilità-400**.
 
 Quando si aggiungono le bitmap per i progetti di piattaforma, il **azione di compilazione** deve essere:
 
@@ -181,7 +181,7 @@ Il [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 ### <a name="toolbars-and-their-icons"></a>Le barre degli strumenti e le icone
 
-Uno degli usi principali delle bitmap specifiche della piattaforma è la barra degli strumenti xamarin. Forms, che viene costruita aggiungendo [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) oggetti per il [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) insieme definito dal `Page`. `ToobarItem` deriva da [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) da cui eredita alcune proprietà.
+Uno degli usi principali delle bitmap specifiche della piattaforma è la barra degli strumenti Xamarin.Forms, che viene costruita aggiungendo [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) oggetti per il [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) insieme definito dal `Page`. `ToobarItem` deriva da [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) da cui eredita alcune proprietà.
 
 La più importante `ToolbarItem` proprietà sono:
 

@@ -1,6 +1,6 @@
 ---
-title: Implementazione di SiriKit in Novell. iOS
-description: Questo documento descrive i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS. Vengono illustrate le estensioni per gli Intent e le estensioni dell'interfaccia utente.
+title: Implementazione di SiriKit in Xamarin.iOS
+description: Questo documento descrive i passaggi necessari per implementare il supporto SiriKit in un'app Xamarin.iOS. Vengono illustrate le estensioni per gli Intent e le estensioni dell'interfaccia utente.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031636"
 ---
-# <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Novell. iOS
+# <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Xamarin.iOS
 
-_Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS._
+_Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Xamarin.iOS._
 
-Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit nelle app Novell. iOS aggiungendo le estensioni per Intent, le estensioni dell'interfaccia utente e il vocabolario richiesti.
+Una novità di iOS 10, SiriKit consente a un'app Xamarin.iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit nelle app Xamarin.iOS aggiungendo le estensioni per Intent, le estensioni dell'interfaccia utente e il vocabolario richiesti.
 
 Siri funziona con il concetto di **domini**, gruppi di azioni di conoscenza per le attività correlate. Ogni interazione eseguita dall'app con Siri deve rientrare in uno dei relativi domini di servizio noti, come indicato di seguito:
 
@@ -160,7 +160,7 @@ Per finalità o gruppi di Intent che non rientrano in un gruppo esistente, crear
 
 ### <a name="setting-the-required-entitlements"></a>Impostazione dei diritti obbligatori
 
-Per tutte le app Novell. iOS che includono l'integrazione con SiriKit è necessario impostare i diritti corretti. Se lo sviluppatore non imposta correttamente questi diritti obbligatori, non sarà in grado di installare o testare l'app in un hardware reale iOS 10 (o versione successiva), che è anche un requisito poiché il simulatore iOS 10 non supporta SiriKit.
+Per tutte le app Xamarin.iOS che includono l'integrazione con SiriKit è necessario impostare i diritti corretti. Se lo sviluppatore non imposta correttamente questi diritti obbligatori, non sarà in grado di installare o testare l'app in un hardware reale iOS 10 (o versione successiva), che è anche un requisito poiché il simulatore iOS 10 non supporta SiriKit.
 
 Procedere come descritto di seguito:
 
@@ -205,7 +205,7 @@ Al termine, il file di `Entitlements.plist` dell'applicazione dovrebbe essere si
 
 ### <a name="correctly-provisioning-the-app"></a>Provisioning corretto dell'app
 
-A causa della rigorosa sicurezza che Apple ha inserito in SiriKit Framework, qualsiasi app Novell. iOS che implementi SiriKit _deve_ avere i diritti e l'ID app corretti (vedere la sezione precedente) e deve essere firmata con un profilo di provisioning appropriato.
+A causa della rigorosa sicurezza che Apple ha inserito in SiriKit Framework, qualsiasi app Xamarin.iOS che implementi SiriKit _deve_ avere i diritti e l'ID app corretti (vedere la sezione precedente) e deve essere firmata con un profilo di provisioning appropriato.
 
 Nel Mac eseguire le operazioni seguenti:
 
@@ -244,7 +244,7 @@ Nel Mac eseguire le operazioni seguenti:
 23. Fare clic su **OK** per salvare le modifiche.
 
 > [!IMPORTANT]
-> Il test di SiriKit funziona solo in un dispositivo hardware iOS 10 reale e non nel simulatore iOS 10. Se si verificano problemi durante l'installazione di un'app Novell. iOS abilitata per SiriKit in un hardware reale, assicurarsi che i diritti obbligatori, l'ID app, l'identificatore di firma e il profilo di provisioning siano stati configurati correttamente nel portale per sviluppatori di Apple e Visual Studio per Mac.
+> Il test di SiriKit funziona solo in un dispositivo hardware iOS 10 reale e non nel simulatore iOS 10. Se si verificano problemi durante l'installazione di un'app Xamarin.iOS abilitata per SiriKit in un hardware reale, assicurarsi che i diritti obbligatori, l'ID app, l'identificatore di firma e il profilo di provisioning siano stati configurati correttamente nel portale per sviluppatori di Apple e Visual Studio per Mac.
 
 ### <a name="requesting-siri-authorization"></a>Richiesta dell'autorizzazione Siri
 
@@ -594,7 +594,7 @@ Ora che l'app è stata preparata per l'adozione di SiriKit, lo sviluppatore dovr
 
 Per ogni estensione per Intent è necessario eseguire le operazioni seguenti:
 
-- Aggiungere un progetto di estensione per Intent alla soluzione app Novell. iOS.
+- Aggiungere un progetto di estensione per Intent alla soluzione app Xamarin.iOS.
 - Configurare il file di estensione per Intent `Info.plist`.
 - Modificare la classe principale dell'estensione per Intent.
 
@@ -855,7 +855,7 @@ L'estensione facoltativa dell'interfaccia utente di Intent è la possibilità di
 
 Analogamente all'estensione per Intent, lo sviluppatore eseguirà il passaggio seguente per l'estensione dell'interfaccia utente Intent:
 
-- Aggiungere un progetto di estensione per interfaccia utente Intent alla soluzione app Novell. iOS.
+- Aggiungere un progetto di estensione per interfaccia utente Intent alla soluzione app Xamarin.iOS.
 - Configurare l'estensione per interfaccia utente Intent `Info.plist` file.
 - Modificare la classe principale dell'estensione dell'interfaccia utente di Intent.
 
@@ -1058,7 +1058,7 @@ Apple suggerisce che lo sviluppatore prende in considerazione le considerazioni 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato SiriKit e come può essere aggiunto alle app Novell. iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
+Questo articolo ha illustrato SiriKit e come può essere aggiunto alle app Xamarin.iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

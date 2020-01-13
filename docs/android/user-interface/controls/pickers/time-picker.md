@@ -57,7 +57,7 @@ In questo esempio verrà utilizzata la terza tecnica, che richiede che l'attivit
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di app
 
-Avviare un nuovo progetto Android denominato **TimePickerDemo** (se non si ha familiarità con la creazione di progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) per informazioni su come creare un nuovo progetto).
+Avviare un nuovo progetto Android denominato **TimePickerDemo** (se non si ha familiarità con la creazione di progetti Xamarin.Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) per informazioni su come creare un nuovo progetto).
 
 Modificare **Resources/layout/Main. aXML** e sostituirne il contenuto con il codice XML seguente:
 

@@ -1,5 +1,5 @@
 ---
-title: Domande frequenti su Novell. iOS
+title: Domande frequenti su Xamarin.iOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -89,7 +89,7 @@ Si sono verificati alcuni problemi noti nelle versioni precedenti di Novell che 
 Apple ha [corretto](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) questo `ibtool` bug in Xcode 6.1.1, quindi l'aggiornamento a Xcode 6.1.1 o versione successiva è la soluzione più semplice.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Errore MT1009: Impossibile copiare l'assembly](error-mt1009.md)
-Ciò influiscono sugli utenti che eseguono Novell. iOS 7.2.6. Questo problema è dovuto alle autorizzazioni per i file che richiedono privilegi più elevati quando Novell. iOS viene installato con un account utente diverso, quindi l'account principale dello sviluppatore.
+Ciò influiscono sugli utenti che eseguono Xamarin.iOS 7.2.6. Questo problema è dovuto alle autorizzazioni per i file che richiedono privilegi più elevati quando Xamarin.iOS viene installato con un account utente diverso, quindi l'account principale dello sviluppatore.
 
 ### <a name="systemexception-amdevicenotificationsubscribe-returned-exception-amddevicenotificationsubscribemd"></a>[System. Exception AMDeviceNotificationSubscribe ha restituito...](exception-amddevicenotificationsubscribe.md)
 Questo messaggio può essere visualizzato in una finestra di dialogo di errore quando si avvia per la prima volta Visual Studio per Mac o nel file di `mtbserver.log`. Si noti che si tratta di un problema non comune. Se si verificano problemi durante la connessione di Visual Studio all'host di compilazione Mac, sono presenti altri errori che potrebbero essere visualizzati nel file di `mtbserver.log`.

@@ -1,5 +1,5 @@
 ---
-title: Uso del controllo ListView in Novell. Android
+title: Uso del controllo ListView in Xamarin.Android
 description: ListView è un importante componente dell'interfaccia utente delle applicazioni Android. viene usato ovunque, da brevi elenchi di opzioni di menu a lunghi elenchi di contatti o Preferiti Internet. Fornisce un modo semplice per presentare un elenco di righe di scorrimento che può essere formattato con uno stile incorporato o personalizzato in modo esteso.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028884"
 ---
-# <a name="xamarinandroid-listview"></a>ListView Novell. Android
+# <a name="xamarinandroid-listview"></a>ListView Xamarin.Android
 
 _ListView è un importante componente dell'interfaccia utente delle applicazioni Android. viene usato ovunque, da brevi elenchi di opzioni di menu a lunghi elenchi di contatti o Preferiti Internet. Fornisce un modo semplice per presentare un elenco di righe di scorrimento che può essere formattato con uno stile incorporato o personalizzato in modo esteso._
 
@@ -22,7 +22,7 @@ _ListView è un importante componente dell'interfaccia utente delle applicazioni
 
 Le visualizzazioni elenco e gli adapter sono inclusi nei blocchi predefiniti più importanti delle applicazioni Android. La classe `ListView` fornisce un modo flessibile per presentare i dati, sia che si tratti di un menu breve o di un elenco a scorrimento lungo. Fornisce funzionalità di usabilità quali scorrimento rapido, indici e selezione singola o multipla per semplificare la creazione di interfacce utente per dispositivi mobili per le applicazioni. Un'istanza di `ListView` richiede un *Adapter* da cui ricevere i dati presenti nelle visualizzazioni di righe.
 
-Questa guida illustra come implementare `ListView` e le varie classi di `Adapter` in Novell. Android. Viene inoltre illustrato come personalizzare l'aspetto di un `ListView`e viene illustrata l'importanza del riutilizzo delle righe per ridurre l'utilizzo della memoria. Ci sono anche alcune informazioni sul modo in cui il ciclo di vita dell'attività influiscono `ListView` e `Adapter` uso. Se si lavora su applicazioni multipiattaforma con Novell. iOS, il controllo `ListView` è strutturalmente simile al `UITableView` iOS e il `Adapter` Android è simile al `UITableViewSource`.
+Questa guida illustra come implementare `ListView` e le varie classi di `Adapter` in Xamarin.Android. Viene inoltre illustrato come personalizzare l'aspetto di un `ListView`e viene illustrata l'importanza del riutilizzo delle righe per ridurre l'utilizzo della memoria. Ci sono anche alcune informazioni sul modo in cui il ciclo di vita dell'attività influiscono `ListView` e `Adapter` uso. Se si lavora su applicazioni multipiattaforma con Xamarin.iOS, il controllo `ListView` è strutturalmente simile al `UITableView` iOS e il `Adapter` Android è simile al `UITableViewSource`.
 
 In primo luogo, una breve esercitazione introduce la `ListView` con un esempio di codice di base. Vengono quindi forniti collegamenti ad argomenti più avanzati che consentono di usare `ListView` in app reali.
 
@@ -230,7 +230,7 @@ In questo set di argomenti sono stati introdotti `ListView` e sono stati forniti
 - [SimpleCursorTableAdapter (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/simplecursortableadapter)
 - [CursorTableAdapter (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/cursortableadapter)
 - [Esercitazione sul ciclo di vita delle attività](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Utilizzo di tabelle e celle (in Novell. iOS)](~/ios/user-interface/controls/tables/index.md)
+- [Utilizzo di tabelle e celle (in Xamarin.iOS)](~/ios/user-interface/controls/tables/index.md)
 - [Riferimento alla classe ListView](xref:Android.Widget.ListView)
 - [Riferimento alla classe ListActivity](xref:Android.App.ListActivity)
 - [Riferimento alla classe BaseAdapter](xref:Android.Widget.BaseAdapter)

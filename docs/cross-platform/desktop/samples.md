@@ -14,7 +14,7 @@ ms.locfileid: "73016411"
 ---
 # <a name="cross-platform-desktop-samples"></a>Esempi di desktop multipiattaforma
 
-## <a name="wpf-to-cross-platform-with-xamarinforms"></a>Da WPF a multipiattaforma con Novell. Forms
+## <a name="wpf-to-cross-platform-with-xamarinforms"></a>Da WPF a multipiattaforma con Xamarin.Forms
 
 ### <a name="expenses-app"></a>App spese
 
@@ -26,7 +26,7 @@ ms.locfileid: "73016411"
 
 #### <a name="cross-platform-apps"></a>App multipiattaforma
 
-Usando Novell. Forms, l'app originale è stata in grado di eseguire il porting in un back-end di Azure in esecuzione su dispositivi mobili, tablet e desktop:
+Usando Xamarin.Forms, l'app originale è stata in grado di eseguire il porting in un back-end di Azure in esecuzione su dispositivi mobili, tablet e desktop:
 
 * Android
 * iOS
@@ -42,7 +42,7 @@ App di esempio a cui fa riferimento il codice seguente:
 
 * [EBook di microservizi .NET](https://aka.ms/microservicesebook)
 * [EBook del ciclo di vita delle applicazioni Docker in contenitori](https://aka.ms/dockerlifecycleebook)
-* [Modelli di applicazioni aziendali con l'eBook Novell. Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
+* [Modelli di applicazioni aziendali con l'eBook Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
 
 ## <a name="mobile-app-samples"></a>Esempi di app per dispositivi mobili
 

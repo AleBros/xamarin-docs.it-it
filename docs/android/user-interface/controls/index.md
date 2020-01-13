@@ -1,6 +1,6 @@
 ---
 title: Controlli Android (widget)
-description: Blocchi predefiniti per la creazione di interfacce utente Novell. Android
+description: Blocchi predefiniti per la creazione di interfacce utente Xamarin.Android
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029267"
 ---
-# <a name="xamarinandroid-controls-widgets"></a>Controlli Novell. Android (widget)
+# <a name="xamarinandroid-controls-widgets"></a>Controlli Xamarin.Android (widget)
 
-Novell. Android espone tutti i controlli dell'interfaccia utente (widget) nativi forniti da Android. Questi controlli possono essere facilmente aggiunti alle app Novell. Android usando il Android Designer o a livello tramite i file di layout XML. Indipendentemente dal metodo scelto, Novell. Android espone tutti i metodi e le proprietà degli oggetti dell'interfaccia utente in C#. Le sezioni seguenti introducono i controlli più comuni dell'interfaccia utente di Android e spiegano come incorporarli nelle app Novell. Android.
+Xamarin.Android espone tutti i controlli dell'interfaccia utente (widget) nativi forniti da Android. Questi controlli possono essere facilmente aggiunti alle app Xamarin.Android usando il Android Designer o a livello tramite i file di layout XML. Indipendentemente dal metodo scelto, Xamarin.Android espone tutti i metodi e le proprietà degli oggetti dell'interfaccia utente in C#. Le sezioni seguenti introducono i controlli più comuni dell'interfaccia utente di Android e spiegano come incorporarli nelle app Xamarin.Android.
 
 ## <a name="action-barandroiduser-interfacecontrolsaction-barmd"></a>[Barra delle azioni](~/android/user-interface/controls/action-bar.md) 
 

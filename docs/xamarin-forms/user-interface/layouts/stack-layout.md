@@ -1,6 +1,6 @@
 ---
-title: StackLayout xamarin. Forms
-description: Questo articolo illustra come usare la classe StackLayout xamarin. Forms per presentare le raccolte di visualizzazioni in una dimensione.
+title: StackLayout Xamarin.Forms
+description: Questo articolo illustra come usare la classe StackLayout Xamarin.Forms per presentare le raccolte di visualizzazioni in una dimensione.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70770270"
 ---
-# <a name="xamarinforms-stacklayout"></a>StackLayout xamarin. Forms
+# <a name="xamarinforms-stacklayout"></a>StackLayout Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 

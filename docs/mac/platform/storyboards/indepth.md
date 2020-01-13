@@ -1,6 +1,6 @@
 ---
-title: Uso degli storyboard in Novell. Mac
-description: Questo documento descrive come usare gli storyboard in Novell. Mac, esaminando come caricarli dal codice, il ciclo di vita del controller di visualizzazione, la catena di risponditori, gli elementi segue, i controller di finestra, i riconoscitori dei movimenti e altro ancora.
+title: Uso degli storyboard in Xamarin.Mac
+description: Questo documento descrive come usare gli storyboard in Xamarin.Mac, esaminando come caricarli dal codice, il ciclo di vita del controller di visualizzazione, la catena di risponditori, gli elementi segue, i controller di finestra, i riconoscitori dei movimenti e altro ancora.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026407"
 ---
-# <a name="working-with-storyboards-in-xamarinmac"></a>Uso degli storyboard in Novell. Mac
+# <a name="working-with-storyboards-in-xamarinmac"></a>Uso degli storyboard in Xamarin.Mac
 
 Uno storyboard definisce tutta l'interfaccia utente per una determinata app suddivisa in una panoramica funzionale dei controller di visualizzazione. In Interface Builder di Xcode, ognuno di questi controller si trova in una propria scena.
 
 [![uno storyboard nella Interface Builder di Xcode](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
 
-Lo storyboard è un file di risorse (con le estensioni di `.storyboard`) che viene incluso nel bundle dell'app Novell. Mac quando viene compilato e spedito. Per definire lo storyboard iniziale per l'app, modificarlo `Info.plist` file e selezionare l' **interfaccia principale** nella casella a discesa: 
+Lo storyboard è un file di risorse (con le estensioni di `.storyboard`) che viene incluso nel bundle dell'app Xamarin.Mac quando viene compilato e spedito. Per definire lo storyboard iniziale per l'app, modificarlo `Info.plist` file e selezionare l' **interfaccia principale** nella casella a discesa: 
 
 [![editor info. plist](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
@@ -53,7 +53,7 @@ Facoltativamente, è possibile usare il metodo `InstantiateInitialController` pe
 
 ## <a name="view-controllers"></a>Controller di visualizzazione
 
-I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello storyboard rappresenta un controller di visualizzazione nel codice dell'app Novell. Mac.
+I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello storyboard rappresenta un controller di visualizzazione nel codice dell'app Xamarin.Mac.
 
 <a name="The-View-Controller-Lifecycle" />
 
@@ -350,7 +350,7 @@ Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia ut
 
 ## <a name="complex-storyboard-example"></a>Esempio di storyboard complesso
 
-Per un esempio complesso di utilizzo degli storyboard in un'app Novell. Mac, vedere l'app di [esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
+Per un esempio complesso di utilizzo degli storyboard in un'app Xamarin.Mac, vedere l'app di [esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
 
 Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati indicati i collegamenti delle tecnologie e dei metodi principali alle informazioni corrispondenti nelle guide di Xamarin.Mac.
 

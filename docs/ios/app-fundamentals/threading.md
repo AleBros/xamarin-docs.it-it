@@ -1,6 +1,6 @@
 ---
-title: Threading in Novell. iOS
-description: Questo documento descrive come usare le API System. Threading in un'applicazione Novell. iOS. Viene illustrato il Task Parallel Library, la compilazione di applicazioni reattive e Garbage Collection.
+title: Threading in Xamarin.iOS
+description: Questo documento descrive come usare le API System. Threading in un'applicazione Xamarin.iOS. Viene illustrato il Task Parallel Library, la compilazione di applicazioni reattive e Garbage Collection.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009443"
 ---
-# <a name="threading-in-xamarinios"></a>Threading in Novell. iOS
+# <a name="threading-in-xamarinios"></a>Threading in Xamarin.iOS
 
-Il runtime di Novell. iOS consente agli sviluppatori di accedere alle API di Threading .NET in modo esplicito quando si usano i thread (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si usano i modelli delegati asincroni o i metodi BeginXXX, nonché l'intera gamma di API che supportano l'attività Libreria parallela.
+Il runtime di Xamarin.iOS consente agli sviluppatori di accedere alle API di Threading .NET in modo esplicito quando si usano i thread (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si usano i modelli delegati asincroni o i metodi BeginXXX, nonché l'intera gamma di API che supportano l'attività Libreria parallela.
 
 Novell consiglia vivamente di usare la [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) per la creazione di applicazioni per alcuni motivi:
 
@@ -55,7 +55,7 @@ Il codice precedente richiama il codice all'interno del delegato nel contesto de
 
 ## <a name="threading-and-garbage-collection"></a>Threading e Garbage Collection
 
-Nel corso dell'esecuzione, il runtime di Objective-C creerà e rilascerà oggetti. Se gli oggetti sono contrassegnati per la "versione automatica", il runtime di Objective-C rilascerà tali oggetti all'`NSAutoReleasePool`corrente del thread. Novell. iOS crea un pool di `NSAutoRelease` per ogni thread dal `System.Threading.ThreadPool` e per il thread principale. Questa operazione per estensione copre tutti i thread creati usando il TaskScheduler predefinito in System. Threading. Tasks.
+Nel corso dell'esecuzione, il runtime di Objective-C creerà e rilascerà oggetti. Se gli oggetti sono contrassegnati per la "versione automatica", il runtime di Objective-C rilascerà tali oggetti all'`NSAutoReleasePool`corrente del thread. Xamarin.iOS crea un pool di `NSAutoRelease` per ogni thread dal `System.Threading.ThreadPool` e per il thread principale. Questa operazione per estensione copre tutti i thread creati usando il TaskScheduler predefinito in System. Threading. Tasks.
 
 Se si creano thread personalizzati usando `System.Threading` è necessario fornire il proprio pool `NSAutoRelease` per evitare la perdita di dati. A tale scopo, è sufficiente eseguire il wrapping del thread nel seguente codice:
 
@@ -68,7 +68,7 @@ void MyThreadStart (object arg)
 }
 ```
 
-Nota: dal momento che Novell. iOS 5,2 non è necessario fornire il proprio `NSAutoReleasePool` più come uno verrà fornito automaticamente.
+Nota: dal momento che Xamarin.iOS 5,2 non è necessario fornire il proprio `NSAutoReleasePool` più come uno verrà fornito automaticamente.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

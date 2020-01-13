@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029237"
 ---
-# <a name="xamarinandroid-gallery-control"></a>Controllo raccolta Novell. Android
+# <a name="xamarinandroid-gallery-control"></a>Controllo raccolta Xamarin.Android
 
 [`Gallery`](xref:Android.Widget.Gallery) è un widget di layout usato per visualizzare gli elementi in un elenco a scorrimento orizzontale e posiziona la selezione corrente al centro della visualizzazione.
 

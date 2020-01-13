@@ -1,6 +1,6 @@
 ---
-title: Riproduzione di suoni con AVAudioPlayer in Novell. Mac
-description: Questo documento descrive come riprodurre un suono con AVAudioPlayer in un'app Novell. Mac. Viene illustrato AVAudioPlayer a un livello elevato e sono disponibili collegamenti ad altre documentazioni che lo esplorano più completamente.
+title: Riproduzione di suoni con AVAudioPlayer in Xamarin.Mac
+description: Questo documento descrive come riprodurre un suono con AVAudioPlayer in un'app Xamarin.Mac. Viene illustrato AVAudioPlayer a un livello elevato e sono disponibili collegamenti ad altre documentazioni che lo esplorano più completamente.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030048"
 ---
-# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Riproduzione di suoni con AVAudioPlayer in Novell. Mac
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Riproduzione di suoni con AVAudioPlayer in Xamarin.Mac
 
 ## <a name="about-the-avaudioplayer"></a>Informazioni su AVAudioPlayer
 
@@ -32,7 +32,7 @@ La classe `AVAudioPlayer` viene utilizzata per riprodurre dati audio da una o pi
 
 ## <a name="playing-sounds-in-macos"></a>Riproduzione di suoni in macOS
 
-Dato che macOS supporta le stesse classi della casella degli strumenti audio di iOS, vedere la documentazione di iOS per la [riproduzione di suoni con AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) per informazioni dettagliate sulla riproduzione di audio in un'app Novell. Mac.
+Dato che macOS supporta le stesse classi della casella degli strumenti audio di iOS, vedere la documentazione di iOS per la [riproduzione di suoni con AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) per informazioni dettagliate sulla riproduzione di audio in un'app Xamarin.Mac.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

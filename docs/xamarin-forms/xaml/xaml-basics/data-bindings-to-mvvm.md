@@ -119,7 +119,7 @@ namespace XamlSamples
 }
 ```
 
-I ViewModel implementano in genere l'interfaccia `INotifyPropertyChanged`, il che significa che la classe genera un evento di `PropertyChanged` ogni volta che una delle relative proprietà viene modificata. Il meccanismo data binding in Novell. Forms associa un gestore a questo evento `PropertyChanged` in modo che possa ricevere una notifica quando una proprietà viene modificata e mantiene la destinazione aggiornata con il nuovo valore.
+I ViewModel implementano in genere l'interfaccia `INotifyPropertyChanged`, il che significa che la classe genera un evento di `PropertyChanged` ogni volta che una delle relative proprietà viene modificata. Il meccanismo data binding in Xamarin.Forms associa un gestore a questo evento `PropertyChanged` in modo che possa ricevere una notifica quando una proprietà viene modificata e mantiene la destinazione aggiornata con il nuovo valore.
 
 Un orologio basato su questo ViewModel può essere semplice quanto segue:
 
@@ -303,7 +303,7 @@ In molti casi, il modello MVVM è limitato alla manipolazione degli elementi di 
 
 Tuttavia, a volte la visualizzazione deve contenere pulsanti che attivano varie azioni nell'elemento ViewModel. Il ViewModel, tuttavia, non deve contenere gestori di `Clicked` per i pulsanti perché il ViewModel viene associato a un paradigma dell'interfaccia utente specifico.
 
-Per consentire la maggiore indipendenza dei ViewModel di oggetti specifici dell'interfaccia utente, ma che consentono comunque di chiamare i metodi all'interno di ViewModel, esiste un'interfaccia di *comando* . Questa interfaccia di comando è supportata dagli elementi seguenti in Novell. Forms:
+Per consentire la maggiore indipendenza dei ViewModel di oggetti specifici dell'interfaccia utente, ma che consentono comunque di chiamare i metodi all'interno di ViewModel, esiste un'interfaccia di *comando* . Questa interfaccia di comando è supportata dagli elementi seguenti in Xamarin.Forms:
 
 - `Button`
 - `MenuItem`
@@ -330,7 +330,7 @@ Il ViewModel può definire proprietà di tipo `ICommand`. È quindi possibile as
 
 Il metodo `CanExecute` e l'evento `CanExecuteChanged` vengono usati per i casi in cui un tocco di `Button` potrebbe non essere attualmente valido, nel qual caso il `Button` dovrebbe disabilitare se stesso. Il `Button` chiama `CanExecute` quando la proprietà `Command` è impostata per la prima volta e ogni volta che viene generato l'evento `CanExecuteChanged`. Se `CanExecute` restituisce `false`, il `Button` viene disabilitato e non genera chiamate `Execute`.
 
-Per informazioni sull'aggiunta di comandi ai ViewModel, Novell. Forms definisce due classi che implementano `ICommand`: `Command` e `Command<T>` dove `T` è il tipo degli argomenti per `Execute` e `CanExecute`. Queste due classi definiscono diversi costruttori, oltre a un metodo di `ChangeCanExecute` che il ViewModel può chiamare per forzare l'oggetto `Command` a generare l'evento di `CanExecuteChanged`.
+Per informazioni sull'aggiunta di comandi ai ViewModel, Xamarin.Forms definisce due classi che implementano `ICommand`: `Command` e `Command<T>` dove `T` è il tipo degli argomenti per `Execute` e `CanExecute`. Queste due classi definiscono diversi costruttori, oltre a un metodo di `ChangeCanExecute` che il ViewModel può chiamare per forzare l'oggetto `Command` a generare l'evento di `CanExecuteChanged`.
 
 Di seguito è riportato un ViewModel per una semplice tastiera destinata all'immissione dei numeri di telefono. Si noti che il `Execute` e il metodo `CanExecute` sono definiti come funzioni lambda direttamente nel costruttore:
 
@@ -703,11 +703,11 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Novell evolve 2016: MVVM semplificato con Novell. Forms e Prism**
+**Novell evolve 2016: MVVM semplificato con Xamarin.Forms e Prism**
 
 ## <a name="summary"></a>Riepilogo
 
-XAML è uno strumento potente per la definizione di interfacce utente nelle applicazioni Novell. Forms, in particolare quando si utilizzano Data Binding e MVVM. Il risultato è una rappresentazione pulita, elegante e potenzialmente toolable di un'interfaccia utente con tutto il supporto in background nel codice.
+XAML è uno strumento potente per la definizione di interfacce utente nelle applicazioni Xamarin.Forms, in particolare quando si utilizzano Data Binding e MVVM. Il risultato è una rappresentazione pulita, elegante e potenzialmente toolable di un'interfaccia utente con tutto il supporto in background nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

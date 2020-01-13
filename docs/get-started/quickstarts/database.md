@@ -484,4 +484,4 @@ Per applicare uno stile all'applicazione con gli stili XAML, passare alla Guida 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Notes (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
-- [Approfondimento sulla Guida introduttiva a Novell. Forms](deepdive.md)
+- [Approfondimento sulla Guida introduttiva a Xamarin.Forms](deepdive.md)

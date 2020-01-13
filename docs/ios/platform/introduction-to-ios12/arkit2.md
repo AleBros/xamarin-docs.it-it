@@ -1,5 +1,5 @@
 ---
-title: ARKit 2 in Novell. iOS
+title: ARKit 2 in Xamarin.iOS
 description: Questo documento descrive gli aggiornamenti di ARKit in iOS 12. Si concentra sull'uso di oggetti di riferimento e immagini per il rilevamento, include il codice per la texturing ambientale e illustra i problemi più comuni nella programmazione ARKit.
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032048"
 ---
-# <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Novell. iOS
+# <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Xamarin.iOS
 
 ARKit è maturato considerevolmente dall'introduzione dell'anno scorso in iOS 11. Prima di tutto, è ora possibile rilevare i piani verticali e orizzontali, che migliorano notevolmente la praticità delle esperienze di realtà aumentata internamente. Sono inoltre disponibili nuove funzionalità:
 
@@ -400,4 +400,4 @@ La coerenza con la scelta dell'interpretazione della matrice è essenziale per u
 - [App di esempio: analisi e rilevamento di oggetti 3D](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects)
 - [Novità di ARKit 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/602/)
 - [Informazioni sul rilevamento e rilevamento di ARKit (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/610/)
-- [Introduzione a ARKit in Novell. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/arkit/)
+- [Introduzione a ARKit in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/arkit/)

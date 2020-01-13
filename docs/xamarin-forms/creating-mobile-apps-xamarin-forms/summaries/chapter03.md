@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 3. Approfondimento del testo
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: riepilogo del capitolo 3. Approfondimento del testo'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: riepilogo del capitolo 3. Approfondimento del testo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734

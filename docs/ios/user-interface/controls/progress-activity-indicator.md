@@ -1,6 +1,6 @@
 ---
-title: Indicatori di stato e attività in Novell. iOS
-description: Questo documento illustra come usare gli indicatori di stato e attività in Novell. iOS. Viene descritto come utilizzarli sia a livello di codice che con uno storyboard.
+title: Indicatori di stato e attività in Xamarin.iOS
+description: Questo documento illustra come usare gli indicatori di stato e attività in Xamarin.iOS. Viene descritto come utilizzarli sia a livello di codice che con uno storyboard.
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021966"
 ---
-# <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicatori di stato e attività in Novell. iOS
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicatori di stato e attività in Xamarin.iOS
 
 È probabile che l'app debba eseguire attività a esecuzione prolungata, ad esempio il caricamento o l'elaborazione dei dati e che questo ritardo può causare un ritardo nell'aggiornamento dell'interfaccia utente. Durante questo intervallo di tempo è necessario usare sempre un indicatore di stato per rassicurare l'utente che il sistema è occupato a lavorare. In questo modo si fornisce al controllo utente che l'app sta lavorando alla richiesta, che non è in attesa dell'input e che può fornire un modo per definirne i dettagli esattamente quanto tempo è necessario attendere.
 

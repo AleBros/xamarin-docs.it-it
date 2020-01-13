@@ -1,6 +1,6 @@
 ---
 title: I percorsi e curve di SkiaSharp
-description: Questo articolo illustra come usare SkiaSharp disegnare curve e usare le funzionalità di percorso nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come usare SkiaSharp disegnare curve e usare le funzionalità di percorso nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635

@@ -26,7 +26,7 @@ ms.locfileid: "73031057"
 
 ## <a name="default-ios-sdk-paths"></a>Percorsi predefiniti di iOS SDK
 
-Novell. iOS & Apple SDK (Xcode) avrà il percorso predefinito quando la casella posizione viene lasciata vuota. Queste impostazioni predefinite sono le seguenti:
+Xamarin.iOS & Apple SDK (Xcode) avrà il percorso predefinito quando la casella posizione viene lasciata vuota. Queste impostazioni predefinite sono le seguenti:
 
 - Xcode: `/Applications/Xcode.app`
-- Novell. iOS (Visual Studio per Mac): `/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`
+- Xamarin.iOS (Visual Studio per Mac): `/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`

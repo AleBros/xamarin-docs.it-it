@@ -1,5 +1,5 @@
 ---
-title: PassKit in Novell. iOS
+title: PassKit in Xamarin.iOS
 description: L'app Wallet consente agli utenti iOS di archiviare i pass digitali nei propri dispositivi. Il Framework PassKit consente agli sviluppatori di interagire con i passaggi a livello di codice.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
@@ -14,18 +14,18 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031673"
 ---
-# <a name="passkit-in-xamarinios"></a>PassKit in Novell. iOS
+# <a name="passkit-in-xamarinios"></a>PassKit in Xamarin.iOS
 
 L'app per portafogli iOS consente agli utenti di archiviare i pass digitali nei propri dispositivi.
 Queste sessioni vengono generate dai commercianti e inviate al cliente tramite posta elettronica, URL o tramite l'app iOS. Questi passaggi possono rappresentare vari elementi, dai biglietti per i film alle schede fedeltà ai pass. Il Framework PassKit consente agli sviluppatori di interagire con i passaggi a livello di codice.
 
-Questo documento introduce il portafoglio e l'uso dell'API PassKit con Novell. iOS.
+Questo documento introduce il portafoglio e l'uso dell'API PassKit con Xamarin.iOS.
 
  [![](passkit-images/image1.png "The Wallet stores and organizes all the passes on a phone")](passkit-images/image1.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti
 
-Le funzionalità di PassKit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Novell. iOS 6,0.
+Le funzionalità di PassKit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Xamarin.iOS 6,0.
 
 ## <a name="introduction"></a>Introduzione
 
@@ -321,7 +321,7 @@ I passaggi possono essere aggiunti al portafogli nei modi seguenti:
 
 - **App Conduit** : non modificano direttamente i pass, ma semplicemente caricano i file e presentano l'opzione per aggiungerli al portafogli. 
 
-- **App complementari** : vengono scritte dai provider per distribuire i pass e offrire funzionalità aggiuntive per sfogliarli o modificarli. Le applicazioni Novell. iOS hanno accesso completo all'API PassKit per creare e modificare i passaggi. I passaggi possono quindi essere aggiunti al portafogli usando il `PKAddPassesViewController`. Questo processo viene descritto più dettagliatamente nella sezione **applicazioni complementari** di questo documento.
+- **App complementari** : vengono scritte dai provider per distribuire i pass e offrire funzionalità aggiuntive per sfogliarli o modificarli. Le applicazioni Xamarin.iOS hanno accesso completo all'API PassKit per creare e modificare i passaggi. I passaggi possono quindi essere aggiunti al portafogli usando il `PKAddPassesViewController`. Questo processo viene descritto più dettagliatamente nella sezione **applicazioni complementari** di questo documento.
 
 ### <a name="conduit-applications"></a>Applicazioni Conduit
 
@@ -361,7 +361,7 @@ Poiché Wallet è una tecnologia di archiviazione, è necessario eseguire il pro
 
 ### <a name="entitlements"></a>Diritti
 
-Il file con **estensione plist dei diritti** deve essere incluso in tutti i progetti Novell. iOS recenti. Per aggiungere un nuovo file con estensione plist dei diritti, seguire i passaggi descritti nella Guida [uso dei diritti](~/ios/deploy-test/provisioning/entitlements.md) .
+Il file con **estensione plist dei diritti** deve essere incluso in tutti i progetti Xamarin.iOS recenti. Per aggiungere un nuovo file con estensione plist dei diritti, seguire i passaggi descritti nella Guida [uso dei diritti](~/ios/deploy-test/provisioning/entitlements.md) .
 
 Per impostare i diritti, procedere come segue:
 
@@ -412,7 +412,7 @@ Sono disponibili le seguenti classi PassKit per le app per l'accesso ai passaggi
 - **PKPass** : istanza di un passaggio.
 - **PKPassLibrary** : fornisce l'API per accedere ai passaggi del dispositivo.
 - **PKAddPassesViewController** : consente di visualizzare un passaggio per l'utente per il salvataggio nel portafogli.
-- **PKAddPassesViewControllerDelegate** -Novell. iOS-sviluppatori
+- **PKAddPassesViewControllerDelegate** -Xamarin.iOS-sviluppatori
 
 ## <a name="example"></a>Esempio
 
@@ -551,7 +551,7 @@ Per ulteriori informazioni, vedere la pagina relativa all' [aggiornamento di una
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato introdotto PassKit, che illustra alcuni dei motivi per cui è utile e descrive le diverse parti che devono essere implementate per una soluzione PassKit completa. Sono stati descritti i passaggi necessari per configurare l'account per sviluppatore Apple per la creazione di pass, il processo per eseguire un passaggio manualmente e anche come accedere alle API PassKit da un'applicazione Novell. iOS.
+In questo articolo è stato introdotto PassKit, che illustra alcuni dei motivi per cui è utile e descrive le diverse parti che devono essere implementate per una soluzione PassKit completa. Sono stati descritti i passaggi necessari per configurare l'account per sviluppatore Apple per la creazione di pass, il processo per eseguire un passaggio manualmente e anche come accedere alle API PassKit da un'applicazione Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

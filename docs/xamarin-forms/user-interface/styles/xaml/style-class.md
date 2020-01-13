@@ -1,6 +1,6 @@
 ---
-title: Classi di stile Novell. Forms
-description: Le classi di stile Novell. Forms consentono di applicare più stili a un controllo senza ricorrere all'ereditarietà dello stile.
+title: Classi di stile Xamarin.Forms
+description: Le classi di stile Xamarin.Forms consentono di applicare più stili a un controllo senza ricorrere all'ereditarietà dello stile.
 ms.prod: xamarin
 ms.assetid: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70228133"
 ---
-# <a name="xamarinforms-style-classes"></a>Classi di stile Novell. Forms
+# <a name="xamarinforms-style-classes"></a>Classi di stile Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
-_Le classi di stile Novell. Forms consentono di applicare più stili a un controllo senza ricorrere all'ereditarietà dello stile._
+_Le classi di stile Xamarin.Forms consentono di applicare più stili a un controllo senza ricorrere all'ereditarietà dello stile._
 
 ## <a name="create-style-classes"></a>Creare classi di stile
 

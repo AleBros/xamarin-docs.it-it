@@ -32,7 +32,7 @@ Le applicazioni shell consentono inoltre una velocità di rendering maggiore e u
 
 ## <a name="platform-support"></a>Supporto per piattaforme
 
-La shell di Novell. Forms è completamente disponibile in iOS e Android, ma solo parzialmente disponibile nel piattaforma UWP (Universal Windows Platform) (UWP). Inoltre, la shell è attualmente sperimentale in UWP e può essere usata solo aggiungendo la riga di codice seguente alla classe `App` nel progetto UWP, prima di chiamare `Forms.Init`:
+La shell di Xamarin.Forms è completamente disponibile in iOS e Android, ma solo parzialmente disponibile nel piattaforma UWP (Universal Windows Platform) (UWP). Inoltre, la shell è attualmente sperimentale in UWP e può essere usata solo aggiungendo la riga di codice seguente alla classe `App` nel progetto UWP, prima di chiamare `Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");

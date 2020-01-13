@@ -1,6 +1,6 @@
 ---
-title: API per giochi iOS in Novell. iOS
-description: Questo articolo illustra i nuovi miglioramenti dei giochi offerti da iOS 9 che possono essere usati per migliorare le funzionalità grafiche e audio del gioco Novell. iOS.
+title: API per giochi iOS in Xamarin.iOS
+description: Questo articolo illustra i nuovi miglioramenti dei giochi offerti da iOS 9 che possono essere usati per migliorare le funzionalità grafiche e audio del gioco Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
@@ -14,18 +14,18 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032510"
 ---
-# <a name="ios-gaming-apis-in-xamarinios"></a>API per giochi iOS in Novell. iOS
+# <a name="ios-gaming-apis-in-xamarinios"></a>API per giochi iOS in Xamarin.iOS
 
-_Questo articolo illustra i nuovi miglioramenti dei giochi offerti da iOS 9 che possono essere usati per migliorare le funzionalità grafiche e audio del gioco Novell. iOS._
+_Questo articolo illustra i nuovi miglioramenti dei giochi offerti da iOS 9 che possono essere usati per migliorare le funzionalità grafiche e audio del gioco Xamarin.iOS._
 
-Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Novell. iOS.
+Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Xamarin.iOS.
 Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche.
 
 [![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 Sono inclusi GameplayKit, ReplayKit, Model I/O, MetalKit e Metal Performance shader insieme alle nuove funzionalità migliorate di Metal, SceneKit e SpriteKit.
 
-In questo articolo vengono presentati tutti i modi per migliorare il gioco Novell. iOS con i nuovi miglioramenti dei giochi di iOS 9:
+In questo articolo vengono presentati tutti i modi per migliorare il gioco Xamarin.iOS con i nuovi miglioramenti dei giochi di iOS 9:
 
 ## <a name="introducing-gameplaykit"></a>Introduzione a GameplayKit
 
@@ -47,7 +47,7 @@ Per altre informazioni su GameplayKit, vedere la guida alla [programmazione](htt
 
 ## <a name="gameplaykit-examples"></a>Esempi di GameplayKit
 
-Si esaminerà ora l'implementazione di alcuni semplici meccanismi di riproduzione dei giochi in un'app Novell. iOS con Game Play Kit.
+Si esaminerà ora l'implementazione di alcuni semplici meccanismi di riproduzione dei giochi in un'app Xamarin.iOS con Game Play Kit.
 
 ### <a name="pathfinding"></a>Pathfinding
 
@@ -369,7 +369,7 @@ Quando viene eseguito, il piccolo _"boids"_ animato ricorre intorno ai tocchi de
 
 ### <a name="other-apple-examples"></a>Altri esempi di Apple
 
-Oltre agli esempi presentati in precedenza, Apple ha fornito le app di esempio seguenti che possono essere transcodificate in C# e Novell. iOS:
+Oltre agli esempi presentati in precedenza, Apple ha fornito le app di esempio seguenti che possono essere transcodificate in C# e Xamarin.iOS:
 
 - [FourInARow: uso di GameplayKit MinMax Strategy per l'intelligenza artificiale](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
 - [AgentsCatalog: uso del sistema agenti in GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
@@ -464,7 +464,7 @@ Per ulteriori informazioni, vedere la [documentazione di SpriteKit documentazion
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato le nuove funzionalità di gioco fornite da iOS 9 per le app Novell. iOS.
+Questo articolo ha illustrato le nuove funzionalità di gioco fornite da iOS 9 per le app Xamarin.iOS.
 Ha introdotto GameplayKit e I/O del modello; i principali miglioramenti apportati al metal; e le nuove funzionalità di SceneKit e SpriteKit.
 
 ## <a name="related-links"></a>Collegamenti correlati

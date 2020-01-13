@@ -1,5 +1,5 @@
 ---
-title: Casella di selezione Novell. Android
+title: Casella di selezione Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029156"
 ---
-# <a name="xamarinandroid-spinner"></a>Casella di selezione Novell. Android
+# <a name="xamarinandroid-spinner"></a>Casella di selezione Xamarin.Android
 
 [`Spinner`](xref:Android.Widget.Spinner) è un widget che presenta un elenco a discesa per la selezione di elementi. Questa guida illustra come creare una semplice app che visualizza un elenco di opzioni in una casella di selezione, seguito da modifiche che visualizzano altri valori associati alla scelta selezionata.
 

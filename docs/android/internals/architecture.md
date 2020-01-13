@@ -15,7 +15,7 @@ ms.locfileid: "73027917"
 ---
 # <a name="architecture"></a>Architettura
 
-Le applicazioni Novell. Android vengono eseguite nell'ambiente di esecuzione mono.
+Le applicazioni Xamarin.Android vengono eseguite nell'ambiente di esecuzione mono.
 Questo ambiente di esecuzione viene eseguito side-by-side con la macchina virtuale di Android Runtime (ART). Entrambi gli ambienti di runtime vengono eseguiti sul kernel Linux ed espongono diverse API al codice utente che consente agli sviluppatori di accedere al sistema sottostante. Il runtime di mono è scritto nel linguaggio C.
 
 Per accedere alle funzionalità di sistema operativo Linux sottostanti, è possibile usare il [sistema](xref:System), [System.io](xref:System.IO), [System.NET](xref:System.Net) e le altre librerie di classi .NET.
@@ -24,20 +24,20 @@ In Android la maggior parte delle funzionalità di sistema, ad esempio audio, gr
 
 [![diagramma di mono e arte sopra il kernel e sotto le associazioni .NET/Java +](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
-Gli sviluppatori Novell. Android accedono alle varie funzionalità del sistema operativo chiamando le API .NET che conoscono (per l'accesso di basso livello) o usando le classi esposte negli spazi dei nomi Android, che fornisce un Bridge alle API Java esposte da il runtime di Android.
+Gli sviluppatori Xamarin.Android accedono alle varie funzionalità del sistema operativo chiamando le API .NET che conoscono (per l'accesso di basso livello) o usando le classi esposte negli spazi dei nomi Android, che fornisce un Bridge alle API Java esposte da il runtime di Android.
 
 Per altre informazioni sul modo in cui le classi Android comunicano con le classi di runtime di Android, vedere il documento di [progettazione dell'API](~/android/internals/api-design.md) .
 
 ## <a name="application-packages"></a>Pacchetti dell'applicazione
 
-I pacchetti di applicazioni Android sono contenitori ZIP con estensione *apk* . I pacchetti dell'applicazione Novell. Android hanno la stessa struttura e il layout dei normali pacchetti Android, con le aggiunte seguenti:
+I pacchetti di applicazioni Android sono contenitori ZIP con estensione *apk* . I pacchetti dell'applicazione Xamarin.Android hanno la stessa struttura e il layout dei normali pacchetti Android, con le aggiunte seguenti:
 
 - Gli assembly dell'applicazione (contenenti IL) vengono *archiviati* non compressi nella cartella degli *assembly* . Durante l'avvio del processo nelle build di rilascio, il file con *estensione APK* è *mmap ()* ed è nel processo e gli assembly vengono caricati dalla memoria. Questo consente un avvio più veloce delle app, perché non è necessario estrarre gli assembly prima dell'esecuzione.  
 - *Nota:* Informazioni sul percorso degli assembly, ad esempio [assembly. location](xref:System.Reflection.Assembly.Location) e [assembly.](xref:System.Reflection.Assembly.CodeBase) *non è possibile fare affidamento su* codebase nelle build di rilascio. Non esistono come voci di file System distinte e non hanno un percorso utilizzabile.
 
-- Le librerie native che contengono il runtime di mono sono presenti nel file con *estensione APK* . Un'applicazione Novell. Android deve contenere librerie native per le architetture Android desiderate/di destinazione, ad esempio *ARMEABI* , *ARMEABI-v7a* , *x86* . Le applicazioni Novell. Android non possono essere eseguite su una piattaforma a meno che non contenga le librerie di runtime appropriate.
+- Le librerie native che contengono il runtime di mono sono presenti nel file con *estensione APK* . Un'applicazione Xamarin.Android deve contenere librerie native per le architetture Android desiderate/di destinazione, ad esempio *ARMEABI* , *ARMEABI-v7a* , *x86* . Le applicazioni Xamarin.Android non possono essere eseguite su una piattaforma a meno che non contenga le librerie di runtime appropriate.
 
-Le applicazioni Novell. Android contengono anche i *wrapper richiamabili Android* per consentire a Android di effettuare chiamate nel codice gestito.
+Le applicazioni Xamarin.Android contengono anche i *wrapper richiamabili Android* per consentire a Android di effettuare chiamate nel codice gestito.
 
 ## <a name="android-callable-wrappers"></a>Android Callable Wrapper
 
@@ -165,7 +165,7 @@ Solo *Dispose ()* di sottoclassi di wrapper gestite chiamabili quando si è cert
 
 ## <a name="application-startup"></a>Avvio dell'applicazione
 
-Quando viene avviata un'attività, un servizio e così via, Android verificherà prima di tutto se è già in esecuzione un processo per ospitare l'attività/il servizio e così via. Se non esiste alcun processo di questo tipo, verrà creato un nuovo processo, [file AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) verrà letto e il tipo specificato nell'attributo [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) viene caricato e ne viene creata un'istanza. Viene quindi creata un'istanza di tutti i tipi specificati dai valori dell'attributo [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) e viene richiamato il metodo [ContentProvider. attachInfo %28)](xref:Android.Content.ContentProvider.AttachInfo*) . Novell. Android si associa a questa operazione aggiungendo un *mono. MonoRuntimeProvider* *ContentProvider* in file AndroidManifest. XML durante il processo di compilazione. *Mono. Il metodo MonoRuntimeProvider. attachInfo ()* è responsabile del caricamento del runtime di mono nel processo.
+Quando viene avviata un'attività, un servizio e così via, Android verificherà prima di tutto se è già in esecuzione un processo per ospitare l'attività/il servizio e così via. Se non esiste alcun processo di questo tipo, verrà creato un nuovo processo, [file AndroidManifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) verrà letto e il tipo specificato nell'attributo [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) viene caricato e ne viene creata un'istanza. Viene quindi creata un'istanza di tutti i tipi specificati dai valori dell'attributo [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) e viene richiamato il metodo [ContentProvider. attachInfo %28)](xref:Android.Content.ContentProvider.AttachInfo*) . Xamarin.Android si associa a questa operazione aggiungendo un *mono. MonoRuntimeProvider* *ContentProvider* in file AndroidManifest. XML durante il processo di compilazione. *Mono. Il metodo MonoRuntimeProvider. attachInfo ()* è responsabile del caricamento del runtime di mono nel processo.
 Eventuali tentativi di usare mono prima di questo punto avranno esito negativo. *Nota*: questo è il motivo per cui i tipi con la sottoclasse [Android. app. Application](xref:Android.App.Application) devono fornire un [costruttore (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), perché l'istanza dell'applicazione viene creata prima che mono possa essere inizializzato.
 
 Al termine dell'inizializzazione del processo, viene consultato `AndroidManifest.xml` per trovare il nome della classe dell'attività/servizio e così via per l'avvio. Ad esempio, l' [attributo/manifest/application/activity/@android:name](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) viene utilizzato per determinare il nome di un'attività da caricare. Per le attività, questo tipo deve ereditare [Android. app. Activity](xref:Android.App.Activity).
