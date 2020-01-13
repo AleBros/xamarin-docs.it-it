@@ -612,9 +612,10 @@
       items:
         - name: Panoramica
           href: deploy-test/index.md
-        - name: App Distribution (Distribuzione dell'app)
-          href: deploy-test/app-distribution/index.md
+        - name: Distribuzione di app
           items:
+            - name: Panoramica
+              href: deploy-test/app-distribution/index.md
             - name: Distribuzione tramite l'App Store
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items:
@@ -622,7 +623,7 @@
                   href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
                 - name: Pubblicazione nell'App Store
                   href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
-            - name: Distribuzione interna (Enterprise)
+            - name: Distribuzione interna (aziendale)
               href: deploy-test/app-distribution/in-house-distribution.md
             - name: Distribuzione ad hoc
               href: deploy-test/app-distribution/ad-hoc-distribution.md
