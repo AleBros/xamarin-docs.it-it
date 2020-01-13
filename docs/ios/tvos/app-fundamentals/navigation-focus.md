@@ -1,6 +1,6 @@
 ---
 title: Uso della navigazione tvOS e messa a fuoco in Novell
-description: Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS.
+description: Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
@@ -16,21 +16,21 @@ ms.locfileid: "73030841"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
-_Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS._
+_Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS._
 
-Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e il modo in cui viene usato per gestire la [navigazione](#Navigation) nell'interfaccia utente di un'app Xamarin.tvOS. Si esaminerà il modo in cui i controlli di navigazione tvOS incorporati usano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione dell'interfaccia utente dell'app Xamarin.tvOS.
+Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e il modo in cui viene usato per gestire la [navigazione](#Navigation) nell'interfaccia utente di un'app Novell. tvOS. Si esaminerà il modo in cui i controlli di navigazione tvOS incorporati usano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione dell'interfaccia utente dell'app Novell. tvOS.
 
 [![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
 
 Si esaminerà ora il modo in cui lo stato attivo può essere usato con [Parallax](#Focus-and-Parallax) e *immagini sovrapposte* per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente.
 
-Infine, si esamineranno [gli aggiornamenti, gli aggiornamenti](#Working-with-Focus-Updates), le [guide](#Working-with-Focus-Guides)di messa [a](#Working-with-Focus-in-Collections) fuoco, le raccolte e l' [Abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Xamarin.tvOS. [](#Working-with-Focus)
+Infine, si esamineranno [gli aggiornamenti](#Working-with-Focus), [gli aggiornamenti](#Working-with-Focus-Updates), [le guide di messa a fuoco](#Working-with-Focus-Guides), [le raccolte](#Working-with-Focus-in-Collections) e l'[abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Novell. tvOS.
 
 <a name="Navigation" />
 
 ## <a name="navigation"></a>Navigazione
 
-Gli utenti dell'app Xamarin.tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote). È necessario tenere presente questo aspetto durante la progettazione dell'interfaccia utente dell'app in modo che fluisca naturalmente, ma mantiene l'utente immerso nell'esperienza Apple TV.
+Gli utenti dell'app Novell. tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote). È necessario tenere presente questo aspetto durante la progettazione dell'interfaccia utente dell'app in modo che fluisca naturalmente, ma mantiene l'utente immerso nell'esperienza Apple TV.
 
 Un'app tvOS riuscita implementa la navigazione in modo da supportare agevolmente lo scopo dell'app e la struttura dei dati presentati senza richiamare l'attenzione sulla navigazione. Progettare la navigazione in modo che risulti naturale e familiare senza dominare l'interfaccia utente o disegnare lo stato attivo dal contenuto e dall'esperienza utente delle app.
 
@@ -48,7 +48,7 @@ Quando si progetta la navigazione per l'app tvOS, Apple suggerisce di tenere pre
 - **Fornire la navigazione all'indietro tramite il pulsante di menu** : per creare un'esperienza semplice e familiare, consentire agli utenti di spostarsi all'indietro usando il pulsante di **menu** di Siri remote. Premere il pulsante di **menu** per tornare sempre alla schermata precedente oppure tornare al menu principale dell'app. Al livello principale dell'app, premere il pulsante di **menu** per tornare alla schermata iniziale di Apple TV.
 - **In genere è consigliabile evitare di visualizzare un pulsante indietro** , perché premendo il pulsante di **menu** nella finestra di Siri remote si sposta indietro sullo stack dello schermo, evitando di visualizzare un controllo aggiuntivo che Duplica questo comportamento. Un'eccezione a questa regola è per l'acquisto di schermate o schermate con azioni distruttive, ad esempio l'eliminazione di contenuto, in cui deve essere visualizzato un pulsante **Annulla** .
 - **Visualizzazione di raccolte di grandi dimensioni in un'unica schermata, anziché molti** -il Siri Remote è stato progettato per semplificare e velocizzare l'uso di un ampio insieme di contenuti. Se l'app funziona con una raccolta di grandi dimensioni di elementi attivabili, è consigliabile tenerli in un'unica schermata anziché suddividerli in molte schermate che richiedono una maggiore navigazione sulla parte dell'utente.
-- **Usare i controlli standard per la navigazione** , per creare un'esperienza utente semplice e intuitiva, laddove possibile, usare controlli `UIKit` predefiniti, ad esempio controlli pagina, barre delle schede, controlli segmentati, viste tabella, visualizzazioni raccolta e visualizzazioni suddivise per il esplorazione dell'app. Poiché l'utente ha già familiarità con questi elementi, sarà intuitivamente in grado di spostarsi nell'app.
+- **Usare i controlli standard per la navigazione** , per creare un'esperienza utente semplice e familiare, laddove possibile, usare controlli `UIKit` predefiniti, ad esempio controlli pagina, barre delle schede, controlli segmentati, viste tabella, visualizzazioni raccolta e visualizzazioni suddivise per la navigazione dell'app. Poiché l'utente ha già familiarità con questi elementi, sarà intuitivamente in grado di spostarsi nell'app.
 - **Favorisce la navigazione orizzontale del contenuto** : a causa della natura della TV Apple, l'scorrimento verso sinistra verso destra sul lato Siri remoto è più naturale che in alto o in basso. Prendere in considerazione questa opzione quando si progettano i layout del contenuto per l'app.
 
 <a name="Focus-and-Selection" />
@@ -80,7 +80,7 @@ Apple presenta i suggerimenti seguenti per lavorare con lo stato attivo e la sel
 
 ### <a name="working-with-focus"></a>Utilizzo dello stato attivo
 
-In alcuni casi potrebbe essere necessario creare un controllo personalizzato che può diventare un elemento attivabile. In caso affermativo, eseguire l'override della proprietà `CanBecomeFocused` e restituire `true`, in caso contrario restituire `false`. Esempio:
+In alcuni casi potrebbe essere necessario creare un controllo personalizzato che può diventare un elemento attivabile. In caso affermativo, eseguire l'override della proprietà `CanBecomeFocused` e restituire `true`, in caso contrario restituire `false`. Ad esempio:
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-In qualsiasi momento è possibile utilizzare la proprietà `Focused` di un controllo `UIKit` per verificare se si tratta di un elemento corrente. Se `true` l'elemento dell'interfaccia utente ha attualmente lo stato attivo, in caso contrario. Esempio:
+In qualsiasi momento è possibile utilizzare la proprietà `Focused` di un controllo `UIKit` per verificare se si tratta di un elemento corrente. Se `true` l'elemento dell'interfaccia utente ha attualmente lo stato attivo, in caso contrario. Ad esempio:
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-Sebbene non sia possibile spostare direttamente lo stato attivo su un altro elemento dell'interfaccia utente tramite codice, è possibile specificare quale elemento dell'interfaccia utente ottiene lo stato attivo per primo quando viene caricata una schermata impostando la relativa proprietà `PreferredFocusedView` su `true`. Esempio:
+Sebbene non sia possibile spostare direttamente lo stato attivo su un altro elemento dell'interfaccia utente tramite codice, è possibile specificare quale elemento dell'interfaccia utente ottiene lo stato attivo per primo quando viene caricata una schermata impostando la relativa proprietà `PreferredFocusedView` su `true`. Ad esempio:
 
 ```csharp
 // Make the play button the starting focus item
@@ -204,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 In primo luogo, il codice ottiene il `NextFocusedView` dal `UIFocusUpdateContext` che è stato passato (`context`). Se questa visualizzazione è `null`, non è necessaria alcuna elaborazione e il metodo è terminato.
 
-Il `nextFocusableItem` viene quindi valutato. Se corrisponde ai pulsanti **ulteriori informazioni** o **Acquista** , lo stato attivo viene inviato al pulsante opposto usando la proprietà `PreferredFocusedView` della guida messa a fuoco. Esempio:
+Il `nextFocusableItem` viene quindi valutato. Se corrisponde ai pulsanti **ulteriori informazioni** o **Acquista** , lo stato attivo viene inviato al pulsante opposto usando la proprietà `PreferredFocusedView` della guida messa a fuoco. Ad esempio:
 
 ```csharp
 // Move from the More Info to Buy button
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>Utilizzo dello stato attivo nelle raccolte
 
-Quando si decide se un singolo elemento può essere attivo in un `UICollectionView` o in un `UITableView`, è necessario eseguire l'override rispettivamente dei metodi del `UICollectionViewDelegate` o `UITableViewDelegate`. Esempio:
+Quando si decide se un singolo elemento può essere attivo in un `UICollectionView` o in un `UITableView`, è necessario eseguire l'override rispettivamente dei metodi del `UICollectionViewDelegate` o `UITableViewDelegate`. Ad esempio:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -272,7 +272,7 @@ Se questa proprietà è impostata su `true`, la visualizzazione immagine otterr�
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Xamarin.tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
+Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Novell. tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
