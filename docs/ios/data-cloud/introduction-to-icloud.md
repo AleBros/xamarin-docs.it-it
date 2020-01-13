@@ -1,6 +1,6 @@
 ---
-title: Uso di iCloud con Novell. iOS
-description: Questo documento descrive iCloud e il relativo uso nelle applicazioni Novell. iOS. Vengono illustrati archiviazione chiave-valore, archiviazione documenti e backup iCloud.
+title: Uso di iCloud con Xamarin.iOS
+description: Questo documento descrive iCloud e il relativo uso nelle applicazioni Xamarin.iOS. Vengono illustrati archiviazione chiave-valore, archiviazione documenti e backup iCloud.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016977"
 ---
-# <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con Novell. iOS
+# <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con Xamarin.iOS
 
 L'API di archiviazione iCloud in iOS 5 consente alle applicazioni di salvare i documenti utente e i dati specifici dell'applicazione in una posizione centrale e di accedere a tali elementi da tutti i dispositivi dell'utente.
 
@@ -28,14 +28,14 @@ Sono disponibili quattro tipi di archiviazione:
 
 - **Singoli file e directory** : per gestire molti file diversi direttamente nel file System.
 
-Questo documento illustra i primi due tipi, ovvero coppie chiave-valore e sottoclassi UIDocument, e come usare tali funzionalità in Novell. iOS.
+Questo documento illustra i primi due tipi, ovvero coppie chiave-valore e sottoclassi UIDocument, e come usare tali funzionalità in Xamarin.iOS.
 
 > [!IMPORTANT]
 > Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
 
 ## <a name="requirements"></a>Requisiti
 
-- La versione stabile più recente di Novell. iOS
+- La versione stabile più recente di Xamarin.iOS
 - Xcode 10
 - Visual Studio per Mac o Visual Studio 2019.
 

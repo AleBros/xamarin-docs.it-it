@@ -1,6 +1,6 @@
 ---
-title: Barre degli strumenti in Novell. Mac
-description: Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Novell. Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice.
+title: Barre degli strumenti in Xamarin.Mac
+description: Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Xamarin.Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice.
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73008347"
 ---
-# <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Novell. Mac
+# <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Xamarin.Mac
 
-_Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Novell. Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice._
+_Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Xamarin.Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice._
 
-Gli sviluppatori Novell. Mac che lavorano con Visual Studio per Mac hanno accesso agli stessi controlli dell'interfaccia utente disponibili per gli sviluppatori macOS che lavorano con Xcode, incluso il controllo Toolbar. Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire gli elementi della barra degli strumenti. È anche possibile creare questi elementi della barra C#degli strumenti in.
+Gli sviluppatori Xamarin.Mac che lavorano con Visual Studio per Mac hanno accesso agli stessi controlli dell'interfaccia utente disponibili per gli sviluppatori macOS che lavorano con Xcode, incluso il controllo Toolbar. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire gli elementi della barra degli strumenti. È anche possibile creare questi elementi della barra C#degli strumenti in.
 
 Le barre degli strumenti in macOS vengono aggiunte alla sezione superiore di una finestra e consentono di accedere facilmente ai comandi correlati alle relative funzionalità. Le barre degli strumenti possono essere nascoste, visualizzate o personalizzate dagli utenti di un'applicazione e possono presentare elementi della barra degli strumenti in vari modi.
 
-Questo articolo illustra le nozioni di base sull'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Novell. Mac. 
+Questo articolo illustra le nozioni di base sull'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Xamarin.Mac. 
 
 Prima di continuare, leggere l'articolo relativo ad [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) le sezioni relative a Interface Builder, [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti e le tecniche principali che verranno usati in questa guida.
 
-Vedere anche la sezione [esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) . Vengono illustrati gli attributi `Register` e `Export` utilizzati per C# connettere le classi alle classi Objective-C.
+Vedere anche la sezione [esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) . Vengono illustrati gli attributi `Register` e `Export` utilizzati per C# connettere le classi alle classi Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introduzione alle barre degli strumenti
 
@@ -76,7 +76,7 @@ Nelle sezioni successive di questa guida viene descritto come creare e gestire l
 
 ## <a name="setting-a-custom-main-window-controller"></a>Impostazione di un controller della finestra principale personalizzato
 
-Per esporre gli elementi dell' C# interfaccia utente al codice tramite Outlet e azioni, l'app Novell. Mac deve usare un controller di finestra personalizzato:
+Per esporre gli elementi dell' C# interfaccia utente al codice tramite Outlet e azioni, l'app Xamarin.Mac deve usare un controller di finestra personalizzato:
 
 1. Aprire lo storyboard dell'app nella Interface Builder di Xcode.
 2. Selezionare il controller della finestra nell'area di progettazione.
@@ -356,7 +356,7 @@ Eseguire l'applicazione e notare che l'elemento del **Cestino** è ora disabilit
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Novell. Mac. Viene descritto come creare e gestire le barre degli strumenti in Interface Builder di Xcode, come alcuni controlli dell'interfaccia utente funzionano automaticamente con gli elementi della barra degli strumenti, C# come usare le barre degli strumenti nel codice e come abilitare e disabilitare gli elementi della barra degli strumenti.
+Questo articolo ha esaminato in dettaglio l'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Xamarin.Mac. Viene descritto come creare e gestire le barre degli strumenti in Interface Builder di Xcode, come alcuni controlli dell'interfaccia utente funzionano automaticamente con gli elementi della barra degli strumenti, C# come usare le barre degli strumenti nel codice e come abilitare e disabilitare gli elementi della barra degli strumenti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

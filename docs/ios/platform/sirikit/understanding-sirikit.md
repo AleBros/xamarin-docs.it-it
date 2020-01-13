@@ -1,6 +1,6 @@
 ---
 title: Informazioni sui concetti di SiriKit
-description: Questo documento descrive i concetti chiave necessari per l'uso di SiriKit in un'app Novell. iOS. Ad esempio, vengono illustrati gli Intent e le estensioni dell'interfaccia utente, le autorizzazioni per SiriKit, la progettazione di un'esperienza ottimale e altro ancora.
+description: Questo documento descrive i concetti chiave necessari per l'uso di SiriKit in un'app Xamarin.iOS. Ad esempio, vengono illustrati gli Intent e le estensioni dell'interfaccia utente, le autorizzazioni per SiriKit, la progettazione di un'esperienza ottimale e altro ancora.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
@@ -16,9 +16,9 @@ ms.locfileid: "73031497"
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti di SiriKit
 
-_Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Novell. iOS._
+_Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Xamarin.iOS._
 
-Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
+Una novità di iOS 10, SiriKit consente a un'app Xamarin.iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
 SiriKit consente a un'app per iOS di fornire servizi accessibili all'utente usando Siri e l'app Maps in un dispositivo iOS usando le estensioni delle app e i **nuovi Framework** **dell'interfaccia utente** Intent e Intent.
 
@@ -459,7 +459,7 @@ Sforzarsi di fare in modo che le conversazioni con Siri (per conto dell'app) sia
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i concetti chiave necessari per usare SiriKit e può interagire con le app Novell. iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
+Questo articolo ha illustrato i concetti chiave necessari per usare SiriKit e può interagire con le app Xamarin.iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

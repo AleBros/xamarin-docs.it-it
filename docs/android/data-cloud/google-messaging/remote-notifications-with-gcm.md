@@ -1,6 +1,6 @@
 ---
 title: Notifiche remote con Google Cloud Messaging
-description: Questa procedura dettagliata fornisce una spiegazione dettagliata di come usare Google Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Novell. Android. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), spiega come impostare le autorizzazioni nel manifesto Android per l'accesso a GCM e illustra la messaggistica end-to-end con un programma di test di esempio.
+description: Questa procedura dettagliata fornisce una spiegazione dettagliata di come usare Google Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), spiega come impostare le autorizzazioni nel manifesto Android per l'accesso a GCM e illustra la messaggistica end-to-end con un programma di test di esempio.
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
@@ -21,15 +21,15 @@ ms.locfileid: "73021606"
 >
 > Per iniziare a usare le notifiche remote tramite la messaggistica cloud Firebase con Novell, vedere [notifiche remote con FCM](remote-notifications-with-fcm.md).
 
-_Questa procedura dettagliata fornisce una spiegazione dettagliata di come usare Google Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Novell. Android. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), spiega come impostare le autorizzazioni nel manifesto Android per l'accesso a GCM e illustra la messaggistica end-to-end con un programma di test di esempio._
+_Questa procedura dettagliata fornisce una spiegazione dettagliata di come usare Google Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), spiega come impostare le autorizzazioni nel manifesto Android per l'accesso a GCM e illustra la messaggistica end-to-end con un programma di test di esempio._
 
 ## <a name="gcm-notifications-overview"></a>Panoramica delle notifiche GCM
 
-In questa procedura dettagliata verrà creata un'applicazione Novell. Android che usa Google Cloud Messaging (GCM) per implementare le notifiche remote (note anche come *notifiche push*). Verranno implementati i vari servizi di Intent e listener che usano GCM per la messaggistica remota e l'implementazione verrà testata con un programma da riga di comando che simula un server applicazioni. 
+In questa procedura dettagliata verrà creata un'applicazione Xamarin.Android che usa Google Cloud Messaging (GCM) per implementare le notifiche remote (note anche come *notifiche push*). Verranno implementati i vari servizi di Intent e listener che usano GCM per la messaggistica remota e l'implementazione verrà testata con un programma da riga di comando che simula un server applicazioni. 
 
 Prima di procedere con questa procedura dettagliata, è necessario acquisire le credenziali necessarie per usare i server GCM di Google; Questo processo è illustrato in [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md). In particolare, sarà necessario disporre di una *chiave API* e di un *ID mittente* da inserire nel codice di esempio presentato in questa procedura dettagliata. 
 
-Per creare un'app client Novell. Android abilitata per GCM, verranno usati i passaggi seguenti:
+Per creare un'app client Xamarin.Android abilitata per GCM, verranno usati i passaggi seguenti:
 
 1. Installare i pacchetti aggiuntivi richiesti per le comunicazioni con i server GCM.
 2. Configurare le autorizzazioni dell'app per l'accesso ai server GCM.
@@ -44,7 +44,7 @@ Quando l'app client è pronta, verrà implementata un'applicazione della riga C#
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Per iniziare, creare una nuova soluzione vuota denominata **RemoteNotifications**. Aggiungere quindi un nuovo progetto Android alla soluzione basata sul modello di **app Android** . Chiameremo questo progetto **ClientApp**. Se non si ha familiarità con la creazione di progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md). Il progetto **ClientApp** conterrà il codice per l'applicazione client Novell. Android che riceve le notifiche remote tramite GCM. 
+Per iniziare, creare una nuova soluzione vuota denominata **RemoteNotifications**. Aggiungere quindi un nuovo progetto Android alla soluzione basata sul modello di **app Android** . Chiameremo questo progetto **ClientApp**. Se non si ha familiarità con la creazione di progetti Xamarin.Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md). Il progetto **ClientApp** conterrà il codice per l'applicazione client Xamarin.Android che riceve le notifiche remote tramite GCM. 
 
 ### <a name="add-required-packages"></a>Aggiungere i pacchetti necessari
 
@@ -645,7 +645,7 @@ Si noti che i messaggi GCM non verranno più ricevuti se l'app viene arrestata f
 
 ## <a name="summary"></a>Riepilogo
 
-Questa procedura dettagliata illustra i passaggi per l'implementazione di notifiche remote in un'applicazione Novell. Android. Viene descritto come installare i pacchetti aggiuntivi necessari per le comunicazioni GCM e viene illustrato come configurare le autorizzazioni dell'app per l'accesso ai server GCM. Viene fornito codice di esempio che illustra come verificare la presenza di Google Play Services, come implementare un servizio per finalità di registrazione e un servizio listener ID istanza che negozia con GCM per un token di registrazione e come implementare un listener GCM servizio che riceve ed elabora i messaggi di notifica remota. Infine, è stato implementato un programma di test della riga di comando per inviare notifiche di prova all'app client tramite GCM. 
+Questa procedura dettagliata illustra i passaggi per l'implementazione di notifiche remote in un'applicazione Xamarin.Android. Viene descritto come installare i pacchetti aggiuntivi necessari per le comunicazioni GCM e viene illustrato come configurare le autorizzazioni dell'app per l'accesso ai server GCM. Viene fornito codice di esempio che illustra come verificare la presenza di Google Play Services, come implementare un servizio per finalità di registrazione e un servizio listener ID istanza che negozia con GCM per un token di registrazione e come implementare un listener GCM servizio che riceve ed elabora i messaggi di notifica remota. Infine, è stato implementato un programma di test della riga di comando per inviare notifiche di prova all'app client tramite GCM. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 

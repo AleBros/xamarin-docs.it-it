@@ -1,6 +1,6 @@
 ---
-title: Servizi di dati e cloud nelle app Novell. iOS
-description: Questo documento contiene collegamenti a guide che descrivono come usare i dati locali, iCloud e CloudKit in un'app Novell. iOS.
+title: Servizi di dati e cloud nelle app Xamarin.iOS
+description: Questo documento contiene collegamenti a guide che descrivono come usare i dati locali, iCloud e CloudKit in un'app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663512"
 ---
-# <a name="data-and-cloud-services-in-xamarinios-apps"></a>Servizi di dati e cloud nelle app Novell. iOS
+# <a name="data-and-cloud-services-in-xamarinios-apps"></a>Servizi di dati e cloud nelle app Xamarin.iOS
 
 ## <a name="data-accessiosdata-clouddataindexmd"></a>[Accesso ai dati](~/ios/data-cloud/data/index.md)
 

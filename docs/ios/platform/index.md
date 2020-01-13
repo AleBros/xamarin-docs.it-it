@@ -16,17 +16,17 @@ ms.locfileid: "75488998"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
-Questa pagina elenca le versioni recenti di iOS, oltre ad evidenziare alcuni dei framework Apple a cui è possibile accedere con Novell. iOS.
+Questa pagina elenca le versioni recenti di iOS, oltre ad evidenziare alcuni dei framework Apple a cui è possibile accedere con Xamarin.iOS.
 
 ## <a name="ios-releases"></a>versioni di iOS
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduzione a iOS 13](~/ios/platform/ios13/index.md) | Questo documento descrive Novell. iOS 13.|
-| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive le funzionalità di iOS 12 disponibili per la compilazione di applicazioni Novell. iOS.|
-| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento della selezione, MapKit, PDFKit, SiriKit e visione. Sono disponibili collegamenti a guide che descrivono come usare queste funzionalità con Novell. iOS. |
-| [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include numerose nuove API e servizi che consentono di sviluppare app con nuove funzionalità e funzionalità. Con iOS 10, le app hanno nuove funzionalità, ad esempio l'estensione di mappe, messaggi, telefono e Siri. Questa sezione illustra come sfruttare i vantaggi di queste funzionalità in un'app Novell. iOS. |
-| [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 quando si esegue l'aggiornamento da iOS 8 e come usare queste funzionalità in un'app Novell. iOS. |
+| [Introduzione a iOS 13](~/ios/platform/ios13/index.md) | Questo documento descrive Xamarin.iOS 13.|
+| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive le funzionalità di iOS 12 disponibili per la compilazione di applicazioni Xamarin.iOS.|
+| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento della selezione, MapKit, PDFKit, SiriKit e visione. Sono disponibili collegamenti a guide che descrivono come usare queste funzionalità con Xamarin.iOS. |
+| [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include numerose nuove API e servizi che consentono di sviluppare app con nuove funzionalità e funzionalità. Con iOS 10, le app hanno nuove funzionalità, ad esempio l'estensione di mappe, messaggi, telefono e Siri. Questa sezione illustra come sfruttare i vantaggi di queste funzionalità in un'app Xamarin.iOS. |
+| [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 quando si esegue l'aggiornamento da iOS 8 e come usare queste funzionalità in un'app Xamarin.iOS. |
 | [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 ha apportato un numero elevato di modifiche al sistema operativo da iOS 7. Qui vengono illustrati gli elementi e le modalità d'uso. |
 | [Introduzione a iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Informazioni sulle nuove API principali introdotte in iOS 7, incluse le transizioni del controller di visualizzazione, i miglioramenti apportati alle animazioni UIView, UIKit Dynamics e Text Kit. |
 | [Introduzione a iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Spiegazioni delle funzionalità introdotte in iOS 6, incluse le visualizzazioni di raccolta, il kit di pass, il kit di eventi e il Framework di social networking. |
@@ -77,7 +77,7 @@ le applicazioni iOS possono vendere prodotti o servizi digitali usando StoreKit,
 
 ## <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API per giochi iOS](~/ios/platform/gaming/index.md)
 
-Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Novell. iOS. Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche.
+Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Xamarin.iOS. Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche.
 
 ## <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integrazione dell'app Message](~/ios/platform/message-app-integration/index.md)
 
@@ -91,7 +91,7 @@ iOS 9 aggiunge il supporto multitasking per l'esecuzione di due app allo stesso 
 
 Passbook è un'app per iPhone e iPod touch con iOS 6. Archivia e Visualizza i codici a barre e altre informazioni per collegare le transazioni dei clienti sul telefono con il "mondo reale". Le sessioni vengono generate dai commercianti e inviate al cliente tramite posta elettronica, URL o dall'interno di un'app iOS. Passbook archivia e organizza tutti i passaggi in un telefono e Visualizza i promemoria di pass per la schermata di blocco, a seconda della data/ora o della posizione del dispositivo.
 
-Questo documento introduce Passbook, usando l'API pass kit con Novell. iOS e illustra come implementare i passaggi nel server.
+Questo documento introduce Passbook, usando l'API pass kit con Xamarin.iOS e illustra come implementare i passaggi nel server.
 
 ## <a name="photokitiosplatformphotokitmd"></a>[PhotoKit](~/ios/platform/photokit.md)
 
@@ -103,7 +103,7 @@ Una novità di iOS 10,3, il metodo `RequestReview()` consente a un'app per iOS d
 
 ## <a name="search-apisiosplatformsearchindexmd"></a>[API per la ricerca](~/ios/platform/search/index.md)
 
-La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni e alle funzionalità all'interno di un'app Novell. iOS. Usando le nuove API di ricerca per le app, il contenuto delle app viene reso ricercabile attraverso i risultati della ricerca in evidenza e Safari, i promemoria e i suggerimenti per la consegna e Siri. Ciò consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
+La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni e alle funzionalità all'interno di un'app Xamarin.iOS. Usando le nuove API di ricerca per le app, il contenuto delle app viene reso ricercabile attraverso i risultati della ricerca in evidenza e Safari, i promemoria e i suggerimenti per la consegna e Siri. Ciò consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
 
 ## <a name="sirikitiosplatformsirikitindexmd"></a>[SiriKit](~/ios/platform/sirikit/index.md)
 
@@ -123,11 +123,11 @@ Il kit di testo è una nuova API che offre funzionalità avanzate per il layout 
 
 ## <a name="3d-touchiosplatform3d-touchmd"></a>[3D Touch](~/ios/platform/3d-touch.md)
 
-Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Novell. iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
+Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Xamarin.iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
 
-## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md)
+## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[Touch ID e Face ID con Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
 
-Touch ID e Face ID sono sistemi di autenticazione biometrici disponibili a partire da iOS 8. Questo articolo ed esempio illustrano come usare Touch ID e Face ID con Novell. iOS.
+Touch ID e Face ID sono sistemi di autenticazione biometrici disponibili a partire da iOS 8. Questo articolo ed esempio illustrano come usare Touch ID e Face ID con Xamarin.iOS.
 
 ## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[Notifiche utente](~/ios/platform/user-notifications/index.md)
 
@@ -143,8 +143,8 @@ Quando si utilizza iOS, è possibile che si verifichino casi in cui si desidera 
 
 ## <a name="referencing-native-librariesnative-interopmd"></a>[Riferimento a librerie native](native-interop.md)
 
-Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS.
+Xamarin.iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Xamarin.iOS.
 
 ## <a name="embedded-frameworksembedded-frameworksmd"></a>[Framework incorporati](embedded-frameworks.md)
 
-Viene illustrato come incorporare i Framework utente Objective-C nelle app Novell. iOS.
+Viene illustrato come incorporare i Framework utente Objective-C nelle app Xamarin.iOS.

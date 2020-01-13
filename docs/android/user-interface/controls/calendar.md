@@ -1,5 +1,5 @@
 ---
-title: Calendario di Novell. Android
+title: Calendario di Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029324"
 ---
-# <a name="xamarinandroid-calendar"></a>Calendario di Novell. Android
+# <a name="xamarinandroid-calendar"></a>Calendario di Xamarin.Android
 
 ## <a name="calendar-api"></a>API Calendar
 

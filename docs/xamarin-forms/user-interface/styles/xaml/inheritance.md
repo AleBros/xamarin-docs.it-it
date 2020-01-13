@@ -1,6 +1,6 @@
 ---
-title: Ereditarietà degli stili in xamarin. Forms
-description: Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Questo articolo illustra come eseguire l'ereditarietà dello stile di un'applicazione xamarin. Forms.
+title: Ereditarietà degli stili in Xamarin.Forms
+description: Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Questo articolo illustra come eseguire l'ereditarietà dello stile di un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68657062"
 ---
-# <a name="style-inheritance-in-xamarinforms"></a>Ereditarietà degli stili in xamarin. Forms
+# <a name="style-inheritance-in-xamarinforms"></a>Ereditarietà degli stili in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 

@@ -1,5 +1,5 @@
 ---
-title: Procedura di installazione-accedere con Apple per Novell. Forms
+title: Procedura di installazione-accedere con Apple per Xamarin.Forms
 description: L'accesso con l'installazione di Apple è diverso a seconda delle diverse piattaforme di destinazione dell'applicazione mobile.
 ms.prod: xamarin
 ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/24/2019
 ms.locfileid: "71206534"
 ---
-# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Configurare l'accesso con Apple per Novell. Forms
+# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Configurare l'accesso con Apple per Xamarin.Forms
 
 Questa guida illustra la serie di passaggi necessari per configurare le applicazioni multipiattaforma in modo da richiedere l'accesso avanzato con Apple. Mentre l'installazione di Apple è diretta nel portale per sviluppatori di Apple, sono necessari passaggi aggiuntivi per creare una relazione sicura tra Android e Apple. 
 
@@ -114,7 +114,7 @@ Assegnare un nome `P8FileContents` a questa chiave e mantenerla in un luogo sicu
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo descrive i passaggi necessari per configurare l'accesso con Apple per l'uso nelle applicazioni Novell. Forms.
+Questo articolo descrive i passaggi necessari per configurare l'accesso con Apple per l'uso nelle applicazioni Xamarin.Forms.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

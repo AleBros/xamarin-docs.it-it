@@ -52,7 +52,7 @@ Anche in questo caso non è possibile combinare testo e icone in un determinato 
 
 ## <a name="segment-controls-and-storyboards"></a>Controlli e storyboard del segmento
 
-Il modo più semplice per usare i controlli dei segmenti in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare i controlli dei segmenti in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 
 Come indicato in precedenza, il controllo segmentato fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o un testo, e viene usato per fornire un set di scelte correlate all'utente.
 
-Esistono diversi modi in cui è possibile usare i controlli segmentati nell'app Novell. tvOS.
+Esistono diversi modi in cui è possibile usare i controlli segmentati nell'app Xamarin.tvOS.
 
 <a name="Exposed-as-Outlets-and-Actions" />
 
@@ -231,7 +231,7 @@ Dove il primo `UIControlState` specifica lo stato del segmento a sinistra del di
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato la progettazione e l'uso del controllo segmentato all'interno di un'app Novell. tvOS.
+Questo articolo ha trattato la progettazione e l'uso del controllo segmentato all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

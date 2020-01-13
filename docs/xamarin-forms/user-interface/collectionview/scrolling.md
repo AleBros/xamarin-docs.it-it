@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms (scorrimento)
+title: Xamarin.Forms (scorrimento)
 description: Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CollectionView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697225"
 ---
-# <a name="xamarinforms-collectionview-scrolling"></a>Novell. Forms (scorrimento)
+# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms (scorrimento)
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 

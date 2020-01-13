@@ -1,6 +1,6 @@
 ---
-title: Autenticare gli utenti con un database di documenti Azure Cosmos DB e Novell. Forms
-description: Questo articolo illustra come combinare il controllo di accesso con le raccolte partizionate di Azure Cosmos DB, in modo che un utente può accedere solo ai propri documenti in un'applicazione xamarin. Forms.
+title: Autenticare gli utenti con un database di documenti Azure Cosmos DB e Xamarin.Forms
+description: Questo articolo illustra come combinare il controllo di accesso con le raccolte partizionate di Azure Cosmos DB, in modo che un utente può accedere solo ai propri documenti in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489986"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticare gli utenti con un database di documenti Azure Cosmos DB e Novell. Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticare gli utenti con un database di documenti Azure Cosmos DB e Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
-_Azure Cosmos DB database di documenti supportano le raccolte partizionate, che possono estendersi su più server e partizioni, supportando allo stesso tempo archiviazione e velocità effettiva illimitate. Questo articolo illustra come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente possa accedere solo ai propri documenti in un'applicazione Novell. Forms._
+_Azure Cosmos DB database di documenti supportano le raccolte partizionate, che possono estendersi su più server e partizioni, supportando allo stesso tempo archiviazione e velocità effettiva illimitate. Questo articolo illustra come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente possa accedere solo ai propri documenti in un'applicazione Xamarin.Forms._
 
 ## <a name="overview"></a>Panoramica di
 
@@ -37,26 +37,26 @@ Un approccio tipico per la richiesta, la generazione e il recapito di token dell
 
 Il gestore di token di risorsa è un servizio API Web di livello intermedio, ospitato nel servizio App di Azure, che possiede la chiave master dell'account Cosmos DB. L'applicazione di esempio Usa il gestore di token di risorsa per gestire l'accesso ai dati del database documenti come indicato di seguito:
 
-1. Account di accesso, l'applicazione xamarin. Forms contatta il servizio App di Azure per avviare un flusso di autenticazione.
-1. Servizio App di Azure esegue un flusso di autenticazione OAuth con Facebook. Dopo aver completato il flusso di autenticazione, l'applicazione xamarin. Forms riceve un token di accesso.
-1. L'applicazione xamarin. Forms Usa il token di accesso per richiedere un token della risorsa dal gestore di token di risorsa.
+1. Account di accesso, l'applicazione Xamarin.Forms contatta il servizio App di Azure per avviare un flusso di autenticazione.
+1. Servizio App di Azure esegue un flusso di autenticazione OAuth con Facebook. Dopo aver completato il flusso di autenticazione, l'applicazione Xamarin.Forms riceve un token di accesso.
+1. L'applicazione Xamarin.Forms Usa il token di accesso per richiedere un token della risorsa dal gestore di token di risorsa.
 1. Il gestore di token di risorsa Usa il token di accesso per richiedere l'identità dell'utente da Facebook. L'identità dell'utente viene quindi usato per richiedere un token delle risorse di Cosmos DB, che consente di concedere l'accesso in lettura/scrittura a raccolta partizionata dell'utente autenticato.
-1. L'applicazione xamarin. Forms Usa il token delle risorse per accedere direttamente alle risorse di Cosmos DB con le autorizzazioni definite dal token delle risorse.
+1. L'applicazione Xamarin.Forms Usa il token delle risorse per accedere direttamente alle risorse di Cosmos DB con le autorizzazioni definite dal token delle risorse.
 
 > [!NOTE]
-> Quando il token delle risorse scade, le richieste di database di documenti successive riceveranno un'eccezione 401 non autorizzato. A questo punto, le applicazioni xamarin. Forms devono ristabilire l'identità e richiedere un nuovo token di risorsa.
+> Quando il token delle risorse scade, le richieste di database di documenti successive riceveranno un'eccezione 401 non autorizzato. A questo punto, le applicazioni Xamarin.Forms devono ristabilire l'identità e richiedere un nuovo token di risorsa.
 
 Per altre informazioni sul partizionamento di Cosmos DB, vedere [come eseguire il partizionamento e ridimensionamento in Azure Cosmos DB](/azure/cosmos-db/partition-data/). Per altre informazioni sul controllo di accesso Cosmos DB, vedere [protezione dell'accesso ai dati di Cosmos DB](/azure/cosmos-db/secure-access-to-data/) e [controllo degli accessi nell'API SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
 ## <a name="setup"></a>Programma di installazione
 
-Il processo per l'integrazione del gestore di token di risorsa in un'applicazione xamarin. Forms è come segue:
+Il processo per l'integrazione del gestore di token di risorsa in un'applicazione Xamarin.Forms è come segue:
 
 1. Creare un account Cosmos DB che verrà utilizzato il controllo di accesso. Per altre informazioni, vedere [Cosmos DB Configuration](#cosmosdb_configuration).
 1. Creare un servizio App di Azure per ospitare il gestore di token di risorsa. Per altre informazioni, vedere [configurazione del servizio App Azure](#app_service_configuration).
 1. Creare un'app di Facebook per eseguire l'autenticazione. Per altre informazioni, vedere [Facebook App Configuration](#facebook_configuration).
 1. Configurare il servizio App di Azure per eseguire l'autenticazione facile con Facebook. Per altre informazioni, vedere [configurazione di autenticazione di Azure App Service](#app_service_authentication_configuration).
-1. Configurare l'applicazione di esempio xamarin. Forms per comunicare con il servizio App di Azure e Cosmos DB. Per altre informazioni, vedere [configurazione dell'applicazione xamarin. Forms](#forms_application_configuration).
+1. Configurare l'applicazione di esempio Xamarin.Forms per comunicare con il servizio App di Azure e Cosmos DB. Per altre informazioni, vedere [configurazione dell'applicazione Xamarin.Forms](#forms_application_configuration).
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
@@ -128,11 +128,11 @@ L'app web del servizio App deve essere configurata anche per comunicare con l'ap
 
 <a name="forms_application_configuration" />
 
-### <a name="xamarinforms-application-configuration"></a>Configurazione dell'applicazione xamarin. Forms
+### <a name="xamarinforms-application-configuration"></a>Configurazione dell'applicazione Xamarin.Forms
 
-Il processo per la configurazione dell'applicazione di esempio xamarin. Forms è come segue:
+Il processo per la configurazione dell'applicazione di esempio Xamarin.Forms è come segue:
 
-1. Aprire la soluzione xamarin. Forms.
+1. Aprire la soluzione Xamarin.Forms.
 1. Apri `Constants.cs` e aggiornare i valori delle costanti seguenti:
     - `EndpointUri` : il valore deve essere l'URL dell'account Cosmos DB dal pannello chiavi dell'account Cosmos DB.
     - `DatabaseName` : il valore deve essere il nome del database di documenti.
@@ -192,7 +192,7 @@ auth.Completed += async (sender, e) =>
 
 Il risultato di un'autenticazione riuscita è un token di accesso disponibile `AuthenticatorCompletedEventArgs.Account` proprietà. Il token di accesso è estratto e usato in una richiesta GET a resource token broker `resourcetoken` API.
 
-Il `resourcetoken` API Usa il token di accesso per richiedere l'identità dell'utente da Facebook, che a sua volta viene usato per richiedere un token delle risorse di Cosmos DB. Se esiste già un documento di autorizzazione valido per l'utente nel database di documenti, che sono stati recuperati e viene restituito un documento JSON che contiene il token della risorsa per l'applicazione xamarin. Forms. Se non esiste un documento di autorizzazione valido per l'utente, un utente e l'autorizzazione viene creato nel database di documenti e il token della risorsa viene estratto dal documento di autorizzazione e restituito all'applicazione xamarin. Forms in un documento JSON.
+Il `resourcetoken` API Usa il token di accesso per richiedere l'identità dell'utente da Facebook, che a sua volta viene usato per richiedere un token delle risorse di Cosmos DB. Se esiste già un documento di autorizzazione valido per l'utente nel database di documenti, che sono stati recuperati e viene restituito un documento JSON che contiene il token della risorsa per l'applicazione Xamarin.Forms. Se non esiste un documento di autorizzazione valido per l'utente, un utente e l'autorizzazione viene creato nel database di documenti e il token della risorsa viene estratto dal documento di autorizzazione e restituito all'applicazione Xamarin.Forms in un documento JSON.
 
 > [!NOTE]
 > Un utente di database di documenti è una risorsa associata a un database di documenti e ogni database può contenere zero o più utenti. Un'autorizzazione di database di documenti è una risorsa associata a un utente di database di documenti e ogni utente può contenere zero o più autorizzazioni. Una risorsa autorizzazione fornisce l'accesso a un token di sicurezza che l'utente è necessario quando si tenta di accedere a una risorsa, ad esempio un documento.
@@ -234,7 +234,7 @@ La query recupera tutti i documenti che appartengono all'utente autenticato, dal
 Il `CreateDocumentQuery<T>` metodo consente di specificare un `Uri` argomento che rappresenta la raccolta da sottoporre a query per documenti e una `FeedOptions` oggetto. Il `FeedOptions` oggetto specifica che un numero illimitato di elementi può essere restituito dalla query e l'id dell'utente come chiave di partizione. Ciò garantisce che solo i documenti nella raccolta partizionata dell'utente vengono restituiti nel risultato.
 
 > [!NOTE]
-> Si noti che i documenti di autorizzazione, che vengono creati per il gestore di token di risorsa, vengono archiviati nella stessa raccolta di documenti i documenti creati dall'applicazione xamarin. Forms. Pertanto, la query di documento contiene un `Where` clausola che applica un predicato di filtro alla query sulla raccolta di documenti. Questa clausola assicura che i documenti di autorizzazione non vengono restituiti dalla raccolta documenti.
+> Si noti che i documenti di autorizzazione, che vengono creati per il gestore di token di risorsa, vengono archiviati nella stessa raccolta di documenti i documenti creati dall'applicazione Xamarin.Forms. Pertanto, la query di documento contiene un `Where` clausola che applica un predicato di filtro alla query sulla raccolta di documenti. Questa clausola assicura che i documenti di autorizzazione non vengono restituiti dalla raccolta documenti.
 
 Per altre informazioni sul recupero dei documenti da una raccolta di documenti, vedere [recupero di documenti di una raccolta documenti](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#document_query).
 
@@ -269,7 +269,7 @@ Per altre informazioni sull'eliminazione di un documento da una raccolta di docu
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente può accedere solo ai propri documenti di database di documenti in un'applicazione xamarin. Forms. Specifica l'identità dell'utente come chiave di partizione assicura che una raccolta partizionata possa archiviare solo i documenti per tale utente.
+Questo articolo ha illustrato come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente può accedere solo ai propri documenti di database di documenti in un'applicazione Xamarin.Forms. Specifica l'identità dell'utente come chiave di partizione assicura che una raccolta partizionata possa archiviare solo i documenti per tale utente.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -32,16 +32,16 @@ Sebbene Novell consenta di scrivere app in C#e condividere lo stesso codice su p
 
 Il C# codice sorgente è in grado di accedere a un'app nativa in modi molto diversi in ogni piattaforma:
 
-- **iOS** : C# è stata compilata come AOT (Ahead of Time) in linguaggio assembly ARM. .NET Framework è incluso e le classi inutilizzate vengono rimosse durante il collegamento per ridurre le dimensioni dell'applicazione. Apple non consente la generazione del codice di runtime in iOS, quindi alcune funzionalità del linguaggio non sono disponibili (vedere [limitazioni di Novell. iOS](~/ios/internals/limitations.md) ).
-- **Android** : C# viene compilato in il e incluso in un pacchetto con MonoVM + JIT'ing. Le classi inutilizzate nel Framework vengono rimosse durante il collegamento. L'applicazione viene eseguita side-by-side con Java/ART (runtime di Android) e interagisce con i tipi nativi tramite JNI (vedere [limitazioni di Novell. Android](~/android/internals/limitations.md) ).
+- **iOS** : C# è stata compilata come AOT (Ahead of Time) in linguaggio assembly ARM. .NET Framework è incluso e le classi inutilizzate vengono rimosse durante il collegamento per ridurre le dimensioni dell'applicazione. Apple non consente la generazione del codice di runtime in iOS, quindi alcune funzionalità del linguaggio non sono disponibili (vedere [limitazioni di Xamarin.iOS](~/ios/internals/limitations.md) ).
+- **Android** : C# viene compilato in il e incluso in un pacchetto con MonoVM + JIT'ing. Le classi inutilizzate nel Framework vengono rimosse durante il collegamento. L'applicazione viene eseguita side-by-side con Java/ART (runtime di Android) e interagisce con i tipi nativi tramite JNI (vedere [limitazioni di Xamarin.Android](~/android/internals/limitations.md) ).
 - **Windows** : C# viene compilato in il e viene eseguito dal runtime predefinito e non richiede gli strumenti Novell. La progettazione di applicazioni Windows in base alle linee guida di Novell rende più semplice riusare il codice in iOS e Android.
-  Si noti che il piattaforma UWP (Universal Windows Platform) dispone anche di un'opzione di **.NET native** che si comporta in modo analogo alla compilazione AOT di Novell. iOS.
+  Si noti che il piattaforma UWP (Universal Windows Platform) dispone anche di un'opzione di **.NET native** che si comporta in modo analogo alla compilazione AOT di Xamarin.iOS.
 
-La documentazione del linker per [Novell. iOS](~/ios/deploy-test/linker.md) e [Novell. Android](~/android/deploy-test/linker.md) fornisce ulteriori informazioni su questa parte del processo di compilazione.
+La documentazione del linker per [Xamarin.iOS](~/ios/deploy-test/linker.md) e [Xamarin.Android](~/android/deploy-test/linker.md) fornisce ulteriori informazioni su questa parte del processo di compilazione.
 
 ' Compilazione ' del runtime: è consigliabile evitare di generare codice in modo dinamico con `System.Reflection.Emit`.
 
-Il kernel di Apple impedisce la generazione di codice dinamico nei dispositivi iOS, di conseguenza l'emissione di codice in tempo reale non funzionerà in Novell. iOS. Analogamente, le funzionalità di Dynamic Language Runtime non possono essere usate con gli strumenti Novell.
+Il kernel di Apple impedisce la generazione di codice dinamico nei dispositivi iOS, di conseguenza l'emissione di codice in tempo reale non funzionerà in Xamarin.iOS. Analogamente, le funzionalità di Dynamic Language Runtime non possono essere usate con gli strumenti Novell.
 
 Alcune funzionalità di Reflection funzionano, ad esempio MonoTouch. la finestra di dialogo la usa per l'API di reflection, ma non per la generazione di codice.
 
@@ -49,13 +49,13 @@ Alcune funzionalità di Reflection funzionano, ad esempio MonoTouch. la finestra
 
 Novell rende facilmente accessibili le funzionalità fornite dall'SDK specifico della piattaforma con una sintassi C# familiare:
 
-- **iOS** : Novell. iOS espone i Framework SDK CocoaTouch di Apple come spazi dei nomi a cui è possibile C#fare riferimento. Ad esempio, il Framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso con una semplice istruzione `using UIKit;`.
-- **Android** : Novell. Android espone Google Android SDK come spazi dei nomi, quindi è possibile fare riferimento a qualsiasi parte dell'SDK supportato con un'istruzione using, ad esempio `using Android.Views;` per accedere ai controlli dell'interfaccia utente.
+- **iOS** : Xamarin.iOS espone i Framework SDK CocoaTouch di Apple come spazi dei nomi a cui è possibile C#fare riferimento. Ad esempio, il Framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso con una semplice istruzione `using UIKit;`.
+- **Android** : Xamarin.Android espone Google Android SDK come spazi dei nomi, quindi è possibile fare riferimento a qualsiasi parte dell'SDK supportato con un'istruzione using, ad esempio `using Android.Views;` per accedere ai controlli dell'interfaccia utente.
 - **Windows** : le app di Windows sono compilate con Visual Studio in Windows. I tipi di progetto includono Windows Forms, WPF, WinRT e il piattaforma UWP (Universal Windows Platform) (UWP).
 
 ## <a name="seamless-integration-for-developers"></a>Perfetta integrazione per gli sviluppatori
 
-La bellezza di Novell è che, nonostante le differenze con la cappa, Novell. iOS e Novell. Android (abbinato a Microsoft Windows SDK) offrono un'esperienza uniforme per C# la scrittura di codice che può essere riutilizzato in tutte e tre le piattaforme.
+La bellezza di Novell è che, nonostante le differenze con la cappa, Xamarin.iOS e Xamarin.Android (abbinato a Microsoft Windows SDK) offrono un'esperienza uniforme per C# la scrittura di codice che può essere riutilizzato in tutte e tre le piattaforme.
 
 La logica di business, l'utilizzo del database, l'accesso alla rete e altre funzioni comuni possono essere scritte una sola volta e riutilizzate in ogni piattaforma, fornendo una base per le interfacce utente specifiche della piattaforma che appaiono ed eseguono come applicazioni native.
 
@@ -75,7 +75,7 @@ Per lo sviluppo di applicazioni iOS è necessario un computer Mac che esegue mac
 
 Il codice viene scritto con l'IDE di Visual Studio e i layout dello schermo possono essere compilati a livello di programmazione o modificati con la finestra di progettazione iOS di Novell in uno dei due IDE.
 
-Vedere la [Guida all'installazione di Novell. iOS](~/ios/get-started/installation/index.md) per istruzioni dettagliate su come eseguire la configurazione.
+Vedere la [Guida all'installazione di Xamarin.iOS](~/ios/get-started/installation/index.md) per istruzioni dettagliate su come eseguire la configurazione.
 
 ### <a name="android"></a>Android
 
@@ -84,7 +84,7 @@ Per lo sviluppo di applicazioni Android è necessario che siano installati gli S
 - Windows 10 con Visual Studio 2019
 - macOS Mojave (10.11 +) con Visual Studio 2019 per Mac
 
-Novell fornisce un programma di installazione unificato che consente di configurare il sistema con gli strumenti Java, Android e Novell prerequisiti (inclusa una finestra di progettazione visiva per i layout dello schermo). Per istruzioni dettagliate, vedere la [Guida all'installazione di Novell. Android](~/android/get-started/installation/index.md) .
+Novell fornisce un programma di installazione unificato che consente di configurare il sistema con gli strumenti Java, Android e Novell prerequisiti (inclusa una finestra di progettazione visiva per i layout dello schermo). Per istruzioni dettagliate, vedere la [Guida all'installazione di Xamarin.Android](~/android/get-started/installation/index.md) .
 
 È possibile compilare e testare le applicazioni in un dispositivo reale senza alcuna licenza da Google. Tuttavia, per distribuire l'applicazione tramite uno Store, ad esempio Google Play, Amazon o Barnes &amp; Noble, è possibile che venga addebitata una tariffa di registrazione all'operatore. Google Play pubblicherà l'app immediatamente, mentre gli altri archivi avranno un processo di approvazione simile a quello di Apple.
 
@@ -141,21 +141,21 @@ La piattaforma Novell consente di riutilizzare il codice C# esistente in tutte l
 
 ### <a name="c-source-and-libraries"></a>C#Origine e librerie
 
-Poiché i prodotti Novell C# usano e .NET Framework, un numero elevato di codice sorgente esistente (progetti open source e interni) può essere riutilizzato nei progetti Novell. iOS o Novell. Android. Spesso l'origine può essere semplicemente aggiunta a una soluzione Novell, che funzionerà immediatamente. Se è stata usata una funzionalità di .NET Framework non supportata, potrebbe essere necessario apportare alcune modifiche.
+Poiché i prodotti Novell C# usano e .NET Framework, un numero elevato di codice sorgente esistente (progetti open source e interni) può essere riutilizzato nei progetti Xamarin.iOS o Xamarin.Android. Spesso l'origine può essere semplicemente aggiunta a una soluzione Novell, che funzionerà immediatamente. Se è stata usata una funzionalità di .NET Framework non supportata, potrebbe essere necessario apportare alcune modifiche.
 
-Esempi di C# origine che possono essere usati in Novell. iOS o Novell. Android includono: SQLite-NET, NEWTONSOFT. JSON e sharpziplib.
+Esempi di C# origine che possono essere usati in Xamarin.iOS o Xamarin.Android includono: SQLite-NET, NEWTONSOFT. JSON e sharpziplib.
 
 ### <a name="objective-c-bindings--binding-projects"></a>Binding di Objective-C + progetti di associazione
 
-Novell fornisce uno strumento denominato *btouch* che consente di creare binding che consentono l'uso di librerie Objective-C nei progetti Novell. iOS. Per informazioni dettagliate su come eseguire questa operazione, vedere la [documentazione relativa ai tipi di binding Objective-C](~/cross-platform/macios/binding/binding-types-reference.md) .
+Novell fornisce uno strumento denominato *btouch* che consente di creare binding che consentono l'uso di librerie Objective-C nei progetti Xamarin.iOS. Per informazioni dettagliate su come eseguire questa operazione, vedere la [documentazione relativa ai tipi di binding Objective-C](~/cross-platform/macios/binding/binding-types-reference.md) .
 
-Esempi di librerie Objective-C che è possibile usare in Novell. iOS includono: analisi del codice a barre RedLaser, integrazione di Google Analytics e PayPal. Le associazioni Novell. iOS Open Source sono disponibili su [GitHub](https://github.com/mono/monotouch-bindings).
+Esempi di librerie Objective-C che è possibile usare in Xamarin.iOS includono: analisi del codice a barre RedLaser, integrazione di Google Analytics e PayPal. Le associazioni Xamarin.iOS Open Source sono disponibili su [GitHub](https://github.com/mono/monotouch-bindings).
 
 ### <a name="jar-bindings--binding-projects"></a>Associazioni. jar + progetti di associazione
 
-Novell supporta l'uso di librerie Java esistenti in Novell. Android. Per informazioni dettagliate su come usare un, vedere la [documentazione relativa al binding di una libreria Java](~/android/platform/binding-java-library/index.md) . File JAR da Novell. Android.
+Novell supporta l'uso di librerie Java esistenti in Xamarin.Android. Per informazioni dettagliate su come usare un, vedere la [documentazione relativa al binding di una libreria Java](~/android/platform/binding-java-library/index.md) . File JAR da Xamarin.Android.
 
-Le associazioni Novell. Android Open Source sono disponibili su [GitHub](https://github.com/mono/monodroid-bindings).
+Le associazioni Xamarin.Android Open Source sono disponibili su [GitHub](https://github.com/mono/monodroid-bindings).
 
 ### <a name="c-via-pinvoke"></a>C tramite PInvoke
 
@@ -169,7 +169,7 @@ public static extern Result Open (string filename, out IntPtr db);
 ```
 
 Questa operazione viene associata all'implementazione di SQLite in linguaggio C nativo in iOS e Android.
-Gli sviluppatori che hanno familiarità con un'API C esistente possono C# costruire un set di classi per eseguire il mapping all'API nativa e usare il codice di piattaforma esistente. È disponibile la documentazione per il [collegamento delle librerie native](~/ios/platform/native-interop.md) in Novell. iOS. i principi simili si applicano a Novell. Android.
+Gli sviluppatori che hanno familiarità con un'API C esistente possono C# costruire un set di classi per eseguire il mapping all'API nativa e usare il codice di piattaforma esistente. È disponibile la documentazione per il [collegamento delle librerie native](~/ios/platform/native-interop.md) in Xamarin.iOS. i principi simili si applicano a Xamarin.Android.
 
 ### <a name="c-via-cppsharp"></a>C++tramite CppSharp
 

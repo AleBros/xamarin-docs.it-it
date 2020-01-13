@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028907"
 ---
-# <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizzazione dell'aspetto di un controllo ListView con Novell. Android
+# <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizzazione dell'aspetto di un controllo ListView con Xamarin.Android
 
 L'aspetto di un controllo ListView è determinato dal layout delle righe visualizzate. Per modificare l'aspetto di una `ListView`, utilizzare un layout di riga diverso.
 
@@ -105,7 +105,7 @@ Il `ListView` stesso supporta modalità di selezione diverse, indipendentemente 
 
 ### <a name="handling-api-level"></a>Gestione del livello API
 
-Le versioni precedenti di Novell. Android implementavano le enumerazioni come proprietà Integer. La versione più recente ha introdotto i tipi di enumerazione .NET appropriati, semplificando l'individuazione delle possibili opzioni.
+Le versioni precedenti di Xamarin.Android implementavano le enumerazioni come proprietà Integer. La versione più recente ha introdotto i tipi di enumerazione .NET appropriati, semplificando l'individuazione delle possibili opzioni.
 
 A seconda del livello API di destinazione, `ChoiceMode` può essere un numero intero o un'enumerazione. Il file di esempio **AccessoryViews/homescreen. cs** presenta un blocco impostato come commento se si vuole fare riferimento all'API Gingerbread:
 

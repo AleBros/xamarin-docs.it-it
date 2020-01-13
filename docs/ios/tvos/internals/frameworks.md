@@ -20,7 +20,7 @@ ms.locfileid: "73030664"
 
 ## <a name="supported-frameworks"></a>Framework supportati
 
-Questo è un elenco dei Framework forniti da Apple per l'uso nelle app Novell. tvOS:
+Questo è un elenco dei Framework forniti da Apple per l'uso nelle app Xamarin.tvOS:
 
 - Accelerare
 - AudioToolbox
@@ -70,7 +70,7 @@ Questo è un elenco dei Framework forniti da Apple per l'uso nelle app Novell. t
 
 ## <a name="unsupported-frameworks"></a>Framework non supportati
 
-Di seguito è riportato un elenco di Framework supportati da iOS 9, che sono stati rimossi dal supporto tvOS 9 da Apple e pertanto non possono essere usati nelle app Novell. tvOS:
+Di seguito è riportato un elenco di Framework supportati da iOS 9, che sono stati rimossi dal supporto tvOS 9 da Apple e pertanto non possono essere usati nelle app Xamarin.tvOS:
 
 - Account
 - AddressBook

@@ -1,6 +1,6 @@
 ---
 title: Messaggistica di Google
-description: Questa sezione contiene le guide che descrivono come implementare app Novell. Android usando i servizi di messaggistica Google.
+description: Questa sezione contiene le guide che descrivono come implementare app Xamarin.Android usando i servizi di messaggistica Google.
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73023537"
 ---
 # <a name="google-messaging"></a>Messaggistica di Google
 
-_Questa sezione contiene le guide che descrivono come implementare app Novell. Android usando i servizi di messaggistica Google._
+_Questa sezione contiene le guide che descrivono come implementare app Xamarin.Android usando i servizi di messaggistica Google._
 
 ## <a name="firebase-cloud-messagingfirebase-cloud-messagingmd"></a>[Firebase Cloud Messaging](firebase-cloud-messaging.md)
 
@@ -24,7 +24,7 @@ Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra 
 
 ## <a name="remote-notifications-with-firebase-cloud-messagingremote-notifications-with-fcmmd"></a>[Notifiche remote con Firebase Cloud Messaging](remote-notifications-with-fcm.md)
 
-Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Novell. Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console.
+Questa procedura dettagliata fornisce una spiegazione dettagliata dell'uso di Firebase Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Viene illustrato come implementare le varie classi necessarie per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi di come configurare il manifesto Android per l'accesso a FCM e viene illustrata la messaggistica downstream mediante Firebase Console.
 
 ## <a name="google-cloud-messaginggoogle-cloud-messagingmd"></a>[Google Cloud Messaging](google-cloud-messaging.md)
 
@@ -36,5 +36,5 @@ Questa sezione fornisce una panoramica di alto livello del modo in cui Google Cl
 
 ## <a name="remote-notifications-with-google-cloud-messagingremote-notifications-with-gcmmd"></a>[Notifiche remote con Google Cloud Messaging](remote-notifications-with-gcm.md)
 
-Questa sezione fornisce una spiegazione dettagliata dell'implementazione di notifiche remote in Novell. Android con Google Cloud Messaging.
+Questa sezione fornisce una spiegazione dettagliata dell'implementazione di notifiche remote in Xamarin.Android con Google Cloud Messaging.
 Vengono illustrati i vari componenti che è necessario sfruttare per abilitare Google Cloud Messaging in un'applicazione Android.

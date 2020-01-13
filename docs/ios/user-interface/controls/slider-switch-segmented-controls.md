@@ -1,6 +1,6 @@
 ---
-title: Dispositivi di scorrimento, commutatori e controlli segmentati in Novell. iOS
-description: Questo documento illustra le diapositive, i commutatori e i controlli segmentati in Novell. iOS, che descrivono come utilizzarli sia a livello di codice che in iOS designer.
+title: Dispositivi di scorrimento, commutatori e controlli segmentati in Xamarin.iOS
+description: Questo documento illustra le diapositive, i commutatori e i controlli segmentati in Xamarin.iOS, che descrivono come utilizzarli sia a livello di codice che in iOS designer.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021956"
 ---
-# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Dispositivi di scorrimento, commutatori e controlli segmentati in Novell. iOS
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Dispositivi di scorrimento, commutatori e controlli segmentati in Xamarin.iOS
 
 <a name="Sliders" />
 

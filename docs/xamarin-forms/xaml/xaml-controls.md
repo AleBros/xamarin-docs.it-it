@@ -1,6 +1,6 @@
 ---
 title: Controlli XAML
-description: È possibile fare riferimento a tutte le viste definite in Novell. Forms da file XAML.
+description: È possibile fare riferimento a tutte le viste definite in Xamarin.Forms da file XAML.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
@@ -19,9 +19,9 @@ ms.locfileid: "75490232"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
-Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da xamarin. Forms derivano da tutte le [`View`](xref:Xamarin.Forms.View) classe.
+Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da Xamarin.Forms derivano da tutte le [`View`](xref:Xamarin.Forms.View) classe.
 
-È possibile fare riferimento a tutte le viste definite in Novell. Forms da file XAML.
+È possibile fare riferimento a tutte le viste definite in Xamarin.Forms da file XAML.
 
 ## <a name="views-for-presentation"></a>Viste per la presentazione
 
@@ -87,6 +87,6 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Esempio di Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -1,6 +1,6 @@
 ---
-title: Limitazioni di Novell. iOS
-description: Questo documento descrive le limitazioni di Novell. iOS, la discussione di generics, le sottoclassi generiche di NSObjects, P/Invoke negli oggetti generici e altro ancora.
+title: Limitazioni di Xamarin.iOS
+description: Questo documento descrive le limitazioni di Xamarin.iOS, la discussione di generics, le sottoclassi generiche di NSObjects, P/Invoke negli oggetti generici e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022314"
 ---
-# <a name="limitations-of-xamarinios"></a>Limitazioni di Novell. iOS
+# <a name="limitations-of-xamarinios"></a>Limitazioni di Xamarin.iOS
 
-Poiché le applicazioni che usano Novell. iOS vengono compilate in codice statico, non è possibile usare tutte le funzionalità che richiedono la generazione di codice in fase di esecuzione.
+Poiché le applicazioni che usano Xamarin.iOS vengono compilate in codice statico, non è possibile usare tutte le funzionalità che richiedono la generazione di codice in fase di esecuzione.
 
-Queste sono le limitazioni di Novell. iOS rispetto al desktop mono:
+Queste sono le limitazioni di Xamarin.iOS rispetto al desktop mono:
 
  <a name="Limited_Generics_Support" />
 
@@ -26,7 +26,7 @@ Queste sono le limitazioni di Novell. iOS rispetto al desktop mono:
 
 A differenza di mono/.NET tradizionale, il codice sull'iPhone viene compilato in anticipo in modo statico anziché essere compilato su richiesta da un compilatore JIT.
 
-La tecnologia [AOT completa](https://www.mono-project.com/docs/advanced/aot/#full-aot) di mono presenta alcune limitazioni rispetto ai generics, perché non tutte le possibili creazioni di istanze generiche possono essere determinate in anticipo in fase di compilazione. Questo non è un problema per i Runtime .NET o mono normali perché il codice viene sempre compilato in fase di esecuzione usando il compilatore just-in-time. Questa operazione costituisce tuttavia una sfida per un compilatore statico come Novell. iOS.
+La tecnologia [AOT completa](https://www.mono-project.com/docs/advanced/aot/#full-aot) di mono presenta alcune limitazioni rispetto ai generics, perché non tutte le possibili creazioni di istanze generiche possono essere determinate in anticipo in fase di compilazione. Questo non è un problema per i Runtime .NET o mono normali perché il codice viene sempre compilato in fase di esecuzione usando il compilatore just-in-time. Questa operazione costituisce tuttavia una sfida per un compilatore statico come Xamarin.iOS.
 
 Di seguito sono riportati alcuni dei problemi comuni eseguiti dagli sviluppatori:
 
@@ -34,7 +34,7 @@ Di seguito sono riportati alcuni dei problemi comuni eseguiti dagli sviluppatori
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Le sottoclassi generiche di NSObjects sono limitate
 
-Novell. iOS dispone attualmente di un supporto limitato per la creazione di sottoclassi generiche della classe NSObject, ad esempio nessun supporto per i metodi generici. A partire da 7.2.1, è possibile usare le sottoclassi generiche di NSObjects, come questa:
+Xamarin.iOS dispone attualmente di un supporto limitato per la creazione di sottoclassi generiche della classe NSObject, ad esempio nessun supporto per i metodi generici. A partire da 7.2.1, è possibile usare le sottoclassi generiche di NSObjects, come questa:
 
 ```csharp
 class Foo<T> : UIView {
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>Nessuna generazione di codice dinamico
 
-Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Novell. iOS non supporta alcuna forma di generazione del codice dinamico. tra cui:
+Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Xamarin.iOS non supporta alcuna forma di generazione del codice dinamico. tra cui:
 
 - System. Reflection. Emit non è disponibile.
 - Nessun supporto per System. Runtime. Remoting.
@@ -99,7 +99,7 @@ In mono questi Bridge vengono implementati dal compilatore just-in-time. Quando 
 
 ## <a name="no-remoting"></a>Nessuna comunicazione remota
 
-Lo stack di comunicazione remota non è disponibile in Novell. iOS.
+Lo stack di comunicazione remota non è disponibile in Xamarin.iOS.
 
  <a name="Runtime_Disabled_Features" />
 
@@ -120,4 +120,4 @@ Le funzionalità seguenti sono state disabilitate nel runtime iOS di mono:
 
 L'API .NET esposta è un subset del Framework completo, in quanto non tutti gli elementi sono disponibili in iOS. Per un [elenco degli assembly attualmente supportati](~/cross-platform/internals/available-assemblies.md), vedere le domande frequenti.
 
-In particolare, il profilo API usato da Novell. iOS non include System. Configuration, pertanto non è possibile usare file XML esterni per configurare il comportamento del runtime.
+In particolare, il profilo API usato da Xamarin.iOS non include System. Configuration, pertanto non è possibile usare file XML esterni per configurare il comportamento del runtime.

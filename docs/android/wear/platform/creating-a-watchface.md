@@ -37,13 +37,13 @@ Per implementare un servizio di controllo del viso, è necessario quanto segue:
 
 - Android 5,0 (livello API 21) o versione successiva nel dispositivo o nell'emulatore Wear.
 
-- È necessario aggiungere le [librerie di supporto Novell Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Novell. Android.
+- È necessario aggiungere le [librerie di supporto Novell Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Xamarin.Android.
 
 Sebbene Android 5,0 sia il livello API minimo per l'implementazione di un servizio Watch Face, è consigliabile Android 5,1 o versione successiva. I dispositivi Android Wear che eseguono Android 5,1 (API 22) o versioni successive consentono di usare app per il controllo di ciò che viene visualizzato sullo schermo quando il dispositivo è in modalità di *ambiente* a basso consumo. Quando il dispositivo lascia la modalità di *ambiente* a basso consumo, è in modalità *interattiva* . Per altre informazioni su queste modalità, vedere [mantenere visibile l'app](https://developer.android.com/training/wearables/apps/always-on.html).
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di app
 
-Creare un nuovo progetto Android Wear 1,0 denominato **WatchFace** (per altre informazioni sulla creazione di nuovi progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
+Creare un nuovo progetto Android Wear 1,0 denominato **WatchFace** (per altre informazioni sulla creazione di nuovi progetti Xamarin.Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -59,11 +59,11 @@ Impostare il nome del pacchetto su `com.xamarin.watchface`:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-vs.png "Impostare il nome del pacchetto su com. Novell. Watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
+[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-vs.png "Impostare il nome del pacchetto su com. Xamarin.Watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-xs.png "Impostare il nome del pacchetto su com. Novell. Watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
+[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-xs.png "Impostare il nome del pacchetto su com. Xamarin.Watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -84,23 +84,23 @@ Abilitare inoltre le autorizzazioni **Internet** e **Wakelock** :
 
 Scaricare quindi [anteprima. png](creating-a-watchface-images/preview.png) &ndash; questa operazione verrà aggiunta alla cartella **drawables** più avanti in questa procedura dettagliata.
 
-## <a name="add-the-xamarinandroid-wear-package"></a>Aggiungere il pacchetto di Novell. Android Wear
+## <a name="add-the-xamarinandroid-wear-package"></a>Aggiungere il pacchetto di Xamarin.Android Wear
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Avviare Gestione pacchetti NuGet (in Visual Studio fare clic con il pulsante destro del mouse su **riferimenti** nel **Esplora soluzioni** e scegliere **Gestisci pacchetti NuGet...** ). Aggiornare il progetto alla versione stabile più recente di **Novell. Android. Wear**:
+Avviare Gestione pacchetti NuGet (in Visual Studio fare clic con il pulsante destro del mouse su **riferimenti** nel **Esplora soluzioni** e scegliere **Gestisci pacchetti NuGet...** ). Aggiornare il progetto alla versione stabile più recente di **Xamarin.Android. Wear**:
 
-[![Aggiunta di gestione pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Aggiungere il pacchetto Novell. Android. Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
+[![Aggiunta di gestione pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Aggiungere il pacchetto Xamarin.Android. Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
-Successivamente, se è installato **Novell. Android. support. v13** , disinstallarlo:
+Successivamente, se è installato **Xamarin.Android. support. v13** , disinstallarlo:
 
-[![Rimozione di gestione pacchetti NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Rimuovere Novell. support. v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
+[![Rimozione di gestione pacchetti NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Rimuovere Xamarin.support. v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Avviare Gestione pacchetti NuGet (in Visual Studio per Mac, fare clic con il pulsante destro del mouse su **pacchetti** nel **riquadro soluzione** e selezionare **Aggiungi pacchetti...** ). Aggiornare il progetto alla versione stabile più recente di **Novell. Android. Wear**:
+Avviare Gestione pacchetti NuGet (in Visual Studio per Mac, fare clic con il pulsante destro del mouse su **pacchetti** nel **riquadro soluzione** e selezionare **Aggiungi pacchetti...** ). Aggiornare il progetto alla versione stabile più recente di **Xamarin.Android. Wear**:
 
-[![Aggiunta di gestione pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Aggiungere il pacchetto Novell. Android. Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
+[![Aggiunta di gestione pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Aggiungere il pacchetto Xamarin.Android. Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 

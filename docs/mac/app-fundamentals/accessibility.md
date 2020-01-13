@@ -1,6 +1,6 @@
 ---
 title: Accessibilità in macOS
-description: Questo documento descrive come usare le funzionalità di accessibilità macOS in un'app Novell. Mac. Viene descritta la descrizione degli elementi dell'interfaccia utente negli storyboard e nel codice, nei controlli personalizzati e nell'accessibilità del test.
+description: Questo documento descrive come usare le funzionalità di accessibilità macOS in un'app Xamarin.Mac. Viene descritta la descrizione degli elementi dell'interfaccia utente negli storyboard e nel codice, nei controlli personalizzati e nell'accessibilità del test.
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
@@ -27,14 +27,14 @@ AppKit usa il protocollo `NSAccessibility` per esporre le API che consentono di 
 
 ### <a name="storyboard-files"></a>File storyboard
 
-Novell. Mac usa il Interface Builder Xcode per modificare i file dello storyboard.
+Xamarin.Mac usa il Interface Builder Xcode per modificare i file dello storyboard.
 Le informazioni di accessibilità possono essere modificate in **Identity Inspector** quando si seleziona un controllo nell'area di progettazione, come illustrato nella schermata seguente:
 
 [![Aggiunta dell'accessibilità in Interface Builder di Xcode](accessibility-images/xcode.png "Aggiunta dell'accessibilità in Interface Builder di Xcode")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Codice
 
-Novell. Mac non è attualmente esposto come Setter `AccessibilityLabel`.  Aggiungere il seguente metodo helper per impostare l'etichetta di accessibilità:
+Xamarin.Mac non è attualmente esposto come Setter `AccessibilityLabel`.  Aggiungere il seguente metodo helper per impostare l'etichetta di accessibilità:
 
 ```csharp
 public static class AccessibilityHelper

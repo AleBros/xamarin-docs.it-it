@@ -43,7 +43,7 @@ ms.locfileid: "73015958"
 
 * Supporto per CocoaPods 1,0
 * Miglioramento dell'affidabilità del binding CocoaPods compilando prima un `.framework` nativo e quindi associando
-* Copiare `.framework` CocoaPods e la definizione di associazione in una directory `Binding` per rendere più semplice l'integrazione con i progetti di binding Novell. iOS e Novell. Mac
+* Copiare `.framework` CocoaPods e la definizione di associazione in una directory `Binding` per rendere più semplice l'integrazione con i progetti di binding Xamarin.iOS e Xamarin.Mac
 
 ## <a name="30-october-5-2015"></a>3,0 (5 ottobre 2015)
 

@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 7. XAML e codice
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 7. XAML e codice'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 7. XAML e codice'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
@@ -19,13 +19,13 @@ ms.locfileid: "61334740"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
-Xamarin. Forms supporta un linguaggio di markup basato su XML denominato l'Extensible Application Markup Language o XAML (si pronuncia "zammel"). XAML offre un'alternativa al linguaggio c# nella definizione del layout dell'interfaccia utente di un'applicazione xamarin. Forms e definire associazioni tra elementi dell'interfaccia utente e i dati sottostanti.
+Xamarin.Forms supporta un linguaggio di markup basato su XML denominato l'Extensible Application Markup Language o XAML (si pronuncia "zammel"). XAML offre un'alternativa al linguaggio c# nella definizione del layout dell'interfaccia utente di un'applicazione Xamarin.Forms e definire associazioni tra elementi dell'interfaccia utente e i dati sottostanti.
 
 ## <a name="properties-and-attributes"></a>Proprietà e gli attributi
 
-Strutture e classi xamarin. Forms diventano elementi XML in XAML e proprietà di queste classi e strutture diventano attributi XML. Per creare un'istanza in XAML, una classe in genere deve avere un costruttore pubblico senza parametri. Qualsiasi proprietà impostata in XAML deve avere pubblico `set` le funzioni di accesso.
+Strutture e classi Xamarin.Forms diventano elementi XML in XAML e proprietà di queste classi e strutture diventano attributi XML. Per creare un'istanza in XAML, una classe in genere deve avere un costruttore pubblico senza parametri. Qualsiasi proprietà impostata in XAML deve avere pubblico `set` le funzioni di accesso.
 
 Per le proprietà dei tipi di dati di base (`string`, `double`, `bool`e così via), il parser XAML Usa lo standard `TryParse` metodi per convertire questi tipi di impostazioni degli attributi. Il parser XAML può gestire anche facilmente i tipi di enumerazione ed è possibile combinare i membri dell'enumerazione se il tipo di enumerazione è contrassegnato con il `Flags` attributo.
 
@@ -39,7 +39,7 @@ Talvolta una proprietà deve essere impostata su un oggetto che non può essere 
 
 ## <a name="adding-a-xaml-page-to-your-project"></a>Aggiunta di una pagina XAML al progetto
 
-Libreria di classi portabile xamarin. Forms può contenere una pagina XAML quando viene creato o è possibile aggiungere una pagina XAML a un progetto esistente. Nella finestra di dialogo per aggiungere un nuovo elemento, scegliere l'elemento che fa riferimento a una pagina XAML o `ContentPage` e XAML. (Non un `ContentView`.)
+Libreria di classi portabile Xamarin.Forms può contenere una pagina XAML quando viene creato o è possibile aggiungere una pagina XAML a un progetto esistente. Nella finestra di dialogo per aggiungere un nuovo elemento, scegliere l'elemento che fa riferimento a una pagina XAML o `ContentPage` e XAML. (Non un `ContentView`.)
 
 > [!NOTE]
 > Opzioni di Visual Studio sono stati modificati perché è stato scritto in questo capitolo.
@@ -48,13 +48,13 @@ Vengono creati due file: un file XAML con l'estensione. nome del file XAML e un 
 
 Durante la fase di esecuzione, al termine del `InitializeComponent` chiamare, tutti gli elementi del file XAML sono stati creata un'istanza e inizializzati come se avessero stato creato nel codice c#.
 
-L'elemento radice nel file XAML è `ContentPage`. Il tag radice contiene almeno due dichiarazioni dello spazio dei nomi XML, uno per gli elementi di xamarin. Forms e l'altra definizione di un `x` prefisso per gli elementi e attributi intrinseci per tutte le implementazioni di XAML. Il tag radice contiene anche un `x:Class` attributo che indica dello spazio dei nomi e il nome della classe che deriva da `ContentPage`. Questo corrisponde al nome dello spazio dei nomi e classe nel file code-behind.
+L'elemento radice nel file XAML è `ContentPage`. Il tag radice contiene almeno due dichiarazioni dello spazio dei nomi XML, uno per gli elementi di Xamarin.Forms e l'altra definizione di un `x` prefisso per gli elementi e attributi intrinseci per tutte le implementazioni di XAML. Il tag radice contiene anche un `x:Class` attributo che indica dello spazio dei nomi e il nome della classe che deriva da `ContentPage`. Questo corrisponde al nome dello spazio dei nomi e classe nel file code-behind.
 
 La combinazione di codice e XAML viene dimostrata la [ **CodePlusXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07) esempio.
 
 ## <a name="the-xaml-compiler"></a>Il compilatore XAML
 
-Xamarin. Forms ha un compilatore XAML, ma l'utilizzo è facoltativo in base all'utilizzo di un [ `XamlCompilationAttribute` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute). Se non viene compilato il XAML, il XAML viene analizzato in fase di compilazione e il file XAML è incorporato nella libreria di classi Portabile, in cui viene anche analizzato in fase di esecuzione. Se viene compilato il XAML, il processo di compilazione Converte il XAML in un formato binario e l'elaborazione runtime risulta più efficiente.
+Xamarin.Forms ha un compilatore XAML, ma l'utilizzo è facoltativo in base all'utilizzo di un [ `XamlCompilationAttribute` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute). Se non viene compilato il XAML, il XAML viene analizzato in fase di compilazione e il file XAML è incorporato nella libreria di classi Portabile, in cui viene anche analizzato in fase di esecuzione. Se viene compilato il XAML, il processo di compilazione Converte il XAML in un formato binario e l'elaborazione runtime risulta più efficiente.
 
 ## <a name="platform-specificity-in-the-xaml-file"></a>Specificità piattaforma nel file XAML
 

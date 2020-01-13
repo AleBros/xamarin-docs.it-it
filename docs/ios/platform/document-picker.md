@@ -1,6 +1,6 @@
 ---
-title: Selezione documenti in Novell. iOS
-description: Questo documento descrive la selezione dei documenti iOS e illustra come usarlo in Novell. iOS. Vengono esaminati iCloud, documenti, codice di installazione comune, estensioni del provider di documenti e altro ancora.
+title: Selezione documenti in Xamarin.iOS
+description: Questo documento descrive la selezione dei documenti iOS e illustra come usarlo in Xamarin.iOS. Vengono esaminati iCloud, documenti, codice di installazione comune, estensioni del provider di documenti e altro ancora.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032585"
 ---
-# <a name="document-picker-in-xamarinios"></a>Selezione documenti in Novell. iOS
+# <a name="document-picker-in-xamarinios"></a>Selezione documenti in Xamarin.iOS
 
 Il selettore documenti consente la condivisione dei documenti tra le app. Questi documenti possono essere archiviati in iCloud o in una directory di un'altra app. I documenti vengono condivisi tramite il set di [estensioni del provider di documenti](~/ios/platform/extensions.md) installato dall'utente sul dispositivo. 
 
@@ -152,7 +152,7 @@ namespace DocPicker
 }
 ```
 
-La classe `GenericTextDocument` presentata sopra verrà usata in questo articolo quando si lavora con la selezione documenti e i documenti esterni in un'applicazione Novell. iOS 8.
+La classe `GenericTextDocument` presentata sopra verrà usata in questo articolo quando si lavora con la selezione documenti e i documenti esterni in un'applicazione Xamarin.iOS 8.
 
 ## <a name="asynchronous-file-coordination"></a>Coordinamento file asincrono
 
@@ -433,7 +433,7 @@ Con le nozioni di base sull'uso dei documenti basati su iCloud, insieme alle mod
 
 ## <a name="enabling-icloud-in-xamarin"></a>Abilitazione di iCloud in Novell
 
-Prima di poter usare la selezione documenti in un'applicazione Novell. iOS, è necessario abilitare il supporto iCloud nell'applicazione e tramite Apple. 
+Prima di poter usare la selezione documenti in un'applicazione Xamarin.iOS, è necessario abilitare il supporto iCloud nell'applicazione e tramite Apple. 
 
 La procedura seguente illustra il processo di provisioning per iCloud.
 
@@ -1120,7 +1120,7 @@ Dopo che è stata eseguita la migrazione dell'account di un utente all'unità iC
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato le modifiche apportate alle API iCloud esistenti necessarie per supportare l'unità iCloud e il nuovo controller di visualizzazione selezione documento. Ha trattato il coordinamento dei file e il motivo per cui è importante quando si lavora con documenti basati sul cloud. È stata illustrata la configurazione necessaria per abilitare i documenti basati sul cloud in un'applicazione Novell. iOS e viene fornita un'introduzione introduttiva all'uso di documenti all'esterno di un contenitore di applicazioni dell'app usando il controller di visualizzazione di selezione documento.
+Questo articolo ha trattato le modifiche apportate alle API iCloud esistenti necessarie per supportare l'unità iCloud e il nuovo controller di visualizzazione selezione documento. Ha trattato il coordinamento dei file e il motivo per cui è importante quando si lavora con documenti basati sul cloud. È stata illustrata la configurazione necessaria per abilitare i documenti basati sul cloud in un'applicazione Xamarin.iOS e viene fornita un'introduzione introduttiva all'uso di documenti all'esterno di un contenitore di applicazioni dell'app usando il controller di visualizzazione di selezione documento.
 
 Inoltre, in questo articolo sono state brevemente analizzate le estensioni dei provider di documenti e il motivo per cui lo sviluppatore ne deve essere a conoscenza durante la scrittura di applicazioni in grado di gestire documenti basati sul cloud.
 

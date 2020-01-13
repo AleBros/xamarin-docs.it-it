@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 8. Codice e XAML in armonia
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 8. Codice e XAML in armonia'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 8. Codice e XAML in armonia'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED

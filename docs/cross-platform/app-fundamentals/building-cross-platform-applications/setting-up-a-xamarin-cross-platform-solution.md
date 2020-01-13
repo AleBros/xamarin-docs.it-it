@@ -53,7 +53,7 @@ I progetti di base devono implementare la maggior parte delle funzionalità non 
 
 ### <a name="platform-specific-application-projects"></a>Progetti di applicazioni specifiche della piattaforma
 
-Per i progetti specifici della piattaforma è necessario fare riferimento agli assembly necessari per eseguire l'associazione a ogni SDK della piattaforma (Novell. iOS, Novell. Android, Novell. Mac o Windows) e al progetto .NET Standard.
+Per i progetti specifici della piattaforma è necessario fare riferimento agli assembly necessari per eseguire l'associazione a ogni SDK della piattaforma (Xamarin.iOS, Xamarin.Android, Xamarin.Mac o Windows) e al progetto .NET Standard.
 
 I progetti specifici della piattaforma devono implementare:
 
@@ -74,11 +74,11 @@ Esempi specifici del modo in cui i progetti devono essere strutturati vengono fo
 È importante impostare l'azione di compilazione corretta per determinati tipi di file. Questo elenco Mostra l'azione di compilazione per alcuni tipi di file comuni:
 
 - **Tutti C# i file** -azione di compilazione: compila
-- **Immagini in Novell. iOS & Windows** -azione di compilazione: contenuto
-- **XIB e i file storyboard in Novell. iOS** -azione di compilazione: InterfaceDefinition
+- **Immagini in Xamarin.iOS & Windows** -azione di compilazione: contenuto
+- **XIB e i file storyboard in Xamarin.iOS** -azione di compilazione: InterfaceDefinition
 - **Immagini e layout XML in Android** -azione di compilazione: AndroidResource
 - **File XAML in progetti Windows** -azione di compilazione: pagina
-- **File XAML Novell. Forms** -azione di compilazione: EmbeddedResource
+- **File XAML Xamarin.Forms** -azione di compilazione: EmbeddedResource
 
 L'IDE rileva in genere il tipo di file e suggerisce l'azione di compilazione corretta.
 

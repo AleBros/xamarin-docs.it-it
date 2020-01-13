@@ -1,6 +1,6 @@
 ---
 title: I percorsi e le linee di SkiaSharp
-description: Questo articolo illustra come usare SkiaSharp per tracciare linee e i percorsi di grafica nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come usare SkiaSharp per tracciare linee e i percorsi di grafica nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
 ms.technology: xamarin-skiasharp

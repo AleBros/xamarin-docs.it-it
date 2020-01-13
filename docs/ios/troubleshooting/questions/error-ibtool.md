@@ -24,7 +24,7 @@ Apple ha [corretto](https://developer.apple.com/library/content/documentation/Xc
 
 ## <a name="description-of-the-problem"></a>Descrizione del problema
 
-Il comando `ibtool` in Xcode 6,0 presenta un bug in OS X 10,10 Yosemite. Novell. iOS USA `ibtool` di Xcode per compilare gli storyboard e i file di `XIB`.
+Il comando `ibtool` in Xcode 6,0 presenta un bug in OS X 10,10 Yosemite. Xamarin.iOS USA `ibtool` di Xcode per compilare gli storyboard e i file di `XIB`.
 
 Altre informazioni sul bug in relazione a Xcode sono disponibili nel post di Stack Overflow seguente: [https://stackoverflow.com/questions/25754763/cant-open-storyboard](https://stackoverflow.com/questions/25754763/cant-open-storyboard)
 

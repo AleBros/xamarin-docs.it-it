@@ -22,14 +22,14 @@ _Compressione dei layout rimuove i layout specificati dall'albero visuale nel te
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin. Forms esegue il layout usando due serie di chiamate al metodo ricorsivo:
+Xamarin.Forms esegue il layout usando due serie di chiamate al metodo ricorsivo:
 
 - Layout in cui inizia la parte superiore della struttura visiva con una pagina e procede attraverso tutti i rami dell'albero visuale per includere ogni elemento visivo in una pagina. Gli elementi che sono elementi padre agli altri elementi sono responsabili per il ridimensionamento e posizionamento relativi elementi figlio rispetto a se stessi.
 - Invalidamento è il processo mediante il quale una modifica in un elemento in una pagina attiva un nuovo ciclo di layout. Gli elementi vengono considerati non validi quando le dimensioni corrette o la posizione non è più necessario. Ogni elemento nell'albero visuale che contiene elementi figlio venga visualizzato un avviso ogni volta che uno dei relativi elementi figlio cambia le dimensioni. Pertanto, una modifica delle dimensioni di un elemento nell'albero visuale può causare modifiche che si propagano nell'albero.
 
-Per altre informazioni sul modo in cui viene eseguita layout di xamarin. Forms, vedere [creazione di un Layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
+Per altre informazioni sul modo in cui viene eseguita layout di Xamarin.Forms, vedere [creazione di un Layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
 
-Il risultato del processo di layout è una gerarchia di controlli nativi. Tuttavia, questa gerarchia include renderer contenitore aggiuntivo e wrapper per i renderer di piattaforma, ulteriormente ciò fa aumentare erroneamente la gerarchia di visualizzazione di annidamento. Maggiore è la profondità il livello di annidamento, maggiore è la quantità di lavoro che xamarin. Forms deve eseguire per visualizzare una pagina. Per layout complessi, la gerarchia di visualizzazione può essere sia completa e generica, con più livelli di annidamento.
+Il risultato del processo di layout è una gerarchia di controlli nativi. Tuttavia, questa gerarchia include renderer contenitore aggiuntivo e wrapper per i renderer di piattaforma, ulteriormente ciò fa aumentare erroneamente la gerarchia di visualizzazione di annidamento. Maggiore è la profondità il livello di annidamento, maggiore è la quantità di lavoro che Xamarin.Forms deve eseguire per visualizzare una pagina. Per layout complessi, la gerarchia di visualizzazione può essere sia completa e generica, con più livelli di annidamento.
 
 Ad esempio, si consideri il seguente pulsante dall'applicazione di esempio per l'accesso a Facebook:
 
@@ -59,7 +59,7 @@ La gerarchia di visualizzazione annidati risultanti può essere esaminata con [X
 
 ![](layout-compression-images/no-compression.png "Gerarchia di visualizzazione per il pulsante di Facebook")
 
-Compressione del layout, che è disponibile per le applicazioni xamarin. Forms nelle piattaforme Android e iOS, è possibile rendere flat la visualizzazione di annidamento rimuovendo i layout specificati dalla struttura visiva, che può migliorare le prestazioni di rendering della pagina. Il miglioramento delle prestazioni che viene recapitato varia a seconda della complessità di una pagina, la versione del sistema operativo in uso e il dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
+Compressione del layout, che è disponibile per le applicazioni Xamarin.Forms nelle piattaforme Android e iOS, è possibile rendere flat la visualizzazione di annidamento rimuovendo i layout specificati dalla struttura visiva, che può migliorare le prestazioni di rendering della pagina. Il miglioramento delle prestazioni che viene recapitato varia a seconda della complessità di una pagina, la versione del sistema operativo in uso e il dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
 
 > [!NOTE]
 > Questo articolo è incentrato sui risultati di applicare la compressione di layout in Android, è ugualmente applicabile ai dispositivi iOS.
@@ -104,7 +104,7 @@ Rispetto alla gerarchia di vista annidata originale delle 17 viste, rappresenta 
 
 ### <a name="fast-renderers"></a>Renderer veloci
 
-I renderer veloci riducono l'ingrandimento e i costi per il rendering dei controlli di xamarin. Forms in Android appiattendo la gerarchia di visualizzazione nativi risultante. Questo migliora ulteriormente le prestazioni creando un minor numero di oggetti, che comporta a sua volta in un struttura ad albero visuale meno complesso e minore consumo di memoria. Per altre informazioni sui renderer veloci, vedere [renderer veloci](~/xamarin-forms/internals/fast-renderers.md).
+I renderer veloci riducono l'ingrandimento e i costi per il rendering dei controlli di Xamarin.Forms in Android appiattendo la gerarchia di visualizzazione nativi risultante. Questo migliora ulteriormente le prestazioni creando un minor numero di oggetti, che comporta a sua volta in un struttura ad albero visuale meno complesso e minore consumo di memoria. Per altre informazioni sui renderer veloci, vedere [renderer veloci](~/xamarin-forms/internals/fast-renderers.md).
 
 Per il pulsante di Facebook nell'applicazione di esempio, la combinazione di compressione del layout e renderer veloci produce una gerarchia la vista annidata di 8 visualizzazioni:
 

@@ -1,6 +1,6 @@
 ---
 title: Dizionari risorse
-description: Risorse XAML sono oggetti che possono essere condivisa e usati nuovamente in un'applicazione xamarin. Forms.
+description: Risorse XAML sono oggetti che possono essere condivisa e usati nuovamente in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
@@ -19,9 +19,9 @@ ms.locfileid: "70228082"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
-_Le risorse XAML sono definizioni di oggetti che possono essere condivisi e riutilizzati in un'applicazione Novell. Forms. Questi oggetti risorsa vengono archiviati in un dizionario risorse._
+_Le risorse XAML sono definizioni di oggetti che possono essere condivisi e riutilizzati in un'applicazione Xamarin.Forms. Questi oggetti risorsa vengono archiviati in un dizionario risorse._
 
-Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) è un repository per le risorse utilizzate da un'applicazione xamarin. Forms. Le risorse tipiche che vengono archiviate in un `ResourceDictionary` includono [stili](~/xamarin-forms/user-interface/styles/index.md), [modelli di controllo](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [modelli di data](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colori e dei convertitori di tipi.
+Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) è un repository per le risorse utilizzate da un'applicazione Xamarin.Forms. Le risorse tipiche che vengono archiviate in un `ResourceDictionary` includono [stili](~/xamarin-forms/user-interface/styles/index.md), [modelli di controllo](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [modelli di data](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colori e dei convertitori di tipi.
 
 In XAML, le risorse che vengono archiviati in un `ResourceDictionary` possono essere recuperate e applicato agli elementi usando il `StaticResource` estensione di markup. In c#, risorse possono anche essere definite un `ResourceDictionary` recuperato e quindi applicata agli elementi con un indicizzatore basato su stringa. Tuttavia, c'è molto vantaggiosa all'uso di un `ResourceDictionary` nel linguaggio c#, come oggetti condivisi possono semplicemente essere archiviati come campi o proprietà e si accede direttamente senza dover prima recuperarli da un dizionario.
 
@@ -32,14 +32,14 @@ Le risorse vengono definite un [ `ResourceDictionary` ](xref:Xamarin.Forms.Resou
 - Il [ `Resources` ](xref:Xamarin.Forms.Application.Resources) proprietà di qualsiasi classe che deriva da [`Application`](xref:Xamarin.Forms.Application)
 - Il [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) proprietà di qualsiasi classe che deriva da [`VisualElement`](xref:Xamarin.Forms.Application)
 
-Un programma di xamarin. Forms contiene una sola classe che deriva da `Application` , ma Usa spesso molte classi che derivano da `VisualElement`, inclusi i controlli, layout e pagine. Uno di questi oggetti possono avere relativi `Resources` impostata su un `ResourceDictionary`. Scegliere dove inserire un determinato `ResourceDictionary` impatti dove le risorse possono essere usate:
+Un programma di Xamarin.Forms contiene una sola classe che deriva da `Application` , ma Usa spesso molte classi che derivano da `VisualElement`, inclusi i controlli, layout e pagine. Uno di questi oggetti possono avere relativi `Resources` impostata su un `ResourceDictionary`. Scegliere dove inserire un determinato `ResourceDictionary` impatti dove le risorse possono essere usate:
 
 - Le risorse in un `ResourceDictionary` che è collegato a una visualizzazione, ad esempio `Button` o `Label` può essere applicato solo all'oggetto in questione, in modo che questo non è molto utile.
 - Le risorse in un `ResourceDictionary` collegato a un layout, ad esempio `StackLayout` o `Grid` può essere applicato a tutti gli elementi figlio di tale layout e il layout.
 - Le risorse in un `ResourceDictionary` definiti nella pagina di livello può essere applicato alla pagina e a tutti i relativi elementi figlio.
 - Le risorse in un `ResourceDictionary` definiti nell'applicazione livello può essere applicato in tutta l'applicazione.
 
-il XAML seguente mostra le risorse definite nel livello dell'applicazione `ResourceDictionary` nella **app** file creato come parte del programma di xamarin. Forms standard:
+il XAML seguente mostra le risorse definite nel livello dell'applicazione `ResourceDictionary` nella **app** file creato come parte del programma di Xamarin.Forms standard:
 
 ```xaml
 <Application ...>
@@ -60,7 +60,7 @@ il XAML seguente mostra le risorse definite nel livello dell'applicazione `Resou
 
 Ciò `ResourceDictionary` definisce tre [ `Color` ](xref:Xamarin.Forms.Color) risorse e un [ `Style` ](xref:Xamarin.Forms.Style) risorsa. Per altre informazioni sul `App` classe, vedere [classe App](~/xamarin-forms/app-fundamentals/application-class.md).
 
-A partire da xamarin. Forms 3.0, l'impostazione esplicita `ResourceDictionary` tag non sono necessari. Il `ResourceDictionary` oggetto viene creato automaticamente, e consente di inserire le risorse direttamente tra il `Resources` i tag di elemento di proprietà:
+A partire da Xamarin.Forms 3.0, l'impostazione esplicita `ResourceDictionary` tag non sono necessari. Il `ResourceDictionary` oggetto viene creato automaticamente, e consente di inserire le risorse direttamente tra il `Resources` i tag di elemento di proprietà:
 
 ```xaml
 <Application ...>
@@ -215,7 +215,7 @@ I dizionari risorse Uniti combinano uno [`ResourceDictionary`](xref:Xamarin.Form
 </ContentPage>
 ```
 
-Questa sintassi non crea un'istanza della `MyResourceDictionary` classe. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) la proprietà, il file code-behind (**MyResourceDictionary.XAML.cs**) non è obbligatorio e `x:Class` l'attributo può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Novell. Forms creerà automaticamente un'istanza [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)di, di conseguenza `ResourceDictionary` i tag esterni non sono obbligatori.
+Questa sintassi non crea un'istanza della `MyResourceDictionary` classe. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) la proprietà, il file code-behind (**MyResourceDictionary.XAML.cs**) non è obbligatorio e `x:Class` l'attributo può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Xamarin.Forms creerà automaticamente un'istanza [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)di, di conseguenza `ResourceDictionary` i tag esterni non sono obbligatori.
 
 > [!IMPORTANT]
 > La [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) proprietà può essere impostata solo da XAML.
@@ -268,7 +268,7 @@ In questo esempio viene illustrata `MyResourceDictionary`un'istanza di, che risi
 > [!IMPORTANT]
 > Può essere presente un solo `MergedDictionaries` tag di elemento Property in un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)oggetto, ma è possibile inserire il `ResourceDictionary` numero di oggetti desiderato.
 
-Durante l'unione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) condividono di risorse identici `x:Key` valori di attributo, xamarin. Forms Usa la precedenza di risorsa seguente:
+Durante l'unione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) condividono di risorse identici `x:Key` valori di attributo, Xamarin.Forms Usa la precedenza di risorsa seguente:
 
 1. Le risorse locali per il dizionario risorse.
 1. Le risorse contenute nei dizionari risorse uniti tramite il `MergedDictionaries` insieme, in ordine inverso sono elencati nel `MergedDictionaries` proprietà.

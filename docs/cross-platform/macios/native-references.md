@@ -1,6 +1,6 @@
 ---
 title: Riferimenti nativi progetti iOS, Mac e bindings
-description: I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Novell. iOS, Novell. Mac o di binding.
+description: I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Xamarin.iOS, Xamarin.Mac o di binding.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: davidortinau
@@ -15,12 +15,12 @@ ms.locfileid: "73015610"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Riferimenti nativi nei progetti iOS, Mac e bindings
 
-_I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Novell. iOS o Novell. Mac o in un progetto di associazione._
+_I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Xamarin.iOS o Xamarin.Mac o in un progetto di associazione._
 
-Poiché iOS 8,0 è stato possibile creare un Framework incorporato per condividere il codice tra le estensioni dell'app e l'app principale in Xcode. Utilizzando la funzionalità di riferimento nativo, sarà possibile utilizzare questi Framework incorporati (creati con Xcode) in Novell. iOS.
+Poiché iOS 8,0 è stato possibile creare un Framework incorporato per condividere il codice tra le estensioni dell'app e l'app principale in Xcode. Utilizzando la funzionalità di riferimento nativo, sarà possibile utilizzare questi Framework incorporati (creati con Xcode) in Xamarin.iOS.
 
 > [!IMPORTANT]
-> Non sarà possibile creare Framework incorporati da qualsiasi tipo di progetto Novell. iOS o Novell. Mac, i riferimenti nativi consentono solo il consumo di framework nativi (Objective-C) esistenti.
+> Non sarà possibile creare Framework incorporati da qualsiasi tipo di progetto Xamarin.iOS o Xamarin.Mac, i riferimenti nativi consentono solo il consumo di framework nativi (Objective-C) esistenti.
 
 <a name="Terminology" />
 
@@ -52,7 +52,7 @@ Se si è provato a distribuire questo framework di esempio con l'app, l'esecuzio
 
 ## <a name="working-with-embedded-frameworks"></a>Utilizzo di Framework incorporati
 
-È necessario completare due passaggi per lavorare con i Framework incorporati in un'app Novell. iOS o Novell. Mac: creazione di un Framework FAT e incorporamento del Framework.
+È necessario completare due passaggi per lavorare con i Framework incorporati in un'app Xamarin.iOS o Xamarin.Mac: creazione di un Framework FAT e incorporamento del Framework.
 
 <a name="Overview" />
 
@@ -68,9 +68,9 @@ Per risolvere questo problema, è possibile usare lo strumento da riga di comand
 
 ### <a name="embedding-a-framework"></a>Incorporamento di un Framework
 
-Il passaggio seguente è necessario per incorporare un Framework in un progetto Novell. iOS o Novell. Mac usando i riferimenti nativi:
+Il passaggio seguente è necessario per incorporare un Framework in un progetto Xamarin.iOS o Xamarin.Mac usando i riferimenti nativi:
 
-1. Creare una nuova o aprire un progetto Novell. iOS, Novell. Mac o di binding esistente.
+1. Creare una nuova o aprire un progetto Xamarin.iOS, Xamarin.Mac o di binding esistente.
 2. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **Aggiungi riferimento nativo**: 
 
     [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
@@ -87,7 +87,7 @@ Quando il progetto viene compilato, il Framework nativo verrà incorporato nel b
 
 ## <a name="app-extensions-and-embedded-frameworks"></a>Estensioni di app e Framework incorporati
 
-Novell. iOS internamente può sfruttare questa funzionalità per eseguire il collegamento al runtime di mono come Framework (quando la destinazione di distribuzione è > = iOS 8,0), riducendo in modo significativo le dimensioni dell'app per le app con estensioni (poiché il runtime di mono verrà incluso una sola volta per intero bundle dell'app, anziché una volta per l'app contenitore e una volta per ogni estensione.
+Xamarin.iOS internamente può sfruttare questa funzionalità per eseguire il collegamento al runtime di mono come Framework (quando la destinazione di distribuzione è > = iOS 8,0), riducendo in modo significativo le dimensioni dell'app per le app con estensioni (poiché il runtime di mono verrà incluso una sola volta per intero bundle dell'app, anziché una volta per l'app contenitore e una volta per ogni estensione.
 
 Le estensioni si collegano al runtime di mono come Framework, perché tutte le estensioni richiedono iOS 8,0.
 
@@ -97,4 +97,4 @@ App che non dispongono di estensioni e app destinate a iOS
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in modo dettagliato l'incorporamento di un Framework nativo in un'applicazione Novell. iOS o Novell. Mac.
+Questo articolo ha esaminato in modo dettagliato l'incorporamento di un Framework nativo in un'applicazione Xamarin.iOS o Xamarin.Mac.

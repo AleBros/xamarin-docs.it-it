@@ -1,6 +1,6 @@
 ---
-title: Compilazione XAML in xamarin. Forms
-description: Questo articolo illustra come XAML può essere compilato direttamente in linguaggio intermedio (IL) con il compilatore di xamarin. Forms XAML (XAMLC).
+title: Compilazione XAML in Xamarin.Forms
+description: Questo articolo illustra come XAML può essere compilato direttamente in linguaggio intermedio (IL) con il compilatore di Xamarin.Forms XAML (XAMLC).
 ms.prod: xamarin
 ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61075127"
 ---
-# <a name="xaml-compilation-in-xamarinforms"></a>Compilazione XAML in xamarin. Forms
+# <a name="xaml-compilation-in-xamarinforms"></a>Compilazione XAML in Xamarin.Forms
 
 _XAML può essere compilato direttamente in linguaggio intermedio (IL) con il compilatore XAML (XAMLC)._
 
@@ -58,7 +58,7 @@ public class HomePage : ContentPage
 In questo esempio, il controllo del XAML per la fase di compilazione il `HomePage` classe verrà eseguita e gli errori segnalati come parte del processo di compilazione.
 
 > [!NOTE]
-> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di associazione dati nelle applicazioni xamarin. Forms. Per altre informazioni, vedere [associazioni compilate](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di associazione dati nelle applicazioni Xamarin.Forms. Per altre informazioni, vedere [associazioni compilate](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

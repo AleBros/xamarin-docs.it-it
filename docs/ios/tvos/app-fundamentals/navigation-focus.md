@@ -1,6 +1,6 @@
 ---
 title: Uso della navigazione tvOS e messa a fuoco in Novell
-description: Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS.
+description: Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
@@ -16,21 +16,21 @@ ms.locfileid: "73030841"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
-_Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS._
+_Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS._
 
-Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e il modo in cui viene usato per gestire la [navigazione](#Navigation) nell'interfaccia utente di un'app Novell. tvOS. Si esaminerà il modo in cui i controlli di navigazione tvOS incorporati usano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione dell'interfaccia utente dell'app Novell. tvOS.
+Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e il modo in cui viene usato per gestire la [navigazione](#Navigation) nell'interfaccia utente di un'app Xamarin.tvOS. Si esaminerà il modo in cui i controlli di navigazione tvOS incorporati usano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione dell'interfaccia utente dell'app Xamarin.tvOS.
 
 [![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
 
 Si esaminerà ora il modo in cui lo stato attivo può essere usato con [Parallax](#Focus-and-Parallax) e *immagini sovrapposte* per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente.
 
-Infine, si esamineranno [gli aggiornamenti, gli aggiornamenti](#Working-with-Focus-Updates), le [guide](#Working-with-Focus-Guides)di messa [a](#Working-with-Focus-in-Collections) fuoco, le raccolte e l' [Abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Novell. tvOS. [](#Working-with-Focus)
+Infine, si esamineranno [gli aggiornamenti, gli aggiornamenti](#Working-with-Focus-Updates), le [guide](#Working-with-Focus-Guides)di messa [a](#Working-with-Focus-in-Collections) fuoco, le raccolte e l' [Abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Xamarin.tvOS. [](#Working-with-Focus)
 
 <a name="Navigation" />
 
 ## <a name="navigation"></a>Navigazione
 
-Gli utenti dell'app Novell. tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote). È necessario tenere presente questo aspetto durante la progettazione dell'interfaccia utente dell'app in modo che fluisca naturalmente, ma mantiene l'utente immerso nell'esperienza Apple TV.
+Gli utenti dell'app Xamarin.tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote). È necessario tenere presente questo aspetto durante la progettazione dell'interfaccia utente dell'app in modo che fluisca naturalmente, ma mantiene l'utente immerso nell'esperienza Apple TV.
 
 Un'app tvOS riuscita implementa la navigazione in modo da supportare agevolmente lo scopo dell'app e la struttura dei dati presentati senza richiamare l'attenzione sulla navigazione. Progettare la navigazione in modo che risulti naturale e familiare senza dominare l'interfaccia utente o disegnare lo stato attivo dal contenuto e dall'esperienza utente delle app.
 
@@ -272,7 +272,7 @@ Se questa proprietà è impostata su `true`, la visualizzazione immagine otterr�
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Novell. tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
+Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Xamarin.tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

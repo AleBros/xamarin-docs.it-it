@@ -1,6 +1,6 @@
 ---
-title: Suggerimenti per la risoluzione dei problemi per iOS 12 e Novell. iOS
-description: Questo articolo descrive le risorse che possono essere usate per la risoluzione dei problemi durante lo sviluppo di applicazioni Novell. iOS. Vengono illustrati i problemi noti, viene segnalato un nuovo problema e altre risorse per la risoluzione dei problemi.
+title: Suggerimenti per la risoluzione dei problemi per iOS 12 e Xamarin.iOS
+description: Questo articolo descrive le risorse che possono essere usate per la risoluzione dei problemi durante lo sviluppo di applicazioni Xamarin.iOS. Vengono illustrati i problemi noti, viene segnalato un nuovo problema e altre risorse per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
@@ -37,7 +37,7 @@ Segnalare nuovi problemi nella [community degli sviluppatori](https://developerc
 
 ## <a name="xamarin-forums-and-stack-overflow"></a>Forum e Stack Overflow di Novell
 
-Per informazioni su come implementare specifiche funzionalità iOS 12 in Novell. iOS, vedere:
+Per informazioni su come implementare specifiche funzionalità iOS 12 in Xamarin.iOS, vedere:
 
 - [Forum Novell](https://forums.xamarin.com/categories/ios)
 - [Overflow dello stack](https://stackoverflow.com/search?tab=newest&q=xamarin)

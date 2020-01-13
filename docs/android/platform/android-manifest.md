@@ -15,7 +15,7 @@ ms.locfileid: "73027807"
 ---
 # <a name="working-with-the-android-manifest"></a>Uso del manifesto Android
 
-**File AndroidManifest. XML** è un file potente della piattaforma Android che consente di descrivere le funzionalità e i requisiti dell'applicazione per Android. Tuttavia, l'utilizzo di tale servizio non è semplice. Novell. Android consente di ridurre al minimo questa difficoltà consentendo di aggiungere attributi personalizzati alle classi, che verranno quindi usate per generare automaticamente il manifesto. Il nostro obiettivo è che il 99% degli utenti non debba mai modificare manualmente **file AndroidManifest. XML**. 
+**File AndroidManifest. XML** è un file potente della piattaforma Android che consente di descrivere le funzionalità e i requisiti dell'applicazione per Android. Tuttavia, l'utilizzo di tale servizio non è semplice. Xamarin.Android consente di ridurre al minimo questa difficoltà consentendo di aggiungere attributi personalizzati alle classi, che verranno quindi usate per generare automaticamente il manifesto. Il nostro obiettivo è che il 99% degli utenti non debba mai modificare manualmente **file AndroidManifest. XML**. 
 
 **File AndroidManifest. XML** viene generato come parte del processo di compilazione e il codice XML trovato all'interno di **Properties/file AndroidManifest. XML** viene unito a XML generato da attributi personalizzati. Il **file file AndroidManifest. XML** risultante Unito si trova nella sottodirectory **obj** ; ad esempio, si trova in **obj/debug/Android/file AndroidManifest. XML** per le compilazioni di debug. Il processo di Unione è semplice: USA gli attributi personalizzati all'interno del codice per generare elementi XML e *inserisce* tali elementi in **file AndroidManifest. XML**. 
 
@@ -55,7 +55,7 @@ L'attributo `[Activity]` non ha alcun effetto sui tipi di `abstract`; i tipi di 
 
 ### <a name="activity-name"></a>Nome attività
 
-A partire da Novell. Android 5,1, il nome del tipo di un'attività è basato sull'MD5SUM del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. (Prima di Novell. Android 5,1, il nome di tipo predefinito dell'attività è stato creato dallo spazio dei nomi minuscolo e dal nome della classe). 
+A partire da Xamarin.Android 5,1, il nome del tipo di un'attività è basato sull'MD5SUM del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. (Prima di Xamarin.Android 5,1, il nome di tipo predefinito dell'attività è stato creato dallo spazio dei nomi minuscolo e dal nome della classe). 
 
 Se si desidera eseguire l'override di questa impostazione predefinita e specificare in modo esplicito il nome dell'attività, utilizzare la proprietà [`Name`](xref:Android.App.ActivityAttribute.Name) : 
 

@@ -1,6 +1,6 @@
 ---
-title: Pin mappa di Novell. Forms
-description: Questo articolo illustra come creare pin in una mappa Novell. Forms.
+title: Pin mappa di Xamarin.Forms
+description: Questo articolo illustra come creare pin in una mappa Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/27/2019
 ms.locfileid: "74556167"
 ---
-# <a name="xamarinforms-map-pins"></a>Pin mappa di Novell. Forms
+# <a name="xamarinforms-map-pins"></a>Pin mappa di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-Il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) Novell. Forms consente di contrassegnare le posizioni con [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetti. Un `Pin` è un marcatore di mappa che apre una finestra informazioni quando viene toccato:
+Il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) Xamarin.Forms consente di contrassegnare le posizioni con [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetti. Un `Pin` è un marcatore di mappa che apre una finestra informazioni quando viene toccato:
 
 [![Screenshot di un PIN della mappa e della relativa finestra informazioni, in iOS e Android](pins-images/pin-and-information-window.png "Pin mappa con finestra informazioni")](pins-images/pin-and-information-window-large.png#lightbox "Pin mappa con finestra informazioni")
 
@@ -264,11 +264,11 @@ La classe `MapItemTemplateSelector` definisce `DefaultTemplate` e `XamarinTempla
 > [!NOTE]
 > Un caso di utilizzo per questa funzionalità è l'associazione di proprietà di oggetti [`Pin`](xref:Xamarin.Forms.Maps.Pin) sottoclassati a proprietà diverse, in base al sottotipo di `Pin`.
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Renderer personalizzato mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)
-- [Creazione di un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Creazione di un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

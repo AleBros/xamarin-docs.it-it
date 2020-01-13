@@ -534,7 +534,7 @@ Si noterà il rettangolo di ritaglio limitato a un rapporto di aspetto 16-a-9 ca
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>Suddivisione di una bitmap in riquadri
 
-Una versione di xamarin. Forms del famoso puzzle di 14 o 15 è presente in 22 capitolo del libro [ _creazione di App per dispositivi mobili con xamarin. Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) e possono essere scaricati come [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Tuttavia, il puzzle diventa più divertente (e spesso più complesso) se si basa su un'immagine dalla propria libreria di foto.
+Una versione di Xamarin.Forms del famoso puzzle di 14 o 15 è presente in 22 capitolo del libro [ _creazione di App per dispositivi mobili con Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) e possono essere scaricati come [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Tuttavia, il puzzle diventa più divertente (e spesso più complesso) se si basa su un'immagine dalla propria libreria di foto.
 
 Questa versione del puzzle 14 o 15 fa parte del **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** dell'applicazione ed è costituito da una serie di pagine intitolata **foto rompicapo**.
 
@@ -738,7 +738,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 
 Il gestore del pulsante Ottiene la larghezza e altezza della bitmap ritagliata (questi due valori devono essere lo stesso) e quindi si divide in 15 bitmap separate, ognuno dei quali è 1 e 4 la larghezza e altezza dell'originale **.** (L'ultima delle bitmap di 16 possibili non viene creato). Il `DrawBitmap` metodo con rettangolo di origine e di destinazione consente a una bitmap essere creata in base a subset di una bitmap di dimensioni maggiori.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>Conversione di bitmap di xamarin. Forms
+## <a name="converting-to-xamarinforms-bitmaps"></a>Conversione di bitmap di Xamarin.Forms
 
 Nel `OnDoneButtonClicked` metodo, la matrice creata per le 15 bitmap JE typu [ `ImageSource` ](xref:Xamarin.Forms.ImageSource):
 
@@ -746,13 +746,13 @@ Nel `OnDoneButtonClicked` metodo, la matrice creata per le 15 bitmap JE typu [ `
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` è il tipo di base di xamarin. Forms che incapsula una bitmap. Fortunatamente, SkiaSharp consente la conversione dalle bitmap di SkiaSharp in xamarin. Forms bitmap. Il **SkiaSharp.Views.Forms** assembly definisce un' [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) classe che deriva da `ImageSource` ma possono essere creati come base un SkiaSharp `SKBitmap` oggetto. `SKBitmapImageSource` definisce anche le conversioni tra `SKBitmapImageSource` e `SKBitmap`e di come `SKBitmap` gli oggetti vengono archiviati in una matrice come le bitmap di xamarin. Forms:
+`ImageSource` è il tipo di base di Xamarin.Forms che incapsula una bitmap. Fortunatamente, SkiaSharp consente la conversione dalle bitmap di SkiaSharp in Xamarin.Forms bitmap. Il **SkiaSharp.Views.Forms** assembly definisce un' [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) classe che deriva da `ImageSource` ma possono essere creati come base un SkiaSharp `SKBitmap` oggetto. `SKBitmapImageSource` definisce anche le conversioni tra `SKBitmapImageSource` e `SKBitmap`e di come `SKBitmap` gli oggetti vengono archiviati in una matrice come le bitmap di Xamarin.Forms:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ```
 
-Questa matrice delle bitmap viene passata come un costruttore `PhotoPuzzlePage4`. Tale pagina è completamente xamarin. Forms e non usa alcun SkiaSharp. È molto simile a [ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), pertanto non verrà descritta di seguito, ma visualizza la foto selezionata suddivisa in riquadri quadrati 15:
+Questa matrice delle bitmap viene passata come un costruttore `PhotoPuzzlePage4`. Tale pagina è completamente Xamarin.Forms e non usa alcun SkiaSharp. È molto simile a [ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), pertanto non verrà descritta di seguito, ma visualizza la foto selezionata suddivisa in riquadri quadrati 15:
 
 [![Foto 1 Puzzle](cropping-images/PhotoPuzzle1.png "foto Puzzle 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
 

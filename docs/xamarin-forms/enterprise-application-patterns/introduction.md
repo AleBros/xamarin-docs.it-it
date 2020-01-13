@@ -36,7 +36,7 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 
 Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. tra cui:
 
-- Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un'app aziendale Novell. Forms consiste nel decidere se inserire la logica di business nei file code-behind o se creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere più semplice l'app gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
+- Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un'app aziendale Xamarin.Forms consiste nel decidere se inserire la logica di business nei file code-behind o se creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere più semplice l'app gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 - La scelta tra la piattaforma fornita dagli eventi e la comunicazione basata su messaggi a regime di controllo libero tra i componenti che risultano poco pratici per il collegamento in base a riferimenti a oggetti e tipi. Per altre informazioni, vedere Introduzione alla [comunicazione tra componenti](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)a regime di controllo libero.
 - Decidere come spostarsi tra le pagine, inclusa la modalità di richiamo dello spostamento e la posizione in cui deve risiedere la logica di navigazione. Per altre informazioni, vedere [Navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
@@ -45,7 +45,7 @@ Tuttavia, esistono molti problemi che devono essere risolti durante il partizion
 - Determinazione della modalità di accesso ai dati remoti dai servizi Web, incluso come recuperare in modo affidabile i dati e come memorizzare nella cache i dati. Per ulteriori informazioni, vedere [accesso ai dati remoti](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 - Decidere come testare l'app. Per ulteriori informazioni, vedere [unit testing](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
-Questa guida fornisce indicazioni su questi problemi e si concentra sui modelli e sull'architettura di base per la creazione di un'app aziendale multipiattaforma con Novell. Forms. Il materiale sussidiario mira a produrre codice adattabile, gestibile e testabile, risolvendo gli scenari comuni di sviluppo delle app Novell. Forms e scegliendo le problematiche relative alla presentazione, alla logica di presentazione e alle entità tramite il supporto del Modello MVC (Model-View-ViewModel).
+Questa guida fornisce indicazioni su questi problemi e si concentra sui modelli e sull'architettura di base per la creazione di un'app aziendale multipiattaforma con Xamarin.Forms. Il materiale sussidiario mira a produrre codice adattabile, gestibile e testabile, risolvendo gli scenari comuni di sviluppo delle app Xamarin.Forms e scegliendo le problematiche relative alla presentazione, alla logica di presentazione e alle entità tramite il supporto del Modello MVC (Model-View-ViewModel).
 
 ## <a name="sample-application"></a>Applicazione di esempio
 
@@ -70,7 +70,7 @@ L'applicazione di esempio viene fornita con tre app client:
 
 - Applicazione MVC sviluppata con ASP.NET Core.
 - Applicazione a pagina singola (SPA) sviluppata con angolari 2 e typescript. Questo approccio per le applicazioni Web consente di evitare l'esecuzione di un round trip al server con ciascuna operazione.
-- App per dispositivi mobili sviluppata con Novell. Forms, che supporta iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP).
+- App per dispositivi mobili sviluppata con Xamarin.Forms, che supporta iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP).
 
 Per informazioni sulle applicazioni Web, vedere [architettura e sviluppo di applicazioni Web moderne con ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook).
 
@@ -87,7 +87,7 @@ Per informazioni sull'implementazione dei servizi back-end, vedere [microservizi
 
 ### <a name="mobile-app"></a>App per dispositivi mobili
 
-Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con Novell. Forms e usa l'app per dispositivi mobili eShopOnContainers come esempio. La figura 1-2 Mostra le pagine dell'app per dispositivi mobili eShopOnContainers che forniscono la funzionalità descritta in precedenza.
+Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con Xamarin.Forms e usa l'app per dispositivi mobili eShopOnContainers come esempio. La figura 1-2 Mostra le pagine dell'app per dispositivi mobili eShopOnContainers che forniscono la funzionalità descritta in precedenza.
 
 [![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
@@ -95,7 +95,7 @@ Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con
 
 L'app per dispositivi mobili usa i servizi back-end forniti dall'applicazione di riferimento eShopOnContainers. Tuttavia, può essere configurato per utilizzare i dati di servizi fittizi per coloro che desiderano evitare di distribuire i servizi back-end.
 
-L'app per dispositivi mobili eShopOnContainers esercita la seguente funzionalità di Novell. Forms:
+L'app per dispositivi mobili eShopOnContainers esercita la seguente funzionalità di Xamarin.Forms:
 
 - XAML
 - Controlli
@@ -111,7 +111,7 @@ L'app per dispositivi mobili eShopOnContainers esercita la seguente funzionalit�
 - MessagingCenter
 - Controlli personalizzati
 
-Per altre informazioni su questa funzionalità, vedere la [documentazione di Novell. Forms](~/xamarin-forms/index.yml)e [creazione di app per dispositivi mobili con Novell. Forms](https://aka.ms/xamebook).
+Per altre informazioni su questa funzionalità, vedere la [documentazione di Xamarin.Forms](~/xamarin-forms/index.yml)e [creazione di app per dispositivi mobili con Xamarin.Forms](https://aka.ms/xamebook).
 
 Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositivi mobili eShopOnContainers.
 
@@ -130,7 +130,7 @@ La soluzione app per dispositivi mobili eShopOnContainers organizza il codice so
 |eShopOnContainers. TestRunner. Windows|Questo progetto è il piattaforma UWP (Universal Windows Platform) Test Runner per il progetto eShopOnContainers. UnitTests.|
 |eShopOnContainers. UnitTests|Questo progetto contiene unit test per il progetto eShopOnContainers. Core.|
 
-Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riutilizzate in qualsiasi app Novell. Forms con modifiche minime o nulle.
+Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riutilizzate in qualsiasi app Xamarin.Forms con modifiche minime o nulle.
 
 ##### <a name="eshoponcontainerscore-project"></a>Progetto eShopOnContainers. Core
 

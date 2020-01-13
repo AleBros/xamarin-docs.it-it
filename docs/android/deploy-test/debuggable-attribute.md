@@ -17,7 +17,7 @@ ms.locfileid: "75487971"
 
 Per consentire il debug, Android supporta Java Debug Wire Protocol (JDWP). Si tratta di una tecnologia che consente agli strumenti come ADB di comunicare con JVM. Mentre JDWP è importante durante lo sviluppo, è necessario disabilitarlo prima di pubblicare l'applicazione.
 
-JDWP può essere configurato in base al valore dell'attributo `android:debuggable` in un'applicazione Android. Scegliere _uno_ dei tre modi seguenti per impostare questo attributo in Novell. Android:
+JDWP può essere configurato in base al valore dell'attributo `android:debuggable` in un'applicazione Android. Scegliere _uno_ dei tre modi seguenti per impostare questo attributo in Xamarin.Android:
 
 ## <a name="androidmanifestxml"></a>AndroidManifest.xml
 
@@ -25,11 +25,11 @@ Creare o aprire `AndroidManifext.xml` file e impostare l'attributo `android:debu
 
 ## <a name="add-an-application-class-attribute"></a>Aggiungere un attributo della classe dell'applicazione
 
-Se l'app Novell. Android dispone di una classe con un attributo `[Application]`, aggiornare l'attributo a `[Application(Debuggable = true)]`. Impostarlo su `false` per disabilitarlo.
+Se l'app Xamarin.Android dispone di una classe con un attributo `[Application]`, aggiornare l'attributo a `[Application(Debuggable = true)]`. Impostarlo su `false` per disabilitarlo.
 
 ## <a name="add-an-assembly-attribute"></a>Aggiungere un attributo di assembly
 
-Se l'app Novell. Android non dispone già di un attributo `[Application]` Class, aggiungere un attributo a livello di assembly `[assembly: Application(Debuggable=true)]` in un file c#. Impostarlo su `false` per disabilitarlo.
+Se l'app Xamarin.Android non dispone già di un attributo `[Application]` Class, aggiungere un attributo a livello di assembly `[assembly: Application(Debuggable=true)]` in un file c#. Impostarlo su `false` per disabilitarlo.
 
 ## <a name="summary"></a>Riepilogo
 
@@ -42,7 +42,7 @@ Se si aggiungono sia un attributo di classe _che_ un attributo di assembly, si v
 System.InvalidOperationException: Application cannot have both a type with an [Application] attribute and an [assembly:Application] attribute."
 ```
 
-Per impostazione predefinita, se non è presente né il `AndroidManifest.xml` né il `ApplicationAttribute`, il valore dell'attributo `android:debuggable` dipende dal fatto che vengano generati o meno i simboli di debug. Se sono presenti simboli di debug, Novell. Android imposterà l'attributo `android:debuggable` su `true`.
+Per impostazione predefinita, se non è presente né il `AndroidManifest.xml` né il `ApplicationAttribute`, il valore dell'attributo `android:debuggable` dipende dal fatto che vengano generati o meno i simboli di debug. Se sono presenti simboli di debug, Xamarin.Android imposterà l'attributo `android:debuggable` su `true`.
 
 > [!WARNING]
 > Il valore dell'attributo `android:debuggable` non dipende necessariamente dalla configurazione della compilazione. Le build di rilascio possono avere l'attributo `android:debuggable` impostato su true. Se si usa un attributo per impostare questo valore, è possibile scegliere di eseguire il wrapping dell'attributo in una direttiva del compilatore:

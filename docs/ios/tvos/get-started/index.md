@@ -16,11 +16,11 @@ ms.locfileid: "73030721"
 ---
 # <a name="getting-started-with-tvos-in-xamarin"></a>Introduzione con tvOS in Novell
 
-Questa serie introduce le nozioni di base dello sviluppo di Novell. tvOS. Si passa dall'installazione del supporto tvOS all'avvio, alla progettazione, alla codifica e all'esecuzione di un'app. In questo modo, vengono illustrate le competenze e il set di strumenti necessari per lavorare su qualsiasi app Novell. tvOS.
+Questa serie introduce le nozioni di base dello sviluppo di Xamarin.tvOS. Si passa dall'installazione del supporto tvOS all'avvio, alla progettazione, alla codifica e all'esecuzione di un'app. In questo modo, vengono illustrate le competenze e il set di strumenti necessari per lavorare su qualsiasi app Xamarin.tvOS.
 
 ## <a name="installing-tvos-supportiostvosget-startedinstallationmd"></a>[Installazione del supporto per tvOS](~/ios/tvos/get-started/installation.md)
 
-Per compilare app tvOS con Novell, installare la versione stabile più recente di Novell. iOS, che supporta tvOS 11 e watchos 4.
+Per compilare app tvOS con Novell, installare la versione stabile più recente di Xamarin.iOS, che supporta tvOS 11 e watchos 4.
 
 ## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[Guida introduttiva alla creazione della prima app tvOS](~/ios/tvos/get-started/hello-tvos.md)
 

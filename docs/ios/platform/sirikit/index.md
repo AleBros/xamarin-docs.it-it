@@ -1,6 +1,6 @@
 ---
-title: SiriKit in Novell. iOS
-description: Questo articolo illustra come usare SiriKit in un'app Novell. iOS per fornire servizi accessibili all'utente usando Siri in un dispositivo iOS.
+title: SiriKit in Xamarin.iOS
+description: Questo articolo illustra come usare SiriKit in un'app Xamarin.iOS per fornire servizi accessibili all'utente usando Siri in un dispositivo iOS.
 ms.prod: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031478"
 ---
-# <a name="sirikit-in-xamarinios"></a>SiriKit in Novell. iOS
+# <a name="sirikit-in-xamarinios"></a>SiriKit in Xamarin.iOS
 
-_Questo articolo illustra come usare SiriKit in un'app Novell. iOS per fornire servizi accessibili all'utente usando Siri in un dispositivo iOS._
+_Questo articolo illustra come usare SiriKit in un'app Xamarin.iOS per fornire servizi accessibili all'utente usando Siri in un dispositivo iOS._
 
 Una novità di iOS 10, SiriKit consente a un'app per iOS di fornire servizi accessibili all'utente usando Siri e l'app Maps in un dispositivo iOS usando le estensioni delle app e **i nuovi Framework** **dell'interfaccia utente** Intent e Intent.
 
@@ -33,11 +33,11 @@ Quando l'utente effettua una richiesta di Siri che interessa uno dei servizi di 
 
 ## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[Informazioni sui concetti di SiriKit](~/ios/platform/sirikit/understanding-sirikit.md)
 
-Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Novell. iOS. Vengono illustrati i nuovi punti di estensione dell'interfaccia utente e il modo in cui funzionano con l'app e il vocabolario utente per aprire un'app in Siri.
+Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Xamarin.iOS. Vengono illustrati i nuovi punti di estensione dell'interfaccia utente e il modo in cui funzionano con l'app e il vocabolario utente per aprire un'app in Siri.
 
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementazione di SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
-Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS. Lo sviluppatore dovrebbe leggere la guida ai concetti di SiriKit precedente prima di provare ad aggiungere il supporto SiriKit a un'app, in quanto vengono trattati i concetti chiave che saranno necessari per un'implementazione corretta.
+Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Xamarin.iOS. Lo sviluppatore dovrebbe leggere la guida ai concetti di SiriKit precedente prima di provare ad aggiungere il supporto SiriKit a un'app, in quanto vengono trattati i concetti chiave che saranno necessari per un'implementazione corretta.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

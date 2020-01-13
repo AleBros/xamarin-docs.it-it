@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms BoxView
-description: Questo articolo illustra come usare un rettangolo colorato per decoration, grafica e l'interazione in un'applicazione xamarin. Forms.
+title: Xamarin.Forms BoxView
+description: Questo articolo illustra come usare un rettangolo colorato per decoration, grafica e l'interazione in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70759876"
 ---
-# <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
+# <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
 [`BoxView`](xref:Xamarin.Forms.BoxView) esegue il rendering di un rettangolo semplice di una larghezza specificata, altezza e colore. È possibile usare `BoxView` decorativo, grafica rudimentale e per l'interazione con l'utente tramite la tecnologia multitouch.
 
-Poiché xamarin. Forms non dispone di un sistema di grafica vettoriale incorporato, il `BoxView` consente di compensare. Alcuni dei programmi di esempio descritti in questo articolo usano `BoxView` per il rendering grafica. Il `BoxView` possono essere ridimensionati per essere simile a una riga di una larghezza specifica e lo spessore e quindi ruotata di qualsiasi valore angolare utilizzando la `Rotation` proprietà.
+Poiché Xamarin.Forms non dispone di un sistema di grafica vettoriale incorporato, il `BoxView` consente di compensare. Alcuni dei programmi di esempio descritti in questo articolo usano `BoxView` per il rendering grafica. Il `BoxView` possono essere ridimensionati per essere simile a una riga di una larghezza specifica e lo spessore e quindi ruotata di qualsiasi valore angolare utilizzando la `Rotation` proprietà.
 
-Sebbene `BoxView` può simulare elementi grafici semplici, si potrebbe voler analizzare [uso di SkiaSharp in xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) per i requisiti di grafici più sofisticati.
+Sebbene `BoxView` può simulare elementi grafici semplici, si potrebbe voler analizzare [uso di SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) per i requisiti di grafici più sofisticati.
 
 Questo articolo tratta gli argomenti seguenti:
 
@@ -173,7 +173,7 @@ Infine, per disegnare una linea verticale sul uno lato di un paragrafo di testo,
 
 ## <a name="listing-colors-with-boxview"></a>Elenco di colori con BoxView
 
-Il `BoxView` è utile per la visualizzazione dei colori. Questo programma Usa una `ListView` per elencare tutti gli statici ReadOnly campi pubblici di xamarin. Forms `Color` struttura:
+Il `BoxView` è utile per la visualizzazione dei colori. Questo programma Usa una `ListView` per elencare tutti gli statici ReadOnly campi pubblici di Xamarin.Forms `Color` struttura:
 
 [![I colori di ListView](boxview-images/listviewcolors-small.png "ListView colori")](boxview-images/listviewcolors-large.png#lightbox "colori di ListView")
 
@@ -308,7 +308,7 @@ Il `NamedColor` gli oggetti vengono formattati per il `ViewCell` oggetto imposta
 
 Il gioco del ciclo di vita è una rete cellulare automaton ideato da si ipotizza John Conway e contribuito alla diffusione nelle pagine della *scientifici American* nel 1970s. Una buona introduzione viene fornita nell'articolo di Wikipedia [Conway Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
-Xamarin. Forms [ **GameOfLife** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife) programma definisce una classe denominata `LifeCell` che deriva da `BoxView`. Questa classe incapsula la logica di una singola cella nel gioco del ciclo di vita:
+Xamarin.Forms [ **GameOfLife** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife) programma definisce una classe denominata `LifeCell` che deriva da `BoxView`. Questa classe incapsula la logica di una singola cella nel gioco del ciclo di vita:
 
 ```csharp
 class LifeCell : BoxView
@@ -782,7 +782,7 @@ La seconda mano viene trattata in modo leggermente diverso: Viene applicata una 
 
 ## <a name="conclusion"></a>Conclusione
 
-Il `BoxView` può sembrare semplice alla prima di tutto, ma come si è visto, può essere piuttosto versatile e possono riprodurre quasi oggetti visivi che sono in genere possibili solo con la grafica vettoriale. Per gli elementi grafici più sofisticati, consultare [uso di SkiaSharp in xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
+Il `BoxView` può sembrare semplice alla prima di tutto, ma come si è visto, può essere piuttosto versatile e possono riprodurre quasi oggetti visivi che sono in genere possibili solo con la grafica vettoriale. Per gli elementi grafici più sofisticati, consultare [uso di SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

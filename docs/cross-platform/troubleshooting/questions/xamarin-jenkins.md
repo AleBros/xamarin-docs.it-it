@@ -48,6 +48,6 @@ I messaggi di errore relativi a questo problema sono in genere simili a
 
 Oppure
 
-> Errore: la versione iniziale di Novell. iOS non supporta la compilazione all'esterno di Xamarin Studio 
+> Errore: la versione iniziale di Xamarin.iOS non supporta la compilazione all'esterno di Xamarin Studio 
 
 La causa più comune di questo scenario è l'uso di Jenkins eseguendo l'accesso con un account utente non associato alla licenza Novell. Il modo più semplice per risolvere questo problema consiste nell'installare Jenkins come app direttamente tramite l'account utente. Questo processo e alcune considerazioni aggiuntive sono descritte qui: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

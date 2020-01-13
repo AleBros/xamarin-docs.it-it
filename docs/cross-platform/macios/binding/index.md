@@ -15,7 +15,7 @@ ms.locfileid: "75663253"
 ---
 # <a name="binding-objective-c"></a>Binding di Objective-C
 
-Questa sezione include una serie di documenti che coprono la creazione di binding per le librerie Objective-C, in modo che possano C# essere chiamati da applicazioni create con Novell. iOS o Novell. Mac.
+Questa sezione include una serie di documenti che coprono la creazione di binding per le librerie Objective-C, in modo che possano C# essere chiamati da applicazioni create con Xamarin.iOS o Xamarin.Mac.
 
 ## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Panoramica](~/cross-platform/macios/binding/overview.md)
 

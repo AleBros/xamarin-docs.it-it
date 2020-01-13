@@ -1,5 +1,5 @@
 ---
-title: Grafica principale in Novell. iOS
+title: Grafica principale in Xamarin.iOS
 description: Questo articolo illustra i Framework iOS di base della grafica. Viene illustrato come utilizzare la grafica di base per creare geometria, immagini e PDF.
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032458"
 ---
-# <a name="core-graphics-in-xamarinios"></a>Grafica principale in Novell. iOS
+# <a name="core-graphics-in-xamarinios"></a>Grafica principale in Xamarin.iOS
 
 _Questo articolo illustra i Framework iOS di base della grafica. Viene illustrato come utilizzare la grafica di base per creare geometria, immagini e PDF._
 
@@ -182,7 +182,7 @@ L'aggiunta di questo codice prima di qualsiasi operazione di disegno produce tra
 
  ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
 
-Si noti che quando si usa il API unificata in Novell. iOS, il tipo di matrice deve essere un `nfloat`ed è inoltre necessario eseguire il cast esplicito a Math. PI.
+Si noti che quando si usa il API unificata in Xamarin.iOS, il tipo di matrice deve essere un `nfloat`ed è inoltre necessario eseguire il cast esplicito a Math. PI.
 
 <a name="Drawing_Images_and_Text"/>
 

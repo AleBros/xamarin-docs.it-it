@@ -1,0 +1,895 @@
+- name: Xamarin.Forms
+  href: index.yml
+  items:
+    - name: Introduzione
+      href: ~/get-started/index.yml
+      items:
+        - name: Che cos'è Xamarin.Forms
+          href: ~/get-started/what-is-xamarin-forms.md
+        - name: Requisiti
+          href: ~/get-started/requirements.md
+        - name: Installazione
+          href: ~/get-started/installation/index.md
+        - name: Creare la prima app
+          href: ~/get-started/first-app/index.md
+        - name: 'Avvio rapido: app su pagina singola'
+          href: ~/get-started/quickstarts/single-page.md
+        - name: 'Avvio rapido: app su più pagine'
+          href: ~/get-started/quickstarts/multi-page.md
+        - name: 'Avvio rapido: database locale'
+          href: ~/get-started/quickstarts/database.md
+        - name: 'Avvio rapido: applicazione di stili'
+          href: ~/get-started/quickstarts/styling.md
+        - name: Approfondimenti
+          href: ~/get-started/quickstarts/deepdive.md
+    - name: XAML
+      items:
+        - name: Panoramica
+          href: xaml/index.yml
+        - name: Nozioni di base su XAML
+          href: xaml/xaml-basics/index.md
+          items:
+            - name: Parte 1. Guida introduttiva a XAML
+              href: xaml/xaml-basics/get-started-with-xaml.md
+            - name: Parte 2. Sintassi XAML essenziale
+              href: xaml/xaml-basics/essential-xaml-syntax.md
+            - name: Parte 3. Estensioni di markup XAML
+              href: xaml/xaml-basics/xaml-markup-extensions.md
+            - name: Parte 4. Nozioni di base sul data binding
+              href: xaml/xaml-basics/data-binding-basics.md
+            - name: Parte 5. Da data binding a MVVM
+              href: xaml/xaml-basics/data-bindings-to-mvvm.md
+        - name: Controlli XAML
+          href: xaml/xaml-controls.md
+        - name: Compilazione XAML
+          href: xaml/xamlc.md
+        - name: Estensioni di markup XAML
+          href: xaml/markup-extensions/index.md
+          items:
+            - name: Utilizzo di estensioni di markup XAML
+              href: xaml/markup-extensions/consuming.md
+            - name: Creazione di estensioni di markup XAML
+              href: xaml/markup-extensions/creating.md
+        - name: Strumenti
+          items:
+            - name: Ricaricamento rapido XAML
+              href: xaml/hot-reload.md
+            - name: Casella degli strumenti XAML
+              href: xaml/toolbox.md
+            - name: Visualizzatore anteprima XAML
+              href: xaml/xaml-previewer/index.md
+              items:
+                - name: Dati della fase di progettazione
+                  href: xaml/xaml-previewer/design-time-data.md
+                - name: Controlli personalizzati
+                  href: xaml/xaml-previewer/render-custom-controls.md
+        - name: Spazi dei nomi
+          items:
+            - name: Spazi dei nomi XAML
+              href: xaml/namespaces.md
+            - name: Schemi spazio dei nomi personalizzati XAML
+              href: xaml/custom-namespace-schemas.md
+            - name: Prefissi consigliati per lo spazio dei nomi XAML
+              href: xaml/custom-prefix.md
+        - name: Altre funzionalità
+          items:
+            - name: Proprietà associabili
+              href: xaml/bindable-properties.md
+            - name: Proprietà associate
+              href: xaml/attached-properties.md
+            - name: Dizionari di risorse
+              href: xaml/resource-dictionaries.md
+            - name: Passaggio di argomenti
+              href: xaml/passing-arguments.md
+            - name: Modificatori di campo
+              href: xaml/field-modifiers.md
+            - name: Caricamento di XAML in fase di esecuzione
+              href: xaml/runtime-load.md
+    - name: Nozioni fondamentali sulle applicazioni
+      items:
+        - name: Panoramica
+          href: app-fundamentals/index.yml
+        - name: Accessibilità
+          href: app-fundamentals/accessibility/index.md
+          items:
+            - name: Proprietà di automazione
+              href: app-fundamentals/accessibility/automation-properties.md
+            - name: Accessibilità tramite tastiera
+              href: app-fundamentals/accessibility/keyboard.md
+        - name: Classe App
+          href: app-fundamentals/application-class.md
+        - name: Ciclo di vita dell'app
+          href: app-fundamentals/app-lifecycle.md
+        - name: Indicizzazione e deep linking delle applicazioni
+          href: app-fundamentals/deep-linking.md
+        - name: comportamenti
+          href: app-fundamentals/behaviors/index.md
+          items:
+            - name: Introduzione
+              href: app-fundamentals/behaviors/introduction.md
+            - name: Comportamenti associati
+              href: app-fundamentals/behaviors/attached.md
+            - name: Comportamenti di Xamarin.Forms
+              href: app-fundamentals/behaviors/creating.md
+            - name: Comportamenti riutilizzabili
+              href: app-fundamentals/behaviors/reusable/index.md
+              items:
+                - name: EffectBehavior
+                  href: app-fundamentals/behaviors/reusable/effect-behavior.md
+                - name: EventToCommandBehavior
+                  href: app-fundamentals/behaviors/reusable/event-to-command-behavior.md
+        - name: Renderer personalizzati
+          href: app-fundamentals/custom-renderer/index.md
+          items:
+            - name: Introduzione
+              href: app-fundamentals/custom-renderer/introduction.md
+            - name: Classi di base e controlli nativi del renderer
+              href: app-fundamentals/custom-renderer/renderers.md
+            - name: Personalizzazione di una voce
+              href: app-fundamentals/custom-renderer/entry.md
+            - name: Personalizzazione di un elemento ContentPage
+              href: app-fundamentals/custom-renderer/contentpage.md
+            - name: Personalizzazione di una mappa
+              href: app-fundamentals/custom-renderer/map/index.md
+              items:
+                - name: Personalizzazione di un segnaposto per la mappa
+                  href: app-fundamentals/custom-renderer/map/customized-pin.md
+                - name: Evidenziazione di un'area circolare su una mappa
+                  href: app-fundamentals/custom-renderer/map/circle-map-overlay.md
+            - name: Personalizzazione di un oggetto ListView
+              href: app-fundamentals/custom-renderer/listview.md
+            - name: Personalizzazione di un elemento ViewCell
+              href: app-fundamentals/custom-renderer/viewcell.md
+            - name: Personalizzazione di un elemento WebView
+              href: app-fundamentals/custom-renderer/hybridwebview.md
+            - name: Implementazione di una vista
+              href: app-fundamentals/custom-renderer/view.md
+            - name: Implementazione di un lettore video
+              href: app-fundamentals/custom-renderer/video-player/index.md
+              items:
+                - name: Creazione di lettori video per le piattaforme
+                  href: app-fundamentals/custom-renderer/video-player/player-creation.md
+                - name: Riproduzione di un video Web
+                  href: app-fundamentals/custom-renderer/video-player/web-videos.md
+                - name: Associazione di origini video al lettore
+                  href: app-fundamentals/custom-renderer/video-player/source-bindings.md
+                - name: Caricamento delle risorse dell'applicazione video
+                  href: app-fundamentals/custom-renderer/video-player/loading-resources.md
+                - name: Accesso al catalogo video del dispositivo
+                  href: app-fundamentals/custom-renderer/video-player/accessing-library.md
+                - name: Controlli di trasporto video personalizzati
+                  href: app-fundamentals/custom-renderer/video-player/custom-transport.md
+                - name: Posizionamento del video personalizzato
+                  href: app-fundamentals/custom-renderer/video-player/custom-positioning.md
+        - name: Data binding
+          href: app-fundamentals/data-binding/index.md
+          items:
+            - name: Binding di base
+              href: app-fundamentals/data-binding/basic-bindings.md
+            - name: Modalità di binding
+              href: app-fundamentals/data-binding/binding-mode.md
+            - name: Formattazione delle stringhe
+              href: app-fundamentals/data-binding/string-formatting.md
+            - name: Percorso di binding
+              href: app-fundamentals/data-binding/binding-path.md
+            - name: Convertitori di valori per i binding
+              href: app-fundamentals/data-binding/converters.md
+            - name: Binding relativi
+              href: app-fundamentals/data-binding/relative-bindings.md
+            - name: Fallback di binding
+              href: app-fundamentals/data-binding/binding-fallbacks.md
+            - name: Interfaccia di comando
+              href: app-fundamentals/data-binding/commanding.md
+            - name: Binding compilati
+              href: app-fundamentals/data-binding/compiled-bindings.md
+        - name: DependencyService
+          href: app-fundamentals/dependency-service/index.md
+          items:
+            - name: Introduzione
+              href: app-fundamentals/dependency-service/introduction.md
+            - name: Registrazione e risoluzione
+              href: app-fundamentals/dependency-service/registration-and-resolution.md
+            - name: Selezione dalla raccolta foto
+              href: app-fundamentals/dependency-service/photo-picker.md
+        - name: Effetti
+          href: app-fundamentals/effects/index.md
+          items:
+            - name: Introduzione
+              href: app-fundamentals/effects/introduction.md
+            - name: Creazione di effetti
+              href: app-fundamentals/effects/creating.md
+            - name: Passaggio di parametri
+              href: app-fundamentals/effects/passing-parameters/index.md
+              items:
+                - name: Parametri come proprietà CLR
+                  href: app-fundamentals/effects/passing-parameters/clr-properties.md
+                - name: Parametri come proprietà associate
+                  href: app-fundamentals/effects/passing-parameters/attached-properties.md
+            - name: Richiamo di eventi
+              href: app-fundamentals/effects/touch-tracking.md
+            - name: RoundEffect riutilizzabile
+              href: app-fundamentals/effects/reusable-roundeffect.md
+        - name: Movimenti
+          href: app-fundamentals/gestures/index.md
+          items:
+            - name: Tocco
+              href: app-fundamentals/gestures/tap.md
+            - name: Avvicinamento delle dita
+              href: app-fundamentals/gestures/pinch.md
+            - name: Dettaglio
+              href: app-fundamentals/gestures/pan.md
+            - name: Scorrimento rapido
+              href: app-fundamentals/gestures/swipe.md
+        - name: Notifiche locali
+          href: app-fundamentals/local-notifications.md
+        - name: Localizzazione
+          href: app-fundamentals/localization/index.md
+          items:
+            - name: Localizzazione di stringhe e immagini
+              href: app-fundamentals/localization/text.md
+            - name: Localizzazione da destra a sinistra
+              href: app-fundamentals/localization/right-to-left.md
+        - name: MessagingCenter
+          href: app-fundamentals/messaging-center.md
+        - name: Navigazione
+          href: app-fundamentals/navigation/index.md
+          items:
+            - name: Navigazione gerarchica
+              href: app-fundamentals/navigation/hierarchical.md
+            - name: TabbedPage
+              href: app-fundamentals/navigation/tabbed-page.md
+            - name: CarouselPage
+              href: app-fundamentals/navigation/carousel-page.md
+            - name: MasterDetailPage
+              href: app-fundamentals/navigation/master-detail-page.md
+            - name: Pagine modali
+              href: app-fundamentals/navigation/modal.md
+        - name: Shell
+          href: app-fundamentals/shell/index.md
+          items:
+            - name: Introduzione
+              href: app-fundamentals/shell/introduction.md
+            - name: Creare un'applicazione shell
+              href: app-fundamentals/shell/create.md
+            - name: Flyout
+              href: app-fundamentals/shell/flyout.md
+            - name: Schede
+              href: app-fundamentals/shell/tabs.md
+            - name: Configurazione della pagina
+              href: app-fundamentals/shell/configuration.md
+            - name: Navigazione
+              href: app-fundamentals/shell/navigation.md
+            - name: Cerca
+              href: app-fundamentals/shell/search.md
+            - name: Ciclo di vita
+              href: app-fundamentals/shell/lifecycle.md
+            - name: Renderer personalizzati
+              href: app-fundamentals/shell/customrenderers.md
+        - name: Modelli
+          href: app-fundamentals/templates/index.md
+          items:
+            - name: Modelli di controllo
+              href: app-fundamentals/templates/control-templates/index.md
+              items:
+                - name: Introduzione
+                  href: app-fundamentals/templates/control-templates/introduction.md
+                - name: Creazione di modelli di controllo
+                  href: app-fundamentals/templates/control-templates/creating.md
+                - name: Associazioni a modello
+                  href: app-fundamentals/templates/control-templates/template-binding.md
+            - name: Modelli di dati
+              href: app-fundamentals/templates/data-templates/index.md
+              items:
+                - name: Introduzione
+                  href: app-fundamentals/templates/data-templates/introduction.md
+                - name: Creazione di modelli di dati
+                  href: app-fundamentals/templates/data-templates/creating.md
+                - name: Selezione di modelli di dati
+                  href: app-fundamentals/templates/data-templates/selector.md
+        - name: Trigger
+          href: app-fundamentals/triggers.md
+    - name: Interfaccia utente
+      items:
+        - name: Panoramica
+          href: user-interface/index.yml
+        - name: Riferimento per i controlli
+          items:
+            - name: Panoramica
+              href: user-interface/controls/index.md
+            - name: Pages
+              href: user-interface/controls/pages.md
+            - name: Layout
+              href: user-interface/controls/layouts.md
+            - name: Visualizzazioni
+              href: user-interface/controls/views.md
+            - name: Celle
+              href: user-interface/controls/cells.md
+            - name: 'Proprietà, metodi ed eventi comuni'
+              href: user-interface/controls/common-properties.md
+            - name: Controlli di terze parti
+              href: user-interface/controls/thirdparty.md
+        - name: Presentare i dati
+          items:
+            - name: BoxView
+              href: user-interface/boxview.md
+            - name: Image
+              href: user-interface/images.md
+            - name: Label
+              href: user-interface/text/label.md
+            - name: Mappa
+              items:
+                - name: Panoramica
+                  href: user-interface/map/index.md
+                - name: Inizializzazione e configurazione
+                  href: user-interface/map/setup.md
+                - name: Controllo mappa
+                  href: user-interface/map/map.md
+                - name: Posizione e distanza
+                  href: user-interface/map/position-distance.md
+                - name: Segnaposto
+                  href: user-interface/map/pins.md
+                - name: Poligoni e polilinee
+                  href: user-interface/map/polygons.md
+                - name: Geocodifica
+                  href: user-interface/map/geocoder.md
+                - name: Avviare l'app per le mappe native
+                  href: user-interface/map/native-map-app.md
+            - name: WebView
+              href: user-interface/webview.md
+        - name: Avviare i comandi
+          items:
+            - name: Button
+              href: user-interface/button.md
+            - name: ImageButton
+              href: user-interface/imagebutton.md
+            - name: RefreshView
+              href: user-interface/refreshview.md
+            - name: SearchBar
+              href: user-interface/searchbar.md
+            - name: SwipeView
+              href: user-interface/swipeview.md
+        - name: Impostare i valori
+          items:
+            - name: CheckBox
+              href: user-interface/checkbox.md
+            - name: DatePicker
+              href: user-interface/datepicker.md
+            - name: Slider
+              href: user-interface/slider.md
+            - name: Gestore di istruzioni
+              href: user-interface/stepper.md
+            - name: Opzione
+              href: user-interface/switch.md
+            - name: TimePicker
+              href: user-interface/timepicker.md
+        - name: Modificare il testo
+          items:
+            - name: Editor
+              href: user-interface/text/editor.md
+            - name: Voce
+              href: user-interface/text/entry.md
+        - name: Indicare l'attività
+          items:
+            - name: ActivityIndicator
+              href: user-interface/activityindicator.md
+            - name: ProgressBar
+              href: user-interface/progressbar.md
+        - name: Visualizzare le raccolte
+          items:
+            - name: CarouselView
+              href: user-interface/carouselview/index.md
+              items:
+                - name: Introduzione
+                  href: user-interface/carouselview/introduction.md
+                - name: Dati
+                  href: user-interface/carouselview/populate-data.md
+                - name: Layout
+                  href: user-interface/carouselview/layout.md
+                - name: Interazione
+                  href: user-interface/carouselview/interaction.md
+                - name: EmptyView
+                  href: user-interface/carouselview/emptyview.md
+                - name: Scorrimento
+                  href: user-interface/carouselview/scrolling.md
+            - name: CollectionView
+              href: user-interface/collectionview/index.md
+              items:
+                - name: Introduzione
+                  href: user-interface/collectionview/introduction.md
+                - name: Dati
+                  href: user-interface/collectionview/populate-data.md
+                - name: Layout
+                  href: user-interface/collectionview/layout.md
+                - name: Selection
+                  href: user-interface/collectionview/selection.md
+                - name: EmptyView
+                  href: user-interface/collectionview/emptyview.md
+                - name: Scorrimento
+                  href: user-interface/collectionview/scrolling.md
+                - name: Raggruppamento
+                  href: user-interface/collectionview/grouping.md
+            - name: IndicatorView
+              href: user-interface/indicatorview.md
+            - name: ListView
+              href: user-interface/listview/index.md
+              items:
+                - name: Data Sources
+                  href: user-interface/listview/data-and-databinding.md
+                - name: Aspetto delle celle
+                  href: user-interface/listview/customizing-cell-appearance.md
+                - name: Aspetto degli elenchi
+                  href: user-interface/listview/customizing-list-appearance.md
+                - name: Interattività
+                  href: user-interface/listview/interactivity.md
+                - name: Prestazioni
+                  href: user-interface/listview/performance.md
+            - name: Selezione
+              href: user-interface/picker/index.md
+              items:
+                - name: Impostazione della proprietà ItemsSource per una selezione
+                  href: user-interface/picker/populating-itemssource.md
+                - name: Aggiunta di dati alla raccolta di elementi per una selezione
+                  href: user-interface/picker/populating-items.md
+            - name: TableView
+              href: user-interface/tableview.md
+        - name: Controlli aggiuntivi
+          items:
+            - name: MenuItem
+              href: user-interface/menuitem.md
+            - name: ToolbarItem
+              href: user-interface/toolbaritem.md
+        - name: Concetti
+          items:
+            - name: Animazione
+              href: user-interface/animation/index.md
+              items:
+                - name: Animazioni semplici
+                  href: user-interface/animation/simple.md
+                - name: Funzioni di interpolazione
+                  href: user-interface/animation/easing.md
+                - name: Animazioni personalizzate
+                  href: user-interface/animation/custom.md
+            - name: Colori
+              href: user-interface/colors.md
+            - name: DataPages
+              href: user-interface/datapages/index.md
+              items:
+                - name: Introduzione
+                  href: user-interface/datapages/get-started.md
+                - name: Riferimento per i controlli
+                  href: user-interface/datapages/controls.md
+            - name: Visualizzare popup
+              href: user-interface/pop-ups.md
+            - name: Tipi di carattere
+              href: user-interface/text/fonts.md
+            - name: Grafica con SkiaSharp
+              href: user-interface/graphics/skiasharp/index.md
+            - name: Schermata iniziale
+              href: user-interface/splashscreen.md
+            - name: Stili
+              href: user-interface/styles/index.md
+              items:
+                - name: Applicazione di stili alle app Xamarin.Forms con gli stili XAML
+                  href: user-interface/styles/xaml/index.md
+                  items:
+                    - name: Introduzione
+                      href: user-interface/styles/xaml/introduction.md
+                    - name: Stili espliciti
+                      href: user-interface/styles/xaml/explicit.md
+                    - name: Stili impliciti
+                      href: user-interface/styles/xaml/implicit.md
+                    - name: Stili globali
+                      href: user-interface/styles/xaml/application.md
+                    - name: Ereditarietà degli stili
+                      href: user-interface/styles/xaml/inheritance.md
+                    - name: Stili dinamici
+                      href: user-interface/styles/xaml/dynamic.md
+                    - name: Stili di dispositivo
+                      href: user-interface/styles/xaml/device.md
+                    - name: Classi di stile
+                      href: user-interface/styles/xaml/style-class.md
+                - name: Applicazione di stili alle app Xamarin.Forms con Cascading Style Sheets (CSS)
+                  href: user-interface/styles/css/index.md
+            - name: Temi
+              href: user-interface/theming.md
+            - name: Visual
+              href: user-interface/visual/index.md
+              items:
+                - name: Oggetto visivo Material
+                  href: user-interface/visual/material-visual.md
+                - name: Creare un renderer oggetti visivi
+                  href: user-interface/visual/create.md
+            - name: Visual State Manager
+              href: user-interface/visual-state-manager.md
+        - name: Layout
+          items:
+            - name: Panoramica
+              href: user-interface/layouts/index.yml
+            - name: Scegliere un layout
+              href: user-interface/layouts/choose-layout.md
+            - name: Layout di base
+              items:
+                - name: AbsoluteLayout
+                  href: user-interface/layouts/absolute-layout.md
+                - name: FlexLayout
+                  href: user-interface/layouts/flex-layout.md
+                - name: Grid
+                  href: user-interface/layouts/grid.md
+                - name: RelativeLayout
+                  href: user-interface/layouts/relative-layout.md
+                - name: StackLayout
+                  href: user-interface/layouts/stack-layout.md
+            - name: Layout aggiuntivi
+              items:
+                - name: ContentView
+                  href: user-interface/layouts/contentview.md
+                - name: Frame
+                  href: user-interface/layouts/frame.md
+                - name: ScrollView
+                  href: user-interface/layouts/scroll-view.md
+            - name: Concetti
+              items:
+                - name: Layout associabili
+                  href: user-interface/layouts/bindable-layouts.md
+                - name: Layout personalizzati
+                  href: user-interface/layouts/custom.md
+                - name: Orientamento del dispositivo
+                  href: user-interface/layouts/device-orientation.md
+                - name: LayoutOptions
+                  href: user-interface/layouts/layout-options.md
+                - name: Compressione del layout
+                  href: user-interface/layouts/layout-compression.md
+                - name: Margine e spaziatura interna
+                  href: user-interface/layouts/margin-and-padding.md
+                - name: Tablet e desktop
+                  href: user-interface/layouts/tablet.md
+    - name: Funzionalità della piattaforma
+      items:
+        - name: Panoramica
+          href: platform/index.yml
+        - name: Android
+          items:
+            - name: Panoramica
+              href: platform/android/index.md
+            - name: AppCompat e Material Design
+              href: platform/android/appcompat-material-design.md
+            - name: Riempimento e ombreggiature dei pulsanti
+              href: platform/android/button-padding-shadow.md
+            - name: Opzioni di Input Method Editor per Entry
+              href: platform/android/entry-ime-options.md
+            - name: Ombreggiature per ImageButton
+              href: platform/android/imagebutton-drop-shadow.md
+            - name: Scorrimento rapido di ListView
+              href: platform/android/listview-fast-scrolling.md
+            - name: Altezza della barra per NavigationPage
+              href: platform/android/navigationpage-bar-height.md
+            - name: Eventi del ciclo di vita della pagina
+              href: platform/android/page-lifecycle-events.md
+            - name: Modalità di input per la tastiera su schermo
+              href: platform/android/soft-keyboard-input-mode.md
+            - name: Modalità di transizione con scorrimento rapido SwipeView
+              href: platform/android/swipeview-swipetransitionmode.md
+            - name: Scorrimento rapido delle pagine in TabbedPage
+              href: platform/android/tabbedpage-page-swiping.md
+            - name: Animazioni delle transizioni tra le pagine in TabbedPage
+              href: platform/android/tabbedpage-transition-animations.md
+            - name: Posizionamento e colore della barra degli strumenti in TabbedPage
+              href: platform/android/tabbedpage-toolbar-placement-color.md
+            - name: Azioni di contesto ViewCell
+              href: platform/android/viewcell-context-actions.md
+            - name: Elevazione di VisualElement
+              href: platform/android/visualelement-elevation.md
+            - name: Modalità colore legacy per VisualElement
+              href: platform/android/legacy-color-mode.md
+            - name: Contenuto misto di WebView
+              href: platform/android/webview-mixed-content.md
+            - name: Zoom WebView
+              href: platform/android/webview-zoom-controls.md
+        - name: iOS
+          items:
+            - name: Panoramica
+              href: platform/ios/index.md
+            - name: Ridimensionamento dell'accessibilità per le dimensioni dei caratteri denominate
+              href: platform/ios/named-font-size-scaling.md
+            - name: Colore di sfondo della cella
+              href: platform/ios/cell-background-color.md
+            - name: Colore del cursore per Entry
+              href: platform/ios/entry-cursor-color.md
+            - name: Dimensioni del carattere per Entry
+              href: platform/ios/entry-font-size.md
+            - name: Formattazione
+              href: platform/ios/formatting.md
+            - name: Stile di presentazione delle pagine modali
+              href: platform/ios/page-presentation-style.md
+            - name: Titoli di pagine grandi
+              href: platform/ios/page-large-title.md
+            - name: Stile dell'intestazione del gruppo ListView
+              href: platform/ios/listview-group-header-style.md
+            - name: Animazioni delle righe ListView
+              href: platform/ios/listview-row-animations.md
+            - name: Stile del separatore per ListView
+              href: platform/ios/listview-separator-style.md
+            - name: Aggiornamenti dei controlli sul thread principale
+              href: platform/ios/main-thread-updates-ui.md
+            - name: Separatore della barra per NavigationPage
+              href: platform/ios/navigation-bar-separator.md
+            - name: Modalità del colore del testo della barra per NavigationPage
+              href: platform/ios/status-bar-text-color.md
+            - name: Traslucidità della barra per NavigationPage
+              href: platform/ios/navigation-bar-translucent.md
+            - name: Visibilità dell'indicatore Home di una pagina
+              href: platform/ios/page-home-indicator.md
+            - name: Visibilità della barra di stato di una pagina
+              href: platform/ios/page-status-bar-visibility.md
+            - name: Selezione di un elemento in un Picker
+              href: platform/ios/picker-selection.md
+            - name: Guida per il layout dell'area sicura
+              href: platform/ios/page-safe-area-layout.md
+            - name: Tocchi per il contenuto in ScrollView
+              href: platform/ios/scrollview-content-touches.md
+            - name: Riconoscimento di movimenti di panoramica simultanei
+              href: platform/ios/application-pan-gesture.md
+            - name: Tocco sul controllo Thumb per Slider
+              href: platform/ios/slider-thumb.md
+            - name: Modalità di transizione con scorrimento rapido SwipeView
+              href: platform/ios/swipeview-swipetransitionmode.md
+            - name: Sfocatura per VisualElement
+              href: platform/ios/visualelement-blur.md
+            - name: Ombreggiature per VisualElement
+              href: platform/ios/visualelement-drop-shadow.md
+            - name: Modalità colore legacy per VisualElement
+              href: platform/ios/legacy-color-mode.md
+        - name: WINDOWS
+          items:
+            - name: Panoramica
+              href: platform/windows/index.md
+            - name: Ordine di lettura InputView
+              href: platform/windows/inputview-reading-order.md
+            - name: SelectionMode per ListView
+              href: platform/windows/listview-selectionmode.md
+            - name: Barra di spostamento MasterDetailPage
+              href: platform/windows/masterdetailpage-navigation-bar.md
+            - name: Posizione della barra degli strumenti della pagina
+              href: platform/windows/page-toolbar-placement.md
+            - name: Impostazione della piattaforma
+              href: platform/windows/installation/index.md
+            - name: Direzione di pull di RefreshView
+              href: platform/windows/refreshview-pulldirection.md
+            - name: Controllo ortografico per SearchBar
+              href: platform/windows/searchbar-spell-check.md
+            - name: Icone per TabbedPage
+              href: platform/windows/tabbedpage-icons.md
+            - name: Tasti di scelta per VisualElement
+              href: platform/windows/visualelement-access-keys.md
+            - name: Modalità colore legacy per VisualElement
+              href: platform/windows/legacy-color-mode.md
+            - name: Avvisi JavaScript per WebView
+              href: platform/windows/webview-javascript-alert.md
+        - name: Creare funzionalità specifiche della piattaforma
+          href: platform/platform-specifics/index.md
+        - name: Classe Device
+          href: platform/device.md
+        - name: Form nativi
+          href: platform/native-forms.md
+        - name: Visualizzazioni native
+          href: platform/native-views/index.md
+          items:
+            - name: Visualizzazioni native in XAML
+              href: platform/native-views/xaml.md
+            - name: 'Visualizzazioni native in C#'
+              href: platform/native-views/code.md
+        - name: Accedi con Apple
+          href: platform/sign-in-with-apple/index.md
+          items:
+            - name: Configurazione per iOS
+              href: ~/ios/platform/ios13/sign-in.md
+            - name: Configurazione per altre piattaforme
+              href: platform/sign-in-with-apple/setup.md
+            - name: Usare Accedi con Apple
+              href: platform/sign-in-with-apple/android-ios-sign-in.md
+        - name: Altre piattaforme
+          href: platform/other/index.md
+          items:
+            - name: 'GTK#'
+              href: platform/other/gtk.md
+            - name: Mac
+              href: platform/other/mac.md
+            - name: Tizen
+              href: platform/other/tizen.md
+            - name: WPF
+              href: platform/other/wpf.md
+    - name: Xamarin.Essentials
+      href: ~/essentials/index.md?context=xamarin/xamarin-forms
+      items:
+        - name: Introduzione
+          href: ~/essentials/get-started.md?context=xamarin/xamarin-forms
+        - name: Piattaforma e supporto funzionalità
+          href: ~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms
+        - name: Accelerometro
+          href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
+        - name: Informazioni sull'app
+          href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
+        - name: Barometro
+          href: ~/essentials/barometer.md?context=xamarin/xamarin-forms
+        - name: Batteria
+          href: ~/essentials/battery.md?context=xamarin/xamarin-forms
+        - name: Appunti
+          href: ~/essentials/clipboard.md?context=xamarin/xamarin-forms
+        - name: Convertitori di colori
+          href: ~/essentials/color-converters.md?context=xamarin/xamarin-forms
+        - name: Bussola
+          href: ~/essentials/compass.md?context=xamarin/xamarin-forms
+        - name: Connettività
+          href: ~/essentials/connectivity.md?context=xamarin/xamarin-forms
+        - name: Rileva stretta
+          href: ~/essentials/detect-shake.md?context=xamarin/xamarin-forms
+        - name: Informazioni sullo schermo del dispositivo
+          href: ~/essentials/device-display.md?context=xamarin/xamarin-forms
+        - name: Informazioni sul dispositivo
+          href: ~/essentials/device-information.md?context=xamarin/xamarin-forms
+        - name: Email
+          href: ~/essentials/email.md?context=xamarin/xamarin-forms
+        - name: Helper di file system
+          href: ~/essentials/file-system-helpers.md?context=xamarin/xamarin-forms
+        - name: Torcia elettrica
+          href: ~/essentials/flashlight.md?context=xamarin/xamarin-forms
+        - name: Geocodifica
+          href: ~/essentials/geocoding.md?context=xamarin/xamarin-forms
+        - name: Georilevazione
+          href: ~/essentials/geolocation.md?context=xamarin/xamarin-forms
+        - name: Giroscopio
+          href: ~/essentials/gyroscope.md?context=xamarin/xamarin-forms
+        - name: Utilità di avvio
+          href: ~/essentials/launcher.md?context=xamarin/xamarin-forms
+        - name: Magnetometro
+          href: ~/essentials/magnetometer.md?context=xamarin/xamarin-forms
+        - name: Thread principale
+          href: ~/essentials/main-thread.md?context=xamarin/xamarin-forms
+        - name: Mappe
+          href: ~/essentials/maps.md?context=xamarin/xamarin-forms
+        - name: Apri browser
+          href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
+        - name: Sensore di orientamento
+          href: ~/essentials/orientation-sensor.md?context=xamarin/xamarin-forms
+        - name: Dialer telefono
+          href: ~/essentials/phone-dialer.md?context=xamarin/xamarin-forms
+        - name: 'Estensioni piattaforma (dimensioni, rettangolo, punto)'
+          href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
+        - name: Preferenze
+          href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
+        - name: Archiviazione sicura
+          href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
+        - name: Condividi
+          href: ~/essentials/share.md?context=xamarin/xamarin-forms
+        - name: SMS
+          href: ~/essentials/sms.md?context=xamarin/xamarin-forms
+        - name: Sintesi vocale
+          href: ~/essentials/text-to-speech.md?context=xamarin/xamarin-forms
+        - name: Convertitori di unità
+          href: ~/essentials/unit-converters.md?context=xamarin/xamarin-forms
+        - name: Rilevamento versione
+          href: ~/essentials/version-tracking.md?context=xamarin/xamarin-forms
+        - name: Vibrazione
+          href: ~/essentials/vibrate.md?context=xamarin/xamarin-forms
+        - name: Note sulla versione di Xamarin.Essentials
+          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+        - name: Risoluzione dei problemi
+          href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+    - name: Dati e Servizi cloud di Azure
+      items:
+        - name: Panoramica
+          href: data-cloud/index.yml
+        - name: Archiviazione dati locali
+          items:
+            - name: Panoramica
+              href: data-cloud/data/index.md
+            - name: Gestione di file
+              href: data-cloud/data/files.md
+            - name: Database locali
+              href: data-cloud/data/databases.md
+        - name: Servizi di Azure
+          items:
+            - name: Panoramica dei servizi di Azure
+              href: data-cloud/azure-services/index.md
+            - name: Database di documenti di Azure Cosmos DB
+              href: data-cloud/azure-services/azure-cosmosdb.md
+            - name: Hub di notifica di Azure
+              href: data-cloud/azure-services/azure-notification-hub.md
+            - name: Archiviazione di Azure
+              href: data-cloud/azure-services/azure-storage.md
+            - name: Ricerca di Azure
+              href: data-cloud/azure-services/azure-search.md
+            - name: Funzioni di Azure
+              href: data-cloud/azure-services/azure-functions.md
+            - name: Servizio Azure SignalR
+              href: data-cloud/azure-services/azure-signalr.md
+        - name: Servizi cognitivi di Azure
+          items:
+            - name: Panoramica dei Servizi cognitivi
+              href: data-cloud/azure-cognitive-services/index.md
+            - name: Introduzione
+              href: data-cloud/azure-cognitive-services/introduction.md
+            - name: Riconoscimento vocale
+              href: data-cloud/azure-cognitive-services/speech-recognition.md
+            - name: Controllo ortografico
+              href: data-cloud/azure-cognitive-services/spell-check.md
+            - name: Traduzione di testi
+              href: data-cloud/azure-cognitive-services/text-translation.md
+            - name: Riconoscimento delle emozioni percepite
+              href: data-cloud/azure-cognitive-services/emotion-recognition.md
+        - name: Servizi Web
+          items:
+            - name: Panoramica dei servizi Web
+              href: data-cloud/web-services/index.md
+            - name: Introduzione
+              href: data-cloud/web-services/introduction.md
+            - name: ASMX
+              href: data-cloud/web-services/asmx.md
+            - name: WCF
+              href: data-cloud/web-services/wcf.md
+            - name: REST
+              href: data-cloud/web-services/rest.md
+        - name: Authentication
+          items:
+            - name: Panoramica dell'autenticazione
+              href: data-cloud/authentication/index.md
+            - name: REST
+              href: data-cloud/authentication/rest.md
+            - name: OAuth
+              href: data-cloud/authentication/oauth.md
+            - name: Azure Active Directory B2C
+              href: data-cloud/authentication/azure-ad-b2c.md
+            - name: Autenticazione in Azure Cosmos DB
+              href: data-cloud/authentication/azure-cosmosdb-auth.md
+    - name: Distribuzione e test
+      items:
+        - name: Panoramica
+          href: deploy-test/index.yml
+        - name: Miglioramento delle prestazioni
+          href: deploy-test/performance.md
+        - name: Automatizzare i test con Visual Studio App Center
+          href: /appcenter/test-cloud/uitest/get-started-xamarin-forms
+        - name: Pubblicare app iOS
+          href: ~/ios/deploy-test/app-distribution/index.md
+        - name: Pubblicare app Android
+          href: ~/android/deploy-test/publishing/index.md
+        - name: Pubblicare app UWP
+          href: /windows/uwp/packaging/
+        - name: Pubblicare app Mac
+          href: ~/mac/deploy-test/publishing-to-the-app-store/index.md
+    - name: Concetti avanzati e meccanismi interni
+      items:
+        - name: Panoramica
+          href: internals/index.md
+        - name: Gerarchia di classi dei controlli
+          href: internals/class-hierarchy.md
+        - name: Risoluzione delle dipendenze
+          href: internals/dependency-resolution.md
+        - name: Renderer veloci
+          href: internals/fast-renderers.md
+        - name: Collegamento all'origine
+          href: internals/sourcelink.md
+    - name: Risoluzione dei problemi
+      href: troubleshooting/index.md
+      items:
+        - name: Domande frequenti
+          href: troubleshooting/questions/index.md
+          items:
+            - name: È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?
+              href: troubleshooting/questions/update-forms-template.md
+            - name: Perché la finestra di progettazione XAML di Visual Studio non funziona per i file XAML di Xamarin.Forms?
+              href: troubleshooting/questions/forms-xaml-designer.md
+            - name: 'Errore di compilazione Android: Errore imprevisto dell''attività LinkAssemblies'
+              href: troubleshooting/questions/android-linkassemblies-error.md
+            - name: 'Perché si verifica l''errore COMPILETODALVIK: UNEXPECTED TOP-LEVEL ERROR (COMPILETODALVIK : ERRORE DI PRIMO LIVELLO IMPREVISTO) per un progetto Xamarin.Forms.Maps Android?'
+              href: troubleshooting/questions/maps-compiletodalvik-error.md
+    - name: Note sulla versione
+      href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+    - name: Esempi
+      href: samples/index.md
+    - name: Libro Creazione di app per dispositivi mobili con Xamarin.Forms
+      href: creating-mobile-apps-xamarin-forms/index.md
+    - name: E-book Modelli di applicazioni aziendali
+      href: enterprise-application-patterns/index.md
+    - name: Grafica SkiaSharp in Xamarin.Forms
+      href: user-interface/graphics/skiasharp/index.md

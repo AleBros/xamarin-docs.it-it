@@ -1,5 +1,5 @@
 ---
-title: Tocco e movimenti in Novell. Android
+title: Tocco e movimenti in Xamarin.Android
 description: Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento semplice del tocco. è anche possibile usare i movimenti. Ad esempio, il gesto di pinch-to-zoom è un esempio molto comune, pizzicando una parte dello schermo con due dita, l'utente può ingrandire o ridurre. Questa guida esamina il tocco e i movimenti in Android.
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73024292"
 ---
-# <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in Novell. Android
+# <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in Xamarin.Android
 
 _Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento semplice del tocco. è anche possibile usare i movimenti. Ad esempio, il gesto di pinch-to-zoom è un esempio molto comune, pizzicando una parte dello schermo con due dita, l'utente può ingrandire o ridurre. Questa guida esamina il tocco e i movimenti in Android._
 

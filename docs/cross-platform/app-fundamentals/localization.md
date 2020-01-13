@@ -19,9 +19,9 @@ Questa guida presenta i concetti alla base dell' *internazionalizzazione* e dell
 
 Se si vuole passare direttamente ai dettagli tecnici sulla localizzazione delle app Novell, iniziare con uno di questi articoli sulle procedure specifiche della piattaforma:
 
-- Localizzazione multipiattaforma [**Novell. Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
-- Localizzazione della piattaforma nativa [**Novell. iOS**](~/ios/app-fundamentals/localization/index.md) .
-- Localizzazione della piattaforma nativa [**Novell. Android**](~/android/app-fundamentals/localization.md) .
+- Localizzazione multipiattaforma [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
+- Localizzazione della piattaforma nativa [**Xamarin.iOS**](~/ios/app-fundamentals/localization/index.md) .
+- Localizzazione della piattaforma nativa [**Xamarin.Android**](~/android/app-fundamentals/localization.md) .
 
 ## <a name="i18n-and-l10n"></a>i18n e l10n
 
@@ -122,7 +122,7 @@ Le applicazioni che supportano questi linguaggi devono usare le progettazioni de
 - La posizione predefinita del pulsante è in genere invertita.
 - La navigazione gerarchica e l'animazione (e altre metafore di navigazione e animazioni) che usano la direzione per il contesto dovrebbero anche essere invertite.
 
-IOS e Android supportano layout da destra a sinistra e rendering dei tipi di carattere, con funzionalità predefinite che consentono di apportare le regolazioni precedenti. Novell. Forms attualmente non supporta automaticamente il rendering RTL.
+IOS e Android supportano layout da destra a sinistra e rendering dei tipi di carattere, con funzionalità predefinite che consentono di apportare le regolazioni precedenti. Xamarin.Forms attualmente non supporta automaticamente il rendering RTL.
 
 ### <a name="sorting"></a>Ordinamento
 
@@ -289,9 +289,9 @@ Questi concetti possono essere applicati alle varie tecniche di internazionalizz
 
 Continua a leggere i dettagli tecnici per la piattaforma a cui sei interessato:
 
-- Localizzazione multipiattaforma [Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
-- Localizzazione della piattaforma nativa [Novell. iOS](~/ios/app-fundamentals/localization/index.md) .
-- Localizzazione della piattaforma nativa [Novell. Android](~/android/app-fundamentals/localization.md) .
+- Localizzazione multipiattaforma [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
+- Localizzazione della piattaforma nativa [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) .
+- Localizzazione della piattaforma nativa [Xamarin.Android](~/android/app-fundamentals/localization.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
 title: Mappe e località in Android
-description: Uso di Maps con Novell. Android
+description: Uso di Maps con Xamarin.Android
 ms.prod: xamarin
 ms.assetid: B45211C5-D377-4A55-8C8E-95D4BF470AE3
 ms.technology: xamarin-android
@@ -22,4 +22,4 @@ Questa guida introduce la conoscenza della posizione nelle applicazioni Android 
 
 ## <a name="mapsandroidplatformmaps-and-locationmapsindexmd"></a>[Mappe](~/android/platform/maps-and-location/maps/index.md)
 
-Questo articolo illustra come usare le mappe e il percorso con Novell. Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2. Viene anche illustrato come usare una singola API per lavorare con i servizi di posizione, che consente a un'applicazione di ottenere correzioni di posizione tramite la posizione della Torre della cella, Wi-Fi o GPS.
+Questo articolo illustra come usare le mappe e il percorso con Xamarin.Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2. Viene anche illustrato come usare una singola API per lavorare con i servizi di posizione, che consente a un'applicazione di ottenere correzioni di posizione tramite la posizione della Torre della cella, Wi-Fi o GPS.

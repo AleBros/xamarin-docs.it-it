@@ -21,7 +21,7 @@ ms.locfileid: "73013569"
 
 ## <a name="summary"></a>Riepilogo
 
-Novell. iOS e Novell. Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni _incomplete_ . Ad esempio, né Novell. iOS né Novell. Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi PCL "System. Diagnostics. Tracing". Questa limitazione comporta tre livelli di errori quando si prova a usare la versione `portable-net45+win8+wpa81` predefinita del pacchetto NuGet di Microsoft TPL Dataflow.
+Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni _incomplete_ . Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi PCL "System. Diagnostics. Tracing". Questa limitazione comporta tre livelli di errori quando si prova a usare la versione `portable-net45+win8+wpa81` predefinita del pacchetto NuGet di Microsoft TPL Dataflow.
 
 ## <a name="workaround-switch-the-app-project-to-reference-the-portable-net45win8wp8wpa81-version-of-the-tpl-dataflow-library"></a>Soluzione temporanea: cambiare il progetto dell'app in modo che faccia riferimento alla versione `portable-net45+win8+wp8+wpa81` della libreria del flusso di flussi di lavoro TPL
 
@@ -53,9 +53,9 @@ La versione `portable-net45+win8+wp8+wpa81` della libreria non fa riferimento a 
 
 ## <a name="details-about-the-three-layers-of-errors"></a>Dettagli sui tre livelli di errori
 
-1. L'assembly di facciata **System. Diagnostics. Tracing. dll** è attualmente assente da tutte le versioni Mac di Novell. Android (bug non pubblico 34888) ed è assente da tutte le versioni di Novell. iOS inferiori a 9,0 (o inferiori a XamarinVS 3.11.1443 in Windows) (fisso in [Bug 32388](https://bugzilla.xamarin.com/show_bug.cgi?id=32388)). Questo problema provocherà uno degli errori seguenti a seconda della destinazione di distribuzione e delle impostazioni del linker:
+1. L'assembly di facciata **System. Diagnostics. Tracing. dll** è attualmente assente da tutte le versioni Mac di Xamarin.Android (bug non pubblico 34888) ed è assente da tutte le versioni di Xamarin.iOS inferiori a 9,0 (o inferiori a XamarinVS 3.11.1443 in Windows) (fisso in [Bug 32388](https://bugzilla.xamarin.com/show_bug.cgi?id=32388)). Questo problema provocherà uno degli errori seguenti a seconda della destinazione di distribuzione e delle impostazioni del linker:
 
-    - Novell. Android. Common. targets: errore: eccezione durante il caricamento degli assembly: System. IO. FileNotFoundException: Impossibile caricare l'assembly ' System. Diagnostics. Tracing, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '. Forse non esiste nel profilo mono per Android?
+    - Xamarin.Android. Common. targets: errore: eccezione durante il caricamento degli assembly: System. IO. FileNotFoundException: Impossibile caricare l'assembly ' System. Diagnostics. Tracing, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '. Forse non esiste nel profilo mono per Android?
 
     - Non è stato possibile caricare il file o l'assembly ' System. Diagnostics. Tracing ' o una delle relative dipendenze. Impossibile trovare il file specificato. (System. IO. FileNotFoundException)
 
@@ -73,11 +73,11 @@ La versione `portable-net45+win8+wp8+wpa81` della libreria non fa riferimento a 
 
 ## <a name="questions--answers"></a>Domande & risposte
 
-### <a name="i-was-able-to-leave-linking-enabled-with-the-portable-net45win8wpa81-version-of-the-library-on-older-versions-of-xamarinios-or-on-xamarinandroid-how-did-that-work"></a>Sono riuscito a lasciare il collegamento abilitato con la versione `portable-net45+win8+wpa81` della libreria nelle versioni precedenti di Novell. iOS o in Novell. Android. In che modo funziona?
+### <a name="i-was-able-to-leave-linking-enabled-with-the-portable-net45win8wpa81-version-of-the-library-on-older-versions-of-xamarinios-or-on-xamarinandroid-how-did-that-work"></a>Sono riuscito a lasciare il collegamento abilitato con la versione `portable-net45+win8+wpa81` della libreria nelle versioni precedenti di Xamarin.iOS o in Xamarin.Android. In che modo funziona?
 
 #### <a name="answer"></a>risposta
 
-È _possibile_ ottenere la compilazione "completata" (con collegamento abilitato) nelle versioni precedenti di Novell. iOS o in Novell. Android su Mac se si include un riferimento all' _assembly di riferimento_ `System.Diagnostics.Tracing.dll` \[1\] anziché il _assembly di facciata_ \[2], ma sfortunatamente non si tratta di una soluzione "corretta". Gli assembly di riferimento devono essere usati solo per la compilazione di _librerie_portabili, non per il codice specifico della piattaforma, ad esempio le app. Il tentativo di _eseguire_ il codice contenuto negli assembly di riferimento (anziché semplicemente compilarlo) potrebbe produrre risultati imprevisti. La correzione corretta consentirà al team di mono di aggiungere l'overload del `WriteEvent(System.Int32,System.Object[])` mancante al tipo di [`EventSource`](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Per ora, l'opzione migliore consiste nel passare alla versione `portable-net45+win8+wp8+wpa81` della libreria Microsoft TPL Dataflow, come illustrato nella sezione precedente relativa alla soluzione alternativa.
+È _possibile_ ottenere la compilazione "completata" (con collegamento abilitato) nelle versioni precedenti di Xamarin.iOS o in Xamarin.Android su Mac se si include un riferimento all' _assembly di riferimento_ `System.Diagnostics.Tracing.dll` \[1\] anziché il _assembly di facciata_ \[2], ma sfortunatamente non si tratta di una soluzione "corretta". Gli assembly di riferimento devono essere usati solo per la compilazione di _librerie_portabili, non per il codice specifico della piattaforma, ad esempio le app. Il tentativo di _eseguire_ il codice contenuto negli assembly di riferimento (anziché semplicemente compilarlo) potrebbe produrre risultati imprevisti. La correzione corretta consentirà al team di mono di aggiungere l'overload del `WriteEvent(System.Int32,System.Object[])` mancante al tipo di [`EventSource`](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Per ora, l'opzione migliore consiste nel passare alla versione `portable-net45+win8+wp8+wpa81` della libreria Microsoft TPL Dataflow, come illustrato nella sezione precedente relativa alla soluzione alternativa.
 
 Per chiunque stia leggendo questo articolo dopo aver visto una risposta precedente e più breve da StackOverflow (<https://stackoverflow.com/a/23591322/2561894>), tenere presente che la distinzione tra gli assembly di riferimento e l'assembly di facciata _non_ è stata citata.
 
@@ -103,21 +103,21 @@ _In particolare, è possibile risolvere il problema usando questi 2 passaggi?_
 
     Mac (mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
 
-2. _Aggiungere un riferimento all'assembly di facciata nel progetto di applicazione Novell. iOS o Novell. Android._
+2. _Aggiungere un riferimento all'assembly di facciata nel progetto di applicazione Xamarin.iOS o Xamarin.Android._
 
 #### <a name="answer"></a>risposta
 
 No, questa operazione non può essere utile.
 
-- Per Novell. iOS 9,0 o una versione recente di Novell. Android in Windows, questa soluzione alternativa è strettamente ridondante e potrebbe causare errori di compilazione simili a "System. Diagnostics. Tracing ' con la stessa identità è già stato importato".
+- Per Xamarin.iOS 9,0 o una versione recente di Xamarin.Android in Windows, questa soluzione alternativa è strettamente ridondante e potrebbe causare errori di compilazione simili a "System. Diagnostics. Tracing ' con la stessa identità è già stato importato".
 
-- Per Novell. iOS 8,10 o versioni precedenti o per Novell. Android in Mac, questa soluzione alternativa può essere utile, ma _solo_ per il problema dell'assembly mancante di "livello 1". _Non risolverà_ gli errori del linker "livello 2", quindi non si tratta di una soluzione completa.
+- Per Xamarin.iOS 8,10 o versioni precedenti o per Xamarin.Android in Mac, questa soluzione alternativa può essere utile, ma _solo_ per il problema dell'assembly mancante di "livello 1". _Non risolverà_ gli errori del linker "livello 2", quindi non si tratta di una soluzione completa.
 
 ### <a name="can-i-use-the-systemdiagnosticstracing-nuget-packagehttpswwwnugetorgpackagessystemdiagnosticstracing-to-solve-the-problem"></a>È possibile usare il [pacchetto NuGet System. Diagnostics. Tracing](https://www.nuget.org/packages/System.Diagnostics.Tracing/) per risolvere il problema?
 
 #### <a name="answer"></a>risposta
 
-No, il pacchetto NuGet 3,0 "System. Diagnostics. Tracing" include solo implementazioni specifiche della piattaforma per "DNXCore50" e "netcore50". _Omette_ esplicitamente le implementazioni per Novell. Android ("monoandroid") e Novell. iOS ("MonoTouch" e "Xamarin"). Ciò significa che l'installazione del pacchetto _non avrà alcun effetto_ per i progetti Novell. Android e Novell. iOS. Il pacchetto NuGet presuppone che entrambe le piattaforme forniscano _una propria_ implementazione dei tipi. Questo presupposto è "corretto" nel senso che mono ha _un'_ implementazione dello spazio dei nomi, ma come illustrato in punti \#2 e \#3 di "dettagli sui tre livelli di errore", l'implementazione è attualmente incompleta. Quindi, la correzione corretta sarà per il team mono per la risoluzione del [bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) e del [bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890).
+No, il pacchetto NuGet 3,0 "System. Diagnostics. Tracing" include solo implementazioni specifiche della piattaforma per "DNXCore50" e "netcore50". _Omette_ esplicitamente le implementazioni per Xamarin.Android ("monoandroid") e Xamarin.iOS ("MonoTouch" e "Xamarin"). Ciò significa che l'installazione del pacchetto _non avrà alcun effetto_ per i progetti Xamarin.Android e Xamarin.iOS. Il pacchetto NuGet presuppone che entrambe le piattaforme forniscano _una propria_ implementazione dei tipi. Questo presupposto è "corretto" nel senso che mono ha _un'_ implementazione dello spazio dei nomi, ma come illustrato in punti \#2 e \#3 di "dettagli sui tre livelli di errore", l'implementazione è attualmente incompleta. Quindi, la correzione corretta sarà per il team mono per la risoluzione del [bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) e del [bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

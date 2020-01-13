@@ -16,7 +16,7 @@ ms.locfileid: "74824250"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Renderer personalizzati di Xamarin.Forms
 
-_Le interfacce utente Novell. Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Novell. Forms di mantenere l'aspetto appropriato per ogni piattaforma. I renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli Novell. Forms in ogni piattaforma._
+_Le interfacce utente Xamarin.Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Xamarin.Forms di mantenere l'aspetto appropriato per ogni piattaforma. I renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli Xamarin.Forms in ogni piattaforma._
 
 ## <a name="introduction-to-custom-renderersintroductionmd"></a>[Introduzione ai renderer personalizzati](introduction.md)
 
@@ -48,7 +48,7 @@ Un oggetto [`ViewCell`](xref:Xamarin.Forms.ViewCell) di Xamarin.Forms è una cel
 
 ## <a name="customizing-a-webviewhybridwebviewmd"></a>[Personalizzazione di una visualizzazione WebView](hybridwebview.md)
 
-Un [`WebView`](xref:Xamarin.Forms.WebView) Novell. Forms è una vista che Visualizza il contenuto Web e HTML nell'app. Questo articolo illustra come creare un renderer personalizzato che estende la `WebView` per consentire C# la chiamata del codice da JavaScript.
+Un [`WebView`](xref:Xamarin.Forms.WebView) Xamarin.Forms è una vista che Visualizza il contenuto Web e HTML nell'app. Questo articolo illustra come creare un renderer personalizzato che estende la `WebView` per consentire C# la chiamata del codice da JavaScript.
 
 ## <a name="implementing-a-viewviewmd"></a>[Implementazione di un elemento View](view.md)
 

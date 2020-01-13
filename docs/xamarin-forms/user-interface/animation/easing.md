@@ -1,6 +1,6 @@
 ---
-title: Funzioni di interpolazione in Novell. Forms
-description: Novell. Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate.
+title: Funzioni di interpolazione in Xamarin.Forms
+description: Xamarin.Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate.
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/08/2019
 ms.locfileid: "73842825"
 ---
-# <a name="easing-functions-in-xamarinforms"></a>Funzioni di interpolazione in Novell. Forms
+# <a name="easing-functions-in-xamarinforms"></a>Funzioni di interpolazione in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
-_Novell. Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate._
+_Xamarin.Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate._
 
 La classe [`Easing`](xref:Xamarin.Forms.Easing) definisce numerose funzioni di interpolazione che possono essere utilizzate dalle animazioni:
 
@@ -104,7 +104,7 @@ La funzione di interpolazione personalizzata viene specificata come argomento de
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate. Novell. Forms include una classe [`Easing`](xref:Xamarin.Forms.Easing) che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione.
+In questo articolo è stato illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate. Xamarin.Forms include una classe [`Easing`](xref:Xamarin.Forms.Easing) che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

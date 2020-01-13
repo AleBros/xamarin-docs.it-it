@@ -1,6 +1,6 @@
 ---
-title: Switch Novell. Android
-description: Come usare il widget switch in un'applicazione Novell. Android
+title: Switch Xamarin.Android
+description: Come usare il widget switch in un'applicazione Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029130"
 ---
-# <a name="xamarinandroid-switch"></a>Switch Novell. Android
+# <a name="xamarinandroid-switch"></a>Switch Xamarin.Android
 
 Il widget `Switch` (illustrato di seguito) consente a un utente di passare da uno stato all'altro, ad esempio ON o OFF. Il valore predefinito `Switch` è disattivato. Il widget è riportato di seguito negli Stati ON e OFF:
 

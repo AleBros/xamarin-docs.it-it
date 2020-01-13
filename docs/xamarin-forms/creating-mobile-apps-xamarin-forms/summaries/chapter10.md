@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 10. Estensioni di markup XAML
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 10. Estensioni di markup XAML'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 10. Estensioni di markup XAML'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
@@ -36,14 +36,14 @@ Le seguenti estensioni di markup XAML sono supportate da tutte le implementazion
 - `x:Null` Supportato da [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension)
 - `x:Array` Supportato da [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension)
 
-Queste quattro estensioni di markup XAML sono supportate da molte implementazioni di XAML, inclusi xamarin. Forms:
+Queste quattro estensioni di markup XAML sono supportate da molte implementazioni di XAML, inclusi Xamarin.Forms:
 
 - `StaticResource` Supportato da [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
 - `DynamicResource` Supportato da [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
 - `Binding` supportato da [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;illustrati in [capitolo 16. Data binding](chapter16.md)
 - `TemplateBinding` supportato da [ `TemplateBindingExtension` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash;non incluse nel libro
 
-Incluso in xamarin. Forms in relazione a un'estensione di markup XAML aggiuntiva [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):
+Incluso in Xamarin.Forms in relazione a un'estensione di markup XAML aggiuntiva [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):
 
 - [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression)&mdash;non incluse nel libro
 
@@ -89,7 +89,7 @@ Uso [ `x:Array` ](xref:Xamarin.Forms.Xaml.ArrayExtension) per definire una matri
 
 È possibile creare le proprie estensioni di markup XAML scrivendo una classe che implementa il [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) interfacciarsi con un [ `ProvideValue` ](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)) (metodo).
 
-Il [ `HslColorExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) classe soddisfa tali requisiti. Crea un valore di tipo `Color` in base ai valori di proprietà denominate `H`, `S`, `L`, e `A`. Questa classe è il primo elemento in una libreria xamarin. Forms denominata [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) che è compilato e usato nel corso di questo manuale.
+Il [ `HslColorExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) classe soddisfa tali requisiti. Crea un valore di tipo `Color` in base ai valori di proprietà denominate `H`, `S`, `L`, e `A`. Questa classe è il primo elemento in una libreria Xamarin.Forms denominata [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) che è compilato e usato nel corso di questo manuale.
 
 Il [ **CustomExtensionDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) esempio viene illustrato come fare riferimento a questa raccolta e usare l'estensione di markup personalizzata.
 

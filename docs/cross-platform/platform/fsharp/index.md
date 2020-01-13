@@ -34,4 +34,4 @@ F#è un linguaggio supportato in Visual Studio per Mac. Le funzionalità support
 - F#Supporto progetto condiviso
 - Esplorazione del codice
 - Evidenziazione della sintassi F# in Interactive
-- F#modelli per Novell. Forms, iOS e Android
+- F#modelli per Xamarin.Forms, iOS e Android

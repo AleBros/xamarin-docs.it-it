@@ -1,6 +1,6 @@
 ---
 title: Modifiche di StoreKit in iOS 6
-description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Novell. iOS."
+description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Xamarin.iOS."
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73031912"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Modifiche di StoreKit in iOS 6
 
-_iOS 6 ha introdotto due modifiche all'API di Store Kit: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Novell. iOS._
+_iOS 6 ha introdotto due modifiche all'API di Store Kit: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Xamarin.iOS._
 
 Le principali modifiche apportate al kit di archiviazione in iOS6 sono queste due nuove funzionalità:
 
@@ -27,7 +27,7 @@ Vedere le guide di [acquisto in-app](~/ios/platform/in-app-purchasing/index.md) 
 
 ## <a name="requirements"></a>Requisiti
 
-Le funzionalità di Store Kit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Novell. iOS 6,0.
+Le funzionalità di Store Kit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Xamarin.iOS 6,0.
 
 ## <a name="in-app-content-display--purchasing"></a>Visualizzazione del contenuto in-app & acquisti
 
@@ -115,11 +115,11 @@ Se l'ID Apple usato non è valido, si verificherà l'errore seguente, che può g
 
 ### <a name="reading-objective-c-documentation"></a>Lettura della documentazione di Objective-C
 
-Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come evento `Finished` nel `SKStoreProductViewController` in Novell. iOS.
+Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come evento `Finished` nel `SKStoreProductViewController` in Xamarin.iOS.
 
 ## <a name="determining-apple-ids"></a>Determinazione degli ID Apple
 
-L'ID Apple richiesto dall'`SKStoreProductViewController` è un *numero* (da non confondere con ID bundle come "com. Novell. MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
+L'ID Apple richiesto dall'`SKStoreProductViewController` è un *numero* (da non confondere con ID bundle come "com. Xamarin.MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
 
 ### <a name="itunesconnect"></a>iTunesConnect
 

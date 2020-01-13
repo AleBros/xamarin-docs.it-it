@@ -18,7 +18,7 @@ ms.locfileid: "75558705"
 
 App di esempio e demo di codice multipiattaforma Xamarin.Mac per iniziare a creare app per dispositivi mobili con C# e Xamarin.
 
-[Tutti gli esempi di Novell. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+[Tutti gli esempi di Xamarin.Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 
 :::row:::
     :::column:::
@@ -60,4 +60,4 @@ Editor semplice che offre supporto per il completamento del codice e informazion
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app e demo di codice di esempio Novell. Mac, vedere [tutti gli esempi di Novell. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac).
+Per il set completo di app e demo di codice di esempio Xamarin.Mac, vedere [tutti gli esempi di Xamarin.Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac).

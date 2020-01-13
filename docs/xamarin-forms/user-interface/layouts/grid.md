@@ -1,6 +1,6 @@
 ---
-title: Griglia di xamarin. Forms
-description: Questo articolo illustra come usare la classe di griglia di xamarin. Forms per presentare le viste nelle griglie, che possiedono le righe e colonne.
+title: Griglia di Xamarin.Forms
+description: Questo articolo illustra come usare la classe di griglia di Xamarin.Forms per presentare le viste nelle griglie, che possiedono le righe e colonne.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70770390"
 ---
-# <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
+# <a name="xamarinforms-grid"></a>Griglia di Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
@@ -54,7 +54,7 @@ Informazioni sulla riga e colonna viene archiviati `Grid`del `RowDefinitions` & 
 - **Assoluto** &ndash; alle dimensioni delle colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in C# e come `#` in XAML, con `#` in corso sul valore desiderato.
 
 > [!NOTE]
-> I valori di larghezza per le colonne vengono `*` impostati come per impostazione predefinita in Novell. Forms, in modo da garantire che la colonna riempia lo spazio disponibile. Anche i valori di altezza per le righe vengono `*` impostati come per impostazione predefinita.
+> I valori di larghezza per le colonne vengono `*` impostati come per impostazione predefinita in Xamarin.Forms, in modo da garantire che la colonna riempia lo spazio disponibile. Anche i valori di altezza per le righe vengono `*` impostati come per impostazione predefinita.
 
 Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px estesa in altezza e la riga superiore deve essere due volte la stessa altezza alla riga centrale. Nella colonna sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna a destra deve riempire lo spazio rimanente.
 
@@ -381,7 +381,7 @@ public CalculatorGridCode ()
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
+- [Creazione di App per dispositivi mobili con Xamarin.Forms, capitolo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
 - [Griglia](xref:Xamarin.Forms.Grid)
 - [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 - [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

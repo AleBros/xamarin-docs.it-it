@@ -36,7 +36,7 @@ Le sezioni seguenti illustrano come gestire i dispositivi virtuali Android SDK e
 
 Visual Studio e Visual Studio per Mac ora forniscono sostituzioni Novell per i manager basati su GUI di Google obsoleti:
 
-- Per scaricare Android SDK strumenti, le piattaforme e gli altri componenti necessari per lo sviluppo di app Novell. Android, usare [novell Android SDK Manager](~/android/get-started/installation/android-sdk.md) invece di Google SDK Manager legacy.
+- Per scaricare Android SDK strumenti, le piattaforme e gli altri componenti necessari per lo sviluppo di app Xamarin.Android, usare [novell Android SDK Manager](~/android/get-started/installation/android-sdk.md) invece di Google SDK Manager legacy.
 
 - Per creare e configurare i dispositivi virtuali Android, usare il [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) invece di Gestione emulatori Google legacy.
 

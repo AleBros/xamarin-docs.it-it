@@ -1,5 +1,5 @@
 ---
-title: Ricevitori broadcast in Novell. Android
+title: Ricevitori broadcast in Xamarin.Android
 description: In questa sezione viene illustrato come utilizzare un ricevitore di trasmissione.
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/10/2020
 ms.locfileid: "75870909"
 ---
-# <a name="broadcast-receivers-in-xamarinandroid"></a>Ricevitori broadcast in Novell. Android
+# <a name="broadcast-receivers-in-xamarinandroid"></a>Ricevitori broadcast in Xamarin.Android
 
 _In questa sezione viene illustrato come utilizzare un ricevitore di trasmissione._
 
@@ -29,7 +29,7 @@ Android identifica due tipi di trasmissioni:
 
 Il ricevitore di trasmissione è una sottoclasse del tipo di `BroadcastReceiver` e deve eseguire l'override del metodo [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . Android eseguirà `OnReceive` sul thread principale, quindi questo metodo deve essere progettato per l'esecuzione rapida. È necessario prestare attenzione quando si generano thread in `OnReceive` perché Android può terminare il processo quando il metodo termina. Se un ricevitore di trasmissione deve eseguire operazioni a esecuzione prolungata, è consigliabile pianificare un _processo_ usando il `JobScheduler` o il _dispatcher del processo Firebase_. La pianificazione del lavoro con un processo verrà descritta in una guida separata.
 
-Un _filtro preventivo_ viene usato per registrare un ricevitore di trasmissione in modo che Android possa indirizzare correttamente i messaggi. Il filtro preventivo può essere specificato in fase di esecuzione (a volte viene definito _ricevitore registrato dal contesto_ o come _registrazione dinamica_) oppure può essere definito in modo statico nel manifesto Android ( _ricevitore registrato_da un manifesto). Novell. Android fornisce un C# attributo, `IntentFilterAttribute`, che registrerà in modo statico il filtro preventivo (questo argomento verrà discusso più dettagliatamente più avanti in questa guida). A partire da Android 8,0, non è possibile che un'applicazione si registri in modo statico per una trasmissione implicita.
+Un _filtro preventivo_ viene usato per registrare un ricevitore di trasmissione in modo che Android possa indirizzare correttamente i messaggi. Il filtro preventivo può essere specificato in fase di esecuzione (a volte viene definito _ricevitore registrato dal contesto_ o come _registrazione dinamica_) oppure può essere definito in modo statico nel manifesto Android ( _ricevitore registrato_da un manifesto). Xamarin.Android fornisce un C# attributo, `IntentFilterAttribute`, che registrerà in modo statico il filtro preventivo (questo argomento verrà discusso più dettagliatamente più avanti in questa guida). A partire da Android 8,0, non è possibile che un'applicazione si registri in modo statico per una trasmissione implicita.
 
 La differenza principale tra il ricevitore registrato dal manifesto e il ricevitore registrato dal contesto è che un ricevitore registrato dal contesto risponderà solo alle trasmissioni mentre un'applicazione è in esecuzione, mentre un ricevitore registrato da un manifesto può rispondere a trasmette anche se l'app potrebbe non essere in esecuzione.  
 
@@ -46,7 +46,7 @@ In questa guida verrà illustrato come creare un ricevitore di trasmissione e co
 
 ## <a name="creating-a-broadcast-receiver"></a>Creazione di un ricevitore di trasmissione
 
-Per creare un ricevitore di trasmissione in Novell. Android, un'applicazione deve creare una sottoclasse della classe `BroadcastReceiver`, decorarla con la `BroadcastReceiverAttribute`ed eseguire l'override del metodo `OnReceive`:
+Per creare un ricevitore di trasmissione in Xamarin.Android, un'applicazione deve creare una sottoclasse della classe `BroadcastReceiver`, decorarla con la `BroadcastReceiverAttribute`ed eseguire l'override del metodo `OnReceive`:
 
 ```csharp
 [BroadcastReceiver(Enabled = true, Exported = false)]
@@ -61,7 +61,7 @@ public class SampleReceiver : BroadcastReceiver
 }
 ```
 
-Quando Novell. Android compila la classe, verrà aggiornato anche il file AndroidManifest con i metadati necessari per registrare il ricevitore. Per un ricevitore di broadcast registrato in modo statico, il `Enabled` deve essere impostato correttamente `true`. in caso contrario, Android non sarà in grado di creare un'istanza del destinatario.
+Quando Xamarin.Android compila la classe, verrà aggiornato anche il file AndroidManifest con i metadati necessari per registrare il ricevitore. Per un ricevitore di broadcast registrato in modo statico, il `Enabled` deve essere impostato correttamente `true`. in caso contrario, Android non sarà in grado di creare un'istanza del destinatario.
 
 La proprietà `Exported` controlla se il ricevitore di trasmissione può ricevere messaggi dall'esterno dell'applicazione. Se la proprietà non è impostata in modo esplicito, il valore predefinito della proprietà viene determinato da Android in base a se sono presenti filtri per finalità associate al ricevitore di trasmissione. Se è presente almeno un filtro preventivo per il ricevitore di trasmissione, Android presuppone che la proprietà `Exported` sia `true`. Se al ricevitore di trasmissione non sono associati filtri per finalità, Android presuppone che il valore sia `false`. 
 
@@ -69,7 +69,7 @@ Il metodo `OnReceive` riceve un riferimento al `Intent` che è stato inviato al 
 
 ### <a name="statically-registering-a-broadcast-receiver-with-an-intent-filter"></a>Registrazione statica di un ricevitore di trasmissione con un filtro preventivo
 
-Quando un `BroadcastReceiver` viene decorato con il [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute), Novell. Android aggiungerà l'elemento `<intent-filter>` necessario al manifesto Android in fase di compilazione. Il frammento di codice seguente è un esempio di ricevitore di trasmissione che verrà eseguito al termine dell'avvio di un dispositivo, se l'utente ha concesso le autorizzazioni Android appropriate:
+Quando un `BroadcastReceiver` viene decorato con il [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute), Xamarin.Android aggiungerà l'elemento `<intent-filter>` necessario al manifesto Android in fase di compilazione. Il frammento di codice seguente è un esempio di ricevitore di trasmissione che verrà eseguito al termine dell'avvio di un dispositivo, se l'utente ha concesso le autorizzazioni Android appropriate:
 
 ```csharp
 [BroadcastReceiver(Enabled = true)]

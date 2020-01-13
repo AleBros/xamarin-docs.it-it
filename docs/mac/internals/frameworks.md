@@ -1,6 +1,6 @@
 ---
-title: Framework Novell. Mac
-description: Questo documento elenca i vari Framework macOS che è possibile usare quando si sviluppano applicazioni Mac con Novell. Mac.
+title: Framework Xamarin.Mac
+description: Questo documento elenca i vari Framework macOS che è possibile usare quando si sviluppano applicazioni Mac con Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029952"
 ---
-# <a name="xamarinmac-frameworks"></a>Framework Novell. Mac
+# <a name="xamarinmac-frameworks"></a>Framework Xamarin.Mac
 
-I Framework macOS seguenti sono supportati da Novell. Mac:
+I Framework macOS seguenti sono supportati da Xamarin.Mac:
 
 - AVFoundation 
 - Accelerare

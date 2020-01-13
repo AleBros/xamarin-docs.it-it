@@ -1,6 +1,6 @@
 ---
-title: Notifiche in Novell. iOS
-description: Questa sezione illustra come implementare le notifiche locali in Novell. iOS. Verranno illustrati i vari elementi dell'interfaccia utente di una notifica iOS e verranno illustrate le API che interessano la creazione e la visualizzazione di una notifica.
+title: Notifiche in Xamarin.iOS
+description: Questa sezione illustra come implementare le notifiche locali in Xamarin.iOS. Verranno illustrati i vari elementi dell'interfaccia utente di una notifica iOS e verranno illustrate le API che interessano la creazione e la visualizzazione di una notifica.
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031374"
 ---
-# <a name="notifications-in-xamarinios"></a>Notifiche in Novell. iOS
+# <a name="notifications-in-xamarinios"></a>Notifiche in Xamarin.iOS
 
 > [!IMPORTANT]
 > Le informazioni contenute in questa sezione riguardano iOS 9 e versioni precedenti. Per iOS 10 e versioni successive, vedere la [Guida per il Framework di notifica utente](~/ios/platform/user-notifications/index.md).
@@ -131,7 +131,7 @@ if(remoteNotification != null)
 
 ## <a name="summary"></a>Riepilogo
 
-In questa sezione è stato illustrato come creare e pubblicare una notifica in Novell. iOS. Viene illustrato il modo in cui un'applicazione può rispondere alle notifiche eseguendo l'override del metodo `ReceivedLocalNotification` o del metodo `ReceivedRemoteNotification` nel `AppDelegate`.
+In questa sezione è stato illustrato come creare e pubblicare una notifica in Xamarin.iOS. Viene illustrato il modo in cui un'applicazione può rispondere alle notifiche eseguendo l'override del metodo `ReceivedLocalNotification` o del metodo `ReceivedRemoteNotification` nel `AppDelegate`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

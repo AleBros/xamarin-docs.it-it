@@ -1,6 +1,6 @@
 ---
-title: Sandboxing di un'app Novell. Mac
-description: Questo articolo illustra il sandboxing di un'applicazione Novell. Mac per il rilascio nell'App Store. Copre tutti gli elementi che entrano in sandbox, ad esempio le directory dei contenitori, i diritti, le autorizzazioni definite dall'utente, la separazione dei privilegi e l'imposizione del kernel.
+title: Sandboxing di un'app Xamarin.Mac
+description: Questo articolo illustra il sandboxing di un'applicazione Xamarin.Mac per il rilascio nell'App Store. Copre tutti gli elementi che entrano in sandbox, ad esempio le directory dei contenitori, i diritti, le autorizzazioni definite dall'utente, la separazione dei privilegi e l'imposizione del kernel.
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030105"
 ---
-# <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Novell. Mac
+# <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Xamarin.Mac
 
-_Questo articolo illustra il sandboxing di un'applicazione Novell. Mac per il rilascio nell'App Store. Copre tutti gli elementi che entrano in sandbox, ad esempio le directory dei contenitori, i diritti, le autorizzazioni definite dall'utente, la separazione dei privilegi e l'imposizione del kernel._
+_Questo articolo illustra il sandboxing di un'applicazione Xamarin.Mac per il rilascio nell'App Store. Copre tutti gli elementi che entrano in sandbox, ad esempio le directory dei contenitori, i diritti, le autorizzazioni definite dall'utente, la separazione dei privilegi e l'imposizione del kernel._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, si ha la stessa capacità di sandbox di un'applicazione come si fa quando si usa Objective-C o SWIFT.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, si ha la stessa capacità di sandbox di un'applicazione come si fa quando si usa Objective-C o SWIFT.
 
 [![Esempio di app in esecuzione](sandboxing-images/intro01.png "Esempio di app in esecuzione")](sandboxing-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base per l'uso della sandbox in un'applicazione Novell. Mac e di tutti gli elementi che vengono inseriti in sandbox: directory del contenitore, diritti, autorizzazioni definite dall'utente, separazione dei privilegi e imposizione del kernel. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base per l'uso della sandbox in un'applicazione Xamarin.Mac e di tutti gli elementi che vengono inseriti in sandbox: directory del contenitore, diritti, autorizzazioni definite dall'utente, separazione dei privilegi e imposizione del kernel. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="about-the-app-sandbox"></a>Informazioni sulla sandbox dell'app
 
@@ -51,7 +51,7 @@ Gli elementi della sandbox dell'app che verranno descritti in dettaglio nell'art
 - Separazione dei privilegi
 - Imposizione del kernel
 
-Dopo aver compreso questi dettagli, sarà possibile creare un piano per l'adozione dell'app sandbox nell'applicazione Novell. Mac.
+Dopo aver compreso questi dettagli, sarà possibile creare un piano per l'adozione dell'app sandbox nell'applicazione Xamarin.Mac.
 
 In primo luogo, è necessario determinare se l'applicazione è un buon candidato per il sandboxing (la maggior parte delle applicazioni è). Successivamente, sarà necessario risolvere eventuali incompatibilità API e determinare quali elementi della sandbox dell'app sono necessari. Infine, esaminare l'uso della separazione dei privilegi per massimizzare il livello di difesa dell'applicazione.
 
@@ -59,11 +59,11 @@ Quando si adotta la sandbox dell'app, alcuni file system percorsi usati dall'app
 
 ## <a name="sandboxing-quick-start"></a>Guida introduttiva al sandboxing
 
-In questa sezione verrà creata una semplice app Novell. Mac che usa una visualizzazione Web, che richiede una connessione di rete limitata in modalità sandbox, a meno che non sia specificamente richiesta, come esempio di introduzione all'app sandbox.
+In questa sezione verrà creata una semplice app Xamarin.Mac che usa una visualizzazione Web, che richiede una connessione di rete limitata in modalità sandbox, a meno che non sia specificamente richiesta, come esempio di introduzione all'app sandbox.
 
 Si verificherà che l'applicazione sia effettivamente sandbox e si apprenderà come risolvere gli errori comuni di sandbox app.
 
-### <a name="creating-the-xamarinmac-project"></a>Creazione del progetto Novell. Mac
+### <a name="creating-the-xamarinmac-project"></a>Creazione del progetto Xamarin.Mac
 
 Per creare il progetto di esempio, eseguire le operazioni seguenti:
 
@@ -105,7 +105,7 @@ Eseguire l'applicazione e verificare che il sito Web Apple venga visualizzato ne
 
 ### <a name="signing-and-provisioning-the-app"></a>Firma e provisioning dell'app
 
-Prima di poter abilitare la sandbox dell'app, è prima di tutto necessario effettuare il provisioning e firmare l'applicazione Novell. Mac.
+Prima di poter abilitare la sandbox dell'app, è prima di tutto necessario effettuare il provisioning e firmare l'applicazione Xamarin.Mac.
 
 Consente di eseguire le operazioni seguenti:
 
@@ -155,7 +155,7 @@ Successivamente, è necessario caricare il nuovo ID app e il profilo nel compute
 3. Fare clic sul pulsante di **aggiornamento** nell'angolo in basso a sinistra.
 4. Fare clic sul pulsante **fine** .
 
-Successivamente, è necessario selezionare il nuovo ID app e il profilo di provisioning nel progetto Novell. Mac. Eseguire le operazioni seguenti:
+Successivamente, è necessario selezionare il nuovo ID app e il profilo di provisioning nel progetto Xamarin.Mac. Eseguire le operazioni seguenti:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
 2. Verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza (ad esempio: `com.appracatappra.MacSandbox`):
@@ -206,7 +206,7 @@ A questo punto, l'app sandbox è stata abilitata, ma non è stato fornito l'acce
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>Verifica per verificare se l'app è in modalità sandbox
 
-A parte il comportamento di blocco delle risorse, esistono tre modi principali per stabilire se un'applicazione Novell. Mac è stata creata in modalità sandbox:
+A parte il comportamento di blocco delle risorse, esistono tre modi principali per stabilire se un'applicazione Xamarin.Mac è stata creata in modalità sandbox:
 
 1. In Finder verificare il contenuto della cartella `~/Library/Containers/`: se l'app è in modalità sandbox, sarà presente una cartella denominata come l'identificatore del bundle dell'app, ad esempio: `com.appracatappra.MacSandbox`:
 
@@ -226,7 +226,7 @@ A parte il comportamento di blocco delle risorse, esistono tre modi principali p
 
 ### <a name="debugging-a-sandboxed-app"></a>Debug di un'app in modalità sandbox
 
-Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
+Il debugger si connette alle app Xamarin.Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
 
 [![Impostazione delle opzioni obbligatorie](sandboxing-images/debug01.png "Impostazione delle opzioni obbligatorie")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -234,13 +234,13 @@ L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella n
 
 ### <a name="resolving-an-app-sandbox-violation"></a>Risoluzione della violazione di una sandbox dell'app
 
-Si verifica una violazione sandbox dell'app se un'applicazione Novell. Mac in modalità sandbox ha tentato di accedere a una risorsa che non è consentita in modo esplicito. La visualizzazione Web, ad esempio, non è più in grado di visualizzare il sito Web Apple.
+Si verifica una violazione sandbox dell'app se un'applicazione Xamarin.Mac in modalità sandbox ha tentato di accedere a una risorsa che non è consentita in modo esplicito. La visualizzazione Web, ad esempio, non è più in grado di visualizzare il sito Web Apple.
 
 L'origine più comune delle violazioni sandbox dell'app si verifica quando le impostazioni dei diritti specificate in Visual Studio per Mac non corrispondono ai requisiti dell'applicazione. Ancora una volta, tornando all'esempio, i diritti di connessione di rete mancanti che impediscono il funzionamento della visualizzazione Web.
 
 #### <a name="discovering-app-sandbox-violations"></a>Individuazione delle violazioni sandbox dell'app
 
-Se si sospetta che si verifichi una violazione della sandbox dell'app nell'applicazione Novell. Mac, il modo più rapido per individuare il problema consiste nell'usare l'app **console** .
+Se si sospetta che si verifichi una violazione della sandbox dell'app nell'applicazione Xamarin.Mac, il modo più rapido per individuare il problema consiste nell'usare l'app **console** .
 
 Procedere come descritto di seguito:
 
@@ -270,7 +270,7 @@ Se si eseguono le operazioni descritte in precedenza per l'app di esempio, quind
 
 I meccanismi di controllo degli accessi offerti dalla sandbox dell'app sono pochi e facili da comprendere. Tuttavia, il modo in cui l'app sandbox verrà adottata da ogni app è univoca e basata sui requisiti dell'app.
 
-Dato il massimo sforzo necessario per proteggere l'applicazione Novell. Mac dal codice dannoso, è necessario che sia presente una sola vulnerabilità nell'app, o in una delle librerie o nei Framework utilizzati, per ottenere il controllo delle interazioni dell'app con il sistema.
+Dato il massimo sforzo necessario per proteggere l'applicazione Xamarin.Mac dal codice dannoso, è necessario che sia presente una sola vulnerabilità nell'app, o in una delle librerie o nei Framework utilizzati, per ottenere il controllo delle interazioni dell'app con il sistema.
 
 Il sandbox dell'app è stato progettato per impedire l'acquisizione (o limitare il danno che può causare) consentendo di specificare le interazioni desiderate dell'applicazione con il sistema. Il sistema concederà solo l'accesso alla risorsa richiesta dall'applicazione per svolgere il proprio lavoro e nient'altro.
 
@@ -278,9 +278,9 @@ Quando si progetta per la sandbox dell'app, si sta progettando uno scenario pegg
 
 ### <a name="entitlements-and-system-resource-access"></a>Diritti e accesso alle risorse di sistema
 
-Come illustrato sopra, un'applicazione Novell. Mac a cui non è stato eseguito il sandbox riceve i diritti completi e l'accesso dell'utente che esegue l'app. Se compromessa da codice dannoso, un'app non protetta può fungere da agente per comportamenti ostili, con un'ampia gamma di potenziali rischi.
+Come illustrato sopra, un'applicazione Xamarin.Mac a cui non è stato eseguito il sandbox riceve i diritti completi e l'accesso dell'utente che esegue l'app. Se compromessa da codice dannoso, un'app non protetta può fungere da agente per comportamenti ostili, con un'ampia gamma di potenziali rischi.
 
-Abilitando la sandbox dell'app, si rimuove tutti i privilegi tranne un set minimo di privilegi, che vengono quindi riabilitati solo in base alla necessità usando i diritti dell'app Novell. Mac.
+Abilitando la sandbox dell'app, si rimuove tutti i privilegi tranne un set minimo di privilegi, che vengono quindi riabilitati solo in base alla necessità usando i diritti dell'app Xamarin.Mac.
 
 Per modificare le risorse della sandbox dell'applicazione, modificare il file con **estensione plist** e controllare o selezionare i diritti richiesti dalle caselle a discesa degli editor:
 
@@ -288,7 +288,7 @@ Per modificare le risorse della sandbox dell'applicazione, modificare il file co
 
 ### <a name="container-directories-and-file-system-access"></a>Directory del contenitore e accesso file system
 
-Quando l'applicazione Novell. Mac adotta la sandbox dell'app, può accedere ai percorsi seguenti:
+Quando l'applicazione Xamarin.Mac adotta la sandbox dell'app, può accedere ai percorsi seguenti:
 
 - **Directory del contenitore dell'app** : alla prima esecuzione, il sistema operativo crea una directory speciale del _contenitore_ in cui tutte le relative risorse sono disponibili, a cui solo può accedere. L'app avrà accesso completo in lettura/scrittura alla directory.
 - **Directory del contenitore del gruppo di app** : è possibile concedere all'app l'accesso a uno o più _contenitori di gruppi_ condivisi tra le app nello stesso gruppo.
@@ -298,7 +298,7 @@ Quando l'applicazione Novell. Mac adotta la sandbox dell'app, può accedere ai p
 
 #### <a name="the-app-container-directory"></a>Directory del contenitore di app
 
-Una directory del contenitore dell'applicazione Novell. Mac presenta le caratteristiche seguenti:
+Una directory del contenitore dell'applicazione Xamarin.Mac presenta le caratteristiche seguenti:
 
 - Si trova in una posizione nascosta nella home directory dell'utente (in genere `~Library/Containers`) ed è possibile accedervi con la funzione `NSHomeDirectory` (vedere di seguito) all'interno dell'applicazione. Poiché si trova nella Home Directory, ogni utente otterrà il proprio contenitore per l'app.
 - L'app dispone di accesso in lettura/scrittura illimitato alla directory del contenitore e a tutte le relative sottodirectory e file al suo interno.
@@ -308,7 +308,7 @@ Una directory del contenitore dell'applicazione Novell. Mac presenta le caratter
 - Per i tipi di app da _scarpe_ (ad esempio, app Foto di Apple), il contenuto dell'utente viene inserito nel contenitore.
 
 > [!IMPORTANT]
-> Sfortunatamente, Novell. Mac non dispone ancora della copertura API del 100% (a differenza di Novell. iOS), di conseguenza non è stato eseguito il mapping dell'API `NSHomeDirectory` nella versione corrente di Novell. Mac.
+> Sfortunatamente, Xamarin.Mac non dispone ancora della copertura API del 100% (a differenza di Xamarin.iOS), di conseguenza non è stato eseguito il mapping dell'API `NSHomeDirectory` nella versione corrente di Xamarin.Mac.
 
 Come soluzione temporanea, è possibile usare il codice seguente:
 
@@ -337,13 +337,13 @@ Per ulteriori informazioni, vedere la pagina relativa all' [aggiunta di un'appli
 
 #### <a name="powerbox-and-file-system-access-outside-of-the-app-container"></a>Accesso a PowerBox e file system all'esterno del contenitore di app
 
-Un'applicazione Novell. Mac in modalità sandbox può accedere a posizioni file system all'esterno del relativo contenitore nei modi seguenti:
+Un'applicazione Xamarin.Mac in modalità sandbox può accedere a posizioni file system all'esterno del relativo contenitore nei modi seguenti:
 
 - Alla direzione specifica dell'utente (tramite finestre di dialogo Apri e Salva o altri metodi, ad esempio il trascinamento della selezione).
 - Utilizzando i diritti per percorsi di file system specifici, ad esempio `/bin` o `/usr/lib`.
 - Quando il file system percorso si trova in alcune directory che sono leggibili in tutto il mondo, ad esempio la condivisione.
 
-_PowerBox_ è la tecnologia di sicurezza MacOS che interagisce con l'utente per espandere i diritti di accesso ai file dell'app Novell. Mac in modalità sandbox. Powerbox non dispone di API, ma viene attivato in modo trasparente quando l'app chiama un `NSOpenPanel` o `NSSavePanel`. L'accesso PowerBox viene abilitato tramite i diritti impostati per l'applicazione Novell. Mac.
+_PowerBox_ è la tecnologia di sicurezza MacOS che interagisce con l'utente per espandere i diritti di accesso ai file dell'app Xamarin.Mac in modalità sandbox. Powerbox non dispone di API, ma viene attivato in modo trasparente quando l'app chiama un `NSOpenPanel` o `NSSavePanel`. L'accesso PowerBox viene abilitato tramite i diritti impostati per l'applicazione Xamarin.Mac.
 
 Quando un'app in modalità sandbox Visualizza una finestra di dialogo Apri o Salva, la finestra viene presentata da PowerBox (e non da AppKit) e pertanto ha accesso a qualsiasi file o directory a cui l'utente ha accesso.
 
@@ -365,9 +365,9 @@ Inoltre, il sistema consente automaticamente le operazioni seguenti a un'app cre
   - `/System`
 - Leggere e scrivere i file nelle directory create da `NSTemporaryDirectory`.
 
-Per impostazione predefinita, i file aperti o salvati da un'app Novell. Mac in modalità sandbox rimangono accessibili fino a quando l'app non viene terminata, a meno che il file non sia ancora aperto quando l'app si chiude. I file aperti verranno ripristinati automaticamente nella sandbox dell'app tramite la funzionalità di riattivazione macOS al successivo avvio dell'app.
+Per impostazione predefinita, i file aperti o salvati da un'app Xamarin.Mac in modalità sandbox rimangono accessibili fino a quando l'app non viene terminata, a meno che il file non sia ancora aperto quando l'app si chiude. I file aperti verranno ripristinati automaticamente nella sandbox dell'app tramite la funzionalità di riattivazione macOS al successivo avvio dell'app.
 
-Per rendere persistente i file che si trovano all'esterno del contenitore di un'app Novell. Mac, usare i segnalibri con ambito di sicurezza (vedere di seguito).
+Per rendere persistente i file che si trovano all'esterno del contenitore di un'app Xamarin.Mac, usare i segnalibri con ambito di sicurezza (vedere di seguito).
 
 #### <a name="related-items"></a>Elementi correlati
 
@@ -382,7 +382,7 @@ In entrambi gli scenari, il file **info. plist** dell'app deve dichiarare i tipi
 
 #### <a name="open-and-save-dialog-behavior-with-sandboxed-apps"></a>Comportamento della finestra di dialogo Apri e Salva con le app create mediante sandbox
 
-I limiti seguenti vengono inseriti nel `NSOpenPanel` e `NSSavePanel` quando vengono chiamati da un'app Novell. Mac in modalità sandbox:
+I limiti seguenti vengono inseriti nel `NSOpenPanel` e `NSSavePanel` quando vengono chiamati da un'app Xamarin.Mac in modalità sandbox:
 
 - Non è possibile richiamare il pulsante **OK** a livello di codice.
 - Non è possibile modificare a livello di codice la selezione di un utente in un `NSOpenSavePanelDelegate`.
@@ -393,9 +393,9 @@ Sono inoltre disponibili le seguenti modifiche di ereditarietà:
 
 ### <a name="security-scoped-bookmarks-and-persistent-resource-access"></a>Segnalibri con ambito di sicurezza e accesso alle risorse persistente
 
-Come indicato in precedenza, un'applicazione Novell. Mac in modalità sandbox può accedere a un file o a una risorsa all'esterno del relativo contenitore mediante l'interazione diretta dell'utente (fornita da PowerBox). Tuttavia, l'accesso a queste risorse non viene reso automaticamente persistente tra i lanci delle app o i riavvii del sistema.
+Come indicato in precedenza, un'applicazione Xamarin.Mac in modalità sandbox può accedere a un file o a una risorsa all'esterno del relativo contenitore mediante l'interazione diretta dell'utente (fornita da PowerBox). Tuttavia, l'accesso a queste risorse non viene reso automaticamente persistente tra i lanci delle app o i riavvii del sistema.
 
-Con i _segnalibri con ambito di sicurezza_, un'applicazione Novell. Mac in modalità sandbox può mantenere la finalità dell'utente e mantenere l'accesso alle risorse specificate dopo il riavvio di un'app.
+Con i _segnalibri con ambito di sicurezza_, un'applicazione Xamarin.Mac in modalità sandbox può mantenere la finalità dell'utente e mantenere l'accesso alle risorse specificate dopo il riavvio di un'app.
 
 #### <a name="security-scoped-bookmark-types"></a>Tipi di segnalibro con ambito di sicurezza
 
@@ -403,7 +403,7 @@ Quando si usano segnalibri con ambito di sicurezza e l'accesso alle risorse pers
 
 - **Un segnalibro con ambito di app fornisce accesso permanente a una cartella o a un file specificato dall'utente.**
 
-    Ad esempio, se l'applicazione Novell. Mac in modalità sandbox consente a di aprire un documento esterno per la modifica (usando un `NSOpenPanel`), l'app può creare un segnalibro con ambito di app in modo da poter accedere nuovamente allo stesso file in futuro.
+    Ad esempio, se l'applicazione Xamarin.Mac in modalità sandbox consente a di aprire un documento esterno per la modifica (usando un `NSOpenPanel`), l'app può creare un segnalibro con ambito di app in modo da poter accedere nuovamente allo stesso file in futuro.
 - **Un segnalibro con ambito documento fornisce un documento specifico accesso permanente a un file secondario.**
 
 Ad esempio, un'applicazione di modifica video che consente di creare un file di progetto che ha accesso alle singole immagini, clip video e file audio che verranno combinati in un unico film.
@@ -419,20 +419,20 @@ Un segnalibro con ambito documento può essere risolto da qualsiasi applicazione
 
 Per usare uno dei due tipi di segnalibro con ambito di protezione, è necessario eseguire i passaggi seguenti:
 
-1. **Impostare i diritti appropriati nell'app Novell. Mac che deve usare i segnalibri con ambito di sicurezza** . per i segnalibri con ambito di app, impostare la chiave di diritti `com.apple.security.files.bookmarks.app-scope` su `true`. Per i segnalibri con ambito documento, impostare la chiave di autorizzazione `com.apple.security.files.bookmarks.document-scope` su `true`.
+1. **Impostare i diritti appropriati nell'app Xamarin.Mac che deve usare i segnalibri con ambito di sicurezza** . per i segnalibri con ambito di app, impostare la chiave di diritti `com.apple.security.files.bookmarks.app-scope` su `true`. Per i segnalibri con ambito documento, impostare la chiave di autorizzazione `com.apple.security.files.bookmarks.document-scope` su `true`.
 2. **Creare un segnalibro con ambito di sicurezza** : questa operazione viene eseguita per qualsiasi file o cartella a cui l'utente ha concesso l'accesso (ad esempio, tramite `NSOpenPanel`), che l'app dovrà avere accesso permanente a. Usare il metodo `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` della classe `NSUrl` per creare il segnalibro.
 3. **Risolvere il segnalibro con ambito di sicurezza** : quando l'app deve accedere di nuovo alla risorsa, ad esempio dopo il riavvio, sarà necessario risolvere il segnalibro in un URL con ambito di sicurezza. Usare il metodo `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` della classe `NSUrl` per risolvere il segnalibro.
 4. **Notificare in modo esplicito al sistema che si vuole accedere al file dall'URL con ambito di sicurezza** . questo passaggio deve essere eseguito immediatamente dopo aver ottenuto l'URL con ambito di sicurezza precedente o, quando si vuole riottenere l'accesso alla risorsa dopo avere rinunciare all'accesso. Chiamare il metodo `StartAccessingSecurityScopedResource ()` della classe `NSUrl` per iniziare ad accedere a un URL con ambito di sicurezza.
 5. **Notificare in modo esplicito al sistema che l'utente ha eseguito l'accesso al file dall'URL con ambito di protezione** : appena possibile, è necessario informare il sistema quando l'app non necessita più dell'accesso al file, ad esempio se l'utente la chiude. Chiamare il metodo `StopAccessingSecurityScopedResource ()` della classe `NSUrl` per arrestare l'accesso a un URL con ambito di sicurezza.
 
-Dopo aver ceduto l'accesso a una risorsa, è necessario tornare al passaggio 4 per ristabilire l'accesso. Se l'app Novell. Mac viene riavviata, è necessario tornare al passaggio 3 e risolvere di nuovo il segnalibro.
+Dopo aver ceduto l'accesso a una risorsa, è necessario tornare al passaggio 4 per ristabilire l'accesso. Se l'app Xamarin.Mac viene riavviata, è necessario tornare al passaggio 3 e risolvere di nuovo il segnalibro.
 
 > [!IMPORTANT]
-> Se non si rilascia l'accesso alle risorse URL con ambito di sicurezza, un'app Novell. Mac perderà le risorse del kernel. Di conseguenza, l'app non sarà più in grado di aggiungere percorsi di file system al relativo contenitore fino a quando non viene riavviato.
+> Se non si rilascia l'accesso alle risorse URL con ambito di sicurezza, un'app Xamarin.Mac perderà le risorse del kernel. Di conseguenza, l'app non sarà più in grado di aggiungere percorsi di file system al relativo contenitore fino a quando non viene riavviato.
 
 ### <a name="the-app-sandbox-and-code-signing"></a>Sandbox dell'app e firma del codice
 
-Dopo aver abilitato l'app sandbox e aver abilitato i requisiti specifici per l'app Novell. Mac (tramite diritti), è necessario firmare il progetto affinché il sandboxing venga applicato. È necessario eseguire la firma del codice perché i diritti necessari per il sandboxing dell'app sono collegati alla firma dell'app.
+Dopo aver abilitato l'app sandbox e aver abilitato i requisiti specifici per l'app Xamarin.Mac (tramite diritti), è necessario firmare il progetto affinché il sandboxing venga applicato. È necessario eseguire la firma del codice perché i diritti necessari per il sandboxing dell'app sono collegati alla firma dell'app.
 
 macOS impone un collegamento tra il contenitore di un'app e la firma del codice, in questo modo nessun'altra applicazione può accedere a tale contenitore anche se esegue lo spoofing dell'ID bundle delle app. Questo meccanismo funziona nel modo seguente:
 
@@ -441,10 +441,10 @@ macOS impone un collegamento tra il contenitore di un'app e la firma del codice,
 
 La firma del codice funziona nei modi seguenti:
 
-1. Prima di creare il progetto Novell. Mac, ottenere un certificato di sviluppo, un certificato di distribuzione e un certificato ID sviluppatore dal portale Apple Developer.
-2. Quando Mac App Store distribuisce l'app Novell. Mac, viene firmato con una firma del codice Apple.
+1. Prima di creare il progetto Xamarin.Mac, ottenere un certificato di sviluppo, un certificato di distribuzione e un certificato ID sviluppatore dal portale Apple Developer.
+2. Quando Mac App Store distribuisce l'app Xamarin.Mac, viene firmato con una firma del codice Apple.
 
-Quando si esegue il test e il debug, si userà una versione dell'applicazione Novell. Mac firmata (che verrà usata per creare il contenitore dell'app). In seguito, se si vuole testare o installare la versione dall'App Store di Apple, viene firmata con la firma Apple e non verrà avviata (perché non ha la stessa firma del codice del contenitore dell'app originale). In questa situazione si otterrà una segnalazione di arresto anomalo simile alla seguente:
+Quando si esegue il test e il debug, si userà una versione dell'applicazione Xamarin.Mac firmata (che verrà usata per creare il contenitore dell'app). In seguito, se si vuole testare o installare la versione dall'App Store di Apple, viene firmata con la firma Apple e non verrà avviata (perché non ha la stessa firma del codice del contenitore dell'app originale). In questa situazione si otterrà una segnalazione di arresto anomalo simile alla seguente:
 
 ```csharp
 Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)
@@ -456,16 +456,16 @@ Per altre informazioni su come creare e scaricare i profili di provisioning nece
 
 #### <a name="adjusting-the-acl-entry"></a>Modifica della voce ACL
 
-Per consentire l'esecuzione della versione firmata Apple dell'app Novell. Mac, seguire questa procedura:
+Per consentire l'esecuzione della versione firmata Apple dell'app Xamarin.Mac, seguire questa procedura:
 
 1. Aprire l'app Terminal (in `/Applications/Utilities`).
-2. Aprire una finestra del Finder per la versione con firma Apple dell'app Novell. Mac.
+2. Aprire una finestra del Finder per la versione con firma Apple dell'app Xamarin.Mac.
 3. Digitare `asctl container acl add -file` nella finestra del terminale.
-4. Trascinare l'icona dell'app Novell. Mac dalla finestra di ricerca e rilasciarla nella finestra del terminale.
+4. Trascinare l'icona dell'app Xamarin.Mac dalla finestra di ricerca e rilasciarla nella finestra del terminale.
 5. Il percorso completo del file verrà aggiunto al comando nel terminale.
 6. Premere **invio** per eseguire il comando.
 
-L'elenco di controllo di accesso del contenitore contiene ora i requisiti di codice designati per entrambe le versioni dell'app Novell. Mac e macOS consentirà l'esecuzione di entrambe le versioni.
+L'elenco di controllo di accesso del contenitore contiene ora i requisiti di codice designati per entrambe le versioni dell'app Xamarin.Mac e macOS consentirà l'esecuzione di entrambe le versioni.
 
 #### <a name="display-a-list-of-acl-code-requirements"></a>Visualizza un elenco di requisiti del codice ACL
 
@@ -475,27 +475,27 @@ L'elenco di controllo di accesso del contenitore contiene ora i requisiti di cod
 2. Digitare `asctl container acl list -bundle <container-name>`.
 3. Premere **invio** per eseguire il comando.
 
-Il `<container-name>` è in genere l'identificatore del bundle per l'applicazione Novell. Mac.
+Il `<container-name>` è in genere l'identificatore del bundle per l'applicazione Xamarin.Mac.
 
-## <a name="designing-a-xamarinmac-app-for-the-app-sandbox"></a>Progettazione di un'app Novell. Mac per l'app sandbox
+## <a name="designing-a-xamarinmac-app-for-the-app-sandbox"></a>Progettazione di un'app Xamarin.Mac per l'app sandbox
 
-Quando si progetta un'app Novell. Mac per il sandbox dell'app, è necessario seguire un flusso di lavoro comune. Ciò premesso, le specifiche di implementazione della sandboxing in un'applicazione saranno univoche per la funzionalità dell'app specificata.
+Quando si progetta un'app Xamarin.Mac per il sandbox dell'app, è necessario seguire un flusso di lavoro comune. Ciò premesso, le specifiche di implementazione della sandboxing in un'applicazione saranno univoche per la funzionalità dell'app specificata.
 
 ### <a name="six-steps-for-adopting-the-app-sandbox"></a>Sei passaggi per l'adozione della sandbox dell'app
 
-La progettazione di un'app Novell. Mac per la sandbox dell'app in genere è costituita dai passaggi seguenti:
+La progettazione di un'app Xamarin.Mac per la sandbox dell'app in genere è costituita dai passaggi seguenti:
 
 1. Determinare se l'app è adatta per la sandboxing.
 2. Progettare una strategia di sviluppo e distribuzione.
 3. Risolvere eventuali incompatibilità dell'API.
-4. Applicare i diritti di sandbox dell'app richiesti al progetto Novell. Mac.
+4. Applicare i diritti di sandbox dell'app richiesti al progetto Xamarin.Mac.
 5. Aggiungere la separazione dei privilegi con XPC.
 6. Implementare una strategia di migrazione.
 
 > [!IMPORTANT]
 > È necessario non solo eseguire la sandbox del file eseguibile principale nel bundle dell'app, ma anche ogni app helper o strumento incluso in tale bundle. Questa operazione è necessaria per qualsiasi app distribuita da Mac App Store e, se possibile, deve essere eseguita per qualsiasi altra forma di distribuzione di app.
 
-Per un elenco di tutti i file binari eseguibili in un bundle dell'app Novell. Mac, digitare il comando seguente nel terminale:
+Per un elenco di tutti i file binari eseguibili in un bundle dell'app Xamarin.Mac, digitare il comando seguente nel terminale:
 
 ```bash
 find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executable"
@@ -503,9 +503,9 @@ find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executabl
 
 Dove `[Your-App-Bundle]` è il nome e il percorso del bundle dell'applicazione.
 
-### <a name="determine-whether-a-xamarinmac-app-is-suitable-for-sandboxing"></a>Determinare se un'app Novell. Mac è adatta per la sandboxing
+### <a name="determine-whether-a-xamarinmac-app-is-suitable-for-sandboxing"></a>Determinare se un'app Xamarin.Mac è adatta per la sandboxing
 
-La maggior parte delle app Novell. Mac è completamente compatibile con l'app sandbox e pertanto è adatta per la sandboxing. Se l'app richiede un comportamento non consentito dall'app sandbox, è consigliabile prendere in considerazione un approccio alternativo.
+La maggior parte delle app Xamarin.Mac è completamente compatibile con l'app sandbox e pertanto è adatta per la sandboxing. Se l'app richiede un comportamento non consentito dall'app sandbox, è consigliabile prendere in considerazione un approccio alternativo.
 
 Se l'app richiede uno dei comportamenti seguenti, non è compatibile con l'app sandbox:
 
@@ -521,47 +521,47 @@ Se l'app richiede uno dei comportamenti seguenti, non è compatibile con l'app s
 
 ### <a name="resolving-api-incompatibilities"></a>Risoluzione delle incompatibilità API
 
-Quando si progetta un'app Novell. Mac per la sandbox dell'app, è possibile che si verifichino incompatibilità con l'uso di alcune API macOS.
+Quando si progetta un'app Xamarin.Mac per la sandbox dell'app, è possibile che si verifichino incompatibilità con l'uso di alcune API macOS.
 
 Di seguito sono riportati alcuni problemi comuni che è possibile eseguire per risolverli:
 
 - **Apertura, salvataggio e rilevamento dei documenti** : se si gestiscono documenti con qualsiasi tecnologia diversa da `NSDocument`, è necessario passare a tale documento a causa del supporto incorporato per la sandbox dell'app. `NSDocument` funziona automaticamente con PowerBox e fornisce il supporto per mantenere i documenti all'interno della sandbox se vengono spostati dall'utente in Finder.
-- **Mantenere l'accesso alle risorse del file System** : se l'app Novell. Mac dipende dall'accesso permanente alle risorse esterne al contenitore, usare i segnalibri con ambito di sicurezza per mantenere l'accesso.
+- **Mantenere l'accesso alle risorse del file System** : se l'app Xamarin.Mac dipende dall'accesso permanente alle risorse esterne al contenitore, usare i segnalibri con ambito di sicurezza per mantenere l'accesso.
 - **Creare un elemento di accesso per un'app** : con l'app sandbox, non è possibile creare un elemento di accesso usando `LSSharedFileList` né modificare lo stato dei servizi di avvio usando `LSRegisterURL`. Usare la funzione `SMLoginItemSetEnabled` come descritto in mele [aggiunta di elementi di accesso tramite la documentazione del Framework di gestione dei servizi](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
 - **Accesso ai dati utente** : se si usano funzioni POSIX come `getpwuid` per ottenere la home directory dell'utente dai servizi directory, provare a usare i simboli Cocoa o Core Foundation, ad esempio `NSHomeDirectory`.
 - **Accesso alle preferenze di altre app** : poiché la sandbox dell'app indirizza le API di ricerca del percorso al contenitore dell'app, la modifica delle preferenze viene eseguita all'interno del contenitore e l'accesso alle preferenze di un'altra app non è consentito.
-- **Uso del video HTML5 embedded in visualizzazioni Web** : se l'app Novell. Mac usa WebKit per riprodurre video HTML5 incorporati, è necessario collegare l'app anche a AV Foundation Framework. Il sandbox dell'app impedisce a CoreMedia di riprodurre questi video in caso contrario.
+- **Uso del video HTML5 embedded in visualizzazioni Web** : se l'app Xamarin.Mac usa WebKit per riprodurre video HTML5 incorporati, è necessario collegare l'app anche a AV Foundation Framework. Il sandbox dell'app impedisce a CoreMedia di riprodurre questi video in caso contrario.
 
 ### <a name="applying-required-app-sandbox-entitlements"></a>Applicazione dei diritti di sandbox app richiesti
 
-Sarà necessario modificare i diritti per qualsiasi applicazione Novell. Mac che si vuole eseguire nell'app sandbox e selezionare la casella di controllo **Abilita sandboxing dell'app** .
+Sarà necessario modificare i diritti per qualsiasi applicazione Xamarin.Mac che si vuole eseguire nell'app sandbox e selezionare la casella di controllo **Abilita sandboxing dell'app** .
 
 In base alla funzionalità dell'app, potrebbe essere necessario abilitare altri diritti per accedere alle funzionalità o alle risorse del sistema operativo. Il sandboxing delle app funziona meglio quando si riducono i diritti richiesti al minimo necessario per eseguire l'app, in modo da abilitare solo i diritti in modo casuale.
 
-Per determinare i diritti richiesti da un'app Novell. Mac, seguire questa procedura:
+Per determinare i diritti richiesti da un'app Xamarin.Mac, seguire questa procedura:
 
-1. Abilitare l'app sandbox ed eseguire l'app Novell. Mac.
+1. Abilitare l'app sandbox ed eseguire l'app Xamarin.Mac.
 2. Eseguire le funzionalità dell'app.
 3. Aprire l'app console (disponibile in `/Applications/Utilities`) e cercare `sandboxd` violazioni nel registro **tutti i messaggi** .
 4. Per ogni violazione di `sandboxd`, risolvere il problema usando il contenitore dell'app anziché altri percorsi di file system o applicare diritti sandbox per l'app per consentire l'accesso alle funzionalità limitate del sistema operativo.
-5. Eseguire nuovamente e testare di nuovo tutte le funzionalità dell'app Novell. Mac.
+5. Eseguire nuovamente e testare di nuovo tutte le funzionalità dell'app Xamarin.Mac.
 6. Ripetere fino a quando non sono state risolte tutte le violazioni del `sandboxd`.
 
 ### <a name="add-privilege-separation-using-xpc"></a>Aggiungere la separazione dei privilegi con XPC
 
-Quando si sviluppa un'app Novell. Mac per la sandbox dell'app, esaminare i comportamenti dell'app in termini di privilegi e accesso, quindi considerare la possibilità di separare le operazioni ad alto rischio nei propri servizi XPC.
+Quando si sviluppa un'app Xamarin.Mac per la sandbox dell'app, esaminare i comportamenti dell'app in termini di privilegi e accesso, quindi considerare la possibilità di separare le operazioni ad alto rischio nei propri servizi XPC.
 
 Per ulteriori informazioni, vedere la pagina relativa alla creazione di servizi e daemon di [Servizi XPC](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html#//apple_ref/doc/uid/10000172i-SW6) e alla [Guida alla programmazione dei servizi](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/Introduction.html#//apple_ref/doc/uid/10000172i)di Apple.
 
 ### <a name="implement-a-migration-strategy"></a>Implementare una strategia di migrazione
 
-Se si sta rilasciando una nuova versione di un'applicazione Novell. Mac in modalità sandbox che in precedenza non era sandbox, è necessario assicurarsi che gli utenti correnti dispongano di un percorso di aggiornamento uniforme.
+Se si sta rilasciando una nuova versione di un'applicazione Xamarin.Mac in modalità sandbox che in precedenza non era sandbox, è necessario assicurarsi che gli utenti correnti dispongano di un percorso di aggiornamento uniforme.
 
  Per informazioni dettagliate su come implementare un manifesto di migrazione del contenitore, vedere la documentazione relativa [alla migrazione di un'app in una sandbox di](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) Apple.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio la sandboxing di un'applicazione Novell. Mac. In primo luogo, è stata creata un'app Novell. Mac semplicemente per visualizzare le nozioni di base della sandbox dell'app. Successivamente, è stato illustrato come risolvere le violazioni della sandbox. È stata quindi esaminata in dettaglio l'app sandbox e infine è stata esaminata la progettazione di un'app Novell. Mac per il sandbox dell'app.
+Questo articolo ha esaminato in dettaglio la sandboxing di un'applicazione Xamarin.Mac. In primo luogo, è stata creata un'app Xamarin.Mac semplicemente per visualizzare le nozioni di base della sandbox dell'app. Successivamente, è stato illustrato come risolvere le violazioni della sandbox. È stata quindi esaminata in dettaglio l'app sandbox e infine è stata esaminata la progettazione di un'app Xamarin.Mac per il sandbox dell'app.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

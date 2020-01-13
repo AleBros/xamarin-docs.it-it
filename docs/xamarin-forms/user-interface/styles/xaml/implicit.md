@@ -1,5 +1,5 @@
 ---
-title: Stili impliciti in xamarin. Forms
+title: Stili impliciti in Xamarin.Forms
 description: Uno stile implicito è quello usato da tutti i controlli di TargetType stesso, senza richiedere ogni controllo per fare riferimento allo stile.
 ms.prod: xamarin
 ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70228176"
 ---
-# <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti in xamarin. Forms
+# <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 

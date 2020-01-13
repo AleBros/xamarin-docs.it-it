@@ -1,6 +1,6 @@
 ---
-title: Novell. Forms SwipeView
-description: Novell. Forms SwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida che vengono rivelate da un gesto di scorrimento.
+title: Xamarin.Forms SwipeView
+description: Xamarin.Forms SwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida che vengono rivelate da un gesto di scorrimento.
 ms.prod: xamarin
 ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490388"
 ---
-# <a name="xamarinforms-swipeview"></a>Novell. Forms SwipeView
+# <a name="xamarinforms-swipeview"></a>Xamarin.Forms SwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -24,7 +24,7 @@ Il `SwipeView` è un controllo contenitore che esegue il wrapping di un elemento
 
 [![Screenshot di SwipeView swipe items in a CollectionView, in iOS e Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe elementi")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe elementi")
 
-`SwipeView` è disponibile in Novell. Forms 4,4. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS, alla classe `MainActivity` in Android o alla classe di `App` in UWP, prima di chiamare `Forms.Init`:
+`SwipeView` è disponibile in Xamarin.Forms 4,4. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS, alla classe `MainActivity` in Android o alla classe di `App` in UWP, prima di chiamare `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("SwipeView_Experimental");
@@ -114,7 +114,7 @@ Ogni elemento swipe viene definito come oggetto `SwipeItem` inserito in una dell
 - Evento `Invoked`, che viene generato quando viene eseguito l'elemento swipe.
 
 > [!IMPORTANT]
-> La classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce diverse proprietà, tra cui `Command`, `CommandParameter`, `IconImageSource`e `Text`. Queste proprietà possono essere impostate su un oggetto `SwipeItem` per definirne l'aspetto e per definire un `ICommand` eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md).
+> La classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce diverse proprietà, tra cui `Command`, `CommandParameter`, `IconImageSource`e `Text`. Queste proprietà possono essere impostate su un oggetto `SwipeItem` per definirne l'aspetto e per definire un `ICommand` eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md).
 
 Nell'esempio seguente vengono illustrati due oggetti `SwipeItem` nella raccolta `LeftItems` di un `SwipeView`:
 
@@ -288,4 +288,4 @@ Inoltre, quando si definisce la proprietà `Command` di un `SwipeItem` o `SwipeI
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [SwipeView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md)
+- [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

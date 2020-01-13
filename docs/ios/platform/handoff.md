@@ -1,6 +1,6 @@
 ---
-title: Continuità in Novell. iOS
-description: Questo articolo illustra come usare la consegna in un'app Novell. iOS per trasferire le attività degli utenti tra le app in esecuzione negli altri dispositivi dell'utente.
+title: Continuità in Xamarin.iOS
+description: Questo articolo illustra come usare la consegna in un'app Xamarin.iOS per trasferire le attività degli utenti tra le app in esecuzione negli altri dispositivi dell'utente.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032401"
 ---
-# <a name="handoff-in-xamarinios"></a>Continuità in Novell. iOS
+# <a name="handoff-in-xamarinios"></a>Continuità in Xamarin.iOS
 
-_Questo articolo illustra come usare la consegna in un'app Novell. iOS per trasferire le attività degli utenti tra le app in esecuzione negli altri dispositivi dell'utente._
+_Questo articolo illustra come usare la consegna in un'app Xamarin.iOS per trasferire le attività degli utenti tra le app in esecuzione negli altri dispositivi dell'utente._
 
 Apple ha introdotto la consegna in iOS 8 e OS X Yosemite (10,10) per fornire un meccanismo comune per l'utente per trasferire le attività avviate in uno dei loro dispositivi, a un altro dispositivo che esegue la stessa app o un'altra app che supporta la stessa attività.
 
 [![](handoff-images/handoff02.png "An example of performing a Handoff operation")](handoff-images/handoff02.png#lightbox)
 
-Questo articolo illustra in modo rapido come abilitare la condivisione delle attività in un'app Novell. iOS e come illustrare in dettaglio il Framework uniforme:
+Questo articolo illustra in modo rapido come abilitare la condivisione delle attività in un'app Xamarin.iOS e come illustrare in dettaglio il Framework uniforme:
 
 ## <a name="about-handoff"></a>Informazioni
 
@@ -106,7 +106,7 @@ Per ulteriori informazioni, vedere la sezione relativa all' [implementazione del
 
 ## <a name="enabling-handoff-in-a-xamarin-app"></a>Abilitazione della consegna in un'app Novell
 
-A causa dei requisiti di sicurezza imposti dalla consegna, un'app Novell. iOS che usa il Framework di consegna deve essere configurata correttamente nel portale Apple Developer e nel file di progetto Novell. iOS.
+A causa dei requisiti di sicurezza imposti dalla consegna, un'app Xamarin.iOS che usa il Framework di consegna deve essere configurata correttamente nel portale Apple Developer e nel file di progetto Xamarin.iOS.
 
 Procedere come descritto di seguito:
 
@@ -121,7 +121,7 @@ Procedere come descritto di seguito:
 
     [![](handoff-images/provision02.png "Create a new development provisioning profile for the app")](handoff-images/provision02.png#lightbox)
 7. Scaricare e installare il nuovo profilo di provisioning o usare Xcode per scaricare e installare il profilo.
-8. Modificare le opzioni del progetto Novell. iOS e assicurarsi di usare il profilo di provisioning appena creato:
+8. Modificare le opzioni del progetto Xamarin.iOS e assicurarsi di usare il profilo di provisioning appena creato:
 
     [![](handoff-images/provision03.png "Select the provisioning profile just created")](handoff-images/provision03.png#lightbox)
 9. Modificare quindi il file **info. plist** e assicurarsi di usare l'ID app usato per creare il profilo di provisioning:
@@ -136,7 +136,7 @@ Con queste impostazioni, l'applicazione è ora pronta per accedere alle API del 
 
 ## <a name="implementing-handoff"></a>Implementazione della distribuzione
 
-Le attività utente possono essere proseguite tra le app firmate con lo stesso ID team di sviluppo e supportano lo stesso tipo di attività. Per implementare la distribuzione in un'app Novell. iOS, è necessario creare un oggetto attività utente (in `UIKit` o `AppKit`), aggiornare lo stato dell'oggetto per tenere traccia dell'attività e continuare l'attività in un dispositivo di destinazione.
+Le attività utente possono essere proseguite tra le app firmate con lo stesso ID team di sviluppo e supportano lo stesso tipo di attività. Per implementare la distribuzione in un'app Xamarin.iOS, è necessario creare un oggetto attività utente (in `UIKit` o `AppKit`), aggiornare lo stato dell'oggetto per tenere traccia dell'attività e continuare l'attività in un dispositivo di destinazione.
 
 ### <a name="identifying-user-activities"></a>Identificazione delle attività degli utenti
 
@@ -607,7 +607,7 @@ L'implementazione corretta della continuazione di un'attività utente tramite la
 
 ## <a name="example-handoff-app"></a>App uniforme di esempio
 
-Come esempio di utilizzo della consegna in un'app Novell. iOS, è stata inclusa l'app di esempio [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) in questa guida. L'app dispone di quattro schede che l'utente può usare per esplorare il Web, ognuna con un determinato tipo di attività: Meteo, preferito, pausa caffè e lavoro.
+Come esempio di utilizzo della consegna in un'app Xamarin.iOS, è stata inclusa l'app di esempio [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) in questa guida. L'app dispone di quattro schede che l'utente può usare per esplorare il Web, ognuna con un determinato tipo di attività: Meteo, preferito, pausa caffè e lavoro.
 
 In qualsiasi scheda, quando l'utente immette un nuovo URL e tocca il pulsante **Vai** , viene creato un nuovo `NSUserActivity` per la scheda che contiene l'URL attualmente esplorato dall'utente:
 
@@ -625,7 +625,7 @@ Quando l'attività dell'utente è stata inviata correttamente a un altro disposi
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha fornito un'introduzione al Framework di continuità usato per continuare l'attività di un utente tra più dispositivi Apple dell'utente. Successivamente, è stato illustrato come abilitare e implementare la consegna in un'app Novell. iOS. Infine, sono stati illustrati i diversi tipi di continuazioni di continuità disponibili e le procedure consigliate per la continuità.
+Questo articolo ha fornito un'introduzione al Framework di continuità usato per continuare l'attività di un utente tra più dispositivi Apple dell'utente. Successivamente, è stato illustrato come abilitare e implementare la consegna in un'app Xamarin.iOS. Infine, sono stati illustrati i diversi tipi di continuazioni di continuità disponibili e le procedure consigliate per la continuità.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

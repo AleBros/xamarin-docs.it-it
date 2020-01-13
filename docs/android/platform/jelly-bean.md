@@ -20,7 +20,7 @@ _Questo documento fornisce una panoramica di alto livello delle nuove funzionali
 
 ## <a name="overview"></a>Panoramica
 
-Android 4,1 (livello API 16), noto anche come "Jelly Bean", è stato rilasciato il 9 luglio 2012. Questo articolo fornisce un'introduzione generale ad alcune delle nuove funzionalità di Android 4,1 per gli sviluppatori che usano Novell. Android. Alcune di queste nuove funzionalità introdotte sono i miglioramenti apportati alle animazioni per l'avvio di un'attività, nuovi suoni per una fotocamera e un supporto migliorato per la navigazione dello stack dell'applicazione. È ora possibile tagliare e incollare con Intent.
+Android 4,1 (livello API 16), noto anche come "Jelly Bean", è stato rilasciato il 9 luglio 2012. Questo articolo fornisce un'introduzione generale ad alcune delle nuove funzionalità di Android 4,1 per gli sviluppatori che usano Xamarin.Android. Alcune di queste nuove funzionalità introdotte sono i miglioramenti apportati alle animazioni per l'avvio di un'attività, nuovi suoni per una fotocamera e un supporto migliorato per la navigazione dello stack dell'applicazione. È ora possibile tagliare e incollare con Intent.
 
 La stabilità delle applicazioni Android è stata migliorata con la possibilità di isolare la dipendenza da provider di contenuti instabili. I servizi possono anche essere isolati in modo che siano accessibili solo dall'attività che le ha avviate.
 
@@ -30,7 +30,7 @@ Sono state aggiunte infine alcune nuove autorizzazioni in Android 4,1.
 
 ## <a name="requirements"></a>Requisiti
 
-Per lo sviluppo di applicazioni Novell. Android con Jelly Bean è necessario che Novell. Android 4.2.6 o versione successiva e Android 4,1 (API level 16) venga installato tramite Android SDK Manager, come illustrato nella schermata seguente:
+Per lo sviluppo di applicazioni Xamarin.Android con Jelly Bean è necessario che Xamarin.Android 4.2.6 o versione successiva e Android 4,1 (API level 16) venga installato tramite Android SDK Manager, come illustrato nella schermata seguente:
 
 [![la selezione di Android 4,1 in gestione Android SDK](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 

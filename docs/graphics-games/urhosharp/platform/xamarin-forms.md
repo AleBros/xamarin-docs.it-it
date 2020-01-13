@@ -1,6 +1,6 @@
 ---
-title: Supporto di UrhoSharp Novell. Forms
-description: Questo documento illustra l'hosting di UrhoSharp in un'applicazione Novell. Forms. Si collega a istruzioni e codice di esempio per eseguire questa operazione.
+title: Supporto di UrhoSharp Xamarin.Forms
+description: Questo documento illustra l'hosting di UrhoSharp in un'applicazione Xamarin.Forms. Si collega a istruzioni e codice di esempio per eseguire questa operazione.
 ms.prod: xamarin
 ms.assetid: B630B8BE-3D8D-4CDB-BDB0-9709052AA46C
 author: conceptdev
@@ -13,10 +13,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/18/2019
 ms.locfileid: "71105794"
 ---
-# <a name="urhosharp-xamarinforms-support"></a>Supporto di UrhoSharp Novell. Forms
+# <a name="urhosharp-xamarinforms-support"></a>Supporto di UrhoSharp Xamarin.Forms
 
-UrhoSharp può essere ospitato nelle applicazioni Novell. Forms. Il codice Urho può essere scritto in una libreria di classi portabile e condiviso tra più piattaforme.
+UrhoSharp può essere ospitato nelle applicazioni Xamarin.Forms. Il codice Urho può essere scritto in una libreria di classi portabile e condiviso tra più piattaforme.
 
-Seguire queste istruzioni per l' [aggiunta di UrhoSharp a Novell. Forms](~/xamarin-forms/user-interface/graphics/urhosharp.md)e fare riferimento alla [documentazione di UrhoSharp](~/graphics-games/urhosharp/using.md) per informazioni su come creare scene e azioni 3D.
+Seguire queste istruzioni per l' [aggiunta di UrhoSharp a Xamarin.Forms](~/xamarin-forms/user-interface/graphics/urhosharp.md)e fare riferimento alla [documentazione di UrhoSharp](~/graphics-games/urhosharp/using.md) per informazioni su come creare scene e azioni 3D.
 
-L' [esempio UrhoSharp Novell. Forms](https://github.com/xamarin/urho-samples/tree/master/FormsSample) Mostra un grafico interattivo 3D per illustrare come interagire con UrhoSharp dal codice condiviso Novell. Forms.
+L' [esempio UrhoSharp Xamarin.Forms](https://github.com/xamarin/urho-samples/tree/master/FormsSample) Mostra un grafico interattivo 3D per illustrare come interagire con UrhoSharp dal codice condiviso Xamarin.Forms.

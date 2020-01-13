@@ -52,9 +52,9 @@ Novell [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-up
 
 ### <a name="touchunit"></a>Touch. unit
 
-Novell. iOS include un Framework di unit test denominato touch. Unit che segue i test di scrittura in stile JUnit/NUnit.
+Xamarin.iOS include un Framework di unit test denominato touch. Unit che segue i test di scrittura in stile JUnit/NUnit.
 
-Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Novell. iOS](~/ios/deploy-test/touch.unit.md) .
+Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Xamarin.iOS](~/ios/deploy-test/touch.unit.md) .
 
 ### <a name="andrunit"></a>Andr. unit
 

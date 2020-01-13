@@ -1,6 +1,6 @@
 ---
-title: Avviare l'app map nativa da Novell. Forms
-description: L'app native Maps in ogni piattaforma può essere avviata da un'applicazione Novell. Forms mediante la classe dell'utilità di avvio Novell. Essentials.
+title: Avviare l'app map nativa da Xamarin.Forms
+description: L'app native Maps in ogni piattaforma può essere avviata da un'applicazione Xamarin.Forms mediante la classe dell'utilità di avvio Xamarin.Essentials.
 ms.prod: xamarin
 ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
 ms.technology: xamarin-forms
@@ -14,14 +14,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/01/2019
 ms.locfileid: "73426202"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>Avviare l'app map nativa da Novell. Forms
+# <a name="launch-the-native-map-app-from-xamarinforms"></a>Avviare l'app map nativa da Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-L'app map nativa in ogni piattaforma può essere avviata da un'applicazione Novell. Forms dalla classe Novell. Essentials `Launcher`. Questa classe consente a un'applicazione di aprire un'altra app tramite il relativo schema URI personalizzato. La funzionalità di avvio può essere richiamata con il metodo `OpenAsync`, passando un argomento `string` o `Uri` che rappresenta lo schema URL personalizzato da aprire. Per altre informazioni su Novell. Essentials, vedere [Novell. Essentials](~/essentials/index.md?context=xamarin/xamarin-forms).
+L'app map nativa in ogni piattaforma può essere avviata da un'applicazione Xamarin.Forms dalla classe Xamarin.Essentials `Launcher`. Questa classe consente a un'applicazione di aprire un'altra app tramite il relativo schema URI personalizzato. La funzionalità di avvio può essere richiamata con il metodo `OpenAsync`, passando un argomento `string` o `Uri` che rappresenta lo schema URL personalizzato da aprire. Per altre informazioni su Xamarin.Essentials, vedere [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms).
 
 > [!NOTE]
-> Un'alternativa all'uso della classe `Launcher` Novell. Essentials consiste nell'usare la classe `Map`. Per altre informazioni, vedere [Novell. Essentials: Map](~/essentials/maps.md?context=xamarin/xamarin-forms).
+> Un'alternativa all'uso della classe `Launcher` Xamarin.Essentials consiste nell'usare la classe `Map`. Per altre informazioni, vedere [Xamarin.Essentials: Map](~/essentials/maps.md?context=xamarin/xamarin-forms).
 
 L'app Maps in ogni piattaforma usa uno schema URI personalizzato univoco. Per informazioni sullo schema URI Maps in iOS, vedere [collegamenti Mappa](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html) in Developer.Apple.com. Per informazioni sullo schema URI di Maps in Android, vedere [Maps Developer Guide](https://developer.android.com/guide/components/intents-common.html#Maps) e [Google Maps Intent per Android](https://developers.google.com/maps/documentation/urls/android-intents) in Developers.Android.com. Per informazioni sullo schema URI Maps nella piattaforma UWP (Universal Windows Platform) (UWP), vedere [avviare l'app Windows Maps](/windows/uwp/launch-resume/launch-maps-app).
 

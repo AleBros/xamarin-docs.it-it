@@ -15,7 +15,7 @@ ms.locfileid: "73029918"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso di Jenkins con Xamarin
 
-_Questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare applicazioni Novell. iOS e Novell. Android quando viene eseguito il commit delle modifiche nel sistema di gestione del codice sorgente._
+_questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare applicazioni Novell. iOS e Novell. Android quando viene eseguito il commit delle modifiche nel sistema di gestione del codice sorgente._
 
 [Introduzione all'integrazione continua con Novell](~/tools/ci/intro-to-ci.md) introduce l'integrazione continuata come una pratica di sviluppo software utile che fornisce un avviso tempestivo di codice interrotto o incompatibile. CI consente agli sviluppatori di risolvere problemi e problemi non appena si verificano e mantiene il software in uno stato adatto per la distribuzione. Questa procedura dettagliata illustra come usare il contenuto di entrambi i documenti insieme.
 
@@ -142,7 +142,7 @@ Questa sezione è obbligatoria se si intende usare TFS per il controllo del codi
 Per consentire a una workstation macOS di interagire con un server TFS, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) necessario installare nella workstation. Team Explorer Everywhere è un set di strumenti di Microsoft che include un client della riga di comando multipiattaforma per l'accesso a TFS. Team Explorer Everywhere possono essere scaricati da Microsoft e installati in tre passaggi:
 
 1. Decomprimere il file di archivio in una directory accessibile per l'account utente. Ad esempio, è possibile decomprimere il file in **~/Tee**.
-2. Configurare la shell o il percorso di sistema in modo da includere la cartella che contiene i file che sono stati decompressi nel passaggio uno precedente. Di seguito è riportato un esempio:
+2. Configurare la shell o il percorso di sistema in modo da includere la cartella che contiene i file che sono stati decompressi nel passaggio uno precedente. Ad esempio,
 
     ```
     echo export PATH~/tee/:$PATH' >> ~/.bash_profile

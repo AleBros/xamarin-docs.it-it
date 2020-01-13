@@ -24,13 +24,13 @@ Negli ambienti multi-touch, ad esempio quelli nei dispositivi mobili, gli utenti
 
 ![](touch-images/touchmanipulationsexample.png "Una bitmap sottoposta alla traslazione, ridimensionamento e rotazione")
 
-Tutti gli esempi riportati usano l'effetto di tocco di rilevamento di xamarin. Forms presentato nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
+Tutti gli esempi riportati usano l'effetto di tocco di rilevamento di Xamarin.Forms presentato nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
 ## <a name="dragging-and-translation"></a>Il trascinamento e traduzione
 
 Una delle applicazioni più importanti di trasformazioni con matrice è l'elaborazione di tocco. Un unico [ `SKMatrix` ](xref:SkiaSharp.SKMatrix) valore possa consolidare una serie di operazioni di tocco. 
 
-Per il trascinamento di un singolo dito, il `SKMatrix` valore esegue la conversione. Questa funzionalità viene illustrata la **trascinamento di Bitmap** pagina. Il file XAML crea un' `SKCanvasView` in un xamarin. Forms `Grid`. Oggetto `TouchEffect` oggetto è stato aggiunto per il `Effects` raccolta di cui `Grid`:
+Per il trascinamento di un singolo dito, il `SKMatrix` valore esegue la conversione. Questa funzionalità viene illustrata la **trascinamento di Bitmap** pagina. Il file XAML crea un' `SKCanvasView` in un Xamarin.Forms `Grid`. Oggetto `TouchEffect` oggetto è stato aggiunto per il `Effects` raccolta di cui `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -93,7 +93,7 @@ public partial class BitmapDraggingPage : ContentPage
 
 Senza ulteriore codice, il `SKMatrix` valore è sempre la matrice di identità e non avrebbe alcun effetto sulla visualizzazione della bitmap. L'obiettivo del `OnTouchEffectAction` gestore impostata nel file XAML consiste nel modificare il valore della matrice in modo da riflettere le modifiche di tocco.
 
-Il `OnTouchEffectAction` gestore inizia con la conversione di xamarin. Forms `Point` valore in un SkiaSharp `SKPoint` valore. Si tratta semplicemente di ridimensionamento in base il `Width` e `Height` delle proprietà di `SKCanvasView` (che sono unità indipendenti dal dispositivo) e il `CanvasSize` proprietà, ovvero in unità di pixel:
+Il `OnTouchEffectAction` gestore inizia con la conversione di Xamarin.Forms `Point` valore in un SkiaSharp `SKPoint` valore. Si tratta semplicemente di ridimensionamento in base il `Width` e `Height` delle proprietà di `SKCanvasView` (che sono unità indipendenti dal dispositivo) e il `CanvasSize` proprietà, ovvero in unità di pixel:
 
 ```csharp
 public partial class BitmapDraggingPage : ContentPage

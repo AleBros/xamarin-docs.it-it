@@ -1,6 +1,6 @@
 ---
-title: Usare l'accesso con Apple per Novell. Forms
-description: Informazioni su come implementare l'accesso con Apple nelle applicazioni Novell. Forms per dispositivi mobili.
+title: Usare l'accesso con Apple per Xamarin.Forms
+description: Informazioni su come implementare l'accesso con Apple nelle applicazioni Xamarin.Forms per dispositivi mobili.
 ms.prod: xamarin
 ms.assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71319514"
 ---
-# <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usare l'accesso con Apple in Novell. Forms
+# <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usare l'accesso con Apple in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
-L'accesso con Apple è per tutte le nuove applicazioni in iOS 13 che usano servizi di autenticazione di terze parti. I dettagli di implementazione tra iOS e Android sono piuttosto diversi. Questa guida illustra come è possibile eseguire questa operazione oggi in Novell. Forms.
+L'accesso con Apple è per tutte le nuove applicazioni in iOS 13 che usano servizi di autenticazione di terze parti. I dettagli di implementazione tra iOS e Android sono piuttosto diversi. Questa guida illustra come è possibile eseguire questa operazione oggi in Xamarin.Forms.
 
 In questa guida e nell'esempio vengono usati servizi di piattaforma specifici per gestire l'accesso con Apple:
 
@@ -27,7 +27,7 @@ In questa guida e nell'esempio vengono usati servizi di piattaforma specifici pe
 
 ## <a name="a-sample-apple-sign-in-flow"></a>Un flusso di accesso Apple di esempio
 
-Questo esempio offre un'implementazione dogmatica per il funzionamento dell'accesso Apple nell'app Novell. Forms.
+Questo esempio offre un'implementazione dogmatica per il funzionamento dell'accesso Apple nell'app Xamarin.Forms.
 
 Per semplificare il flusso di autenticazione vengono usate due funzioni di Azure:
 
@@ -71,7 +71,7 @@ Si consiglia inoltre di utilizzare `WebView` per ospitare il flusso di autentica
 
 ## <a name="a-cross-platform-sign-in-service"></a>Un servizio di accesso multipiattaforma
 
-Usando il DependencyService Novell. Forms, è possibile creare servizi di autenticazione distinti che usano i servizi della piattaforma in iOS e un servizio Web generico per Android e altre piattaforme non iOS basate su un'interfaccia condivisa.
+Usando il DependencyService Xamarin.Forms, è possibile creare servizi di autenticazione distinti che usano i servizi della piattaforma in iOS e un servizio Web generico per Android e altre piattaforme non iOS basate su un'interfaccia condivisa.
 
 ```csharp
 public interface IAppleSignInService
@@ -243,7 +243,7 @@ public class WebAppleSignInService : IAppleSignInService
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo descrive i passaggi necessari per configurare l'accesso con Apple per l'uso nelle applicazioni Novell. Forms.
+Questo articolo descrive i passaggi necessari per configurare l'accesso con Apple per l'uso nelle applicazioni Xamarin.Forms.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

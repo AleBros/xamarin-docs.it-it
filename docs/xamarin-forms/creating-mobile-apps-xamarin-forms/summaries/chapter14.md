@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 14. Layout assoluto
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 14. Layout assoluto'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 14. Layout assoluto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84

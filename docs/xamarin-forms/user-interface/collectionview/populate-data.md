@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms-dati CollectionView
+title: Xamarin.Forms-dati CollectionView
 description: Un oggetto CollectionView viene popolato con i dati impostando la relativa proprietà ItemsSource su una raccolta che implementa IEnumerable.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488173"
 ---
-# <a name="xamarinforms-collectionview-data"></a>Novell. Forms-dati CollectionView
+# <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms-dati CollectionView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -79,7 +79,7 @@ Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionVi
 > [!IMPORTANT]
 > Se il [`CollectionView`](xref:Xamarin.Forms.CollectionView) è necessario per l'aggiornamento quando gli elementi vengono aggiunti, rimossi o modificati nella raccolta sottostante, la raccolta sottostante deve essere una raccolta di `IEnumerable` che invia le notifiche di modifica delle proprietà, ad esempio `ObservableCollection`.
 
-Per informazioni su come modificare il layout di [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vedere [Novell. Forms CollectionView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CollectionView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
+Per informazioni su come modificare il layout di [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vedere [Xamarin.Forms CollectionView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CollectionView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Associazione dati
 
@@ -99,7 +99,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 In questo esempio, i dati della proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) vengono associati alla proprietà `Monkeys` dell'elemento ViewModel connesso.
 
 > [!NOTE]
-> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Novell. Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Xamarin.Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -246,7 +246,7 @@ La classe `MonkeyDataTemplateSelector` definisce `AmericanMonkey` e `OtherMonkey
 
 [![Screenshot della selezione del modello di elemento di runtime di CollectionView, in iOS e Android](populate-data-images/datatemplateselector.png "Selezione del modello di elemento di runtime in un CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Selezione del modello di elemento di runtime in un CollectionView")
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 > [!IMPORTANT]
 > Quando si usa [`CollectionView`](xref:Xamarin.Forms.CollectionView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CollectionView` non ha alcun concetto di celle.
@@ -328,7 +328,7 @@ In questo esempio, il contenuto del `SwipeView` è un [`Grid`](xref:Xamarin.Form
 
 `SwipeView` supporta quattro direzioni di scorrimento diverse, con la direzione di scorrimento definita dalla raccolta di `SwipeItems` direzionali a cui vengono aggiunti gli oggetti di `SwipeItems`. Per impostazione predefinita, un elemento swipe viene eseguito quando viene toccato dall'utente. Inoltre, dopo l'esecuzione di un elemento swipe gli elementi swipe sono nascosti e il contenuto del `SwipeView` viene nuovamente visualizzato. Tuttavia, è possibile modificare questi comportamenti.
 
-Per ulteriori informazioni sul controllo `SwipeView`, vedere [Novell. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
+Per ulteriori informazioni sul controllo `SwipeView`, vedere [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Aggiornamento tramite trascinamento verso il basso
 
@@ -367,7 +367,7 @@ Quando l'utente avvia un aggiornamento, viene eseguito il `ICommand` definito da
 
 Il valore della proprietà `RefreshView.IsRefreshing` indica lo stato corrente del `RefreshView`. Quando un aggiornamento viene attivato dall'utente, questa proprietà passerà automaticamente a `true`. Una volta completato l'aggiornamento, è necessario reimpostare la proprietà su `false`.
 
-Per ulteriori informazioni su `RefreshView`, vedere [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+Per ulteriori informazioni su `RefreshView`, vedere [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Caricare i dati in modo incrementale
 
@@ -422,8 +422,8 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Novell. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
-- [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
+- [Data Binding Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creare un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

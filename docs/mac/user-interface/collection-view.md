@@ -1,6 +1,6 @@
 ---
-title: Viste di raccolta in Novell. Mac
-description: Questo articolo descrive l'uso delle visualizzazioni di raccolta in un'app Novell. Mac. Viene illustrata la creazione e la gestione delle visualizzazioni di raccolta in Xcode e Interface Builder e l'utilizzo di tali viste a livello di codice.
+title: Viste di raccolta in Xamarin.Mac
+description: Questo articolo descrive l'uso delle visualizzazioni di raccolta in un'app Xamarin.Mac. Viene illustrata la creazione e la gestione delle visualizzazioni di raccolta in Xcode e Interface Builder e l'utilizzo di tali viste a livello di codice.
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025828"
 ---
-# <a name="collection-views-in-xamarinmac"></a>Viste di raccolta in Novell. Mac
+# <a name="collection-views-in-xamarinmac"></a>Viste di raccolta in Xamarin.Mac
 
-_Questo articolo descrive l'uso delle visualizzazioni di raccolta in un'app Novell. Mac. Viene illustrata la creazione e la gestione delle visualizzazioni di raccolta in Xcode e Interface Builder e l'utilizzo di tali viste a livello di codice._
+_Questo articolo descrive l'uso delle visualizzazioni di raccolta in un'app Xamarin.Mac. Viene illustrata la creazione e la gestione delle visualizzazioni di raccolta in Xcode e Interface Builder e l'utilizzo di tali viste a livello di codice._
 
-Quando si lavora C# con e .NET in un'app Novell. Mac, lo sviluppatore ha accesso agli stessi controlli di visualizzazione raccolta AppKit che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, lo sviluppatore usa _Interface Builder_ di Xcode per creare e gestire le visualizzazioni di raccolta.
+Quando si lavora C# con e .NET in un'app Xamarin.Mac, lo sviluppatore ha accesso agli stessi controlli di visualizzazione raccolta AppKit che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, lo sviluppatore usa _Interface Builder_ di Xcode per creare e gestire le visualizzazioni di raccolta.
 
 In un `NSCollectionView` viene visualizzata una griglia di sottoviste organizzate con un `NSCollectionViewLayout`. Ogni sottovista della griglia viene rappresentata da un `NSCollectionViewItem` che gestisce il caricamento del contenuto della visualizzazione da un file di `.xib`.
 
 [![un'esecuzione di app di esempio](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
-Questo articolo illustra le nozioni di base sull'uso delle visualizzazioni di raccolta in un'app Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti e le tecniche principali usati in questo articolo.
+Questo articolo illustra le nozioni di base sull'uso delle visualizzazioni di raccolta in un'app Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti e le tecniche principali usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="About_Collection_Views"/>
 
@@ -42,7 +42,7 @@ Poiché lo sviluppatore è responsabile dell'aspetto di un elemento della visual
 
 ## <a name="defining-the-data-model"></a>Definizione del modello di dati
 
-Prima di associare i dati a una visualizzazione di raccolta in Interface Builder, è necessario definire una classe conforme a KVC (Key-Value Coding)/Key-Value Osservating (KVO) nell'app Novell. Mac in modo che funga da _modello di dati_ per l'associazione. Il modello di dati fornisce tutti i dati che verranno visualizzati nella raccolta e riceverà tutte le modifiche ai dati che l'utente effettua nell'interfaccia utente durante l'esecuzione dell'applicazione.
+Prima di associare i dati a una visualizzazione di raccolta in Interface Builder, è necessario definire una classe conforme a KVC (Key-Value Coding)/Key-Value Osservating (KVO) nell'app Xamarin.Mac in modo che funga da _modello di dati_ per l'associazione. Il modello di dati fornisce tutti i dati che verranno visualizzati nella raccolta e riceverà tutte le modifiche ai dati che l'utente effettua nell'interfaccia utente durante l'esecuzione dell'applicazione.
 
 Prendere l'esempio di un'app che gestisce un gruppo di dipendenti, è possibile usare la classe seguente per definire il modello di dati:
 
@@ -195,7 +195,7 @@ Il data binding con una visualizzazione di raccolta è molto simile al binding c
 
 ### <a name="creating-the-cell-prototype"></a>Creazione del prototipo di cella
 
-Poiché la visualizzazione raccolta non include un prototipo di cella predefinito, lo sviluppatore dovrà aggiungere uno o più file di `.xib` all'app Novell. Mac per definire il layout e il contenuto delle singole celle.
+Poiché la visualizzazione raccolta non include un prototipo di cella predefinito, lo sviluppatore dovrà aggiungere uno o più file di `.xib` all'app Xamarin.Mac per definire il layout e il contenuto delle singole celle.
 
 Procedere come descritto di seguito:
 
@@ -813,7 +813,7 @@ public override void ViewDidLoad()
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni di raccolta in un'applicazione Novell. Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). A questo punto, è stato illustrato come usare una classe conforme a KVO e i dati vengono associati a visualizzazioni di raccolta nel Interface Builder di Xcode. Infine, è stato illustrato come interagire con le visualizzazioni di C# raccolta nel codice.
+Questo articolo ha esaminato in dettaglio l'uso delle visualizzazioni di raccolta in un'applicazione Xamarin.Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). A questo punto, è stato illustrato come usare una classe conforme a KVO e i dati vengono associati a visualizzazioni di raccolta nel Interface Builder di Xcode. Infine, è stato illustrato come interagire con le visualizzazioni di C# raccolta nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

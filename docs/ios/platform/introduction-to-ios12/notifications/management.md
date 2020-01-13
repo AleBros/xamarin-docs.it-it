@@ -1,6 +1,6 @@
 ---
-title: Gestione delle notifiche in Novell. iOS
-description: Questo documento descrive come usare Novell. iOS per sfruttare le nuove funzionalità di gestione delle notifiche introdotte in iOS 12.
+title: Gestione delle notifiche in Xamarin.iOS
+description: Questo documento descrive come usare Xamarin.iOS per sfruttare le nuove funzionalità di gestione delle notifiche introdotte in iOS 12.
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031899"
 ---
-# <a name="notification-management-in-xamarinios"></a>Gestione delle notifiche in Novell. iOS
+# <a name="notification-management-in-xamarinios"></a>Gestione delle notifiche in Xamarin.iOS
 
 In iOS 12 il sistema operativo è in grado di collegarsi in modo approfondito dal centro notifiche e dall'app impostazioni alla schermata di gestione delle notifiche di un'app. Questa schermata deve consentire agli utenti di acconsentire esplicitamente e in uscita dai vari tipi di notifiche inviate dall'app.
 
@@ -106,7 +106,7 @@ public void OpenSettings(UNUserNotificationCenter center, UNNotification notific
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [App di esempio-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
-- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
+- [Framework delle notifiche utente in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Procedure consigliate e novità delle notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)

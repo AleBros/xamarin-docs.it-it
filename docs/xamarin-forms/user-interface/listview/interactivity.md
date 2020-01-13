@@ -1,6 +1,6 @@
 ---
 title: Interattività ListView
-description: Questo articolo illustra come aggiungere interattività a un controllo ListView Novell. Forms implementando selezioni, azioni di contesto e pull-to-refresh.
+description: Questo articolo illustra come aggiungere interattività a un controllo ListView Xamarin.Forms implementando selezioni, azioni di contesto e pull-to-refresh.
 ms.prod: xamarin
 ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "72696863"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-La classe [`ListView`](xref:Xamarin.Forms.ListView) Novell. Forms supporta l'interazione dell'utente con i dati che presenta.
+La classe [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms supporta l'interazione dell'utente con i dati che presenta.
 
 ## <a name="selection-and-taps"></a>Selezione e tocchi
 

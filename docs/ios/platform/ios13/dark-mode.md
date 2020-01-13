@@ -1,5 +1,5 @@
 ---
-title: Modalità scura in Novell. iOS
+title: Modalità scura in Xamarin.iOS
 description: La modalità scura è una nuova opzione a livello di sistema per i temi chiaro e scuro. l'utente iOS può ora scegliere un tema o consentire a iOS di modificare l'aspetto dinamicamente.
 ms.prod: xamarin
 ms.assetid: 4F44446E-36B6-4743-9B4D-32278D1D3D66
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/24/2019
 ms.locfileid: "71206396"
 ---
-# <a name="dark-mode-in-xamarinios"></a>Modalità scura in Novell. iOS
+# <a name="dark-mode-in-xamarinios"></a>Modalità scura in Xamarin.iOS
 
 La modalità scura è un'opzione a livello di sistema per i temi chiaro e scuro. Gli utenti iOS possono ora scegliere il tema o consentire a iOS di modificare l'aspetto in modo dinamico in base all'ambiente e all'ora del giorno.
 
@@ -22,7 +22,7 @@ Questo documento introduce la modalità scura e supporta la modalità scura nell
 
 ## <a name="requirements"></a>Requisiti
 
-Per la modalità Dark sono necessari iOS 13 e Xcode 11, Novell. iOS 12,99 e Visual Studio 2019 o Visual Studio 2019 per Mac con supporto per Xcode 11.
+Per la modalità Dark sono necessari iOS 13 e Xcode 11, Xamarin.iOS 12,99 e Visual Studio 2019 o Visual Studio 2019 per Mac con supporto per Xcode 11.
 
 ## <a name="turning-on-dark-mode"></a>Attivazione della modalità scura
 

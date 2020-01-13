@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 16. Associazione dati
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 16. Associazione dati'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 16. Associazione dati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
@@ -19,7 +19,7 @@ ms.locfileid: "70771095"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
 I programmatori spesso trovano autonomamente la scrittura di gestori di eventi che rilevano quando una proprietà di un oggetto è stato modificato e usano per modificare il valore di una proprietà in un altro oggetto. È possibile automatizzare questo processo con la tecnica di *associazione dati*. Le associazioni dati sono in genere definite in XAML e diventano parte della definizione dell'interfaccia utente.
 

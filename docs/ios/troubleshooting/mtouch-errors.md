@@ -1,6 +1,6 @@
 ---
-title: Errori di Novell. iOS
-description: Questo documento descrive i vari errori generati da mTouch, lo strumento usato per aggregare le applicazioni Novell. iOS. Gli errori sono elencati in base al codice ed è stata fornita una descrizione completa.
+title: Errori di Xamarin.iOS
+description: Questo documento descrive i vari errori generati da mTouch, lo strumento usato per aggregare le applicazioni Xamarin.iOS. Gli errori sono elencati in base al codice ed è stata fornita una descrizione completa.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031195"
 ---
-# <a name="xamarinios-errors"></a>Errori di Novell. iOS
+# <a name="xamarinios-errors"></a>Errori di Xamarin.iOS
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: messaggi di errore mTouch
 
@@ -62,7 +62,7 @@ Il nome dell'assembly eseguibile e il nome dell'applicazione non possono corrisp
 
 Se si Abilita l'estensione refcounting, è necessario abilitare anche il Garbage Collector SGen nelle opzioni di compilazione iOS del progetto (scheda Avanzate).
 
-A partire da Novell. iOS 7.2.1 questo requisito è stato rimosso, la nuova logica refcounting può essere abilitata con i Garbage Collector Boehm e SGen.
+A partire da Xamarin.iOS 7.2.1 questo requisito è stato rimosso, la nuova logica refcounting può essere abilitata con i Garbage Collector Boehm e SGen.
 
 <a name="MT0005" />
 
@@ -76,13 +76,13 @@ Questo errore non viene più generato, mTouch creerà automaticamente la directo
 
 ### <a name="mt0006-there-is-no-devel-platform-at--use---platformplat-to-specify-the-sdk"></a>MT0006: non è disponibile alcuna piattaforma devel in *, usare--Platform = PLAT per specificare l'SDK.
 
-Novell. iOS non è in grado di trovare la directory SDK nel percorso indicato nel messaggio di errore. Verificare che il percorso sia corretto.
+Xamarin.iOS non è in grado di trovare la directory SDK nel percorso indicato nel messaggio di errore. Verificare che il percorso sia corretto.
 
 <a name="MT0007" />
 
 ### <a name="mt0007-the-root-assembly--does-not-exist"></a>MT0007: l'assembly radice * non esiste.
 
-Novell. iOS non è in grado di trovare l'assembly nel percorso indicato nel messaggio di errore. Verificare che il percorso sia corretto.
+Xamarin.iOS non è in grado di trovare l'assembly nel percorso indicato nel messaggio di errore. Verificare che il percorso sia corretto.
 
 <a name="MT0008" />
 
@@ -106,17 +106,17 @@ Si è verificato un errore durante l'analisi degli argomenti della riga di coman
 
 ### <a name="mt0011--was-built-against-a-more-recent-runtime--than-monotouch-supports"></a>MT0011: \* è stato creato in base a un runtime più recente (\*) rispetto al supporto di MonoTouch.
 
-Questo avviso viene in genere segnalato perché il progetto contiene un riferimento a una libreria di classi che non è stata compilata con la BCL Novell. iOS.
+Questo avviso viene in genere segnalato perché il progetto contiene un riferimento a una libreria di classi che non è stata compilata con la BCL Xamarin.iOS.
 
-Allo stesso modo in cui un'app che usa .NET 4,0 SDK potrebbe non funzionare in un sistema che supporta solo .NET 2,0, una libreria compilata con .NET 4,0 potrebbe non funzionare in Novell. iOS, può usare l'API non presente in Novell. iOS.
+Allo stesso modo in cui un'app che usa .NET 4,0 SDK potrebbe non funzionare in un sistema che supporta solo .NET 2,0, una libreria compilata con .NET 4,0 potrebbe non funzionare in Xamarin.iOS, può usare l'API non presente in Xamarin.iOS.
 
-La soluzione generale consiste nel compilare la libreria come libreria di classi Novell. iOS. Questa operazione può essere eseguita creando un nuovo progetto libreria di classi Novell. iOS e aggiungendovi tutti i file di origine. Se non si dispone del codice sorgente per la libreria, è necessario contattare il fornitore e richiedere che forniscano una versione compatibile con Novell. iOS della libreria.
+La soluzione generale consiste nel compilare la libreria come libreria di classi Xamarin.iOS. Questa operazione può essere eseguita creando un nuovo progetto libreria di classi Xamarin.iOS e aggiungendovi tutti i file di origine. Se non si dispone del codice sorgente per la libreria, è necessario contattare il fornitore e richiedere che forniscano una versione compatibile con Xamarin.iOS della libreria.
 
 <a name="MT0012" />
 
 ### <a name="mt0012-incomplete-data-is-provided-to-complete-"></a>MT0012: i dati incompleti vengono forniti per completare *.
 
-Questo errore non viene più segnalato nella versione corrente di Novell. iOS.
+Questo errore non viene più segnalato nella versione corrente di Xamarin.iOS.
 
 <a name="MT0013" />
 
@@ -184,7 +184,7 @@ Sono disponibili diverse opzioni per mTouch che non possono essere usate contemp
 
 ### <a name="mt0022-the-options---unsupported--enable-generics-in-registrar-and---registrar-are-not-compatible"></a>MT0022: le opzioni '--non supportate--Enable-generics-in-registrar ' è--registrar ' non sono compatibili.
 
-Rimuovere entrambe le opzioni `--unsupported--enable-generics-in-registrar` e `--registrar`. A partire da Novell. iOS 7.2.1 il registrar predefinito supporta i generics.
+Rimuovere entrambe le opzioni `--unsupported--enable-generics-in-registrar` e `--registrar`. A partire da Xamarin.iOS 7.2.1 il registrar predefinito supporta i generics.
 
 Questo errore non viene più visualizzato (l'argomento della riga di comando `--unsupported--enable-generics-in-registrar` è stato rimosso da mTouch).
 
@@ -238,11 +238,11 @@ Per risolvere questo problema, modificare il nome dell'applicazione nelle opzion
 
 <a name="MT0033" />
 
-### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: un progetto Novell. iOS deve fare riferimento A MonoTouch. dll o Novell. iOS. dll
+### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: un progetto Xamarin.iOS deve fare riferimento A MonoTouch. dll o Xamarin.iOS. dll
 
 <a name="MT0034" />
 
-### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: non è possibile includere sia ' MonoTouch. dll ' che ' Novell. iOS. dll ' nello stesso progetto Novell. iOS. a'\*' viene fatto riferimento in modo esplicito, mentre '\*' fa riferimento a' *'.
+### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: non è possibile includere sia ' MonoTouch. dll ' che ' Xamarin.iOS. dll ' nello stesso progetto Xamarin.iOS. a'\*' viene fatto riferimento in modo esplicito, mentre '\*' fa riferimento a' *'.
 
 <!-- MT0035 unused -->
 
@@ -252,15 +252,15 @@ Per risolvere questo problema, modificare il nome dell'applicazione nelle opzion
 
 <a name="MT0037" />
 
-### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: MonoTouch. dll non è compatibile con 64 bit. È possibile fare riferimento a Novell. iOS. dll o non compilare per un'architettura a 64 bit (ARM64 e/o x86_64).
+### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: MonoTouch. dll non è compatibile con 64 bit. È possibile fare riferimento a Xamarin.iOS. dll o non compilare per un'architettura a 64 bit (ARM64 e/o x86_64).
 
 <a name="MT0038" />
 
-### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: i registrar precedenti (--Registrar: oldstatic | olddynamic) non sono supportati quando si fa riferimento a Novell. iOS. dll.
+### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: i registrar precedenti (--Registrar: oldstatic | olddynamic) non sono supportati quando si fa riferimento a Xamarin.iOS. dll.
 
 <a name="MT0039" />
 
-### <a name="mt0039-applications-targeting-armv6-cannot-reference-xamariniosdll"></a>MT0039: le applicazioni destinate a ARMv6 non possono fare riferimento a Novell. iOS. dll.
+### <a name="mt0039-applications-targeting-armv6-cannot-reference-xamariniosdll"></a>MT0039: le applicazioni destinate a ARMv6 non possono fare riferimento a Xamarin.iOS. dll.
 
 <a name="MT0040" />
 
@@ -268,15 +268,15 @@ Per risolvere questo problema, modificare il nome dell'applicazione nelle opzion
 
 <a name="MT0041" />
 
-### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: non è possibile fare riferimento sia a' MonoTouch. dll ' che a' Novell. iOS. dll '.
+### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: non è possibile fare riferimento sia a' MonoTouch. dll ' che a' Xamarin.iOS. dll '.
 
 <a name="MT0042" />
 
-### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: non è stato trovato alcun riferimento a MonoTouch. dll o Novell. iOS. dll. Verrà aggiunto un riferimento a MonoTouch. dll.
+### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: non è stato trovato alcun riferimento a MonoTouch. dll o Xamarin.iOS. dll. Verrà aggiunto un riferimento a MonoTouch. dll.
 
 <a name="MT0043" />
 
-### <a name="mt0043-the-boehm-garbage-collector-is-currently-not-supported-when-referencing-xamariniosdll-the-sgen-garbage-collector-has-been-selected-instead"></a>MT0043: il Garbage Collector Boehm non è attualmente supportato quando si fa riferimento a' Novell. iOS. dll '. Il Garbage Collector SGen è stato selezionato.
+### <a name="mt0043-the-boehm-garbage-collector-is-currently-not-supported-when-referencing-xamariniosdll-the-sgen-garbage-collector-has-been-selected-instead"></a>MT0043: il Garbage Collector Boehm non è attualmente supportato quando si fa riferimento a' Xamarin.iOS. dll '. Il Garbage Collector SGen è stato selezionato.
 
 Solo il Garbage Collector SGen è supportato con i progetti unificati. Verificare che non siano presenti flag mTouch aggiuntivi che specifichino Boehm come Garbage Collector.
 
@@ -308,7 +308,7 @@ Il Framework specificato non è supportato nella versione iOS a cui fa riferimen
 
 <a name="MT0051" />
 
-### <a name="mt0051-xamarinios--requires-xcode-50-or-later-the-current-xcode-version-found-in--is-"></a>MT0051: Novell. iOS \* richiede Xcode 5,0 o versione successiva. La versione corrente di Xcode (disponibile in \*) è \*.
+### <a name="mt0051-xamarinios--requires-xcode-50-or-later-the-current-xcode-version-found-in--is-"></a>MT0051: Xamarin.iOS \* richiede Xcode 5,0 o versione successiva. La versione corrente di Xcode (disponibile in \*) è \*.
 
 Installare una versione più recente di Xcode.
 
@@ -374,19 +374,19 @@ Si tratta di un avviso informativo, che spiega quale Xcode verrà usato, perché
 
 Ogni info. plist deve avere un eseguibile (usando la voce CFBundleExecutable), tuttavia una voce deve essere generata automaticamente durante la compilazione.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0064" />
 
-### <a name="mt0064-xamarinios-only-supports-embedded-frameworks-with-unified-projects"></a>MT0064: Novell. iOS supporta solo Framework incorporati con progetti unificati.
+### <a name="mt0064-xamarinios-only-supports-embedded-frameworks-with-unified-projects"></a>MT0064: Xamarin.iOS supporta solo Framework incorporati con progetti unificati.
 
-Novell. iOS supporta solo Framework incorporati quando si usa il API unificata; aggiornare il progetto per usare la API unificata.
+Xamarin.iOS supporta solo Framework incorporati quando si usa il API unificata; aggiornare il progetto per usare la API unificata.
 
 <a name="MT0065" />
 
-### <a name="mt0065-xamarinios-only-supports-embedded-frameworks-when-deployment-target-is-at-least-80-current-deployment-target--embedded-frameworks-"></a>MT0065: Novell. iOS supporta solo Framework incorporati quando la destinazione di distribuzione è almeno 8,0 (destinazione di distribuzione corrente: \* Framework incorporati: \*)
+### <a name="mt0065-xamarinios-only-supports-embedded-frameworks-when-deployment-target-is-at-least-80-current-deployment-target--embedded-frameworks-"></a>MT0065: Xamarin.iOS supporta solo Framework incorporati quando la destinazione di distribuzione è almeno 8,0 (destinazione di distribuzione corrente: \* Framework incorporati: \*)
 
-Novell. iOS supporta solo Framework incorporati quando la destinazione di distribuzione è almeno 8,0 (perché le versioni precedenti di iOS non supportano i Framework incorporati).
+Xamarin.iOS supporta solo Framework incorporati quando la destinazione di distribuzione è almeno 8,0 (perché le versioni precedenti di iOS non supportano i Framework incorporati).
 
 Aggiornare la destinazione di distribuzione nel file INFO. plist del progetto a 8,0 o versione successiva.
 
@@ -394,13 +394,13 @@ Aggiornare la destinazione di distribuzione nel file INFO. plist del progetto a 
 
 ### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: assembly del registrar di compilazione non valido: *
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0067" />
 
 ### <a name="mt0067-invalid-registrar-"></a>MT0067: Registrar non valido: *
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0068" />
 
@@ -420,31 +420,31 @@ Un Framework di destinazione non valido è stato passato usando l'argomento--Tar
 
 <a name="MT0071" />
 
-### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: piattaforma sconosciuta: *. Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in http://bugzilla.xamarin.com con una test case.
+### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: piattaforma sconosciuta: *. Questo indica in genere un bug in Xamarin.iOS; inviare un report sui bug in http://bugzilla.xamarin.com con una test case.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0072" />
 
 ### <a name="mt0072-extensions-are-not-supported-for-the-platform-"></a>MT0072: le estensioni non sono supportate per la piattaforma ' *'.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0073" />
 
-### <a name="mt0073-xamarinios--does-not-support-a-deployment-target-of--the-minimum-is--please-select-a-newer-deployment-target-in-your-projects-infoplist"></a>MT0073: Novell. iOS \* non supporta una destinazione di distribuzione di \* (il valore minimo è \*). Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
+### <a name="mt0073-xamarinios--does-not-support-a-deployment-target-of--the-minimum-is--please-select-a-newer-deployment-target-in-your-projects-infoplist"></a>MT0073: Xamarin.iOS \* non supporta una destinazione di distribuzione di \* (il valore minimo è \*). Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
 
 La destinazione di distribuzione minima è quella specificata nel messaggio di errore. Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
 
-Se non è possibile aggiornare la destinazione di distribuzione, usare una versione precedente di Novell. iOS.
+Se non è possibile aggiornare la destinazione di distribuzione, usare una versione precedente di Xamarin.iOS.
 
 <a name="MT0074" />
 
-### <a name="mt0074-xamarinios--does-not-support-a-minimum-deployment-target-of--the-maximum-is--please-select-an-older-deployment-target-in-your-projects-infoplist-or-upgrade-to-a-newer-version-of-xamarinios"></a>MT0074: Novell. iOS \* non supporta una destinazione di distribuzione minima di \* (il massimo è \*). Selezionare una destinazione di distribuzione precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Novell. iOS.
+### <a name="mt0074-xamarinios--does-not-support-a-minimum-deployment-target-of--the-maximum-is--please-select-an-older-deployment-target-in-your-projects-infoplist-or-upgrade-to-a-newer-version-of-xamarinios"></a>MT0074: Xamarin.iOS \* non supporta una destinazione di distribuzione minima di \* (il massimo è \*). Selezionare una destinazione di distribuzione precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Xamarin.iOS.
 
-Novell. iOS non supporta l'impostazione della destinazione di distribuzione minima su una versione superiore rispetto alla versione per la quale è stata creata questa versione specifica di Novell. iOS.
+Xamarin.iOS non supporta l'impostazione della destinazione di distribuzione minima su una versione superiore rispetto alla versione per la quale è stata creata questa versione specifica di Xamarin.iOS.
 
-Selezionare una destinazione di distribuzione minima precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Novell. iOS.
+Selezionare una destinazione di distribuzione minima precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Xamarin.iOS.
 
 <a name="MT0075" />
 
@@ -456,13 +456,13 @@ Selezionare una destinazione di distribuzione minima precedente nel file INFO. p
 
 ### <a name="mt0076-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0076: Nessuna architettura specificata (usando l'argomento--ABI). È necessaria un'architettura per i progetti *.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0077" />
 
 ### <a name="mt0077-watchos-projects-must-be-extensions"></a>MT0077: i progetti Watchos devono essere estensioni.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0078" />
 
@@ -474,9 +474,9 @@ Le compilazioni incrementali sono supportate solo se la destinazione di distribu
 
 <a name="MT0079" />
 
-### <a name="mt0079-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0079: la versione di Xcode consigliata per Novell. iOS \* è Xcode \* o versione successiva. La versione corrente di Xcode (disponibile in \*) è \*.
+### <a name="mt0079-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0079: la versione di Xcode consigliata per Xamarin.iOS \* è Xcode \* o versione successiva. La versione corrente di Xcode (disponibile in \*) è \*.
 
-Si tratta di un avviso che informa che la versione corrente di Xcode non è la versione consigliata di Xcode per questa versione di Novell. iOS.
+Si tratta di un avviso che informa che la versione corrente di Xcode non è la versione consigliata di Xcode per questa versione di Xamarin.iOS.
 
 Aggiornare Xcode per garantire un comportamento ottimale.
 
@@ -512,7 +512,7 @@ La nuova funzionalità refcount è ora obbligatoria per tutti i progetti e perta
 
 ### <a name="mt0086-a-target-framework---target-framework-must-be-specified-when-building-for-tvos-or-watchos"></a>MT0086: è necessario specificare un Framework di destinazione (--Target-Framework) quando si compila per TVOS o Watchos.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0087" />
 
@@ -528,13 +528,13 @@ Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https:/
 
 <a name="MT0091" />
 
-### <a name="mt0091-this-version-of-xamarinios-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-set-the-managed-linker-behaviour-to-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MT0091: questa versione di Novell. iOS richiede il \* SDK (fornito con Xcode \*). Aggiornare Xcode per ottenere i file di intestazione necessari o impostare il comportamento del linker gestito per collegare solo gli SDK del Framework (per provare a evitare le nuove API).
+### <a name="mt0091-this-version-of-xamarinios-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-set-the-managed-linker-behaviour-to-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MT0091: questa versione di Xamarin.iOS richiede il \* SDK (fornito con Xcode \*). Aggiornare Xcode per ottenere i file di intestazione necessari o impostare il comportamento del linker gestito per collegare solo gli SDK del Framework (per provare a evitare le nuove API).
 
-Per compilare l'applicazione, Novell. iOS richiede i file di intestazione, dalla versione SDK specificata nel messaggio di errore. Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario, inclusi tutti i file di intestazione necessari. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
+Per compilare l'applicazione, Xamarin.iOS richiede i file di intestazione, dalla versione SDK specificata nel messaggio di errore. Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario, inclusi tutti i file di intestazione necessari. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
 
 Una possibile soluzione alternativa consiste nell'abilitare il linker gestito. Questa operazione rimuoverà l'API non usata, incluso, nella maggior parte dei casi, la nuova API in cui i file di intestazione sono mancanti (o incompleti). Questa operazione non funzionerà tuttavia se il progetto usa l'API introdotta in un SDK più recente rispetto a quella fornita da Xcode.
 
-Una soluzione Last-Straw è quella di usare una versione precedente di Novell. iOS, che supporta l'SDK richiesto dal progetto.
+Una soluzione Last-Straw è quella di usare una versione precedente di Xamarin.iOS, che supporta l'SDK richiesto dal progetto.
 
 <!-- MT0092 used by mlaunch -->
 
@@ -550,7 +550,7 @@ Una soluzione Last-Straw è quella di usare una versione precedente di Novell. i
 
 <a name="MT0096" />
 
-### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: non è stato trovato alcun riferimento a Novell. iOS. dll.
+### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: non è stato trovato alcun riferimento a Xamarin.iOS. dll.
 
 <!-- MT0097: used by mmp -->
 <!-- MT0098: used by mmp -->
@@ -559,17 +559,17 @@ Una soluzione Last-Straw è quella di usare una versione precedente di Novell. i
 
 ### <a name="mt0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MT0099: errore interno *. Inviare un report sui bug con un test case (https://bugzilla.xamarin.com).
 
-Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Novell. iOS ha esito negativo.
+Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Xamarin.iOS ha esito negativo.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0100" />
 
 ### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MT0100: destinazione compilazione assembly non valida:' *'. Inviare un report sui bug con un test case (https://bugzilla.xamarin.com).
 
-Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Novell. iOS ha esito negativo.
+Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Xamarin.iOS ha esito negativo.
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0101" />
 
@@ -647,9 +647,9 @@ Questo potrebbe significare che l'app fa riferimento a più assembly con lo stes
 
 <a name="MT0110" />
 
-### <a name="mt0110-incremental-builds-have-been-disabled-because-this-version-of-xamarinios-does-not-support-incremental-builds-in-projects-that-include-third-party-binding-libraries-and-that-compiles-to-bitcode"></a>MT0110: le compilazioni incrementali sono state disabilitate perché questa versione di Novell. iOS non supporta le compilazioni incrementali nei progetti che includono librerie di associazione di terze parti e che vengono compilate in bitcode.
+### <a name="mt0110-incremental-builds-have-been-disabled-because-this-version-of-xamarinios-does-not-support-incremental-builds-in-projects-that-include-third-party-binding-libraries-and-that-compiles-to-bitcode"></a>MT0110: le compilazioni incrementali sono state disabilitate perché questa versione di Xamarin.iOS non supporta le compilazioni incrementali nei progetti che includono librerie di associazione di terze parti e che vengono compilate in bitcode.
 
-Le compilazioni incrementali sono state disabilitate perché questa versione di Novell. iOS non supporta le compilazioni incrementali nei progetti che includono librerie di associazione di terze parti e che vengono compilate in bitcode (progetti tvOS e watchos).
+Le compilazioni incrementali sono state disabilitate perché questa versione di Xamarin.iOS non supporta le compilazioni incrementali nei progetti che includono librerie di associazione di terze parti e che vengono compilate in bitcode (progetti tvOS e watchos).
 
 Non è richiesta alcuna azione da parte dell'utente, questo messaggio è puramente informativo.
 
@@ -659,9 +659,9 @@ Questo avviso non viene più segnalato.
 
 <a name="MT0111" />
 
-### <a name="mt0111-bitcode-has-been-enabled-because-this-version-of-xamarinios-does-not-support-building-watchos-projects-using-llvm-without-enabling-bitcode"></a>MT0111: bitcode è stato abilitato perché questa versione di Novell. iOS non supporta la compilazione di progetti watchos con LLVM senza abilitare bitcode.
+### <a name="mt0111-bitcode-has-been-enabled-because-this-version-of-xamarinios-does-not-support-building-watchos-projects-using-llvm-without-enabling-bitcode"></a>MT0111: bitcode è stato abilitato perché questa versione di Xamarin.iOS non supporta la compilazione di progetti watchos con LLVM senza abilitare bitcode.
 
-Bitcode è stato abilitato automaticamente perché questa versione di Novell. iOS non supporta la compilazione di progetti watchos con LLVM senza abilitare bitcode.
+Bitcode è stato abilitato automaticamente perché questa versione di Xamarin.iOS non supporta la compilazione di progetti watchos con LLVM senza abilitare bitcode.
 
 Non è richiesta alcuna azione da parte dell'utente, questo messaggio è puramente informativo.
 
@@ -751,13 +751,13 @@ La condivisione del codice nativo richiede non è supportata per i progetti che 
 
 ### <a name="mt0115-it-is-recommended-to-reference-dynamic-symbols-using-code---dynamic-symbol-modecode-when-bitcode-is-enabled"></a>MT0115: è consigliabile fare riferimento a simboli dinamici usando il codice (--Dynamic-symbol-Mode = code) quando bitcode è abilitato.
 
-I progetti Novell. iOS spesso fanno riferimento a simboli nativi in modo dinamico, il che significa che il linker nativo potrebbe rimuovere questi simboli nativi durante il processo di collegamento nativo, perché il linker nativo non verifica che questi simboli vengano usati.
+I progetti Xamarin.iOS spesso fanno riferimento a simboli nativi in modo dinamico, il che significa che il linker nativo potrebbe rimuovere questi simboli nativi durante il processo di collegamento nativo, perché il linker nativo non verifica che questi simboli vengano usati.
 
-In genere, Novell. iOS chiederà al linker nativo di preservare tali simboli (usando il flag del linker `-u symbol`), ma quando si compila per bitcode il linker nativo non accetta il flag di `-u`.
+In genere, Xamarin.iOS chiederà al linker nativo di preservare tali simboli (usando il flag del linker `-u symbol`), ma quando si compila per bitcode il linker nativo non accetta il flag di `-u`.
 
-Novell. iOS ha implementato una soluzione alternativa: viene generato codice nativo aggiuntivo che fa riferimento a questi simboli, quindi il linker nativo vedrà che questi simboli vengono usati. Questa operazione viene eseguita automaticamente durante la compilazione in bitcode.
+Xamarin.iOS ha implementato una soluzione alternativa: viene generato codice nativo aggiuntivo che fa riferimento a questi simboli, quindi il linker nativo vedrà che questi simboli vengono usati. Questa operazione viene eseguita automaticamente durante la compilazione in bitcode.
 
-Se `--dynamic-symbol-mode=linker` viene passato a mTouch, questa soluzione alternativa verrà disabilitata e Novell. iOS tenterà di passare `-u` al linker nativo. Questa operazione comporterà probabilmente errori nativi del linker.
+Se `--dynamic-symbol-mode=linker` viene passato a mTouch, questa soluzione alternativa verrà disabilitata e Xamarin.iOS tenterà di passare `-u` al linker nativo. Questa operazione comporterà probabilmente errori nativi del linker.
 
 La soluzione consiste nel rimuovere l'argomento `--dynamic-symbol-mode=linker` dagli argomenti mTouch aggiuntivi nelle opzioni di compilazione del progetto.
 
@@ -785,7 +785,7 @@ Modificare l'architettura di destinazione nelle opzioni di compilazione iOS del 
 
 ### <a name="mt0123-the-executable-assembly--does-not-reference-"></a>MT0123: l'assembly eseguibile \* non fa riferimento a \*.
 
-Non è stato possibile trovare alcun riferimento all'assembly della piattaforma (Novell. iOS. dll/Novell. TVOS. dll/Novell. Watchos. dll) nell'assembly eseguibile.
+Non è stato possibile trovare alcun riferimento all'assembly della piattaforma (Xamarin.iOS. dll/Xamarin.TVOS. dll/Xamarin.Watchos. dll) nell'assembly eseguibile.
 
 Questa situazione si verifica in genere quando non è presente codice nel progetto eseguibile che usa qualsiasi elemento dall'assembly della piattaforma; ad esempio, un metodo Main vuoto (e nessun altro codice) visualizzerà questo errore:
 
@@ -830,9 +830,9 @@ Non è richiesta alcuna azione. questo messaggio è puramente informativo.
 
 <a name="MT0127" />
 
-### <a name="mt0127-incremental-builds-have-been-disabled-because-this-version-of-xamarinios-does-not-support-incremental-builds-in-projects-that-include-more-than-one-third-party-binding-libraries"></a>MT0127: le compilazioni incrementali sono state disabilitate perché questa versione di Novell. iOS non supporta le compilazioni incrementali nei progetti che includono più di una libreria di binding di terze parti.
+### <a name="mt0127-incremental-builds-have-been-disabled-because-this-version-of-xamarinios-does-not-support-incremental-builds-in-projects-that-include-more-than-one-third-party-binding-libraries"></a>MT0127: le compilazioni incrementali sono state disabilitate perché questa versione di Xamarin.iOS non supporta le compilazioni incrementali nei progetti che includono più di una libreria di binding di terze parti.
 
-Le compilazioni incrementali sono state disabilitate automaticamente perché questa versione di Novell. iOS non sempre compila i progetti con più librerie di binding di terze parti correttamente.
+Le compilazioni incrementali sono state disabilitate automaticamente perché questa versione di Xamarin.iOS non sempre compila i progetti con più librerie di binding di terze parti correttamente.
 
 Non è richiesta alcuna azione. questo messaggio è puramente informativo.
 
@@ -850,13 +850,13 @@ Questo avviso può essere probabilmente ignorato. in caso di problemi, si verifi
 
 ### <a name="mt0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MT0135: non è stato collegato il Framework di sistema '{0}' (a cui fa riferimento l'assembly '{1}') perché è stato introdotto in {2} {3}e viene usato {2} SDK {4}.
 
-Per compilare l'applicazione, Novell. iOS deve collegarsi a librerie di sistema, alcune delle quali dipendono dalla versione SDK specificata nel messaggio di errore. Poiché si sta usando una versione precedente dell'SDK, le chiamate a tali API possono avere esito negativo in fase di esecuzione.
+Per compilare l'applicazione, Xamarin.iOS deve collegarsi a librerie di sistema, alcune delle quali dipendono dalla versione SDK specificata nel messaggio di errore. Poiché si sta usando una versione precedente dell'SDK, le chiamate a tali API possono avere esito negativo in fase di esecuzione.
 
 Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
 
 In alternativa, consentire al [linker](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) gestito di rimuovere le API inutilizzate, tra cui, nella maggior parte dei casi, quelle nuove che richiedono la libreria specificata. Tuttavia, questa operazione non funzionerà se il progetto richiede API introdotte in un SDK più recente rispetto a quello fornito da Xcode.
 
-Come ultima soluzione di paglia, usare una versione precedente di Novell. iOS che non richiede che questi nuovi SDK siano presenti durante il processo di compilazione.
+Come ultima soluzione di paglia, usare una versione precedente di Xamarin.iOS che non richiede che questi nuovi SDK siano presenti durante il processo di compilazione.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: messaggi di errore correlati al progetto
 
@@ -913,7 +913,7 @@ $ launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove
 
 ### <a name="mt1009-could-not-copy-the-assembly--to--"></a>MT1009: non è stato possibile copiare l'assembly '\*' in '\*': *
 
-Si tratta di un problema noto in alcune versioni di Novell. iOS.
+Si tratta di un problema noto in alcune versioni di Xamarin.iOS.
 
 Se si verifica questa situazione, provare la soluzione alternativa seguente:
 
@@ -921,7 +921,7 @@ Se si verifica questa situazione, provare la soluzione alternativa seguente:
 sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/*/*.mdb
 ```
 
-Tuttavia, poiché questo problema è stato risolto nella versione più recente di Novell. iOS, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con le informazioni complete sulla versione e l'output del log di compilazione.
+Tuttavia, poiché questo problema è stato risolto nella versione più recente di Xamarin.iOS, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con le informazioni complete sulla versione e l'output del log di compilazione.
 
 <a name="MT1010" />
 
@@ -939,7 +939,7 @@ Tuttavia, poiché questo problema è stato risolto nella versione più recente d
 
 ### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013: errore di rilevamento delle dipendenze: nessun file da confrontare. Inviare un report sui bug in http://bugzilla.xamarin.com con una test case.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT1014" />
 
@@ -1305,7 +1305,7 @@ Verificare che il Framework sia valido.
 
 ### <a name="mt1305-the-binding-library--contains-a-user-framework--but-embedded-user-frameworks-require-ios-80-the-current-deployment-target-is--please-set-the-deployment-target-in-the-infoplist-file-to-at-least-80"></a>MT1305: la libreria di binding '\*' contiene un Framework utente (\*), ma i Framework utente incorporati richiedono iOS 8,0 (la destinazione di distribuzione corrente è *). Impostare la destinazione di distribuzione nel file INFO. plist almeno 8,0.
 
-La libreria di associazione specificata contiene un Framework incorporato, ma Novell. iOS supporta solo Framework incorporati in iOS 8,0 o versione successiva.
+La libreria di associazione specificata contiene un Framework incorporato, ma Xamarin.iOS supporta solo Framework incorporati in iOS 8,0 o versione successiva.
 
 Impostare la destinazione di distribuzione nel file INFO. plist su almeno 8,0 per risolvere questo errore (oppure non usare Framework incorporati).
 
@@ -1532,9 +1532,9 @@ Parameter name: instruction
 
 <a name="MT2006" />
 
-### <a name="mt2006-can-not-load-mscorlibdll-from--please-reinstall-xamarinios"></a>MT2006: Impossibile caricare mscorlib. dll da: *. Reinstallare Novell. iOS.
+### <a name="mt2006-can-not-load-mscorlibdll-from--please-reinstall-xamarinios"></a>MT2006: Impossibile caricare mscorlib. dll da: *. Reinstallare Xamarin.iOS.
 
-Questo indica in genere un problema con l'installazione di Novell. iOS. Provare a reinstallare Novell. iOS.
+Questo indica in genere un problema con l'installazione di Xamarin.iOS. Provare a reinstallare Xamarin.iOS.
 
 <!--- 2007 used by mmp -->
 <!--- 2009 used by mmp -->
@@ -1569,7 +1569,7 @@ Per correggere il problema, aprire il file di progetto in un editor di testo e r
 
 ### <a name="mt2016-invalid-tlsprovider-legacy-option-the-only-valid-value-appletls-will-be-used"></a>MT2016: opzione TlsProvider `legacy` non valida. Verrà utilizzato l'unico valore valido `appletls`.
 
-Il provider di `legacy`, che era un provider solo SSLv3/TLSv1 completamente gestito, non viene più fornito con Novell. iOS. I progetti che usavano questo provider obsoleti e ora si compilano con il più recente `appletls`.
+Il provider di `legacy`, che era un provider solo SSLv3/TLSv1 completamente gestito, non viene più fornito con Xamarin.iOS. I progetti che usavano questo provider obsoleti e ora si compilano con il più recente `appletls`.
 
 Per correggere il problema, aprire il file di progetto in un editor di testo e rimuovere tutti i nodi "MtouchTlsProvider" dal codice XML.
 
@@ -1729,13 +1729,13 @@ Il debug non è supportato quando LLVM è abilitato. Se è necessario eseguire i
 
 Questo problema si verifica in genere quando un assembly fa riferimento a un'altra versione di un assembly della piattaforma, in genere la versione .NET 4 di mscorlib. dll.
 
-Questa operazione non è supportata e non può essere compilata o eseguita correttamente (l'assembly può usare l'API della versione .NET 4 di mscorlib. dll che la versione di Novell. iOS non ha).
+Questa operazione non è supportata e non può essere compilata o eseguita correttamente (l'assembly può usare l'API della versione .NET 4 di mscorlib. dll che la versione di Xamarin.iOS non ha).
 
 <a name="MT3006" />
 
-### <a name="mt3006-could-not-compute-a-complete-dependency-map-for-the-project-this-will-result-in-slower-build-times-because-xamarinios-cant-properly-detect-what-needs-to-be-rebuilt-and-what-does-not-need-to-be-rebuilt-please-review-previous-warnings-for-more-details"></a>MT3006: non è stato possibile calcolare una mappa delle dipendenze completa per il progetto. Questo comporterà tempi di compilazione più lenti perché Novell. iOS non è in grado di rilevare correttamente gli elementi che devono essere ricompilati e non è necessario ricompilarli. Per altri dettagli, vedere gli avvisi precedenti.
+### <a name="mt3006-could-not-compute-a-complete-dependency-map-for-the-project-this-will-result-in-slower-build-times-because-xamarinios-cant-properly-detect-what-needs-to-be-rebuilt-and-what-does-not-need-to-be-rebuilt-please-review-previous-warnings-for-more-details"></a>MT3006: non è stato possibile calcolare una mappa delle dipendenze completa per il progetto. Questo comporterà tempi di compilazione più lenti perché Xamarin.iOS non è in grado di rilevare correttamente gli elementi che devono essere ricompilati e non è necessario ricompilarli. Per altri dettagli, vedere gli avvisi precedenti.
 
- compilazione o esecuzione corretta (l'assembly può usare l'API della versione .NET 4 di mscorlib. dll che la versione di Novell. iOS non è presente).
+ compilazione o esecuzione corretta (l'assembly può usare l'API della versione .NET 4 di mscorlib. dll che la versione di Xamarin.iOS non è presente).
 
 <a name="MT3007" />
 
@@ -1785,7 +1785,7 @@ Impossibile compilare il codice generato per i metodi P/Invoke. Inviare un nuovo
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4102" />
 
@@ -1805,13 +1805,13 @@ Questo errore si verifica quando il registrar incontra un tipo in una firma con 
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4105" />
 
 ### <a name="mt4105-the-registrar-cannot-marshal-the-parameter-of-type--in-signature-for-method-"></a>MT4105: il registrar non è in grado di effettuare il marshalling del parametro di tipo `*` nella firma per `*`metodo.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4106" />
 
@@ -1819,7 +1819,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4107" />
 
@@ -1827,7 +1827,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4108" />
 
@@ -1835,7 +1835,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Se si ritiene che Xamarin.iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4109" />
 
@@ -1843,7 +1843,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 Impossibile compilare il codice generato per il registrar. Il log di compilazione conterrà l'output del compilatore nativo, spiegando il motivo per cui il codice non viene compilato.
 
-Si tratta sempre di un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con il progetto o un test case.
+Si tratta sempre di un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con il progetto o un test case.
 
 <a name="MT4110" />
 
@@ -1855,7 +1855,7 @@ Si tratta sempre di un bug in Novell. iOS; inviare un nuovo problema in [GitHub]
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: il Registrar ha rilevato un tipo non valido `*`. La registrazione di tipi generici con Objective-C non è supportata e può causare un comportamento casuale e/o arresti anomali (per compatibilità con le versioni precedenti di Novell. iOS è possibile ignorare questo errore passando `--unsupported--enable-generics-in-registrar` come argomento mTouch aggiuntivo in pagina delle opzioni di compilazione iOS del progetto. Per ulteriori informazioni, vedere [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) .
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: il Registrar ha rilevato un tipo non valido `*`. La registrazione di tipi generici con Objective-C non è supportata e può causare un comportamento casuale e/o arresti anomali (per compatibilità con le versioni precedenti di Xamarin.iOS è possibile ignorare questo errore passando `--unsupported--enable-generics-in-registrar` come argomento mTouch aggiuntivo in pagina delle opzioni di compilazione iOS del progetto. Per ulteriori informazioni, vedere [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) .
 
 <a name="MT4113" />
 
@@ -1885,7 +1885,7 @@ Si tratta sempre di un bug in Novell. iOS; inviare un nuovo problema in [GitHub]
 
 ### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: il Registrar ha trovato un tipo di campo sconosciuto '\*' nel campo '\*. *'. Inviare un report sui bug all'http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo errore indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4121" />
 
@@ -1903,7 +1903,7 @@ Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub
 
 ### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: trovato \* non valido in '\*'. Inviare un report sui bug all'http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo errore indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4125" />
 
@@ -1969,7 +1969,7 @@ Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub
 
 <a name="MT4141" />
 
-### <a name="mt4141-cannot-register-the-selector--on-the-member--because-xamarinios-implicitly-registers-this-selector"></a>MT4141: Impossibile registrare il selettore '\*' sul membro '\*' perché Novell. iOS registra in modo implicito questo selettore.
+### <a name="mt4141-cannot-register-the-selector--on-the-member--because-xamarinios-implicitly-registers-this-selector"></a>MT4141: Impossibile registrare il selettore '\*' sul membro '\*' perché Xamarin.iOS registra in modo implicito questo selettore.
 
 Questo errore si verifica quando si crea una sottoclasse di un tipo di Framework e si tenta di implementare un metodo ' conserva ',' release ' o ' Dealloc ':
 
@@ -2007,7 +2007,7 @@ class MyCustomNSObject : MyNSObject
 }
 ```
 
-In questo caso Novell. iOS eseguirà l'override di `retain`, `release` e `dealloc` sulla classe `MyNSObject` e non si verifica alcun conflitto.
+In questo caso Xamarin.iOS eseguirà l'override di `retain`, `release` e `dealloc` sulla classe `MyNSObject` e non si verifica alcun conflitto.
 
 <a name="MT4142" />
 
@@ -2021,7 +2021,7 @@ In questo caso Novell. iOS eseguirà l'override di `retain`, `release` e `deallo
 
 ### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: non è possibile registrare il metodo ' *' perché non dispone di un trampolino associato. Inviare un report sui bug in http://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4145" />
 
@@ -2111,7 +2111,7 @@ Aggiornare Xcode.
 
 ### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: errore interno del registrar (*). Inviare un report sui bug all'http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo errore indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4164" />
 
@@ -2125,19 +2125,19 @@ Usare un identificatore Objective-C valido come selettori.
 
 ### <a name="mt4165-the-registrar-couldnt-find-the-type-systemvoid-in-any-of-the-referenced-assemblies"></a>MT4165: il registrar non è riuscito a trovare il tipo ' System. void ' in nessuno degli assembly a cui si fa riferimento.
 
-Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo errore indica con maggiore probabilità un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4166" />
 
 ### <a name="mt4166-cannot-register-the-method--because-the-signature-contains-a-type--that-isnt-a-reference-type"></a>MT4166: non è possibile registrare il metodo '\*' perché la firma contiene un tipo (\*) che non è un tipo di riferimento.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4167" />
 
 ### <a name="mt4167-cannot-register-the-method--because-the-signature-contains-a-generic-type--with-a-generic-argument-type-that-isnt-an-nsobject-subclass-"></a>MT4167: non è possibile registrare il metodo '\*' perché la firma contiene un tipo generico (\*) con un tipo di argomento generico che non è una sottoclasse NSObject (*).
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4168" />
 
@@ -2151,7 +2151,7 @@ Usare un identificatore Objective-C valido.
 
 ### <a name="mt4169-failed-to-generate-a-pinvoke-wrapper-for-method-message"></a>MT4169: non è stato possibile generare un wrapper P/Invoke per {Method}: {Message}
 
-Novell. iOS non è riuscito a generare una funzione wrapper P/Invoke per l'oggetto indicato.
+Xamarin.iOS non è riuscito a generare una funzione wrapper P/Invoke per l'oggetto indicato.
 Verificare il messaggio di errore segnalato per la cause sottostante.
 
 <a name="MT4170" />
@@ -2172,7 +2172,7 @@ Verificare che il tipo nell'attributo binds corrisponda al tipo del membro a cui
 
 Il registrar non supporta la conversione tra i tipi indicati.
 
-Si tratta di un bug in Novell. iOS se l'API in questione viene fornita da Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Si tratta di un bug in Xamarin.iOS se l'API in questione viene fornita da Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 Se si esegue questa operazione durante lo sviluppo di un progetto di binding per una libreria nativa, è possibile aggiungere il supporto per nuove combinazioni di tipi. In tal caso, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con una test case e valutarla.
 
@@ -2207,7 +2207,7 @@ Se si esegue questa operazione durante lo sviluppo di un progetto di binding per
 
 ### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: non è stato possibile compilare i file ' *'. Inviare un report sui bug all'http://bugzilla.xamarin.com
 
-Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt52xx-linking"></a>MT52xx: collegamento
 
@@ -2250,7 +2250,7 @@ Ciò si verifica quando il linker nativo non riesce a trovare un simbolo a cui s
 - In alcuni casi, un'associazione gestita è costituita da più librerie native e deve essere inclusa nelle associazioni. In ogni progetto di associazione è possibile avere più di una libreria nativa, quindi la soluzione consiste nell'aggiungere tutte le librerie native necessarie al progetto di binding.</li>
 - Un'associazione gestita fa riferimento a simboli nativi che non esistono nella libreria nativa.
     Questo problema si verifica in genere quando esiste un'associazione per un certo periodo di tempo e il codice nativo è stato modificato durante tale periodo di tempo, in modo che una determinata classe nativa sia stata rimossa o rinominata, mentre l'associazione non è stata aggiornata.
-- Un P/Invoke fa riferimento a un simbolo nativo che non esiste. A partire da Novell. iOS 7,4 verrà segnalato un errore <a href="#MT5214">MT5214</a> per questo caso. per ulteriori informazioni, vedere MT5214.
+- Un P/Invoke fa riferimento a un simbolo nativo che non esiste. A partire da Xamarin.iOS 7,4 verrà segnalato un errore <a href="#MT5214">MT5214</a> per questo caso. per ulteriori informazioni, vedere MT5214.
 - Un'associazione o una libreria di terze parti è C++stata compilata utilizzando, ma non viene specificata nell'attributo`[LinkWith]`. Si tratta in genere di un'operazione abbastanza semplice da riconoscere, perché i simboli C++ sono simboli alterati (un esempio comune è`__ZNKSt9exception4whatEv`).
   - Se si è l'autore dell'associazione di terze parti o si ha accesso all'origine, modificare l'attributo `[LinkWith]` dell'associazione per impostare il flag di `IsCxx`:
 
@@ -2330,7 +2330,7 @@ Ciò si verifica quando il linker nativo rileva simboli duplicati tra tutte le l
   lipo *.a -create -output libNative.a
   ```
 
-  - Richiedere al linker di rimuovere il codice inutilizzato. Novell. iOS eseguirà questa operazione automaticamente se vengono soddisfatte tutte le condizioni seguenti:
+  - Richiedere al linker di rimuovere il codice inutilizzato. Xamarin.iOS eseguirà questa operazione automaticamente se vengono soddisfatte tutte le condizioni seguenti:
     - Tutti i binding di terze parti ' `[LinkWith]` attributi hanno abilitato SmartLink:
 
       ```csharp
@@ -2378,7 +2378,7 @@ Si tratta di un avviso che indica che è stato rilevato un P/Invoke per fare rif
 
 Questo errore viene segnalato durante il collegamento dell'output dal compilatore AOT.
 
-Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo errore indica con maggiore probabilità un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT5217" />
 
@@ -2386,9 +2386,9 @@ Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un
 
 Il collegamento nativo non è riuscito ed è possibile che si sia verificato perché il comando del linker era troppo lungo.
 
-I progetti Novell. iOS spesso fanno riferimento a simboli nativi in modo dinamico, il che significa che il linker nativo potrebbe rimuovere questi simboli nativi durante il processo di collegamento nativo, perché il linker nativo non verifica che questi simboli vengano usati.
+I progetti Xamarin.iOS spesso fanno riferimento a simboli nativi in modo dinamico, il che significa che il linker nativo potrebbe rimuovere questi simboli nativi durante il processo di collegamento nativo, perché il linker nativo non verifica che questi simboli vengano usati.
 
-In genere, Novell. iOS chiederà al linker nativo di memorizzare tali simboli usando il flag del linker `-u symbol`, ma se sono presenti molti simboli di questo tipo, l'intera riga di comando potrebbe superare la lunghezza massima della riga di comando, come specificato dal sistema operativo.
+In genere, Xamarin.iOS chiederà al linker nativo di memorizzare tali simboli usando il flag del linker `-u symbol`, ma se sono presenti molti simboli di questo tipo, l'intera riga di comando potrebbe superare la lunghezza massima della riga di comando, come specificato dal sistema operativo.
 
 Esistono alcune possibili origini per tali simboli dinamici:
 
@@ -2401,10 +2401,10 @@ Possibili soluzioni:
 - Abilitare il linker gestito (se possibile per tutti gli assembly anziché solo gli assembly SDK). Questo potrebbe rimuovere un numero sufficiente di origini per i simboli dinamici, in modo che la riga di comando del linker non superi il valore massimo.
 - Ridurre il numero di P/Invoke, i riferimenti ai campi e/o le classi Objective-C.
 - Riscrivere i simboli dinamici per avere nomi più brevi.
-- Passare `-dlsym:false` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà un riferimento nativo nel codice compilato con AOT e non sarà necessario richiedere al linker di memorizzare questo simbolo. Tuttavia, questo funziona solo per le compilazioni di dispositivi e causerà errori del linker se sono presenti P/Invoke per le funzioni che non esistono nella libreria statica.
-- Passare `--dynamic-symbol-mode=code` come argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà codice nativo aggiuntivo che fa riferimento a questi simboli anziché chiedere al linker nativo di conservarli usando gli argomenti della riga di comando. Lo svantaggio di questo approccio è che aumenterà le dimensioni del file eseguibile.
+- Passare `-dlsym:false` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto. Con questa opzione, Xamarin.iOS genererà un riferimento nativo nel codice compilato con AOT e non sarà necessario richiedere al linker di memorizzare questo simbolo. Tuttavia, questo funziona solo per le compilazioni di dispositivi e causerà errori del linker se sono presenti P/Invoke per le funzioni che non esistono nella libreria statica.
+- Passare `--dynamic-symbol-mode=code` come argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto. Con questa opzione, Xamarin.iOS genererà codice nativo aggiuntivo che fa riferimento a questi simboli anziché chiedere al linker nativo di conservarli usando gli argomenti della riga di comando. Lo svantaggio di questo approccio è che aumenterà le dimensioni del file eseguibile.
 - Abilitare il registrar statico passando `--registrar:static` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto (per le compilazioni del simulatore, perché il registrar statico è già quello predefinito per le compilazioni di dispositivi). Il registrar statico genererà codice che fa riferimento a classi Objective-C in modo statico, quindi non è necessario richiedere al linker nativo di mantengono tali classi.
-- Disabilitare le compilazioni incrementali (per le compilazioni di dispositivi). Quando le compilazioni incrementali sono abilitate, il codice generato dal registrar statico non verrà considerato dal linker nativo, il che significa che Novell. iOS deve comunque richiedere al linker di mantenere le classi Objective-C a cui si fa riferimento. In questo modo, la disabilitazione delle compilazioni incrementali impedisce tale necessità.
+- Disabilitare le compilazioni incrementali (per le compilazioni di dispositivi). Quando le compilazioni incrementali sono abilitate, il codice generato dal registrar statico non verrà considerato dal linker nativo, il che significa che Xamarin.iOS deve comunque richiedere al linker di mantenere le classi Objective-C a cui si fa riferimento. In questo modo, la disabilitazione delle compilazioni incrementali impedisce tale necessità.
 
 <a name="MT5218" />
 
@@ -2925,7 +2925,7 @@ Dove * può essere:
 
 <a name="MT8001" />
 
-### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: versione non corrispondente tra il runtime Novell. iOS nativo e MonoTouch. dll. Reinstallare Novell. iOS.
+### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: versione non corrispondente tra il runtime Xamarin.iOS nativo e MonoTouch. dll. Reinstallare Xamarin.iOS.
 
 <a name="MT8002" />
 
@@ -2953,7 +2953,7 @@ Dove * può essere:
 
 <a name="MT8008" />
 
-### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: la versione caricata di Novell. iOS. dll è stata compilata per \* bit, mentre il processo è \* bit. Inviare un bug in http://bugzilla.xamarin.com.
+### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: la versione caricata di Xamarin.iOS. dll è stata compilata per \* bit, mentre il processo è \* bit. Inviare un bug in http://bugzilla.xamarin.com.
 
 Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
@@ -2965,7 +2965,7 @@ Indica che un'API non è stata associata correttamente. Se si tratta di un'API e
 
 <a name="MT8010" />
 
-### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010: le dimensioni del tipo nativo non corrispondono tra Novell. [iOS | Mac]. dll e l'architettura in esecuzione. Novell. [iOS | Mac]. dll è stato compilato per * bit, mentre il processo corrente è * bit.
+### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010: le dimensioni del tipo nativo non corrispondono tra Xamarin.[iOS | Mac]. dll e l'architettura in esecuzione. Xamarin.[iOS | Mac]. dll è stato compilato per * bit, mentre il processo corrente è * bit.
 
 Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
@@ -2973,9 +2973,9 @@ Ciò indica che si è verificato un errore nel processo di compilazione. Inviare
 
 ### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: Impossibile individuare il delegato per bloccare l'attributo di conversione ([DelegateProxy]) per il valore restituito per il metodo *.* Inviare un bug in http://bugzilla.xamarin.com.
 
-Novell. iOS non è stato in grado di individuare un metodo necessario in fase di esecuzione (per convertire un delegato in un blocco).
+Xamarin.iOS non è stato in grado di individuare un metodo necessario in fase di esecuzione (per convertire un delegato in un blocco).
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8012" />
 
@@ -2983,7 +2983,7 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 L'attributo DelegateProxy per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8013" />
 
@@ -2991,7 +2991,7 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 L'attributo `[DelegateProxy]` per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8014" />
 
@@ -2999,7 +2999,7 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 L'attributo `[DelegateProxy]` per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8015" />
 
@@ -3007,7 +3007,7 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 L'attributo DelegateProxy per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8016" />
 
@@ -3015,7 +3015,7 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 L'attributo `[DelegateProxy]` per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Questo indica in genere un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <!-- 8017 is used by mmp -->
 
@@ -3023,40 +3023,40 @@ Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [Git
 
 ### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: errore di coerenza interno. Inviare un report sui bug in http://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019: Impossibile trovare l'assembly * negli assembly caricati.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020: non è stato possibile trovare il modulo con MetadataToken \* nell'assembly \*.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021: tipo di token implicito sconosciuto: *.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8022" />
 
 ### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: previsto il riferimento del token \* essere un \*, ma è un \*. Inviare un report sui bug in http://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8023" />
 
 ### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: un oggetto istanza è necessario per costruire un metodo generico chiuso per il metodo generico aperto: \* (riferimento al token: \*). Inviare un report sui bug in http://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8024" />
 
 ### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Impossibile trovare un tipo di estensione valido per l'enumerazione intelligente ' {smart_type}'. Inviare un bug in https://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Ciò indica un bug in Xamarin.iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).

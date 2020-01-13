@@ -350,7 +350,7 @@ Ai fini di questa procedura dettagliata, la libreria movimenti è già stata cre
 
   [![Scribble sullo schermo, viene visualizzata l'immagine originale](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
-È ora possibile comprendere come integrare il tocco e i movimenti in un'applicazione Android con Novell. Android.
+È ora possibile comprendere come integrare il tocco e i movimenti in un'applicazione Android con Xamarin.Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

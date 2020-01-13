@@ -27,7 +27,7 @@ Il sistema operativo Android versione 4,0 (livello API 14) rappresenta una maggi
 - **Nuove API di dati** : è disponibile un nuovo accesso ai dati che non erano precedentemente accessibili ufficialmente, ad esempio i dati del calendario e il profilo utente del proprietario del dispositivo. 
 - **Condivisione dei dati delle app** : la condivisione di dati tra applicazioni e dispositivi è ora più semplice che mai tramite tecnologie come la `ShareActionProvider`, che semplifica la creazione di un'azione di condivisione da una barra delle azioni e *Android Beam* per le *comunicazioni Near Field ( NFC)* , che lo rende uno snap per condividere i dati tra i dispositivi in prossimità. 
 
-In questo articolo verranno esaminate queste funzionalità e altre modifiche apportate all'API Android 4,0 e verrà illustrato come usare ogni funzionalità con Novell. Android.
+In questo articolo verranno esaminate queste funzionalità e altre modifiche apportate all'API Android 4,0 e verrà illustrato come usare ogni funzionalità con Xamarin.Android.
 
 ## <a name="user-interface-features"></a>Funzionalità dell'interfaccia utente
 

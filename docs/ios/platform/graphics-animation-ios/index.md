@@ -1,6 +1,6 @@
 ---
 title: Grafica e animazione in iOS
-description: Questo documento contiene collegamenti a diverse guide che illustrano come usare l'immagine principale, la grafica principale e i Framework di animazione core in Novell. iOS.
+description: Questo documento contiene collegamenti a diverse guide che illustrano come usare l'immagine principale, la grafica principale e i Framework di animazione core in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios

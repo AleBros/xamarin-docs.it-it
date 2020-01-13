@@ -1,5 +1,5 @@
 ---
-title: Panoramica di StoreKit e recupero di informazioni sul prodotto in Novell. iOS
+title: Panoramica di StoreKit e recupero di informazioni sul prodotto in Xamarin.iOS
 description: Questo documento fornisce una panoramica di StoreKit. Descrive le classi usate con StoreKit, testando le interazioni StoreKit, visualizzando i prodotti per la vendita, gestendo prodotti non validi e visualizzando i prezzi localizzati.
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032324"
 ---
-# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Panoramica di StoreKit e recupero di informazioni sul prodotto in Novell. iOS
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Panoramica di StoreKit e recupero di informazioni sul prodotto in Xamarin.iOS
 
 L'interfaccia utente per un acquisto in-app è illustrata negli screenshot seguenti.
 Prima che venga apportata una transazione, l'applicazione deve recuperare il prezzo e la descrizione del prodotto per la visualizzazione. Quando l'utente preme **Acquista**, l'applicazione effettua una richiesta a StoreKit che gestisce la finestra di dialogo di conferma e l'account di accesso Apple ID. Supponendo che la transazione abbia esito positivo, StoreKit notifica il codice dell'applicazione, che deve archiviare il risultato della transazione e fornire all'utente l'accesso all'acquisto.   

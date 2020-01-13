@@ -1,6 +1,6 @@
 ---
 title: Modifiche aggiuntive ai Framework di iOS 10
-description: Questo documento descrive le modifiche e i miglioramenti secondari apportati ai Framework esistenti in iOS 10 e illustra come usare questi aggiornamenti in Novell. iOS.
+description: Questo documento descrive le modifiche e i miglioramenti secondari apportati ai Framework esistenti in iOS 10 e illustra come usare questi aggiornamenti in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios

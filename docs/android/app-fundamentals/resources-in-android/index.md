@@ -1,6 +1,6 @@
 ---
 title: Risorse Android
-description: In questo articolo viene introdotto il concetto di risorse Android in Novell. Android e viene documentato come utilizzarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse.
+description: In questo articolo viene introdotto il concetto di risorse Android in Xamarin.Android e viene documentato come utilizzarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73025052"
 ---
 # <a name="android-resources"></a>Risorse Android
 
-_In questo articolo viene introdotto il concetto di risorse Android in Novell. Android e viene documentato come utilizzarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse._
+_In questo articolo viene introdotto il concetto di risorse Android in Xamarin.Android e viene documentato come utilizzarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse._
 
 ## <a name="overview"></a>Panoramica
 
@@ -32,7 +32,7 @@ Le risorse offrono diversi vantaggi a un'applicazione Android:
 
 - Il **controllo in fase di compilazione** &ndash; risorse sono statiche e compilate nell'applicazione. Ciò consente di controllare l'utilizzo delle risorse in fase di compilazione, quando sarà facile intercettare e correggere gli errori, anziché in fase di esecuzione quando risulta più difficile individuare e rendere più costoso la correzione.
 
-Quando viene avviato un nuovo progetto Novell. Android, viene creata una directory speciale denominata Resources, insieme ad alcune sottodirectory:
+Quando viene avviato un nuovo progetto Xamarin.Android, viene creata una directory speciale denominata Resources, insieme ad alcune sottodirectory:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -48,7 +48,7 @@ Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base 
 
 -----
 
-Esistono due modi per accedere a queste risorse in un'applicazione Novell. Android: a *livello* di codice nel codice e in *modo dichiarativo* in XML usando una sintassi XML speciale.
+Esistono due modi per accedere a queste risorse in un'applicazione Xamarin.Android: a *livello* di codice nel codice e in *modo dichiarativo* in XML usando una sintassi XML speciale.
 
 Queste risorse sono denominate *risorse predefinite* e vengono usate da tutti i dispositivi a meno che non venga specificata una corrispondenza più specifica. Inoltre, ogni tipo di risorsa può facoltativamente avere *risorse alternative* che possono essere usate da Android per dispositivi specifici. Ad esempio, è possibile fornire le risorse per specificare le impostazioni locali dell'utente, le dimensioni dello schermo o se il dispositivo viene ruotato di 90 gradi da verticale a orizzontale e così via. In ognuno di questi casi, Android caricherà le risorse per l'uso da parte dell'applicazione senza alcuna ulteriore operazione di codifica da parte dello sviluppatore.
 

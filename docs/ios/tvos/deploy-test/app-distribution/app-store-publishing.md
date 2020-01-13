@@ -45,7 +45,7 @@ Apple gestisce anche un elenco di suggerimenti per l'invio di App Store di Apple
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>Configurazione dell'applicazione in iTunes Connect
 
-[iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) è una suite di strumenti basati sul Web per, tra le altre cose, la gestione delle app TvOS nell'App Store di Apple TV. È necessario configurare e configurare correttamente l'app Novell. tvOS in iTunes Connect prima di poterla inviare ad Apple per la revisione e, infine, essere rilasciata per la vendita o come app gratuita nell'App Store di Apple TV.
+[iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) è una suite di strumenti basati sul Web per, tra le altre cose, la gestione delle app TvOS nell'App Store di Apple TV. È necessario configurare e configurare correttamente l'app Xamarin.tvOS in iTunes Connect prima di poterla inviare ad Apple per la revisione e, infine, essere rilasciata per la vendita o come app gratuita nell'App Store di Apple TV.
 
 eseguire le operazioni descritte di seguito.
 
@@ -65,22 +65,22 @@ Per altri dettagli, vedere la documentazione [configurare l'app tvOS in iTunes C
 
 ## <a name="preparing-for-app-store-distribution"></a>Preparazione per la distribuzione nell'App Store
 
-Per pubblicare un'app nell'App Store di Apple TV, è prima necessario compilarla per la distribuzione, che comporta molti passaggi. Le sezioni seguenti illustrano tutti gli elementi necessari per preparare un'app Novell. tvOS per la pubblicazione, in modo che possa essere compilata e inviata all'App Store di Apple TV per la revisione e il rilascio.
+Per pubblicare un'app nell'App Store di Apple TV, è prima necessario compilarla per la distribuzione, che comporta molti passaggi. Le sezioni seguenti illustrano tutti gli elementi necessari per preparare un'app Xamarin.tvOS per la pubblicazione, in modo che possa essere compilata e inviata all'App Store di Apple TV per la revisione e il rilascio.
 
 <a name="Provisioning_for_Application_Services" />
 
 ### <a name="provisioning-for-application-services"></a>Povisioning per i servizi per le applicazioni
 
-Apple offre una selezione di Servizi per le applicazioni speciali, denominati anche diritti, che possono essere attivati per l'app tvOS quando si crea un ID univoco. Indipendentemente dal fatto che si utilizzino diritti personalizzati, sarà comunque necessario creare un ID univoco per l'app Novell. tvOS prima di poterlo pubblicare nell'App Store di Apple TV.
+Apple offre una selezione di Servizi per le applicazioni speciali, denominati anche diritti, che possono essere attivati per l'app tvOS quando si crea un ID univoco. Indipendentemente dal fatto che si utilizzino diritti personalizzati, sarà comunque necessario creare un ID univoco per l'app Xamarin.tvOS prima di poterlo pubblicare nell'App Store di Apple TV.
 
 Per creare un ID app e facoltativamente selezionare gli entitlement è necessario seguire questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 
 1. Selezionare **provisioning** > **sviluppo**.
 2. Fare clic sul pulsante **+** e specificare **Nome** (Nome) e **Bundle ID** (ID bundle) per la nuova applicazione.
-3. Scorrere fino alla fine della schermata e selezionare tutti i **Servizi app** che saranno richiesti dall'app Novell. tvOS.
+3. Scorrere fino alla fine della schermata e selezionare tutti i **Servizi app** che saranno richiesti dall'app Xamarin.tvOS.
 4. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate per creare un nuovo ID app.
 
-Oltre a selezionare e configurare la Servizi per le applicazioni obbligatoria quando si definisce l'ID app, è necessario configurare anche l'ID e i diritti dell'app nel progetto Novell. tvOS modificando i file di `Info.plist` e di `Entitlements.plist`.
+Oltre a selezionare e configurare la Servizi per le applicazioni obbligatoria quando si definisce l'ID app, è necessario configurare anche l'ID e i diritti dell'app nel progetto Xamarin.tvOS modificando i file di `Info.plist` e di `Entitlements.plist`.
 
 In Visual Studio per Mac eseguire le operazioni seguenti:
 
@@ -88,16 +88,16 @@ In Visual Studio per Mac eseguire le operazioni seguenti:
 2. Nella sezione **destinazione applicazione tvOS** compilare un nome per l'applicazione e immettere l' **identificatore del bundle** creato quando è stato definito l'ID app.
 3. Salvare le modifiche apportate al file `Info.plist`.
 4. In **Esplora soluzioni** fare doppio clic sul file `Entitlements.plist` per aprirlo e modificarlo.
-5. Selezionare e configurare i diritti necessari per l'app Novell. tvOS in modo che corrispondano alla configurazione eseguita in precedenza quando è stato definito l'ID app.
+5. Selezionare e configurare i diritti necessari per l'app Xamarin.tvOS in modo che corrispondano alla configurazione eseguita in precedenza quando è stato definito l'ID app.
 6. Salvare le modifiche apportate al file `Entitlements.plist`.
 
-Per istruzioni dettagliate, vedere la documentazione [Provisioning dei servizi applicativi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Mentre questo documento è stato scritto per iOS, vengono usati gli stessi passaggi per eseguire il provisioning di un'app Novell. tvOS.
+Per istruzioni dettagliate, vedere la documentazione [Provisioning dei servizi applicativi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Mentre questo documento è stato scritto per iOS, vengono usati gli stessi passaggi per eseguire il provisioning di un'app Xamarin.tvOS.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
 ### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>Impostazione delle icone delle app, dell'immagine di avvio e dell'immagine in primo piano
 
-Per consentire a un'app tvOS di essere accettata da Apple per l'inclusione nell'App Store di Apple TV, sono necessarie icone, lanci e immagini top shelf per tutti i dispositivi Apple TV su cui verrà eseguita. È necessario aggiungere gli asset immagine richiesti che verranno compilati in un file di `Assets.car` e inclusi nel bundle dell'app Novell. tvOS prima che venga caricato in iTunes Connect.
+Per consentire a un'app tvOS di essere accettata da Apple per l'inclusione nell'App Store di Apple TV, sono necessarie icone, lanci e immagini top shelf per tutti i dispositivi Apple TV su cui verrà eseguita. È necessario aggiungere gli asset immagine richiesti che verranno compilati in un file di `Assets.car` e inclusi nel bundle dell'app Xamarin.tvOS prima che venga caricato in iTunes Connect.
 
 Per istruzioni dettagliate, vedere la documentazione sull' [uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) .
 
@@ -123,14 +123,14 @@ Per istruzioni dettagliate, vedere [Creating a Distribution Profile](~/ios/deplo
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Impostazione della configurazione della build per l'applicazione
 
-Per impostazione predefinita, quando si crea una nuova app Novell. tvOS, le _configurazioni di compilazione_ vengono create automaticamente per la distribuzione di **debug** e di **rilascio** . Prima di eseguire la build finale dell'app che verrà inviata ad Apple, è necessario apportare alcune modifiche alla configurazione della **versione** di base.
+Per impostazione predefinita, quando si crea una nuova app Xamarin.tvOS, le _configurazioni di compilazione_ vengono create automaticamente per la distribuzione di **debug** e di **rilascio** . Prima di eseguire la build finale dell'app che verrà inviata ad Apple, è necessario apportare alcune modifiche alla configurazione della **versione** di base.
 
 eseguire le operazioni descritte di seguito.
 
 1. Fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e selezionare **Opzioni** per aprirle per la modifica.
 2. Se la destinazione è una versione specifica di tvOS, selezionarla in **TvOS Build** > **iOS SDK Version**. Per la versione di anteprima del supporto tvOS, lasciare questo valore impostato su **predefinito**.
 3. Il collegamento riduce le dimensioni complessive dell'app distribuibile rimuovendo i metodi, le proprietà, le classi e così via. nella maggior parte dei casi, è consigliabile lasciare il valore predefinito di **link Framework SDK**. In alcune situazioni, ad esempio quando si usano alcune librerie di terze parti specifiche, potrebbe essere necessario impostare questo valore su **non collegare** per evitare la rimozione dell'elemento necessario.
-4. Per distribuire un'app Novell. tvOS, è necessario usare il compilatore di ottimizzazione LLVM. Assicurarsi che la casella di controllo **Usa il compilatore di ottimizzazione di LLVM** sia selezionata sotto la configurazione di **rilascio** .
+4. Per distribuire un'app Xamarin.tvOS, è necessario usare il compilatore di ottimizzazione LLVM. Assicurarsi che la casella di controllo **Usa il compilatore di ottimizzazione di LLVM** sia selezionata sotto la configurazione di **rilascio** .
 5. Apple ha inoltre richiesto che le app tvOS usino bitcode. Nuovamente sotto la configurazione della **versione** , aggiungere `--bitcode=asmonly` alla casella **argomenti aggiuntivi di mTouch** .
 6. È necessario selezionare la casella di controllo **Ottimizza file di immagine PNG per iOS** per ridurre ulteriormente le dimensioni del risultato finale dell'app.
 7. Il debug *non* deve essere abilitato perché renderà la compilazione inutilmente più grande.
@@ -139,7 +139,7 @@ eseguire le operazioni descritte di seguito.
 
 ## <a name="building-and-submitting-the-distributable"></a>Compilazione e invio del file distribuibile
 
-Con l'app Novell. tvOS configurata correttamente, è ora possibile eseguire la build di distribuzione finale che verrà inviata ad Apple per la revisione e il rilascio.
+Con l'app Xamarin.tvOS configurata correttamente, è ora possibile eseguire la build di distribuzione finale che verrà inviata ad Apple per la revisione e il rilascio.
 
 #### <a name="build-your-archive"></a>Compilare l'archivio
 
@@ -213,7 +213,7 @@ Se si accede di nuovo a iTunes Connect e si seleziona l'app nell'elenco delle ap
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Novell. tvOS.
+Se si verificano problemi durante l'invio dell'app Xamarin.tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Xamarin.tvOS.
 
 <a name="Summary" />
 

@@ -1,5 +1,5 @@
 ---
-title: Uso della grafica principale e dell'animazione principale in Novell. iOS
+title: Uso della grafica principale e dell'animazione principale in Xamarin.iOS
 description: Questo articolo illustra passo per passo come creare un'applicazione che usa la grafica di base e l'animazione principale. Viene illustrato come creare sullo schermo in risposta a tocco utente e come animare un'immagine per spostarsi lungo un tracciato.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032445"
 ---
-# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso della grafica principale e dell'animazione principale in Novell. iOS
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso della grafica principale e dell'animazione principale in Xamarin.iOS
 
 Per questa procedura dettagliata verrà disegnato un percorso usando la grafica principale in risposta all'input tocco. Si aggiungerà quindi un `CALayer` contenente un'immagine che verrà animata lungo il tracciato.
 

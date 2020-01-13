@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 20. / O asincrono e file
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 20. / O asincrono e file'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 20. / O asincrono e file'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
@@ -19,7 +19,7 @@ ms.locfileid: "70771043"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
  Un'interfaccia utente grafica deve rispondere a eventi di input dell'utente in modo sequenziale. Ciò implica che l'elaborazione di eventi di input dell'utente deve essere presenti in un singolo thread, spesso denominato il *thread principale* o nella *thread dell'interfaccia utente*.
 
@@ -28,7 +28,7 @@ Gli utenti si aspettano interfacce utente grafiche di essere reattiva. Ciò sign
 Alcuni programmi di esempio in questo libro è sono usato il [ `WebRequest` ](xref:System.Net.WebRequest) classe. In questa classe la [ `BeginGetResponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) metodo avvia un thread di lavoro, che chiama una funzione di callback quando sarà completata. Tuttavia, tale funzione di callback viene eseguito nel thread di lavoro, in modo che il programma deve chiamare [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) metodo per accedere all'interfaccia utente.
 
 > [!NOTE]
-> Programmi di xamarin. Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. `HttpClient` supporta le operazioni asincrone.
+> Programmi di Xamarin.Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. `HttpClient` supporta le operazioni asincrone.
 
 Un approccio più moderno per l'elaborazione asincrona è disponibile in .NET e c#. Ciò comporta il [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classi e altri tipi all'interno di [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) spazi dei nomi, nonché il C# 5.0 `async` e `await` parole chiave. Questo è ciò che in questo capitolo è incentrato sulla.
 
@@ -74,16 +74,16 @@ In genere, .NET [ `System.IO` ](xref:System.IO) dello spazio dei nomi è stato l
 
 ### <a name="good-news-and-bad-news"></a>Notizie buone e notizie
 
-Tutte le piattaforme supportate da archiviazione locale dell'applicazione il supporto di xamarin. Forms &mdash; archiviazione privato per l'applicazione.
+Tutte le piattaforme supportate da archiviazione locale dell'applicazione il supporto di Xamarin.Forms &mdash; archiviazione privato per l'applicazione.
 
-Le librerie di xamarin. IOS e xamarin. Android includono una versione di .NET che Xamarin è espressamente su misura per queste due piattaforme. Queste includono le classi da `System.IO` che è possibile usare per eseguire i/o file con l'archiviazione locale dell'applicazione in queste due piattaforme.
+Le librerie di Xamarin.IOS e Xamarin.Android includono una versione di .NET che Xamarin è espressamente su misura per queste due piattaforme. Queste includono le classi da `System.IO` che è possibile usare per eseguire i/o file con l'archiviazione locale dell'applicazione in queste due piattaforme.
 
-Tuttavia, se si cerca questi `System.IO` classi in una libreria di classi Portabile xamarin. Forms, non sono disponibili in. Il problema è che i/o del file di Microsoft completamente rinnovata per l'API di Runtime di Windows. Non utilizzano programmi destinati a Windows 8.1, Windows Phone 8.1 e la piattaforma Windows universale `System.IO` per i/o file.
+Tuttavia, se si cerca questi `System.IO` classi in una libreria di classi Portabile Xamarin.Forms, non sono disponibili in. Il problema è che i/o del file di Microsoft completamente rinnovata per l'API di Runtime di Windows. Non utilizzano programmi destinati a Windows 8.1, Windows Phone 8.1 e la piattaforma Windows universale `System.IO` per i/o file.
 
 Ciò significa che è necessario usare il [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (illustrata per prima nella [ **capitolo 9. Chiamate API specifiche della piattaforma** ](chapter09.md) per implementare i/o file.
 
 > [!NOTE]
-> Librerie di classi portabili sono stati sostituiti con le librerie .NET Standard 2.0 e supporta .NET Standard 2.0 [ `System.IO` ](xref:System.IO) tipi per tutte le piattaforme di xamarin. Forms. Non è più necessario usare un `DependencyService` per la maggior parte delle attività dei / o file. Visualizzare [gestione File in xamarin. Forms](~/xamarin-forms/data-cloud/data/files.md) per un approccio più moderno file i/o.
+> Librerie di classi portabili sono stati sostituiti con le librerie .NET Standard 2.0 e supporta .NET Standard 2.0 [ `System.IO` ](xref:System.IO) tipi per tutte le piattaforme di Xamarin.Forms. Non è più necessario usare un `DependencyService` per la maggior parte delle attività dei / o file. Visualizzare [gestione File in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) per un approccio più moderno file i/o.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Vengo prima i/o file lo sviluppo multipiattaforma
 
@@ -101,7 +101,7 @@ Il codice che illustra questo nuovo approccio sarà in una libreria in modo che 
 
 Il [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) soluzione illustra un approccio. Questa soluzione contiene progetti diversi sette:
 
-- [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), una libreria di classi Portabile xamarin. Forms normale
+- [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), una libreria di classi Portabile Xamarin.Forms normale
 - [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), una libreria di classi iOS
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), una libreria di classi Android
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), una libreria di classi di Windows universale
@@ -109,7 +109,7 @@ Il [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-b
 
 Tutti i singoli progetti di piattaforma (ad eccezione di **Xamarin.FormsBook.Platform.WinRT**) includono riferimenti ai **Xamarin.FormsBook.Platform**. I tre progetti Windows dispone di un riferimento a **Xamarin.FormsBook.Platform.WinRT**.
 
-Tutti i progetti contengono un valore statico `Toolkit.Init` metodo per assicurarsi che la libreria viene caricata se non si fa direttamente riferimento a un progetto in una soluzione di applicazioni xamarin. Forms.
+Tutti i progetti contengono un valore statico `Toolkit.Init` metodo per assicurarsi che la libreria viene caricata se non si fa direttamente riferimento a un progetto in una soluzione di applicazioni Xamarin.Forms.
 
 Il **Xamarin.FormsBook.Platform** contiene il nuovo progetto [ `IFileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/IFileHelper.cs) interfaccia. Tutti i metodi hanno ora nomi con `Async` suffissi e restituire `Task` oggetti.
 

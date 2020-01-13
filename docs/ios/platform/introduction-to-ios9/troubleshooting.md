@@ -1,6 +1,6 @@
 ---
-title: Novell. iOS 9-risoluzione dei problemi
-description: Questo articolo fornisce vari suggerimenti per la risoluzione dei problemi per l'uso di iOS 9 in Novell. iOS. Suggerimenti per l'analisi XML, i simulatori, i vincoli di layout, i problemi di rete e molti altri argomenti.
+title: Xamarin.iOS 9-risoluzione dei problemi
+description: Questo articolo fornisce vari suggerimenti per la risoluzione dei problemi per l'uso di iOS 9 in Xamarin.iOS. Suggerimenti per l'analisi XML, i simulatori, i vincoli di layout, i problemi di rete e molti altri argomenti.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031751"
 ---
-# <a name="xamarinios-9--troubleshooting"></a>Novell. iOS 9-risoluzione dei problemi
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9-risoluzione dei problemi
 
-_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di iOS 9 nelle app Novell. iOS._
+_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di iOS 9 nelle app Xamarin.iOS._
 
 ## <a name="there-was-a-problem-parsing-the-xml"></a>Si è verificato un problema durante l'analisi del codice XML
 
@@ -137,7 +137,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>Sviluppatore aziendale non attendibile
 
-Quando si tenta di eseguire la versione iOS 9 dell'app Novell. iOS su hardware iOS reale, potrebbe essere presente un messaggio che informa che l'account sviluppatore non è stato considerato attendibile nel dispositivo. Esempio:
+Quando si tenta di eseguire la versione iOS 9 dell'app Xamarin.iOS su hardware iOS reale, potrebbe essere presente un messaggio che informa che l'account sviluppatore non è stato considerato attendibile nel dispositivo. Esempio:
 
 [![](troubleshooting-images/untrusted01.png "Untrusted Enterprise Developer alert")](troubleshooting-images/untrusted01.png#lightbox)
 
@@ -160,10 +160,10 @@ Per risolvere questo problema, eseguire le operazioni seguenti:
 
     [![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
 7. Al termine dell'aggiornamento dell'elenco, fare clic sul pulsante **fine** e chiudere la finestra delle preferenze.
-8. Rimuovere la versione esistente dell'app Novell. iOS che si sta provando a testare dal dispositivo iOS.
+8. Rimuovere la versione esistente dell'app Xamarin.iOS che si sta provando a testare dal dispositivo iOS.
 9. Tornare a Visual Studio per Mac, eseguire una compilazione pulita e provare a eseguire di nuovo l'app nel dispositivo.
 
-Potrebbe essere necessario arrestare e riavviare Visual Studio per Mac prima che vengano visualizzati i nuovi profili di provisioning caricati da Xcode. Potrebbe anche essere necessario modificare le opzioni di **firma del bundle iOS** per l'app Novell. iOS per selezionare i nuovi profili di provisioning.
+Potrebbe essere necessario arrestare e riavviare Visual Studio per Mac prima che vengano visualizzati i nuovi profili di provisioning caricati da Xcode. Potrebbe anche essere necessario modificare le opzioni di **firma del bundle iOS** per l'app Xamarin.iOS per selezionare i nuovi profili di provisioning.
 
 ## <a name="launch-screen-issues"></a>Problemi di avvio della schermata
 
@@ -175,7 +175,7 @@ Infine, l'app deve usare un file storyboard per la schermata di avvio e supporta
 
 ## <a name="nsinternalinconsistencyexception-exception"></a>Eccezione NSInternalInconsistencyException
 
-Durante la compilazione e l'esecuzione di un'app Novell. iOS esistente per iOS 9 è possibile che si ottenga un errore nel formato seguente:
+Durante la compilazione e l'esecuzione di un'app Xamarin.iOS esistente per iOS 9 è possibile che si ottenga un errore nel formato seguente:
 
 > Eccezione Objective-C generata.  Nome: NSInternalInconsistencyException motivo: le finestre dell'applicazione dovrebbero avere un controller visualizzazione radice alla fine dell'avvio dell'applicazione
 
@@ -188,7 +188,7 @@ Esistono almeno due possibili soluzioni alternative per questo problema:
 
 ## <a name="when-to-initialize-views-and-view-controllers"></a>Quando inizializzare le visualizzazioni e i controller di visualizzazione
 
-Con Novell. iOS è possibile fare in modo che l'inizializzazione di visualizzazione o visualizzazione del controller all'interno dei costruttori venga chiamata quando un elemento viene esposto nel codice gestito, ma interrompe la progettazione iOS.
+Con Xamarin.iOS è possibile fare in modo che l'inizializzazione di visualizzazione o visualizzazione del controller all'interno dei costruttori venga chiamata quando un elemento viene esposto nel codice gestito, ma interrompe la progettazione iOS.
 
 In generale, non è consigliabile inizializzare qualsiasi elemento che possa richiamare il codice Objective-C dal costruttore, perché non è possibile assicurarsi quando verrà chiamato. Ciò significa anche che sono presenti migliori posizioni (other. ctor) o chiamate di cui eseguire l'override (in quanto Objective-C non ha eventi) in cui l'inizializzazione deve essere eseguita.
 
@@ -196,4 +196,4 @@ In generale, non è consigliabile inizializzare qualsiasi elemento che possa ric
 
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
 - [Novità di iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Aggiornamento delle app Novell. iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)
+- [Aggiornamento delle app Xamarin.iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

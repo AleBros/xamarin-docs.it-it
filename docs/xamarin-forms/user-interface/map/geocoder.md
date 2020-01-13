@@ -1,6 +1,6 @@
 ---
-title: Mappa geocodifica di Novell. Forms
-description: Questo articolo illustra come geocodificare e invertire la mappa geografica dei dati, usando la classe geocodificatore Novell. Forms. maps.
+title: Mappa geocodifica di Xamarin.Forms
+description: Questo articolo illustra come geocodificare e invertire la mappa geografica dei dati, usando la classe geocodificatore Xamarin.Forms. maps.
 ms.prod: xamarin
 ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490259"
 ---
-# <a name="xamarinforms-map-geocoding"></a>Mappa geocodifica di Novell. Forms
+# <a name="xamarinforms-map-geocoding"></a>Mappa geocodifica di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -55,5 +55,5 @@ Il metodo [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetA
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Posizione e distanza del mapping di Novell. Forms](position-distance.md)
+- [Posizione e distanza del mapping di Xamarin.Forms](position-distance.md)
 - [API geocodificatore](xref:Xamarin.Forms.Maps.Geocoder)

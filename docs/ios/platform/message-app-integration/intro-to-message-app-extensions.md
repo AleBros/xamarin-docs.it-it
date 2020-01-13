@@ -1,6 +1,6 @@
 ---
-title: Nozioni fondamentali sull'estensione dell'app Message in Novell. iOS
-description: Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente.
+title: Nozioni fondamentali sull'estensione dell'app Message in Xamarin.iOS
+description: Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente.
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031668"
 ---
-# <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sull'estensione dell'app Message in Novell. iOS
+# <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sull'estensione dell'app Message in Xamarin.iOS
 
-_Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
+_Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
 
 Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
@@ -707,7 +707,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo include un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. Viene analizzato utilizzando l'estensione per inviare testo, adesivi, file multimediali e messaggi interattivi.
+Questo articolo include un'estensione di app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. Viene analizzato utilizzando l'estensione per inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

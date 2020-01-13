@@ -1,6 +1,6 @@
 ---
-title: Riferimento a librerie native in Novell. iOS
-description: Questo documento illustra come collegare le librerie C native in un'applicazione Novell. iOS. Viene descritto come compilare librerie native universali e accedere ai metodi C da C#.
+title: Riferimento a librerie native in Xamarin.iOS
+description: Questo documento illustra come collegare le librerie C native in un'applicazione Xamarin.iOS. Viene descritto come compilare librerie native universali e accedere ai metodi C da C#.
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031632"
 ---
-# <a name="referencing-native-libraries-in-xamarinios"></a>Riferimento a librerie native in Novell. iOS
+# <a name="referencing-native-libraries-in-xamarinios"></a>Riferimento a librerie native in Xamarin.iOS
 
-Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-C, vedere il documento relativo all' [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md) .
+Xamarin.iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Xamarin.iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-C, vedere il documento relativo all' [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md) .
 
 <a name="building_native" />
 
@@ -77,12 +77,12 @@ Qualsiasi libreria di terze parti che si utilizza deve essere collegata in modo 
 Se si desidera collegare in modo statico la libreria "libMyLibrary. a" ottenuta da Internet o compilata con Xcode, è necessario eseguire alcune operazioni:
 
 - Portare la libreria nel progetto
-- Configurare Novell. iOS per collegare la libreria
+- Configurare Xamarin.iOS per collegare la libreria
 - Accedere ai metodi dalla libreria.
 
 Per **portare la libreria nel progetto**, selezionare il progetto in Esplora soluzioni e premere **comando + opzione + a**. Passare a libMyLibrary. a e aggiungerlo al progetto. Quando richiesto, indicare a Visual Studio per Mac o a Visual Studio di copiarlo nel progetto. Dopo averlo aggiunto, trovare libFoo. a nel progetto, fare clic con il pulsante destro del mouse su di esso e impostare l' **azione di compilazione** su **nessuno**.
 
-Per **configurare Novell. iOS per collegare la libreria**, nelle opzioni del progetto per l'eseguibile finale (non la libreria stessa, ma il programma finale), è necessario aggiungere l'argomento aggiuntivo della **compilazione iOS**(queste sono parte delle opzioni del progetto) "-gcc_flags" opzione seguita da una stringa racchiusa tra virgolette contenente tutte le librerie aggiuntive necessarie per il programma, ad esempio:
+Per **configurare Xamarin.iOS per collegare la libreria**, nelle opzioni del progetto per l'eseguibile finale (non la libreria stessa, ma il programma finale), è necessario aggiungere l'argomento aggiuntivo della **compilazione iOS**(queste sono parte delle opzioni del progetto) "-gcc_flags" opzione seguita da una stringa racchiusa tra virgolette contenente tutte le librerie aggiuntive necessarie per il programma, ad esempio:
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load ${ProjectDir}/libMyLibrary.a"
@@ -96,7 +96,7 @@ Nell'esempio precedente viene collegato **libMyLibrary. a**
 -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-Se la libreria nativa contiene C++ codice, è necessario passare anche il flag-cxx in "argomenti aggiuntivi" in modo che Novell. iOS sappia di usare il compilatore corretto. Per C++ le opzioni precedenti avrà un aspetto simile al seguente:
+Se la libreria nativa contiene C++ codice, è necessario passare anche il flag-cxx in "argomenti aggiuntivi" in modo che Xamarin.iOS sappia di usare il compilatore corretto. Per C++ le opzioni precedenti avrà un aspetto simile al seguente:
 
 ```bash
 -cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
@@ -140,9 +140,9 @@ Constants. UIKitLibrary è semplicemente una costante definita come "/System/Lib
 
 ### <a name="accessing-c-dylibs"></a>Accesso a C dylib
 
-Se è necessario utilizzare un dylib C nell'applicazione Novell. iOS, è necessario eseguire una configurazione aggiuntiva prima di chiamare l'attributo `DllImport`.
+Se è necessario utilizzare un dylib C nell'applicazione Xamarin.iOS, è necessario eseguire una configurazione aggiuntiva prima di chiamare l'attributo `DllImport`.
 
-Se, ad esempio, si dispone di un `Animal.dylib` con un metodo `Animal_Version` che verrà chiamato nell'applicazione, è necessario informare Novell. iOS del percorso della libreria prima di provare a utilizzarlo.
+Se, ad esempio, si dispone di un `Animal.dylib` con un metodo `Animal_Version` che verrà chiamato nell'applicazione, è necessario informare Xamarin.iOS del percorso della libreria prima di provare a utilizzarlo.
 
 A tale scopo, modificare il file `Main.CS` e renderlo simile al seguente:
 

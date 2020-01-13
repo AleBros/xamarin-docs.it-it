@@ -1,6 +1,6 @@
 ---
-title: Uso dei binding Novell. Mac per le app console
-description: Creare un'app console per l'uso di Novell. Mac per accedere alle API macOS native.
+title: Uso dei binding Xamarin.Mac per le app console
+description: Creare un'app console per l'uso di Xamarin.Mac per accedere alle API macOS native.
 ms.prod: xamarin
 ms.assetid: 9E52B4CC-F530-4B3E-984A-7F5719A6D528
 ms.technology: xamarin-mac
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70769901"
 ---
-# <a name="xamarinmac-bindings-in-console-apps"></a>Binding Novell. Mac nelle app console
+# <a name="xamarinmac-bindings-in-console-apps"></a>Binding Xamarin.Mac nelle app console
 
 Esistono scenari in cui si vogliono usare alcune API native di Apple C# in per compilare un'applicazione &ndash; senza intestazione che non dispone di un'interfaccia &ndash; utente che usa. C#
 
@@ -30,7 +30,7 @@ static class MainClass {
 }
 ```
 
-La chiamata a `Init` prepara il runtime Novell. Mac, la chiamata a `Main(args)` avvia il ciclo principale dell'applicazione Cocoa, che prepara l'applicazione a ricevere gli eventi della tastiera e del mouse e Mostra la finestra principale dell'applicazione.   La chiamata a `Main` tenterà anche di individuare le risorse Cocoa, preparare una finestra di livello superiore e prevedere che il programma faccia parte di un bundle di applicazioni (programmi distribuiti in una directory con `.app` l'estensione e un layout molto specifico).
+La chiamata a `Init` prepara il runtime Xamarin.Mac, la chiamata a `Main(args)` avvia il ciclo principale dell'applicazione Cocoa, che prepara l'applicazione a ricevere gli eventi della tastiera e del mouse e Mostra la finestra principale dell'applicazione.   La chiamata a `Main` tenterà anche di individuare le risorse Cocoa, preparare una finestra di livello superiore e prevedere che il programma faccia parte di un bundle di applicazioni (programmi distribuiti in una directory con `.app` l'estensione e un layout molto specifico).
 
 Le applicazioni senza intestazione non necessitano di un'interfaccia utente e non devono essere eseguite come parte del bundle di un'applicazione.
 
@@ -41,20 +41,20 @@ Quindi, è preferibile iniziare con un normale tipo di progetto console .NET.
 È necessario eseguire alcune operazioni:
 
 - Creare un progetto vuoto.
-- Fare riferimento alla libreria Novell. Mac. dll.
+- Fare riferimento alla libreria Xamarin.Mac. dll.
 - Portare la dipendenza non gestita al progetto.
 
 Questi passaggi sono illustrati in modo più dettagliato di seguito:
 
 ### <a name="create-an-empty-console-project"></a>Creare un progetto console vuoto
 
-Creare un nuovo progetto console .NET, assicurarsi che sia .NET e non .NET Core, poiché Novell. Mac. dll non viene eseguito nel runtime di .NET Core, ma viene eseguito solo con il runtime di mono.
+Creare un nuovo progetto console .NET, assicurarsi che sia .NET e non .NET Core, poiché Xamarin.Mac. dll non viene eseguito nel runtime di .NET Core, ma viene eseguito solo con il runtime di mono.
 
-### <a name="reference-the-xamarinmac-library"></a>Fare riferimento alla libreria Novell. Mac
+### <a name="reference-the-xamarinmac-library"></a>Fare riferimento alla libreria Xamarin.Mac
 
 Per compilare il codice, è necessario fare riferimento all' `Xamarin.Mac.dll` assembly da questa directory:`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current//lib/x86_64/full`
 
-A tale scopo, passare ai riferimenti del progetto, selezionare la scheda **assembly .NET** e fare clic sul pulsante **Sfoglia** per individuare il file nella file System.  Passare al percorso precedente, quindi selezionare **Novell. Mac. dll** da tale directory.
+A tale scopo, passare ai riferimenti del progetto, selezionare la scheda **assembly .NET** e fare clic sul pulsante **Sfoglia** per individuare il file nella file System.  Passare al percorso precedente, quindi selezionare **Xamarin.Mac. dll** da tale directory.
 
 In questo modo sarà possibile accedere alle API Cocoa in fase di compilazione.   A questo punto, è possibile aggiungere `using AppKit` all'inizio del file e chiamare il `NSApplication.Init()` metodo.   Prima di poter eseguire l'applicazione, è necessario un solo passaggio.
 
@@ -66,7 +66,7 @@ Prima che l'applicazione venga eseguita, è necessario portare la `Xamarin.Mac` 
 
 Qui, selezionare il file **libxammac. dylib**.   Verrà offerta una scelta di copia, collegamento o trasferimento.   Personalmente come il collegamento, ma anche la copia funziona.    È quindi necessario selezionare il file e, nel riquadro delle proprietà, selezionare **visualizza > rilievi > proprietà** se il riquadro proprietà non è visibile), passare alla sezione **compilazione** e impostare l'impostazione **copia in directory di output** su **copia se più recente**.
 
-È ora possibile eseguire l'applicazione Novell. Mac.
+È ora possibile eseguire l'applicazione Xamarin.Mac.
 
 Il risultato nella directory bin sarà simile al seguente:
 
@@ -92,13 +92,13 @@ $ mkbundle --simple -o /tmp/consoleapp consoleapp.exe --library libxammac.dylib 
 $ _
 ```
 
-Nella chiamata della riga di comando precedente, l'opzione `-o` viene usata per specificare l'output generato, in questo caso, è stato `/tmp/consoleapp`superato.   Si tratta di un'applicazione autonoma che è possibile distribuire e non ha dipendenze esterne in mono o Novell. Mac, ma è un file eseguibile completamente indipendente.
+Nella chiamata della riga di comando precedente, l'opzione `-o` viene usata per specificare l'output generato, in questo caso, è stato `/tmp/consoleapp`superato.   Si tratta di un'applicazione autonoma che è possibile distribuire e non ha dipendenze esterne in mono o Xamarin.Mac, ma è un file eseguibile completamente indipendente.
 
 La riga di comando ha specificato manualmente il file **Machine. config** da usare e un file di configurazione del mapping della libreria a livello di sistema.   Non sono necessarie per tutte le applicazioni, ma è utile aggregarle, perché vengono usate quando si usano più funzionalità di .NET
 
 ## <a name="project-less-builds"></a>Compilazione senza progetto
 
-Non è necessario un progetto completo per creare un'applicazione Novell. Mac autonoma, ma è anche possibile usare semplici makefile UNIX per eseguire il processo.   Nell'esempio seguente viene illustrato come è possibile configurare un makefile per una semplice applicazione della riga di comando:
+Non è necessario un progetto completo per creare un'applicazione Xamarin.Mac autonoma, ma è anche possibile usare semplici makefile UNIX per eseguire il processo.   Nell'esempio seguente viene illustrato come è possibile configurare un makefile per una semplice applicazione della riga di comando:
 
 ```
 XAMMAC_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current//lib/x86_64/full/

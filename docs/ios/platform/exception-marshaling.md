@@ -1,6 +1,6 @@
 ---
-title: Marshalling delle eccezioni in Novell. iOS
-description: Questo documento descrive come usare le eccezioni native e gestite in un'app Novell. iOS. Vengono illustrati i problemi che possono verificarsi e una soluzione per questi problemi.
+title: Marshalling delle eccezioni in Xamarin.iOS
+description: Questo documento descrive come usare le eccezioni native e gestite in un'app Xamarin.iOS. Vengono illustrati i problemi che possono verificarsi e una soluzione per questi problemi.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032518"
 ---
-# <a name="exception-marshaling-in-xamarinios"></a>Marshalling delle eccezioni in Novell. iOS
+# <a name="exception-marshaling-in-xamarinios"></a>Marshalling delle eccezioni in Xamarin.iOS
 
-_Novell. iOS contiene nuovi eventi che consentono di rispondere alle eccezioni, in particolare nel codice nativo._
+_Xamarin.iOS contiene nuovi eventi che consentono di rispondere alle eccezioni, in particolare nel codice nativo._
 
 Il codice gestito e Objective-C sono supportati per le eccezioni di runtime (clausole try/catch/finally).
 
@@ -30,7 +30,7 @@ Include anche un progetto di esempio, il [marshalling delle eccezioni](https://g
 
 Il problema si verifica quando viene generata un'eccezione e durante la rimozione dello stack viene rilevato un frame che non corrisponde al tipo di eccezione generata.
 
-Un esempio tipico di questo tipo per Novell. iOS o Novell. Mac è quando un'API nativa genera un'eccezione Objective-C e quindi tale eccezione di Objective-C deve essere gestita in qualche modo quando il processo di rimozione dello stack raggiunge un frame gestito.
+Un esempio tipico di questo tipo per Xamarin.iOS o Xamarin.Mac è quando un'API nativa genera un'eccezione Objective-C e quindi tale eccezione di Objective-C deve essere gestita in qualche modo quando il processo di rimozione dello stack raggiunge un frame gestito.
 
 L'azione predefinita consiste nel non eseguire alcuna operazione. Per l'esempio precedente, ciò significa consentire al runtime di Objective-C di rimuovere i frame gestiti. Questo problema è dovuto al fatto che il runtime di Objective-C non è in grado di rimuovere i frame gestiti; ad esempio, non verrà eseguita alcuna clausola `catch` o `finally` nel frame.
 
@@ -80,7 +80,7 @@ try {
 
 Ciò è dovuto al fatto che l'operazione di rimozione dello stack Objective-C non è in grado di conoscere la clausola `catch` gestita, né la clausola `finally` essere eseguita.
 
-Quando l'esempio di codice precedente _è_ efficace, questo è dovuto al fatto che Objective-c ha un metodo di notifica delle eccezioni Objective-c non gestite, [`NSSetUncaughtExceptionHandler`][2], che Novell. iOS e Novell. Mac usano e a quel punto tenta di convertire qualsiasi Objective-c eccezioni alle eccezioni gestite.
+Quando l'esempio di codice precedente _è_ efficace, questo è dovuto al fatto che Objective-c ha un metodo di notifica delle eccezioni Objective-c non gestite, [`NSSetUncaughtExceptionHandler`][2], che Xamarin.iOS e Xamarin.Mac usano e a quel punto tenta di convertire qualsiasi Objective-c eccezioni alle eccezioni gestite.
 
 ## <a name="scenarios"></a>Scenari
 
@@ -90,12 +90,12 @@ Nello scenario seguente è possibile rilevare le eccezioni Objective-C utilizzan
 
 1. Viene generata un'eccezione Objective-C.
 2. Il runtime di Objective-C esamina lo stack, ma non lo rimuove, cercando un gestore di `@catch` nativo in grado di gestire l'eccezione.
-3. Il runtime di Objective-C non trova gestori di `@catch`, chiama `NSGetUncaughtExceptionHandler`e richiama il gestore installato da Novell. iOS/Novell. Mac.
-4. Il gestore di Novell. iOS/Novell. Mac convertirà l'eccezione Objective-C in un'eccezione gestita e la genererà. Poiché il runtime di Objective-C non ha rimosso lo stack (solo a sua volta), il frame corrente è lo stesso in cui è stata generata l'eccezione Objective-C.
+3. Il runtime di Objective-C non trova gestori di `@catch`, chiama `NSGetUncaughtExceptionHandler`e richiama il gestore installato da Xamarin.iOS/Xamarin.Mac.
+4. Il gestore di Xamarin.iOS/Xamarin.Mac convertirà l'eccezione Objective-C in un'eccezione gestita e la genererà. Poiché il runtime di Objective-C non ha rimosso lo stack (solo a sua volta), il frame corrente è lo stesso in cui è stata generata l'eccezione Objective-C.
 
 Un altro problema si verifica qui, perché il runtime di mono non è in grado di rimuovere correttamente i frame Objective-C.
 
-Quando viene chiamato il callback di eccezioni Objective-C di Novell. iOS, lo stack è simile al seguente:
+Quando viene chiamato il callback di eccezioni Objective-C di Xamarin.iOS, lo stack è simile al seguente:
 
 ```
  0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
@@ -194,7 +194,7 @@ Nello scenario seguente _non_ è possibile intercettare le eccezioni Objective-c
 2. Il runtime di Objective-C esamina lo stack, ma non lo rimuove, cercando un gestore di `@catch` nativo in grado di gestire l'eccezione.
 3. Il runtime di Objective-C trova un gestore di `@catch`, rimuove lo stack e avvia l'esecuzione del gestore di `@catch`.
 
-Questo scenario è comunemente disponibile nelle app Novell. iOS, perché sul thread principale è in genere presente codice simile al seguente:
+Questo scenario è comunemente disponibile nelle app Xamarin.iOS, perché sul thread principale è in genere presente codice simile al seguente:
 
 ``` objective-c
 void UIApplicationMain ()
@@ -213,13 +213,13 @@ void UIApplicationMain ()
 
 Ciò significa che nel thread principale non esiste mai un'eccezione Objective-C non gestita e pertanto il callback che converte le eccezioni Objective-C in eccezioni gestite non viene mai chiamato.
 
-Questa operazione è molto comune anche quando si esegue il debug di app Novell. Mac in una versione precedente di macOS rispetto a Novell. Mac perché il controllo della maggior parte degli oggetti dell'interfaccia utente nel debugger tenterà di recuperare proprietà che corrispondono ai selettori che non esistono nella piattaforma in esecuzione ( Poiché Novell. Mac include il supporto per una versione di macOS più elevata). La chiamata di tali selettori genererà un `NSInvalidArgumentException` ("selettore non riconosciuto inviato a..."), che alla fine causa l'arresto anomalo del processo.
+Questa operazione è molto comune anche quando si esegue il debug di app Xamarin.Mac in una versione precedente di macOS rispetto a Xamarin.Mac perché il controllo della maggior parte degli oggetti dell'interfaccia utente nel debugger tenterà di recuperare proprietà che corrispondono ai selettori che non esistono nella piattaforma in esecuzione ( Poiché Xamarin.Mac include il supporto per una versione di macOS più elevata). La chiamata di tali selettori genererà un `NSInvalidArgumentException` ("selettore non riconosciuto inviato a..."), che alla fine causa l'arresto anomalo del processo.
 
 Per riepilogare, la presenza del runtime di Objective-C o dei frame di rimozione del runtime di mono che non sono programmati per la gestione può causare comportamenti indefiniti, ad esempio arresti anomali, perdite di memoria e altri tipi di comportamenti imprevedibili (MIS).
 
 ## <a name="solution"></a>Soluzione
 
-In Novell. iOS 10 e Novell. Mac 2,10 è stato aggiunto il supporto per intercettare le eccezioni gestite e Objective-C su qualsiasi limite nativo gestito e per convertire l'eccezione in un altro tipo.
+In Xamarin.iOS 10 e Xamarin.Mac 2,10 è stato aggiunto il supporto per intercettare le eccezioni gestite e Objective-C su qualsiasi limite nativo gestito e per convertire l'eccezione in un altro tipo.
 
 In pseudo-codice l'aspetto è simile al seguente:
 
@@ -251,9 +251,9 @@ Per la Reverse (marshalling di eccezioni gestite a eccezioni Objective-C) viene 
 
 L'intercettazione delle eccezioni sul limite nativo gestito non è priva di costi, quindi non è sempre abilitata per impostazione predefinita:
 
-- Novell. iOS/tvOS: l'intercettazione delle eccezioni Objective-C è abilitata nel simulatore.
-- Novell. watchos: l'intercettazione viene applicata in tutti i casi, perché consentire ai frame gestiti di rimozione del runtime di Objective-C di confondere il Garbage Collector e di bloccarlo o arrestarlo in modo anomalo.
-- Novell. Mac: l'intercettazione di eccezioni Objective-C è abilitata per le compilazioni di debug.
+- Xamarin.iOS/tvOS: l'intercettazione delle eccezioni Objective-C è abilitata nel simulatore.
+- Xamarin.watchos: l'intercettazione viene applicata in tutti i casi, perché consentire ai frame gestiti di rimozione del runtime di Objective-C di confondere il Garbage Collector e di bloccarlo o arrestarlo in modo anomalo.
+- Xamarin.Mac: l'intercettazione di eccezioni Objective-C è abilitata per le compilazioni di debug.
 
 La sezione [flag della fase di compilazione](#build_time_flags) illustra come abilitare l'intercettazione quando non è abilitata per impostazione predefinita.
 
@@ -305,7 +305,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 
 ## <a name="build-time-flags"></a>Flag della fase di compilazione
 
-È possibile passare le opzioni seguenti a **mTouch** (per le app Novell. iOS) e **MMP** (per le app Novell. Mac), per determinare se l'intercettazione delle eccezioni è abilitata e impostare l'azione predefinita che deve verificarsi:
+È possibile passare le opzioni seguenti a **mTouch** (per le app Xamarin.iOS) e **MMP** (per le app Xamarin.Mac), per determinare se l'intercettazione delle eccezioni è abilitata e impostare l'azione predefinita che deve verificarsi:
 
 - `--marshal-managed-exceptions=`
   - `default`

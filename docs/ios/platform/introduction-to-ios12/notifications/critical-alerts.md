@@ -1,6 +1,6 @@
 ---
-title: Avvisi critici in Novell. iOS
-description: Questo documento descrive come usare gli avvisi critici con Novell. iOS. Gli avvisi critici, introdotti con iOS 12, sono notifiche di disturbo che rivestono un suono indipendentemente dal fatto che l'opzione non sia disturbata o che l'interruttore squillo sia disattivato.
+title: Avvisi critici in Xamarin.iOS
+description: Questo documento descrive come usare gli avvisi critici con Xamarin.iOS. Gli avvisi critici, introdotti con iOS 12, sono notifiche di disturbo che rivestono un suono indipendentemente dal fatto che l'opzione non sia disturbata o che l'interruttore squillo sia disattivato.
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031982"
 ---
-# <a name="critical-alerts-in-xamarinios"></a>Avvisi critici in Novell. iOS
+# <a name="critical-alerts-in-xamarinios"></a>Avvisi critici in Xamarin.iOS
 
 Con iOS 12, le app possono inviare avvisi critici. Gli avvisi critici rivestono un suono indipendentemente dall'abilitazione o meno della funzionalità di disturbo o dall'opzione della suoneria. Queste notifiche sono problematiche e devono essere usate solo quando gli utenti devono intraprendere un'azione immediata.
 
@@ -82,7 +82,7 @@ Per informazioni sugli avvisi critici in remoto, vedere le [novità della sessio
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
+- [Framework delle notifiche utente in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Procedure consigliate e novità delle notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)

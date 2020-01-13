@@ -1,5 +1,5 @@
 ---
-title: Notifiche utente avanzate in Novell. iOS
+title: Notifiche utente avanzate in Xamarin.iOS
 description: Questo articolo esamina in maniera più approfondita il framework delle notifiche utente, introdotto in iOS 10. Vengono illustrate le notifiche utente, l'interfaccia di notifica utente, gli allegati multimediali, le interfacce utente personalizzate e altro ancora.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031438"
 ---
-# <a name="advanced-user-notifications-in-xamarinios"></a>Notifiche utente avanzate in Novell. iOS
+# <a name="advanced-user-notifications-in-xamarinios"></a>Notifiche utente avanzate in Xamarin.iOS
 
 Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Usando questo Framework, un'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
@@ -38,7 +38,7 @@ Inoltre, a seconda del contesto corrente dell'utente, esistono diversi modi in c
 - Se il dispositivo è bloccato, la notifica verrà visualizzata nella schermata di blocco dell'utente.
 - Se l'utente ha perso una notifica, può aprire il centro notifiche e visualizzare eventuali notifiche in attesa disponibili.
 
-Un'app Novell. iOS include due tipi di notifiche utente che è in grado di inviare:
+Un'app Xamarin.iOS include due tipi di notifiche utente che è in grado di inviare:
 
 - **Notifiche locali** : vengono inviate dalle app installate localmente nel dispositivo degli utenti.
 - **Notifiche remote** : vengono inviate da un server remoto e presentate all'utente o attivano un aggiornamento in background del contenuto dell'app.
@@ -57,7 +57,7 @@ Poiché le notifiche degli utenti sono parte integrante dell'esperienza utente i
 
 Quando viene visualizzata l'interfaccia utente di notifica utente personalizzata, se l'utente interagisce con le azioni associate alla notifica, l'interfaccia utente personalizzata può essere immediatamente aggiornata per fornire commenti e suggerimenti relativi a ciò che è stato modificato.
 
-Una novità di iOS 10, l'API dell'interfaccia utente di notifica utente consente a un'app Novell. iOS di sfruttare facilmente le nuove funzionalità dell'interfaccia utente di notifica utente.
+Una novità di iOS 10, l'API dell'interfaccia utente di notifica utente consente a un'app Xamarin.iOS di sfruttare facilmente le nuove funzionalità dell'interfaccia utente di notifica utente.
 
 ## <a name="adding-media-attachments"></a>Aggiunta di allegati multimediali
 
@@ -161,7 +161,7 @@ Se l'utente interagisce con le azioni personalizzate (presentate sotto la notifi
 
 ### <a name="adding-a-notification-content-extension"></a>Aggiunta di un'estensione per il contenuto delle notifiche
 
-Per implementare un'interfaccia utente personalizzata per le notifiche utente in un'app Novell. iOS, seguire questa procedura:
+Per implementare un'interfaccia utente personalizzata per le notifiche utente in un'app Xamarin.iOS, seguire questa procedura:
 
 <!-- markdownlint-disable MD001 -->
 
@@ -727,7 +727,7 @@ Server.PostEventResponse += (response) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in modo avanzato l'uso del nuovo Framework di notifica utente in un'app Novell. iOS. È stato spiegato come aggiungere allegati multimediali sia alla notifica locale che a quella remota ed è stato analizzato utilizzando la nuova interfaccia utente di notifica utente per creare interfacce utente di notifica personalizzate.
+Questo articolo ha esaminato in modo avanzato l'uso del nuovo Framework di notifica utente in un'app Xamarin.iOS. È stato spiegato come aggiungere allegati multimediali sia alla notifica locale che a quella remota ed è stato analizzato utilizzando la nuova interfaccia utente di notifica utente per creare interfacce utente di notifica personalizzate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

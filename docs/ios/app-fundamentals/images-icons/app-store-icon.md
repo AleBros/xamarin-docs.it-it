@@ -1,6 +1,6 @@
 ---
-title: Icone di App Store in Novell. iOS
-description: Questo documento descrive come usare i cataloghi asset per gestire un'icona dell'app Store per un'applicazione Novell. iOS. In precedenza, le icone dell'app Store venivano gestite con iTunes Connect.
+title: Icone di App Store in Xamarin.iOS
+description: Questo documento descrive come usare i cataloghi asset per gestire un'icona dell'app Store per un'applicazione Xamarin.iOS. In precedenza, le icone dell'app Store venivano gestite con iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73004177"
 ---
-# <a name="app-store-icons-in-xamarinios"></a>Icone di App Store in Novell. iOS
+# <a name="app-store-icons-in-xamarinios"></a>Icone di App Store in Xamarin.iOS
 
 Prima di Xcode 9 tutte le icone dell'app Store sono state aggiunte tramite iTunes Connect. Tuttavia, questo non è più il caso. Le icone dell'app Store devono ora essere incluse come parte del bundle di progetto e aggiunte all'interno di un catalogo asset. Le app che non contengono un'icona dell'app Store verranno rifiutate da Apple.
 

@@ -31,7 +31,7 @@ Novell fornisce l'accesso completo alle API della piattaforma sottostante sia pe
 
 ### <a name="ios"></a>iOS
 
-La visualizzazione del codice HTML in un controllo UIWebView in Novell. iOS richiede anche solo poche righe di codice:
+La visualizzazione del codice HTML in un controllo UIWebView in Xamarin.iOS richiede anche solo poche righe di codice:
 
 ```csharp
 var webView = new UIWebView (View.Bounds);
@@ -45,7 +45,7 @@ Per altre informazioni sull'uso del controllo UIWebView, vedere le ricette [UIWe
 
 ### <a name="android"></a>Android
 
-La visualizzazione di HTML in un controllo WebView con Novell. Android viene eseguita in poche righe di codice:
+La visualizzazione di HTML in un controllo WebView con Xamarin.Android viene eseguita in poche righe di codice:
 
 ```csharp
 // webView is declared in an AXML layout file

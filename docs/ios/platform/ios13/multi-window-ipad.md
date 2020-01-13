@@ -1,5 +1,5 @@
 ---
-title: Più finestre per iPad in Novell. iOS
+title: Più finestre per iPad in Xamarin.iOS
 description: Aggiunta del supporto per più finestre alle applicazioni iPad.
 ms.prod: xamarin
 ms.assetid: 524b6f2e-dbdf-11e9-8a34-2a2ae2dbcce4
@@ -103,6 +103,6 @@ In `userActivity` questo esempio, è l'unico valore passato `RequestSceneSession
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Trascinamento della selezione in Novell. iOS][0]
+- [Trascinamento della selezione in Xamarin.iOS][0]
 
 [0]: ~/ios/platform/introduction-to-ios11/drag-and-drop.md

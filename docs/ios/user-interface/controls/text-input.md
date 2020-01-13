@@ -1,6 +1,6 @@
 ---
-title: Input di testo in Novell. iOS
-description: Questo documento descrive l'input di testo in un'app Novell. iOS. Viene illustrato l'uso di UITextField e UITextVIew a livello di codice e in iOS designer.
+title: Input di testo in Xamarin.iOS
+description: Questo documento descrive l'input di testo in un'app Xamarin.iOS. Viene illustrato l'uso di UITextField e UITextVIew a livello di codice e in iOS designer.
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021826"
 ---
-# <a name="text-input-in-xamarinios"></a>Input di testo in Novell. iOS
+# <a name="text-input-in-xamarinios"></a>Input di testo in Xamarin.iOS
 
 L'accettazione dell'input di testo utente viene eseguita con la `UITextField` per gli input a riga singola e UITextView per il testo modificabile su più righe. È possibile trascinare uno di questi controlli su una schermata e fare doppio clic per impostare il testo iniziale.
 
@@ -56,7 +56,7 @@ textfield1.MinimumFontSize = 17f;
 textfield1.AdjustsFontSizeToFitWidth = true;
 ```
 
-Novell. iOS fornisce le enumerazioni laddove appropriato per facilitare la selezione delle impostazioni desiderate, ad esempio il `UIKeyboardType` e `UIReturnKeyType` nel frammento di codice precedente.
+Xamarin.iOS fornisce le enumerazioni laddove appropriato per facilitare la selezione delle impostazioni desiderate, ad esempio il `UIKeyboardType` e `UIReturnKeyType` nel frammento di codice precedente.
 
 ### <a name="display-text-programmatically"></a>Visualizzare il testo a livello di codice
 

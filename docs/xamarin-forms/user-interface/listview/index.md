@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms ListView
-description: Questa guida presenta il ListView Novell. Forms, che può essere usato per presentare i dati negli elenchi interattivi.
+title: Xamarin.Forms ListView
+description: Questa guida presenta il ListView Xamarin.Forms, che può essere usato per presentare i dati negli elenchi interattivi.
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/15/2019
 ms.locfileid: "70997989"
 ---
-# <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
+# <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 

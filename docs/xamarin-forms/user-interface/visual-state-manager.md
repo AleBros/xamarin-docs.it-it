@@ -1,5 +1,5 @@
 ---
-title: Xamarin. Forms Visual State Manager
+title: Xamarin.Forms Visual State Manager
 description: Usare Visual State Manager per apportare modifiche agli elementi XAML in base gli stati visivi impostata dal codice.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -15,19 +15,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490012"
 ---
-# <a name="the-xamarinforms-visual-state-manager"></a>Xamarin. Forms Visual State Manager
+# <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Usare Visual State Manager per apportare modifiche agli elementi XAML in base gli stati visivi impostata dal codice._
 
-I Visual State Manager (VSM) è stata introdotta nella versione 3.0 di xamarin. Forms. VSM fornisce un modo strutturato per apportare modifiche visive per l'interfaccia utente dal codice. Nella maggior parte dei casi, l'interfaccia utente dell'applicazione è definita in XAML, e questo XAML include il markup che descrive gli oggetti visivi dell'interfaccia utente di influenza Visual State Manager.
+I Visual State Manager (VSM) è stata introdotta nella versione 3.0 di Xamarin.Forms. VSM fornisce un modo strutturato per apportare modifiche visive per l'interfaccia utente dal codice. Nella maggior parte dei casi, l'interfaccia utente dell'applicazione è definita in XAML, e questo XAML include il markup che descrive gli oggetti visivi dell'interfaccia utente di influenza Visual State Manager.
 
-VSM introduce il concetto di _gli stati visivi_. Una vista di xamarin. Forms, ad esempio un `Button` può avere diversi aspetti di visual diversi a seconda dello stato sottostante &mdash; se è disabilitato, premuto o ha lo stato attivo. Questi sono gli stati del pulsante.
+VSM introduce il concetto di _gli stati visivi_. Una vista di Xamarin.Forms, ad esempio un `Button` può avere diversi aspetti di visual diversi a seconda dello stato sottostante &mdash; se è disabilitato, premuto o ha lo stato attivo. Questi sono gli stati del pulsante.
 
 Stati di visualizzazione vengono raccolti nel _gruppi di stato di visualizzazione_. Tutti gli stati visivi all'interno di un gruppo di stati di visualizzazione si escludono a vicenda. Sia gli stati visivi e i gruppi dello stato di visualizzazione vengono identificati da stringhe di testo semplice.
 
-Xamarin. Forms Visual State Manager definisce un gruppo di stati di visualizzazione denominato "CommonStates" con tre stati di visualizzazione:
+Xamarin.Forms Visual State Manager definisce un gruppo di stati di visualizzazione denominato "CommonStates" con tre stati di visualizzazione:
 
 - "Normal"
 - "Disabilitata"
@@ -38,7 +38,7 @@ Questo gruppo dello stato di visualizzazione è supportato per tutte le classi c
 È anche possibile definire i propri gruppi dello stato di visualizzazione e stati di visualizzazione, come in questo articolo verranno illustrato.
 
 > [!NOTE]
-> Familiarità con gli sviluppatori di xamarin. Forms [trigger](~/xamarin-forms/app-fundamentals/triggers.md) sono consapevoli che i trigger possono anche apportare modifiche agli oggetti visivi nell'interfaccia utente in base alle modifiche nelle proprietà di una vista o la generazione degli eventi. Tuttavia, l'utilizzo di trigger per affrontare varie combinazioni di queste modifiche può risultare poco chiaro. In passato, il gestore di stato di visualizzazione è stata introdotta in ambienti basati su XAML di Windows per ridurre la confusione derivante da combinazioni di stati di visualizzazione. Con VSM, gli stati visivi all'interno di un gruppo di stati di visualizzazione sono sempre si escludono a vicenda. In qualsiasi momento, solo uno stato di ogni gruppo rappresenta lo stato corrente.
+> Familiarità con gli sviluppatori di Xamarin.Forms [trigger](~/xamarin-forms/app-fundamentals/triggers.md) sono consapevoli che i trigger possono anche apportare modifiche agli oggetti visivi nell'interfaccia utente in base alle modifiche nelle proprietà di una vista o la generazione degli eventi. Tuttavia, l'utilizzo di trigger per affrontare varie combinazioni di queste modifiche può risultare poco chiaro. In passato, il gestore di stato di visualizzazione è stata introdotta in ambienti basati su XAML di Windows per ridurre la confusione derivante da combinazioni di stati di visualizzazione. Con VSM, gli stati visivi all'interno di un gruppo di stati di visualizzazione sono sempre si escludono a vicenda. In qualsiasi momento, solo uno stato di ogni gruppo rappresenta lo stato corrente.
 
 ## <a name="the-common-states"></a>Gli Stati comuni
 
@@ -416,9 +416,9 @@ A questo punto tutti i `Entry` viste in questa pagina rispondono allo stesso mod
 
 [![VSM nello stile](vsm-images/VsmInStyle.png "VSM nello stile")](vsm-images/VsmInStyle-Large.png#lightbox)
 
-## <a name="visual-states-in-xamarinforms"></a>Stati di visualizzazione in Novell. Forms
+## <a name="visual-states-in-xamarinforms"></a>Stati di visualizzazione in Xamarin.Forms
 
-Nella tabella seguente sono elencati gli Stati di visualizzazione definiti in Novell. Forms:
+Nella tabella seguente sono elencati gli Stati di visualizzazione definiti in Xamarin.Forms:
 
 | Classe | Stati | Altre informazioni |
 | ----- | ------ | ---------------- |
@@ -550,7 +550,7 @@ Potrebbe essere tentato di prendere in considerazione la derivazione di una clas
 
 ## <a name="using-the-visual-state-manager-for-adaptive-layout"></a>Utilizzare il gestore di stato di visualizzazione per il layout adattivo
 
-Un xamarin. Forms dell'applicazione in esecuzione su un telefono in genere può essere visualizzati in verticale o orizzontale proporzioni e un programma di xamarin. Forms in esecuzione sul desktop può essere ridimensionata per assumere molte diverse dimensioni e proporzioni. Un'applicazione ben progettata può visualizzare il contenuto in modo diverso per i vari fattori di forma pagina o nella finestra.
+Un Xamarin.Forms dell'applicazione in esecuzione su un telefono in genere può essere visualizzati in verticale o orizzontale proporzioni e un programma di Xamarin.Forms in esecuzione sul desktop può essere ridimensionata per assumere molte diverse dimensioni e proporzioni. Un'applicazione ben progettata può visualizzare il contenuto in modo diverso per i vari fattori di forma pagina o nella finestra.
 
 Questa tecnica è talvolta detta _adattivo layout_. Poiché layout adattivo riguarda esclusivamente gli oggetti visivi di un programma, è un'applicazione ideale di Visual State Manager.
 
@@ -725,7 +725,7 @@ Può sembrare come se il file code-behind è possibile gestire le modifiche appo
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Novell. Forms 3,0 video di Visual State Manager**
+**Xamarin.Forms 3,0 video di Visual State Manager**
 
 ## <a name="related-links"></a>Collegamenti correlati
 

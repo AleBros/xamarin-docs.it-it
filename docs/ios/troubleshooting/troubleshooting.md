@@ -1,6 +1,6 @@
 ---
-title: Suggerimenti per la risoluzione dei problemi per Novell. iOS
-description: Questo documento fornisce diversi suggerimenti utili per la risoluzione dei problemi durante lo sviluppo di applicazioni Novell. iOS. Vengono descritti i messaggi di errore specifici e altri potenziali problemi.
+title: Suggerimenti per la risoluzione dei problemi per Xamarin.iOS
+description: Questo documento fornisce diversi suggerimenti utili per la risoluzione dei problemi durante lo sviluppo di applicazioni Xamarin.iOS. Vengono descritti i messaggi di errore specifici e altri potenziali problemi.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
@@ -15,9 +15,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030872"
 ---
-# <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS 
+# <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Xamarin.iOS 
 
-## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Novell. iOS non è in grado di risolvere System. ValueTuple
+## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.iOS non è in grado di risolvere System. ValueTuple
 
 Questo errore si verifica a causa di un'incompatibilità con Visual Studio.
 
@@ -33,7 +33,7 @@ Quando si tenta di aggiornare il software e viene visualizzato questo messaggio 
 
 ## <a name="how-do-i-create-outlets-or-actions-with-interface-builder"></a>Ricerca per categorie creare Outlet o azioni con Interface Builder?
 
-Con l'introduzione del Xamarin Designer per iOS in Visual Studio per Mac e Visual Studio, gli sviluppatori di Novell. iOS possono ora sfruttare i vantaggi della creazione di un'interfaccia utente tramite gli storyboard e XIB. Per ulteriori informazioni sull'utilizzo della finestra di progettazione, consultare le guide [Hello, iOS](~/ios/get-started/hello-ios/index.md) .
+Con l'introduzione del Xamarin Designer per iOS in Visual Studio per Mac e Visual Studio, gli sviluppatori di Xamarin.iOS possono ora sfruttare i vantaggi della creazione di un'interfaccia utente tramite gli storyboard e XIB. Per ulteriori informazioni sull'utilizzo della finestra di progettazione, consultare le guide [Hello, iOS](~/ios/get-started/hello-ios/index.md) .
 
 È anche possibile fare riferimento alle guide di [Outlet](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingOutlet.html) e [azioni](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingAction.html) di Apple per altre informazioni sull'uso degli Outlet e delle azioni in IB.
 
@@ -48,7 +48,7 @@ Il membro è stato probabilmente rimosso dal linker e pertanto non esiste nell'a
 - Aggiungere l'attributo [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) al membro.  Ciò impedirà al linker di rimuoverlo.
 - Quando si richiama [**mTouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), usare le opzioni **-nolink** o **-linksdkonly** :
   - **-nolink** Disabilita tutti i collegamenti.
-  - **-linksdkonly** collegherà solo gli assembly forniti da Novell. iOS, ad esempio **Novell. iOS. dll**, mantenendo tutti i tipi negli assembly creati dall'utente (ad esempio, i progetti di app).
+  - **-linksdkonly** collegherà solo gli assembly forniti da Xamarin.iOS, ad esempio **Xamarin.iOS. dll**, mantenendo tutti i tipi negli assembly creati dall'utente (ad esempio, i progetti di app).
 
 Si noti che gli assembly sono collegati in modo che l'eseguibile risultante sia minore. Pertanto, la disabilitazione del collegamento può comportare un eseguibile di dimensioni maggiori rispetto a quello auspicabile.
 
@@ -132,7 +132,7 @@ Le azioni per i file di Interface Builder sono connesse ai widget tramite reflec
 
 ## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mTouch non riuscito con il messaggio seguente: Impossibile aprire l'assembly '/path/to/YOURPROJECT.exe '
 
-Se viene visualizzato questo messaggio di errore, in genere il problema è il percorso assoluto del progetto che contiene uno spazio. Questo problema verrà risolto in una versione futura di Novell. iOS, ma è possibile aggirare il problema spostando il progetto in una cartella senza spazi.
+Se viene visualizzato questo messaggio di errore, in genere il problema è il percorso assoluto del progetto che contiene uno spazio. Questo problema verrà risolto in una versione futura di Xamarin.iOS, ma è possibile aggirare il problema spostando il progetto in una cartella senza spazi.
 
 ## <a name="your-sqlite3-version-is-old---please-upgrade-to-at-least-v350"></a>La versione di sqlite3 è obsoleta. eseguire l'aggiornamento ad almeno v 3.5.0!
 
@@ -150,7 +150,7 @@ Questo errore indica che la configurazione della firma del codice per il certifi
 
 ## <a name="code-completion-is-not-working-in-visual-studio-for-mac"></a>Il completamento del codice non funziona in Visual Studio per Mac
 
-Assicurarsi di usare la versione più recente di Visual Studio per Mac e Novell. iOS
+Assicurarsi di usare la versione più recente di Visual Studio per Mac e Xamarin.iOS
 
 Se il problema è ancora presente, inviare [un bug](https://monodevelop.com/Developers#Reporting_Bugs), collegando i file di log **~/Library/Logs/XamarinStudio-{Version}/IDE-{timestamp}.log**, **AndroidTools-{timestamp}. log**e **Components-{timestamp}. log** .
 
@@ -184,7 +184,7 @@ Stacktrace:
     at (wrapper runtime-invoke) object.runtime_invoke_dynamic (intptr,intptr,intptr,intptr) <0xffffffff>`
 ```
 
-Significa che si sta collegando una libreria statica compilata con codice Thumb nel progetto. A partire dalla versione 3,1 di iPhone SDK (o versione successiva al momento della stesura di questo articolo) Apple ha introdotto un bug nel linker durante il collegamento di codice non Thumb (Novell. iOS) con codice Thumb (la libreria statica). Per attenuare questo problema, è necessario eseguire il collegamento con una versione non Thumb della libreria statica.
+Significa che si sta collegando una libreria statica compilata con codice Thumb nel progetto. A partire dalla versione 3,1 di iPhone SDK (o versione successiva al momento della stesura di questo articolo) Apple ha introdotto un bug nel linker durante il collegamento di codice non Thumb (Xamarin.iOS) con codice Thumb (la libreria statica). Per attenuare questo problema, è necessario eseguire il collegamento con una versione non Thumb della libreria statica.
 
 ## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System. ExecutionEngineException: tentativo di compilare il metodo JIT (gestito da wrapper) foo []: System. Collections. Generic. ICollection'1. get_Count ()
 
@@ -217,13 +217,13 @@ Alleghi i log XS, **~/Library/Logs/XamarinStudio-{Version}/IDE-{timestamp}.log**
 
 Per supportare il debug, le compilazioni di debug contengono codice aggiuntivo. I progetti compilati in modalità versione sono una frazione delle dimensioni.
 
-A partire da Novell. iOS 1,3, le build di debug includono il supporto del debug per ogni singolo componente di mono (ogni metodo in ogni classe dei Framework).  
+A partire da Xamarin.iOS 1,3, le build di debug includono il supporto del debug per ogni singolo componente di mono (ogni metodo in ogni classe dei Framework).  
 
-Con Novell. iOS 1,4 verrà introdotto un metodo con granularità fine per il debug, il valore predefinito sarà fornire solo la strumentazione di debug per il codice e le librerie e non eseguire questa operazione per tutti gli [assembly mono](~/cross-platform/internals/available-assemblies.md) (questo sarà ancora possibile, ma si dovrà acconsentire esplicitamente al debug degli assembly.
+Con Xamarin.iOS 1,4 verrà introdotto un metodo con granularità fine per il debug, il valore predefinito sarà fornire solo la strumentazione di debug per il codice e le librerie e non eseguire questa operazione per tutti gli [assembly mono](~/cross-platform/internals/available-assemblies.md) (questo sarà ancora possibile, ma si dovrà acconsentire esplicitamente al debug degli assembly.
 
 ## <a name="installation-hangs"></a>Blocco installazione
 
-I programmi di installazione mono e Novell. iOS si bloccano se è in esecuzione il simulatore iPhone. Questo problema non è limitato a mono o Novell. iOS. si tratta di un problema coerente tra tutti i software che tentano di installare software in MacOS Snow Leopard se il simulatore di iPhone è in esecuzione al momento dell'installazione.
+I programmi di installazione mono e Xamarin.iOS si bloccano se è in esecuzione il simulatore iPhone. Questo problema non è limitato a mono o Xamarin.iOS. si tratta di un problema coerente tra tutti i software che tentano di installare software in MacOS Snow Leopard se il simulatore di iPhone è in esecuzione al momento dell'installazione.
 
 Assicurarsi di uscire dal simulatore iPhone e riprovare l'installazione.
 
@@ -268,7 +268,7 @@ Se la modalità Wi-Fi o USB non funziona, è possibile provare facilmente l'altr
 
 ## <a name="error-134-mtouch-failed-with-the-following-message"></a>Errore 134: mTouch non riuscito con il messaggio seguente:
 
-Questo errore può essere generato se si tenta di compilare con-nolink nello stile Novell. iOS 1,4 delle versioni. Per risolvere questo errore, è possibile specificare argomenti aggiuntivi nella configurazione del progetto MonoDevelop.
+Questo errore può essere generato se si tenta di compilare con-nolink nello stile Xamarin.iOS 1,4 delle versioni. Per risolvere questo errore, è possibile specificare argomenti aggiuntivi nella configurazione del progetto MonoDevelop.
 
 Aggiungere l'argomento
 
@@ -286,7 +286,7 @@ Durante il caricamento di un'app nel dispositivo è possibile che venga visualiz
 
 ## <a name="error-mtouch-failed-with-no-output"></a>Errore "mTouch non riuscito senza output"
 
-La versione corrente di Novell. iOS e Visual Studio per Mac ha esito negativo quando il nome del progetto o la directory in cui è archiviata la soluzione o il progetto contengono spazi.
+La versione corrente di Xamarin.iOS e Visual Studio per Mac ha esito negativo quando il nome del progetto o la directory in cui è archiviata la soluzione o il progetto contengono spazi.
 Per risolvere il problema:
 
 - Assicurarsi che né il progetto o la directory in cui è archiviato contenga uno spazio.
@@ -294,7 +294,7 @@ Per risolvere il problema:
 
 ## <a name="error-the-binary-you-uploaded-was-invalid-a-pre-release-beta-version-of-the-sdk-was-used-to-build-the-application"></a>Errore "il file binario caricato non è valido. Per la compilazione dell'applicazione è stata usata una versione beta non definitiva dell'SDK.
 
-Questo errore è in genere causato da un progetto avviato nello sviluppo di iPad prima del rilascio di Novell. iOS 2.0.0. è probabile che siano presenti alcune chiavi nel file INFO. plist, ad esempio:
+Questo errore è in genere causato da un progetto avviato nello sviluppo di iPad prima del rilascio di Xamarin.iOS 2.0.0. è probabile che siano presenti alcune chiavi nel file INFO. plist, ad esempio:
 
 ```xml
 <key>UIDeviceFamily</key>
@@ -312,7 +312,7 @@ Questa coppia di elementi deve essere rimossa come Visual Studio per Mac la gest
 Attenersi ai passaggi riportati di seguito.
 
 - Modificare la versione dell'SDK nella build di iPhone in 3,2 o iTunes Connect lo rifiuterà al caricamento perché viene visualizzato un app compatibile con iPad creato con una versione di SDK inferiore a 3,2
-- Creare un file INFO. plist personalizzato per il progetto e impostare in modo esplicito MinimumOSVersion su 3,0.   Verrà eseguito l'override del valore MinimumOSVersion 3,2 impostato da Novell. iOS.   Se non si esegue questa operazione, l'app non potrà essere eseguita su un iPhone.
+- Creare un file INFO. plist personalizzato per il progetto e impostare in modo esplicito MinimumOSVersion su 3,0.   Verrà eseguito l'override del valore MinimumOSVersion 3,2 impostato da Xamarin.iOS.   Se non si esegue questa operazione, l'app non potrà essere eseguita su un iPhone.
 - Ricompilare, zip e caricare in iTunes Connect.
 
 ## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Eccezione non gestita: System. Exception: Impossibile trovare il selettore someSelector: in {Type}
@@ -398,7 +398,7 @@ Questa operazione non è consentita come nome eseguibile in CFBundleExecutable, 
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Errore: "il tipo di attributo personalizzato 0x43 non è supportato" quando si fa doppio clic su file XIB
 
-Ciò è dovuto al tentativo di aprire i file con estensione XIB quando le variabili di ambiente non sono impostate correttamente. Questa situazione non dovrebbe verificarsi con l'utilizzo normale di Visual Studio per Mac/Novell. iOS e la riapertura Visual Studio per Mac da/Applications dovrebbe risolvere il problema.
+Ciò è dovuto al tentativo di aprire i file con estensione XIB quando le variabili di ambiente non sono impostate correttamente. Questa situazione non dovrebbe verificarsi con l'utilizzo normale di Visual Studio per Mac/Xamarin.iOS e la riapertura Visual Studio per Mac da/Applications dovrebbe risolvere il problema.
 
 Quando si tenta di aggiornare il software e questo messaggio di errore viene visualizzato, inviare un messaggio di posta elettronica *support@xamarin.com*
 
@@ -410,6 +410,6 @@ Per controllare l'azione di compilazione, fare clic con il pulsante destro del m
 
 ## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: non sono disponibili dati per la codifica 437
 
-Quando si includono librerie di terze parti nell'app Novell. iOS, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
+Quando si includono librerie di terze parti nell'app Xamarin.iOS, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 
-Questo problema può essere risolto aprendo le opzioni per il progetto Novell. iOS, passando a **iOS compila** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** .
+Questo problema può essere risolto aprendo le opzioni per il progetto Xamarin.iOS, passando a **iOS compila** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** .

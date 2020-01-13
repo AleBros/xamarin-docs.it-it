@@ -26,7 +26,7 @@ msbuild /p:Configuration=Release /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 Il `.xcarchive` verrà inserito nella directory `$HOME/Library/Developer/Xcode/Archives` nell'host di compilazione Mac che sia Xcode che Xamarin Studio la ricerca per visualizzare archivi compilati in precedenza.
 
-Per alcune brevi note aggiuntive sulla proprietà `ArchiveOnBuild`, vedere il [post dei forum di Novell](https://forums.xamarin.com/discussion/comment/156635/#Comment_156635) . Per ulteriori informazioni sulle proprietà `ServerAddress` e `ServerUser`, vedere la documentazione relativa alle [compilazioni da riga di comando di Novell. iOS in Windows](~/ios/get-started/installation/windows/connecting-to-mac/index.md) .
+Per alcune brevi note aggiuntive sulla proprietà `ArchiveOnBuild`, vedere il [post dei forum di Novell](https://forums.xamarin.com/discussion/comment/156635/#Comment_156635) . Per ulteriori informazioni sulle proprietà `ServerAddress` e `ServerUser`, vedere la documentazione relativa alle [compilazioni da riga di comando di Xamarin.iOS in Windows](~/ios/get-started/installation/windows/connecting-to-mac/index.md) .
 
 * * *
 

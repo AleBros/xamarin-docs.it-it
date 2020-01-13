@@ -43,11 +43,11 @@ Esistono alcune limitazioni note relative al supporto dei pacchetti NuGet nelle 
 - I pacchetti che dipendono da `.targets` file o script di PowerShell probabilmente non funzioneranno come previsto.
 - Per rimuovere o modificare una dipendenza del pacchetto, modificare il manifesto della cartella di lavoro con un editor di testo. La gestione corretta dei pacchetti è in corso.
 
-### <a name="xamarinforms-support"></a>Supporto di Novell. Forms
+### <a name="xamarinforms-support"></a>Supporto di Xamarin.Forms
 
-Se si fa riferimento al pacchetto NuGet Novell. Forms nella cartella di lavoro, l'app cartella di lavoro cambierà la visualizzazione principale in modo che sia Novell. Forms. È possibile accedervi tramite `Xamarin.Forms.Application.Current.MainPage`.
+Se si fa riferimento al pacchetto NuGet Xamarin.Forms nella cartella di lavoro, l'app cartella di lavoro cambierà la visualizzazione principale in modo che sia Xamarin.Forms. È possibile accedervi tramite `Xamarin.Forms.Application.Current.MainPage`.
 
-Nella scheda Visualizza controllo è inoltre presente un supporto speciale per la visualizzazione della gerarchia di visualizzazione Novell. Forms per facilitare la comprensione dei layout.
+Nella scheda Visualizza controllo è inoltre presente un supporto speciale per la visualizzazione della gerarchia di visualizzazione Xamarin.Forms per facilitare la comprensione dei layout.
 
 ## <a name="rich-text-editing"></a>Modifica di testo RTF
 

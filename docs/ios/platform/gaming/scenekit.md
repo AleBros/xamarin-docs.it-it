@@ -1,5 +1,5 @@
 ---
-title: SceneKit in Novell. iOS
+title: SceneKit in Xamarin.iOS
 description: Questo documento descrive SceneKit, un'API Graph della scena 3D che semplifica l'uso della grafica 3D astraendone le complessità di OpenGL.
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032491"
 ---
-# <a name="scenekit-in-xamarinios"></a>SceneKit in Novell. iOS
+# <a name="scenekit-in-xamarinios"></a>SceneKit in Xamarin.iOS
 
 SceneKit è un'API Graph della scena 3D che semplifica l'uso della grafica 3D. È stata introdotta per la prima volta in OS X 10,8 ed è ora disponibile in iOS 8. Con SceneKit, la creazione di visualizzazioni 3D immersive e giochi 3D casuali non richiede esperienza in OpenGL. Basandosi sui concetti comuni relativi ai grafici delle scene, SceneKit estrae le complessità di OpenGL e OpenGL, semplificando l'aggiunta di contenuto 3D a un'applicazione. Tuttavia, se si è un esperto OpenGL, SceneKit offre un ottimo supporto per il collegamento diretto con OpenGL. Include inoltre numerose funzionalità che integrano grafica 3D, ad esempio la fisica, e si integra molto bene con diversi altri framework Apple, ad esempio Core Animation, Core Image e sprite Kit.
 

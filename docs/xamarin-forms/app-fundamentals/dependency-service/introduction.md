@@ -29,7 +29,7 @@ La procedura per usare [`DependencyService`](xref:Xamarin.Forms.DependencyServic
 
 Il diagramma seguente illustra come viene richiamata la funzionalità della piattaforma nativa in un'applicazione Xamarin.Forms:
 
-![Panoramica della posizione del servizio con la classe Novell. Forms DependencyService](introduction-images/dependency-service.png "Posizione del servizio DependencyService")
+![Panoramica della posizione del servizio con la classe Xamarin.Forms DependencyService](introduction-images/dependency-service.png "Posizione del servizio DependencyService")
 
 ## <a name="create-an-interface"></a>Creare un'interfaccia
 

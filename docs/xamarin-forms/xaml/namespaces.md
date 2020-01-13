@@ -1,5 +1,5 @@
 ---
-title: Spazi dei nomi XAML in xamarin. Forms
+title: Spazi dei nomi XAML in Xamarin.Forms
 description: XAML Usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso.
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61176521"
 ---
-# <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in xamarin. Forms
+# <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in Xamarin.Forms
 
 _XAML Usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso._
 
@@ -26,7 +26,7 @@ Esistono due dichiarazioni dello spazio dei nomi XAML che sono sempre all'intern
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
-Spazio dei nomi predefinito specifica che gli elementi definiti all'interno del file XAML senza il prefisso fa riferimento alle classi di xamarin. Forms, ad esempio [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
+Spazio dei nomi predefinito specifica che gli elementi definiti all'interno del file XAML senza il prefisso fa riferimento alle classi di Xamarin.Forms, ad esempio [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
 
 La seconda dichiarazione dello spazio dei nomi viene utilizzato il `x` prefisso, come illustrato nell'esempio di codice XAML seguente:
 
@@ -36,7 +36,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 
 XAML vengono utilizzati prefissi per dichiarare spazi dei nomi non predefinito, con il prefisso viene usato quando si fa riferimento ai tipi nello spazio dei nomi. Il `x` dichiarazione dello spazio dei nomi specifica che gli elementi definiti all'interno di XAML con il prefisso `x` vengono utilizzati per gli elementi e attributi intrinseci XAML (in particolare la specifica di XAML 2009).
 
-La tabella seguente descrive il `x` attributi dello spazio dei nomi supportati da xamarin. Forms:
+La tabella seguente descrive il `x` attributi dello spazio dei nomi supportati da Xamarin.Forms:
 
 |Costrutto|Descrizione|
 |--- |--- |
@@ -52,7 +52,7 @@ La tabella seguente descrive il `x` attributi dello spazio dei nomi supportati d
 Per altre informazioni sul `x:DataType` dell'attributo, vedere [associazioni compilate](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). Per altre informazioni sul `x:FieldModifier` dell'attributo, vedere [modificatori di campo](~/xamarin-forms/xaml/field-modifiers.md). Per altre informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` attributi, vedere [passando gli argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 > [!NOTE]
-> Oltre agli attributi dello spazio dei nomi sopra elencati, xamarin. Forms include anche le estensioni di markup che possono essere utilizzate tramite il `x` prefisso dello spazio dei nomi. Per altre informazioni, vedere [utilizzano le estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+> Oltre agli attributi dello spazio dei nomi sopra elencati, Xamarin.Forms include anche le estensioni di markup che possono essere utilizzate tramite il `x` prefisso dello spazio dei nomi. Per altre informazioni, vedere [utilizzano le estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
 In XAML, le dichiarazioni dello spazio dei nomi ereditano da elemento padre all'elemento figlio. Pertanto, quando si definisce uno spazio dei nomi nell'elemento radice di un file XAML, tutti gli elementi all'interno del file ereditano la dichiarazione dello spazio dei nomi.
 

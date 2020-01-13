@@ -1,5 +1,5 @@
 ---
-title: Pulsanti in Novell. Android
+title: Pulsanti in Xamarin.Android
 description: Implementazione di elementi dell'interfaccia utente che l'utente tocca per eseguire un'azione
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029334"
 ---
-# <a name="buttons-in-xamarinandroid"></a>Pulsanti in Novell. Android
+# <a name="buttons-in-xamarinandroid"></a>Pulsanti in Xamarin.Android
 
-La classe `Button` viene utilizzata per rappresentare diversi stili di pulsante nelle schermate Android. Questa sezione presenta le diverse opzioni per l'uso dei pulsanti in Novell. Android:
+La classe `Button` viene utilizzata per rappresentare diversi stili di pulsante nelle schermate Android. Questa sezione presenta le diverse opzioni per l'uso dei pulsanti in Xamarin.Android:
 
 - [RadioButton](~/android/user-interface/controls/buttons/radio-button.md) consente all'utente di selezionare un'opzione da un set.
 

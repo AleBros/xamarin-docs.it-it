@@ -1,6 +1,6 @@
 ---
-title: CloudKit in Novell. iOS
-description: Questo documento descrive come usare CloudKit in Novell. iOS. Viene fornita una panoramica di CloudKit e viene illustrato come abilitarla, l'API CloudKit praticità, la scalabilità, gli account utente e gli ambienti di sviluppo e produzione.
+title: CloudKit in Xamarin.iOS
+description: Questo documento descrive come usare CloudKit in Xamarin.iOS. Viene fornita una panoramica di CloudKit e viene illustrato come abilitarla, l'API CloudKit praticità, la scalabilità, gli account utente e gli ambienti di sviluppo e produzione.
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663460"
 ---
-# <a name="cloudkit-in-xamarinios"></a>CloudKit in Novell. iOS
+# <a name="cloudkit-in-xamarinios"></a>CloudKit in Xamarin.iOS
 
 Il Framework CloudKit semplifica lo sviluppo di applicazioni che accedono a iCloud. Questo include il recupero dei dati delle applicazioni e dei diritti degli asset, nonché la possibilità di archiviare in modo sicuro le informazioni sull'applicazione. Questo kit offre agli utenti un livello di anonimità consentendo l'accesso alle applicazioni con gli ID iCloud senza condividere le informazioni personali.
 

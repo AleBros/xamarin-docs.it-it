@@ -1,6 +1,6 @@
 ---
-title: Windows in Novell. Mac
-description: Questo articolo illustra l'uso di finestre e pannelli in un'applicazione Novell. Mac. Viene descritta la creazione di finestre e pannelli in Xcode e Interface Builder, il caricamento da storyboard e file con estensione XIB e l'uso a livello di codice.
+title: Windows in Xamarin.Mac
+description: Questo articolo illustra l'uso di finestre e pannelli in un'applicazione Xamarin.Mac. Viene descritta la creazione di finestre e pannelli in Xcode e Interface Builder, il caricamento da storyboard e file con estensione XIB e l'uso a livello di codice.
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75606710"
 ---
-# <a name="windows-in-xamarinmac"></a>Windows in Novell. Mac
+# <a name="windows-in-xamarinmac"></a>Windows in Xamarin.Mac
 
-_Questo articolo illustra l'uso di finestre e pannelli in un'applicazione Novell. Mac. Viene descritta la creazione di finestre e pannelli in Xcode e Interface Builder, il caricamento da storyboard e file con estensione XIB e l'uso a livello di codice._
+_Questo articolo illustra l'uso di finestre e pannelli in un'applicazione Xamarin.Mac. Viene descritta la creazione di finestre e pannelli in Xcode e Interface Builder, il caricamento da storyboard e file con estensione XIB e l'uso a livello di codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere alle stesse finestre e ai pannelli che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le finestre e i pannelli (oppure, facoltativamente, crearli direttamente nel C# codice).
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere alle stesse finestre e ai pannelli che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le finestre e i pannelli (oppure, facoltativamente, crearli direttamente nel C# codice).
 
-A seconda del suo scopo, un'applicazione Novell. Mac può presentare una o più finestre sullo schermo per gestire e coordinare le informazioni che Visualizza e funziona con. Le funzioni principali di una finestra sono:
+A seconda del suo scopo, un'applicazione Xamarin.Mac può presentare una o più finestre sullo schermo per gestire e coordinare le informazioni che Visualizza e funziona con. Le funzioni principali di una finestra sono:
 
 1. Per fornire un'area in cui le visualizzazioni e i controlli possono essere posizionati e gestiti.
 2. Per accettare e rispondere agli eventi in risposta all'interazione dell'utente con la tastiera e il mouse.
@@ -31,9 +31,9 @@ I pannelli sono un tipo speciale di finestra (una sottoclasse della classe di ba
 
 [![modifica di una finestra in Xcode](window-images/intro01.png)](window-images/intro01.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base per l'utilizzo di Windows e dei pannelli in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
+In questo articolo verranno illustrate le nozioni di base per l'utilizzo di Windows e dei pannelli in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi `Register` e `Export` usati per collegare le C# classi agli oggetti Objective-c e agli elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi `Register` e `Export` usati per collegare le C# classi agli oggetti Objective-c e agli elementi dell'interfaccia utente.
 
 ## <a name="introduction-to-windows"></a>Introduzione a Windows
 
@@ -51,7 +51,7 @@ Per altre informazioni, vedere la sezione [About Windows](https://developer.appl
 
 ### <a name="main-key-and-inactive-windows"></a>Finestre principale, chiave e inattiva
 
-Windows in un'applicazione Novell. Mac può apparire e comportarsi in modo diverso in base alla modalità di interazione dell'utente. Il primo documento o la finestra dell'app attualmente concentrata sull'attenzione dell'utente è detta _finestra principale_. Nella maggior parte dei casi questa finestra sarà anche la _finestra chiave_ , ovvero la finestra che sta attualmente accettando l'input dell'utente. Tuttavia, questo non è sempre il caso, ad esempio, un selettore di colori potrebbe essere aperto ed essere la finestra chiave con cui l'utente interagisce per modificare lo stato di un elemento nella finestra del documento (che sarebbe ancora la finestra principale).
+Windows in un'applicazione Xamarin.Mac può apparire e comportarsi in modo diverso in base alla modalità di interazione dell'utente. Il primo documento o la finestra dell'app attualmente concentrata sull'attenzione dell'utente è detta _finestra principale_. Nella maggior parte dei casi questa finestra sarà anche la _finestra chiave_ , ovvero la finestra che sta attualmente accettando l'input dell'utente. Tuttavia, questo non è sempre il caso, ad esempio, un selettore di colori potrebbe essere aperto ed essere la finestra chiave con cui l'utente interagisce per modificare lo stato di un elemento nella finestra del documento (che sarebbe ancora la finestra principale).
 
 Le finestre principale e chiave (se sono separate) sono sempre attive, le finestre _inattive_ sono finestre aperte che non sono in primo piano. Ad esempio, un'applicazione editor di testo potrebbe avere più di un documento aperto alla volta, ma solo la finestra principale sarebbe attiva, tutte le altre sarebbero inattive. 
 
@@ -104,11 +104,11 @@ La maggior parte delle applicazioni macOS moderne presenta controlli e opzioni a
 
 [![un controllo di esempio](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
-Per altre informazioni, vedere la sezione [pannelli](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) dei temi di [progettazione MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) di Apple e l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) per un'implementazione completa di un' **interfaccia di controllo** in un'app Novell. Mac.
+Per altre informazioni, vedere la sezione [pannelli](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) dei temi di [progettazione MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) di Apple e l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) per un'implementazione completa di un' **interfaccia di controllo** in un'app Xamarin.Mac.
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Creazione e gestione di Windows in Xcode
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
+Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
 
 [![selezione dello storyboard principale](window-images/edit01.png)](window-images/edit01.png#lightbox)
 
@@ -152,7 +152,7 @@ Da qui è possibile impostare le dimensioni iniziali della finestra, assegnarle 
 
 ### <a name="setting-a-custom-main-window-controller"></a>Impostazione di un controller della finestra principale personalizzato
 
-Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Novell. Mac dovrà usare un controller di finestra personalizzato.
+Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Xamarin.Mac dovrà usare un controller di finestra personalizzato.
 
 eseguire le operazioni descritte di seguito.
 
@@ -198,7 +198,7 @@ Per altre informazioni sull'uso di **Outlet** e **azioni**, vedere la documentaz
 
 ### <a name="standard-window-workflow"></a>Flusso di lavoro finestra standard
 
-Per tutte le finestre create e usate nell'applicazione Novell. Mac, il processo è fondamentalmente uguale a quello ottenuto in precedenza:
+Per tutte le finestre create e usate nell'applicazione Xamarin.Mac, il processo è fondamentalmente uguale a quello ottenuto in precedenza:
 
 1. Per le nuove finestre che non sono aggiunte automaticamente al progetto, aggiungere una nuova definizione di finestra al progetto. Questo argomento verrà illustrato in dettaglio di seguito.
 1. Fare doppio clic sul file `Main.storyboard` per aprire la finestra progettazione per la modifica nella Interface Builder di Xcode.
@@ -209,11 +209,11 @@ Per tutte le finestre create e usate nell'applicazione Novell. Mac, il processo 
 1. Esporre gli elementi dell'interfaccia utente della C# finestra al codice tramite **Outlet** e **azioni**.
 1. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Ora che è stata creata una finestra di base, verranno esaminati i processi tipici usati da un'applicazione Novell. Mac quando si lavora con Windows. 
+Ora che è stata creata una finestra di base, verranno esaminati i processi tipici usati da un'applicazione Xamarin.Mac quando si lavora con Windows. 
 
 ## <a name="displaying-the-default-window"></a>Visualizzazione della finestra predefinita
 
-Per impostazione predefinita, una nuova applicazione Novell. Mac visualizzerà automaticamente la finestra definita nel file `MainWindow.xib` all'avvio:
+Per impostazione predefinita, una nuova applicazione Xamarin.Mac visualizzerà automaticamente la finestra definita nel file `MainWindow.xib` all'avvio:
 
 [![una finestra di esempio in esecuzione](window-images/display01.png)](window-images/display01.png#lightbox)
 
@@ -244,7 +244,7 @@ public override void ViewWillAppear ()
 
 ## <a name="programmatically-closing-a-window"></a>Chiusura di una finestra a livello di codice
 
-In alcuni casi potrebbe essere necessario chiudere a livello di codice una finestra in un'applicazione Novell. Mac, tranne che l'utente fa clic sul pulsante **Chiudi** della finestra o utilizzando una voce di menu. macOS offre due modi diversi per chiudere un `NSWindow` a livello di codice: `PerformClose` e `Close`.
+In alcuni casi potrebbe essere necessario chiudere a livello di codice una finestra in un'applicazione Xamarin.Mac, tranne che l'utente fa clic sul pulsante **Chiudi** della finestra o utilizzando una voce di menu. macOS offre due modi diversi per chiudere un `NSWindow` a livello di codice: `PerformClose` e `Close`.
 
 ### <a name="performclose"></a>PerformClose
 
@@ -402,7 +402,7 @@ Window.Delegate = new EditorWindowDelegate(Window);
 
 ### <a name="saving-changes-before-closing-the-app"></a>Salvataggio delle modifiche prima della chiusura dell'app
 
-Infine, l'app Novell. Mac dovrebbe verificare se una delle finestre contiene contenuto modificato e consentire all'utente di salvare le modifiche prima di uscire. A tale scopo, modificare il file di `AppDelegate.cs`, eseguire l'override del metodo `ApplicationShouldTerminate` e renderlo simile al seguente:
+Infine, l'app Xamarin.Mac dovrebbe verificare se una delle finestre contiene contenuto modificato e consentire all'utente di salvare le modifiche prima di uscire. A tale scopo, modificare il file di `AppDelegate.cs`, eseguire l'override del metodo `ApplicationShouldTerminate` e renderlo simile al seguente:
 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
@@ -422,7 +422,7 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 ## <a name="working-with-multiple-windows"></a>Utilizzo di più finestre
 
-La maggior parte delle applicazioni Mac basate su documenti possono modificare più documenti nello stesso momento. Un editor di testo, ad esempio, può disporre di più file di testo aperti per la modifica nello stesso momento. Per impostazione predefinita, una nuova applicazione Novell. Mac dispone di un menu **file** con un **nuovo** elemento collegato automaticamente all' **azione**`newDocument:`.
+La maggior parte delle applicazioni Mac basate su documenti possono modificare più documenti nello stesso momento. Un editor di testo, ad esempio, può disporre di più file di testo aperti per la modifica nello stesso momento. Per impostazione predefinita, una nuova applicazione Xamarin.Mac dispone di un menu **file** con un **nuovo** elemento collegato automaticamente all' **azione**`newDocument:`.
 
 Il codice seguente attiverà questo nuovo elemento e consentirà all'utente di aprire più copie della finestra principale per modificare più documenti in una sola volta.
 
@@ -459,11 +459,11 @@ Se si apre il menu di **Windows** , è possibile osservare che l'applicazione ti
 
 [![il menu Windows](window-images/display05.png)](window-images/display05.png#lightbox)
 
-Per ulteriori informazioni sull'utilizzo di menu in un'applicazione Novell. Mac, vedere la documentazione relativa all' [utilizzo dei menu](~/mac/user-interface/menu.md) .
+Per ulteriori informazioni sull'utilizzo di menu in un'applicazione Xamarin.Mac, vedere la documentazione relativa all' [utilizzo dei menu](~/mac/user-interface/menu.md) .
 
 ### <a name="getting-the-currently-active-window"></a>Recupero della finestra attualmente attiva
 
-In un'applicazione Novell. Mac in grado di aprire più finestre (documenti), in alcuni casi è necessario ottenere la finestra corrente in primo piano (la finestra della chiave). Il codice seguente restituirà la finestra del tasto:
+In un'applicazione Xamarin.Mac in grado di aprire più finestre (documenti), in alcuni casi è necessario ottenere la finestra corrente in primo piano (la finestra della chiave). Il codice seguente restituirà la finestra del tasto:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow;
@@ -473,7 +473,7 @@ Può essere chiamato in qualsiasi classe o metodo che deve accedere alla finestr
 
 ### <a name="accessing-all-app-windows"></a>Accesso a tutte le finestre delle app
 
-In alcuni casi è possibile che sia necessario accedere a tutte le finestre attualmente aperte dall'app Novell. Mac. Ad esempio, per verificare se un file che l'utente vuole aprire è già aperto in una finestra di uscita.
+In alcuni casi è possibile che sia necessario accedere a tutte le finestre attualmente aperte dall'app Xamarin.Mac. Ad esempio, per verificare se un file che l'utente vuole aprire è già aperto in una finestra di uscita.
 
 Il `NSApplication.SharedApplication` gestisce una proprietà `Windows` che contiene una matrice di tutte le finestre aperte nell'app. È possibile eseguire l'iterazione su questa matrice per accedere a tutte le finestre correnti dell'app. Ad esempio:
 
@@ -515,7 +515,7 @@ SetFrame (frame, true);
 
 ## <a name="monitoring-window-size-changes"></a>Monitoraggio delle modifiche alle dimensioni della finestra
 
-In alcuni casi è necessario monitorare le modifiche apportate alle dimensioni di una finestra all'interno dell'app Novell. Mac. Ad esempio, per ricreare il contenuto per adattarlo alle nuove dimensioni.
+In alcuni casi è necessario monitorare le modifiche apportate alle dimensioni di una finestra all'interno dell'app Xamarin.Mac. Ad esempio, per ricreare il contenuto per adattarlo alle nuove dimensioni.
 
 Per monitorare le modifiche alle dimensioni, assicurarsi innanzitutto di avere assegnato una classe personalizzata per il controller di finestra nella Interface Builder di Xcode. Ad esempio, `MasterWindowController` di seguito:
 
@@ -656,7 +656,7 @@ Il file verrà visualizzato e il titolo verrà impostato con l'icona del file:
 
 ## <a name="adding-a-new-window-to-a-project"></a>Aggiunta di una nuova finestra a un progetto
 
-A parte la finestra del documento principale, un'applicazione Novell. Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo.
+A parte la finestra del documento principale, un'applicazione Xamarin.Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo.
 
 Per aggiungere una nuova finestra, procedere come segue:
 
@@ -684,7 +684,7 @@ Se eseguiamo il codice e selezioni le **Preferenze...** dal **menu applicazione*
 
 Come indicato all'inizio di questo articolo, un pannello esegue il float sopra le altre finestre e fornisce gli strumenti o i controlli che gli utenti possono usare durante l'apertura dei documenti. 
 
-Analogamente a qualsiasi altro tipo di finestra che si crea e si utilizza nell'applicazione Novell. Mac, il processo è fondamentalmente lo stesso:
+Analogamente a qualsiasi altro tipo di finestra che si crea e si utilizza nell'applicazione Xamarin.Mac, il processo è fondamentalmente lo stesso:
 
 1. Aggiungere una nuova definizione di finestra al progetto.
 2. Fare doppio clic sul file `.xib` per aprire la finestra progettazione per la modifica nella Interface Builder di Xcode.
@@ -705,7 +705,7 @@ Nel **controllo attributi**sono disponibili le seguenti opzioni specifiche per i
 Per aggiungere un nuovo pannello, procedere come segue:
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** .
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac** > **finestra Cocoa con controller**:
+2. Nella finestra di dialogo nuovo file selezionare **Xamarin.Mac** > **finestra Cocoa con controller**:
 
     [![l'aggiunta di un nuovo controller di finestra](window-images/panels00.png)](window-images/panels00.png#lightbox)
 
@@ -750,11 +750,11 @@ Se si esegue l'applicazione, verrà visualizzato il pannello:
 [![il pannello in un'app in esecuzione](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> Le finestre del pannello sono state deprecate da Apple e devono essere sostituite con le **interfacce del controllo**. Per un esempio completo di creazione di un **controllo** in un'app Novell. Mac, vedere l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .
+> Le finestre del pannello sono state deprecate da Apple e devono essere sostituite con le **interfacce del controllo**. Per un esempio completo di creazione di un **controllo** in un'app Xamarin.Mac, vedere l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di finestre e pannelli in un'applicazione Novell. Mac. Abbiamo visto i diversi tipi e usi di Windows e dei pannelli, come creare e gestire finestre e pannelli nel Interface Builder di Xcode e come usare Windows e i pannelli nel C# codice.
+Questo articolo ha esaminato in dettaglio l'uso di finestre e pannelli in un'applicazione Xamarin.Mac. Abbiamo visto i diversi tipi e usi di Windows e dei pannelli, come creare e gestire finestre e pannelli nel Interface Builder di Xcode e come usare Windows e i pannelli nel C# codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

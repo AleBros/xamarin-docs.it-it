@@ -33,7 +33,7 @@ In questo articolo vengono confrontati i metodi disponibili per scegliere il tip
 
 ## <a name="net-standard-libraries"></a>Librerie di .NET Standard
 
-[.NET standard](~/cross-platform/app-fundamentals/net-standard.md) librerie forniscono un set ben definito di librerie di classi di base a cui è possibile fare riferimento in diversi tipi di progetto, inclusi progetti multipiattaforma come Novell. Android e Novell. iOS. È consigliabile .NET Standard 2,0 per la massima compatibilità con il codice .NET Framework esistente.
+[.NET standard](~/cross-platform/app-fundamentals/net-standard.md) librerie forniscono un set ben definito di librerie di classi di base a cui è possibile fare riferimento in diversi tipi di progetto, inclusi progetti multipiattaforma come Xamarin.Android e Xamarin.iOS. È consigliabile .NET Standard 2,0 per la massima compatibilità con il codice .NET Framework esistente.
 
 ![Diagramma .NET Standard](code-sharing-images/netstandard.png "Diagramma .NET Standard")
 
@@ -72,8 +72,8 @@ Un'applicazione multipiattaforma che supporta iOS, Android e Windows richiedereb
 Una soluzione di esempio contiene le cartelle e i progetti seguenti (i nomi di progetto sono stati scelti per l'espressività, i progetti non devono seguire queste linee guida per la denominazione):
 
 - **Shared** : progetto condiviso contenente il codice comune a tutti i progetti.
-- Progetto di applicazione **AppAndroid** – Novell. Android.
-- **AppiOS** : progetto di applicazione Novell. iOS.
+- Progetto di applicazione **AppAndroid** – Xamarin.Android.
+- **AppiOS** : progetto di applicazione Xamarin.iOS.
 - **AppWindows** : progetto di applicazione Windows.
 
 In questo modo i tre progetti di applicazione condividono lo stesso codice sorgente, ovvero C# i file in condivisione. Tutte le modifiche apportate al codice condiviso verranno condivise tra tutti e tre i progetti.

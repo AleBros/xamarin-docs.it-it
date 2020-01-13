@@ -1,6 +1,6 @@
 ---
 title: Origini dati ListView
-description: Questo articolo illustra come compilare il ListView di xamarin. Forms con i dati e come usare il data binding con un ListView.
+description: Questo articolo illustra come compilare il ListView di Xamarin.Forms con i dati e come usare il data binding con un ListView.
 ms.prod: xamarin
 ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "70998022"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
-Un Novell. Forms [`ListView`](xref:Xamarin.Forms.ListView) viene usato per visualizzare gli elenchi di dati. In questo articolo viene illustrato come popolare `ListView` un oggetto con i dati e come associare dati all'elemento selezionato.
+Un Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) viene usato per visualizzare gli elenchi di dati. In questo articolo viene illustrato come popolare `ListView` un oggetto con i dati e come associare dati all'elemento selezionato.
 
 ## <a name="itemssource"></a>ItemsSource
 
@@ -80,7 +80,7 @@ Il data binding è la "collazione" che associa le proprietà di un oggetto dell'
 
 Data binding dati funziona, mantenendo gli oggetti sincronizzati man mano che cambiano i relativi valori associati. Anziché dover scrivere i gestori eventi per ogni modifica del valore di un controllo, è necessario definire l'associazione e abilitare l'associazione nell'elemento ViewModel.
 
-Per altre informazioni sul data binding, vedere [nozioni di base di Data Binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) che fa parte di quattro il [serie di articoli nozioni di base di xamarin. Forms XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
+Per altre informazioni sul data binding, vedere [nozioni di base di Data Binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) che fa parte di quattro il [serie di articoli nozioni di base di Xamarin.Forms XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Binding di celle
 

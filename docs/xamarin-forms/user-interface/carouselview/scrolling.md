@@ -1,5 +1,5 @@
 ---
-title: Scorrimento CarouselView Novell. Forms
+title: Scorrimento CarouselView Xamarin.Forms
 description: Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CarouselView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione.
 ms.prod: xamarin
 ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489752"
 ---
-# <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Novell. Forms
+# <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 

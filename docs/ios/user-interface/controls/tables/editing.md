@@ -1,6 +1,6 @@
 ---
-title: Modifica di tabelle con Novell. iOS
-description: Questo documento descrive come modificare le tabelle in Novell. iOS. Viene illustrato il scorrimento per eliminare, modificare la modalità e l'inserimento di righe.
+title: Modifica di tabelle con Xamarin.iOS
+description: Questo documento descrive come modificare le tabelle in Xamarin.iOS. Viene illustrato il scorrimento per eliminare, modificare la modalità e l'inserimento di righe.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021905"
 ---
-# <a name="editing-tables-with-xamarinios"></a>Modifica di tabelle con Novell. iOS
+# <a name="editing-tables-with-xamarinios"></a>Modifica di tabelle con Xamarin.iOS
 
 Le funzionalità di modifica della tabella sono abilitate eseguendo l'override dei metodi in una sottoclasse `UITableViewSource`. Il comportamento di modifica più semplice è il gesto di scorrimento da eliminare che può essere implementato con un solo override del metodo.
 La modifica più complessa (incluse le righe di trasferimento) può essere eseguita con la tabella in modalità di modifica.

@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 12. Stili
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 12. Stili'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 12. Stili'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
@@ -18,7 +18,7 @@ ms.locfileid: "65926914"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
-In xamarin. Forms, gli stili di consentano più visualizzazioni condividere una raccolta di impostazioni delle proprietà. Ciò riduce markup e consente di mantenere coerenti temi visivi.
+In Xamarin.Forms, gli stili di consentano più visualizzazioni condividere una raccolta di impostazioni delle proprietà. Ciò riduce markup e consente di mantenere coerenti temi visivi.
 
 Gli stili sono quasi sempre definiti e utilizzati nel markup. Un oggetto di tipo [ `Style` ](xref:Xamarin.Forms.Style) viene creata un'istanza in un dizionario risorse e quindi impostare il [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà di un elemento visivo utilizzando un `StaticResource` o `DynamicResource` markup estensione.
 

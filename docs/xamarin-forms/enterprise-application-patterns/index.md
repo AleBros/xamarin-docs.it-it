@@ -1,6 +1,6 @@
 ---
-title: Modelli di applicazioni aziendali con l'eBook Novell. Forms
-description: Questo eBook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali Novell. Forms adattabili, gestibili e testabili.
+title: Modelli di applicazioni aziendali con l'eBook Xamarin.Forms
+description: Questo eBook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali Xamarin.Forms adattabili, gestibili e testabili.
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70760209"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Modelli di applicazioni aziendali con l'eBook Novell. Forms
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Modelli di applicazioni aziendali con l'eBook Xamarin.Forms
 
-_Linee guida per l'architettura per lo sviluppo di applicazioni aziendali Novell. Forms adattabili, gestibili e testabili_
+_Linee guida per l'architettura per lo sviluppo di applicazioni aziendali Xamarin.Forms adattabili, gestibili e testabili_
 
-![](images/cover-sml.png "Modelli di applicazioni aziendali con l'eBook Novell. Forms")
+![](images/cover-sml.png "Modelli di applicazioni aziendali con l'eBook Xamarin.Forms")
 
 Questo eBook fornisce indicazioni su come implementare il modello MVVM (Model-View-ViewModel), l'inserimento delle dipendenze, la navigazione, la convalida e la gestione della configurazione, mantenendo l'accoppiamento libero. Inoltre, sono disponibili indicazioni per l'esecuzione dell'autenticazione e dell'autorizzazione con IdentityServer, l'accesso ai dati da microservizi in contenitori e il testing unità.
 
@@ -46,7 +46,7 @@ La classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) di Xamarin.For
 
 ## <a name="navigationnavigationmd"></a>[Navigazione](navigation.md)
 
-Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
+Xamarin.Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
 
 In questo capitolo viene `NavigationService` presentata una classe, che viene utilizzata per eseguire l'esplorazione del primo modello di visualizzazione dai modelli di visualizzazione. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite test automatizzati. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business.
 
@@ -66,7 +66,7 @@ I microservizi offrono un approccio per lo sviluppo e la distribuzione di applic
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[Autenticazione e autorizzazione](authentication-and-authorization.md)
 
-Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Novell. Forms che comunica con un'applicazione Web MVC ASP.NET. In questo caso, l'autenticazione e l'autorizzazione vengono eseguite con un microservizio di identità in contenitori che usa IdentityServer 4. IdentityServer è un framework open source di OpenID Connect e OAuth 2,0 per ASP.NET Core che si integra con ASP.NET Core identità per eseguire bearer token l'autenticazione.
+Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Xamarin.Forms che comunica con un'applicazione Web MVC ASP.NET. In questo caso, l'autenticazione e l'autorizzazione vengono eseguite con un microservizio di identità in contenitori che usa IdentityServer 4. IdentityServer è un framework open source di OpenID Connect e OAuth 2,0 per ASP.NET Core che si integra con ASP.NET Core identità per eseguire bearer token l'autenticazione.
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[Accesso ai dati remoti](accessing-remote-data.md)
 

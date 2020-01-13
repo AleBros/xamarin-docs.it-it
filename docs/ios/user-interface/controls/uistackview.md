@@ -1,6 +1,6 @@
 ---
-title: Visualizzazioni dello stack in Novell. iOS
-description: Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Novell. iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente.
+title: Visualizzazioni dello stack in Xamarin.iOS
+description: Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Xamarin.iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
@@ -15,9 +15,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021797"
 ---
-# <a name="stack-views-in-xamarinios"></a>Visualizzazioni dello stack in Novell. iOS
+# <a name="stack-views-in-xamarinios"></a>Visualizzazioni dello stack in Xamarin.iOS
 
-_Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Novell. iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente._
+_Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Xamarin.iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente._
 
 > [!IMPORTANT]
 > Si noti che, mentre StackView è supportato in iOS designer, è possibile che si verifichino bug di usabilità quando si usa il canale stabile. Il cambio dei canali Beta o alfa dovrebbe risolvere questo problema. Si è deciso di presentare questa procedura dettagliata con Xcode fino a quando non sono state implementate le correzioni necessarie nel canale stabile.
@@ -28,7 +28,7 @@ Il layout di tutte le sottoviste associate a una visualizzazione dello stack vie
 
 [![](uistackview-images/stacked01.png "Stack View layout diagram")](uistackview-images/stacked01.png#lightbox)
 
-Quando si usa un `UIStackView` in un'app Novell. iOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
+Quando si usa un `UIStackView` in un'app Xamarin.iOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
 
 Questo documento è costituito da due parti: una guida introduttiva che consente di implementare la prima visualizzazione dello stack e altri dettagli tecnici sul funzionamento.
 
@@ -42,7 +42,7 @@ Come breve introduzione al controllo `UIStackView`, verrà creata un'interfaccia
 
 ### <a name="define-the-ui"></a>Definire l'interfaccia utente
 
-Avviare un nuovo progetto Novell. iOS e modificare il file **Main. Storyboard** nel Interface Builder di Xcode. Per prima cosa, trascinare una singola **visualizzazione dello stack verticale** sul **controller di visualizzazione**:
+Avviare un nuovo progetto Xamarin.iOS e modificare il file **Main. Storyboard** nel Interface Builder di Xcode. Per prima cosa, trascinare una singola **visualizzazione dello stack verticale** sul **controller di visualizzazione**:
 
 [![](uistackview-images/quick01.png "Drag a single Vertical Stack View on the View Controller")](uistackview-images/quick01.png#lightbox)
 
@@ -268,7 +268,7 @@ Molte delle proprietà della visualizzazione stack possono essere specificate ut
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato il nuovo controllo di `UIStackView` (per iOS 9) per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente in un'app Novell. iOS.
+Questo articolo ha trattato il nuovo controllo di `UIStackView` (per iOS 9) per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente in un'app Xamarin.iOS.
 Inizia con un semplice esempio di utilizzo delle visualizzazioni dello stack per creare un'interfaccia utente e completata con un aspetto più dettagliato delle visualizzazioni dello stack e delle relative proprietà e funzionalità.
 
 ## <a name="related-links"></a>Collegamenti correlati

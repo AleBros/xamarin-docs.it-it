@@ -1,6 +1,6 @@
 ---
-title: Visual Basic in Novell. Android e Novell. iOS
-description: Questa procedura dettagliata illustra come compilare app Novell. iOS e Novell. Android native che usano la logica di business scritta in Visual Basic.NET.
+title: Visual Basic in Xamarin.Android e Xamarin.iOS
+description: Questa procedura dettagliata illustra come compilare app Xamarin.iOS e Xamarin.Android native che usano la logica di business scritta in Visual Basic.NET.
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: davidortinau
@@ -30,7 +30,7 @@ Questa guida illustra come Visual Basic è stata implementata nell'esempio [Task
 > [!NOTE]
 > Prima di continuare con questa guida, vedere le istruzioni su [Visual Basic e .NET standard](index.md) .
 >
-> Per informazioni su come creare un'app con codice Visual Basic dell'interfaccia utente condivisa, vedere [Novell. Forms usando](xamarin-forms.md) le istruzioni Visual Basic.
+> Per informazioni su come creare un'app con codice Visual Basic dell'interfaccia utente condivisa, vedere [Xamarin.Forms usando](xamarin-forms.md) le istruzioni Visual Basic.
 
 ## <a name="visualbasicnetstandard"></a>VisualBasicNetStandard
 

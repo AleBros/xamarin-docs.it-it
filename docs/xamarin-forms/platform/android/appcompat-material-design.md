@@ -1,6 +1,6 @@
 ---
 title: Aggiunta di AppCompat e della progettazione del materiale
-description: Questo articolo illustra come convertire le app Novell. Forms Android esistenti per usare AppCompat e la progettazione del materiale.
+description: Questo articolo illustra come convertire le app Xamarin.Forms Android esistenti per usare AppCompat e la progettazione del materiale.
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
@@ -16,18 +16,18 @@ ms.locfileid: "75728330"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
-_Seguire questa procedura per convertire le app Novell. Forms Android esistenti in modo da usare AppCompat e progettazione materiale_
+_Seguire questa procedura per convertire le app Xamarin.Forms Android esistenti in modo da usare AppCompat e progettazione materiale_
 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
 ## <a name="overview"></a>Panoramica di
 
-Queste istruzioni spiegano come aggiornare le applicazioni Novell. Forms Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle app Novell. Forms.
+Queste istruzioni spiegano come aggiornare le applicazioni Xamarin.Forms Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle app Xamarin.Forms.
 
-### <a name="1-update-xamarinforms"></a>1. aggiornare Novell. Forms
+### <a name="1-update-xamarinforms"></a>1. aggiornare Xamarin.Forms
 
-Assicurarsi che la soluzione usi Novell. Forms 2,0 o versione successiva. Se necessario, aggiornare il pacchetto NuGet Novell. Forms a 2,0.
+Assicurarsi che la soluzione usi Xamarin.Forms 2,0 o versione successiva. Se necessario, aggiornare il pacchetto NuGet Xamarin.Forms a 2,0.
 
 ### <a name="2-check-android-version"></a>2. controllare la versione di Android
 
@@ -137,7 +137,7 @@ Per altre informazioni, vedere il post di Blog della [barra degli strumenti Hell
 
 ### <a name="6-update-the-mainactivity"></a>6. aggiornare il `MainActivity`
 
-Nelle app Novell. Forms esistenti la classe **MainActivity.cs** erediterà da `FormsApplicationActivity`. Questa operazione deve essere sostituita con `FormsAppCompatActivity` per abilitare la nuova funzionalità.
+Nelle app Xamarin.Forms esistenti la classe **MainActivity.cs** erediterà da `FormsApplicationActivity`. Questa operazione deve essere sostituita con `FormsAppCompatActivity` per abilitare la nuova funzionalità.
 
 **MainActivity.cs**
 

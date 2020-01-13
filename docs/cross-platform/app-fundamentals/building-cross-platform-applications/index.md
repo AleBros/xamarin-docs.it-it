@@ -65,6 +65,6 @@ Infine, viene brevemente illustrato il testing e vengono forniti riferimenti a u
 - [Opzioni di condivisione del codice](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Case Study: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [App di esempio Tasky (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Sviluppo di applicazioni per dispositivi mobili Novell: C# nozioni fondamentali su più piattaforme e Novell. Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Sviluppo di applicazioni per dispositivi mobili Novell: C# nozioni fondamentali su più piattaforme e Xamarin.Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Sviluppo di applicazioni C# per dispositivi mobili con di Greg manette (Reilly)](https://shop.oreilly.com/product/0636920024002.do)
 - [Sviluppo di app per dispositivi mobili multipiattaforma professionali in C# di Scott Olson, John Hunter, ben Horgen, Kenny frequentatori (Wrox)](https://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

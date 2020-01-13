@@ -1,5 +1,5 @@
 ---
-title: Uso delle impostazioni predefinite dell'utente in Novell. iOS
+title: Uso delle impostazioni predefinite dell'utente in Xamarin.iOS
 description: Questo articolo illustra l'uso di NSUserDefaults per salvare le impostazioni predefinite in un'estensione o un'app per iOS Novell. Viene descritto NSUserDefaults a un livello elevato e viene illustrato come leggere e scrivere i valori.
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009073"
 ---
-# <a name="working-with-user-defaults-in-xamarinios"></a>Uso delle impostazioni predefinite dell'utente in Novell. iOS
+# <a name="working-with-user-defaults-in-xamarinios"></a>Uso delle impostazioni predefinite dell'utente in Xamarin.iOS
 
-_Questo articolo illustra l'uso di NSUserDefault per salvare le impostazioni predefinite in un'estensione o un'app Novell. iOS._
+_Questo articolo illustra l'uso di NSUserDefault per salvare le impostazioni predefinite in un'estensione o un'app Xamarin.iOS._
 
 La classe `NSUserDefaults` fornisce un modo per le app e le estensioni iOS per interagire a livello di codice con il sistema predefinito a livello di sistema. Usando il sistema predefinito, l'utente può configurare il comportamento o lo stile di un'app per soddisfare le preferenze (in base alla progettazione dell'app). Ad esempio, per presentare i dati nelle misure metrica rispetto a quelle imperiali oppure selezionare un tema dell'interfaccia utente specifico.
 
@@ -132,7 +132,7 @@ plist.SetBool(useHeader, "UseHeader");
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la classe `NSUserDefaults` e come può essere usata per fornire un set di opzioni che l'utente finale può usare per configurare l'app Novell. iOS. Inoltre, è stato analizzato usando i gruppi di app per comunicare tra un'estensione e la relativa app padre o tra app in un gruppo.
+Questo articolo ha illustrato la classe `NSUserDefaults` e come può essere usata per fornire un set di opzioni che l'utente finale può usare per configurare l'app Xamarin.iOS. Inoltre, è stato analizzato usando i gruppi di app per comunicare tra un'estensione e la relativa app padre o tra app in un gruppo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

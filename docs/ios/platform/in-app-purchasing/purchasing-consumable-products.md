@@ -1,6 +1,6 @@
 ---
-title: Acquisto di prodotti utilizzabili in Novell. iOS
-description: Questo documento descrive i prodotti utilizzabili in Novell. iOS. I prodotti utilizzabili sono componenti monouso di funzionalità, ad esempio la valuta nel gioco.
+title: Acquisto di prodotti utilizzabili in Xamarin.iOS
+description: Questo documento descrive i prodotti utilizzabili in Xamarin.iOS. I prodotti utilizzabili sono componenti monouso di funzionalità, ad esempio la valuta nel gioco.
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489024"
 ---
-# <a name="purchasing-consumable-products-in-xamarinios"></a>Acquisto di prodotti utilizzabili in Novell. iOS
+# <a name="purchasing-consumable-products-in-xamarinios"></a>Acquisto di prodotti utilizzabili in Xamarin.iOS
 
 I prodotti utilizzabili sono i più semplici da implementare, perché non esiste alcun requisito di "ripristino". Sono utili per prodotti come la valuta nel gioco o una parte di funzionalità monouso. Gli utenti possono riacquistare i prodotti utilizzabili più volte.
 

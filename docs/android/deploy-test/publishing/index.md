@@ -31,8 +31,8 @@ Il diagramma seguente illustra i passaggi relativi alla pubblicazione di un'appl
 
 Come si può notare dal diagramma precedente, la preparazione è la stessa indipendentemente dal metodo di distribuzione usato. Per rilasciare un'applicazione Android agli utenti sono disponibili diversi metodi:
 
-- **Tramite un sito web** &ndash; un'applicazione Novell. Android può essere resa disponibile per il download in un sito Web, da cui gli utenti possono quindi installare l'applicazione facendo clic su un collegamento.
-- **Tramite posta elettronica** &ndash; è possibile che gli utenti installino un'applicazione Novell. Android dalla posta elettronica. L'applicazione viene installata quando l'allegato viene aperto con un dispositivo Android.
+- **Tramite un sito web** &ndash; un'applicazione Xamarin.Android può essere resa disponibile per il download in un sito Web, da cui gli utenti possono quindi installare l'applicazione facendo clic su un collegamento.
+- **Tramite posta elettronica** &ndash; è possibile che gli utenti installino un'applicazione Xamarin.Android dalla posta elettronica. L'applicazione viene installata quando l'allegato viene aperto con un dispositivo Android.
 - **Attraverso un Market** &ndash; sono disponibili diversi Marketplace di applicazioni per la distribuzione, ad esempio [Google Play](https://play.google.com/) o [Amazon App Store per Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
 
 L'uso di marketplace affermati è il modo più comune di pubblicare un'applicazione, dato che questi sono in grado di offrire la copertura di mercato più ampia e il controllo più solido sulla distribuzione. La pubblicazione di un'applicazione tramite un marketplace, tuttavia, richiede un impegno maggiore.

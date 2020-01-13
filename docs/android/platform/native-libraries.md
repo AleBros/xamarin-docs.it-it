@@ -15,13 +15,13 @@ ms.locfileid: "75489167"
 ---
 # <a name="using-native-libraries"></a>Uso di librerie native
 
-Novell. Android supporta l'utilizzo di librerie native tramite il meccanismo PInvoke standard. È anche possibile aggregare librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione APK.
+Xamarin.Android supporta l'utilizzo di librerie native tramite il meccanismo PInvoke standard. È anche possibile aggregare librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione APK.
 
-Per distribuire una libreria nativa con un'applicazione Novell. Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **AndroidNativeLibrary**.
+Per distribuire una libreria nativa con un'applicazione Xamarin.Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **AndroidNativeLibrary**.
 
-Per distribuire una libreria nativa con un progetto di libreria Novell. Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **EmbeddedNativeLibrary**.
+Per distribuire una libreria nativa con un progetto di libreria Xamarin.Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **EmbeddedNativeLibrary**.
 
-Si noti che poiché Android supporta più interfacce binarie dell'applicazione (ABI), Novell. Android deve essere in grado di stabilire per quale ABI è stata compilata la libreria nativa.
+Si noti che poiché Android supporta più interfacce binarie dell'applicazione (ABI), Xamarin.Android deve essere in grado di stabilire per quale ABI è stata compilata la libreria nativa.
 Esistono due modi per farlo:
 
 1. Percorso "sniffing"
@@ -44,7 +44,7 @@ Per ulteriori informazioni sull'utilizzo delle librerie native, vedere [interope
 ## <a name="debugging-native-code-with-visual-studio"></a>Debug del codice nativo con Visual Studio
 
 Se si usa *Visual studio 2019* o *Visual Studio 2017*, non è necessario modificare i file di progetto come descritto in precedenza.
-È possibile compilare ed eseguire C++ il debug all'interno della soluzione Novell. Android aggiungendo un riferimento di C++ progetto a un progetto di **libreria condivisa dinamica (Android)** .
+È possibile compilare ed eseguire C++ il debug all'interno della soluzione Xamarin.Android aggiungendo un riferimento di C++ progetto a un progetto di **libreria condivisa dinamica (Android)** .
 
 Per eseguire il C++ debug del codice nativo nel progetto, attenersi alla procedura seguente:
 

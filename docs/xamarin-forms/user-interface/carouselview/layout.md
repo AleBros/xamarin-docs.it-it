@@ -1,5 +1,5 @@
 ---
-title: Layout di Novell. Forms CarouselView
+title: Layout di Xamarin.Forms CarouselView
 description: Per impostazione predefinita, un CarouselView Visualizza i relativi elementi orizzontalmente. Tuttavia, è anche possibile un orientamento verticale.
 ms.prod: xamarin
 ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488257"
 ---
-# <a name="xamarinforms-carouselview-layout"></a>Layout di Novell. Forms CarouselView
+# <a name="xamarinforms-carouselview-layout"></a>Layout di Xamarin.Forms CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -33,7 +33,7 @@ Per impostazione predefinita, un [`CarouselView`](xref:Xamarin.Forms.CarouselVie
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), specifica il modo in cui i punti di allineamento sono allineati con gli elementi.
 - [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType), specifica il comportamento dei punti di blocco durante lo scorrimento.
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati. Per ulteriori informazioni sui punti di aggancio, vedere la pagina relativa ai [punti](scrolling.md#snap-points) di blocco nella Guida allo [scorrimento di Novell. Forms](scrolling.md) .
+Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati. Per ulteriori informazioni sui punti di aggancio, vedere la pagina relativa ai [punti](scrolling.md#snap-points) di blocco nella Guida allo [scorrimento di Xamarin.Forms](scrolling.md) .
 
 L'enumerazione [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) definisce i membri seguenti:
 
@@ -264,4 +264,4 @@ Per altre informazioni sulla direzione del flusso, vedere [localizzazione da des
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Localizzazione da destra a sinistra](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Scorrimento CarouselView Novell. Forms](scrolling.md)
+- [Scorrimento CarouselView Xamarin.Forms](scrolling.md)

@@ -1,6 +1,6 @@
 ---
-title: Nuovo sistema di conteggio dei riferimenti in Novell. iOS
-description: Questo documento descrive il sistema di conteggio dei riferimenti migliorato di Novell, abilitato per impostazione predefinita in tutte le applicazioni Novell. iOS.
+title: Nuovo sistema di conteggio dei riferimenti in Xamarin.iOS
+description: Questo documento descrive il sistema di conteggio dei riferimenti migliorato di Novell, abilitato per impostazione predefinita in tutte le applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022295"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo sistema di conteggio dei riferimenti in Novell. iOS
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo sistema di conteggio dei riferimenti in Xamarin.iOS
 
-Per impostazione predefinita, Novell. iOS 9.2.1 ha introdotto il sistema di conteggio dei riferimenti migliorato per tutte le applicazioni. Può essere usato per eliminare molti problemi di memoria difficili da rilevare e correggere nelle versioni precedenti di Novell. iOS.
+Per impostazione predefinita, Xamarin.iOS 9.2.1 ha introdotto il sistema di conteggio dei riferimenti migliorato per tutte le applicazioni. Può essere usato per eliminare molti problemi di memoria difficili da rilevare e correggere nelle versioni precedenti di Xamarin.iOS.
 
 ## <a name="enabling-the-new-reference-counting-system"></a>Abilitazione del nuovo sistema di conteggio dei riferimenti
 
@@ -32,7 +32,7 @@ Se è impostato su `false` l'applicazione non utilizzerà i nuovi strumenti.
 
 ### <a name="using-older-versions-of-xamarin"></a>Uso di versioni precedenti di Novell
 
-Novell. iOS 7.2.1 e versioni successive dispongono di un'anteprima migliorata del nuovo sistema di conteggio dei riferimenti.
+Xamarin.iOS 7.2.1 e versioni successive dispongono di un'anteprima migliorata del nuovo sistema di conteggio dei riferimenti.
 
 **API classica:**
 
@@ -49,7 +49,7 @@ Si noti che queste opzioni sono state rimosse nelle versioni più recenti di Vis
 > [!IMPORTANT]
 > Una versione precedente di questa funzionalità è stata aggirata rispetto a MonoTouch 5,2 ma era disponibile solo per **SGen** come anteprima sperimentale. Questa nuova versione migliorata è ora disponibile anche per la Garbage Collector di **Boehm** .
 
-Storicamente sono presenti due tipi di oggetti gestiti da Novell. iOS: quelli che sono semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che hanno esteso o incorporato nuove funzionalità (oggetti derivati), in genere mantenendo lo stato in memoria aggiuntivo. In precedenza era possibile che venisse migliorato un oggetto peer con lo stato (ad esempio aggiungendo un C# gestore eventi), ma che si lascia che l'oggetto venga senza riferimenti e quindi raccolto. Questo potrebbe causare un arresto anomalo in un secondo momento, ad esempio se il runtime di Objective-C ha richiamato l'oggetto gestito.
+Storicamente sono presenti due tipi di oggetti gestiti da Xamarin.iOS: quelli che sono semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che hanno esteso o incorporato nuove funzionalità (oggetti derivati), in genere mantenendo lo stato in memoria aggiuntivo. In precedenza era possibile che venisse migliorato un oggetto peer con lo stato (ad esempio aggiungendo un C# gestore eventi), ma che si lascia che l'oggetto venga senza riferimenti e quindi raccolto. Questo potrebbe causare un arresto anomalo in un secondo momento, ad esempio se il runtime di Objective-C ha richiamato l'oggetto gestito.
 
 Il nuovo sistema aggiorna automaticamente gli oggetti peer in oggetti gestiti dal runtime quando archivia informazioni aggiuntive.
 

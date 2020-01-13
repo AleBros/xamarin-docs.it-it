@@ -20,7 +20,7 @@ _I controlli personalizzati a volte non funzionano come previsto nel Visualizzat
 
 ## <a name="basic-preview-mode"></a>Modalità di anteprima di base
 
-Anche se il progetto non è stato compilato, il Visualizzatore anteprima XAML eseguirà il rendering delle pagine. Fino a quando non si compila, qualsiasi controllo che si basa sul code-behind visualizzerà il tipo Novell. Forms di base. Quando il progetto viene compilato, il Visualizzatore anteprima XAML tenterà di visualizzare i controlli personalizzati con il rendering della fase di progettazione abilitato. Se il rendering ha esito negativo, verrà visualizzato il tipo Novell. Forms di base.
+Anche se il progetto non è stato compilato, il Visualizzatore anteprima XAML eseguirà il rendering delle pagine. Fino a quando non si compila, qualsiasi controllo che si basa sul code-behind visualizzerà il tipo Xamarin.Forms di base. Quando il progetto viene compilato, il Visualizzatore anteprima XAML tenterà di visualizzare i controlli personalizzati con il rendering della fase di progettazione abilitato. Se il rendering ha esito negativo, verrà visualizzato il tipo Xamarin.Forms di base.
 
 ## <a name="enable-design-time-rendering-for-custom-controls"></a>Abilitare il rendering della fase di progettazione per i controlli personalizzati
 
@@ -46,8 +46,8 @@ Attualmente, i controlli SkiaSharp sono supportati solo quando si esegue l'antep
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-### <a name="check-your-xamarinforms-version"></a>Verificare la versione di Novell. Forms
-Verificare che sia installato almeno Novell. Forms 3,6. È possibile aggiornare la versione di Novell. Forms in NuGet.
+### <a name="check-your-xamarinforms-version"></a>Verificare la versione di Xamarin.Forms
+Verificare che sia installato almeno Xamarin.Forms 3,6. È possibile aggiornare la versione di Xamarin.Forms in NuGet.
 
 ### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Anche con `[DesignTimeVisible(true)]`, il controllo personalizzato non esegue correttamente il rendering.
 I controlli personalizzati che si basano molto sui dati di code-behind o back-end non funzionano sempre nel Visualizzatore anteprime XAML. È possibile provare:

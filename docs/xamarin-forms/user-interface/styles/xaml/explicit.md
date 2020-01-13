@@ -1,6 +1,6 @@
 ---
-title: Stili espliciti in xamarin. Forms
-description: Uno stile esplicito è quello che viene applicato in modo selettivo a controlli impostando le relative proprietà di stile. Questo articolo illustra come usare stili espliciti in un'applicazione xamarin. Forms.
+title: Stili espliciti in Xamarin.Forms
+description: Uno stile esplicito è quello che viene applicato in modo selettivo a controlli impostando le relative proprietà di stile. Questo articolo illustra come usare stili espliciti in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70228004"
 ---
-# <a name="explicit-styles-in-xamarinforms"></a>Stili espliciti in xamarin. Forms
+# <a name="explicit-styles-in-xamarinforms"></a>Stili espliciti in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 

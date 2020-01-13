@@ -1,6 +1,6 @@
 ---
-title: Opzioni di layout in xamarin. Forms
-description: Tutte le visualizzazioni di xamarin. Forms ha proprietà HorizontalOptions e VerticalOptions, di tipo LayoutOptions. Questo articolo illustra l'effetto ogni valore LayoutOptions sull'allineamento e espansione di una vista.
+title: Opzioni di layout in Xamarin.Forms
+description: Tutte le visualizzazioni di Xamarin.Forms ha proprietà HorizontalOptions e VerticalOptions, di tipo LayoutOptions. Questo articolo illustra l'effetto ogni valore LayoutOptions sull'allineamento e espansione di una vista.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70770340"
 ---
-# <a name="layout-options-in-xamarinforms"></a>Opzioni di layout in xamarin. Forms
+# <a name="layout-options-in-xamarinforms"></a>Opzioni di layout in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
-_Tutte le visualizzazioni di xamarin. Forms ha proprietà HorizontalOptions e VerticalOptions, di tipo LayoutOptions. Questo articolo illustra l'effetto ogni valore LayoutOptions sull'allineamento e espansione di una vista._
+_Tutte le visualizzazioni di Xamarin.Forms ha proprietà HorizontalOptions e VerticalOptions, di tipo LayoutOptions. Questo articolo illustra l'effetto ogni valore LayoutOptions sull'allineamento e espansione di una vista._
 
 ## <a name="overview"></a>Panoramica
 

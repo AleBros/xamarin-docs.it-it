@@ -1,5 +1,5 @@
 ---
-title: Concetti avanzati di Novell. Forms & elementi interni
+title: Concetti avanzati di Xamarin.Forms & elementi interni
 description: Informazioni sui concetti avanzati e i meccanismi interni di Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/06/2020
 ms.locfileid: "75685321"
 ---
-# <a name="xamarinforms-advanced-concepts--internals"></a>Concetti avanzati di Novell. Forms & elementi interni
+# <a name="xamarinforms-advanced-concepts--internals"></a>Concetti avanzati di Xamarin.Forms & elementi interni
 
-_Informazioni sui concetti avanzati e gli elementi interni di Novell. Forms._
+_Informazioni sui concetti avanzati e gli elementi interni di Xamarin.Forms._
 
 ## <a name="controls-class-hierarchyclass-hierarchymd"></a>[Gerarchia di classi di controlli](class-hierarchy.md)
 
@@ -24,7 +24,7 @@ Informazioni sulla gerarchia dei tipi usati per creare l'interfaccia utente di u
 
 ## <a name="dependency-resolutiondependency-resolutionmd"></a>[Risoluzione delle dipendenze](dependency-resolution.md)
 
-Informazioni su come inserire un metodo di risoluzione delle dipendenze in Novell. Forms, in modo che un'applicazione abbia il controllo sulla creazione e sulla durata di renderer, effetti e implementazioni di `DependencyService` personalizzati.
+Informazioni su come inserire un metodo di risoluzione delle dipendenze in Xamarin.Forms, in modo che un'applicazione abbia il controllo sulla creazione e sulla durata di renderer, effetti e implementazioni di `DependencyService` personalizzati.
 
 ## <a name="fast-renderersfast-renderersmd"></a>[Renderer veloci](fast-renderers.md)
 

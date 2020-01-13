@@ -1,5 +1,5 @@
 ---
-title: Uso di JSON per creare un'interfaccia utente in Novell. iOS
+title: Uso di JSON per creare un'interfaccia utente in Xamarin.iOS
 description: MonoTouch. Dialog (MT. D) include il supporto per la generazione dinamica dell'interfaccia utente tramite dati JSON. Questa esercitazione illustra come usare un oggetto JSONelement per creare un'interfaccia utente da JSON inclusa in un'applicazione o caricata da un URL remoto.
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002262"
 ---
-# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso di JSON per creare un'interfaccia utente in Novell. iOS
+# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso di JSON per creare un'interfaccia utente in Xamarin.iOS
 
 _MonoTouch. Dialog (MT. D) include il supporto per la generazione dinamica dell'interfaccia utente tramite dati JSON. Questa esercitazione illustra come usare un oggetto JSONelement per creare un'interfaccia utente da JSON inclusa in un'applicazione o caricata da un URL remoto._
 
@@ -28,7 +28,7 @@ Verrà ora rivisitato l'esempio dell'esercitazione relativa alla [procedura dett
 
 ## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
-Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
+Mt. D viene distribuito con Xamarin.iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Xamarin.iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
 
 ## <a name="json-walkthrough"></a>Procedura dettagliata JSON
 

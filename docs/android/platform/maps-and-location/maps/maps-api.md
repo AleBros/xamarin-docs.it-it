@@ -1,6 +1,6 @@
 ---
 title: Uso dell'API Google Maps nell'applicazione
-description: Come implementare le funzionalità di Google Maps API v2 nell'applicazione Novell. Android.
+description: Come implementare le funzionalità di Google Maps API v2 nell'applicazione Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
@@ -24,7 +24,7 @@ L'API Maps è adatta ai casi in cui si desidera mantenere un maggiore controllo 
 - Annotazione di una mappa con sovrimpressioni.
 
 Diversamente dall'API di Google Maps Android V1, Google Maps Android API v2 fa parte di [Google Play Services](https://developers.google.com/android/guides/overview).
-Prima di poter usare l'API Google Maps Android, un'app Novell. Android deve soddisfare alcuni prerequisiti obbligatori.
+Prima di poter usare l'API Google Maps Android, un'app Xamarin.Android deve soddisfare alcuni prerequisiti obbligatori.
 
 ## <a name="google-maps-api-prerequisites"></a>Prerequisiti per l'API di Google Maps
 
@@ -32,13 +32,13 @@ Prima di poter usare l'API Maps, è necessario eseguire diversi passaggi, tra cu
 
 - [Ottenere una chiave API Maps](#obtain-maps-key)
 - [Installare l'SDK di Google Play Services](#install-gps-sdk)
-- [Installare il pacchetto Novell. GooglePlayServices. Maps da NuGet](#install-gpsmaps-nuget)
+- [Installare il pacchetto Xamarin.GooglePlayServices. Maps da NuGet](#install-gpsmaps-nuget)
 - [Specificare le autorizzazioni necessarie](#declare-permissions)
 - [Facoltativamente, creare un emulatore con le API Google](#create-emulator-with-google-api)
 
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />ottenere una chiave API di Google Maps
 
-Il primo passaggio consiste nell'ottenere una chiave API di Google Maps (si noti che non è possibile riutilizzare una chiave API dall'API di Google Maps V1 legacy). Per informazioni su come ottenere e usare la chiave API con Novell. Android, vedere [ottenere una chiave API di Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+Il primo passaggio consiste nell'ottenere una chiave API di Google Maps (si noti che non è possibile riutilizzare una chiave API dall'API di Google Maps V1 legacy). Per informazioni su come ottenere e usare la chiave API con Xamarin.Android, vedere [ottenere una chiave API di Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> installare SDK Google Play Services
 
@@ -49,29 +49,29 @@ Le applicazioni Android interagiscono con Google Play Services tramite la librer
 ![Diagramma che illustra la Google Play Store aggiornamento dell'APK Google Play Services](maps-api-images/play-services-diagram.png)
 
 L'API Maps Android viene fornita come parte di Google Play Services.
-Prima che un'applicazione Novell. Android possa usare l'API Maps, è necessario installare Google Play Services SDK usando [gestione Android SDK](~/android/get-started/installation/android-sdk.md). Lo screenshot seguente illustra il punto in cui è possibile trovare il client di Google Play Services in Android SDK Manager:
+Prima che un'applicazione Xamarin.Android possa usare l'API Maps, è necessario installare Google Play Services SDK usando [gestione Android SDK](~/android/get-started/installation/android-sdk.md). Lo screenshot seguente illustra il punto in cui è possibile trovare il client di Google Play Services in Android SDK Manager:
 
 ![Google Play Services viene visualizzato in extra in gestione Android SDK](maps-api-images/image01.png)
 
 > [!NOTE]
 > Il Google Play APK Services è un prodotto concesso in licenza che potrebbe non essere presente in tutti i dispositivi. Se non è installato, Google Maps non funzionerà sul dispositivo.
 
-### <a name="a-nameinstall-gpsmaps-nuget--install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget" /> installare il pacchetto Novell. GooglePlayServices. Maps da NuGet
+### <a name="a-nameinstall-gpsmaps-nuget--install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget" /> installare il pacchetto Xamarin.GooglePlayServices. Maps da NuGet
 
-Il [pacchetto Novell. GooglePlayServices. Maps](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps) contiene le associazioni Novell. Android per l'API Google Play Services maps.
+Il [pacchetto Xamarin.GooglePlayServices. Maps](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps) contiene le associazioni Xamarin.Android per l'API Google Play Services maps.
 Per aggiungere il pacchetto della mappa Google Play Services, fare clic con il pulsante destro del mouse sulla cartella **riferimenti** del progetto nel Esplora soluzioni e scegliere **Gestisci pacchetti NuGet...** :
 
 ![Esplora soluzioni visualizzazione della voce di menu di scelta rapida Gestisci pacchetti NuGet in riferimenti](maps-api-images/image02.png)
 
-Verrà aperto **Gestione pacchetti NuGet**. Fare clic su **Sfoglia** e immettere **Novell Google Play Services Maps** nel campo di ricerca. Selezionare **Novell. GooglePlayServices. Maps** e fare clic su **Installa**. (Se il pacchetto è stato installato in precedenza, fare clic su **Aggiorna**):
+Verrà aperto **Gestione pacchetti NuGet**. Fare clic su **Sfoglia** e immettere **Novell Google Play Services Maps** nel campo di ricerca. Selezionare **Xamarin.GooglePlayServices. Maps** e fare clic su **Installa**. (Se il pacchetto è stato installato in precedenza, fare clic su **Aggiorna**):
 
-[![gestione pacchetti NuGet con il pacchetto Novell. GooglePlayServices. Maps selezionato](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
+[![gestione pacchetti NuGet con il pacchetto Xamarin.GooglePlayServices. Maps selezionato](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 Si noti che vengono installati anche i pacchetti di dipendenza seguenti:
 
-- **Novell. GooglePlayServices. base**
-- **Novell. GooglePlayServices. scantinato**
-- **Novell. GooglePlayServices. Tasks**
+- **Xamarin.GooglePlayServices. base**
+- **Xamarin.GooglePlayServices. scantinato**
+- **Xamarin.GooglePlayServices. Tasks**
 
 ### <a name="a-namedeclare-permissions--specify-the-required-permissions"></a><a name="declare-permissions" /> specificare le autorizzazioni necessarie
 
@@ -140,7 +140,7 @@ Il frammento di codice seguente è un esempio delle impostazioni che devono esse
 </manifest>
 ```
 
-Oltre a richiedere le autorizzazioni **file AndroidManifest. XML**, un'app deve anche eseguire controlli di autorizzazione Runtime per le autorizzazioni `ACCESS_COARSE_LOCATION` e `ACCESS_FINE_LOCATION`. Per ulteriori informazioni sull'esecuzione dei controlli delle autorizzazioni in fase di esecuzione, vedere la Guida alle [autorizzazioni di Novell. Android](~/android/app-fundamentals/permissions.md) .
+Oltre a richiedere le autorizzazioni **file AndroidManifest. XML**, un'app deve anche eseguire controlli di autorizzazione Runtime per le autorizzazioni `ACCESS_COARSE_LOCATION` e `ACCESS_FINE_LOCATION`. Per ulteriori informazioni sull'esecuzione dei controlli delle autorizzazioni in fase di esecuzione, vedere la Guida alle [autorizzazioni di Xamarin.Android](~/android/app-fundamentals/permissions.md) .
 
 ### <a name="a-namecreate-emulator-with-google-api-create-an-emulator-with-google-apis"></a><a name="create-emulator-with-google-api" />creare un emulatore con Google APIs
 
@@ -148,7 +148,7 @@ Nel caso in cui non sia installato un dispositivo Android fisico con Google Play
 
 ## <a name="the-googlemap-class"></a>Classe GoogleMap
 
-Una volta soddisfatti i prerequisiti, è possibile iniziare a sviluppare l'applicazione e usare l'API Maps Android. La classe [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap) è l'API principale che verrà usata da un'applicazione Novell. Android per visualizzare e interagire con Google Maps per Android. Questa classe ha le responsabilità seguenti:
+Una volta soddisfatti i prerequisiti, è possibile iniziare a sviluppare l'applicazione e usare l'API Maps Android. La classe [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap) è l'API principale che verrà usata da un'applicazione Xamarin.Android per visualizzare e interagire con Google Maps per Android. Questa classe ha le responsabilità seguenti:
 
 - Interazione con i servizi di Google Play per autorizzare l'applicazione con il servizio Web Google.
 
@@ -278,7 +278,7 @@ public void OnMapReady(GoogleMap map)
 
 ## <a name="interacting-with-the-googlemap"></a>Interazione con GoogleMap
 
-L'API Maps Android fornisce le API che consentono a un'attività di modificare il punto di vista, aggiungere marcatori, inserire sovrapposizioni personalizzate o tracciare forme geometriche. In questa sezione viene illustrato come eseguire alcune di queste attività in Novell. Android.
+L'API Maps Android fornisce le API che consentono a un'attività di modificare il punto di vista, aggiungere marcatori, inserire sovrapposizioni personalizzate o tracciare forme geometriche. In questa sezione viene illustrato come eseguire alcune di queste attività in Xamarin.Android.
 
 ### <a name="changing-the-viewpoint"></a>Modifica del punto di vista
 

@@ -1,6 +1,6 @@
 ---
 title: Orientamento del dispositivo
-description: Questo articolo illustra come le applicazioni xamarin. Forms di layout che aspetto accattivante nell'orientamento verticale e orizzontale.
+description: Questo articolo illustra come le applicazioni Xamarin.Forms di layout che aspetto accattivante nell'orientamento verticale e orizzontale.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
@@ -24,7 +24,7 @@ ms.locfileid: "70772756"
 
 ## <a name="controlling-orientation"></a>Controllo dell'orientamento
 
-Quando si usa xamarin. Forms, il metodo supportato per il controllo dell'orientamento del dispositivo consiste nell'utilizzare le impostazioni per ogni singolo progetto.
+Quando si usa Xamarin.Forms, il metodo supportato per il controllo dell'orientamento del dispositivo consiste nell'utilizzare le impostazioni per ogni singolo progetto.
 
 ### <a name="ios"></a>iOS
 
@@ -66,7 +66,7 @@ namespace MyRotatingApp.Droid
 ...
 ```
 
-Xamarin. Android supporta diverse opzioni per specificare l'orientamento:
+Xamarin.Android supporta diverse opzioni per specificare l'orientamento:
 
 - **Panorama applicativo** &ndash; forza l'orientamento dell'applicazione in orizzontale, indipendentemente dal fatto i dati del sensore.
 - **Verticale** &ndash; forza l'orientamento dell'applicazione in verticale, indipendentemente dal fatto i dati del sensore.
@@ -93,7 +93,7 @@ In Universal Windows Platform (UWP), gli orientamenti supportati sono impostati 
 
 ## <a name="reacting-to-changes-in-orientation"></a>Reazione alle modifiche apportate orientamento
 
-Xamarin. Forms non offre tutti gli eventi nativi per inviare la notifica delle modifiche apportate orientamento nel codice condiviso l'app. Tuttavia, il `SizeChanged` eventi del `Page` viene attivato quando la larghezza o altezza del `Page` le modifiche. Quando la larghezza del `Page` è superiore all'altezza, il dispositivo è in modalità orizzontale. Per altre informazioni, vedere [visualizzare un'immagine di base dell'orientamento dello schermo](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
+Xamarin.Forms non offre tutti gli eventi nativi per inviare la notifica delle modifiche apportate orientamento nel codice condiviso l'app. Tuttavia, il `SizeChanged` eventi del `Page` viene attivato quando la larghezza o altezza del `Page` le modifiche. Quando la larghezza del `Page` è superiore all'altezza, il dispositivo è in modalità orizzontale. Per altre informazioni, vedere [visualizzare un'immagine di base dell'orientamento dello schermo](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
 > [!NOTE]
 > È un pacchetto NuGet esistente, gratuito per la ricezione di notifiche delle modifiche apportate orientamento nel codice condiviso. Vedere le [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per altre informazioni.
@@ -146,7 +146,7 @@ Si noti che le app di sfruttano i vantaggi dello spazio disponibile mediante l'a
 - **Prestare attenzione ai rapporti** &ndash; le modifiche apportate orientamento possono causare problemi quando vengono apportate alcune ipotesi per quanto riguarda i rapporti. Ad esempio, una vista che potrebbe avere una notevole quantità di spazio in 1 o 3 dello spazio verticale di una schermata in formato verticale potrebbe non rientrare nello 1/3 lo spazio verticale nel panorama applicativo.
 - **Prestare attenzione con i valori assoluti** &ndash; valori assoluti (pixel) che hanno un significato in formato verticale possono non avere senso in modalità orizzontale. Quando sono necessari i valori assoluti, usare layout annidati per isolare il relativo impatto. Ad esempio, sarebbe ragionevole utilizzati valori assoluti in una `TableView` `ItemTemplate` quando il modello di elemento ha un'altezza uniforme garantita.
 
-Le regole precedenti si applicano anche quando l'implementazione di interfacce per più dimensioni dello schermo e sono in genere considerati procedure consigliate. Il resto di questa guida illustra esempi specifici di layout reattivo utilizzando tutti i layout primari in xamarin. Forms.
+Le regole precedenti si applicano anche quando l'implementazione di interfacce per più dimensioni dello schermo e sono in genere considerati procedure consigliate. Il resto di questa guida illustra esempi specifici di layout reattivo utilizzando tutti i layout primari in Xamarin.Forms.
 
 > [!NOTE]
 > Per maggiore chiarezza, le sezioni seguenti illustrano come implementare il layout reattivo usando solo uno dei tipi `Layout` alla volta. In pratica, è spesso più semplice combinare `Layout`s per ottenere un layout desiderato usando il più semplice o più intuitivo `Layout` per ciascun componente.

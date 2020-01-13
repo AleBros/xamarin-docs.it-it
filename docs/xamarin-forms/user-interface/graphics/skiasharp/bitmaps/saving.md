@@ -66,7 +66,7 @@ Quando si codifica un `SKBitmap` oggetto in un determinato file di formato, in g
 
 Salvataggio in un file nell'archiviazione locale dell'applicazione è piuttosto semplice, poiché è possibile utilizzare standard `System.IO` classi e metodi per questa attività. Questa tecnica è dimostrata nell'articolo [ **animazione bitmap SkiaSharp** ](animating.md#bitmap-animation) in relazione a una serie di bitmap del set di Mandelbrot l'animazione.
 
-Se si desidera che il file deve essere condiviso da altre applicazioni, deve essere salvato alla raccolta di foto dell'utente. Questa attività richiede codice specifico della piattaforma e l'uso di xamarin. Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService).
+Se si desidera che il file deve essere condiviso da altre applicazioni, deve essere salvato alla raccolta di foto dell'utente. Questa attività richiede codice specifico della piattaforma e l'uso di Xamarin.Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService).
 
 Il **SkiaSharpFormsDemo** del progetto nel [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione definisce un `IPhotoLibrary` interfaccia utilizzata con il `DependencyService` classe. Definisce la sintassi di un `SavePhotoAsync` metodo:
 

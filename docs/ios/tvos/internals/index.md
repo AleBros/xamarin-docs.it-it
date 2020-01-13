@@ -1,6 +1,6 @@
 ---
 title: tvOS in Novell-elementi interni
-description: Documenti che descrivono il funzionamento interno di tvOS in Novell, basato su Novell. iOS. Il contenuto del collegamento illustra gli assembly, i Framework di destinazione e i concetti relativi a iOS correlati.
+description: Documenti che descrivono il funzionamento interno di tvOS in Novell, basato su Xamarin.iOS. Il contenuto del collegamento illustra gli assembly, i Framework di destinazione e i concetti relativi a iOS correlati.
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
@@ -18,11 +18,11 @@ ms.locfileid: "73030652"
 
 ## <a name="assembliesiostvosinternalsassembliesmd"></a>[Assembly](~/ios/tvos/internals/assemblies.md)
 
-Elenco degli assembly supportati da Novell per le applicazioni Novell. tvOS.
+Elenco degli assembly supportati da Novell per le applicazioni Xamarin.tvOS.
 
 ## <a name="target-frameworksiostvosinternalsframeworksmd"></a>[Framework di destinazione](~/ios/tvos/internals/frameworks.md)
 
-Questo articolo illustra i tipi di Framework di destinazione (librerie di classi base) disponibili in Novell. tvOS e le implicazioni della selezione di una destinazione specifica per l'applicazione Novell. tvOS.
+Questo articolo illustra i tipi di Framework di destinazione (librerie di classi base) disponibili in Xamarin.tvOS e le implicazioni della selezione di una destinazione specifica per l'applicazione Xamarin.tvOS.
 
 ## <a name="related-ios-articles"></a>Articoli iOS correlati
 
@@ -38,7 +38,7 @@ Vengono illustrati i principi di progettazione alla base dell'associazione API.
 
 ### <a name="limitationsiosinternalslimitationsmd"></a>[Limitazioni](~/ios/internals/limitations.md)
 
-In questa sezione vengono illustrati i problemi e le limitazioni da tenere presenti per quanto riguarda Novell. iOS, molti dei quali sono applicabili a Novell. tvOS.
+In questa sezione vengono illustrati i problemi e le limitazioni da tenere presenti per quanto riguarda Xamarin.iOS, molti dei quali sono applicabili a Xamarin.tvOS.
 
 ### <a name="linkeriosdeploy-testlinkermd"></a>[Linker](~/ios/deploy-test/linker.md)
 
@@ -46,7 +46,7 @@ Viene illustrato il funzionamento del linker per assicurare il pacchetto di appl
 
 ### <a name="localization-and-internationalizationiosapp-fundamentalslocalizationindexmd"></a>[Localizzazione e internazionalizzazione](~/ios/app-fundamentals/localization/index.md)
 
-Questa guida illustra l'aggiunta di codifiche a un'applicazione Novell. iOS per supportare l'internazionalizzazione.
+Questa guida illustra l'aggiunta di codifiche a un'applicazione Xamarin.iOS per supportare l'internazionalizzazione.
 
 ### <a name="mtouchiosdeploy-testmtouchmd"></a>[mtouch](~/ios/deploy-test/mtouch.md)
 
@@ -54,7 +54,7 @@ Note e informazioni su mtouch.exe, lo strumento da riga di comando che compila i
 
 ### <a name="linking-native-librariesiosplatformnative-interopmd"></a>[Collegamento di librerie native](~/ios/platform/native-interop.md)
 
-Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-C, vedere l'&nbsp; [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md)&nbsp;documento.
+Xamarin.iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Xamarin.iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-C, vedere l'&nbsp; [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md)&nbsp;documento.
 
 ## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
 
@@ -66,7 +66,7 @@ Informazioni e istruzioni sull'uso di System. Data per accedere al sistema di da
 
 ### <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Threading](~/ios/app-fundamentals/threading.md)
 
-Note sull'uso del threading nelle applicazioni Novell. iOS.
+Note sull'uso del threading nelle applicazioni Xamarin.iOS.
 
 ### <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[Generazione di codice XIB](~/ios/internals/xib-code-generation.md)
 

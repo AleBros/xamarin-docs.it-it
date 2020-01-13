@@ -396,7 +396,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 - **AndroidTlsProvider**: valore di stringa che specifica il provider TLS da usare in un'applicazione. I possibili valori sono:
 
-  - Non impostato/stringa vuota: in Novell. Android 7,3 e versioni successive, equivale a `btls`.
+  - Non impostato/stringa vuota: in Xamarin.Android 7,3 e versioni successive, equivale a `btls`.
 
     in Xamarin.Android 7.1 equivale a `legacy`.
 
@@ -412,7 +412,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     Corrisponde all'impostazione **TLS 1.0 gestito** nelle pagine delle proprietà di Visual Studio.
 
-  - `default`: è improbabile che questo valore venga usato nei progetti Novell. Android. Il valore consigliato da usare è invece la stringa vuota, che corrisponde all'impostazione **Predefinito** nelle pagine delle proprietà di Visual Studio.
+  - `default`: è improbabile che questo valore venga usato nei progetti Xamarin.Android. Il valore consigliato da usare è invece la stringa vuota, che corrisponde all'impostazione **Predefinito** nelle pagine delle proprietà di Visual Studio.
 
     Il valore `default` non è disponibile nelle pagine delle proprietà di Visual Studio.
 

@@ -18,7 +18,7 @@ ms.locfileid: "68656907"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Nella piattaforma Windows universale, per impostazione predefinita di xamarin. Forms [`ListView`](xref:Xamarin.Forms.ListView) nativi `ItemClick` evento a cui rispondere interazione, anziché l'oggetto nativo `Tapped` evento. Fornisce funzionalità di accessibilità in modo che l'Assistente vocale di Windows e della tastiera possano interagire con il `ListView`. Tuttavia, esegue il rendering anche tutti i movimenti tocco all'interno di `ListView` è inutilizzabile.
+Nella piattaforma Windows universale, per impostazione predefinita di Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) nativi `ItemClick` evento a cui rispondere interazione, anziché l'oggetto nativo `Tapped` evento. Fornisce funzionalità di accessibilità in modo che l'Assistente vocale di Windows e della tastiera possano interagire con il `ListView`. Tuttavia, esegue il rendering anche tutti i movimenti tocco all'interno di `ListView` è inutilizzabile.
 
 Questo piattaforma UWP (Universal Windows Platform) controlla se gli elementi in un [`ListView`](xref:Xamarin.Forms.ListView) oggetto possono rispondere ai movimenti Tap e, di conseguenza, se il nativo `ListView` genera l' `ItemClick` evento o. `Tapped` Vengono utilizzati in XAML, impostando il [`ListView.SelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView.SelectionModeProperty) proprietà associata a un valore del [`ListViewSelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) enumerazione:
 

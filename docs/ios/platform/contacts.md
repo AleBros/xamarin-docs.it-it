@@ -1,6 +1,6 @@
 ---
-title: Contatti e ContactsUI in Novell. iOS
-description: Questo articolo illustra l'uso dei nuovi framework dell'interfaccia utente contatti e contatti in un'app Novell. iOS. Questi framework sostituiscono la rubrica esistente e l'interfaccia utente di Rubrica usata nelle versioni precedenti di iOS.
+title: Contatti e ContactsUI in Xamarin.iOS
+description: Questo articolo illustra l'uso dei nuovi framework dell'interfaccia utente contatti e contatti in un'app Xamarin.iOS. Questi framework sostituiscono la rubrica esistente e l'interfaccia utente di Rubrica usata nelle versioni precedenti di iOS.
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032562"
 ---
-# <a name="contacts-and-contactsui-in-xamarinios"></a>Contatti e ContactsUI in Novell. iOS
+# <a name="contacts-and-contactsui-in-xamarinios"></a>Contatti e ContactsUI in Xamarin.iOS
 
-_Questo articolo illustra l'uso dei nuovi framework dell'interfaccia utente contatti e contatti in un'app Novell. iOS. Questi framework sostituiscono la rubrica esistente e l'interfaccia utente di Rubrica usata nelle versioni precedenti di iOS._
+_Questo articolo illustra l'uso dei nuovi framework dell'interfaccia utente contatti e contatti in un'app Xamarin.iOS. Questi framework sostituiscono la rubrica esistente e l'interfaccia utente di Rubrica usata nelle versioni precedenti di iOS._
 
 Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente della Rubrica e della rubrica esistente usati da iOS 8 e versioni precedenti.
 
@@ -25,20 +25,20 @@ I due nuovi Framework contengono le funzionalità seguenti:
 - [**Contatti**](#contacts) : fornisce l'accesso ai dati dell'elenco dei contatti dell'utente.
   Poiché la maggior parte delle app richiede solo l'accesso in sola lettura, questo Framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
 
-- [**ContactsUI**](#contactsui) : fornisce gli elementi dell'interfaccia utente di Novell. iOS per visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
+- [**ContactsUI**](#contactsui) : fornisce gli elementi dell'interfaccia utente di Xamarin.iOS per visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
 
 [![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> I Framework `AddressBook` e `AddressBookUI` esistenti usati da iOS 8 (e versioni precedenti) sono stati deprecati in iOS 9 e devono essere sostituiti con i nuovi framework di `Contacts` e `ContactsUI` il prima possibile per qualsiasi app Novell. iOS esistente. Le nuove app devono essere scritte in base ai nuovi Framework.
+> I Framework `AddressBook` e `AddressBookUI` esistenti usati da iOS 8 (e versioni precedenti) sono stati deprecati in iOS 9 e devono essere sostituiti con i nuovi framework di `Contacts` e `ContactsUI` il prima possibile per qualsiasi app Xamarin.iOS esistente. Le nuove app devono essere scritte in base ai nuovi Framework.
 
-Nelle sezioni seguenti verranno esaminati questi nuovi Framework e come implementarli in un'app Novell. iOS.
+Nelle sezioni seguenti verranno esaminati questi nuovi Framework e come implementarli in un'app Xamarin.iOS.
 
 <a name="contacts" />
 
 ## <a name="the-contacts-framework"></a>Framework contatti
 
-Il Framework Contacts fornisce a Novell. iOS l'accesso alle informazioni di contatto dell'utente. Poiché la maggior parte delle app richiede solo l'accesso in sola lettura, questo Framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
+Il Framework Contacts fornisce a Xamarin.iOS l'accesso alle informazioni di contatto dell'utente. Poiché la maggior parte delle app richiede solo l'accesso in sola lettura, questo Framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
 
 <a name="Contact_Objects" />
 
@@ -50,7 +50,7 @@ La classe `CNContact` fornisce accesso thread-safe, in sola lettura alle proprie
 
 Per tutte le proprietà che possono avere più valori, ad esempio indirizzo di posta elettronica o numeri di telefono, verranno rappresentati come una matrice di oggetti `NSLabeledValue`. `NSLabeledValue` è una tupla thread-safe costituita da un set di sola lettura di etichette e valori in cui l'etichetta definisce il valore per l'utente (ad esempio, posta elettronica domestica o aziendale). Il Framework Contacts fornisce una selezione di etichette predefinite (tramite il `CNLabelKey` e `CNLabelPhoneNumberKey` classi statiche) che è possibile usare nell'app oppure è possibile definire etichette personalizzate per le proprie esigenze.
 
-Per tutte le app Novell. iOS che devono modificare i valori di un contatto esistente (o crearne di nuovi), usare la versione `NSMutableContact` della classe e le relative sottoclassi, ad esempio `CNMutablePostalAddress`.
+Per tutte le app Xamarin.iOS che devono modificare i valori di un contatto esistente (o crearne di nuovi), usare la versione `NSMutableContact` della classe e le relative sottoclassi, ad esempio `CNMutablePostalAddress`.
 
 Il codice seguente, ad esempio, creerà un nuovo contatto e lo aggiungerà alla raccolta di contatti dell'utente:
 
@@ -268,9 +268,9 @@ Alcuni contenitori consentono la disposizione dei contatti in uno o più _gruppi
 
 ## <a name="the-contactsui-framework"></a>Framework ContactsUI
 
-Per le situazioni in cui l'applicazione non deve presentare un'interfaccia utente personalizzata, è possibile usare il Framework ContactsUI per presentare gli elementi dell'interfaccia utente per visualizzare, modificare, selezionare e creare contatti nell'app Novell. iOS.
+Per le situazioni in cui l'applicazione non deve presentare un'interfaccia utente personalizzata, è possibile usare il Framework ContactsUI per presentare gli elementi dell'interfaccia utente per visualizzare, modificare, selezionare e creare contatti nell'app Xamarin.iOS.
 
-Usando i controlli predefiniti di Apple, non solo si riduce la quantità di codice che è necessario creare per supportare i contatti nell'app Novell. iOS, ma si presenta un'interfaccia coerente agli utenti dell'app.
+Usando i controlli predefiniti di Apple, non solo si riduce la quantità di codice che è necessario creare per supportare i contatti nell'app Xamarin.iOS, ma si presenta un'interfaccia coerente agli utenti dell'app.
 
 ### <a name="the-contact-picker-view-controller"></a>Controller di visualizzazione selezione contatti
 
@@ -355,7 +355,7 @@ PresentViewController(view, true, null);
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato in dettaglio come usare i Framework di contatto e contatto dell'interfaccia utente in un'applicazione Novell. iOS. In primo luogo, sono stati illustrati i diversi tipi di oggetti offerti dal framework del contatto e il modo in cui vengono usati per creare nuovi contatti esistenti o accedervi. È stato inoltre esaminato il Framework Contact UI per selezionare i contatti esistenti e visualizzare le informazioni di contatto.
+Questo articolo ha illustrato in dettaglio come usare i Framework di contatto e contatto dell'interfaccia utente in un'applicazione Xamarin.iOS. In primo luogo, sono stati illustrati i diversi tipi di oggetti offerti dal framework del contatto e il modo in cui vengono usati per creare nuovi contatti esistenti o accedervi. È stato inoltre esaminato il Framework Contact UI per selezionare i contatti esistenti e visualizzare le informazioni di contatto.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
-title: Opzioni di layout in Novell. iOS
-description: In questo documento vengono descritti i diversi modi per disporre le interfacce utente in Novell. iOS. Viene illustrato il ridimensionamento automatico e il layout automatico.
+title: Opzioni di layout in Xamarin.iOS
+description: In questo documento vengono descritti i diversi modi per disporre le interfacce utente in Xamarin.iOS. Viene illustrato il ridimensionamento automatico e il layout automatico.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003318"
 ---
-# <a name="layout-options-in-xamarinios"></a>Opzioni di layout in Novell. iOS
+# <a name="layout-options-in-xamarinios"></a>Opzioni di layout in Xamarin.iOS
 
 Esistono due meccanismi diversi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata:
 

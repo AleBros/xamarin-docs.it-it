@@ -1,6 +1,6 @@
 ---
 title: Introduzione ad Android Wear
-description: Con l'introduzione di Android Wear di Google, non si è più limitati solo a telefoni e tablet quando si tratta di sviluppare app Android eccezionali. Il supporto di Novell. Android per Android Wear ti permette di eseguire C# il codice con il polso. Questa introduzione fornisce una panoramica di base di Android Wear, ne descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in Android Wear 2,0. Sono elencati alcuni dei dispositivi Android Wear più diffusi e sono disponibili collegamenti alla documentazione essenziale di Google Android Wear per ulteriori letture.
+description: Con l'introduzione di Android Wear di Google, non si è più limitati solo a telefoni e tablet quando si tratta di sviluppare app Android eccezionali. Il supporto di Xamarin.Android per Android Wear ti permette di eseguire C# il codice con il polso. Questa introduzione fornisce una panoramica di base di Android Wear, ne descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in Android Wear 2,0. Sono elencati alcuni dei dispositivi Android Wear più diffusi e sono disponibili collegamenti alla documentazione essenziale di Google Android Wear per ulteriori letture.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028615"
 ---
 # <a name="introduction-to-android-wear"></a>Introduzione ad Android Wear
 
-_Con l'introduzione di Android Wear di Google, non si è più limitati solo a telefoni e tablet quando si tratta di sviluppare app Android eccezionali. Il supporto di Novell. Android per Android Wear ti permette di eseguire C# il codice con il polso. Questa introduzione fornisce una panoramica di base di Android Wear, ne descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in Android Wear 2,0. Sono elencati alcuni dei dispositivi Android Wear più diffusi e sono disponibili collegamenti alla documentazione essenziale di Google Android Wear per ulteriori letture._
+_Con l'introduzione di Android Wear di Google, non si è più limitati solo a telefoni e tablet quando si tratta di sviluppare app Android eccezionali. Il supporto di Xamarin.Android per Android Wear ti permette di eseguire C# il codice con il polso. Questa introduzione fornisce una panoramica di base di Android Wear, ne descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in Android Wear 2,0. Sono elencati alcuni dei dispositivi Android Wear più diffusi e sono disponibili collegamenti alla documentazione essenziale di Google Android Wear per ulteriori letture._
 
 ## <a name="overview"></a>Panoramica
 
@@ -24,7 +24,7 @@ Android Wear viene eseguito su diversi dispositivi, tra cui Motorola 360, LG G W
 
 ![Dispositivi Android Wear 2,0](intro-to-wear-images/hero-image.png "Esempio di dispositivi Android Wear 2,0")
 
-Novell. Android 5,0 e versioni successive supportano l'uso di Android tramite il supporto per Android 4.4 W (API 20) e un pacchetto NuGet che aggiunge altri controlli dell'interfaccia utente specifici per l'utilizzo. Novell. Android 5,0 e versioni successive includono anche funzionalità per la creazione di pacchetti di app di consumo. I pacchetti NuGet sono disponibili anche per Android Wear 2,0, come descritto più avanti in questa guida.
+Xamarin.Android 5,0 e versioni successive supportano l'uso di Android tramite il supporto per Android 4.4 W (API 20) e un pacchetto NuGet che aggiunge altri controlli dell'interfaccia utente specifici per l'utilizzo. Xamarin.Android 5,0 e versioni successive includono anche funzionalità per la creazione di pacchetti di app di consumo. I pacchetti NuGet sono disponibili anche per Android Wear 2,0, come descritto più avanti in questa guida.
 
 ## <a name="android-wear-basics"></a>Nozioni fondamentali su Android Wear
 
@@ -68,14 +68,14 @@ Nell'esempio [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-
 
 ### <a name="deployment"></a>Distribuzione
 
-Ogni app indossabile viene distribuita con il proprio file APK incorporato all'interno dell'APK dell'applicazione principale. Questo pacchetto viene gestito automaticamente in Novell. Android 5,0 e versioni successive, ma deve essere eseguito manualmente per le versioni di Novell. Android precedenti alla versione 5,0. 
+Ogni app indossabile viene distribuita con il proprio file APK incorporato all'interno dell'APK dell'applicazione principale. Questo pacchetto viene gestito automaticamente in Xamarin.Android 5,0 e versioni successive, ma deve essere eseguito manualmente per le versioni di Xamarin.Android precedenti alla versione 5,0. 
 L'uso della creazione di [pacchetti illustra la](~/android/wear/deploy-test/packaging.md) distribuzione in modo più dettagliato. 
 
 ## <a name="going-further"></a>Più avanti 
 
 Il modo migliore per acquisire familiarità con Android Wear è compilare e testare la prima app. L'elenco seguente fornisce un ordine di lettura consigliato per velocizzare rapidamente:
 
-1. Installazione [& installazione](~/android/wear/get-started/installation.md) fornisce istruzioni dettagliate per l'installazione e la configurazione dell'ambiente di sviluppo per la compilazione di app Novell. Android Wear. 
+1. Installazione [& installazione](~/android/wear/get-started/installation.md) fornisce istruzioni dettagliate per l'installazione e la configurazione dell'ambiente di sviluppo per la compilazione di app Xamarin.Android Wear. 
 
 2. Dopo aver installato i pacchetti necessari e configurato un emulatore o un dispositivo, vedere [Hello, Wear](~/android/wear/get-started/hello-wear.md) per istruzioni dettagliate che illustrano come creare un piccolo progetto Android Wear che gestisce i clic sui pulsanti e visualizza un contatore di clic per l'usura dispositivo. 
 
@@ -94,15 +94,15 @@ Android Wear 2,0 introduce un'ampia gamma di nuove caratteristiche e funzionalit
 
 ### <a name="install-wear-20-packages"></a>Installare i pacchetti Wear 2,0
 
-Per creare un'app Wear 2,0 con Novell. Android, è necessario aggiungere il pacchetto **Novell. Android. Wear v 2.0** al progetto (fare clic sulla **scheda browse**):
+Per creare un'app Wear 2,0 con Xamarin.Android, è necessario aggiungere il pacchetto **Xamarin.Android. Wear v 2.0** al progetto (fare clic sulla **scheda browse**):
 
-[![Novell. Android. Wear v 2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Installare Novell. Android. Wear v 2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
+[![Xamarin.Android. Wear v 2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Installare Xamarin.Android. Wear v 2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 Questo pacchetto NuGet contiene le associazioni per il supporto Android e le librerie compatibili Wear.
 
-Oltre a **Novell. Android. Wear**, è consigliabile installare il pacchetto NuGet **Novell. GooglePlayServices. Wearable** : 
+Oltre a **Xamarin.Android. Wear**, è consigliabile installare il pacchetto NuGet **Xamarin.GooglePlayServices. Wearable** : 
 
-[![Novell. GooglePlayServices. Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Installare il pacchetto NuGet Novell. GooglePlayServices. Wearable")](intro-to-wear-images/gpsw-nuget.png#lightbox)
+[![Xamarin.GooglePlayServices. Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Installare il pacchetto NuGet Xamarin.GooglePlayServices. Wearable")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
 ### <a name="key-features-of-wear-20"></a>Funzionalità principali di Wear 2,0
 
@@ -169,7 +169,7 @@ Consultare la documentazione di Android Wear di Google:
 
 ## <a name="summary"></a>Riepilogo
 
-Questa introduzione fornisce una panoramica di Android Wear. Sono state descritte le funzionalità di base di Android Wear e è stata inclusa una panoramica delle funzionalità introdotte in Android Wear 2,0. Sono stati forniti collegamenti a letture essenziali per aiutare gli sviluppatori a iniziare a usare lo sviluppo di Novell. Android e sono stati elencati esempi di alcuni dei dispositivi Android Wear attualmente presenti sul mercato.
+Questa introduzione fornisce una panoramica di Android Wear. Sono state descritte le funzionalità di base di Android Wear e è stata inclusa una panoramica delle funzionalità introdotte in Android Wear 2,0. Sono stati forniti collegamenti a letture essenziali per aiutare gli sviluppatori a iniziare a usare lo sviluppo di Xamarin.Android e sono stati elencati esempi di alcuni dei dispositivi Android Wear attualmente presenti sul mercato.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

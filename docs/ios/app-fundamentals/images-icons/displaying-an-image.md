@@ -1,6 +1,6 @@
 ---
-title: Visualizzazione di un'immagine in Novell. iOS
-description: Questo articolo illustra l'inclusione di un asset immagine in un'app Novell. iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer.
+title: Visualizzazione di un'immagine in Xamarin.iOS
+description: Questo articolo illustra l'inclusione di un asset immagine in un'app Xamarin.iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer.
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73004489"
 ---
-# <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in Novell. iOS
+# <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in Xamarin.iOS
 
-_Questo articolo illustra l'inclusione di un asset immagine in un'app Novell. iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer._
+_Questo articolo illustra l'inclusione di un asset immagine in un'app Xamarin.iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer._
 
-## <a name="adding-and-organizing-images-in-a-xamarinios-app"></a>Aggiunta e organizzazione di immagini in un'app Novell. iOS
+## <a name="adding-and-organizing-images-in-a-xamarinios-app"></a>Aggiunta e organizzazione di immagini in un'app Xamarin.iOS
 
-Quando si aggiunge un'immagine da usare in un'app Novell. iOS, lo sviluppatore userà un _Catalogo asset_ per supportare ogni dispositivo iOS e la risoluzione richiesta da un'app.
+Quando si aggiunge un'immagine da usare in un'app Xamarin.iOS, lo sviluppatore userà un _Catalogo asset_ per supportare ogni dispositivo iOS e la risoluzione richiesta da un'app.
 
 Aggiunto in iOS 7, i **set di immagini dei cataloghi asset** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessarie per supportare i vari dispositivi e i fattori di scalabilità per un'app. Invece di basarsi sul nome file delle risorse immagine, i **set di immagini** usano un file JSON per specificare quale immagine appartiene a quale dispositivo e/o risoluzione. Questo è il modo migliore per gestire e supportare le immagini in iOS (da iOS 9 o versione successiva).
 
@@ -217,7 +217,7 @@ Per altre informazioni sulle icone e le immagini, vedere la documentazione di Ap
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Visualizzazione di un'immagine in uno storyboard
 
-Dopo che un'immagine è stata aggiunta a un progetto Novell. iOS usando un catalogo asset, può essere visualizzata facilmente in uno storyboard usando un `UIImageView` in iOS designer. Ad esempio, se è stato aggiunto il seguente asset immagine:
+Dopo che un'immagine è stata aggiunta a un progetto Xamarin.iOS usando un catalogo asset, può essere visualizzata facilmente in uno storyboard usando un `UIImageView` in iOS designer. Ad esempio, se è stato aggiunto il seguente asset immagine:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -269,7 +269,7 @@ Per visualizzarlo in uno storyboard, eseguire le operazioni seguenti:
 
 ## <a name="displaying-an-image-in-code"></a>Visualizzazione di un'immagine nel codice
 
-Proprio come la visualizzazione di un'immagine in uno storyboard, dopo che un'immagine è stata aggiunta a un progetto Novell. iOS usando un catalogo asset, può essere visualizzata facilmente C# usando il codice.
+Proprio come la visualizzazione di un'immagine in uno storyboard, dopo che un'immagine è stata aggiunta a un progetto Xamarin.iOS usando un catalogo asset, può essere visualizzata facilmente C# usando il codice.
 
 Vedere l'esempio seguente:
 

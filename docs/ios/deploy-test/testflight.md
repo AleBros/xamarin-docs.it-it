@@ -16,7 +16,7 @@ ms.locfileid: "73028480"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
-_TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Novell. iOS. In questo articolo vengono illustrati tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
+_TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Xamarin.iOS. In questo articolo vengono illustrati tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
 
 Il test della versione beta è parte integrante del ciclo di sviluppo software. Esistono numerose applicazioni multipiattaforma che è possibile usare per semplificare questo processo, ad esempio [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing) e ovviamente il test della versione beta dell'app nativa di Google Play per le app Android. Questo documento descrive lo strumento TestFlight di Apple.
 

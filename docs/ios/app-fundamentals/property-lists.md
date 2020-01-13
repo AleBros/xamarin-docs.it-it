@@ -1,5 +1,5 @@
 ---
-title: Uso degli elenchi di proprietà in Novell. iOS
+title: Uso degli elenchi di proprietà in Xamarin.iOS
 description: Questo documento introduce l'editor grafico e avanzato delle proprietà (estensione plist) di Visual Studio per Mac per l'uso di info. plist e dei diritti. plist. Viene illustrata l'impostazione delle icone e delle immagini di avvio per le applicazioni iOS dall'interno Visual Studio per Mac.
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009869"
 ---
-# <a name="working-with-property-lists-in-xamarinios"></a>Uso degli elenchi di proprietà in Novell. iOS
+# <a name="working-with-property-lists-in-xamarinios"></a>Uso degli elenchi di proprietà in Xamarin.iOS
 
 _Questo documento introduce l'editor grafico e avanzato delle proprietà (estensione plist) di Visual Studio per Mac per l'uso di info. plist e dei diritti. plist. Viene illustrata l'impostazione delle icone e delle immagini di avvio per le applicazioni iOS dall'interno Visual Studio per Mac._
 

@@ -1,6 +1,6 @@
 ---
-title: API di ricerca in Novell. iOS
-description: Questo articolo illustra l'uso delle nuove API di ricerca di app fornite da iOS 9 per consentire agli utenti di cercare informazioni e funzionalità nelle app Novell. iOS.
+title: API di ricerca in Xamarin.iOS
+description: Questo articolo illustra l'uso delle nuove API di ricerca di app fornite da iOS 9 per consentire agli utenti di cercare informazioni e funzionalità nelle app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031556"
 ---
-# <a name="search-apis-in-xamarinios"></a>API di ricerca in Novell. iOS
+# <a name="search-apis-in-xamarinios"></a>API di ricerca in Xamarin.iOS
 
-_Questo articolo illustra l'uso delle API di ricerca di app fornite da iOS 9 per consentire agli utenti di cercare informazioni e funzionalità nelle app Novell. iOS._
+_Questo articolo illustra l'uso delle API di ricerca di app fornite da iOS 9 per consentire agli utenti di cercare informazioni e funzionalità nelle app Xamarin.iOS._
 
-La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni e alle funzionalità all'interno di un'app Novell. iOS. Usando le nuove API di ricerca per le app, il contenuto delle app viene reso ricercabile attraverso i risultati della ricerca in evidenza e Safari, i promemoria e i suggerimenti per la consegna e Siri. Ciò consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
+La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni e alle funzionalità all'interno di un'app Xamarin.iOS. Usando le nuove API di ricerca per le app, il contenuto delle app viene reso ricercabile attraverso i risultati della ricerca in evidenza e Safari, i promemoria e i suggerimenti per la consegna e Siri. Ciò consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
 
 Inoltre, le nuove API di ricerca facilitano l'integrazione della ricerca nell'app senza l'esperienza di implementazione della ricerca precedente. Per questo motivo, Apple dichiara che richiede in genere alcune ore per rendere il contenuto di un'app iOS 9 universalmente ricercabile usando la ricerca di app.
 
@@ -88,7 +88,7 @@ Per ulteriori informazioni, vedere la guida ai [suggerimenti proattivi](~/ios/pl
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato le nuove funzionalità dell'API di ricerca disponibili in iOS 9 per le app Novell. iOS. Sono stati analizzati i metodi [NSUserActivity](nsuseractivity.md), [Spotlight principale](corespotlight.md) e [markup web](web-markup.md) per l'indicizzazione del contenuto. Questa operazione è stata completata con una breve discussione su quando è necessario usare un approccio di ricerca specifico e sui tipi di contenuto da indicizzare.
+Questo articolo ha trattato le nuove funzionalità dell'API di ricerca disponibili in iOS 9 per le app Xamarin.iOS. Sono stati analizzati i metodi [NSUserActivity](nsuseractivity.md), [Spotlight principale](corespotlight.md) e [markup web](web-markup.md) per l'indicizzazione del contenuto. Questa operazione è stata completata con una breve discussione su quando è necessario usare un approccio di ricerca specifico e sui tipi di contenuto da indicizzare.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

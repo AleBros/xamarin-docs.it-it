@@ -16,7 +16,7 @@ ms.locfileid: "70771874"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduzione ai renderer personalizzati
 
-_I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei controlli Novell. Forms. Possono essere usati per le modifiche di stile piccolo o per una personalizzazione sofisticata del layout e del comportamento specifici della piattaforma. Questo articolo fornisce un'introduzione ai renderer personalizzati e descrive il processo di creazione di un renderer personalizzato._
+_I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei controlli Xamarin.Forms. Possono essere usati per le modifiche di stile piccolo o per una personalizzazione sofisticata del layout e del comportamento specifici della piattaforma. Questo articolo fornisce un'introduzione ai renderer personalizzati e descrive il processo di creazione di un renderer personalizzato._
 
 Le [pagine, i layout e i controlli](~/xamarin-forms/user-interface/controls/index.md) Xamarin.Forms presentano un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Il rendering di ogni pagina, layout e controllo viene eseguito in modo diverso su ogni piattaforma usando una classe `Renderer`, che a sua volta crea un controllo nativo (corrispondente alla rappresentazione Xamarin.Forms), lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso.
 

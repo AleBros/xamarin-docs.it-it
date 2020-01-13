@@ -26,7 +26,7 @@ Come illustrato nell'articolo [ **modalità di blend in SkiaSharp separabili**](
 
 Per comprendere le modalità di blend non separabili, è necessario trattare i pixel di destinazione e di origine come i colori nel modello di Tonalità-saturazione-luminosità. (Luminosità è detta anche Lightness.)
 
-Il modello di colori HSL illustrato nell'articolo [ **l'integrazione con xamarin. Forms** ](../../basics/integration.md) e un programma di esempio in questo articolo consente la sperimentazione con colori HSL. È possibile creare un `SKColor` valore utilizzando i valori di tonalità, saturazione e luminosità con il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) (metodo).
+Il modello di colori HSL illustrato nell'articolo [ **l'integrazione con Xamarin.Forms** ](../../basics/integration.md) e un programma di esempio in questo articolo consente la sperimentazione con colori HSL. È possibile creare un `SKColor` valore utilizzando i valori di tonalità, saturazione e luminosità con il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) (metodo).
 
 La tonalità rappresenta la lunghezza d'onda dominante del colore. I valori di tonalità variano da 0 a 360 e passano attraverso le primarie additive e sottrattive: Il valore rosso è 0, il giallo è 60, il verde è 120, cyan è 180, il blu è 240, il magenta è 300 e il ciclo torna a rosso a 360.
 

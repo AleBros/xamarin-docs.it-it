@@ -1,6 +1,6 @@
 ---
-title: Gestione del tocco nelle app Novell. iOS
-description: Questo documento contiene collegamenti a guide che descrivono come usare touch, multitouch, movimenti e 3D touch in un'app Novell. iOS.
+title: Gestione del tocco nelle app Xamarin.iOS
+description: Questo documento contiene collegamenti a guide che descrivono come usare touch, multitouch, movimenti e 3D touch in un'app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009355"
 ---
-# <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Novell. iOS
+# <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Xamarin.iOS
 
 Analogamente ad altre piattaforme per dispositivi mobili, iOS offre diversi modi per gestire il tocco. Può supportare la funzionalità multitocco, ovvero molti punti di contatto sullo schermo, e movimenti complessi. Questa guida presenta alcuni concetti, nonché le peculiarità dell'implementazione di tocco e movimenti in iOS.
 

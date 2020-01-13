@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 27. Renderer personalizzati
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 27. Renderer personalizzati'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 27. Renderer personalizzati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
@@ -19,15 +19,15 @@ ms.locfileid: "70760497"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
-Un elemento di xamarin. Forms, ad esempio `Button` viene eseguito il rendering con un pulsante specifico della piattaforma è incapsulato in una classe denominata `ButtonRenderer`.  Di seguito è riportato il [versione di iOS `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), il [versione Android di `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)e il [versione UWP del `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs).
+Un elemento di Xamarin.Forms, ad esempio `Button` viene eseguito il rendering con un pulsante specifico della piattaforma è incapsulato in una classe denominata `ButtonRenderer`.  Di seguito è riportato il [versione di iOS `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), il [versione Android di `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)e il [versione UWP del `ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs).
 
 In questo capitolo illustra come scrivere il proprio renderer per creare viste personalizzate che eseguono il mapping agli oggetti specifici della piattaforma.
 
 ## <a name="the-complete-class-hierarchy"></a>La gerarchia di classe completo
 
-Esistono quattro assembly che contengono il codice specifico della piattaforma xamarin. Forms.
+Esistono quattro assembly che contengono il codice specifico della piattaforma Xamarin.Forms.
 È possibile visualizzare l'origine su GitHub tramite i collegamenti seguenti:
 
 - [**Xamarin.Forms.Platform** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) (piccola)
@@ -71,7 +71,7 @@ Il [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Il [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter27/HelloRenderers/HelloRenderers/HelloRenderers.UWP/HelloViewRenderer.cs) classe la **HelloRenderers.UWP** e altri progetti Windows deriva da `ViewRenderer<HelloView, TextBlock>`. Nel `OnElementChanged` sostituzione, viene creato un Windows `TextBlock` e chiama `SetNativeControl`.
 
-Tutti i `ViewRenderer` derivati contengono un `ExportRenderer` attributo a livello di assembly che associa il `HelloView` con la particolare classe `HelloViewRenderer` classe. Si tratta di modalità di individuazione di renderer nei singoli progetti di piattaforma xamarin. Forms:
+Tutti i `ViewRenderer` derivati contengono un `ExportRenderer` attributo a livello di assembly che associa il `HelloView` con la particolare classe `HelloViewRenderer` classe. Si tratta di modalità di individuazione di renderer nei singoli progetti di piattaforma Xamarin.Forms:
 
 [![Schermata triplo della visualizzazione Hello](images/ch27fg02-small.png "renderer personalizzati")](images/ch27fg02-large.png#lightbox "renderer personalizzati")
 
@@ -83,7 +83,7 @@ Il [ `EllipseView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/
 
 I renderer possono trasferire i valori delle proprietà impostare su un `View` all'oggetto nativo eseguendo l'override di `OnElementPropertyChanged` nel renderer del metodo. All'interno di questo metodo ed entro la maggior parte dei renderer, sono disponibili due proprietà:
 
-- `Element`, l'elemento di xamarin. Forms
+- `Element`, l'elemento di Xamarin.Forms
 - `Control`, la visualizzazione nativa o l'oggetto di widget o di un controllo
 
 I tipi di queste proprietà sono determinati dai parametri generici per `ViewRenderer`. In questo esempio `Element` JE typu `EllipseView`.
@@ -102,7 +102,7 @@ Il [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ## <a name="renderers-and-events"></a>I renderer ed eventi
 
-È anche possibile per i renderer indirettamente generare eventi. Il [ `StepSlider` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/StepSlider.cs) classe è simile a xamarin. Forms normale `Slider` ma consente di specificare un numero di passaggi discreti tra il `Minimum` e `Maximum` valori.
+È anche possibile per i renderer indirettamente generare eventi. Il [ `StepSlider` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/StepSlider.cs) classe è simile a Xamarin.Forms normale `Slider` ma consente di specificare un numero di passaggi discreti tra il `Minimum` e `Maximum` valori.
 
 I renderer di tre sono:
 

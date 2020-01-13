@@ -1,5 +1,5 @@
 ---
-title: Novell. Android Designer funzionalità di progettazione materiali
+title: Xamarin.Android Designer funzionalità di progettazione materiali
 description: In questo argomento vengono descritte le funzionalità di progettazione che rendono più semplice per gli sviluppatori la creazione di layout materiali conformi alla progettazione. In questa sezione viene illustrato come utilizzare la griglia Material, la tavolozza dei colori Material, la scala tipografica e l'editor del tema.
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029442"
 ---
-# <a name="xamarinandroid-designer-material-design-features"></a>Novell. Android Designer funzionalità di progettazione materiali
+# <a name="xamarinandroid-designer-material-design-features"></a>Xamarin.Android Designer funzionalità di progettazione materiali
 
 _In questo argomento vengono descritte le funzionalità di progettazione che rendono più semplice per gli sviluppatori la creazione di layout materiali conformi alla progettazione. In questa sezione viene illustrato come utilizzare la griglia Material, la tavolozza dei colori Material, la scala tipografica e l'editor del tema._
 
@@ -24,7 +24,7 @@ _In questo argomento vengono descritte le funzionalità di progettazione che ren
 
 ## <a name="overview"></a>Panoramica
 
-In Novell. Android Designer sono incluse funzionalità che semplificano la creazione di layout compatibili con la progettazione del materiale. Se non si ha familiarità con la progettazione di materiali, vedere [Introduzione alla progettazione di materiali](https://material.io/design/introduction).
+In Xamarin.Android Designer sono incluse funzionalità che semplificano la creazione di layout compatibili con la progettazione del materiale. Se non si ha familiarità con la progettazione di materiali, vedere [Introduzione alla progettazione di materiali](https://material.io/design/introduction).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -154,8 +154,8 @@ Nell'esempio seguente è stato premuto <kbd>CTRL + S</kbd> , in modo che le modi
 
 ## <a name="summary"></a>Riepilogo
 
-Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Novell. Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione del materiale e come usare l'editor di temi per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali.
-Per ulteriori informazioni sul supporto di Novell. Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
+Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Xamarin.Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione del materiale e come usare l'editor di temi per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali.
+Per ulteriori informazioni sul supporto di Xamarin.Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -317,7 +317,7 @@ La modifica del colore nella finestra di progettazione è stata apportata, ma qu
 
 ## <a name="summary"></a>Riepilogo
 
-Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Novell. Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione materiale, come utilizzare la tavolozza dei colori di progettazione materiale per modificare le proprietà dei colori e come utilizzare il selettore di scala tipografico per configurare le proprietà di testo. È stato inoltre illustrato come utilizzare l'editor del tema per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali. Per ulteriori informazioni sul supporto di Novell. Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
+Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Xamarin.Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione materiale, come utilizzare la tavolozza dei colori di progettazione materiale per modificare le proprietà dei colori e come utilizzare il selettore di scala tipografico per configurare le proprietà di testo. È stato inoltre illustrato come utilizzare l'editor del tema per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali. Per ulteriori informazioni sul supporto di Xamarin.Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
 
 -----
 

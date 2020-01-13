@@ -443,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-Il `OnAppearing` sostituzione definisce tre xamarin. Forms `Animation` oggetti da animare il `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campi con ritmi diversi. Si noti che i periodi di queste animazioni vengono impostati su un numero primo numeri (5 secondi, 7 secondi e 11 secondi) in modo che solo la combinazione globale si ripete ogni 385 secondi o più di 10 minuti:
+Il `OnAppearing` sostituzione definisce tre Xamarin.Forms `Animation` oggetti da animare il `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campi con ritmi diversi. Si noti che i periodi di queste animazioni vengono impostati su un numero primo numeri (5 secondi, 7 secondi e 11 secondi) in modo che solo la combinazione globale si ripete ogni 385 secondi o più di 10 minuti:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage

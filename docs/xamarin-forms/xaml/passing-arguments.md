@@ -33,7 +33,7 @@ Inoltre, il `x:TypeArguments` attributo può essere utilizzato per specificare g
 
 ## <a name="passing-constructor-arguments"></a>Il passaggio di argomenti del costruttore
 
-Argomenti possono essere passati a un costruttore non predefinito usando la `x:Arguments` attributo. Ogni argomento di costruttore deve essere delimitato all'interno di un elemento XML che rappresenta il tipo dell'argomento. Xamarin. Forms supporta i seguenti elementi per i tipi di base:
+Argomenti possono essere passati a un costruttore non predefinito usando la `x:Arguments` attributo. Ogni argomento di costruttore deve essere delimitato all'interno di un elemento XML che rappresenta il tipo dell'argomento. Xamarin.Forms supporta i seguenti elementi per i tipi di base:
 
 - `x:Object`
 - `x:Boolean`

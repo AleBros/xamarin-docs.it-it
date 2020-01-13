@@ -1,6 +1,6 @@
 ---
-title: Visualizzare le transizioni del controller in Novell. iOS
-description: Questo documento descrive come personalizzare le transizioni animate tra i controller di visualizzazione nelle applicazioni Novell. iOS.
+title: Visualizzare le transizioni del controller in Xamarin.iOS
+description: Questo documento descrive come personalizzare le transizioni animate tra i controller di visualizzazione nelle applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002400"
 ---
-# <a name="view-controller-transitions-in-xamarinios"></a>Visualizzare le transizioni del controller in Novell. iOS
+# <a name="view-controller-transitions-in-xamarinios"></a>Visualizzare le transizioni del controller in Xamarin.iOS
 
 UIKit aggiunge il supporto per la personalizzazione della transizione animata che si verifica quando si presentano i controller di visualizzazione. Questo supporto è incluso nei controller incorporati, nonché in qualsiasi controller personalizzato che eredita direttamente da `UIViewController`. Inoltre, `UICollectionViewController` sfrutta i vantaggi della personalizzazione della transizione del controller per sfruttare le transizioni animate nei layout delle visualizzazioni di raccolta.
 

@@ -1,6 +1,6 @@
 ---
-title: file con estensione XIB in Novell. Mac
-description: Questo articolo illustra l'uso dei file con estensione XIB creati nella Interface Builder di Xcode per creare e gestire interfacce utente per un'applicazione Novell. Mac.
+title: file con estensione XIB in Xamarin.Mac
+description: Questo articolo illustra l'uso dei file con estensione XIB creati nella Interface Builder di Xcode per creare e gestire interfacce utente per un'applicazione Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
@@ -14,28 +14,28 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021776"
 ---
-# <a name="xib-files-in-xamarinmac"></a>file con estensione XIB in Novell. Mac
+# <a name="xib-files-in-xamarinmac"></a>file con estensione XIB in Xamarin.Mac
 
-_Questo articolo illustra l'uso dei file con estensione XIB creati nella Interface Builder di Xcode per creare e gestire interfacce utente per un'applicazione Novell. Mac._
+_Questo articolo illustra l'uso dei file con estensione XIB creati nella Interface Builder di Xcode per creare e gestire interfacce utente per un'applicazione Xamarin.Mac._
 
 > [!NOTE]
-> Il modo migliore per creare un'interfaccia utente per un'app Novell. Mac è con gli storyboard. Questa documentazione è stata lasciata per motivi cronologici e per l'utilizzo di progetti Novell. Mac precedenti. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard](~/mac/platform/storyboards/index.md) .
+> Il modo migliore per creare un'interfaccia utente per un'app Xamarin.Mac è con gli storyboard. Questa documentazione è stata lasciata per motivi cronologici e per l'utilizzo di progetti Xamarin.Mac precedenti. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard](~/mac/platform/storyboards/index.md) .
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi elementi e strumenti dell'interfaccia utente che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le interfacce utente oppure, facoltativamente, crearle direttamente C# nel codice.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi elementi e strumenti dell'interfaccia utente che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le interfacce utente oppure, facoltativamente, crearle direttamente C# nel codice.
 
 Un file con estensione XIB viene usato da macOS per definire gli elementi dell'interfaccia utente dell'applicazione (ad esempio menu, finestre, visualizzazioni, etichette, campi di testo) che vengono creati e gestiti graficamente nel Interface Builder di Xcode.
 
 [![Esempio di app in esecuzione](xib-images/intro01.png "Esempio di app in esecuzione")](xib-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso dei file con estensione XIB in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , che illustra i concetti chiave e le tecniche che verranno usati in questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso dei file con estensione XIB in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , che illustra i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introduzione a Xcode e Interface Builder
 
-Come parte di Xcode, Apple ha creato uno strumento denominato Interface Builder, che consente di creare visivamente l'interfaccia utente in una finestra di progettazione. Novell. Mac si integra perfettamente con Interface Builder, consentendo di creare l'interfaccia utente con gli stessi strumenti che gli utenti di Objective-C.
+Come parte di Xcode, Apple ha creato uno strumento denominato Interface Builder, che consente di creare visivamente l'interfaccia utente in una finestra di progettazione. Xamarin.Mac si integra perfettamente con Interface Builder, consentendo di creare l'interfaccia utente con gli stessi strumenti che gli utenti di Objective-C.
 
 ### <a name="components-of-xcode"></a>Componenti di Xcode
 
@@ -43,11 +43,11 @@ Quando si apre un file con estensione XIB in Xcode da Visual Studio per Mac, que
 
 [![Componenti dell'interfaccia utente di Xcode](xib-images/xcode03.png "Componenti dell'interfaccia utente di Xcode")](xib-images/xcode03-large.png#lightbox)
 
-Di seguito viene illustrato il funzionamento di ognuna di queste sezioni di Xcode e il modo in cui usarle per creare l'interfaccia per l'applicazione Novell. Mac.
+Di seguito viene illustrato il funzionamento di ognuna di queste sezioni di Xcode e il modo in cui usarle per creare l'interfaccia per l'applicazione Xamarin.Mac.
 
 #### <a name="project-navigation"></a>Esplorazione del progetto
 
-Quando si apre un file con estensione XIB per la modifica in Xcode, Visual Studio per Mac crea un file di progetto Xcode in background per comunicare le modifiche tra e Xcode. Successivamente, quando si torna a Visual Studio per Mac da Xcode, tutte le modifiche apportate a questo progetto vengono sincronizzate con il progetto Novell. Mac per Visual Studio per Mac.
+Quando si apre un file con estensione XIB per la modifica in Xcode, Visual Studio per Mac crea un file di progetto Xcode in background per comunicare le modifiche tra e Xcode. Successivamente, quando si torna a Visual Studio per Mac da Xcode, tutte le modifiche apportate a questo progetto vengono sincronizzate con il progetto Xamarin.Mac per Visual Studio per Mac.
 
 La sezione **esplorazione del progetto** consente di spostarsi tra tutti i file che compongono questo progetto _shim_ Xcode. In genere, saranno interessati solo i file con estensione XIB in questo elenco, ad esempio **MainMenu. xib** e **MainWindow. xib**.
 
@@ -90,11 +90,11 @@ Ora che si ha familiarità con l'IDE di Xcode e Interface Builder, è possibile 
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Creazione e gestione di Windows in Xcode
 
-Il metodo preferito per la creazione dell'interfaccia utente di un'app Novell. Mac è costituito dagli storyboard. per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard](~/mac/platform/storyboards/index.md) . di conseguenza, tutti i nuovi progetti avviati in Novell. Mac utilizzeranno gli storyboard predefinita.
+Il metodo preferito per la creazione dell'interfaccia utente di un'app Xamarin.Mac è costituito dagli storyboard. per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard](~/mac/platform/storyboards/index.md) . di conseguenza, tutti i nuovi progetti avviati in Xamarin.Mac utilizzeranno gli storyboard predefinita.
 
 Per passare all'utilizzo di un'interfaccia utente basata su XIB, eseguire le operazioni seguenti:
 
-1. Aprire Visual Studio per Mac e avviare un nuovo progetto Novell. Mac.
+1. Aprire Visual Studio per Mac e avviare un nuovo progetto Xamarin.Mac.
 2. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file...**
 3. Selezionare **Mac**  > **controller Windows**:
 
@@ -171,7 +171,7 @@ Verrà aperta la progettazione della finestra nella Interface Builder di Xcode:
 
 ### <a name="standard-window-workflow"></a>Flusso di lavoro finestra standard
 
-Per qualsiasi finestra creata e utilizzata nell'applicazione Novell. Mac, il processo è fondamentalmente lo stesso:
+Per qualsiasi finestra creata e utilizzata nell'applicazione Xamarin.Mac, il processo è fondamentalmente lo stesso:
 
 1. Per le nuove finestre che non sono aggiunte automaticamente al progetto, aggiungere una nuova definizione di finestra al progetto.
 2. Fare doppio clic sul file. xib per aprire la finestra progettazione per la modifica nella Interface Builder di Xcode.
@@ -229,7 +229,7 @@ Se si osserva la sezione **gerarchia dell'interfaccia** , si noti come vengono v
 
 Da qui è possibile selezionare gli elementi da modificare o trascinare per riordinare gli elementi dell'interfaccia utente, se necessario. Se, ad esempio, un elemento dell'interfaccia utente è stato coperto da un altro elemento, è possibile trascinarlo nella parte inferiore dell'elenco per impostarlo come elemento in primo piano nella finestra.
 
-Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Novell. Mac, consultare la documentazione di [Windows](~/mac/user-interface/window.md) .
+Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Xamarin.Mac, consultare la documentazione di [Windows](~/mac/user-interface/window.md) .
 
 ## <a name="exposing-ui-elements-to-c-code"></a>Esposizione di elementi dell'interfaccia C# utente al codice
 
@@ -237,7 +237,7 @@ Una volta terminato di definire l'aspetto dell'interfaccia utente in Interface B
 
 ### <a name="setting-a-custom-main-window-controller"></a>Impostazione di un controller della finestra principale personalizzato
 
-Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Novell. Mac dovrà usare un controller di finestra personalizzato.
+Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Xamarin.Mac dovrà usare un controller di finestra personalizzato.
 
 Procedere come descritto di seguito:
 
@@ -264,11 +264,11 @@ Che cosa sono gli Outlet e le azioni? Nella programmazione tradizione dell'inter
 
 In Xcode gli Outlet e le azioni vengono aggiunti direttamente nel codice tramite il *trascinamento del controllo*. In particolare, ciò significa che per creare un outlet o un'azione, è possibile scegliere l'elemento di controllo che si vuole aggiungere a un punto di uscita o un'azione, tenendo premuto il pulsante di **controllo** sulla tastiera e trascinando il controllo direttamente nel codice.
 
-Per gli sviluppatori Novell. Mac, ciò significa che si trascinano i file stub di Objective-C che C# corrispondono al file in cui si vuole creare il punto di uscita o l'azione. Visual Studio per Mac creato un file denominato **MainWindow. h** come parte del progetto shim Xcode generato per usare il Interface Builder:
+Per gli sviluppatori Xamarin.Mac, ciò significa che si trascinano i file stub di Objective-C che C# corrispondono al file in cui si vuole creare il punto di uscita o l'azione. Visual Studio per Mac creato un file denominato **MainWindow. h** come parte del progetto shim Xcode generato per usare il Interface Builder:
 
 [![Esempio di un file con estensione h in Xcode](xib-images/xcode16.png "Esempio di un file con estensione h in Xcode")](xib-images/xcode16-large.png#lightbox)
 
-Questo file stub. h rispecchia il **MainWindow.designer.cs** che viene aggiunto automaticamente a un progetto Novell. Mac quando viene creata una nuova `NSWindow`. Questo file verrà usato per sincronizzare le modifiche apportate da Interface Builder ed è il punto in cui verranno creati gli Outlet e le azioni in modo che C# gli elementi dell'interfaccia utente vengano esposti al codice.
+Questo file stub. h rispecchia il **MainWindow.designer.cs** che viene aggiunto automaticamente a un progetto Xamarin.Mac quando viene creata una nuova `NSWindow`. Questo file verrà usato per sincronizzare le modifiche apportate da Interface Builder ed è il punto in cui verranno creati gli Outlet e le azioni in modo che C# gli elementi dell'interfaccia utente vengano esposti al codice.
 
 #### <a name="adding-an-outlet"></a>Aggiunta di un Outlet
 
@@ -387,7 +387,7 @@ Per ulteriori informazioni sull'utilizzo dei menu, consultare la documentazione 
 
 ## <a name="synchronizing-changes-with-xcode"></a>Sincronizzazione delle modifiche con Xcode
 
-Quando si torna al Visual Studio per Mac da Xcode, tutte le modifiche apportate in Xcode verranno sincronizzate automaticamente con il progetto Novell. Mac.
+Quando si torna al Visual Studio per Mac da Xcode, tutte le modifiche apportate in Xcode verranno sincronizzate automaticamente con il progetto Xamarin.Mac.
 
 Se si seleziona **MainWindow.designer.cs** nel **riquadro della soluzione** sarà possibile vedere come l'Outlet e l'azione sono stati collegati nel C# codice:
 
@@ -415,16 +415,16 @@ Come si può notare, Visual Studio per Mac resta in attesa delle modifiche appor
 Normalmente non sarà mai necessario aprire il **MainWindow.designer.cs** , ma è stato presentato solo a scopo didattico.
 
 > [!IMPORTANT]
-> Nella maggior parte dei casi, Visual Studio per Mac visualizzerà automaticamente tutte le modifiche apportate in Xcode e le sincronizza con il progetto Novell. Mac. Se la sincronizzazione non viene eseguita automaticamente, tornare a Xcode e quindi di nuovo in Visual Studio per Mac. Questa operazione avvia solitamente un ciclo di sincronizzazione.
+> Nella maggior parte dei casi, Visual Studio per Mac visualizzerà automaticamente tutte le modifiche apportate in Xcode e le sincronizza con il progetto Xamarin.Mac. Se la sincronizzazione non viene eseguita automaticamente, tornare a Xcode e quindi di nuovo in Visual Studio per Mac. Questa operazione avvia solitamente un ciclo di sincronizzazione.
 
 ## <a name="adding-a-new-window-to-a-project"></a>Aggiunta di una nuova finestra a un progetto
 
-A parte la finestra del documento principale, un'applicazione Novell. Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo. Quando si aggiunge una nuova finestra al progetto, è consigliabile usare sempre la **finestra Cocoa con** l'opzione Controller, in quanto ciò rende più semplice il processo di caricamento della finestra dal file con estensione XIB.
+A parte la finestra del documento principale, un'applicazione Xamarin.Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo. Quando si aggiunge una nuova finestra al progetto, è consigliabile usare sempre la **finestra Cocoa con** l'opzione Controller, in quanto ciò rende più semplice il processo di caricamento della finestra dal file con estensione XIB.
 
 Per aggiungere una nuova finestra, procedere come segue:
 
 1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file..** .
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **finestra Cocoa con controller**:
+2. Nella finestra di dialogo nuovo file selezionare **Xamarin.Mac**  > **finestra Cocoa con controller**:
 
     ![Aggiunta di un nuovo controller di finestra](xib-images/new01.png "Aggiunta di un nuovo controller di finestra")
 3. Immettere `PreferencesWindow` in **Nome** e fare clic sul pulsante **Nuovo**.
@@ -453,7 +453,7 @@ Se si esegue il codice e si selezionano le **Preferenze...** dal **menu applicaz
 
 ![Esecuzione dell'app di esempio](xib-images/new04.png "Esecuzione dell'app di esempio")
 
-Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Novell. Mac, consultare la documentazione di [Windows](~/mac/user-interface/window.md) .
+Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Xamarin.Mac, consultare la documentazione di [Windows](~/mac/user-interface/window.md) .
 
 ## <a name="adding-a-new-view-to-a-project"></a>Aggiunta di una nuova visualizzazione a un progetto
 
@@ -464,7 +464,7 @@ Quando si aggiunge una nuova visualizzazione al progetto, è consigliabile usare
 Per aggiungere una nuova vista, procedere come segue:
 
 1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file..** .
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **visualizzazione Cocoa con controller**:
+2. Nella finestra di dialogo nuovo file selezionare **Xamarin.Mac**  > **visualizzazione Cocoa con controller**:
 
     ![Aggiunta di una nuova visualizzazione](xib-images/view01.png "Aggiunta di una nuova visualizzazione")
 3. Immettere `SubviewTable` in **Nome** e fare clic sul pulsante **Nuovo**.
@@ -561,11 +561,11 @@ In questo modo viene creata una nuova istanza del controller di visualizzazione 
 
 [![Esecuzione dell'app di esempio](xib-images/view04.png "Esecuzione dell'app di esempio")](xib-images/view04-large.png#lightbox)
 
-Per altre informazioni sull'uso di Windows in un'applicazione Novell. Mac, vedere la documentazione di [Windows](~/mac/user-interface/window.md) e dei [dialoghi](~/mac/user-interface/dialog.md) .
+Per altre informazioni sull'uso di Windows in un'applicazione Xamarin.Mac, vedere la documentazione di [Windows](~/mac/user-interface/window.md) e dei [dialoghi](~/mac/user-interface/dialog.md) .
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso dei file con estensione XIB in un'applicazione Novell. Mac. Sono stati osservati i diversi tipi e usi dei file con estensione XIB per creare l'interfaccia utente dell'applicazione, come creare e gestire i file XIB nel Interface Builder di Xcode e come usare i file con estensione C# XIB nel codice.
+Questo articolo ha esaminato in dettaglio l'uso dei file con estensione XIB in un'applicazione Xamarin.Mac. Sono stati osservati i diversi tipi e usi dei file con estensione XIB per creare l'interfaccia utente dell'applicazione, come creare e gestire i file XIB nel Interface Builder di Xcode e come usare i file con estensione C# XIB nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

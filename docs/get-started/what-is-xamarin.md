@@ -49,7 +49,7 @@ Il diagramma mostra l'architettura complessiva di un'applicazione Xamarin multip
 
 Xamarin si basa su **mono**, una versione open source della .NET Framework basata sugli standard ECMA di .NET. Mono è esistito per quasi tutto il tempo che il .NET Framework e viene eseguito sulla maggior parte delle piattaforme, tra cui Linux, UNIX, FreeBSD e macOS. L'ambiente di esecuzione mono gestisce automaticamente le attività quali l'allocazione della memoria, la Garbage Collection e l'interoperabilità con le piattaforme sottostanti.
 
-Per ulteriori informazioni sull'architettura specifica della piattaforma, vedere [Xamarin. Android](#xamarinandroid) e [Xamarin. iOS](#xamarinios).
+Per ulteriori informazioni sull'architettura specifica della piattaforma, vedere [Xamarin.Android](#xamarinandroid) e [Xamarin.iOS](#xamarinios).
 
 ### <a name="added-features"></a>Funzionalità aggiunte
 
@@ -60,27 +60,27 @@ Xamarin combina le capacità delle piattaforme native e aggiunge numerose funzio
 1. **Costrutti di linguaggio moderni** : le applicazioni Xamarin sono C#scritte in, un linguaggio moderno che include miglioramenti significativi rispetto a Objective-C e Java, ad esempio le funzionalità del linguaggio dinamico, i costrutti funzionali quali le espressioni lambda, LINQ, la programmazione parallela, i generics e altro ancora.
 1. **Libreria di classi di base (BCL) affidabile** : le applicazioni Xamarin usano .NET BCL, una vasta raccolta di classi con funzionalità complete e semplificate, ad esempio potenti funzionalità di XML, database, serializzazione, i/o, stringhe e supporto di rete e altro ancora. Il C# codice esistente può essere compilato per l'uso in un'app, che fornisce l'accesso a migliaia di librerie che aggiungono funzionalità oltre a BCL.
 1. **Ambiente di sviluppo integrato (IDE) moderno** : Xamarin usa Visual Studio, un IDE moderno che include funzionalità quali il completamento automatico del codice, un sofisticato sistema di gestione di progetti e soluzioni, una libreria di modelli di progetto completa, il controllo del codice sorgente integrato e altro ancora.
-1. **Supporto multipiattaforma per dispositivi mobili** : Xamarin offre un supporto multipiattaforma sofisticato per le tre principali piattaforme di iOS, Android e Windows. Le applicazioni possono essere scritte in modo da condividere fino al 90% del codice e Xamarin. Essentials offre un'API unificata per accedere alle risorse comuni su tutte e tre le piattaforme. Il codice condiviso può ridurre significativamente i costi di sviluppo e i tempi di immissione sul mercato per gli sviluppatori di dispositivi mobili.
+1. **Supporto multipiattaforma per dispositivi mobili** : Xamarin offre un supporto multipiattaforma sofisticato per le tre principali piattaforme di iOS, Android e Windows. Le applicazioni possono essere scritte in modo da condividere fino al 90% del codice e Xamarin.Essentials offre un'API unificata per accedere alle risorse comuni su tutte e tre le piattaforme. Il codice condiviso può ridurre significativamente i costi di sviluppo e i tempi di immissione sul mercato per gli sviluppatori di dispositivi mobili.
 
-### <a name="opno-locxamarinandroid"></a>Xamarin. Android
+### <a name="opno-locxamarinandroid"></a>Xamarin.Android
 
 [![[! OP. NO-LOC (Xamarin)]. Diagramma dell'architettura Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
-Xamarin. Le applicazioni Android vengono C# compilate da in **linguaggio intermedio (il)** , che viene quindi compilato **JIT** in un assembly nativo all'avvio dell'applicazione. Xamarin. Le applicazioni Android vengono eseguite all'interno dell'ambiente di esecuzione mono, affiancate alla macchina virtuale di Android Runtime (ART). Xamarin fornisce associazioni .NET agli spazi dei nomi Android. * e Java. *. L'ambiente di esecuzione mono chiama questi spazi dei nomi tramite **Managed Wrappers (MCW)** e fornisce **Android Callable Wrapper (ACW)** all'arte, consentendo a entrambi gli ambienti di richiamare codice tra loro.
+Xamarin.Le applicazioni Android vengono C# compilate da in **linguaggio intermedio (il)** , che viene quindi compilato **JIT** in un assembly nativo all'avvio dell'applicazione. Xamarin.Le applicazioni Android vengono eseguite all'interno dell'ambiente di esecuzione mono, affiancate alla macchina virtuale di Android Runtime (ART). Xamarin fornisce associazioni .NET agli spazi dei nomi Android. * e Java. *. L'ambiente di esecuzione mono chiama questi spazi dei nomi tramite **Managed Wrappers (MCW)** e fornisce **Android Callable Wrapper (ACW)** all'arte, consentendo a entrambi gli ambienti di richiamare codice tra loro.
 
-Per ulteriori informazioni, vedere [Xamarin. Architettura Android](~/android/internals/architecture.md).
+Per ulteriori informazioni, vedere [Xamarin.Architettura Android](~/android/internals/architecture.md).
 
-### <a name="opno-locxamarinios"></a>Xamarin. iOS
+### <a name="opno-locxamarinios"></a>Xamarin.iOS
 
 [![[! OP. Diagramma dell'architettura di NO-LOC (Xamarin)]. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
-le applicazioni Xamarin. iOS sono completamente precompilate in base al **tempo (AOT)** da C# nel codice dell'assembly ARM nativo. Xamarin usa i **selettori** per esporre Objective-c C# ai **registrar** e gestiti per C# esporre il codice gestito a Objective-c. I selettori e i registrar sono collettivamente denominati "binding" e consentono C# la comunicazione tra Objective-C e.
+le applicazioni Xamarin.iOS sono completamente precompilate in base al **tempo (AOT)** da C# nel codice dell'assembly ARM nativo. Xamarin usa i **selettori** per esporre Objective-c C# ai **registrar** e gestiti per C# esporre il codice gestito a Objective-c. I selettori e i registrar sono collettivamente denominati "binding" e consentono C# la comunicazione tra Objective-C e.
 
-Per altre informazioni, vedere [architetturaXamarin. iOS](~/ios/internals/architecture.md).
+Per altre informazioni, vedere [architetturaXamarin.iOS](~/ios/internals/architecture.md).
 
-### <a name="opno-locxamarinessentials"></a>Xamarin. Essentials
+### <a name="opno-locxamarinessentials"></a>Xamarin.Essentials
 
-Xamarin. Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin. Essentials è un'astrazione che semplifica il processo di accesso alle funzionalità native. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin. I concetti di base includono:
+Xamarin.Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin.Essentials è un'astrazione che semplifica il processo di accesso alle funzionalità native. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin.I concetti di base includono:
 
 - Informazioni sul dispositivo
 - File system
@@ -89,11 +89,11 @@ Xamarin. Essentials è una libreria che fornisce API multipiattaforma per le fun
 - Sintesi vocale
 - Blocco schermo
 
-Per ulteriori informazioni, vedere [Xamarin. Concetti](~/essentials/index.md)di base.
+Per ulteriori informazioni, vedere [Xamarin.Concetti](~/essentials/index.md)di base.
 
-### <a name="opno-locxamarinforms"></a>Xamarin. Form
+### <a name="opno-locxamarinforms"></a>Xamarin.Form
 
-Xamarin. Forms è un Framework dell'interfaccia utente open source. Xamarin. Moduli consente agli sviluppatori di compilare applicazioni iOS, Android e Windows da una singola codebase condivisa. Xamarin. I moduli consentono agli sviluppatori di creare interfacce utente in XAML con code- C#behind in. Queste interfacce utente vengono visualizzate come controlli nativi performanti in ogni piattaforma. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin. I moduli includono:
+Xamarin.Forms è un Framework dell'interfaccia utente open source. Xamarin.Moduli consente agli sviluppatori di compilare applicazioni iOS, Android e Windows da una singola codebase condivisa. Xamarin.I moduli consentono agli sviluppatori di creare interfacce utente in XAML con code- C#behind in. Queste interfacce utente vengono visualizzate come controlli nativi performanti in ogni piattaforma. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin.I moduli includono:
 
 - Linguaggio dell'interfaccia utente XAML
 - Data binding
@@ -101,16 +101,16 @@ Xamarin. Forms è un Framework dell'interfaccia utente open source. Xamarin. Mod
 - Effetti
 - Stile
 
-Per ulteriori informazioni, vedere [Xamarin. Moduli](~/xamarin-forms/index.yml).
+Per ulteriori informazioni, vedere [Xamarin.Moduli](~/xamarin-forms/index.yml).
 
 ## <a name="get-started"></a>Attività iniziali
 
 Le guide seguenti consentiranno di compilare la prima app usando Xamarin:
 
-- [Inizia a usare Xamarin. Form](~/xamarin-forms/index.yml)
-- [Inizia a usare Xamarin. Android](~/android/index.yml)
-- [Introduzione a Xamarin. iOS](~/ios/index.yml)
-- [Inizia a usare Xamarin. Mac](~/mac/index.yml)
+- [Inizia a usare Xamarin.Form](~/xamarin-forms/index.yml)
+- [Inizia a usare Xamarin.Android](~/android/index.yml)
+- [Introduzione a Xamarin.iOS](~/ios/index.yml)
+- [Inizia a usare Xamarin.Mac](~/mac/index.yml)
 
 ## <a name="related-video"></a>Video correlati
 

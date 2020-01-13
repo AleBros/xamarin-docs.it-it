@@ -1,6 +1,6 @@
 ---
-title: Popolamento di una tabella con i dati in Novell. iOS
-description: Questo documento descrive come popolare una tabella con i dati in un'applicazione Novell. iOS. Vengono illustrati UITableViewSource, il riutilizzo delle celle, l'aggiunta di un indice e le intestazioni e i piè di pagina.
+title: Popolamento di una tabella con i dati in Xamarin.iOS
+description: Questo documento descrive come popolare una tabella con i dati in un'applicazione Xamarin.iOS. Vengono illustrati UITableViewSource, il riutilizzo delle celle, l'aggiunta di un indice e le intestazioni e i piè di pagina.
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/27/2019
 ms.locfileid: "75500328"
 ---
-# <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Novell. iOS
+# <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Xamarin.iOS
 
 Per aggiungere righe a una `UITableView` è necessario implementare una sottoclasse `UITableViewSource` ed eseguire l'override dei metodi che la visualizzazione tabella chiama per popolare.
 

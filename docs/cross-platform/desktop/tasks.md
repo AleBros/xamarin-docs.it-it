@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0B45BF03-145B-43B2-AFD9-5A0EAB1E63A9
 title: Confronto tra attività comuni
-description: Questo documento illustra come eseguire diverse attività comuni in WPF e in Novell. Forms. Esamina i pulsanti, i timer, le dimensioni del carattere, l'apertura di un URI e la visualizzazione di un foglio di azione.
+description: Questo documento illustra come eseguire diverse attività comuni in WPF e in Xamarin.Forms. Esamina i pulsanti, i timer, le dimensioni del carattere, l'apertura di un URI e la visualizzazione di un foglio di azione.
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017

@@ -57,13 +57,13 @@ Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di 
 
 ## <a name="videos"></a>Video
 
-Vedere questi collegamenti video che illustrano Novell. Android con supporto di utilizzo:
+Vedere questi collegamenti video che illustrano Xamarin.Android con supporto di utilizzo:
 
 |Descrizione|Schermata|
 |--- |--- |
 |[Android l e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android l Developer Preview ha introdotto una pletora di nuove API che consentono agli sviluppatori di sfruttare i vantaggi offerti da, tra cui progettazione di materiali, notifiche e nuove animazioni, per citarne alcuni.|![Screenshot video della presentazione](images/video-android-l.png)|
 |[è a mio occhio: Google Glass e Android Wear&ndash;l'informatica indossabile potrebbe sembrare qualcosa del futuro (o un episodio del gadget di controllo), ma molte persone hanno già adottato il futuro. C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#gli sviluppatori conoscono questo e hanno già gli strumenti e le competenze per sfruttare la potenza dei dispositivi indossabili (dall'evoluzione 2014).|![Screenshot video della presentazione](images/video-eyes-ears.png)|
-|[Novità di Novell. android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? da evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
+|[Novità di Xamarin.android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? da evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
 
 <!--
 

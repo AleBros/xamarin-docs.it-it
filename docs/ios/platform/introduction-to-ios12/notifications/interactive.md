@@ -1,6 +1,6 @@
 ---
-title: Interfacce utente di notifica interattiva in Novell. iOS
-description: Con iOS 12, è possibile creare interfacce utente interattive per le notifiche locali e remote. Questa guida descrive come usare queste funzionalità con Novell. iOS.
+title: Interfacce utente di notifica interattiva in Xamarin.iOS
+description: Con iOS 12, è possibile creare interfacce utente interattive per le notifiche locali e remote. Questa guida descrive come usare queste funzionalità con Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031934"
 ---
-# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Interfacce utente di notifica interattiva in Novell. iOS
+# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Interfacce utente di notifica interattiva in Xamarin.iOS
 
 Le [estensioni di contenuto delle notifiche](~/ios/platform/user-notifications/advanced-user-notifications.md), introdotte in iOS 10, consentono di creare interfacce utente personalizzate per le notifiche. A partire da iOS 12, le interfacce utente di notifica possono contenere elementi interattivi quali pulsanti e dispositivi di scorrimento.
 
@@ -118,7 +118,7 @@ Si notino le funzionalità seguenti:
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [App di esempio-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
-- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
+- [Framework delle notifiche utente in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Procedure consigliate e novità delle notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)

@@ -18,14 +18,14 @@ ms.locfileid: "75728343"
 # <a name="xamarin-live-reload-preview"></a>Ricaricamento in tempo reale di Novell (anteprima)
 
 > [!NOTE]
-> L'anteprima del ricaricamento in tempo reale di Novell è terminata e vogliamo ringraziare tutti i commenti e i commenti. Per altre informazioni sulle nuove funzionalità di produttività che stiamo lavorando per Novell. Forms, leggi la nostra [Roadmap](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) per Visual Studio 2019. Questa estensione rimarrà disponibile per Visual Studio 2017, ma non riceverà aggiornamenti futuri.
+> L'anteprima del ricaricamento in tempo reale di Novell è terminata e vogliamo ringraziare tutti i commenti e i commenti. Per altre informazioni sulle nuove funzionalità di produttività che stiamo lavorando per Xamarin.Forms, leggi la nostra [Roadmap](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) per Visual Studio 2019. Questa estensione rimarrà disponibile per Visual Studio 2017, ma non riceverà aggiornamenti futuri.
 
 Il ricaricamento in tempo reale di Novell consente di **apportare modifiche al codice XAML e visualizzarne il riflesso in tempo reale, senza richiedere un'altra compilazione e distribuzione**. Tutte le modifiche apportate al codice XAML verranno ridistribuite al salvataggio e riflesse nella destinazione di distribuzione.
 
 ## <a name="requirements"></a>Requisiti di
 
 * [Visual Studio 2017 versione 15,7 o successiva](https://visualstudio.microsoft.com/vs/) con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
-* [Novell. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/).
+* [Xamarin.Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Guida introduttiva
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. installare il ricaricamento in tempo reale di Novell dalla Visual Studio Marketplace
@@ -42,13 +42,13 @@ In alternativa, è possibile cercarlo nella scheda **online** della finestra di 
 
 L'aggiunta del ricaricamento in tempo reale alle app per dispositivi mobili esistenti può essere eseguita in tre passaggi:
 
-1. Assicurarsi che tutti i progetti siano aggiornati per l'uso di [Novell. Forms 3.0.0 o superiore](https://www.nuget.org/packages/Xamarin.Forms/) o superiore.
+1. Assicurarsi che tutti i progetti siano aggiornati per l'uso di [Xamarin.Forms 3.0.0 o superiore](https://www.nuget.org/packages/Xamarin.Forms/) o superiore.
 
-2. Aggiungere il pacchetto NuGet **Novell. LiveReload** :
+2. Aggiungere il pacchetto NuGet **Xamarin.LiveReload** :
 
-    a. **.NET standard** : installare NuGet **Novell. LiveReload** nella libreria .NET standard 2,0. Questa operazione non deve essere installata nei progetti della piattaforma. Verificare che l' **origine del pacchetto** sia impostata su **tutti**.
+    a. **.NET standard** : installare NuGet **Xamarin.LiveReload** nella libreria .NET standard 2,0. Questa operazione non deve essere installata nei progetti della piattaforma. Verificare che l' **origine del pacchetto** sia impostata su **tutti**.
     
-    b. **Progetti condivisi** : installare **Novell. LiveReload** NuGet in tutti i progetti di piattaforma, ad esempio Android, iOS, UWP e così via. Verificare che l' **origine del pacchetto** sia impostata su **tutti**.
+    b. **Progetti condivisi** : installare **Xamarin.LiveReload** NuGet in tutti i progetti di piattaforma, ad esempio Android, iOS, UWP e così via. Verificare che l' **origine del pacchetto** sia impostata su **tutti**.
 
     [![aggiungere Novell Live ricarica NuGet con gestione pacchetti NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
@@ -93,7 +93,7 @@ Il ricaricamento in tempo reale applica solo le modifiche apportate a XAML o CSS
 
 ### <a name="what-platforms-are-supported"></a>Quali piattaforme sono supportate? 
 
-Il ricaricamento in tempo reale funziona su qualsiasi piattaforma supportata da Novell. Forms, inclusi Android, iOS e UWP.
+Il ricaricamento in tempo reale funziona su qualsiasi piattaforma supportata da Xamarin.Forms, inclusi Android, iOS e UWP.
 
 ### <a name="does-this-work-on-emulators-simulators-and-physical-devices"></a>Funziona su emulatori, simulatori e dispositivi fisici? 
 
@@ -125,7 +125,7 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 
 ### <a name="error-codes"></a>Codici di errore
 
-* **XLR001**: *il progetto corrente fa riferimento alla versione ' [versione]' del pacchetto NuGet ' Novell. LiveReload ', ma l'estensione per il ricaricamento in tempo reale di Novell richiede la versione ' [Version]'.*
+* **XLR001**: *il progetto corrente fa riferimento alla versione ' [versione]' del pacchetto NuGet ' Xamarin.LiveReload ', ma l'estensione per il ricaricamento in tempo reale di Novell richiede la versione ' [Version]'.*
 
   Per consentire l'iterazione e l'evoluzione rapide della funzionalità di ricaricamento in tempo reale, il pacchetto NuGet e l'estensione di Visual Studio devono corrispondere esattamente. Aggiornare il pacchetto NuGet con la stessa versione dell'estensione installata.
 
@@ -137,7 +137,7 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 
   Si è provato a compilare un progetto che fa riferimento al pacchetto NuGet di ricaricamento in tempo reale, ma l'estensione visiva non è installata.  
 
-* *Eccezione durante il caricamento degli assembly: System. IO. FileNotFoundException: non è stato possibile caricare l'assembly ' Novell. Live. reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+* *Eccezione durante il caricamento degli assembly: System. IO. FileNotFoundException: non è stato possibile caricare l'assembly ' Xamarin.Live. reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
 
   Il progetto host deve usare `PackageReference` anziché `packages.config`
 

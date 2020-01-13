@@ -1,5 +1,5 @@
 ---
-title: Raggruppamento Novell. Forms di CollectionView
+title: Raggruppamento Xamarin.Forms di CollectionView
 description: CollectionView può visualizzare i dati raggruppati correttamente impostando la relativa proprietà Grouping su true.
 ms.prod: xamarin
 ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72749799"
 ---
-# <a name="xamarinforms-collectionview-grouping"></a>Raggruppamento Novell. Forms di CollectionView
+# <a name="xamarinforms-collectionview-grouping"></a>Raggruppamento Xamarin.Forms di CollectionView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -250,4 +250,4 @@ In questo scenario è possibile visualizzare dati significativi eseguendo l'over
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

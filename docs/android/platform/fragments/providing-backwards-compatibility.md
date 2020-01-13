@@ -22,7 +22,7 @@ L'utilità dei frammenti sarà limitata senza la compatibilità con le versioni 
 
 ## <a name="adding-the-support-package"></a>Aggiunta del pacchetto per il supporto
 
-Il pacchetto per il supporto Android non viene aggiunto automaticamente a un'applicazione Novell. Android. Novell fornisce il [pacchetto NuGet della libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta delle librerie di supporto a un'applicazione Novell. Android. Per includere i pacchetti di supporto nell'applicazione Novell. Android, includere il componente della [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) nel progetto Novell. Android, come illustrato nello screenshot seguente: 
+Il pacchetto per il supporto Android non viene aggiunto automaticamente a un'applicazione Xamarin.Android. Novell fornisce il [pacchetto NuGet della libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta delle librerie di supporto a un'applicazione Xamarin.Android. Per includere i pacchetti di supporto nell'applicazione Xamarin.Android, includere il componente della [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) nel progetto Xamarin.Android, come illustrato nello screenshot seguente: 
 
 [![screenshot del pacchetto della libreria di supporto Android V4 aggiunto al progetto](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 

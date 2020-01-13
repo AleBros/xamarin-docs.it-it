@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029258"
 ---
-# <a name="xamarinandroid-edit-text"></a>Testo di modifica di Novell. Android
+# <a name="xamarinandroid-edit-text"></a>Testo di modifica di Xamarin.Android
 
 In questa sezione si userà il widget [EDITTEXT](xref:Android.Widget.EditText) per creare un campo di testo per l'input dell'utente. Una volta immesso il testo nel campo, il tasto **invio** visualizzerà il testo in un messaggio di avviso popup.
 

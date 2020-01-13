@@ -1,6 +1,6 @@
 ---
-title: Uso di Novell. Android Designer
-description: Questo articolo è una procedura dettagliata di Novell. Android Designer. Viene illustrato come creare un'interfaccia utente per un'app per browser a colori piccoli; Questa interfaccia utente viene creata interamente nella finestra di progettazione.
+title: Uso di Xamarin.Android Designer
+description: Questo articolo è una procedura dettagliata di Xamarin.Android Designer. Viene illustrato come creare un'interfaccia utente per un'app per browser a colori piccoli; Questa interfaccia utente viene creata interamente nella finestra di progettazione.
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
@@ -14,14 +14,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029528"
 ---
-# <a name="using-the-xamarinandroid-designer"></a>Uso di Novell. Android Designer
+# <a name="using-the-xamarinandroid-designer"></a>Uso di Xamarin.Android Designer
 
-_Questo articolo è una procedura dettagliata di Novell. Android Designer. Viene illustrato come creare un'interfaccia utente per un'app per browser a colori piccoli; Questa interfaccia utente viene creata interamente nella finestra di progettazione._
+_Questo articolo è una procedura dettagliata di Xamarin.Android Designer. Viene illustrato come creare un'interfaccia utente per un'app per browser a colori piccoli; Questa interfaccia utente viene creata interamente nella finestra di progettazione._
 
 ## <a name="overview"></a>Panoramica
 
-Le interfacce utente Android possono essere create in modo dichiarativo tramite file XML o a livello di codice scrivendo codice. Novell. Android Designer consente agli sviluppatori di creare e modificare visivamente layout dichiarativi, senza richiedere la modifica manuale dei file XML. La finestra di progettazione fornisce anche commenti in tempo reale che consentono allo sviluppatore di valutare le modifiche dell'interfaccia utente senza dover ridistribuire l'applicazione in un dispositivo o in un emulatore. Queste funzionalità di progettazione possono velocizzare notevolmente lo sviluppo dell'interfaccia utente di Android.
-Questo articolo illustra come usare Novell. Android Designer per creare visivamente un'interfaccia utente.
+Le interfacce utente Android possono essere create in modo dichiarativo tramite file XML o a livello di codice scrivendo codice. Xamarin.Android Designer consente agli sviluppatori di creare e modificare visivamente layout dichiarativi, senza richiedere la modifica manuale dei file XML. La finestra di progettazione fornisce anche commenti in tempo reale che consentono allo sviluppatore di valutare le modifiche dell'interfaccia utente senza dover ridistribuire l'applicazione in un dispositivo o in un emulatore. Queste funzionalità di progettazione possono velocizzare notevolmente lo sviluppo dell'interfaccia utente di Android.
+Questo articolo illustra come usare Xamarin.Android Designer per creare visivamente un'interfaccia utente.
 
 > [!TIP]
 > Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
@@ -38,7 +38,7 @@ L'obiettivo di questa procedura dettagliata consiste nell'usare la Android Desig
 
 ### <a name="creating-a-new-project"></a>Creazione di un nuovo progetto
 
-Il primo passaggio consiste nel creare un nuovo progetto Novell. Android. Avviare Visual Studio, fare clic su **nuovo progetto...** e scegliere il modello **visual C\# > Android > Android app (Novell)** .
+Il primo passaggio consiste nel creare un nuovo progetto Xamarin.Android. Avviare Visual Studio, fare clic su **nuovo progetto...** e scegliere il modello **visual C\# > Android > Android app (Novell)** .
 Assegnare alla nuova app il nome **DesignerWalkthrough** e fare clic su **OK**.
 
 [App vuota![Android](designer-walkthrough-images/vs/01-android-app-w158-sml.png)](designer-walkthrough-images/vs/01-android-app-w158.png#lightbox)
@@ -285,7 +285,7 @@ Compilare ed eseguire l'applicazione. Lo screenshot seguente è un esempio di co
 
 ### <a name="creating-a-new-project"></a>Creazione di un nuovo progetto
 
-Il primo passaggio consiste nel creare un nuovo progetto Novell. Android.
+Il primo passaggio consiste nel creare un nuovo progetto Xamarin.Android.
 
 Avviare Visual Studio per Mac e fare clic su **nuovo progetto...** . Scegliere il modello **app Android** e fare clic su **Avanti**:
 
@@ -525,6 +525,6 @@ Compilare ed eseguire l'applicazione. Lo screenshot seguente è un esempio di co
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il processo di uso di Novell. Android Designer in Visual Studio per creare un'interfaccia utente per un'app di base.
+Questo articolo ha illustrato il processo di uso di Xamarin.Android Designer in Visual Studio per creare un'interfaccia utente per un'app di base.
 È stato illustrato come creare l'interfaccia per un singolo elemento in un elenco e come aggiungere widget e disporli visivamente.
 È stato inoltre illustrato come assegnare le risorse e quindi impostare varie proprietà su tali widget.

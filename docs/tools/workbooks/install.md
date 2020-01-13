@@ -47,7 +47,7 @@ ms.locfileid: "73029626"
 |Piattaforma app|Supporto del sistema operativo|Note|
 |--- |--- |--- |
 |Mac|Supportato solo in Mac|
-|iOS|Supportato in Mac e Windows|È necessario installare Novell. iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
+|iOS|Supportato in Mac e Windows|È necessario installare Xamarin.iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
 |Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Novell con un dispositivo virtuale > = 5,0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
@@ -155,7 +155,7 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
 ## <a name="downgrading"></a>Declassamento
 
-L'identificatore del bundle per le **cartelle di lavoro di/Applications/Xamarin. app** è stato modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1,4, perché le cartelle di lavoro e il controllo ora sono completamente divisi.
+L'identificatore del bundle per le **cartelle di lavoro di/Applications/Xamarin.app** è stato modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1,4, perché le cartelle di lavoro e il controllo ora sono completamente divisi.
 
 A causa di un bug nei programmi di installazione precedenti, non è possibile effettuare il downgrade di 1,4 o versioni successive usando i programmi di installazione 1.3.2 o precedenti.
 

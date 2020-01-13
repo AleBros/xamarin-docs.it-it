@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms DatePicker
-description: Il controllo DatePicker è una vista di xamarin. Forms che consente all'utente di selezionare una data. Questo articolo illustra come usare un controllo DatePicker in un'applicazione xamarin. Forms.
+title: Xamarin.Forms DatePicker
+description: Il controllo DatePicker è una vista di Xamarin.Forms che consente all'utente di selezionare una data. Questo articolo illustra come usare un controllo DatePicker in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/30/2019
 ms.locfileid: "75545608"
 ---
-# <a name="xamarinforms-datepicker"></a>Xamarin. Forms DatePicker
+# <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
-_Una vista di xamarin. Forms che consente all'utente di selezionare una data._
+_Una vista di Xamarin.Forms che consente all'utente di selezionare una data._
 
-Xamarin. Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) richiama controllo selezione data della piattaforma e consente all'utente di selezionare una data. `DatePicker` definisce otto proprietà:
+Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) richiama controllo selezione data della piattaforma e consente all'utente di selezionare una data. `DatePicker` definisce otto proprietà:
 
 - [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate) typu [ `DateTime` ](xref:System.DateTime), che per impostazione predefinita il primo giorno dell'anno 1900.
 - [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate) di tipo `DateTime`, quali il valore predefinito è l'ultimo giorno dell'anno 2100.

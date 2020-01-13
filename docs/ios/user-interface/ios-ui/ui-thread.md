@@ -1,6 +1,6 @@
 ---
-title: Utilizzo del thread dell'interfaccia utente in Novell. iOS
-description: Questo documento descrive come usare il thread dell'interfaccia utente in Novell. iOS. Illustra l'esecuzione del thread dell'interfaccia utente, fornisce un esempio di thread in background ed esamina async/await.
+title: Utilizzo del thread dell'interfaccia utente in Xamarin.iOS
+description: Questo documento descrive come usare il thread dell'interfaccia utente in Xamarin.iOS. Illustra l'esecuzione del thread dell'interfaccia utente, fornisce un esempio di thread in background ed esamina async/await.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002838"
 ---
-# <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo del thread dell'interfaccia utente in Novell. iOS
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo del thread dell'interfaccia utente in Xamarin.iOS
 
 Le interfacce utente dell'applicazione sono sempre a thread singolo, anche nei dispositivi multithread. esiste solo una rappresentazione dello schermo e tutte le modifiche apportate agli elementi visualizzati devono essere coordinate tramite un unico punto di accesso. In questo modo si impedisce a più thread di provare ad aggiornare lo stesso pixel nello stesso momento (ad esempio).
 
@@ -34,7 +34,7 @@ InvokeOnMainThread ( () => {
 
 Il metodo `InvokeOnMainThread` viene definito in `NSObject` in modo che possa essere chiamato dall'interno di metodi definiti in qualsiasi oggetto UIKit, ad esempio una vista o un controller di visualizzazione.
 
-Durante il debug delle applicazioni Novell. iOS, viene generato un errore se il codice tenta di accedere a un controllo dell'interfaccia utente dal thread errato. Questo consente di rilevare e risolvere questi problemi con il metodo InvokeOnMainThread. Questo si verifica solo durante il debug e non genera un errore nelle build di rilascio. Il messaggio di errore verrà visualizzato come segue:
+Durante il debug delle applicazioni Xamarin.iOS, viene generato un errore se il codice tenta di accedere a un controllo dell'interfaccia utente dal thread errato. Questo consente di rilevare e risolvere questi problemi con il metodo InvokeOnMainThread. Questo si verifica solo durante il debug e non genera un errore nelle build di rilascio. Il messaggio di errore verrà visualizzato come segue:
 
  ![](ui-thread-images/image10.png "UI Thread Execution")
 

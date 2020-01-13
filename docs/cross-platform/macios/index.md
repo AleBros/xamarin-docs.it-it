@@ -1,6 +1,6 @@
 ---
 title: Piattaforma Apple (iOS e Mac)
-description: 'Questo documento descrive vari argomenti correlati allo sviluppo di Novell. iOS e Novell. Mac: condivisione del codice, API unificata, binding di librerie Objective-C, riferimenti nativi, tipi nativi e altro ancora.'
+description: 'Questo documento descrive vari argomenti correlati allo sviluppo di Xamarin.iOS e Xamarin.Mac: condivisione del codice, API unificata, binding di librerie Objective-C, riferimenti nativi, tipi nativi e altro ancora.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: davidortinau
@@ -28,9 +28,9 @@ Il API unificata per i progetti iOS e Mac usa gli stessi spazi dei nomi per i Fr
 ### <a name="classic-apis"></a>API classiche
 
 > [!NOTE]
-> **Deprecazione del profilo classico:** Man mano che vengono aggiunte nuove piattaforme in Novell. iOS, viene avviata la deprecazione graduale delle funzionalità del profilo classico (MonoTouch. dll). Ad esempio, l'opzione non-NRC (New-ref-Count) è stata rimossa. NRC è sempre stato abilitato per tutte le applicazioni unificate, ovvero non è mai stata un'opzione, ma non ha problemi noti. Nelle versioni future viene rimossa l'opzione di utilizzo di Boehm come Garbage Collector. Questa era anche un'opzione non disponibile per le applicazioni unificate. La rimozione completa del supporto classico è prevista per il calo 2016 con la versione di Novell. iOS 10,0.
+> **Deprecazione del profilo classico:** Man mano che vengono aggiunte nuove piattaforme in Xamarin.iOS, viene avviata la deprecazione graduale delle funzionalità del profilo classico (MonoTouch. dll). Ad esempio, l'opzione non-NRC (New-ref-Count) è stata rimossa. NRC è sempre stato abilitato per tutte le applicazioni unificate, ovvero non è mai stata un'opzione, ma non ha problemi noti. Nelle versioni future viene rimossa l'opzione di utilizzo di Boehm come Garbage Collector. Questa era anche un'opzione non disponibile per le applicazioni unificate. La rimozione completa del supporto classico è prevista per il calo 2016 con la versione di Xamarin.iOS 10,0.
 
-Le API originali (non unificate) Novell. iOS e Novell. Mac hanno reso più difficile la condivisione del codice perché i framework nativi avevano `MonoTouch.` o `MonoMac.` prefissi dello spazio dei nomi.  Sono stati forniti spazi dei nomi vuoti che consentono agli sviluppatori di condividere il codice aggiungendo `using` istruzioni che fanno riferimento agli spazi dei nomi MonoMac e MonoTouch nello stesso file, ma si tratta di un po' brutto. Il API classica deve continuare a essere usato solo nelle app legacy distribuite internamente (è consigliabile eseguire l'aggiornamento al API unificata).
+Le API originali (non unificate) Xamarin.iOS e Xamarin.Mac hanno reso più difficile la condivisione del codice perché i framework nativi avevano `MonoTouch.` o `MonoMac.` prefissi dello spazio dei nomi.  Sono stati forniti spazi dei nomi vuoti che consentono agli sviluppatori di condividere il codice aggiungendo `using` istruzioni che fanno riferimento agli spazi dei nomi MonoMac e MonoTouch nello stesso file, ma si tratta di un po' brutto. Il API classica deve continuare a essere usato solo nelle app legacy distribuite internamente (è consigliabile eseguire l'aggiornamento al API unificata).
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>Aggiornamento dal modello classico al API unificata
 
@@ -61,6 +61,6 @@ Fornisce informazioni dettagliate su quando usare i tipi nativi e fornisce diver
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Stack HttpClient e selettore dell'implementazione di SSL/TLS](http-stack.md)
 
-Il nuovo selettore dello stack HttpClient controlla quale implementazione di HttpClient usare nell'app Novell. iOS, Novell. tvOS e Novell. Mac. È ora possibile passare a un'implementazione che usa i trasporti nativi di iOS, tvOS o OS X (`NSUrlSession` o `CFNetwork` a seconda del sistema operativo).
+Il nuovo selettore dello stack HttpClient controlla quale implementazione di HttpClient usare nell'app Xamarin.iOS, Xamarin.tvOS e Xamarin.Mac. È ora possibile passare a un'implementazione che usa i trasporti nativi di iOS, tvOS o OS X (`NSUrlSession` o `CFNetwork` a seconda del sistema operativo).
 
 SSL (Secure Socket Layer) e il suo successore, TLS (Transport Layer Security), forniscono il supporto per HTTP e altre connessioni di rete tramite `System.Net.Security.SslStream`. La nuova opzione di compilazione di implementazione SSL/TLS passa tra lo stack TLS di mono e uno basato sullo stack TLS di Apple presente in Mac e iOS.

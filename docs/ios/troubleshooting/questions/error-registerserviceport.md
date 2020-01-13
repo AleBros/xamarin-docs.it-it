@@ -17,7 +17,7 @@ ms.locfileid: "73031130"
 # <a name="ios-designer-error-with-registerserviceport"></a>Errore di iOS Designer con RegisterServicePort
 
 ## <a name="sample-error"></a>Errore di esempio
-> System. AggregateException: si sono verificati uno o più errori---> System. SystemException: RegisterServicePort (com. Novell. MTHosting. 2a0b1, com. Apple. PowerManagement. Control): kernel restituito:-308 (-308): (IPC/MIG) Server è morto
+> System. AggregateException: si sono verificati uno o più errori---> System. SystemException: RegisterServicePort (com. Xamarin.MTHosting. 2a0b1, com. Apple. PowerManagement. Control): kernel restituito:-308 (-308): (IPC/MIG) Server è morto
 
 ## <a name="explanation"></a>Descrizione
 Gli errori con `RegisterServicePort` e messaggi di errore simili, come sopra, rappresentano in genere un problema con spyware/malware nel computer. Per ulteriori informazioni, prendere in considerazione il [commento sul report sui bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) , insieme al collegamento alla [discussione sul forum Apple](https://discussions.apple.com/thread/5596008) su come rimuovere una possibile infezione. 

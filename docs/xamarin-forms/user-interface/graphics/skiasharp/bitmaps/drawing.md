@@ -171,7 +171,7 @@ I due formati in cui ogni pixel ha una dimensione di 32 pixel (4 byte) sono spes
 
 Oggi, i programmatori quasi sempre usano bitmap a colori e proviate con altri formati. L'eccezione è il `RgbaF16` formato, che consente la risoluzione di colore maggiore rispetto a anche i formati a colori. Tuttavia, questo formato viene usato per scopi particolari, ad esempio di diagnostica per immagini e non ha molto senso se usato con schermi a colori standard.
 
-Questa serie di articoli limiterà per il `SKBitmap` formati utilizzati per impostazione predefinita se non si specifica di colori `SKColorType` membro viene specificato. Questo formato predefinito è basato sulla piattaforma sottostante. Per le piattaforme supportate da xamarin. Forms, il tipo di colore predefinito è:
+Questa serie di articoli limiterà per il `SKBitmap` formati utilizzati per impostazione predefinita se non si specifica di colori `SKColorType` membro viene specificato. Questo formato predefinito è basato sulla piattaforma sottostante. Per le piattaforme supportate da Xamarin.Forms, il tipo di colore predefinito è:
 
 - `Rgba8888` per iOS e Android
 - `Bgra8888` per la piattaforma UWP

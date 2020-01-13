@@ -18,7 +18,7 @@ ms.locfileid: "75728278"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-Il motore di database SQLite consente alle applicazioni Novell. Forms di caricare e salvare oggetti dati nel codice condiviso. Nell'applicazione di esempio viene utilizzata una tabella di database SQLite per archiviare gli elementi todo. Questo articolo descrive come usare SQLite.Net nel codice condiviso per archiviare e recuperare le informazioni in un database locale.
+Il motore di database SQLite consente alle applicazioni Xamarin.Forms di caricare e salvare oggetti dati nel codice condiviso. Nell'applicazione di esempio viene utilizzata una tabella di database SQLite per archiviare gli elementi todo. Questo articolo descrive come usare SQLite.Net nel codice condiviso per archiviare e recuperare le informazioni in un database locale.
 
 [![screenshot dell'app Todo in iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "App Todo in iOS e Android")
 
@@ -27,7 +27,7 @@ Integrare SQLite.NET nelle app per dispositivi mobili attenendosi alla procedura
 1. [Installare il pacchetto NuGet](#install-the-sqlite-nuget-package).
 1. [Configurare le costanti](#configure-app-constants).
 1. [Creare una classe di accesso al database](#create-a-database-access-class).
-1. [Accedere ai dati in Novell. Forms](#access-data-in-xamarinforms).
+1. [Accedere ai dati in Xamarin.Forms](#access-data-in-xamarinforms).
 1. [Configurazione avanzata](#advanced-configuration).
 
 ## <a name="install-the-sqlite-nuget-package"></a>Installare il pacchetto NuGet SQLite
@@ -214,9 +214,9 @@ public static class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Novell. Forms
+## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Xamarin.Forms
 
-La classe `App` Novell. Forms espone un'istanza della classe `TodoItemDatabase`:
+La classe `App` Xamarin.Forms espone un'istanza della classe `TodoItemDatabase`:
 
 ```csharp
 public static TodoItemDatabase Database
@@ -232,7 +232,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-Questa proprietà consente ai componenti Novell. Forms di chiamare i metodi per il recupero e la manipolazione dei dati nell'istanza di `Database` in risposta all'interazione dell'utente. Ad esempio:
+Questa proprietà consente ai componenti Xamarin.Forms di chiamare i metodi per il recupero e la manipolazione dei dati nell'istanza di `Database` in risposta all'interazione dell'utente. Ad esempio:
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -279,7 +279,7 @@ In generale, lo stesso processo di trasferimento, ridenominazione o copia di un 
 - È necessario chiudere tutte le connessioni al database prima di tentare di spostare il file di database.
 - Se si usa la [registrazione write-ahead](#write-ahead-logging), SQLite creerà un file di accesso alla memoria condivisa (con estensione SHM) e un file (log write-ahead) (con estensione Wal). Assicurarsi di applicare anche le modifiche apportate a questi file.
 
-Per altre informazioni, vedere [gestione dei file in Novell. Forms](~/xamarin-forms/data-cloud/data/files.md).
+Per altre informazioni, vedere [gestione dei file in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

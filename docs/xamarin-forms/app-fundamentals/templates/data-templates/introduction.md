@@ -18,7 +18,7 @@ ms.locfileid: "70771272"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
-_I modelli di dati Novell. Forms offrono la possibilità di definire la presentazione dei dati nei controlli supportati. Questo articolo fornisce un'introduzione ai modelli di dati, esaminando il motivo per cui sono necessari._
+_I modelli di dati Xamarin.Forms offrono la possibilità di definire la presentazione dei dati nei controlli supportati. Questo articolo fornisce un'introduzione ai modelli di dati, esaminando il motivo per cui sono necessari._
 
 Si consideri un [`ListView`](xref:Xamarin.Forms.ListView) in cui viene visualizzata una raccolta di oggetti `Person`. L'esempio di codice seguente illustra la definizione della classe `Person`:
 

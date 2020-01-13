@@ -42,7 +42,7 @@ Per usare le associazioni compilate, l'attributo `x:DataType` deve essere impost
 
 ## <a name="use-compiled-bindings"></a>Usare binding compilati
 
-La pagina di **selezione colori compilata** illustra l'uso di associazioni compilate tra le visualizzazioni Novell. Forms e le proprietà ViewModel:
+La pagina di **selezione colori compilata** illustra l'uso di associazioni compilate tra le visualizzazioni Xamarin.Forms e le proprietà ViewModel:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

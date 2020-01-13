@@ -1,7 +1,7 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Cross-Platform per sviluppatori desktop
-description: Questo documento contiene collegamenti a diverse guide che descrivono Novell. Forms per sviluppatori WPF e Windows Forms. Il contenuto collegato Esplora il ciclo di vita dell'applicazione, i controlli dell'interfaccia utente, le linee guida e gli esempi di porting.
+description: Questo documento contiene collegamenti a diverse guide che descrivono Xamarin.Forms per sviluppatori WPF e Windows Forms. Il contenuto collegato Esplora il ciclo di vita dell'applicazione, i controlli dell'interfaccia utente, le linee guida e gli esempi di porting.
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
@@ -18,19 +18,19 @@ Questa sezione contiene informazioni utili per consentire a WPF e Windows Forms 
 
 ## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Confronto del ciclo di vita delle app](lifecycle.md)
 
-Informazioni sulle differenze tra gli Stati di avvio e di background dell'app WPF e Novell. Forms.
+Informazioni sulle differenze tra gli Stati di avvio e di background dell'app WPF e Xamarin.Forms.
 
 ## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Confronto tra controlli dell'interfaccia utente](controls/index.md)
 
-Riferimento rapido per trovare controlli equivalenti in Windows Forms, WPF e Novell. Forms, incluse informazioni aggiuntive sulle differenze tra WPF e Novell. Forms.
+Riferimento rapido per trovare controlli equivalenti in Windows Forms, WPF e Xamarin.Forms, incluse informazioni aggiuntive sulle differenze tra WPF e Xamarin.Forms.
 
 ## <a name="porting-guidanceportingmd"></a>[Linee guida per il porting](porting.md)
 
-Uso di Portability Analyzer per facilitare la migrazione del codice dell'applicazione desktop (esclusa l'interfaccia utente) a Novell. Forms.
+Uso di Portability Analyzer per facilitare la migrazione del codice dell'applicazione desktop (esclusa l'interfaccia utente) a Xamarin.Forms.
 
 ## <a name="samplessamplesmd"></a>[Esempi](samples.md)
 
-Esempi di riferimento che illustrano l'architettura dell'applicazione aziendale e il codice di porting da WPF a Novell. Forms.
+Esempi di riferimento che illustrano l'architettura dell'applicazione aziendale e il codice di porting da WPF a Xamarin.Forms.
 
 ## <a name="learn-more"></a>Ulteriori informazioni
 

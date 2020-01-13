@@ -1,6 +1,6 @@
 ---
 title: Pixel e unità di misura indipendenti dal dispositivo
-description: Questo articolo vengono esaminate le differenze tra coordinate SkiaSharp e xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo vengono esaminate le differenze tra coordinate SkiaSharp e Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
@@ -18,19 +18,19 @@ ms.locfileid: "70759479"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Esplorare le differenze tra coordinate SkiaSharp e xamarin. Forms_
+_Esplorare le differenze tra coordinate SkiaSharp e Xamarin.Forms_
 
-Questo articolo esamina le differenze nel sistema di coordinate utilizzato in SkiaSharp e xamarin. Forms. È possibile ottenere informazioni per eseguire la conversione tra i due sistemi di coordinate e inoltre disegnare immagini che è riempire un'area specifica:
+Questo articolo esamina le differenze nel sistema di coordinate utilizzato in SkiaSharp e Xamarin.Forms. È possibile ottenere informazioni per eseguire la conversione tra i due sistemi di coordinate e inoltre disegnare immagini che è riempire un'area specifica:
 
 ![](pixels-images/screenfillexample.png "Un forma ovale che riempie la schermata")
 
-Se è stata programmatore in xamarin. Forms per un periodo di tempo, potrebbe essere un'idea per dimensioni e le coordinate di xamarin. Forms. I cerchi disegnati in due articoli precedenti potrebbero sembrare un po' piccoli all'utente.
+Se è stata programmatore in Xamarin.Forms per un periodo di tempo, potrebbe essere un'idea per dimensioni e le coordinate di Xamarin.Forms. I cerchi disegnati in due articoli precedenti potrebbero sembrare un po' piccoli all'utente.
 
-Tali cerchi *sono* piccole rispetto alle dimensioni di xamarin. Forms. Per impostazione predefinita, mentre le coordinate e le dimensioni si basa xamarin. Forms in un'unità indipendenti dal dispositivo stabilita dalla piattaforma sottostante SkiaSharp disegna in unità di pixel. (Altre informazioni sul sistema di coordinate di xamarin. Forms sono reperibile [capitolo 5. Gestione delle dimensioni](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *creazione di App per dispositivi mobili con xamarin. Forms*.)
+Tali cerchi *sono* piccole rispetto alle dimensioni di Xamarin.Forms. Per impostazione predefinita, mentre le coordinate e le dimensioni si basa Xamarin.Forms in un'unità indipendenti dal dispositivo stabilita dalla piattaforma sottostante SkiaSharp disegna in unità di pixel. (Altre informazioni sul sistema di coordinate di Xamarin.Forms sono reperibile [capitolo 5. Gestione delle dimensioni](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *creazione di App per dispositivi mobili con Xamarin.Forms*.)
 
 La pagina nel [ **SkewSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma intitolata **nell'area dimensioni** Usa SkiaSharp output di testo per visualizzare le dimensioni dell'area di visualizzazione da tre origini diverse:
 
-- Xamarin. Forms normali [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) e [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) le proprietà del `SKCanvasView` oggetto.
+- Xamarin.Forms normali [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) e [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) le proprietà del `SKCanvasView` oggetto.
 - Il [ `CanvasSize` ](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize) proprietà del `SKCanvasView` oggetto.
 - Il [ `Size` ](xref:SkiaSharp.SKImageInfo.Size) proprietà della `SKImageInfo` valore, che è coerente con il `Width` e `Height` proprietà utilizzate nei due pagine precedenti.
 
@@ -103,7 +103,7 @@ Ecco il programma in esecuzione:
 
 [![](pixels-images/surfacesize-small.png "Tripla screenshot della pagina di dimensioni di superficie")](pixels-images/surfacesize-large.png#lightbox "tripla screenshot della pagina di dimensioni di Surface")
 
-Come può notare, il `CanvasSize` proprietà del `SKCanvasView` e il `Size` proprietà del `SKImageInfo` valore siano consistenti nei report le dimensioni in pixel. Il `Height` e `Width` delle proprietà del `SKCanvasView` le proprietà di xamarin. Forms e segnalare le dimensioni della visualizzazione nelle unità indipendenti dal dispositivo definite dalla piattaforma.
+Come può notare, il `CanvasSize` proprietà del `SKCanvasView` e il `Size` proprietà del `SKImageInfo` valore siano consistenti nei report le dimensioni in pixel. Il `Height` e `Width` delle proprietà del `SKCanvasView` le proprietà di Xamarin.Forms e segnalare le dimensioni della visualizzazione nelle unità indipendenti dal dispositivo definite dalla piattaforma.
 
 Simulatore iOS sette a sinistra ha due pixel per ogni unità indipendenti dal dispositivo e di Android Nexus 5 al centro ha tre pixel per ogni unità. Ecco perché il cerchio semplice mostrato in precedenza dispone di diverse dimensioni su piattaforme diverse.
 

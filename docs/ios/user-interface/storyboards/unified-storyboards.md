@@ -1,6 +1,6 @@
 ---
-title: Storyboard unificati in Novell. iOS
-description: Questo documento descrive gli storyboard unificati in Novell. iOS. Gli storyboard unificati consentono agli sviluppatori di supportare più dimensioni dello schermo con una singola definizione di interfaccia.
+title: Storyboard unificati in Xamarin.iOS
+description: Questo documento descrive gli storyboard unificati in Xamarin.iOS. Gli storyboard unificati consentono agli sviluppatori di supportare più dimensioni dello schermo con una singola definizione di interfaccia.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001832"
 ---
-# <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Novell. iOS
+# <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Xamarin.iOS
 
 iOS 8 include un nuovo meccanismo più semplice da usare per la creazione dell'interfaccia utente, lo storyboard unificato. Con un singolo storyboard per coprire tutte le diverse dimensioni dello schermo hardware, è possibile creare visualizzazioni rapide e reattive in uno stile di tipo "progettazione, utilizzo e molti".
 
@@ -544,7 +544,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Esaminare più da vicino l'applicazione Adaptive Photos per visualizzare tutti i modi in cui le classi di dimensioni, le raccolte di tratti e i controller di visualizzazione adattivo possono essere usati per creare facilmente un'applicazione unificata in Novell. iOS.
+Esaminare più da vicino l'applicazione Adaptive Photos per visualizzare tutti i modi in cui le classi di dimensioni, le raccolte di tratti e i controller di visualizzazione adattivo possono essere usati per creare facilmente un'applicazione unificata in Xamarin.iOS.
 
 ## <a name="unified-storyboards"></a>Storyboard unificati
 
@@ -562,7 +562,7 @@ Questa funzionalità è completamente supportata in Visual Studio per Mac
 
 ### <a name="enabling-size-classes"></a>Abilitazione di classi di dimensioni
 
-Per impostazione predefinita, qualsiasi nuovo progetto Novell. iOS ci consentirà di ridimensionare le classi. Per usare le classi di dimensioni e i gli elementi segue adattivi all'interno di uno storyboard da un progetto precedente, è necessario prima convertirlo nel formato dello storyboard unificato di Xcode 6 dall'interno della finestra di progettazione di iOS.
+Per impostazione predefinita, qualsiasi nuovo progetto Xamarin.iOS ci consentirà di ridimensionare le classi. Per usare le classi di dimensioni e i gli elementi segue adattivi all'interno di uno storyboard da un progetto precedente, è necessario prima convertirlo nel formato dello storyboard unificato di Xcode 6 dall'interno della finestra di progettazione di iOS.
 
 A tale scopo, aprire lo storyboard da convertire nella finestra di progettazione iOS e selezionare la casella di controllo **usa classi di dimensioni** :
 

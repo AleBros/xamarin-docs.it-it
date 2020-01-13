@@ -1,5 +1,5 @@
 ---
-title: Accedere con Apple in Novell. iOS
+title: Accedere con Apple in Xamarin.iOS
 description: L'accesso con Apple fornisce la protezione delle identità quando si usano i servizi di autenticazione di terze parti.
 ms.prod: xamarin
 ms.assetid: CDA59BBF-AAE1-4D4F-B4AE-DB37220D41EB
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71319532"
 ---
-# <a name="sign-in-with-apple-in-xamarinios"></a>Accedere con Apple in Novell. iOS
+# <a name="sign-in-with-apple-in-xamarinios"></a>Accedere con Apple in Xamarin.iOS
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
@@ -212,7 +212,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 * [Accedere con le linee guida di Apple](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
 * [Accedere con diritti Apple.][2]
 * [WWDC 2019 sessione 706: Introduzione all'accesso con Apple.][3]
-* [Configurare l'accesso con Apple per Novell. Forms][4]
+* [Configurare l'accesso con Apple per Xamarin.Forms][4]
 
 [1]: https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app
 [2]: https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_applesignin

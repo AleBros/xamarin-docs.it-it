@@ -1,6 +1,6 @@
 ---
-title: Registrar di tipo per Novell. iOS
-description: Questo documento descrive il registrar di tipo Novell. iOS, C# che rende le classi disponibili per il runtime di Objective-C.
+title: Registrar di tipo per Xamarin.iOS
+description: Questo documento descrive il registrar di tipo Xamarin.iOS, C# che rende le classi disponibili per il runtime di Objective-C.
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
@@ -14,20 +14,20 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022271"
 ---
-# <a name="type-registrar-for-xamarinios"></a>Registrar di tipo per Novell. iOS
+# <a name="type-registrar-for-xamarinios"></a>Registrar di tipo per Xamarin.iOS
 
-Questo documento descrive il sistema di registrazione dei tipi usato da Novell. iOS.
+Questo documento descrive il sistema di registrazione dei tipi usato da Xamarin.iOS.
 
 ## <a name="registration-of-managed-classes-and-methods"></a>Registrazione di classi gestite e metodi
 
-Durante l'avvio, Novell. iOS registrerà:
+Durante l'avvio, Xamarin.iOS registrerà:
 
 - Classi con un attributo [[Register]](xref:Foundation.RegisterAttribute) come classi Objective-C.
 - Classi con attributo [[Category]](xref:ObjCRuntime.CategoryAttribute) come categorie Objective-C.
 - Interfacce con un attributo [[Protocol]](xref:Foundation.ProtocolAttribute) come protocolli Objective-C.
 - Membri con [[Export]](xref:Foundation.ExportAttribute), rendendo possibile l'accesso a Objective-C.
 
-Si consideri ad esempio il metodo di `Main` gestito comune nelle applicazioni Novell. iOS:
+Si consideri ad esempio il metodo di `Main` gestito comune nelle applicazioni Xamarin.iOS:
 
 ```csharp
 UIApplication.Main (args, null, "AppDelegate");
@@ -35,7 +35,7 @@ UIApplication.Main (args, null, "AppDelegate");
 
 Questo codice indica al runtime di Objective-C di usare il tipo denominato `AppDelegate` come classe delegata dell'applicazione. Affinché il runtime di Objective-C sia in grado di creare un'istanza della C# classe`AppDelegate`, tale classe deve essere registrata.
 
-Novell. iOS esegue automaticamente la registrazione, in fase di esecuzione (registrazione dinamica) o in fase di compilazione (registrazione statica).
+Xamarin.iOS esegue automaticamente la registrazione, in fase di esecuzione (registrazione dinamica) o in fase di compilazione (registrazione statica).
 
 La registrazione dinamica usa la reflection all'avvio per trovare tutte le classi e i metodi da registrare, passandoli al runtime di Objective-C. Per impostazione predefinita, la registrazione dinamica viene usata per le build del simulatore.
 
@@ -44,7 +44,7 @@ Quindi, all'avvio, registra la mappa con il runtime di Objective-C. La registraz
 
 ### <a name="categories"></a>Categories
 
-A partire da Novell. iOS 8,10, è possibile creare categorie Objective-C usando C# la sintassi.
+A partire da Xamarin.iOS 8,10, è possibile creare categorie Objective-C usando C# la sintassi.
 
 Per creare una categoria, usare l'attributo `[Category]` e specificare il tipo da estendere. Il codice seguente, ad esempio, estende `NSString`:
 
@@ -102,7 +102,7 @@ public static class MyViewControllerCategory
 
 ### <a name="protocols"></a>Protocolli
 
-A partire da Novell. iOS 8,10, le interfacce con l'attributo `[Protocol]` verranno esportate in Objective-C come protocolli:
+A partire da Xamarin.iOS 8,10, le interfacce con l'attributo `[Protocol]` verranno esportate in Objective-C come protocolli:
 
 ```csharp
 [Protocol ("MyProtocol")]
@@ -180,7 +180,7 @@ Alcuni aspetti da tenere presenti sul nuovo Registrar:
 
 - Alcune librerie di terze parti devono essere aggiornate per funzionare con il nuovo sistema di registrazione. Per ulteriori informazioni, vedere le [modifiche richieste](#required-modifications) di seguito.
 
-- Un aspetto negativo a breve termine è anche che è necessario usare Clang se viene usato il Framework degli account (questo è dovuto al fatto che l'intestazione **accounts. h** di Apple può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti aggiuntivi di mTouch per usare Clang se si usa Xcode 4,6 o versione precedente (Novell. iOS selezionerà automaticamente Clang in Xcode 5,0 o versione successiva).
+- Un aspetto negativo a breve termine è anche che è necessario usare Clang se viene usato il Framework degli account (questo è dovuto al fatto che l'intestazione **accounts. h** di Apple può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti aggiuntivi di mTouch per usare Clang se si usa Xcode 4,6 o versione precedente (Xamarin.iOS selezionerà automaticamente Clang in Xcode 5,0 o versione successiva).
 
 - Se si usa Xcode 4,6 (o versioni precedenti), è necessario selezionare GCC/G + + se i nomi dei tipi esportati contengono caratteri non ASCII, perché la versione di Clang fornita con Xcode 4,6 non supporta caratteri non ASCII all'interno degli identificatori del codice Objective-C. Aggiungere `--compiler:gcc` agli argomenti aggiuntivi di mTouch per usare GCC.
 

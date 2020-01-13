@@ -1,6 +1,6 @@
 ---
-title: Eventi touch e movimenti in Novell. iOS
-description: Questo documento descrive come usare eventi di tocco, multitocco, movimenti, più movimenti e movimenti personalizzati nelle applicazioni Novell. iOS.
+title: Eventi touch e movimenti in Xamarin.iOS
+description: Questo documento descrive come usare eventi di tocco, multitocco, movimenti, più movimenti e movimenti personalizzati nelle applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009150"
 ---
-# <a name="touch-events-and-gestures-in-xamarinios"></a>Eventi touch e movimenti in Novell. iOS
+# <a name="touch-events-and-gestures-in-xamarinios"></a>Eventi touch e movimenti in Xamarin.iOS
 
 È importante comprendere gli eventi di tocco e le API Touch in un'applicazione iOS, in quanto sono centrali per tutte le interazioni fisiche con il dispositivo. Tutte le interazioni con il tocco coinvolgono un oggetto `UITouch`. In questo articolo verrà illustrato come usare la classe `UITouch` e le relative API per supportare il tocco. In seguito, si espanderanno le proprie conoscenze per apprendere come supportare i movimenti.
 
@@ -116,7 +116,7 @@ Ora che sono state apprese le informazioni sugli eventi di tocco in iOS, verrann
 
 I riconoscitori dei movimenti possono semplificare e ridurre notevolmente l'impegno di programmazione per supportare il tocco in un'applicazione. i riconoscitori di movimento iOS aggregano una serie di eventi di tocco in un singolo evento Touch.
 
-Novell. iOS fornisce la classe `UIGestureRecognizer` come classe di base per i riconoscitori di movimento predefiniti seguenti:
+Xamarin.iOS fornisce la classe `UIGestureRecognizer` come classe di base per i riconoscitori di movimento predefiniti seguenti:
 
 - *UITapGestureRecognizer* : questa operazione è per uno o più rubinetti.
 - *UIPinchGestureRecognizer* : pizzicare e diffondere le dita.
@@ -129,7 +129,7 @@ Il modello di base per l'uso di un riconoscimento di movimento è il seguente:
 
 1. **Creare un'istanza del riconoscitore di movimento** , innanzitutto creare un'istanza di una sottoclasse `UIGestureRecognizer`. L'oggetto di cui viene creata un'istanza verrà associato a una vista e verrà sottoposto a Garbage Collection quando la vista viene eliminata. Non è necessario creare questa vista come variabile a livello di classe.
 1. **Configurare le impostazioni di movimento** : il passaggio successivo consiste nel configurare il riconoscimento del movimento. Per un elenco delle proprietà che è possibile impostare per controllare il comportamento di un'istanza di `UIGestureRecognizer`, vedere la documentazione di Novell su `UIGestureRecognizer` e le relative sottoclassi.
-1. **Configurare la destinazione** : a causa del patrimonio Objective-C, Novell. iOS non genera eventi quando un riconoscimento di movimento corrisponde a un movimento.  `UIGestureRecognizer` dispone di un metodo, `AddTarget`, che può accettare un delegato anonimo o un selettore Objective-C con il codice da eseguire quando il riconoscitore di movimento crea una corrispondenza.
+1. **Configurare la destinazione** : a causa del patrimonio Objective-C, Xamarin.iOS non genera eventi quando un riconoscimento di movimento corrisponde a un movimento.  `UIGestureRecognizer` dispone di un metodo, `AddTarget`, che può accettare un delegato anonimo o un selettore Objective-C con il codice da eseguire quando il riconoscitore di movimento crea una corrispondenza.
 1. **Abilita riconoscimento movimento** : Analogamente agli eventi tocco, i movimenti sono riconosciuti solo se le interazioni tocco sono abilitate.
 1. **Aggiungere il riconoscitore di movimento alla visualizzazione** . il passaggio finale consiste nell'aggiungere il movimento a una vista chiamando `View.AddGestureRecognizer` e passandogli un oggetto del riconoscimento di movimento.
 
@@ -160,7 +160,7 @@ I riconoscitori di movimento esistono in uno degli Stati seguenti:
 - *Terminato* : si tratta di un alias per lo stato riconosciuto.
 - *Operazione non riuscita* : quando il riconoscitore di movimento non è più in grado di corrispondere ai tocchi per cui è in ascolto, lo stato verrà modificato in non riuscito.
 
-Novell. iOS rappresenta questi valori nell'enumerazione `UIGestureRecognizerState`.
+Xamarin.iOS rappresenta questi valori nell'enumerazione `UIGestureRecognizerState`.
 
 ## <a name="working-with-multiple-gestures"></a>Utilizzo di più movimenti
 

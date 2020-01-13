@@ -1,6 +1,6 @@
 ---
-title: Inizializzazione e configurazione del mapping di Novell. Forms
-description: Il pacchetto NuGet Novell. Forms. Maps è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione per l'applicazione.
+title: Inizializzazione e configurazione del mapping di Xamarin.Forms
+description: Il pacchetto NuGet Xamarin.Forms. Maps è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione per l'applicazione.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/06/2019
 ms.locfileid: "73662335"
 ---
-# <a name="xamarinforms-map-initialization-and-configuration"></a>Inizializzazione e configurazione del mapping di Novell. Forms
+# <a name="xamarinforms-map-initialization-and-configuration"></a>Inizializzazione e configurazione del mapping di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -22,9 +22,9 @@ Il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) usa il controllo mappa nativo 
 
 ## <a name="map-initialization"></a>Inizializzazione mappa
 
-Il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) viene fornito dal pacchetto NuGet [Novell. Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) , che deve essere aggiunto a tutti i progetti nella soluzione.
+Il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) viene fornito dal pacchetto NuGet [Xamarin.Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) , che deve essere aggiunto a tutti i progetti nella soluzione.
 
-Dopo l'installazione del pacchetto NuGet [Novell. Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) , è necessario inizializzarlo in ogni progetto di piattaforma.
+Dopo l'installazione del pacchetto NuGet [Xamarin.Forms. Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps/) , è necessario inizializzarlo in ogni progetto di piattaforma.
 
 In iOS questo dovrebbe verificarsi in **AppDelegate.cs** richiamando il metodo `Xamarin.FormsMaps.Init` *dopo* il metodo `Xamarin.Forms.Forms.Init`:
 
@@ -126,7 +126,7 @@ Questa operazione incorpora la versione di Google Play servizi con cui l'applica
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Specificare il requisito per la libreria legacy Apache HTTP
 
-Se l'applicazione Novell. Forms è destinata all'API 28 o successiva, è necessario aggiungere la dichiarazione seguente all'interno dell'elemento `<application>` di **file AndroidManifest. XML**:
+Se l'applicazione Xamarin.Forms è destinata all'API 28 o successiva, è necessario aggiungere la dichiarazione seguente all'interno dell'elemento `<application>` di **file AndroidManifest. XML**:
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    
@@ -264,6 +264,6 @@ Questo codice passa l'assembly in cui risiede la classe `Xamarin.Forms.Maps.UWP.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Pin di Novell. Forms. Maps](~/xamarin-forms/user-interface/map/pins.md).
+- [Pin di Xamarin.Forms. Maps](~/xamarin-forms/user-interface/map/pins.md).
 - [API Maps](xref:Xamarin.Forms.Maps)
 - [Renderer personalizzato mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)

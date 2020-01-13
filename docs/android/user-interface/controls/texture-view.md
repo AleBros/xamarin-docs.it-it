@@ -1,5 +1,5 @@
 ---
-title: Novell. Android TextureView
+title: Xamarin.Android TextureView
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029129"
 ---
-# <a name="xamarinandroid-textureview"></a>Novell. Android TextureView
+# <a name="xamarinandroid-textureview"></a>Xamarin.Android TextureView
 
 La classe `TextureView` è una vista che usa il rendering 2D con accelerazione hardware per consentire la visualizzazione di un flusso di contenuto video o OpenGL. Ad esempio, lo screenshot seguente mostra il `TextureView` visualizzare un feed live dalla fotocamera del dispositivo:
 

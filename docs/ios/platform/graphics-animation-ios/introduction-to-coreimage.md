@@ -1,6 +1,6 @@
 ---
-title: Immagine di base in Novell. iOS
-description: L'immagine principale è un nuovo Framework introdotto con iOS 5 per fornire funzionalità di elaborazione delle immagini e di miglioramento dei video in tempo reale. Questo articolo presenta le seguenti funzionalità con gli esempi di Novell. iOS.
+title: Immagine di base in Xamarin.iOS
+description: L'immagine principale è un nuovo Framework introdotto con iOS 5 per fornire funzionalità di elaborazione delle immagini e di miglioramento dei video in tempo reale. Questo articolo presenta le seguenti funzionalità con gli esempi di Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032362"
 ---
-# <a name="core-image-in-xamarinios"></a>Immagine di base in Novell. iOS
+# <a name="core-image-in-xamarinios"></a>Immagine di base in Xamarin.iOS
 
-_L'immagine principale è un nuovo Framework introdotto con iOS 5 per fornire funzionalità di elaborazione delle immagini e di miglioramento dei video in tempo reale. Questo articolo presenta le seguenti funzionalità con gli esempi di Novell. iOS._
+_L'immagine principale è un nuovo Framework introdotto con iOS 5 per fornire funzionalità di elaborazione delle immagini e di miglioramento dei video in tempo reale. Questo articolo presenta le seguenti funzionalità con gli esempi di Xamarin.iOS._
 
 L'immagine principale è un nuovo Framework introdotto in iOS 5 che offre una serie di filtri e effetti predefiniti da applicare alle immagini e ai video, incluso il rilevamento dei visi.
 
@@ -26,7 +26,7 @@ Questo documento contiene esempi semplici di:
 - Applicazione di filtri a un'immagine
 - Elenco dei filtri disponibili.
 
-Questi esempi sono utili per iniziare a incorporare le funzionalità di base delle immagini nelle applicazioni Novell. iOS.
+Questi esempi sono utili per iniziare a incorporare le funzionalità di base delle immagini nelle applicazioni Xamarin.iOS.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -214,7 +214,7 @@ L'output delle categorie elenco è simile al seguente nel simulatore: è possibi
 
  [![](introduction-to-coreimage-images/coreimage05.png "The List Categories output looks like this on the simulator")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
-Ogni filtro elencato è stato esposto come una classe in Novell. iOS, quindi è anche possibile esplorare l'API Novell. iOS. CoreImage nel browser assembly o usare il completamento automatico in Visual Studio per Mac o Visual Studio. 
+Ogni filtro elencato è stato esposto come una classe in Xamarin.iOS, quindi è anche possibile esplorare l'API Xamarin.iOS. CoreImage nel browser assembly o usare il completamento automatico in Visual Studio per Mac o Visual Studio. 
 
 ## <a name="summary"></a>Riepilogo
 

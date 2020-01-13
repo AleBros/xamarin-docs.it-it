@@ -22,7 +22,7 @@ _Questo articolo illustra come ripristinare i nomi dei parametri in un progetto 
 
 Quando si associa una libreria Java esistente, alcuni metadati sull'API associata vengono persi. In particolare i nomi dei parametri per i metodi. I nomi dei parametri verranno visualizzati come `p0`, `p1`e così via. Ciò è dovuto al fatto che i file di `.class` Java non conservano i nomi dei parametri utilizzati nel codice sorgente Java. 
 
-Un progetto di associazione Java Novell. Android può fornire i nomi dei parametri se ha accesso al codice HTML Javadoc dalla libreria originale. 
+Un progetto di associazione Java Xamarin.Android può fornire i nomi dei parametri se ha accesso al codice HTML Javadoc dalla libreria originale. 
 
 ## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Integrazione di javadoc HTML in un progetto di binding Java
 

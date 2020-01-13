@@ -319,7 +319,7 @@ Vengono mantenute le proporzioni della bitmap, ma vengono ritagliate le aree a s
 
 ## <a name="a-versatile-bitmap-display-function"></a>Una funzione di visualizzazione di bitmap versatile
 
-Ambienti di programmazione basato su XAML (ad esempio UWP e xamarin. Forms) hanno una struttura per espandere o ridurre le dimensioni delle bitmap, mantenendo tuttavia le proporzioni. Sebbene SkiaSharp non include questa funzionalità, è possibile implementarlo manualmente. Il `BitmapExtensions` incluso nella classe la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione viene illustrato come. La classe definisce due nuove `DrawBitmap` metodi che eseguono il calcolo delle proporzioni. Questi nuovi metodi sono metodi di estensione di `SKCanvas`.
+Ambienti di programmazione basato su XAML (ad esempio UWP e Xamarin.Forms) hanno una struttura per espandere o ridurre le dimensioni delle bitmap, mantenendo tuttavia le proporzioni. Sebbene SkiaSharp non include questa funzionalità, è possibile implementarlo manualmente. Il `BitmapExtensions` incluso nella classe la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione viene illustrato come. La classe definisce due nuove `DrawBitmap` metodi che eseguono il calcolo delle proporzioni. Questi nuovi metodi sono metodi di estensione di `SKCanvas`.
 
 Il nuovo `DrawBitmap` metodi includono un parametro di tipo `BitmapStretch`, un'enumerazione definita nel **BitmapExtensions.cs** file:
 
@@ -335,7 +335,7 @@ public enum BitmapStretch
 }
 ```
 
-Il `None`, `Fill`, `Uniform`, e `UniformToFill` membri sono identici a quelli nella piattaforma UWP [ `Stretch` ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) enumerazione. Xamarin. Forms simili [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumerazione definisce i membri `Fill`, `AspectFit`, e `AspectFill`.
+Il `None`, `Fill`, `Uniform`, e `UniformToFill` membri sono identici a quelli nella piattaforma UWP [ `Stretch` ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) enumerazione. Xamarin.Forms simili [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumerazione definisce i membri `Fill`, `AspectFit`, e `AspectFill`.
 
 Il **ridimensionamento uniforme** pagina riportata sopra Centra la bitmap all'interno del rettangolo, ma è possibile altre opzioni, ad esempio il posizionamento della bitmap nel lato sinistro o destro del rettangolo, o la parte superiore o inferiore. Lo scopo del `BitmapAlignment` enumerazione:
 

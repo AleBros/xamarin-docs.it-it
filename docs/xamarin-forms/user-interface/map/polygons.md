@@ -1,6 +1,6 @@
 ---
-title: Poligoni e polilinee del mapping di Novell. Forms
-description: Questo articolo illustra come creare poligoni e polilinee in un'istanza di mappa Novell. Forms.
+title: Poligoni e polilinee del mapping di Xamarin.Forms
+description: Questo articolo illustra come creare poligoni e polilinee in un'istanza di mappa Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72810491"
 ---
-# <a name="xamarinforms-map-polygons-and-polylines"></a>Poligoni e polilinee del mapping di Novell. Forms
+# <a name="xamarinforms-map-polygons-and-polylines"></a>Poligoni e polilinee del mapping di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

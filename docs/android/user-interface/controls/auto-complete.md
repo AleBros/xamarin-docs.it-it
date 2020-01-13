@@ -1,5 +1,5 @@
 ---
-title: Completamento automatico per Novell. Android
+title: Completamento automatico per Xamarin.Android
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029370"
 ---
-# <a name="auto-complete-for-xamarinandroid"></a>Completamento automatico per Novell. Android
+# <a name="auto-complete-for-xamarinandroid"></a>Completamento automatico per Xamarin.Android
 
 `AutoCompleteTextView` è un elemento di visualizzazione di testo modificabile che mostra automaticamente i suggerimenti di completamento mentre l'utente sta digitando. L'elenco di suggerimenti viene visualizzato in un menu a discesa da cui l'utente può scegliere un elemento in cui sostituire il contenuto della casella di modifica.
 
@@ -195,7 +195,7 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>Riferimenti
 
-- [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; progetto di esempio Novell. Android per il `AutoCompleteTextView`
+- [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; progetto di esempio Xamarin.Android per il `AutoCompleteTextView`
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 - [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 

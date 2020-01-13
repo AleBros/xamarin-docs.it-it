@@ -1,6 +1,6 @@
 ---
-title: Rilevamento del dito multitocco in Novell. iOS
-description: Questo documento descrive come tenere traccia delle singole dita nei movimenti multitocco in un'app Novell. iOS. Si concentra su un esempio di app per il disegno di un dito.
+title: Rilevamento del dito multitocco in Xamarin.iOS
+description: Questo documento descrive come tenere traccia delle singole dita nei movimenti multitocco in un'app Xamarin.iOS. Si concentra su un esempio di app per il disegno di un dito.
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009183"
 ---
-# <a name="multi-touch-finger-tracking-in-xamarinios"></a>Rilevamento del dito multitocco in Novell. iOS
+# <a name="multi-touch-finger-tracking-in-xamarinios"></a>Rilevamento del dito multitocco in Xamarin.iOS
 
 _Questo documento illustra come tenere traccia degli eventi di tocco da più dita_
 

@@ -1,6 +1,6 @@
 ---
-title: Riconoscimento vocale in Novell. iOS
-description: Questo articolo presenta il nuovo Speech API e Mostra come implementarlo in un'app Novell. iOS per supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato) in testo.
+title: Riconoscimento vocale in Xamarin.iOS
+description: Questo articolo presenta il nuovo Speech API e Mostra come implementarlo in un'app Xamarin.iOS per supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato) in testo.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031462"
 ---
-# <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Novell. iOS
+# <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Xamarin.iOS
 
-_Questo articolo presenta il nuovo Speech API e Mostra come implementarlo in un'app Novell. iOS per supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato) in testo._
+_Questo articolo presenta il nuovo Speech API e Mostra come implementarlo in un'app Xamarin.iOS per supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato) in testo._
 
 Una novità di iOS 10, Apple ha rilasciato l'API riconoscimento vocale, che consente a un'app iOS di supportare il riconoscimento vocale continuo e di trascrivere il discorso (da flussi audio in tempo reale o registrato) in testo.
 
@@ -394,7 +394,7 @@ Apple presenta il suggerimento seguente per essere trasparente e rispettando la 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato il nuovo Speech API e ha illustrato come implementarlo in un'app Novell. iOS per supportare il riconoscimento vocale continuo e la trascrizione vocale (da flussi audio in tempo reale o registrato) in testo. 
+Questo articolo ha presentato il nuovo Speech API e ha illustrato come implementarlo in un'app Xamarin.iOS per supportare il riconoscimento vocale continuo e la trascrizione vocale (da flussi audio in tempo reale o registrato) in testo. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 

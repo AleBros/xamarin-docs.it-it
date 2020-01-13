@@ -16,9 +16,9 @@ ms.locfileid: "73030432"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Novell
 
-_Questo articolo illustra la progettazione e l'uso degli indicatori di stato all'interno di un'app Novell. tvOS._
+_Questo articolo illustra la progettazione e l'uso degli indicatori di stato all'interno di un'app Xamarin.tvOS._
 
-In alcuni casi l'app Novell. tvOS deve caricare nuovo contenuto o eseguire un'operazione di elaborazione lunga. In questi casi, è necessario presentare un indicatore di attività o un indicatore di stato per informare l'utente che l'app è ancora in esecuzione e per dare loro un'indicazione relativa alla lunghezza dell'attività in esecuzione.
+In alcuni casi l'app Xamarin.tvOS deve caricare nuovo contenuto o eseguire un'operazione di elaborazione lunga. In questi casi, è necessario presentare un indicatore di attività o un indicatore di stato per informare l'utente che l'app è ancora in esecuzione e per dare loro un'indicazione relativa alla lunghezza dell'attività in esecuzione.
 
 ![Indicatori di stato di esempio](progress-indicators-images/intro01.png "Indicatori di stato di esempio")
 
@@ -43,7 +43,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di stato:
 
 ## <a name="progress-indicators-and-storyboards"></a>Indicatori di stato e storyboard
 
-Il modo più semplice per usare un indicatore di stato in un'app Novell. tvOS consiste nell'aggiungerlo all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare un indicatore di stato in un'app Xamarin.tvOS consiste nell'aggiungerlo all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -131,7 +131,7 @@ La proprietà `Progress` viene utilizzata per impostare la quantità di attivit�
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata illustrata la progettazione e l'utilizzo degli indicatori di stato all'interno di un'app Novell. tvOS.
+In questo articolo è stata illustrata la progettazione e l'utilizzo degli indicatori di stato all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

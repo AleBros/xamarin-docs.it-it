@@ -1,6 +1,6 @@
 ---
 title: Visualizzazioni native in c#
-description: Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di xamarin. Forms create utilizzando c#. Questo articolo illustra come aggiungere le visualizzazioni native in un layout di xamarin. Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API.
+description: Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di Xamarin.Forms create utilizzando c#. Questo articolo illustra come aggiungere le visualizzazioni native in un layout di Xamarin.Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API.
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
@@ -18,22 +18,22 @@ ms.locfileid: "70770721"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
-_Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di xamarin. Forms create utilizzando c#. Questo articolo illustra come aggiungere le visualizzazioni native in un layout di xamarin. Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API._
+_Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di Xamarin.Forms create utilizzando c#. Questo articolo illustra come aggiungere le visualizzazioni native in un layout di Xamarin.Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API._
 
 ## <a name="overview"></a>Panoramica
 
-Qualsiasi controllo di xamarin. Forms che consente `Content` da impostare, o che dispone di un `Children` raccolta, è possibile aggiungere le visualizzazioni specifiche della piattaforma. Ad esempio, iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà, oppure al [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) raccolta. Si noti tuttavia che questa funzionalità richiede l'uso di `#if` definisce nelle soluzioni xamarin. Forms progetto condiviso e non è disponibile da soluzioni di libreria xamarin. Forms .NET Standard.
+Qualsiasi controllo di Xamarin.Forms che consente `Content` da impostare, o che dispone di un `Children` raccolta, è possibile aggiungere le visualizzazioni specifiche della piattaforma. Ad esempio, iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà, oppure al [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) raccolta. Si noti tuttavia che questa funzionalità richiede l'uso di `#if` definisce nelle soluzioni Xamarin.Forms progetto condiviso e non è disponibile da soluzioni di libreria Xamarin.Forms .NET Standard.
 
-Gli screenshot seguenti illustrano le viste specifiche della piattaforma è stato aggiunto a un xamarin. Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
+Gli screenshot seguenti illustrano le viste specifiche della piattaforma è stato aggiunto a un Xamarin.Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 
 [![](code-images/screenshots-sml.png "StackLayout che contiene le viste specifiche della piattaforma")](code-images/screenshots.png#lightbox "StackLayout che contiene le viste specifiche della piattaforma")
 
-La possibilità di aggiungere le visualizzazioni specifiche della piattaforma a un layout di xamarin. Forms è abilitata per due metodi di estensione in ogni piattaforma:
+La possibilità di aggiungere le visualizzazioni specifiche della piattaforma a un layout di Xamarin.Forms è abilitata per due metodi di estensione in ogni piattaforma:
 
 - `Add` : aggiunge una visualizzazione specifica della piattaforma per la [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) del layout di una raccolta.
-- `ToView` – accetta una visualizzazione specifica della piattaforma e ne esegue il wrapping come un xamarin. Forms [ `View` ](xref:Xamarin.Forms.View) che possono essere impostati come il `Content` proprietà di un controllo.
+- `ToView` – accetta una visualizzazione specifica della piattaforma e ne esegue il wrapping come un Xamarin.Forms [ `View` ](xref:Xamarin.Forms.View) che possono essere impostati come il `Content` proprietà di un controllo.
 
-Uso di questi metodi in un progetto condiviso di xamarin. Forms richiede l'importazione di spazio dei nomi di xamarin. Forms appropriato del tipo specifico della piattaforma:
+Uso di questi metodi in un progetto condiviso di Xamarin.Forms richiede l'importazione di spazio dei nomi di Xamarin.Forms appropriato del tipo specifico della piattaforma:
 
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
@@ -41,7 +41,7 @@ Uso di questi metodi in un progetto condiviso di xamarin. Forms richiede l'impor
 
 ## <a name="adding-platform-specific-views-on-each-platform"></a>Aggiunta di visualizzazioni specifiche della piattaforma in ogni piattaforma
 
-Le sezioni seguenti illustrano come aggiungere viste specifiche della piattaforma a un layout di xamarin. Forms in ogni piattaforma.
+Le sezioni seguenti illustrano come aggiungere viste specifiche della piattaforma a un layout di Xamarin.Forms in ogni piattaforma.
 
 ### <a name="ios"></a>iOS
 
@@ -92,7 +92,7 @@ L'esempio presuppone che il `stackLayout` e `contentView` istanze precedentement
 
 ## <a name="overriding-platform-measurements-for-custom-views"></a>Esegue l'override delle misurazioni di piattaforma per le visualizzazioni personalizzate
 
-Visualizzazioni personalizzate in ogni piattaforma implementano spesso solo correttamente l'unità di misura per lo scenario di layout per il quale sono stati progettati. Ad esempio, una visualizzazione personalizzata può sono stata progettata in modo che occupi solo la metà della larghezza disponibile del dispositivo. Tuttavia, dopo aver condiviso con altri utenti, la visualizzazione personalizzata potrebbe essere necessaria a occupare larghezza completa disponibile del dispositivo. Pertanto, può essere necessario eseguire l'override di un'implementazione di misurazione di visualizzazioni personalizzate quando vengono riutilizzate in un layout di xamarin. Forms. Per questo motivo, il `Add` e `ToView` i metodi di estensione offrono override che consentono di delegati di misurazione specificare quale possono eseguire l'override di layout di visualizzazione personalizzato quando viene aggiunto a un layout di xamarin. Forms.
+Visualizzazioni personalizzate in ogni piattaforma implementano spesso solo correttamente l'unità di misura per lo scenario di layout per il quale sono stati progettati. Ad esempio, una visualizzazione personalizzata può sono stata progettata in modo che occupi solo la metà della larghezza disponibile del dispositivo. Tuttavia, dopo aver condiviso con altri utenti, la visualizzazione personalizzata potrebbe essere necessaria a occupare larghezza completa disponibile del dispositivo. Pertanto, può essere necessario eseguire l'override di un'implementazione di misurazione di visualizzazioni personalizzate quando vengono riutilizzate in un layout di Xamarin.Forms. Per questo motivo, il `Add` e `ToView` i metodi di estensione offrono override che consentono di delegati di misurazione specificare quale possono eseguire l'override di layout di visualizzazione personalizzato quando viene aggiunto a un layout di Xamarin.Forms.
 
 Le sezioni seguenti illustrano come eseguire l'override di layout di visualizzazioni personalizzate, per correggere le unità di misura all'utilizzo dell'API.
 
@@ -318,7 +318,7 @@ Questo metodo Usa la larghezza fornita dal `CustomControl.ArrangeOverride` (meto
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come aggiungere le visualizzazioni native in un layout di xamarin. Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API.
+Questo articolo ha illustrato come aggiungere le visualizzazioni native in un layout di Xamarin.Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

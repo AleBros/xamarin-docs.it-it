@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche nei dati con ricerca di Azure e Novell. Forms
-description: Questo articolo illustra come usare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione xamarin. Forms.
+title: Eseguire ricerche nei dati con ricerca di Azure e Xamarin.Forms
+description: Questo articolo illustra come usare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489791"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Novell. Forms
+# <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
-_Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un'applicazione Novell. Forms._
+_Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms._
 
 ## <a name="overview"></a>Panoramica di
 
@@ -43,11 +43,11 @@ Ricerca di Azure supporta anche il recupero dei suggerimenti in base a input di 
 
 ## <a name="setup"></a>Programma di installazione
 
-Il processo per l'integrazione di ricerca di Azure in un'applicazione xamarin. Forms è come segue:
+Il processo per l'integrazione di ricerca di Azure in un'applicazione Xamarin.Forms è come segue:
 
 1. Creare un servizio di ricerca di Azure. Per altre informazioni, vedere [creare un servizio di ricerca di Azure usando il portale di Azure](/azure/search/search-create-service-portal/).
-1. Rimuovere Silverlight come framework di destinazione dalla soluzione xamarin. Forms libreria di classi portabile (PCL). È possibile modificare il profilo di libreria di classi Portabile a qualsiasi profilo che supporta lo sviluppo multipiattaforma, ma non supporta Silverlight, ad esempio profilo 151 o 92.
-1. Aggiungere il [libreria di ricerca di Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search) pacchetto NuGet al progetto libreria di classi Portabile della soluzione xamarin. Forms.
+1. Rimuovere Silverlight come framework di destinazione dalla soluzione Xamarin.Forms libreria di classi portabile (PCL). È possibile modificare il profilo di libreria di classi Portabile a qualsiasi profilo che supporta lo sviluppo multipiattaforma, ma non supporta Silverlight, ad esempio profilo 151 o 92.
+1. Aggiungere il [libreria di ricerca di Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search) pacchetto NuGet al progetto libreria di classi Portabile della soluzione Xamarin.Forms.
 
 Dopo aver eseguito questi passaggi, l'API di libreria di ricerca di Microsoft è utilizzabile per gestire origini dati e gli indici di ricerca, caricare e gestire documenti ed eseguire query.
 
@@ -277,7 +277,7 @@ Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiam
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione xamarin. Forms. Ricerca di Azure è un servizio cloud che offre funzionalità per i dati caricati di query e indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca tradizionalmente associate all'implementazione di funzionalità di ricerca in un'applicazione.
+In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms. Ricerca di Azure è un servizio cloud che offre funzionalità per i dati caricati di query e indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca tradizionalmente associate all'implementazione di funzionalità di ricerca in un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

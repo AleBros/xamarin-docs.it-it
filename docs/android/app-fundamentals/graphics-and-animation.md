@@ -1,6 +1,6 @@
 ---
 title: Grafica e animazione
-description: Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo argomento introduce questi Framework e illustra come creare grafica e animazioni personalizzate da usare in un'applicazione Novell. Android.
+description: Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo argomento introduce questi Framework e illustra come creare grafica e animazioni personalizzate da usare in un'applicazione Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "75655291"
 ---
 # <a name="android-graphics-and-animation"></a>Grafica e animazione Android
 
-_Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo argomento introduce questi Framework e illustra come creare grafica e animazioni personalizzate da usare in un'applicazione Novell. Android._
+_Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo argomento introduce questi Framework e illustra come creare grafica e animazioni personalizzate da usare in un'applicazione Xamarin.Android._
 
 ## <a name="overview"></a>Panoramica di
 
@@ -220,7 +220,7 @@ In generale, l'animazione delle proprietà è il sistema preferito da usare perc
 Le animazioni di visualizzazione sono limitate alle viste e possono eseguire animazioni solo su valori quali punti di inizio e di fine, dimensioni, rotazione e trasparenza.
 Questi tipi di animazioni vengono in genere definiti *animazioni di interpolazione*. Le animazioni di visualizzazione possono essere definite in due modi &ndash; a livello di codice o tramite file XML. I file XML rappresentano il modo migliore per dichiarare le animazioni di visualizzazione, perché sono più leggibili e più semplici da gestire.
 
-I file XML di animazione verranno archiviati nella directory `/Resources/anim` di un progetto Novell. Android. Questo file deve avere uno degli elementi seguenti come elemento radice:
+I file XML di animazione verranno archiviati nella directory `/Resources/anim` di un progetto Xamarin.Android. Questo file deve avere uno degli elementi seguenti come elemento radice:
 
 - `alpha` &ndash; un'animazione di dissolvenza o dissolvenza.
 

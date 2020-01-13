@@ -22,7 +22,7 @@ Analogamente a iOS, Android crea un oggetto che include i dati sull'interazione 
 - Set di valori dell'asse che descrivono la posizione del `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
    I valori dell'asse possono essere diversi a seconda del dispositivo, quindi l'elenco precedente non descrive tutti i valori dell'asse.
 
-L'oggetto `MotionEvent` verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Novell. Android risponda a un evento Touch in tre modi:
+L'oggetto `MotionEvent` verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Xamarin.Android risponda a un evento Touch in tre modi:
 
 - *Assegnare un gestore eventi a `View.Touch`* : la classe `Android.Views.View` dispone di un `EventHandler<View.TouchEventArgs>` a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
 
@@ -160,7 +160,7 @@ private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayV
 }
 ```
 
-A questo proposito, è necessario comprendere come usare il tocco e i movimenti in un'applicazione Novell. Android. Passare ora a una procedura dettagliata e visualizzare tutti i concetti in un'applicazione di esempio funzionante.
+A questo proposito, è necessario comprendere come usare il tocco e i movimenti in un'applicazione Xamarin.Android. Passare ora a una procedura dettagliata e visualizzare tutti i concetti in un'applicazione di esempio funzionante.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

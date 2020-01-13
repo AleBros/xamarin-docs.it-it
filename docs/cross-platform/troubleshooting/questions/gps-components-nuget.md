@@ -34,7 +34,7 @@ La discrepanza era dovuta al fatto che gli strumenti non indicavano in modo corr
 
 ## <a name="unifying-google-play-services"></a>Unificazione di Google Play Services
 
-Nelle versioni più recenti di Novell. Android, ora si indica `aapt.exe` quale versione massima delle risorse usare, quindi questo problema si interrompe.
+Nelle versioni più recenti di Xamarin.Android, ora si indica `aapt.exe` quale versione massima delle risorse usare, quindi questo problema si interrompe.
 
 Ciò significa che non esiste un motivo reale per avere pacchetti separati per Gingerbread/ICS/JellyBean/KitKat (Tuttavia, è ancora necessario un binding separato per Froyo poiché si tratta di un file con estensione jar diverso).
 

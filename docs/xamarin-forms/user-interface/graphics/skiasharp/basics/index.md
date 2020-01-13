@@ -1,6 +1,6 @@
 ---
 title: Nozioni fondamentali di disegno di SkiaSharp
-description: Questa guida illustra le nozioni di base di SkiaSharp grafica concetti e le coordinate nelle applicazioni xamarin. Forms.
+description: Questa guida illustra le nozioni di base di SkiaSharp grafica concetti e le coordinate nelle applicazioni Xamarin.Forms.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
@@ -20,7 +20,7 @@ ms.locfileid: "68657101"
 
 _Scopri le nozioni di base di SkiaSharp grafica concetti e le coordinate_
 
-Dopo aver aggiunto il pacchetto NuGet di SkiaSharp all'applicazione xamarin. Forms, è possibile iniziare a usare SkiaSharp grafica. Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) soluzioni includono numerose pagine che illustrano le tecniche di programmazione nelle lezioni progressivamente più avanzati di SkiaSharp.
+Dopo aver aggiunto il pacchetto NuGet di SkiaSharp all'applicazione Xamarin.Forms, è possibile iniziare a usare SkiaSharp grafica. Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) soluzioni includono numerose pagine che illustrano le tecniche di programmazione nelle lezioni progressivamente più avanzati di SkiaSharp.
 
 Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **nozioni di base di SkiaSharp Drawing** nella home page del [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma e il [ **Nozioni di base** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) cartella della soluzione.
 
@@ -30,11 +30,11 @@ Scopri le nozioni di base di disegno di SkiaSharp, tra cui Canvas e disegnare gl
 
 ## <a name="integrating-with-xamarinformsintegrationmd"></a>[Integrazione con Xamarin.Forms](integration.md)
 
-Per creare grafica interattiva di SkiaSharp, risponde al tocco input e l'integrazione con gli elementi di xamarin. Forms.
+Per creare grafica interattiva di SkiaSharp, risponde al tocco input e l'integrazione con gli elementi di Xamarin.Forms.
 
 ## <a name="pixels-and-device-independent-unitspixelsmd"></a>[Pixel e unità di misura indipendenti dal dispositivo](pixels.md)
 
-Esplorare le differenze tra coordinate SkiaSharp e xamarin. Forms.
+Esplorare le differenze tra coordinate SkiaSharp e Xamarin.Forms.
 
 ## <a name="basic-animationanimationmd"></a>[Animazione di base](animation.md)
 

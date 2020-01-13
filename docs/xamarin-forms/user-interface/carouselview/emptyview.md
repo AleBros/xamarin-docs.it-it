@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms CarouselView EmptyView
+title: Xamarin.Forms CarouselView EmptyView
 description: In CarouselView è possibile specificare una vista vuota che fornisce feedback all'utente quando non sono disponibili dati per la visualizzazione. La vista vuota può essere una stringa, una vista o più visualizzazioni.
 ms.prod: xamarin
 ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697570"
 ---
-# <a name="xamarinforms-carouselview-emptyview"></a>Novell. Forms CarouselView EmptyView
+# <a name="xamarinforms-carouselview-emptyview"></a>Xamarin.Forms CarouselView EmptyView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -241,7 +241,7 @@ void ToggleEmptyView(bool isToggled)
 
 Il metodo `ToggleEmptyView` imposta la proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) dell'oggetto `carouselView` su uno dei due oggetti [`ContentView`](xref:Xamarin.Forms.ContentView) archiviati nell' [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), in base al valore della proprietà [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Quando il [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata dal [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata per il termine di ricerca archiviato nella proprietà [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se l'operazione di filtro non restituisce alcun dato, viene visualizzato il `ContentView` oggetto impostato come `EmptyView` proprietà.
 
-Per altre informazioni sui dizionari risorse, vedere [dizionari risorse Novell. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
+Per altre informazioni sui dizionari risorse, vedere [dizionari risorse Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Scegliere un EmptyViewTemplate in fase di esecuzione
 
@@ -314,11 +314,11 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 La classe `SearchTermTemplateSelector` definisce `DefaultTemplate` e `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. L'override del `OnSelectTemplate` restituisce `DefaultTemplate`, che visualizza un messaggio all'utente, quando la query di ricerca non è uguale a "Novell". Quando la query di ricerca è uguale a "Novell", l'override del `OnSelectTemplate` restituisce `OtherTemplate`, che visualizza un messaggio di base per l'utente.
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Dizionari risorse Novell. Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Dizionari risorse Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Creare un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 6. Clic sui pulsanti
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 6. Clic sui pulsanti'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 6. Clic sui pulsanti'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
@@ -52,7 +52,7 @@ Il [ **TwoButtons** ](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 ## <a name="distinguishing-views-with-ids"></a>Viste distintive con ID
 
-Più `Button` oggetti sono inoltre possibile distinguere impostando il [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) proprietà oppure [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) proprietà a un `string`. Questa proprietà è definita da `Element` ma non viene usato all'interno di xamarin. Forms. Si dovrà essere utilizzato esclusivamente da parte delle applicazioni.
+Più `Button` oggetti sono inoltre possibile distinguere impostando il [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) proprietà oppure [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) proprietà a un `string`. Questa proprietà è definita da `Element` ma non viene usato all'interno di Xamarin.Forms. Si dovrà essere utilizzato esclusivamente da parte delle applicazioni.
 
 Il [ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) esempio Usa lo stesso gestore eventi per tutti i tasti numerici 10 un tastierino numerico e consente di distinguere tra di essi con il `StyleId` proprietà:
 
@@ -90,4 +90,4 @@ Il [ **PersistentKeypad** ](https://github.com/xamarin/xamarin-forms-book-sample
 - [Capitolo 6 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Esempi di capitolo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 - [Capitolo 6 F# esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
-- [Pulsante di xamarin. Forms](~/xamarin-forms/user-interface/button.md)
+- [Pulsante di Xamarin.Forms](~/xamarin-forms/user-interface/button.md)

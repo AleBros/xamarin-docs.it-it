@@ -1,6 +1,6 @@
 ---
-title: Barre schede e controller di barra schede in xamarin. IOS
-description: Questo documento descrive i controller di barra della scheda di iOS e come usarli con xamarin. IOS. Viene illustrato come configurare un UITabBarController, lavorare con immagini, impostare i valori di badge, funzionano con gli eventi e altro ancora.
+title: Barre schede e controller di barra schede in Xamarin.IOS
+description: Questo documento descrive i controller di barra della scheda di iOS e come usarli con Xamarin.IOS. Viene illustrato come configurare un UITabBarController, lavorare con immagini, impostare i valori di badge, funzionano con gli eventi e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663328"
 ---
-# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre schede e controller della barra schede in Novell. iOS
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre schede e controller della barra schede in Xamarin.iOS
 
 Le applicazioni a schede vengono usate in iOS per supportare le interfacce utente in cui è possibile accedere più schermate in nessun ordine particolare. Tramite il `UITabBarController` (classe), le applicazioni possono includere facilmente il supporto per questi scenari multi-schermati. `UITabBarController` si occupa della gestione di multi-schermata, che consente allo sviluppatore di concentrarsi sui dettagli di ogni schermata dell'applicazione.
 

@@ -42,7 +42,7 @@ L'app Xamarin Live Player supporta i dispositivi Android seguenti:
 
 Live Player non è disponibile per iOS.
 
-### <a name="xamarinforms-limitations"></a>Limitazioni di Novell. Forms
+### <a name="xamarinforms-limitations"></a>Limitazioni di Xamarin.Forms
 
 - Renderer personalizzati non supportati.
 - Gli effetti non sono supportati.
@@ -146,7 +146,7 @@ Aprire **PlayerDeviceList. XML** in un editor, ad esempio Visual Studio o Visual
 
 Verificare di aver selezionato un **progetto di avvio** corrispondente al tipo di dispositivo, ad esempio Android) e che la configurazione corrisponda a quel tipo di dispositivo (ad esempio **Eseguire il debug** per Android.
 
-## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>"Costruttore sul tipo ' InterpretedXamarin. Forms. Button ' non trovato" nel lettore
+## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>"Costruttore sul tipo ' InterpretedXamarin.Forms. Button ' non trovato" nel lettore
 
 Non è possibile eseguire l'override di alcune classi di sistema, ad esempio:
 
@@ -159,9 +159,9 @@ public class SomeCustomButton : Xamarin.Forms.Button { ... }
 Questo errore si verifica per i progetti Android con interfacce utente definite nei file AXML.
 I file AXML non sono attualmente supportati in Xamarin Live Player.
 
-### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Il rendering della barra degli strumenti e delle schede Android non è corretto con Novell. Forms
+### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Il rendering della barra degli strumenti e delle schede Android non è corretto con Xamarin.Forms
 
-I progetti Android di Novell. Forms devono usare "Toolbar. aXML" e "Tabby. aXML" per i nomi dei file di layout pertinenti. Il modello predefinito usa questi nomi; la ridenominazione provocherà problemi di rendering.
+I progetti Android di Xamarin.Forms devono usare "Toolbar. aXML" e "Tabby. aXML" per i nomi dei file di layout pertinenti. Il modello predefinito usa questi nomi; la ridenominazione provocherà problemi di rendering.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

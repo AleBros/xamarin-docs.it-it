@@ -45,7 +45,7 @@ Questa guida illustra la creazione di un semplice "Hello, World!" Soluzione Urho
 
 - **SamplyGame** è un'implementazione di esempio del gioco di Skies.
 
-- **FormsSample** illustra come usare UrhoSharp nelle applicazioni Novell. Forms.
+- **FormsSample** illustra come usare UrhoSharp nelle applicazioni Xamarin.Forms.
 
 Tutti gli esempi vengono eseguiti in Android, iOS, Mac e Windows.
 

@@ -29,11 +29,11 @@ Ora che sono stati illustrati i concetti e le API che racchiudono l'autenticazio
 
 ## <a name="summary"></a>Riepilogo
 
-L'autenticazione con impronta digitale è un ottimo modo per consentire a un'applicazione Novell. Android di verificare rapidamente gli utenti, semplificando l'interazione degli utenti con funzionalità sensibili come gli acquisti in-app. Questa guida ha illustrato i concetti e il codice necessari per incorporare l'API per le impronte digitali Android 6,0 nell'applicazione Novell. Android.
+L'autenticazione con impronta digitale è un ottimo modo per consentire a un'applicazione Xamarin.Android di verificare rapidamente gli utenti, semplificando l'interazione degli utenti con funzionalità sensibili come gli acquisti in-app. Questa guida ha illustrato i concetti e il codice necessari per incorporare l'API per le impronte digitali Android 6,0 nell'applicazione Xamarin.Android.
 
 Prima di tutto abbiamo discusso le API dell'impronta digitale, `FingerprintManager` (e `FingerprintManagerCompat`). È stato esaminato il modo in cui la classe astratta `FingerprintManager.AuthenticationCallbacks` deve essere estesa da un'applicazione e usata come intermediario tra l'hardware dell'impronta digitale e l'applicazione stessa. Si è quindi esaminato come verificare l'integrità dei risultati dello scanner di impronta digitale usando un oggetto Java `Cipher`. Infine, abbiamo toccato un po' di test descrivendo come registrare un'impronta digitale in un dispositivo e usando **ADB** per simulare un swipe impronta digitale su un emulatore. 
 
-Se non è già stato fatto, è necessario esaminare l' [applicazione di esempio](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) che accompagna questa guida. L' [esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) è stato trasferito da Java a Novell. Android e fornisce un altro esempio su come aggiungere l'autenticazione con impronta digitale a un'applicazione Android.
+Se non è già stato fatto, è necessario esaminare l' [applicazione di esempio](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) che accompagna questa guida. L' [esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) è stato trasferito da Java a Xamarin.Android e fornisce un altro esempio su come aggiungere l'autenticazione con impronta digitale a un'applicazione Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

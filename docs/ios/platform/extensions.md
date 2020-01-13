@@ -1,5 +1,5 @@
 ---
-title: Estensioni iOS in Novell. iOS
+title: Estensioni iOS in Xamarin.iOS
 description: Questo documento descrive le estensioni, ovvero i widget presentati da iOS in un contesto standard, ad esempio all'interno del centro notifiche. Viene illustrato come creare un'estensione e comunicare con esso dall'app padre.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032578"
 ---
-# <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Novell. iOS
+# <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Xamarin.iOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
@@ -51,7 +51,7 @@ Le limitazioni universali sono:
 - [UIActionSheet](xref:UIKit.UIActionSheet) e [UIAlertView](xref:UIKit.UIAlertView) non sono disponibili. le estensioni devono usare [UIAlertController](xref:UIKit.UIAlertController)
 - Diversi membri di [UIApplication](xref:UIKit.UIApplication) non sono disponibili: [UIApplication. SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication. OpenURL](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication. BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) e [ UIApplication. EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - iOS impone un limite di utilizzo della memoria di 16 MB sulle estensioni odierne.
-- Per impostazione predefinita, le estensioni della tastiera non hanno accesso alla rete. Ciò influiscono sul debug nel dispositivo (la restrizione non viene applicata nel simulatore), perché Novell. iOS richiede l'accesso alla rete per il debug. È possibile richiedere l'accesso alla rete impostando il valore `Requests Open Access` nel file INFO. plist del progetto su `Yes`. Per ulteriori informazioni sulle limitazioni dell'estensione per la tastiera, vedere la [Guida alla tastiera personalizzata](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) di Apple.
+- Per impostazione predefinita, le estensioni della tastiera non hanno accesso alla rete. Ciò influiscono sul debug nel dispositivo (la restrizione non viene applicata nel simulatore), perché Xamarin.iOS richiede l'accesso alla rete per il debug. È possibile richiedere l'accesso alla rete impostando il valore `Requests Open Access` nel file INFO. plist del progetto su `Yes`. Per ulteriori informazioni sulle limitazioni dell'estensione per la tastiera, vedere la [Guida alla tastiera personalizzata](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) di Apple.
 
 Per le singole limitazioni, vedere la [Guida alla programmazione dell'estensione app](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/)di Apple.
 
@@ -75,7 +75,7 @@ Per impostazione predefinita, le estensioni e le relative app contenitore non po
 
 ## <a name="creating-an-extension"></a>Creazione di un'estensione
 
-Le estensioni (e le relative app contenitore) devono essere binari a 64 bit e compilate usando le [API unificate](~/cross-platform/macios/unified/index.md)Novell. iOS. Quando si sviluppa un'estensione, le soluzioni conterranno almeno due progetti: l'app contenitore e un progetto per ogni estensione fornita dal contenitore.
+Le estensioni (e le relative app contenitore) devono essere binari a 64 bit e compilate usando le [API unificate](~/cross-platform/macios/unified/index.md)Xamarin.iOS. Quando si sviluppa un'estensione, le soluzioni conterranno almeno due progetti: l'app contenitore e un progetto per ogni estensione fornita dal contenitore.
 
 ### <a name="container-app-project-requirements"></a>Requisiti del progetto di app contenitore
 
@@ -463,4 +463,4 @@ In questo documento sono state analizzate le estensioni, il tipo di punti di est
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [ContainerApp (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
-- [Creazione di estensioni in Novell. iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
+- [Creazione di estensioni in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)

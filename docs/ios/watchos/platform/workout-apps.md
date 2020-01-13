@@ -98,7 +98,7 @@ Procedere come descritto di seguito:
 
     [![](workout-apps-images/auth01.png "Check Enable HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. Salvare le modifiche apportate al file.
-4. Seguire le istruzioni riportate nell'articolo relativo all' [ID app esplicito e al profilo di provisioning](~/ios/platform/healthkit.md) e [associando l'ID app e il profilo di provisioning all'app Novell. iOS](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per eseguire correttamente il provisioning dell'app.
+4. Seguire le istruzioni riportate nell'articolo relativo all' [ID app esplicito e al profilo di provisioning](~/ios/platform/healthkit.md) e [associando l'ID app e il profilo di provisioning all'app Xamarin.iOS](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per eseguire correttamente il provisioning dell'app.
 5. Infine, usare le istruzioni disponibili in [Programming Health Kit](~/ios/platform/healthkit.md) e [richiedere l'autorizzazione dalle sezioni utente](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per richiedere l'autorizzazione per l'accesso all'archivio dati HealthKit dell'utente.
 
 ### <a name="setting-the-workout-configuration"></a>Impostazione della configurazione di allenamento

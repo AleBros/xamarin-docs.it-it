@@ -1,6 +1,6 @@
 ---
 title: RecyclerView
-description: RecyclerView è un gruppo di visualizzazione per la visualizzazione delle raccolte. è progettato per essere una sostituzione più flessibile per i gruppi di viste precedenti, ad esempio ListView e GridView.  Questa guida illustra come usare e personalizzare RecyclerView in applicazioni Novell. Android.
+description: RecyclerView è un gruppo di visualizzazione per la visualizzazione delle raccolte. è progettato per essere una sostituzione più flessibile per i gruppi di viste precedenti, ad esempio ListView e GridView.  Questa guida illustra come usare e personalizzare RecyclerView in applicazioni Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028817"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
-_RecyclerView è un gruppo di visualizzazione per la visualizzazione delle raccolte. è progettato per essere una sostituzione più flessibile per i gruppi di viste precedenti, ad esempio ListView e GridView.  Questa guida illustra come usare e personalizzare RecyclerView in applicazioni Novell. Android._
+_RecyclerView è un gruppo di visualizzazione per la visualizzazione delle raccolte. è progettato per essere una sostituzione più flessibile per i gruppi di viste precedenti, ad esempio ListView e GridView.  Questa guida illustra come usare e personalizzare RecyclerView in applicazioni Xamarin.Android._
 
 ## <a name="recyclerview"></a>RecyclerView
 
@@ -31,15 +31,15 @@ Molte app devono visualizzare le raccolte dello stesso tipo (ad esempio messaggi
 
 - È efficiente con le raccolte di grandi dimensioni perché riutilizza le visualizzazioni di elementi e richiede l'uso di *titolari di visualizzazione* per memorizzare nella cache i riferimenti alla visualizzazione.
 
-Questa guida illustra come usare `RecyclerView` nelle applicazioni Novell. Android; viene illustrato come aggiungere il pacchetto di `RecyclerView` al progetto Novell. Android e viene descritto come `RecyclerView` funzioni in un'applicazione tipica. Sono disponibili esempi di codice reali per illustrare come integrare `RecyclerView` nell'applicazione, come implementare la visualizzazione di elementi e come aggiornare `RecyclerView` quando cambiano i dati sottostanti. Questa guida presuppone che l'utente abbia familiarità con lo sviluppo di Novell. Android.
+Questa guida illustra come usare `RecyclerView` nelle applicazioni Xamarin.Android; viene illustrato come aggiungere il pacchetto di `RecyclerView` al progetto Xamarin.Android e viene descritto come `RecyclerView` funzioni in un'applicazione tipica. Sono disponibili esempi di codice reali per illustrare come integrare `RecyclerView` nell'applicazione, come implementare la visualizzazione di elementi e come aggiornare `RecyclerView` quando cambiano i dati sottostanti. Questa guida presuppone che l'utente abbia familiarità con lo sviluppo di Xamarin.Android.
 
 ### <a name="requirements"></a>Requisiti
 
 Anche se `RecyclerView` è spesso associato a un Lollipop Android 5,0, viene offerto come libreria di supporto &ndash; `RecyclerView` funziona con le app che hanno come destinazione API Level 7 (Android 2,1) e versioni successive. Per usare `RecyclerView` nelle applicazioni basate su Novell, è necessario quanto segue:
 
-- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
-- Il progetto dell'app deve includere il pacchetto **Novell. Android. support. V7. RecyclerView** . Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+- Il progetto dell'app deve includere il pacchetto **Xamarin.Android. support. V7. RecyclerView** . Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 ### <a name="overview"></a>Panoramica
 
@@ -75,7 +75,7 @@ Questo argomento aggiunge codice aggiuntivo all'app di esempio presentata in [un
 
 ### <a name="summary"></a>Riepilogo
 
-Questa guida ha presentato il widget Android `RecyclerView`; è stato illustrato come aggiungere la libreria di supporto `RecyclerView` ai progetti Novell. Android, come `RecyclerView` ricicla le visualizzazioni, come impone il modello di supporto per l'efficienza e in che modo le varie classi helper che compongono `RecyclerView` collaborano per visualizzare le raccolte. Viene fornito codice di esempio per illustrare il modo in cui `RecyclerView` è integrato in un'applicazione, spiega come adattare i criteri di layout di `RecyclerView`tramite l'inserimento in diversi gestori di layout e come gestire gli eventi click degli elementi e inviare notifiche `RecyclerView` di dati modifiche all'origine.
+Questa guida ha presentato il widget Android `RecyclerView`; è stato illustrato come aggiungere la libreria di supporto `RecyclerView` ai progetti Xamarin.Android, come `RecyclerView` ricicla le visualizzazioni, come impone il modello di supporto per l'efficienza e in che modo le varie classi helper che compongono `RecyclerView` collaborano per visualizzare le raccolte. Viene fornito codice di esempio per illustrare il modo in cui `RecyclerView` è integrato in un'applicazione, spiega come adattare i criteri di layout di `RecyclerView`tramite l'inserimento in diversi gestori di layout e come gestire gli eventi click degli elementi e inviare notifiche `RecyclerView` di dati modifiche all'origine.
 
 Per ulteriori informazioni su `RecyclerView`, vedere la pagina relativa al [riferimento alla classe RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
 

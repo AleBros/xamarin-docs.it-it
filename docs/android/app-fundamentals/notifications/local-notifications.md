@@ -1,6 +1,6 @@
 ---
 title: Notifiche locali in Android
-description: Questa sezione illustra come implementare le notifiche locali in Novell. Android. Vengono illustrati i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API.
+description: Questa sezione illustra come implementare le notifiche locali in Xamarin.Android. Vengono illustrati i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API.
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73025645"
 ---
 # <a name="local-notifications-on-android"></a>Notifiche locali in Android
 
-_Questa sezione illustra come implementare le notifiche locali in Novell. Android. Vengono illustrati i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API._
+_Questa sezione illustra come implementare le notifiche locali in Xamarin.Android. Vengono illustrati i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API._
 
 ## <a name="local-notifications-overview"></a>Panoramica delle notifiche locali
 
@@ -138,7 +138,7 @@ Si noti che non si ha il controllo assoluto sulla modalità di interazione dei c
 
 ## <a name="notification-creation"></a>Creazione di notifiche
 
-Per creare una notifica in Android, usare la classe [NotificationCompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) dal pacchetto NuGet [Novell. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Questa classe rende possibile la creazione e la pubblicazione di notifiche nelle versioni precedenti di Android.
+Per creare una notifica in Android, usare la classe [NotificationCompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) dal pacchetto NuGet [Xamarin.Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Questa classe rende possibile la creazione e la pubblicazione di notifiche nelle versioni precedenti di Android.
 viene inoltre illustrata la `NotificationCompat.Builder`.
 
 `NotificationCompat.Builder` fornisce metodi per l'impostazione delle varie opzioni in una notifica, ad esempio:
@@ -607,7 +607,7 @@ Le app in esecuzione in Android 7,1 e versioni precedenti devono impostare la pr
 
 - Indica se la notifica viene visualizzata nel formato di notifica Heads-up (Android 5,0 e versioni successive). Solo le notifiche di priorità *alta* e *massima* vengono visualizzate come notifiche Heads-up.
 
-Novell. Android definisce le enumerazioni seguenti per impostare la priorità di notifica:
+Xamarin.Android definisce le enumerazioni seguenti per impostare la priorità di notifica:
 
 - `NotificationPriority.Max` &ndash; avvisa l'utente di una condizione urgente o critica (ad esempio, una chiamata in ingresso, direzioni di turn-by-turn o un avviso di emergenza). Nei dispositivi Android 5,0 e versioni successive, le notifiche con priorità massima vengono visualizzate in formato Heads-up.
 
@@ -645,7 +645,7 @@ Poiché il "pensiero per la giornata" notifica è una notifica con priorità bas
 ### <a name="visibility-settings"></a>Impostazioni di visibilità
 
 A partire da Android 5,0, è disponibile l'impostazione di *visibilità* che consente di controllare la quantità di contenuto delle notifiche visualizzata nella schermata di blocco protetto.
-Novell. Android definisce le enumerazioni seguenti per l'impostazione della visibilità delle notifiche:
+Xamarin.Android definisce le enumerazioni seguenti per l'impostazione della visibilità delle notifiche:
 
 - `NotificationVisibility.Public` &ndash; il contenuto completo della notifica viene visualizzato nella schermata di blocco protetto.
 
@@ -667,7 +667,7 @@ In questo esempio, **NotificationsLab** è il nome dell'app di origine. Questa v
 
 ### <a name="category-settings"></a>Impostazioni categoria
 
-A partire da Android 5,0, le categorie predefinite sono disponibili per le notifiche di classificazione e filtro. Novell. Android fornisce le enumerazioni seguenti per queste categorie:
+A partire da Android 5,0, le categorie predefinite sono disponibili per le notifiche di classificazione e filtro. Xamarin.Android fornisce le enumerazioni seguenti per queste categorie:
 
 - `Notification.CategoryCall` &ndash; telefonata in arrivo.
 
@@ -709,7 +709,7 @@ La funzionalità non *disturbare* (novità di Android 5,0) filtra le notifiche i
 
 Quando l'utente configura non *disturbare* il blocco di tutti gli interrupt ad eccezione delle chiamate telefoniche (come illustrato nello screenshot precedente), Android consente di inviare notifiche con un'impostazione di categoria di `Notification.CategoryCall` da presentare mentre il dispositivo si trova in non *disturbare* modalità. Si noti che le notifiche `Notification.CategoryAlarm` non vengono mai bloccate in modalità *non di disturbo* .
 
-Nell'esempio [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) viene illustrato come utilizzare `NotificationCompat.Builder` per avviare una seconda attività da una notifica. Questo codice di esempio è illustrato nella procedura dettagliata [uso delle notifiche locali in Novell. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
+Nell'esempio [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) viene illustrato come utilizzare `NotificationCompat.Builder` per avviare una seconda attività da una notifica. Questo codice di esempio è illustrato nella procedura dettagliata [uso delle notifiche locali in Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 
 ### <a name="notification-styles"></a>Stili di notifica
 

@@ -18,7 +18,7 @@ ms.locfileid: "73017040"
 
 Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate di macOS Mojave.
 
-Per iniziare a creare app per macOS Mojave con Novell, vedere la [Guida introduttiva](~/mac/platform/introduction-to-macos-mojave/get-started.md) per [novell. Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
+Per iniziare a creare app per macOS Mojave con Novell, vedere la [Guida introduttiva](~/mac/platform/introduction-to-macos-mojave/get-started.md) per [Xamarin.Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
 
 ## <a name="dark-mode"></a>Modalità scura
 
@@ -46,6 +46,6 @@ Con macOS Mojave, Apple ha deprecato OpenGL ES e OpenCL, [incoraggiando gli svil
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di Novell. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Esempi di Xamarin.Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS-Apple Developer](https://developer.apple.com/macos/)
-- [Note sulla versione di Novell. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Note sulla versione di Xamarin.Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

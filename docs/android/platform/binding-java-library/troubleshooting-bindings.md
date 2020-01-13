@@ -21,20 +21,20 @@ _In questo articolo vengono riepilogati gli errori comuni del server che possono
 ## <a name="overview"></a>Panoramica
 
 Il binding di una libreria Android (un file **. AAR** o **. jar**) è raramente un affare semplice; richiede in genere ulteriore sforzo per attenuare i problemi derivanti dalle differenze tra Java e .NET.
-Questi problemi impediscono a Novell. Android di associare la libreria Android e presentarsi come messaggi di errore nel log di compilazione. In questa guida vengono forniti alcuni suggerimenti per la risoluzione dei problemi, vengono elencati alcuni dei problemi o scenari più comuni e vengono fornite le possibili soluzioni per associare correttamente la libreria Android.
+Questi problemi impediscono a Xamarin.Android di associare la libreria Android e presentarsi come messaggi di errore nel log di compilazione. In questa guida vengono forniti alcuni suggerimenti per la risoluzione dei problemi, vengono elencati alcuni dei problemi o scenari più comuni e vengono fornite le possibili soluzioni per associare correttamente la libreria Android.
 
 Quando si associa una libreria Android esistente, è necessario tenere presenti le considerazioni seguenti:
 
-- **Le dipendenze esterne per la libreria** &ndash; le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Novell. Android come **ReferenceJar** o come **EmbeddedReferenceJar**.
+- **Le dipendenze esterne per la libreria** &ndash; le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Xamarin.Android come **ReferenceJar** o come **EmbeddedReferenceJar**.
 
-- **Il livello API Android che la libreria Android è destinazione** &ndash; non è possibile "effettuare il downgrade" del livello API Android; Verificare che il progetto di binding Novell. Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
+- **Il livello API Android che la libreria Android è destinazione** &ndash; non è possibile "effettuare il downgrade" del livello API Android; Verificare che il progetto di binding Xamarin.Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
 
-- **La versione di Android JDK usata per creare il pacchetto della libreria android** &ndash; possono verificarsi errori di binding se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Novell. Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Novell. Android.
+- **La versione di Android JDK usata per creare il pacchetto della libreria android** &ndash; possono verificarsi errori di binding se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Xamarin.Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Xamarin.Android.
 
-Il primo passaggio per la risoluzione dei problemi relativi all'associazione di una libreria Novell. Android consiste nell'abilitare l' [output di MSBuild di diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
-Dopo aver abilitato l'output di diagnostica, ricompilare il progetto di binding Novell. Android ed esaminare il log di compilazione per individuare gli indizi sulla causa del problema.
+Il primo passaggio per la risoluzione dei problemi relativi all'associazione di una libreria Xamarin.Android consiste nell'abilitare l' [output di MSBuild di diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
+Dopo aver abilitato l'output di diagnostica, ricompilare il progetto di binding Xamarin.Android ed esaminare il log di compilazione per individuare gli indizi sulla causa del problema.
 
-Può inoltre risultare utile decompilare la libreria Android ed esaminare i tipi e i metodi che Novell. Android sta tentando di associare. Questo aspetto viene trattato in modo più dettagliato più avanti in questa guida.
+Può inoltre risultare utile decompilare la libreria Android ed esaminare i tipi e i metodi che Xamarin.Android sta tentando di associare. Questo aspetto viene trattato in modo più dettagliato più avanti in questa guida.
 
 ## <a name="decompiling-an-android-library"></a>Decompilazione di una libreria Android
 
@@ -52,18 +52,18 @@ Dopo aver decompilato la libreria Android, esaminare il codice sorgente. In gene
   - Il nome della classe include una **$** , ovvero **una classe $. Class**
   - Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**      
 
-- **`import` le istruzioni per le librerie senza riferimenti** &ndash; identificare la libreria senza riferimenti e aggiungere tali dipendenze al progetto di binding Novell. Android con un' **azione di compilazione** **ReferenceJar** o **EmbedddedReferenceJar** .
+- **`import` le istruzioni per le librerie senza riferimenti** &ndash; identificare la libreria senza riferimenti e aggiungere tali dipendenze al progetto di binding Xamarin.Android con un' **azione di compilazione** **ReferenceJar** o **EmbedddedReferenceJar** .
 
 > [!NOTE]
 > La decompilazione di una libreria Java potrebbe essere vietata o soggetta a restrizioni legali basate sulle leggi locali o sulla licenza con cui è stata pubblicata la libreria Java. Se necessario, integrare i servizi di un professionista legale prima di provare a decompilare una libreria Java ed esaminare il codice sorgente.
 
 ## <a name="inspect-apixml"></a>Controllare l'API. XML
 
-Come parte della compilazione di un progetto di binding, Novell. Android genererà un nome file XML **obj/debug/API. XML**:
+Come parte della compilazione di un progetto di binding, Xamarin.Android genererà un nome file XML **obj/debug/API. XML**:
 
 ![API. XML generato in obj/debug](troubleshooting-bindings-images/troubleshoot-bindings-02.png)
 
-Questo file fornisce un elenco di tutte le API Java che Novell. Android sta tentando di associare. Il contenuto di questo file può aiutare a identificare i tipi o i metodi mancanti, ovvero l'associazione duplicata. Sebbene l'ispezione di questo file sia noiosa e dispendiosa in termini di tempo, può fornire indizi su cosa potrebbe causare problemi di binding. Ad esempio, il **file API. XML** potrebbe rivelare che una proprietà restituisce un tipo non appropriato o che esistono due tipi che condividono lo stesso nome gestito.
+Questo file fornisce un elenco di tutte le API Java che Xamarin.Android sta tentando di associare. Il contenuto di questo file può aiutare a identificare i tipi o i metodi mancanti, ovvero l'associazione duplicata. Sebbene l'ispezione di questo file sia noiosa e dispendiosa in termini di tempo, può fornire indizi su cosa potrebbe causare problemi di binding. Ad esempio, il **file API. XML** potrebbe rivelare che una proprietà restituisce un tipo non appropriato o che esistono due tipi che condividono lo stesso nome gestito.
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -71,7 +71,7 @@ In questa sezione sono elencati alcuni dei messaggi di errore comuni che si veri
 
 ### <a name="problem-java-version-mismatch"></a>Problema: mancata corrispondenza tra le versioni Java
 
-A volte i tipi non vengono generati o possono verificarsi arresti imprevisti perché si utilizza una versione più recente o precedente di Java rispetto a quella con cui la libreria è stata compilata. Ricompilare la libreria Android con la stessa versione del JDK usato dal progetto Novell. Android.
+A volte i tipi non vengono generati o possono verificarsi arresti imprevisti perché si utilizza una versione più recente o precedente di Java rispetto a quella con cui la libreria è stata compilata. Ricompilare la libreria Android con la stessa versione del JDK usato dal progetto Xamarin.Android.
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problema: almeno una libreria Java è obbligatoria
 
@@ -99,7 +99,7 @@ Questo errore può verificarsi a causa di diversi motivi, come indicato di segui
 
 - La libreria da associare può fare riferimento a una seconda libreria Java. Se l'API pubblica per la libreria associata usa tipi della seconda libreria, è necessario fare riferimento anche a un'associazione gestita per la seconda libreria.
 
-- È possibile che una libreria sia stata inserita a causa della reflection Java, in modo analogo al motivo dell'errore di caricamento della libreria precedente, causando il caricamento imprevisto dei metadati. Gli strumenti di Novell. Android non possono attualmente risolvere questa situazione. In tal caso, è necessario associare manualmente la libreria.
+- È possibile che una libreria sia stata inserita a causa della reflection Java, in modo analogo al motivo dell'errore di caricamento della libreria precedente, causando il caricamento imprevisto dei metadati. Gli strumenti di Xamarin.Android non possono attualmente risolvere questa situazione. In tal caso, è necessario associare manualmente la libreria.
 
 - Si è verificato un errore nel Runtime .NET 4,0 che non è riuscito a caricare gli assembly quando necessario. Questo problema è stato risolto nel runtime di .NET 4,5.
 
@@ -112,7 +112,7 @@ Questo errore può verificarsi a causa di diversi motivi, come indicato di segui
       name="visibility">public</attr>
   ```
 
-- Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Novell. Android C# e la relativa capacità di generare classi wrapper. Il frammento di codice seguente illustra come aggiornare **Metadata. XML** per deoffuscare il nome di una classe:
+- Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Xamarin.Android C# e la relativa capacità di generare classi wrapper. Il frammento di codice seguente illustra come aggiornare **Metadata. XML** per deoffuscare il nome di una classe:
 
   ```xml
   <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
@@ -125,7 +125,7 @@ L'origine C# generata non viene compilata. I tipi di parametro del metodo sottop
 
 #### <a name="possible-causes"></a>Possibili cause:
 
-Novell. Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per altre informazioni, vedere [correzione delle enumerazioni](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md).
+Xamarin.Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per altre informazioni, vedere [correzione delle enumerazioni](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md).
 
 ### <a name="problem-noclassdeffounderror-in-packaging"></a>Problema: NoClassDefFoundError nel pacchetto
 
@@ -229,9 +229,9 @@ In Java non è necessario che una classe derivata abbia la stessa visibilità de
 
 ### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problema: A **.** la libreria richiesta dall'associazione non viene caricata
 
-Alcuni progetti di associazione possono inoltre dipendere dalla funzionalità di una libreria. **so** . È possibile che Novell. Android non caricherà automaticamente la libreria **. so** . Quando viene eseguito il codice Java di cui è stato eseguito il Wrapped, Novell. Android non riuscirà a eseguire la chiamata JNI e il messaggio di errore _java. lang. UnsatisfiedLinkError: il metodo nativo non è stato trovato:_ verrà visualizzato in logcat out per l'applicazione.
+Alcuni progetti di associazione possono inoltre dipendere dalla funzionalità di una libreria. **so** . È possibile che Xamarin.Android non caricherà automaticamente la libreria **. so** . Quando viene eseguito il codice Java di cui è stato eseguito il Wrapped, Xamarin.Android non riuscirà a eseguire la chiamata JNI e il messaggio di errore _java. lang. UnsatisfiedLinkError: il metodo nativo non è stato trovato:_ verrà visualizzato in logcat out per l'applicazione.
 
-La correzione per questa operazione consiste nel caricare manualmente la libreria **. so** con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Si supponga, ad esempio, che un progetto Novell. Android disponga di una libreria condivisa **libpocketsphinx_jni. pertanto** , incluso nel progetto di binding con un'azione di compilazione **EmbeddedNativeLibrary**, il frammento di codice seguente (eseguito prima di utilizzare la libreria condivisa) caricherà la libreria **. so** :
+La correzione per questa operazione consiste nel caricare manualmente la libreria **. so** con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Si supponga, ad esempio, che un progetto Xamarin.Android disponga di una libreria condivisa **libpocketsphinx_jni. pertanto** , incluso nel progetto di binding con un'azione di compilazione **EmbeddedNativeLibrary**, il frammento di codice seguente (eseguito prima di utilizzare la libreria condivisa) caricherà la libreria **. so** :
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");

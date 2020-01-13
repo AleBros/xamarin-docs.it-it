@@ -18,7 +18,7 @@ ms.locfileid: "72697430"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Per impostazione predefinita, da Novell. Forms 4,3, quando un [`ViewCell`](xref:Xamarin.Forms.ViewCell) in un'applicazione Android definisce le azioni di contesto per ogni elemento in una [`ListView`](xref:Xamarin.Forms.ListView), il menu azioni del contesto viene aggiornato quando l'elemento selezionato nel `ListView` viene modificato. Tuttavia, nelle versioni precedenti di Novell. Forms il menu azioni del contesto non è stato aggiornato e questo comportamento viene definito `ViewCell` modalità legacy. Questa modalità legacy può comportare un comportamento errato se un `ListView` utilizza un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) per impostare la relativa `ItemTemplate` da oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definiscono azioni di contesto diverse.
+Per impostazione predefinita, da Xamarin.Forms 4,3, quando un [`ViewCell`](xref:Xamarin.Forms.ViewCell) in un'applicazione Android definisce le azioni di contesto per ogni elemento in una [`ListView`](xref:Xamarin.Forms.ListView), il menu azioni del contesto viene aggiornato quando l'elemento selezionato nel `ListView` viene modificato. Tuttavia, nelle versioni precedenti di Xamarin.Forms il menu azioni del contesto non è stato aggiornato e questo comportamento viene definito `ViewCell` modalità legacy. Questa modalità legacy può comportare un comportamento errato se un `ListView` utilizza un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) per impostare la relativa `ItemTemplate` da oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definiscono azioni di contesto diverse.
 
 Questa specifica per la piattaforma Android consente la [`ViewCell`](xref:Xamarin.Forms.ViewCell) modalità legacy del menu azioni del contesto, per la compatibilità con le versioni precedenti, in modo che il menu azioni del contesto non venga aggiornato quando viene modificato l'elemento selezionato in una [`ListView`](xref:Xamarin.Forms.ListView) . Viene utilizzato in XAML impostando la proprietà associabile `ViewCell.IsContextActionsLegacyModeEnabled` su `true`:
 
@@ -61,7 +61,7 @@ Gli screenshot seguenti illustrano [`ViewCell`](xref:Xamarin.Forms.ViewCell) mod
 
 In questa modalità, le voci di menu azione contesto visualizzate sono identiche per la cella 1 e la cella 2, nonostante le diverse voci di menu di scelta rapida definite per la cella 2.
 
-Gli screenshot seguenti illustrano [`ViewCell`](xref:Xamarin.Forms.ViewCell) modalità legacy delle azioni di contesto disabilitata, che è il comportamento predefinito di Novell. Forms:
+Gli screenshot seguenti illustrano [`ViewCell`](xref:Xamarin.Forms.ViewCell) modalità legacy delle azioni di contesto disabilitata, che è il comportamento predefinito di Xamarin.Forms:
 
 ![Screenshot della modalità legacy ViewCell disabilitata, in Android](viewcell-context-actions-images/legacy-mode-disabled.png "Modalità legacy ViewCell disabilitata")
 

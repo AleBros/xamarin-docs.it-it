@@ -1,5 +1,5 @@
 ---
-title: Eseguire il debug di app Novell. Android in dispositivi ed emulatori
+title: Eseguire il debug di app Xamarin.Android in dispositivi ed emulatori
 description: Come eseguire test e debug di un'app Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/31/2019
 ms.locfileid: "75556483"
 ---
-# <a name="debug-xamarinandroid-apps"></a>Eseguire il debug di app Novell. Android
+# <a name="debug-xamarinandroid-apps"></a>Eseguire il debug di app Xamarin.Android
 
 Questa sezione illustra come eseguire il debug di un'app Xamarin.Android in dispositivi o emulatori.
 
@@ -28,7 +28,7 @@ Questo articolo illustra come avviare l'emulatore Android da Visual Studio ed es
 
 ### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[Debugging on a Device](~/android/deploy-test/debugging/debug-on-device.md) (Debug in un dispositivo)
 
-Questo articolo illustra come configurare un dispositivo Android fisico in modo che l'applicazione Novell. Android possa essere distribuita direttamente da Visual Studio o Visual Studio per Mac.
+Questo articolo illustra come configurare un dispositivo Android fisico in modo che l'applicazione Xamarin.Android possa essere distribuita direttamente da Visual Studio o Visual Studio per Mac.
 
 ### <a name="android-debug-logandroiddeploy-testdebuggingandroid-debug-logmd"></a>[Log di debug Android](~/android/deploy-test/debugging/android-debug-log.md)
 

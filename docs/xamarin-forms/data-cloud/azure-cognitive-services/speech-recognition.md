@@ -1,6 +1,6 @@
 ---
 title: Riconoscimento vocale usando l'API riconoscimento vocale di Microsoft
-description: L'API traduzione vocale Microsoft è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione xamarin. Forms.
+description: L'API traduzione vocale Microsoft è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "75489804"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Microsoft Speech API è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire l'audio in testo in un'applicazione Novell. Forms._
+_Microsoft Speech API è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire l'audio in testo in un'applicazione Xamarin.Forms._
 
 ## <a name="overview"></a>Panoramica di
 
@@ -168,7 +168,7 @@ Nell'applicazione di esempio, la risposta JSON viene deserializzata in un `Speec
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare l'API REST di riconoscimento vocale di Microsoft per convertire audio in testo in un'applicazione xamarin. Forms. Oltre a eseguire il riconoscimento vocale, l'API traduzione vocale Microsoft può anche convertire testo in parole.
+Questo articolo ha illustrato come usare l'API REST di riconoscimento vocale di Microsoft per convertire audio in testo in un'applicazione Xamarin.Forms. Oltre a eseguire il riconoscimento vocale, l'API traduzione vocale Microsoft può anche convertire testo in parole.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

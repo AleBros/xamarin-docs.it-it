@@ -1,6 +1,6 @@
 ---
-title: 'Procedura dettagliata: uso delle notifiche locali in Novell. iOS'
-description: Questa sezione illustra come usare le notifiche locali in un'applicazione Novell. iOS. Vengono illustrate le nozioni di base per la creazione e la pubblicazione di una notifica che visualizza un avviso quando viene ricevuta dall'app.
+title: 'Procedura dettagliata: uso delle notifiche locali in Xamarin.iOS'
+description: Questa sezione illustra come usare le notifiche locali in un'applicazione Xamarin.iOS. Vengono illustrate le nozioni di base per la creazione e la pubblicazione di una notifica che visualizza un avviso quando viene ricevuta dall'app.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031410"
 ---
-# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata: uso delle notifiche locali in Novell. iOS
+# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata: uso delle notifiche locali in Xamarin.iOS
 
-_Questa sezione illustra come usare le notifiche locali in un'applicazione Novell. iOS. Vengono illustrate le nozioni di base per la creazione e la pubblicazione di una notifica che visualizza un avviso quando viene ricevuta dall'app._
+_Questa sezione illustra come usare le notifiche locali in un'applicazione Xamarin.iOS. Vengono illustrate le nozioni di base per la creazione e la pubblicazione di una notifica che visualizza un avviso quando viene ricevuta dall'app._
 
 > [!IMPORTANT]
 > Le informazioni contenute in questa sezione sono relative a iOS 9 e versioni precedenti, ma sono state lasciate qui per supportare le versioni precedenti di iOS. Per iOS 10 e versioni successive, vedere la [Guida per il Framework di notifica utente](~/ios/platform/user-notifications/index.md) per il supporto di notifiche locali e remote in un dispositivo iOS.

@@ -25,7 +25,7 @@ ms.locfileid: "75728109"
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
 > [!NOTE]
-> Se questa operazione viene installata manualmente tramite la console di gestione pacchetti, assicurarsi di installare anche la stessa versione di Novell. Android. support. v4
+> Se questa operazione viene installata manualmente tramite la console di gestione pacchetti, assicurarsi di installare anche la stessa versione di Xamarin.Android. support. v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 

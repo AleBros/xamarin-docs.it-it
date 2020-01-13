@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms ScrollView
-description: Questo articolo illustra come usare la classe ScrollView xamarin. Forms per presentare i layout che non può essere contenuta in una sola schermata e ai quali è contenuto liberare spazio per la tastiera.
+title: Xamarin.Forms ScrollView
+description: Questo articolo illustra come usare la classe ScrollView Xamarin.Forms per presentare i layout che non può essere contenuta in una sola schermata e ai quali è contenuto liberare spazio per la tastiera.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488270"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
+# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 

@@ -1,5 +1,5 @@
 ---
-title: Eseguire una ricerca con NSUserActivity in Novell. iOS
+title: Eseguire una ricerca con NSUserActivity in Xamarin.iOS
 description: Questo documento descrive come indicizzare un NSUserActivity, rendendolo ricercabile in Spotlight e Safari. Viene illustrato come rispondere alla selezione di un NSUserActivity nei risultati della ricerca.
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031549"
 ---
-# <a name="search-with-nsuseractivity-in-xamarinios"></a>Eseguire una ricerca con NSUserActivity in Novell. iOS
+# <a name="search-with-nsuseractivity-in-xamarinios"></a>Eseguire una ricerca con NSUserActivity in Xamarin.iOS
 
 `NSUserActivity` è stato introdotto in iOS 8 e viene usato per fornire i dati per la consegna.
 Consente di creare attività in parti specifiche dell'app che possono quindi essere passate a un'altra istanza dell'app in esecuzione in un dispositivo iOS diverso. Il dispositivo ricevente può quindi continuare l'attività avviata sul dispositivo precedente, selezionando la posizione in cui l'utente ha interrotto l'esecuzione. Per altre informazioni sull'uso della consegna, vedere l' [Introduzione alla](~/ios/platform/handoff.md) documentazione.

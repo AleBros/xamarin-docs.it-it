@@ -44,19 +44,19 @@ Oltre ai miglioramenti apportati all'interfaccia utente per quanto riguarda il t
 
 Per usare le nuove funzionalità di Android 5,0 nelle app basate su Novell, è necessario quanto segue:
 
-- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
+- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite il Android SDK Manager.
 
-- **Java Developer Kit** &ndash; Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** &ndash; Xamarin.Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
 
 ## <a name="setting-up-an-android-50-project"></a>Configurazione di un progetto Android 5,0
 
-Per creare un progetto Android 5,0, è necessario installare gli strumenti e i pacchetti SDK più recenti. Usare la procedura seguente per configurare un progetto Novell. Android destinato a Android 5,0:
+Per creare un progetto Android 5,0, è necessario installare gli strumenti e i pacchetti SDK più recenti. Usare la procedura seguente per configurare un progetto Xamarin.Android destinato a Android 5,0:
 
-1. Installare gli strumenti di Novell. Android e attivare la licenza di Novell. Per ulteriori informazioni sull'installazione di Novell. Android, vedere [configurazione e installazione](~/android/get-started/installation/index.md) .
+1. Installare gli strumenti di Xamarin.Android e attivare la licenza di Novell. Per ulteriori informazioni sull'installazione di Xamarin.Android, vedere [configurazione e installazione](~/android/get-started/installation/index.md) .
 
 2. Se si usa Visual Studio per Mac, installare gli aggiornamenti più recenti di Android 5,0.
 
@@ -70,7 +70,7 @@ Per creare un progetto Android 5,0, è necessario installare gli strumenti e i p
 
    Per ulteriori informazioni sull'utilizzo di gestione Android SDK, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
-4. Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
+4. Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
    In Visual Studio per Mac passare a **Opzioni progetto &gt; compila &gt; generale** e impostare **Framework di destinazione** su **Android 5,0 (Lollipop)** o versione successiva:
 
     ![Impostazione del Framwework di destinazione su Android 5,0 Lollipop](lollipop-images/target-framework.png)
@@ -79,7 +79,7 @@ Per creare un progetto Android 5,0, è necessario installare gli strumenti e i p
 
     ![Impostazione delle versioni di Android minime e di destinazione su automatico](lollipop-images/minimum-android-version.png)
 
-5. Configurare un emulatore o un dispositivo Android per testare l'app. Se si usa un emulatore, vedere [emulatore Android installazione](~/android/get-started/installation/android-emulator/index.md) per informazioni su come configurare un emulatore Android da usare con Xamarin Studio o Visual Studio. Se si usa un dispositivo Android, vedere [la pagina relativa alla configurazione dell'SDK di anteprima](https://developer.android.com/preview/setup-sdk.html) per informazioni su come aggiornare il dispositivo per Android 5,0. Per configurare il dispositivo Android per l'esecuzione e il debug di applicazioni Novell. Android, vedere [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
+5. Configurare un emulatore o un dispositivo Android per testare l'app. Se si usa un emulatore, vedere [emulatore Android installazione](~/android/get-started/installation/android-emulator/index.md) per informazioni su come configurare un emulatore Android da usare con Xamarin Studio o Visual Studio. Se si usa un dispositivo Android, vedere [la pagina relativa alla configurazione dell'SDK di anteprima](https://developer.android.com/preview/setup-sdk.html) per informazioni su come aggiornare il dispositivo per Android 5,0. Per configurare il dispositivo Android per l'esecuzione e il debug di applicazioni Xamarin.Android, vedere [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
 
 Nota: se si sta aggiornando un progetto Android esistente destinato a Android L Preview, è necessario aggiornare il Framework di **destinazione** e la **versione di Android** ai valori descritti in precedenza.
 
@@ -137,7 +137,7 @@ Il tema materiale include tre versioni predefinite che è possibile usare nell'a
 
 [![screenshot dei temi Dark, Light e DarkActionBar](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
-Per altre informazioni sull'uso delle funzionalità del tema materiale nelle app Novell. Android, vedere [tema del materiale](~/android/user-interface/material-theme.md).
+Per altre informazioni sull'uso delle funzionalità del tema materiale nelle app Xamarin.Android, vedere [tema del materiale](~/android/user-interface/material-theme.md).
 
 ## <a name="animations"></a>Animations
 
@@ -449,7 +449,7 @@ Per altre informazioni sulle nuove API di pianificazione dei processi in Android
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo fornisce una panoramica delle nuove funzionalità importanti di Android 5,0 per gli sviluppatori di app Novell. Android:
+Questo articolo fornisce una panoramica delle nuove funzionalità importanti di Android 5,0 per gli sviluppatori di app Xamarin.Android:
 
 - Tema Material
 
@@ -465,7 +465,7 @@ Questo articolo fornisce una panoramica delle nuove funzionalità importanti di 
 
 - Nuove API per fotocamere, riproduzione audio, controllo multimediale, archiviazione, wireless/connettività e pianificazione dei processi
 
-Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Novell. Android.
+Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Xamarin.Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) è un'ottima introduzione per imparare a creare progetti Android.
 
 ## <a name="related-links"></a>Collegamenti correlati

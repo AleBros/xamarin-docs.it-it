@@ -42,7 +42,7 @@ Se si esegue la distribuzione in un test o si carica nell'App Store, è necessar
 
 Come illustrato nelle [istruzioni di installazione](~/ios/watchos/get-started/installation.md), tutti e tre i progetti in un'app Watch hanno ID bundle correlati, ad esempio:
 
-- Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`
+- Progetto unificato Xamarin.iOS-`com.xamarin.WatchKitCatalog`
 - Progetto di estensione WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
 - Guarda il progetto dell'app-`com.xamarin.WatchKitCatalog.watchkitapp`
 

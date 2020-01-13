@@ -1,6 +1,6 @@
 ---
-title: Personalizzazione dell'aspetto di una tabella in Novell. iOS
-description: In questo documento viene descritto come personalizzare l'aspetto di una tabella in Novell. iOS. Vengono illustrati gli stili delle celle, gli accessori, i separatori di celle e i layout delle celle personalizzati.
+title: Personalizzazione dell'aspetto di una tabella in Xamarin.iOS
+description: In questo documento viene descritto come personalizzare l'aspetto di una tabella in Xamarin.iOS. Vengono illustrati gli stili delle celle, gli accessori, i separatori di celle e i layout delle celle personalizzati.
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021913"
 ---
-# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizzazione dell'aspetto di una tabella in Novell. iOS
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizzazione dell'aspetto di una tabella in Xamarin.iOS
 
 Il modo più semplice per modificare l'aspetto di una tabella consiste nell'usare uno stile di cella diverso. È possibile modificare lo stile di cella usato durante la creazione di ogni cella nel metodo `GetCell` del `UITableViewSource`.
 

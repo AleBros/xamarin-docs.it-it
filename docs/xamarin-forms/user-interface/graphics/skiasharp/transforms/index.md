@@ -1,6 +1,6 @@
 ---
 title: Trasformazioni di SkiaSharp
-description: Questo articolo esamina le trasformazioni per la visualizzazione grafica di SkiaSharp in applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo esamina le trasformazioni per la visualizzazione grafica di SkiaSharp in applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
@@ -33,9 +33,9 @@ Si parla *affini* Trasforma. Le trasformazioni affini mantenere sempre linee par
 
 SkiaSharp supporta anche le trasformazioni non affini (chiamato anche *le divisioni proiettive delle* oppure *prospettiva* Trasforma) basato su una matrice di trasformazione da 3-3 standard. Una trasformazione non affine consente un quadrato da trasformare in qualsiasi quadrilatero convesso che è una figura i quattro lati con tutti gli angoli interni minori di 180 gradi. Le trasformazioni non affini possono causare coordinate o dimensioni diventare infinito, ma sono fondamentali per gli effetti 3D.
 
-## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>Differenze tra SkiaSharp e trasformazioni di xamarin. Forms
+## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>Differenze tra SkiaSharp e trasformazioni di Xamarin.Forms
 
-Xamarin. Forms supporta anche le trasformazioni che sono simili a quelle di SkiaSharp. Xamarin. Forms [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe definisce le proprietà di trasformazione seguenti:
+Xamarin.Forms supporta anche le trasformazioni che sono simili a quelle di SkiaSharp. Xamarin.Forms [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe definisce le proprietà di trasformazione seguenti:
 
 - [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 - [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
@@ -43,13 +43,13 @@ Xamarin. Forms supporta anche le trasformazioni che sono simili a quelle di Skia
 
 Il `RotationX` e `RotationY` trasformazioni prospettiva che creano effetti poi-3D sono di proprietà.
 
-Esistono alcune differenze fondamentali tra trasformazioni di SkiaSharp e trasformazioni di xamarin. Forms:
+Esistono alcune differenze fondamentali tra trasformazioni di SkiaSharp e trasformazioni di Xamarin.Forms:
 
-La prima differenza è che le trasformazioni di SkiaSharp vengono applicate all'intera `SKCanvas` dell'oggetto durante le trasformazioni di xamarin. Forms sono applicate al singolo `VisualElement` derivati. (È possibile applicare le trasformazioni di xamarin. Forms per il `SKCanvasView` dell'oggetto stesso, poiché `SKCanvasView` deriva da `VisualElement`, ma all'interno che `SKCanvasView`, applicano le trasformazioni SkiaSkarp.)
+La prima differenza è che le trasformazioni di SkiaSharp vengono applicate all'intera `SKCanvas` dell'oggetto durante le trasformazioni di Xamarin.Forms sono applicate al singolo `VisualElement` derivati. (È possibile applicare le trasformazioni di Xamarin.Forms per il `SKCanvasView` dell'oggetto stesso, poiché `SKCanvasView` deriva da `VisualElement`, ma all'interno che `SKCanvasView`, applicano le trasformazioni SkiaSkarp.)
 
-Le trasformazioni di SkiaSharp sono rispetto all'angolo superiore sinistro del `SKCanvas` durante le trasformazioni di xamarin. Forms sono rispetto all'angolo superiore sinistro del `VisualElement` al quale vengono applicati. Questa differenza è importante quando si applica la scalabilità e rotazione Trasforma perché queste trasformazioni sono sempre relativi a un momento specifico.
+Le trasformazioni di SkiaSharp sono rispetto all'angolo superiore sinistro del `SKCanvas` durante le trasformazioni di Xamarin.Forms sono rispetto all'angolo superiore sinistro del `VisualElement` al quale vengono applicati. Questa differenza è importante quando si applica la scalabilità e rotazione Trasforma perché queste trasformazioni sono sempre relativi a un momento specifico.
 
-La realtà grande differenza è che sono trasformazioni di SKiaSharp *metodi* anche se sono le trasformazioni di xamarin. Forms *proprietà*. Si tratta di una differenza semantica oltre la differenza sintattica: Le trasformazioni SkiaSharp eseguono un'operazione mentre le trasformazioni di Novell. Forms impostano uno stato. Trasformazioni di SkiaSharp si applicano agli oggetti di grafica disegnati successivamente, ma non agli oggetti di grafica disegnati prima che venga applicata la trasformazione. Al contrario, una trasformazione di xamarin. Forms viene applicato a un elemento precedentemente sottoposti a rendering, non appena la proprietà è impostata. Trasformazioni di SkiaSharp sono cumulative, come i metodi vengono chiamati; Trasformazioni di xamarin. Forms vengono sostituite quando la proprietà è impostata con un altro valore.
+La realtà grande differenza è che sono trasformazioni di SKiaSharp *metodi* anche se sono le trasformazioni di Xamarin.Forms *proprietà*. Si tratta di una differenza semantica oltre la differenza sintattica: Le trasformazioni SkiaSharp eseguono un'operazione mentre le trasformazioni di Xamarin.Forms impostano uno stato. Trasformazioni di SkiaSharp si applicano agli oggetti di grafica disegnati successivamente, ma non agli oggetti di grafica disegnati prima che venga applicata la trasformazione. Al contrario, una trasformazione di Xamarin.Forms viene applicato a un elemento precedentemente sottoposti a rendering, non appena la proprietà è impostata. Trasformazioni di SkiaSharp sono cumulative, come i metodi vengono chiamati; Trasformazioni di Xamarin.Forms vengono sostituite quando la proprietà è impostata con un altro valore.
 
 Tutti i programmi di esempio in questa sezione vengono visualizzati nella **trasformazioni di SkiaSharp** sezione il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma. Codice sorgente è reperibile nel [ **trasforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) cartella della soluzione.
 

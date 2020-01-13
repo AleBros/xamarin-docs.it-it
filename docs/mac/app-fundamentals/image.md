@@ -1,6 +1,6 @@
 ---
-title: Immagini in Novell. Mac
-description: Questo articolo illustra l'uso di immagini e icone in un'applicazione Novell. Mac. Descrive la creazione e la gestione delle immagini necessarie per creare l'icona dell'applicazione e l'uso di C# immagini sia nel codice che nella Interface Builder di Xcode.
+title: Immagini in Xamarin.Mac
+description: Questo articolo illustra l'uso di immagini e icone in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle immagini necessarie per creare l'icona dell'applicazione e l'uso di C# immagini sia nel codice che nella Interface Builder di Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030146"
 ---
-# <a name="images-in-xamarinmac"></a>Immagini in Novell. Mac
+# <a name="images-in-xamarinmac"></a>Immagini in Xamarin.Mac
 
-_Questo articolo illustra l'uso di immagini e icone in un'applicazione Novell. Mac. Descrive la creazione e la gestione delle immagini necessarie per creare l'icona dell'applicazione e l'uso di C# immagini sia nel codice che nella Interface Builder di Xcode._
+_Questo articolo illustra l'uso di immagini e icone in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle immagini necessarie per creare l'icona dell'applicazione e l'uso di C# immagini sia nel codice che nella Interface Builder di Xcode._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi strumenti per immagini e icone di uno sviluppatore che lavora in *Objective-C* e *Xcode* .
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi strumenti per immagini e icone di uno sviluppatore che lavora in *Objective-C* e *Xcode* .
 
-Sono disponibili diversi modi per usare le risorse dell'immagine in un'applicazione macOS (nota in precedenza come Mac OS X). Dalla semplice visualizzazione di un'immagine come parte dell'interfaccia utente dell'applicazione a, assegnarla a un controllo dell'interfaccia utente, ad esempio una barra degli strumenti o un elemento dell'elenco di origine, per fornire le icone, Novell. Mac consente di aggiungere in modo semplice un'ottima grafica alle applicazioni macOS nei modi seguenti: : 
+Sono disponibili diversi modi per usare le risorse dell'immagine in un'applicazione macOS (nota in precedenza come Mac OS X). Dalla semplice visualizzazione di un'immagine come parte dell'interfaccia utente dell'applicazione a, assegnarla a un controllo dell'interfaccia utente, ad esempio una barra degli strumenti o un elemento dell'elenco di origine, per fornire le icone, Xamarin.Mac consente di aggiungere in modo semplice un'ottima grafica alle applicazioni macOS nei modi seguenti: : 
 
 - **Elementi dell'interfaccia utente** : le immagini possono essere visualizzate come sfondi o come parte dell'applicazione in una visualizzazione immagine (`NSImageView`).
 - **Button** : le immagini possono essere visualizzate in pulsanti (`NSButton`).
@@ -35,11 +35,11 @@ MacOS fornisce inoltre un set di immagini predefinite che possono essere usate i
 
 [![Esempio di esecuzione dell'app](image-images/intro01.png "Esempio di esecuzione dell'app")](image-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base per l'uso di immagini e icone in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base per l'uso di immagini e icone in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-## <a name="adding-images-to-a-xamarinmac-project"></a>Aggiunta di immagini a un progetto Novell. Mac
+## <a name="adding-images-to-a-xamarinmac-project"></a>Aggiunta di immagini a un progetto Xamarin.Mac
 
-Quando si aggiunge un'immagine da usare in un'applicazione Novell. Mac, esistono diverse posizioni e modi in cui lo sviluppatore può includere un file di immagine nell'origine del progetto:
+Quando si aggiunge un'immagine da usare in un'applicazione Xamarin.Mac, esistono diverse posizioni e modi in cui lo sviluppatore può includere un file di immagine nell'origine del progetto:
 
 - **Albero del progetto principale [deprecato]** -le immagini possono essere aggiunte direttamente all'albero dei progetti. Quando si chiamano le immagini archiviate nell'albero del progetto principale dal codice, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Cartella Resources [deprecato]** -la cartella **delle risorse** speciali è per qualsiasi file che diventerà parte del bundle dell'applicazione, ad esempio icona, schermata di avvio o immagini generali (o qualsiasi altra immagine o file che lo sviluppatore desidera aggiungere). Quando si chiamano le immagini archiviate nella cartella **Resources** dal codice, proprio come le immagini archiviate nell'albero del progetto principale, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage.ImageNamed("tags.png")`.
@@ -105,7 +105,7 @@ Da qui è possibile usare la raccolta in modo analogo alla raccolta **assets. xc
 > [!IMPORTANT]
 > Questo metodo di uso delle immagini in un'app macOS è stato deprecato da Apple. È consigliabile usare i [set di immagini del catalogo asset](#asset-catalogs) per dirigere le immagini dell'app.
 
-Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# codice o da Interface Builder), è necessario che sia incluso nella cartella **Resources** del progetto come **risorsa bundle**. Per aggiungere un file a un progetto, procedere come segue:
+Prima di poter usare un file di immagine nell'applicazione Xamarin.Mac (nel C# codice o da Interface Builder), è necessario che sia incluso nella cartella **Resources** del progetto come **risorsa bundle**. Per aggiungere un file a un progetto, procedere come segue:
 
 1. Fare clic con il pulsante destro del mouse sulla cartella **risorse** del progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **Aggiungi file...** : 
 
@@ -121,21 +121,21 @@ Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# c
     ![I nuovi file di immagine aggiunti alla riquadro della soluzione](image-images/add03.png "I nuovi file di immagine aggiunti alla riquadro della soluzione")
 5. Ripetere il processo per tutti i file di immagine richiesti.
 
-È possibile usare qualsiasi file PNG, jpg o PDF come immagine di origine nell'applicazione Novell. Mac. Nella sezione successiva si esamineranno le versioni ad alta risoluzione delle immagini e delle icone per supportare i Mac basati su retina.
+È possibile usare qualsiasi file PNG, jpg o PDF come immagine di origine nell'applicazione Xamarin.Mac. Nella sezione successiva si esamineranno le versioni ad alta risoluzione delle immagini e delle icone per supportare i Mac basati su retina.
 
 > [!IMPORTANT]
 > Se si aggiungono immagini alla cartella **Resources** , è possibile lasciare l' **azione Sostituisci compilazione** impostata su **predefinito**. L'azione di compilazione predefinita per questa cartella è `BundleResource`.
 
 ## <a name="provide-high-resolution-versions-of-all-app-graphics-resources"></a>Fornire versioni ad alta risoluzione di tutte le risorse grafiche di app
 
-Qualsiasi asset grafico aggiunto a un'applicazione Novell. Mac (icone, controlli personalizzati, cursori personalizzati, immagini personalizzate e così via) deve disporre di versioni ad alta risoluzione, oltre alle versioni di risoluzione standard. Questa operazione è necessaria in modo che l'applicazione abbia un aspetto ottimale quando viene eseguita in un computer Mac dotato di display retina.
+Qualsiasi asset grafico aggiunto a un'applicazione Xamarin.Mac (icone, controlli personalizzati, cursori personalizzati, immagini personalizzate e così via) deve disporre di versioni ad alta risoluzione, oltre alle versioni di risoluzione standard. Questa operazione è necessaria in modo che l'applicazione abbia un aspetto ottimale quando viene eseguita in un computer Mac dotato di display retina.
 
 ### <a name="adopt-the-2x-naming-convention"></a>Adottare la convenzione di denominazione @2x
 
 > [!IMPORTANT]
 > Questo metodo di uso delle immagini in un'app macOS è stato deprecato da Apple. È consigliabile usare i [set di immagini del catalogo asset](#asset-catalogs) per dirigere le immagini dell'app.
 
-Quando si creano le versioni standard e ad alta risoluzione di un'immagine, seguire questa convenzione di denominazione per la coppia di immagini quando vengono incluse nel progetto Novell. Mac:
+Quando si creano le versioni standard e ad alta risoluzione di un'immagine, seguire questa convenzione di denominazione per la coppia di immagini quando vengono incluse nel progetto Xamarin.Mac:
 
 - **Risoluzione Standard**   - **ImageName. filename-extension** (esempio: **Tags. png**)
 - **ImageName@2x.filename-extension** **di  - ad alta risoluzione** (ad esempio: **tags@2x.png** )
@@ -146,11 +146,11 @@ Quando vengono aggiunti a un progetto, vengono visualizzati nel modo seguente:
 
 Quando un'immagine viene assegnata a un elemento dell'interfaccia utente in Interface Builder, è sufficiente selezionare il file in _ImageName_ **.** _nome file-formato estensione_ (esempio: **Tags. png**). Per usare un'immagine nel C# codice, è necessario scegliere il file in _ImageName_ **.** _nome file-formato estensione_ .
 
-Quando l'applicazione Novell. Mac viene eseguita in un Mac, _ImageName_ **.** _nome file:_ l'immagine del formato dell'estensione verrà usata con le visualizzazioni di risoluzione standard, l'immagine del **ImageName@2x.filename-extension** verrà selezionata automaticamente nei computer Mac di base della retina.
+Quando l'applicazione Xamarin.Mac viene eseguita in un Mac, _ImageName_ **.** _nome file:_ l'immagine del formato dell'estensione verrà usata con le visualizzazioni di risoluzione standard, l'immagine del **ImageName@2x.filename-extension** verrà selezionata automaticamente nei computer Mac di base della retina.
 
 ## <a name="using-images-in-interface-builder"></a>Uso di immagini in Interface Builder
 
-Tutte le risorse immagine aggiunte alla cartella **Resources** nel progetto Novell. Mac e hanno impostato l'azione di compilazione su **BundleResource** verranno visualizzate automaticamente in Interface Builder e possono essere selezionate come parte di un elemento dell'interfaccia utente (se gestisce immagini).
+Tutte le risorse immagine aggiunte alla cartella **Resources** nel progetto Xamarin.Mac e hanno impostato l'azione di compilazione su **BundleResource** verranno visualizzate automaticamente in Interface Builder e possono essere selezionate come parte di un elemento dell'interfaccia utente (se gestisce immagini).
 
 Per usare un'immagine in Interface Builder, seguire questa procedura:
 
@@ -178,7 +178,7 @@ I passaggi precedenti funzionano per qualsiasi elemento dell'interfaccia utente 
 
 ## <a name="using-images-in-c-code"></a>Uso delle immagini C# nel codice
 
-Quando si carica un'immagine in memoria C# usando il codice nell'applicazione Novell. Mac, l'immagine verrà archiviata in un oggetto `NSImage`. Se il file di immagine è stato incluso nel bundle di applicazioni Novell. Mac (incluso nelle risorse), usare il codice seguente per caricare l'immagine:
+Quando si carica un'immagine in memoria C# usando il codice nell'applicazione Xamarin.Mac, l'immagine verrà archiviata in un oggetto `NSImage`. Se il file di immagine è stato incluso nel bundle di applicazioni Xamarin.Mac (incluso nelle risorse), usare il codice seguente per caricare l'immagine:
 
 ```csharp
 NSImage image = NSImage.ImageNamed("tags.png");
@@ -442,7 +442,7 @@ Per ulteriori informazioni sull'utilizzo delle visualizzazioni struttura, consul
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di immagini e icone in un'applicazione Novell. Mac. Abbiamo visto i diversi tipi e usi delle immagini, come usare immagini e icone nei Interface Builder di Xcode e come lavorare con immagini e icone nel C# codice.
+Questo articolo ha esaminato in dettaglio l'uso di immagini e icone in un'applicazione Xamarin.Mac. Abbiamo visto i diversi tipi e usi delle immagini, come usare immagini e icone nei Interface Builder di Xcode e come lavorare con immagini e icone nel C# codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

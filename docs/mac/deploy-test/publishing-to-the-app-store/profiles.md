@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489388"
 ---
-# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Novell. Mac
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
 
 I profili di provisioning consentono a uno sviluppatore di incorporare nelle app Xamarin.Mac diverse funzionalità specifiche di macOS (precedentemente noto come Mac OS X), ad esempio iCloud e le notifiche push. Lo sviluppatore deve creare, scaricare e installare un profilo di provisioning Mac per ogni applicazione in fase di sviluppo che userà queste funzionalità.
 

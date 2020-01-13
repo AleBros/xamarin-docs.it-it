@@ -1,5 +1,5 @@
 ---
-title: XAML Namespace consigliati i prefissi in xamarin. Forms
+title: XAML Namespace consigliati i prefissi in Xamarin.Forms
 description: La classe XmlnsPrefixAttribute può essere utilizzata dagli autori di controlli per specificare un prefisso consigliato da associare a uno spazio dei nomi XAML, per l'utilizzo XAML.
 ms.prod: xamarin
 ms.assetid: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61075101"
 ---
-# <a name="xaml-namespace-recommended-prefixes-in-xamarinforms"></a>XAML Namespace consigliati i prefissi in xamarin. Forms
+# <a name="xaml-namespace-recommended-prefixes-in-xamarinforms"></a>XAML Namespace consigliati i prefissi in Xamarin.Forms
 
 Il `XmlnsPrefixAttribute` classe può essere utilizzata dagli autori di controlli per specificare un prefisso consigliato da associare a uno spazio dei nomi XAML, per l'utilizzo XAML. Il prefisso è utile quando il supporto di serializzazione dell'albero degli oggetti per XAML, o quando si interagisce con un ambiente di progettazione con funzionalità di modifica XAML. Ad esempio:
 
@@ -35,4 +35,4 @@ I prefissi devono usare stringhe brevi, poiché il prefisso viene in genere appl
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Schemi spazio dei nomi personalizzati XAML](custom-namespace-schemas.md)
-- [Spazi dei nomi XAML in xamarin. Forms](namespaces.md)
+- [Spazi dei nomi XAML in Xamarin.Forms](namespaces.md)

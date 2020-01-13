@@ -19,7 +19,7 @@ ms.locfileid: "75728265"
 _Anche se non si prevede di aggiungere le funzionalità di iOS 9 all'app immediatamente, è necessario ricompilare le app con la versione più recente di Novell._
 
 > [!IMPORTANT]
-> Le informazioni contenute in questa pagina sono destinate ai clienti con app già presenti nell'App Store destinate a iOS 8 o versioni precedenti, che non hanno già inviato aggiornamenti per la compatibilità con iOS 9. Se si usano già le versioni più recenti-Xcode 7 e Novell. iOS 9 per lo sviluppo di app, vedere l' [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
+> Le informazioni contenute in questa pagina sono destinate ai clienti con app già presenti nell'App Store destinate a iOS 8 o versioni precedenti, che non hanno già inviato aggiornamenti per la compatibilità con iOS 9. Se si usano già le versioni più recenti-Xcode 7 e Xamarin.iOS 9 per lo sviluppo di app, vedere l' [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
 Quando sono state apportate le prime versioni beta di iOS 9, sono stati identificati due problemi con le versioni precedenti di Novell che si manifestavano come app meno recenti che non possono essere avviate in iOS 9.
 
@@ -44,7 +44,7 @@ Si consiglia di verificare in modo esplicito che Visual Studio sia aggiornato al
 ## <a name="what-about-components-nugets-and-other-libraries"></a>Quali componenti, NuGet e altre librerie?
 
 **Non** è necessario attendere le nuove versioni di componenti o NuGet utilizzati per risolvere i due problemi menzionati in precedenza.
-Questi problemi sono corretti semplicemente ricompilando l'app con la versione stabile più recente di Novell. iOS.
+Questi problemi sono corretti semplicemente ricompilando l'app con la versione stabile più recente di Xamarin.iOS.
 
 Analogamente, i fornitori di componenti e gli autori NuGet **non** devono inviare nuove compilazioni solo per correggere i due problemi menzionati in precedenza. Tuttavia, se un componente o NuGet USA `UICollectionView` o carica viste da file **XIB** , *potrebbe* essere necessario un aggiornamento per risolvere i problemi di compatibilità con iOS 9 indicati di seguito.
 
@@ -103,4 +103,4 @@ Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaSc
 
 - [informazioni sulla versione per la compatibilità con iOS 9](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
 - [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)
-- [Aggiornamento delle app Novell. iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)
+- [Aggiornamento delle app Xamarin.iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

@@ -1,6 +1,6 @@
 ---
-title: Animazioni personalizzate in xamarin. Forms
-description: Questo articolo illustra come usare la classe di animazione di xamarin. Forms per creare e annullare le animazioni, sincronizzare le animazioni più e creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti.
+title: Animazioni personalizzate in Xamarin.Forms
+description: Questo articolo illustra come usare la classe di animazione di Xamarin.Forms per creare e annullare le animazioni, sincronizzare le animazioni più e creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70759833"
 ---
-# <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate in xamarin. Forms
+# <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
-_La classe di animazione è il blocco predefinito di tutte le animazioni di xamarin. Forms, con i metodi di estensione nella classe ViewExtensions la creazione di uno o più oggetti di animazione. Questo articolo illustra come usare la classe di animazione per creare e annullare le animazioni, sincronizzare le animazioni più e creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti._
+_La classe di animazione è il blocco predefinito di tutte le animazioni di Xamarin.Forms, con i metodi di estensione nella classe ViewExtensions la creazione di uno o più oggetti di animazione. Questo articolo illustra come usare la classe di animazione per creare e annullare le animazioni, sincronizzare le animazioni più e creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti._
 
 Un numero di parametri deve essere specificato durante la creazione di un `Animation` oggetto, inclusi i valori di inizio e fine della proprietà animata e un callback che cambia il valore della proprietà. Un `Animation` oggetto inoltre possibile mantenere una raccolta di animazioni figlio che possono essere eseguiti e sincronizzate. Per altre informazioni, vedere [animazioni figlio](#child).
 
@@ -32,7 +32,7 @@ Quando si crea un' [ `Animation` ](xref:Xamarin.Forms.Animation) dell'oggetto, i
 var animation = new Animation (v => image.Scale = v, 1, 2);
 ```
 
-Questo codice definisce un'animazione del [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà di un [ `Image` ](xref:Xamarin.Forms.Image) istanza da un valore pari a 1 a un valore pari a 2. Il valore animato, che è derivato da xamarin. Forms, viene passato al metodo di callback specificato come primo argomento, in cui viene usato per modificare il valore della `Scale` proprietà.
+Questo codice definisce un'animazione del [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà di un [ `Image` ](xref:Xamarin.Forms.Image) istanza da un valore pari a 1 a un valore pari a 2. Il valore animato, che è derivato da Xamarin.Forms, viene passato al metodo di callback specificato come primo argomento, in cui viene usato per modificare il valore della `Scale` proprietà.
 
 L'animazione viene avviata con una chiamata per il [ `Commit` ](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) metodo, come illustrato nell'esempio di codice seguente:
 
@@ -120,7 +120,7 @@ new Animation (callback: v => BackgroundColor = Color.FromHsla (v, 1, 0.5),
 
 L'animazione risulta fornisce l'aspetto del miglioramento dello sfondo della pagina tramite i colori dell'arcobaleno.
 
-Per altri esempi di creazione di animazioni complesse, tra cui un'animazione di curva di Bezier, vedere [capitolo 22](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) dei [creazione di App per dispositivi mobili con xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
+Per altri esempi di creazione di animazioni complesse, tra cui un'animazione di curva di Bezier, vedere [capitolo 22](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) dei [creazione di App per dispositivi mobili con Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
 
 ## <a name="creating-a-custom-animation-extension-method"></a>Creazione di un metodo di estensione di animazione personalizzata
 
@@ -178,7 +178,7 @@ In questo esempio di codice, il `ColorTo` metodo aggiunge un'animazione il [ `Te
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo è stato illustrato come usare il [ `Animation` ](xref:Xamarin.Forms.Animation) classe per creare e annullare le animazioni e sincronizzare le animazioni più creare animazioni personalizzate per animare le proprietà che non vengono animate dall'animazione esistente metodi. Il `Animation` classe è il blocco predefinito di tutte le animazioni di xamarin. Forms.
+Questo articolo è stato illustrato come usare il [ `Animation` ](xref:Xamarin.Forms.Animation) classe per creare e annullare le animazioni e sincronizzare le animazioni più creare animazioni personalizzate per animare le proprietà che non vengono animate dall'animazione esistente metodi. Il `Animation` classe è il blocco predefinito di tutte le animazioni di Xamarin.Forms.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

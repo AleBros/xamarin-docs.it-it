@@ -160,7 +160,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 ## <a name="automatic-mac-provisioning"></a>Provisioning automatico del Mac
 
-A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), associa a Mac effettua automaticamente il provisioning di un Mac con il software necessario per la compilazione di applicazioni Novell. iOS: mono, Novell. iOS (il Framework software, non l'IDE Visual Studio per Mac) e diversi strumenti correlati a Xcode (ma non Xcode).
+A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), associa a Mac effettua automaticamente il provisioning di un Mac con il software necessario per la compilazione di applicazioni Xamarin.iOS: mono, Xamarin.iOS (il Framework software, non l'IDE Visual Studio per Mac) e diversi strumenti correlati a Xcode (ma non Xcode).
 
 > [!IMPORTANT]
 >
@@ -194,7 +194,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 
 ||Verifica dell'installazione|Download|Installazione del
 |---|---|---|---|
-|Xamarin.iOS|[![Installazione di Novell. iOS mancante](images/xamios-missing.png "Installazione di Novell. iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Novell. iOS](images/xamios-downloading.png "Download di Novell. iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Novell. iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Installazione di Xamarin.iOS mancante](images/xamios-missing.png "Installazione di Xamarin.iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Xamarin.iOS](images/xamios-downloading.png "Download di Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Xamarin.iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Strumenti e licenza Xcode
 

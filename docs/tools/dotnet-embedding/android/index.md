@@ -18,11 +18,11 @@ In alcuni casi, potrebbe essere necessario aggiungere una libreria Novell .NET a
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="xamarinandroid-requirements"></a>Requisiti di Novell. Android
+## <a name="xamarinandroid-requirements"></a>Requisiti di Xamarin.Android
 
-Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto segue:
+Per usare Xamarin.Android con l'incorporamento di .NET, è necessario quanto segue:
 
-- È necessario installare **Novell. android** &ndash;[novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
+- È necessario installare **Xamarin.android** &ndash;[Xamarin.Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
 
 - È necessario installare **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) o versione successiva.   
 
@@ -52,11 +52,11 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-## <a name="xamarinandroid-requirements"></a>Requisiti di Novell. Android
+## <a name="xamarinandroid-requirements"></a>Requisiti di Xamarin.Android
 
-Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto segue:
+Per usare Xamarin.Android con l'incorporamento di .NET, è necessario quanto segue:
 
-- È necessario installare **Novell. android** &ndash;[novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
+- È necessario installare **Xamarin.android** &ndash;[Xamarin.Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
 
 - È necessario installare **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) o versione successiva.   
 

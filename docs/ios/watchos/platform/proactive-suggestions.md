@@ -18,7 +18,7 @@ ms.locfileid: "73028194"
 
 _Questo articolo illustra come usare i suggerimenti proattivi in un'app watchos 3 per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente._
 
-Una novità di watchos 3, i suggerimenti proattivi presentano nuove modalità per consentire agli utenti di interagire con un'app Novell. iOS inviando in modo proattivo informazioni utili automaticamente all'utente in momenti appropriati.
+Una novità di watchos 3, i suggerimenti proattivi presentano nuove modalità per consentire agli utenti di interagire con un'app Xamarin.iOS inviando in modo proattivo informazioni utili automaticamente all'utente in momenti appropriati.
 
 ## <a name="about-proactive-suggestions"></a>Informazioni sui suggerimenti proattivi
 
@@ -40,7 +40,7 @@ Consente all'utente di usare Siri per creare rapidamente un promemoria per visua
 
 ## <a name="implementing-proactive-suggestions"></a>Implementazione di suggerimenti proattivi
 
-L'aggiunta del supporto proattivo per i suggerimenti all'app Novell. iOS è in genere semplice quanto l'implementazione di alcune API o l'espansione in alcune API che l'app potrebbe già implementare.
+L'aggiunta del supporto proattivo per i suggerimenti all'app Xamarin.iOS è in genere semplice quanto l'implementazione di alcune API o l'espansione in alcune API che l'app potrebbe già implementare.
 
 I suggerimenti proattivi funzionano con le app in tre modi principali:
 
@@ -358,7 +358,7 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico a un'app Novell. iOS per watchos. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
+Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico a un'app Xamarin.iOS per watchos. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

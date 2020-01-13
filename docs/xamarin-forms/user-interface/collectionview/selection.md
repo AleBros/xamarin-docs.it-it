@@ -1,5 +1,5 @@
 ---
-title: Selezione di Novell. Forms CollectionView
+title: Selezione di Xamarin.Forms CollectionView
 description: Per impostazione predefinita, la selezione di CollectionView è disabilitata. Tuttavia, è possibile abilitare una selezione singola o multipla.
 ms.prod: xamarin
 ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72696367"
 ---
-# <a name="xamarinforms-collectionview-selection"></a>Selezione di Novell. Forms CollectionView
+# <a name="xamarinforms-collectionview-selection"></a>Selezione di Xamarin.Forms CollectionView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -305,7 +305,7 @@ In questo esempio il valore della proprietà [`Style.TargetType`](xref:Xamarin.F
 
 [![Screenshot di un elenco di ritrovi verticali con un colore di selezione singola personalizzato, in iOS e Android](selection-images/single-selection-color.png "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")](selection-images/single-selection-color-large.png#lightbox "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")
 
-Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per ulteriori informazioni sugli stati visivi, vedere [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="disable-selection"></a>Disabilita selezione
 
@@ -334,4 +334,4 @@ Quando la proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.Se
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Gestore dello stato di visualizzazione di Novell. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Gestore dello stato di visualizzazione di Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

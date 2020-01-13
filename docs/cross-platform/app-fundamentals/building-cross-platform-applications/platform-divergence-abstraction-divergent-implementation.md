@@ -95,13 +95,13 @@ I vantaggi e gli svantaggi delle interfacce si applicano ugualmente all'ereditar
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Vedere la documentazione di [Novell. Forms](~/get-started/index.yml) .
+Vedere la documentazione di [Xamarin.Forms](~/get-started/index.yml) .
 
 ### <a name="other-cross-platform-libraries"></a>Altre librerie multipiattaforma
 
 Queste librerie offrono inoltre funzionalità multipiattaforma per C# gli sviluppatori:
 
-- [**Novell. Essentials**](~/essentials/index.md) : API multipiattaforma per le funzionalità comuni.
+- [**Xamarin.Essentials**](~/essentials/index.md) : API multipiattaforma per le funzionalità comuni.
 - [**SkiaSharp**](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) : grafica 2D multipiattaforma.
 
 ## <a name="conditional-compilation"></a>Compilazione condizionale
@@ -118,7 +118,7 @@ I progetti Novell definiscono sempre `__MOBILE__`, vale a volte per i progetti d
 
 #### <a name="ios"></a>iOS
 
-Novell. iOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
+Xamarin.iOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
 
 ```csharp
 #if __IOS__
@@ -140,7 +140,7 @@ Sono disponibili anche simboli specifici per l'espressione di controllo e la TV:
 
 #### <a name="android"></a>Android
 
-Il codice che deve essere compilato solo in applicazioni Novell. Android può usare gli elementi seguenti
+Il codice che deve essere compilato solo in applicazioni Xamarin.Android può usare gli elementi seguenti
 
 ```csharp
 #if __ANDROID__
@@ -158,7 +158,7 @@ Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quin
 
 #### <a name="mac"></a>Mac
 
-Attualmente non è disponibile un simbolo predefinito per Novell. Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo, ad esempio `__MAC__`
+Attualmente non è disponibile un simbolo predefinito per Xamarin.Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo, ad esempio `__MAC__`
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>

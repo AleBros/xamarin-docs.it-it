@@ -231,7 +231,7 @@ In questa guida sono state esaminate le nozioni di base per la conversione di te
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Novell. Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Xamarin.Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
 - [Sintesi vocale (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
 - [Sintesi vocale (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Spazio dei nomi Android. Speech](xref:Android.Speech)

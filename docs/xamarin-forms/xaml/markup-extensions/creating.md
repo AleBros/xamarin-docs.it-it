@@ -1,6 +1,6 @@
 ---
 title: Creazione di estensioni di Markup XAML
-description: Questo articolo illustra come definire delle estensioni di markup XAML di xamarin. Forms personalizzate. Un'estensione di markup XAML è una classe che implementa l'interfaccia IMarkupExtension<T> o IMarkupExtension.
+description: Questo articolo illustra come definire delle estensioni di markup XAML di Xamarin.Forms personalizzate. Un'estensione di markup XAML è una classe che implementa l'interfaccia IMarkupExtension<T> o IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
@@ -18,9 +18,9 @@ ms.locfileid: "68655856"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-Il livello a livello di codice, un'estensione di markup XAML è una classe che implementa il [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) oppure [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interfaccia. È possibile esplorare il codice sorgente delle estensioni di markup standard descritto di seguito nel [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repository GitHub xamarin. Forms.
+Il livello a livello di codice, un'estensione di markup XAML è una classe che implementa il [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) oppure [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interfaccia. È possibile esplorare il codice sorgente delle estensioni di markup standard descritto di seguito nel [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repository GitHub Xamarin.Forms.
 
-È anche possibile definire le proprie estensioni di markup XAML personalizzate mediante derivazione dalla `IMarkupExtension` o `IMarkupExtension<T>`. Se l'estensione di markup Ottiene un valore di un determinato tipo, usare il modulo generico. Questo è il caso di alcuni fra le estensioni di markup di xamarin. Forms:
+È anche possibile definire le proprie estensioni di markup XAML personalizzate mediante derivazione dalla `IMarkupExtension` o `IMarkupExtension<T>`. Se l'estensione di markup Ottiene un valore di un determinato tipo, usare il modulo generico. Questo è il caso di alcuni fra le estensioni di markup di Xamarin.Forms:
 
 - `TypeExtension` deriva da `IMarkupExtension<Type>`
 - `ArrayExtension` deriva da `IMarkupExtension<Array>`
@@ -185,7 +185,7 @@ Ecco il programma in esecuzione:
 
 ## <a name="service-providers"></a>Provider di servizi
 
-Tramite il `IServiceProvider` argomento per `ProvideValue`, estensioni di markup XAML è possono accedere a informazioni utili relative al file XAML in cui vengono usati. Ma per usare il `IServiceProvider` argomento correttamente, è necessario conoscere quali tipi di servizi sono disponibili in contesti specifici. Il modo migliore per ottenere le informazioni di questa funzionalità è esaminando il codice sorgente delle estensioni di markup XAML esistente nel [ **MarkupExtensions** cartella](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) nel repository di xamarin. Forms in GitHub. Tenere presente che alcuni tipi di servizi sono interni a xamarin. Forms.
+Tramite il `IServiceProvider` argomento per `ProvideValue`, estensioni di markup XAML è possono accedere a informazioni utili relative al file XAML in cui vengono usati. Ma per usare il `IServiceProvider` argomento correttamente, è necessario conoscere quali tipi di servizi sono disponibili in contesti specifici. Il modo migliore per ottenere le informazioni di questa funzionalità è esaminando il codice sorgente delle estensioni di markup XAML esistente nel [ **MarkupExtensions** cartella](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) nel repository di Xamarin.Forms in GitHub. Tenere presente che alcuni tipi di servizi sono interni a Xamarin.Forms.
 
 In alcune estensioni di markup XAML, questo servizio potrebbe essere utile:
 
@@ -204,4 +204,4 @@ Le estensioni di markup XAML svolgono un ruolo fondamentale in XAML mediante l'e
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Estensioni di markup (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
-- [Capitolo di estensioni di markup XAML dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Capitolo di estensioni di markup XAML dal libro di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

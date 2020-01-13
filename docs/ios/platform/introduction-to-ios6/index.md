@@ -16,11 +16,11 @@ ms.locfileid: "73031830"
 ---
 # <a name="introduction-to-ios-6"></a>Introduzione a iOS 6
 
-_iOS 6 include un'ampia gamma di nuove tecnologie per lo sviluppo di app, che Novell. iOS C# 6 offre agli sviluppatori._
+_iOS 6 include un'ampia gamma di nuove tecnologie per lo sviluppo di app, che Xamarin.iOS C# 6 offre agli sviluppatori._
 
 [![](images/ios6-large.jpg "The iOS 6 logo")](images/ios6-large.jpg#lightbox)
 
-Con iOS 6 e Novell. iOS 6, gli sviluppatori ora hanno a disposizione una vasta gamma di funzionalità per la creazione di applicazioni iOS, incluse quelle destinate a iPhone 5.
+Con iOS 6 e Xamarin.iOS 6, gli sviluppatori ora hanno a disposizione una vasta gamma di funzionalità per la creazione di applicazioni iOS, incluse quelle destinate a iPhone 5.
 Questo documento elenca alcune delle nuove funzionalità più interessanti disponibili e i collegamenti agli articoli per ogni argomento. Inoltre, si riferisce a un paio di modifiche che saranno importanti quando gli sviluppatori passano a iOS 6 e la nuova risoluzione di iPhone 5.
 
 ## <a name="introduction-to-collection-viewsiosuser-interfacecontrolsuicollectionviewmd"></a>[Introduzione alle visualizzazioni di raccolta](~/ios/user-interface/controls/uicollectionview.md)

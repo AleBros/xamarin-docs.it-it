@@ -148,11 +148,11 @@ La localizzazione da destra a sinistra di Xamarin.Forms presenta attualmente alc
 
 ## <a name="force-right-to-left-layout"></a>Forza layout da destra a sinistra
 
-Le applicazioni Novell. iOS e Novell. Android possono essere forzate a usare sempre un layout da destra a sinistra, indipendentemente dalle impostazioni del dispositivo, modificando i rispettivi progetti di piattaforma.
+Le applicazioni Xamarin.iOS e Xamarin.Android possono essere forzate a usare sempre un layout da destra a sinistra, indipendentemente dalle impostazioni del dispositivo, modificando i rispettivi progetti di piattaforma.
 
 ### <a name="ios"></a>iOS
 
-Le applicazioni Novell. iOS possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **AppDelegate** come indicato di seguito:
+Le applicazioni Xamarin.iOS possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **AppDelegate** come indicato di seguito:
 
 1. Dichiarare la funzione `IntPtr_objc_msgSend` come prima riga nella classe `AppDelegate`:
 
@@ -174,11 +174,11 @@ Le applicazioni Novell. iOS possono essere forzate a usare sempre un layout da d
 
 Questo approccio è utile per le applicazioni che richiedono sempre un layout da destra a sinistra e rimuove il requisito per impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) .
 
-Per ulteriori informazioni sul metodo `IntrPtr_objc_msgSend`, vedere [selettori Objective-C in Novell. iOS](~/ios/internals/objective-c-selectors.md).
+Per ulteriori informazioni sul metodo `IntrPtr_objc_msgSend`, vedere [selettori Objective-C in Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
 
 ### <a name="android"></a>Android
 
-Le applicazioni Novell. Android possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **MainActivity** in modo da includere la riga seguente:
+Le applicazioni Xamarin.Android possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **MainActivity** in modo da includere la riga seguente:
 
 ```csharp
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;

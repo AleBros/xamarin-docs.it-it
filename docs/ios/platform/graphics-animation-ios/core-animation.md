@@ -1,5 +1,5 @@
 ---
-title: Animazione principale in Novell. iOS
+title: Animazione principale in Xamarin.iOS
 description: Questo articolo esamina il Framework di animazione principale, mostrando come consente animazioni ad alte prestazioni e fluide in UIKit, oltre a come usarlo direttamente per il controllo di animazione di livello inferiore.
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032489"
 ---
-# <a name="core-animation-in-xamarinios"></a>Animazione principale in Novell. iOS
+# <a name="core-animation-in-xamarinios"></a>Animazione principale in Xamarin.iOS
 
 _Questo articolo esamina il Framework di animazione principale, mostrando come consente animazioni ad alte prestazioni e fluide in UIKit, oltre a come usarlo direttamente per il controllo di animazione di livello inferiore._
 

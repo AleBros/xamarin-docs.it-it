@@ -1,6 +1,6 @@
 ---
-title: Opzione Novell. Forms
-description: L'opzione Novell. Forms è un tipo di pulsante che può essere modificato dall'utente per passare da uno stato all'altro. Questo articolo illustra come usare la classe Switch per visualizzare un elemento dell'interfaccia utente di attivazione/disattivazione.
+title: Opzione Xamarin.Forms
+description: L'opzione Xamarin.Forms è un tipo di pulsante che può essere modificato dall'utente per passare da uno stato all'altro. Questo articolo illustra come usare la classe Switch per visualizzare un elemento dell'interfaccia utente di attivazione/disattivazione.
 ms.prod: xamarin
 ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69887872"
 ---
-# <a name="xamarinforms-switch"></a>Opzione Novell. Forms
+# <a name="xamarinforms-switch"></a>Opzione Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-Il controllo Novell. [`Switch`](xref:Xamarin.Forms.Switch) Forms è un interruttore orizzontale che può essere modificato dall'utente per passare da uno stato all'altro e viceversa, rappresentato da un `boolean` valore. La `Switch` classe eredita da [`View`](xref:Xamarin.Forms.View).
+Il controllo Xamarin.[`Switch`](xref:Xamarin.Forms.Switch) Forms è un interruttore orizzontale che può essere modificato dall'utente per passare da uno stato all'altro e viceversa, rappresentato da un `boolean` valore. La `Switch` classe eredita da [`View`](xref:Xamarin.Forms.View).
 
 Gli screenshot seguenti mostrano un `Switch` controllo negli Stati di attivazione e disattivazione in iOS e Android:
 
@@ -118,7 +118,7 @@ Il `Toggled` gestore eventi può essere eliminato utilizzando Data Binding e tri
 
 In questo esempio [`Label`](xref:Xamarin.Forms.Label) , usa un'espressione di associazione in un oggetto `DataTrigger` per monitorare `IsToggled` la proprietà della `Switch` classe `styleSwitch`denominata. Quando questa proprietà diventa `true`, le `FontAttributes` proprietà `FontSize` e dell'oggetto `Label` vengono modificate. Quando la `IsToggled` `false`proprietà restituisce, le `FontAttributes` proprietà e `FontSize` dell'oggetto `Label` vengono reimpostate sullo stato iniziale.
 
-Per informazioni sui trigger, vedere [trigger Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Per informazioni sui trigger, vedere [trigger Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-switch"></a>Disabilitare un'opzione
 
@@ -127,4 +127,4 @@ Un'applicazione può entrare in uno stato in `Switch` cui l'elemento attivato o 
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Demo switch](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
-* [Trigger di Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+* [Trigger di Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)

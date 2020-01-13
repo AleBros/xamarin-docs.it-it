@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028982"
 ---
-# <a name="xamarinandroid-gridview"></a>GridView Novell. Android
+# <a name="xamarinandroid-gridview"></a>GridView Xamarin.Android
 
 [`GridView`](xref:Android.Widget.GridView) è un [`ViewGroup`](xref:Android.Views.ViewGroup)
 che consente di visualizzare gli elementi in una griglia bidimensionale scorrevole. Gli elementi della griglia vengono inseriti automaticamente nel layout utilizzando un [`ListAdapter`](xref:Android.App.ListActivity.ListAdapter).

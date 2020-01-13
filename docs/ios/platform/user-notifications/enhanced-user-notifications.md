@@ -1,5 +1,5 @@
 ---
-title: Notifiche utente migliorate in Novell. iOS
+title: Notifiche utente migliorate in Xamarin.iOS
 description: Questo articolo descrive il framework delle notifiche utente introdotto in iOS 10. Vengono illustrate le notifiche locali, le notifiche remote, la gestione delle notifiche, le azioni di notifica e altro ancora.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031358"
 ---
-# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Novell. iOS
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Xamarin.iOS
 
 Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Usando questo Framework, un'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
@@ -38,7 +38,7 @@ Inoltre, a seconda del contesto corrente dell'utente, esistono diversi modi in c
 - Se il dispositivo è bloccato, la notifica verrà visualizzata nella schermata di blocco dell'utente.
 - Se l'utente ha perso una notifica, può aprire il centro notifiche e visualizzare eventuali notifiche in attesa disponibili.
 
-Un'app Novell. iOS include due tipi di notifiche utente che è in grado di inviare:
+Un'app Xamarin.iOS include due tipi di notifiche utente che è in grado di inviare:
 
 - **Notifiche locali** : vengono inviate dalle app installate localmente nel dispositivo degli utenti.
 - **Notifiche remote** : vengono inviate da un server remoto e presentate all'utente o attivano un aggiornamento in background del contenuto dell'app.
@@ -530,7 +530,7 @@ Alcuni possibili utilizzi delle estensioni del servizio includono:
 
 ### <a name="implementing-a-service-extension"></a>Implementazione di un'estensione del servizio
 
-Per implementare un'estensione del servizio in un'app Novell. iOS, seguire questa procedura:
+Per implementare un'estensione del servizio in un'app Xamarin.iOS, seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -662,7 +662,7 @@ Questo codice decrittografa il contenuto crittografato dalla chiave di `encrypte
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato tutti i modi in cui la notifica degli utenti è stata migliorata da iOS 10. Viene presentato il nuovo Framework di notifica utente e viene illustrato come usarlo in un'app Novell. iOS o in un'estensione di app.
+Questo articolo ha trattato tutti i modi in cui la notifica degli utenti è stata migliorata da iOS 10. Viene presentato il nuovo Framework di notifica utente e viene illustrato come usarlo in un'app Xamarin.iOS o in un'estensione di app.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -34,7 +34,7 @@ Il processo per l'utilizzo di una specifica della piattaforma tramite XAML o tra
 
 Funzionalità specifiche della piattaforma utilizzati tramite il `On<T>` codice fluent return API [`IPlatformElementConfiguration`](xref:Xamarin.Forms.IPlatformElementConfiguration`2) oggetti. In tal modo funzionalità specifiche della piattaforma più venga richiamato sullo stesso oggetto con metodo di propagazione.
 
-Per ulteriori informazioni sulle specifiche della piattaforma fornite da Novell. Forms, vedere specifiche della piattaforma [iOS](~/xamarin-forms/platform/ios/index.md), specifiche della [piattaforma Android](~/xamarin-forms/platform/android/index.md)e [specifiche della piattaforma Windows](~/xamarin-forms/platform/windows/index.md).
+Per ulteriori informazioni sulle specifiche della piattaforma fornite da Xamarin.Forms, vedere specifiche della piattaforma [iOS](~/xamarin-forms/platform/ios/index.md), specifiche della [piattaforma Android](~/xamarin-forms/platform/android/index.md)e [specifiche della piattaforma Windows](~/xamarin-forms/platform/windows/index.md).
 
 ## <a name="creating-platform-specifics"></a>Creazione di specifiche della piattaforma
 

@@ -1,6 +1,6 @@
 ---
-title: Framework delle notifiche utente in Novell. iOS
-description: Collegamenti ai documenti che descrivono il framework delle notifiche utente e come usarlo per inviare e ricevere notifiche locali e remote in un'app Novell. iOS.
+title: Framework delle notifiche utente in Xamarin.iOS
+description: Collegamenti ai documenti che descrivono il framework delle notifiche utente e come usarlo per inviare e ricevere notifiche locali e remote in un'app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489076"
 ---
-# <a name="user-notifications-framework-in-xamarinios"></a>Framework delle notifiche utente in Novell. iOS
+# <a name="user-notifications-framework-in-xamarinios"></a>Framework delle notifiche utente in Xamarin.iOS
 
 Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Con questo Framework, l'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
@@ -28,7 +28,7 @@ Questo articolo presenta tutti i modi in cui le notifiche utente sono state migl
 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notifiche utente avanzate](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
-Questo articolo illustra in modo più approfondito il nuovo Framework notifiche utente e come sfruttarlo completamente in un'app Novell. iOS.
+Questo articolo illustra in modo più approfondito il nuovo Framework notifiche utente e come sfruttarlo completamente in un'app Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms CarouselView
+title: Xamarin.Forms CarouselView
 description: CarouselView è una visualizzazione per la presentazione dei dati in un layout scorrevole, in cui gli utenti possono scorrere rapidamente una raccolta di elementi.
 ms.prod: xamarin
 ms.assetid: 5b673347-cdba-4532-820f-fb5f070c86bc
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72696981"
 ---
-# <a name="xamarinforms-carouselview"></a>Novell. Forms CarouselView
+# <a name="xamarinforms-carouselview"></a>Xamarin.Forms CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 

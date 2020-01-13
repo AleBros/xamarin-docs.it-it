@@ -1,6 +1,6 @@
 ---
-title: Procedura dettagliata-percorso in background in Novell. iOS
-description: Questo documento fornisce una procedura dettagliata su come usare le informazioni sul percorso in un'applicazione Novell. iOS in background. Viene descritto il programma di installazione, l'interfaccia utente e gli Stati dell'applicazione necessari.
+title: Procedura dettagliata-percorso in background in Xamarin.iOS
+description: Questo documento fornisce una procedura dettagliata su come usare le informazioni sul percorso in un'applicazione Xamarin.iOS in background. Viene descritto il programma di installazione, l'interfaccia utente e gli Stati dell'applicazione necessari.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488322"
 ---
-# <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata-percorso in background in Novell. iOS
+# <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata-percorso in background in Xamarin.iOS
 
 In questo esempio verrà compilata un'applicazione location iOS che stampa le informazioni relative alla posizione corrente: Latitudine, Longitudine e altri parametri sullo schermo. Questa applicazione dimostrerà come eseguire correttamente gli aggiornamenti del percorso mentre l'applicazione è attiva o in background.
 

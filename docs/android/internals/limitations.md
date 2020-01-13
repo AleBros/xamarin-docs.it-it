@@ -1,5 +1,5 @@
 ---
-title: Confronto tra Novell. Android e desktop-differenze nel runtime di mono
+title: Confronto tra Xamarin.Android e desktop-differenze nel runtime di mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
@@ -17,7 +17,7 @@ ms.locfileid: "73027845"
 
 Poiché le applicazioni in Android richiedono la generazione di tipi proxy Java durante il processo di compilazione, non è possibile generare tutto il codice in fase di esecuzione.
 
-Queste sono le limitazioni di Novell. Android rispetto alla mono desktop:
+Queste sono le limitazioni di Xamarin.Android rispetto alla mono desktop:
 
 ## <a name="limited-dynamic-language-support"></a>Supporto del linguaggio dinamico limitato
 

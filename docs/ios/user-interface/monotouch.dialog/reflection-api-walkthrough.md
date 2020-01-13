@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'applicazione Novell. iOS tramite l'API Reflection
+title: Creazione di un'applicazione Xamarin.iOS tramite l'API Reflection
 description: Questo documento descrive l'API di Reflection basata sugli attributi MonoTouch. Dialog, che crea l'interfaccia utente in base alle classi decorate con attributi.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002213"
 ---
-# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Reflection
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creazione di un'applicazione Xamarin.iOS tramite l'API Reflection
 
 MT. L'API di Reflection D consente di decorare le classi con attributi che MT. D utilizza per creare automaticamente le schermate. L'API Reflection fornisce un'associazione tra queste classi e ciò che viene visualizzato sullo schermo. Sebbene questa API non fornisca il controllo granulare svolto dall'API degli elementi, riduce la complessità compilando automaticamente la gerarchia di elementi in base alla decorazione della classe.
 
 ## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
-Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
+Mt. D viene distribuito con Xamarin.iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Xamarin.iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
 
 ## <a name="getting-started-with-the-reflection-api"></a>Introduzione all'API di Reflection
 

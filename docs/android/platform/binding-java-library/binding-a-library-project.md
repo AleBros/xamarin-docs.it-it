@@ -1,6 +1,6 @@
 ---
 title: Associazione di un progetto di libreria Eclipse
-description: Questa procedura dettagliata illustra come usare i modelli di progetto Novell. Android per associare un progetto di libreria Android per Eclipse.
+description: Questa procedura dettagliata illustra come usare i modelli di progetto Xamarin.Android per associare un progetto di libreria Android per Eclipse.
 ms.prod: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73027732"
 ---
 # <a name="binding-an-eclipse-library-project"></a>Associazione di un progetto di libreria Eclipse
 
-_Questa procedura dettagliata illustra come usare i modelli di progetto Novell. Android per associare un progetto di libreria Android per Eclipse._
+_Questa procedura dettagliata illustra come usare i modelli di progetto Xamarin.Android per associare un progetto di libreria Android per Eclipse._
 
 ## <a name="overview"></a>Panoramica
 
@@ -27,17 +27,17 @@ I progetti di libreria Android sono diversi dai progetti Android normali perché
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Per usare un progetto di libreria Android in un progetto di binding Java per Novell. Android, è necessario innanzitutto compilare il progetto di libreria Android in Eclipse. La schermata seguente mostra un esempio di un progetto di libreria Android dopo la compilazione: 
+Per usare un progetto di libreria Android in un progetto di binding Java per Xamarin.Android, è necessario innanzitutto compilare il progetto di libreria Android in Eclipse. La schermata seguente mostra un esempio di un progetto di libreria Android dopo la compilazione: 
 
 [progetto di libreria di esempio![in Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
 
 Si noti che il codice sorgente del progetto di libreria Android è stato compilato in un oggetto temporaneo. File JAR denominato **Android-mapviewballoons. jar**e che le risorse sono state copiate nella cartella **bin/res/Crunch** . 
 
-Dopo che il progetto di libreria Android è stato compilato in Eclipse, può essere associato usando un progetto di binding Java Novell. Android. Primo oggetto a. È necessario creare il file ZIP contenente le cartelle **bin** e **res** del progetto di libreria Android. È importante rimuovere la sottodirectory **Crunch** corrispondente in modo che le risorse risiedano in **bin/res**. Lo screenshot seguente mostra il contenuto di uno di questi. File ZIP: 
+Dopo che il progetto di libreria Android è stato compilato in Eclipse, può essere associato usando un progetto di binding Java Xamarin.Android. Primo oggetto a. È necessario creare il file ZIP contenente le cartelle **bin** e **res** del progetto di libreria Android. È importante rimuovere la sottodirectory **Crunch** corrispondente in modo che le risorse risiedano in **bin/res**. Lo screenshot seguente mostra il contenuto di uno di questi. File ZIP: 
 
 [Contenuto![del file di libreria Android Project. zip](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
 
-Questo. Il file ZIP viene quindi aggiunto al progetto di binding Java Novell. Android, come illustrato nello screenshot seguente:
+Questo. Il file ZIP viene quindi aggiunto al progetto di binding Java Xamarin.Android, come illustrato nello screenshot seguente:
 
 [![zip aggiunto al progetto di associazione Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
 
@@ -47,11 +47,11 @@ Se ne esiste uno. I file JAR necessari per il progetto di libreria Android devon
 
 [![azione di compilazione impostata su ReferenceJar](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
 
-Una volta completati questi passaggi, è possibile usare il progetto di associazione Java Novell. Android, come descritto in precedenza in questo documento.
+Una volta completati questi passaggi, è possibile usare il progetto di associazione Java Xamarin.Android, come descritto in precedenza in questo documento.
 
 > [!NOTE]
 > La compilazione dei progetti di libreria Android in altri IDE non è supportata in questo momento. Altri IDE non possono creare la stessa struttura di directory o i file nella cartella **bin** come Eclipse. 
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato il processo di associazione di un progetto di libreria Android. Il progetto di libreria Android è stato compilato in Eclipse, quindi è stato creato un file zip dalle cartelle **bin** e **res** del progetto di libreria Android. Successivamente, è stato usato questo file zip per creare un progetto di binding Java per Novell. Android. 
+In questo articolo è stato illustrato il processo di associazione di un progetto di libreria Android. Il progetto di libreria Android è stato compilato in Eclipse, quindi è stato creato un file zip dalle cartelle **bin** e **res** del progetto di libreria Android. Successivamente, è stato usato questo file zip per creare un progetto di binding Java per Xamarin.Android. 

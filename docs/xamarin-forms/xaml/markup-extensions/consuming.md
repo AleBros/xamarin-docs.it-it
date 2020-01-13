@@ -1,6 +1,6 @@
 ---
 title: Utilizzo di estensioni di markup XAML
-description: Questo articolo illustra come usare le estensioni di markup XAML di xamarin. Forms per migliorare la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da diverse origini.
+description: Questo articolo illustra come usare le estensioni di markup XAML di Xamarin.Forms per migliorare la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da diverse origini.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
@@ -30,7 +30,7 @@ Le estensioni di markup XAML consentono di migliorare la potenza e flessibilità
 - [`DataTemplate`](#datatemplate-markup-extension) : converte un tipo in un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 - [`FontImage`](#fontimage-markup-extension) -Visualizza un'icona del tipo di carattere in qualsiasi visualizzazione in cui è possibile visualizzare una `ImageSource`.
 
-Altre estensioni di markup XAML in passato sono supportate nelle altre implementazioni di XAML e sono supportate anche da xamarin. Forms. Questi elementi sono descritti più dettagliatamente negli altri articoli:
+Altre estensioni di markup XAML in passato sono supportate nelle altre implementazioni di XAML e sono supportate anche da Xamarin.Forms. Questi elementi sono descritti più dettagliatamente negli altri articoli:
 
 - `StaticResource` fare riferimento a oggetti da un dizionario risorse, come descritto nell'articolo [**dizionari risorse**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource`: rispondere alle modifiche apportate agli oggetti in un dizionario risorse, come descritto nell'articolo [**stili dinamici**](~/xamarin-forms/user-interface/styles/dynamic.md).
@@ -196,7 +196,7 @@ Entrambe `x:Reference` espressioni di usano la versione abbreviata del `Referenc
 
 Il `x:Type` estensione di markup è l'equivalente XAML del linguaggio c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) (parola chiave). È supportato dal [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), che definisce una proprietà denominata [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) typu `string` che è impostato su un nome di classe o struttura. Il `x:Type` markup estensione restituisce il [ `System.Type` ](xref:System.Type) oggetto di tale classe o struttura. `TypeName` è la proprietà content del `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato tra parentesi graffe.
 
-All'interno di xamarin. Forms, esistono diverse proprietà che hanno argomenti di tipo `Type`. Gli esempi includono la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà della `Style`e il [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attributo utilizzato per specificare gli argomenti in classi generiche. Tuttavia, il parser XAML consente di eseguire la `typeof` operazione automaticamente e il `x:Type` estensione di markup non viene usato in questi casi.
+All'interno di Xamarin.Forms, esistono diverse proprietà che hanno argomenti di tipo `Type`. Gli esempi includono la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà della `Style`e il [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attributo utilizzato per specificare gli argomenti in classi generiche. Tuttavia, il parser XAML consente di eseguire la `typeof` operazione automaticamente e il `x:Type` estensione di markup non viene usato in questi casi.
 
 Un'unica posizione in cui `x:Type` *viene* obbligatorio è con il `x:Array` estensione di markup, che è descritti il [nella sezione successiva](#array).
 
@@ -269,7 +269,7 @@ public partial class MainPage : ContentPage
 
 Il `NavigateCommand` proprietà è una `Command` oggetto che implementa un comando execute con un argomento di tipo `Type` &mdash; hodnotou `CommandParameter`. Il metodo Usa `Activator.CreateInstance` per creare un'istanza della pagina e quindi si passa a esso. Il costruttore termina impostando il `BindingContext` della pagina a se stessa, che consente la `Binding` su `Command` a funzionare. Vedere le [ **Data Binding** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) articolo e in particolare il [ **Commanding** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) per altre informazioni su questo tipo di codice.
 
-Il **X:Type Demo** pagina Usa una tecnica simile per creare istanze di elementi di xamarin. Forms e aggiungerli a un `StackLayout`. Il file XAML inizialmente costituito da tre `Button` elementi con loro `Command` impostate su un `Binding` e il `CommandParameter` impostate sui tipi di tre visualizzazioni di xamarin. Forms:
+Il **X:Type Demo** pagina Usa una tecnica simile per creare istanze di elementi di Xamarin.Forms e aggiungerli a un `StackLayout`. Il file XAML inizialmente costituito da tre `Button` elementi con loro `Command` impostate su un `Binding` e il `CommandParameter` impostate sui tipi di tre visualizzazioni di Xamarin.Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -485,7 +485,7 @@ Il `OnPlatform` estensione di markup è supportato per il [ `OnPlatformExtension
 Il `Default` è la proprietà content di `OnPlatformExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare il `Default=` fa parte dell'espressione di condizione che si tratta del primo argomento. Se la proprietà `Default` non è impostata, verrà utilizzato per impostazione predefinita il valore della proprietà [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , purché l'estensione di markup sia destinata a un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
-> Il parser XAML si aspetta che vengano forniti alle proprietà di utilizzo di valori del tipo corretto di `OnPlatform` estensione di markup. Se la conversione di tipo è necessaria, il `OnPlatform` estensione di markup proverà a eseguire usando i convertitori di tipi predefiniti forniti da xamarin. Forms. Esistono tuttavia alcune conversioni dei tipi che non possono essere eseguite per i convertitori di tipi predefiniti e in questi casi il `Converter` proprietà deve essere impostata su un `IValueConverter` implementazione.
+> Il parser XAML si aspetta che vengano forniti alle proprietà di utilizzo di valori del tipo corretto di `OnPlatform` estensione di markup. Se la conversione di tipo è necessaria, il `OnPlatform` estensione di markup proverà a eseguire usando i convertitori di tipi predefiniti forniti da Xamarin.Forms. Esistono tuttavia alcune conversioni dei tipi che non possono essere eseguite per i convertitori di tipi predefiniti e in questi casi il `Converter` proprietà deve essere impostata su un `IValueConverter` implementazione.
 
 Il **OnPlatform Demo** pagina viene illustrato come utilizzare il `OnPlatform` estensione di markup:
 
@@ -523,7 +523,7 @@ L'estensione di markup `OnIdiom` consente di personalizzare l'aspetto dell'inter
 Il `Default` è la proprietà content di `OnIdiomExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare il `Default=` fa parte dell'espressione di condizione che si tratta del primo argomento.
 
 > [!IMPORTANT]
-> Il parser XAML si aspetta che vengano forniti alle proprietà di utilizzo di valori del tipo corretto di `OnIdiom` estensione di markup. Se la conversione di tipo è necessaria, il `OnIdiom` estensione di markup proverà a eseguire usando i convertitori di tipi predefiniti forniti da xamarin. Forms. Esistono tuttavia alcune conversioni dei tipi che non possono essere eseguite per i convertitori di tipi predefiniti e in questi casi il `Converter` proprietà deve essere impostata su un `IValueConverter` implementazione.
+> Il parser XAML si aspetta che vengano forniti alle proprietà di utilizzo di valori del tipo corretto di `OnIdiom` estensione di markup. Se la conversione di tipo è necessaria, il `OnIdiom` estensione di markup proverà a eseguire usando i convertitori di tipi predefiniti forniti da Xamarin.Forms. Esistono tuttavia alcune conversioni dei tipi che non possono essere eseguite per i convertitori di tipi predefiniti e in questi casi il `Converter` proprietà deve essere impostata su un `IValueConverter` implementazione.
 
 Il **OnIdiom Demo** pagina viene illustrato come utilizzare il `OnIdiom` estensione di markup:
 
@@ -557,7 +557,7 @@ Un utilizzo tipico di questa estensione di markup si trova in un'applicazione sh
 
 In questo esempio `MonkeysPage` viene convertito da un [`ContentPage`](xref:Xamarin.Forms.ContentPage) a un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), che viene impostato come valore della proprietà `ShellContent.ContentTemplate`. In questo modo si garantisce che `MonkeysPage` venga creato solo quando si verifica la navigazione alla pagina, anziché all'avvio dell'applicazione.
 
-Per ulteriori informazioni sulle applicazioni shell, vedere [Novell. Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+Per ulteriori informazioni sulle applicazioni shell, vedere [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="fontimage-markup-extension"></a>Estensione di markup FontImage
 
@@ -592,13 +592,13 @@ Per informazioni sulla visualizzazione delle icone dei tipi di carattere specifi
 
 ## <a name="define-your-own-markup-extensions"></a>Definire le proprie estensioni di Markup
 
-Se avrai avuto necessità di un'estensione di markup XAML che non è disponibile in xamarin. Forms, è possibile [creane di nuove](creating.md).
+Se avrai avuto necessità di un'estensione di markup XAML che non è disponibile in Xamarin.Forms, è possibile [creane di nuove](creating.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Estensioni di markup (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
-- [Capitolo di estensioni di markup XAML dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Capitolo di estensioni di markup XAML dal libro di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Stili dinamici](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Shell Novell. Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+- [Shell Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).

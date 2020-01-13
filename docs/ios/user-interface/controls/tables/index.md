@@ -1,6 +1,6 @@
 ---
-title: Utilizzo di tabelle e celle in Novell. iOS
-description: Questo documento contiene collegamenti a diverse guide che descrivono come visualizzare i dati con il controllo UITableView in un'app Novell. iOS.
+title: Utilizzo di tabelle e celle in Xamarin.iOS
+description: Questo documento contiene collegamenti a diverse guide che descrivono come visualizzare i dati con il controllo UITableView in un'app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021886"
 ---
-# <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo di tabelle e celle in Novell. iOS
+# <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo di tabelle e celle in Xamarin.iOS
 
-Questa sezione presenta le classi usate per creare e visualizzare le tabelle, quindi fornisce esempi su come usarle in Novell. iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Novell iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
+Questa sezione presenta le classi usate per creare e visualizzare le tabelle, quindi fornisce esempi su come usarle in Xamarin.iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Novell iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
 
-Per coloro che lavorano su applicazioni multipiattaforma con Novell. Android, il controllo UITableView è simile alla classe ListView in Android (e la classe UITableViewSource è simile alle classi adapter di Android).
+Per coloro che lavorano su applicazioni multipiattaforma con Xamarin.Android, il controllo UITableView è simile alla classe ListView in Android (e la classe UITableViewSource è simile alle classi adapter di Android).
 
 In questi articoli verranno esaminati in maniera completa l'utilizzo delle tabelle, tra cui:
 

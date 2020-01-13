@@ -22,7 +22,7 @@ Il layout di tutte le sottoviste associate a una visualizzazione dello stack vie
 
 [![](stacked-views-images/stacked01.png "Subview layout diagram")](stacked-views-images/stacked01.png#lightbox)
 
-Quando si usa un `UIStackView` in un'app Novell. tvOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
+Quando si usa un `UIStackView` in un'app Xamarin.tvOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
 
 ## <a name="about-stacked-view-controls"></a>Informazioni sui controlli visualizzazione in pila
 
@@ -90,7 +90,7 @@ Sono disponibili diversi tipi di layout che funzionano bene con i controlli di v
 
 ## <a name="stack-views-and-storyboards"></a>Visualizzazioni dello stack e storyboard
 
-Il modo più semplice per usare le visualizzazioni dello stack in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare le visualizzazioni dello stack in un'app Xamarin.tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -305,7 +305,7 @@ Molte delle proprietà della visualizzazione stack possono essere specificate ut
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata illustrata la progettazione e l'utilizzo di una vista in pila all'interno di un'app Novell. tvOS.
+In questo articolo è stata illustrata la progettazione e l'utilizzo di una vista in pila all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

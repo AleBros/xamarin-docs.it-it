@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 18. MVVM
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 18. MVVM'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 18. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
@@ -36,7 +36,7 @@ In molti programmi di dimensioni ridotte e quelli ancora più grandi, spesso il 
 
 ## <a name="viewmodels-and-data-binding"></a>ViewModel e il data binding
 
-Per contattare i data binding, un elemento ViewModel deve essere in grado di avvisare la vista quando viene modificata una proprietà dell'elemento ViewModel. L'elemento ViewModel viene eseguita implementando il [ `INotifyPropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged) interfaccia nel `System.ComponentModel` dello spazio dei nomi. Ciò fa parte di .NET anziché a xamarin. Forms. (In genere ViewModel tenta di mantenere l'indipendenza dalla piattaforma.)
+Per contattare i data binding, un elemento ViewModel deve essere in grado di avvisare la vista quando viene modificata una proprietà dell'elemento ViewModel. L'elemento ViewModel viene eseguita implementando il [ `INotifyPropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged) interfaccia nel `System.ComponentModel` dello spazio dei nomi. Ciò fa parte di .NET anziché a Xamarin.Forms. (In genere ViewModel tenta di mantenere l'indipendenza dalla piattaforma.)
 
 Il `INotifyPropertyChanged` interfaccia dichiara un singolo evento denominato [ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged) che indica la proprietà che è stato modificato.
 
@@ -62,7 +62,7 @@ Il codice nel ViewModel può essere semplificato definendo un `OnPropertyChanged
 
 ## <a name="the-command-interface"></a>L'interfaccia di comando
 
-MVVM funziona con le associazioni dati e le associazioni dati funzionano con le proprietà, in modo MVVM sembra essere mancanti se si desidera la gestione una `Clicked` eventi di un `Button` o una `Tapped` eventi di un `TapGestureRecognizer`. Per consentire a ViewModel gestire tali eventi, xamarin. Forms supporta il *interfaccia di comando*.
+MVVM funziona con le associazioni dati e le associazioni dati funzionano con le proprietà, in modo MVVM sembra essere mancanti se si desidera la gestione una `Clicked` eventi di un `Button` o una `Tapped` eventi di un `TapGestureRecognizer`. Per consentire a ViewModel gestire tali eventi, Xamarin.Forms supporta il *interfaccia di comando*.
 
 L'interfaccia di comando si manifesta nel `Button` con due proprietà pubbliche:
 
@@ -77,7 +77,7 @@ Per supportare l'interfaccia di comando, un ViewModel necessario definire una pr
 
 Internamente, un ViewModel imposta ogni proprietà di tipo `ICommand` a un'istanza di una classe che implementa il `ICommand` interfaccia. Tramite il data binding, il `Button` chiamati inizialmente il `CanExecute` metodo e se si disabilita automaticamente se il metodo restituisce `false`. Imposta anche un gestore per il `CanExecuteChanged` eventi e chiamate `CanExecute` ogni volta che viene generato tale evento. Se il `Button` è abilitata, viene chiamato il `Execute` metodo ogni volta che il `Button` si fa clic.
 
-È possibile avere alcune ViewModels risalenti a xamarin. Forms e queste potrebbero supportare già l'interfaccia di comando. Per nuovo ViewModel deve essere utilizzata solo con xamarin. Forms, xamarin. Forms fornisce una [ `Command` ](xref:Xamarin.Forms.Command) classe e un [ `Command<T>` ](xref:Xamarin.Forms.Command`1) classe che implementano il `ICommand` interfaccia. Il tipo generico è il tipo dell'argomento per il `Execute` e `CanExecute` metodi.
+È possibile avere alcune ViewModels risalenti a Xamarin.Forms e queste potrebbero supportare già l'interfaccia di comando. Per nuovo ViewModel deve essere utilizzata solo con Xamarin.Forms, Xamarin.Forms fornisce una [ `Command` ](xref:Xamarin.Forms.Command) classe e un [ `Command<T>` ](xref:Xamarin.Forms.Command`1) classe che implementano il `ICommand` interfaccia. Il tipo generico è il tipo dell'argomento per il `Execute` e `CanExecute` metodi.
 
 ### <a name="simple-method-executions"></a>Esecuzioni di metodo semplice
 
@@ -97,4 +97,4 @@ Il `AdderViewModel` usato nel **AddingMachine** esempio definisce anche due meto
 
 - [Capitolo 18 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)
 - [Capitolo 18 campioni](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
-- [Modelli di applicazioni aziendali tramite e-book di xamarin. Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
+- [Modelli di applicazioni aziendali tramite e-book di Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)

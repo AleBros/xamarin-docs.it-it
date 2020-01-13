@@ -1,6 +1,6 @@
 ---
-title: Novell. Forms TimePicker
-description: TimePicker è una vista Novell. Forms che consente all'utente di selezionare un'ora. Questo articolo illustra come utilizzare un TimePicker in un'applicazione Novell. Forms.
+title: Xamarin.Forms TimePicker
+description: TimePicker è una vista Xamarin.Forms che consente all'utente di selezionare un'ora. Questo articolo illustra come utilizzare un TimePicker in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72695906"
 ---
-# <a name="xamarinforms-timepicker"></a>Novell. Forms TimePicker
+# <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
-_Visualizzazione Novell. Forms che consente all'utente di selezionare un'ora._
+_Visualizzazione Xamarin.Forms che consente all'utente di selezionare un'ora._
 
-Il [`TimePicker`](xref:Xamarin.Forms.TimePicker) Novell. Forms richiama il controllo di selezione temporale della piattaforma e consente all'utente di selezionare un'ora. `TimePicker` definisce le proprietà seguenti:
+Il [`TimePicker`](xref:Xamarin.Forms.TimePicker) Xamarin.Forms richiama il controllo di selezione temporale della piattaforma e consente all'utente di selezionare un'ora. `TimePicker` definisce le proprietà seguenti:
 
 - [`Time`](xref:Xamarin.Forms.TimePicker.Time) di tipo `TimeSpan`, l'ora selezionata, che per impostazione predefinita è un `TimeSpan` di 0. Il tipo di `TimeSpan` indica l'intervallo di tempo trascorso la mezzanotte.
 - [`Format`](xref:Xamarin.Forms.TimePicker.Format) di tipo `string`, una stringa di formattazione .NET [standard](/dotnet/standard/base-types/standard-date-and-time-format-strings/) o [personalizzata](/dotnet/standard/base-types/custom-date-and-time-format-strings/) , che per impostazione predefinita è "t", il modello di ora breve.

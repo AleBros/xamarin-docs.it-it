@@ -16,7 +16,7 @@ ms.locfileid: "73023452"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Procedura dettagliata: Uso di Apple Instruments
 
-_Questo articolo illustra come usare lo strumento Apple Instruments per diagnosticare i problemi di memoria in un'applicazione iOS compilata con Novell. Viene illustrato come avviare Instruments, creare snapshot dell'heap e analizzare la crescita della memoria. Viene inoltre illustrato come utilizzare Instruments per visualizzare e individuare le righe esatte di codice che causano il problema di memoria._
+_Questo articolo illustra in dettaglio l'uso di Apple Instruments per diagnosticare problemi di memoria in un'applicazione iOS compilata con Xamarin. Illustra come avviare Instruments, come creare snapshot dell'heap e come analizzare la crescita della memoria. Descrive anche come usare Instruments per visualizzare ed evidenziare le righe di codice specifiche che causano il problema di memoria._
 
 Questo articolo spiega come usare lo strumento **Xcode Instruments** per diagnosticare un problema di memoria in un'applicazione iOS.
 Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) e aprire la soluzione **before** in Visual Studio per Mac.
@@ -37,7 +37,7 @@ Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/sample
 
 6. Scegliere il pulsante **Record** (Registra) (il cerchio rosso in alto a sinistra) in Instruments per avviare l'applicazione.
 
-7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore (ora che l'app è in esecuzione, conterrà due sezioni: Dirty [Modificato] e Resident Size [Dimensioni residenti]). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
+7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore. Ora che l'app è in esecuzione, conterrà due sezioni: Dirty (Modificato) e Resident Size (Dimensioni residenti). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
 

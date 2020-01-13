@@ -1,5 +1,5 @@
 ---
-title: Modificatori di campo XAML in Novell. Forms
+title: Modificatori di campo XAML in Xamarin.Forms
 description: L'attributo dello spazio dei nomi x:FieldModifier specifica il livello di accesso per i campi generati per gli elementi XAML denominati.
 ms.prod: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/02/2019
 ms.locfileid: "68739455"
 ---
-# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificatori di campo XAML in Novell. Forms
+# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificatori di campo XAML in Xamarin.Forms
 
 L' `x:FieldModifier` attributo Namespace specifica il livello di accesso per i campi generati per gli elementi XAML denominati. I valori validi dell'attributo sono:
 
@@ -27,7 +27,7 @@ L' `x:FieldModifier` attributo Namespace specifica il livello di accesso per i c
 Per impostazione predefinita, se il valore dell'attributo non è impostato, il campo generato per l'elemento sarà `private`.
 
 > [!NOTE]
-> Il valore dell'attributo può utilizzare qualsiasi combinazione di maiuscole e minuscole, in quanto verrà convertito in minuscolo da Novell. Forms.
+> Il valore dell'attributo può utilizzare qualsiasi combinazione di maiuscole e minuscole, in quanto verrà convertito in minuscolo da Xamarin.Forms.
 
 Per elaborare un `x:FieldModifier` attributo, è necessario che siano soddisfatte le condizioni seguenti:
 

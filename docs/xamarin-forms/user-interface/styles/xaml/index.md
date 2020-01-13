@@ -1,6 +1,6 @@
 ---
 title: Applicazione di stili alle app Xamarin.Forms con gli stili XAML
-description: Questa guida illustra come personalizzare l'aspetto di un'applicazione xamarin. Forms usando gli stili XAML.
+description: Questa guida illustra come personalizzare l'aspetto di un'applicazione Xamarin.Forms usando gli stili XAML.
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "65926614"
 
 ## <a name="introductionintroductionmd"></a>[Introduzione](introduction.md)
 
-Le applicazioni xamarin. Forms contengono spesso più controlli che hanno un aspetto identico. Impostazione dell'aspetto di ogni controllo singoli possono essere ricorrenti e tendente all'errore. Al contrario, gli stili è possibile creare che consentono di personalizzare l'aspetto del controllo il raggruppamento e impostare le proprietà disponibili per il tipo di controllo.
+Le applicazioni Xamarin.Forms contengono spesso più controlli che hanno un aspetto identico. Impostazione dell'aspetto di ogni controllo singoli possono essere ricorrenti e tendente all'errore. Al contrario, gli stili è possibile creare che consentono di personalizzare l'aspetto del controllo il raggruppamento e impostare le proprietà disponibili per il tipo di controllo.
 
 ## <a name="explicit-stylesexplicitmd"></a>[Stili espliciti](explicit.md)
 
@@ -42,8 +42,8 @@ Gli stili non rispondere alle modifiche delle proprietà e rimangono invariati p
 
 ## <a name="device-stylesdevicemd"></a>[Stili di dispositivo](device.md)
 
-Xamarin. Forms include sei *dinamici* stili, noti come *dispositivo* gli stili, il [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Tutti i sei stili possono essere applicati a [ `Label` ](xref:Xamarin.Forms.Label) solo istanze.
+Xamarin.Forms include sei *dinamici* stili, noti come *dispositivo* gli stili, il [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Tutti i sei stili possono essere applicati a [ `Label` ](xref:Xamarin.Forms.Label) solo istanze.
 
 ## <a name="style-classesstyle-classmd"></a>[Classi di stile](style-class.md)
 
-Le classi di stile di xamarin. Forms abilitano più stili da applicare a un controllo, senza dover ricorrere a ereditarietà degli stili.
+Le classi di stile di Xamarin.Forms abilitano più stili da applicare a un controllo, senza dover ricorrere a ereditarietà degli stili.

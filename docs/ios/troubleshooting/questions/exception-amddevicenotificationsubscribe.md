@@ -41,7 +41,7 @@ AMDeviceNotificationSubscribe returned: 3892314211
   at Mtb.Application.MainClass.Main (System.String[] args) [0x00000] in <filename unknown="">:0
 ```
 
-Questo messaggio può essere visualizzato in una finestra di dialogo di errore quando si avvia per la prima volta Visual Studio per Mac o nel file di `mtbserver.log` nell'app host di compilazione Novell. iOS (host di compilazione**Novell. ios > visualizzare il log dell'host di compilazione**).
+Questo messaggio può essere visualizzato in una finestra di dialogo di errore quando si avvia per la prima volta Visual Studio per Mac o nel file di `mtbserver.log` nell'app host di compilazione Xamarin.iOS (host di compilazione**Xamarin.ios > visualizzare il log dell'host di compilazione**).
 
 Si noti che si tratta di un problema non comune. Se si verificano problemi durante la connessione di Visual Studio all'host di compilazione Mac, sono presenti altri errori che potrebbero essere visualizzati nel file di `mtbserver.log`.
 

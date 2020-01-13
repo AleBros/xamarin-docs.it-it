@@ -1,6 +1,6 @@
 ---
 title: Animazione di base in SkiaSharp
-description: Questo articolo illustra come animare la grafica di SkiaSharp in applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come animare la grafica di SkiaSharp in applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
@@ -20,11 +20,11 @@ ms.locfileid: "70759743"
 
 _Informazioni su come aggiungere un'animazione di grafica in SkiaSharp_
 
-È possibile animare grafica di SkiaSharp in xamarin. Forms causando il `PaintSurface` metodo da chiamare periodicamente, ogni volta che gli elementi grafici di disegno in modo leggermente diverso. Ecco un'animazione illustrata più avanti in questo articolo con cerchi concentrici che apparentemente espandere dal centro:
+È possibile animare grafica di SkiaSharp in Xamarin.Forms causando il `PaintSurface` metodo da chiamare periodicamente, ogni volta che gli elementi grafici di disegno in modo leggermente diverso. Ecco un'animazione illustrata più avanti in questo articolo con cerchi concentrici che apparentemente espandere dal centro:
 
 ![](animation-images/animationexample.png "Alcuni dei cerchi concentrici apparentemente espansione dal centro")
 
-Il **Pulsating ellisse** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma anima due assi di un'ellisse in modo che il file sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni. Il [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file crea un'istanza di un xamarin. Forms `Slider` e un `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Questo è un modo comune per integrare un `SKCanvasView` con altre viste di xamarin. Forms:
+Il **Pulsating ellisse** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma anima due assi di un'ellisse in modo che il file sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni. Il [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file crea un'istanza di un Xamarin.Forms `Slider` e un `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Questo è un modo comune per integrare un `SKCanvasView` con altre viste di Xamarin.Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -177,7 +177,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-Questo programma Usa un approccio diverso per animazione basata su xamarin. Forms `Device.StartTimer` (metodo). Il `t` campo viene animato da 0 a 1 ogni `cycleTime` millisecondi:
+Questo programma Usa un approccio diverso per animazione basata su Xamarin.Forms `Device.StartTimer` (metodo). Il `t` campo viene animato da 0 a 1 ogni `cycleTime` millisecondi:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

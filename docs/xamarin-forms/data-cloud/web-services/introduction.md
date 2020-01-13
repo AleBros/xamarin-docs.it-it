@@ -1,6 +1,6 @@
 ---
-title: Introduzione ai servizi Web di Novell. Forms
-description: Questa guida fornisce una procedura dettagliata dell'applicazione di esempio Novell. Forms che illustra come comunicare con diversi servizi Web. Mentre ogni servizio Web usa un'applicazione di esempio separata, sono funzionalmente simili e condividono classi comuni.
+title: Introduzione ai servizi Web di Xamarin.Forms
+description: Questa guida fornisce una procedura dettagliata dell'applicazione di esempio Xamarin.Forms che illustra come comunicare con diversi servizi Web. Mentre ogni servizio Web usa un'applicazione di esempio separata, sono funzionalmente simili e condividono classi comuni.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68656645"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Introduzione ai servizi Web di Novell. Forms
+# <a name="xamarinforms-web-services-introduction"></a>Introduzione ai servizi Web di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
-_Questo argomento fornisce una procedura dettagliata dell'applicazione di esempio Novell. Forms che illustra come comunicare con diversi servizi Web. Mentre ogni servizio Web usa un'applicazione di esempio separata, sono funzionalmente simili e condividono classi comuni._
+_Questo argomento fornisce una procedura dettagliata dell'applicazione di esempio Xamarin.Forms che illustra come comunicare con diversi servizi Web. Mentre ogni servizio Web usa un'applicazione di esempio separata, sono funzionalmente simili e condividono classi comuni._
 
-L'applicazione to-do list di esempio descritta di seguito viene usata per illustrare come accedere a tipi diversi di backend di servizi Web con Novell. Forms. Fornisce funzionalità per:
+L'applicazione to-do list di esempio descritta di seguito viene usata per illustrare come accedere a tipi diversi di backend di servizi Web con Xamarin.Forms. Fornisce funzionalità per:
 
 - Visualizzare un elenco di attività.
 - Aggiunta, modifica ed eliminazione di attività.

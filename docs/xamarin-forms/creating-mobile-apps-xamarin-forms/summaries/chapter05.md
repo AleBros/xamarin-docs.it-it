@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 5. Gestione delle dimensioni
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 5. Gestione delle dimensioni'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 5. Gestione delle dimensioni'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -19,9 +19,9 @@ ms.locfileid: "70771147"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
 
 > [!NOTE]
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
-Diverse dimensioni in xamarin. Forms sono state rilevate fino a questo momento:
+Diverse dimensioni in Xamarin.Forms sono state rilevate fino a questo momento:
 
 - L'altezza della barra di stato iOS è 20
 - Il `BoxView` ha una larghezza predefinita e un'altezza pari a 40
@@ -44,9 +44,9 @@ Android è simile. I programmatori lavorano in unità pari *pixel indipendenti d
 I telefoni Windows e dispositivi mobili anche aver stabilito i fattori di scala che implicano qualcosa di simile a 160 unità indipendenti dal dispositivo di pollice.
 
 > [!NOTE]
-> Xamarin. Forms non supporta più qualsiasi phone basate su Windows o un dispositivo mobile.
+> Xamarin.Forms non supporta più qualsiasi phone basate su Windows o un dispositivo mobile.
 
-In sintesi, un programmatore di xamarin. Forms destinate a telefoni e Tablet possa presupporre che tutte le unità di misura sono basate sul criterio seguente:
+In sintesi, un programmatore di Xamarin.Forms destinate a telefoni e Tablet possa presupporre che tutte le unità di misura sono basate sul criterio seguente:
 
 - 160 unità per pollice, equivalente a
 - unità di 64 per il centimetro

@@ -1,5 +1,5 @@
 ---
-title: Touch ID e Face ID con Novell. iOS
+title: Touch ID e Face ID con Xamarin.iOS
 description: Questo documento fornisce una descrizione di alto livello dell'autenticazione biometrica in iOS.
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490297"
 ---
-# <a name="use-touch-id-and-face-id-with-xamarinios"></a>Usare Touch ID e Face ID con Novell. iOS
+# <a name="use-touch-id-and-face-id-with-xamarinios"></a>Usare Touch ID e Face ID con Xamarin.iOS
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
 

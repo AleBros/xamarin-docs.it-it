@@ -1,6 +1,6 @@
 ---
-title: Gestore di istruzioni di xamarin. Forms
-description: Il gestore di istruzioni di xamarin. Forms consente a un utente di selezionare un valore numerico da un intervallo di valori. È costituito da due pulsanti contrassegnati con segni più e meno (-). Modifica i due pulsanti Modifica il valore selezionato in modo incrementale.
+title: Gestore di istruzioni di Xamarin.Forms
+description: Il gestore di istruzioni di Xamarin.Forms consente a un utente di selezionare un valore numerico da un intervallo di valori. È costituito da due pulsanti contrassegnati con segni più e meno (-). Modifica i due pulsanti Modifica il valore selezionato in modo incrementale.
 ms.prod: xamarin
 ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68656197"
 ---
-# <a name="xamarinforms-stepper"></a>Gestore di istruzioni di xamarin. Forms
+# <a name="xamarinforms-stepper"></a>Gestore di istruzioni di Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Usare un gestore di istruzioni per la selezione di un valore numerico da un intervallo di valori._
 
-Xamarin. Forms [ `Stepper` ](xref:Xamarin.Forms.Stepper) è costituito da due pulsanti contrassegnati con segni più e meno (-). Questi pulsanti possono essere modificati dall'utente per selezionare in modo incrementale un `double` valore da un intervallo di valori.
+Xamarin.Forms [ `Stepper` ](xref:Xamarin.Forms.Stepper) è costituito da due pulsanti contrassegnati con segni più e meno (-). Questi pulsanti possono essere modificati dall'utente per selezionare in modo incrementale un `double` valore da un intervallo di valori.
 
 Il [ `Stepper` ](xref:Xamarin.Forms.Stepper) definisce quattro proprietà di tipo `double`:
 

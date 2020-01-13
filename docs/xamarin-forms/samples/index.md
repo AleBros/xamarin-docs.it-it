@@ -18,7 +18,7 @@ ms.locfileid: "75502919"
 
 App e demo di codice di esempio Xamarin.Forms per iniziare a comprendere i concetti di Xamarin.Forms.
 
-[Tutti gli esempi di Novell. Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+[Tutti gli esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 :::row:::
     :::column:::
@@ -70,4 +70,4 @@ Questo gioco è una variante del rompicapo 14-15 classico che è possibile risol
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app e demo di codice di esempio Novell. Forms, vedere [tutti gli esempi di Novell. Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).
+Per il set completo di app e demo di codice di esempio Xamarin.Forms, vedere [tutti gli esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).

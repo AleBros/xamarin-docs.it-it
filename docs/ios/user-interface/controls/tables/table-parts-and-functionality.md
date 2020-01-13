@@ -1,5 +1,5 @@
 ---
-title: Parti e funzionalità della tabella in Novell. iOS
+title: Parti e funzionalità della tabella in Xamarin.iOS
 description: Questo documento descrive le varie parti di un UITableView in iOS. Vengono illustrate le intestazioni, le celle, i piè di pagina, l'indice e la modalità di modifica della sezione.
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021846"
 ---
-# <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Novell. iOS
+# <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Xamarin.iOS
 
 Un UITableView può avere uno stile "raggruppato" o "normale" ed è costituito dalle parti seguenti:
 
@@ -66,7 +66,7 @@ Sono disponibili un paio di funzionalità di modifica diverse:
 - Passaggio alla modalità di modifica per rivelare gli handle di nuovo ordinamento. 
 - Inserimento di nuove celle (con animazione).
 
-Nella parte restante di questo documento viene illustrato come implementare tutte queste funzionalità di UITableView con Novell. iOS.
+Nella parte restante di questo documento viene illustrato come implementare tutte queste funzionalità di UITableView con Xamarin.iOS.
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
@@ -78,17 +78,17 @@ Lo scopo di ogni classe è descritto di seguito:
 
 - **UITableView** : vista che contiene una raccolta di celle all'interno di un contenitore di scorrimento. La visualizzazione tabella USA in genere l'intera schermata in un'app iPhone, ma potrebbe esistere come parte di una visualizzazione più ampia nell'iPad (o apparire in un popopov). 
 - **UITableViewCell** : vista che rappresenta una singola cella (o riga) in una vista tabella. Sono disponibili quattro tipi di celle incorporati ed è possibile creare celle personalizzate in C# o con iOS designer. 
-- **UITableViewSource** – Novell. iOS: classe astratta esclusiva che fornisce tutti i metodi necessari per visualizzare una tabella, incluso il conteggio delle righe, restituendo una visualizzazione di celle per ogni riga, gestendo la selezione delle righe e molte altre funzionalità facoltative. È *necessario* sottoclassare questo per ottenere un UITableView funzionante. 
+- **UITableViewSource** – Xamarin.iOS: classe astratta esclusiva che fornisce tutti i metodi necessari per visualizzare una tabella, incluso il conteggio delle righe, restituendo una visualizzazione di celle per ogni riga, gestendo la selezione delle righe e molte altre funzionalità facoltative. È *necessario* sottoclassare questo per ottenere un UITableView funzionante. 
 - **NSIndexPath** : contiene le proprietà di riga e sezione che identificano in modo univoco la posizione di una cella in una tabella. 
 - **UITableViewController** : UIViewController pronto per l'uso con un UITableView hardcoded come vista e accessibile tramite la proprietà Tableview. 
 - **UIViewController** : se la tabella non occupa l'intera schermata, è possibile aggiungere un UITableView a qualsiasi UIViewController con il relativo frame impostato in modo appropriato. 
 
-UITableViewSource sostituisce le due classi seguenti, che sono ancora disponibili in Novell. iOS, ma in genere non sono necessarie:
+UITableViewSource sostituisce le due classi seguenti, che sono ancora disponibili in Xamarin.iOS, ma in genere non sono necessarie:
 
-- **UITableViewDataSource** : protocollo Objective-C modellato in Novell. iOS come classe astratta. Deve essere sottoclassata per fornire una tabella con una visualizzazione per ogni cella, nonché informazioni sulle intestazioni, i piè di pagina e il numero di righe e sezioni della tabella. 
-- **UITableViewDelegate** : protocollo Objective-C modellato in Novell. iOS come classe. Gestisce la selezione, la modifica delle funzionalità e altre funzionalità facoltative della tabella. 
+- **UITableViewDataSource** : protocollo Objective-C modellato in Xamarin.iOS come classe astratta. Deve essere sottoclassata per fornire una tabella con una visualizzazione per ogni cella, nonché informazioni sulle intestazioni, i piè di pagina e il numero di righe e sezioni della tabella. 
+- **UITableViewDelegate** : protocollo Objective-C modellato in Xamarin.iOS come classe. Gestisce la selezione, la modifica delle funzionalità e altre funzionalità facoltative della tabella. 
 
-In questo documento gli esempi usano UITableViewSource e ignorano queste due classi. Sono citati in questo articolo, poiché tutti gli esempi di Objective-C presenti nella documentazione di Apple vi faranno riferimento, quindi è utile capire cosa fanno (e che è possibile usare invece UITableViewSource di Novell. iOS).
+In questo documento gli esempi usano UITableViewSource e ignorano queste due classi. Sono citati in questo articolo, poiché tutti gli esempi di Objective-C presenti nella documentazione di Apple vi faranno riferimento, quindi è utile capire cosa fanno (e che è possibile usare invece UITableViewSource di Xamarin.iOS).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

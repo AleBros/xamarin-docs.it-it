@@ -1,5 +1,5 @@
 ---
-title: Novell. Android TableLayout
+title: Xamarin.Android TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028740"
 ---
-# <a name="xamarinandroid-tablelayout"></a>Novell. Android TableLayout
+# <a name="xamarinandroid-tablelayout"></a>Xamarin.Android TableLayout
 
 [`TableLayout`](xref:Android.Widget.TableLayout) è un [`ViewGroup`](xref:Android.Views.ViewGroup)
 che visualizza [`View`](xref:Android.Views.View) figlio

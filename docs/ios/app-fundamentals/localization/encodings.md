@@ -1,6 +1,6 @@
 ---
-title: Codifiche di internazionalizzazione in Novell. iOS
-description: Questo documento descrive le codifiche di internazionalizzazione in Novell. iOS, illustrando le codifiche disponibili e come aggiungerle a un'app.
+title: Codifiche di internazionalizzazione in Xamarin.iOS
+description: Questo documento descrive le codifiche di internazionalizzazione in Xamarin.iOS, illustrando le codifiche disponibili e come aggiungerle a un'app.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009996"
 ---
-# <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in Novell. iOS
+# <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in Xamarin.iOS
 
-Per impostazione predefinita, non tutte le codifiche sono incluse nella libreria di classi Novell. iOS.
+Per impostazione predefinita, non tutte le codifiche sono incluse nella libreria di classi Xamarin.iOS.
 
-Per ridurre le dimensioni dell'applicazione, Novell. iOS non include alcuna codifica specifica ed è necessario indicare a mTouch di includere gli assembly che contengono il supporto per la codifica necessaria.
+Per ridurre le dimensioni dell'applicazione, Xamarin.iOS non include alcuna codifica specifica ed è necessario indicare a mTouch di includere gli assembly che contengono il supporto per la codifica necessaria.
 
 Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquadro compilazione/avanzata iOS in Visual Studio per Mac o Visual Studio:
 

@@ -25,7 +25,7 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 > [!IMPORTANT]
-> A partire da Novell. Studio 5,5, il modo in cui vengono creati i controlli personalizzati è leggermente diverso rispetto alle versioni precedenti. Per creare un controllo personalizzato, è necessaria l'interfaccia `IComponent` (con i metodi di implementazione associati) oppure la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo viene usato nell'esempio di procedura dettagliata seguente.
+> A partire da Xamarin.Studio 5,5, il modo in cui vengono creati i controlli personalizzati è leggermente diverso rispetto alle versioni precedenti. Per creare un controllo personalizzato, è necessaria l'interfaccia `IComponent` (con i metodi di implementazione associati) oppure la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo viene usato nell'esempio di procedura dettagliata seguente.
 
 1. Creare una nuova soluzione dall' **app iOS > > > C# modello di applicazione di visualizzazione singola** , denominarla`ScratchTicket`e continuare con la creazione guidata nuovo progetto:
 

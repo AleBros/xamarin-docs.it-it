@@ -1,5 +1,5 @@
 ---
-title: Proprietà associabili Novell. Forms
+title: Proprietà associabili Xamarin.Forms
 description: Questo articolo viene fornita un'introduzione alle proprietà associabile e viene illustrato come creare e il loro uso.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490103"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Proprietà associabili Novell. Forms
+# <a name="xamarinforms-bindable-properties"></a>Proprietà associabili Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -28,7 +28,7 @@ Le proprietà devono essere implementate come proprietà associabile per support
 - La convalida del valore della proprietà.
 - Monitoraggio delle modifiche di proprietà.
 
-Esempi di xamarin. Forms proprietà associabili [ `Label.Text` ](xref:Xamarin.Forms.Label.Text), [ `Button.BorderRadius` ](xref:Xamarin.Forms.Button.BorderRadius), e [ `StackLayout.Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation). Ogni proprietà associabili ha un corrispondente `public static readonly` vlastnosti typu [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) esposto nella stessa classe e che è l'identificatore della proprietà associabile. Ad esempio, l'identificatore della proprietà associabile corrispondente per il `Label.Text` proprietà viene [ `Label.TextProperty` ](xref:Xamarin.Forms.Label.TextProperty).
+Esempi di Xamarin.Forms proprietà associabili [ `Label.Text` ](xref:Xamarin.Forms.Label.Text), [ `Button.BorderRadius` ](xref:Xamarin.Forms.Button.BorderRadius), e [ `StackLayout.Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation). Ogni proprietà associabili ha un corrispondente `public static readonly` vlastnosti typu [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) esposto nella stessa classe e che è l'identificatore della proprietà associabile. Ad esempio, l'identificatore della proprietà associabile corrispondente per il `Label.Text` proprietà viene [ `Label.TextProperty` ](xref:Xamarin.Forms.Label.TextProperty).
 
 ## <a name="create-a-bindable-property"></a>Creare una proprietà associabile
 

@@ -1,6 +1,6 @@
 ---
-title: Novell. Forms TableView
-description: Questo articolo illustra come usare la classe Novell. Forms TableView per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni.
+title: Xamarin.Forms TableView
+description: Questo articolo illustra come usare la classe Xamarin.Forms TableView per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72695990"
 ---
-# <a name="xamarinforms-tableview"></a>Novell. Forms TableView
+# <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
@@ -88,7 +88,7 @@ Inoltre, il colore del testo visualizzato per ogni [`TableSection`](xref:Xamarin
 
 ## <a name="built-in-cells"></a>Celle predefinite
 
-Novell. Forms è dotato di celle predefinite per la raccolta e la visualizzazione delle informazioni. Sebbene [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView) possano utilizzare tutte le stesse celle, [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) e [`EntryCell`](xref:Xamarin.Forms.EntryCell) sono le più rilevanti per uno scenario di `TableView`.
+Xamarin.Forms è dotato di celle predefinite per la raccolta e la visualizzazione delle informazioni. Sebbene [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView) possano utilizzare tutte le stesse celle, [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) e [`EntryCell`](xref:Xamarin.Forms.EntryCell) sono le più rilevanti per uno scenario di `TableView`.
 
 Per una descrizione dettagliata di [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) e [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell), vedere [aspetto della cella ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) .
 
@@ -205,7 +205,7 @@ L'elemento radice nella [`TableView`](xref:Xamarin.Forms.TableView) è l' [`Tabl
 La classe [`TableView`](xref:Xamarin.Forms.TableView) dispone di due proprietà che possono essere utilizzate per modificare l'altezza di riga delle celle:
 
 - [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) : imposta l'altezza di ogni riga su una `int`.
-- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) : le righe presentano altezze variabili se impostate su `true`. Si noti che quando si imposta questa proprietà su `true`, le altezze delle righe verranno calcolate e applicate automaticamente da Novell. Forms.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) : le righe presentano altezze variabili se impostate su `true`. Si noti che quando si imposta questa proprietà su `true`, le altezze delle righe verranno calcolate e applicate automaticamente da Xamarin.Forms.
 
 Quando l'altezza del contenuto in una cella in un [`TableView`](xref:Xamarin.Forms.TableView) viene modificata, l'altezza della riga viene aggiornata in modo implicito in Android e nella piattaforma UWP (Universal Windows Platform) (UWP). Tuttavia, in iOS è necessario forzare l'aggiornamento impostando la proprietà [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) su `true` e chiamando il metodo [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) .
 

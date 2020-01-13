@@ -1,6 +1,6 @@
 ---
-title: Creare un renderer Visual Novell. Forms
-description: Creare oggetti visivi Novell. Forms da applicare in modo selettivo agli oggetti visualElement senza dover sottoclassare le visualizzazioni Novell. Forms.
+title: Creare un renderer Visual Xamarin.Forms
+description: Creare oggetti visivi Xamarin.Forms da applicare in modo selettivo agli oggetti visualElement senza dover sottoclassare le visualizzazioni Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
@@ -14,16 +14,16 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/13/2019
 ms.locfileid: "68978283"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Creare un renderer Visual Novell. Forms
+# <a name="create-a-xamarinforms-visual-renderer"></a>Creare un renderer Visual Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-L'oggetto visivo Novell. Forms consente di creare e applicare in modo selettivo i renderer agli [`VisualElement`](xref:Xamarin.Forms.VisualElement) oggetti senza dover sottoclassare le visualizzazioni Novell. Forms. Un renderer che specifica un `IVisual` tipo, come parte del relativo `ExportRendererAttribute`, verrà usato per il rendering delle visualizzazioni di cui è stato scelto il rendering, anziché il renderer predefinito. In fase di selezione del renderer, il `Visual` proprietà della vista vengono ispezionate e inclusi nel processo di selezione del renderer.
+L'oggetto visivo Xamarin.Forms consente di creare e applicare in modo selettivo i renderer agli [`VisualElement`](xref:Xamarin.Forms.VisualElement) oggetti senza dover sottoclassare le visualizzazioni Xamarin.Forms. Un renderer che specifica un `IVisual` tipo, come parte del relativo `ExportRendererAttribute`, verrà usato per il rendering delle visualizzazioni di cui è stato scelto il rendering, anziché il renderer predefinito. In fase di selezione del renderer, il `Visual` proprietà della vista vengono ispezionate e inclusi nel processo di selezione del renderer.
 
 > [!IMPORTANT]
 > Attualmente la [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) proprietà non può essere modificata dopo il rendering della vista, ma verrà modificata in una versione futura.
 
-Il processo per la creazione e l'utilizzo di un renderer Visual Novell. Forms è il seguente:
+Il processo per la creazione e l'utilizzo di un renderer Visual Xamarin.Forms è il seguente:
 
 1. Creare renderer della piattaforma per la visualizzazione richiesta. Per altre informazioni, vedere [create renderers](#create-platform-renderers).
 1. Creare un tipo che deriva da `IVisual`. Per altre informazioni, vedere [creare un tipo IVisual](#create-an-ivisual-type).
@@ -33,7 +33,7 @@ Il processo per la creazione e l'utilizzo di un renderer Visual Novell. Forms è
 
 ## <a name="create-platform-renderers"></a>Crea renderer della piattaforma
 
-Per informazioni sulla creazione di una classe renderer, vedere renderer [personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Si noti tuttavia che un renderer Visual Novell. Forms viene applicato a una vista senza dover sottoclassare la visualizzazione.
+Per informazioni sulla creazione di una classe renderer, vedere renderer [personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Si noti tuttavia che un renderer Visual Xamarin.Forms viene applicato a una vista senza dover sottoclassare la visualizzazione.
 
 Le classi renderer descritte di seguito implementano un oggetto [`Button`](xref:Xamarin.Forms.Button) personalizzato che Visualizza il testo con un'ombreggiatura.
 
@@ -144,7 +144,7 @@ Button button = new Button { Text = "CUSTOM BUTTON", ... };
 button.Visual = new CustomVisual();
 ```
 
-Al momento della selezione del renderer [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) , la proprietà [`Button`](xref:Xamarin.Forms.Button) di viene controllata e inclusa nel processo di selezione del renderer. Se non si trova un renderer, verrà usato il renderer predefinito Novell. Forms.
+Al momento della selezione del renderer [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) , la proprietà [`Button`](xref:Xamarin.Forms.Button) di viene controllata e inclusa nel processo di selezione del renderer. Se non si trova un renderer, verrà usato il renderer predefinito Xamarin.Forms.
 
 Gli screenshot seguenti mostrano il rendering [`Button`](xref:Xamarin.Forms.Button), che Visualizza il testo con un'ombreggiatura:
 
@@ -173,5 +173,5 @@ Il `IVisual` tipo può quindi essere utilizzato tramite il nome registrato:
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Materiale visivo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Oggetti visivi del materiale Novell. Forms](material-visual.md)
+- [Oggetti visivi del materiale Xamarin.Forms](material-visual.md)
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

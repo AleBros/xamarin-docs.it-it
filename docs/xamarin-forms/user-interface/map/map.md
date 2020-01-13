@@ -1,5 +1,5 @@
 ---
-title: Controllo mappa Novell. Forms
+title: Controllo mappa Xamarin.Forms
 description: Il controllo mappa è una visualizzazione multipiattaforma per la visualizzazione e l'annotazione delle mappe. Usa il controllo mappa nativo per ogni piattaforma, offrendo un'esperienza di mapping rapida e familiare per gli utenti.
 ms.prod: xamarin
 ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/01/2019
 ms.locfileid: "73426230"
 ---
-# <a name="xamarinforms-map-control"></a>Controllo mappa Novell. Forms
+# <a name="xamarinforms-map-control"></a>Controllo mappa Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -54,7 +54,7 @@ Un [`Map`](xref:Xamarin.Forms.Maps.Map) può essere visualizzato aggiungendolo a
 ```
 
 > [!NOTE]
-> Per fare riferimento ai controlli Novell. Forms. Maps è necessaria una definizione di spazio dei nomi `xmlns` aggiuntiva. Nell'esempio precedente viene fatto riferimento allo spazio dei nomi `Xamarin.Forms.Maps` tramite la parola chiave `maps`.
+> Per fare riferimento ai controlli Xamarin.Forms. Maps è necessaria una definizione di spazio dei nomi `xmlns` aggiuntiva. Nell'esempio precedente viene fatto riferimento allo spazio dei nomi `Xamarin.Forms.Maps` tramite la parola chiave `maps`.
 
 Il codice C# equivalente è il seguente:
 
@@ -206,7 +206,7 @@ In questo esempio, il metodo [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveTo
 Il comportamento di un [`Map`](xref:Xamarin.Forms.Maps.Map) può essere personalizzato impostando alcune proprietà e gestendo l'evento `MapClicked`.
 
 > [!NOTE]
-> È possibile ottenere un ulteriore comportamento della mappa customizatin creando un renderer personalizzato della mappa. Per altre informazioni, vedere [personalizzazione di un mapping di Novell. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
+> È possibile ottenere un ulteriore comportamento della mappa customizatin creando un renderer personalizzato della mappa. Per altre informazioni, vedere [personalizzazione di un mapping di Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
 ### <a name="disable-scroll"></a>Disabilita scorrimento
 
@@ -309,5 +309,5 @@ map.MapClicked += OnMapClicked;
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Posizione e distanza della mappa](position-distance.md)
-- [Personalizzazione di un mapping di Novell. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Personalizzazione di un mapping di Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)

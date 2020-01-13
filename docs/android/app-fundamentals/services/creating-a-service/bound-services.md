@@ -1,6 +1,6 @@
 ---
-title: Servizi associati in Novell. Android
-description: I servizi associati sono servizi Android che forniscono un'interfaccia client-server che può interagire con un client, ad esempio un'attività Android. Questa guida illustra i componenti principali necessari per la creazione di un servizio associato e come usarlo in un'applicazione Novell. Android.
+title: Servizi associati in Xamarin.Android
+description: I servizi associati sono servizi Android che forniscono un'interfaccia client-server che può interagire con un client, ad esempio un'attività Android. Questa guida illustra i componenti principali necessari per la creazione di un servizio associato e come usarlo in un'applicazione Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73024985"
 ---
-# <a name="bound-services-in-xamarinandroid"></a>Servizi associati in Novell. Android
+# <a name="bound-services-in-xamarinandroid"></a>Servizi associati in Xamarin.Android
 
-_I servizi associati sono servizi Android che forniscono un'interfaccia client-server che può interagire con un client, ad esempio un'attività Android. Questa guida illustra i componenti principali necessari per la creazione di un servizio associato e come usarlo in un'applicazione Novell. Android._
+_I servizi associati sono servizi Android che forniscono un'interfaccia client-server che può interagire con un client, ad esempio un'attività Android. Questa guida illustra i componenti principali necessari per la creazione di un servizio associato e come usarlo in un'applicazione Xamarin.Android._
 
 ## <a name="bound-services-overview"></a>Panoramica dei servizi associati
 
@@ -26,7 +26,7 @@ I servizi che forniscono un'interfaccia client-server che consente ai client di 
 - L' **uso di un Messenger** &ndash; questa tecnica è adatto quando il servizio può esistere in un processo separato. Al contrario, le richieste di servizio vengono sottoposte a marshalling tra il client e il servizio tramite un [`Android.OS.Messenger`](xref:Android.OS.Messenger). Nel servizio viene creata un' [`Android.OS.Handler`](xref:Android.OS.Handler) che gestirà le richieste di `Messenger`. Questo verrà trattato in un'altra guida.
 - **Uso di Android Interface Definition Language (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) è una tecnica avanzata che non verrà descritta in questa guida.
 
-Una volta che un client è stato associato a un servizio, la comunicazione tra le due si verifica tramite `Android.OS.IBinder` oggetto.  Questo oggetto è responsabile dell'interfaccia che consentirà al client di interagire con il servizio. Non è necessario che ogni applicazione Novell. Android implementi questa interfaccia da zero, il Android SDK fornisce la classe [`Android.OS.Binder`](xref:Android.OS.Binder) che occupa la maggior parte del codice necessario per il marshalling dell'oggetto tra il client e il servizio.
+Una volta che un client è stato associato a un servizio, la comunicazione tra le due si verifica tramite `Android.OS.IBinder` oggetto.  Questo oggetto è responsabile dell'interfaccia che consentirà al client di interagire con il servizio. Non è necessario che ogni applicazione Xamarin.Android implementi questa interfaccia da zero, il Android SDK fornisce la classe [`Android.OS.Binder`](xref:Android.OS.Binder) che occupa la maggior parte del codice necessario per il marshalling dell'oggetto tra il client e il servizio.
 
 Quando un client viene eseguito con il servizio, è necessario annullare l'associazione chiamando il metodo `UnbindService`. Quando l'ultimo client non è associato a un servizio, Android arresterà ed eliminerà il servizio associato.
 
@@ -34,7 +34,7 @@ Questo diagramma illustra il modo in cui l'attività, la connessione del servizi
 
 ![Diagramma che mostra la relazione tra i componenti del servizio](bound-services-images/bound-services-02.png "Diagramma che mostra la relazione tra i componenti del servizio.")
 
-In questa guida viene illustrato come estendere la classe `Service` per implementare un servizio associato. Verrà inoltre trattata l'implementazione di `IServiceConnection` ed estensione `Binder` per consentire a un client di comunicare con il servizio. Un'app di esempio accompagna questa guida, che contiene una soluzione con un singolo progetto Novell. Android denominato **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Si tratta di un'applicazione molto semplice che illustra come implementare un servizio e come associarvi un'attività. Il servizio associato ha un'API molto semplice con un solo metodo, `GetFormattedTimestamp`, che restituisce una stringa che indica all'utente quando il servizio è stato avviato e il tempo di esecuzione. L'app consente inoltre all'utente di annullare manualmente il binding e il binding al servizio.
+In questa guida viene illustrato come estendere la classe `Service` per implementare un servizio associato. Verrà inoltre trattata l'implementazione di `IServiceConnection` ed estensione `Binder` per consentire a un client di comunicare con il servizio. Un'app di esempio accompagna questa guida, che contiene una soluzione con un singolo progetto Xamarin.Android denominato **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Si tratta di un'applicazione molto semplice che illustra come implementare un servizio e come associarvi un'attività. Il servizio associato ha un'API molto semplice con un solo metodo, `GetFormattedTimestamp`, che restituisce una stringa che indica all'utente quando il servizio è stato avviato e il tempo di esecuzione. L'app consente inoltre all'utente di annullare manualmente il binding e il binding al servizio.
 
 [![screenshot dell'applicazione in esecuzione su un telefono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
@@ -51,7 +51,7 @@ Ognuno di questi passaggi verrà descritto più dettagliatamente nelle sezioni s
 
 ### <a name="extend-the-service-class"></a>Estendere la classe `Service`
 
-Per creare un servizio con Novell. Android, è necessario sottoclassare `Service` e decorare la classe con l' [`ServiceAttribute`](xref:Android.App.ServiceAttribute). L'attributo viene usato dagli strumenti di compilazione Novell. Android per registrare correttamente il servizio nel file **file AndroidManifest. XML** dell'app, in modo analogo a un'attività, un servizio associato ha il ciclo di vita e i metodi di callback associati agli eventi significativi in il ciclo di vita. L'elenco seguente è un esempio di alcuni dei metodi di callback più comuni che verrà implementato da un servizio:
+Per creare un servizio con Xamarin.Android, è necessario sottoclassare `Service` e decorare la classe con l' [`ServiceAttribute`](xref:Android.App.ServiceAttribute). L'attributo viene usato dagli strumenti di compilazione Xamarin.Android per registrare correttamente il servizio nel file **file AndroidManifest. XML** dell'app, in modo analogo a un'attività, un servizio associato ha il ciclo di vita e i metodi di callback associati agli eventi significativi in il ciclo di vita. L'elenco seguente è un esempio di alcuni dei metodi di callback più comuni che verrà implementato da un servizio:
 
 - `OnCreate` &ndash; questo metodo viene richiamato da Android poiché crea un'istanza del servizio. Viene usato per inizializzare eventuali variabili o oggetti richiesti dal servizio durante la relativa durata. È facoltativo.
 - `OnBind` &ndash; questo metodo deve essere implementato da tutti i servizi associati. Viene richiamato quando il primo client tenta di connettersi al servizio. Verrà restituita un'istanza di `IBinder` in modo che il client possa interagire con il servizio. Fino a quando il servizio è in esecuzione, l'oggetto `IBinder` verrà usato per soddisfare le richieste client future da associare al servizio.
@@ -62,7 +62,7 @@ In questo diagramma vengono illustrati gli eventi del ciclo di vita delle chiavi
 
 ![Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita](bound-services-images/bound-services-01.png "Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita.")
 
-Il frammento di codice seguente, dall'applicazione complementare che accompagna questa guida, Mostra come implementare un servizio associato in Novell. Android:
+Il frammento di codice seguente, dall'applicazione complementare che accompagna questa guida, Mostra come implementare un servizio associato in Xamarin.Android:
 
 ```csharp
 using Android.App;

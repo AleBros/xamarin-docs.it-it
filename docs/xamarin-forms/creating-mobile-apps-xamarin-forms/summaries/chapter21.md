@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 21. Trasformazioni
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 21. Trasformazioni'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 21. Trasformazioni'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
@@ -18,15 +18,15 @@ ms.locfileid: "70760573"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
-Una vista di xamarin. Forms viene visualizzato sullo schermo in una posizione e dimensione determinata dal relativo elemento padre, che corrisponde in genere un `Layout` o `Layout<View>` derivato. Il *trasformare* è una funzionalità di xamarin. Forms che è possibile modificare tale posizione, dimensione o orientamento anche.
+Una vista di Xamarin.Forms viene visualizzato sullo schermo in una posizione e dimensione determinata dal relativo elemento padre, che corrisponde in genere un `Layout` o `Layout<View>` derivato. Il *trasformare* è una funzionalità di Xamarin.Forms che è possibile modificare tale posizione, dimensione o orientamento anche.
 
-Xamarin. Forms supporta tre tipi di trasformazioni di base:
+Xamarin.Forms supporta tre tipi di trasformazioni di base:
 
 - *Traduzione* &mdash; spostare un elemento orizzontalmente o verticalmente
 - *Scala* &mdash; modificare le dimensioni di un elemento
 - *Rotazione* &mdash; attiva un elemento intorno a un punto o un asse
 
-In xamarin. Forms, il ridimensionamento è isotropo; influisce su larghezza e altezza in modo uniforme. La rotazione è supportata sia nella superficie bidimensionale dello schermo e nello spazio 3D. Non vi è alcuna trasformazione di inclinazione (o elevata) e Nessuna trasformazione di matrice generalizzato.
+In Xamarin.Forms, il ridimensionamento è isotropo; influisce su larghezza e altezza in modo uniforme. La rotazione è supportata sia nella superficie bidimensionale dello schermo e nello spazio 3D. Non vi è alcuna trasformazione di inclinazione (o elevata) e Nessuna trasformazione di matrice generalizzato.
 
 Le trasformazioni sono supportate con otto proprietà typu `double` definito dal `VisualElement` classe:
 
@@ -39,7 +39,7 @@ Le trasformazioni sono supportate con otto proprietà typu `double` definito dal
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-Tutte queste proprietà sono supportate da proprietà associabili. Possono essere destinazioni di data binding e stile. [**Capitolo 22. Animazione** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) di seguito viene illustrato come queste proprietà possono essere animate, ma alcuni negli esempi in questo capitolo viene illustrato come è possibile aggiungere un'animazione usando xamarin. Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer).
+Tutte queste proprietà sono supportate da proprietà associabili. Possono essere destinazioni di data binding e stile. [**Capitolo 22. Animazione** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) di seguito viene illustrato come queste proprietà possono essere animate, ma alcuni negli esempi in questo capitolo viene illustrato come è possibile aggiungere un'animazione usando Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer).
 
 Proprietà hanno effetto solo come l'elemento viene eseguito il rendering e si trasformano *non* influiscono sul modo in cui l'elemento viene percepito nel layout.
 
@@ -119,7 +119,7 @@ Il [ `RotationX` ](xref:Xamarin.Forms.VisualElement.RotationX) proprietà viene 
 
 Il `AnchorX` proprietà influisce `RotationY` ma non `RotationX`. Il `AnchorY` proprietà influisce `RotationX` ma non `RotationY`. È possibile sperimentare il [ **ThreeDeeRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ThreeDeeRotationDemo) esempio per esplorare le interazioni di queste proprietà.
 
-Il sistema di coordinate 3D in cui è inclusa per xamarin. Forms è da sinistra. Se si punta l'indice della propria mano a sinistra nella direzione di incremento X coordina (a destra) e coordina il dito intermedio nella direzione y crescente (inattivo), quindi i punti di controllo thumb nella direzione crescente le coordinate Z (su schermo).
+Il sistema di coordinate 3D in cui è inclusa per Xamarin.Forms è da sinistra. Se si punta l'indice della propria mano a sinistra nella direzione di incremento X coordina (a destra) e coordina il dito intermedio nella direzione y crescente (inattivo), quindi i punti di controllo thumb nella direzione crescente le coordinate Z (su schermo).
 
 Inoltre, per uno dei tre assi, se si posiziona il cursore a sinistra nella direzione di aumentare i valori, quindi la curva delle dita indica la direzione di rotazione per gli angoli di rotazione positivi.
 

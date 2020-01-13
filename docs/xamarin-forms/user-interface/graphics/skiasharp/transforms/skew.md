@@ -26,7 +26,7 @@ In SkiaSharp, la trasformazione di inclinazione inclina oggetti grafici, ad esem
 
 L'inclinazione Trasforma un rettangolo in un parallelogramma, ma un'ellisse asimmetriche è ancora un'ellisse.
 
-Sebbene xamarin. Forms definisce le proprietà di traslazione, ridimensionamento e rotazioni, non è presente alcuna proprietà corrispondente in xamarin. Forms per l'inclinazione.
+Sebbene Xamarin.Forms definisce le proprietà di traslazione, ridimensionamento e rotazioni, non è presente alcuna proprietà corrispondente in Xamarin.Forms per l'inclinazione.
 
 Il [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) metodo `SKCanvas` accetta due argomenti per l'inclinazione orizzontale e verticale di una differenza:
 

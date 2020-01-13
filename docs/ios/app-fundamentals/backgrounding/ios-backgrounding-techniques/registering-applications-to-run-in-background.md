@@ -1,6 +1,6 @@
 ---
-title: Registrazione delle app Novell. iOS per l'esecuzione in background
-description: Questo documento descrive come registrare un'applicazione Novell. iOS per l'esecuzione in background. Questo articolo illustra app audio, app VoIP, accessori esterni e Bluetooth e altro ancora.
+title: Registrazione delle app Xamarin.iOS per l'esecuzione in background
+description: Questo documento descrive come registrare un'applicazione Xamarin.iOS per l'esecuzione in background. Questo articolo illustra app audio, app VoIP, accessori esterni e Bluetooth e altro ancora.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010826"
 ---
-# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrazione delle app Novell. iOS per l'esecuzione in background
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrazione delle app Xamarin.iOS per l'esecuzione in background
 
 La registrazione delle singole attività per i privilegi in background funziona per alcune applicazioni, ma cosa accade se un'applicazione viene costantemente chiamata per eseguire attività importanti e a esecuzione prolungata, ad esempio per ottenere indicazioni per l'utente tramite GPS? Le applicazioni, ad esempio, devono essere registrate come applicazioni necessarie in background note.
 

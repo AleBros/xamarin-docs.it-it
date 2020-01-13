@@ -1,6 +1,6 @@
 ---
-title: Novell. Android e Java Development Kit 9
-description: Questo articolo illustra come risolvere gli errori di Java Development Kit (JDK) 9 o versioni successive in Novell. Android.
+title: Xamarin.Android e Java Development Kit 9
+description: Questo articolo illustra come risolvere gli errori di Java Development Kit (JDK) 9 o versioni successive in Xamarin.Android.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
@@ -15,24 +15,24 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026838"
 ---
-# <a name="xamarinandroid-and-java-development-kit-9-or-later"></a>Novell. Android e Java Development Kit 9 o versione successiva
+# <a name="xamarinandroid-and-java-development-kit-9-or-later"></a>Xamarin.Android e Java Development Kit 9 o versione successiva
 
-_Questo articolo illustra come risolvere gli errori di Java Development Kit (JDK) 9 o versioni successive in Novell. Android._
+_Questo articolo illustra come risolvere gli errori di Java Development Kit (JDK) 9 o versioni successive in Xamarin.Android._
 
 ## <a name="overview"></a>Panoramica
 
-Novell. Android usa Java Development Kit (JDK) per l'integrazione con i Android SDK per la creazione di app Android e l'esecuzione di Android designer. Le versioni più recenti del Android SDK (API 24 e versioni successive) richiedono JDK 8 (1,8) o Microsoft Mobile OpenJDK Preview. **Poiché gli strumenti di Android SDK disponibili in Google non sono ancora compatibili con JDK 9, Novell. Android non funziona con JDK 9 o versioni successive.**
+Xamarin.Android usa Java Development Kit (JDK) per l'integrazione con i Android SDK per la creazione di app Android e l'esecuzione di Android designer. Le versioni più recenti del Android SDK (API 24 e versioni successive) richiedono JDK 8 (1,8) o Microsoft Mobile OpenJDK Preview. **Poiché gli strumenti di Android SDK disponibili in Google non sono ancora compatibili con JDK 9, Xamarin.Android non funziona con JDK 9 o versioni successive.**
 
 ## <a name="jdk-errors"></a>Errori JDK
 
-Se si prova a compilare un progetto Novell. Android con una versione di JDK successiva a JDK 8, verrà generato un errore esplicito che indica che la versione di JDK non è supportata. Esempio:
+Se si prova a compilare un progetto Xamarin.Android con una versione di JDK successiva a JDK 8, verrà generato un errore esplicito che indica che la versione di JDK non è supportata. Esempio:
 
 ```shell
 Building with JDK Version `9.0.4` is not supported. Please install JDK version `1.8.0`. See https://aka.ms/xamarin/jdk9-errors
 ```
 
 Per risolvere questi errori, è necessario installare JDK 8 (1,8) come illustrato in [ricerca per categorie aggiornare la versione di Java Development Kit (JDK)?](~/android/troubleshooting/questions/update-jdk.md).
-In alternativa, è possibile installare [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md) . Microsoft Mobile OpenJDK sostituirà infine JDK 8 per lo sviluppo di Novell. Android.
+In alternativa, è possibile installare [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md) . Microsoft Mobile OpenJDK sostituirà infine JDK 8 per lo sviluppo di Xamarin.Android.
 
 ## <a name="checking-the-jdk-version"></a>Verifica della versione JDK
 

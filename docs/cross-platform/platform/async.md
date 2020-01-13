@@ -15,13 +15,13 @@ ms.locfileid: "75488881"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
-_C#5 sono state introdotte due parole chiave per semplificare la programmazione asincrona: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Novell. iOS e Novell. Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell._
+_C#5 sono state introdotte due parole chiave per semplificare la programmazione asincrona: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Xamarin.iOS e Xamarin.Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell._
 
 Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
 
 ## <a name="overview"></a>Panoramica di
 
-Questo documento introduce le nuove parole chiave async e await, quindi esamina alcuni semplici esempi di implementazione di metodi asincroni in Novell. iOS e Novell. Android.
+Questo documento introduce le nuove parole chiave async e await, quindi esamina alcuni semplici esempi di implementazione di metodi asincroni in Xamarin.iOS e Xamarin.Android.
 
 Per una descrizione più completa delle nuove funzionalità asincrone di C# 5 (inclusi molti esempi e diversi scenari di utilizzo), vedere l'articolo [programmazione asincrona](https://docs.microsoft.com/dotnet/csharp/async).
 
@@ -33,7 +33,7 @@ Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il 
 
 ## <a name="requirements"></a>Requisiti di
 
-C#5 le funzionalità richiedono mono 3,0 incluso in Novell. iOS 6,4 e Novell. Android 4,8. Verrà richiesto di aggiornare i dispositivi mono, Novell. iOS, Novell. Android e Novell. Mac per sfruttarne i vantaggi.
+C#5 le funzionalità richiedono mono 3,0 incluso in Xamarin.iOS 6,4 e Xamarin.Android 4,8. Verrà richiesto di aggiornare i dispositivi mono, Xamarin.iOS, Xamarin.Android e Xamarin.Mac per sfruttarne i vantaggi.
 
 ## <a name="using-async-amp-await"></a>Uso di Async &amp; await
 
@@ -187,7 +187,7 @@ Alcuni punti importanti:
 
 L'utilizzo di Async e await semplifica notevolmente il codice necessario per generare operazioni con esecuzione prolungata sui thread in background senza bloccare il thread principale. Consentono inoltre di accedere facilmente ai risultati al termine dell'attività.
 
-In questo documento è stata fornita una panoramica delle parole chiave e degli esempi del nuovo linguaggio per Novell. iOS e Novell. Android.
+In questo documento è stata fornita una panoramica delle parole chiave e degli esempi del nuovo linguaggio per Xamarin.iOS e Xamarin.Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

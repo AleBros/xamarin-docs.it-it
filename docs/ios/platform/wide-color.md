@@ -1,6 +1,6 @@
 ---
-title: Colore Wide in Novell. iOS
-description: Questo documento illustra il colore di grandi dimensioni e il modo in cui può essere usato in un'app Novell. iOS o Novell. Mac.
+title: Colore Wide in Xamarin.iOS
+description: Questo documento illustra il colore di grandi dimensioni e il modo in cui può essere usato in un'app Xamarin.iOS o Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031252"
 ---
-# <a name="wide-color-in-xamarinios"></a>Colore Wide in Novell. iOS
+# <a name="wide-color-in-xamarinios"></a>Colore Wide in Xamarin.iOS
 
-_Questo articolo illustra un ampio colore e come può essere usato in un'app Novell. iOS o Novell. Mac._
+_Questo articolo illustra un ampio colore e come può essere usato in un'app Xamarin.iOS o Xamarin.Mac._
 
 iOS 10 e macOS Sierra migliorano il supporto per i formati pixel estesi e gli spazi dei colori a gamma ampia in tutto il sistema, inclusi i Framework come la grafica principale, le immagini di base, i metal e i AVFoundation. Il supporto per i dispositivi con schermi Wide Color è ulteriormente facilitato fornendo questo comportamento nell'intero stack di grafica.
 

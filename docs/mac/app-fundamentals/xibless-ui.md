@@ -1,6 +1,6 @@
 ---
-title: . Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
-description: Questo articolo illustra la creazione di un'interfaccia utente dell'applicazione Novell. Mac C# direttamente dal codice, senza file con estensione storyboard, file xib o Interface Builder.
+title: . Storyboard/. xib-progettazione dell'interfaccia utente in Xamarin.Mac
+description: Questo articolo illustra la creazione di un'interfaccia utente dell'applicazione Xamarin.Mac C# direttamente dal codice, senza file con estensione storyboard, file xib o Interface Builder.
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021716"
 ---
-# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
+# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Xamarin.Mac
 
-_Questo articolo illustra la creazione di un'interfaccia utente dell'applicazione Novell. Mac C# direttamente dal codice, senza file con estensione storyboard, file xib o Interface Builder._
+_Questo articolo illustra la creazione di un'interfaccia utente dell'applicazione Xamarin.Mac C# direttamente dal codice, senza file con estensione storyboard, file xib o Interface Builder._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi elementi e strumenti dell'interfaccia utente che uno sviluppatore lavora in *Objective-C* e *Xcode* . In genere, quando si crea un'applicazione Novell. Mac, per creare e gestire l'interfaccia utente dell'applicazione verrà usato il Interface Builder di Xcode con i file. Storyboard o. xib.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi elementi e strumenti dell'interfaccia utente che uno sviluppatore lavora in *Objective-C* e *Xcode* . In genere, quando si crea un'applicazione Xamarin.Mac, per creare e gestire l'interfaccia utente dell'applicazione verrà usato il Interface Builder di Xcode con i file. Storyboard o. xib.
 
-È anche possibile creare alcune o tutte le interfacce utente dell'applicazione Novell. Mac direttamente nel C# codice. In questo articolo verranno illustrate le nozioni di base per la creazione di interfacce utente C# e elementi dell'interfaccia utente nel codice.
+È anche possibile creare alcune o tutte le interfacce utente dell'applicazione Xamarin.Mac direttamente nel C# codice. In questo articolo verranno illustrate le nozioni di base per la creazione di interfacce utente C# e elementi dell'interfaccia utente nel codice.
 
 [![Editor di codice Visual Studio per Mac](xibless-ui-images/intro01.png "Editor di codice Visual Studio per Mac")](xibless-ui-images/intro01-large.png#lightbox)
 
@@ -30,7 +30,7 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile acce
 
 ## <a name="switching-a-window-to-use-code"></a>Spostamento di una finestra per l'utilizzo del codice
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file **Main. Storyboard** (o tradizionalmente un file **MainWindow. xib**) incluso automaticamente nel progetto. Include anche un file **ViewController.cs** che gestisce la visualizzazione principale dell'app (o di solito un file **MainWindow.cs** e **MainWindowController.cs** ).
+Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file **Main. Storyboard** (o tradizionalmente un file **MainWindow. xib**) incluso automaticamente nel progetto. Include anche un file **ViewController.cs** che gestisce la visualizzazione principale dell'app (o di solito un file **MainWindow.cs** e **MainWindowController.cs** ).
 
 Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni seguenti:
 
@@ -44,7 +44,7 @@ Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni s
 
 A questo punto è necessario modificare il file **MainWindow.cs** per definire il layout della finestra e modificare il file **ViewController.cs** o **MainWindowController.cs** per creare un'istanza della classe `MainWindow` perché non è più in uso lo storyboard o file con estensione XIB.
 
-Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**aggiungere**  > **nuovo file...**  > **generale**  > **classe vuota**) e denominarla come il file mancante.
+Le app Xamarin.Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**aggiungere**  > **nuovo file...**  > **generale**  > **classe vuota**) e denominarla come il file mancante.
 
 ### <a name="defining-the-window-in-code"></a>Definizione della finestra nel codice
 
@@ -286,7 +286,7 @@ A questo punto, se l'applicazione viene eseguita e il pulsante ha fatto clic su 
 
 ## <a name="adding-a-code-only-window"></a>Aggiunta di una finestra solo codice
 
-Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell. Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file..** . Nella finestra di dialogo **nuovo file** scegliere **novell. Mac**  > **finestra Cocoa con controller**, come illustrato di seguito:
+Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Xamarin.Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file..** . Nella finestra di dialogo **nuovo file** scegliere **Xamarin.Mac**  > **finestra Cocoa con controller**, come illustrato di seguito:
 
 ![Aggiunta di un nuovo controller di finestra](xibless-ui-images/add01.png "Aggiunta di un nuovo controller di finestra")
 
@@ -307,7 +307,7 @@ Il codice precedente crea una nuova `NSButton` e la aggiunge all'istanza della f
 
 ## <a name="defining-the-menu-bar-in-code"></a>Definizione della barra dei menu nel codice
 
-A causa delle limitazioni correnti in Novell. Mac, non è consigliabile creare la barra dei menu dell'applicazione Novell. Mac, `NSMenuBar`, nel codice, ma continuare a usare il file **Main. Storyboard** o **MainMenu. xib** per definirlo. Detto ciò, è possibile aggiungere e rimuovere menu e voci di menu C# nel codice.
+A causa delle limitazioni correnti in Xamarin.Mac, non è consigliabile creare la barra dei menu dell'applicazione Xamarin.Mac, `NSMenuBar`, nel codice, ma continuare a usare il file **Main. Storyboard** o **MainMenu. xib** per definirlo. Detto ciò, è possibile aggiungere e rimuovere menu e voci di menu C# nel codice.
 
 Modificare ad esempio il file **AppDelegate.cs** e fare in modo che il metodo `DidFinishLaunching` sia simile al seguente:
 
@@ -355,7 +355,7 @@ Il codice precedente crea un menu della barra di stato dal codice e lo Visualizz
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato in modo dettagliato la creazione di un'interfaccia utente dell'applicazione Novell. Mac C# nel codice anziché l'uso di Interface Builder di Xcode con i file. Storyboard o. xib.
+Questo articolo ha illustrato in modo dettagliato la creazione di un'interfaccia utente dell'applicazione Xamarin.Mac C# nel codice anziché l'uso di Interface Builder di Xcode con i file. Storyboard o. xib.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

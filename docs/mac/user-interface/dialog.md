@@ -1,6 +1,6 @@
 ---
-title: Finestre di dialogo in Novell. Mac
-description: Questo articolo illustra l'uso di finestre di dialogo e finestre modali in un'applicazione Novell. Mac. Descrive la creazione di finestre modali in Xcode e Interface Builder, l'uso di finestre di dialogo standard e l'interazione con questi C# controlli nel codice.
+title: Finestre di dialogo in Xamarin.Mac
+description: Questo articolo illustra l'uso di finestre di dialogo e finestre modali in un'applicazione Xamarin.Mac. Descrive la creazione di finestre modali in Xcode e Interface Builder, l'uso di finestre di dialogo standard e l'interazione con questi C# controlli nel codice.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032830"
 ---
-# <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Novell. Mac
+# <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Xamarin.Mac
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere alle stesse finestre di dialogo e finestre modali che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le finestre modali o, facoltativamente, crearle direttamente C# nel codice.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere alle stesse finestre di dialogo e finestre modali che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire le finestre modali o, facoltativamente, crearle direttamente C# nel codice.
 
 Viene visualizzata una finestra di dialogo in risposta a un'azione dell'utente che in genere consente agli utenti di completare l'azione. Una finestra di dialogo richiede una risposta da parte dell'utente prima che possa essere chiusa.
 
@@ -24,9 +24,9 @@ Viene visualizzata una finestra di dialogo in risposta a un'azione dell'utente c
 
 [![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base per l'uso di finestre di dialogo e finestre modali in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base per l'uso di finestre di dialogo e finestre modali in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Dialogs" />
 
@@ -108,7 +108,7 @@ Per altre informazioni, vedere la sezione [Dialogs](https://developer.apple.com/
 
 ## <a name="adding-a-modal-window-to-a-project"></a>Aggiunta di una finestra modale a un progetto
 
-A parte la finestra del documento principale, un'applicazione Novell. Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo.
+A parte la finestra del documento principale, un'applicazione Xamarin.Mac potrebbe dover visualizzare altri tipi di finestre per l'utente, ad esempio le preferenze o i pannelli di controllo.
 
 Per aggiungere una nuova finestra, procedere come segue:
 
@@ -250,7 +250,7 @@ Questo codice inizializza il segue definito nel Interface Builder di Xcode nella
 
 [![](dialog-images/new05.png "An example dialog")](dialog-images/new05.png#lightbox)
 
-Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Novell. Mac, consultare la documentazione relativa all'utilizzo [di Windows](~/mac/user-interface/window.md) .
+Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Xamarin.Mac, consultare la documentazione relativa all'utilizzo [di Windows](~/mac/user-interface/window.md) .
 
 <a name="Creating_a_Custom_Sheet" />
 
@@ -258,7 +258,7 @@ Per ulteriori informazioni sull'utilizzo di Windows in un'applicazione Novell. M
 
 Un _foglio_ è una finestra di dialogo modale collegata a una determinata finestra del documento, che impedisce agli utenti di interagire con la finestra fino a quando non chiude la finestra di dialogo. Un foglio viene collegato alla finestra da cui emerge ed è possibile aprire un solo foglio per una finestra in qualsiasi momento. 
 
-Per creare un foglio personalizzato in Novell. Mac, procedere come segue:
+Per creare un foglio personalizzato in Xamarin.Mac, procedere come segue:
 
 1. Nel **Esplora soluzioni**aprire il file `Main.storyboard` per la modifica nella Interface Builder di Xcode.
 2. Trascinare un nuovo **controller di visualizzazione** nella area di progettazione:
@@ -517,7 +517,7 @@ Per ulteriori informazioni sull'utilizzo di finestre e barre degli strumenti, ve
 
 ### <a name="saving-and-loading-preferences"></a>Salvataggio e caricamento delle preferenze
 
-In una tipica app macOS, quando l'utente apporta modifiche a tutte le preferenze dell'utente dell'app, le modifiche vengono salvate automaticamente. Il modo più semplice per gestire questo problema in un'app Novell. Mac consiste nel creare una singola classe per gestire tutte le preferenze dell'utente e condividerle a livello di sistema.
+In una tipica app macOS, quando l'utente apporta modifiche a tutte le preferenze dell'utente dell'app, le modifiche vengono salvate automaticamente. Il modo più semplice per gestire questo problema in un'app Xamarin.Mac consiste nel creare una singola classe per gestire tutte le preferenze dell'utente e condividerle a livello di sistema.
 
 Per prima cosa, aggiungere una nuova classe `AppPreferences` al progetto ed ereditare da `NSObject`. Le preferenze saranno progettate per usare il [Data Binding e la codifica chiave-valore,](~/mac/app-fundamentals/databinding.md) che rende molto più semplice il processo di creazione e gestione dei moduli delle preferenze. Poiché le preferenze sono costituite da una piccola quantità di tipi di dati semplici, utilizzare il `NSUserDefaults` incorporato per archiviare e recuperare i valori.
 
@@ -908,7 +908,7 @@ Dopo aver apportato tutte le modifiche, se l'utente modifica le preferenze dell'
 
 ## <a name="the-open-dialog"></a>Finestra di dialogo Apri
 
-La finestra di dialogo Apri fornisce agli utenti un modo coerente per trovare e aprire un elemento in un'applicazione. Per visualizzare una finestra di dialogo aperta in un'applicazione Novell. Mac, usare il codice seguente:
+La finestra di dialogo Apri fornisce agli utenti un modo coerente per trovare e aprire un elemento in un'applicazione. Per visualizzare una finestra di dialogo aperta in un'applicazione Xamarin.Mac, usare il codice seguente:
 
 ```csharp
 var dlg = NSOpenPanel.OpenPanel;
@@ -1095,7 +1095,7 @@ Per ulteriori informazioni sull'utilizzo della finestra di dialogo Salva, consul
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di finestre modali, fogli e finestre di dialogo di sistema standard in un'applicazione Novell. Mac. Sono stati osservati i diversi tipi e usi di finestre modali, fogli e finestre di dialogo, come creare e gestire finestre e fogli modali in Interface Builder di Xcode e come usare finestre, fogli e finestre di dialogo modali C# nel codice.
+Questo articolo ha esaminato in dettaglio l'uso di finestre modali, fogli e finestre di dialogo di sistema standard in un'applicazione Xamarin.Mac. Sono stati osservati i diversi tipi e usi di finestre modali, fogli e finestre di dialogo, come creare e gestire finestre e fogli modali in Interface Builder di Xcode e come usare finestre, fogli e finestre di dialogo modali C# nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

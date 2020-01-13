@@ -1,6 +1,6 @@
 ---
-title: Uso di sul relativelayout in Novell. Android
-description: Come usare sul relativelayout in un'applicazione Novell. Android
+title: Uso di sul relativelayout in Xamarin.Android
+description: Come usare sul relativelayout in un'applicazione Xamarin.Android
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028800"
 ---
-# <a name="xamarinandroid-relativelayout"></a>Novell. Android sul relativelayout
+# <a name="xamarinandroid-relativelayout"></a>Xamarin.Android sul relativelayout
 
 [`RelativeLayout`](xref:Android.Widget.RelativeLayout) è un [`ViewGroup`](xref:Android.Views.ViewGroup) che visualizza [`View`](xref:Android.Views.View) figlio
 elementi nelle posizioni relative. La posizione di un [`View`](xref:Android.Views.View) può essere specificata in relazione agli elementi di pari livello (ad esempio, all'estrema sinistra o al di sotto di un determinato elemento) o in posizioni relative al [`RelativeLayout`](xref:Android.Widget.RelativeLayout)

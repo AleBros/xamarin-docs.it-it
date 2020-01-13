@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029172"
 ---
-# <a name="xamarinandroid-popup-menu"></a>Menu di scelta rapida Novell. Android
+# <a name="xamarinandroid-popup-menu"></a>Menu di scelta rapida Xamarin.Android
 
 Il [PopupMenu](xref:Android.Widget.PopupMenu) , detto anche _menu di scelta rapida_, è un menu che è ancorato a una visualizzazione specifica. Nell'esempio seguente, una singola attività contiene un pulsante. Quando l'utente tocca il pulsante, viene visualizzato un menu popup a tre elementi:
 

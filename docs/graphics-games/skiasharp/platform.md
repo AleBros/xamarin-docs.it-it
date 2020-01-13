@@ -1,6 +1,6 @@
 ---
 title: Note specifiche della piattaforma di SkiaSharp
-description: Questo documento descrive i dettagli specifici della piattaforma relativi agli SkiaSharp. Fornisce il codice di esempio per iOS, Android, macOS, Windows e xamarin. Forms.
+description: Questo documento descrive i dettagli specifici della piattaforma relativi agli SkiaSharp. Fornisce il codice di esempio per iOS, Android, macOS, Windows e Xamarin.Forms.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C

@@ -1,6 +1,6 @@
 ---
-title: Copia e incolla in Novell. Mac
-description: Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Novell. Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app.
+title: Copia e incolla in Xamarin.Mac
+description: Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Xamarin.Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
@@ -14,36 +14,36 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032630"
 ---
-# <a name="copy-and-paste-in-xamarinmac"></a>Copia e incolla in Novell. Mac
+# <a name="copy-and-paste-in-xamarinmac"></a>Copia e incolla in Xamarin.Mac
 
-_Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Novell. Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app._
+_Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Xamarin.Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere allo stesso supporto di cartone (copia e incolla) dello sviluppatore che lavora in Objective-C.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere allo stesso supporto di cartone (copia e incolla) dello sviluppatore che lavora in Objective-C.
 
-In questo articolo verranno illustrati i due modi principali per usare il tavolo di montaggio in un'app Novell. Mac:
+In questo articolo verranno illustrati i due modi principali per usare il tavolo di montaggio in un'app Xamarin.Mac:
 
 1. **Tipi di dati standard** : poiché le operazioni di tavolo di montaggio vengono in genere eseguite tra due app non correlate, nessuna app conosce i tipi di dati supportati dagli altri. Per massimizzare il rischio di condivisione, il tavolo di montaggio può tenere più rappresentazioni di un determinato elemento (usando un set standard di tipi di dati comuni), in modo da consentire all'app di utilizzo di scegliere la versione più adatta alle proprie esigenze.
-2. **Dati personalizzati** : per supportare la copia e incolla di dati complessi all'interno di Novell. Mac è possibile definire un tipo di dati personalizzato che verrà gestito dal tavolo di montaggio. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare forme complesse che sono costituite da più tipi di dati e punti.
+2. **Dati personalizzati** : per supportare la copia e incolla di dati complessi all'interno di Xamarin.Mac è possibile definire un tipo di dati personalizzato che verrà gestito dal tavolo di montaggio. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare forme complesse che sono costituite da più tipi di dati e punti.
 
 [![Esempio di app in esecuzione](copy-paste-images/intro01.png "Esempio di app in esecuzione")](copy-paste-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base relative all'uso del tavolo di montaggio in un'applicazione Novell. Mac per supportare le operazioni di copia e incolla. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base relative all'uso del tavolo di montaggio in un'applicazione Xamarin.Mac per supportare le operazioni di copia e incolla. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="getting-started-with-the-pasteboard"></a>Introduzione al riquadro di montaggio
 
-Il tavolo di montaggio presenta un meccanismo standardizzato per lo scambio di dati all'interno di una determinata applicazione o tra applicazioni. L'uso tipico di un tavolo di montaggio in un'applicazione Novell. Mac consiste nel gestire le operazioni di copia e incolla, tuttavia sono supportate anche diverse altre operazioni, ad esempio il trascinamento & l'eliminazione e la Servizi per le applicazioni.
+Il tavolo di montaggio presenta un meccanismo standardizzato per lo scambio di dati all'interno di una determinata applicazione o tra applicazioni. L'uso tipico di un tavolo di montaggio in un'applicazione Xamarin.Mac consiste nel gestire le operazioni di copia e incolla, tuttavia sono supportate anche diverse altre operazioni, ad esempio il trascinamento & l'eliminazione e la Servizi per le applicazioni.
 
-Per iniziare rapidamente, si inizierà con una semplice introduzione pratica all'uso di Pasteboards in un'app Novell. Mac. In seguito verrà fornita una spiegazione approfondita del funzionamento del tavolo di montaggio e dei metodi utilizzati.
+Per iniziare rapidamente, si inizierà con una semplice introduzione pratica all'uso di Pasteboards in un'app Xamarin.Mac. In seguito verrà fornita una spiegazione approfondita del funzionamento del tavolo di montaggio e dei metodi utilizzati.
 
 Per questo esempio verrà creata una semplice applicazione basata su documenti che gestisce una finestra contenente una visualizzazione immagine. L'utente potrà copiare e incollare immagini tra documenti nell'app e in o da altre app o più finestre all'interno della stessa app.
 
 ### <a name="creating-the-xamarin-project"></a>Creazione del progetto Novell
 
-In primo luogo, si creerà una nuova app Novell. Mac basata su documenti che verrà aggiunta al supporto di copia e incolla per.
+In primo luogo, si creerà una nuova app Xamarin.Mac basata su documenti che verrà aggiunta al supporto di copia e incolla per.
 
 Procedere come descritto di seguito:
 
@@ -63,7 +63,7 @@ Procedere come descritto di seguito:
 
 Successivamente, verrà aggiunta una classe `NSDocument` personalizzata che fungerà da archivio in background per l'interfaccia utente dell'applicazione. Conterrà una singola visualizzazione immagine e sarà in grado di copiare un'immagine dalla visualizzazione nel riquadro di montaggio predefinito e come estrarre un'immagine dal tavolo di montaggio predefinito e visualizzarla nella visualizzazione immagine.
 
-Fare clic con il pulsante destro del mouse sul progetto Novell. Mac nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file..** :
+Fare clic con il pulsante destro del mouse sul progetto Xamarin.Mac nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file..** :
 
 ![Aggiunta di un NSDocument al progetto](copy-paste-images/sample03.png "Aggiunta di un NSDocument al progetto")
 
@@ -259,7 +259,7 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-Con questo documento verrà creata l'interfaccia utente per l'app Novell. Mac.
+Con questo documento verrà creata l'interfaccia utente per l'app Xamarin.Mac.
 
 ### <a name="building-the-user-interface"></a>Compilazione dell'interfaccia utente
 
@@ -549,7 +549,7 @@ window.Document.CopyImage (sender);
 
 Si desidera che le voci di menu **taglia**, **copia** e **Incolla** siano accessibili solo se sono presenti dati immagine nel tavolo di montaggio predefinito o nell'immagine della finestra attiva corrente.
 
-Aggiungere un file **EditMenuDelegate.cs** al progetto Novell. Mac e renderlo simile al seguente:
+Aggiungere un file **EditMenuDelegate.cs** al progetto Xamarin.Mac e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -635,7 +635,7 @@ Se si copia l'immagine e si sceglie **nuovo** dal menu file, è possibile incoll
 
 ![Incollare un'immagine in una nuova finestra](copy-paste-images/run04.png "Incollare un'immagine in una nuova finestra")
 
-Nelle sezioni seguenti verrà esaminata in dettaglio l'utilizzo del tavolo di montaggio in un'applicazione Novell. Mac.
+Nelle sezioni seguenti verrà esaminata in dettaglio l'utilizzo del tavolo di montaggio in un'applicazione Xamarin.Mac.
 
 ## <a name="about-the-pasteboard"></a>Informazioni sul tavolo di montaggio
 
@@ -765,7 +765,7 @@ public void PasteImage(NSObject sender) {
 
 ### <a name="requesting-multiple-data-types"></a>Richiesta di più tipi di dati
 
-In base al tipo di applicazione Novell. Mac da creare, può essere in grado di gestire più rappresentazioni dei dati incollati. In questa situazione sono disponibili due scenari per il recupero dei dati dal tavolo di montaggio:
+In base al tipo di applicazione Xamarin.Mac da creare, può essere in grado di gestire più rappresentazioni dei dati incollati. In questa situazione sono disponibili due scenari per il recupero dei dati dal tavolo di montaggio:
 
 1. Eseguire una singola chiamata al metodo `ReadObjectsForClasses` e fornire una matrice di tutte le rappresentazioni desiderate (nell'ordine preferenziale).
 2. Eseguire più chiamate al metodo `ReadObjectsForClasses` richiedendo ogni volta una matrice di tipi diversa.
@@ -795,13 +795,13 @@ public bool ImageAvailableOnPasteboard {
 
 ### <a name="reading-urls-from-the-pasteboard"></a>Lettura degli URL dal tavolo di montaggio
 
-In base alla funzione di un'app Novell. Mac specificata, potrebbe essere necessario leggere gli URL da un tavolo di montaggio, ma solo se soddisfano un determinato set di criteri, ad esempio puntando a file o URL di un tipo di dati specifico. In questa situazione è possibile specificare criteri di ricerca aggiuntivi usando il secondo parametro del `CanReadObjectForClasses` o `ReadObjectsForClasses` metodi.
+In base alla funzione di un'app Xamarin.Mac specificata, potrebbe essere necessario leggere gli URL da un tavolo di montaggio, ma solo se soddisfano un determinato set di criteri, ad esempio puntando a file o URL di un tipo di dati specifico. In questa situazione è possibile specificare criteri di ricerca aggiuntivi usando il secondo parametro del `CanReadObjectForClasses` o `ReadObjectsForClasses` metodi.
 
 <a name="Custom_Data_Types" />
 
 ## <a name="custom-data-types"></a>Tipi di dati personalizzati
 
-In alcuni casi è necessario salvare i tipi personalizzati nel tavolo di montaggio da un'app Novell. Mac. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare oggetti Drawing.
+In alcuni casi è necessario salvare i tipi personalizzati nel tavolo di montaggio da un'app Xamarin.Mac. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare oggetti Drawing.
 
 In questa situazione è necessario progettare la classe personalizzata dei dati in modo da ereditare da `NSObject` e conforme a alcune interfacce (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Facoltativamente, è possibile utilizzare un `NSPasteboardItem` per incapsulare i dati da copiare o incollare.
 
@@ -949,7 +949,7 @@ public string ImageType { get; set; }
 
 Verranno esposti i due campi di dati che questa classe conterrà: il nome dell'immagine e il relativo tipo (jpg, PNG e così via). 
 
-Per ulteriori informazioni, vedere la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) della documentazione [interna di Novell. Mac](~/mac/internals/how-it-works.md) , spiega gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Per ulteriori informazioni, vedere la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) della documentazione [interna di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiega gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 #### <a name="constructors"></a>Costruttori
 
@@ -996,7 +996,7 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 
 Ogni rappresentazione viene identificata tramite un identificatore di tipo uniforme (UTI), che non è nient'altro che una semplice stringa che identifica in modo univoco il tipo di dati presentati (per altre informazioni, vedere [Cenni preliminari sugli identificatori di tipo uniforme](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) di Apple). documentazione).
 
-Per il nostro formato personalizzato, creiamo il nostro UTI: "com. Novell. Image-Info" (si noti che è in notazione inversa esattamente come un identificatore di app). La nostra classe è anche in grado di scrivere una stringa standard nel tavolo di montaggio (`public.text`). 
+Per il nostro formato personalizzato, creiamo il nostro UTI: "com. Xamarin.Image-Info" (si noti che è in notazione inversa esattamente come un identificatore di app). La nostra classe è anche in grado di scrivere una stringa standard nel tavolo di montaggio (`public.text`). 
 
 Successivamente, è necessario creare l'oggetto nel formato richiesto che venga effettivamente scritto nel tavolo di montaggio:
 
@@ -1274,7 +1274,7 @@ if (ok) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso del tavolo di montaggio in un'applicazione Novell. Mac per supportare le operazioni di copia e incolla. In primo luogo, è stato introdotto un semplice esempio per acquisire familiarità con le operazioni Pasteboards standard. Successivamente, è stata esaminata dettagliatamente il cartone e viene illustrato come leggere e scrivere i dati. Infine, è stato esaminato l'uso di un tipo di dati personalizzato per supportare la copia e incolla di tipi di dati complessi all'interno di un'app.
+Questo articolo ha esaminato in dettaglio l'uso del tavolo di montaggio in un'applicazione Xamarin.Mac per supportare le operazioni di copia e incolla. In primo luogo, è stato introdotto un semplice esempio per acquisire familiarità con le operazioni Pasteboards standard. Successivamente, è stata esaminata dettagliatamente il cartone e viene illustrato come leggere e scrivere i dati. Infine, è stato esaminato l'uso di un tipo di dati personalizzato per supportare la copia e incolla di tipi di dati complessi all'interno di un'app.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

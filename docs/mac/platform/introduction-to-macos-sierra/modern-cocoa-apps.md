@@ -1,6 +1,6 @@
 ---
 title: Creazione di app macOS moderne
-description: Questo articolo illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Novell. Mac.
+description: Questo articolo illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
@@ -16,7 +16,7 @@ ms.locfileid: "73029897"
 ---
 # <a name="building-modern-macos-apps"></a>Creazione di app macOS moderne
 
-_Questo articolo illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Novell. Mac._
+_Questo articolo illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Xamarin.Mac._
 
 <a name="Building-Modern-Looks-with-Modern-Views" />
 
@@ -30,7 +30,7 @@ Un aspetto moderno includerà un aspetto moderno della finestra e della barra de
 
 ### <a name="enabling-full-sized-content-views"></a>Abilitazione di visualizzazioni di contenuto con dimensioni complete
 
-Per ottenere questo risultato in un'app Novell. Mac, lo sviluppatore vuole usare una visualizzazione del _contenuto con dimensioni complete_, ovvero il contenuto si estende sotto le aree dello strumento e della barra del titolo e verrà offuscato automaticamente da MacOS.
+Per ottenere questo risultato in un'app Xamarin.Mac, lo sviluppatore vuole usare una visualizzazione del _contenuto con dimensioni complete_, ovvero il contenuto si estende sotto le aree dello strumento e della barra del titolo e verrà offuscato automaticamente da MacOS.
 
 Per abilitare questa funzionalità nel codice, creare una classe personalizzata per il `NSWindowController` e renderla simile alla seguente:
 
@@ -250,7 +250,7 @@ Inoltre, il sistema macOS potrebbe aggiungere controller di visualizzazione acce
 
 [![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png#lightbox)
 
-In genere, lo sviluppatore dovrà eseguire un'azione limitata usando le finestre a schede nelle app Novell. Mac, che verranno gestite automaticamente dal sistema nel modo seguente:
+In genere, lo sviluppatore dovrà eseguire un'azione limitata usando le finestre a schede nelle app Xamarin.Mac, che verranno gestite automaticamente dal sistema nel modo seguente:
 
 - Windows verrà automaticamente a schede quando viene richiamato il metodo `OrderFront`.
 - Quando viene richiamato il metodo `OrderOut`, verrà automaticamente eseguita la tabulazione di Windows.
@@ -436,7 +436,7 @@ Per abilitare il supporto del livello, è possibile impostare il `WantsLayer` di
 
 #### <a name="redrawing-views-with-layers"></a>Ridisegno di viste con livelli
 
-Un altro passaggio importante quando si usano le visualizzazioni supportate da un livello in un'app Novell. Mac è l'impostazione della `LayerContentsRedrawPolicy` della `NSView` per `OnSetNeedsDisplay` nel `NSViewController`. Esempio:
+Un altro passaggio importante quando si usano le visualizzazioni supportate da un livello in un'app Xamarin.Mac è l'impostazione della `LayerContentsRedrawPolicy` della `NSView` per `OnSetNeedsDisplay` nel `NSViewController`. Esempio:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -735,7 +735,7 @@ Il `NSTableViewRowAction.FromStyle` statico viene utilizzato per creare una nuov
 
 ## <a name="scroll-view-enhancements"></a>Miglioramenti della visualizzazione a scorrimento 
 
-Quando si usa direttamente una visualizzazione a scorrimento (`NSScrollView`) o come parte di un altro controllo, ad esempio `NSTableView`, il contenuto della visualizzazione a scorrimento può scorrere sotto le aree del titolo e della barra degli strumenti in un'app Novell. Mac usando un aspetto moderno e le visualizzazioni.
+Quando si usa direttamente una visualizzazione a scorrimento (`NSScrollView`) o come parte di un altro controllo, ad esempio `NSTableView`, il contenuto della visualizzazione a scorrimento può scorrere sotto le aree del titolo e della barra degli strumenti in un'app Xamarin.Mac usando un aspetto moderno e le visualizzazioni.
 
 Di conseguenza, il primo elemento nell'area del contenuto della visualizzazione a scorrimento può essere parzialmente nascosto dall'area del titolo e della barra degli strumenti.
 
@@ -950,7 +950,7 @@ Apple ha incluso diverse funzionalità rivolte agli utenti in macOS Sierra che c
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Novell. Mac.
+Questo articolo ha trattato diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app macOS moderna in Xamarin.Mac.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
-title: Colori in xamarin. Forms
-description: Xamarin. Forms fornisce una classe di colore multipiattaforma flessibile. Questo articolo illustra le funzionalità fornite dalla classe colore e come usarlo.
+title: Colori in Xamarin.Forms
+description: Xamarin.Forms fornisce una classe di colore multipiattaforma flessibile. Questo articolo illustra le funzionalità fornite dalla classe colore e come usarlo.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69888465"
 ---
-# <a name="colors-in-xamarinforms"></a>Colori in xamarin. Forms
+# <a name="colors-in-xamarinforms"></a>Colori in Xamarin.Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
-_Xamarin. Forms fornisce una classe di colore multipiattaforma flessibile._
+_Xamarin.Forms fornisce una classe di colore multipiattaforma flessibile._
 
-Questo articolo presenta i vari modi in [`Color`](xref:Xamarin.Forms.Color) cui la classe può essere usata in Novell. Forms.
+Questo articolo presenta i vari modi in [`Color`](xref:Xamarin.Forms.Color) cui la classe può essere usata in Xamarin.Forms.
 
 La [`Color`](xref:Xamarin.Forms.Color) classe fornisce diversi metodi per compilare un'istanza del colore:
 
@@ -47,7 +47,7 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-Tali colori vengono visualizzati in ogni piattaforma riportato di seguito. Si noti che il colore finale - `Accent` -è un colore blue-ish per iOS e Android; questo valore viene definito da xamarin. Forms.
+Tali colori vengono visualizzati in ogni piattaforma riportato di seguito. Si noti che il colore finale - `Accent` -è un colore blue-ish per iOS e Android; questo valore viene definito da Xamarin.Forms.
 
  [![Demo di colore](colors-images/colors-sml.png "colore Demo")](colors-images/colors.png#lightbox "Demo di colore")
 

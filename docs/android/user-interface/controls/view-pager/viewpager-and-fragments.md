@@ -22,11 +22,11 @@ _ViewPager è un gestore di layout che consente di implementare la navigazione g
 
 `ViewPager` viene spesso usato in combinazione con i frammenti in modo da semplificare la gestione del ciclo di vita di ogni pagina nel `ViewPager`. In questa procedura dettagliata viene usato `ViewPager` per creare un'app denominata **FlashCardPager** che presenta una serie di problemi matematici sulle schede flash. Ogni scheda flash viene implementata come frammento. L'utente scorre verso sinistra e verso destra attraverso le schede flash e tocca un problema matematico per rivelare la risposta. Questa app crea un'istanza di `Fragment` per ogni scheda Flash e implementa un adapter derivato da `FragmentPagerAdapter`. In [viewpager e nelle visualizzazioni](~/android/user-interface/controls/view-pager/viewpager-and-views.md)la maggior parte del lavoro è stata eseguita nei metodi `MainActivity` ciclo di vita. In **FlashCardPager**, la maggior parte del lavoro verrà eseguita da un `Fragment` in uno dei relativi metodi del ciclo di vita. 
 
-Questa guida non illustra le nozioni di base dei frammenti &ndash; se non si ha ancora familiarità con i frammenti in Novell. Android, vedere [frammenti](~/android/platform/fragments/index.md) che consentono di iniziare a usare i frammenti. 
+Questa guida non illustra le nozioni di base dei frammenti &ndash; se non si ha ancora familiarità con i frammenti in Xamarin.Android, vedere [frammenti](~/android/platform/fragments/index.md) che consentono di iniziare a usare i frammenti. 
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di app
 
-Creare un nuovo progetto Android denominato **FlashCardPager**. Avviare quindi Gestione pacchetti NuGet (per altre informazioni sull'installazione dei pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Trovare e installare il pacchetto **Novell. Android. support. v4** come illustrato in [viewpager e viste](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
+Creare un nuovo progetto Android denominato **FlashCardPager**. Avviare quindi Gestione pacchetti NuGet (per altre informazioni sull'installazione dei pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Trovare e installare il pacchetto **Xamarin.Android. support. v4** come illustrato in [viewpager e viste](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
 ## <a name="add-an-example-data-source"></a>Aggiungere un'origine dati di esempio
 

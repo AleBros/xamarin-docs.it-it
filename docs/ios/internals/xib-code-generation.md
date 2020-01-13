@@ -1,6 +1,6 @@
 ---
-title: Generazione del codice XIB in Novell. iOS
-description: Questo documento descrive il modo in cui Novell. iOS genera il codice per eseguire C#il mapping dei file XIB a, rendendo accessibili i controlli visivi a livello di programmazione.
+title: Generazione del codice XIB in Xamarin.iOS
+description: Questo documento descrive il modo in cui Xamarin.iOS genera il codice per eseguire C#il mapping dei file XIB a, rendendo accessibili i controlli visivi a livello di programmazione.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022247"
 ---
-# <a name="xib-code-generation-in-xamarinios"></a>Generazione del codice XIB in Novell. iOS
+# <a name="xib-code-generation-in-xamarinios"></a>Generazione del codice XIB in Xamarin.iOS
 
 > [!IMPORTANT]
 > Questo documento illustra l'integrazione di Visual Studio per Mac solo con Interface Builder di Xcode, in quanto le azioni e gli Outlet non vengono usati nella Xamarin Designer per iOS. Per altre informazioni su iOS designer, vedere il documento di [iOS designer](~/ios/user-interface/designer/index.md) .
@@ -23,7 +23,7 @@ Lo strumento di Interface Builder Apple ("IB") può essere usato per progettare 
 
 Queste classi utente sono in genere sottoclassi delle classi del controller dell'interfaccia utente. Hanno *Outlet* (analoghe alle proprietà) e *azioni* (analoghe agli eventi) che possono essere connesse a oggetti interfaccia. In fase di esecuzione, quando viene caricato il file IB, vengono creati gli oggetti e gli Outlet e le azioni sono connessi in modo dinamico ai vari oggetti dell'interfaccia utente. Quando si definiscono queste classi gestite, è necessario definire tutte le azioni e gli outlet in modo che corrispondano a quelli previsti da IB. Per semplificare questa operazione, Visual Studio per Mac usa un modello simile a codebehind. Questo comportamento è simile a quello di Xcode per Objective-C, ma le convenzioni e il modello di generazione del codice sono stati modificati per essere più esperti degli sviluppatori .NET.
 
-L'uso di file con **estensione XIB** non è attualmente supportato in Novell. iOS per Visual Studio.
+L'uso di file con **estensione XIB** non è attualmente supportato in Xamarin.iOS per Visual Studio.
 
 ## <a name="xib-files-and-custom-classes"></a>File con estensione XIB e classi personalizzate
 
@@ -41,7 +41,7 @@ Il file di progettazione viene aggiornato automaticamente quando il file con **e
 
 Visual Studio per Mac genera le classi della finestra di progettazione utilizzando lo spazio dei nomi predefinito del progetto per il percorso del file della finestra di progettazione, in modo che sia coerente con il normale progetto .NET namespacing. Lo spazio dei nomi dei file di progettazione è determinato dallo spazio dei nomi predefinito del progetto e dalle impostazioni relative ai criteri di denominazione .NET. Si tenga presente che se lo spazio dei nomi predefinito del progetto viene modificato, MD rigenererà le classi nel nuovo spazio dei nomi, in modo che le classi parziali non corrispondano più.
 
-Per rendere individuabile la classe dal runtime di Objective-C, Visual Studio per Mac applica un attributo `[Register (name)]` alla classe. Sebbene Novell. iOS registri automaticamente le classi derivate da `NSObject`, USA i nomi .NET completi. L'attributo applicato da Visual Studio per Mac esegue l'override di questo per assicurarsi che ogni classe venga registrata con il nome usato nel file **. xib** . Se si usano classi personalizzate in IB senza usare Visual Studio per Mac per generare file di progettazione, potrebbe essere necessario applicare questa operazione manualmente per fare in modo che le classi gestite corrispondano ai nomi previsti della classe Objective-C.
+Per rendere individuabile la classe dal runtime di Objective-C, Visual Studio per Mac applica un attributo `[Register (name)]` alla classe. Sebbene Xamarin.iOS registri automaticamente le classi derivate da `NSObject`, USA i nomi .NET completi. L'attributo applicato da Visual Studio per Mac esegue l'override di questo per assicurarsi che ogni classe venga registrata con il nome usato nel file **. xib** . Se si usano classi personalizzate in IB senza usare Visual Studio per Mac per generare file di progettazione, potrebbe essere necessario applicare questa operazione manualmente per fare in modo che le classi gestite corrispondano ai nomi previsti della classe Objective-C.
 
 Le classi non possono essere definite in più di un **. xib**o saranno in conflitto.
 
@@ -61,7 +61,7 @@ Nelle classi della finestra di progettazione parziale, Visual Studio per Mac gen
 
 ### <a name="outlet-properties"></a>Proprietà Outlet
 
-Le classi della finestra di progettazione contengono proprietà corrispondenti a tutti gli outlet definiti nella classe personalizzata. Il fatto che si tratta di proprietà è un dettaglio di implementazione di Novell. iOS al Bridge Objective C per abilitare l'associazione lazy. È necessario considerarle equivalenti ai campi privati, destinate a essere usate solo dalla classe codebehind. Se si desidera renderli pubblici, aggiungere le proprietà della funzione di accesso alla parte della classe non della finestra di progettazione, come per qualsiasi altro campo privato.
+Le classi della finestra di progettazione contengono proprietà corrispondenti a tutti gli outlet definiti nella classe personalizzata. Il fatto che si tratta di proprietà è un dettaglio di implementazione di Xamarin.iOS al Bridge Objective C per abilitare l'associazione lazy. È necessario considerarle equivalenti ai campi privati, destinate a essere usate solo dalla classe codebehind. Se si desidera renderli pubblici, aggiungere le proprietà della funzione di accesso alla parte della classe non della finestra di progettazione, come per qualsiasi altro campo privato.
 
 Se le proprietà di uscita sono definite in modo da avere un tipo di `id` (equivalente a `NSObject`), il generatore di codice della finestra di progettazione determina attualmente il tipo più sicuro in base agli oggetti connessi a tale Outlet, per praticità.
 Tuttavia, questo potrebbe non essere supportato nelle versioni future, quindi è consigliabile tipizzare in modo esplicito gli outlet quando si definisce la classe personalizzata.
@@ -87,6 +87,6 @@ Il secondo caso può essere problematico a causa della Visual Studio per Mac l'e
 
 ## <a name="type-resolution"></a>Risoluzione dei tipi
 
-I tipi usati in IB sono nomi di tipi Objective-C. Viene eseguito il mapping ai tipi CLR tramite l'utilizzo di attributi Register. Quando si genera il codice di uscita e azione, Visual Studio per Mac risolverà i tipi CLR corrispondenti per tutti i tipi Objective-C inclusi nel core Novell. iOS e completerà i nomi dei tipi.
+I tipi usati in IB sono nomi di tipi Objective-C. Viene eseguito il mapping ai tipi CLR tramite l'utilizzo di attributi Register. Quando si genera il codice di uscita e azione, Visual Studio per Mac risolverà i tipi CLR corrispondenti per tutti i tipi Objective-C inclusi nel core Xamarin.iOS e completerà i nomi dei tipi.
 
 Tuttavia, il generatore di codice non può attualmente risolvere i tipi CLR da nomi di tipi Objective-C nel codice utente o nelle librerie, quindi, in questi casi, restituisce il nome del tipo Verbatim. Questo significa che il tipo CLR corrispondente deve avere lo stesso nome del tipo Objective-C e trovarsi nello stesso spazio dei nomi del codice che lo usa. Questo è pianificato per essere risolto a breve in futuro considerando tutti i tipi Objective-C nel progetto durante la generazione del codice.

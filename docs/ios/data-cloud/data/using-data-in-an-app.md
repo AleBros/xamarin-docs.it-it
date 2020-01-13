@@ -1,6 +1,6 @@
 ---
 title: Uso dei dati in un'app iOS
-description: Questo documento descrive l'esempio DataAccess_Adv, che illustra come raccogliere l'input dell'utente ed eseguire operazioni di creazione, lettura, aggiornamento ed eliminazione (CRUD) del database in un'app Novell. iOS.
+description: Questo documento descrive l'esempio DataAccess_Adv, che illustra come raccogliere l'input dell'utente ed eseguire operazioni di creazione, lettura, aggiornamento ed eliminazione (CRUD) del database in un'app Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
@@ -122,4 +122,4 @@ Qualsiasi codice di accesso ai dati (se ADO.NET o SQLite.NET) che viene eseguito
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

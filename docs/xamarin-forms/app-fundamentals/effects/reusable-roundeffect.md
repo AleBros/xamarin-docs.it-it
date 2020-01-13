@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms riutilizzabile RoundEffect
+title: Xamarin.Forms riutilizzabile RoundEffect
 description: RoundEffect è un effetto riutilizzabile che può essere applicato a qualsiasi controllo derivante da visualElement per eseguire il rendering del controllo come cerchio.
 ms.prod: xamarin
 ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73055960"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>Novell. Forms riutilizzabile RoundEffect
+# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms riutilizzabile RoundEffect
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
@@ -39,7 +39,7 @@ Questa classe consente al progetto condiviso di risolvere i riferimenti all'effe
 
 ## <a name="implement-the-android-effect"></a>Implementare l'effetto Android
 
-Il progetto di piattaforma Android definisce una classe `RoundEffect` che deriva da `PlatformEffect`. Questa classe è contrassegnata con `assembly` attributi che consentono a Novell. Forms di risolvere la classe Effect:
+Il progetto di piattaforma Android definisce una classe `RoundEffect` che deriva da `PlatformEffect`. Questa classe è contrassegnata con `assembly` attributi che consentono a Xamarin.Forms di risolvere la classe Effect:
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]
@@ -78,7 +78,7 @@ class CornerRadiusOutlineProvider : ViewOutlineProvider
 }
 ```
 
-Questa classe usa le proprietà `Width` e `Height` dell'istanza di `Element` di Novell. Forms per calcolare un raggio che rappresenta la metà della dimensione più breve.
+Questa classe usa le proprietà `Width` e `Height` dell'istanza di `Element` di Xamarin.Forms per calcolare un raggio che rappresenta la metà della dimensione più breve.
 
 Una volta definito un provider di struttura, il `RoundEffect` classe può utilizzarlo per implementare l'effetto:
 
@@ -123,7 +123,7 @@ Il metodo `OnDetatched` viene chiamato quando l'effetto viene rimosso da un elem
 
 ## <a name="implement-the-ios-effect"></a>Implementare l'effetto iOS
 
-Il progetto della piattaforma iOS definisce una classe `RoundEffect` che deriva da `PlatformEffect`. Questa classe è contrassegnata con `assembly` attributi che consentono a Novell. Forms di risolvere la classe Effect:
+Il progetto della piattaforma iOS definisce una classe `RoundEffect` che deriva da `PlatformEffect`. Questa classe è contrassegnata con `assembly` attributi che consentono a Xamarin.Forms di risolvere la classe Effect:
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]
@@ -183,14 +183,14 @@ public class RoundEffect : PlatformEffect
 }
 ```
 
-Il metodo `CalculateRadius` calcola un raggio in base alla dimensione minima del `Element`Novell. Forms. Il metodo `OnAttached` viene chiamato quando l'effetto è associato a un controllo e aggiorna la proprietà del `CornerRadius` del livello. Imposta la proprietà `ClipToBounds` su `true` in modo che gli elementi di overflow vengano ritagliati ai bordi del controllo. Il metodo `OnDetatched` viene chiamato quando l'effetto viene rimosso da un controllo e inverte le modifiche, ripristinando il raggio dell'angolo originale.
+Il metodo `CalculateRadius` calcola un raggio in base alla dimensione minima del `Element`Xamarin.Forms. Il metodo `OnAttached` viene chiamato quando l'effetto è associato a un controllo e aggiorna la proprietà del `CornerRadius` del livello. Imposta la proprietà `ClipToBounds` su `true` in modo che gli elementi di overflow vengano ritagliati ai bordi del controllo. Il metodo `OnDetatched` viene chiamato quando l'effetto viene rimosso da un controllo e inverte le modifiche, ripristinando il raggio dell'angolo originale.
 
 > [!NOTE]
 > A seconda del tipo di elemento, la proprietà `Control` può essere null o non può essere null. Se la proprietà `Control` non è null, gli angoli arrotondati possono essere applicati direttamente al controllo. Tuttavia, se è null, gli angoli arrotondati devono essere applicati all'oggetto `Container`. Il campo `effectTarget` consente l'applicazione dell'effetto all'oggetto appropriato.
 
 ## <a name="consume-the-effect"></a>Utilizzare l'effetto
 
-Una volta implementato l'effetto su più piattaforme, può essere utilizzato dai controlli Novell. Forms. Un'applicazione comune del `RoundEffect` sta rendendo un oggetto `Image` circolare. Il codice XAML seguente illustra l'effetto applicato a un'istanza di `Image`:
+Una volta implementato l'effetto su più piattaforme, può essere utilizzato dai controlli Xamarin.Forms. Un'applicazione comune del `RoundEffect` sta rendendo un oggetto `Image` circolare. Il codice XAML seguente illustra l'effetto applicato a un'istanza di `Image`:
 
 ```xaml
 <Image Source=outdoors"

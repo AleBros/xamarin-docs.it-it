@@ -1,5 +1,5 @@
 ---
-title: Framework di social networking in Novell. iOS
+title: Framework di social networking in Xamarin.iOS
 description: Il Framework di social networking fornisce un'API unificata per interagire con i social network, inclusi Twitter e Facebook, oltre a SinaWeibo per gli utenti in Cina.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031475"
 ---
-# <a name="social-framework-in-xamarinios"></a>Framework di social networking in Novell. iOS
+# <a name="social-framework-in-xamarinios"></a>Framework di social networking in Xamarin.iOS
 
 _Il Framework di social networking fornisce un'API unificata per interagire con i social network, inclusi Twitter e Facebook, oltre a SinaWeibo per gli utenti in Cina._
 

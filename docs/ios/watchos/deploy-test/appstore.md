@@ -224,7 +224,7 @@ Invalid architecture: Apps that include an app extension
 and framework must support arm64.
 ```
 
-È possibile aggiungere solo app Watch [API unificata (64 bit)](~/cross-platform/macios/unified/index.md) Novell. iOS.
+È possibile aggiungere solo app Watch [API unificata (64 bit)](~/cross-platform/macios/unified/index.md) Xamarin.iOS.
 Fare clic con il pulsante destro del mouse sul progetto di app iOS, quindi scegliere **opzioni > compilare > iOS compila > scheda Avanzate** e assicurarsi che le **architetture supportate** per la configurazione AppStore-iPhone includano **arm64** (ad esempio, **ARMv7 + arm64**).
 
 ### <a name="this-bundle-is-invalid"></a>Questo bundle non è valido.

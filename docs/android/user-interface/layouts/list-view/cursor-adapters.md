@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028919"
 ---
-# <a name="using-cursoradapters-with-xamarinandroid"></a>Uso di CursorAdapter con Novell. Android
+# <a name="using-cursoradapters-with-xamarinandroid"></a>Uso di CursorAdapter con Xamarin.Android
 
 Android fornisce classi di adapter specifiche per visualizzare i dati da una query di database SQLite:
 

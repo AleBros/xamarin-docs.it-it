@@ -1,5 +1,5 @@
 ---
-title: Domande frequenti su Novell. Android
+title: Domande frequenti su Xamarin.Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
@@ -20,7 +20,7 @@ ms.locfileid: "73026973"
 
 ### <a name="which-android-sdk-packages-should-i-installinstall-android-sdk-packagesmd"></a>[Quali pacchetti di Android SDK è necessario installare?](install-android-sdk-packages.md)
 
-L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Anche se le esigenze dei singoli sviluppatori variano, questa guida illustra i pacchetti che in genere saranno necessari per lo sviluppo con Novell. Android.
+L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Anche se le esigenze dei singoli sviluppatori variano, questa guida illustra i pacchetti che in genere saranno necessari per lo sviluppo con Xamarin.Android.
 
 ### <a name="where-can-i-set-my-android-sdk-locationsandroid-sdk-locationmd"></a>[Dove è possibile impostare i percorsi di Android SDK?](android-sdk-location.md)
 
@@ -32,7 +32,7 @@ Questo articolo illustra come aggiornare la versione di Java Development Kit (JD
 
 ### <a name="can-i-use-java-development-kit-jdk-version-9-or-laterjdk9-errorsmd"></a>[È possibile utilizzare Java Development Kit (JDK) versione 9 o successiva?](jdk9-errors.md)
 
-Novell. Android richiede JDK 8 o Microsoft Mobile OpenJDK. Questo articolo elenca alcuni messaggi di errore comuni che possono essere visualizzati se è installato JDK 9 o versione successiva, insieme alle istruzioni per il controllo della versione JDK.
+Xamarin.Android richiede JDK 8 o Microsoft Mobile OpenJDK. Questo articolo elenca alcuni messaggi di errore comuni che possono essere visualizzati se è installato JDK 9 o versione successiva, insieme alle istruzioni per il controllo della versione JDK.
 
 ### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packagesinstall-android-support-librarymd"></a>[Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?](install-android-support-library.md)
 
@@ -51,7 +51,7 @@ Questa guida descrive i metodi quando si usa l'emulatore di Android.
 
 ### <a name="how-do-i-automate-an-android-nunit-test-projectautomate-android-nunit-testmd"></a>[Come si può automatizzare un progetto di test Android NUnit?](automate-android-nunit-test.md)
 
-Questa guida illustra i passaggi per la configurazione di un progetto di test di Android NUnit, _non_ di un progetto Novell. UITest. Le guide Novell. UITest sono disponibili [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+Questa guida illustra i passaggi per la configurazione di un progetto di test di Android NUnit, _non_ di un progetto Xamarin.UITest. Le guide Xamarin.UITest sono disponibili [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Perché non è possibile connettere la build di versione Android a Internet?](android-internet.md)
 
@@ -63,7 +63,7 @@ La causa più comune di questo problema è che l'autorizzazione **Internet** vie
 
 ### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[Ricerca per categorie risolvere un errore PathTooLongException?](path-too-long-exception.md)
 
-Questo articolo illustra come risolvere un errore **PathTooLongException** che può verificarsi durante la compilazione di un progetto Novell. Android.
+Questo articolo illustra come risolvere un errore **PathTooLongException** che può verificarsi durante la compilazione di un progetto Xamarin.Android.
 
 ## <a name="deprecated"></a>Deprecato
 
@@ -72,7 +72,7 @@ Questo articolo illustra come risolvere un errore **PathTooLongException** che p
 
 ### <a name="what-version-of-xamarinandroid-added-lollipop-supportxa-lollipopmd"></a>[In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?](xa-lollipop.md)
 
-Questa guida è stata scritta originariamente per Android L Preview. Novell. Android 4,17 ha aggiunto il supporto per Android L Preview & Novell. Android 4,20 ha aggiunto il supporto di Android Lollipop.
+Questa guida è stata scritta originariamente per Android L Preview. Xamarin.Android 4,17 ha aggiunto il supporto per Android L Preview & Xamarin.Android 4,20 ha aggiunto il supporto di Android Lollipop.
 
 ### <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawablemissing-action-mode-share-drawablemd"></a>[Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
 
@@ -84,4 +84,4 @@ I parametri di memoria predefiniti usati quando si avvia il processo di `java` p
 
 ### <a name="my-android-resourcedesignercs-file-will-not-updateresource-designer-wont-updatemd"></a>[Il file Android Resource.designer.cs non verrà aggiornato](resource-designer-wont-update.md)
 
-Un bug in Novell. Studio 5,1 danneggiava in precedenza i file. csproj eliminando parzialmente o completamente il codice XML nel file con estensione csproj. In questo modo, le parti importanti del sistema di compilazione Android, ad esempio l'aggiornamento di Android Resource.designer.cs, avranno esito negativo. A partire dalla versione stabile di 5.1.4 il 15 luglio, questo bug è stato risolto. in molti casi, tuttavia, il file di progetto deve essere ripristinato manualmente, come descritto in questa guida.
+Un bug in Xamarin.Studio 5,1 danneggiava in precedenza i file. csproj eliminando parzialmente o completamente il codice XML nel file con estensione csproj. In questo modo, le parti importanti del sistema di compilazione Android, ad esempio l'aggiornamento di Android Resource.designer.cs, avranno esito negativo. A partire dalla versione stabile di 5.1.4 il 15 luglio, questo bug è stato risolto. in molti casi, tuttavia, il file di progetto deve essere ripristinato manualmente, come descritto in questa guida.

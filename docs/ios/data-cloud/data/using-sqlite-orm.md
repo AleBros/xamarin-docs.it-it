@@ -1,6 +1,6 @@
 ---
-title: Uso di SQLite.NET con Novell. iOS
-description: La libreria NuGet SQLite.NET PCL fornisce un semplice meccanismo di accesso ai dati per le app Novell. iOS. In questo documento viene fornita una panoramica dell'utilizzo della libreria.
+title: Uso di SQLite.NET con Xamarin.iOS
+description: La libreria NuGet SQLite.NET PCL fornisce un semplice meccanismo di accesso ai dati per le app Xamarin.iOS. In questo documento viene fornita una panoramica dell'utilizzo della libreria.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488413"
 ---
-# <a name="using-sqlitenet-with-xamarinios"></a>Uso di SQLite.NET con Novell. iOS
+# <a name="using-sqlitenet-with-xamarinios"></a>Uso di SQLite.NET con Xamarin.iOS
 
 La libreria SQLite.NET consigliata da Novell è un ORM di base che consente di archiviare e recuperare oggetti nel database SQLite locale in un dispositivo iOS.
 ORM sta per il mapping relazionale a oggetti, un'API che consente di salvare e recuperare "oggetti" da un database senza scrivere istruzioni SQL.
@@ -208,4 +208,4 @@ SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

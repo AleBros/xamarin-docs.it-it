@@ -1,6 +1,6 @@
 ---
 title: Hello, tvOS Guida introduttiva
-description: Questa guida illustra la creazione della prima app Novell. tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Novell. tvOS.
+description: Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
@@ -16,34 +16,34 @@ ms.locfileid: "73030808"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
-_Questa guida illustra la creazione della prima app Novell. tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Novell. tvOS._
+_Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS._
 
 Apple ha rilasciato la quinta generazione di Apple TV, Apple TV 4K, che esegue tvOS 11.
 
 La piattaforma Apple TV è aperta agli sviluppatori, consentendo loro di creare app immersive avanzate e di rilasciarle tramite l'App Store di Apple TV incorporata.
 
-Se si ha familiarità con lo sviluppo di Novell. iOS, si dovrebbe trovare la transizione a tvOS abbastanza semplice. La maggior parte delle API e delle funzionalità sono le stesse, ma molte API comuni non sono disponibili, ad esempio WebKit. Inoltre, l'utilizzo del con Siri Remote pone alcune difficoltà di progettazione che non sono presenti nei dispositivi iOS basati su touchscreen.
+Se si ha familiarità con lo sviluppo di Xamarin.iOS, si dovrebbe trovare la transizione a tvOS abbastanza semplice. La maggior parte delle API e delle funzionalità sono le stesse, ma molte API comuni non sono disponibili, ad esempio WebKit. Inoltre, l'utilizzo del con Siri Remote pone alcune difficoltà di progettazione che non sono presenti nei dispositivi iOS basati su touchscreen.
 
 Questa guida fornirà un'introduzione all'uso di tvOS in un'app Novell. Per altre informazioni su tvOS, vedere la documentazione relativa alla [preparazione per Apple TV 4K](https://developer.apple.com/tvos/) .
 
 ## <a name="overview"></a>Panoramica
 
-Novell. tvOS ti permette di sviluppare app Apple TV completamente native in C# e .NET usando le stesse librerie OS X e i controlli di interfaccia usati per lo sviluppo in *Swift* (o *Objective-C*) e *Xcode*.
+Xamarin.tvOS ti permette di sviluppare app Apple TV completamente native in C# e .NET usando le stesse librerie OS X e i controlli di interfaccia usati per lo sviluppo in *Swift* (o *Objective-C*) e *Xcode*.
 
-Inoltre, poiché le app Novell. tvOS sono scritte C# in e .NET, il codice back-end comune può essere condiviso con le app Novell. iOS, Novell. Android e Novell. Mac; tutto pur offrendo un'esperienza nativa su ogni piattaforma.
+Inoltre, poiché le app Xamarin.tvOS sono scritte C# in e .NET, il codice back-end comune può essere condiviso con le app Xamarin.iOS, Xamarin.Android e Xamarin.Mac; tutto pur offrendo un'esperienza nativa su ogni piattaforma.
 
-Questo articolo illustra i concetti chiave necessari per creare un'app Apple TV usando Novell. tvOS e Visual Studio seguendo il processo di creazione di un'app **Hello, tvOS** di base che conta il numero di volte in cui è stato fatto clic su un pulsante:
+Questo articolo illustra i concetti chiave necessari per creare un'app Apple TV usando Xamarin.tvOS e Visual Studio seguendo il processo di creazione di un'app **Hello, tvOS** di base che conta il numero di volte in cui è stato fatto clic su un pulsante:
 
 [![](hello-tvos-images/run05.png "Example app run")](hello-tvos-images/run05.png#lightbox)
 
 Verranno illustrati i concetti seguenti:
 
-- **Visual Studio per Mac** : introduzione al Visual Studio per Mac e alla procedura di creazione di applicazioni Novell. tvOS.
-- **Anatomia di un'app Novell. tvOS** : che cos'è costituito da un'app Novell. tvOS.
+- **Visual Studio per Mac** : introduzione al Visual Studio per Mac e alla procedura di creazione di applicazioni Xamarin.tvOS.
+- **Anatomia di un'app Xamarin.tvOS** : che cos'è costituito da un'app Xamarin.tvOS.
 - **Creazione di un'interfaccia utente** : come usare per Xamarin designer per iOS per creare un'interfaccia utente.
 - **Distribuzione e test** : come eseguire e testare l'app nel simulatore tvOS e su hardware tvOS reale.
 
-## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Avvio di una nuova app Novell. tvOS in Visual Studio per Mac
+## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Avvio di una nuova app Xamarin.tvOS in Visual Studio per Mac
 
 Come indicato in precedenza, verrà creata un'app Apple TV denominata `Hello-tvOS` che aggiunge un singolo pulsante e un'etichetta alla schermata principale. Quando viene fatto clic sul pulsante, l'etichetta visualizza il numero di volte in cui è stato fatto clic.
 
@@ -63,15 +63,15 @@ Per iniziare, eseguire le operazioni seguenti:
 
     [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
 
-Visual Studio per Mac creerà la nuova app Novell. tvOS e visualizzerà i file predefiniti che vengono aggiunti alla soluzione dell'applicazione:
+Visual Studio per Mac creerà la nuova app Xamarin.tvOS e visualizzerà i file predefiniti che vengono aggiunti alla soluzione dell'applicazione:
 
  [![](hello-tvos-images/project01.png "The default files view")](hello-tvos-images/project01.png#lightbox)
 
 Visual Studio per Mac usa **soluzioni** e **progetti**esattamente come avviene in Visual Studio. Una soluzione è un contenitore che può ospitare uno o più progetti; i progetti possono includere applicazioni, librerie di supporto, applicazioni di test e così via. In questo caso, Visual Studio per Mac ha creato automaticamente una soluzione e un progetto di applicazione.
 
-Se lo si desidera, è possibile creare uno o più progetti della libreria di codice che contengono codice condiviso comune. Questi progetti di libreria possono essere usati dal progetto dell'applicazione o condivisi con altri progetti di app Novell. tvOS (o Novell. iOS, Novell. Android e Novell. Mac in base al tipo di codice), proprio come se si creasse un'applicazione .NET standard.
+Se lo si desidera, è possibile creare uno o più progetti della libreria di codice che contengono codice condiviso comune. Questi progetti di libreria possono essere usati dal progetto dell'applicazione o condivisi con altri progetti di app Xamarin.tvOS (o Xamarin.iOS, Xamarin.Android e Xamarin.Mac in base al tipo di codice), proprio come se si creasse un'applicazione .NET standard.
 
-## <a name="anatomy-of-a-xamarintvos-app"></a>Anatomia di un'app Novell. tvOS
+## <a name="anatomy-of-a-xamarintvos-app"></a>Anatomia di un'app Xamarin.tvOS
 
 Se si ha familiarità con la programmazione iOS, si noterà una grande quantità di similitudini. In realtà, tvOS 9 è un subset di iOS 9, quindi numerosi concetti si troveranno in questo argomento.
 
@@ -88,7 +88,7 @@ Nelle sezioni seguenti verranno esaminati rapidamente alcuni di questi file. Ver
 
 ### <a name="maincs"></a>Main.cs
 
-Il file di `Main.cs` contiene un metodo di `Main` statico che crea una nuova istanza dell'app Novell. tvOS e passa il nome della classe che gestirà gli eventi del sistema operativo, che in questo caso è la classe `AppDelegate`:
+Il file di `Main.cs` contiene un metodo di `Main` statico che crea una nuova istanza dell'app Xamarin.tvOS e passa il nome della classe che gestirà gli eventi del sistema operativo, che in questo caso è la classe `AppDelegate`:
 
 ```csharp
 using UIKit;
@@ -243,13 +243,13 @@ namespace HellotvOS
 
 In genere i file della finestra di progettazione non sono interessati, perché sono gestiti automaticamente da Visual Studio per Mac e forniscono solo il codice plumbing necessario che consente l'accesso ai controlli aggiunti a qualsiasi finestra o visualizzazione dell'applicazione.
 
-Ora che è stata creata l'app Novell. tvOS e abbiamo una conoscenza di base dei relativi componenti, esaminiamo la creazione dell'interfaccia utente.
+Ora che è stata creata l'app Xamarin.tvOS e abbiamo una conoscenza di base dei relativi componenti, esaminiamo la creazione dell'interfaccia utente.
 
 <a name="Creating-the-User-Interface" />
 
 ## <a name="creating-the-user-interface"></a>Creazione dell'interfaccia utente
 
-Non è necessario usare Xamarin Designer per iOS per creare l'interfaccia utente per l'app Novell. tvOS, l'interfaccia utente può essere creata direttamente dal C# codice ma che esula dall'ambito di questo articolo. Per semplicità, verrà usato iOS designer per creare l'interfaccia utente durante la restante parte di questa esercitazione.
+Non è necessario usare Xamarin Designer per iOS per creare l'interfaccia utente per l'app Xamarin.tvOS, l'interfaccia utente può essere creata direttamente dal C# codice ma che esula dall'ambito di questo articolo. Per semplicità, verrà usato iOS designer per creare l'interfaccia utente durante la restante parte di questa esercitazione.
 
 Per avviare la creazione dell'interfaccia utente, fare doppio clic sul file `Main.storyboard` nel **Esplora soluzioni** per aprirlo per la modifica in iOS designer:
 
@@ -261,7 +261,7 @@ Verrà avviata la finestra di progettazione e avrà un aspetto simile al seguent
 
 Per altre informazioni su iOS designer e sul relativo funzionamento, vedere Introduzione alla guida [Xamarin designer per iOS](~/ios/user-interface/designer/introduction.md) .
 
-È ora possibile iniziare ad aggiungere controlli all'area di progettazione dell'app Novell. tvOS.
+È ora possibile iniziare ad aggiungere controlli all'area di progettazione dell'app Xamarin.tvOS.
 
 Procedere come descritto di seguito:
 
@@ -321,7 +321,7 @@ Se si osserva la sezione **struttura documento** , si noti come vengono visualiz
 
 Da qui è possibile selezionare gli elementi da modificare o trascinare per riordinare gli elementi dell'interfaccia utente, se necessario. Se, ad esempio, un elemento dell'interfaccia utente è stato coperto da un altro elemento, è possibile trascinarlo nella parte inferiore dell'elenco per impostarlo come elemento in primo piano nella finestra.
 
-Ora che è stata creata l'interfaccia utente, è necessario esporre gli elementi dell'interfaccia utente in modo che Novell. tvOS possa accedere e interagire con C# essi nel codice.
+Ora che è stata creata l'interfaccia utente, è necessario esporre gli elementi dell'interfaccia utente in modo che Xamarin.tvOS possa accedere e interagire con C# essi nel codice.
 
 ### <a name="accessing-the-controls-in-the-code-behind"></a>Accesso ai controlli nel code-behind
 
@@ -427,7 +427,7 @@ partial void Clicked (UIButton sender)
 
 Questo codice verrà chiamato ogni volta che l'utente fa clic sul pulsante.
 
-Con tutti gli elementi, è ora possibile compilare e testare l'applicazione Novell. tvOS.
+Con tutti gli elementi, è ora possibile compilare e testare l'applicazione Xamarin.tvOS.
 
 ## <a name="testing-the-application"></a>Verifica dell'applicazione
 
@@ -468,23 +468,23 @@ Usando il simulatore remoto, se si fa clic sul pulsante alcune volte l'etichetta
 
 [![](hello-tvos-images/run05.png "The label with updated count")](hello-tvos-images/run05.png#lightbox)
 
-La procedura è stata completata. In questo articolo è stata illustrata una grande quantità di informazioni, ma se è stata seguita questa esercitazione dall'inizio alla fine, è ora necessario conoscere in modo approfondito i componenti di un'app Novell. tvOS, oltre agli strumenti usati per crearli.
+La procedura è stata completata. In questo articolo è stata illustrata una grande quantità di informazioni, ma se è stata seguita questa esercitazione dall'inizio alla fine, è ora necessario conoscere in modo approfondito i componenti di un'app Xamarin.tvOS, oltre agli strumenti usati per crearli.
 
 ## <a name="where-to-next"></a>Posizione successiva
 
 Lo sviluppo di app Apple TV presenta alcune complicazioni a causa della disconnessione tra l'utente e l'interfaccia (la stanza non è presente nell'utente) e le limitazioni tvOS posizionate sulle dimensioni e l'archiviazione delle app.
 
-Di conseguenza, è consigliabile leggere i documenti seguenti prima di passare alla progettazione di un'app Novell. tvOS:
+Di conseguenza, è consigliabile leggere i documenti seguenti prima di passare alla progettazione di un'app Xamarin.tvOS:
 
-- [Introduzione a tvOS 9](~/ios/tvos/platform/tvos9.md) : questo articolo presenta tutte le API nuove e modificate e le funzionalità disponibili in tvOS 9 per gli sviluppatori Novell. tvOS.
-- [Lavorare con lo spostamento e lo stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) : gli utenti dell'app Novell. tvOS non interagiranno con l'interfaccia direttamente come per iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando Siri remote. Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Novell. tvOS.
-- I [controller Siri remoto e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) : la modalità principale con cui gli utenti interagiranno con Apple TV e con l'app Novell. tvOS, è tramite l'inclusivo Siri remote. Se l'app è un gioco, è possibile compilare facoltativamente il supporto per i controller di gioco Bluetooth di terze parti, creati per iOS (IFM) nell'app. Questo articolo illustra il supporto dei nuovi controller di gioco Siri remote e Bluetooth nelle app Novell. tvOS.
-- [Risorse e archiviazione dei dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) : diversamente dai dispositivi iOS, il nuovo Apple TV non fornisce archiviazione locale persistente per le app tvOS. Di conseguenza, se l'app Novell. tvOS deve salvare in modo permanente le informazioni, ad esempio le preferenze dell'utente, deve archiviare e recuperare i dati da iCloud. Questo articolo illustra l'uso delle risorse e dell'archiviazione dei dati permanenti in un'app Novell. tvOS.
-- [Uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) : la creazione di icone e immagini accattivanti è una parte essenziale dello sviluppo di un'esperienza utente immersiva per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Novell. tvOS.
-- [Interfaccia utente](~/ios/tvos/user-interface/index.md) : copertura dell'esperienza utente generale, inclusi i controlli dell'interfaccia utente, usare i principi di progettazione di Interface Builder e UX di Xcode quando si lavora con Novell. tvOS.
+- [Introduzione a tvOS 9](~/ios/tvos/platform/tvos9.md) : questo articolo presenta tutte le API nuove e modificate e le funzionalità disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS.
+- [Lavorare con lo spostamento e lo stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) : gli utenti dell'app Xamarin.tvOS non interagiranno con l'interfaccia direttamente come per iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando Siri remote. Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Xamarin.tvOS.
+- I [controller Siri remoto e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) : la modalità principale con cui gli utenti interagiranno con Apple TV e con l'app Xamarin.tvOS, è tramite l'inclusivo Siri remote. Se l'app è un gioco, è possibile compilare facoltativamente il supporto per i controller di gioco Bluetooth di terze parti, creati per iOS (IFM) nell'app. Questo articolo illustra il supporto dei nuovi controller di gioco Siri remote e Bluetooth nelle app Xamarin.tvOS.
+- [Risorse e archiviazione dei dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) : diversamente dai dispositivi iOS, il nuovo Apple TV non fornisce archiviazione locale persistente per le app tvOS. Di conseguenza, se l'app Xamarin.tvOS deve salvare in modo permanente le informazioni, ad esempio le preferenze dell'utente, deve archiviare e recuperare i dati da iCloud. Questo articolo illustra l'uso delle risorse e dell'archiviazione dei dati permanenti in un'app Xamarin.tvOS.
+- [Uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) : la creazione di icone e immagini accattivanti è una parte essenziale dello sviluppo di un'esperienza utente immersiva per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Xamarin.tvOS.
+- [Interfaccia utente](~/ios/tvos/user-interface/index.md) : copertura dell'esperienza utente generale, inclusi i controlli dell'interfaccia utente, usare i principi di progettazione di Interface Builder e UX di Xcode quando si lavora con Xamarin.tvOS.
 - [Distribuzione e test](~/ios/tvos/deploy-test/index.md) : questa sezione descrive gli argomenti usati per testare un'app e come distribuirla. Gli argomenti seguenti includono elementi come gli strumenti usati per il debug, la distribuzione ai tester e la pubblicazione di un'applicazione nell'App Store di Apple TV.
 
-Se si verificano problemi durante l'uso di Novell. tvOS, vedere la documentazione relativa alla [risoluzione dei](~/ios/tvos/troubleshooting.md) problemi per un elenco dei problemi e delle soluzioni.
+Se si verificano problemi durante l'uso di Xamarin.tvOS, vedere la documentazione relativa alla [risoluzione dei](~/ios/tvos/troubleshooting.md) problemi per un elenco dei problemi e delle soluzioni.
 
 ## <a name="summary"></a>Riepilogo
 

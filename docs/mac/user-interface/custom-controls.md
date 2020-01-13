@@ -1,6 +1,6 @@
 ---
-title: Creazione di controlli personalizzati in Novell. Mac
-description: Questo documento descrive come creare controlli personalizzati in Novell. Mac. Viene illustrato come compilare il controllo personalizzato, monitorarne lo stato, tracciarne l'interfaccia, rispondere all'input dell'utente e utilizzare il controllo in un'applicazione.
+title: Creazione di controlli personalizzati in Xamarin.Mac
+description: Questo documento descrive come creare controlli personalizzati in Xamarin.Mac. Viene illustrato come compilare il controllo personalizzato, monitorarne lo stato, tracciarne l'interfaccia, rispondere all'input dell'utente e utilizzare il controllo in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
@@ -14,23 +14,23 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025606"
 ---
-# <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in Novell. Mac
+# <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in Xamarin.Mac
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi controlli utente che uno sviluppatore lavora in *Objective-C*, *Swift* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire i controlli utente oppure, facoltativamente, crearli direttamente C# nel codice.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi controlli utente che uno sviluppatore lavora in *Objective-C*, *Swift* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire i controlli utente oppure, facoltativamente, crearli direttamente C# nel codice.
 
 Sebbene macOS fornisca un'ampia gamma di controlli utente incorporati, è possibile che sia necessario creare un controllo personalizzato per fornire funzionalità non predefinite o per abbinare un tema personalizzato dell'interfaccia utente, ad esempio un'interfaccia di gioco.
 
 [![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base per la creazione di un controllo dell'interfaccia utente personalizzata riutilizzabile in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base per la creazione di un controllo dell'interfaccia utente personalizzata riutilizzabile in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction-to-Outline-Views" />
 
 ## <a name="introduction-to-custom-controls"></a>Introduzione ai controlli personalizzati
 
-Come indicato in precedenza, in alcuni casi è necessario creare un controllo dell'interfaccia utente personalizzato riutilizzabile per fornire funzionalità univoche per l'interfaccia utente dell'app Novell. Mac o per creare un tema personalizzato dell'interfaccia utente, ad esempio un'interfaccia di gioco.
+Come indicato in precedenza, in alcuni casi è necessario creare un controllo dell'interfaccia utente personalizzato riutilizzabile per fornire funzionalità univoche per l'interfaccia utente dell'app Xamarin.Mac o per creare un tema personalizzato dell'interfaccia utente, ad esempio un'interfaccia di gioco.
 
 In queste situazioni è possibile ereditare facilmente da `NSControl` e creare uno strumento personalizzato che può essere aggiunto all'interfaccia utente dell'app tramite C# codice o tramite Interface Builder di Xcode. Ereditando da `NSControl` il controllo personalizzato avrà automaticamente tutte le funzionalità standard di un controllo dell'interfaccia utente incorporato, ad esempio `NSButton`.
 
@@ -46,7 +46,7 @@ In questo articolo verrà creato un componente del Commuter personalizzato che f
 
 Poiché il controllo personalizzato che si sta creando risponderà all'input dell'utente (clic del pulsante sinistro del mouse), verrà ereditato da `NSControl`. In questo modo, il controllo personalizzato includerà automaticamente tutte le funzionalità standard che un controllo dell'interfaccia utente predefinito ha e risponderà come un controllo macOS standard.
 
-In Visual Studio per Mac aprire il progetto Novell. Mac per il quale si desidera creare un controllo personalizzato dell'interfaccia utente (o crearne uno nuovo). Aggiungere una nuova classe e chiamarla `NSFlipSwitch`:
+In Visual Studio per Mac aprire il progetto Xamarin.Mac per il quale si desidera creare un controllo personalizzato dell'interfaccia utente (o crearne uno nuovo). Aggiungere una nuova classe e chiamarla `NSFlipSwitch`:
 
 [![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
 
@@ -330,9 +330,9 @@ Prima di tutto, viene verificato se un' **azione** è stata assegnata al control
 
 ## <a name="using-the-custom-control"></a>Uso del controllo personalizzato
 
-Con il controllo personalizzato completamente definito, è possibile aggiungerlo all'interfaccia utente dell'app Novell. Mac usando C# il codice o la Interface Builder di Xcode.
+Con il controllo personalizzato completamente definito, è possibile aggiungerlo all'interfaccia utente dell'app Xamarin.Mac usando C# il codice o la Interface Builder di Xcode.
 
-Per aggiungere il controllo tramite Interface Builder, eseguire prima una compilazione pulita del progetto Novell. Mac, quindi fare doppio clic sul file `Main.storyboard` per aprirlo in Interface Builder per la modifica:
+Per aggiungere il controllo tramite Interface Builder, eseguire prima una compilazione pulita del progetto Xamarin.Mac, quindi fare doppio clic sul file `Main.storyboard` per aprirlo in Interface Builder per la modifica:
 
 [![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
 
@@ -385,7 +385,7 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio la creazione di un controllo dell'interfaccia utente personalizzata riutilizzabile in un'applicazione Novell. Mac. È stato illustrato come creare l'interfaccia utente dei controlli personalizzati, i due modi principali per rispondere all'input del mouse e dell'utente e come esporre il nuovo controllo alle azioni nella Interface Builder di Xcode.
+Questo articolo ha esaminato in dettaglio la creazione di un controllo dell'interfaccia utente personalizzata riutilizzabile in un'applicazione Xamarin.Mac. È stato illustrato come creare l'interfaccia utente dei controlli personalizzati, i due modi principali per rispondere all'input del mouse e dell'utente e come esporre il nuovo controllo alle azioni nella Interface Builder di Xcode.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

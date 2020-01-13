@@ -1,5 +1,5 @@
 ---
-title: Funzionalità della piattaforma di Novell. Android
+title: Funzionalità della piattaforma di Xamarin.Android
 description: I documenti in questa sezione riguardano le funzionalità specifiche di Android. In questa sezione sono disponibili argomenti come l'utilizzo di frammenti, l'utilizzo di mappe e l'incapsulamento dei dati con i provider di contenuti.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
@@ -24,19 +24,19 @@ Android Beam è una nuova tecnologia NFC (Near Field Communication) in Android 4
 
 ## <a name="working-with-filesandroidplatformfilesindexmd"></a>[Uso dei file](~/android/platform/files/index.md)
 
-Questa sezione illustra come accedere ai file in Novell. Android.
+Questa sezione illustra come accedere ai file in Xamarin.Android.
 
 ## <a name="fingerprint-authenticationandroidplatformfingerprint-authenticationindexmd"></a>[Autenticazione con impronta digitale](~/android/platform/fingerprint-authentication/index.md)
 
-Questa sezione illustra come usare l'autenticazione con impronta digitale, introdotta per la prima volta in Android 6,0, in un'applicazione Novell. Android.
+Questa sezione illustra come usare l'autenticazione con impronta digitale, introdotta per la prima volta in Android 6,0, in un'applicazione Xamarin.Android.
 
 ## <a name="firebase-job-dispatcherandroidplatformfirebase-job-dispatchermd"></a>[Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)
 
-Questa guida illustra il dispatcher del processo di Firebase e come usarlo per semplificare l'esecuzione di processi in background in un'app Novell. Android.
+Questa guida illustra il dispatcher del processo di Firebase e come usarlo per semplificare l'esecuzione di processi in background in un'app Xamarin.Android.
 
 ## <a name="fragmentsandroidplatformfragmentsindexmd"></a>[Frammenti](~/android/platform/fragments/index.md)
 
-Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11).
+Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Xamarin.Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11).
 
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Collegamento di app](~/android/platform/app-linking.md)
 
@@ -44,15 +44,15 @@ Questa guida illustra in che modo Android 6,0 supporta il _collegamento di app_,
 
 ## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
 
-Questo articolo fornisce una descrizione delle nuove funzionalità di Android 10, spiega come preparare lo sviluppo di Novell. Android per Android 10 e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
+Questo articolo fornisce una descrizione delle nuove funzionalità di Android 10, spiega come preparare lo sviluppo di Xamarin.Android per Android 10 e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Xamarin.Android.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Torta Android 9](~/android/platform/pie.md)
 
-Questo articolo fornisce una descrizione delle nuove funzionalità di Android Pie, spiega come preparare Novell. Android per lo sviluppo di torte Android e fornisce un'app di esempio che illustra come usare le nuove funzionalità di ritaglio e notifica della torta Android in App Novell. Android.
+Questo articolo fornisce una descrizione delle nuove funzionalità di Android Pie, spiega come preparare Xamarin.Android per lo sviluppo di torte Android e fornisce un'app di esempio che illustra come usare le nuove funzionalità di ritaglio e notifica della torta Android in App Xamarin.Android.
 
 ## <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
 
-Questo articolo fornisce una descrizione delle nuove funzionalità di Android Oreo, spiega come preparare lo sviluppo di Novell. Android per Android Oreo e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
+Questo articolo fornisce una descrizione delle nuove funzionalità di Android Oreo, spiega come preparare lo sviluppo di Xamarin.Android per Android Oreo e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Xamarin.Android.
 
 ## <a name="android-7-nougatandroidplatformnougatmd"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
@@ -85,11 +85,11 @@ Questo articolo presenta il file file AndroidManifest. XML e come può essere us
 
 ## <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[Introduzione ai provider di contenuti](~/android/platform/content-providers/index.md)
 
-Un ContentProvider incapsula un repository di dati e fornisce un'API per accedervi. Il provider esiste come parte di un'applicazione Android che fornisce anche un'interfaccia utente per la visualizzazione e la gestione dei dati. Il vantaggio principale dell'utilizzo di un provider di contenuti è consentire ad altre applicazioni di accedere facilmente ai dati incapsulati utilizzando un oggetto client del provider (denominato ContentResolver). Insieme un provider di contenuti e un resolver del contenuto offrono un'API tra applicazioni coerente per l'accesso ai dati semplice da compilare e utilizzare. Questo documento illustra come accedere e compilare ContentProviders con Novell. Android.
+Un ContentProvider incapsula un repository di dati e fornisce un'API per accedervi. Il provider esiste come parte di un'applicazione Android che fornisce anche un'interfaccia utente per la visualizzazione e la gestione dei dati. Il vantaggio principale dell'utilizzo di un provider di contenuti è consentire ad altre applicazioni di accedere facilmente ai dati incapsulati utilizzando un oggetto client del provider (denominato ContentResolver). Insieme un provider di contenuti e un resolver del contenuto offrono un'API tra applicazioni coerente per l'accesso ai dati semplice da compilare e utilizzare. Questo documento illustra come accedere e compilare ContentProviders con Xamarin.Android.
 
 ## <a name="maps-and-locationandroidplatformmaps-and-locationindexmd"></a>[Mappe e posizione](~/android/platform/maps-and-location/index.md)
 
-Questa sezione illustra come usare le mappe e il percorso con Novell. Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di [Google Maps Android API v2](https://developers.google.com/maps/documentation/android/) . Viene inoltre illustrato come usare una singola API per lavorare con i servizi di posizione, che usano la triangolazione cellulare per consentire a un'applicazione di ottenere correzioni di posizione, percorso Wi-Fi e GPS.
+Questa sezione illustra come usare le mappe e il percorso con Xamarin.Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di [Google Maps Android API v2](https://developers.google.com/maps/documentation/android/) . Viene inoltre illustrato come usare una singola API per lavorare con i servizi di posizione, che usano la triangolazione cellulare per consentire a un'applicazione di ottenere correzioni di posizione, percorso Wi-Fi e GPS.
 
 ## <a name="android-speechandroidplatformspeechmd"></a>[Sintesi vocale Android](~/android/platform/speech.md)
 
@@ -97,11 +97,11 @@ Questa sezione illustra come usare le funzionalità di Sintesi vocale e riconosc
 
 ## <a name="binding-a-java-librarybinding-java-libraryindexmd"></a>[Associazione di una libreria Java](binding-java-library/index.md)
 
-Questa guida illustra come incorporare le librerie Java nelle app Novell. Android creando una libreria di binding.
+Questa guida illustra come incorporare le librerie Java nelle app Xamarin.Android creando una libreria di binding.
 
 ## <a name="java-integrationjava-integrationindexmd"></a>[Integrazione di Java](java-integration/index.md)
 
-Questo articolo fornisce una panoramica dei modi in cui gli sviluppatori possono riutilizzare i componenti Java esistenti nelle app Novell. Android.
+Questo articolo fornisce una panoramica dei modi in cui gli sviluppatori possono riutilizzare i componenti Java esistenti nelle app Xamarin.Android.
 
 ## <a name="renderscriptrenderscriptmd"></a>[Renderscript](renderscript.md)
 

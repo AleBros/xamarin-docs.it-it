@@ -1,5 +1,5 @@
 ---
-title: Dati CarouselView di Novell. Forms
+title: Dati CarouselView di Xamarin.Forms
 description: Un CarouselView viene popolato con i dati impostando la relativa proprietà ItemsSource su una raccolta che implementa IEnumerable.
 ms.prod: xamarin
 ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488224"
 ---
-# <a name="xamarinforms-carouselview-data"></a>Dati CarouselView di Novell. Forms
+# <a name="xamarinforms-carouselview-data"></a>Dati CarouselView di Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -78,7 +78,7 @@ Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) 
 
 [![Screenshot di CarouselView contenente gli elementi di testo in iOS e Android](populate-data-images/text.png "Elementi di testo in un CarouselView")](populate-data-images/text-large.png#lightbox "Elementi di testo in un CarouselView")
 
-Per informazioni su come modificare l'orientamento [`CarouselView`](xref:Xamarin.Forms.CarouselView) , vedere [Novell. Forms CarouselView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CarouselView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
+Per informazioni su come modificare l'orientamento [`CarouselView`](xref:Xamarin.Forms.CarouselView) , vedere [Xamarin.Forms CarouselView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CarouselView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Associazione dati
 
@@ -98,7 +98,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 In questo esempio, i dati della proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) vengono associati alla proprietà `Monkeys` dell'elemento ViewModel connesso.
 
 > [!NOTE]
-> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Novell. Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Xamarin.Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -253,7 +253,7 @@ La classe `MonkeyDataTemplateSelector` definisce `AmericanMonkey` e `OtherMonkey
 
 [![Screenshot della selezione del modello di elemento del runtime CarouselView, in iOS e Android](populate-data-images/datatemplateselector.png "Selezione del modello di elemento di runtime in un CarouselView")](populate-data-images/datatemplateselector-large.png#lightbox "Selezione del modello di elemento di runtime in un CarouselView")
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 > [!IMPORTANT]
 > Quando si usa [`CarouselView`](xref:Xamarin.Forms.CarouselView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CarouselView` non ha alcun concetto di celle.
@@ -284,7 +284,7 @@ In questo esempio viene eseguito il rendering del `IndicatorView` sotto l'`Carou
 > [!IMPORTANT]
 > Impostando la proprietà `ItemsSourceBy` si ottiene il binding della proprietà `IndicatorView.Position` alla proprietà `CarouselView.Position` e l'associazione della proprietà `IndicatorView.ItemsSource` alla proprietà `CarouselView.ItemsSource`.
 
-Per ulteriori informazioni sugli indicatori, vedere [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
+Per ulteriori informazioni sugli indicatori, vedere [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
 ## <a name="pull-to-refresh"></a>Aggiornamento tramite trascinamento verso il basso
 
@@ -323,7 +323,7 @@ Quando l'utente avvia un aggiornamento, viene eseguito il `ICommand` definito da
 
 Il valore della proprietà `RefreshView.IsRefreshing` indica lo stato corrente del `RefreshView`. Quando un aggiornamento viene attivato dall'utente, questa proprietà passerà automaticamente a `true`. Una volta completato l'aggiornamento, è necessario reimpostare la proprietà su `false`.
 
-Per ulteriori informazioni su `RefreshView`, vedere [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+Per ulteriori informazioni su `RefreshView`, vedere [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Caricare i dati in modo incrementale
 
@@ -379,8 +379,8 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
-- [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Data Binding Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creare un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

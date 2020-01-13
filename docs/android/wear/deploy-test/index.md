@@ -21,12 +21,12 @@ Quando l'app è pronta, nell'ultimo argomento viene illustrato come preparare l'
 
 ## <a name="debug-android-wear-on-an-emulatorandroidweardeploy-testdebug-on-emulatormd"></a>[Eseguire il debug di Android Wear in un emulatore](~/android/wear/deploy-test/debug-on-emulator.md)
 
-Come eseguire il debug di un'applicazione Novell. Android Wear nell'emulatore Android SDK.
+Come eseguire il debug di un'applicazione Xamarin.Android Wear nell'emulatore Android SDK.
 
 ## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Eseguire il debug in un dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md)
 
-Come configurare un dispositivo Android in modo che le applicazioni Novell. Android Wear possano essere distribuite direttamente da Visual Studio o Visual Studio per Mac.
+Come configurare un dispositivo Android in modo che le applicazioni Xamarin.Android Wear possano essere distribuite direttamente da Visual Studio o Visual Studio per Mac.
 
 ## <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Creazione di pacchetti di app Wear](~/android/wear/deploy-test/packaging.md)
 
-Come creare un pacchetto di app Novell. Android Wear per la distribuzione in Google Play.
+Come creare un pacchetto di app Xamarin.Android Wear per la distribuzione in Google Play.

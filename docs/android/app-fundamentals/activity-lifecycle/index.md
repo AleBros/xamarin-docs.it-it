@@ -65,7 +65,7 @@ Questa operazione verrà trattata in un secondo momento nello [stato di gestione
 
 ### <a name="activity-lifecycle-methods"></a>Metodi del ciclo di vita delle attività
 
-Il Android SDK e, per estensione, il Framework Novell. Android fornisce un modello potente per la gestione dello stato delle attività all'interno di un'applicazione. Quando lo stato di un'attività viene modificato, l'attività viene notificata dal sistema operativo, che chiama metodi specifici su tale attività. Il diagramma seguente illustra questi metodi in relazione al ciclo di vita dell'attività:
+Il Android SDK e, per estensione, il Framework Xamarin.Android fornisce un modello potente per la gestione dello stato delle attività all'interno di un'applicazione. Quando lo stato di un'attività viene modificato, l'attività viene notificata dal sistema operativo, che chiama metodi specifici su tale attività. Il diagramma seguente illustra questi metodi in relazione al ciclo di vita dell'attività:
 
 [diagramma di flusso ciclo di vita attività![](images/image2-sml.png)](images/image2.png#lightbox)
 

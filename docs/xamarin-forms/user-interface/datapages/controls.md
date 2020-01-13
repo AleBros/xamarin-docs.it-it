@@ -1,6 +1,6 @@
 ---
 title: Riferimento ai controlli DataPages
-description: Questo articolo presenta i controlli disponibili nel pacchetto NuGet Novell. Forms.
+description: Questo articolo presenta i controlli disponibili nel pacchetto NuGet Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms
@@ -19,9 +19,9 @@ ms.locfileid: "75728031"
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
+> Per il rendering delle pagine Web è necessario un riferimento al tema Xamarin.Forms. Ciò comporta l'installazione del pacchetto NuGet [Xamarin.Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Xamarin.Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Xamarin.Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
-Il NuGet DataPages di Novell. Forms include una serie di controlli che possono sfruttare l'associazione dell'origine dati.
+Il NuGet DataPages di Xamarin.Forms include una serie di controlli che possono sfruttare l'associazione dell'origine dati.
 
 Per usare questi controlli in XAML, verificare che lo spazio dei nomi sia stato incluso, ad esempio vedere la dichiarazione `xmlns:pages` riportata di seguito:
 

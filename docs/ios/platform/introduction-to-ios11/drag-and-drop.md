@@ -1,6 +1,6 @@
 ---
-title: Trascinamento della selezione in Novell. iOS
-description: Questo documento descrive come implementare il trascinamento della selezione nelle app Novell. iOS usando le API introdotte in iOS 11. In particolare, viene illustrato come abilitare il trascinamento della selezione in UITableView.
+title: Trascinamento della selezione in Xamarin.iOS
+description: Questo documento descrive come implementare il trascinamento della selezione nelle app Xamarin.iOS usando le API introdotte in iOS 11. In particolare, viene illustrato come abilitare il trascinamento della selezione in UITableView.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032170"
 ---
-# <a name="drag-and-drop-in-xamarinios"></a>Trascinamento della selezione in Novell. iOS
+# <a name="drag-and-drop-in-xamarinios"></a>Trascinamento della selezione in Xamarin.iOS
 
 _Implementazione del trascinamento della selezione per iOS 11_
 

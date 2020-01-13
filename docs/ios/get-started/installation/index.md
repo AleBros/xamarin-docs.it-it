@@ -25,7 +25,7 @@ Per compilare per Xamarin.iOS, sono necessari i componenti seguenti:
 - l'ultima versione di Xcode
 - la versione minima di macOS richiesta da Xcode
 
-Per i requisiti di versione specifici, vedere le note sulla versione [più recenti di Novell. iOS](/xamarin/ios/release-notes/).
+Per i requisiti di versione specifici, vedere le note sulla versione [più recenti di Xamarin.iOS](/xamarin/ios/release-notes/).
 
 La versione più recente di Xcode può essere scaricata da [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (accesso richiesto) o tramite Mac App Store:
 

@@ -1,6 +1,6 @@
 ---
-title: NFC di base in Novell. iOS
-description: Questo documento descrive come leggere i tag Near Field Communication in Novell. iOS usando le API introdotte in iOS 11.
+title: NFC di base in Xamarin.iOS
+description: Questo documento descrive come leggere i tag Near Field Communication in Xamarin.iOS usando le API introdotte in iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75753023"
 ---
-# <a name="core-nfc-in-xamarinios"></a>NFC di base in Novell. iOS
+# <a name="core-nfc-in-xamarinios"></a>NFC di base in Xamarin.iOS
 
 _Lettura di tag NFC (Near Field Communication) con iOS 11_
 

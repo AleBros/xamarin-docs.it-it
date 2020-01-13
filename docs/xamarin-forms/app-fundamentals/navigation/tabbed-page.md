@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms TabbedPage
+title: Xamarin.Forms TabbedPage
 description: TabbedPage di Xamarin.Forms è costituita da un elenco di schede e un'area dei dettagli più grande con ogni scheda che carica il contenuto nell'area dei dettagli. Questo articolo illustra come usare una classe TabbedPage per spostarsi in una raccolta di pagine.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489999"
 ---
-# <a name="xamarinforms-tabbedpage"></a>Novell. Forms TabbedPage
+# <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
@@ -56,7 +56,7 @@ Con entrambi gli approcci, la classe [`TabbedPage`](xref:Xamarin.Forms.TabbedPag
 Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che supportano l'applicazione di stili e che le proprietà possono essere destinazioni di data binding.
 
 > [!WARNING]
-> In una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), ogni oggetto [`Page`](xref:Xamarin.Forms.Page) viene creato quando viene costruito il `TabbedPage`. Questo può causare un'esperienza utente inadeguata, soprattutto se il `TabbedPage` è la pagina radice dell'applicazione. Tuttavia, Novell. Forms Shell consente di creare su richiesta le pagine a cui si accede tramite una barra delle schede, in risposta alla navigazione. Per altre informazioni, vedere [Shell di Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+> In una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), ogni oggetto [`Page`](xref:Xamarin.Forms.Page) viene creato quando viene costruito il `TabbedPage`. Questo può causare un'esperienza utente inadeguata, soprattutto se il `TabbedPage` è la pagina radice dell'applicazione. Tuttavia, Xamarin.Forms Shell consente di creare su richiesta le pagine a cui si accede tramite una barra delle schede, in risposta alla navigazione. Per altre informazioni, vedere [Shell di Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="populate-a-tabbedpage-with-a-page-collection"></a>Popolamento di un TabbedPage con una raccolta di pagine
 

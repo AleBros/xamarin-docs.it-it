@@ -1,5 +1,5 @@
 ---
-title: Sottoclassi generiche di NSObject in Novell. iOS
+title: Sottoclassi generiche di NSObject in Xamarin.iOS
 description: Questo documento descrive come creare sottoclassi generiche di NSObject. Esamina le operazioni che possono e non possono essere eseguite, illustra il registrar statico e osserva le prestazioni.
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022370"
 ---
-# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in Novell. iOS
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in Xamarin.iOS
 
 ## <a name="using-generics-with-nsobjects"></a>Uso dei generics con NSObjects
 
@@ -103,7 +103,7 @@ class Generic<T, U> : NSObject where T: NSObject
 
 La creazione di istanze di tipi generici da Objective-C non è consentita. Questo si verifica in genere quando un tipo gestito viene usato in un XIB o in uno storyboard.
 
-Si consideri questa definizione di classe, che espone un costruttore che accetta un `IntPtr` (il metodo Novell. iOS C# per costruire un oggetto da un'istanza di Objective-C nativa):
+Si consideri questa definizione di classe, che espone un costruttore che accetta un `IntPtr` (il metodo Xamarin.iOS C# per costruire un oggetto da un'istanza di Objective-C nativa):
 
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -149,7 +149,7 @@ class MyClass : NSObject
 }
 ```
 
-**Motivo**: questa operazione non è consentita perché Novell. iOS non conosce il tipo da usare per l'argomento di tipo `T` quando il metodo viene richiamato da Objective-C.
+**Motivo**: questa operazione non è consentita perché Xamarin.iOS non conosce il tipo da usare per l'argomento di tipo `T` quando il metodo viene richiamato da Objective-C.
 
 In alternativa, è possibile creare un metodo specializzato ed esportare il metodo:
 
@@ -186,7 +186,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** Proprio come per i metodi generici, il runtime di Novell. iOS deve essere in grado di conoscere il tipo da usare per l'argomento di tipo generico `T`.
+**Motivo:** Proprio come per i metodi generici, il runtime di Xamarin.iOS deve essere in grado di conoscere il tipo da usare per l'argomento di tipo generico `T`.
 
 Per i membri di istanza viene utilizzata l'istanza stessa (poiché non ci sarà mai un'istanza `Generic<T>`, sarà sempre `Generic<SomeSpecificClass>`), ma per i membri statici queste informazioni non sono presenti.
 

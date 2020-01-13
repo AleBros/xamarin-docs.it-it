@@ -1,6 +1,6 @@
 ---
-title: CallKit in Novell. iOS
-description: Questo articolo illustra la nuova API CallKit rilasciata da Apple in iOS 10 e come implementarla nelle app VOIP Novell. iOS.
+title: CallKit in Xamarin.iOS
+description: Questo articolo illustra la nuova API CallKit rilasciata da Apple in iOS 10 e come implementarla nelle app VOIP Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032606"
 ---
-# <a name="callkit-in-xamarinios"></a>CallKit in Novell. iOS
+# <a name="callkit-in-xamarinios"></a>CallKit in Xamarin.iOS
 
 La nuova API CallKit in iOS 10 consente alle app VOIP di integrarsi con l'interfaccia utente di iPhone e fornire all'utente finale un'interfaccia familiare ed esperienza. Con questa API gli utenti possono visualizzare e interagire con le chiamate VOIP dalla schermata di blocco del dispositivo iOS e gestire i contatti usando le visualizzazioni **Preferiti** e **recenti** dell'app per telefoni.
 
@@ -89,7 +89,7 @@ Quando l'app desidera comunicare le azioni dell'utente locale al sistema, usa la
 
 ## <a name="implementing-callkit"></a>Implementazione di CallKit
 
-Le sezioni seguenti illustrano come implementare CallKit in un'app VOIP Novell. iOS. Per questo esempio, questo documento utilizzerà il codice dell'app MonkeyCall VOIP fittizia. Il codice presentato in questo argomento rappresenta diverse classi di supporto, le parti specifiche di CallKit sono descritte in dettaglio nelle sezioni seguenti.
+Le sezioni seguenti illustrano come implementare CallKit in un'app VOIP Xamarin.iOS. Per questo esempio, questo documento utilizzerà il codice dell'app MonkeyCall VOIP fittizia. Il codice presentato in questo argomento rappresenta diverse classi di supporto, le parti specifiche di CallKit sono descritte in dettaglio nelle sezioni seguenti.
 
 ### <a name="the-activecall-class"></a>Classe ActiveCall
 
@@ -1128,7 +1128,7 @@ Quando si usa CallKit, le _estensioni della directory di chiamata_ consentono di
 
 ### <a name="implementing-a-call-directory-extension"></a>Implementazione di un'estensione di directory di chiamata
 
-Per implementare un'estensione di directory di chiamata in un'app Novell. iOS, seguire questa procedura:
+Per implementare un'estensione di directory di chiamata in un'app Xamarin.iOS, seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -1257,7 +1257,7 @@ Per informare di contattare l'app dei numeri di contatto noti all'app VOIP, usar
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la nuova API CallKit rilasciata da Apple in iOS 10 e come implementarla nelle app VOIP di Novell. iOS. Ha illustrato come CallKit consente a un'app di integrarsi nel sistema iOS, come fornisce la parità di funzionalità con le app predefinite (ad esempio, il telefono) e come aumenta la visibilità di un'app in tutti i dispositivi iOS in posizioni quali le schermate di blocco e Home, tramite le interazioni Siri e via app dei contatti.
+Questo articolo ha illustrato la nuova API CallKit rilasciata da Apple in iOS 10 e come implementarla nelle app VOIP di Xamarin.iOS. Ha illustrato come CallKit consente a un'app di integrarsi nel sistema iOS, come fornisce la parità di funzionalità con le app predefinite (ad esempio, il telefono) e come aumenta la visibilità di un'app in tutti i dispositivi iOS in posizioni quali le schermate di blocco e Home, tramite le interazioni Siri e via app dei contatti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
-title: Creazione di oggetti dell'interfaccia utente in Novell. iOS
-description: Questo documento fornisce una panoramica su come creare un'interfaccia utente in Novell. iOS. Vengono illustrati gli storyboard di iOS designer, C#Xcode Interface Builder, e.
+title: Creazione di oggetti dell'interfaccia utente in Xamarin.iOS
+description: Questo documento fornisce una panoramica su come creare un'interfaccia utente in Xamarin.iOS. Vengono illustrati gli storyboard di iOS designer, C#Xcode Interface Builder, e.
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003665"
 ---
-# <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Novell. iOS
+# <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Xamarin.iOS
 
-Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Novell. iOS. `UIKit` è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
+Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Xamarin.iOS. `UIKit` è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
 
 Ogni volta che il codice deve fare riferimento a un controllo dell'interfaccia utente, ad esempio un'etichetta o un pulsante, ricordarsi di includere la seguente istruzione using:
 

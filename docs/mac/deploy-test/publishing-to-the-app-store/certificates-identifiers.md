@@ -1,6 +1,6 @@
 ---
 title: Certificati e identificatori in Xamarin.Mac
-description: Questa guida illustra come creare i certificati e gli identificatori necessari per pubblicare un'app Novell. Mac.
+description: Questa guida illustra come creare i certificati e gli identificatori necessari per pubblicare un'app Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac
@@ -181,7 +181,7 @@ Per prima cosa, creare il certificato del programma di installazione:
 
 ### <a name="developer-id-certificates"></a>Certificati ID sviluppatore
 
-Per la versione autonoma di un'applicazione Novell. Mac (non rilasciata tramite l'App Store di Apple), sono necessari due certificati:
+Per la versione autonoma di un'applicazione Xamarin.Mac (non rilasciata tramite l'App Store di Apple), sono necessari due certificati:
 
 - Certificato del **programma di installazione dell'ID sviluppatore** che verrà usato per firmare l'applicazione. e 
 - Certificato **dell'applicazione ID sviluppatore** , per firmare il programma di installazione.

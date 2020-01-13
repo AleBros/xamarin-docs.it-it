@@ -1,5 +1,5 @@
 ---
-title: Acquisto in-app in Novell. iOS
+title: Acquisto in-app in Xamarin.iOS
 description: Questo documento descrive come vendere prodotti e servizi digitali usando le API di StoreKit. Sono disponibili collegamenti a guide che illustrano la configurazione, i prodotti utilizzabili, i prodotti non utilizzabili, le transazioni, le sottoscrizioni e altro ancora.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032348"
 ---
-# <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
+# <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Xamarin.iOS
 
 le applicazioni iOS possono vendere prodotti o servizi digitali usando StoreKit, un set di API fornite da iOS che comunicano con i server Apple per condurre transazioni finanziarie con l'utente tramite il proprio ID Apple. Le API StoreKit riguardano principalmente il recupero delle informazioni sul prodotto e l'esecuzione di transazioni. non esiste alcun componente dell'interfaccia utente. Le applicazioni che implementano l'acquisto in-app devono compilare la propria interfaccia utente e tenere traccia degli elementi acquistati con codice personalizzato per fornire all'utente i prodotti o i servizi richiesti.
 
@@ -26,11 +26,11 @@ Per fornire funzionalità di acquisto in-app, è necessario eseguire una serie d
 - **Compilazione dell'interfaccia utente e dei prodotti stessi** : i prodotti devono essere implementati, inclusi i meccanismi per tenere traccia di ogni acquisto e backup/ripristino, se appropriato.
 - **Monitoraggio delle vendite e della ricezione dei fondi** : usare le informazioni fornite da iTunes Connect per monitorare le tendenze di vendita e tenere traccia del reddito.
 
-Questo documento illustra come eseguire tutti questi passaggi per fornire acquisti in-app con Novell. iOS.
+Questo documento illustra come eseguire tutti questi passaggi per fornire acquisti in-app con Xamarin.iOS.
 
 ## <a name="requirements"></a>Requisiti
 
-Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione successiva con Xcode 7 e versioni successive.
+Per supportare l'acquisto in-app, è necessario usare Xamarin.iOS 5,0 o versione successiva con Xcode 7 e versioni successive.
 
 ## <a name="contents"></a>Contenuti
 
@@ -48,12 +48,12 @@ Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Novell. iOS. È stato analizzato:
+Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Xamarin.iOS. È stato analizzato:
 
 - **portale di provisioning iOS** : linee guida per abilitare la funzionalità di acquisto in-app.
 - **iTunes Connect** : configurazione dei prodotti da vendere nell'app.
 - **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
-- **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.
+- **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Xamarin.iOS.
 - **Creazione di report** : Panoramica delle statistiche disponibili tramite iTunes Connect.
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -1,6 +1,6 @@
 ---
-title: Servizio Azure SignalR con Novell. Forms
-description: Introduzione al servizio Azure SignalR e alle funzioni di Azure con Novell. Forms
+title: Servizio Azure SignalR con Xamarin.Forms
+description: Introduzione al servizio Azure SignalR e alle funzioni di Azure con Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
@@ -13,13 +13,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75687427"
 ---
-# <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Novell. Forms
+# <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core SignalR è un modello di applicazione che semplifica il processo di aggiunta della comunicazione in tempo reale alle applicazioni. Il servizio Azure SignalR consente uno sviluppo e una distribuzione rapidi di applicazioni SignalR scalabili. Funzioni di Azure è un metodo di codice senza server di breve durata che può essere combinato per formare applicazioni scalabili e guidate dagli eventi.
 
-Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e funzioni di Azure con Novell. Forms, per fornire messaggi in tempo reale ai client connessi.
+Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e funzioni di Azure con Xamarin.Forms, per fornire messaggi in tempo reale ai client connessi.
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
@@ -139,9 +139,9 @@ Dopo aver immesso la stringa di connessione, è possibile fare clic su **pubblic
 
 ![Funzioni pubblicate nell'app funzioni di Azure](azure-signalr-images/azure-functions-deployed.png "Funzioni pubblicate nell'app funzioni di Azure")
 
-## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrare il servizio Azure SignalR con Novell. Forms
+## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrare il servizio Azure SignalR con Xamarin.Forms
 
-L'integrazione tra il servizio Azure SignalR e l'applicazione Novell. Forms è una classe del servizio SignalR di cui viene creata un'istanza nella classe `MainPage` con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Novell. Forms](#use-the-signalr-service-class-in-xamarinforms).
+L'integrazione tra il servizio Azure SignalR e l'applicazione Xamarin.Forms è una classe del servizio SignalR di cui viene creata un'istanza nella classe `MainPage` con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Xamarin.Forms](#use-the-signalr-service-class-in-xamarinforms).
 
 L'applicazione di esempio include una classe **Constants.cs** che deve essere personalizzata con l'endpoint URL dell'app funzioni di Azure. Impostare il valore della proprietà `HostName` sull'indirizzo dell'app funzioni di Azure. Nel codice seguente vengono illustrate le proprietà **Constants.cs** con un valore `HostName` di esempio:
 
@@ -249,9 +249,9 @@ public void AddNewMessage(JObject message)
 }
 ```
 
-### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usare la classe del servizio SignalR in Novell. Forms
+### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usare la classe del servizio SignalR in Xamarin.Forms
 
-L'uso della classe del servizio SignalR in Novell. Forms viene eseguito associando gli eventi della classe `SignalRService` nella classe code-behind `MainPage`.
+L'uso della classe del servizio SignalR in Xamarin.Forms viene eseguito associando gli eventi della classe `SignalRService` nella classe code-behind `MainPage`.
 
 L'evento `Connected` nella classe `SignalRService` viene generato quando una connessione SignalR viene completata correttamente. L'evento `ConnectionFailed` nella classe `SignalRService` viene generato in caso di errore di una connessione SignalR. Il metodo del gestore eventi `SignalR_ConnectionChanged` è associato a entrambi gli eventi nel costruttore di `MainPage`. Questo gestore eventi aggiorna gli Stati dei pulsanti Connetti e invia in base all'argomento `success` di connessione e aggiunge il messaggio fornito dall'evento alla coda della chat utilizzando il metodo `AddMessage`. Il codice seguente illustra il metodo del gestore dell'evento `SignalR_ConnectionChanged`:
 

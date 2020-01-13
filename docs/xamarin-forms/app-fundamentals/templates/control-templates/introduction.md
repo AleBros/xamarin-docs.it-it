@@ -16,7 +16,7 @@ ms.locfileid: "70771260"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introduzione ai modelli del controllo Xamarin.Forms
 
-_I modelli di controllo Novell. Forms offrono la possibilità di eseguire facilmente il tema e il tema delle pagine dell'applicazione in fase di esecuzione. Questo articolo fornisce un'introduzione ai modelli di controllo._
+_I modelli di controllo Xamarin.Forms offrono la possibilità di eseguire facilmente il tema e il tema delle pagine dell'applicazione in fase di esecuzione. Questo articolo fornisce un'introduzione ai modelli di controllo._
 
 I controlli presentano proprietà diverse, ad esempio `BackgroundColor` e `TextColor`, che possono definire le caratteristiche dell'aspetto del controllo. Queste proprietà possono essere impostate usando gli [stili](~/xamarin-forms/user-interface/styles/index.md), che possono essere modificati in fase di esecuzione per implementare i temi di base. Gli stili non mantengono tuttavia una netta separazione tra l'aspetto di una pagina e il relativo contenuto e le modifiche che possono essere apportate tramite l'impostazione di tali proprietà sono limitate.
 

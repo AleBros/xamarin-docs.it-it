@@ -1,6 +1,6 @@
 ---
 title: Architetture CPU
-description: Novell. Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e a 64 bit. Questo articolo illustra come indirizzare un'app a una o più architetture CPU supportate da Android.
+description: Xamarin.Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e a 64 bit. Questo articolo illustra come indirizzare un'app a una o più architetture CPU supportate da Android.
 ms.prod: xamarin
 ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
@@ -16,12 +16,12 @@ ms.locfileid: "73019365"
 ---
 # <a name="cpu-architectures"></a>Architetture CPU
 
-_Novell. Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e a 64 bit. Questo articolo illustra come indirizzare un'app a una o più architetture CPU supportate da Android._
+_Xamarin.Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e a 64 bit. Questo articolo illustra come indirizzare un'app a una o più architetture CPU supportate da Android._
 
 ## <a name="cpu-architectures-overview"></a>Cenni preliminari sulle architetture della CPU
 
 Quando si prepara l'app per il rilascio, è necessario specificare le architetture CPU della piattaforma supportate dall'app. Un singolo APK può contenere codice macchina per supportare più architetture diverse. Ogni raccolta di codice specifico per l'architettura è associata a un'interfaccia ABI ( *Application Binary Interface* ). Ogni ABI definisce il modo in cui il codice macchina dovrebbe interagire con Android in fase di esecuzione.
-Per altre informazioni sul funzionamento, vedere dispositivi multicore [&amp; Novell. Android](~/android/deploy-test/multicore-devices.md).
+Per altre informazioni sul funzionamento, vedere dispositivi multicore [&amp; Xamarin.Android](~/android/deploy-test/multicore-devices.md).
 
 ## <a name="how-to-specify-supported-architectures"></a>Come specificare le architetture supportate
 
@@ -48,7 +48,7 @@ Xamarin.Android supporta le architetture seguenti:
 - **armeabi** &ndash; CPU basate su ARM che supportano almeno il set di istruzioni ARMv5TE. Si noti che `armeabi` non è thread-safe e non deve essere usato su dispositivi con più CPU.
 
 > [!NOTE]
-> A partire da [Novell. Android 9,2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` non è più supportato.
+> A partire da [Xamarin.Android 9,2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` non è più supportato.
 
 - **ARMEABI-v7a** &ndash; CPU basate su ARM con operazioni a virgola mobile hardware e più dispositivi di CPU (SMP). Si noti che `armeabi-v7a` codice computer non viene eseguito sui dispositivi ARMv5.
 
@@ -58,7 +58,7 @@ Xamarin.Android supporta le architetture seguenti:
 
 - **x86_64** CPU che supportano il set di istruzioni x86 a 64 bit (noto anche come *x64* e *amd64*).
 
-Il valore predefinito di Novell. Android è `armeabi-v7a` per le build di **rilascio** . Questa impostazione garantisce prestazioni significativamente migliori rispetto a `armeabi`. Se la destinazione è una piattaforma ARM a 64 bit, ad esempio Nexus 9, selezionare `arm64-v8a`. Se si distribuisce l'app in un dispositivo x86, selezionare `x86`. Se il dispositivo x86 di destinazione usa un'architettura della CPU a 64 bit, selezionare `x86_64`.
+Il valore predefinito di Xamarin.Android è `armeabi-v7a` per le build di **rilascio** . Questa impostazione garantisce prestazioni significativamente migliori rispetto a `armeabi`. Se la destinazione è una piattaforma ARM a 64 bit, ad esempio Nexus 9, selezionare `arm64-v8a`. Se si distribuisce l'app in un dispositivo x86, selezionare `x86`. Se il dispositivo x86 di destinazione usa un'architettura della CPU a 64 bit, selezionare `x86_64`.
 
 ## <a name="targeting-multiple-platforms"></a>Destinazione di più piattaforme
 

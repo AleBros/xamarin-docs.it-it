@@ -1,6 +1,6 @@
 ---
-title: Etichette in Novell. iOS
-description: Questo documento illustra come usare le etichette in Novell. iOS. Viene descritto come creare etichette a livello di codice e con iOS designer.
+title: Etichette in Xamarin.iOS
+description: Questo documento illustra come usare le etichette in Xamarin.iOS. Viene descritto come creare etichette a livello di codice e con iOS designer.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022015"
 ---
-# <a name="labels-in-xamarinios"></a>Etichette in Novell. iOS
+# <a name="labels-in-xamarinios"></a>Etichette in Xamarin.iOS
 
 Il controllo `UILabel` viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
 

@@ -1,6 +1,6 @@
 ---
-title: Estensioni avanzate dell'app per i messaggi in Novell. iOS
-description: Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente.
+title: Estensioni avanzate dell'app per i messaggi in Xamarin.iOS
+description: Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031727"
 ---
-# <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni avanzate dell'app per i messaggi in Novell. iOS
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni avanzate dell'app per i messaggi in Xamarin.iOS
 
-_Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
+_Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
 
 Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
@@ -601,7 +601,7 @@ Verranno recapitati in un formato di fallback come due messaggi distinti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente.
+Questo articolo ha presentato tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Xamarin.iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

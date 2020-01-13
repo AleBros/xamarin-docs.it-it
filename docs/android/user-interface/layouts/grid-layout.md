@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029002"
 ---
-# <a name="xamarinandroid-gridlayout"></a>Novell. Android GridLayout
+# <a name="xamarinandroid-gridlayout"></a>Xamarin.Android GridLayout
 
 Il `GridLayout` è una nuova sottoclasse `ViewGroup` che supporta la disposizione di viste in una griglia 2D, simile a una tabella HTML, come illustrato di seguito:
 

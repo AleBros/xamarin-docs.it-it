@@ -32,7 +32,7 @@ Novell offre anche pacchetti NuGet di messaggistica di Azure per [iOS](https://w
 
 ## <a name="active-directory-authentication"></a>Autenticazione Active Directory
 
-[Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) può essere usato per accedere agli utenti nelle app Novell tramite il [componente Novell. auth](https://www.nuget.org/packages/Xamarin.Auth/).
+[Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) può essere usato per accedere agli utenti nelle app Novell tramite il [componente Xamarin.auth](https://www.nuget.org/packages/Xamarin.Auth/).
 Le app possono quindi accedere a servizi aggiuntivi come Office 365.
 
 ## <a name="webapi"></a>webAPI

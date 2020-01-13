@@ -1,6 +1,6 @@
 ---
-title: 'Procedura dettagliata: uso delle notifiche locali in Novell. Android'
-description: Questa procedura dettagliata illustra come usare le notifiche locali nelle applicazioni Novell. Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica locale. Quando l'utente fa clic sulla notifica nell'area di notifica, avvia una seconda attività.
+title: 'Procedura dettagliata: uso delle notifiche locali in Xamarin.Android'
+description: Questa procedura dettagliata illustra come usare le notifiche locali nelle applicazioni Xamarin.Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica locale. Quando l'utente fa clic sulla notifica nell'area di notifica, avvia una seconda attività.
 ms.prod: xamarin
 ms.assetid: D8C6C9E2-3282-49D1-A2F6-78A4F3306E29
 ms.technology: xamarin-android
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025540"
 ---
-# <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Procedura dettagliata: uso delle notifiche locali in Novell. Android
+# <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Procedura dettagliata: uso delle notifiche locali in Xamarin.Android
 
-_Questa procedura dettagliata illustra come usare le notifiche locali nelle applicazioni Novell. Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica locale. Quando l'utente fa clic sulla notifica nell'area di notifica, avvia una seconda attività._
+_Questa procedura dettagliata illustra come usare le notifiche locali nelle applicazioni Xamarin.Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica locale. Quando l'utente fa clic sulla notifica nell'area di notifica, avvia una seconda attività._
 
 ## <a name="overview"></a>Panoramica
 
@@ -31,7 +31,7 @@ Gli screenshot seguenti illustrano alcuni esempi di questa applicazione:
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
-Per iniziare, creare un nuovo progetto Android usando il modello di **app Android** . Chiameremo questo progetto **LocalNotifications**. Se non si ha familiarità con la creazione di progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
+Per iniziare, creare un nuovo progetto Android usando il modello di **app Android** . Chiameremo questo progetto **LocalNotifications**. Se non si ha familiarità con la creazione di progetti Xamarin.Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
 Modificare il file di risorse **values/Strings. XML** in modo che contenga due risorse di stringa aggiuntive che verranno usate quando è il momento di creare il canale di notifica:
 

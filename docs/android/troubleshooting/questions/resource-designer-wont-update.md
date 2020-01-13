@@ -19,13 +19,13 @@ ms.locfileid: "73019517"
 > [!NOTE]
 > Questo problema è stato risolto in Xamarin Studio 5.1.4 e versioni successive. Tuttavia, se il problema si verifica in Visual Studio per Mac, inviare un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
-Un bug in Novell. Studio 5,1 danneggiava in precedenza i file. csproj eliminando parzialmente o completamente il codice XML nel file con estensione csproj. In questo modo, le parti importanti del sistema di compilazione Android, ad esempio l'aggiornamento di Android Resource.designer.cs, avranno esito negativo. A partire dalla versione stabile di 5.1.4 il 15 luglio, questo bug è stato risolto. in molti casi, tuttavia, il file di progetto deve essere ripristinato manualmente, come descritto di seguito.
+Un bug in Xamarin.Studio 5,1 danneggiava in precedenza i file. csproj eliminando parzialmente o completamente il codice XML nel file con estensione csproj. In questo modo, le parti importanti del sistema di compilazione Android, ad esempio l'aggiornamento di Android Resource.designer.cs, avranno esito negativo. A partire dalla versione stabile di 5.1.4 il 15 luglio, questo bug è stato risolto. in molti casi, tuttavia, il file di progetto deve essere ripristinato manualmente, come descritto di seguito.
 
 ## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Due possibili approcci per la correzione del file di progetto
 
 **Uno**
 
-1. Creare un nuovo progetto di applicazione Novell. Android, impostare tutte le proprietà del progetto in modo che corrispondano al progetto precedente e aggiungere tutte le risorse, i file di origine e così via nel progetto.
+1. Creare un nuovo progetto di applicazione Xamarin.Android, impostare tutte le proprietà del progetto in modo che corrispondano al progetto precedente e aggiungere tutte le risorse, i file di origine e così via nel progetto.
 
    **OPPURE**
 

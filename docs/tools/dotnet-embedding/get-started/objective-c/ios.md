@@ -19,7 +19,7 @@ ms.locfileid: "73029755"
 
 Oltre ai requisiti della Guida [introduttiva a Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) , è necessario anche:
 
-* [Novell. iOS 10,11](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+* [Xamarin.iOS 10,11](https://visualstudio.microsoft.com/xamarin/) o versione successiva
 
 ## <a name="hello-world"></a>Hello world
 

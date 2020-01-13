@@ -1,6 +1,6 @@
 ---
 title: Configurazione della piattaforma WPF
-description: Novell. Forms ora dispone del supporto in anteprima per la piattaforma WPF
+description: Xamarin.Forms ora dispone del supporto in anteprima per la piattaforma WPF
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
@@ -19,18 +19,18 @@ ms.locfileid: "71997180"
 
 ![Anteprima](~/media/shared/preview.png)
 
-In Novell. Forms è ora disponibile il supporto in anteprima per il Windows Presentation Foundation (WPF). Questo articolo illustra come aggiungere un progetto WPF a una soluzione Novell. Forms.
+In Xamarin.Forms è ora disponibile il supporto in anteprima per il Windows Presentation Foundation (WPF). Questo articolo illustra come aggiungere un progetto WPF a una soluzione Xamarin.Forms.
 
 > [!IMPORTANT]
-> Il supporto di Novell. Forms per WPF viene fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Novell. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+> Il supporto di Xamarin.Forms per WPF viene fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-Prima di iniziare, creare una nuova soluzione Novell. Forms in Visual Studio 2019 oppure usare una soluzione Novell. Forms esistente, ad esempio [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). È possibile aggiungere app WPF solo a una soluzione Novell. Forms in Windows.
+Prima di iniziare, creare una nuova soluzione Xamarin.Forms in Visual Studio 2019 oppure usare una soluzione Xamarin.Forms esistente, ad esempio [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). È possibile aggiungere app WPF solo a una soluzione Xamarin.Forms in Windows.
 
-## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>Aggiungere un progetto WPF a un'app Novell. Forms con Novell. University
+## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>Aggiungere un progetto WPF a un'app Xamarin.Forms con Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Video di supporto WPF per Novell. Forms 3,0**
+**Video di supporto WPF per Xamarin.Forms 3,0**
 
 ## <a name="adding-a-wpf-app"></a>Aggiunta di un'app WPF
 
@@ -46,15 +46,15 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
     Fare clic su OK per creare il progetto.
 
-4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto **BoxViewClock. WPF** e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** , fare clic sulla casella di controllo **Includi versione preliminare** e cercare **Novell. Forms**.
+4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto **BoxViewClock. WPF** e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** , fare clic sulla casella di controllo **Includi versione preliminare** e cercare **Xamarin.Forms**.
 
     ![Selezionare il pacchetto NuGet](wpf-images/select-nuget-package.png "Selezionare il pacchetto NuGet")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
-5. A questo punto, cercare il pacchetto **Novell. Forms. Platform. WPF** e installarne anche uno. Verificare che il pacchetto provenga da Microsoft.
+5. A questo punto, cercare il pacchetto **Xamarin.Forms. Platform. WPF** e installarne anche uno. Verificare che il pacchetto provenga da Microsoft.
 
-6. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e selezionare **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Novell. Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Novell. Forms:
+6. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e selezionare **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Xamarin.Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Xamarin.Forms:
 
     ![Aggiornare il pacchetto NuGet](wpf-images/update-nuget-package.png "Aggiornare il pacchetto NuGet")
 
@@ -62,7 +62,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
     ![Fare riferimento al progetto condiviso](wpf-images/reference-shared-project.png "Fare riferimento al progetto condiviso")
 
-8. Modificare il file **MainWindow. XAML** del progetto WPF. Nel tag `Window` aggiungere una dichiarazione dello spazio dei nomi XML per l'assembly **Novell. Forms. Platform. WPF** e lo spazio dei nomi:
+8. Modificare il file **MainWindow. XAML** del progetto WPF. Nel tag `Window` aggiungere una dichiarazione dello spazio dei nomi XML per l'assembly **Xamarin.Forms. Platform. WPF** e lo spazio dei nomi:
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
@@ -129,7 +129,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 ### <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
-È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da codice o XAML. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in WPF. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.WPF` (che corrisponde alla stringa "WPF"). Se esiste una corrispondenza, l'applicazione è in esecuzione in WPF.
+È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Xamarin.Forms da codice o XAML. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in WPF. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.WPF` (che corrisponde alla stringa "WPF"). Se esiste una corrispondenza, l'applicazione è in esecuzione in WPF.
 
 In XAML è possibile usare il tag `OnPlatform` per selezionare un valore della proprietà specifico per la piattaforma:
 
@@ -154,4 +154,4 @@ Title="BoxViewClock" Height="450" Width="800"
 
 ## <a name="issues"></a>Problemi
 
-Si tratta di un'anteprima, quindi è necessario aspettarsi che non tutti gli elementi siano pronti per la produzione. Non tutti i pacchetti NuGet per Novell. Forms sono pronti per WPF e alcune funzionalità potrebbero non funzionare completamente.
+Si tratta di un'anteprima, quindi è necessario aspettarsi che non tutti gli elementi siano pronti per la produzione. Non tutti i pacchetti NuGet per Xamarin.Forms sono pronti per WPF e alcune funzionalità potrebbero non funzionare completamente.

@@ -1,6 +1,6 @@
 ---
-title: Introduzione ai suggerimenti proattivi in Novell. iOS
-description: Questo articolo illustra come usare i suggerimenti proattivi nell'app Novell. iOS per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente.
+title: Introduzione ai suggerimenti proattivi in Xamarin.iOS
+description: Questo articolo illustra come usare i suggerimenti proattivi nell'app Xamarin.iOS per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031540"
 ---
-# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione ai suggerimenti proattivi in Novell. iOS
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione ai suggerimenti proattivi in Xamarin.iOS
 
-_Questo articolo illustra come usare i suggerimenti proattivi nell'app Novell. iOS per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente._
+_Questo articolo illustra come usare i suggerimenti proattivi nell'app Xamarin.iOS per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente._
 
-Novità di iOS 10, i suggerimenti proattivi presentano le ultime novità per consentire agli utenti di interagire con un'app Novell. iOS, presentando in modo proattivo le informazioni utili automaticamente all'utente in momenti appropriati.
+Novità di iOS 10, i suggerimenti proattivi presentano le ultime novità per consentire agli utenti di interagire con un'app Xamarin.iOS, presentando in modo proattivo le informazioni utili automaticamente all'utente in momenti appropriati.
 
 iOS 10 presenta nuovi modi per guidare il coinvolgimento nell'app consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente in momenti appropriati. Così come iOS 9 ha fornito la possibilità di aggiungere una ricerca completa all'app usando i suggerimenti Spotlight, Componi e Siri (vedere le [nuove API di ricerca](~/ios/platform/search/index.md)) con iOS 10 un'app può esporre le funzionalità che possono essere presentate all'utente dal sistema dall'interno delle seguenti posizioni :
 
@@ -72,7 +72,7 @@ Se l'app supporta solo la condivisione del percorso, il suggerimento di sistema 
 
 ## <a name="implementing-proactive-suggestions"></a>Implementazione di suggerimenti proattivi
 
-L'aggiunta del supporto proattivo dei suggerimenti a un'app Novell. iOS è in genere semplice quanto l'implementazione di alcune API o l'espansione in alcune API che l'app potrebbe già implementare.
+L'aggiunta del supporto proattivo dei suggerimenti a un'app Xamarin.iOS è in genere semplice quanto l'implementazione di alcune API o l'espansione in alcune API che l'app potrebbe già implementare.
 
 I suggerimenti proattivi funzionano con le app in tre modi principali:
 
@@ -679,7 +679,7 @@ namespace MonkeyPlayer
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico all'app Novell. iOS. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
+Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico all'app Xamarin.iOS. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

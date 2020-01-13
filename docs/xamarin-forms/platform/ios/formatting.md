@@ -1,6 +1,6 @@
 ---
 title: Aggiunta della formattazione specifica di iOS
-description: Questo articolo illustra come impostare un aspetto specifico di iOS senza usare un renderer personalizzato Novell. Forms.
+description: Questo articolo illustra come impostare un aspetto specifico di iOS senza usare un renderer personalizzato Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "70760132"
 
 Un modo per impostare la formattazione specifica di iOS consiste nel creare un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) per un controllo e impostare stili e colori specifici della piattaforma per ogni piattaforma.
 
-Altre opzioni per controllare il modo in cui l'aspetto dell'app per iOS Novell. Forms includono:
+Altre opzioni per controllare il modo in cui l'aspetto dell'app per iOS Xamarin.Forms includono:
 
 - Configurazione delle opzioni di visualizzazione in [ **info. plist**](#info-plist)
 - Impostazione degli stili dei controlli tramite l' [ `UIAppearance` API](#uiappearance)
@@ -39,7 +39,7 @@ nav.BarBackgroundColor = Color.FromHex("91CA47");
 nav.BarTextColor = Color.White;
 ```
 
-Il risultato viene mostrato nel frammento di schermata riportato di seguito. Si noti che gli elementi della barra di stato sono neri (non può essere impostato all'interno di Novell. Forms perché si tratta di una funzionalità specifica della piattaforma).
+Il risultato viene mostrato nel frammento di schermata riportato di seguito. Si noti che gli elementi della barra di stato sono neri (non può essere impostato all'interno di Xamarin.Forms perché si tratta di una funzionalità specifica della piattaforma).
 
 ![](theme-images/status-default-sml.png "Temi iOS")
 
@@ -56,7 +56,7 @@ in alternativa, modificare direttamente il file **info. plist** corrispondente i
 <false/>
 ```
 
-A questo punto, quando l'app viene eseguita, la barra di spostamento è verde e il testo è bianco (a causa della formattazione Novell. Forms) *e* anche il testo della barra di stato è bianco grazie alla configurazione specifica di iOS:
+A questo punto, quando l'app viene eseguita, la barra di spostamento è verde e il testo è bianco (a causa della formattazione Xamarin.Forms) *e* anche il testo della barra di stato è bianco grazie alla configurazione specifica di iOS:
 
 ![](theme-images/status-white-sml.png "Temi iOS")
 
@@ -101,7 +101,7 @@ In questo modo la scheda selezionata sarà verde:
 
 ![](theme-images/tabbar-custom.png "Icona della barra scheda iOS verde in TabbedPage")
 
-L'uso di questa API consente di personalizzare l'aspetto di Novell. `TabbedPage` Forms in iOS con pochissimo codice. Per altre informazioni sull'uso di un renderer personalizzato per impostare un tipo di carattere specifico per la scheda, vedere la [ricetta personalizzare le schede](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) .
+L'uso di questa API consente di personalizzare l'aspetto di Xamarin.`TabbedPage` Forms in iOS con pochissimo codice. Per altre informazioni sull'uso di un renderer personalizzato per impostare un tipo di carattere specifico per la scheda, vedere la [ricetta personalizzare le schede](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) .
 
 ### <a name="uiswitch"></a>UISwitch
 

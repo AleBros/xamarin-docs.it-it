@@ -1,6 +1,6 @@
 ---
 title: Panoramica della distribuzione di app tvOS
-description: Questo documento offre una panoramica delle tecniche di distribuzione disponibili per l'app Novell. tvOS e funge da puntatore a documenti più dettagliati sull'argomento.
+description: Questo documento offre una panoramica delle tecniche di distribuzione disponibili per l'app Xamarin.tvOS e funge da puntatore a documenti più dettagliati sull'argomento.
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
 ms.technology: xamarin-ios
@@ -16,13 +16,13 @@ ms.locfileid: "73030753"
 ---
 # <a name="tvos-app-distribution-overview"></a>Panoramica della distribuzione di app tvOS
 
-_Questo documento offre una panoramica delle tecniche di distribuzione disponibili per l'app Novell. tvOS e funge da puntatore a documenti più dettagliati sull'argomento._
+_Questo documento offre una panoramica delle tecniche di distribuzione disponibili per l'app Xamarin.tvOS e funge da puntatore a documenti più dettagliati sull'argomento._
 
-Dopo che l'app Novell. tvOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo del software consiste nel distribuire l'app agli utenti, come illustrato nella sezione evidenziata del diagramma seguente:
+Dopo che l'app Xamarin.tvOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo del software consiste nel distribuire l'app agli utenti, come illustrato nella sezione evidenziata del diagramma seguente:
 
 [![Panoramica del ciclo di vita dello sviluppo software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
-Apple fornisce i modi seguenti per distribuire un'app tvOS, supportata da Novell. tvOS:
+Apple fornisce i modi seguenti per distribuire un'app tvOS, supportata da Xamarin.tvOS:
 
 1. [**App Store**](#Apple-TV-App-Store-Distribution)
 2. [**In-House (Enterprise)** ](#In-House-Distribution) 
@@ -55,7 +55,7 @@ Dopo aver completato tutti i passaggi elencati in precedenza, vedere la pagina r
 
 È importante tenere presente che solo gli sviluppatori che appartengono al **programma Apple Developer** hanno accesso a iTunes Connect. I membri del **programma Apple Developer Enterprise** non hanno accesso.
 
-Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Novell. tvOS.
+Se si verificano problemi durante l'invio dell'app Xamarin.tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Xamarin.tvOS.
 
 Per altre informazioni, visitare la guida alla pubblicazione nella pagina relativa all' [App Store di Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) .
 
@@ -71,7 +71,7 @@ Per ulteriori informazioni sulla configurazione e su come distribuire l'applicaz
 
 ## <a name="ad-hoc-distribution"></a>Distribuzione ad hoc
 
-Le app Novell. tvOS possono essere testate dagli utenti tramite la distribuzione ad hoc, disponibile sia nel **programma Apple Developer**che nel **programma Apple Developer Enterprise**, che consente di testare fino a 100 dispositivi Apple TV. Il caso d'uso migliore per la distribuzione ad hoc è la distribuzione all'interno dell'azienda quando iTunes Connect non è un'opzione.
+Le app Xamarin.tvOS possono essere testate dagli utenti tramite la distribuzione ad hoc, disponibile sia nel **programma Apple Developer**che nel **programma Apple Developer Enterprise**, che consente di testare fino a 100 dispositivi Apple TV. Il caso d'uso migliore per la distribuzione ad hoc è la distribuzione all'interno dell'azienda quando iTunes Connect non è un'opzione.
 
 Per ulteriori informazioni sulla configurazione e su come distribuire l'app internamente, vedere la [Guida alla distribuzione ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Anche in questo caso, questo documento è specifico per iOS, ma le stesse tecniche vengono usate per le app tvOS.
 
@@ -79,7 +79,7 @@ Per ulteriori informazioni sulla configurazione e su come distribuire l'app inte
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha fornito una breve panoramica dei meccanismi di distribuzione disponibili per le app Novell. tvOS. Ha introdotto l'App Store di Apple TV, ad hoc e la distribuzione interna e fornito collegamenti a informazioni più dettagliate.
+Questo articolo ha fornito una breve panoramica dei meccanismi di distribuzione disponibili per le app Xamarin.tvOS. Ha introdotto l'App Store di Apple TV, ad hoc e la distribuzione interna e fornito collegamenti a informazioni più dettagliate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
 title: Trasformazione di traslazione
-description: Questo articolo viene esaminato come utilizzare la trasformazione di traslazione da spostare in SkiaSharp grafica nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo viene esaminato come utilizzare la trasformazione di traslazione da spostare in SkiaSharp grafica nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
@@ -216,7 +216,7 @@ Ecco il risultato:
 
 [![](translate-images/hendecagramarray-small.png "Tripla screenshot della pagina di matrice Hendecagram")](translate-images/hendecagramarray-large.png#lightbox "tripla screenshot della pagina Hendecagram matrice")
 
-Le animazioni comportano spesso trasformazioni. Il **animazione Hendecagram** pagina non si sposta la stella a punte 11 in un cerchio. Il [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe inizia con alcuni campi ed esegue l'override del `OnAppearing` e `OnDisappearing` metodi per avviare e arrestare un timer di xamarin. Forms:
+Le animazioni comportano spesso trasformazioni. Il **animazione Hendecagram** pagina non si sposta la stella a punte 11 in un cerchio. Il [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe inizia con alcuni campi ed esegue l'override del `OnAppearing` e `OnDisappearing` metodi per avviare e arrestare un timer di Xamarin.Forms:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage

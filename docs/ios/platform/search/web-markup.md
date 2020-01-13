@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche con markup Web in Novell. iOS
-description: Questo documento descrive come creare risultati di ricerca basati sul Web che si collegano a un'app Novell. iOS. Viene illustrato come abilitare l'indicizzazione del contenuto Web, rendendo individuabile il sito Web dell'app, usando banner di smart app, collegamenti universali e altro ancora.
+title: Eseguire ricerche con markup Web in Xamarin.iOS
+description: Questo documento descrive come creare risultati di ricerca basati sul Web che si collegano a un'app Xamarin.iOS. Viene illustrato come abilitare l'indicizzazione del contenuto Web, rendendo individuabile il sito Web dell'app, usando banner di smart app, collegamenti universali e altro ancora.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031521"
 ---
-# <a name="search-with-web-markup-in-xamarinios"></a>Eseguire ricerche con markup Web in Novell. iOS
+# <a name="search-with-web-markup-in-xamarinios"></a>Eseguire ricerche con markup Web in Xamarin.iOS
 
 Per le app che forniscono accesso al contenuto tramite un sito Web (non solo dall'interno dell'app), il contenuto Web può essere contrassegnato con collegamenti speciali che verranno sottoposti a ricerca per indicizzazione da Apple e fornire deep linking all'app nel dispositivo iOS 9 dell'utente.
 
@@ -87,7 +87,7 @@ Per ulteriori informazioni, vedere la documentazione sui [collegamenti alle app]
 
 ## <a name="opening-deep-links"></a>Apertura di collegamenti profondi
 
-È necessario aggiungere il supporto per l'apertura e la visualizzazione di collegamenti profondi nell'app Novell. iOS. Modificare il file **AppDelegate.cs** ed eseguire l'override del metodo `OpenURL` per gestire il formato dell'URL personalizzato. Esempio:
+È necessario aggiungere il supporto per l'apertura e la visualizzazione di collegamenti profondi nell'app Xamarin.iOS. Modificare il file **AppDelegate.cs** ed eseguire l'override del metodo `OpenURL` per gestire il formato dell'URL personalizzato. Esempio:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)

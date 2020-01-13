@@ -41,7 +41,7 @@ L'utilità di pianificazione dei processi Android è un framework integrato nel 
 - Un `Android.App.Job.JobService` è una classe astratta che deve essere estesa con la logica che eseguirà il processo sul thread principale dell'applicazione. Ciò significa che il `JobService` è responsabile della modalità di esecuzione del lavoro in modo asincrono.
 - Un oggetto `Android.App.Job.JobInfo` include i criteri per guidare Android quando il processo deve essere eseguito.
 
-Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Novell. Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
+Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Xamarin.Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
 
 - **bool OnStartJob (parametri JobParameters)** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` eseguire in modo asincrono il lavoro e restituire `true` se il lavoro rimane disponibile oppure `false` se il lavoro viene eseguito.
     
@@ -109,7 +109,7 @@ public class DownloadJob : JobService
 
 ### <a name="creating-a-jobinfo-to-schedule-a-job"></a>Creazione di un JobInfo per pianificare un processo
 
-Le applicazioni Novell. Android non creano direttamente un'istanza di un `JobService`, bensì passano un oggetto `JobInfo` al `JobScheduler`. Il `JobScheduler` creerà un'istanza dell'oggetto `JobService` richiesto, pianificando ed eseguendo il `JobService` in base ai metadati nel `JobInfo`. Un oggetto `JobInfo` deve contenere le seguenti informazioni:
+Le applicazioni Xamarin.Android non creano direttamente un'istanza di un `JobService`, bensì passano un oggetto `JobInfo` al `JobScheduler`. Il `JobScheduler` creerà un'istanza dell'oggetto `JobService` richiesto, pianificando ed eseguendo il `JobService` in base ai metadati nel `JobInfo`. Un oggetto `JobInfo` deve contenere le seguenti informazioni:
 
 - **JobId** &ndash; si tratta di un valore `int` usato per identificare un processo al `JobScheduler`. Il riutilizzo di questo valore aggiornerà eventuali processi esistenti. Il valore deve essere univoco per l'applicazione. 
 - **JobService** &ndash; questo parametro è un `ComponentName` che identifica in modo esplicito il tipo che il `JobScheduler` deve usare per eseguire un processo. 
@@ -179,7 +179,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 ### <a name="scheduling-a-job"></a>Pianificazione di un processo
 
-Per pianificare un processo, un'applicazione Novell. Android otterrà un riferimento al servizio di sistema `JobScheduler` e chiamerà il metodo `JobScheduler.Schedule` con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule` restituirà immediatamente uno dei due valori integer:
+Per pianificare un processo, un'applicazione Xamarin.Android otterrà un riferimento al servizio di sistema `JobScheduler` e chiamerà il metodo `JobScheduler.Schedule` con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule` restituirà immediatamente uno dei due valori integer:
 
 - **JobScheduler. ResultSuccess** &ndash; il processo è stato pianificato correttamente. 
 - **JobScheduler. ResultFailure** &ndash; non è stato possibile pianificare il processo. Questa situazione è in genere causata da parametri `JobInfo` in conflitto.

@@ -215,4 +215,4 @@ Il tipo restituito del metodo `ExecuteScalar` è `object` &ndash; è necessario 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

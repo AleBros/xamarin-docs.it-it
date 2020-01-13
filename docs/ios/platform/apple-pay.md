@@ -1,6 +1,6 @@
 ---
-title: Apple Pay in Novell. iOS
-description: Questa guida illustra la configurazione dell'ambiente Novell. iOS da usare con Apple Pay per pagare i beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite l'app. Sono incluse informazioni sugli identificatori, i certificati e i diritti necessari.
+title: Apple Pay in Xamarin.iOS
+description: Questa guida illustra la configurazione dell'ambiente Xamarin.iOS da usare con Apple Pay per pagare i beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite l'app. Sono incluse informazioni sugli identificatori, i certificati e i diritti necessari.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022240"
 ---
-# <a name="apple-pay-in-xamarinios"></a>Apple Pay in Novell. iOS
+# <a name="apple-pay-in-xamarinios"></a>Apple Pay in Xamarin.iOS
 
-_Questa guida illustra la configurazione dell'ambiente Novell. iOS da usare con Apple Pay per pagare i beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite l'app. Sono incluse informazioni sugli identificatori, i certificati e i diritti necessari._
+_Questa guida illustra la configurazione dell'ambiente Xamarin.iOS da usare con Apple Pay per pagare i beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite l'app. Sono incluse informazioni sugli identificatori, i certificati e i diritti necessari._
 
 Apple Pay è stato introdotto insieme a iOS 8, consentendo agli utenti di pagare beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite i dispositivi iOS. È disponibile in iPhone 6 e iPhone 6 Plus e può anche essere abbinato al Apple Watch per gli acquisti in-Store. Quando viene usato in un iPhone, USA Touch ID per confermare e autorizzare le transazioni sulla carta di credito o debito di un utente.
 

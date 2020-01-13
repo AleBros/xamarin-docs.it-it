@@ -18,19 +18,19 @@ ms.locfileid: "71997133"
 
 _Tizen .NET consente di sviluppare applicazioni Tizen da eseguire su dispositivi Samsung, tra cui TV, indossabili, dispositivi mobili e altri dispositivi._
 
-Tizen .NET consente di creare applicazioni .NET con Novell. Forms e Tizen .NET Framework. La piattaforma Tizen .NET è supportata da Samsung. Novell. Forms consente di creare facilmente interfacce utente, mentre l'API TizenFX fornisce interfacce all'hardware disponibile nei dispositivi TV, mobile, wearable e Internet. Per altre informazioni su Tizen .NET, vedere [Introduzione all'applicazione .NET di Tizen](https://developer.tizen.org/development/training/.net-application).
+Tizen .NET consente di creare applicazioni .NET con Xamarin.Forms e Tizen .NET Framework. La piattaforma Tizen .NET è supportata da Samsung. Xamarin.Forms consente di creare facilmente interfacce utente, mentre l'API TizenFX fornisce interfacce all'hardware disponibile nei dispositivi TV, mobile, wearable e Internet. Per altre informazioni su Tizen .NET, vedere [Introduzione all'applicazione .NET di Tizen](https://developer.tizen.org/development/training/.net-application).
 
 ## <a name="get-started"></a>Attività iniziali
 
 Prima di iniziare a sviluppare applicazioni .NET Tizen, è innanzitutto necessario configurare l'ambiente di sviluppo. Per ulteriori informazioni, vedere [installazione di strumenti di Visual Studio per Tizen](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen).
 
-Per informazioni su come aggiungere un progetto Tizen .NET a una soluzione Novell. Forms esistente, vedere [creazione della prima applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
+Per informazioni su come aggiungere un progetto Tizen .NET a una soluzione Xamarin.Forms esistente, vedere [creazione della prima applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
 
 ## <a name="documentation"></a>Documentazione
 
-- [Documentazione di Novell. forms](~/xamarin-forms/index.yml) &ndash; come creare applicazioni multipiattaforma con C# e Novell. Forms.
+- [Documentazione di Xamarin.forms](~/xamarin-forms/index.yml) &ndash; come creare applicazioni multipiattaforma con C# e Xamarin.Forms.
 - documentazione e video di [**developer.tizen.org**](https://developer.tizen.org/development) &ndash; per semplificare la compilazione e la distribuzione di applicazioni Tizen.
 
 ## <a name="samples"></a>Esempi
 
-Samsung mantiene un fork degli [esempi di Novell. Forms con i progetti Tizen aggiunti](https://github.com/Samsung/xamarin-forms-samples)ed è disponibile un repository separato [Tizen-CSharp-Samples](https://github.com/Samsung/Tizen-CSharp-Samples) che contiene progetti aggiuntivi, tra cui le demo indossabili e specifiche della TV.
+Samsung mantiene un fork degli [esempi di Xamarin.Forms con i progetti Tizen aggiunti](https://github.com/Samsung/xamarin-forms-samples)ed è disponibile un repository separato [Tizen-CSharp-Samples](https://github.com/Samsung/Tizen-CSharp-Samples) che contiene progetti aggiuntivi, tra cui le demo indossabili e specifiche della TV.

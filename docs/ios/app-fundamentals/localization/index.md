@@ -1,6 +1,6 @@
 ---
-title: Localizzazione in Novell. iOS
-description: Questo documento descrive le funzionalità di localizzazione di iOS e come usare queste funzionalità nelle app Novell. iOS. Viene illustrato il linguaggio, le impostazioni locali, i file di stringhe, le immagini di avvio e altro ancora.
+title: Localizzazione in Xamarin.iOS
+description: Questo documento descrive le funzionalità di localizzazione di iOS e come usare queste funzionalità nelle app Xamarin.iOS. Viene illustrato il linguaggio, le impostazioni locali, i file di stringhe, le immagini di avvio e altro ancora.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009799"
 ---
-# <a name="localization-in-xamarinios"></a>Localizzazione in Novell. iOS
+# <a name="localization-in-xamarinios"></a>Localizzazione in Xamarin.iOS
 
 _Questo documento illustra le funzionalità di localizzazione di iOS SDK e come accedervi con Novell._
 
@@ -57,7 +57,7 @@ Le impostazioni locali correnti possono essere sottoposte a query in uno dei due
 Il primo valore può essere memorizzato nella cache dal sistema operativo e pertanto potrebbe non rispecchiare sempre le impostazioni locali attualmente selezionate dall'utente. Utilizzare il secondo valore per ottenere le impostazioni locali attualmente selezionate.
 
 > [!NOTE]
-> Mono (il Runtime .NET su cui si basa Novell. iOS) e le API iOS di Apple non supportano set identici di combinazioni di lingua/area geografica.
+> Mono (il Runtime .NET su cui si basa Xamarin.iOS) e le API iOS di Apple non supportano set identici di combinazioni di lingua/area geografica.
 > Per questo motivo, è possibile selezionare una combinazione lingua/area nell'app **Impostazioni** iOS che non esegue il mapping a un valore valido in mono. Se ad esempio si imposta la lingua di un iPhone sull'inglese e la relativa area in Spagna, le API seguenti restituiranno valori diversi:
 >
 > - `CurrentThead.CurrentCulture`: en-US (API mono)
@@ -88,7 +88,7 @@ Come indicato in Technical Q & A, `CFBundleDevelopmentRegion` rappresenta l'area
 > [!IMPORTANT]
 > iOS 11 applica questo meccanismo di selezione della lingua in modo più rigoroso rispetto alle versioni precedenti del sistema operativo. Per questo motivo, qualsiasi app iOS 11 che non dichiara in modo esplicito le proprie localizzazioni supportate, incluse le cartelle. lproj o l'impostazione di un valore per `CFBundleLocalizations`, può visualizzare una lingua diversa in iOS 11 rispetto a quella eseguita in iOS 10.
 
-Se `CFBundleDevelopmentRegion` non è stato specificato nel file **info. plist** , gli strumenti di compilazione Novell. iOS utilizzano attualmente il valore predefinito `en_US`. Sebbene ciò possa cambiare in una versione futura, significa che la lingua predefinita è l'inglese.
+Se `CFBundleDevelopmentRegion` non è stato specificato nel file **info. plist** , gli strumenti di compilazione Xamarin.iOS utilizzano attualmente il valore predefinito `en_US`. Sebbene ciò possa cambiare in una versione futura, significa che la lingua predefinita è l'inglese.
 
 Per assicurarsi che l'app selezioni una lingua prevista, seguire questa procedura:
 
@@ -112,7 +112,7 @@ Questo esempio USA "es" per specificare che, quando nessuna delle lingue preferi
 </array>
 ```
 
-Le app Novell. iOS che sono state localizzate con i meccanismi .NET, ad esempio i file con estensione resx, devono fornire anche questi valori **info. plist** .
+Le app Xamarin.iOS che sono state localizzate con i meccanismi .NET, ad esempio i file con estensione resx, devono fornire anche questi valori **info. plist** .
 
 Per altre informazioni su queste chiavi **info. plist** , vedere la Guida di riferimento alla [chiave dell'elenco di proprietà delle informazioni](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html)di Apple.
 
@@ -359,7 +359,7 @@ Segue le domande frequenti di Apple sulla [localizzazione dell'app Store](https:
 
 Questo articolo illustra le nozioni di base della localizzazione di applicazioni iOS usando le funzionalità predefinite di gestione delle risorse e storyboard.
 
-È possibile ottenere altre informazioni su i18n e l10n per app iOS, Android e multipiattaforma (incluso Novell. Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
+È possibile ottenere altre informazioni su i18n e l10n per app iOS, Android e multipiattaforma (incluso Xamarin.Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -367,5 +367,5 @@ Questo articolo illustra le nozioni di base della localizzazione di applicazioni
 - [Tasky (Storyboard localizzato) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guida alla localizzazione di Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Panoramica della localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
-- [Localizzazione di Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Localizzazione di Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localizzazione in Android](~/android/app-fundamentals/localization.md)

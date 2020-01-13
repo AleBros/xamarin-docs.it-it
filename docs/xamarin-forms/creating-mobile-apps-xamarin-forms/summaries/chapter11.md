@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 11. Infrastruttura associabile
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 11. Infrastruttura associabile'
+description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 11. Infrastruttura associabile'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -20,11 +20,11 @@ ms.locfileid: "61334366"
 
 Ogni programmatore in c# abbia familiarità con c# *proprietà*. Proprietà contengono una *impostata* funzione di accesso e/o una *ottenere* della funzione di accesso. Vengono spesso chiamati *le proprietà CLR* per Common Language Runtime.
 
-Xamarin. Forms definisce una definizione di proprietà avanzate chiamata un *la proprietà associabile* incapsulato dal [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) classe e supportata dal [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)classe. Queste classi sono sostanzialmente distinte ma correlate: Il `BindableProperty` viene usato per definire la proprietà stessa. `BindableObject` è simile a `object` in quanto si tratta di una classe di base per le classi che definiscono le proprietà associabili.
+Xamarin.Forms definisce una definizione di proprietà avanzate chiamata un *la proprietà associabile* incapsulato dal [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) classe e supportata dal [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)classe. Queste classi sono sostanzialmente distinte ma correlate: Il `BindableProperty` viene usato per definire la proprietà stessa. `BindableObject` è simile a `object` in quanto si tratta di una classe di base per le classi che definiscono le proprietà associabili.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>La gerarchia di classi xamarin. Forms
+## <a name="the-xamarinforms-class-hierarchy"></a>La gerarchia di classi Xamarin.Forms
 
-Il [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) esempio Usa la reflection per visualizzare una gerarchia di classi di xamarin. Forms e illustrano il ruolo fondamentale `BindableObject` in questa gerarchia. `BindableObject` deriva da `Object` ed è la classe principale [ `Element` ](xref:Xamarin.Forms.Element) da cui [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) deriva. Si tratta della classe padre per [ `Page` ](xref:Xamarin.Forms.Page) e [ `View` ](xref:Xamarin.Forms.View), che è la classe padre da [ `Layout` ](xref:Xamarin.Forms.Layout):
+Il [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) esempio Usa la reflection per visualizzare una gerarchia di classi di Xamarin.Forms e illustrano il ruolo fondamentale `BindableObject` in questa gerarchia. `BindableObject` deriva da `Object` ed è la classe principale [ `Element` ](xref:Xamarin.Forms.Element) da cui [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) deriva. Si tratta della classe padre per [ `Page` ](xref:Xamarin.Forms.Page) e [ `View` ](xref:Xamarin.Forms.View), che è la classe padre da [ `Layout` ](xref:Xamarin.Forms.Layout):
 
 [![Schermata triplo della gerarchia di classi di condivisione](images/ch11fg01-small.png "gerarchia di classe condivisione")](images/ch11fg01-large.png#lightbox "condivisione gerarchia di classe")
 
@@ -50,7 +50,7 @@ In effetti, il `Text` proprietà CLR è interamente implementato mediante il `Se
 
 Ogni volta che una proprietà supportata da modifica una proprietà associabile, `BindableObject` viene attivato un [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventi che identifica la proprietà che è stato modificato. Questo evento non viene generato quando la proprietà è impostata sullo stesso valore.
 
-Alcune proprietà non sono supportate da proprietà associabile e alcune classi di xamarin. Forms &mdash; , ad esempio `Span` &mdash; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare proprietà associabili poiché `BindableObject` definisce le `SetValue` e `GetValue` metodi.
+Alcune proprietà non sono supportate da proprietà associabile e alcune classi di Xamarin.Forms &mdash; , ad esempio `Span` &mdash; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare proprietà associabili poiché `BindableObject` definisce le `SetValue` e `GetValue` metodi.
 
 In quanto `Span` non deriva da `BindableObject`, nessuna delle proprietà &mdash; , ad esempio `Text` &mdash; sono supportati da una proprietà associabile. È per questo motivo un `DynamicResource` impostazione nella `Text` proprietà di `Span` genera un'eccezione nel [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) esempio nel capitolo precedente. Il [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) esempio viene illustrato come impostare una risorsa dinamica nel codice utilizzando il [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) definito dal metodo `Element`. Il primo argomento è un oggetto di tipo `BindableProperty`.
 

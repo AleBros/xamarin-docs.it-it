@@ -1,6 +1,6 @@
 ---
 title: Supporto della piattaforma di UrhoSharp
-description: Questo documento include collegamenti alle varie guide che descrivono come aggiungere Urho a un progetto nativo esistente per una piattaforma specifica. Viene descritto Android, iOS, tvOS, macOS, Windows e xamarin. Forms.
+description: Questo documento include collegamenti alle varie guide che descrivono come aggiungere Urho a un progetto nativo esistente per una piattaforma specifica. Viene descritto Android, iOS, tvOS, macOS, Windows e Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 author: conceptdev
@@ -35,4 +35,4 @@ Istruzioni di installazione di Windows e funzionalità.
 
 ## <a name="xamarinformsgraphics-gamesurhosharpplatformxamarin-formsmd"></a>[Xamarin.Forms](~/graphics-games/urhosharp/platform/xamarin-forms.md)
 
-Esempi e istruzioni di installazione di xamarin. Forms.
+Esempi e istruzioni di installazione di Xamarin.Forms.

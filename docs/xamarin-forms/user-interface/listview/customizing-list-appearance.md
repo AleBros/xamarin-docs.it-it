@@ -1,6 +1,6 @@
 ---
 title: Aspetto ListView
-description: Questo articolo illustra come personalizzare i ListView nelle applicazioni Novell. Forms usando le intestazioni, i piè di pagina, i gruppi e le celle a altezza variabile.
+description: Questo articolo illustra come personalizzare i ListView nelle applicazioni Xamarin.Forms usando le intestazioni, i piè di pagina, i gruppi e le celle a altezza variabile.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "73032809"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-Il [`ListView`](xref:Xamarin.Forms.ListView) Novell. Forms consente di personalizzare la presentazione dell'elenco, oltre alle istanze [`ViewCell`](xref:Xamarin.Forms.ViewCell) per ogni riga nell'elenco.
+Il [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms consente di personalizzare la presentazione dell'elenco, oltre alle istanze [`ViewCell`](xref:Xamarin.Forms.ViewCell) per ogni riga nell'elenco.
 
 ## <a name="grouping"></a>Raggruppamento
 
@@ -296,7 +296,7 @@ XAML
 
 ### <a name="uneven-rows"></a>Righe non uniformi
 
-Se si desidera che le singole righe abbiano altezze diverse, è possibile impostare la proprietà `HasUnevenRows` su `true`. Non è necessario impostare manualmente le altezze delle righe dopo che `HasUnevenRows` è stato impostato su `true`, perché le altezze verranno calcolate automaticamente da Novell. Forms.
+Se si desidera che le singole righe abbiano altezze diverse, è possibile impostare la proprietà `HasUnevenRows` su `true`. Non è necessario impostare manualmente le altezze delle righe dopo che `HasUnevenRows` è stato impostato su `true`, perché le altezze verranno calcolate automaticamente da Xamarin.Forms.
 
 C#:
 

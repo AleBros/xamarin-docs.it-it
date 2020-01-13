@@ -1,6 +1,6 @@
 ---
-title: Novell. Mac-Risoluzione dei problemi di macOS Sierra
-description: Questo documento fornisce diversi suggerimenti per la risoluzione dei problemi per l'uso di macOS Sierra nelle app Novell. Mac. I suggerimenti sono correlati a Mac App Store, Apple Pay, compatibilità binaria, CFNetwork, CloudKit e altro ancora.
+title: Xamarin.Mac-Risoluzione dei problemi di macOS Sierra
+description: Questo documento fornisce diversi suggerimenti per la risoluzione dei problemi per l'uso di macOS Sierra nelle app Xamarin.Mac. I suggerimenti sono correlati a Mac App Store, Apple Pay, compatibilità binaria, CFNetwork, CloudKit e altro ancora.
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73017031"
 ---
-# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Novell. Mac-Risoluzione dei problemi di macOS Sierra
+# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac-Risoluzione dei problemi di macOS Sierra
 
-_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per lavorare con macOS Sierra nelle app Novell. Mac._
+_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per lavorare con macOS Sierra nelle app Xamarin.Mac._
 
-Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa macOS Sierra con Novell. Mac e la soluzione a questi problemi:
+Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa macOS Sierra con Xamarin.Mac e la soluzione a questi problemi:
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)

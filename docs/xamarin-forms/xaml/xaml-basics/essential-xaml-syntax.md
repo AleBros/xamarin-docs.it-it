@@ -82,9 +82,9 @@ Questi due modi per specificare il `TextColor` proprietà sono funzionalmente eq
 
 Con questa nuova sintassi, è possono che vengano introdotti alcuni termini utili:
 
-- `Label` è un' *elemento oggetto*. È un oggetto di xamarin. Forms espresso come un elemento XML.
-- `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` sono *gli attributi della proprietà*. Sono le proprietà di xamarin. Forms espresse come attributi XML.
-- In questo frammento di codice finale `TextColor` è diventato un *property (elemento)* . Si tratta di una proprietà di xamarin. Forms, ma ora è un elemento XML.
+- `Label` è un' *elemento oggetto*. È un oggetto di Xamarin.Forms espresso come un elemento XML.
+- `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` sono *gli attributi della proprietà*. Sono le proprietà di Xamarin.Forms espresse come attributi XML.
+- In questo frammento di codice finale `TextColor` è diventato un *property (elemento)* . Si tratta di una proprietà di Xamarin.Forms, ma ora è un elemento XML.
 
 La definizione della proprietà di elementi potrebbero a prima di tutto sembra essere una violazione della sintassi XML, ma non è. Il periodo di ha alcun significato speciale in XML. Per un decodificatore XML, `Label.TextColor` è semplicemente un elemento figlio normale.
 
@@ -352,7 +352,7 @@ Negli esempi precedenti, il `StackLayout`, `Grid`, e `AbsoluteLayout` gli oggett
 
 La domanda reale è: Perché questi elementi di proprietà *non* sono necessari nel file XAML?
 
-Gli elementi definiti in xamarin. Forms per l'utilizzo in XAML possono avere una proprietà contrassegnata nella `ContentProperty` attributo della classe. Se cerca di `ContentPage` classe nella documentazione online di xamarin. Forms, si noterà questo attributo:
+Gli elementi definiti in Xamarin.Forms per l'utilizzo in XAML possono avere una proprietà contrassegnata nella `ContentProperty` attributo della classe. Se cerca di `ContentPage` classe nella documentazione online di Xamarin.Forms, si noterà questo attributo:
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Content")]
@@ -361,7 +361,7 @@ public class ContentPage : TemplatedPage
 
 Ciò significa che il `Content` i tag di elemento di proprietà non sono necessari. Qualsiasi contenuto XML visualizzato tra l'inizio e fine `ContentPage` si presuppone che i tag per è possibile assegnare il `Content` proprietà.
 
- `StackLayout`, `Grid`, `AbsoluteLayout`, e `RelativeLayout` derivano tutte dalla `Layout<View>`, e se è cercare `Layout<T>` nella documentazione di xamarin. Forms, si noterà un altro `ContentProperty` attributo:
+ `StackLayout`, `Grid`, `AbsoluteLayout`, e `RelativeLayout` derivano tutte dalla `Layout<View>`, e se è cercare `Layout<T>` nella documentazione di Xamarin.Forms, si noterà un altro `ContentProperty` attributo:
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Children")]

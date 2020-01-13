@@ -1,5 +1,5 @@
 ---
-title: Viste di raccolta in Novell. iOS
+title: Viste di raccolta in Xamarin.iOS
 description: Le visualizzazioni di raccolta consentono di visualizzare il contenuto utilizzando layout arbitrari. Consentono di creare facilmente layout simili a griglia, supportando al tempo stesso layout personalizzati.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021831"
 ---
-# <a name="collection-views-in-xamarinios"></a>Viste di raccolta in Novell. iOS
+# <a name="collection-views-in-xamarinios"></a>Viste di raccolta in Xamarin.iOS
 
 _Le visualizzazioni di raccolta consentono di visualizzare il contenuto utilizzando layout arbitrari. Consentono di creare facilmente layout simili a griglia, supportando al tempo stesso layout personalizzati._
 
@@ -136,7 +136,7 @@ Le visualizzazioni di decorazione sono viste puramente visive che possono essere
 
 ## <a name="data-source"></a>origine dati
 
-Come per le altre parti di iOS, ad esempio `UITableView` e `MKMapView`, `UICollectionView` ottiene i dati da un' *origine dati*esposta in Novell. iOS tramite la classe **`UICollectionViewDataSource`** . Questa classe è responsabile della fornitura di contenuto alla `UICollectionView`, ad esempio:
+Come per le altre parti di iOS, ad esempio `UITableView` e `MKMapView`, `UICollectionView` ottiene i dati da un' *origine dati*esposta in Xamarin.iOS tramite la classe **`UICollectionViewDataSource`** . Questa classe è responsabile della fornitura di contenuto alla `UICollectionView`, ad esempio:
 
 - **Celle** : restituite dal metodo `GetCell`.
 - **Viste supplementari** : restituite dal metodo `GetViewForSupplementaryElement`.
@@ -414,7 +414,7 @@ Usando questi nuovi metodi, è possibile implementare facilmente il trascinament
 
 [![](uicollectionview-images/intro01.png "An example of the reordering process")](uicollectionview-images/intro01.png#lightbox)
 
-Questo articolo illustra come implementare il trascinamento per riordinare in un'applicazione Novell. iOS, oltre ad alcune delle altre modifiche apportate da iOS 9 al controllo di visualizzazione raccolta:
+Questo articolo illustra come implementare il trascinamento per riordinare in un'applicazione Xamarin.iOS, oltre ad alcune delle altre modifiche apportate da iOS 9 al controllo di visualizzazione raccolta:
 
 - [Facile riordinamento degli elementi](#Easy-Reordering-of-Items)
   - [Esempio di riordino semplice](#Simple-Reordering-Example)
@@ -444,7 +444,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 ### <a name="simple-reordering-example"></a>Esempio di riordino semplice
 
-Come esempio rapido, avviare un nuovo progetto Novell. iOS e modificare il file **Main. Storyboard** . Trascinare un `UICollectionViewController` nell'area di progettazione:
+Come esempio rapido, avviare un nuovo progetto Xamarin.iOS e modificare il file **Main. Storyboard** . Trascinare un `UICollectionViewController` nell'area di progettazione:
 
 [![](uicollectionview-images/quick01.png "Adding a UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
 
@@ -1181,7 +1181,7 @@ public override void AwakeFromNib ()
 
 In questo modo viene creata un'istanza del layout personalizzato, viene impostato l'evento per fornire le dimensioni di ogni elemento e il nuovo layout viene collegato alla visualizzazione di raccolta.
 
-Se si esegue di nuovo l'app Novell. iOS, la visualizzazione della raccolta apparirà come segue:
+Se si esegue di nuovo l'app Xamarin.iOS, la visualizzazione della raccolta apparirà come segue:
 
 [![](uicollectionview-images/custom01.png "The collection view will now look like this")](uicollectionview-images/custom01.png#lightbox)
 
@@ -1269,7 +1269,7 @@ Le modifiche o le aggiunte seguenti sono state apportate alla classe `UICollecti
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato le modifiche apportate alle visualizzazioni di raccolta in iOS 9 e come implementarle in Novell. iOS.
+Questo articolo ha illustrato le modifiche apportate alle visualizzazioni di raccolta in iOS 9 e come implementarle in Xamarin.iOS.
 È stata analizzata l'implementazione di una semplice azione di trascinamento della riordinamento in una visualizzazione di raccolta. uso di un riconoscimento di movimenti personalizzato con trascinamento della ridisposizione; e il modo in cui il trascinamento riordino influisca su un layout di visualizzazione raccolta personalizzato.
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -1,6 +1,6 @@
 ---
-title: Etichetta di xamarin. Forms
-description: Questo articolo illustra come usare la classe di etichetta di xamarin. Forms per visualizzare il testo singolo e multi-linea nelle applicazioni.
+title: Etichetta di Xamarin.Forms
+description: Questo articolo illustra come usare la classe di etichetta di Xamarin.Forms per visualizzare il testo singolo e multi-linea nelle applicazioni.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490038"
 ---
-# <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
+# <a name="xamarinforms-label"></a>Etichetta di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Testo visualizzato in xamarin. Forms_
+_Testo visualizzato in Xamarin.Forms_
 
 Il [ `Label` ](xref:Xamarin.Forms.Label) vista utilizzata per la visualizzazione di testo, un o più righe. Le etichette prevede le decorazioni di testo, testo colorato e usare i tipi di carattere personalizzati (famiglie di dimensioni e opzioni).
 
@@ -285,7 +285,7 @@ public class LabelPageCode : ContentPage
 > [!IMPORTANT]
 > Il [ `Text` ](xref:Xamarin.Forms.Span.Text) proprietà di un `Span` possono essere impostate tramite associazione dati. Per altre informazioni, vedere [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-Si noti che un [ `Span` ](xref:Xamarin.Forms.Span) inoltre può rispondere a tutti i movimenti che vengono aggiunti per l'intervallo [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) raccolta. Ad esempio, un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) è stato aggiunto al secondo `Span` negli esempi di codice riportato sopra. Pertanto, quando ciò `Span` toccando il `TapGestureRecognizer` risponderà eseguendo il `ICommand` definito dal [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Per altre informazioni sui riconoscitori di movimento, vedere [movimenti di xamarin. Forms](~/xamarin-forms/app-fundamentals/gestures/index.md).
+Si noti che un [ `Span` ](xref:Xamarin.Forms.Span) inoltre può rispondere a tutti i movimenti che vengono aggiunti per l'intervallo [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) raccolta. Ad esempio, un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) è stato aggiunto al secondo `Span` negli esempi di codice riportato sopra. Pertanto, quando ciò `Span` toccando il `TapGestureRecognizer` risponderà eseguendo il `ICommand` definito dal [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Per altre informazioni sui riconoscitori di movimento, vedere [movimenti di Xamarin.Forms](~/xamarin-forms/app-fundamentals/gestures/index.md).
 
 Le schermate seguenti illustrano il risultato dell'impostazione di `FormattedString` tre proprietà `Span` istanze:
 
@@ -456,7 +456,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Il `TapCommand` esegue il metodo `Launcher.OpenAsync`, passando il valore della proprietà [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) come parametro. Il metodo `Launcher.OpenAsync` viene fornito da Novell. Essentials e apre l'URL in un Web browser. Pertanto, l'effetto complessivo è che, quando il collegamento ipertestuale viene toccato sulla pagina, viene visualizzato un Web browser e l'URL associato al collegamento ipertestuale viene indirizzato a.
+Il `TapCommand` esegue il metodo `Launcher.OpenAsync`, passando il valore della proprietà [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) come parametro. Il metodo `Launcher.OpenAsync` viene fornito da Xamarin.Essentials e apre l'URL in un Web browser. Pertanto, l'effetto complessivo è che, quando il collegamento ipertestuale viene toccato sulla pagina, viene visualizzato un Web browser e l'URL associato al collegamento ipertestuale viene indirizzato a.
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Creazione di una classe di collegamento ipertestuale riutilizzabile
 
@@ -522,6 +522,6 @@ Le sezioni precedenti trattati impostazione [ `Label` ](xref:Xamarin.Forms.Label
 
 - [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Collegamenti ipertestuali (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
-- [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
+- [Creazione di App per dispositivi mobili con Xamarin.Forms, capitolo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API Etichetta](xref:Xamarin.Forms.Label)
 - [Intervallo di API](xref:Xamarin.Forms.Span)

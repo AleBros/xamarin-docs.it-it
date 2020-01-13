@@ -1,5 +1,5 @@
 ---
-title: Introduzione agli stili di Novell. Forms
+title: Introduzione agli stili di Xamarin.Forms
 description: Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "70228167"
 ---
-# <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli stili di Novell. Forms
+# <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli stili di Xamarin.Forms
 
 _Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo._
 
-Le applicazioni Novell. Forms spesso contengono più controlli che hanno un aspetto identico. Ad esempio, un'applicazione può avere più istanze di [`Label`](xref:Xamarin.Forms.Label) con le stesse opzioni relative ai tipi di carattere e le stesse opzioni di layout, come illustrato nell'esempio di codice XAML seguente:
+Le applicazioni Xamarin.Forms spesso contengono più controlli che hanno un aspetto identico. Ad esempio, un'applicazione può avere più istanze di [`Label`](xref:Xamarin.Forms.Label) con le stesse opzioni relative ai tipi di carattere e le stesse opzioni di layout, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -128,12 +128,12 @@ Per applicare una `Style`, l'oggetto di destinazione deve essere un [`VisualElem
 
 Gli stili inferiori nella gerarchia di visualizzazione hanno la precedenza su quelli definiti più in alto. Se, ad esempio, si imposta un [`Style`](xref:Xamarin.Forms.Style) che imposta [`Label.TextColor`](xref:Xamarin.Forms.Label.TextColor) su `Red` a livello di applicazione verrà sostituito da uno stile a livello di pagina che imposta `Label.TextColor` su `Green`. Allo stesso modo, uno stile a livello di pagina verrà sottoposto a override da uno stile del livello di controllo. Inoltre, se `Label.TextColor` è impostato direttamente su una proprietà del controllo, avrà la precedenza su qualsiasi stile.
 
-Gli articoli di questa sezione illustrano come creare e applicare stili *espliciti* e *impliciti* , come creare stili globali, ereditarietà dello stile, come rispondere alle modifiche di stile in fase di esecuzione e come usare gli stili incorporati inclusi in Novell. Forms.
+Gli articoli di questa sezione illustrano come creare e applicare stili *espliciti* e *impliciti* , come creare stili globali, ereditarietà dello stile, come rispondere alle modifiche di stile in fase di esecuzione e come usare gli stili incorporati inclusi in Xamarin.Forms.
 
 > [!NOTE]
 > **Che cos'è StyleId?**
 >
-> Prima di Novell. Forms 2,2, la proprietà [`StyleId`](xref:Xamarin.Forms.Element.StyleId) è stata usata per identificare i singoli elementi in un'applicazione per l'identificazione nei test dell'interfaccia utente e nei motori di tema come Pixate. Tuttavia, in Novell. Forms 2,2 è stata introdotta la proprietà [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) , che ha sostituito la proprietà [`StyleId`](xref:Xamarin.Forms.Element.StyleId) .
+> Prima di Xamarin.Forms 2,2, la proprietà [`StyleId`](xref:Xamarin.Forms.Element.StyleId) è stata usata per identificare i singoli elementi in un'applicazione per l'identificazione nei test dell'interfaccia utente e nei motori di tema come Pixate. Tuttavia, in Xamarin.Forms 2,2 è stata introdotta la proprietà [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) , che ha sostituito la proprietà [`StyleId`](xref:Xamarin.Forms.Element.StyleId) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

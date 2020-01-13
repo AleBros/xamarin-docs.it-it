@@ -1,5 +1,5 @@
 ---
-title: Schemi dello spazio dei nomi personalizzati XAML in Novell. Forms
+title: Schemi dello spazio dei nomi personalizzati XAML in Xamarin.Forms
 description: Uno schema dello spazio dei nomi personalizzato XAML può essere definito con la classe XmlnsDefinitionAttribute, che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Lo schema dello spazio dei nomi personalizzato può quindi essere utilizzato nelle dichiarazioni dello spazio dei nomi XAML.
 ms.prod: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68644703"
 ---
-# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Schemi dello spazio dei nomi personalizzati XAML in Novell. Forms
+# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Schemi dello spazio dei nomi personalizzati XAML in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
@@ -31,7 +31,7 @@ Tuttavia, la specifica di uno spazio dei nomi CLR e di un nome di assembly in un
 
 Un approccio alternativo consiste nel definire uno schema dello spazio dei nomi personalizzato, ad esempio `http://mycompany.com/schemas/controls`, che esegue il mapping a uno o più spazi dei nomi CLR. Ciò consente a una singola dichiarazione dello spazio dei nomi XAML di fare riferimento a tutti i tipi in un assembly, anche se si trovano in spazi dei nomi diversi. Consente inoltre a una singola dichiarazione dello spazio dei nomi XAML di fare riferimento ai tipi in più assembly.
 
-Per altre informazioni sugli spazi dei nomi XAML, vedere [spazi dei nomi XAML in Novell. Forms](namespaces.md).
+Per altre informazioni sugli spazi dei nomi XAML, vedere [spazi dei nomi XAML in Xamarin.Forms](namespaces.md).
 
 ## <a name="defining-a-custom-namespace-schema"></a>Definizione di uno schema dello spazio dei nomi personalizzato
 
@@ -135,7 +135,7 @@ Per utilizzare il controllo `CircleButton`, viene dichiarato uno spazio dei nomi
 
 le istanze di `CircleButton` possono quindi essere aggiunte al [`ContentPage`](xref:Xamarin.Forms.ContentPage) dichiarando il prefisso dello spazio dei nomi `controls`.
 
-Per trovare i tipi di schema dello spazio dei nomi personalizzato, Novell. Forms cercherà gli assembly a cui si fa riferimento per `XmlnsDefinitionAttribute` istanze. Se l'attributo `xmlns` per un elemento in un file XAML corrisponde al valore della proprietà `XmlNamespace` in un `XmlnsDefinitionAttribute`, Novell. Forms tenterà di usare il valore della proprietà `XmlnsDefinitionAttribute.ClrNamespace` per la risoluzione del tipo. Se la risoluzione del tipo ha esito negativo, Novell. Forms continuerà a tentare la risoluzione dei tipi in base a qualsiasi istanza di `XmlnsDefinitionAttribute` corrispondente.
+Per trovare i tipi di schema dello spazio dei nomi personalizzato, Xamarin.Forms cercherà gli assembly a cui si fa riferimento per `XmlnsDefinitionAttribute` istanze. Se l'attributo `xmlns` per un elemento in un file XAML corrisponde al valore della proprietà `XmlNamespace` in un `XmlnsDefinitionAttribute`, Xamarin.Forms tenterà di usare il valore della proprietà `XmlnsDefinitionAttribute.ClrNamespace` per la risoluzione del tipo. Se la risoluzione del tipo ha esito negativo, Xamarin.Forms continuerà a tentare la risoluzione dei tipi in base a qualsiasi istanza di `XmlnsDefinitionAttribute` corrispondente.
 
 Il risultato è che vengono visualizzate due istanze `CircleButton`:
 
@@ -145,4 +145,4 @@ Il risultato è che vengono visualizzate due istanze `CircleButton`:
 
 - [Schemi dello spazio dei nomi personalizzati (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [Prefissi consigliati per lo spazio dei nomi XAML](custom-prefix.md)
-- [Spazi dei nomi XAML in Novell. Forms](namespaces.md)
+- [Spazi dei nomi XAML in Xamarin.Forms](namespaces.md)

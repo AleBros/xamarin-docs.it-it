@@ -1,5 +1,5 @@
 ---
-title: Funzionalità della piattaforma di uso del sistema operativo con Novell. Android
+title: Funzionalità della piattaforma di uso del sistema operativo con Xamarin.Android
 description: Componenti chiave della piattaforma del sistema operativo Wear
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B

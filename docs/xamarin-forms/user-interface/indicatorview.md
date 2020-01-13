@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms IndicatorView
+title: Xamarin.Forms IndicatorView
 description: IndicatorView è un controllo che visualizza indicatori che rappresentano il numero di elementi e la posizione corrente in un CarouselView.
 ms.prod: xamarin
 ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490402"
 ---
-# <a name="xamarinforms-indicatorview"></a>Novell. Forms IndicatorView
+# <a name="xamarinforms-indicatorview"></a>Xamarin.Forms IndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -24,7 +24,7 @@ Il `IndicatorView` è un controllo che consente di visualizzare gli indicatori c
 
 [![Screenshot di CarouselView e IndicatorView, su iOS e Android](indicatorview-images/circles.png "Cerchi IndicatorView")](indicatorview-images/circles-large.png#lightbox "Cerchi IndicatorView")
 
-`IndicatorView` è disponibile in Novell. Forms 4,4 sulle piattaforme iOS e Android. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS o alla classe `MainActivity` in Android, prima di chiamare `Forms.Init`:
+`IndicatorView` è disponibile in Xamarin.Forms 4,4 sulle piattaforme iOS e Android. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS o alla classe `MainActivity` in Android, prima di chiamare `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
@@ -36,7 +36,7 @@ Forms.SetFlags("IndicatorView_Experimental");
 - `HideSingle`, di tipo `bool`, indica se l'indicatore deve essere nascosto quando ne esiste solo uno. Il valore predefinito è `true`.
 - `IndicatorColor`, di tipo `Color`, il colore degli indicatori.
 - `IndicatorSize`, di tipo `double`, la dimensione degli indicatori. Il valore predefinito è 6,0.
-- `IndicatorLayout`, di tipo `Layout<View>`, definisce la classe di layout utilizzata per eseguire il rendering della `IndicatorView`. Questa proprietà viene impostata da Novell. Forms e in genere non deve essere impostata dagli sviluppatori.
+- `IndicatorLayout`, di tipo `Layout<View>`, definisce la classe di layout utilizzata per eseguire il rendering della `IndicatorView`. Questa proprietà viene impostata da Xamarin.Forms e in genere non deve essere impostata dagli sviluppatori.
 - `IndicatorTemplate`, di tipo `DataTemplate`, il modello che definisce l'aspetto di ogni indicatore.
 - `IndicatorsShape`, di tipo `IndicatorShape`, la forma di ogni indicatore.
 - `ItemsSource`, di tipo `IEnumerable`, la raccolta per la quale verranno visualizzati gli indicatori. Questa proprietà verrà impostata automaticamente quando viene impostata la proprietà `ItemsSourceBy`.

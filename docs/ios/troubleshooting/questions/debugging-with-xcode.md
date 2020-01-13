@@ -1,5 +1,5 @@
 ---
-title: Debug di App xamarin. IOS con Xcode
+title: Debug di App Xamarin.IOS con Xcode
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5FDDEDB3-AEB9-4D9C-9F7B-FEFAA9AF0031
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61422477"
 ---
-# <a name="debugging-xamarinios-apps-with-xcode"></a>Debug di App xamarin. IOS con Xcode
+# <a name="debugging-xamarinios-apps-with-xcode"></a>Debug di App Xamarin.IOS con Xcode
 
-Potrebbero essere presenti scenari in cui si vuole usare Xcode per il debug di alcune parti dell'applicazione xamarin. IOS. Mentre non sarà in grado di eseguire il debug di codice .NET in esso, sarà comunque in grado di eseguire il debug di codice nativo e usare alcuni dei visualizzatori native in Xcode.
+Potrebbero essere presenti scenari in cui si vuole usare Xcode per il debug di alcune parti dell'applicazione Xamarin.IOS. Mentre non sarà in grado di eseguire il debug di codice .NET in esso, sarà comunque in grado di eseguire il debug di codice nativo e usare alcuni dei visualizzatori native in Xcode.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -24,7 +24,7 @@ Se non è presente alcun supporto predefinito per il debug di Xcode in Visual St
 
 1. Creare un'app per iOS Xcode con lo stesso ID bundle come quello nell'app Xamarin.
    
-    - È possibile trovare l'identificatore del bundle del progetto xamarin. IOS, aprire il **Info. plist** file:
+    - È possibile trovare l'identificatore del bundle del progetto Xamarin.IOS, aprire il **Info. plist** file:
 
         ![Editing Info.plist](debugging-with-xcode-images/vsmac-infoplist.png "Editing Info.list")
 
@@ -50,7 +50,7 @@ Se non è presente alcun supporto predefinito per il debug di Xcode in Visual St
 
 ### <a name="caveats"></a>Avvertenze
 
-Potrebbe essere necessario apportare una piccola modifica all'app xamarin. IOS ogni volta che si avvia. In caso contrario, Visual Studio per Mac rileverà che l'app non deve necessariamente essere compilati *e* è già installato, e non sarà reinstallarlo tramite l'app fittizio di Xcode.
+Potrebbe essere necessario apportare una piccola modifica all'app Xamarin.IOS ogni volta che si avvia. In caso contrario, Visual Studio per Mac rileverà che l'app non deve necessariamente essere compilati *e* è già installato, e non sarà reinstallarlo tramite l'app fittizio di Xcode.
 
 ## <a name="alternative---using-lldb"></a>In alternativa - usando lldb
 

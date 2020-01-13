@@ -31,7 +31,7 @@ In questa pagina viene illustrato come creare un progetto **PCL** destinato a un
 
 ## <a name="what-is-a-portable-class-library"></a>Che cos'è una libreria di classi portabile?
 
-Quando si crea un progetto di applicazione o un progetto di libreria, la DLL risultante è limitata all'utilizzo della piattaforma per la quale viene creato. Ciò impedisce di scrivere un assembly per un'app di Windows e quindi di riutilizzarlo in Novell. iOS e Novell. Android.
+Quando si crea un progetto di applicazione o un progetto di libreria, la DLL risultante è limitata all'utilizzo della piattaforma per la quale viene creato. Ciò impedisce di scrivere un assembly per un'app di Windows e quindi di riutilizzarlo in Xamarin.iOS e Xamarin.Android.
 
 Quando si crea una libreria di classi portabile, tuttavia, è possibile scegliere una combinazione di piattaforme in cui si vuole eseguire il codice. Le scelte di compatibilità effettuate durante la creazione di una libreria di classi portabile vengono convertite in un identificatore "profile", che descrive le piattaforme supportate dalla libreria.
 
@@ -45,7 +45,7 @@ La tabella seguente illustra alcune delle funzionalità che variano in base alla
 |Serializzazione|Y|Y|Y|Y|Y|
 |Annotazioni dei dati|4.0.3 +|Y|Y||Y|
 
-La colonna Novell riflette il fatto che Novell. iOS e Novell. Android supportano tutti i profili forniti con Visual Studio e la disponibilità delle funzionalità in tutte le librerie create sarà limitata solo dalle altre piattaforme che si sceglie di supportare.
+La colonna Novell riflette il fatto che Xamarin.iOS e Xamarin.Android supportano tutti i profili forniti con Visual Studio e la disponibilità delle funzionalità in tutte le librerie create sarà limitata solo dalle altre piattaforme che si sceglie di supportare.
 
 Sono inclusi i profili che sono combinazioni di:
 
@@ -90,7 +90,7 @@ L'aggiunta di una libreria di classi portabile alla soluzione è molto simile al
 
     ![Creazione di un nuovo progetto PCL](pcl-images/image2.png)
 
-1. Quando viene creata una libreria di classi portabile in Visual Studio per Mac viene automaticamente configurata con un profilo che funziona per Novell. iOS e Novell. Android. Il progetto PCL verrà visualizzato come illustrato nello screenshot seguente:
+1. Quando viene creata una libreria di classi portabile in Visual Studio per Mac viene automaticamente configurata con un profilo che funziona per Xamarin.iOS e Xamarin.Android. Il progetto PCL verrà visualizzato come illustrato nello screenshot seguente:
 
     ![Progetto PCL nel riquadro della soluzione](pcl-images/image3.png)
 
@@ -112,7 +112,7 @@ Quando il codice viene scritto in una libreria di librerie di classi portabili, 
 
 [![elenco IntelliSense di 14 classi nella classe System.IO di una libreria di classi portabile](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
-Confrontare con il completamento automatico di System.IO in un progetto Novell. iOS o Novell. Android. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
+Confrontare con il completamento automatico di System.IO in un progetto Xamarin.iOS o Xamarin.Android. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
 
 [![elenco IntelliSense di classi 40 nello spazio dei nomi .NET Framework System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
@@ -124,7 +124,7 @@ Una volta creato un progetto di libreria di classi portabile, è possibile aggiu
 
 [![aggiungere un riferimento a una libreria di classi portabile tramite l'opzione modifica riferimenti](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
-Lo screenshot seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
+Lo screenshot seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Xamarin.iOS.
 
 [![soluzione di esempio TaskyPortable che mostra il progetto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
@@ -187,7 +187,7 @@ Una volta creato un progetto di libreria di classi portabile, è possibile aggiu
 
 [![aggiungere un riferimento a una libreria di classi portabile tramite la scheda Aggiungi progetti di riferimento](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
-La schermata seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
+La schermata seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Xamarin.iOS.
 
 [![soluzione di esempio TaskyPortable che mostra una libreria PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 

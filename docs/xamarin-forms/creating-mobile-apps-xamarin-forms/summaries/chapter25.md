@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 25. Tipi di pagina
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 25. Tipi di pagina'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 25. Tipi di pagina'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
@@ -62,7 +62,7 @@ Che file XAML imposta anche il [ `IsPresented` ](xref:Xamarin.Forms.MasterDetail
 
 ### <a name="your-own-user-interface"></a>Interfaccia utente personalizzata
 
-Sebbene xamarin. Forms fornisce un'interfaccia utente per il passaggio tra le visualizzazioni master e di dettaglio, è possibile fornire il proprio. A tale scopo:
+Sebbene Xamarin.Forms fornisce un'interfaccia utente per il passaggio tra le visualizzazioni master e di dettaglio, è possibile fornire il proprio. A tale scopo:
 
 - Impostare il [ `IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) proprietà `false` disabilitare scorrendo rapidamente
 - Eseguire l'override di [ `ShouldShowToolbarButton` ](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) metodo e restituire `false` per nascondere i pulsanti della barra degli strumenti in Windows 8.1 e Windows Phone 8.1.

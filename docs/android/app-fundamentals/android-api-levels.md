@@ -1,6 +1,6 @@
 ---
 title: Informazioni sui livelli dell'API Android
-description: Novell. Android presenta diverse impostazioni a livello di API Android che determinano la compatibilità dell'app con più versioni di Android. Questa guida illustra le implicazioni di queste impostazioni, le modalità di configurazione e l'effetto che hanno sull'app in fase di esecuzione.
+description: Xamarin.Android presenta diverse impostazioni a livello di API Android che determinano la compatibilità dell'app con più versioni di Android. Questa guida illustra le implicazioni di queste impostazioni, le modalità di configurazione e l'effetto che hanno sull'app in fase di esecuzione.
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
@@ -16,13 +16,13 @@ ms.locfileid: "73018188"
 ---
 # <a name="understanding-android-api-levels"></a>Understanding Android API Levels (Informazioni sui livelli API Android)
 
-_Novell. Android presenta diverse impostazioni a livello di API Android che determinano la compatibilità dell'app con più versioni di Android. Questa guida illustra le implicazioni di queste impostazioni, le modalità di configurazione e l'effetto che hanno sull'app in fase di esecuzione._
+_Xamarin.Android presenta diverse impostazioni a livello di API Android che determinano la compatibilità dell'app con più versioni di Android. Questa guida illustra le implicazioni di queste impostazioni, le modalità di configurazione e l'effetto che hanno sull'app in fase di esecuzione._
 
 ## <a name="quick-start"></a>Avvio rapido
 
-Novell. Android espone tre impostazioni di progetto a livello di API Android:
+Xamarin.Android espone tre impostazioni di progetto a livello di API Android:
 
-- [Framework di destinazione](#framework) &ndash; specifica il Framework da usare per la compilazione dell'applicazione. Questo livello API viene usato in fase di *compilazione* da Novell. Android.
+- [Framework di destinazione](#framework) &ndash; specifica il Framework da usare per la compilazione dell'applicazione. Questo livello API viene usato in fase di *compilazione* da Xamarin.Android.
 
 - [Versione minima di android](#minimum) &ndash; specifica la versione di Android meno recente che si vuole che l'app supporti. Questo livello API viene usato in fase di *esecuzione* da Android.
 
@@ -38,7 +38,7 @@ Le app esistenti saranno necessarie per il livello API di destinazione 26 o supe
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-In genere, tutti e tre i livelli di API Novell. Android sono impostati sullo stesso valore. Nella pagina **dell'applicazione** impostare **Compila usando la versione di Android (Framework di destinazione)** per la versione più recente dell'API stabile (o, come minimo, per la versione di Android con tutte le funzionalità necessarie).
+In genere, tutti e tre i livelli di API Xamarin.Android sono impostati sullo stesso valore. Nella pagina **dell'applicazione** impostare **Compila usando la versione di Android (Framework di destinazione)** per la versione più recente dell'API stabile (o, come minimo, per la versione di Android con tutte le funzionalità necessarie).
 Nello screenshot seguente il Framework di destinazione è impostato su **Android 7,1 (API Level 25-torrone)** :
 
 [![versione del Framework di destinazione predefinita per la compilazione con la versione di Android](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png#lightbox)
@@ -53,7 +53,7 @@ Se si vuole mantenere la compatibilità con le versioni precedenti di Android, i
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-In genere, tutti e tre i livelli di API Novell. Android sono impostati sullo stesso valore. Impostare **Framework di destinazione** sulla versione più recente dell'API stabile (o, come minimo, per la versione di Android con tutte le funzionalità necessarie). Per impostare il **Framework di destinazione**, passare a **Compila > generale** nelle **Opzioni del progetto**. Nella schermata seguente, il Framework di destinazione è impostato per **usare la piattaforma installata più recente (8,0)** :
+In genere, tutti e tre i livelli di API Xamarin.Android sono impostati sullo stesso valore. Impostare **Framework di destinazione** sulla versione più recente dell'API stabile (o, come minimo, per la versione di Android con tutte le funzionalità necessarie). Per impostare il **Framework di destinazione**, passare a **Compila > generale** nelle **Opzioni del progetto**. Nella schermata seguente, il Framework di destinazione è impostato per **usare la piattaforma installata più recente (8,0)** :
 
 [impostazione predefinita di![Framework di destinazione per l'utilizzo della piattaforma installata più recente](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
@@ -84,7 +84,7 @@ Ogni versione di Android va da più nomi:
 
 Un nome di codice Android può corrispondere a più versioni e a livelli API, come illustrato nella tabella seguente, ma ogni versione di Android corrisponde esattamente a un livello API.
 
-Inoltre, Novell. Android definisce i *codici della versione di compilazione* che vengono mappati ai livelli API Android attualmente noti. La tabella seguente può essere utile per la conversione tra il livello API, la versione di Android, il nome del codice e il codice della versione build di Novell. Android (i codici della versione di build sono definiti nello spazio dei nomi `Android.OS`):
+Inoltre, Xamarin.Android definisce i *codici della versione di compilazione* che vengono mappati ai livelli API Android attualmente noti. La tabella seguente può essere utile per la conversione tra il livello API, la versione di Android, il nome del codice e il codice della versione build di Xamarin.Android (i codici della versione di build sono definiti nello spazio dei nomi `Android.OS`):
 
 [!include[](~/android/includes/api-levels.md)]
 
@@ -104,11 +104,11 @@ Queste impostazioni vengono usate per assicurarsi che la funzionalità necessari
 
 ## <a name="project-api-level-settings"></a>Impostazioni livello API progetto
 
-Le sezioni seguenti illustrano come usare SDK Manager per preparare l'ambiente di sviluppo per i livelli di API a cui si vuole fare riferimento, seguito da spiegazioni dettagliate su come configurare il *Framework di destinazione*, la *versione minima di Android*eImpostazioni della versione di Android di destinazione in Novell. Android.
+Le sezioni seguenti illustrano come usare SDK Manager per preparare l'ambiente di sviluppo per i livelli di API a cui si vuole fare riferimento, seguito da spiegazioni dettagliate su come configurare il *Framework di destinazione*, la *versione minima di Android*eImpostazioni della versione di Android di destinazione in Xamarin.Android.
 
 ### <a name="android-sdk-platforms"></a>Piattaforme Android SDK
 
-Prima di poter selezionare una destinazione o un livello API minimo in Novell. Android, è necessario installare la versione della piattaforma Android SDK corrispondente a tale livello API. L'intervallo di opzioni disponibili per il Framework di destinazione, la versione minima di Android e la versione di destinazione di Android è limitato all'intervallo di versioni di Android SDK installate. È possibile usare SDK Manager per verificare che le versioni Android SDK richieste siano installate ed è possibile usarle per aggiungere i nuovi livelli API necessari per l'app. Se non si ha familiarità con la procedura di installazione dei livelli API, vedere [Android SDK installazione](~/android/get-started/installation/android-sdk.md).
+Prima di poter selezionare una destinazione o un livello API minimo in Xamarin.Android, è necessario installare la versione della piattaforma Android SDK corrispondente a tale livello API. L'intervallo di opzioni disponibili per il Framework di destinazione, la versione minima di Android e la versione di destinazione di Android è limitato all'intervallo di versioni di Android SDK installate. È possibile usare SDK Manager per verificare che le versioni Android SDK richieste siano installate ed è possibile usarle per aggiungere i nuovi livelli API necessari per l'app. Se non si ha familiarità con la procedura di installazione dei livelli API, vedere [Android SDK installazione](~/android/get-started/installation/android-sdk.md).
 
 <a name="framework" />
 
@@ -172,7 +172,7 @@ Se si seleziona **automatico &ndash; usa la versione del Framework di destinazio
 
 La *versione di destinazione di Android* (nota anche come `targetSdkVersion`) è il livello API del dispositivo Android in cui è prevista l'esecuzione dell'app. Android usa questa impostazione per determinare se abilitare eventuali comportamenti di compatibilità &ndash; questo garantisce che l'app continui a funzionare nel modo previsto. Android usa l'impostazione della versione di Android di destinazione dell'app per individuare le modifiche del comportamento che è possibile applicare all'app senza suddividerle (questo è il modo in cui Android fornisce la compatibilità con le versioni con il futuro).
 
-Il Framework di destinazione e la versione di destinazione di Android, con nomi molto simili, non sono la stessa cosa. L'impostazione del Framework di destinazione comunica le informazioni a livello di API di destinazione a Novell. Android per l'uso in *fase di compilazione*, mentre la versione di destinazione di Android comunica le informazioni a livello di API di destinazione ad Android per l'uso in fase di *esecuzione* (quando l'app è installato ed eseguito in un dispositivo.
+Il Framework di destinazione e la versione di destinazione di Android, con nomi molto simili, non sono la stessa cosa. L'impostazione del Framework di destinazione comunica le informazioni a livello di API di destinazione a Xamarin.Android per l'uso in *fase di compilazione*, mentre la versione di destinazione di Android comunica le informazioni a livello di API di destinazione ad Android per l'uso in fase di *esecuzione* (quando l'app è installato ed eseguito in un dispositivo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -238,13 +238,13 @@ Non esiste alcuna regola rapida e semplice che illustra come ridurre o modificar
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Quando si crea un progetto di libreria Novell. Android (ad esempio una libreria di classi o una libreria di associazioni), è possibile configurare solo l'impostazione del Framework di destinazione &ndash; la versione minima di Android e le impostazioni della versione di Android di destinazione non sono disponibili. Ciò è dovuto al fatto che non esiste alcuna pagina del **manifesto Android** :
+Quando si crea un progetto di libreria Xamarin.Android (ad esempio una libreria di classi o una libreria di associazioni), è possibile configurare solo l'impostazione del Framework di destinazione &ndash; la versione minima di Android e le impostazioni della versione di Android di destinazione non sono disponibili. Ciò è dovuto al fatto che non esiste alcuna pagina del **manifesto Android** :
 
 [![è disponibile solo l'opzione Compila con la versione Android](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Quando si crea un progetto di libreria Novell. Android, non è disponibile alcuna pagina **dell'applicazione Android** in cui è possibile configurare la versione minima di Android e la versione di Android di destinazione &ndash; la versione minima di Android e le impostazioni della versione di Android di destinazione non sono disponibile.
+Quando si crea un progetto di libreria Xamarin.Android, non è disponibile alcuna pagina **dell'applicazione Android** in cui è possibile configurare la versione minima di Android e la versione di Android di destinazione &ndash; la versione minima di Android e le impostazioni della versione di Android di destinazione non sono disponibile.
 Ciò è dovuto al fatto che non esiste alcuna pagina di **compilazione > applicazione Android** :
 
 [![pagina Generale compila senza opzioni versione minima e di destinazione](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
@@ -261,7 +261,7 @@ Queste procedure consigliate sono consigliate per evitare la situazione in cui u
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida ha illustrato come vengono usati i livelli di API Android per gestire la compatibilità delle app in versioni diverse di Android. Sono stati forniti i passaggi dettagliati per configurare il *Framework di destinazione*Novell. Android, la *versione minima di Android*e le impostazioni di progetto della *versione di Android di destinazione* . Sono state fornite istruzioni per l'uso di gestione Android SDK per installare i pacchetti SDK, inclusi esempi di come scrivere codice per gestire diversi livelli API in fase di esecuzione e come gestire i livelli di API durante la creazione o l'utilizzo di librerie Android. È stato inoltre fornito un elenco completo che mette in correlazione i livelli API ai numeri di versione di Android, ad esempio Android 4,4, i nomi delle versioni Android (ad esempio KitKat) e i codici della versione di build Novell. Android.
+Questa guida ha illustrato come vengono usati i livelli di API Android per gestire la compatibilità delle app in versioni diverse di Android. Sono stati forniti i passaggi dettagliati per configurare il *Framework di destinazione*Xamarin.Android, la *versione minima di Android*e le impostazioni di progetto della *versione di Android di destinazione* . Sono state fornite istruzioni per l'uso di gestione Android SDK per installare i pacchetti SDK, inclusi esempi di come scrivere codice per gestire diversi livelli API in fase di esecuzione e come gestire i livelli di API durante la creazione o l'utilizzo di librerie Android. È stato inoltre fornito un elenco completo che mette in correlazione i livelli API ai numeri di versione di Android, ad esempio Android 4,4, i nomi delle versioni Android (ad esempio KitKat) e i codici della versione di build Xamarin.Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

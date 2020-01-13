@@ -55,7 +55,7 @@ Di seguito è riportato un nuovo progetto condiviso. si noti che non sono presen
 
 Affinché un progetto condiviso possa essere utile, è necessario fare riferimento a esso da almeno un progetto di compilazione (ad esempio, un'applicazione o una libreria iOS o Android o un progetto PCL). Un progetto condiviso non viene compilato quando non vi è alcun riferimento, quindi gli errori di sintassi (o qualsiasi altro) non verranno evidenziati fino a quando non vi viene fatto riferimento da altri elementi.
 
-L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
+L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Xamarin.iOS che fa riferimento a un progetto condiviso.
 
 ![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
 
@@ -91,7 +91,7 @@ In Visual Studio 2017 selezionare il modello di **progetto condiviso** , quindi 
 
 Affinché un progetto condiviso possa essere utile, è necessario fare riferimento a esso da almeno un progetto di compilazione (ad esempio, un'applicazione o una libreria iOS o Android o un progetto PCL). Un progetto condiviso non viene compilato quando non vi è alcun riferimento, quindi gli errori di sintassi (o qualsiasi altro) non verranno evidenziati fino a quando non vi viene fatto riferimento da altri elementi.
 
-L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
+L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Xamarin.iOS che fa riferimento a un progetto condiviso.
 
 ![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
 

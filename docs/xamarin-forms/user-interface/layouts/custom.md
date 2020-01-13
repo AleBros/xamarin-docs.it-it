@@ -1,5 +1,5 @@
 ---
-title: Creare un layout personalizzato in Novell. Forms
+title: Creare un layout personalizzato in Xamarin.Forms
 description: Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -14,17 +14,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71198499"
 ---
-# <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato in Novell. Forms
+# <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Novell. Forms definisce cinque classi di layout: StackLayout, AbsoluteLayout, sul relativelayout, Grid e FlexLayout e ognuna dispone gli elementi figlio in modo diverso. Tuttavia, talvolta è necessario organizzare i contenuti di pagina utilizzando un layout non fornito da xamarin. Forms. Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive._
+_Xamarin.Forms definisce cinque classi di layout: StackLayout, AbsoluteLayout, sul relativelayout, Grid e FlexLayout e ognuna dispone gli elementi figlio in modo diverso. Tuttavia, talvolta è necessario organizzare i contenuti di pagina utilizzando un layout non fornito da Xamarin.Forms. Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive._
 
-In xamarin. Forms, derivano da tutte le classi di layout la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe e il tipo generico per vincolare [ `View` ](xref:Xamarin.Forms.View) e i tipi derivati. A sua volta, il `Layout<T>` deriva dalla classe la [ `Layout` ](xref:Xamarin.Forms.Layout) classe, che fornisce un meccanismo per il posizionamento e ridimensionamento figlio elementi.
+In Xamarin.Forms, derivano da tutte le classi di layout la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe e il tipo generico per vincolare [ `View` ](xref:Xamarin.Forms.View) e i tipi derivati. A sua volta, il `Layout<T>` deriva dalla classe la [ `Layout` ](xref:Xamarin.Forms.Layout) classe, che fornisce un meccanismo per il posizionamento e ridimensionamento figlio elementi.
 
 Ogni elemento visivo è responsabile di determinare la propria dimensione preferita, che è noto come il *richiesto* dimensioni. [`Page`](xref:Xamarin.Forms.Page), [ `Layout` ](xref:Xamarin.Forms.Layout), e [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) tipi derivati sono tenuti a determinare la posizione e dimensione figlio o elementi figlio, rispetto a se stessi. Layout prevede quindi una relazione padre-figlio, in cui l'elemento padre determina quali devono essere le dimensioni dei relativi elementi figlio, ma verrà effettuato un tentativo di contenere le dimensioni richieste dell'elemento figlio.
 
-Per creare un layout personalizzato è necessario conoscere a fondo i layout e invalidamento dei cicli di xamarin. Forms. Verranno ora illustrati questi cicli.
+Per creare un layout personalizzato è necessario conoscere a fondo i layout e invalidamento dei cicli di Xamarin.Forms. Verranno ora illustrati questi cicli.
 
 ## <a name="layout"></a>Layout
 
@@ -37,12 +37,12 @@ Il [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe definisce un [ `
 
 Questo ciclo assicura che ogni elemento visivo nella pagina riceve le chiamate per il `Measure` e `Layout` metodi. Il processo è illustrato nel diagramma seguente:
 
-![](custom-images/layout-cycle.png "Ciclo di Layout di xamarin. Forms")
+![](custom-images/layout-cycle.png "Ciclo di Layout di Xamarin.Forms")
 
 > [!NOTE]
 > Si noti che i cicli di layout possono verificarsi anche in un subset della struttura visiva se si apportano modifiche per influire sul layout. Ciò include gli elementi aggiunto o rimosso da una raccolta, ad esempio in un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), una modifica nel [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) proprietà di un elemento o di una modifica delle dimensioni di un elemento.
 
-Ogni classe di xamarin. Forms che ha un `Content` o un `Children` proprietà ha un sottoponibile a override [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) (metodo). Classi di layout personalizzati che derivano da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) deve eseguire l'override di questo metodo e assicurarsi che il [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) e [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) sono metodi chiamato su tutti i figli dell'elemento, per fornire il layout personalizzato.
+Ogni classe di Xamarin.Forms che ha un `Content` o un `Children` proprietà ha un sottoponibile a override [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) (metodo). Classi di layout personalizzati che derivano da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) deve eseguire l'override di questo metodo e assicurarsi che il [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) e [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) sono metodi chiamato su tutti i figli dell'elemento, per fornire il layout personalizzato.
 
 Inoltre, ogni classe che deriva da [ `Layout` ](xref:Xamarin.Forms.Layout) o [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) devono eseguire l'override di [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) metodo, ovvero in una classe di layout Determina le dimensioni che deve essere effettuando chiamate per il [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) metodi dei relativi elementi figlio.
 
@@ -427,7 +427,7 @@ Il numero di colonne in ogni riga dipende la dimensione di foto, la larghezza de
 
 - [WrapLayout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layout personalizzati](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Creazione di layout personalizzati in xamarin. Forms (video)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
+- [Creazione di layout personalizzati in Xamarin.Forms (video)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [Layout\<T >](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

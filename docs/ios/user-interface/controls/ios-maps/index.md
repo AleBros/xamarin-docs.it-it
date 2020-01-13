@@ -1,6 +1,6 @@
 ---
-title: Mappe in Novell. iOS
-description: Questo documento descrive il Framework MapKit iOS e il modo in cui viene usato con Novell. iOS. Viene illustrato come aggiungere una mappa, applicarvi uno stile, una panoramica e uno zoom, utilizzare la posizione dell'utente, aggiungere annotazioni, utilizzare callout e sovrapposizioni ed eseguire ricerche locali.
+title: Mappe in Xamarin.iOS
+description: Questo documento descrive il Framework MapKit iOS e il modo in cui viene usato con Xamarin.iOS. Viene illustrato come aggiungere una mappa, applicarvi uno stile, una panoramica e uno zoom, utilizzare la posizione dell'utente, aggiungere annotazioni, utilizzare callout e sovrapposizioni ed eseguire ricerche locali.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022037"
 ---
-# <a name="maps-in-xamarinios"></a>Mappe in Novell. iOS
+# <a name="maps-in-xamarinios"></a>Mappe in Xamarin.iOS
 
 Le mappe sono una funzionalità comune in tutti i moderni sistemi operativi mobili. iOS offre supporto per il mapping in modo nativo tramite il Framework del kit di mappe. Con Map Kit, le applicazioni possono aggiungere facilmente mappe interattive e complesse. Queste mappe possono essere personalizzate in diversi modi, ad esempio aggiungendo annotazioni per contrassegnare le posizioni su una mappa e sovrapponendo la grafica di forme arbitrarie. Map Kit include anche il supporto predefinito per visualizzare la posizione corrente di un dispositivo.
 
@@ -190,7 +190,7 @@ Analogamente alle annotazioni, l'aggiunta di una sovrapposizione implica due par
 - Creazione di un oggetto modello per la sovrimpressione e aggiunta al `MKMapView`.
 - Creazione di una vista per la sovrimpressione nella `MKMapViewDelegate`.
 
-Il modello per la sovrimpressione può essere qualsiasi `MKShape` sottoclasse. Novell. iOS include `MKShape` sottoclassi per poligoni, polilinee e cerchi, rispettivamente tramite le classi `MKPolygon`, `MKPolyline` e `MKCircle`.
+Il modello per la sovrimpressione può essere qualsiasi `MKShape` sottoclasse. Xamarin.iOS include `MKShape` sottoclassi per poligoni, polilinee e cerchi, rispettivamente tramite le classi `MKPolygon`, `MKPolyline` e `MKCircle`.
 
 Il codice seguente, ad esempio, viene usato per aggiungere un `MKCircle`:
 

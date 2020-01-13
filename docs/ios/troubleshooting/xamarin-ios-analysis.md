@@ -1,6 +1,6 @@
 ---
-title: Regole di analisi di Novell. iOS
-description: Questo documento descrive un set di regole di analisi che controllano le impostazioni del progetto Novell. iOS per determinare se sono disponibili impostazioni più o ottimizzate in modo più efficace.
+title: Regole di analisi di Xamarin.iOS
+description: Questo documento descrive un set di regole di analisi che controllano le impostazioni del progetto Xamarin.iOS per determinare se sono disponibili impostazioni più o ottimizzate in modo più efficace.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
@@ -15,16 +15,16 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030870"
 ---
-# <a name="xamarinios-analysis-rules"></a>Regole di analisi di Novell. iOS
+# <a name="xamarinios-analysis-rules"></a>Regole di analisi di Xamarin.iOS
 
-L'analisi di Novell. iOS è un set di regole che controllano le impostazioni del progetto per determinare se sono disponibili impostazioni ottimizzate o migliorate.
+L'analisi di Xamarin.iOS è un set di regole che controllano le impostazioni del progetto per determinare se sono disponibili impostazioni ottimizzate o migliorate.
 
 Eseguire le regole di analisi il più spesso possibile per individuare i possibili miglioramenti in anticipo e risparmiare tempo di sviluppo.
 
 Per eseguire le regole, nel menu di Visual Studio per Mac selezionare **progetto > Esegui analisi codice**.
 
 > [!NOTE]
-> L'analisi di Novell. iOS viene eseguita solo sulla configurazione attualmente selezionata. Si consiglia vivamente di eseguire lo strumento per le configurazioni di debug **e** di rilascio.
+> L'analisi di Xamarin.iOS viene eseguita solo sulla configurazione attualmente selezionata. Si consiglia vivamente di eseguire lo strumento per le configurazioni di debug **e** di rilascio.
 
 <a name="XIA0001" />
 

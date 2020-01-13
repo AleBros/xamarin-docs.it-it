@@ -30,11 +30,11 @@ Android 4,4 (API level 19), noto anche come "KitKat", è stato rilasciato alla f
 
 - [Strumenti di sviluppo](#developer_tools) &ndash; screencast sulle applicazioni in azione con il client di Android Debug Bridge, disponibile come parte del Android SDK.
 
-Questa guida fornisce indicazioni per la migrazione di un'applicazione Novell. Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Novell. Android.
+Questa guida fornisce indicazioni per la migrazione di un'applicazione Xamarin.Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Xamarin.Android.
 
 ## <a name="requirements"></a>Requisiti
 
-Per sviluppare applicazioni Novell. Android con KitKat, è necessario *Novell. Android 4.11.0* o versione successiva e Android 4,4 (API level 19) installato tramite Android SDK Manager, come illustrato nello screenshot seguente:
+Per sviluppare applicazioni Xamarin.Android con KitKat, è necessario *Xamarin.Android 4.11.0* o versione successiva e Android 4,4 (API level 19) installato tramite Android SDK Manager, come illustrato nello screenshot seguente:
 
 [![la selezione di Android 4,4 in gestione Android SDK](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 

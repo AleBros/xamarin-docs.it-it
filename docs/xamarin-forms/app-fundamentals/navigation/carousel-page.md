@@ -18,10 +18,10 @@ ms.locfileid: "72696436"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
-_Novell. Forms CarouselPage è una pagina che gli utenti possono scorrere da un lato all'altro per spostarsi tra le pagine di contenuto, ad esempio una raccolta. Questo articolo illustra come usare un CarouselPage per spostarsi in una raccolta di pagine._
+_Xamarin.Forms CarouselPage è una pagina che gli utenti possono scorrere da un lato all'altro per spostarsi tra le pagine di contenuto, ad esempio una raccolta. Questo articolo illustra come usare un CarouselPage per spostarsi in una raccolta di pagine._
 
 > [!IMPORTANT]
-> Il [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) è stato sostituito dal [`CarouselView`](xref:Xamarin.Forms.CarouselView), che fornisce un layout scorrevole in cui gli utenti possono scorrere una raccolta di elementi. Per ulteriori informazioni sulla `CarouselView`, vedere [Novell. Forms CarouselView](~/xamarin-forms/user-interface/carouselview/index.md).
+> Il [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) è stato sostituito dal [`CarouselView`](xref:Xamarin.Forms.CarouselView), che fornisce un layout scorrevole in cui gli utenti possono scorrere una raccolta di elementi. Per ulteriori informazioni sulla `CarouselView`, vedere [Xamarin.Forms CarouselView](~/xamarin-forms/user-interface/carouselview/index.md).
 
 Gli screenshot seguenti illustrano una [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) in ogni piattaforma:
 

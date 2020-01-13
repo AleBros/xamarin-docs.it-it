@@ -22,7 +22,7 @@ _Creare la prima app Android Wear ed eseguirla in un emulatore o dispositivo Wea
 
 ## <a name="your-first-wear-app"></a>La prima app Wear
 
-Per creare la prima app Novell. Android Wear, seguire questa procedura:
+Per creare la prima app Xamarin.Android Wear, seguire questa procedura:
 
 ### <a name="1-create-a-new-android-project"></a>1. creare un nuovo progetto Android
 
@@ -131,7 +131,7 @@ public class MainActivity : Activity
 
 ### <a name="5-setup-an-emulator-or-device"></a>5. configurare un emulatore o un dispositivo
 
-Il passaggio successivo consiste nel configurare un emulatore o un dispositivo per distribuire ed eseguire l'app. Se non si ha ancora familiarità con il processo di distribuzione ed esecuzione di app Novell. Android in generale, vedere la [Guida introduttiva a Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
+Il passaggio successivo consiste nel configurare un emulatore o un dispositivo per distribuire ed eseguire l'app. Se non si ha ancora familiarità con il processo di distribuzione ed esecuzione di app Xamarin.Android in generale, vedere la [Guida introduttiva a Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
 Se non si dispone di un dispositivo Android Wear, ad esempio un SmartWatch Android Wear, è possibile eseguire l'app in un emulatore. Per informazioni sul debug di app in un emulatore, vedere [eseguire il debug di Android Wear in un emulatore](~/android/wear/deploy-test/debug-on-emulator.md).
 

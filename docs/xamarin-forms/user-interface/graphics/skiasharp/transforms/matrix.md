@@ -489,7 +489,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 Una matrice affine è definita in modo univoco da tre punti. I tre `TouchPoint` oggetti corrispondono agli angoli superiore sinistro, superiore destro e inferiore sinistro della bitmap. Perché è in grado di trasformazione di un rettangolo in un parallelogramma solo una matrice affine, è implicito quarto punto le altre tre. Il costruttore si conclude con una chiamata a `ComputeMatrix`, che calcola le celle di un `SKMatrix` oggetto da questi tre punti.
 
-Il `TouchAction` chiamate al gestore la `ProcessTouchEvent` metodo della ognuno `TouchPoint`. Il `scale` valore viene convertito da coordinate di xamarin. Forms per pixel:
+Il `TouchAction` chiamate al gestore la `ProcessTouchEvent` metodo della ognuno `TouchPoint`. Il `scale` valore viene convertito da coordinate di Xamarin.Forms per pixel:
 
 ```csharp
 public partial class ShowAffineMatrixPage : ContentPage

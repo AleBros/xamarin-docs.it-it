@@ -16,7 +16,7 @@ ms.locfileid: "73083829"
 ---
 # <a name="xamarinforms-effects"></a>Effetti di Xamarin.Forms
 
-_Le interfacce utente Novell. Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Novell. Forms di mantenere l'aspetto appropriato per ogni piattaforma. Gli effetti consentono di personalizzare i controlli nativi in ogni piattaforma senza dover ricorrere a un'implementazione di renderer personalizzata._
+_Le interfacce utente Xamarin.Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Xamarin.Forms di mantenere l'aspetto appropriato per ogni piattaforma. Gli effetti consentono di personalizzare i controlli nativi in ogni piattaforma senza dover ricorrere a un'implementazione di renderer personalizzata._
 
 ## <a name="introduction-to-effectsintroductionmd"></a>[Introduzione agli effetti](introduction.md)
 

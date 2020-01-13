@@ -1,6 +1,6 @@
 ---
 title: Associazione di librerie iOS
-description: In questo documento viene descritto come C# creare binding a codice Objective-C, rendendo possibile l'utilizzo di librerie native e CocoaPods in un'applicazione Novell. iOS.
+description: In questo documento viene descritto come C# creare binding a codice Objective-C, rendendo possibile l'utilizzo di librerie native e CocoaPods in un'applicazione Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -17,7 +17,7 @@ ms.locfileid: "73022216"
 ---
 # <a name="binding-ios-libraries"></a>Associazione di librerie iOS
 
-Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C e CocoaPods per Novell. iOS e Novell. Mac:
+Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C e CocoaPods per Xamarin.iOS e Xamarin.Mac:
 
 - [**Panoramica**](~/cross-platform/macios/binding/overview.md) -
   descrive il funzionamento dell'associazione.

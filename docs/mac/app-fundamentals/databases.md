@@ -1,5 +1,5 @@
 ---
-title: Database in Novell. Mac
+title: Database in Xamarin.Mac
 description: Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding tra i database SQLite e gli elementi dell'interfaccia utente nella Interface Builder di Xcode. Viene inoltre illustrata l'utilizzo di SQLite.NET ORM per fornire l'accesso ai dati SQLite.
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
@@ -14,32 +14,32 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032610"
 ---
-# <a name="databases-in-xamarinmac"></a>Database in Novell. Mac
+# <a name="databases-in-xamarinmac"></a>Database in Xamarin.Mac
 
 _Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding tra i database SQLite e gli elementi dell'interfaccia utente nella Interface Builder di Xcode. Viene inoltre illustrata l'utilizzo di SQLite.NET ORM per fornire l'accesso ai dati SQLite._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi database SQLite a cui può accedere un'applicazione Novell. iOS o Novell. Android.
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi database SQLite a cui può accedere un'applicazione Xamarin.iOS o Xamarin.Android.
 
 In questo articolo verranno illustrati due modi per accedere ai dati SQLite:
 
-1. **Accesso diretto** : accedendo direttamente a un database SQLite, è possibile usare i dati del database per la codifica chiave-valore e data binding con gli elementi dell'interfaccia utente creati nell'Interface Builder di Xcode. Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+1. **Accesso diretto** : accedendo direttamente a un database SQLite, è possibile usare i dati del database per la codifica chiave-valore e data binding con gli elementi dell'interfaccia utente creati nell'Interface Builder di Xcode. Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 2. **SQLite.NET ORM** : usando il [SQLite.NET](https://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source (ORM), è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questi dati possono quindi essere utilizzati per popolare un elemento dell'interfaccia utente, ad esempio una visualizzazione tabella.
 
 [![Esempio di app in esecuzione](databases-images/intro01.png "Esempio di app in esecuzione")](databases-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding con i database SQLite in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding con i database SQLite in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
 Poiché si utilizzeranno la codifica e il data binding chiave-valore, usare prima di tutto il [Data Binding e la codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , in quanto verranno analizzate le tecniche e i concetti di base che verranno usati in questa documentazione e nell'applicazione di esempio.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="direct-sqlite-access"></a>Accesso diretto a SQLite
 
 Per i dati SQLite che verranno associati agli elementi dell'interfaccia utente nel Interface Builder di Xcode, è consigliabile accedere direttamente al database SQLite (invece di usare una tecnica come ORM), dal momento che si ha il controllo totale sul modo in cui i dati vengono scritti e letti.  dal database.
 
-Come abbiamo visto nella documentazione relativa al [Data Binding e alla codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , usando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e mantenere per popolare e usare gli elementi dell'interfaccia utente. In combinazione con l'accesso diretto a un database SQLite, può anche ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati in tale database.
+Come abbiamo visto nella documentazione relativa al [Data Binding e alla codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , usando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e mantenere per popolare e usare gli elementi dell'interfaccia utente. In combinazione con l'accesso diretto a un database SQLite, può anche ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati in tale database.
 
 In questo articolo verrà modificata l'app di esempio dal documento data binding e codice chiave-valore per usare un database SQLite come origine di supporto per l'associazione.
 
@@ -2220,7 +2220,7 @@ Prima di tutto, si ottiene l'accesso al database SQLite.NET, che viene creato e 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore con i database SQLite in un'applicazione Novell. Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Questo articolo illustra anche l'uso di dati SQLite tramite SQLite.NET ORM e la visualizzazione di tali dati in una vista tabella.
+Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore con i database SQLite in un'applicazione Xamarin.Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Questo articolo illustra anche l'uso di dati SQLite tramite SQLite.NET ORM e la visualizzazione di tali dati in una vista tabella.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,6 +1,6 @@
 ---
-title: Funzioni di Azure con xamarin. Forms
-description: Introduzione a funzioni di Azure usando xamarin. Forms.
+title: Funzioni di Azure con Xamarin.Forms
+description: Introduzione a funzioni di Azure usando Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
 author: conceptdev
@@ -18,7 +18,7 @@ ms.locfileid: "75487490"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 
-_Iniziare a creare la prima funzione di Azure che interagisce con xamarin. Forms._
+_Iniziare a creare la prima funzione di Azure che interagisce con Xamarin.Forms._
 
 ## <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
@@ -58,4 +58,4 @@ Oltre a questo video, vi è una [esercitazione dettagliata](https://docs.microso
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Documentazione di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/)
-- [Implementazione di una semplice funzione di Azure con un client di xamarin. Forms (esempio)](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Implementazione di una semplice funzione di Azure con un client di Xamarin.Forms (esempio)](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)

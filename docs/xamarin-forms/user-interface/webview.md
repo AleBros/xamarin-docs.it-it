@@ -1,6 +1,6 @@
 ---
-title: WebView di xamarin. Forms
-description: Questo articolo illustra come usare la classe WebView di xamarin. Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
+title: WebView di Xamarin.Forms
+description: Questo articolo illustra come usare la classe WebView di Xamarin.Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490207"
 ---
-# <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
+# <a name="xamarinforms-webview"></a>WebView di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
@@ -153,7 +153,7 @@ Anche se la prima pagina è stata caricata, il `WebView` non conosce la provenie
 
 Per risolvere questo problema, è necessario indicare la `WebView` dove trovare i file nel file System. Farlo impostando il `BaseUrl` proprietà di `HtmlWebViewSource` usato dal `WebView`.
 
-Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin. Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
+Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin.Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
 
 Usare il `DependencyService`, innanzitutto definire un'interfaccia che può essere implementata in ogni piattaforma:
 
@@ -403,12 +403,12 @@ Quando la `Reload` metodo viene richiamato il `ReloadRequested` viene generato l
 
 ## <a name="performance"></a>Prestazioni
 
-I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Novell. Forms 4,4, il `WebView` Novell. Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Novell. Forms 4,4, il `WebView` Novell. Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
+I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Xamarin.Forms 4,4, il `WebView` Xamarin.Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Xamarin.Forms 4,4, il `WebView` Xamarin.Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
 
 > [!NOTE]
 > In iOS, il `WkWebViewRenderer` dispone di un overload del costruttore che accetta un argomento `WkWebViewConfiguration`. In questo modo è possibile configurare il renderer durante la creazione.
 
-Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Novell. Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
+Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Xamarin.Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
 
 ```csharp
 // Opt-in to using UIWebView instead of WkWebView.
@@ -429,7 +429,7 @@ Affinché `WebView` per lavorare, è necessario assicurarsi che le autorizzazion
 
 ## <a name="layout"></a>Formato
 
-A differenza della maggior parte delle altre visualizzazioni, xamarin. Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
+A differenza della maggior parte delle altre visualizzazioni, Xamarin.Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
 
 Gli esempi seguenti illustrano i layout risultanti in uso, per il rendering `WebView`s:
 

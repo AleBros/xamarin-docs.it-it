@@ -1,6 +1,6 @@
 ---
 title: Personalizzazione dell'aspetto di cella ListView
-description: Questo articolo esamina le opzioni per la presentazione dei dati nelle applicazioni xamarin. Forms, sfruttando la praticità del controllo ListView.
+description: Questo articolo esamina le opzioni per la presentazione dei dati nelle applicazioni Xamarin.Forms, sfruttando la praticità del controllo ListView.
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
@@ -18,10 +18,10 @@ ms.locfileid: "70998159"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-La classe Novell. [`ListView`](xref:Xamarin.Forms.ListView) Forms viene usata per presentare elenchi scorrevoli, che possono essere personalizzati tramite l'uso `ViewCell` di elementi. Un `ViewCell` elemento può visualizzare testo e immagini, indicare uno stato true/false e ricevere l'input dell'utente.
+La classe Xamarin.[`ListView`](xref:Xamarin.Forms.ListView) Forms viene usata per presentare elenchi scorrevoli, che possono essere personalizzati tramite l'uso `ViewCell` di elementi. Un `ViewCell` elemento può visualizzare testo e immagini, indicare uno stato true/false e ricevere l'input dell'utente.
 
 ## <a name="built-in-cells"></a>Compilato in celle
-Novell. Forms è dotato di celle predefinite che funzionano per molte applicazioni:
+Xamarin.Forms è dotato di celle predefinite che funzionano per molte applicazioni:
 
 - [`TextCell`](#textcell)i controlli vengono utilizzati per visualizzare il testo con una seconda riga facoltativa per il testo del dettaglio.
 - [`ImageCell`](#imagecell)i controlli sono simili `TextCell`a, ma includono un'immagine a sinistra del testo.
@@ -68,7 +68,7 @@ Le celle personalizzate consentono di creare layout di celle non supportati dall
 
 Tutte le celle personalizzate devono derivare da [`ViewCell`](xref:Xamarin.Forms.ViewCell), la stessa classe di base che tutta la cella predefinita dei tipi di utilizzo.
 
-Novell. Forms offre un [comportamento di memorizzazione nella cache](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy) sul controllo che può migliorare le `ListView` prestazioni di scorrimento per alcuni tipi di celle personalizzate.
+Xamarin.Forms offre un [comportamento di memorizzazione nella cache](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy) sul controllo che può migliorare le `ListView` prestazioni di scorrimento per alcuni tipi di celle personalizzate.
 
 Lo screenshot seguente mostra un esempio di una cella personalizzata:
 
@@ -110,7 +110,7 @@ Il codice XAML funziona nel modo seguente:
 
 - La cella personalizzata è annidata all'interno di un `DataTemplate`, che si trova all'interno `ListView.ItemTemplate`. Si tratta dello stesso processo utilizzato per qualsiasi cella incorporata.
 - `ViewCell` è il tipo di cella personalizzato. Il figlio dell' `DataTemplate` elemento deve essere o derivare dalla `ViewCell` classe.
-- All'interno `ViewCell`di il layout può essere gestito da qualsiasi layout di Novell. Forms. In questo esempio il layout è gestito da un `StackLayout`, che consente la personalizzazione del colore di sfondo.
+- All'interno `ViewCell`di il layout può essere gestito da qualsiasi layout di Xamarin.Forms. In questo esempio il layout è gestito da un `StackLayout`, che consente la personalizzazione del colore di sfondo.
 
 > [!NOTE]
 > Qualsiasi proprietà di `StackLayout` che è associabile può essere associata all'interno di una cella personalizzata. Questa funzionalità, tuttavia, non viene mostrata nell'esempio di XAML.
@@ -215,7 +215,7 @@ public class CustomCell : ViewCell
 }
 ```
 
-Il [`OnBindingContextChanged`](xref:Xamarin.Forms.Cell.OnBindingContextChanged) sostituzione verrà chiamata quando il [`BindingContextChanged`](xref:Xamarin.Forms.BindableObject.BindingContextChanged) attivazione dell'evento in risposta al valore della [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) modifica delle proprietà. Pertanto, quando la `BindingContext` viene modificato, i controlli dell'interfaccia utente che visualizzano la [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) valori devono impostare i propri dati. Si noti che il `BindingContext` deve essere verificato per un `null` valore, come può essere impostato da xamarin. Forms per garbage collection, che a sua volta comporterà il `OnBindingContextChanged` eseguire l'override viene chiamato.
+Il [`OnBindingContextChanged`](xref:Xamarin.Forms.Cell.OnBindingContextChanged) sostituzione verrà chiamata quando il [`BindingContextChanged`](xref:Xamarin.Forms.BindableObject.BindingContextChanged) attivazione dell'evento in risposta al valore della [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) modifica delle proprietà. Pertanto, quando la `BindingContext` viene modificato, i controlli dell'interfaccia utente che visualizzano la [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) valori devono impostare i propri dati. Si noti che il `BindingContext` deve essere verificato per un `null` valore, come può essere impostato da Xamarin.Forms per garbage collection, che a sua volta comporterà il `OnBindingContextChanged` eseguire l'override viene chiamato.
 
 In alternativa, possono associare i controlli dell'interfaccia utente per il [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) istanze per visualizzare i relativi valori, che elimina la necessità di eseguire l'override di `OnBindingContextChanged` (metodo).
 

@@ -37,7 +37,7 @@ Objective Sharpie usa i file di intestazione di analisi Clang, quindi il binding
 
 ## <a name="history"></a>Cronologia
 
-È in corso l'evoluzione e l'uso dell'obiettivo Sharpie internamente in Novell negli ultimi tre anni. Per quanto riguarda la potenza dell'obiettivo Sharpie, le API introdotte in Novell. iOS e Novell. Mac da iOS 8, Mac OS X 10,10 e watchos 2,0 sono state avviate interamente con Objective Sharpe. Novell si basa principalmente sull'obiettivo Sharpie per la creazione di propri prodotti.
+È in corso l'evoluzione e l'uso dell'obiettivo Sharpie internamente in Novell negli ultimi tre anni. Per quanto riguarda la potenza dell'obiettivo Sharpie, le API introdotte in Xamarin.iOS e Xamarin.Mac da iOS 8, Mac OS X 10,10 e watchos 2,0 sono state avviate interamente con Objective Sharpe. Novell si basa principalmente sull'obiettivo Sharpie per la creazione di propri prodotti.
 
 Tuttavia, Objective è uno strumento molto avanzato che richiede una conoscenza avanzata di Objective-C e C, come usare il compilatore Clang nella riga di comando e in genere come vengono combinate le librerie native. A causa di questa alta barra, abbiamo pensato che la creazione guidata di GUI consentisse di impostare le aspettative errate e, di conseguenza, l'obiettivo Sharpie è attualmente disponibile solo come strumento da riga di comando.
 

@@ -1,5 +1,5 @@
 ---
-title: Guide introduttive per Novell. Forms
+title: Guide introduttive per Xamarin.Forms
 description: Guide di avvio rapido sullo sviluppo di applicazioni Xamarin.Forms con Visual Studio e Visual Studio per Mac.
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -14,15 +14,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75720460"
 ---
-# <a name="xamarinforms-quickstarts"></a>Guide introduttive per Novell. Forms
+# <a name="xamarinforms-quickstarts"></a>Guide introduttive per Xamarin.Forms
 
-_Informazioni su come creare applicazioni per dispositivi mobili con Novell. Forms._
+_Informazioni su come creare applicazioni per dispositivi mobili con Xamarin.Forms._
 
-## <a name="create-a-single-page-xamarinforms-applicationsingle-pagemd"></a>[Creare un'applicazione Novell. Forms a pagina singola](single-page.md)
+## <a name="create-a-single-page-xamarinforms-applicationsingle-pagemd"></a>[Creare un'applicazione Xamarin.Forms a pagina singola](single-page.md)
 
 Informazioni su come creare un'applicazione Xamarin.Forms multipiattaforma a pagina singola, che consente di immettere una nota e renderla persistente nell'archiviazione del dispositivo.
 
-## <a name="perform-navigation-in-a-multi-page-xamarinforms-applicationmulti-pagemd"></a>[Eseguire lo spostamento in un'applicazione Novell. Forms a più pagine](multi-page.md)
+## <a name="perform-navigation-in-a-multi-page-xamarinforms-applicationmulti-pagemd"></a>[Eseguire lo spostamento in un'applicazione Xamarin.Forms a più pagine](multi-page.md)
 
 Informazioni su come trasformare l'applicazione a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note.
 
@@ -30,7 +30,7 @@ Informazioni su come trasformare l'applicazione a pagina singola, in grado di ar
 
 Informazioni su come archiviare i dati in un database di SQLite.NET locale.
 
-## <a name="style-a-cross-platform-xamarinforms-applicationstylingmd"></a>[Applicare uno stile a un'applicazione Novell. Forms multipiattaforma](styling.md)
+## <a name="style-a-cross-platform-xamarinforms-applicationstylingmd"></a>[Applicare uno stile a un'applicazione Xamarin.Forms multipiattaforma](styling.md)
 
 Informazioni su come definire lo stile di un'applicazione Xamarin.Forms multipiattaforma con gli stili XAML.
 

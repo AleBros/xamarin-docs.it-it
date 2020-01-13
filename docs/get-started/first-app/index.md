@@ -34,7 +34,7 @@ Seguire questi passaggi e il video precedente:
 
     [![creare un nuovo progetto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
-2. Cercare "Novell" o scegliere **mobile** dal menu **tipo progetto** . Selezionare il tipo di progetto **app per dispositivi mobili (Novell. Forms)** :
+2. Cercare "Novell" o scegliere **mobile** dal menu **tipo progetto** . Selezionare il tipo di progetto **app per dispositivi mobili (Xamarin.Forms)** :
 
     [Filtro ![per progetti Novell](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
@@ -212,5 +212,5 @@ Seguire questi passaggi e il video precedente:
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Guida introduttiva a pagina singola](~/get-started/quickstarts/single-page.md) &ndash; creare un'app più funzionale.
-- [Esempi di Novell. forms](~/xamarin-forms/samples/index.md) &ndash; scaricare ed eseguire esempi di codice e app di esempio.
-- La [creazione di ebook per app per dispositivi mobili](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; capitoli approfonditi che insegnano lo sviluppo di Novell. Forms, disponibile come PDF e con centinaia di esempi aggiuntivi.
+- [Esempi di Xamarin.forms](~/xamarin-forms/samples/index.md) &ndash; scaricare ed eseguire esempi di codice e app di esempio.
+- La [creazione di ebook per app per dispositivi mobili](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; capitoli approfonditi che insegnano lo sviluppo di Xamarin.Forms, disponibile come PDF e con centinaia di esempi aggiuntivi.

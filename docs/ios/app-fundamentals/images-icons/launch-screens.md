@@ -1,5 +1,5 @@
 ---
-title: Schermate di avvio per le app Novell. iOS
+title: Schermate di avvio per le app Xamarin.iOS
 description: Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010495"
 ---
-# <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
+# <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Xamarin.iOS
 
 _Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato._
 

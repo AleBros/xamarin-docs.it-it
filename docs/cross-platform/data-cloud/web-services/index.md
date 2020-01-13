@@ -19,7 +19,7 @@ _In questa guida viene illustrato come utilizzare tecnologie di servizi Web dive
 
 Per funzionare correttamente, molte applicazioni per dispositivi mobili dipendono dal cloud e pertanto l'integrazione dei servizi Web nelle applicazioni per dispositivi mobili è uno scenario comune. La piattaforma Novell supporta l'utilizzo di diverse tecnologie di servizi Web e include supporto integrato e di terze parti per l'utilizzo di servizi RESTful, ASMX e Windows Communication Foundation (WCF).
 
-Per i clienti che usano Novell. Forms, sono disponibili esempi completi che usano ciascuna di queste tecnologie nella documentazione relativa ai [servizi Web Novell. Forms](~/xamarin-forms/data-cloud/index.yml) .
+Per i clienti che usano Xamarin.Forms, sono disponibili esempi completi che usano ciascuna di queste tecnologie nella documentazione relativa ai [servizi Web Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml) .
 
 > [!IMPORTANT]
 > In iOS 9, la sicurezza del trasporto app (ATS) applica connessioni sicure tra le risorse Internet (ad esempio il server back-end dell'app) e l'app, impedendo in tal modo la divulgazione accidentale di informazioni riservate.
@@ -444,6 +444,6 @@ Per ulteriori informazioni sull'autenticazione di base HTTP, anche se nel contes
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Servizi Web in Novell. Forms](~/xamarin-forms/data-cloud/index.yml)
+- [Servizi Web in Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

@@ -1,6 +1,6 @@
 ---
 title: Integrazione con Xamarin.Forms
-description: Questo articolo illustra come creare elementi grafici di SkiaSharp che rispondono al tocco e gli elementi di xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come creare elementi grafici di SkiaSharp che rispondono al tocco e gli elementi di Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
@@ -18,16 +18,16 @@ ms.locfileid: "70759442"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Creare grafici di SkiaSharp che rispondono al tocco e gli elementi di xamarin. Forms_
+_Creare grafici di SkiaSharp che rispondono al tocco e gli elementi di Xamarin.Forms_
 
-Grafica di SkiaSharp può integrarsi con il resto di xamarin. Forms in diversi modi. È possibile combinare un'area di disegno di SkiaSharp e gli elementi di xamarin. Forms nella stessa pagina ed elementi di xamarin. Forms posizione anche all'inizio di un'area di disegno di SkiaSharp:
+Grafica di SkiaSharp può integrarsi con il resto di Xamarin.Forms in diversi modi. È possibile combinare un'area di disegno di SkiaSharp e gli elementi di Xamarin.Forms nella stessa pagina ed elementi di Xamarin.Forms posizione anche all'inizio di un'area di disegno di SkiaSharp:
 
 ![](integration-images/integrationexample.png "Selezionare un colore con dispositivi di scorrimento")
 
-Un altro approccio alla creazione grafica interattiva di SkiaSharp in xamarin. Forms è tramite tocco.
+Un altro approccio alla creazione grafica interattiva di SkiaSharp in Xamarin.Forms è tramite tocco.
 La seconda pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma è autorizzata a utilizzare **toccare riempire attiva/disattiva**. Disegna un cerchio semplice due modi &mdash; senza riempimento e con riempimento &mdash; attivata/disattivata tramite tocco. Il [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe illustra come è possibile modificare i grafici di SkiaSharp in risposta all'input dell'utente.
 
-Per questa pagina, il `SKCanvasView` viene creata un'istanza di classe nel [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) file, che imposta anche un xamarin. Forms [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) sulla vista:
+Per questa pagina, il `SKCanvasView` viene creata un'istanza di classe nel [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) file, che imposta anche un Xamarin.Forms [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) sulla vista:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -88,7 +88,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il `StrokeWidth` proprietà è stata impostata su 50 per sottolineare la differenza. È anche possibile visualizzare la larghezza intera riga disegnando prima di tutto l'interno e quindi la struttura. Per impostazione predefinita, grafica figure che vengono creati successivamente nel `PaintSurface` gestore dell'evento oscurare quelli creato in precedenza nel gestore.
 
-Il **colore esplorare** pagina viene illustrato come è possibile integrare SkiaSharp grafica con altri elementi di xamarin. Forms e illustra anche la differenza tra due metodi alternativi per definire i colori in SkiaSharp. Il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) metodo crea un `SKColor` valore basato sul modello di Hue-Saturation-Lightness:
+Il **colore esplorare** pagina viene illustrato come è possibile integrare SkiaSharp grafica con altri elementi di Xamarin.Forms e illustra anche la differenza tra due metodi alternativi per definire i colori in SkiaSharp. Il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) metodo crea un `SKColor` valore basato sul modello di Hue-Saturation-Lightness:
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)

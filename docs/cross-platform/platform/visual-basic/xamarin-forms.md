@@ -1,6 +1,6 @@
 ---
-title: Novell. Forms con Visual Basic.NET
-description: Il modello di progetto Novell. Forms può essere modificato in modo da usare Visual Basic per l'assembly principale, consentendo di creare app per dispositivi mobili multipiattaforma usando VB.NET.
+title: Xamarin.Forms con Visual Basic.NET
+description: Il modello di progetto Xamarin.Forms può essere modificato in modo da usare Visual Basic per l'assembly principale, consentendo di creare app per dispositivi mobili multipiattaforma usando VB.NET.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
@@ -13,34 +13,34 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014554"
 ---
-# <a name="xamarinforms-using-visual-basicnet"></a>Novell. Forms con Visual Basic.NET
+# <a name="xamarinforms-using-visual-basicnet"></a>Xamarin.Forms con Visual Basic.NET
 
-Novell non supporta direttamente Visual Basic. seguire le istruzioni disponibili in questa pagina per creare una C# soluzione Novell. Forms e quindi sostituire il C# progetto .NET standard con Visual Basic.
+Novell non supporta direttamente Visual Basic. seguire le istruzioni disponibili in questa pagina per creare una C# soluzione Xamarin.Forms e quindi sostituire il C# progetto .NET standard con Visual Basic.
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 
-[![creare una soluzione Novell. Forms e quindi sostituire il progetto .NET Standard con Visual Basic](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
+[![creare una soluzione Xamarin.Forms e quindi sostituire il progetto .NET Standard con Visual Basic](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
 
 > [!NOTE]
 > È necessario usare Visual Studio in Windows per programmare con Visual Basic.
 
-## <a name="xamarinforms-with-visual-basic-walkthrough"></a>Novell. Forms con Visual Basic procedura dettagliata
+## <a name="xamarinforms-with-visual-basic-walkthrough"></a>Xamarin.Forms con Visual Basic procedura dettagliata
 
-Seguire questa procedura per creare un progetto Novell. Forms semplice che usi Visual Basic:
+Seguire questa procedura per creare un progetto Xamarin.Forms semplice che usi Visual Basic:
 
 1. Da Visual Studio 2019 scegliere **Crea un nuovo progetto**.
 
-2. Nella finestra **Crea un nuovo progetto** digitare **Novell. Forms** per filtrare l'elenco e selezionare **app per dispositivi mobili (Novell. Forms)** , quindi fare clic su **Avanti**.
+2. Nella finestra **Crea un nuovo progetto** digitare **Xamarin.Forms** per filtrare l'elenco e selezionare **app per dispositivi mobili (Xamarin.Forms)** , quindi fare clic su **Avanti**.
 
-    [Filtro![per le app Novell. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
+    [Filtro![per le app Xamarin.Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
 
 3. Nella schermata successiva, digitare un nome per il progetto e premere **Crea**.
 
 4. Scegliere il modello **vuoto** e fare clic su **OK**:
 
-    [![modello Novell. Forms vuoto](xamarin-forms-images/04-sml.png)](xamarin-forms-images/04.png#lightbox)
+    [![modello Xamarin.Forms vuoto](xamarin-forms-images/04-sml.png)](xamarin-forms-images/04.png#lightbox)
 
-    Viene creata una soluzione Novell. Forms in Visual Studio usando C#. Nei passaggi successivi viene modificata la soluzione per utilizzare Visual Basic.
+    Viene creata una soluzione Xamarin.Forms in Visual Studio usando C#. Nei passaggi successivi viene modificata la soluzione per utilizzare Visual Basic.
 
 5. Fare clic con il pulsante destro del mouse sulla soluzione e scegliere **aggiungi > nuovo progetto...**
 
@@ -52,9 +52,9 @@ Seguire questa procedura per creare un progetto Novell. Forms semplice che usi V
 
 8. Fare clic con il pulsante destro del mouse sul progetto Visual Basic e scegliere **Proprietà**, quindi modificare lo **spazio dei nomi predefinito** in modo che corrisponda ai progetti esistenti C# :
 
-    [![assicurarsi che lo spazio dei nomi della Visual Basic radice corrisponda all'app Novell. Forms](xamarin-forms-images/07a-sml.png)](xamarin-forms-images/07a.png#lightbox)
+    [![assicurarsi che lo spazio dei nomi della Visual Basic radice corrisponda all'app Xamarin.Forms](xamarin-forms-images/07a-sml.png)](xamarin-forms-images/07a.png#lightbox)
 
-9. Fare clic con il pulsante destro del mouse sul nuovo progetto Visual Basic e scegliere **Gestisci pacchetti NuGet**, quindi installare **Novell. Forms** e chiudere la finestra di gestione pacchetti.
+9. Fare clic con il pulsante destro del mouse sul nuovo progetto Visual Basic e scegliere **Gestisci pacchetti NuGet**, quindi installare **Xamarin.Forms** e chiudere la finestra di gestione pacchetti.
 
     [![form e chiudere la finestra di gestione pacchetti](xamarin-forms-images/07b-sml.png)](xamarin-forms-images/07b.png#lightbox)
 
@@ -62,7 +62,7 @@ Seguire questa procedura per creare un progetto Novell. Forms semplice che usi V
 
     [![rinominare il file Class1 e la classe predefiniti in app](xamarin-forms-images/08.png)](xamarin-forms-images/08.png#lightbox)
 
-11. Incollare il codice seguente nel file **app. vb** , che diventerà il punto di partenza dell'app Novell. Forms:
+11. Incollare il codice seguente nel file **app. vb** , che diventerà il punto di partenza dell'app Xamarin.Forms:
 
     ```vb
     Imports Xamarin.Forms
@@ -94,7 +94,7 @@ Fare clic con il pulsante destro del mouse sul nodo **riferimenti** nei progetti
 
     [![rimuovere il riferimento al progetto precedente, aggiungere Visual Basic riferimento](xamarin-forms-images/10-sml.png)](xamarin-forms-images/10.png#lightbox)
 
-13. Eliminare il C# progetto. Aggiungere nuovi file **. vb** per compilare l'applicazione Novell. Forms. Di seguito è riportato un modello per i nuovi `ContentPage`in Visual Basic:
+13. Eliminare il C# progetto. Aggiungere nuovi file **. vb** per compilare l'applicazione Xamarin.Forms. Di seguito è riportato un modello per i nuovi `ContentPage`in Visual Basic:
 
     ```vb
     Imports Xamarin.Forms
@@ -117,7 +117,7 @@ Fare clic con il pulsante destro del mouse sul nodo **riferimenti** nei progetti
     End Class
     ```
 
-## <a name="limitations-of-visual-basic-in-xamarinforms"></a>Limitazioni dei Visual Basic in Novell. Forms
+## <a name="limitations-of-visual-basic-in-xamarinforms"></a>Limitazioni dei Visual Basic in Xamarin.Forms
 
 Come indicato nella [pagina Portable Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md), Novell non supporta la lingua Visual Basic. Ciò significa che esistono alcune limitazioni in cui è possibile usare Visual Basic:
 

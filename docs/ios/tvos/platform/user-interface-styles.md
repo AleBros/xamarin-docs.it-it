@@ -1,6 +1,6 @@
 ---
 title: Stili dell'interfaccia utente di tvOS in Novell
-description: Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Novell. tvOS.
+description: Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73030571"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Stili dell'interfaccia utente di tvOS in Novell
 
-_Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Novell. tvOS._
+_Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Xamarin.tvOS._
 
 tvOS 10 supporta ora sia un tema di interfaccia utente scuro che chiaro che tutti i controlli UIKit di compilazione verranno adattati automaticamente in base alle preferenze dell'utente. Inoltre, lo sviluppatore può modificare manualmente gli elementi dell'interfaccia utente in base al tema selezionato dall'utente e può eseguire l'override di un determinato tema.
 
@@ -100,7 +100,7 @@ Inoltre, le raccolte di tratti hanno le funzionalità seguenti in tvOS 10:
 - Un'app tvOS può gestire le modifiche alla raccolta dei tratti eseguendo l'override del metodo `TraitCollectionDidChange` di una classe `UIView` o `UIViewController`.
 
 > [!IMPORTANT]
-> Novell. tvOS Early Preview per tvOS 10 non supporta ancora `UIUserInterfaceStyle` per `UITraitCollection`. Il supporto completo verrà aggiunto in una versione futura.
+> Xamarin.tvOS Early Preview per tvOS 10 non supporta ancora `UIUserInterfaceStyle` per `UITraitCollection`. Il supporto completo verrà aggiunto in una versione futura.
 
 <a name="Customizing-Appearance-Based-on-Theme" />
 
@@ -120,7 +120,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> Sfortunatamente, l'anteprima di Novell. tvOS per tvOS 10 non supporta completamente `UIUserInterfaceStyle` per `UITraitCollection`, pertanto questo tipo di personalizzazione non è ancora disponibile. Il supporto completo verrà aggiunto in una versione futura.
+> Sfortunatamente, l'anteprima di Xamarin.tvOS per tvOS 10 non supporta completamente `UIUserInterfaceStyle` per `UITraitCollection`, pertanto questo tipo di personalizzazione non è ancora disponibile. Il supporto completo verrà aggiunto in una versione futura.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
@@ -163,7 +163,7 @@ Per altre informazioni, [vedere le sezioni relative ai tratti e](~/ios/user-inte
 
 ### <a name="trait-collections-and-storyboards"></a>Raccolte di tratti e storyboard
 
-In tvOS 10, lo storyboard di un'app può essere impostato in modo da rispondere alle raccolte di tratti e molti elementi dell'interfaccia utente possono essere resi consapevoli del tema chiaro e scuro. La versione corrente di Novell. tvOS Early Preview per tvOS 10 non supporta ancora questa funzionalità nella finestra di progettazione dell'interfaccia, pertanto lo storyboard deve essere modificato nel Interface Builder di Xcode come soluzione alternativa.
+In tvOS 10, lo storyboard di un'app può essere impostato in modo da rispondere alle raccolte di tratti e molti elementi dell'interfaccia utente possono essere resi consapevoli del tema chiaro e scuro. La versione corrente di Xamarin.tvOS Early Preview per tvOS 10 non supporta ancora questa funzionalità nella finestra di progettazione dell'interfaccia, pertanto lo storyboard deve essere modificato nel Interface Builder di Xcode come soluzione alternativa.
 
 Per abilitare il supporto per la raccolta di tratti, procedere come segue:
 
@@ -205,7 +205,7 @@ Inoltre, il simulatore tvOS dispone ora di un tasto di scelta rapida che consent
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i temi di interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Novell. tvOS.
+Questo articolo ha illustrato i temi di interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

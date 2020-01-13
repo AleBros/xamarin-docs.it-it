@@ -1,6 +1,6 @@
 ---
 title: Prestazioni di ListView
-description: ListView è una visualizzazione potente per la visualizzazione dei dati, ma presenta alcune limitazioni. Questo articolo illustra come garantire prestazioni ottimali con un ListView di xamarin. Forms in un'applicazione.
+description: ListView è una visualizzazione potente per la visualizzazione dei dati, ma presenta alcune limitazioni. Questo articolo illustra come garantire prestazioni ottimali con un ListView di Xamarin.Forms in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
@@ -20,7 +20,7 @@ ms.locfileid: "70998186"
 
 Quando si scrivono applicazioni per dispositivi mobili, è importante delle prestazioni. Gli utenti sono ormai si aspettano uno scorrimento fluido e tempi di caricamento rapido. Non soddisfa le aspettative degli utenti verranno costo di valutazioni nell'archivio di applicazione o nel caso di un'applicazione line-of-business, costo del tempo e denaro.
 
-Novell. Forms [`ListView`](xref:Xamarin.Forms.ListView) è una vista potente per la visualizzazione dei dati, ma presenta alcune limitazioni. Lo scorrimento delle prestazioni può risentirne quando si utilizzano celle personalizzate, soprattutto quando contengono gerarchie di visualizzazione profondamente annidate o si utilizzano determinati layout che richiedono una misurazione complessa. Fortunatamente, esistono tecniche che è possibile utilizzare per evitare una riduzione delle prestazioni.
+Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) è una vista potente per la visualizzazione dei dati, ma presenta alcune limitazioni. Lo scorrimento delle prestazioni può risentirne quando si utilizzano celle personalizzate, soprattutto quando contengono gerarchie di visualizzazione profondamente annidate o si utilizzano determinati layout che richiedono una misurazione complessa. Fortunatamente, esistono tecniche che è possibile utilizzare per evitare una riduzione delle prestazioni.
 
 ## <a name="caching-strategy"></a>Strategia di memorizzazione nella cache
 
@@ -28,7 +28,7 @@ I ListView vengono spesso utilizzati per visualizzare un numero maggiore di dati
 
 Per conservare la memoria, gli equivalenti nativi [`ListView`](xref:Xamarin.Forms.ListView) per ogni piattaforma hanno funzionalità predefinite per il riutilizzo delle righe. Solo le celle visibili sullo schermo vengono caricate in memoria e il **contenuto** viene caricato in celle esistenti. Questo modello impedisce all'applicazione di creare istanze di migliaia di oggetti, risparmiando tempo e memoria.
 
-Novell. Forms [`ListView`](xref:Xamarin.Forms.ListView) consente il riutilizzo [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) delle celle tramite l'enumerazione, che presenta i valori seguenti:
+Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) consente il riutilizzo [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) delle celle tramite l'enumerazione, che presenta i valori seguenti:
 
 ```csharp
 public enum ListViewCachingStrategy
@@ -94,7 +94,7 @@ In iOS e Android, se le celle renderer personalizzati, è necessario assicurarsi
 Quando un [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza una [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) per selezionare un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) la memorizzazione nella cache strategia di non memorizzare nella cache `DataTemplate`s. Al contrario, un `DataTemplate` è selezionato per ogni elemento di dati nell'elenco.
 
 > [!NOTE]
-> Il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache è un prerequisito, introdotta in xamarin. Forms 2.4, che, quando un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) viene chiesto di selezionare un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)ognuna `DataTemplate` deve restituire lo stesso [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) tipo. Si consideri, ad esempio, un [ `ListView` ](xref:Xamarin.Forms.ListView) con un `DataTemplateSelector` che può restituire `MyDataTemplateA` (dove `MyDataTemplateA` restituisce un `ViewCell` typu `MyViewCellA`), o `MyDataTemplateB` (dove `MyDataTemplateB`restituisce un `ViewCell` typu `MyViewCellB`), quando `MyDataTemplateA` restituito deve essere restituito `MyViewCellA` o verrà generata un'eccezione.
+> Il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache è un prerequisito, introdotta in Xamarin.Forms 2.4, che, quando un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) viene chiesto di selezionare un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)ognuna `DataTemplate` deve restituire lo stesso [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) tipo. Si consideri, ad esempio, un [ `ListView` ](xref:Xamarin.Forms.ListView) con un `DataTemplateSelector` che può restituire `MyDataTemplateA` (dove `MyDataTemplateA` restituisce un `ViewCell` typu `MyViewCellA`), o `MyDataTemplateB` (dove `MyDataTemplateB`restituisce un `ViewCell` typu `MyViewCellB`), quando `MyDataTemplateA` restituito deve essere restituito `MyViewCellA` o verrà generata un'eccezione.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 

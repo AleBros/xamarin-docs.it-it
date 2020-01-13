@@ -17,9 +17,9 @@ ms.locfileid: "73031154"
 # <a name="error-mt1009-could-not-copy-the-assembly"></a>Errore MT1009: non è stato possibile copiare l'assembly
 
 > [!IMPORTANT]
-> Questo problema è stato risolto nelle versioni recenti di Novell. iOS. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
+> Questo problema è stato risolto nelle versioni recenti di Xamarin.iOS. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
-Come descritto nelle [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_7/xamarin.ios_7.2/index.md), si tratta di un problema noto in Novell. iOS 7.2.6. Questo problema è dovuto alle autorizzazioni per i file che richiedono privilegi più elevati quando Novell. iOS viene installato con un account utente diverso, quindi l'account principale dello sviluppatore.
+Come descritto nelle [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_7/xamarin.ios_7.2/index.md), si tratta di un problema noto in Xamarin.iOS 7.2.6. Questo problema è dovuto alle autorizzazioni per i file che richiedono privilegi più elevati quando Xamarin.iOS viene installato con un account utente diverso, quindi l'account principale dello sviluppatore.
 
 Per aggirare il problema, aprire l'app Terminal. nella workstation Mac ed eseguire il comando seguente:
 

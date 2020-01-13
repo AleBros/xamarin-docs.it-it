@@ -33,7 +33,7 @@ In genere, ciò significa che sarà necessario determinare l'impronta digitale S
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Novell. Android si trova nel percorso seguente:
+Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android si trova nel percorso seguente:
 
 **C:\\utenti\\[USERNAME]\\AppData\\local\\Novell\\mono per Android\\debug. keystore**
 
@@ -43,7 +43,7 @@ Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Novell. Android si trova nel percorso seguente:
+Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android si trova nel percorso seguente:
 
 **/Utenti/[USERNAME]/.local/share/Xamarin/Mono per Android/Debug. keystore**
 
@@ -125,11 +125,11 @@ Dopo aver recuperato l'impronta digitale SHA-1 dell'archivio chiavi di firma, è
 
    [![fare clic sul pulsante Abilita nella sezione Dashboard](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-A questo punto è stato creato il progetto API e l'API di Google Maps Android V2 è stata aggiunta. Tuttavia, non è possibile usare questa API nel progetto finché non vengono create le relative credenziali. La sezione successiva illustra come creare una chiave API ed elencare un elenco di applicazioni Novell. Android in modo che sia autorizzato a usare questa chiave.
+A questo punto è stato creato il progetto API e l'API di Google Maps Android V2 è stata aggiunta. Tuttavia, non è possibile usare questa API nel progetto finché non vengono create le relative credenziali. La sezione successiva illustra come creare una chiave API ed elencare un elenco di applicazioni Xamarin.Android in modo che sia autorizzato a usare questa chiave.
 
 ## <a name="obtaining-the-api-key"></a>Ottenere la chiave API
 
-Dopo aver creato il progetto API della **console Google Developer** , è necessario creare una chiave API Android. Le applicazioni Novell. Android devono avere una chiave API prima di concedere l'accesso all'API della mappa Android V2.
+Dopo aver creato il progetto API della **console Google Developer** , è necessario creare una chiave API Android. Le applicazioni Xamarin.Android devono avere una chiave API prima di concedere l'accesso all'API della mappa Android V2.
 
 1. Nella pagina **Maps SDK per Android** visualizzata (dopo aver fatto clic su **Abilita** nel passaggio precedente) andare alla scheda **Credentials (credenziali** ) e fare clic sul pulsante **create Credentials (crea credenziali** ):
 
@@ -153,7 +153,7 @@ Dopo aver creato il progetto API della **console Google Developer** , è necessa
 
 6. Immettere il nome del pacchetto dell'app e immettere l'impronta digitale del certificato SHA-1, ottenuta tramite `keytool` come illustrato in precedenza in questa guida. Nell'esempio seguente viene immesso il nome del pacchetto per `XamarinMapsDemo`, seguito dall'impronta digitale del certificato SHA-1 ottenuta da **debug. keystore**:
 
-   [il nome del pacchetto ![immesso è com. Novell. docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
+   [il nome del pacchetto ![immesso è com. Xamarin.docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
 7. Si noti che, affinché il pacchetto APK l'accesso a Google Maps, è necessario includere le impronte digitali SHA-1 e creare un pacchetto nomi per ogni archivio chiavi (debug e rilascio) che usano per firmare l'APK. Ad esempio, se si usa un computer per il debug e un altro computer per la generazione del file APK di rilascio, è necessario includere l'impronta digitale certificato SHA-1 dall'archivio di chiavi di debug del computer prima e l'impronta digitale certificato SHA-1 dalla versione dell'archivio chiavi di il secondo computer. Fare clic su **+ Aggiungi nome pacchetto e impronta digitale** per aggiungere un'altra impronta digitale e il nome del pacchetto, come illustrato nell'esempio seguente:
 
@@ -177,7 +177,7 @@ A partire dall'11 giugno 2018, la chiave API non funzionerà se il progetto non 
 
 ## <a name="adding-the-key-to-your-project"></a>Aggiunta della chiave al progetto
 
-Aggiungere infine questa chiave API al file **file AndroidManifest. XML** dell'app Novell. Android. Nell'esempio seguente `YOUR_API_KEY` deve essere sostituito con la chiave API generata nei passaggi precedenti:
+Aggiungere infine questa chiave API al file **file AndroidManifest. XML** dell'app Xamarin.Android. Nell'esempio seguente `YOUR_API_KEY` deve essere sostituito con la chiave API generata nei passaggi precedenti:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"

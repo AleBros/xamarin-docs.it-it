@@ -1,6 +1,6 @@
 ---
 title: Funzionalità per la sicurezza e la privacy di iOS
-description: In questo documento vengono descritte le funzionalità di sicurezza e privacy di iOS e viene illustrato come usarle con Novell. iOS. Vengono esaminati gli aggiornamenti apportati in iOS 10 e viene illustrato come accedere ai dati utente privati.
+description: In questo documento vengono descritte le funzionalità di sicurezza e privacy di iOS e viene illustrato come usarle con Xamarin.iOS. Vengono esaminati gli aggiornamenti apportati in iOS 10 e viene illustrato come accedere ai dati utente privati.
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
@@ -16,9 +16,9 @@ ms.locfileid: "73009656"
 ---
 # <a name="ios-security-and-privacy-features"></a>Funzionalità per la sicurezza e la privacy di iOS
 
-_Questo articolo illustra l'uso della sicurezza e della privacy in iOS e del modo in cui influiscono su un'app Novell. iOS._
+_Questo articolo illustra l'uso della sicurezza e della privacy in iOS e del modo in cui influiscono su un'app Xamarin.iOS._
 
-Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in iOS 10 (e versioni successive) che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Novell. iOS.
+Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in iOS 10 (e versioni successive) che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Xamarin.iOS.
 
 <a name="General-Enhancements" />
 
@@ -74,7 +74,7 @@ Per accedere a HomeKit in iOS 10 e versioni successive, lo sviluppatore dovrà a
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Novell. iOS per Visual Studio attualmente non supporta la modifica delle chiavi di privacy **info. plist** nell'editor di manifesti iOS predefinito. Sarà invece necessario usare l'editor PList generico, quindi eseguire le operazioni seguenti:
+Xamarin.iOS per Visual Studio attualmente non supporta la modifica delle chiavi di privacy **info. plist** nell'editor di manifesti iOS predefinito. Sarà invece necessario usare l'editor PList generico, quindi eseguire le operazioni seguenti:
 
 1. Fare clic con il pulsante destro del mouse sul file **info. plist** nel **Esplora soluzioni** e scegliere **Apri con...**.
 2. Selezionare l' **Editor PList generico** nell'elenco dei programmi per aprire il file e quindi fare clic su **OK**.
@@ -114,7 +114,7 @@ Per impostare le chiavi sulla privacy, procedere come segue:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato le modifiche alla sicurezza e alla privacy apportate da Apple in iOS 10 e come incidono sull'app Novell. iOS.
+Questo articolo ha illustrato le modifiche alla sicurezza e alla privacy apportate da Apple in iOS 10 e come incidono sull'app Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

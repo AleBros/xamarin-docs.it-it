@@ -1,6 +1,6 @@
 ---
-title: Fornire feedback tattile in Novell. iOS
-description: Questo documento descrive come fornire commenti e suggerimenti tattili in un'app Novell. iOS. Vengono illustrati UIImpactFeedbackGenerator, UINotificationFeedbackGenerator e UISelectionFeedbackGenerator.
+title: Fornire feedback tattile in Xamarin.iOS
+description: Questo documento descrive come fornire commenti e suggerimenti tattili in un'app Xamarin.iOS. Vengono illustrati UIImpactFeedbackGenerator, UINotificationFeedbackGenerator e UISelectionFeedbackGenerator.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003351"
 ---
-# <a name="providing-haptic-feedback-in-xamarinios"></a>Fornire feedback tattile in Novell. iOS
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Fornire feedback tattile in Xamarin.iOS
 
 <a name="Overview" />
 
@@ -125,7 +125,7 @@ Il metodo `SelectionChanged` attiva quindi il feedback tattile.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i nuovi tipi di feedback tattili disponibili in iOS 10 e come implementarli in Novell. iOS.
+Questo articolo ha illustrato i nuovi tipi di feedback tattili disponibili in iOS 10 e come implementarli in Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

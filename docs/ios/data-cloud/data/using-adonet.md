@@ -1,6 +1,6 @@
 ---
-title: Uso di ADO.NET con Novell. iOS
-description: Questo documento descrive come usare ADO.NET come metodo per accedere a SQLite in un'applicazione Novell. iOS. Vengono illustrati i riferimenti agli assembly, mono. Data. sqlite e l'esempio BasicDataAccess.
+title: Uso di ADO.NET con Xamarin.iOS
+description: Questo documento descrive come usare ADO.NET come metodo per accedere a SQLite in un'applicazione Xamarin.iOS. Vengono illustrati i riferimenti agli assembly, mono. Data. sqlite e l'esempio BasicDataAccess.
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73008230"
 ---
-# <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Novell. iOS
+# <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Xamarin.iOS
 
 Novell include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
 
@@ -215,4 +215,4 @@ Il tipo restituito del metodo `ExecuteScalar` è `object`: è necessario eseguir
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

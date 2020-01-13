@@ -15,7 +15,7 @@ ms.locfileid: "75487841"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
-Novell. Android usa il [Garbage Collector generazionale semplice](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)di mono. Si tratta di un Garbage Collector Mark-and-sweep con due generazioni e uno *spazio di oggetti di grandi dimensioni*, con due tipi di raccolte: 
+Xamarin.Android usa il [Garbage Collector generazionale semplice](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)di mono. Si tratta di un Garbage Collector Mark-and-sweep con due generazioni e uno *spazio di oggetti di grandi dimensioni*, con due tipi di raccolte: 
 
 - Raccolte secondarie (raccoglie l'heap Gen0) 
 - Raccolte principali (raccoglie Gen1 e heap dello spazio degli oggetti grandi). 
@@ -40,11 +40,11 @@ Sono disponibili tre categorie di tipi di oggetti.
 
 Esistono due tipi di peer nativi:
 
-- **Peer del Framework** : tipi Java "normali" che non conoscono Novell. Android, ad esempio   [Android. Content. Context](xref:Android.Content.Context).
+- **Peer del Framework** : tipi Java "normali" che non conoscono Xamarin.Android, ad esempio   [Android. Content. Context](xref:Android.Content.Context).
 
 - **Peer utente** : [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md) generati in fase di compilazione per ogni sottoclasse Java. lang. Object presente nell'applicazione.
 
-Poiché sono presenti due macchine virtuali all'interno di un processo Novell. Android, esistono due tipi di Garbage Collection:
+Poiché sono presenti due macchine virtuali all'interno di un processo Xamarin.Android, esistono due tipi di Garbage Collection:
 
 - Raccolte di Runtime Android 
 - Raccolte mono 
@@ -65,13 +65,13 @@ Il risultato finale è che un'istanza di un oggetto peer sarà disponibile fino 
 
 Gli oggetti peer sono presenti logicamente nel runtime di Android e nelle VM mono. Ad esempio, un'istanza peer gestita di [Android. app. Activity](xref:Android.App.Activity) avrà un'istanza java peer di [Android. app. Activity](https://developer.android.com/reference/android/app/Activity.html) Framework corrispondente. Tutti gli oggetti che ereditano da [java. lang. Object](xref:Java.Lang.Object) possono prevedere rappresentazioni all'interno di entrambe le macchine virtuali. 
 
-Tutti gli oggetti con rappresentazione in entrambe le macchine virtuali avranno durate che vengono estese rispetto agli oggetti presenti solo all'interno di una singola macchina virtuale (ad esempio, un [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)). Chiamata a [GC. Collect](xref:System.GC.Collect) non raccoglierà necessariamente questi oggetti, perché il GC Novell. Android deve assicurarsi che l'oggetto non faccia riferimento a una macchina virtuale prima di raccoglierla. 
+Tutti gli oggetti con rappresentazione in entrambe le macchine virtuali avranno durate che vengono estese rispetto agli oggetti presenti solo all'interno di una singola macchina virtuale (ad esempio, un [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)). Chiamata a [GC. Collect](xref:System.GC.Collect) non raccoglierà necessariamente questi oggetti, perché il GC Xamarin.Android deve assicurarsi che l'oggetto non faccia riferimento a una macchina virtuale prima di raccoglierla. 
 
 Per abbreviare la durata degli oggetti, è necessario richiamare [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose) . Questa operazione consentirà di eseguire manualmente il "Sever" della connessione nell'oggetto tra le due VM liberando il riferimento globale, consentendo così la raccolta più veloce degli oggetti. 
 
 ## <a name="automatic-collections"></a>Raccolte automatiche
 
-A partire dalla [versione 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), Novell. Android esegue automaticamente un catalogo globale completo quando viene superata una soglia di Gref. Questa soglia corrisponde al 90% del numero massimo noto di Grefs per la piattaforma: 1800 Grefs nell'emulatore (2000 max) e 46800 Grefs su hardware (massimo 52000). *Nota:* Novell. Android conta solo il Grefs creato da [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)e non è in grado di conoscere altri Grefs creati nel processo. Si tratta di un *approccio*euristico. 
+A partire dalla [versione 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), Xamarin.Android esegue automaticamente un catalogo globale completo quando viene superata una soglia di Gref. Questa soglia corrisponde al 90% del numero massimo noto di Grefs per la piattaforma: 1800 Grefs nell'emulatore (2000 max) e 46800 Grefs su hardware (massimo 52000). *Nota:* Xamarin.Android conta solo il Grefs creato da [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)e non è in grado di conoscere altri Grefs creati nel processo. Si tratta di un *approccio*euristico. 
 
 Quando viene eseguita una raccolta automatica, nel log di debug viene stampato un messaggio simile al seguente:
 
@@ -83,7 +83,7 @@ L'occorrenza di questo oggetto non è deterministica e può verificarsi in momen
 
 ## <a name="gc-bridge-options"></a>Opzioni del Bridge GC
 
-Novell. Android offre una gestione trasparente della memoria con Android e il runtime di Android. Viene implementato come un'estensione del Garbage Collector mono denominato *GC Bridge*. 
+Xamarin.Android offre una gestione trasparente della memoria con Android e il runtime di Android. Viene implementato come un'estensione del Garbage Collector mono denominato *GC Bridge*. 
 
 Il Bridge GC funziona durante una Garbage Collection mono e rileva quali oggetti peer necessitano di una "dinamicità" verificata con l'heap di runtime di Android. Il Bridge GC esegue questa determinazione eseguendo i passaggi seguenti (in ordine):
 
@@ -129,7 +129,7 @@ Sono disponibili diversi modi per aiutare il Garbage Collector a ridurre l'utili
 Il Garbage Collector presenta una visualizzazione incompleta del processo e potrebbe non essere eseguito quando la memoria è insufficiente perché il Garbage Collector non sa che la memoria è insufficiente. 
 
 Ad esempio, un'istanza di un tipo [java. lang. Object](xref:Java.Lang.Object) o un tipo derivato ha una dimensione di almeno 20 byte (soggetto a modifiche senza preavviso, ecc.). 
-I [wrapper richiamabili gestiti](~/android/internals/architecture.md) non aggiungono membri di istanza aggiuntivi. Pertanto, quando si dispone di un'istanza di [Android. graphics. bitmap](xref:Android.Graphics.Bitmap) che fa riferimento a un BLOB di 10 MB di memoria, il catalogo globale di Novell. Android non saprà che &ndash; GC visualizzerà un oggetto a 20 byte e non sarà in grado di determinare che è collegato a oggetti allocati da Android Runtime che mantiene 10 MB 
+I [wrapper richiamabili gestiti](~/android/internals/architecture.md) non aggiungono membri di istanza aggiuntivi. Pertanto, quando si dispone di un'istanza di [Android. graphics. bitmap](xref:Android.Graphics.Bitmap) che fa riferimento a un BLOB di 10 MB di memoria, il catalogo globale di Xamarin.Android non saprà che &ndash; GC visualizzerà un oggetto a 20 byte e non sarà in grado di determinare che è collegato a oggetti allocati da Android Runtime che mantiene 10 MB 
 
 Spesso è necessario aiutare il GC. Sfortunatamente, *GC. AddMemoryPressure ()* e *GC. RemoveMemoryPressure ()* non sono supportati, pertanto se si è *certi* di aver appena liberato un oggetto grafico di grandi dimensioni allocato da Java, potrebbe essere necessario chiamare manualmente [GC. Collect ()](xref:System.GC.Collect) per richiedere a un catalogo globale di rilasciare la memoria sul lato Java oppure è possibile eliminare in modo esplicito le sottoclassi *java. lang. Object* , suddividendo il mapping tra l'istanza gestita Callable Wrapper e l'istanza java. Vedere ad esempio il [Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
@@ -325,7 +325,7 @@ Per tenere traccia del momento in cui i riferimenti globali vengono creati ed el
 
 ## <a name="configuration"></a>Configurazione di
 
-È possibile configurare il Garbage Collector Novell. Android impostando la variabile di ambiente `MONO_GC_PARAMS`. Le variabili di ambiente possono essere impostate con un'azione di compilazione di [AndroidEnvironment](~/android/deploy-test/environment.md).
+È possibile configurare il Garbage Collector Xamarin.Android impostando la variabile di ambiente `MONO_GC_PARAMS`. Le variabili di ambiente possono essere impostate con un'azione di compilazione di [AndroidEnvironment](~/android/deploy-test/environment.md).
 
 La variabile di ambiente `MONO_GC_PARAMS` è un elenco delimitato da virgole dei parametri seguenti: 
 

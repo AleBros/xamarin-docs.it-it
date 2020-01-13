@@ -1,5 +1,5 @@
 ---
-title: Demo del ciclo di vita delle applicazioni per Novell. iOS
+title: Demo del ciclo di vita delle applicazioni per Xamarin.iOS
 description: Questo documento esamina diversi eventi del ciclo di vita gestiti dal delegato dell'app in un'applicazione iOS, dimostrando quando e come vengono gestiti questi eventi.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73011195"
 ---
-# <a name="application-lifecycle-demo-for-xamarinios"></a>Demo del ciclo di vita delle applicazioni per Novell. iOS
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Demo del ciclo di vita delle applicazioni per Xamarin.iOS
 
 Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) illustrano i quattro Stati dell'applicazione in iOS e il ruolo dei `AppDelegate` metodi per notificare all'applicazione quando gli Stati vengono modificati. L'applicazione visualizzerà gli aggiornamenti alla console ogni volta che lo stato dell'app cambia:
 

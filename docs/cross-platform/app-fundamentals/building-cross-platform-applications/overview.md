@@ -34,7 +34,7 @@ Ecco un riepilogo dei punti chiave per la creazione di app multipiattaforma Nove
 1. In Windows verrà usato XAML per il livello di presentazione, creato in Visual Studio o nella finestra di progettazione dell'interfaccia utente di Blend.
 1. In Mac si useranno gli storyboard per il livello di presentazione, creato in Xcode.
 
-I progetti Novell. Forms sono supportati in tutte le piattaforme e consentono di creare interfacce utente che possono essere condivise tra piattaforme usando il codice XAML di Novell. Forms. 
+I progetti Xamarin.Forms sono supportati in tutte le piattaforme e consentono di creare interfacce utente che possono essere condivise tra piattaforme usando il codice XAML di Xamarin.Forms. 
 
 La quantità di riutilizzo del codice dipende in larga misura dalla quantità di codice che viene mantenuta nel Core condiviso e dalla quantità di codice specifico dell'interfaccia utente. Il codice principale è qualsiasi elemento che non interagisce direttamente con l'utente, ma fornisce invece servizi per parti dell'applicazione che raccoglieranno e visualizzeranno queste informazioni.
 

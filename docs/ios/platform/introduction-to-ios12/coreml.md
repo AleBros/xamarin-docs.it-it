@@ -1,5 +1,5 @@
 ---
-title: Core ML 2 in Novell. iOS
+title: Core ML 2 in Xamarin.iOS
 description: Questo documento descrive gli aggiornamenti di core ML disponibili nell'ambito di iOS 12. In particolare, analizza i miglioramenti delle prestazioni associati alla nuova API di stima di batch.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032030"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Novell. iOS
+# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Xamarin.iOS
 
 Core ML è una tecnologia di machine learning disponibile in iOS, macOS, tvOS e watchos. Consente alle app di eseguire stime basate sui modelli di machine learning.
 
@@ -125,6 +125,6 @@ Sia per il simulatore sia per il dispositivo, `GetPredictions` termina più rapi
 - [App di esempio-MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 - [Novità di core ML, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [Novità di core ML, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introduzione a core ML in Novell. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Introduzione a core ML in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
 - [Uso dei modelli di base ML](https://developer.apple.com/machine-learning/build-run-models/)

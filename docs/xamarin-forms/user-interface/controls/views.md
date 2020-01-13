@@ -1,6 +1,6 @@
 ---
-title: Visualizzazioni di xamarin. Forms
-description: Le visualizzazioni di xamarin. Forms sono i blocchi predefiniti di interfacce utente per dispositivi mobili multipiattaforma. Questo articolo elenca le viste che sono inclusi in xamarin. Forms.
+title: Visualizzazioni di Xamarin.Forms
+description: Le visualizzazioni di Xamarin.Forms sono i blocchi predefiniti di interfacce utente per dispositivi mobili multipiattaforma. Questo articolo elenca le viste che sono inclusi in Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728187"
 ---
-# <a name="xamarinforms-views"></a>Visualizzazioni di xamarin. Forms
+# <a name="xamarinforms-views"></a>Visualizzazioni di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_Le visualizzazioni di xamarin. Forms sono i blocchi predefiniti di interfacce utente per dispositivi mobili multipiattaforma._
+_Le visualizzazioni di Xamarin.Forms sono i blocchi predefiniti di interfacce utente per dispositivi mobili multipiattaforma._
 
-Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da xamarin. Forms derivano da tutte le [`View`](xref:Xamarin.Forms.View) classe. Possono essere suddivisi in diverse categorie:
+Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da Xamarin.Forms derivano da tutte le [`View`](xref:Xamarin.Forms.View) classe. Possono essere suddivisi in diverse categorie:
 
 ## <a name="views-for-presentation"></a>Viste per la presentazione
 
@@ -56,14 +56,14 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) Visualizza la grafica OpenGL in progetti iOS e Android. Non vi è alcun supporto per la piattaforma Windows universale. I progetti iOS e Android richiedono un riferimento per il **OpenTK-1.0** assembly o il **OpenTK** assembly della versione 1.0.0.0. `OpenGLView` è più facile da usare in un progetto condiviso. Se utilizzata in una libreria .NET Standard, quindi una dipendenza servizio sarà anche necessario (come illustrato nell'esempio di codice).<br /><br />Si tratta dell'unica funzionalità grafica incorporata in Novell. Forms, ma un'applicazione Novell. Forms può anche eseguire il rendering della grafica usando [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentazione delle API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Esempio di OpenGLView](views-images/OpenGLView.png "Esempio di OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Esempio di OpenGLView")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) Visualizza la grafica OpenGL in progetti iOS e Android. Non vi è alcun supporto per la piattaforma Windows universale. I progetti iOS e Android richiedono un riferimento per il **OpenTK-1.0** assembly o il **OpenTK** assembly della versione 1.0.0.0. `OpenGLView` è più facile da usare in un progetto condiviso. Se utilizzata in una libreria .NET Standard, quindi una dipendenza servizio sarà anche necessario (come illustrato nell'esempio di codice).<br /><br />Si tratta dell'unica funzionalità grafica incorporata in Xamarin.Forms, ma un'applicazione Xamarin.Forms può anche eseguire il rendering della grafica usando [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentazione delle API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Esempio di OpenGLView](views-images/OpenGLView.png "Esempio di OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Esempio di OpenGLView")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="map"></a>Mappa
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) Consente di visualizzare una mappa. È necessario installare il pacchetto NuGet **Novell. Forms. Maps** . Android e Universal Windows Platform richiedono una chiave di autorizzazione della mappa.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Maps.Map) / [Guida](~/xamarin-forms/user-interface/map/index.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Esempio di mappa](views-images/Map.png "Esempio di mappa")](views-images/Map-Large.png#lightbox "Esempio di mappa")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) Consente di visualizzare una mappa. È necessario installare il pacchetto NuGet **Xamarin.Forms. Maps** . Android e Universal Windows Platform richiedono una chiave di autorizzazione della mappa.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Maps.Map) / [Guida](~/xamarin-forms/user-interface/map/index.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Esempio di mappa](views-images/Map.png "Esempio di mappa")](views-images/Map-Large.png#lightbox "Esempio di mappa")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>Viste che consentono di avviare i comandi
@@ -227,6 +227,6 @@ Queste due classi derivano dal [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Esempio di Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

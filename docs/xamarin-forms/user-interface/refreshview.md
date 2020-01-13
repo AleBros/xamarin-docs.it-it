@@ -1,6 +1,6 @@
 ---
-title: Novell. Forms RefreshView
-description: Novell. Forms RefreshView è un controllo contenitore che fornisce il pull per aggiornare la funzionalità per il contenuto scorrevole.
+title: Xamarin.Forms RefreshView
+description: Xamarin.Forms RefreshView è un controllo contenitore che fornisce il pull per aggiornare la funzionalità per il contenuto scorrevole.
 ms.prod: xamarin
 ms.assetId: 58DBD23B-ADB9-40DA-B331-4DDB6E698990
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/06/2019
 ms.locfileid: "73649300"
 ---
-# <a name="xamarinforms-refreshview"></a>Novell. Forms RefreshView
+# <a name="xamarinforms-refreshview"></a>Xamarin.Forms RefreshView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
@@ -68,7 +68,7 @@ scrollView.Content = flexLayout;
 refreshView.Content = scrollView;
 ```
 
-In questo esempio, il `RefreshView` fornisce il pull per aggiornare la funzionalità a una [`ScrollView`](xref:Xamarin.Forms.ScrollView) il cui figlio è un [`FlexLayout`](xref:Xamarin.Forms.FlexLayout). Il `FlexLayout` utilizza un layout associabile per generare il contenuto mediante l'associazione a una raccolta di elementi e imposta l'aspetto di ogni elemento con una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Per altre informazioni sui layout associabili, vedere [layout associabili in Novell. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
+In questo esempio, il `RefreshView` fornisce il pull per aggiornare la funzionalità a una [`ScrollView`](xref:Xamarin.Forms.ScrollView) il cui figlio è un [`FlexLayout`](xref:Xamarin.Forms.FlexLayout). Il `FlexLayout` utilizza un layout associabile per generare il contenuto mediante l'associazione a una raccolta di elementi e imposta l'aspetto di ogni elemento con una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Per altre informazioni sui layout associabili, vedere [layout associabili in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
 
 Il valore della proprietà `RefreshView.IsRefreshing` indica lo stato corrente del `RefreshView`. Quando un aggiornamento viene attivato dall'utente, questa proprietà passerà automaticamente a `true`. Una volta completato l'aggiornamento, è necessario reimpostare la proprietà su `false`.
 
@@ -106,5 +106,5 @@ In alternativa, quando si definisce la proprietà `Command`, è possibile specif
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [RefreshView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
-- [Layout associabili in Novell. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [Layout associabili in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [RefreshView pull direction-specifico della piattaforma](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

@@ -1,5 +1,5 @@
 ---
-title: Introduzione a 3D touch in Novell. iOS
+title: Introduzione a 3D touch in Xamarin.iOS
 description: Questo articolo descrive come usare i movimenti di tocco 3D introdotti con iPhone 6s e iPhone 6s Plus. Questi movimenti abilitano la sensibilità alla pressione, la visualizzazione e il pop e le azioni rapide.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022255"
 ---
-# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione a 3D touch in Novell. iOS
+# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione a 3D touch in Xamarin.iOS
 
 _Questo articolo illustra l'uso dei nuovi movimenti iPhone 6s e iPhone 6s Plus 3D touch nell'app._
 
 [![](3d-touch-images/info01.png "Examples of 3D Touch enabled apps")](3d-touch-images/info01.png#lightbox)
 
-Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Novell. iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
+Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Xamarin.iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
 
 Con il tocco 3D, un'app iPhone è ora in grado di non solo indicare che l'utente sta toccando lo schermo del dispositivo, ma è in grado di rilevare la quantità di pressione che l'utente impiega e rispondere ai diversi livelli di pressione.
 

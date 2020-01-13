@@ -1,6 +1,6 @@
 ---
 title: Associazione di un file AAR
-description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File AAR.
+description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File AAR.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73618540"
 ---
 # <a name="binding-an-aar"></a>Associazione di un file AAR
 
-_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File AAR._
+_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File AAR._
 
 ## <a name="overview"></a>Panoramica
 
@@ -106,9 +106,9 @@ Prima di iniziare con la procedura seguente, scaricare il file di archivio Andro
 
 ### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
-Per utilizzare questo. DLL nell'app Novell. Android, è necessario innanzitutto aggiungere un riferimento alla libreria Bindings. Attenersi alla procedura seguente:
+Per utilizzare questo. DLL nell'app Xamarin.Android, è necessario innanzitutto aggiungere un riferimento alla libreria Bindings. Attenersi alla procedura seguente:
 
-1. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. L'app che utilizza la libreria dei binding potrebbe trovarsi anche in una soluzione diversa. Creare una nuova app Novell. Android: fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. Assegnare al nuovo progetto il nome **BindingTest**:
+1. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. L'app che utilizza la libreria dei binding potrebbe trovarsi anche in una soluzione diversa. Creare una nuova app Xamarin.Android: fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. Assegnare al nuovo progetto il nome **BindingTest**:
 
     [![creare un nuovo progetto BindingTest](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 

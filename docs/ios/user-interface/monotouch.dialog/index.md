@@ -1,6 +1,6 @@
 ---
-title: Introduzione a MonoTouch. dialog per Novell. iOS
-description: In questo documento viene descritta la finestra di dialogo MonoTouch. Dialog (MT. D), un Framework per lo sviluppo rapido e dichiarativo dell'interfaccia utente con Novell. iOS. Viene illustrato come utilizzare le API MonoTouch. dialog per creare un'interfaccia nel codice o JSON e utilizzare funzionalità come pull-to-refresh, ricerca, caricamento di immagini di sfondo e altro ancora.
+title: Introduzione a MonoTouch. dialog per Xamarin.iOS
+description: In questo documento viene descritta la finestra di dialogo MonoTouch. Dialog (MT. D), un Framework per lo sviluppo rapido e dichiarativo dell'interfaccia utente con Xamarin.iOS. Viene illustrato come utilizzare le API MonoTouch. dialog per creare un'interfaccia nel codice o JSON e utilizzare funzionalità come pull-to-refresh, ricerca, caricamento di immagini di sfondo e altro ancora.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002577"
 ---
-# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a MonoTouch. dialog per Novell. iOS
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a MonoTouch. dialog per Xamarin.iOS
 
 MonoTouch. Dialog, definito MT. D per brevità, è un toolkit di sviluppo rapido per l'interfaccia utente che consente agli sviluppatori di creare schermate delle applicazioni e spostamento usando le informazioni, anziché la noia della creazione di controller di visualizzazione, tabelle e così via. Di conseguenza, fornisce una semplificazione significativa dello sviluppo dell'interfaccia utente e della riduzione del codice. Si consideri, ad esempio, la schermata seguente:
 
@@ -69,7 +69,7 @@ Questo articolo illustra in maniera completa l'uso di MT. D, tra cui:
 
 ## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
-Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
+Mt. D viene distribuito con Xamarin.iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Xamarin.iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
 
 ## <a name="understanding-the-pieces-of-mtd"></a>Informazioni sulle parti di MT. D
 

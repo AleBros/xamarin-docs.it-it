@@ -35,7 +35,7 @@ A seconda delle esigenze, potrebbe essere possibile aggirare le parti di questa 
 
 * il codice gestito può p/invoke nel codice nativo. Questa operazione richiede la personalizzazione del codice gestito per consentire la personalizzazione dal codice nativo;
 
-* usare prodotti come Novell. iOS ed esporre una libreria gestita che consentirebbe a Objective-C (in questo caso) di sottoporre a sottoclasse alcune sottoclassi NSObject gestite.
+* usare prodotti come Xamarin.iOS ed esporre una libreria gestita che consentirebbe a Objective-C (in questo caso) di sottoporre a sottoclasse alcune sottoclassi NSObject gestite.
 
 ## <a name="objective-c-generated-code"></a>Codice generato da Objective-C
 
@@ -49,10 +49,10 @@ Poiché non è possibile generare annotazioni accurate di valori null nei file d
 
 Attualmente l'incorporamento .NET non supporta bitcode in iOS, che è abilitato per alcuni modelli di progetto Xcode. Questa operazione dovrà essere disabilitata per collegare correttamente i Framework generati.
 
-* Per iOS, bitcode è facoltativo per inviare app ad AppStore di Apple. Novell. iOS non lo supporta per iOS poiché il bitcode generato è "assembly inline". Questo non offre alcun vantaggio sulla piattaforma iOS perché non può essere ottimizzata sul lato server, ma rende i file binari più grandi e tempi di compilazione più lunghi.
+* Per iOS, bitcode è facoltativo per inviare app ad AppStore di Apple. Xamarin.iOS non lo supporta per iOS poiché il bitcode generato è "assembly inline". Questo non offre alcun vantaggio sulla piattaforma iOS perché non può essere ottimizzata sul lato server, ma rende i file binari più grandi e tempi di compilazione più lunghi.
 
-* Per tvOS e watchos, bitcode è necessario per l'invio di app ad AppStore di Apple. Novell. iOS supporta bitcode in tvOS (come "assembly inline") e watchos (come "LLVM/IR") per soddisfare questo requisito.
+* Per tvOS e watchos, bitcode è necessario per l'invio di app ad AppStore di Apple. Xamarin.iOS supporta bitcode in tvOS (come "assembly inline") e watchos (come "LLVM/IR") per soddisfare questo requisito.
 
-* Per macOS, il supporto per bitcode non è attualmente necessario né supportato da Novell. Mac.
+* Per macOS, il supporto per bitcode non è attualmente necessario né supportato da Xamarin.Mac.
 
 ![Bitcode-opzione](images/ios-bitcode-option.png)

@@ -1,6 +1,6 @@
 ---
 title: Grafica SkiaSharp in Xamarin.Forms
-description: SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. Questa guida illustra come usare SkiaSharp per la grafica 2D nelle applicazioni xamarin. Forms.
+description: SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. Questa guida illustra come usare SkiaSharp per la grafica 2D nelle applicazioni Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
@@ -17,23 +17,23 @@ ms.locfileid: "68656141"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Uso di SkiaSharp per la grafica 2D nelle applicazioni xamarin. Forms_
+_Uso di SkiaSharp per la grafica 2D nelle applicazioni Xamarin.Forms_
 
-SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. È possibile usare SkiaSharp nelle applicazioni xamarin. Forms per disegnare il testo, bitmap e la grafica vettoriale 2D. Vedere le [disegno 2D](~/graphics-games/skiasharp/index.md) Guida per informazioni più generali sulla libreria di SkiaSharp e alcune altre esercitazioni.
+SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. È possibile usare SkiaSharp nelle applicazioni Xamarin.Forms per disegnare il testo, bitmap e la grafica vettoriale 2D. Vedere le [disegno 2D](~/graphics-games/skiasharp/index.md) Guida per informazioni più generali sulla libreria di SkiaSharp e alcune altre esercitazioni.
 
-Questa guida si presuppone che abbia familiarità con la programmazione di xamarin. Forms.
+Questa guida si presuppone che abbia familiarità con la programmazione di Xamarin.Forms.
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**Webinar SkiaSharp per Novell. Forms**
+**Webinar SkiaSharp per Xamarin.Forms**
 
 ## <a name="skiasharp-preliminaries"></a>Operazioni preliminari di SkiaSharp
 
-SkiaSharp per xamarin. Forms viene fornito come un pacchetto NuGet. Dopo aver creato una soluzione xamarin. Forms in Visual Studio o Visual Studio per Mac, è possibile usare Gestione pacchetti NuGet cercare il **SkiaSharp.Views.Forms** del pacchetto e aggiungerlo alla soluzione. Se si seleziona il **riferimenti** sezione di ogni progetto dopo l'aggiunta di SkiaSharp, è possibile vedere che vari **SkiaSharp** librerie sono stati aggiunti a ogni progetto nella soluzione.
+SkiaSharp per Xamarin.Forms viene fornito come un pacchetto NuGet. Dopo aver creato una soluzione Xamarin.Forms in Visual Studio o Visual Studio per Mac, è possibile usare Gestione pacchetti NuGet cercare il **SkiaSharp.Views.Forms** del pacchetto e aggiungerlo alla soluzione. Se si seleziona il **riferimenti** sezione di ogni progetto dopo l'aggiunta di SkiaSharp, è possibile vedere che vari **SkiaSharp** librerie sono stati aggiunti a ogni progetto nella soluzione.
 
-Se l'applicazione xamarin. Forms è destinata a iOS, usare la pagina delle proprietà di progetto per modificare la destinazione di distribuzione minima a iOS 8.0.
+Se l'applicazione Xamarin.Forms è destinata a iOS, usare la pagina delle proprietà di progetto per modificare la destinazione di distribuzione minima a iOS 8.0.
 
-In qualsiasi pagina di c# che utilizza SkiaSharp è opportuno includere una `using` direttiva per il [ `SkiaSharp` ](xref:SkiaSharp) dello spazio dei nomi, che comprenda tutti di SkiaSharp classi, strutture ed enumerazioni che verrà usato negli elementi grafici la programmazione. Sarà inoltre necessario un `using` direttiva per il [ `SkiaSharp.Views.Forms` ](xref:SkiaSharp.Views.Forms) dello spazio dei nomi per le classi specifiche di xamarin. Forms. Si tratta di una quantità minore dello spazio dei nomi, con la classe più importante in fase [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView). Questa classe deriva da xamarin. Forms `View` classe e ospita l'output dei grafici SkiaSharp.
+In qualsiasi pagina di c# che utilizza SkiaSharp è opportuno includere una `using` direttiva per il [ `SkiaSharp` ](xref:SkiaSharp) dello spazio dei nomi, che comprenda tutti di SkiaSharp classi, strutture ed enumerazioni che verrà usato negli elementi grafici la programmazione. Sarà inoltre necessario un `using` direttiva per il [ `SkiaSharp.Views.Forms` ](xref:SkiaSharp.Views.Forms) dello spazio dei nomi per le classi specifiche di Xamarin.Forms. Si tratta di una quantità minore dello spazio dei nomi, con la classe più importante in fase [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView). Questa classe deriva da Xamarin.Forms `View` classe e ospita l'output dei grafici SkiaSharp.
 
 > [!IMPORTANT]
 > Il `SkiaSharp.Views.Forms` dello spazio dei nomi contiene inoltre un' `SKGLView` classe che deriva da `View` ma Usa OpenGL per il rendering grafica. Per motivi di semplicità, questa guida si limita a `SKCanvasView`, ma tramite `SKGLView` invece è abbastanza simile.
@@ -66,4 +66,4 @@ Gli effetti sono proprietà modificare la visualizzazione di grafica, incluse le
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [SkiaSharp webinar su xamarin. Forms (video)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
+- [SkiaSharp webinar su Xamarin.Forms (video)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

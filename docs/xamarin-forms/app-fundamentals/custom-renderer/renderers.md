@@ -16,7 +16,7 @@ ms.locfileid: "75489245"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classi di base e controlli nativi del renderer
 
-_Ogni controllo Novell. Forms dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Questo articolo elenca le classi del renderer e del controllo nativo che implementano ogni pagina, layout, visualizzazione e cella di Novell. Forms._
+_Ogni controllo Xamarin.Forms dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Questo articolo elenca le classi del renderer e del controllo nativo che implementano ogni pagina, layout, visualizzazione e cella di Xamarin.Forms._
 
 Ad eccezione della classe `MapRenderer`, i renderer specifici delle varie piattaforme sono disponibili negli spazi dei nomi seguenti:
 

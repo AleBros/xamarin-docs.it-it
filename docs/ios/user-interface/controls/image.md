@@ -1,6 +1,6 @@
 ---
-title: Visualizzazione di immagini con Novell. iOS
-description: In questo documento viene descritto come visualizzare le immagini in Novell. iOS. Viene illustrata l'aggiunta di immagini a un'app a livello di codice o tramite iOS designer.
+title: Visualizzazione di immagini con Xamarin.iOS
+description: In questo documento viene descritto come visualizzare le immagini in Xamarin.iOS. Viene illustrata l'aggiunta di immagini a un'app a livello di codice o tramite iOS designer.
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022071"
 ---
-# <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Novell. iOS
+# <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Xamarin.iOS
 
-Per aggiungere immagini all'app sono necessari due passaggi: prima di tutto, aggiungere le immagini al progetto; quindi, aggiungere i controlli e il codice per visualizzarli in una schermata. Per informazioni più dettagliate sulla gestione delle immagini in Novell. iOS, vedere l'articolo [utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
+Per aggiungere immagini all'app sono necessari due passaggi: prima di tutto, aggiungere le immagini al progetto; quindi, aggiungere i controlli e il codice per visualizzarli in una schermata. Per informazioni più dettagliate sulla gestione delle immagini in Xamarin.iOS, vedere l'articolo [utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
 
 ## <a name="adding-images-to-your-app"></a>Aggiunta di immagini all'app
 

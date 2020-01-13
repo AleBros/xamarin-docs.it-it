@@ -179,7 +179,7 @@ La velocità di risposta complessiva dell'applicazione può essere migliorata e 
 ### <a name="ui"></a>Interfaccia utente di
 
 - Chiamare una versione asincrona di un'API, se disponibile. Questo consente di mantenere sbloccato il thread dell'interfaccia utente, contribuendo a migliorare l'esperienza utente dell'applicazione.
-- Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Novell. Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+- Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
     > [!IMPORTANT]
     > Viene eseguito automaticamente il marshalling di tutte le proprietà del controllo aggiornate tramite data binding al thread dell'interfaccia utente.

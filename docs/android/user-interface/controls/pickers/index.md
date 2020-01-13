@@ -1,5 +1,5 @@
 ---
-title: Controlli di selezione per Novell. Android
+title: Controlli di selezione per Xamarin.Android
 description: Uso di finestre di dialogo Android predefinite per eseguire query sull'utente per la data e l'ora
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029183"
 ---
-# <a name="picker-controls-for-xamarinandroid"></a>Controlli di selezione per Novell. Android
+# <a name="picker-controls-for-xamarinandroid"></a>Controlli di selezione per Xamarin.Android
 
 I *selezionatori* sono elementi dell'interfaccia utente che consentono all'utente di selezionare una data o un'ora usando le finestre di dialogo fornite da Android:
 

@@ -1,6 +1,6 @@
 ---
-title: Miglioramenti della ricerca di app in Novell. iOS
-description: Questo articolo descrive i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Novell. iOS.
+title: Miglioramenti della ricerca di app in Xamarin.iOS
+description: Questo articolo descrive i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031588"
 ---
-# <a name="app-search-enhancements-in-xamarinios"></a>Miglioramenti della ricerca di app in Novell. iOS
+# <a name="app-search-enhancements-in-xamarinios"></a>Miglioramenti della ricerca di app in Xamarin.iOS
 
-_Questo articolo descrive i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Novell. iOS._
+_Questo articolo descrive i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Xamarin.iOS._
 
-In iOS 10, Apple ha apportato diversi miglioramenti alla ricerca di app, come il Deep linking con crowdsourcing, la ricerca in-app, la continuazione della ricerca e la visualizzazione dei risultati della convalida. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Novell. iOS.
+In iOS 10, Apple ha apportato diversi miglioramenti alla ricerca di app, come il Deep linking con crowdsourcing, la ricerca in-app, la continuazione della ricerca e la visualizzazione dei risultati della convalida. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Xamarin.iOS.
 
 ## <a name="about-app-search-enhancements"></a>Informazioni sui miglioramenti apportati alla ricerca app
 
@@ -38,7 +38,7 @@ iOS 10 fornisce un meccanismo per contare la frequenza con cui i collegamenti pr
 
 Per le app che usano oggetti `NSUserActivity` per fornire URL con collegamento profondo e che la proprietà `EligibleForPublicIndexing` è impostata su `true`, iOS 10 Invia un subset di *hash di privacy differenziale* ai server Apple. Queste informazioni vengono quindi usate per innalzare di livello i contenuti in-app più diffusi nei risultati della ricerca.
 
-Per altre informazioni sull'implementazione del Deep linking in un'app Novell. iOS, vedere la documentazione relativa [alla ricerca con NSUserActivity](~/ios/platform/search/nsuseractivity.md) .
+Per altre informazioni sull'implementazione del Deep linking in un'app Xamarin.iOS, vedere la documentazione relativa [alla ricerca con NSUserActivity](~/ios/platform/search/nsuseractivity.md) .
 
 ## <a name="in-app-searching"></a>Ricerca in-app
 
@@ -89,7 +89,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 Questo codice cerca il tipo di azione di continuazione di query (`userActivity.ActivityType == CSSearchQuery.ContinuationActionType`), quindi legge la query corrente dell'utente dal dizionario informazioni utente della classe `NSUserActivity` (`userActivity.UserInfo.KeyForValue(CSSearchQuery.QueryString)`). Da qui, l'app deve intervenire per continuare la ricerca dell'utente.
 
-Per altre informazioni sull'uso delle ricerche in un'app Novell. iOS, vedere la documentazione relativa [alla ricerca con core Spotlight](~/ios/platform/search/corespotlight.md) .
+Per altre informazioni sull'uso delle ricerche in un'app Xamarin.iOS, vedere la documentazione relativa [alla ricerca con core Spotlight](~/ios/platform/search/corespotlight.md) .
 
 ## <a name="visualization-of-validation-results"></a>Visualizzazione dei risultati della convalida
 
@@ -114,7 +114,7 @@ Per altri dettagli, vedere la documentazione relativa all' [integrazione dell'ap
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Novell. iOS.
+Questo articolo ha illustrato i miglioramenti apportati da Apple alla ricerca di app in iOS 10 e come implementarli in Xamarin.iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

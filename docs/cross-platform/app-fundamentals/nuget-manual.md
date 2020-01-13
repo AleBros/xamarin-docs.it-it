@@ -27,8 +27,8 @@ Il sito Web NuGet che [supporta più versioni e profili di .NET Framework](https
 I principali framework di destinazione Novell attualmente in uso sono i seguenti:
 
 - **MonoAndroid** - Xamarin.Android
-- **Novell. iOS** -Novell. iOS [API unificata](~/cross-platform/macios/unified/index.md) (supporta 64 bit)
-- **Novell. Mac** : profilo mobile di Novell. Mac, equivalente alla superficie dell'API Novell. iOS e Novell. Android.
+- **Xamarin.iOS** -Xamarin.iOS [API unificata](~/cross-platform/macios/unified/index.md) (supporta 64 bit)
+- **Xamarin.Mac** : profilo mobile di Xamarin.Mac, equivalente alla superficie dell'API Xamarin.iOS e Xamarin.Android.
 
 Esiste anche una destinazione per la [API classica](~/cross-platform/macios/unified/index.md)iOS precedente:
 
@@ -47,7 +47,7 @@ Un file con **estensione NuSpec** che ha come destinazione tutti questi elementi
 
 Il codice precedente ignora tutte le librerie di classi portabili.
 
-La maggior parte dei file con **estensione NuSpec** specifica il numero di versione del Framework di destinazione, ma è facoltativa se l'assembly funziona con tutte le versioni di tale framework di destinazione. Quindi, se la destinazione è **lib\MonoAndroid** , questo significa che funziona con qualsiasi versione di Novell. Android.
+La maggior parte dei file con **estensione NuSpec** specifica il numero di versione del Framework di destinazione, ma è facoltativa se l'assembly funziona con tutte le versioni di tale framework di destinazione. Quindi, se la destinazione è **lib\MonoAndroid** , questo significa che funziona con qualsiasi versione di Xamarin.Android.
 
 È possibile specificare la versione con un set di numeri senza un separatore decimale oppure è possibile specificarla usando i punti decimali. Senza il separatore decimale, NuGet accetta solo ogni numero e lo trasforma in una versione inserendo un carattere ' .' tra le cifre.
 
@@ -56,8 +56,8 @@ Nella sezione precedente "MonoAndroid10" significa "Android 1,0". Questo signifi
 Per chiarire:
 
 - **MonoAndroid403** corrisponde a Android 4.0.3 e versioni successive (livello API IE 15)
-- **Novell. iOS10** corrisponde a Novell. iOS 1,0 e versioni successive
-- **Novell. iOS 1.0** corrisponde anche a Novell. iOS 1,0 e versioni successive
+- **Xamarin.iOS10** corrisponde a Xamarin.iOS 1,0 e versioni successive
+- **Xamarin.iOS 1.0** corrisponde anche a Xamarin.iOS 1,0 e versioni successive
 
 ## <a name="pcl-nugets-with-platform-dependencies"></a>NuGet di PCL con dipendenze di piattaforma
 
@@ -65,7 +65,7 @@ I profili PCL sono limitati alle API .NET Framework a cui possono accedere e cer
 
 - [Come usare le librerie di classi portabili](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
 - [Il trucco per le esche e le opzioni PCL](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Creazione di una PCL NuGet che funziona con Novell. iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Creazione di una PCL NuGet che funziona con Xamarin.iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
 Questo [elenco esterno dei profili PCL con il nome di destinazione NuGet](https://portablelibraryprofiles.stephencleary.com) è anche un utile riferimento.
 

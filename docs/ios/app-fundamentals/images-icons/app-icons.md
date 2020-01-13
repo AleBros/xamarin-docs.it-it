@@ -1,6 +1,6 @@
 ---
-title: Icone dell'applicazione in Novell. iOS
-description: "Questo documento descrive come usare varie icone dell'applicazione in Novell. iOS: icona dell'applicazione stessa, icone di Spotlight, icone delle impostazioni e immagini di iTunes."
+title: Icone dell'applicazione in Xamarin.iOS
+description: "Questo documento descrive come usare varie icone dell'applicazione in Xamarin.iOS: icona dell'applicazione stessa, icone di Spotlight, icone delle impostazioni e immagini di iTunes."
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488432"
 ---
-# <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Novell. iOS
+# <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Xamarin.iOS
 
 Gli argomenti seguenti vengono descritti nel dettaglio:
 
@@ -26,7 +26,7 @@ Gli argomenti seguenti vengono descritti nel dettaglio:
 
 ## <a name="application-spotlight-and-settings-icons"></a>Icone di applicazione, Spotlight e impostazioni
 
-Nello stesso modo in cui un'app Novell. iOS può usare asset di immagine per i controlli dell'interfaccia utente e come icone di documento, gli asset di immagine possono essere usati per fornire le icone dell'applicazione. Gli screenshot seguenti di un iPad illustrano i tre usi delle icone in iOS:
+Nello stesso modo in cui un'app Xamarin.iOS può usare asset di immagine per i controlli dell'interfaccia utente e come icone di documento, gli asset di immagine possono essere usati per fornire le icone dell'applicazione. Gli screenshot seguenti di un iPad illustrano i tre usi delle icone in iOS:
 
 - **Icona dell'applicazione** : ogni app iOS deve definire un'icona dell'applicazione. Questa è l'icona che l'utente toccherà dalla schermata iniziale di iOS per avviare l'app. Questa icona viene inoltre utilizzata da Game Center, se applicabile. Esempio: 
 
@@ -38,7 +38,7 @@ Nello stesso modo in cui un'app Novell. iOS può usare asset di immagine per i c
 
     [![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png#lightbox)
 
-Per supportare tutti i tipi di icona richiesti da un'app Novell. iOS destinata a iOS 5 tramite iOS 9 (o versione successiva), saranno necessarie le risoluzioni e le dimensioni degli asset immagine seguenti:
+Per supportare tutti i tipi di icona richiesti da un'app Xamarin.iOS destinata a iOS 5 tramite iOS 9 (o versione successiva), saranno necessarie le risoluzioni e le dimensioni degli asset immagine seguenti:
 
 ### <a name="iphone-icon-sizes"></a>Dimensioni delle icone iPhone
 

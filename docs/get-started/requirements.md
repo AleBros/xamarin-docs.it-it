@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Requisiti dei moduli
-description: Requisiti del sistema di piattaforma e di sviluppo per Xamarin. Form.
+title: Xamarin.Requisiti dei moduli
+description: Requisiti del sistema di piattaforma e di sviluppo per Xamarin.Form.
 ms.prod: xamarin
 ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
@@ -21,15 +21,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607854"
 ---
-# <a name="opno-locxamarinforms-requirements"></a>Xamarin. Requisiti dei moduli
+# <a name="opno-locxamarinforms-requirements"></a>Xamarin.Requisiti dei moduli
 
-_Requisiti del sistema di piattaforma e di sviluppo per Xamarin. Form._
+_Requisiti del sistema di piattaforma e di sviluppo per Xamarin.Form._
 
 Vedere l'articolo [Installazione](installation/index.md) per una panoramica delle procedure di installazione e configurazione per le diverse piattaforme.
 
 ## <a name="target-platforms"></a>Piattaforme di destinazione
 
-Xamarin. È possibile scrivere applicazioni form per i sistemi operativi seguenti:
+Xamarin.È possibile scrivere applicazioni form per i sistemi operativi seguenti:
 
 - iOS 9 o versione successiva
 - Android 4.4 (API 19) o versioni successive ([altri dettagli](#android))
@@ -41,7 +41,7 @@ Si presuppone che gli sviluppatori abbiano familiarità con [.NET standard](~/cr
 
 ### <a name="additional-platform-support"></a>Supporto di piattaforme aggiuntive
 
-Lo stato di queste piattaforme è disponibile nel [Xamarin. Moduli GitHub](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support):
+Lo stato di queste piattaforme è disponibile nel [Xamarin.Moduli GitHub](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support):
 
 - Samsung Tizen
 - macOS
@@ -74,18 +74,18 @@ La versione di destinazione/compilazione per i progetti Android **deve** inoltre
 
 ## <a name="development-system-requirements"></a>Requisiti del sistema di sviluppo
 
-Xamarin. Le app per moduli possono essere sviluppate in macOS e Windows. Per creare versioni Windows dell'app sono tuttavia necessari Windows e Visual Studio.
+Xamarin.Le app per moduli possono essere sviluppate in macOS e Windows. Per creare versioni Windows dell'app sono tuttavia necessari Windows e Visual Studio.
 
 ## <a name="mac-system-requirements"></a>Requisiti di sistema Mac
 
-È possibile utilizzare Visual Studio per Mac per sviluppare Xamarin. App Forms in macOS High Sierra (10,13) o versione successiva. Per sviluppare app iOS, è consigliabile usare la versione più recente di Xcode, iOS e macOS. Per i requisiti di versione specifici, vedere le note sulla versione di [Xamarin. iOS](/xamarin/ios/release-notes/)più recenti.
+È possibile utilizzare Visual Studio per Mac per sviluppare Xamarin.App Forms in macOS High Sierra (10,13) o versione successiva. Per sviluppare app iOS, è consigliabile usare la versione più recente di Xcode, iOS e macOS. Per i requisiti di versione specifici, vedere le note sulla versione di [Xamarin.iOS](/xamarin/ios/release-notes/)più recenti.
 
 > [!NOTE]
 > Non è possibile sviluppare app di Windows in macOS.
 
 ## <a name="windows-system-requirements"></a>Requisiti di sistema Windows
 
-Xamarin. Le app per i moduli per iOS e Android possono essere create in qualsiasi installazione di Windows che supporta lo sviluppo di Xamarin. Per il supporto completo delle funzionalità della piattaforma corrente, usare la versione più recente di Visual Studio. 
+Xamarin.Le app per i moduli per iOS e Android possono essere create in qualsiasi installazione di Windows che supporta lo sviluppo di Xamarin. Per il supporto completo delle funzionalità della piattaforma corrente, usare la versione più recente di Visual Studio. 
 
 Per lo sviluppo di iOS è necessario un Mac in rete con la versione più recente di Xcode e la versione minima di macOS specificata da Apple.
 
@@ -93,7 +93,7 @@ Per lo sviluppo di iOS è necessario un Mac in rete con la versione più recente
 
 ### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)
 
-Sviluppo di Xamarin. App moduli per UWP richiede:
+Sviluppo di Xamarin.App moduli per UWP richiede:
 
 - Windows 10 (ultima versione consigliata, Fall Creators Update minimum)
 
@@ -105,7 +105,7 @@ Sviluppo di Xamarin. App moduli per UWP richiede:
 
 ## <a name="deprecated-platforms"></a>Piattaforme deprecate
 
-Queste piattaforme non sono supportate quando si usa Xamarin. Form 3,0 o versione successiva:
+Queste piattaforme non sono supportate quando si usa Xamarin.Form 3,0 o versione successiva:
 
 - *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*

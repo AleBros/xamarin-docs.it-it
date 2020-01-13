@@ -1,6 +1,6 @@
 ---
 title: Parte 1. Introduzione a XAML
-description: In un'applicazione xamarin. Forms XAML viene utilizzato principalmente per definire il contenuto di una pagina e funziona insieme a un file code-behind visual.
+description: In un'applicazione Xamarin.Forms XAML viene utilizzato principalmente per definire il contenuto di una pagina e funziona insieme a un file code-behind visual.
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
@@ -18,13 +18,13 @@ ms.locfileid: "71679968"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-_In un'applicazione xamarin. Forms XAML viene usato principalmente per definire il contenuto di una pagina visual e interagisce con un C# file code-behind._
+_In un'applicazione Xamarin.Forms XAML viene usato principalmente per definire il contenuto di una pagina visual e interagisce con un C# file code-behind._
 
 Il file code-behind fornisce supporto di codice per il markup. Insieme, questi due file contribuiscono a una nuova definizione di classe che include visualizzazioni figlio e l'inizializzazione della proprietà. All'interno del file XAML, classi e proprietà viene fatto riferimento con elementi e attributi XML e vengono stabiliti i collegamenti tra il markup e codice.
 
 ## <a name="creating-the-solution"></a>Creazione della soluzione
 
-Per iniziare la modifica del primo file XAML, usare Visual Studio o Visual Studio per Mac per creare una nuova soluzione xamarin. Forms. (Selezionare la scheda di seguito corrispondenti all'ambiente).
+Per iniziare la modifica del primo file XAML, usare Visual Studio o Visual Studio per Mac per creare una nuova soluzione Xamarin.Forms. (Selezionare la scheda di seguito corrispondenti all'ambiente).
 
 <!-- markdownlint-disable MD001 -->
 
@@ -34,7 +34,7 @@ In Windows avviare Visual Studio 2019 e nella finestra di avvio fare clic su **C
 
 ![Nuova finestra della soluzione](get-started-with-xaml-images/win/new-solution-2019.png)
 
-Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Novell. Forms)** e fare clic sul pulsante **Avanti** :
+Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Xamarin.Forms)** e fare clic sul pulsante **Avanti** :
 
 ![Finestra nuovo progetto](get-started-with-xaml-images/win/new-project-2019.png)
 
@@ -108,7 +108,7 @@ Il **MainPage. XAML** file avrà un aspetto simile al seguente (anche se la form
 
 Le due dichiarazioni dello spazio`xmlns`dei nomi XML () fanno riferimento a URI, il primo sito Web di Novell e il secondo su Microsoft. Non ci preoccupiamo verifica quali tali scegliere gli URI. Non è presente alcun elemento. Sono semplicemente gli URI di proprietà da Xamarin e Microsoft, e in sostanza funzionano come identificatori di versione.
 
-La prima dichiarazione dello spazio dei nomi XML significa che i tag definiti all'interno del file XAML senza il prefisso si riferisce alle classi in xamarin. Forms, ad esempio `ContentPage`. La seconda dichiarazione dello spazio dei nomi definisce un prefisso di `x`. Questa opzione viene utilizzata per diversi elementi e attributi intrinseci XAML stesso e che sono supportati da altre implementazioni di XAML. Tuttavia, questi elementi e attributi sono leggermente diversi a seconda dell'anno incorporato nell'URI. Xamarin. Forms supporta la specifica di XAML 2009, ma non tutte.
+La prima dichiarazione dello spazio dei nomi XML significa che i tag definiti all'interno del file XAML senza il prefisso si riferisce alle classi in Xamarin.Forms, ad esempio `ContentPage`. La seconda dichiarazione dello spazio dei nomi definisce un prefisso di `x`. Questa opzione viene utilizzata per diversi elementi e attributi intrinseci XAML stesso e che sono supportati da altre implementazioni di XAML. Tuttavia, questi elementi e attributi sono leggermente diversi a seconda dell'anno incorporato nell'URI. Xamarin.Forms supporta la specifica di XAML 2009, ma non tutte.
 
 Il `local` dichiarazione dello spazio dei nomi consente di accedere alle altre classi dal progetto della libreria .NET Standard.
 
@@ -145,7 +145,7 @@ Sebbene in genere non occorre dedicare molto tempo con file di codice generati, 
 
 Quando si compila e si esegue questo programma, il `Label` elemento viene visualizzato al centro della pagina, come suggerisce il XAML:
 
-[![Visualizzazione predefinita di Novell. Forms](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
+[![Visualizzazione predefinita di Xamarin.Forms](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 Per gli oggetti visivi più interessanti, tutto quello che serve è più interessanti di XAML.
 
@@ -153,7 +153,7 @@ Per gli oggetti visivi più interessanti, tutto quello che serve è più interes
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per aggiungere altre classi `ContentPage` basate su XAML al progetto, selezionare il progetto libreria .NET Standard **XamlSamples** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **elementi C# visivi > Novell. Forms > pagina contenuto** (non **paginaC#contenuto ()** , che crea una pagina di solo codice o una **visualizzazione contenuto**, che non è una pagina. Assegnare, ad esempio, un nome, la pagina **HelloXamlPage**:
+Per aggiungere altre classi `ContentPage` basate su XAML al progetto, selezionare il progetto libreria .NET Standard **XamlSamples** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **elementi C# visivi > Xamarin.Forms > pagina contenuto** (non **paginaC#contenuto ()** , che crea una pagina di solo codice o una **visualizzazione contenuto**, che non è una pagina. Assegnare, ad esempio, un nome, la pagina **HelloXamlPage**:
 
 ![Finestra di dialogo Aggiungi nuovo elemento](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
@@ -207,13 +207,13 @@ Il `ContentPage.Content` tag vengono chiamati *property (elemento)* tag. `Conten
 
 Si noti inoltre che un `Title` attributo è stato impostato nel tag radice.
 
-A questo punto, la relazione tra le classi, le proprietà e il codice XML dovrebbe essere evidente: Una classe Novell. Forms, ad `ContentPage` esempio `Label`o, viene visualizzata nel file XAML come elemento XML. Le proprietà di tale classe, inclusi `Title` sul `ContentPage` e sette proprietà di `Label`, ovvero in genere vengono visualizzati come attributi XML.
+A questo punto, la relazione tra le classi, le proprietà e il codice XML dovrebbe essere evidente: Una classe Xamarin.Forms, ad `ContentPage` esempio `Label`o, viene visualizzata nel file XAML come elemento XML. Le proprietà di tale classe, inclusi `Title` sul `ContentPage` e sette proprietà di `Label`, ovvero in genere vengono visualizzati come attributi XML.
 
 Molti tasti di scelta rapida disponibili per impostare i valori di queste proprietà. Alcune proprietà sono tipi di dati di base: Ad esempio, le `Title` proprietà `Text` e sono di `String`tipo, `Rotation` è di tipo `Double`e `IsVisible` (che è `true` per impostazione predefinita ed è impostato qui solo per illustrazione) è di tipo `Boolean`.
 
 Il `HorizontalTextAlignment` proprietà è di tipo `TextAlignment`, che costituisce un'enumerazione. Per una proprietà di qualsiasi tipo di enumerazione, è sufficiente specificare è un nome di membro.
 
-Per le proprietà dei tipi più complessi, tuttavia, convertitori di tipi vengono usate per l'analisi di XAML. Si tratta di classi in xamarin. Forms che derivano da `TypeConverter`. Molti sono classi pubbliche, ma non lo sono. Per questo file XAML, alcune di queste classi svolgono un ruolo dietro le quinte:
+Per le proprietà dei tipi più complessi, tuttavia, convertitori di tipi vengono usate per l'analisi di XAML. Si tratta di classi in Xamarin.Forms che derivano da `TypeConverter`. Molti sono classi pubbliche, ma non lo sono. Per questo file XAML, alcune di queste classi svolgono un ruolo dietro le quinte:
 
 - `LayoutOptionsConverter` per il `VerticalOptions` proprietà
 - `FontSizeConverter` per il `FontSize` proprietà

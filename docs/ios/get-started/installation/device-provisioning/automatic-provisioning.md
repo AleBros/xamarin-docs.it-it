@@ -17,7 +17,7 @@ ms.locfileid: "73425579"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
-_Dopo aver installato correttamente Novell. iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso della firma automatica per richiedere certificati e profili di sviluppo._
+_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso della firma automatica per richiedere certificati e profili di sviluppo._
 
 ## <a name="requirements"></a>Requisiti
 

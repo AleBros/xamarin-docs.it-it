@@ -1,5 +1,5 @@
 ---
-title: Popolamento di un controllo ListView Novell. Android con dati
+title: Popolamento di un controllo ListView Xamarin.Android con dati
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607971"
 ---
-# <a name="populating-a-xamarinandroid-listview-with-data"></a>Popolamento di un controllo ListView Novell. Android con dati
+# <a name="populating-a-xamarinandroid-listview-with-data"></a>Popolamento di un controllo ListView Xamarin.Android con dati
 
 Per aggiungere righe a una `ListView` è necessario aggiungerla al layout e implementare una `IListAdapter` con i metodi che il `ListView` chiama per popolare. Android include le classi `ListActivity` e `ArrayAdapter` predefinite che è possibile usare senza definire codice XML o codice di layout personalizzato. La classe `ListActivity` crea automaticamente una `ListView` ed espone una proprietà `ListAdapter` per fornire le visualizzazioni di riga da visualizzare tramite un adapter.
 

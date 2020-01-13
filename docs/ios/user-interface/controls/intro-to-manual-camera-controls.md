@@ -1,6 +1,6 @@
 ---
-title: Controlli manuali della fotocamera in Novell. iOS
-description: Questo documento descrive come è possibile usare il Framework AVFoundation iOS con Novell. iOS per abilitare i controlli della fotocamera manuale. I controlli della fotocamera manuale consentono a un utente di controllare lo stato attivo, il saldo bianco e le impostazioni di esposizione.
+title: Controlli manuali della fotocamera in Xamarin.iOS
+description: Questo documento descrive come è possibile usare il Framework AVFoundation iOS con Xamarin.iOS per abilitare i controlli della fotocamera manuale. I controlli della fotocamera manuale consentono a un utente di controllare lo stato attivo, il saldo bianco e le impostazioni di esposizione.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022052"
 ---
-# <a name="manual-camera-controls-in-xamarinios"></a>Controlli manuali della fotocamera in Novell. iOS
+# <a name="manual-camera-controls-in-xamarinios"></a>Controlli manuali della fotocamera in Xamarin.iOS
 
 I controlli della fotocamera manuale, forniti dal `AVFoundation Framework` in iOS 8, consentono a un'applicazione per dispositivi mobili di assumere il controllo completo sulla fotocamera di un dispositivo iOS. Questo livello di controllo con granularità fine può essere usato per creare applicazioni per la fotocamera a livello professionale e fornire composizioni degli artisti modificando i parametri della fotocamera durante l'acquisizione di un'immagine o un video ancora.
 

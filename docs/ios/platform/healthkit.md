@@ -1,5 +1,5 @@
 ---
-title: HealthKit in Novell. iOS
+title: HealthKit in Xamarin.iOS
 description: Questo documento descrive HealthKit, un Framework introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni relative allo stato di integrità. Viene illustrato come eseguire il provisioning di un'app HealthKit e come scrivere codice che usa il Framework HealthKit.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032392"
 ---
-# <a name="healthkit-in-xamarinios"></a>HealthKit in Novell. iOS
+# <a name="healthkit-in-xamarinios"></a>HealthKit in Xamarin.iOS
 
 Il kit di integrità fornisce un archivio dati protetto per le informazioni relative all'integrità dell'utente. Le app del kit di integrità possono, con l'autorizzazione esplicita dell'utente, leggere e scrivere in questo archivio dati e ricevere notifiche quando vengono aggiunti dati pertinenti. Le app possono presentare i dati oppure l'utente può usare l'app per l'integrità fornita da Apple per visualizzare un dashboard di tutti i relativi dati.
 
@@ -84,7 +84,7 @@ Fare clic su **genera** e attendere la creazione del profilo. Scaricare il file 
 
 <a name="associating-appid" />
 
-### <a name="associating-the-app-id-and-provisioning-profile-with-your-xamarinios-app"></a>Associazione dell'ID app e del profilo di provisioning all'app Novell. iOS
+### <a name="associating-the-app-id-and-provisioning-profile-with-your-xamarinios-app"></a>Associazione dell'ID app e del profilo di provisioning all'app Xamarin.iOS
 
 Dopo aver creato e installato un profilo di **provisioning** appropriato come descritto, sarebbe in genere opportuno creare una soluzione in Visual Studio per Mac o Visual Studio. L'accesso al kit di integrità è disponibile C# per F# qualsiasi iOS o progetto.
 

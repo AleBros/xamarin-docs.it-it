@@ -1,5 +1,5 @@
 ---
-title: In background in Novell. iOS
+title: In background in Xamarin.iOS
 description: L'elaborazione in background o in background è il processo che consente alle applicazioni di eseguire le attività in background mentre un'altra applicazione viene eseguita in primo piano. Questa guida funge da introduzione all'elaborazione in background in iOS.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73005059"
 ---
-# <a name="backgrounding-in-xamarinios"></a>In background in Novell. iOS
+# <a name="backgrounding-in-xamarinios"></a>In background in Xamarin.iOS
 
 _L'elaborazione in background o in background è il processo che consente alle applicazioni di eseguire le attività in background mentre un'altra applicazione viene eseguita in primo piano. Questa guida funge da introduzione all'elaborazione in background in iOS._
 

@@ -1,6 +1,6 @@
 ---
-title: Controlli di terze parti Novell. Forms
-description: Sono disponibili controlli aggiuntivi per lo sviluppo di Novell. Forms da società quali Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne e Steema.
+title: Controlli di terze parti Xamarin.Forms
+description: Sono disponibili controlli aggiuntivi per lo sviluppo di Xamarin.Forms da società quali Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne e Steema.
 ms.prod: xamarin
 ms.assetid: C33A4848-3FC8-4A20-8275-387039F541AD
 ms.technology: xamarin-forms
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/09/2019
 ms.locfileid: "68876240"
 ---
-# <a name="xamarinforms-third-party-controls"></a>Controlli di terze parti Novell. Forms
+# <a name="xamarinforms-third-party-controls"></a>Controlli di terze parti Xamarin.Forms
 
-Oltre ai controlli forniti con Novell. Forms, i controlli di terze parti sono disponibili nelle società seguenti:
+Oltre ai controlli forniti con Xamarin.Forms, i controlli di terze parti sono disponibili nelle società seguenti:
 
 - [Telerik](https://www.telerik.com/xamarin-ui)
 - [SyncFusion](https://www.syncfusion.com/xamarin-ui-controls)
@@ -25,4 +25,4 @@ Oltre ai controlli forniti con Novell. Forms, i controlli di terze parti sono di
 - [ComponentOne](https://www.grapecity.com/componentone-xamarin/)
 - [Steema](https://www.steema.com/product/forms)
 
-Questi controlli offrono supporto aggiuntivo per gli sviluppatori di Novell. Forms grazie all'aumento dei controlli standard con controlli e servizi personalizzati.
+Questi controlli offrono supporto aggiuntivo per gli sviluppatori di Xamarin.Forms grazie all'aumento dei controlli standard con controlli e servizi personalizzati.

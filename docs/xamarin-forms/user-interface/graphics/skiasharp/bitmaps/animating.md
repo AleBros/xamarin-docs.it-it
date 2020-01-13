@@ -34,13 +34,13 @@ Nel secondo esempio viene illustrato come utilizzare SkiaSharp per il rendering 
 
 ## <a name="bitmap-animation"></a>Animazione di bitmap
 
-Il Set di Mandelbrot è visivamente affascinanti ma computionally lunga durata. (Per una descrizione del Set di Mandelbrot e la matematica usata in questo esempio, vedere [capitolo 20 _creazione di App per dispositivi mobili con xamarin. Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) iniziale nella pagina 666. La descrizione seguente si presuppone che informazioni di background.)
+Il Set di Mandelbrot è visivamente affascinanti ma computionally lunga durata. (Per una descrizione del Set di Mandelbrot e la matematica usata in questo esempio, vedere [capitolo 20 _creazione di App per dispositivi mobili con Xamarin.Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) iniziale nella pagina 666. La descrizione seguente si presuppone che informazioni di background.)
 
 Il [**animazione di Mandelbrot**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) esempio Usa l'animazione di bitmap per simulare uno zoom continuo di un punto fisso nel Set di Mandelbrot. Lo zoom avanti è seguito da uno zoom indietro, e quindi il ciclo viene ripetuto all'infinito o fino al termine del programma.
 
 Il programma Prepara per questa animazione mediante la creazione di un massimo di 50 bitmap archiviati nell'archiviazione locale dell'applicazione. Ogni bitmap comprende metà della larghezza e altezza del piano complesso come mappa di bit precedente. (In programma, si dice che tali bitmap per rappresentare integrale _livelli di zoom_.) Le mappe di bit vengono quindi visualizzati nella sequenza. Il ridimensionamento di ogni bitmap viene animato per fornire una progressione smooth da una singola bitmap a altro.
 
-Come descritto nel capitolo 20 del programma finale _creazione di App per dispositivi mobili con xamarin. Forms_, il calcolo del Set di Mandelbrot nelle **animazione di Mandelbrot** è un metodo asincrono con otto parametri. I parametri includono un punto centrale complessi e una larghezza e altezza del piano complesso che circonda il punto centrale. I tre parametri successivi sono la larghezza in pixel e l'altezza della bitmap da creare e un numero massimo di iterazioni per il calcolo ricorsive. Il `progress` parametro viene utilizzato per visualizzare lo stato di avanzamento di questo calcolo. Il `cancelToken` parametro non viene usato in questo programma:
+Come descritto nel capitolo 20 del programma finale _creazione di App per dispositivi mobili con Xamarin.Forms_, il calcolo del Set di Mandelbrot nelle **animazione di Mandelbrot** è un metodo asincrono con otto parametri. I parametri includono un punto centrale complessi e una larghezza e altezza del piano complesso che circonda il punto centrale. I tre parametri successivi sono la larghezza in pixel e l'altezza della bitmap da creare e un numero massimo di iterazioni per il calcolo ricorsive. Il `progress` parametro viene utilizzato per visualizzare lo stato di avanzamento di questo calcolo. Il `cancelToken` parametro non viene usato in questo programma:
 
 ```csharp
 static class Mandelbrot
@@ -179,9 +179,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-A un certo punto, è opportuno modificare il `COUNT` valore fino a 50 per visualizzare l'intera gamma dell'animazione. I valori superiori a 50 non sono utili. Intorno a un livello di zoom di 48 o questa operazione, la risoluzione di numeri a virgola mobile a precisione doppia diventa insufficiente per il calcolo del Set di Mandelbrot. Questo problema è descritto nella pagina 684 della _creazione di App per dispositivi mobili con xamarin. Forms_.
+A un certo punto, è opportuno modificare il `COUNT` valore fino a 50 per visualizzare l'intera gamma dell'animazione. I valori superiori a 50 non sono utili. Intorno a un livello di zoom di 48 o questa operazione, la risoluzione di numeri a virgola mobile a precisione doppia diventa insufficiente per il calcolo del Set di Mandelbrot. Questo problema è descritto nella pagina 684 della _creazione di App per dispositivi mobili con Xamarin.Forms_.
 
-Il `center` valore è molto importante. Questo è lo stato attivo dello zoom animazione. I tre valori nel file sono quelli utilizzati nelle tre schermate finale nel capitolo 20 _creazione di App per dispositivi mobili con xamarin. Forms_ nella pagina 684, ma è possibile sperimentare il programma in quel capitolo dovranno inventare con uno dei valori personalizzati.
+Il `center` valore è molto importante. Questo è lo stato attivo dello zoom animazione. I tre valori nel file sono quelli utilizzati nelle tre schermate finale nel capitolo 20 _creazione di App per dispositivi mobili con Xamarin.Forms_ nella pagina 684, ma è possibile sperimentare il programma in quel capitolo dovranno inventare con uno dei valori personalizzati.
 
 Il **animazione di Mandelbrot** esempio Archivia gli `COUNT` bitmap nello spazio di memorizzazione locale dell'applicazione. Le cinquanta bitmap richiedono oltre 20 megabyte di spazio di archiviazione nel dispositivo, pertanto si potrebbe voler sapere quanto spazio di archiviazione occupata dai tali bitmap e a un certo punto è possibile eliminarli tutti. Lo scopo di questi due metodi in fondo il `MainPage` classe:
 

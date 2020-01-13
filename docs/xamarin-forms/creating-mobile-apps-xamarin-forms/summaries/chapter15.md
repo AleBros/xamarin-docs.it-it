@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 15. L'interfaccia interattiva
-description: "Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 15. L'interfaccia interattiva"
+description: "Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 15. L'interfaccia interattiva"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
@@ -22,7 +22,7 @@ In questo capitolo esamina otto `View` derivazioni che consentono di interagire 
 
 ## <a name="view-overview"></a>Panoramica di View
 
-Xamarin. Forms contiene 20 istanziabile classi che derivano da `View` ma non `Layout`. Sei di queste sono state trattate nei precedenti capitoli:
+Xamarin.Forms contiene 20 istanziabile classi che derivano da `View` ma non `Layout`. Sei di queste sono state trattate nei precedenti capitoli:
 
 - `Label`: [**Capitolo 2. Anatomia di un'app**](chapter02.md)
 - `BoxView`: [**Capitolo 3. Scorrimento dello stack**](chapter03.md)
@@ -122,7 +122,7 @@ Il [ **CheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ## <a name="typing-text"></a>Digitare un testo
 
-Xamarin. Forms definisce tre visualizzazioni che consentono di immettere e modificare il testo:
+Xamarin.Forms definisce tre visualizzazioni che consentono di immettere e modificare il testo:
 
 - [`Entry`](xref:Xamarin.Forms.Entry) per una singola riga di testo
 - [`Editor`](xref:Xamarin.Forms.Editor) per più righe di testo

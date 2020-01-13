@@ -1,6 +1,6 @@
 ---
-title: EventKit in Novell. iOS
-description: Questo documento descrive EventKit e come usarlo in Novell. iOS. Vengono illustrati i calendari, gli eventi del calendario e i promemoria, vengono esaminate le classi utilizzate comunemente durante la programmazione con EventKit e altro ancora.
+title: EventKit in Xamarin.iOS
+description: Questo documento descrive EventKit e come usarlo in Xamarin.iOS. Vengono illustrati i calendari, gli eventi del calendario e i promemoria, vengono esaminate le classi utilizzate comunemente durante la programmazione con EventKit e altro ancora.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032544"
 ---
-# <a name="eventkit-in-xamarinios"></a>EventKit in Novell. iOS
+# <a name="eventkit-in-xamarinios"></a>EventKit in Xamarin.iOS
 
 iOS include due applicazioni correlate al calendario: l'applicazione calendario e l'applicazione promemoria. È abbastanza semplice per comprendere in che modo l'applicazione Calendar gestisce i dati del calendario, ma l'applicazione promemoria è meno ovvia. I promemoria possono effettivamente avere date associate in termini di quando sono dovuti, quando vengono completati e così via. In questo modo, iOS archivia tutti i dati del calendario, sia che si tratti di eventi del calendario o promemoria, in un'unica posizione, denominato *database del calendario*.
 

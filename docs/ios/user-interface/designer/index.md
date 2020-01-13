@@ -32,7 +32,7 @@ _Il Xamarin Designer per iOS è una finestra di progettazione visiva per lo stor
 
 Il Xamarin Designer per iOS è disponibile in Visual Studio per Mac e in Visual Studio 2017 in Windows.
 
-Queste guide presuppongono una certa familiarità con il contenuto trattato nelle [guide Introduzione Novell. iOS](~/ios/get-started/index.md).
+Queste guide presuppongono una certa familiarità con il contenuto trattato nelle [guide Introduzione Xamarin.iOS](~/ios/get-started/index.md).
 
 ## <a name="ios-designer-basicsintroductionmd"></a>[Nozioni di base su iOS Designer](introduction.md)
 

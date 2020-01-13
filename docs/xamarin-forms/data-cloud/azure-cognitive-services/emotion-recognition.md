@@ -1,6 +1,6 @@
 ---
 title: Riconoscimento delle emozioni percepito usando il API Viso
-description: L'API viso accetta un'espressione del viso in un'immagine come input e restituisce i dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare l'API viso per riconoscere le emozioni, per valutare un'applicazione xamarin. Forms.
+description: L'API viso accetta un'espressione del viso in un'immagine come input e restituisce i dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare l'API viso per riconoscere le emozioni, per valutare un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
 ms.technology: xamarin-forms

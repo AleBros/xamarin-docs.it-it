@@ -1,5 +1,5 @@
 ---
-title: Pulsante di xamarin. Forms
+title: Pulsante di Xamarin.Forms
 description: Il pulsante risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività.
 ms.prod: xamarin
 ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489713"
 ---
-# <a name="xamarinforms-button"></a>Pulsante di xamarin. Forms
+# <a name="xamarinforms-button"></a>Pulsante di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _Il pulsante risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività._
 
-Il [ `Button` ](xref:Xamarin.Forms.Button) è il controllo interattivo più importante in tutti di xamarin. Forms. Il `Button` in genere consente di visualizzare una breve stringa di testo che indica un comando, ma è anche possibile visualizzare un'immagine bitmap, o una combinazione di testo e un'immagine. L'utente preme il `Button` con un dito o fa clic con il mouse per avviare tale comando.
+Il [ `Button` ](xref:Xamarin.Forms.Button) è il controllo interattivo più importante in tutti di Xamarin.Forms. Il `Button` in genere consente di visualizzare una breve stringa di testo che indica un comando, ma è anche possibile visualizzare un'immagine bitmap, o una combinazione di testo e un'immagine. L'utente preme il `Button` con un dito o fa clic con il mouse per avviare tale comando.
 
 La maggior parte degli argomenti illustrati di seguito corrispondono alle pagine di [ **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) esempio.
 
@@ -150,7 +150,7 @@ In alcuni casi un'applicazione è in un determinato stato in cui un determinato 
 
 Questo approccio è particolarmente adatto in relazione al data binding e in particolare quando si implementa l'architettura Model-View-ViewModel (MVVM). Questi argomenti sono illustrati negli articoli [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md), [dal Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), e [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 
-In un'applicazione MVVM, il ViewModel definisce proprietà di tipo `ICommand` che vengono quindi connesse agli elementi `Button` XAML con le associazioni dati. Novell. Forms definisce anche [`Command`](xref:Xamarin.Forms.Command) e [`Command<T>`](xref:Xamarin.Forms.Command`1) classi che implementano l'interfaccia `ICommand` e assistono il ViewModel nella definizione di proprietà di tipo `ICommand`.
+In un'applicazione MVVM, il ViewModel definisce proprietà di tipo `ICommand` che vengono quindi connesse agli elementi `Button` XAML con le associazioni dati. Xamarin.Forms definisce anche [`Command`](xref:Xamarin.Forms.Command) e [`Command<T>`](xref:Xamarin.Forms.Command`1) classi che implementano l'interfaccia `ICommand` e assistono il ViewModel nella definizione di proprietà di tipo `ICommand`.
 
 L'esecuzione di comandi è descritto più dettagliatamente nell'articolo [ **l'interfaccia di comando** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) ma la **base pulsante di comando** nella pagina di [  **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) esempio viene illustrato l'approccio di base.
 
@@ -579,13 +579,13 @@ Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizz
 
 Il `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) specifica che quando il [ `Button` ](xref:Xamarin.Forms.Button) viene premuto, relativo [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà verrà modificata da relativo valore predefinito di 1 a 0,8. Il `Normal` `VisualState` specifica che quando il `Button` è in uno stato normale, relativo `Scale` verrà impostata su 1. Pertanto, il risultato complessivo è che quando la `Button` è premuto, viene ridimensionata per essere leggermente più piccoli e quando il `Button` viene rilasciato, viene ridimensionata alle dimensioni predefinite.
 
-Per altre informazioni sugli stati visual, vedere [di xamarin. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per altre informazioni sugli stati visual, vedere [di Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="creating-a-toggle-button"></a>Creazione di un pulsante di attivazione/disattivazione
 
 È possibile per creare una sottoclasse `Button` così da poterla utilizzare ad esempio un interruttore on / off: toccare il pulsante di una sola volta per attivare il pulsante e toccare di nuovo per essere disattivata.
 
-Quanto segue `ToggleButton` deriva dalla classe `Button` e definisce un nuovo evento denominato `Toggled` e una proprietà booleana denominata `IsToggled`. Queste sono le stesse due proprietà definite da xamarin. Forms [ `Switch` ](xref:Xamarin.Forms.Switch):
+Quanto segue `ToggleButton` deriva dalla classe `Button` e definisce un nuovo evento denominato `Toggled` e una proprietà booleana denominata `IsToggled`. Queste sono le stesse due proprietà definite da Xamarin.Forms [ `Switch` ](xref:Xamarin.Forms.Switch):
 
 ```csharp
 class ToggleButton : Button
@@ -629,7 +629,7 @@ class ToggleButton : Button
 
 Il `ToggleButton` costruttore collega un gestore per il `Clicked` eventi in modo che sia possibile modificare il valore della `IsToggled` proprietà. Il `OnIsToggledChanged` metodo generato il `Toggled` evento.
 
-L'ultima riga del `OnIsToggledChanged` metodo chiama il metodo statico `VisualStateManager.GoToState` metodo con il testo di due stringhe "ToggledOn" e "ToggledOff". È possibile leggere su questo metodo e modo in cui l'applicazione può rispondere a stati di visualizzazione nell'articolo [ **The xamarin. Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md).
+L'ultima riga del `OnIsToggledChanged` metodo chiama il metodo statico `VisualStateManager.GoToState` metodo con il testo di due stringhe "ToggledOn" e "ToggledOff". È possibile leggere su questo metodo e modo in cui l'applicazione può rispondere a stati di visualizzazione nell'articolo [ **The Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 In quanto `ToggleButton` effettua la chiamata al `VisualStateManager.GoToState`, senza dover includere eventuali funzionalità aggiuntive per modificare l'aspetto del pulsante in base alla classe stessa relativo `IsToggled` dello stato. Vale a dire la responsabilità di XAML che ospita il `ToggleButton`.
 
@@ -756,7 +756,7 @@ La proprietà `ImageSource` è di tipo [`ImageSource`](xref:Xamarin.Forms.ImageS
 > [!NOTE]
 > Mentre un `Button` può caricare un GIF animato, verrà visualizzato solo il primo frame del GIF.
 
-Ogni piattaforma supportata da xamarin. Forms permette di essere archiviati in più dimensioni per le risoluzioni diverse in pixel dei vari dispositivi che l'applicazione può essere eseguita su immagini. Queste bitmap più sono denominate o archiviate in modo che il sistema operativo può scegliere quello più adatto per il dispositivo il video di risoluzione dello schermo.
+Ogni piattaforma supportata da Xamarin.Forms permette di essere archiviati in più dimensioni per le risoluzioni diverse in pixel dei vari dispositivi che l'applicazione può essere eseguita su immagini. Queste bitmap più sono denominate o archiviate in modo che il sistema operativo può scegliere quello più adatto per il dispositivo il video di risoluzione dello schermo.
 
 Per una bitmap in un `Button`, la dimensione ottimale è in genere compreso tra 32 e 64 device independent unit, a seconda delle dimensioni si desidera che questo sia. Le immagini usate in questo esempio si basano su una dimensione pari a 48 unità indipendenti dal dispositivo.
 

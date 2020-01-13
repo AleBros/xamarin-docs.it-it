@@ -16,7 +16,7 @@ ms.locfileid: "73028020"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivi multi-core e Xamarin.Android
 
-_Android può essere eseguito su diverse architetture di computer. Questo documento illustra le diverse architetture della CPU che possono essere usate per un'applicazione Novell. Android. Questo documento illustra anche il modo in cui le applicazioni Android vengono impacchettate per supportare diverse architetture della CPU. Verrà introdotta l'interfaccia ABI (Application Binary Interface) e verranno fornite informazioni aggiuntive relative a Abi da usare in un'applicazione Novell. Android._
+_Android può essere eseguito su diverse architetture di computer. Questo documento illustra le diverse architetture della CPU che possono essere usate per un'applicazione Xamarin.Android. Questo documento illustra anche il modo in cui le applicazioni Android vengono impacchettate per supportare diverse architetture della CPU. Verrà introdotta l'interfaccia ABI (Application Binary Interface) e verranno fornite informazioni aggiuntive relative a Abi da usare in un'applicazione Xamarin.Android._
 
 ## <a name="overview"></a>Panoramica
 
@@ -54,7 +54,7 @@ Ogni interfaccia ABI supportata da Android è identificata da un nome univoco.
 Questo è il nome di un'interfaccia EABI per le CPU basate su ARM che supportano almeno il set di istruzioni ARMv5TE. Android segue l'interfaccia ABI GNU/Linux ARM little-endian. Questa interfaccia ABI non supporta i calcoli a virgola mobile assistiti mediante hardware. Tutte le operazioni a virgola mobile vengono eseguite dalle funzioni helper del software che provengono dalla libreria statica `libgcc.a` del compilatore. I dispositivi SMP non sono supportati da `armeabi`.
 
 > [!IMPORTANT]
-> Il codice `armeabi` di Novell. Android non è thread-safe e non deve essere usato nei dispositivi con più CPU `armeabi-v7a` (descritto di seguito). L'uso del codice `armeabi` su un dispositivo `armeabi-v7a` a singolo core è sicuro.
+> Il codice `armeabi` di Xamarin.Android non è thread-safe e non deve essere usato nei dispositivi con più CPU `armeabi-v7a` (descritto di seguito). L'uso del codice `armeabi` su un dispositivo `armeabi-v7a` a singolo core è sicuro.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 

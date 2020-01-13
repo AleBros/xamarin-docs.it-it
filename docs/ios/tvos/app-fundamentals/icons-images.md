@@ -16,14 +16,14 @@ ms.locfileid: "73030849"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
 
-La creazione di icone e immagini accattivanti è una parte essenziale dello sviluppo di un'esperienza utente immersiva per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Novell. tvOS:
+La creazione di icone e immagini accattivanti è una parte essenziale dello sviluppo di un'esperienza utente immersiva per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Xamarin.tvOS:
 
 - [Immagine di avvio](#Launch-Image) : un'immagine di avvio viene visualizzata quando l'app viene avviata per la prima volta e viene sostituita dalla prima schermata dell'app dopo il completamento dell'avvio.
 - [Immagini sovrapposte](#Layered-Images) , specifiche per Apple TV, le nuove immagini a più livelli di Apple funzionano con l'effetto parallasse per creare un effetto 3D per gli elementi selezionati. Esistono diversi modi per [creare immagini sovrapposte](#Creating-Layered-Images).
 - [Icona dell'app](#App-Icons) : le icone sono necessarie solo per la schermata iniziale di Apple TV ma per l'App Store. Devono essere fornite come immagine a più livelli.
 - [Image shelf top](#Top-Shelf-Image) : se l'app viene posizionata nella parte superiore della schermata iniziale, sarà necessaria un'immagine in primo piano per evidenziare le funzionalità dell'app. Facoltativamente, è possibile fornire [contenuto dinamico Top Shelf](#Dynamic-Top-Shelf-Content) per evidenziare il contenuto nell'app.
 - [Immagini Game Center](#Game-Center-Images) : se l'app è un gioco e USA Game Center, saranno necessarie diverse immagini aggiuntive.
-- [Impostazione delle immagini del progetto Novell. tvOS](#Setting-Xamarin.tvOS-Project-Images) : vengono illustrati i passaggi necessari per impostare l'immagine di avvio e l'icona dell'app per l'app Novell. tvOS.
+- [Impostazione delle immagini del progetto Xamarin.tvOS](#Setting-Xamarin.tvOS-Project-Images) : vengono illustrati i passaggi necessari per impostare l'immagine di avvio e l'icona dell'app per l'app Xamarin.tvOS.
 
 > [!IMPORTANT]
 > Tutte le immagini in Apple TV hanno una risoluzione di 1 (`@1x`) ed è consigliabile usare _solo_ immagini di questa dimensione. Anche la grafica più grande e a risoluzione superiore non solo può richiedere tempo per il download e l'uso di più memoria e archiviazione, ma deve essere ridimensionata dinamicamente in fase di esecuzione e influisce negativamente sulle prestazioni del disegno.
@@ -32,7 +32,7 @@ La creazione di icone e immagini accattivanti è una parte essenziale dello svil
 
 ## <a name="launch-image"></a>Immagine di avvio
 
-L'immagine di avvio è la prima cosa che viene visualizzata quando l'app Novell. tvOS viene avviata inizialmente in Apple TV e, di conseguenza, ogni app tvOS deve fornire un'immagine di avvio. 
+L'immagine di avvio è la prima cosa che viene visualizzata quando l'app Xamarin.tvOS viene avviata inizialmente in Apple TV e, di conseguenza, ogni app tvOS deve fornire un'immagine di avvio. 
 
 L'immagine di avvio viene visualizzata rapidamente e offre l'impressione che l'applicazione sia veloce e reattiva. Apple TV sostituirà l'immagine di avvio con la prima schermata dell'app subito dopo.
 
@@ -127,7 +127,7 @@ Per altre informazioni sulla creazione e l'anteprima delle immagini sovrapposte,
 
 ## <a name="app-icons"></a>Icone dell'app
 
-L'app Novell. tvOS richiederà non solo un'icona dell'app per la schermata iniziale di Apple TV, ma anche un'icona per l'App Store. L'icona dell'app è la prima modifica che consente di ottenere un'impressione eccezionale sul potenziale utente e deve comunicare a colpo d'occhio lo scopo dell'app.
+L'app Xamarin.tvOS richiederà non solo un'icona dell'app per la schermata iniziale di Apple TV, ma anche un'icona per l'App Store. L'icona dell'app è la prima modifica che consente di ottenere un'impressione eccezionale sul potenziale utente e deve comunicare a colpo d'occhio lo scopo dell'app.
 
 [![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png#lightbox)
 
@@ -181,7 +181,7 @@ Per impostare le icone dell'app necessarie per il progetto tvOS, eseguire le ope
 
 ## <a name="top-shelf-image"></a>Immagine in primo piano
 
-Se l'utente ha inserito l'app Novell. tvOS nella parte superiore della schermata iniziale di Apple TV, viene visualizzata un'immagine di grandi dimensioni superiore quando l'utente seleziona l'app. Questa immagine dovrebbe evidenziare le funzionalità dell'app o fornire collegamenti diretti al relativo contenuto.
+Se l'utente ha inserito l'app Xamarin.tvOS nella parte superiore della schermata iniziale di Apple TV, viene visualizzata un'immagine di grandi dimensioni superiore quando l'utente seleziona l'app. Questa immagine dovrebbe evidenziare le funzionalità dell'app o fornire collegamenti diretti al relativo contenuto.
 
 [![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
 
@@ -247,7 +247,7 @@ Apple fornisce i suggerimenti seguenti per la riga di contenuto sezionata:
 
 #### <a name="scrolling-inset-banners"></a>Scorrimento di banner di inserimento
 
-Facoltativamente, l'app Novell. tvOS può presentare il proprio contenuto nel primo scaffale come una raccolta di banner e scorrimento automatico di banner che riempiono quasi lo schermo. Questo stile viene in genere usato per presentare contenuti avanzati, come i nuovi programmi TV.
+Facoltativamente, l'app Xamarin.tvOS può presentare il proprio contenuto nel primo scaffale come una raccolta di banner e scorrimento automatico di banner che riempiono quasi lo schermo. Questo stile viene in genere usato per presentare contenuti avanzati, come i nuovi programmi TV.
 
 Oltre allo scorrimento automatico, l'utente può assumere il controllo dei banner e scorrere in entrambe le direzioni usando Siri remote. Facendo un piccolo movimento circolare sul Siri remoto quando un banner è attivo, verrà attivato l'effetto di parallasse per tale banner.
 
@@ -273,7 +273,7 @@ Per altre informazioni sull'aggiunta di un'estensione dello scaffale principale 
 
 ## <a name="game-center-images"></a>Immagini Game Center
 
-Se l'app Novell. tvOS è un gioco e hai incluso Game Center supporto, saranno necessarie diverse risorse per le immagini:
+Se l'app Xamarin.tvOS è un gioco e hai incluso Game Center supporto, saranno necessarie diverse risorse per le immagini:
 
 - **Icone di Achievement** : è necessaria un'immagine opaca per ogni risultato che verrà ritagliato automaticamente in un cerchio. Gli obiettivi sono elementi non attivabili.
 - **Artwork del dashboard** : è possibile specificare un'immagine facoltativa che verrà visualizzata nella parte superiore del dashboard dell'app all'interno Game Center. Queste immagini non sono focalizzabili.
@@ -293,13 +293,13 @@ Per ulteriori informazioni sull'utilizzo di Game Center, vedere la guida alla [p
 
 ## <a name="working-with-images"></a>Working with Images (Uso delle immagini)
 
-Poiché tvOS 9 è un subset di iOS 9, le stesse tecniche usate per includere e visualizzare immagini in un'app Novell. iOS funzionano anche per un'app Novell. tvOS. Per ulteriori informazioni, vedere la documentazione di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
+Poiché tvOS 9 è un subset di iOS 9, le stesse tecniche usate per includere e visualizzare immagini in un'app Xamarin.iOS funzionano anche per un'app Xamarin.tvOS. Per ulteriori informazioni, vedere la documentazione di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
 <a name="Setting-Xamarin.tvOS-Project-Images" />
 
-## <a name="setting-xamarintvos-project-images"></a>Impostazione delle immagini del progetto Novell. tvOS
+## <a name="setting-xamarintvos-project-images"></a>Impostazione delle immagini del progetto Xamarin.tvOS
 
-Come indicato in precedenza, tutte le app tvOS richiedono un' [immagine di avvio](#Launch-Image)e un' [icona dell'app](#App-Icons). Questa sezione illustra come selezionare l'immagine di avvio e l'icona dell'app per il progetto di app Novell. tvOS dopo che sono state impostate in un catalogo asset.
+Come indicato in precedenza, tutte le app tvOS richiedono un' [immagine di avvio](#Launch-Image)e un' [icona dell'app](#App-Icons). Questa sezione illustra come selezionare l'immagine di avvio e l'icona dell'app per il progetto di app Xamarin.tvOS dopo che sono state impostate in un catalogo asset.
 
 Procedere come descritto di seguito:
 
@@ -316,7 +316,7 @@ Procedere come descritto di seguito:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato tutti i tipi di immagine e le dimensioni usati in un'app Novell. tvOS. In primo luogo, sono state analizzate immagini di avvio, immagini sovrapposte, icone dell'app, immagini di scaffale e immagini Game Center. Quindi è stato analizzato l'uso delle immagini nell'app Novell. tvOS.
+Questo articolo ha trattato tutti i tipi di immagine e le dimensioni usati in un'app Xamarin.tvOS. In primo luogo, sono state analizzate immagini di avvio, immagini sovrapposte, icone dell'app, immagini di scaffale e immagini Game Center. Quindi è stato analizzato l'uso delle immagini nell'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

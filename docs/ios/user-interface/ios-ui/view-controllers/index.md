@@ -1,6 +1,6 @@
 ---
-title: Controller di visualizzazione in Novell. iOS
-description: Questo documento include collegamenti a una guida che descrive come personalizzare le transizioni animate tra i controller di visualizzazione in Novell. iOS.
+title: Controller di visualizzazione in Xamarin.iOS
+description: Questo documento include collegamenti a una guida che descrive come personalizzare le transizioni animate tra i controller di visualizzazione in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 15846D93-26A7-4E7E-B6DA-8E20FCD995E7
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002444"
 ---
-# <a name="view-controllers-in-xamarinios"></a>Controller di visualizzazione in Novell. iOS
+# <a name="view-controllers-in-xamarinios"></a>Controller di visualizzazione in Xamarin.iOS
 
 ## <a name="view-controller-transitionstransitionsmd"></a>[Transizioni dei controller di visualizzazione](transitions.md)
 

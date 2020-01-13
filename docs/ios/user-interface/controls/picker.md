@@ -1,6 +1,6 @@
 ---
-title: Controllo selezione in Novell. iOS
-description: Questo documento descrive come progettare e usare i controlli di selezione in un'app Novell. iOS. Viene illustrato come implementare una selezione nel codice e in iOS designer.
+title: Controllo selezione in Xamarin.iOS
+description: Questo documento descrive come progettare e usare i controlli di selezione in un'app Xamarin.iOS. Viene illustrato come implementare una selezione nel codice e in iOS designer.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021986"
 ---
-# <a name="picker-control-in-xamarinios"></a>Controllo selezione in Novell. iOS
+# <a name="picker-control-in-xamarinios"></a>Controllo selezione in Xamarin.iOS
 
 Un [`UIPickerView`](xref:UIKit.UIPickerView) consente di selezionare un valore da un elenco scorrendo i singoli componenti di un'interfaccia simile a una rotellina.
 

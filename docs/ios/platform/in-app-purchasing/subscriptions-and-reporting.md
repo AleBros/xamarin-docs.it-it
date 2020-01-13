@@ -1,5 +1,5 @@
 ---
-title: Sottoscrizioni e creazione di report in Novell. iOS
+title: Sottoscrizioni e creazione di report in Xamarin.iOS
 description: Questo documento descrive le sottoscrizioni senza rinnovo, le sottoscrizioni gratuite, le sottoscrizioni rinnovate automaticamente e l'uso di iTunes Connect per creare report su questi elementi.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032296"
 ---
-# <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Xamarin.iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Informazioni sulle sottoscrizioni senza rinnovo
 

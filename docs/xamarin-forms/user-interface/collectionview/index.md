@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms (CollectionView)
+title: Xamarin.Forms (CollectionView)
 description: CollectionView è una visualizzazione flessibile ed efficiente per la presentazione di elenchi di dati con specifiche di layout diverse.
 ms.prod: xamarin
 ms.assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72696996"
 ---
-# <a name="xamarinforms-collectionview"></a>Novell. Forms (CollectionView)
+# <a name="xamarinforms-collectionview"></a>Xamarin.Forms (CollectionView)
 
 ## <a name="introductionintroductionmd"></a>[Introduzione](introduction.md)
 

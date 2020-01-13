@@ -37,7 +37,7 @@ ms.locfileid: "73013346"
 
     - "File di progetto... non è possibile aprire. Manca un sottotipo di progetto "
 
-    - "Riferimento oggetto non impostato su un'istanza di un oggetto.  in Novell. VisualStudio. IOS. XamarinIOSPackage. Initialize () "
+    - "Riferimento oggetto non impostato su un'istanza di un oggetto.  in Xamarin.VisualStudio. IOS. XamarinIOSPackage. Initialize () "
 
     - "Errore del sito per il pacchetto" (in Visual Studio _ActivityLog. XML_)
 

@@ -1,5 +1,5 @@
 ---
-title: Selettori Objective-C in Novell. iOS
+title: Selettori Objective-C in Xamarin.iOS
 description: In questo documento viene illustrato come interagire con i selettori Objective C#-C da. Viene descritto come richiamare i selettori e le considerazioni tecniche che devono essere presi in considerazione quando si esegue questa operazione.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022281"
 ---
-# <a name="objective-c-selectors-in-xamarinios"></a>Selettori Objective-C in Novell. iOS
+# <a name="objective-c-selectors-in-xamarinios"></a>Selettori Objective-C in Xamarin.iOS
 
-Il linguaggio Objective-C si basa su *selettori*. Un selettore è un messaggio che può essere inviato a un oggetto o a una *classe*. [Novell. iOS](~/ios/internals/api-design/index.md) esegue il mapping di selettori di istanza ai metodi di istanza e ai selettori di classe per i metodi statici.
+Il linguaggio Objective-C si basa su *selettori*. Un selettore è un messaggio che può essere inviato a un oggetto o a una *classe*. [Xamarin.iOS](~/ios/internals/api-design/index.md) esegue il mapping di selettori di istanza ai metodi di istanza e ai selettori di classe per i metodi statici.
 
 Diversamente dalle normali funzioni C (e come C++ le funzioni membro), non è possibile richiamare direttamente un selettore usando [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) , i selettori vengono inviati a una classe Objective-C o a un'istanza usando il [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 funzione.
@@ -38,7 +38,7 @@ Questa API presenta le caratteristiche seguenti:
 - Il tipo restituito è `CGSize` per l'API unificata.
 - Il `font` parametro è un [UIFont](xref:UIKit.UIFont) (e un tipo (indirettamente) derivato da [NSObject](xref:Foundation.NSObject)ed è mappato a [System. IntPtr](xref:System.IntPtr).
 - Viene eseguito il mapping del parametro `width`, un `CGFloat`, al `nfloat`.
-- Il parametro `lineBreakMode`, un [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in Novell. iOS come [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
+- Il parametro `lineBreakMode`, un [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in Xamarin.iOS come [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 Enumerazione.
 
 Riunendola, il `objc_msgSend` dichiarazione deve corrispondere:
@@ -137,7 +137,7 @@ La chiamata di un selettore prevede tre passaggi:
 
 ### <a name="selector-targets"></a>Destinazioni del selettore
 
-Una destinazione del selettore è un'istanza dell'oggetto o una classe Objective-C. Se la destinazione è un'istanza di e proviene da un tipo Novell. iOS associato, usare la proprietà [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) .
+Una destinazione del selettore è un'istanza dell'oggetto o una classe Objective-C. Se la destinazione è un'istanza di e proviene da un tipo Xamarin.iOS associato, usare la proprietà [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) .
 
 Se la destinazione è una classe, utilizzare [`ObjCRuntime.Class`](xref:ObjCRuntime.Class) per ottenere un riferimento all'istanza della classe, quindi utilizzare la proprietà [`Class.Handle`](xref:ObjCRuntime.Class.Handle) .
 

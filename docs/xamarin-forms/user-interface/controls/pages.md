@@ -1,6 +1,6 @@
 ---
-title: Pagine di Novell. Forms
-description: Le pagine Novell. Forms rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma. Questo articolo elenca le pagine incluse in Novell. Forms.
+title: Pagine di Xamarin.Forms
+description: Le pagine Xamarin.Forms rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma. Questo articolo elenca le pagine incluse in Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
 ms.technology: xamarin-forms
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "69976452"
 ---
-# <a name="xamarinforms-pages"></a>Pagine di Novell. Forms
+# <a name="xamarinforms-pages"></a>Pagine di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_Le pagine Novell. Forms rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma._
+_Le pagine Xamarin.Forms rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma._
 
-Tutti i tipi di pagina descritti di seguito derivano dalla classe Novell. Forms [`Page`](xref:Xamarin.Forms.Page) . Questi elementi visivi occupano tutti o la maggior parte dello schermo. Un oggetto `Page` rappresenta una `ViewController` in iOS e un `Page` nel piattaforma UWP (Universal Windows Platform). In Android ogni pagina occupa lo schermo come un `Activity`, ma le pagine Novell. Forms *non* sono `Activity` oggetti.
+Tutti i tipi di pagina descritti di seguito derivano dalla classe Xamarin.Forms [`Page`](xref:Xamarin.Forms.Page) . Questi elementi visivi occupano tutti o la maggior parte dello schermo. Un oggetto `Page` rappresenta una `ViewController` in iOS e un `Page` nel piattaforma UWP (Universal Windows Platform). In Android ogni pagina occupa lo schermo come un `Activity`, ma le pagine Xamarin.Forms *non* sono `Activity` oggetti.
 
 [![](pages-images/pages-sml.png "Xamarin.Forms Page Types")](pages-images/pages.png#lightbox "Xamarin.Forms Page Types")
 
 ## <a name="pages"></a>Pages
 
-Novell. Forms supporta i tipi di pagina seguenti:
+Xamarin.Forms supporta i tipi di pagina seguenti:
 
 <a name="contentPage" />
 
@@ -74,6 +74,6 @@ Novell. Forms supporta i tipi di pagina seguenti:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di Novell. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Esempio di Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

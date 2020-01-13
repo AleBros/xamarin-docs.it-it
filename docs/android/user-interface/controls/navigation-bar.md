@@ -1,5 +1,5 @@
 ---
-title: Barra di spostamento Novell. Android
+title: Barra di spostamento Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029223"
 ---
-# <a name="xamarinandroid-navigation-bar"></a>Barra di spostamento Novell. Android
+# <a name="xamarinandroid-navigation-bar"></a>Barra di spostamento Xamarin.Android
 
 Android 4 ha introdotto una nuova funzionalità dell'interfaccia utente di sistema denominata *barra di navigazione*, che fornisce controlli di navigazione nei dispositivi che non includono i pulsanti hardware per **Home**, **back**e **menu**.
 Lo screenshot seguente mostra la barra di navigazione da un dispositivo Nexus Prime:

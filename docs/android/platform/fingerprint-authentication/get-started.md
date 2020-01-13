@@ -15,7 +15,7 @@ ms.locfileid: "73020274"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introduzione con l'autenticazione con impronta digitale
 
-Per iniziare, verrà prima di tutto illustrato come configurare un progetto Novell. Android in modo che l'applicazione sia in grado di usare l'autenticazione con impronta digitale:
+Per iniziare, verrà prima di tutto illustrato come configurare un progetto Xamarin.Android in modo che l'applicazione sia in grado di usare l'autenticazione con impronta digitale:
 
 1. Aggiornare **file AndroidManifest. XML** per dichiarare le autorizzazioni richieste dalle API per le impronte digitali.
 2. Ottenere un riferimento al `FingerprintManager`.

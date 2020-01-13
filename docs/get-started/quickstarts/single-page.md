@@ -1,6 +1,6 @@
 ---
 title: Creare un'applicazione Xamarin.Forms a pagina singola
-description: Questo articolo illustra come creare un'applicazione Novell. Forms multipiattaforma a pagina singola, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo.
+description: Questo articolo illustra come creare un'applicazione Xamarin.Forms multipiattaforma a pagina singola, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -16,17 +16,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "71679989"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Novell. Forms a pagina singola
+# <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Xamarin.Forms a pagina singola
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 In questa Guida introduttiva si apprenderà come:
 
-- Creare un'applicazione Novell. Forms multipiattaforma.
+- Creare un'applicazione Xamarin.Forms multipiattaforma.
 - Definire l'interfaccia utente per una pagina usando eXtensible Application Markup Language (XAML).
 - Interagire con gli elementi dell'interfaccia utente XAML dal codice.
 
-Questa Guida introduttiva illustra come creare un'applicazione Novell. Forms multipiattaforma, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo. Il risultato è riportato di seguito:
+Questa Guida introduttiva illustra come creare un'applicazione Xamarin.Forms multipiattaforma, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo. Il risultato è riportato di seguito:
 
 [![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
 
@@ -46,7 +46,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     ![](single-page-images/vs/new-solution-2019.png "New Project")
 
-2. Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Novell. Forms)** e fare clic sul pulsante **Avanti** :
+2. Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Xamarin.Forms)** e fare clic sul pulsante **Avanti** :
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
 
@@ -144,7 +144,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
@@ -164,7 +164,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
     > [!NOTE]
     > I passaggi seguenti devono essere effettuati solo se si usa un [Mac associato](~/ios/get-started/installation/windows/connecting-to-mac/index.md) che soddisfa i requisiti di sistema per lo sviluppo di Xamarin.Forms.
@@ -181,7 +181,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
@@ -246,7 +246,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
 
@@ -294,7 +294,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
@@ -314,7 +314,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
     > [!NOTE]
     > I passaggi seguenti devono essere effettuati solo se si usa un [Mac associato](~/ios/get-started/installation/windows/connecting-to-mac/index.md) che soddisfa i requisiti di sistema per lo sviluppo di Xamarin.Forms.
@@ -331,7 +331,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -400,7 +400,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -448,7 +448,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
@@ -472,7 +472,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
 4. Nella **riquadro della soluzione**selezionare il progetto **Notes. Droid** , fare clic con il pulsante destro del mouse e selezionare **Imposta come progetto di avvio**:
 
@@ -484,7 +484,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Novell. Forms](deepdive.md).
+    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 
@@ -492,7 +492,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 In questa Guida introduttiva si è appreso come:
 
-- Creare un'applicazione Novell. Forms multipiattaforma.
+- Creare un'applicazione Xamarin.Forms multipiattaforma.
 - Definire l'interfaccia utente per una pagina usando eXtensible Application Markup Language (XAML).
 - Interagire con gli elementi dell'interfaccia utente XAML dal codice.
 
@@ -504,4 +504,4 @@ Per trasformare questa applicazione a pagina singola in un'applicazione a più p
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Notes (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
-- [Approfondimento sulla Guida introduttiva a Novell. Forms](deepdive.md)
+- [Approfondimento sulla Guida introduttiva a Xamarin.Forms](deepdive.md)

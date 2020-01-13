@@ -1,6 +1,6 @@
 ---
-title: Ricaricamento a caldo di XAML per Novell. Forms
-description: Ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, quindi non è necessario compilare il progetto Novell. Forms dopo ogni modifica del codice XAML.
+title: Ricaricamento a caldo di XAML per Xamarin.Forms
+description: Ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, quindi non è necessario compilare il progetto Xamarin.Forms dopo ogni modifica del codice XAML.
 ms.prod: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
@@ -14,14 +14,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75655407"
 ---
-# <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Ricaricamento a caldo di XAML per Novell. Forms (anteprima)
+# <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Ricaricamento a caldo di XAML per Xamarin.Forms (anteprima)
 
 Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per aumentare la produttività e risparmiare tempo. Senza il ricaricamento a caldo di XAML, è necessario compilare e distribuire l'app ogni volta che si desidera visualizzare una modifica XAML. Con il ricaricamento a caldo, quando si salva il file XAML le modifiche vengono riflesse in tempo reale nell'app in esecuzione. Inoltre, lo stato e i dati di navigazione verranno conservati, consentendo di eseguire rapidamente l'iterazione sull'interfaccia utente senza perdere il posto nell'app. Pertanto, con il ricaricamento a caldo di XAML, dedicare meno tempo alla ricompilazione e alla distribuzione delle app per convalidare le modifiche dell'interfaccia utente.
 
 > [!NOTE]
 > Se si sta scrivendo un'app WPF o UWP, vedere [ricaricamento a caldo di XAML per UWP e WPF](/visualstudio/debugger/xaml-hot-reload).
 >
-> Il ricaricamento a caldo di XAML per Novell. Forms _non funziona_ attualmente per i progetti Novell. Forms UWP.
+> Il ricaricamento a caldo di XAML per Xamarin.Forms _non funziona_ attualmente per i progetti Xamarin.Forms UWP.
 
 ## <a name="system-requirements"></a>Requisiti di sistema
 
@@ -31,7 +31,7 @@ Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per au
 Visual Studio 2019 per Mac | 8,4 o versione successiva
 Xamarin.Forms | 4,1 o versione successiva
 
-## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usare il ricaricamento a caldo di XAML per Novell. Forms
+## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usare il ricaricamento a caldo di XAML per Xamarin.Forms
 
 Non è necessaria alcuna installazione o installazione aggiuntiva per usare il ricaricamento a caldo di XAML. È incorporata in Visual Studio e può essere abilitata nelle impostazioni dell'IDE. Una volta abilitata, è possibile iniziare a usare il ricaricamento a caldo di XAML eseguendo il debug dell'app in un emulatore, un simulatore o un dispositivo fisico. Attualmente, il ricaricamento a caldo di XAML funziona solo quando si esegue il debug in iOS o Android.
 
@@ -51,7 +51,7 @@ Se si effettua una modifica che non è possibile ricaricare il ricaricamento fre
 - Tutti i riferimenti creati assegnando un controllo a un altro campo o a una proprietà utilizzando il relativo valore `x:Name` non verranno ricaricati.
 - L'aggiornamento della gerarchia visiva dell'applicazione shell in **AppShell. XAML** può causare problemi di gestione dello stato dell'applicazione. Ricompilare l'app per continuare il ricaricamento.
 - Il ricaricamento a caldo di C# XAML non è in grado di ricaricare il codice, inclusi gestori eventi, controlli personalizzati, code-behind della pagina e classi aggiuntive.
-- Non _funziona su_ altre piattaforme supportate da Novell. Forms (ad esempio Mac OS o UWP).
+- Non _funziona su_ altre piattaforme supportate da Xamarin.Forms (ad esempio Mac OS o UWP).
 
 ## <a name="migrate-from-the-private-preview"></a>Eseguire la migrazione dall'anteprima privata
 
@@ -60,7 +60,7 @@ Se si fa parte dell'anteprima privata, l'estensione per il ricaricamento a caldo
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 - Se non è possibile inizializzare il ricaricamento a caldo di XAML:
-  - Aggiornare la versione di Novell. Forms.
+  - Aggiornare la versione di Xamarin.Forms.
   - Assicurarsi di avere la versione più recente dell'IDE.
   - Impostare le impostazioni del linker per Android o iOS in modo che **non vengano collegate** nelle impostazioni di compilazione del progetto.
 - Se non si verifica nulla quando si salva il file XAML, verificare che il ricaricamento a caldo sia abilitato nell'IDE.

@@ -1,6 +1,6 @@
 ---
-title: Suggerimenti per la risoluzione dei problemi di Novell. Mac
-description: Questo documento descrive gli approcci per la risoluzione dei problemi riscontrati durante lo sviluppo di applicazioni Novell. Mac. Vengono inoltre illustrati i modi per ottenere supporto.
+title: Suggerimenti per la risoluzione dei problemi di Xamarin.Mac
+description: Questo documento descrive gli approcci per la risoluzione dei problemi riscontrati durante lo sviluppo di applicazioni Xamarin.Mac. Vengono inoltre illustrati i modi per ottenere supporto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001602"
 ---
-# <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Novell. Mac
+# <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Xamarin.Mac
 
 ## <a name="overview"></a>Panoramica
 
@@ -31,7 +31,7 @@ Con una qualsiasi di queste risorse, è possibile eseguire alcune operazioni di 
 
 - Se possibile, fornire un piccolo programma di esempio che mostra il problema. L'analisi delle pagine del codice sorgente che cercano il problema richiede più tempo e lavoro.
 
-- Conoscere le modifiche apportate all'applicazione per fare in modo che venga visualizzato un problema può limitare rapidamente l'origine del problema. Se sono state aggiornate di recente versioni di Novell. Mac, è possibile ritagliare le sezioni dell'applicazione per trovare la parte che causa il problema oppure testare le compilazioni precedenti per trovare la modifica introdotta. il problema può essere molto utile.
+- Conoscere le modifiche apportate all'applicazione per fare in modo che venga visualizzato un problema può limitare rapidamente l'origine del problema. Se sono state aggiornate di recente versioni di Xamarin.Mac, è possibile ritagliare le sezioni dell'applicazione per trovare la parte che causa il problema oppure testare le compilazioni precedenti per trovare la modifica introdotta. il problema può essere molto utile.
 
 ### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>Cosa fare quando l'app si arresta in modo anomalo senza output
 
@@ -68,7 +68,7 @@ Le sezioni seguenti riguardano i problemi noti e le relative soluzioni.
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>Non è possibile connettersi al debugger nelle app in modalità sandbox
 
-Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
+Il debugger si connette alle app Xamarin.Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
 
 [![Modifica dei diritti](troubleshooting-images/debug01.png "Modifica dei diritti")](troubleshooting-images/debug01-large.png#lightbox)
 
@@ -76,9 +76,9 @@ L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella n
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: non sono disponibili dati per la codifica 437
 
-Quando si includono librerie di terze parti nell'app Novell. Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
+Quando si includono librerie di terze parti nell'app Xamarin.Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 
-Questo problema può essere risolto aprendo le opzioni per il progetto Novell. Mac, passando a **Mac Build** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** :
+Questo problema può essere risolto aprendo le opzioni per il progetto Xamarin.Mac, passando a **Mac Build** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** :
 
 [![Modifica delle opzioni di compilazione](troubleshooting-images/issue01.png "Modifica delle opzioni di compilazione")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -86,15 +86,15 @@ Questo problema può essere risolto aprendo le opzioni per il progetto Novell. M
 
 Questo errore si verifica in genere quando viene rilasciata una nuova versione di Xcode ed è stata installata la nuova versione ma non è stata ancora eseguita. Prima di provare a compilare con una nuova versione di Xcode, è necessario prima eseguire tale versione almeno una volta.
 
-La prima volta che si esegue una nuova versione di Xcode, vengono installati diversi strumenti della riga di comando richiesti da Novell. Mac. Inoltre, è consigliabile eseguire una compilazione pulita dopo l'aggiornamento di Xcode o della versione di Novell. Mac.
+La prima volta che si esegue una nuova versione di Xcode, vengono installati diversi strumenti della riga di comando richiesti da Xamarin.Mac. Inoltre, è consigliabile eseguire una compilazione pulita dopo l'aggiornamento di Xcode o della versione di Xamarin.Mac.
 
 Se non è possibile risolvere il problema, inviare [un bug](#filing-a-bug).
 
 ### <a name="missing-entitlementsplist"></a>Mancano i diritti. plist
 
-La versione più recente di Visual Studio per Mac ha rimosso la sezione dei diritti dall'editor **info. plist** e la ha inserita in un editor di **diritti distinti. plist** (per un migliore supporto multipiattaforma con Novell. iOS).
+La versione più recente di Visual Studio per Mac ha rimosso la sezione dei diritti dall'editor **info. plist** e la ha inserita in un editor di **diritti distinti. plist** (per un migliore supporto multipiattaforma con Xamarin.iOS).
 
-Con la nuova Visual Studio per Mac installata, quando si crea un nuovo progetto di app Novell. Mac, un file con **estensione plist dei diritti** verrà automaticamente aggiunto all'albero del progetto:
+Con la nuova Visual Studio per Mac installata, quando si crea un nuovo progetto di app Xamarin.Mac, un file con **estensione plist dei diritti** verrà automaticamente aggiunto all'albero del progetto:
 
 ![Selezione dei diritti](troubleshooting-images/entitlements01.png "Selezione dei diritti")
 
@@ -102,7 +102,7 @@ Se si fa doppio clic sul file **titles. plist** , verrà visualizzato l'editor d
 
 [![Modifica dei diritti](troubleshooting-images/entitlements02.png "Modifica dei diritti")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-Per i progetti Novell. Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliendo **Aggiungi** > **nuovo file.** Selezionare quindi **Novell. Mac** > **elenco di proprietà vuoto**:
+Per i progetti Xamarin.Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliendo **Aggiungi** > **nuovo file.** Selezionare quindi **Xamarin.Mac** > **elenco di proprietà vuoto**:
 
 ![Aggiunta di un nuovo elenco di proprietà](troubleshooting-images/entitlements03.png "Aggiunta di un nuovo elenco di proprietà")
 
@@ -112,13 +112,13 @@ Immettere `Entitlements` per il nome e fare clic sul pulsante **nuovo** . Se il 
 
 ## <a name="community-support-on-the-forums"></a>Supporto della community nei forum
 
-La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Novell. Mac](https://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
+La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Xamarin.Mac](https://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
 
 <a name="filing-a-bug"/>
 
 ## <a name="filing-a-bug"></a>Archiviazione di un bug
 
-Il feedback è importante per noi. Se si riscontrano problemi con Novell. Mac:
+Il feedback è importante per noi. Se si riscontrano problemi con Xamarin.Mac:
 
 - Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues)
 - Prima di passare ai problemi di GitHub, si è tenuta traccia dei problemi di Xamarin in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi), dove è possibile cercare i problemi corrispondenti.

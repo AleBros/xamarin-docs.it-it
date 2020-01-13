@@ -1,5 +1,5 @@
 ---
-title: Finalità dei servizi in Novell. Android
+title: Finalità dei servizi in Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488062"
 ---
-# <a name="intent-services-in-xamarinandroid"></a>Finalità dei servizi in Novell. Android
+# <a name="intent-services-in-xamarinandroid"></a>Finalità dei servizi in Xamarin.Android
 
 Sia i servizi avviati che i servizi associati vengono eseguiti sul thread principale, il che significa che per garantire prestazioni ottimali, un servizio deve eseguire il lavoro in modo asincrono. Uno dei modi più semplici per risolvere questo problema è il modello di _processore della coda di lavoro_, in cui il lavoro da eseguire viene inserito in una coda che viene gestita da un singolo thread.
 

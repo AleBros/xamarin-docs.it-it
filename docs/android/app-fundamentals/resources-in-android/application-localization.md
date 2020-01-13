@@ -55,7 +55,7 @@ Nell'esempio precedente, la stringa per il pulsante è stata caricata dalle riso
 
 Leggere l' [Introduzione alla localizzazione](~/cross-platform/app-fundamentals/localization.md) per suggerimenti e istruzioni sulla localizzazione di app per dispositivi mobili.
 
-La Guida [localizzazione di app Android](~/android/app-fundamentals/localization.md) contiene esempi più specifici su come tradurre le stringhe e localizzare immagini con Novell. Android.
+La Guida [localizzazione di app Android](~/android/app-fundamentals/localization.md) contiene esempi più specifici su come tradurre le stringhe e localizzare immagini con Xamarin.Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

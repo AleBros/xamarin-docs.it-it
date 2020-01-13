@@ -374,7 +374,7 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-Il metodo `OnAttached` Recupera il controllo nativo per il controllo [`Entry`](xref:Xamarin.Forms.Entry) Novell. Forms e aggiorna il colore della linea chiamando il metodo `UpdateLineColor`. L'override del `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili sul controllo `Entry` aggiornando il colore della linea se la proprietà `LineColor` associata viene modificata o se la proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) del `Entry` viene modificata. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
+Il metodo `OnAttached` Recupera il controllo nativo per il controllo [`Entry`](xref:Xamarin.Forms.Entry) Xamarin.Forms e aggiorna il colore della linea chiamando il metodo `UpdateLineColor`. L'override del `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili sul controllo `Entry` aggiornando il colore della linea se la proprietà `LineColor` associata viene modificata o se la proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) del `Entry` viene modificata. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 Quando vengono immessi dati validi nel controllo [`Entry`](xref:Xamarin.Forms.Entry) , viene applicata una linea nera nella parte inferiore del controllo per indicare che non è presente alcun errore di convalida. La figura 6-3 illustra un esempio di questo.
 

@@ -19,10 +19,10 @@ ms.locfileid: "73026794"
 
 ## <a name="cause"></a>Causa
 
-I nomi di percorso generati in un progetto Novell. Android possono essere piuttosto lunghi.
+I nomi di percorso generati in un progetto Xamarin.Android possono essere piuttosto lunghi.
 Ad esempio, è possibile generare un percorso simile al seguente durante una compilazione:
 
-**C:\\alcuni\\directory\\soluzione\\progetto\\obj\\debug\\__library_projects__\\Novell. Forms. Platform. Android\\library_project_imports\\asset**
+**C:\\alcuni\\directory\\soluzione\\progetto\\obj\\debug\\__library_projects__\\Xamarin.Forms. Platform. Android\\library_project_imports\\asset**
 
 In Windows (dove la lunghezza massima per un percorso è [260 caratteri](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), è possibile che venga generato un **PathTooLongException** durante la compilazione del progetto se un percorso generato supera la lunghezza massima. 
 

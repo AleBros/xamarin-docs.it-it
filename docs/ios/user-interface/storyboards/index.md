@@ -1,6 +1,6 @@
 ---
-title: Introduzione agli storyboard in Novell. iOS
-description: Questo documento fornisce un'introduzione agli storyboard in Novell. iOS. Viene descritto come viene utilizzato uno storyboard per definire un'interfaccia utente, gli elementi segue, e come utilizzare iOS designer per modificare i file dello storyboard.
+title: Introduzione agli storyboard in Xamarin.iOS
+description: Questo documento fornisce un'introduzione agli storyboard in Xamarin.iOS. Viene descritto come viene utilizzato uno storyboard per definire un'interfaccia utente, gli elementi segue, e come utilizzare iOS designer per modificare i file dello storyboard.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002435"
 ---
-# <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Xamarin.iOS
 
 In questa guida verrà illustrato lo storyboard ed esaminando alcuni componenti chiave, ad esempio gli elementi segue. Si esaminerà il modo in cui gli storyboard possono essere creati e usati e i vantaggi che hanno per uno sviluppatore.
 
@@ -75,7 +75,7 @@ Sono disponibili diversi tipi di transizioni, ognuna delle quali fornisce il con
 
 ### <a name="adaptive-segue-types"></a>Tipi di segue adattivi
 
- iOS 8 ha introdotto [le classi di dimensioni](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) per consentire a un file storyboard iOS di funzionare con tutte le dimensioni dello schermo disponibili, consentendo agli sviluppatori di creare un'interfaccia utente per tutti i dispositivi iOS. Per impostazione predefinita, tutte le nuove applicazioni Novell. iOS utilizzeranno le classi di dimensioni. Per utilizzare le classi di dimensioni di un progetto precedente, fare riferimento alla guida [introduttiva agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) . 
+ iOS 8 ha introdotto [le classi di dimensioni](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) per consentire a un file storyboard iOS di funzionare con tutte le dimensioni dello schermo disponibili, consentendo agli sviluppatori di creare un'interfaccia utente per tutti i dispositivi iOS. Per impostazione predefinita, tutte le nuove applicazioni Xamarin.iOS utilizzeranno le classi di dimensioni. Per utilizzare le classi di dimensioni di un progetto precedente, fare riferimento alla guida [introduttiva agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) . 
 
 Qualsiasi applicazione che utilizza le classi di dimensioni utilizzerà anche il nuovo [*gli elementi segue adattivo*](~/ios/user-interface/storyboards/unified-storyboards.md). Quando si usano le classi di dimensioni, tenere presente che non viene specificato direttamente il modo in cui si usa un iPhone o iPad. In altre parole, si crea un'interfaccia utente che avrà sempre lo stesso aspetto, indipendentemente dalla quantità di spazio reale con cui lavorare. Il gli elementi segue adattivo funziona a giudizio dell'ambiente e determina il modo migliore per presentare il contenuto. I gli elementi segue adattivi sono illustrati di seguito: 
 

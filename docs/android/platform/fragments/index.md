@@ -1,6 +1,6 @@
 ---
 title: Frammenti
-description: Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11).
+description: Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Xamarin.Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11).
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73020258"
 ---
 # <a name="fragments"></a>Frammenti
 
-_Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11)._
+_Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Xamarin.Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11)._
 
 ## <a name="fragments-overview"></a>Cenni preliminari sui frammenti
 
@@ -52,11 +52,11 @@ I frammenti sono disponibili nell'Android SDK a partire dal livello API 11 (Andr
 
 [![selezione del livello API in gestione Android SDK](images/02.png)](images/02.png#lightbox)
 
-I frammenti sono disponibili in Novell. Android 4,0 e versioni successive. Per poter usare i frammenti, un'applicazione Novell. Android deve avere come destinazione almeno l'API livello 11 (Android 3,0) o versione successiva. Il Framework di destinazione può essere impostato nelle proprietà del progetto, come illustrato di seguito:
+I frammenti sono disponibili in Xamarin.Android 4,0 e versioni successive. Per poter usare i frammenti, un'applicazione Xamarin.Android deve avere come destinazione almeno l'API livello 11 (Android 3,0) o versione successiva. Il Framework di destinazione può essere impostato nelle proprietà del progetto, come illustrato di seguito:
 
 [![l'impostazione del livello API del Framework di destinazione nelle opzioni del progetto](images/03-sml.png)](images/03.png#lightbox)
 
-È possibile usare i frammenti nelle versioni precedenti di Android usando il pacchetto del supporto Android e Novell. Android 4,2 o versione successiva. Questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
+È possibile usare i frammenti nelle versioni precedenti di Android usando il pacchetto del supporto Android e Xamarin.Android 4,2 o versione successiva. Questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

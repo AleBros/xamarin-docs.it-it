@@ -1,6 +1,6 @@
 ---
 title: Linee ed estremità dei tratti
-description: Questo articolo illustra come usare SkiaSharp per disegnare linee con estremità dei tratti diversi nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come usare SkiaSharp per disegnare linee con estremità dei tratti diversi nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
 ms.technology: xamarin-skiasharp

@@ -1,6 +1,6 @@
 ---
 title: Associazione di una libreria Java
-description: La community Android include molte librerie Java che è possibile usare nell'app; Questa guida illustra come incorporare le librerie Java nell'applicazione Novell. Android creando una libreria di binding.
+description: La community Android include molte librerie Java che è possibile usare nell'app; Questa guida illustra come incorporare le librerie Java nell'applicazione Xamarin.Android creando una libreria di binding.
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
@@ -16,11 +16,11 @@ ms.locfileid: "73027610"
 ---
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
-_La community Android include molte librerie Java che è possibile usare nell'app; Questa guida illustra come incorporare le librerie Java nell'applicazione Novell. Android creando una libreria di binding._
+_La community Android include molte librerie Java che è possibile usare nell'app; Questa guida illustra come incorporare le librerie Java nell'applicazione Xamarin.Android creando una libreria di binding._
 
 ## <a name="overview"></a>Panoramica
 
-L'ecosistema di librerie di terze parti per Android è molto grande. Per questo motivo, è spesso consigliabile usare una libreria Android esistente anziché crearne una nuova. Novell. Android offre due modi per usare queste librerie:
+L'ecosistema di librerie di terze parti per Android è molto grande. Per questo motivo, è spesso consigliabile usare una libreria Android esistente anziché crearne una nuova. Xamarin.Android offre due modi per usare queste librerie:
 
 - Creare una *libreria di binding* che esegue automaticamente il wrapping della libreria C# con wrapper per poter richiamare il codice Java tramite C# chiamate.
 
@@ -28,7 +28,7 @@ L'ecosistema di librerie di terze parti per Android è molto grande. Per questo 
 
 Questa guida illustra la prima opzione: come creare una *libreria di binding* che esegue il wrapping di una o più librerie Java esistenti in un assembly a cui è possibile collegarsi nell'applicazione. Per altre informazioni sull'uso di JNI, vedere [uso di JNI](~/android/platform/java-integration/working-with-jni.md).
 
-Novell. Android implementa associazioni usando *Managed wrappers* (*MCW*). MCW è un Bridge JNI usato quando il codice gestito deve richiamare codice Java. I wrapper richiamabili gestiti forniscono anche il supporto per la sottoclasse di tipi Java e per l'override di metodi virtuali su tipi Java. Analogamente, ogni volta che il codice di Android Runtime (ART) desidera richiamare il codice gestito, lo esegue tramite un altro Bridge JNI noto come Android Callable Wrapper (ACW). Questa [architettura](~/android/internals/architecture.md) è illustrata nel diagramma seguente:
+Xamarin.Android implementa associazioni usando *Managed wrappers* (*MCW*). MCW è un Bridge JNI usato quando il codice gestito deve richiamare codice Java. I wrapper richiamabili gestiti forniscono anche il supporto per la sottoclasse di tipi Java e per l'override di metodi virtuali su tipi Java. Analogamente, ogni volta che il codice di Android Runtime (ART) desidera richiamare il codice gestito, lo esegue tramite un altro Bridge JNI noto come Android Callable Wrapper (ACW). Questa [architettura](~/android/internals/architecture.md) è illustrata nel diagramma seguente:
 
 [![architettura Bridge Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
@@ -51,7 +51,7 @@ var instance = new MyClass ();
 string result = instance.MyMethod (42);
 ```
 
-Per creare questa libreria di binding, usare il modello Novell. Android *Java bindings Library* . Il progetto di associazione risultante crea un assembly .NET con le classi MCW, i file con **estensione jar** e le risorse per i progetti di libreria Android incorporati. È anche possibile creare librerie di binding per l'archivio Android (. AAR) e i progetti della libreria Android di Eclipse. Facendo riferimento all'assembly DLL della libreria di binding risultante, è possibile riutilizzare una libreria Java esistente nel progetto Novell. Android.
+Per creare questa libreria di binding, usare il modello Xamarin.Android *Java bindings Library* . Il progetto di associazione risultante crea un assembly .NET con le classi MCW, i file con **estensione jar** e le risorse per i progetti di libreria Android incorporati. È anche possibile creare librerie di binding per l'archivio Android (. AAR) e i progetti della libreria Android di Eclipse. Facendo riferimento all'assembly DLL della libreria di binding risultante, è possibile riutilizzare una libreria Java esistente nel progetto Xamarin.Android.
 
 Quando si fa riferimento ai tipi nella libreria di associazione, è necessario utilizzare lo spazio dei nomi della libreria di associazione. In genere, si aggiunge una direttiva `using` all'inizio dei file C# di origine che corrisponde alla versione dello spazio dei nomi .NET del nome del pacchetto Java. Ad esempio, se il nome del pacchetto Java per il file con estensione **jar** associato è il seguente:
 
@@ -67,11 +67,11 @@ using Com.Company.Package;
 
 Quando si associa una libreria Android esistente, è necessario tenere presente quanto segue:
 
-- **Sono presenti dipendenze esterne per la libreria?** &ndash; le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Novell. Android come **ReferenceJar** o come **EmbeddedReferenceJar**. Tutti gli assembly nativi devono essere aggiunti al progetto di associazione come **EmbeddedNativeLibrary**.  
+- **Sono presenti dipendenze esterne per la libreria?** &ndash; le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Xamarin.Android come **ReferenceJar** o come **EmbeddedReferenceJar**. Tutti gli assembly nativi devono essere aggiunti al progetto di associazione come **EmbeddedNativeLibrary**.  
 
-- **Quale versione dell'API Android è la destinazione della libreria Android?** &ndash; non è possibile effettuare il "downgrade" del livello API Android; Verificare che il progetto di binding Novell. Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
+- **Quale versione dell'API Android è la destinazione della libreria Android?** &ndash; non è possibile effettuare il "downgrade" del livello API Android; Verificare che il progetto di binding Xamarin.Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
 
-- **Quale versione del JDK è stata usata per compilare la libreria?** è possibile che si verifichino errori di associazione &ndash; se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Novell. Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Novell. Android.
+- **Quale versione del JDK è stata usata per compilare la libreria?** è possibile che si verifichino errori di associazione &ndash; se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Xamarin.Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Xamarin.Android.
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
@@ -101,9 +101,9 @@ La documentazione dell'API deve essere il valore predefinito di doclet da Java8,
 
 ## <a name="including-a-native-library-in-a-binding"></a>Inclusione di una libreria nativa in un'associazione
 
-Potrebbe essere necessario includere una libreria **. so** in un progetto di binding Novell. Android come parte dell'associazione di una libreria Java. Quando viene eseguito il codice Java di cui è stato eseguito il Wrapped, Novell. Android non riuscirà a eseguire la chiamata JNI e il messaggio di errore _java. lang. UnsatisfiedLinkError: il metodo nativo non è stato trovato:_ verrà visualizzato in logcat out per l'applicazione.
+Potrebbe essere necessario includere una libreria **. so** in un progetto di binding Xamarin.Android come parte dell'associazione di una libreria Java. Quando viene eseguito il codice Java di cui è stato eseguito il Wrapped, Xamarin.Android non riuscirà a eseguire la chiamata JNI e il messaggio di errore _java. lang. UnsatisfiedLinkError: il metodo nativo non è stato trovato:_ verrà visualizzato in logcat out per l'applicazione.
 
-La correzione per questa operazione consiste nel caricare manualmente la libreria **. so** con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Si supponga, ad esempio, che un progetto Novell. Android disponga di una libreria condivisa **libpocketsphinx_jni. pertanto** , incluso nel progetto di binding con un'azione di compilazione **EmbeddedNativeLibrary**, il frammento di codice seguente (eseguito prima di utilizzare la libreria condivisa) caricherà la libreria **. so** :
+La correzione per questa operazione consiste nel caricare manualmente la libreria **. so** con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Si supponga, ad esempio, che un progetto Xamarin.Android disponga di una libreria condivisa **libpocketsphinx_jni. pertanto** , incluso nel progetto di binding con un'azione di compilazione **EmbeddedNativeLibrary**, il frammento di codice seguente (eseguito prima di utilizzare la libreria condivisa) caricherà la libreria **. so** :
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
@@ -111,7 +111,7 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 
 ## <a name="adapting-java-apis-to-ceparsl"></a>Adattamento delle API Java a C&eparsl;
 
-Il generatore di binding Novell. Android cambierà alcuni idiomi e modelli Java in modo che corrispondano ai modelli .NET. L'elenco seguente descrive come viene eseguito il mapping C#di Java a/.NET:
+Il generatore di binding Xamarin.Android cambierà alcuni idiomi e modelli Java in modo che corrispondano ai modelli .NET. L'elenco seguente descrive come viene eseguito il mapping C#di Java a/.NET:
 
 - I _metodi setter/Getter_ in Java sono _Proprietà_ in .NET.
 

@@ -19,7 +19,7 @@ Xamarin.Essentials offre una singola API multipiattaforma supportata da qualsias
 
 ## <a name="installation"></a>Installazione di
 
-Novell. Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuovo progetto in Visual Studio. Può essere aggiunto a qualsiasi esistente usando Visual Studio con i passaggi seguenti.
+Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuovo progetto in Visual Studio. Può essere aggiunto a qualsiasi esistente usando Visual Studio con i passaggi seguenti.
 
 1. Scaricare e installare [Visual Studio](https://visualstudio.microsoft.com/) con [Visual Studio Tools per Xamarin](~/get-started/installation/index.md).
 
@@ -37,7 +37,7 @@ Novell. Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuo
 
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-    Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **aggiungi > Aggiungi pacchetti NuGet...** . Cercare **Novell. Essentials** e installare il pacchetto in **tutti i** progetti, incluse le librerie Android, iOS e .NET standard.
+    Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **aggiungi > Aggiungi pacchetti NuGet...** . Cercare **Xamarin.Essentials** e installare il pacchetto in **tutti i** progetti, incluse le librerie Android, iOS e .NET standard.
 
     -----
 

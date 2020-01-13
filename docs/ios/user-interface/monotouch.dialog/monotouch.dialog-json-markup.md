@@ -1,6 +1,6 @@
 ---
 title: Markup JSON per MonoTouch.Dialog
-description: Questo documento descrive la sintassi JSON che può essere usata per compilare un'interfaccia utente Novell. iOS usando MonoTouch. dialog.
+description: Questo documento descrive la sintassi JSON che può essere usata per compilare un'interfaccia utente Xamarin.iOS usando MonoTouch. dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios

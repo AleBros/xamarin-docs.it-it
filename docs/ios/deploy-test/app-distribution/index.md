@@ -1,5 +1,5 @@
 ---
-title: Panoramica della distribuzione di app Novell. iOS
+title: Panoramica della distribuzione di app Xamarin.iOS
 description: Questo documento offre una panoramica delle tecniche di distribuzione disponibili per le applicazioni Xamarin.iOS e contiene i collegamenti a documenti più dettagliati sull'argomento.
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/11/2020
 ms.locfileid: "75886580"
 ---
-# <a name="xamarinios-app-distribution-overview"></a>Panoramica della distribuzione di app Novell. iOS
+# <a name="xamarinios-app-distribution-overview"></a>Panoramica della distribuzione di app Xamarin.iOS
 
 _Questo documento offre una panoramica delle tecniche di distribuzione disponibili per le applicazioni Xamarin.iOS e contiene i collegamenti a documenti più dettagliati sull'argomento._
 

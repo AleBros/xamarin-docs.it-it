@@ -1,6 +1,6 @@
 ---
-title: Pulsanti di azione di notifica dinamica in Novell. iOS
-description: Con iOS 12, un'estensione per il contenuto delle notifiche può aggiungere, rimuovere e aggiornare i pulsanti di azione visualizzati insieme a una notifica. Questo documento descrive come usare i pulsanti di azione di notifica dinamica con Novell. iOS.
+title: Pulsanti di azione di notifica dinamica in Xamarin.iOS
+description: Con iOS 12, un'estensione per il contenuto delle notifiche può aggiungere, rimuovere e aggiornare i pulsanti di azione visualizzati insieme a una notifica. Questo documento descrive come usare i pulsanti di azione di notifica dinamica con Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
@@ -14,13 +14,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031965"
 ---
-# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in Novell. iOS
+# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in Xamarin.iOS
 
 In iOS 12, le notifiche possono aggiungere, rimuovere e aggiornare in modo dinamico i pulsanti di azione associati. Tale personalizzazione consente di fornire agli utenti azioni direttamente rilevanti per il contenuto della notifica e l'interazione dell'utente.
 
 ## <a name="sample-app-redgreennotifications"></a>App di esempio: RedGreenNotifications
 
-I frammenti di codice in questa guida provengono dall'app di esempio [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , che illustra come usare Novell. iOS per lavorare con i pulsanti di azione di notifica in iOS 12.
+I frammenti di codice in questa guida provengono dall'app di esempio [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , che illustra come usare Xamarin.iOS per lavorare con i pulsanti di azione di notifica in iOS 12.
 
 Questa app di esempio invia due tipi di notifiche locali: rosso e verde.
 Dopo che l'app ha inviato una notifica, usare 3D Touch per visualizzare l'interfaccia utente personalizzata. Usare quindi i pulsanti di azione della notifica per ruotare l'immagine visualizzata. Quando l'immagine ruota, viene visualizzato un pulsante di **rotazione della reimpostazione** e scompare se necessario.
@@ -189,7 +189,7 @@ In questo caso, il metodo passa `UNNotificationContentExtensionResponseOption.Do
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [App di esempio-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
-- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
+- [Framework delle notifiche utente in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [Dichiarazione dei tipi di notifica di utilità pratica](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

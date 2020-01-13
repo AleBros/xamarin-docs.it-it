@@ -21,7 +21,7 @@ _Questo articolo illustra come aggiornare la versione di Java Development Kit (J
 
 ## <a name="overview"></a>Panoramica
 
-Novell. Android usa Java Development Kit (JDK) per l'integrazione con i Android SDK per la creazione di app Android e l'esecuzione di Android designer. Le versioni più recenti del Android SDK (API 24 e versioni successive) richiedono JDK 8 (1,8). In alternativa, è possibile installare [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK sostituirà infine JDK 8 per lo sviluppo di Novell. Android.
+Xamarin.Android usa Java Development Kit (JDK) per l'integrazione con i Android SDK per la creazione di app Android e l'esecuzione di Android designer. Le versioni più recenti del Android SDK (API 24 e versioni successive) richiedono JDK 8 (1,8). In alternativa, è possibile installare [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK sostituirà infine JDK 8 per lo sviluppo di Xamarin.Android.
 
 Per eseguire l'aggiornamento a Microsoft Mobile OpenJDK, vedere [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Per eseguire l'aggiornamento a JDK 8, seguire questa procedura:
 

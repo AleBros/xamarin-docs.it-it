@@ -1,5 +1,5 @@
 ---
-title: Novell. Forms ToolbarItem
+title: Xamarin.Forms ToolbarItem
 description: La classe ToolbarItem è un tipo speciale di pulsante usato nella barra di spostamento di un'applicazione.
 ms.prod: xamarin
 ms.assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72780346"
 ---
-# <a name="xamarinforms-toolbaritem"></a>Novell. Forms ToolbarItem
+# <a name="xamarinforms-toolbaritem"></a>Xamarin.Forms ToolbarItem
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
-La classe [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Novell. Forms è un tipo speciale di pulsante che può essere aggiunto alla raccolta di `ToolbarItems` di un oggetto `Page`. Ogni oggetto `ToolbarItem` verrà visualizzato come pulsante nella barra di spostamento dell'applicazione. Un'istanza di `ToolbarItem` può avere un'icona e apparire come una voce di menu primaria o secondaria. La classe `ToolbarItem` eredita da [`MenuItem`](xref:Xamarin.Forms.MenuItem).
+La classe [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Xamarin.Forms è un tipo speciale di pulsante che può essere aggiunto alla raccolta di `ToolbarItems` di un oggetto `Page`. Ogni oggetto `ToolbarItem` verrà visualizzato come pulsante nella barra di spostamento dell'applicazione. Un'istanza di `ToolbarItem` può avere un'icona e apparire come una voce di menu primaria o secondaria. La classe `ToolbarItem` eredita da [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
 Gli screenshot seguenti mostrano `ToolbarItem` oggetti nella barra di spostamento in iOS e Android:
 
@@ -72,7 +72,7 @@ this.ToolbarItems.Add(item);
 Il file rappresentato dal `string`, fornito come proprietà `IconImageSource`, deve esistere in ogni progetto di piattaforma.
 
 > [!NOTE]
-> Gli asset immagine vengono gestiti in modo diverso in ogni piattaforma. Un `ImageSource` può provenire da origini che includono un file locale o una risorsa incorporata, un URI o un flusso. Per ulteriori informazioni sull'impostazione della proprietà `IconImageSource` e delle immagini in Novell. Forms, vedere [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md).
+> Gli asset immagine vengono gestiti in modo diverso in ogni piattaforma. Un `ImageSource` può provenire da origini che includono un file locale o una risorsa incorporata, un URI o un flusso. Per ulteriori informazioni sull'impostazione della proprietà `IconImageSource` e delle immagini in Xamarin.Forms, vedere [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="define-button-behavior"></a>Comportamento dei pulsanti Definisci
 
@@ -100,7 +100,7 @@ void OnItemClicked(object sender, EventArgs e)
 }
 ```
 
-`ToolbarItem` oggetti possono inoltre utilizzare le proprietà `Command` e `CommandParameter` per rispondere all'input dell'utente senza gestori eventi. Per ulteriori informazioni sull'interfaccia `ICommand` e sul data binding MVVM, vedere [Novell. Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+`ToolbarItem` oggetti possono inoltre utilizzare le proprietà `Command` e `CommandParameter` per rispondere all'input dell'utente senza gestori eventi. Per ulteriori informazioni sull'interfaccia `ICommand` e sul data binding MVVM, vedere [Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
 ## <a name="primary-and-secondary-menus"></a>Menu primari e secondari
 
@@ -120,5 +120,5 @@ Quando la proprietà `Order` è impostata su `Secondary`, il comportamento varia
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Demo di ToolbarItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
-* [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)
-* [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md)
+* [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

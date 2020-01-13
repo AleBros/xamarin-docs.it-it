@@ -8,7 +8,7 @@ ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: 3728a209c99712fad6b3dbf9bc59a2c1a3c7bcd5
 ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66354117"

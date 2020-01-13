@@ -1,6 +1,6 @@
 ---
 title: Aggiornamento di app iOS esistenti
-description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. iOS dal API classica al API unificata.
+description: Questo documento descrive i passaggi da seguire per aggiornare un'app Xamarin.iOS dal API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: davidortinau
@@ -15,13 +15,13 @@ ms.locfileid: "73015034"
 ---
 # <a name="updating-existing-ios-apps"></a>Aggiornamento di app iOS esistenti
 
-_Seguire questa procedura per aggiornare un'app Novell. iOS esistente per l'uso del API unificata._
+_Seguire questa procedura per aggiornare un'app Xamarin.iOS esistente per l'uso del API unificata._
 
 L'aggiornamento di un'app esistente per l'uso del API unificata richiede modifiche al file di progetto stesso nonché agli spazi dei nomi e alle API usati nel codice dell'applicazione.
 
 ## <a name="the-road-to-64-bits"></a>La strada a 64 bit
 
-Le nuove API unificate sono necessarie per supportare le architetture di dispositivi a 64 bit da un'applicazione per dispositivi mobili Novell. iOS. A partire dal 1 ° febbraio 2015 Apple richiede che tutti i nuovi invii di app ad iTunes App Store supportino le architetture a 64 bit.
+Le nuove API unificate sono necessarie per supportare le architetture di dispositivi a 64 bit da un'applicazione per dispositivi mobili Xamarin.iOS. A partire dal 1 ° febbraio 2015 Apple richiede che tutti i nuovi invii di app ad iTunes App Store supportino le architetture a 64 bit.
 
 Novell fornisce strumenti per Visual Studio per Mac e Visual Studio per automatizzare il processo di migrazione dalla API classica al API unificata oppure è possibile convertire i file di progetto manualmente. Mentre l'utilizzo degli strumenti automatici è molto suggerito, in questo articolo vengono illustrati entrambi i metodi.
 
@@ -31,7 +31,7 @@ Prima di aggiornare il codice esistente alla API unificata, è consigliabile eli
 
 ## <a name="automated-updating"></a>Aggiornamento automatico
 
-Una volta corretti gli avvisi, selezionare un progetto iOS esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Novell. iOS API unificata** dal menu **progetto** . Esempio:
+Una volta corretti gli avvisi, selezionare un progetto iOS esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Xamarin.iOS API unificata** dal menu **progetto** . Esempio:
 
 ![](updating-ios-apps-images/beta-tool1.png "Choose Migrate to Xamarin.iOS Unified API from the Project menu")
 
@@ -39,11 +39,11 @@ Una volta corretti gli avvisi, selezionare un progetto iOS esistente in Visual S
 
 ![](updating-ios-apps-images/beta-tool2.png "Agree to this warning before the automated migration will run")
 
-Lo strumento consente di automatizzare tutti i passaggi descritti nella sezione **aggiornamento manuale** riportata di seguito ed è il metodo consigliato per convertire un progetto Novell. iOS esistente nel API unificata.
+Lo strumento consente di automatizzare tutti i passaggi descritti nella sezione **aggiornamento manuale** riportata di seguito ed è il metodo consigliato per convertire un progetto Xamarin.iOS esistente nel API unificata.
 
 ## <a name="steps-to-update-manually"></a>Passaggi per l'aggiornamento manuale
 
-Anche in questo caso, dopo aver corretto gli avvisi, seguire questa procedura per aggiornare manualmente le app Novell. iOS per usare la nuova API unificata:
+Anche in questo caso, dopo aver corretto gli avvisi, seguire questa procedura per aggiornare manualmente le app Xamarin.iOS per usare la nuova API unificata:
 
 ### <a name="1-update-project-type--build-target"></a>1. aggiornare il tipo di progetto & destinazione di compilazione
 
@@ -65,7 +65,7 @@ Fare clic con il pulsante destro del mouse sul progetto di applicazione iOS per 
 
 ![](updating-ios-apps-images/references-delete-monotouch-sml.png "Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button")
 
-Scorrere ora fino alla fine dell'elenco di riferimenti e selezionare l'assembly **Novell. iOS** .
+Scorrere ora fino alla fine dell'elenco di riferimenti e selezionare l'assembly **Xamarin.iOS** .
 
 ![](updating-ios-apps-images/references-add-xamarinios-sml.png "Now scroll to the end of the references list and tick the Xamarin.iOS assembly")
 
@@ -87,7 +87,7 @@ Gli esempi includono la modifica `public override int NumberOfSections (UITableV
 
 ## <a name="considerations"></a>Considerazioni
 
-Quando si converte un progetto Novell. iOS esistente dal API classica al nuovo API unificata se tale app si basa su uno o più pacchetti di componenti o NuGet, tenere presente le considerazioni seguenti.
+Quando si converte un progetto Xamarin.iOS esistente dal API classica al nuovo API unificata se tale app si basa su uno o più pacchetti di componenti o NuGet, tenere presente le considerazioni seguenti.
 
 ### <a name="components"></a>Componenti
 
@@ -100,15 +100,15 @@ Anche se sono state apportate modifiche a NuGet per lavorare con il supporto API
 Fino a quel momento, come per i componenti, è necessario cambiare il pacchetto NuGet incluso nel progetto in una versione che supporta le API unificate ed eseguire una compilazione pulita in seguito.
 
 > [!IMPORTANT]
-> Se è presente un errore nel formato _"errore 3: non è possibile includere sia ' MonoTouch. dll ' che ' Novell. iOS. dll ' nello stesso progetto Novell. iOS. viene fatto riferimento in modo esplicito a' Novell. iOS. dll ', mentre a' MonoTouch. dll ' fa riferimento ' xxx, Version = 0.0.000, culture = neutral, PublicKeyToken = null ' "_ dopo la conversione dell'applicazione nelle API unificate, è in genere dovuto alla presenza di un componente o di un pacchetto NuGet nel progetto che non è stato aggiornato al API unificata. È necessario rimuovere il componente/NuGet esistente, eseguire l'aggiornamento a una versione che supporta le API unificate ed eseguire una compilazione pulita.
+> Se è presente un errore nel formato _"errore 3: non è possibile includere sia ' MonoTouch. dll ' che ' Xamarin.iOS. dll ' nello stesso progetto Xamarin.iOS. viene fatto riferimento in modo esplicito a' Xamarin.iOS. dll ', mentre a' MonoTouch. dll ' fa riferimento ' xxx, Version = 0.0.000, culture = neutral, PublicKeyToken = null ' "_ dopo la conversione dell'applicazione nelle API unificate, è in genere dovuto alla presenza di un componente o di un pacchetto NuGet nel progetto che non è stato aggiornato al API unificata. È necessario rimuovere il componente/NuGet esistente, eseguire l'aggiornamento a una versione che supporta le API unificate ed eseguire una compilazione pulita.
 
-## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione delle build a 64 bit delle app Novell. iOS
+## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione delle build a 64 bit delle app Xamarin.iOS
 
-Per un'applicazione per dispositivi mobili Novell. iOS che è stata convertita nel API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit dalle opzioni dell'app. Per istruzioni dettagliate sull'abilitazione di compilazioni a 64 bit, vedere la pagina relativa all' **Abilitazione delle build a 64 bit delle app Novell. iOS** del documento sulle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md#enable-64)
+Per un'applicazione per dispositivi mobili Xamarin.iOS che è stata convertita nel API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit dalle opzioni dell'app. Per istruzioni dettagliate sull'abilitazione di compilazioni a 64 bit, vedere la pagina relativa all' **Abilitazione delle build a 64 bit delle app Xamarin.iOS** del documento sulle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md#enable-64)
 
 ## <a name="finishing-up"></a>Completamento
 
-Indipendentemente dal fatto che si scelga di usare il metodo automatico o manuale per convertire l'applicazione Novell. iOS dalla distribuzione classica alle API unificate, esistono diverse istanze che richiedono un intervento manuale. Per informazioni sui problemi noti e su come risolvere il problema, vedere [i suggerimenti per l'aggiornamento del codice al documento API unificata](~/cross-platform/macios/unified/updating-tips.md) .
+Indipendentemente dal fatto che si scelga di usare il metodo automatico o manuale per convertire l'applicazione Xamarin.iOS dalla distribuzione classica alle API unificate, esistono diverse istanze che richiedono un intervento manuale. Per informazioni sui problemi noti e su come risolvere il problema, vedere [i suggerimenti per l'aggiornamento del codice al documento API unificata](~/cross-platform/macios/unified/updating-tips.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

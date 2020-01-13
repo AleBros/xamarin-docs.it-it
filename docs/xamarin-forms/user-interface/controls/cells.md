@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms Cells
-description: Le celle di xamarin. Forms possono essere aggiunti a controlli ListView e TableViews. Questo articolo elenca le celle incluse in xamarin. Forms.
+description: Le celle di Xamarin.Forms possono essere aggiunti a controlli ListView e TableViews. Questo articolo elenca le celle incluse in Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
@@ -18,7 +18,7 @@ ms.locfileid: "75488088"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
-_Le celle di xamarin. Forms possono essere aggiunti a controlli ListView e TableViews._
+_Le celle di Xamarin.Forms possono essere aggiunti a controlli ListView e TableViews._
 
 Oggetto *cella* è un elemento specializzato usato per gli elementi in una tabella e viene descritta la modalità di rendering di ogni elemento in un elenco. Il [ `Cell` ](xref:Xamarin.Forms.Cell) deriva dalla classe [ `Element` ](xref:Xamarin.Forms.Element), da cui [ `VisualElement` ](xref:Xamarin.Forms.Element) deriva anche. Una cella è di per sé un elemento visivo; è invece un modello per la creazione di un elemento visivo.
 
@@ -26,7 +26,7 @@ Oggetto *cella* è un elemento specializzato usato per gli elementi in una tabel
 
 ## <a name="cells"></a>Celle
 
-Xamarin. Forms supporta i tipi di cella seguenti:
+Xamarin.Forms supporta i tipi di cella seguenti:
 
 <a name="textCell" />
 
@@ -60,6 +60,6 @@ Xamarin. Forms supporta i tipi di cella seguenti:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Esempio di Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

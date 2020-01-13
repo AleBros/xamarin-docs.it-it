@@ -1,6 +1,6 @@
 ---
-title: Immagini in xamarin. Forms
-description: Le immagini possono essere condivisi tra piattaforme con xamarin. Forms, possano essere caricate in modo specifico per ogni piattaforma, o possono essere scaricati per la visualizzazione.
+title: Immagini in Xamarin.Forms
+description: Le immagini possono essere condivisi tra piattaforme con Xamarin.Forms, possano essere caricate in modo specifico per ogni piattaforma, o possono essere scaricati per la visualizzazione.
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
 ms.technology: xamarin-forms
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490161"
 ---
-# <a name="images-in-xamarinforms"></a>Immagini in xamarin. Forms
+# <a name="images-in-xamarinforms"></a>Immagini in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
-_Le immagini possono essere condivisi tra piattaforme con xamarin. Forms, possano essere caricate in modo specifico per ogni piattaforma, o possono essere scaricati per la visualizzazione._
+_Le immagini possono essere condivisi tra piattaforme con Xamarin.Forms, possano essere caricate in modo specifico per ogni piattaforma, o possono essere scaricati per la visualizzazione._
 
-Le immagini sono una parte fondamentale della navigazione tramite applicazione, usabilità e personalizzazione. Le applicazioni xamarin. Forms devono essere in grado di condividere le immagini in tutte le piattaforme, ma anche potenzialmente visualizzare immagini diverse in ogni piattaforma.
+Le immagini sono una parte fondamentale della navigazione tramite applicazione, usabilità e personalizzazione. Le applicazioni Xamarin.Forms devono essere in grado di condividere le immagini in tutte le piattaforme, ma anche potenzialmente visualizzare immagini diverse in ogni piattaforma.
 
 Immagini specifiche della piattaforma sono necessari anche per le icone e schermate iniziali; Questi elementi dovranno essere configurate per ogni piattaforma.
 
 ## <a name="display-images"></a>Visualizza immagini
 
-Xamarin. Forms Usa il [ `Image` ](xref:Xamarin.Forms.Image) vista per visualizzare le immagini in una pagina. Ha due proprietà importanti:
+Xamarin.Forms Usa il [ `Image` ](xref:Xamarin.Forms.Image) vista per visualizzare le immagini in una pagina. Ha due proprietà importanti:
 
 - [`Source`](xref:Xamarin.Forms.Image.Source) -An [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) istanza, File, Uri o risorsa, che imposta l'immagine da visualizzare.
 - [`Aspect`](xref:Xamarin.Forms.Image.Aspect) -Come impostare le dimensioni dell'immagine entro i limiti che vengano visualizzati all'interno (se stretch, ritagliare o letterbox).
@@ -48,7 +48,7 @@ Le immagini possono essere caricate da un [file locale](#local-images), da una [
 
 ## <a name="local-images"></a>Immagini locali
 
-I file di immagine possono essere aggiunti a ogni progetto di applicazione e fare riferimento dal codice condiviso xamarin. Forms. Questo metodo di distribuzione delle immagini è necessario quando le immagini sono specifiche della piattaforma, ad esempio quando si usano risoluzioni diverse su piattaforme diverse o progettazioni leggermente differenti.
+I file di immagine possono essere aggiunti a ogni progetto di applicazione e fare riferimento dal codice condiviso Xamarin.Forms. Questo metodo di distribuzione delle immagini è necessario quando le immagini sono specifiche della piattaforma, ad esempio quando si usano risoluzioni diverse su piattaforme diverse o progettazioni leggermente differenti.
 
 Usare una singola immagine in tutte le app, *lo stesso nome file deve essere usato in qualsiasi piattaforma*, e deve essere un nome di risorsa di Android valido (ie. sono consentiti solo lettere minuscole, numeri, il carattere di sottolineatura e il periodo).
 
@@ -88,7 +88,7 @@ image.Source = Device.RuntimePlatform == Device.Android
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Risoluzioni native (retina e DPI elevato)
 
-iOS, Android e UWP includono il supporto per le soluzioni di immagine diversa, in cui il sistema operativo scelga l'immagine appropriata in fase di esecuzione in base alle funzionalità del dispositivo. Xamarin. Forms Usa le API le piattaforme native per il caricamento di immagini locali, in modo che esso supporta automaticamente le soluzioni alternative se i file vengono denominati correttamente e che si trova nel progetto.
+iOS, Android e UWP includono il supporto per le soluzioni di immagine diversa, in cui il sistema operativo scelga l'immagine appropriata in fase di esecuzione in base alle funzionalità del dispositivo. Xamarin.Forms Usa le API le piattaforme native per il caricamento di immagini locali, in modo che esso supporta automaticamente le soluzioni alternative se i file vengono denominati correttamente e che si trova nel progetto.
 
 Il modo migliore per gestire le immagini poiché iOS 9 consiste nel trascinare le immagini per singole risoluzioni necessarie per il set di immagini di catalogo asset appropriati. Per altre informazioni, vedere [aggiunta di immagini da un catalogo Asset immagine Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
@@ -303,14 +303,14 @@ La memorizzazione nella cache predefinito è molto semplice supportare scenari, 
 
 ## <a name="animated-gifs"></a>Gif animate
 
-Novell. Forms include il supporto per la visualizzazione di gif animate di piccole dimensioni. Questa operazione viene eseguita impostando la proprietà [`Image.Source`](xref:Xamarin.Forms.Image.Source) su un file GIF animato:
+Xamarin.Forms include il supporto per la visualizzazione di gif animate di piccole dimensioni. Questa operazione viene eseguita impostando la proprietà [`Image.Source`](xref:Xamarin.Forms.Image.Source) su un file GIF animato:
 
 ```xaml
 <Image Source="demo.gif" />
 ```
 
 > [!IMPORTANT]
-> Sebbene il supporto GIF animato in Novell. Forms includa la possibilità di scaricare i file, non supporta la memorizzazione nella cache o il flusso di gif animate.
+> Sebbene il supporto GIF animato in Xamarin.Forms includa la possibilità di scaricare i file, non supporta la memorizzazione nella cache o il flusso di gif animate.
 
 Per impostazione predefinita, quando un GIF animato viene caricato, non verrà riprodotto. Questo è dovuto al fatto che la proprietà `IsAnimationPlaying`, che controlla se un GIF animato viene riprodotto o arrestato, il valore predefinito è `false`. Questa proprietà, di tipo `bool`, è supportata da un oggetto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che può essere la destinazione di un data binding e lo stile.
 
@@ -322,9 +322,9 @@ Pertanto, quando viene caricata un'immagine GIF animata, non verrà riprodotta f
 
 ## <a name="icons-and-splash-screens"></a>Icone e schermate iniziali
 
-Anche se non è correlata la [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione, le icone dell'applicazione e schermate iniziali sono anche un utilizzo importante delle immagini nei progetti xamarin. Forms.
+Anche se non è correlata la [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione, le icone dell'applicazione e schermate iniziali sono anche un utilizzo importante delle immagini nei progetti Xamarin.Forms.
 
-L'impostazione delle icone e schermate iniziali per le app xamarin. Forms viene eseguita in ognuno dei progetti dell'applicazione. Ciò significa che la generazione di correttamente dimensioni immagini per iOS, Android e UWP. Queste immagini devono essere denominate e che si trova in base ai requisiti di ogni piattaforme.
+L'impostazione delle icone e schermate iniziali per le app Xamarin.Forms viene eseguita in ognuno dei progetti dell'applicazione. Ciò significa che la generazione di correttamente dimensioni immagini per iOS, Android e UWP. Queste immagini devono essere denominate e che si trova in base ai requisiti di ogni piattaforme.
 
 ## <a name="icons"></a>Icone
 

@@ -1,6 +1,6 @@
 ---
 title: Integrazione di testo e grafica
-description: Questo articolo illustra come determinare le dimensioni della stringa di testo sottoposto a rendering per integrare il testo con la grafica di SkiaSharp nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come determinare le dimensioni della stringa di testo sottoposto a rendering per integrare il testo con la grafica di SkiaSharp nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C

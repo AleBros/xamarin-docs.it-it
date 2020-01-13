@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c2a49af1a2d55011ef3579ddfe994e5455fed303
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301227"
+---
 # <a name="xamarin-documentation"></a>Documentazione di Xamarin
 
 La documentazione in questo repository è ospitata in [**docs.microsoft.com/xamarin**](https://docs.microsoft.com/xamarin).

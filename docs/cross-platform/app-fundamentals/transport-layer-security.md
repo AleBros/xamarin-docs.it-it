@@ -1,6 +1,6 @@
 ---
 title: Transport Layer Security (TLS) 1,2
-description: Questo documento descrive come abilitare TLS 1,2 per i progetti Novell. iOS, Novell. Android e Novell. Mac. Viene illustrato come eseguire questa operazione sia in Visual Studio 2019 che in Visual Studio per Mac.
+description: Questo documento descrive come abilitare TLS 1,2 per i progetti Xamarin.iOS, Xamarin.Android e Xamarin.Mac. Viene illustrato come eseguire questa operazione sia in Visual Studio 2019 che in Visual Studio per Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: davidortinau
@@ -24,7 +24,7 @@ L'uso della versione più recente di [ _Transport Layer Security_ (TLS)](https:/
 
 È necessario che i progetti facciano riferimento all'assembly **System .NET. http** e siano configurati come illustrato di seguito.
 
-## <a name="update-xamarinandroid-to-tls-12"></a>Aggiornare Novell. Android a TLS 1,2
+## <a name="update-xamarinandroid-to-tls-12"></a>Aggiornare Xamarin.Android a TLS 1,2
 
 Aggiornare le opzioni di implementazione di **HttpClient** e **SSL/TLS** per abilitare la sicurezza di TLS 1,2.
 
@@ -45,7 +45,7 @@ Queste impostazioni sono disponibili in **Opzioni progetto > compila > scheda co
 
 -----
 
-## <a name="update-xamarinios-to-tls-12"></a>Aggiornare Novell. iOS a TLS 1,2
+## <a name="update-xamarinios-to-tls-12"></a>Aggiornare Xamarin.iOS a TLS 1,2
 
 Aggiornare l'opzione di **implementazione di HttpClient** per abilitare la sicurezza di TSL 1,2.
 
@@ -63,9 +63,9 @@ Questa impostazione è disponibile in **Opzioni progetto > compila > scheda comp
 
 -----
 
-## <a name="update-xamarinmac-to-tls-12"></a>Aggiornare Novell. Mac a TLS 1,2
+## <a name="update-xamarinmac-to-tls-12"></a>Aggiornare Xamarin.Mac a TLS 1,2
 
-In Visual Studio per Mac, per abilitare TLS 1,2 in un'app Novell. Mac, aggiornare l'opzione di **implementazione di HttpClient** in **Opzioni progetto > Compila > compilazione Mac**:
+In Visual Studio per Mac, per abilitare TLS 1,2 in un'app Xamarin.Mac, aggiornare l'opzione di **implementazione di HttpClient** in **Opzioni progetto > Compila > compilazione Mac**:
 
 [![configurare HttpClient in Visual Studio per Mac](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
 
@@ -120,7 +120,7 @@ Le applicazioni devono usare Transport Layer Security (TLS) 1,2, laddove possibi
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
-- [Ambiente Novell. Android](~/android/deploy-test/environment.md)
+- [Ambiente Xamarin.Android](~/android/deploy-test/environment.md)
 - [Ciclo Novell 9 (febbraio 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [Note sulla versione di mono 4,8-supporto di TLS 1,2](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#tls-12-support)

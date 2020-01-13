@@ -41,11 +41,11 @@ Impostare il livello di Framework di destinazione su API livello 21 o superiore 
 
 ## <a name="install-the-appcompat-nuget-package"></a>Installare il pacchetto NuGet AppCompat
 
-Successivamente, aggiungere il pacchetto AppCompat per la [libreria di supporto Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) al progetto. In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti** e scegliere **Gestisci pacchetti NuGet...** . Fare clic su **Sfoglia** e cercare la **libreria di supporto Android V7 AppCompat**. Selezionare **Novell. Android. support. V7. AppCompat** e fare clic su **Installa**: 
+Successivamente, aggiungere il pacchetto AppCompat per la [libreria di supporto Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) al progetto. In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti** e scegliere **Gestisci pacchetti NuGet...** . Fare clic su **Sfoglia** e cercare la **libreria di supporto Android V7 AppCompat**. Selezionare **Xamarin.Android. support. V7. AppCompat** e fare clic su **Installa**: 
 
 [![screenshot del pacchetto V7 AppCompat selezionato in Gestisci pacchetti NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Quando questo NuGet è installato, vengono installati anche diversi altri pacchetti NuGet, se non sono già presenti, ad esempio **Novell. Android. support. animata. Vector. disegnatore**, **Novell. Android. support. v4**e  **Novell. Android. support. Vector. disegnatore**). Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Quando questo NuGet è installato, vengono installati anche diversi altri pacchetti NuGet, se non sono già presenti, ad esempio **Xamarin.Android. support. animata. Vector. disegnatore**, **Xamarin.Android. support. v4**e  **Xamarin.Android. support. Vector. disegnatore**). Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Usare un tema e una barra degli strumenti di AppCompat
 

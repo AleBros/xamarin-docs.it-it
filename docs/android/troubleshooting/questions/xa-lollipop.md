@@ -19,8 +19,8 @@ ms.locfileid: "73026707"
 > [!NOTE]
 > Questa guida è stata scritta originariamente per Android L Preview.
 
-- [Novell. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) ha aggiunto il supporto per Android L Preview.
-- [Novell. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) ha aggiunto il supporto di Android Lollipop.
+- [Xamarin.Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) ha aggiunto il supporto per Android L Preview.
+- [Xamarin.Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) ha aggiunto il supporto di Android Lollipop.
 
 Novell supporta attivamente solo la versione stabile corrente degli strumenti di Novell. Le informazioni riportate di seguito vengono fornite "così come sono" per le versioni precedenti degli strumenti. Per le informazioni più recenti sulle versioni di Novell, vedere le [Note sulla versione](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
 
@@ -34,7 +34,7 @@ Novell supporta attivamente solo la versione stabile corrente degli strumenti di
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-Questo messaggio indica che la piattaforma Android SDK per il livello API 21 non è installata. Installarlo in gestione Android SDK (**strumenti > aprire Android SDK Manager...**) oppure modificare il progetto Novell. Android in modo che sia destinato a una versione API installata.
+Questo messaggio indica che la piattaforma Android SDK per il livello API 21 non è installata. Installarlo in gestione Android SDK (**strumenti > aprire Android SDK Manager...**) oppure modificare il progetto Xamarin.Android in modo che sia destinato a una versione API installata.
 
 Esistono alcune soluzioni alternative per questo problema:
 
@@ -58,7 +58,7 @@ Esistono alcune soluzioni alternative per questo problema:
 Error: Could not find android.jar for API Level 21.**
 ```
 
-Ciò significa che la piattaforma di Android SDK per il livello API 21 non è installata. Installarlo in gestione Android SDK (strumenti > SDK Manager...) oppure modificare il progetto Novell. Android in modo che sia destinato a una versione API installata.
+Ciò significa che la piattaforma di Android SDK per il livello API 21 non è installata. Installarlo in gestione Android SDK (strumenti > SDK Manager...) oppure modificare il progetto Xamarin.Android in modo che sia destinato a una versione API installata.
 
 Esistono alcune soluzioni alternative per questo problema:
 

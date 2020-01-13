@@ -1,6 +1,6 @@
 ---
 title: Introduzione a tvOS 10
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 10 per gli sviluppatori Novell. tvOS.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 10 per gli sviluppatori Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
@@ -16,7 +16,7 @@ ms.locfileid: "73030619"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduzione a tvOS 10
 
-_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 10 per gli sviluppatori Novell. tvOS._
+_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in tvOS 10 per gli sviluppatori Xamarin.tvOS._
 
 Con il nuovo tvOS 10 SDK, Apple ha incluso nuove API e servizi che consentono allo sviluppatore di creare nuove categorie di app e funzionalità. 
 

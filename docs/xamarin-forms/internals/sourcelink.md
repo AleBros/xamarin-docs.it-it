@@ -1,6 +1,6 @@
 ---
-title: Collegamento all'origine con Novell. Forms
-description: Questo articolo illustra come usare il collegamento di origine per eseguire il debug in Novell. Forms.
+title: Collegamento all'origine con Xamarin.Forms
+description: Questo articolo illustra come usare il collegamento di origine per eseguire il debug in Xamarin.Forms.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB
@@ -15,9 +15,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697500"
 ---
-# <a name="source-link-with-xamarinforms"></a>Collegamento all'origine con Novell. Forms
+# <a name="source-link-with-xamarinforms"></a>Collegamento all'origine con Xamarin.Forms
 
-I pacchetti NuGet di Novell. Forms includono i mapping dei collegamenti di origine. Il collegamento all'origine esegue il mapping delle librerie compilate, contenute in un pacchetto NuGet, a un repository di codice sorgente. Visual Studio scaricherà i file del codice sorgente durante il debug e consentirà agli sviluppatori di eseguire il codice istruzione per istruzione, abilitando il debug dei pacchetti senza compilazione dall'origine.
+I pacchetti NuGet di Xamarin.Forms includono i mapping dei collegamenti di origine. Il collegamento all'origine esegue il mapping delle librerie compilate, contenute in un pacchetto NuGet, a un repository di codice sorgente. Visual Studio scaricherà i file del codice sorgente durante il debug e consentirà agli sviluppatori di eseguire il codice istruzione per istruzione, abilitando il debug dei pacchetti senza compilazione dall'origine.
 
 Per ulteriori informazioni sull'utilizzo del collegamento all'origine, vedere la [documentazione sul collegamento all'origine](/dotnet/standard/library-guidance/sourcelink).
 
@@ -47,11 +47,11 @@ Assicurarsi che l'istruzione per il **codice esterno** sia abilitata.
 
 ::: zone-end
 
-## <a name="debug-xamarinforms-using-source-link"></a>Debug di Novell. Forms tramite il collegamento all'origine
+## <a name="debug-xamarinforms-using-source-link"></a>Debug di Xamarin.Forms tramite il collegamento all'origine
 
-Se il debug di pacchetti esterni è abilitato, Visual Studio userà i mapping dei collegamenti di origine contenuti nel pacchetto NuGet per scaricare ed eseguire il codice sorgente esterno. Questo può essere testato impostando un punto di interruzione in una chiamata a un metodo fornito da Novell. Forms:
+Se il debug di pacchetti esterni è abilitato, Visual Studio userà i mapping dei collegamenti di origine contenuti nel pacchetto NuGet per scaricare ed eseguire il codice sorgente esterno. Questo può essere testato impostando un punto di interruzione in una chiamata a un metodo fornito da Xamarin.Forms:
 
-[![Breakpoint impostato sul metodo Novell. Forms](sourcelink-images/breakpoint-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
+[![Breakpoint impostato sul metodo Xamarin.Forms](sourcelink-images/breakpoint-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
 
 A seconda delle impostazioni specificate nelle opzioni del **debugger** , Visual Studio avvisa l'utente che sta scaricando i file di origine:
 

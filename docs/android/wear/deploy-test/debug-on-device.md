@@ -1,6 +1,6 @@
 ---
 title: Eseguire il debug in un dispositivo Wear
-description: Questo articolo illustra come eseguire il debug di un'applicazione Novell. Android Wear in un dispositivo Wear.
+description: Questo articolo illustra come eseguire il debug di un'applicazione Xamarin.Android Wear in un dispositivo Wear.
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73028689"
 ---
 # <a name="debug-on-a-wear-device"></a>Eseguire il debug in un dispositivo Wear
 
-_Questo articolo illustra come eseguire il debug di un'applicazione Novell. Android Wear in un dispositivo Wear._
+_Questo articolo illustra come eseguire il debug di un'applicazione Xamarin.Android Wear in un dispositivo Wear._
 
 ## <a name="overview"></a>Panoramica
 
@@ -48,7 +48,7 @@ Se il dispositivo Wear non dispone di una porta USB, è possibile distribuire l'
 
 Usare la procedura seguente per preparare il telefono per l'esecuzione di connessioni Bluetooth al dispositivo Wear: 
 
-1. Se non è già stato fatto, configurare il telefono per lo sviluppo di Novell. Android, come illustrato in [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
+1. Se non è già stato fatto, configurare il telefono per lo sviluppo di Xamarin.Android, come illustrato in [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
 
 2. Scaricare e installare l'app [Android Wear](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) gratuita dalla Google Play Store.
 

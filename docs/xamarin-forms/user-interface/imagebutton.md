@@ -1,5 +1,5 @@
 ---
-title: Xamarin. Forms ImageButton
+title: Xamarin.Forms ImageButton
 description: Elemento ImageButton Visualizza un'immagine e risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività.
 ms.prod: xamarin
 ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490090"
 ---
-# <a name="xamarinforms-imagebutton"></a>Xamarin. Forms ImageButton
+# <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
@@ -29,7 +29,7 @@ Gli esempi di codice in questa guida vengono prelevati i [FormsGallery esempio](
 
 ## <a name="setting-the-image-source"></a>Impostare l'origine dell'immagine
 
-`ImageButton` definisce un `Source` proprietà che deve essere impostata per l'immagine da visualizzare nel pulsante a, con l'origine dell'immagine che può essere un file, un URI, una risorsa o un flusso. Per altre informazioni sul caricamento di immagini da origini diverse, vedere [immagini in xamarin. Forms](images.md).
+`ImageButton` definisce un `Source` proprietà che deve essere impostata per l'immagine da visualizzare nel pulsante a, con l'origine dell'immagine che può essere un file, un URI, una risorsa o un flusso. Per altre informazioni sul caricamento di immagini da origini diverse, vedere [immagini in Xamarin.Forms](images.md).
 
 Nell'esempio seguente viene mostrato come creare un `ImageButton` in XAML:
 
@@ -275,7 +275,7 @@ Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizz
 
 Il `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) specifica che quando il `ImageButton` viene premuto, relativo [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà verrà modificata il valore predefinito di 1 a 0,8. Il `Normal` `VisualState` specifica che quando il `ImageButton` è in uno stato normale, relativo `Scale` verrà impostata su 1. Pertanto, il risultato complessivo è che quando la `ImageButton` è premuto, viene ridimensionata per essere leggermente più piccoli e quando il `ImageButton` viene rilasciato, viene ridimensionata alle dimensioni predefinite.
 
-Per altre informazioni sugli stati visual, vedere [di xamarin. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per altre informazioni sugli stati visual, vedere [di Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

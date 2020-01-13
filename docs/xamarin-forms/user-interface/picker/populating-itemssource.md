@@ -20,7 +20,7 @@ ms.locfileid: "68656116"
 
 _La visualizzazione di selezione è un controllo per la selezione di un elemento di testo da un elenco di dati. Questo articolo illustra come popolare un controllo di selezione con i dati impostando la proprietà ItemsSource e come rispondere alla selezione di elementi dall'utente._
 
-Xamarin. Forms 2.3.4 ha migliorato la [`Picker`](xref:Xamarin.Forms.Picker) vista aggiungendo la possibilità di popolarlo con i dati tramite l'impostazione relativa [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) proprietà e per recuperare l'elemento selezionato dal [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) proprietà. Inoltre, il colore del testo per l'elemento selezionato può essere modificato impostando il [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) proprietà a un [`Color`](xref:Xamarin.Forms.Color).
+Xamarin.Forms 2.3.4 ha migliorato la [`Picker`](xref:Xamarin.Forms.Picker) vista aggiungendo la possibilità di popolarlo con i dati tramite l'impostazione relativa [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) proprietà e per recuperare l'elemento selezionato dal [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) proprietà. Inoltre, il colore del testo per l'elemento selezionato può essere modificato impostando il [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) proprietà a un [`Color`](xref:Xamarin.Forms.Color).
 
 ## <a name="populating-a-picker-with-data"></a>Popolamento di un selettore con i dati
 

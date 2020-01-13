@@ -16,7 +16,7 @@ ms.locfileid: "75487990"
 ---
 # <a name="proguard"></a>ProGuard
 
-_Novell. Android Proguard è un compattatore di file di classe Java, Optimizer e pre-Verifier. Rileva e rimuove il codice inutilizzato, analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di Proguard, come abilitarlo nel progetto e come configurarlo. Sono inoltre disponibili diversi esempi di configurazioni Proguard._
+_Xamarin.Android Proguard è un compattatore di file di classe Java, Optimizer e pre-Verifier. Rileva e rimuove il codice inutilizzato, analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di Proguard, come abilitarlo nel progetto e come configurarlo. Sono inoltre disponibili diversi esempi di configurazioni Proguard._
 
 ## <a name="overview"></a>Panoramica di
 

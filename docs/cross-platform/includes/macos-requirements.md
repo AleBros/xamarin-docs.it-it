@@ -2,7 +2,7 @@
 ms.topic: include
 ms.openlocfilehash: 5a3909fd766225a1d87cdb1ba12992dd6b27bb33
 ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/01/2019
 ms.locfileid: "64987047"

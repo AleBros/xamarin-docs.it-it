@@ -147,13 +147,13 @@ In questa sezione vengono presentate le parti di iOS designer e viene fornita un
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-I progetti Novell. iOS creati con Visual Studio per Mac includono uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file. Storyboard nel **riquadro della soluzione**:
+I progetti Xamarin.iOS creati con Visual Studio per Mac includono uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file. Storyboard nel **riquadro della soluzione**:
 
 [![Uno storyboard aperto in iOS designer](introduction-images/7-storyboardopen-vsmac.png "Uno storyboard aperto in iOS designer")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-La maggior parte dei progetti Novell. iOS creati con Visual Studio include uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file. Storyboard nel **Esplora soluzioni**:
+La maggior parte dei progetti Xamarin.iOS creati con Visual Studio include uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file. Storyboard nel **Esplora soluzioni**:
 
 [![Uno storyboard aperto in iOS designer](introduction-images/7-storyboardopen-vs.png "Uno storyboard aperto in iOS designer")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
@@ -458,17 +458,17 @@ Il controllo selezionato nella visualizzazione struttura rimane sincronizzato co
 
 [![Apertura di uno storyboard in Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Apertura di uno storyboard in Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
-Dopo aver apportato le modifiche in Xcode Interface Builder, salvare il file e tornare al Visual Studio per Mac. Le modifiche vengono sincronizzate con il progetto Novell. iOS.
+Dopo aver apportato le modifiche in Xcode Interface Builder, salvare il file e tornare al Visual Studio per Mac. Le modifiche vengono sincronizzate con il progetto Xamarin.iOS.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="revert-to-xcode"></a>Ripristinare Xcode
 
-È possibile usare iOS designer e Xcode Interface Builder in modo intercambiabile, tuttavia Xcode Interface Builder è disponibile solo su Mac. Per aprire un file storyboard o XIB in Xcode Interface Builder in un Mac, aprire la soluzione contenente il progetto Novell. iOS in [Visual Studio per Mac](/visualstudio/mac/), fare clic con il pulsante destro del mouse sul file e selezionare **Apri con > Xcode Interface Builder**, come illustrato nel schermata seguente:
+È possibile usare iOS designer e Xcode Interface Builder in modo intercambiabile, tuttavia Xcode Interface Builder è disponibile solo su Mac. Per aprire un file storyboard o XIB in Xcode Interface Builder in un Mac, aprire la soluzione contenente il progetto Xamarin.iOS in [Visual Studio per Mac](/visualstudio/mac/), fare clic con il pulsante destro del mouse sul file e selezionare **Apri con > Xcode Interface Builder**, come illustrato nel schermata seguente:
 
 [![Apertura di uno storyboard in Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Apertura di uno storyboard in Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
-Dopo aver apportato le modifiche in Xcode Interface Builder, salvare il file e tornare al Visual Studio per Mac. Le modifiche vengono sincronizzate con il progetto Novell. iOS.
+Dopo aver apportato le modifiche in Xcode Interface Builder, salvare il file e tornare al Visual Studio per Mac. Le modifiche vengono sincronizzate con il progetto Xamarin.iOS.
 
 -----
 
@@ -486,7 +486,7 @@ Altre informazioni sull'uso dei file con estensione XIB sono disponibili nelle s
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, fare riferimento all' [Introduzione agli storyboard](~/ios/user-interface/storyboards/index.md).
 
-Questa e altre guide correlate a iOS designer fanno riferimento all'uso degli storyboard come approccio standard per la creazione di interfacce utente, poiché la maggior parte dei modelli di progetto Novell. iOS forniscono uno storyboard per impostazione predefinita.
+Questa e altre guide correlate a iOS designer fanno riferimento all'uso degli storyboard come approccio standard per la creazione di interfacce utente, poiché la maggior parte dei modelli di progetto Xamarin.iOS forniscono uno storyboard per impostazione predefinita.
 
 ## <a name="summary"></a>Riepilogo
 

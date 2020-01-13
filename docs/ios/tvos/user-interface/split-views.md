@@ -44,7 +44,7 @@ Apple presenta i suggerimenti seguenti per lavorare con i controller di visualiz
 
 ## <a name="split-view-controllers-and-storyboards"></a>Suddividere i controller di visualizzazione e gli storyboard
 
-Il modo più semplice per lavorare con i controller Split View in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando iOS designer.
+Il modo più semplice per lavorare con i controller Split View in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -170,7 +170,7 @@ Per ottenere lo stato di presentazione corrente, usare la proprietà `DisplayMod
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata illustrata la progettazione e l'utilizzo di controller di visualizzazione divisi all'interno di un'app Novell. tvOS.
+In questo articolo è stata illustrata la progettazione e l'utilizzo di controller di visualizzazione divisi all'interno di un'app Xamarin.tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

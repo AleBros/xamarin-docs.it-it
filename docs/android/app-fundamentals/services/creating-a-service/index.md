@@ -15,14 +15,14 @@ ms.locfileid: "75500230"
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
-I servizi Novell. Android devono rispettare due regole inviolabili dei servizi Android:
+I servizi Xamarin.Android devono rispettare due regole inviolabili dei servizi Android:
 
 - Devono estendere il [`Android.App.Service`](xref:Android.App.Service).
 - Devono essere decorate con la [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
-Un altro requisito dei servizi Android è che devono essere registrati in **file AndroidManifest. XML** e dato un nome univoco. Novell. Android registrerà automaticamente il servizio nel manifesto in fase di compilazione con l'attributo XML necessario.
+Un altro requisito dei servizi Android è che devono essere registrati in **file AndroidManifest. XML** e dato un nome univoco. Xamarin.Android registrerà automaticamente il servizio nel manifesto in fase di compilazione con l'attributo XML necessario.
 
-Questo frammento di codice è il più semplice esempio di creazione di un servizio in Novell. Android che soddisfi questi due requisiti:  
+Questo frammento di codice è il più semplice esempio di creazione di un servizio in Xamarin.Android che soddisfi questi due requisiti:  
 
 ```csharp
 [Service]
@@ -32,7 +32,7 @@ public class DemoService : Service
 }
 ```
 
-In fase di compilazione, Novell. Android registrerà il servizio inserendo l'elemento XML seguente in **file AndroidManifest. XML** (si noti che Novell. Android ha generato un nome casuale per il servizio):
+In fase di compilazione, Xamarin.Android registrerà il servizio inserendo l'elemento XML seguente in **file AndroidManifest. XML** (si noti che Xamarin.Android ha generato un nome casuale per il servizio):
 
 ```xml
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
@@ -106,7 +106,7 @@ Il modo in cui viene inviato lo scopo dipende dal tipo di servizio e verrà illu
 
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>Creazione di un filtro preventivo per gli Intent impliciti
 
-Per associare un servizio a uno scopo implicito, un'app Android deve fornire alcuni metadati per identificare le funzionalità del servizio. Questi metadati sono forniti dai filtri per _finalità_. I filtri per finalità contengono alcune informazioni, ad esempio un'azione o un tipo di dati, che devono essere presenti nello scopo di avviare un servizio. In Novell. Android il filtro preventivo è registrato in **file AndroidManifest. XML** , decorando un servizio con la [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). Il codice seguente, ad esempio, aggiunge un filtro preventivo con un'azione associata di `com.xamarin.DemoService`:
+Per associare un servizio a uno scopo implicito, un'app Android deve fornire alcuni metadati per identificare le funzionalità del servizio. Questi metadati sono forniti dai filtri per _finalità_. I filtri per finalità contengono alcune informazioni, ad esempio un'azione o un tipo di dati, che devono essere presenti nello scopo di avviare un servizio. In Xamarin.Android il filtro preventivo è registrato in **file AndroidManifest. XML** , decorando un servizio con la [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). Il codice seguente, ad esempio, aggiunge un filtro preventivo con un'azione associata di `com.xamarin.DemoService`:
 
 ```csharp
 [Service]
@@ -126,7 +126,7 @@ Ciò comporta l'inclusione di una voce nel file **file AndroidManifest. xml** &n
 </service>
 ```
 
-Con le nozioni di base di un servizio Novell. Android, esaminiamo i diversi sottotipi di servizi in modo più dettagliato.
+Con le nozioni di base di un servizio Xamarin.Android, esaminiamo i diversi sottotipi di servizi in modo più dettagliato.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

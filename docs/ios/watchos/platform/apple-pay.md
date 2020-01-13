@@ -1,6 +1,6 @@
 ---
 title: Apple Pay su watchos in Novell
-description: Questo articolo descrive i miglioramenti apportati da Apple a Apple Pay in watchos 3 e come implementarli in Novell. iOS per Apple Watch.
+description: Questo articolo descrive i miglioramenti apportati da Apple a Apple Pay in watchos 3 e come implementarli in Xamarin.iOS per Apple Watch.
 ms.prod: xamarin
 ms.assetid: 32FF5D21-C252-485D-83AC-A7E592237962
 ms.technology: xamarin-ios
@@ -62,4 +62,4 @@ Per abilitare il nuovo ambiente di test, eseguire le operazioni seguenti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i miglioramenti apportati da Apple a Apple Pay in watchos 3 e come implementarli in Novell. iOS.
+Questo articolo ha illustrato i miglioramenti apportati da Apple a Apple Pay in watchos 3 e come implementarli in Xamarin.iOS.

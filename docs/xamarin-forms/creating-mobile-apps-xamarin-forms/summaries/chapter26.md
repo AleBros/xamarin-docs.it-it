@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 26. Layout personalizzati
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 26. Layout personalizzati'
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 26. Layout personalizzati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
@@ -18,7 +18,7 @@ ms.locfileid: "70770934"
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
 
-Xamarin. Forms include diverse classi derivate da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1):
+Xamarin.Forms include diverse classi derivate da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1):
 
 - `StackLayout`,
 - `Grid`,
@@ -29,7 +29,7 @@ In questo capitolo descrive come creare le classi che derivano da `Layout<View>`
 
 ## <a name="an-overview-of-layout"></a>Una panoramica del layout
 
-Non vi è alcun sistema centralizzato che gestisce il layout di xamarin. Forms. Ogni elemento è responsabile di determinare quale deve essere la propria dimensione e su come eseguire il rendering all'interno di una determinata area.
+Non vi è alcun sistema centralizzato che gestisce il layout di Xamarin.Forms. Ogni elemento è responsabile di determinare quale deve essere la propria dimensione e su come eseguire il rendering all'interno di una determinata area.
 
 ### <a name="parents-and-children"></a>Elementi padre e figlio
 
@@ -58,7 +58,7 @@ Infine, viene generato l'evento seguente:
 
 - [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
-Il `OnSizeAllocated` metodo esegue l'override `Page` e `Layout`, quali sono le uniche due classi in xamarin. Forms che può avere elementi figlio. Le chiamate del metodo sottoposto a override
+Il `OnSizeAllocated` metodo esegue l'override `Page` e `Layout`, quali sono le uniche due classi in Xamarin.Forms che può avere elementi figlio. Le chiamate del metodo sottoposto a override
 
 - [`UpdateChildrenLayout`](xref:Xamarin.Forms.Page.UpdateChildrenLayout) per la `Page` derivati e [ `UpdateChildrenLayout` ](xref:Xamarin.Forms.Layout.UpdateChildrenLayout) per `Layout` derivati, che chiama
 - [`LayoutChildren`](xref:Xamarin.Forms.Page.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) per la `Page` derivati e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) per `Layout` derivati.

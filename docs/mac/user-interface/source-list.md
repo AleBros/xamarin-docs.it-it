@@ -1,6 +1,6 @@
 ---
-title: Elenchi di origine in Novell. Mac
-description: Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Novell. Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice.
+title: Elenchi di origine in Xamarin.Mac
+description: Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Xamarin.Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
@@ -14,19 +14,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030020"
 ---
-# <a name="source-lists-in-xamarinmac"></a>Elenchi di origine in Novell. Mac
+# <a name="source-lists-in-xamarinmac"></a>Elenchi di origine in Xamarin.Mac
 
-_Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Novell. Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice._
+_Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Xamarin.Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice._
 
-Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi elenchi di origine che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire gli elenchi di origine (oppure, facoltativamente, crearli direttamente nel C# codice).
+Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi elenchi di origine che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire gli elenchi di origine (oppure, facoltativamente, crearli direttamente nel C# codice).
 
 Un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes.
 
 [![](source-list-images/source05.png "An example source list")](source-list-images/source05.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base relative all'uso degli elenchi di origine in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base relative all'uso degli elenchi di origine in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Outline_Views" />
 
@@ -34,7 +34,7 @@ Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~
 
 Come indicato in precedenza, un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. Un elenco di origine è un tipo di tabella che consente all'utente di espandere o comprimere righe di dati gerarchici. Diversamente da una vista tabella, gli elementi in un elenco di origine non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido. Se un elemento in un elenco di origine contiene altri elementi, può essere espanso o compresso dall'utente.
 
-L'elenco di origine è una visualizzazione struttura con stile speciale (`NSOutlineView`), che a sua volta è una sottoclasse della visualizzazione tabella (`NSTableView`) e, di conseguenza, eredita gran parte del suo comportamento dalla relativa classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione struttura sono supportate anche da un elenco di origine. Un'applicazione Novell. Mac ha il controllo di queste funzionalità e può configurare i parametri dell'elenco di origine (nel codice o in Interface Builder) per consentire o impedire determinate operazioni.
+L'elenco di origine è una visualizzazione struttura con stile speciale (`NSOutlineView`), che a sua volta è una sottoclasse della visualizzazione tabella (`NSTableView`) e, di conseguenza, eredita gran parte del suo comportamento dalla relativa classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione struttura sono supportate anche da un elenco di origine. Un'applicazione Xamarin.Mac ha il controllo di queste funzionalità e può configurare i parametri dell'elenco di origine (nel codice o in Interface Builder) per consentire o impedire determinate operazioni.
 
 Un elenco di origine non archivia i propri dati, ma si basa su un'origine dati (`NSOutlineViewDataSource`) per fornire le righe e le colonne necessarie, in base alle esigenze.
 
@@ -46,7 +46,7 @@ Poiché un elenco di origine condivide gran parte del comportamento e delle funz
 
 ## <a name="working-with-source-lists"></a>Utilizzo degli elenchi di origine
 
-Un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. A differenza delle visualizzazioni struttura, prima di definire l'elenco di origine in Interface Builder, è ora di creare le classi di supporto in Novell. Mac.
+Un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. A differenza delle visualizzazioni struttura, prima di definire l'elenco di origine in Interface Builder, è ora di creare le classi di supporto in Xamarin.Mac.
 
 Prima di tutto, creare una nuova classe `SourceListItem` per conservare i dati per l'elenco di origine. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** Selezionare **generale** > **classe vuota**, immettere `SourceListItem` per **nome** e fare clic sul pulsante **nuovo** :
 
@@ -524,7 +524,7 @@ namespace MacOutlines
 }
 ```
 
-In questo modo viene creata una sottoclasse personalizzata riutilizzabile di `NSOutlineView` (`SourceListView`) che è possibile usare per guidare l'elenco di origine in qualsiasi applicazione Novell. Mac.
+In questo modo viene creata una sottoclasse personalizzata riutilizzabile di `NSOutlineView` (`SourceListView`) che è possibile usare per guidare l'elenco di origine in qualsiasi applicazione Xamarin.Mac.
 
 <a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
 
@@ -620,7 +620,7 @@ Se si esegue l'applicazione, verranno visualizzati gli elementi seguenti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso degli elenchi di origine in un'applicazione Novell. Mac. È stato illustrato come creare e gestire elenchi di origine in Interface Builder di Xcode e come usare gli elenchi di origine C# nel codice.
+Questo articolo ha esaminato in dettaglio l'uso degli elenchi di origine in un'applicazione Xamarin.Mac. È stato illustrato come creare e gestire elenchi di origine in Interface Builder di Xcode e come usare gli elenchi di origine C# nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

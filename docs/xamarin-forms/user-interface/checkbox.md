@@ -1,6 +1,6 @@
 ---
-title: Casella di controllo Novell. Forms
-description: La casella di controllo Novell. Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
+title: Casella di controllo Xamarin.Forms
+description: La casella di controllo Xamarin.Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 ms.prod: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
 ms.technology: xamarin-forms
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739151"
 ---
-# <a name="xamarinforms-checkbox"></a>Casella di controllo Novell. Forms
+# <a name="xamarinforms-checkbox"></a>Casella di controllo Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-Il `CheckBox` Novell. Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
+Il `CheckBox` Xamarin.Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 
 `CheckBox` definisce una proprietà di `bool` denominata `IsChecked`, che indica se il `CheckBox` è selezionato. Questa proprietà è supportata anche da un oggetto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che è possibile applicare uno stile e essere la destinazione delle associazioni dati.
 
@@ -110,7 +110,7 @@ Negli screenshot seguenti lo screenshot iOS Mostra la formattazione [`Label`](xr
 
 [![Screenshot della casella di controllo Data Binding in iOS e Android](checkbox-images/checkbox-databinding.png "Casella di controllo Data Binding")](checkbox-images/checkbox-databinding-large.png#lightbox "Casella di controllo Data Binding")
 
-Per ulteriori informazioni sui trigger, vedere [trigger Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Per ulteriori informazioni sui trigger, vedere [trigger Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-checkbox"></a>Disabilitare una casella di controllo
 
@@ -158,10 +158,10 @@ Nell'esempio di codice XAML riportato di seguito viene illustrato come definire 
 
 In questo esempio, il `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) specifica che, quando il `CheckBox` è selezionato, la relativa proprietà `Color` verrà impostata su verde. Il `Normal` `VisualState` specifica che quando il `CheckBox` è in uno stato normale, la relativa proprietà `Color` verrà impostata su rosso. Pertanto, l'effetto complessivo è che la `CheckBox` è rossa quando è vuota e verde quando viene controllata.
 
-Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per ulteriori informazioni sugli stati visivi, vedere [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo CheckBox (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
-- [Trigger di Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Gestore dello stato di visualizzazione di Novell. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Trigger di Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Gestore dello stato di visualizzazione di Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

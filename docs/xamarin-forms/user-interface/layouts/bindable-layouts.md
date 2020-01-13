@@ -1,5 +1,5 @@
 ---
-title: Layout associabili in Novell. Forms
+title: Layout associabili in Xamarin.Forms
 description: I layout associabili consentono alle classi di layout di generare il contenuto mediante associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un oggetto DataTemplate.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68647900"
 ---
-# <a name="bindable-layouts-in-xamarinforms"></a>Layout associabili in Novell. Forms
+# <a name="bindable-layouts-in-xamarinforms"></a>Layout associabili in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
@@ -29,7 +29,7 @@ Queste proprietà possono essere associate alle classi [`AbsoluteLayout`](xref:X
 > [!NOTE]
 > La proprietà `ItemTemplate` ha la precedenza quando vengono impostate entrambe le proprietà `ItemTemplate` e `ItemTemplateSelector`.
 
-La classe `Layout<T>` espone una raccolta [`Children`](xref:Xamarin.Forms.Layout`1.Children) a cui vengono aggiunti gli elementi figlio di un layout. Quando la proprietà `BinableLayout.ItemsSource` è impostata su una raccolta di elementi e collegata a una classe derivata da [`Layout<T>`](xref:Xamarin.Forms.Layout`1), ogni elemento della raccolta viene aggiunto alla raccolta di `Layout<T>.Children` per la visualizzazione da parte del layout. La classe derivata da `Layout<T>` aggiornerà quindi le visualizzazioni figlio quando la raccolta sottostante viene modificata. Per ulteriori informazioni sul ciclo di layout di Novell. Forms, vedere [creazione di un layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
+La classe `Layout<T>` espone una raccolta [`Children`](xref:Xamarin.Forms.Layout`1.Children) a cui vengono aggiunti gli elementi figlio di un layout. Quando la proprietà `BinableLayout.ItemsSource` è impostata su una raccolta di elementi e collegata a una classe derivata da [`Layout<T>`](xref:Xamarin.Forms.Layout`1), ogni elemento della raccolta viene aggiunto alla raccolta di `Layout<T>.Children` per la visualizzazione da parte del layout. La classe derivata da `Layout<T>` aggiornerà quindi le visualizzazioni figlio quando la raccolta sottostante viene modificata. Per ulteriori informazioni sul ciclo di layout di Xamarin.Forms, vedere [creazione di un layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
 
 I layout associabili devono essere usati solo quando la raccolta di elementi da visualizzare è di piccole dimensioni e lo scorrimento e la selezione non sono necessari. Sebbene sia possibile fornire lo scorrimento eseguendo il wrapping di un layout associabile in una [`ScrollView`](xref:Xamarin.Forms.ScrollView), questa operazione non è consigliata perché i layout associabili non hanno la virtualizzazione dell'interfaccia utente. Quando è necessario lo scorrimento, è necessario utilizzare una visualizzazione scorrevole che includa la virtualizzazione dell'interfaccia utente, ad esempio [`ListView`](xref:Xamarin.Forms.ListView) o [`CollectionView`](xref:Xamarin.Forms.CollectionView). L'impossibilità di osservare questa raccomandazione può causare problemi di prestazioni.
 
@@ -123,15 +123,15 @@ public class TechItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-La classe `TechItemTemplateSelector` definisce `DefaultTemplate` e `XamarinFormsTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. Il metodo `OnSelectTemplate` restituisce il `XamarinFormsTemplate`, che visualizza un elemento in rosso scuro con un cuore accanto, quando l'elemento è uguale a "Novell. Forms". Quando l'elemento non è uguale a "Novell. Forms", il metodo `OnSelectTemplate` restituisce il `DefaultTemplate`, che visualizza un elemento usando il colore predefinito di un [`Label`](xref:Xamarin.Forms.Label):
+La classe `TechItemTemplateSelector` definisce `DefaultTemplate` e `XamarinFormsTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. Il metodo `OnSelectTemplate` restituisce il `XamarinFormsTemplate`, che visualizza un elemento in rosso scuro con un cuore accanto, quando l'elemento è uguale a "Xamarin.Forms". Quando l'elemento non è uguale a "Xamarin.Forms", il metodo `OnSelectTemplate` restituisce il `DefaultTemplate`, che visualizza un elemento usando il colore predefinito di un [`Label`](xref:Xamarin.Forms.Label):
 
 ![Layout associabile con DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Layout associabile con un selettore di modello di dati")
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo sul layout associabile (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Creazione di un layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creazione di un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creazione di un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

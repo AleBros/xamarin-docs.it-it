@@ -1,6 +1,6 @@
 ---
-title: Editor Novell. Forms
-description: Questo articolo illustra come usare il controllo editor Novell. Forms per accettare l'input di testo su più righe in un'applicazione.
+title: Editor Xamarin.Forms
+description: Questo articolo illustra come usare il controllo editor Xamarin.Forms per accettare l'input di testo su più righe in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72696799"
 ---
-# <a name="xamarinforms-editor"></a>Editor Novell. Forms
+# <a name="xamarinforms-editor"></a>Editor Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 

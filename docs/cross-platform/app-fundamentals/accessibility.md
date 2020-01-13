@@ -28,7 +28,7 @@ Per implementare le linee guida in questo documento, usare le API fornite da ogn
 - [**Accessibilità Android**](~/android/app-fundamentals/accessibility.md)
 - [**Accessibilità iOS**](~/ios/app-fundamentals/accessibility.md)
 - [**Accessibilità OS X**](~/mac/app-fundamentals/accessibility.md)
-- [**Novell. Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
 <a name="checklist" />
 
@@ -74,4 +74,4 @@ Le descrizioni di accessibilità possono e devono essere localizzate in cui l'ap
 - [Accessibilità Android](~/android/app-fundamentals/accessibility.md)
 - [Accessibilità iOS](~/ios/app-fundamentals/accessibility.md)
 - [Accessibilità OS X](~/mac/app-fundamentals/accessibility.md)
-- [Accessibilità di Novell. Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [Accessibilità di Xamarin.Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)

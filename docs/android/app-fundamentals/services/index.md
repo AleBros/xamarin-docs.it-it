@@ -1,6 +1,6 @@
 ---
 title: Creazione di servizi Android
-description: Questa guida illustra i servizi di Novell. Android, che sono componenti Android che consentono di eseguire il lavoro senza un'interfaccia utente attiva. I servizi sono comunemente usati per le attività eseguite in background, ad esempio i calcoli che richiedono molto tempo, il download di file, la riproduzione di musica e così via. Vengono illustrati i diversi scenari per cui sono adatti i servizi e viene illustrato come implementarli sia per eseguire attività in background con esecuzione prolungata che per fornire un'interfaccia per le chiamate di procedure remote.
+description: Questa guida illustra i servizi di Xamarin.Android, che sono componenti Android che consentono di eseguire il lavoro senza un'interfaccia utente attiva. I servizi sono comunemente usati per le attività eseguite in background, ad esempio i calcoli che richiedono molto tempo, il download di file, la riproduzione di musica e così via. Vengono illustrati i diversi scenari per cui sono adatti i servizi e viene illustrato come implementarli sia per eseguire attività in background con esecuzione prolungata che per fornire un'interfaccia per le chiamate di procedure remote.
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "73024563"
 ---
 # <a name="creating-android-services"></a>Creazione di servizi Android
 
-_Questa guida illustra i servizi di Novell. Android, che sono componenti Android che consentono di eseguire il lavoro senza un'interfaccia utente attiva. I servizi sono comunemente usati per le attività eseguite in background, ad esempio i calcoli che richiedono molto tempo, il download di file, la riproduzione di musica e così via. Vengono illustrati i diversi scenari per cui sono adatti i servizi e viene illustrato come implementarli sia per eseguire attività in background con esecuzione prolungata che per fornire un'interfaccia per le chiamate di procedure remote._
+_Questa guida illustra i servizi di Xamarin.Android, che sono componenti Android che consentono di eseguire il lavoro senza un'interfaccia utente attiva. I servizi sono comunemente usati per le attività eseguite in background, ad esempio i calcoli che richiedono molto tempo, il download di file, la riproduzione di musica e così via. Vengono illustrati i diversi scenari per cui sono adatti i servizi e viene illustrato come implementarli sia per eseguire attività in background con esecuzione prolungata che per fornire un'interfaccia per le chiamate di procedure remote._
 
 ## <a name="android-services-overview"></a>Panoramica dei servizi Android
 
@@ -71,7 +71,7 @@ In alcuni casi, anche se un'app è in background, Android riattiverà l'app e ri
 * L'app riceve una trasmissione. 
 * L'applicazione riceve ed esegue un `PendingIntent` in risposta a una notifica.
 
-Le applicazioni Novell. Android esistenti potrebbero dover modificare il modo in cui eseguono il lavoro in background per evitare eventuali problemi che possono verificarsi in Android 8,0. Di seguito sono riportate alcune alternative pratiche a un servizio Android:
+Le applicazioni Xamarin.Android esistenti potrebbero dover modificare il modo in cui eseguono il lavoro in background per evitare eventuali problemi che possono verificarsi in Android 8,0. Di seguito sono riportate alcune alternative pratiche a un servizio Android:
 
 * **Pianificare il lavoro da eseguire in background usando l'utilità di pianificazione dei processi Android o il [dispatcher di processi Firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; queste due librerie forniscono un Framework per le applicazioni per separare il lavoro in background nei _processi_, un'unità di lavoro discreta. Le app possono quindi pianificare il processo con il sistema operativo insieme ad alcuni criteri relativi al momento in cui il processo può essere eseguito.
 * **Avviare il servizio in primo piano** &ndash; un servizio in primo piano è utile quando l'app deve eseguire un'attività in background e l'utente potrebbe dover interagire periodicamente con tale attività. Il servizio in primo piano visualizzerà una notifica persistente, in modo che l'utente sappia che l'app sta eseguendo un'attività in background e fornisce anche un modo per monitorare o interagire con l'attività. Un esempio è costituito da un'app di podcasting che riproduce un podcast per l'utente o forse Scarica un episodio podcast in modo che possa essere goduto in un secondo momento. 

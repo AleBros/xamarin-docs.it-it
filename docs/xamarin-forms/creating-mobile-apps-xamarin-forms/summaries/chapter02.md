@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 2. Anatomia di un'app
-description: "Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 2. Anatomia di un'app"
+description: "Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 2. Anatomia di un'app"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
@@ -19,9 +19,9 @@ ms.locfileid: "61334399"
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
-> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
+> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
 
-In un'applicazione xamarin. Forms, gli oggetti che occupano spazio sullo schermo vengono definiti *gli elementi visivi*, incapsulati dalle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe. Gli elementi visivi possono essere suddivisa in tre categorie corrispondenti a queste classi:
+In un'applicazione Xamarin.Forms, gli oggetti che occupano spazio sullo schermo vengono definiti *gli elementi visivi*, incapsulati dalle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe. Gli elementi visivi possono essere suddivisa in tre categorie corrispondenti a queste classi:
 
 - [Page](xref:Xamarin.Forms.Page)
 - [Layout](xref:Xamarin.Forms.Layout)
@@ -33,12 +33,12 @@ Questo capitolo viene illustrato come creare un'applicazione focalizzando l'atte
 
 ## <a name="say-hello"></a>Dal benvenuto
 
-Con la piattaforma Xamarin installata, è possibile creare una nuova soluzione xamarin. Forms in Visual Studio o Visual Studio per Mac. Il [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) soluzione Usa una libreria di classi portabile per il codice comune.
+Con la piattaforma Xamarin installata, è possibile creare una nuova soluzione Xamarin.Forms in Visual Studio o Visual Studio per Mac. Il [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) soluzione Usa una libreria di classi portabile per il codice comune.
 
 > [!NOTE]
 > Librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
 
-Questo esempio illustra una soluzione xamarin. Forms creata in Visual Studio senza modifiche. La soluzione è costituita da sei progetti:
+Questo esempio illustra una soluzione Xamarin.Forms creata in Visual Studio senza modifiche. La soluzione è costituita da sei progetti:
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), una libreria di classi portabile (PCL) condiviso da altri progetti
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), un progetto di App per Android
@@ -48,20 +48,20 @@ Questo esempio illustra una soluzione xamarin. Forms creata in Visual Studio sen
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), un progetto di applicazione per Windows Phone 8.1
 
 > [!NOTE]
-> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10.
+> Xamarin.Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni Xamarin.Forms vengono eseguite sul desktop di Windows 10.
 
 È possibile apportare qualsiasi di questi progetti di applicazione il progetto di avvio e quindi compilare ed eseguire il programma in un dispositivo o simulatore.
 
-In molti dei propri programmi di xamarin. Forms, non modifica i progetti dell'applicazione. Spesso questi rimangono piccolo stub solo per l'avvio del programma. La maggior parte dell'attenzione sarà la libreria comune a tutte le applicazioni.
+In molti dei propri programmi di Xamarin.Forms, non modifica i progetti dell'applicazione. Spesso questi rimangono piccolo stub solo per l'avvio del programma. La maggior parte dell'attenzione sarà la libreria comune a tutte le applicazioni.
 
 ## <a name="inside-the-files"></a>All'interno dei file
 
-Gli oggetti visivi visualizzati per il **Hello** programma sono definiti nel costruttore della [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) classe. `App` deriva dalla classe di xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application).
+Gli oggetti visivi visualizzati per il **Hello** programma sono definiti nel costruttore della [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) classe. `App` deriva dalla classe di Xamarin.Forms [ `Application` ](xref:Xamarin.Forms.Application).
 
 > [!NOTE]
-> I modelli di soluzione Visual Studio per xamarin. Forms creano una pagina con un file XAML. XAML non è illustrata in questo libro fino alla [capitolo 7](chapter07.md).
+> I modelli di soluzione Visual Studio per Xamarin.Forms creano una pagina con un file XAML. XAML non è illustrata in questo libro fino alla [capitolo 7](chapter07.md).
 
-Il **riferimenti** sezione il **Hello** progetto PCL include i seguenti assembly xamarin. Forms:
+Il **riferimenti** sezione il **Hello** progetto PCL include i seguenti assembly Xamarin.Forms:
 
 - **Xamarin.Forms.Core**
 - **Xamarin.Forms.Xaml**
@@ -77,9 +77,9 @@ Il **riferimenti** sezioni dei progetti del cinque applicazione includono assemb
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
 > [!NOTE]
-> Il **riferimenti** nelle sezioni di questi progetti non sono elencati gli assembly. Al contrario, il file di progetto contiene un **PackageReference** tag facendo riferimento al pacchetto NuGet di xamarin. Forms. Il **riferimenti** sezione negli elenchi di Visual Studio il **xamarin. Forms** package anziché l'assembly xamarin. Forms.
+> Il **riferimenti** nelle sezioni di questi progetti non sono elencati gli assembly. Al contrario, il file di progetto contiene un **PackageReference** tag facendo riferimento al pacchetto NuGet di Xamarin.Forms. Il **riferimenti** sezione negli elenchi di Visual Studio il **Xamarin.Forms** package anziché l'assembly Xamarin.Forms.
 
-Ognuno dei progetti dell'applicazione contiene una chiamata alla proprietà statica `Forms.Init` metodo nella `Xamarin.Forms` dello spazio dei nomi. Ciò consente di inizializzare la libreria xamarin. Forms. Una versione diversa di `Forms.Init` definita per ogni piattaforma. Le chiamate a questo metodo sono reperibili nelle seguenti classi:
+Ognuno dei progetti dell'applicazione contiene una chiamata alla proprietà statica `Forms.Init` metodo nella `Xamarin.Forms` dello spazio dei nomi. Ciò consente di inizializzare la libreria Xamarin.Forms. Una versione diversa di `Forms.Init` definita per ogni piattaforma. Le chiamate a questo metodo sono reperibili nelle seguenti classi:
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
@@ -95,14 +95,14 @@ In caso contrario, questi progetti di applicazione sono normali programmi "do no
 
 ## <a name="pcl-or-sap"></a>Libreria di classi Portabile o SAP?
 
-È possibile creare una soluzione xamarin. Forms con il codice comune in una libreria di classi portabile (PCL) o in un progetto di Asset condivisi (SAP). Per creare una soluzione SAP, selezionare l'opzione Shared in Visual Studio. Il [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) soluzione illustra il modello SAP senza modifiche.
+È possibile creare una soluzione Xamarin.Forms con il codice comune in una libreria di classi portabile (PCL) o in un progetto di Asset condivisi (SAP). Per creare una soluzione SAP, selezionare l'opzione Shared in Visual Studio. Il [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) soluzione illustra il modello SAP senza modifiche.
 
 > [!NOTE]
 > Librerie di classi portabile è stata sostituita dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard. In caso contrario, le librerie PCL e .NET Standard sono concettualmente molto simile.
 
 I bundle di approccio libreria tutti i più comuni di codice in un progetto di libreria a cui fanno riferimento i progetti di applicazione della piattaforma. Con l'approccio SAP, il codice comune in modo efficace è presente in tutti i progetti di applicazione della piattaforma ed è condiviso tra di essi.
 
-La maggior parte degli sviluppatori di xamarin. Forms preferiscono l'approccio di libreria. In questo libro, la maggior parte delle soluzioni di usare una libreria. Quelle che usano SAP include un' **Sap** suffisso nel nome del progetto.
+La maggior parte degli sviluppatori di Xamarin.Forms preferiscono l'approccio di libreria. In questo libro, la maggior parte delle soluzioni di usare una libreria. Quelle che usano SAP include un' **Sap** suffisso nel nome del progetto.
 
 L'approccio SAP il codice nel progetto condiviso permette di eseguire codice diverso per varie piattaforme utilizzando direttive del preprocessore C# (`#if`, &`elif`, e `#endif`) con questi identificatori predefiniti:
 
@@ -116,7 +116,7 @@ In una libreria condivisa, è possibile determinare quale piattaforma su cui vie
 
 Il [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) soluzione illustra come aggiungere un nuovo file C# per il **Greetings** progetto. Questo file definisce una classe denominata `GreetingsPage` che deriva da `ContentPage`. In questo libro, la maggior parte dei progetti contengono un unico `ContentPage` derivato il cui nome è il nome del progetto con il suffisso `Page` aggiunto.
 
-Il `GreetingsPage` costruttore crea un [ `Label` ](xref:Xamarin.Forms.Label) visualizzazione, che è la visualizzazione di xamarin. Forms che visualizza il testo. Il [ `Text` ](xref:Xamarin.Forms.Label.Text) viene impostata per il testo visualizzato dal `Label`. Imposta questo programma la `Label` per il `Content` proprietà di `ContentPage`. Il costruttore del `App` classe crea quindi un'istanza `GreetingsPage` e lo imposta su relativo `MainPage` proprietà.
+Il `GreetingsPage` costruttore crea un [ `Label` ](xref:Xamarin.Forms.Label) visualizzazione, che è la visualizzazione di Xamarin.Forms che visualizza il testo. Il [ `Text` ](xref:Xamarin.Forms.Label.Text) viene impostata per il testo visualizzato dal `Label`. Imposta questo programma la `Label` per il `Content` proprietà di `ContentPage`. Il costruttore del `App` classe crea quindi un'istanza `GreetingsPage` e lo imposta su relativo `MainPage` proprietà.
 
 Il testo viene visualizzato nell'angolo superiore sinistro della pagina. In iOS, ciò significa che si sovrappone a barra di stato della pagina. Esistono diverse soluzioni a questo problema:
 
@@ -137,7 +137,7 @@ Impostare una proprietà 'Spaziatura interna' solo in iOS usando un SAP con una 
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>Soluzione 3. Includere la spaziatura interna solo per iOS (libreria di classi Portabile o SAP)
 
-Nella versione di xamarin. Forms utilizzato per il libro, una `Padding` proprietà specifici ai dispositivi iOS in una libreria di classi Portabile o SAP possono essere selezionati utilizzando il [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) oppure [ `Device.OnPlatform<T>` ](xref:Xamarin.Forms.Device.OnPlatform*) metodo statico. Questi metodi sono stati deprecati
+Nella versione di Xamarin.Forms utilizzato per il libro, una `Padding` proprietà specifici ai dispositivi iOS in una libreria di classi Portabile o SAP possono essere selezionati utilizzando il [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) oppure [ `Device.OnPlatform<T>` ](xref:Xamarin.Forms.Device.OnPlatform*) metodo statico. Questi metodi sono stati deprecati
 
 Il `Device.OnPlatform` metodi vengono utilizzati per eseguire codice specifico della piattaforma o per selezionare i valori specifici della piattaforma. Internamente, rendono Usa la [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) sola lettura proprietà statica, che restituisce un membro del [ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform) enumerazione:
 
@@ -185,7 +185,7 @@ In genere queste proprietà non vengono usate direttamente. Al contrario, le com
 - [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
 - [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
-`HorizontalOptions` e `VerticalOptions` sono le proprietà più importanti nel layout di xamarin. Forms e sono descritti più dettagliatamente in [ **capitolo 4. Scorrimento dello Stack**](chapter04.md).
+`HorizontalOptions` e `VerticalOptions` sono le proprietà più importanti nel layout di Xamarin.Forms e sono descritti più dettagliatamente in [ **capitolo 4. Scorrimento dello Stack**](chapter04.md).
 
 Ecco il risultato con il `HorizontalOptions` e `VerticalOptions` delle proprietà di `Label` entrambi impostati su `LayoutOptions.Center`:
 
@@ -206,4 +206,4 @@ Queste due proprietà sono definite solo da `Label`, mentre la `HorizontalAlignm
 - [Capitolo 2 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [Esempi di capitolo 2](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 - [Capitolo 2 F# esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
-- [Introduzione a xamarin. Forms](~/get-started/index.yml)
+- [Introduzione a Xamarin.Forms](~/get-started/index.yml)

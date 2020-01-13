@@ -33,7 +33,7 @@ Usare Azure Pipelines per compilare automaticamente app Novell per Android e iOS
 
 ### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[Crea app Novell usando App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
 
-Crea soluzioni Novell. iOS e Novell. Android con App Center, direttamente da GitHub, Azure DevOps o bitbucket.
+Crea soluzioni Xamarin.iOS e Xamarin.Android con App Center, direttamente da GitHub, Azure DevOps o bitbucket.
 
 ### <a name="build-xamarin-apps-with-teamcitytoolsciteamcitymd"></a>[Crea app Novell con TeamCity](~/tools/ci/teamcity.md)
 
@@ -41,4 +41,4 @@ Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare a
 
 ### <a name="build-xamarin-apps-with-jenkinstoolscijenkins-walkthroughmd"></a>[Crea app Novell con Jenkins](~/tools/ci/jenkins-walkthrough.md)
 
-Questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di app per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare le app Novell. iOS e Novell. Android quando viene eseguito il commit delle modifiche nel sistema di controllo della versione.
+Questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di app per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare le app Xamarin.iOS e Xamarin.Android quando viene eseguito il commit delle modifiche nel sistema di controllo della versione.

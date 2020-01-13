@@ -1,6 +1,6 @@
 ---
-title: Notifiche locali di Novell. Forms
-description: Questo articolo illustra come inviare e ricevere notifiche locali in Novell. Forms.
+title: Notifiche locali di Xamarin.Forms
+description: Questo articolo illustra come inviare e ricevere notifiche locali in Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72371571"
 ---
-# <a name="local-notifications-in-xamarinforms"></a>Notifiche locali in Novell. Forms
+# <a name="local-notifications-in-xamarinforms"></a>Notifiche locali in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 
@@ -24,13 +24,13 @@ Le notifiche locali sono avvisi inviati dalle applicazioni installate in un disp
 - Promemoria
 - Trigger basati sulla posizione
 
-Ogni piattaforma gestisce la creazione, la visualizzazione e l'utilizzo di notifiche locali in modo diverso. Questo articolo illustra come creare un'astrazione multipiattaforma per inviare e ricevere notifiche locali con Novell. Forms.
+Ogni piattaforma gestisce la creazione, la visualizzazione e l'utilizzo di notifiche locali in modo diverso. Questo articolo illustra come creare un'astrazione multipiattaforma per inviare e ricevere notifiche locali con Xamarin.Forms.
 
 [![applicazione notifiche locali in iOS e Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
 ## <a name="create-a-cross-platform-interface"></a>Creare un'interfaccia multipiattaforma
 
-L'applicazione Novell. Forms deve creare e utilizzare le notifiche senza alcuna preoccupazione per le implementazioni della piattaforma sottostanti. La `INotificationManager` interfaccia seguente viene implementata nella libreria di codice condivisa e definisce un'API multipiattaforma che l'applicazione può usare per interagire con le notifiche:
+L'applicazione Xamarin.Forms deve creare e utilizzare le notifiche senza alcuna preoccupazione per le implementazioni della piattaforma sottostanti. La `INotificationManager` interfaccia seguente viene implementata nella libreria di codice condivisa e definisce un'API multipiattaforma che l'applicazione può usare per interagire con le notifiche:
 
 ```csharp
 public interface INotificationManager
@@ -47,9 +47,9 @@ public interface INotificationManager
 
 Questa interfaccia verrà implementata in ogni progetto di piattaforma. L'evento `NotificationReceived` consente all'applicazione di gestire le notifiche in ingresso. Il metodo `Initialize` deve eseguire qualsiasi logica della piattaforma nativa necessaria per preparare il sistema di notifica. Il metodo `ScheduleNotification` deve inviare una notifica. Quando viene ricevuto un messaggio, il metodo di `ReceiveNotification` deve essere chiamato dalla piattaforma sottostante.
 
-## <a name="consume-the-interface-in-xamarinforms"></a>Utilizzare l'interfaccia in Novell. Forms
+## <a name="consume-the-interface-in-xamarinforms"></a>Utilizzare l'interfaccia in Xamarin.Forms
 
-Una volta creata, un'interfaccia può essere utilizzata nel progetto Novell. Forms condiviso anche se le implementazioni della piattaforma non sono ancora state create. L'applicazione di esempio contiene un `ContentPage` denominato **MainPage. XAML** con il contenuto seguente:
+Una volta creata, un'interfaccia può essere utilizzata nel progetto Xamarin.Forms condiviso anche se le implementazioni della piattaforma non sono ancora state create. L'applicazione di esempio contiene un `ContentPage` denominato **MainPage. XAML** con il contenuto seguente:
 
 ```xaml
 <StackLayout Margin="0,35,0,0"
@@ -109,13 +109,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Il costruttore della classe `MainPage` usa il `DependencyService` Novell. Forms per recuperare un'istanza specifica della piattaforma del `INotificationManager`. Il metodo `OnScheduleClicked` utilizza l'istanza `INotificationManager` per pianificare una nuova notifica. Il metodo `ShowNotification` viene chiamato dal gestore eventi associato all'evento `NotificationReceived` e inserisce un nuovo `Label` nella pagina quando viene richiamato l'evento.
+Il costruttore della classe `MainPage` usa il `DependencyService` Xamarin.Forms per recuperare un'istanza specifica della piattaforma del `INotificationManager`. Il metodo `OnScheduleClicked` utilizza l'istanza `INotificationManager` per pianificare una nuova notifica. Il metodo `ShowNotification` viene chiamato dal gestore eventi associato all'evento `NotificationReceived` e inserisce un nuovo `Label` nella pagina quando viene richiamato l'evento.
 
-Per ulteriori informazioni sul `DependencyService`Novell. Forms, vedere [Novell. Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
+Per ulteriori informazioni sul `DependencyService`Xamarin.Forms, vedere [Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
 
 ## <a name="create-the-android-interface-implementation"></a>Creare l'implementazione dell'interfaccia Android
 
-Per consentire all'applicazione Novell. Forms di inviare e ricevere notifiche in Android, l'applicazione deve fornire un'implementazione dell'interfaccia `INotificationManager`.
+Per consentire all'applicazione Xamarin.Forms di inviare e ricevere notifiche in Android, l'applicazione deve fornire un'implementazione dell'interfaccia `INotificationManager`.
 
 ### <a name="create-the-androidnotificationmanager-class"></a>Creazione della classe AndroidNotificationManager
 
@@ -265,11 +265,11 @@ Il metodo `CreateNotificationFromIntent` estrae i dati di notifica dall'argoment
 - Quando l'applicazione viene avviata dai dati di notifica, i dati `Intent` verranno passati al metodo `OnCreate`.
 - Se l'applicazione è già in primo piano, i dati `Intent` verranno passati al metodo `OnNewIntent`.
 
-Android offre molte opzioni avanzate per le notifiche. Per altre informazioni, vedere [notifiche in Novell. Android](~/android/app-fundamentals/notifications/index.md).
+Android offre molte opzioni avanzate per le notifiche. Per altre informazioni, vedere [notifiche in Xamarin.Android](~/android/app-fundamentals/notifications/index.md).
 
 ## <a name="create-the-ios-interface-implementation"></a>Creare l'implementazione dell'interfaccia iOS
 
-Per consentire all'applicazione Novell. Forms di inviare e ricevere notifiche in iOS, l'applicazione deve fornire un'implementazione del `INotificationManager`.
+Per consentire all'applicazione Xamarin.Forms di inviare e ricevere notifiche in iOS, l'applicazione deve fornire un'implementazione del `INotificationManager`.
 
 ### <a name="create-the-iosnotificationmanager-class"></a>Creazione della classe iOSNotificationManager
 
@@ -381,7 +381,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 }
 ```
 
-iOS offre molte opzioni avanzate per le notifiche. Per altre informazioni, vedere [notifiche in Novell. iOS](~/ios/platform/user-notifications/index.md).
+iOS offre molte opzioni avanzate per le notifiche. Per altre informazioni, vedere [notifiche in Xamarin.iOS](~/ios/platform/user-notifications/index.md).
 
 ## <a name="test-the-application"></a>Test dell'applicazione
 
@@ -398,6 +398,6 @@ In iOS le notifiche in ingresso vengono ricevute automaticamente dall'applicazio
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Progetto di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
-- [Notifiche in Novell. Android](~/android/app-fundamentals/notifications/index.md)
-- [Notifiche in Novell. iOS](~/ios/platform/user-notifications/index.md)
-- [Dipendenza Novell. Forms. Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
+- [Notifiche in Xamarin.Android](~/android/app-fundamentals/notifications/index.md)
+- [Notifiche in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
+- [Dipendenza Xamarin.Forms. Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
