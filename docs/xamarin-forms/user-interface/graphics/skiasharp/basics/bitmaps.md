@@ -67,7 +67,7 @@ HttpClient httpClient = new HttpClient();
 
 Quando si usa `HttpClient` con le applicazioni iOS e Android, è necessario impostare le proprietà del progetto come descritto nei documenti su **[Transport Layer Security (TLS) 1,2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
-Poiché è più pratico usare l'operatore `await` con `HttpClient`, il codice non può essere eseguito nel costruttore di `BasicBitmapsPage`. Ma fa parte dell'override del `OnAppearing`. L'URL fa riferimento a un'area nel sito Web Novell con alcune bitmap di esempio. Un pacchetto nel sito Web consente di aggiungere una specifica per ridimensionare la bitmap a una particolare larghezza:
+Poiché è più pratico usare l'operatore `await` con `HttpClient`, il codice non può essere eseguito nel costruttore di `BasicBitmapsPage`. Ma fa parte dell'override del `OnAppearing`. L'URL fa riferimento a un'area nel sito Web Xamarin con alcune bitmap di esempio. Un pacchetto nel sito Web consente di aggiungere una specifica per ridimensionare la bitmap a una particolare larghezza:
 
 ```csharp
 protected override async void OnAppearing()

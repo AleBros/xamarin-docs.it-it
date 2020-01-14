@@ -26,7 +26,7 @@ Due delle librerie di supporto: `Support-v4` e `Support-v13` non possono essere 
 
 Poiché `Support-v4` è diventato così popolare, numerose librerie di terze parti ora dipendono da esso. Potrebbero avere scelto di dipendere dal supporto-V13, ma è più comune dipendere da _V4_ , perché fornisce alle app che usano queste librerie di terze parti la possibilità di supportare i livelli API fino a 4.
 
-Se una libreria di terze parti Novell fa riferimento al binding `Xamarin.Android.Support.v4.dll` `Support-v4`, anche qualsiasi app che usa questa libreria deve fare riferimento a `Xamarin.Android.Support.v4.dll`. Questo diventa un problema quando la stessa app vuole anche usare alcune funzionalità del binding `Xamarin.Android.Support.v13.dll` per `Support-v13`. Se si fa riferimento a entrambe le associazioni, si verificheranno errori di tipo duplicati.
+Se una libreria di terze parti Xamarin fa riferimento al binding `Xamarin.Android.Support.v4.dll` `Support-v4`, anche qualsiasi app che usa questa libreria deve fare riferimento a `Xamarin.Android.Support.v4.dll`. Questo diventa un problema quando la stessa app vuole anche usare alcune funzionalità del binding `Xamarin.Android.Support.v13.dll` per `Support-v13`. Se si fa riferimento a entrambe le associazioni, si verificheranno errori di tipo duplicati.
 
 ## <a name="type-forwarded-v4-binding-assembly"></a>Assembly di binding V4 con inoltri di tipo
 

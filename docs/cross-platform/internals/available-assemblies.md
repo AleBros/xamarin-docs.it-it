@@ -15,23 +15,23 @@ ms.locfileid: "75867605"
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
 
-Xamarin.iOS, Xamarin.Android e Xamarin.Mac vengono forniti con più di una decina di assembly. Proprio come Silverlight è un subset esteso degli assembly .NET desktop, Novell Platforms è anche un subset esteso di diversi assembly .NET per Silverlight e desktop.
+Xamarin.iOS, Xamarin.Android e Xamarin.Mac vengono forniti con più di una decina di assembly. Proprio come Silverlight è un subset esteso degli assembly .NET desktop, Xamarin Platforms è anche un subset esteso di diversi assembly .NET per Silverlight e desktop.
 
-Le piattaforme Novell non sono compatibili con l'interfaccia ABI con gli assembly esistenti compilati per un profilo diverso. È necessario ricompilare il codice sorgente per generare assembly destinati al profilo corretto (proprio come è necessario ricompilare il codice sorgente per Silverlight e .NET 3,5 separatamente).
+Le piattaforme Xamarin non sono compatibili con l'interfaccia ABI con gli assembly esistenti compilati per un profilo diverso. È necessario ricompilare il codice sorgente per generare assembly destinati al profilo corretto (proprio come è necessario ricompilare il codice sorgente per Silverlight e .NET 3,5 separatamente).
 
-Le applicazioni Xamarin.Mac possono essere compilate in tre modalità: una che usa il profilo mobile curato di Novell, il Framework Xamarin.Mac .NET 4,5 che consente di definire come destinazione gli assembly desktop completi esistenti e uno non supportato che usa l'API .NET disponibile in un sistema mono installazione. Per ulteriori informazioni, vedere la documentazione sui [Framework di destinazione](~/mac/platform/target-framework.md) .
+Le applicazioni Xamarin.Mac possono essere compilate in tre modalità: una che usa il profilo mobile curato di Xamarin, il Framework Xamarin.Mac .NET 4,5 che consente di definire come destinazione gli assembly desktop completi esistenti e uno non supportato che usa l'API .NET disponibile in un sistema mono installazione. Per ulteriori informazioni, vedere la documentazione sui [Framework di destinazione](~/mac/platform/target-framework.md) .
 
 ## <a name="net-standard-libraries"></a>Librerie di .NET Standard
 
-Oltre alle associazioni iOS, Android e Mac, i progetti Novell possono utilizzare le [librerie .NET standard](~/cross-platform/app-fundamentals/net-standard.md).
+Oltre alle associazioni iOS, Android e Mac, i progetti Xamarin possono utilizzare le [librerie .NET standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
 
-I progetti Novell possono inoltre utilizzare [librerie di classi](~/cross-platform/app-fundamentals/pcl.md)portabili .NET, anche se questa tecnologia viene deprecata a favore di .NET standard.
+I progetti Xamarin possono inoltre utilizzare [librerie di classi](~/cross-platform/app-fundamentals/pcl.md)portabili .NET, anche se questa tecnologia viene deprecata a favore di .NET standard.
 
 ## <a name="supported-assemblies"></a>Assembly supportati
 
-Questi sono gli assembly disponibili in **Gestione riferimenti > assembly > Framework** (Visual Studio 2017) e **modifica riferimenti > pacchetti** (Visual Studio per Mac) e la loro compatibilità con le piattaforme Novell.
+Questi sono gli assembly disponibili in **Gestione riferimenti > assembly > Framework** (Visual Studio 2017) e **modifica riferimenti > pacchetti** (Visual Studio per Mac) e la loro compatibilità con le piattaforme Xamarin.
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Assembly|Compatibilità API|Xamarin iOS|Xamarin Android|Xamarin Mac|

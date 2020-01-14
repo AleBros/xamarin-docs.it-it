@@ -1,5 +1,5 @@
 ---
-title: Accessibilità nelle app Novell
+title: Accessibilità nelle app Xamarin
 description: Questo documento fornisce diversi suggerimenti per la creazione di app accessibili. Sono inclusi, ad esempio, consigli su tipi di carattere di grandi dimensioni, contrasto elevato, interfacce autodescrittive e altro ancora.
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030284"
 ---
-# <a name="accessibility-in-xamarin-apps"></a>Accessibilità nelle app Novell
+# <a name="accessibility-in-xamarin-apps"></a>Accessibilità nelle app Xamarin
 
 _Verificare che le app siano utilizzabili dal più ampio pubblico possibile_
 

@@ -20,7 +20,7 @@ _Questa guida esamina Xamarin.Mac e la relativa relazione con Objective-C a un l
 
 ## <a name="overview"></a>Panoramica
 
-Le applicazioni Xamarin.Mac vengono eseguite nell'ambiente di esecuzione mono e usano il compilatore di Novell per compilare il linguaggio intermedio (IL), che è quindi compilato JIT (just-in-Time) in codice nativo in fase di esecuzione. Questa operazione viene eseguita side-by-side con il runtime di Objective-C. Entrambi gli ambienti di runtime vengono eseguiti su un kernel di tipo UNIX, in particolare XNU, ed espongono diverse API al codice utente, consentendo agli sviluppatori di accedere al sistema nativo o gestito sottostante.
+Le applicazioni Xamarin.Mac vengono eseguite nell'ambiente di esecuzione mono e usano il compilatore di Xamarin per compilare il linguaggio intermedio (IL), che è quindi compilato JIT (just-in-Time) in codice nativo in fase di esecuzione. Questa operazione viene eseguita side-by-side con il runtime di Objective-C. Entrambi gli ambienti di runtime vengono eseguiti su un kernel di tipo UNIX, in particolare XNU, ed espongono diverse API al codice utente, consentendo agli sviluppatori di accedere al sistema nativo o gestito sottostante.
 
 Il diagramma seguente mostra una panoramica di base di questa architettura:
 
@@ -28,7 +28,7 @@ Il diagramma seguente mostra una panoramica di base di questa architettura:
 
 ### <a name="native-and-managed-code"></a>Codice nativo e gestito
 
-Quando si sviluppa per Novell, vengono spesso usati i termini *nativi* e codice *gestito* . Il codice gestito è codice in cui l'esecuzione viene gestita dal .NET Framework Common Language Runtime o nel caso di Novell: il runtime di mono.
+Quando si sviluppa per Xamarin, vengono spesso usati i termini *nativi* e codice *gestito* . Il codice gestito è codice in cui l'esecuzione viene gestita dal .NET Framework Common Language Runtime o nel caso di Xamarin: il runtime di mono.
 
 Il codice nativo è codice che verrà eseguito in modalità nativa sulla piattaforma specifica, ad esempio Objective-C o anche codice compilato AOT, su un chip ARM. Questa guida illustra il modo in cui il codice gestito viene compilato in codice nativo e illustra il funzionamento di un'applicazione Xamarin.Mac, per sfruttare al meglio le API Mac di Apple tramite l'uso di binding, pur avendo accesso a. BCL di NET e un linguaggio sofisticato, C#ad esempio.
 
@@ -46,7 +46,7 @@ Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisi
 
 ## <a name="compilation"></a>Compilazione
 
-Quando si compila un'applicazione della piattaforma Novell, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in Microsoft Intermediate Language (MSIL o il). Xamarin.Mac usa quindi un compilatore *just-in-time (JIT)* in fase di esecuzione per compilare il codice nativo, consentendo l'esecuzione sull'architettura corretta, in base alle esigenze.
+Quando si compila un'applicazione della piattaforma Xamarin, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in Microsoft Intermediate Language (MSIL o il). Xamarin.Mac usa quindi un compilatore *just-in-time (JIT)* in fase di esecuzione per compilare il codice nativo, consentendo l'esecuzione sull'architettura corretta, in base alle esigenze.
 
 Questo è contrario a Xamarin.iOS che usa la compilazione AOT. Quando si usa il compilatore AOT, tutti gli assembly e tutti i metodi in essi contenuti vengono compilati in fase di compilazione. Con JIT, la compilazione avviene su richiesta solo per i metodi che vengono eseguiti.
 
@@ -54,7 +54,7 @@ Con le applicazioni Xamarin.Mac, mono viene in genere incorporato nel bundle del
 
 ## <a name="selectors"></a>Selettori
 
-Con Novell sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API Mac native in Novell. Le associazioni sono illustrate in dettaglio nella [documentazione sull'associazione di Objective-C](~/mac/platform/binding.md), quindi per ora è possibile esaminare il funzionamento di Xamarin.Mac dietro le quinte.
+Con Xamarin sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API Mac native in Xamarin. Le associazioni sono illustrate in dettaglio nella [documentazione sull'associazione di Objective-C](~/mac/platform/binding.md), quindi per ora è possibile esaminare il funzionamento di Xamarin.Mac dietro le quinte.
 
 In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione eseguita tramite selettori. Un selettore è un messaggio inviato a un oggetto o a una classe. Con Objective-C questa operazione viene eseguita tramite le funzioni [objc_msgSend](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/index.html) . Per altre informazioni sull'uso dei selettori, vedere la guida per i selettori di iOS [Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, viene usato un [registrar](~/mac/internals/registrar.md). Questa operazione è stata illustrata più dettagliatamente nella sezione successiva.
 
@@ -101,7 +101,7 @@ Esistono due tipi di registrar usati in Xamarin.Mac-Dynamic e static:
 
 ## <a name="application-launch"></a>Avvio dell'applicazione
 
-La logica di avvio di Xamarin.Mac varia a seconda che venga usato embedded o System mono. Per visualizzare il codice e i passaggi per l'avvio dell'applicazione Xamarin.Mac, fare riferimento al file di [intestazione di avvio](https://github.com/xamarin/xamarin-macios/blob/master/runtime/xamarin/launch.h) nel repository pubblico Novell-macios.
+La logica di avvio di Xamarin.Mac varia a seconda che venga usato embedded o System mono. Per visualizzare il codice e i passaggi per l'avvio dell'applicazione Xamarin.Mac, fare riferimento al file di [intestazione di avvio](https://github.com/xamarin/xamarin-macios/blob/master/runtime/xamarin/launch.h) nel repository pubblico Xamarin-macios.
 
 ## <a name="generator"></a>Generator
 

@@ -243,7 +243,7 @@ internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRec
 }
 ```
 
-La seconda cosa interessante da fare in relazione ai movimenti è il modo in cui il rettangolo di delimitazione viene spostato in relazione ai piani reali rilevati. Questo aspetto è illustrato in [questo post di Blog di Novell](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/).
+La seconda cosa interessante da fare in relazione ai movimenti è il modo in cui il rettangolo di delimitazione viene spostato in relazione ai piani reali rilevati. Questo aspetto è illustrato in [questo post di Blog di Xamarin](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/).
 
 ## <a name="other-new-features-in-arkit-2"></a>Altre nuove funzionalità di ARKit 2
 
@@ -389,7 +389,7 @@ Console.WriteLine(xform);
 
 Come si può notare, la posizione è codificata nei primi tre elementi della riga inferiore.
 
-In Novell, il tipo comune per la modifica di matrici di trasformazione è `NVector4`, che per convenzione viene interpretato in una colonna-Major. Ovvero, il componente Translation/position è previsto in M14, M24, M34, not M41, M42, M43:
+In Xamarin, il tipo comune per la modifica di matrici di trasformazione è `NVector4`, che per convenzione viene interpretato in una colonna-Major. Ovvero, il componente Translation/position è previsto in M14, M24, M34, not M41, M42, M43:
 
 ![riga-principale vs colonna-principale](images/arkit_row_vs_column.png)
 

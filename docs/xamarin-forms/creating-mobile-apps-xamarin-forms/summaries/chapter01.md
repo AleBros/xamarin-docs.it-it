@@ -33,9 +33,9 @@ Un fornitore di software che desidera utilizzare queste piattaforme deve gestire
 
 Sebbene Objective-C, Java e C# siano tutti derivati dal linguaggio di programmazione C, sono stati sviluppati da percorsi molto diversi. C#è la più recente di questi linguaggi ed è stata maturata in modo molto utile. Inoltre, C# è strettamente associato a un'intera infrastruttura di programmazione denominata .NET, che fornisce il supporto per Math, debug, Reflection, raccolte, globalizzazione, I/O di file, rete, sicurezza, Threading, servizi Web, gestione dei dati, e la lettura e la scrittura di XML e JSON.
 
-Novell fornisce attualmente strumenti per la destinazione delle API Mac, iOS e Android Native usando C# e .NET. Questi strumenti sono denominati Xamarin.Mac, Xamarin.iOS e Xamarin.Android, collettivamente noti come piattaforma Novell. Si tratta di librerie e associazioni che esprimono le API native di queste piattaforme con idiomi .NET.
+Xamarin fornisce attualmente strumenti per la destinazione delle API Mac, iOS e Android Native usando C# e .NET. Questi strumenti sono denominati Xamarin.Mac, Xamarin.iOS e Xamarin.Android, collettivamente noti come piattaforma Xamarin. Si tratta di librerie e associazioni che esprimono le API native di queste piattaforme con idiomi .NET.
 
-Gli sviluppatori possono usare la piattaforma Novell per scrivere applicazioni C# in destinate a Mac, iOS o Android. Tuttavia, quando si fa riferimento a più di una piattaforma, è molto utile condividere parte del codice tra le piattaforme di destinazione. Questa operazione comporta la separazione del programma in codice dipendente dalla piattaforma (che in genere interessa l'interfaccia utente) e il codice indipendente dalla piattaforma, che in genere richiede solo .NET Framework di base. Questo codice indipendente dalla piattaforma può trovarsi in una libreria di classi portabile (PCL) o in un progetto condiviso, spesso denominato progetto asset condiviso o SAP.
+Gli sviluppatori possono usare la piattaforma Xamarin per scrivere applicazioni C# in destinate a Mac, iOS o Android. Tuttavia, quando si fa riferimento a più di una piattaforma, è molto utile condividere parte del codice tra le piattaforme di destinazione. Questa operazione comporta la separazione del programma in codice dipendente dalla piattaforma (che in genere interessa l'interfaccia utente) e il codice indipendente dalla piattaforma, che in genere richiede solo .NET Framework di base. Questo codice indipendente dalla piattaforma può trovarsi in una libreria di classi portabile (PCL) o in un progetto condiviso, spesso denominato progetto asset condiviso o SAP.
 
 > [!NOTE]
 > Le librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio del libro è stato convertito in modo da usare le librerie .NET standard.
@@ -73,9 +73,9 @@ Anche se Xamarin.Forms è un'ottima soluzione per le applicazioni line-of-busine
 
 L'ambiente di sviluppo dipende dalle piattaforme di destinazione e dai computer che si vuole usare.
 
-Se si vuole usare iOS come destinazione, sarà necessario un Mac con Xcode e la piattaforma Novell installata. Per supportare Android è necessario installare anche Java e gli SDK necessari. È quindi possibile fare riferimento a iOS e Android usando Visual Studio per Mac.
+Se si vuole usare iOS come destinazione, sarà necessario un Mac con Xcode e la piattaforma Xamarin installata. Per supportare Android è necessario installare anche Java e gli SDK necessari. È quindi possibile fare riferimento a iOS e Android usando Visual Studio per Mac.
 
-L'installazione di Visual Studio consente al PC di fare riferimento a iOS, Android e a tutte le piattaforme Windows. Tuttavia, la destinazione di iOS da Visual Studio richiede ancora un Mac con Xcode e la piattaforma Novell installata.
+L'installazione di Visual Studio consente al PC di fare riferimento a iOS, Android e a tutte le piattaforme Windows. Tuttavia, la destinazione di iOS da Visual Studio richiede ancora un Mac con Xcode e la piattaforma Xamarin installata.
 
 È possibile testare i programmi in un dispositivo effettivo connesso tramite USB al computer o in un simulatore.
 
@@ -83,7 +83,7 @@ L'installazione di Visual Studio consente al PC di fare riferimento a iOS, Andro
 
 Prima di creare e compilare un'applicazione Xamarin.Forms, è consigliabile provare a creare e compilare separatamente un'applicazione iOS, un'applicazione Android e un'applicazione UWP, a seconda delle piattaforme di destinazione e dell'ambiente di sviluppo.
 
-Il Novell e i siti Web Microsoft contengono informazioni su come eseguire questa operazione:
+Il Xamarin e i siti Web Microsoft contengono informazioni su come eseguire questa operazione:
 
 - [Introduzione con iOS](~/ios/get-started/index.md)
 - [Introduzione con Android](~/android/get-started/index.md)

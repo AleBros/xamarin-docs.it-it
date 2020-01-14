@@ -35,7 +35,7 @@ Integrare Hub di notifica di Azure in app per dispositivi mobili attenendosi all
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Configurare Notification Services push e hub di notifica di Azure
 
-L'integrazione di hub di notifica di Azure con un'app per dispositivi mobili Xamarin.Forms è simile all'integrazione di hub di notifica di Azure con un'applicazione Novell nativa. Configurare un' **applicazione FCM** attenendosi alla procedura della console Firebase in [notifiche push a Xamarin.Android usando hub di notifica di Azure](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging). Completare i passaggi seguenti usando l'esercitazione su Xamarin.Android:
+L'integrazione di hub di notifica di Azure con un'app per dispositivi mobili Xamarin.Forms è simile all'integrazione di hub di notifica di Azure con un'applicazione Xamarin nativa. Configurare un' **applicazione FCM** attenendosi alla procedura della console Firebase in [notifiche push a Xamarin.Android usando hub di notifica di Azure](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging). Completare i passaggi seguenti usando l'esercitazione su Xamarin.Android:
 
 1. Definire un nome di pacchetto Android, ad esempio `com.xamarin.notifysample`, che viene usato nell'esempio.
 1. Scaricare **Google-Services. JSON** dalla console di Firebase. Questo file verrà aggiunto all'applicazione Android in un passaggio successivo.

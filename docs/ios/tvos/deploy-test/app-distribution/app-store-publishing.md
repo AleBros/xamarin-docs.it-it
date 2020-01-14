@@ -1,6 +1,6 @@
 ---
 title: Pubblicazione in Apple TV App Store
-description: Questo documento descrive come pubblicare un'app nell'App Store di Apple TV. Viene illustrato come configurare, effettuare il provisioning, compilare e inviare un'applicazione tvOS compilata con Novell.
+description: Questo documento descrive come pubblicare un'app nell'App Store di Apple TV. Viene illustrato come configurare, effettuare il provisioning, compilare e inviare un'applicazione tvOS compilata con Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios

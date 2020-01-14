@@ -30,7 +30,7 @@ Questa guida illustra come aggiungere il pacchetto di `CardView` al progetto Xam
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare le nuove funzionalità di Android 5,0 e versioni successive (incluso `CardView`) nelle app basate su Novell, è necessario quanto segue:
+Per usare le nuove funzionalità di Android 5,0 e versioni successive (incluso `CardView`) nelle app basate su Xamarin, è necessario quanto segue:
 
 - **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
@@ -44,7 +44,7 @@ L'app deve includere anche il pacchetto di `Xamarin.Android.Support.v7.CardView`
 
 2. Nella finestra di dialogo **Aggiungi pacchetti** cercare **CardView**.
 
-3. Selezionare la **libreria di supporto Novell V7 CardView**e quindi fare clic su **Aggiungi pacchetto**.
+3. Selezionare la **libreria di supporto Xamarin V7 CardView**e quindi fare clic su **Aggiungi pacchetto**.
 
 Per aggiungere il pacchetto di `Xamarin.Android.Support.v7.CardView` in Visual Studio:
 
@@ -52,7 +52,7 @@ Per aggiungere il pacchetto di `Xamarin.Android.Support.v7.CardView` in Visual S
 
 2. Quando viene visualizzata la finestra di dialogo **Gestisci pacchetti NuGet** , immettere **CardView** nella casella di ricerca.
 
-3. Quando viene visualizzata la **libreria di supporto Novell V7 CardView** , fare clic su **Installa**.
+3. Quando viene visualizzata la **libreria di supporto Xamarin V7 CardView** , fare clic su **Installa**.
 
 Per informazioni su come configurare un progetto di app Android 5,0, vedere [configurazione di un progetto android 5,0](~/android/platform/lollipop.md).
 Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).

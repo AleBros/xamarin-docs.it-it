@@ -1,6 +1,6 @@
 ---
 title: Panoramica dell'API Xamarin.iOS
-description: Questo documento contiene i collegamenti alla documentazione di riferimento dell'API Novell, una guida che descrive la progettazione dell'API Xamarin.iOS e un elenco di assembly disponibili per l'uso nello sviluppo di Novell.
+description: Questo documento contiene i collegamenti alla documentazione di riferimento dell'API Xamarin, una guida che descrive la progettazione dell'API Xamarin.iOS e un elenco di assembly disponibili per l'uso nello sviluppo di Xamarin.
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios

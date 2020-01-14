@@ -178,7 +178,7 @@ Nota: il test del contenuto di acquisto in-app ospitato nel simulatore iOS non �
 
 ### <a name="hosted-content-basics"></a>Nozioni di base sul contenuto ospitato
 
-Prima di iOS 6, erano disponibili due modi per fornire un prodotto (descritto più dettagliatamente nella documentazione di [acquisto in-app di Novell](~/ios/platform/in-app-purchasing/index.md) ):
+Prima di iOS 6, erano disponibili due modi per fornire un prodotto (descritto più dettagliatamente nella documentazione di [acquisto in-app di Xamarin](~/ios/platform/in-app-purchasing/index.md) ):
 
 - **Prodotti predefiniti** : funzionalità che vengono sbloccate acquistando, ma che sono compilate nell'applicazione (codice o risorse incorporate). Esempi di prodotti incorporati includono filtri foto sbloccati o Power-up in gioco.
 - **Prodotti distribuiti dal server** : dopo l'acquisto, l'applicazione deve scaricare il contenuto da un server in uso. Questo contenuto viene scaricato durante l'acquisto, archiviato nel dispositivo e quindi sottoposto a rendering come parte del prodotto. Gli esempi includono libri, problemi di riviste o livelli di gioco costituiti da file di configurazione e arte di sfondo.

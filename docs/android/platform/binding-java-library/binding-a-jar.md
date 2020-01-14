@@ -22,13 +22,13 @@ _Questa procedura dettagliata include istruzioni dettagliate per la creazione di
 
 La community Android offre molte librerie Java che è possibile usare nell'app. Queste librerie Java sono spesso impacchettate in. Formato JAR (Java Archive), ma è possibile creare il pacchetto a. JAR it in una *libreria di binding Java* in modo che la relativa funzionalità sia disponibile per le app Xamarin.Android. Lo scopo della libreria dei binding Java è quello di rendere le API in. File JAR disponibile per C# il codice tramite wrapper di codice generati automaticamente.
 
-Gli strumenti Novell possono generare una libreria di binding da uno o più input. File JAR. Libreria di binding (. Assembly DLL) contiene gli elementi seguenti: 
+Gli strumenti Xamarin possono generare una libreria di binding da uno o più input. File JAR. Libreria di binding (. Assembly DLL) contiene gli elementi seguenti: 
 
 - Contenuto dell'oggetto originale. File JAR.
 
 - Gestiti Callable Wrapper (MCW), che sono C# tipi che eseguono il wrapping dei tipi Java corrispondenti all'interno di. File JAR.
 
-Il codice MCW generato USA JNI (Java Native Interface) per inviare le chiamate API all'oggetto sottostante. File JAR. È possibile creare librerie di binding per qualsiasi. File JAR originariamente destinato a essere usato con Android (si noti che gli strumenti Novell attualmente non supportano l'associazione di librerie Java non Android). È inoltre possibile scegliere di compilare la libreria dei binding senza includere il contenuto di. File JAR in modo che la DLL abbia una dipendenza da. JAR in fase di esecuzione.
+Il codice MCW generato USA JNI (Java Native Interface) per inviare le chiamate API all'oggetto sottostante. File JAR. È possibile creare librerie di binding per qualsiasi. File JAR originariamente destinato a essere usato con Android (si noti che gli strumenti Xamarin attualmente non supportano l'associazione di librerie Java non Android). È inoltre possibile scegliere di compilare la libreria dei binding senza includere il contenuto di. File JAR in modo che la DLL abbia una dipendenza da. JAR in fase di esecuzione.
 
 In questa guida verranno illustrate le nozioni di base per la creazione di una libreria di binding per un singolo. File JAR. Verrà illustrato un esempio in cui tutto va bene &ndash; ovvero, in cui non è richiesta alcuna personalizzazione o debug delle associazioni. 
 La [creazione di associazioni usando i metadati](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) offre un esempio di scenario più avanzato in cui il processo di associazione non è completamente automatico e è necessaria una certa quantità di intervento manuale. Per una panoramica dell'associazione di librerie Java in generale (con un esempio di codice di base), vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md). 

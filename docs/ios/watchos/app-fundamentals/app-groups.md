@@ -1,5 +1,5 @@
 ---
-title: Uso dei gruppi di app watchos in Novell
+title: Uso dei gruppi di app watchos in Xamarin
 description: Questo documento descrive i gruppi di app e il relativo uso in un'applicazione watchos. Viene descritto come configurare un gruppo di app, i requisiti di provisioning, i diritti e le considerazioni su plist e la distribuzione.
 ms.prod: xamarin
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001705"
 ---
-# <a name="working-with-watchos-app-groups-in-xamarin"></a>Uso dei gruppi di app watchos in Novell
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Uso dei gruppi di app watchos in Xamarin
 
 Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso. È possibile usare i Gruppi di app per dati quali:
 

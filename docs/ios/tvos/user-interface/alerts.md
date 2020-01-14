@@ -1,6 +1,6 @@
 ---
-title: Uso degli avvisi tvOS in Novell
-description: Questo documento descrive come usare gli avvisi di tvOS in Novell. Viene illustrata la visualizzazione di un avviso, l'aggiunta di campi di testo e una classe helper.
+title: Uso degli avvisi tvOS in Xamarin
+description: Questo documento descrive come usare gli avvisi di tvOS in Xamarin. Viene illustrata la visualizzazione di un avviso, l'aggiunta di campi di testo e una classe helper.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030510"
 ---
-# <a name="working-with-tvos-alerts-in-xamarin"></a>Uso degli avvisi tvOS in Novell
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Uso degli avvisi tvOS in Xamarin
 
 _Questo articolo illustra l'uso di UIAlertController per visualizzare un messaggio di avviso all'utente in Xamarin.tvOS._
 

@@ -68,7 +68,7 @@ public class TextCounter
 
 Questa app di esempio, inoltre, recupererà e visualizzerà una risorsa immagine composta in un pacchetto in **textanalyzer. AAR**:
 
-[immagine di ![Monkey Novell](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
+[immagine di ![Monkey Xamarin](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 Questa risorsa immagine si trova in **res/disegnatore/Monkey. png** in **textanalyzer. AAR**.
 
@@ -254,7 +254,7 @@ Provare a toccare il pulsante per il **conteggio delle consonanti** . Inoltre, �
 
 ### <a name="accessing-aar-resources"></a>Accesso. Risorse AAR
 
-Gli strumenti Novell uniscono i dati **R** da. AAR nella classe di **risorse** dell'app. Di conseguenza, è possibile accedere a. Le risorse AAR dal layout (e dal code-behind) nello stesso modo in cui si accede alle risorse presenti nel percorso delle **risorse** del progetto.
+Gli strumenti Xamarin uniscono i dati **R** da. AAR nella classe di **risorse** dell'app. Di conseguenza, è possibile accedere a. Le risorse AAR dal layout (e dal code-behind) nello stesso modo in cui si accede alle risorse presenti nel percorso delle **risorse** del progetto.
 
 Per accedere a una risorsa immagine, è possibile usare il nome **Resource. disegnatore** per l'immagine compressa all'interno di. Aar. Ad esempio, è possibile fare riferimento a **Image. png** in. File AAR usando `@drawable/image`:
 

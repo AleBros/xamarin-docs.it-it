@@ -307,7 +307,7 @@ Dopo aver completato questi passaggi e aver eseguito l'applicazione, facendo cli
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Creazione di app per dispositivi mobili in tempo reale con Novell e SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Creazione di app per dispositivi mobili in tempo reale con Xamarin e SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
 * [Introduzione a SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introduzione alle funzioni di Azure](/azure/azure-functions/functions-overview)
 * [Documentazione di Funzioni di Azure](/azure/azure-functions/)

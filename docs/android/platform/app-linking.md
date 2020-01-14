@@ -40,7 +40,7 @@ Questa guida illustra come configurare un'applicazione Android 6,0 e come creare
 
 Questa guida richiede Xamarin.Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
 
-Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Novell. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
+Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Xamarin. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
 
 ## <a name="configuring-app-linking-in-android-60"></a>Configurazione del collegamento di app in Android 6,0
 

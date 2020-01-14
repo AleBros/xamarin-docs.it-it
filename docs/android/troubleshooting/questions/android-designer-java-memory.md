@@ -18,7 +18,7 @@ ms.locfileid: "73027052"
 
 I parametri di memoria predefiniti usati quando si avvia il processo di `java` per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema.
 
-A partire da Xamarin Studio 5.7.2.7 (e versioni successive, Visual Studio per Mac) e Strumenti di Visual Studio per Novell 3.9.344, queste impostazioni possono essere personalizzate in base al progetto.
+A partire da Xamarin Studio 5.7.2.7 (e versioni successive, Visual Studio per Mac) e Strumenti di Visual Studio per Xamarin 3.9.344, queste impostazioni possono essere personalizzate in base al progetto.
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Nuove proprietà di Android designer e corrispondenti opzioni Java
 

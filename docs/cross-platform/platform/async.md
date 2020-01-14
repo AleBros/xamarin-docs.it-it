@@ -15,9 +15,9 @@ ms.locfileid: "75488881"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
-_C#5 sono state introdotte due parole chiave per semplificare la programmazione asincrona: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Xamarin.iOS e Xamarin.Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell._
+_C#5 sono state introdotte due parole chiave per semplificare la programmazione asincrona: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Xamarin.iOS e Xamarin.Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin._
 
-Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
+Il supporto asincrono di Xamarin è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
 
 ## <a name="overview"></a>Panoramica di
 
@@ -29,7 +29,7 @@ L'applicazione di esempio esegue una semplice richiesta Web asincrona (senza blo
 
  [![](async-images/AsyncAwait_427x368.png "The sample application makes a simple asynchronous web request without blocking the main thread then updates the UI with the downloaded html and character count")](async-images/AsyncAwait.png#lightbox)
 
-Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
+Il supporto asincrono di Xamarin è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
 
 ## <a name="requirements"></a>Requisiti di
 
@@ -89,7 +89,7 @@ Per altre informazioni sull'annullamento, vedere [Ottimizzazione dell'app asincr
 
 ## <a name="example"></a>Esempio
 
-Scaricare la [soluzione Novell di esempio](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (per iOS e Android) per vedere un esempio funzionante di `async` e `await` nelle app per dispositivi mobili. Il codice di esempio viene illustrato più dettagliatamente in questa sezione.
+Scaricare la [soluzione Xamarin di esempio](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (per iOS e Android) per vedere un esempio funzionante di `async` e `await` nelle app per dispositivi mobili. Il codice di esempio viene illustrato più dettagliatamente in questa sezione.
 
 ### <a name="writing-an-async-method"></a>Scrittura di un metodo asincrono
 

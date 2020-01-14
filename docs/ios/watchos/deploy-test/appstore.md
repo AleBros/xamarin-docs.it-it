@@ -1,6 +1,6 @@
 ---
 title: Distribuzione delle app watchos nell'App Store
-description: Questo documento descrive come distribuire le app watchos compilate con Novell nell'App Store. Vengono esaminati i profili di provisioning della distribuzione e iTunes Connect, oltre ad alcuni suggerimenti per la risoluzione dei problemi.
+description: Questo documento descrive come distribuire le app watchos compilate con Xamarin nell'App Store. Vengono esaminati i profili di provisioning della distribuzione e iTunes Connect, oltre ad alcuni suggerimenti per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
@@ -108,7 +108,7 @@ Devono essere 312x390 pixel e dimostrare l'app Watch in azione.
 
 Xcode mostrerà automaticamente gli archivi creati in Visual Studio per Mac.
 
-1. Avviare Xcode e scegliere **finestra libreria >**:
+1. Avviare Xcode e scegliere **finestra libreria >** :
 
    ![](appstore-images/xc-organizer.png "The Window menu")
 
@@ -172,7 +172,7 @@ Missing Icon. The watch application '...watchkitextension.appex/WatchApp.app'
 is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 ```
 
-Assicurarsi di disporre della versione più recente di Visual Studio per Mac e che **AppIcon. appiconset** contenga un set completo di immagini. Se questo errore viene ancora visualizzato, visualizzare l'origine del file **Contents. JSON** per confermare che contiene una voce per tutte le immagini obbligatorie. In alternativa, dopo aver verificato che si sta usando la versione più recente di Novell, eliminare e ricreare **AppIcon. appiconset**.
+Assicurarsi di disporre della versione più recente di Visual Studio per Mac e che **AppIcon. appiconset** contenga un set completo di immagini. Se questo errore viene ancora visualizzato, visualizzare l'origine del file **Contents. JSON** per confermare che contiene una voce per tutte le immagini obbligatorie. In alternativa, dopo aver verificato che si sta usando la versione più recente di Xamarin, eliminare e ricreare **AppIcon. appiconset**.
 
 > [!IMPORTANT]
 > È presente un bug noto nel supporto dell'icona del controllo Visual Studio per Mac: prevede un'immagine di pixel 88x88 per l'immagine **29x29@3x** (che deve essere 87x87 pixel).
@@ -193,7 +193,7 @@ Ensure you are using the latest version of Xcode and Xamarin's tools.
 > [!IMPORTANT]
 > È necessario **archiviare** l'app in Visual Studio per Mac, quindi passare a Xcode 6.2 + per convalidare e caricare in iTunes Connect.
 
-Usare il canale Novell stabile e Xcode 6.2 +.
+Usare il canale Xamarin stabile e Xcode 6.2 +.
 
 ### <a name="invalid-provisioning-profile"></a>Profilo di provisioning non valido
 
@@ -243,7 +243,7 @@ Your app contains non-public API usage.
 Please review the errors, and resubmit your application.
 ```
 
-Assicurarsi di usare la versione più recente degli strumenti di Xcode e Novell.
+Assicurarsi di usare la versione più recente degli strumenti di Xcode e Xamarin.
 Il codice non deve accedere ad alcuna API non pubblica.
 
 ### <a name="build-error-mt5309"></a>Errore di compilazione MT5309

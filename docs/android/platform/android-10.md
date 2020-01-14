@@ -12,7 +12,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73612275"
 ---
-# <a name="android-10-with-xamarin"></a>Android 10 con Novell
+# <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
 _Come iniziare a sviluppare app per Android 10 con Xamarin.Android._
 
@@ -26,7 +26,7 @@ Xamarin.Android 10,0 fornisce supporto per Android 10. Per ulteriori informazion
 
 ## <a name="requirements"></a>Requisiti
 
-L'elenco seguente è necessario per usare le funzionalità di Android 10 nelle app basate su Novell:
+L'elenco seguente è necessario per usare le funzionalità di Android 10 nelle app basate su Xamarin:
 
 - **Visual Studio** : visual studio 2019 è consigliato. In Windows Update per Visual Studio 2019 versione 16,3 o successiva. In macOS eseguire l'aggiornamento a Visual Studio 2019 per Mac versione 8,3 o successiva.
 - **Xamarin.Android** : Xamarin.Android 10,0 o versione successiva deve essere installato con Visual Studio (Xamarin.Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** in Windows e installato come parte del **programma di installazione di Visual Studio per Mac**)
@@ -51,7 +51,7 @@ Ognuno di questi passaggi è illustrato di seguito:
 
 ### <a name="update-visual-studio"></a>Aggiornare Visual Studio
 
-Visual Studio 2019 è consigliato per la creazione di app Android 10 con Novell.
+Visual Studio 2019 è consigliato per la creazione di app Android 10 con Xamarin.
 
 Se si usa Visual Studio 2019, eseguire l'aggiornamento a Visual Studio 2019 versione 16,3 o successiva. per istruzioni, vedere [aggiornare Visual studio 2019 alla versione più recente](https://docs.microsoft.com/visualstudio/install/update-visual-studio). In macOS eseguire l'aggiornamento a Visual Studio 2019 per Mac 8,3 o versione successiva. per istruzioni, vedere [aggiornare Visual studio 2019 per Mac alla versione più recente](https://docs.microsoft.com/visualstudio/mac/update).
 
@@ -70,7 +70,7 @@ Per creare un progetto con Xamarin.Android 10,0, è necessario prima di tutto us
 
 ### <a name="create-a-xamarinandroid-project"></a>Creare un progetto Xamarin.Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) per altre informazioni sulla creazione di progetti Xamarin.Android.
+Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Xamarin, vedere [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) per altre informazioni sulla creazione di progetti Xamarin.Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 10,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 10, è necessario configurare il livello API Android di destinazione del progetto su **android 10,0 (API 29)** . Sono incluse sia la **versione del Framework di destinazione** che la **Android SDK di destinazione** per l'API 29 o versioni successive. Per altre informazioni sulla configurazione dei livelli API Android, vedere [informazioni sui livelli di API Android.](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)
 

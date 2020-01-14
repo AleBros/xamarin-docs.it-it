@@ -1,6 +1,6 @@
 ---
 title: Modifiche ai Framework di watchos 3 aggiuntivi
-description: Questo documento descrive le varie modifiche del Framework introdotte con watchos 3 e come usarle in Novell. Vengono illustrati i dati di base, Motion core, Foundation, HealthKit, HomeKit, PassKit e UIKit.
+description: Questo documento descrive le varie modifiche del Framework introdotte con watchos 3 e come usarle in Xamarin. Vengono illustrati i dati di base, Motion core, Foundation, HealthKit, HomeKit, PassKit e UIKit.
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios

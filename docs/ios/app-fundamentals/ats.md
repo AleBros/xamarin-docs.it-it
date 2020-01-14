@@ -81,7 +81,7 @@ Il livello TLS è controllato dal servizio Web che si sta utilizzando ed è quin
 A seconda del server a cui si sta parlando, soprattutto se si tratta di un servizio di terze parti, potrebbe essere necessario disabilitare la riservatezza in avanti o selezionare un livello TLS più basso. Per altri dettagli, vedere la sezione relativa alla [configurazione delle opzioni ATS](#configuring-ats-options) di seguito.
 
 > [!IMPORTANT]
-> La sicurezza del trasporto delle app non si applica alle app Novell che usano **implementazioni HTTPClient gestite**. Si applica alle connessioni usando solo **implementazioni CFNetwork HTTPClient** o solo **implementazioni NSURLSession HTTPClient** .
+> La sicurezza del trasporto delle app non si applica alle app Xamarin che usano **implementazioni HTTPClient gestite**. Si applica alle connessioni usando solo **implementazioni CFNetwork HTTPClient** o solo **implementazioni NSURLSession HTTPClient** .
 
 ### <a name="setting-the-httpclient-implementation"></a>Impostazione dell'implementazione di HTTPClient
 
@@ -95,7 +95,7 @@ Il gestore gestito è il gestore HttpClient completamente gestito che è stato f
 
 I professionisti
 
-- È il più compatibile con Microsoft .NET e la versione precedente di Novell.
+- È il più compatibile con Microsoft .NET e la versione precedente di Xamarin.
 
 Svantaggi
 
@@ -142,7 +142,7 @@ In iOS9, la sicurezza del trasporto app (ATS) applica connessioni sicure tra le 
 
 Poiché ATS è abilitato per impostazione predefinita nelle app compilate per iOS 9 e OS X 10,11 (El Capitan), tutte le connessioni che usano `NSURLConnection`, `CFURL` o `NSURLSession` saranno soggette ai requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, avranno esito negativo con un'eccezione.
 
-Apple fornisce anche l' [app di esempio TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) che può essere compilata (o eventualmente transcodificata in C#Novell e) e usata per diagnosticare i problemi di ATS/TLS. Per informazioni su come risolvere il problema, vedere la sezione relativa alla disattivazione [di ATS riportata di](#optout) seguito.
+Apple fornisce anche l' [app di esempio TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) che può essere compilata (o eventualmente transcodificata in C#Xamarin e) e usata per diagnosticare i problemi di ATS/TLS. Per informazioni su come risolvere il problema, vedere la sezione relativa alla disattivazione [di ATS riportata di](#optout) seguito.
 
 <a name="config" />
 

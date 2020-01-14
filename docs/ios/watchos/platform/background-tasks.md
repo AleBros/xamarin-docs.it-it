@@ -1,6 +1,6 @@
 ---
-title: Attività in background di watchos in Novell
-description: Questo documento descrive come usare le attività in background con watchos in Novell, esaminando i tipi di attività in background, usando le risorse, implementando attività in background, pianificazione, procedure consigliate e altro ancora.
+title: Attività in background di watchos in Xamarin
+description: Questo documento descrive come usare le attività in background con watchos in Xamarin, esaminando i tipi di attività in background, usando le risorse, implementando attività in background, pianificazione, procedure consigliate e altro ancora.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028326"
 ---
-# <a name="watchos-background-tasks-in-xamarin"></a>Attività in background di watchos in Novell
+# <a name="watchos-background-tasks-in-xamarin"></a>Attività in background di watchos in Xamarin
 
 Con watchos 3, è possibile tenere aggiornate le informazioni di un'app Watch in tre modi principali: 
 
@@ -695,7 +695,7 @@ Apple presenta i suggerimenti seguenti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i miglioramenti apportati da Apple a watchos e come è possibile usarli per tenere aggiornata l'app Watch. In primo luogo, è stata analizzata tutta la nuova attività in background aggiunta da Apple in watchos 3. È stato quindi trattato il ciclo di vita dell'API in background e come implementare le attività in background in un'app Novell watchos. Infine, ha illustrato il funzionamento della pianificazione e alcune procedure consigliate.
+Questo articolo ha illustrato i miglioramenti apportati da Apple a watchos e come è possibile usarli per tenere aggiornata l'app Watch. In primo luogo, è stata analizzata tutta la nuova attività in background aggiunta da Apple in watchos 3. È stato quindi trattato il ciclo di vita dell'API in background e come implementare le attività in background in un'app Xamarin watchos. Infine, ha illustrato il funzionamento della pianificazione e alcune procedure consigliate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

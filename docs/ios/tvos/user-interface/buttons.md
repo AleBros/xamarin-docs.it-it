@@ -1,6 +1,6 @@
 ---
-title: Uso dei pulsanti tvOS in Novell
-description: Questo documento descrive come usare i pulsanti in un'app tvOS compilata con Novell. Viene illustrato come utilizzare i pulsanti nel codice e negli storyboard ed esamina come applicare uno stile a un pulsante.
+title: Uso dei pulsanti tvOS in Xamarin
+description: Questo documento descrive come usare i pulsanti in un'app tvOS compilata con Xamarin. Viene illustrato come utilizzare i pulsanti nel codice e negli storyboard ed esamina come applicare uno stile a un pulsante.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030482"
 ---
-# <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Novell
+# <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Xamarin
 
 Utilizzare un'istanza della classe `UIButton` per creare un pulsante selezionabile attivabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione all'oggetto di destinazione Consenti all'app Xamarin.tvOS di rispondere all'input dell'utente.
 

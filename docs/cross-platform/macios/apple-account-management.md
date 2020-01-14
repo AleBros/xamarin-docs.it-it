@@ -27,7 +27,7 @@ La finestra di dialogo account Apple consente di eseguire le operazioni seguenti
 Informazioni su come eseguire questa operazione sono descritte in questa guida.
 
 > [!NOTE]
-> Gli strumenti di Novell per la gestione degli account Apple visualizzano solo le informazioni sugli account per sviluppatori Apple a pagamento. Per informazioni su come testare un'app in un dispositivo senza un account per sviluppatore Apple a pagamento, vedere la Guida [relativa al provisioning gratuito per le app Xamarin.iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
+> Gli strumenti di Xamarin per la gestione degli account Apple visualizzano solo le informazioni sugli account per sviluppatori Apple a pagamento. Per informazioni su come testare un'app in un dispositivo senza un account per sviluppatore Apple a pagamento, vedere la Guida [relativa al provisioning gratuito per le app Xamarin.iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
 È anche possibile usare gli strumenti di provisioning automatico di iOS per creare e gestire automaticamente le identità di firma, gli ID app e i profili di provisioning. Per altre informazioni sull'uso di queste funzionalità, vedere la guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
@@ -72,7 +72,7 @@ Per usare questa funzionalità, è necessario disporre di un account per svilupp
 
 1. Prima di iniziare ad aggiungere l'ID Apple a Visual Studio 2019, assicurarsi che l'ambiente di sviluppo sia associato [a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Per aprire la finestra Gestione account, passare a **strumenti > opzioni > novell > account Apple**:
+1. Per aprire la finestra Gestione account, passare a **strumenti > opzioni > Xamarin > account Apple**:
 
     ![Schermata delle opzioni degli account Apple](apple-account-management-images/prov1.png)
 

@@ -18,7 +18,7 @@ ms.locfileid: "73027030"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-In Visual Studio passare a **strumenti > opzioni > novell > le impostazioni Android** per visualizzare e impostare il percorso Android SDK:
+In Visual Studio passare a **strumenti > opzioni > Xamarin > le impostazioni Android** per visualizzare e impostare il percorso Android SDK:
 
 [![scheda percorsi di esempio in Preferenze](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
@@ -63,6 +63,6 @@ Il percorso predefinito per ogni percorso è il seguente:
 
 Si noti che il numero di versione di NDK può variare. Ad esempio, anziché **Android-NDK-r14b**, potrebbe trattarsi di una versione precedente, ad esempio **Android-NDK-r10e**.
 
-Per impostare il percorso di Android SDK, immettere il percorso completo della directory Android SDK nella casella **Android SDK percorso** . È possibile selezionare la cartella Android SDK nel Finder, premere **&#8984;CTRL + + I** per visualizzare le informazioni sulla cartella, fare clic e trascinare il percorso a destra di **Where:**, copy, quindi incollarlo nella casella **Android SDK location** nella scheda **locations (percorsi** ). Se ad esempio il percorso del Android SDK è **~/Library/Developer/Android/SDK**, deselezionare il percorso precedente nella casella percorso **Android SDK** , incollare il percorso e fare clic su **OK**.
+Per impostare il percorso di Android SDK, immettere il percorso completo della directory Android SDK nella casella **Android SDK percorso** . È possibile selezionare la cartella Android SDK nel Finder, premere **&#8984;CTRL + + I** per visualizzare le informazioni sulla cartella, fare clic e trascinare il percorso a destra di **Where:** , copy, quindi incollarlo nella casella **Android SDK location** nella scheda **locations (percorsi** ). Se ad esempio il percorso del Android SDK è **~/Library/Developer/Android/SDK**, deselezionare il percorso precedente nella casella percorso **Android SDK** , incollare il percorso e fare clic su **OK**.
 
 -----

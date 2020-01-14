@@ -107,7 +107,7 @@ L'utilizzo di spazi dei nomi per separare i livelli consente di gestire i riferi
 
 Le librerie di classi portabili devono essere utilizzabili su più piattaforme, ognuna con diversi livelli di supporto per le funzionalità della piattaforma e del Framework. Per questo motivo, esistono alcune limitazioni per i pacchetti e le librerie di Framework che è possibile usare. Ad esempio, Xamarin.iOS non supporta la parola chiave `dynamic` c#, pertanto una libreria di classi portabile non può usare alcun pacchetto che dipende dal codice dinamico, anche se tale codice funziona in Android. Visual Studio per Mac impedisce di aggiungere i pacchetti e i riferimenti incompatibili, ma è opportuno tenere presenti le limitazioni per evitare le sorprese in un secondo momento.
 
-Nota: si noterà che i progetti fanno riferimento a librerie di Framework che non sono state usate. Questi riferimenti sono inclusi come parte dei modelli di progetto Novell. Quando le app vengono compilate, il processo di collegamento rimuoverà il codice senza riferimenti, quindi anche se `System.Xml` è stato fatto riferimento, non verrà incluso nell'applicazione finale perché non vengono utilizzate funzioni XML.
+Nota: si noterà che i progetti fanno riferimento a librerie di Framework che non sono state usate. Questi riferimenti sono inclusi come parte dei modelli di progetto Xamarin. Quando le app vengono compilate, il processo di collegamento rimuoverà il codice senza riferimenti, quindi anche se `System.Xml` è stato fatto riferimento, non verrà incluso nell'applicazione finale perché non vengono utilizzate funzioni XML.
 
  <a name="Data_Layer_(DL)" />
 
@@ -389,7 +389,7 @@ Analogamente alla versione di iOS esaminata in precedenza, il livello dell'appli
 
 Il livello dell'interfaccia utente dell'app Android è costituito da una combinazione di codice e markup XML.
 
-- **Risorse/layout** : layout dello schermo e progettazione di celle di riga implementati come file AXML. I AXML possono essere scritti manualmente o disposti visivamente con la finestra di progettazione dell'interfaccia utente di Novell per Android.
+- **Risorse/layout** : layout dello schermo e progettazione di celle di riga implementati come file AXML. I AXML possono essere scritti manualmente o disposti visivamente con la finestra di progettazione dell'interfaccia utente di Xamarin per Android.
 - **Risorse/disegnatore** : immagini (icone) e pulsante personalizzato.
 - **Schermate** : sottoclassi di attività che definiscono ogni schermata e il relativo comportamento. Combina l'interfaccia utente con le classi del livello dell'applicazione e l'API comune (`TaskItemManager`).
 

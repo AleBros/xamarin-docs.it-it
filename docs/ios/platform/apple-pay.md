@@ -50,7 +50,7 @@ Sono disponibili due opzioni:
 
 - **Stripe** : iscriversi a [stripe.com](https://stripe.com/) per accedere alle API.
 
-- **JudoPay** : vedere il [codice di esempio Novell su GitHub](https://github.com/Judopay/Xamarin-Sample-App)e registrarsi in [JudoPay.com](https://www.judopay.com/).
+- **JudoPay** : vedere il [codice di esempio Xamarin su GitHub](https://github.com/Judopay/Xamarin-Sample-App)e registrarsi in [JudoPay.com](https://www.judopay.com/).
 
 ## <a name="provisioning-for-apple-pay"></a>Provisioning per Apple Pay
 

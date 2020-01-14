@@ -24,13 +24,13 @@ Il diagramma seguente mostra una panoramica di base di questa architettura:
 
 ## <a name="native-and-managed-code-an-explanation"></a>Codice nativo e gestito: spiegazione
 
-Quando si sviluppa per Novell, vengono spesso usati i termini *nativi e codice gestito* . Il [codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice in cui l'esecuzione viene gestita dal [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)o nel caso di Novell: il runtime di mono. Questo è il cosiddetto linguaggio intermedio.
+Quando si sviluppa per Xamarin, vengono spesso usati i termini *nativi e codice gestito* . Il [codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice in cui l'esecuzione viene gestita dal [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)o nel caso di Xamarin: il runtime di mono. Questo è il cosiddetto linguaggio intermedio.
 
 Il codice nativo è codice che verrà eseguito in modalità nativa sulla piattaforma specifica, ad esempio Objective-C o anche codice compilato AOT, su un chip ARM. Questa guida illustra il modo in cui AOT compila il codice gestito in codice nativo e illustra il funzionamento di un'applicazione Xamarin.iOS, sfruttando al meglio le API iOS di Apple tramite l'uso di binding, pur avendo accesso a. BCL di NET e un linguaggio sofisticato, C#ad esempio.
 
 ## <a name="aot"></a>AOT
 
-Quando si compila un'applicazione della piattaforma Novell, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in MSIL (Microsoft Intermediate Language). Se si esegue un Xamarin.Android, un'applicazione Xamarin.Mac o anche un'applicazione Xamarin.iOS nel simulatore, [Common Language Runtime (CLR) di .NET](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL usando un compilatore just-in-time (JIT). In fase di esecuzione viene compilato in un codice nativo, che può essere eseguito nell'architettura corretta per l'applicazione.
+Quando si compila un'applicazione della piattaforma Xamarin, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in MSIL (Microsoft Intermediate Language). Se si esegue un Xamarin.Android, un'applicazione Xamarin.Mac o anche un'applicazione Xamarin.iOS nel simulatore, [Common Language Runtime (CLR) di .NET](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL usando un compilatore just-in-time (JIT). In fase di esecuzione viene compilato in un codice nativo, che può essere eseguito nell'architettura corretta per l'applicazione.
 
 Tuttavia, esiste una restrizione di sicurezza in iOS, impostata da Apple, che impedisce l'esecuzione di codice generato dinamicamente in un dispositivo.
 Per assicurarsi di rispettare questi protocolli di sicurezza, Xamarin.iOS usa invece un compilatore AOT (Ahead of Time) per compilare il codice gestito. Questo produce un file binario iOS nativo, ottimizzato facoltativamente con LLVM per i dispositivi, che può essere distribuito nel processore basato su ARM di Apple. Di seguito è illustrato un diagramma di approssimazione del modo in cui questo si integra.
@@ -43,7 +43,7 @@ Ora che è stata esaminata la modalità di compilazione del codice dal codice so
 
 ## <a name="selectors"></a>Selettori
 
-Con Novell sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API iOS native in Novell. Le associazioni sono illustrate in modo dettagliato nella documentazione di [binding di Objective-C](~/cross-platform/macios/binding/overview.md) , quindi per ora si analizzerà il funzionamento di iOS dietro le quinte.
+Con Xamarin sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API iOS native in Xamarin. Le associazioni sono illustrate in modo dettagliato nella documentazione di [binding di Objective-C](~/cross-platform/macios/binding/overview.md) , quindi per ora si analizzerà il funzionamento di iOS dietro le quinte.
 
 In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione eseguita tramite selettori. Un selettore è un messaggio inviato a un oggetto o a una classe. Con Objective-C questa operazione viene eseguita tramite le funzioni [objc_msgSend](~/cross-platform/macios/binding/overview.md) .
 Per ulteriori informazioni sull'utilizzo dei selettori, vedere la guida ai [selettori Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, vengono usati i *registrar*. Queste informazioni sono descritte più dettagliatamente nella sezione successiva.
@@ -107,7 +107,7 @@ Il punto di ingresso di tutti i file eseguibili Xamarin.iOS viene fornito da una
 
 A seconda del tipo di progetto, vengono eseguite le operazioni seguenti:
 
-- Per le normali applicazioni iOS e tvOS, viene chiamato il metodo Main gestito, fornito dall'app Novell. Questo metodo Main gestito chiama quindi `UIApplication.Main`, che è il punto di ingresso per Objective-C. UIApplication. Main è l'associazione per il metodo `UIApplicationMain` di Objective-C.
+- Per le normali applicazioni iOS e tvOS, viene chiamato il metodo Main gestito, fornito dall'app Xamarin. Questo metodo Main gestito chiama quindi `UIApplication.Main`, che è il punto di ingresso per Objective-C. UIApplication. Main è l'associazione per il metodo `UIApplicationMain` di Objective-C.
 - Per le estensioni, viene chiamata la funzione nativa, `NSExtensionMain` o (`NSExtensionmain` per le estensioni Watchos), fornita dalle librerie Apple. Poiché si tratta di progetti di librerie di classi e non eseguibili, non sono disponibili metodi Main gestiti da eseguire.
 
 Tutta questa sequenza di avvio viene compilata in una libreria statica, che viene quindi collegata all'eseguibile finale in modo che l'app sappia come uscire da zero.

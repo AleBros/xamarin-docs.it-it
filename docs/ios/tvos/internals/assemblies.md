@@ -1,6 +1,6 @@
 ---
-title: Assembly supportati da Novell per tvOS
-description: Per chiarire le funzionalità disponibili per le applicazioni tvOS, questo documento fornisce un elenco di assembly supportati da Novell per lo sviluppo di tvOS.
+title: Assembly supportati da Xamarin per tvOS
+description: Per chiarire le funzionalità disponibili per le applicazioni tvOS, questo documento fornisce un elenco di assembly supportati da Xamarin per lo sviluppo di tvOS.
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
@@ -14,11 +14,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030679"
 ---
-# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Assembly supportati da Novell per tvOS
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Assembly supportati da Xamarin per tvOS
 
 ## <a name="supported-assemblies"></a>Assembly supportati
 
-Questo è un elenco degli assembly supportati da Novell per le app Xamarin.tvOS. L'elenco dettagliato è riportato di seguito.  Alcune omissioni rilevanti includono `System.EnterpriseServices`, lo stack ASP.NET e Windows. Forms.
+Questo è un elenco degli assembly supportati da Xamarin per le app Xamarin.tvOS. L'elenco dettagliato è riportato di seguito.  Alcune omissioni rilevanti includono `System.EnterpriseServices`, lo stack ASP.NET e Windows. Forms.
 
 |Assembly|Aggiunto|Compatibilità API|
 |---|---|---|
