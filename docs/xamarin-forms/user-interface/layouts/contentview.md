@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms ContentView
+title: Novell. Forms ContentView
 description: Questo articolo illustra come usare la classe ContentView per creare un controllo personalizzato, ad esempio CardView.
 ms.prod: xamarin
 ms.assetid: 638402E7-CA44-456B-863B-791F6B6B561D
@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 69f3311834fd438af97b3d2fa527572f02d2b0cb
-ms.sourcegitcommit: fa2898d95b35fcee05503f3829351ba5a7d4a44d
+ms.openlocfilehash: 712aa43fb4959b766786c8fd0969ef2c2c8f00ef
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955079"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955728"
 ---
-# <a name="xamarinforms-contentview"></a>Xamarin.Forms ContentView
+# <a name="xamarinforms-contentview"></a>Novell. Forms ContentView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
-La classe [`ContentView`](xref:Xamarin.Forms.ContentView) Xamarin.Forms è un tipo di `Layout` che contiene un singolo elemento figlio e viene in genere usato per creare controlli personalizzati riutilizzabili. La classe `ContentView` eredita da [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). In questo articolo e nell'esempio associato viene illustrato come creare un controllo `CardView` personalizzato basato sulla classe `ContentView`.
+La classe [`ContentView`](xref:Xamarin.Forms.ContentView) Novell. Forms è un tipo di `Layout` che contiene un singolo elemento figlio e viene in genere usato per creare controlli personalizzati riutilizzabili. La classe `ContentView` eredita da [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). In questo articolo e nell'esempio associato viene illustrato come creare un controllo `CardView` personalizzato basato sulla classe `ContentView`.
 
 Lo screenshot seguente mostra un controllo `CardView` che deriva dalla classe `ContentView`:
 
@@ -204,11 +204,11 @@ Gli screenshot seguenti mostrano un'istanza di `CardView` standard e `CardView` 
 
 [schermata di ![ControlTemplate CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-Per ulteriori informazioni sui modelli di controllo, vedere [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Per ulteriori informazioni sui modelli di controllo, vedere [Novell. Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Applicazione di esempio ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
-* [Data Binding Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md).
-* [Modelli di controllo Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+* [Modelli di controllo Novell. Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

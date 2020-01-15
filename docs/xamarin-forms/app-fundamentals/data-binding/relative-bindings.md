@@ -1,5 +1,5 @@
 ---
-title: Binding relativi di Xamarin.Forms
+title: Binding relativi di Novell. Forms
 description: In questo articolo viene illustrato come creare associazioni relative usando l'estensione di markup RelativeSource per impostare l'origine di associazione in relazione alla posizione della destinazione del binding.
 ms.prod: xamarin
 ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 63ce27fc871da12eabb1baad568af167c860926f
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489871"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955806"
 ---
-# <a name="xamarinforms-relative-bindings"></a>Binding relativi di Xamarin.Forms
+# <a name="xamarinforms-relative-bindings"></a>Binding relativi di Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -38,7 +38,7 @@ L'estensione di markup `RelativeSource` è supportata dalla classe `RelativeSour
 
 La proprietà `Mode` è la proprietà Content della classe `RelativeSourceExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare la `Mode=` parte dell'espressione.
 
-Per altre informazioni sulle estensioni di markup Xamarin.Forms, vedere [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md).
+Per altre informazioni sulle estensioni di markup Novell. Forms, vedere [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md).
 
 ## <a name="bind-to-self"></a>Associa a se stesso
 
@@ -179,10 +179,10 @@ In questo esempio, il [`Frame`](xref:Xamarin.Forms.Frame), che è l'elemento rad
 
 [![Screenshot di un'associazione relativa in modalità TemplatedParent, in iOS e Android](relative-bindings-images/templatedparent-relative-binding.png "Modalità di associazione relativa di TemplatedParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Modalità di associazione relativa di TemplatedParent")
 
-Per ulteriori informazioni sui modelli di controllo, vedere [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Per ulteriori informazioni sui modelli di controllo, vedere [Novell. Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Modelli di controllo Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+- [Modelli di controllo Novell. Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

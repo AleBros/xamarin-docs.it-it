@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 335fb03cd190752d488f047bdf22f67d72f30c2e
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: 6669dbaff3cfb5b929261352b8db046b35ec5b4f
+ms.sourcegitcommit: 2a053df1163ab0125a51138b2b1f702f657eba5d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032570"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76020697"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla Raccolta immagini
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 Questo articolo illustra in dettaglio la creazione di un'applicazione che consente all'utente di scegliere una foto dalla Raccolta immagini del telefono. Poiché Xamarin.Forms non include questa funzionalità, è necessario usare [`DependencyService`](xref:Xamarin.Forms.DependencyService) per accedere alle API native in ogni piattaforma.
 
@@ -85,7 +85,7 @@ Il metodo `GetImageStreamAsync` crea un `UIImagePickerController` e lo inizializ
 
 A questo punto il metodo `GetImageStreamAsync` deve restituire un oggetto `Task<Stream>` al codice che origina la chiamata. Questa attività viene completata solo quando l'utente ha terminato l'interazione con la raccolta di foto e viene chiamato uno dei gestori eventi. Per situazioni come queste, la classe [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) è indispensabile. La classe specifica un oggetto `Task` del tipo generico appropriato per la restituzione dal metodo `GetImageStreamAsync` e può ricevere il segnale successivamente, una volta completata l'attività.
 
-Il gestore eventi `FinishedPickingMedia` viene chiamato quando l'utente ha selezionato un'immagine. Tuttavia il gestore specifica un oggetto `UIImage` e `Task` deve restituire un oggetto .NET `Stream`. Questa operazione viene eseguita in due passaggi: L'oggetto `UIImage` viene innanzitutto convertito in un file PNG o JPEG in memoria archiviato in un oggetto `NSData`, quindi l'oggetto `NSData` viene convertito in un oggetto .NET `Stream`. Una chiamata al metodo `SetResult` per l'oggetto `TaskCompletionSource` completa l'operazione specificando l'oggetto `Stream`:
+Il gestore eventi `FinishedPickingMedia` viene chiamato quando l'utente ha selezionato un'immagine. Tuttavia il gestore specifica un oggetto `UIImage` e `Task` deve restituire un oggetto .NET `Stream`. Questa operazione viene eseguita in due passaggi: l'oggetto `UIImage` viene prima convertito in un file PNG o JPEG in memoria archiviato in un oggetto `NSData`, quindi l'oggetto `NSData` viene convertito in un oggetto `Stream` .NET. Una chiamata al metodo `SetResult` per l'oggetto `TaskCompletionSource` completa l'operazione specificando l'oggetto `Stream`:
 
 ```csharp
 namespace DependencyServiceDemos.iOS
@@ -156,7 +156,14 @@ L'implementazione Android usa la tecnica descritta nel file recipe [**Selezionar
 ```csharp
 public class MainActivity : FormsAppCompatActivity
 {
-    ...
+    internal static MainActivity Instance { get; private set; }  
+
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        // ... 
+        Instance = this;
+    }
+    // ...
     // Field, property, and method for Picture Picker
     public static readonly int PickImageId = 1000;
 
