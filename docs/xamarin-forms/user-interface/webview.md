@@ -1,20 +1,20 @@
 ---
-title: WebView di Xamarin.Forms
-description: Questo articolo illustra come usare la classe WebView di Xamarin.Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
+title: WebView di xamarin. Forms
+description: Questo articolo illustra come usare la classe WebView di xamarin. Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: c9f934ad690bffa2418a7221445a473d9a90fdb9
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490207"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031404"
 ---
-# <a name="xamarinforms-webview"></a>WebView di Xamarin.Forms
+# <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
@@ -153,7 +153,7 @@ Anche se la prima pagina è stata caricata, il `WebView` non conosce la provenie
 
 Per risolvere questo problema, è necessario indicare la `WebView` dove trovare i file nel file System. Farlo impostando il `BaseUrl` proprietà di `HtmlWebViewSource` usato dal `WebView`.
 
-Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin.Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
+Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin. Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
 
 Usare il `DependencyService`, innanzitutto definire un'interfaccia che può essere implementata in ogni piattaforma:
 
@@ -403,12 +403,12 @@ Quando la `Reload` metodo viene richiamato il `ReloadRequested` viene generato l
 
 ## <a name="performance"></a>Prestazioni
 
-I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Xamarin.Forms 4,4, il `WebView` Xamarin.Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Xamarin.Forms 4,4, il `WebView` Xamarin.Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
+I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Novell. Forms 4,4, il `WebView` Novell. Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Novell. Forms 4,4, il `WebView` Novell. Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
 
 > [!NOTE]
 > In iOS, il `WkWebViewRenderer` dispone di un overload del costruttore che accetta un argomento `WkWebViewConfiguration`. In questo modo è possibile configurare il renderer durante la creazione.
 
-Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Xamarin.Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
+Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Novell. Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
 
 ```csharp
 // Opt-in to using UIWebView instead of WkWebView.
@@ -429,7 +429,7 @@ Affinché `WebView` per lavorare, è necessario assicurarsi che le autorizzazion
 
 ## <a name="layout"></a>Formato
 
-A differenza della maggior parte delle altre visualizzazioni, Xamarin.Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
+A differenza della maggior parte delle altre visualizzazioni, xamarin. Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
 
 Gli esempi seguenti illustrano i layout risultanti in uso, per il rendering `WebView`s:
 
@@ -518,6 +518,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Deprecazione di UIWebView e rifiuto di App Store (ITMS-90809)
+
+A partire dall'aprile 2020, [Apple rifiuterà le app](https://developer.apple.com/news/?id=12232019b) che usano ancora l'API `UIWebView` deprecata. Mentre Novell. Forms è passato a `WKWebView` come impostazione predefinita, esiste ancora un riferimento all'SDK precedente nei file binari di Novell. Forms. Il comportamento corrente del [linker iOS](~/ios/deploy-test/linker.md) non rimuove questo e, di conseguenza, l'API `UIWebView` deprecata verrà comunque visualizzata come riferimento dall'app quando si invia all'App Store.
+
+Per risolvere il problema, è disponibile una versione di anteprima del linker. Per abilitare l'anteprima, sarà necessario fornire un argomento aggiuntivo `--optimize=experimental-xforms-product-type` al linker. 
+
+I prerequisiti per questo lavoro sono i seguenti:
+
+- È possibile usare **Novell. forms 4,5 o versioni successive** &ndash; versioni preliminari di Novell. forms 4,5.
+- **Novell. iOS 13.10.0.17 o versione successiva** &ndash; controllare la versione di Novell. iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Novell. iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
+- **Rimuovere i riferimenti a `UIWebView`** &ndash; il codice non deve contenere riferimenti a `UIWebView` o a classi che usano `UIWebView`.
+
+### <a name="configure-the-linker-preview"></a>Configurare l'anteprima del linker
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+Per rimuovere `UIWebView` riferimenti, attenersi alla procedura seguente:
+
+1. **Aprire le proprietà del progetto ios** &ndash; fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Proprietà**.
+1. **Passare alla sezione Build ios** &ndash; selezionare la sezione **iOS Build** .
+1. **Aggiornare gli argomenti mTouch aggiuntivi** &ndash; negli **argomenti mTouch aggiuntivi** aggiungere questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente). 
+1. **Aggiornare tutte le configurazioni della build** &ndash; usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
+
+È possibile visualizzare la finestra con il nuovo flag sul posto in questa schermata:
+
+[![l'impostazione del flag nella sezione di compilazione iOS](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+
+Seguire questa procedura per il linker per rimuovere `UIWebView` riferimenti
+
+1. **Aprire le opzioni del progetto ios** &ndash; fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Opzioni**.
+1. **Passare alla sezione Build ios** &ndash; selezionare la sezione **iOS Build** .
+1. **Aggiornare gli argomenti _mTouch_ aggiuntivi** &ndash; nell'gli **argomenti _mTouch_ aggiuntivi** aggiungono questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente).
+1. **Aggiornare tutte le configurazioni della build** &ndash; usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
+
+È possibile visualizzare la finestra con il nuovo flag sul posto in questa schermata:
+
+[![l'impostazione del flag nella sezione di compilazione iOS](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+A questo punto, quando si crea una nuova compilazione (versione) e la si invia all'App Store, non dovrebbero essere presenti avvisi sull'API deprecata.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
