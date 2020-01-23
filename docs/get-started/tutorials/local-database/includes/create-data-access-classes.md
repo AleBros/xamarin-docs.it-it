@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67841545"
 ---
 In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **LocalDatabaseTutorial**, che verrà usato per rendere persistenti i dati relativi alle persone nel database.
@@ -175,7 +175,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
     Questa classe contiene il codice per creare il database, leggere i dati dal database e scrivere i dati in esso. Il codice usa API SQLite.NET asincrone che spostano le operazioni sul database in thread in background. Inoltre, il costruttore `Database` accetta il percorso del file di database come argomento. Questo percorso verrà fornito dalla classe `App` nell'esercizio successivo.
 
-1. Nel **riquadro della soluzione** espandere **App.xaml** nel progetto **LocalDatabaseTutorial** e fare doppio clic su **App.xaml.cs** per aprirlo. In **App.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** espandere **App.xaml** nel progetto **LocalDatabaseTutorial** e fare doppio clic su **App.xaml.cs** per aprirlo. In **App.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;

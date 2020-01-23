@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: e9c20f8ca0656f6bad72e1e09fbe873a9208be2b
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107264"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 >
-> - Creare una classe [`Entry`](xref:Xamarin.Forms.Entry) Xamarin.Forms in XAML.
+> - Creare un elemento [`Entry`](xref:Xamarin.Forms.Entry) di Xamarin.Forms in XAML.
 > - Rispondere al cambiamento del testo dell'elemento `Entry`.
 > - Personalizzare il comportamento di `Entry`.
 

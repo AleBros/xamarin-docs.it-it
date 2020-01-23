@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 83baf0982da49b5568a43a1695f78150119d4d88
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107260"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 >
-> - Creare una classe [`Image`](xref:Xamarin.Forms.Image) Xamarin.Forms in XAML.
+> - Creare un elemento [`Image`](xref:Xamarin.Forms.Image) di Xamarin.Forms in XAML.
 > - Personalizzare l'aspetto dell'elemento `Image`.
 > - Visualizzare un file di immagine locale da ogni progetto di piattaforma.
 
