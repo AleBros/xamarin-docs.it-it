@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: e4c8e404f447dd88b338123335a291bc9f23e449
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119012"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "76530864"
 ---
 # <a name="metadata-and-markdown-template"></a>Modello Markdown e metadati
 
@@ -21,7 +21,7 @@ Questo modello contiene esempi di sintassi di Markdown, nonché indicazioni su c
 
 Quando si crea un file Markdown, è necessario copiare il modello in un nuovo file, compilare i metadati come specificato di seguito, impostare l'intestazione H1 sopra il titolo dell'articolo ed eliminare il contenuto.
 
-## <a name="metadata"></a>Metadata
+## <a name="metadata"></a>Metadati
 
 Il blocco dei metadati completo, con una serie di annotazioni, è mostrato di seguito:
 
@@ -65,18 +65,18 @@ Markdown usa caratteri speciali, ad esempio \*, \` e \#, per la formattazione. S
 ## <a name="file-name"></a>Nome file
 
 Per i nomi di file vengono usate le regole seguenti:
+
 - Devono contenere solo lettere minuscole, numeri e trattini.
 - Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
-- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Non usare parole al gerundio.
-- Non usare parole estremamente brevi, ad esempio "un", "e", "il", "in", "o" e così via.
+- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Evitare i sostantivi.
+- Non includere parole brevi, come un, e, il, in, o e così via.
 - Usare il formato Markdown e l'estensione di file md.
 - Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
-
-
 
 ## <a name="headings"></a>Intestazioni
 
 Usare l'iniziale maiuscola solo per la prima parola. Scrivere sempre in maiuscolo:
+
 - La prima parola di un'intestazione.
 - La parola che segue i due punti in un titolo o un'intestazione (ad esempio, "Procedura: Ordinare una matrice").
 
@@ -84,7 +84,7 @@ Usare l'iniziale maiuscola solo per la prima parola. Scrivere sempre in maiuscol
 
 Nell'argomento **deve** essere presente una sola intestazione di primo livello (H1), che verrà visualizzata come titolo della pagina.
 
-Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio: `# Async Programming in F# #`.
+Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio `# Async Programming in F# #`.
 
 Le intestazioni di secondo livello verranno usate per generare il sommario della pagina, visualizzato nella sezione "Contenuto dell'articolo" sotto il titolo della pagina.
 
@@ -133,6 +133,7 @@ Il sistema di compilazione dispone di alcune estensioni che consentono di colleg
 Quando si crea un collegamento a un'API, è possibile usare il relativo identificatore univoco (UID), che viene generato automaticamente dal codice sorgente.
 
 È possibile usare una delle sintassi seguenti:
+
 1. Collegamento Markdown:`[link_text](xref:UID)`
 2. Collegamento automatico: `<xref:UID>`
 3. Sintassi abbreviata: `@UID`
@@ -145,6 +146,7 @@ Per altre informazioni sull'uso di questa notazione, vedere la pagina relativa a
 > Attualmente, non è facile individuare l'UID. Il modo migliore per trovare l'UID per un'API è cercarlo in questo repository: [docascode/coreapi](https://github.com/docascode/coreapi). È in corso lo sviluppo di un sistema più efficiente, che sarà disponibile in futuro.
 
 Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere codificato in formato HTML, come %60 e %23, rispettivamente, negli esempi seguenti:
+
 - Esempio: @System.Threading.Tasks.Task\`1 diventa `@System.Threading.Tasks.Task%601`
 - Esempio: @System.Exception\# diventa `@System.Exception.%23ctor`
 
@@ -153,11 +155,10 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 ### <a name="ordered-lists"></a>Elenchi ordinati
 
 1. This
-1. Is
+1. È
 1. Un
 1. Ordered
 1. Elenco
-
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Elenco ordinato con un elenco incorporato
 
@@ -170,29 +171,26 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 1. ordered
 1. list
 
-
 ### <a name="unordered-lists"></a>Elenchi non ordinati
 
-- Questo
+- This
 - is
 - a
 - puntato
 - list
 
+#### <a name="unordered-list-with-an-embedded-list"></a>Elenco non ordinato con un elenco incorporato
 
-##### <a name="unordered-list-with-an-embedded-list"></a>Elenco non ordinato con un elenco incorporato
-
-- Questo
+- This
 - puntato
 - list
-    - Signora Pavone
-    - Dottor Verde
+  - Signora Pavone
+  - Dottor Verde
 - contiene
 - altro
     1. Colonnello Mustard
     1. Signora Bianchi
 - elenchi
-
 
 ## <a name="horizontal-rule"></a>Righello orizzontale
 
@@ -208,12 +206,11 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 Per creare le tabelle più facilmente, è possibile usare uno [strumento generatore di tabelle Markdown](http://www.tablesgenerator.com/markdown_tables).
 
-
 ### <a name="inline-code-blocks-with-language-identifier"></a>Blocchi di codice inline con identificatore del linguaggio
 
 Usare tre apici (\`\`\`) e un ID di linguaggio per applicare il codice a colori di uno specifico linguaggio a un blocco di codice. Ecco l'elenco completo degli [ID di linguaggio GFM](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs).
 
-##### <a name="c9839"></a>C&#9839;
+#### <a name="c9839"></a>C&#9839;
 
 ```c#
 using System;
@@ -233,7 +230,7 @@ namespace HelloWorld
 }
 ```
 
-#### <a name="xml"></a>Xml
+#### <a name="xml"></a>xml
 
 ```xml
 <dict>
@@ -329,7 +326,7 @@ docs.microsoft fornisce alcune estensioni aggiuntive a GitHub Flavored Markdown 
 
 È importante usare gli stili di avviso seguenti, in modo che ne venga eseguito il rendering con lo stile appropriato nel sito della documentazione. Tuttavia, il motore di rendering in GitHub non li differenzia.
 
-#### <a name="note"></a>Note
+#### <a name="note"></a>Nota
 
 ```
 > [!NOTE]
