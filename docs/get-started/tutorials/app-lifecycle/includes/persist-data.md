@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67841457"
 ---
 La sottoclasse [`Application`](xref:Xamarin.Forms.Application) ha un dizionario statico [`Properties`](xref:Xamarin.Forms.Application.Properties) che può essere usato per archiviare dati fra le modifiche di stato del ciclo di vita. Il dizionario usa una chiave `string` e archivia un valore `object`. Il dizionario viene salvato automaticamente sul dispositivo e non è ripopolato quando l'applicazione viene riavviata.
@@ -113,7 +113,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
 
     Infine avviare nuovamente l'applicazione da Visual Studio e il testo immesso in precedenza nell'elemento [`Entry`](xref:Xamarin.Forms.Entry) verrà ripristinato:
 
-    [![Screenshot di un elemento Entry la cui proprietà Text è resa permanente tra le modifiche di stato del ciclo di vita, in iOS e Android](../images/persist-data.png "Elemento Entry la cui proprietà Text è resa permanente fra le modifiche di stato del ciclo di vita")](../images/persist-data-large.png#lightbox "Elemento Entry la cui proprietà Text è resa permanente fra le modifiche di stato del ciclo di vita")
+    [![Screenshot di una voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita, in iOS e Android](../images/persist-data.png "Voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita")](../images/persist-data-large.png#lightbox "Voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita")
 
     Per altre informazioni su come rendere permanenti i dati nel dizionario delle proprietà, vedere [Dizionario delle proprietà](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) nella guida [Classe App di Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
@@ -217,6 +217,6 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
 
     Infine avviare nuovamente l'applicazione da Visual Studio per Mac e il testo immesso in precedenza nell'elemento [`Entry`](xref:Xamarin.Forms.Entry) verrà ripristinato:
 
-    [![Screenshot di un elemento Entry la cui proprietà Text è resa permanente tra le modifiche di stato del ciclo di vita, in iOS e Android](../images/persist-data.png "Elemento Entry la cui proprietà Text è resa permanente fra le modifiche di stato del ciclo di vita")](../images/persist-data-large.png#lightbox "Elemento Entry la cui proprietà Text è resa permanente fra le modifiche di stato del ciclo di vita")
+    [![Screenshot di una voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita, in iOS e Android](../images/persist-data.png "Voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita")](../images/persist-data-large.png#lightbox "Voce la cui proprietà Text rimane permanente tra le modifiche dello stato del ciclo di vita")
 
     Per altre informazioni su come rendere permanenti i dati nel dizionario delle proprietà, vedere [Dizionario delle proprietà](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) nella guida [Classe App di Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).

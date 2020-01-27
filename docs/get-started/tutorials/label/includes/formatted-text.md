@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "60896675"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -32,7 +32,7 @@ ms.locfileid: "60896675"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
-    [![Screenshot di Label con testo formattato in iOS e Android](../images/label-formatted-text.png "Label con testo formattato")](../images/label-formatted-text-large.png#lightbox "Label con testo formattato")
+    [![Screenshot di un'etichetta che visualizza testo formattato, in iOS e Android](../images/label-formatted-text.png "Etichetta con testo formattato")](../images/label-formatted-text-large.png#lightbox "Etichetta con testo formattato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Span`](xref:Xamarin.Forms.Span), vedere [Testo formattato](~/xamarin-forms/user-interface/text/label.md#formatted-text) nella guida [Etichetta Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
@@ -62,6 +62,6 @@ ms.locfileid: "60896675"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
-    [![Screenshot di Label con testo formattato in iOS e Android](../images/label-formatted-text.png "Label con testo formattato")](../images/label-formatted-text-large.png#lightbox "Label con testo formattato")
+    [![Screenshot di un'etichetta che visualizza testo formattato, in iOS e Android](../images/label-formatted-text.png "Etichetta con testo formattato")](../images/label-formatted-text-large.png#lightbox "Etichetta con testo formattato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Span`](xref:Xamarin.Forms.Span), vedere [Testo formattato](~/xamarin-forms/user-interface/text/label.md#formatted-text) nella guida [Etichetta Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).

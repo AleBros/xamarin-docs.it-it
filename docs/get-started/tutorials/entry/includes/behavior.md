@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61343464"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -25,7 +25,7 @@ ms.locfileid: "61343464"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Immettere il testo in [`Entry`](xref:Xamarin.Forms.Entry) e osservare che ogni carattere viene sostituito con un carattere della maschera della password e che il numero massimo di caratteri che possono essere immessi è 15:
 
-    [![Screenshot di una voce con il testo mascherato dai caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")
+    [![Screenshot di una voce con testo mascherato con caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")
 
     Per altre informazioni sulla personalizzazione del comportamento [`Entry`](xref:Xamarin.Forms.Entry), vedere la guida [Voce Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
@@ -48,6 +48,6 @@ ms.locfileid: "61343464"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Immettere il testo in [`Entry`](xref:Xamarin.Forms.Entry) e osservare che ogni carattere viene sostituito con un carattere della maschera della password e che il numero massimo di caratteri che possono essere immessi è 15:
 
-    [![Screenshot di una voce con il testo mascherato dai caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")
+    [![Screenshot di una voce con testo mascherato con caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")
 
     Per altre informazioni sulla personalizzazione del comportamento [`Entry`](xref:Xamarin.Forms.Entry), vedere la guida [Voce Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).

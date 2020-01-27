@@ -12,7 +12,7 @@ abstract:
   description: 'Xamarin.iOS espone la versione completa di iOS SDK per gli sviluppatori .NET. Creare app iOS completamente native con C# o F# in Visual Studio.'
   menu:
     items:
-      - href: ~/ios/samples/index.yml
+      - href: ~/ios/samples/index.md
         text: Esempi di iOS
       - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
         text: Note sulla versione
@@ -110,7 +110,7 @@ sections:
               src: ~/media/icons/i_tvos.svg
               href: ~/ios/tvos/index.md
             title: tvOS
-  - title: Riferimenti
+  - title: Riferimento
     items:
       - type: list
         style: cards

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61375388"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,7 +46,7 @@ ms.locfileid: "61375388"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Grid con contenuto disposto in colonne e righe, in iOS e Android](../images/columns-rows.png "Elemento Grid con contenuto disposto in colonne e righe")](../images/columns-rows-large.png#lightbox "Elemento Grid con contenuto disposto in colonne e righe")
+    [![Screenshot di una griglia con contenuto disposto in colonne e righe, in iOS e Android](../images/columns-rows.png "Griglia con contenuto in colonne e righe")](../images/columns-rows-large.png#lightbox "Griglia con contenuto in colonne e righe")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -88,4 +88,4 @@ ms.locfileid: "61375388"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Grid con contenuto disposto in colonne e righe, in iOS e Android](../images/columns-rows.png "Elemento Grid con contenuto disposto in colonne e righe")](../images/columns-rows-large.png#lightbox "Elemento Grid con contenuto disposto in colonne e righe")
+    [![Screenshot di una griglia con contenuto disposto in colonne e righe, in iOS e Android](../images/columns-rows.png "Griglia con contenuto in colonne e righe")](../images/columns-rows-large.png#lightbox "Griglia con contenuto in colonne e righe")

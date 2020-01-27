@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: bd3f37082443e93f10f60d9466fe22aae8571b14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373445"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -22,7 +22,7 @@ ms.locfileid: "61373445"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Immettere il testo in [`Editor`](xref:Xamarin.Forms.Entry) e osservare che l'altezza di `Editor` aumenta man mano che viene compilato con il testo e diminuisce man mano che il testo viene rimosso e che il numero massimo di caratteri che è possibile immettere è 200:
 
-    [![Screenshot di un Editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")
+    [![Screenshot di un editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")
 
     Per altre informazioni sulla personalizzazione del comportamento [`Editor`](xref:Xamarin.Forms.Editor), vedere la guida [Editor Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
 
@@ -42,6 +42,6 @@ ms.locfileid: "61373445"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Immettere il testo in [`Editor`](xref:Xamarin.Forms.Entry) e osservare che l'altezza di `Editor` aumenta man mano che viene compilato con il testo e diminuisce man mano che il testo viene rimosso e che il numero massimo di caratteri che è possibile immettere è 200:
 
-    [![Screenshot di un Editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")
+    [![Screenshot di un editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")
 
     Per altre informazioni sulla personalizzazione del comportamento [`Editor`](xref:Xamarin.Forms.Editor), vedere la guida [Editor Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).

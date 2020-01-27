@@ -12,7 +12,7 @@ abstract:
   description: 'Xamarin.Android espone la versione completa di Android SDK per gli sviluppatori .NET. Creare app Android completamente native con C# o F# in Visual Studio.'
   menu:
     items:
-      - href: ~/android/samples/
+      - href: ~/android/samples/index.md
         text: Esempi di Android
       - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
         text: Note sulla versione
@@ -104,7 +104,7 @@ sections:
               src: ~/media/icons/i_android-wear.svg
               href: ~/android/wear/index.md
             title: Android Wear
-  - title: Riferimenti
+  - title: Riferimento
     items:
       - type: list
         style: cards

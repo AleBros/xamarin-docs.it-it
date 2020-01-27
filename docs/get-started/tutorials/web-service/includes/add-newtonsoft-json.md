@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cef0b8f56639e7bc8571ab01b820dfd54b074472
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277297"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -17,13 +17,13 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
     Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. In **Esplora soluzioni** selezionare il progetto **WebServiceTutorial**, fare clic con il pulsante destro del mouse e selezionare **Gestisci pacchetti NuGet...** :
+1. In **Esplora soluzioni** selezionare il progetto **WebServiceTutorial**, fare clic con il pulsante destro del mouse e selezionare **Gestisci pacchetti NuGet...**:
 
-    ![Screenshot della voce di menu Aggiungi pacchetti NuGet che viene selezionata](../images/vs/add-nuget-packages.png "Voce di menu Aggiungi pacchetti NuGet")
+    ![Screenshot della voce di menu Aggiungi pacchetti NuGet selezionata](../images/vs/add-nuget-packages.png "Voce di menu Aggiungi pacchetti NuGet")
 
 1. In **Gestione pacchetti NuGet** selezionare la scheda **Sfoglia**, cercare il pacchetto NuGet **Newtonsoft.Json**, selezionarlo e fare clic sul pulsante **Installa**per aggiungerlo al progetto:
 
-    ![Schermata del pacchetto NuGet Newtonsoft.JSON in Gestione pacchetti NuGet](../images/vs/add-package.png "pacchetto NuGet newtonsoft. JSON")
+    ![Screenshot del pacchetto NuGet Newtonsoft.JSON in Gestione pacchetti NuGet](../images/vs/add-package.png "Pacchetto NuGet Newtonsoft.Json")
 
     Il pacchetto verrà usato per integrare la deserializzazione JSON nell'applicazione.
 
@@ -40,13 +40,13 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
     Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. Nel **riquadro della soluzione** selezionare il progetto **WebServiceTutorial**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Gestisci pacchetti NuGet...** :
+1. Nel **riquadro della soluzione** selezionare il progetto **WebServiceTutorial**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Gestisci pacchetti NuGet...**:
 
-    ![Screenshot della voce di menu Aggiungi pacchetti NuGet che viene selezionata](../images/vsmac/add-nuget-packages.png "Voce di menu Aggiungi pacchetti NuGet")
+    ![Screenshot della voce di menu Aggiungi pacchetti NuGet selezionata](../images/vsmac/add-nuget-packages.png "Voce di menu Aggiungi pacchetti NuGet")
 
 1. Nella finestra **Aggiungi pacchetti** cercare il pacchetto NuGet **Newtonsoft.Json**, selezionarlo e fare clic sul pulsante **Aggiungi pacchetto** per aggiungerlo al progetto:
 
-    ![Schermata del pacchetto NuGet Newtonsoft.JSON in Gestione pacchetti NuGet](../images/vsmac/add-package.png "pacchetto NuGet newtonsoft. JSON")
+    ![Screenshot del pacchetto NuGet Newtonsoft.JSON in Gestione pacchetti NuGet](../images/vsmac/add-package.png "Pacchetto NuGet Newtonsoft.Json")
 
     Il pacchetto verrà usato per integrare la deserializzazione JSON nell'applicazione.
 

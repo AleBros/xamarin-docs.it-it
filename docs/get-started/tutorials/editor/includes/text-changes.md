@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 19afeed47f1c06c89c58dfd996d360698b19fc9c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373386"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -43,7 +43,7 @@ ms.locfileid: "61373386"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di Editor che contiene testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
+    [![Screenshot dell'editor contenente testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
 
     Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
@@ -86,7 +86,7 @@ ms.locfileid: "61373386"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di Editor che contiene testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
+    [![Screenshot dell'editor contenente testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
 
     Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 

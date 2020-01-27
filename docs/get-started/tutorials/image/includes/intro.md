@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 85404d5aceb525a77c98bf2d86ebc4b464f5796f
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107259"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
@@ -21,4 +21,4 @@ In questa esercitazione si imparerà a:
 
 Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come visualizzare un'immagine e personalizzarne l'aspetto. Gli screenshot seguenti illustrano l'applicazione finale:
 
-[![Screenshot di una vista Image che mostra un'immagine locale in iOS e Android](../images/local-file.png "Vista Image che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Vista Image che mostra un'immagine locale")
+[![Screenshot di una visualizzazione immagine che mostra un'immagine locale, in iOS e Android](../images/local-file.png "Visualizzazione immagine che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Visualizzazione immagine che mostra un'immagine locale")

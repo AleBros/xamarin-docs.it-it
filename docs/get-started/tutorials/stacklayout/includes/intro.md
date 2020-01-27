@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107269"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
@@ -20,4 +20,4 @@ In questa esercitazione si imparerà a:
 
 Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come allineare i controlli in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Gli screenshot seguenti illustrano l'applicazione finale:
 
-[![Screenshot delle viste figlio in un elemento StackLayout con opzioni di allineamento ed espansione impostate in iOS e Android](../images/alignment-expansion-reduced.png "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")
+[![Screenshot delle visualizzazioni figlio in un controllo StackLayout, con opzioni di allineamento ed espansione impostate, in iOS e Android](../images/alignment-expansion-reduced.png "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")

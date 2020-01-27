@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61037624"
 ---
 In precedenza [`ListView`](xref:Xamarin.Forms.ListView) veniva popolata con i dati tramite data binding. Tuttavia, nonostante il data binding in una raccolta in cui ogni oggetto definiva più elementi di dati, veniva visualizzato solo un singolo elemento di dati per ogni oggetto (proprietà `Name` dell'oggetto `Monkey`).
@@ -58,7 +58,7 @@ In questo esercizio il progetto **ListViewTutorial** verrà modificato in modo c
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di ListView con elementi a cui è applicato un modello di dati](../images/customize-cell-appearance.png "ListView con dati a cui è applicato un modello")](../images/customize-cell-appearance-large.png#lightbox "ListView con dati a cui è applicato un modello")
+    [![Screenshot di un controllo ListView i cui elementi sono basati su un modello di dati](../images/customize-cell-appearance.png "ListView che visualizza i dati basati su modello")](../images/customize-cell-appearance-large.png#lightbox "ListView che visualizza i dati basati su modello")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -108,4 +108,4 @@ In questo esercizio il progetto **ListViewTutorial** verrà modificato in modo c
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di ListView con elementi a cui è applicato un modello di dati](../images/customize-cell-appearance.png "ListView con dati a cui è applicato un modello")](../images/customize-cell-appearance-large.png#lightbox "ListView con dati a cui è applicato un modello")
+    [![Screenshot di un controllo ListView i cui elementi sono basati su un modello di dati](../images/customize-cell-appearance.png "ListView che visualizza i dati basati su modello")](../images/customize-cell-appearance-large.png#lightbox "ListView che visualizza i dati basati su modello")

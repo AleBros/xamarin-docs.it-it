@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e05a20149d33eed58918382371e8bc333d4a5f8d
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107263"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
@@ -21,4 +21,4 @@ In questa esercitazione si imparerà a:
 
 Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come personalizzare il comportamento di un oggetto [`Entry`](xref:Xamarin.Forms.Entry). Gli screenshot seguenti illustrano l'applicazione finale:
 
-[![Screenshot di una voce con il testo mascherato dai caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")
+[![Screenshot di una voce con testo mascherato con caratteri della password, in iOS e Android](../images/customize-behavior.png "Voce con caratteri della password mascherati")](../images/customize-behavior-large.png#lightbox "Voce con caratteri della password mascherati")

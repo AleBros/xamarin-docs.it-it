@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659834"
 ---
 In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `RestService`, che a sua volta recupera i dati dall'API Web [OpenWeatherMap](https://openweathermap.org/).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -123,14 +123,14 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Toccare [`Button`](xref:Xamarin.Forms.Button) per recuperare i dati meteo correnti per Seattle:
 
-    [![Screenshot dei dati meteo di Seattle, in iOS e Android](../images/consume-web-service.png "Dati meteo di Seattle")](../images/consume-web-service-large.png#lightbox "Dati meteo di Seattle")
+    [![Screenshot dei dati meteorologici per Seattle, in iOS e Android](../images/consume-web-service.png "Dati meteo di Seattle")](../images/consume-web-service-large.png#lightbox "Dati meteo di Seattle")
 
     > [!IMPORTANT]
     > La chiave API OpenWeatherMap personale deve essere impostata come valore della costante `OpenWeatherMapAPIKey` nella classe `Constants`.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -193,7 +193,7 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
 
     Per altre informazioni sull'uso dei servizi Web basati su REST in Xamarin.Forms, vedere [Uso di un servizio Web RESTful (guida)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
-1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **WebServiceTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **WebServiceTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;
@@ -245,7 +245,7 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Toccare [`Button`](xref:Xamarin.Forms.Button) per recuperare i dati meteo correnti per Seattle:
 
-    [![Screenshot dei dati meteo di Seattle, in iOS e Android](../images/consume-web-service.png "Dati meteo di Seattle")](../images/consume-web-service-large.png#lightbox "Dati meteo di Seattle")
+    [![Screenshot dei dati meteorologici per Seattle, in iOS e Android](../images/consume-web-service.png "Dati meteo di Seattle")](../images/consume-web-service-large.png#lightbox "Dati meteo di Seattle")
 
     > [!IMPORTANT]
     > La chiave API OpenWeatherMap personale deve essere impostata come valore della costante `OpenWeatherMapAPIKey` nella classe `Constants`.

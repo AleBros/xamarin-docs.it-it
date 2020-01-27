@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "66193800"
 ---
 
@@ -37,7 +37,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Toccare quindi l'elemento [`Button`](xref:Xamarin.Forms.Button) aggiunto a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Screenshot di un foglio delle azioni, in iOS e Android](../images/actionsheet.png "Foglio delle azioni che guida gli utenti per l'esecuzione di un'attività")](../images/actionsheet-large.png#lightbox "Foglio delle azioni che guida gli utenti per l'esecuzione di un'attività")
+    [![Screenshot di un foglio delle azioni, in iOS e Android](../images/actionsheet.png "Foglio delle azioni di supporto degli utenti nelle attività")](../images/actionsheet-large.png#lightbox "Foglio delle azioni di supporto degli utenti nelle attività")
 
     Si noti che, dopo aver selezionato un'alternativa nella finestra di dialogo del foglio delle azioni, la selezione viene visualizzata nella finestra **Output** di Visual Studio.
 
@@ -54,7 +54,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
     La proprietà [`Button.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato nel `Button`. Inoltre, l'evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) viene impostato su un gestore eventi denominato `OnDisplayActionSheetButtonClicked`, che verrà creato nel passaggio successivo.
 
-1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **PopupsTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere quindi il gestore eventi `OnDisplayActionSheetButtonClicked` alla classe:
+1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **PopupsTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere il gestore eventi `OnDisplayActionSheetButtonClicked` alla classe:
 
     ```csharp
     async void OnDisplayActionSheetButtonClicked(object sender, EventArgs e)
@@ -71,7 +71,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Toccare quindi l'elemento [`Button`](xref:Xamarin.Forms.Button) aggiunto a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Screenshot di un foglio delle azioni, in iOS e Android](../images/actionsheet.png "Foglio delle azioni che guida gli utenti per l'esecuzione di un'attività")](../images/actionsheet-large.png#lightbox "Foglio delle azioni che guida gli utenti per l'esecuzione di un'attività")
+    [![Screenshot di un foglio delle azioni, in iOS e Android](../images/actionsheet.png "Foglio delle azioni di supporto degli utenti nelle attività")](../images/actionsheet-large.png#lightbox "Foglio delle azioni di supporto degli utenti nelle attività")
 
     Si noti che, dopo aver selezionato un'alternativa nella finestra di dialogo del foglio delle azioni, la selezione viene visualizzata nella finestra **Output applicazione**  di Visual Studio per Mac.
 

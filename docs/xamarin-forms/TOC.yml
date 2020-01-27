@@ -6,8 +6,6 @@
       items:
         - name: Che cos'è Xamarin.Forms
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: Requisiti
-          href: ~/get-started/requirements.md
         - name: Installazione
           href: ~/get-started/installation/index.md
           items:
@@ -16,15 +14,19 @@
               items:
                 - name: Installazione delle anteprime di Xamarin (Windows)
                   href: ~/get-started/installation/windows-preview.md
+                - name: Disinstallazione di Xamarin da Visual Studio
+                  href: ~/get-started/installation/uninstalling-xamarin.md
             - name: Installazione di Visual Studio per Mac
               href: /visualstudio/mac/installation/
               items:
                 - name: Installazione delle anteprime di Xamarin (Mac)
                   href: /visualstudio/mac/update/
+                - name: Disinstallazione di Visual Studio per Mac
+                  href: /visualstudio/mac/uninstall
             - name: Istruzioni di configurazione del firewall di Xamarin
               href: ~/get-started/installation/firewall.md
-            - name: Disinstallazione di Xamarin
-              href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: Piattaforme supportate
+          href: ~/get-started/supported-platforms.md
         - name: Prima app
           href: ~/get-started/first-app/index.md
         - name: Guide rapide introduttive
@@ -898,6 +900,8 @@
           href: deploy-test/index.yml
         - name: Miglioramento delle prestazioni
           href: deploy-test/performance.md
+        - name: Riavvio a caldo
+          href: deploy-test/hot-restart.md
         - name: Automatizzare i test con Visual Studio App Center
           href: /appcenter/test-cloud/uitest/get-started-xamarin-forms
         - name: Pubblicare app iOS

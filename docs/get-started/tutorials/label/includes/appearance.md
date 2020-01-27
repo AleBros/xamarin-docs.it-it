@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4fc6c50b5aa2ce502b4157ca2b15f0d33a68ecd1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "60896683"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,7 +23,7 @@ ms.locfileid: "60896683"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
-    [![Screenshot di Label con l'aspetto visivo modificato in iOS e Android](../images/change-label-appearance.png "Label con aspetto modificato")](../images/change-label-appearance-large.png#lightbox "Label con aspetto modificato")
+    [![Screenshot di un'etichetta con aspetto visivo modificato, in iOS e Android](../images/change-label-appearance.png "Etichetta con aspetto modificato")](../images/change-label-appearance-large.png#lightbox "Etichetta con aspetto modificato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Label`](xref:Xamarin.Forms.Label), vedere la guida [Etichetta Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
@@ -44,6 +44,6 @@ ms.locfileid: "60896683"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
-    [![Screenshot di Label con l'aspetto visivo modificato in iOS e Android](../images/change-label-appearance.png "Label con aspetto modificato")](../images/change-label-appearance-large.png#lightbox "Label con aspetto modificato")
+    [![Screenshot di un'etichetta con aspetto visivo modificato, in iOS e Android](../images/change-label-appearance.png "Etichetta con aspetto modificato")](../images/change-label-appearance-large.png#lightbox "Etichetta con aspetto modificato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Label`](xref:Xamarin.Forms.Label), vedere la guida [Etichetta Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).

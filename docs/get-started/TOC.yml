@@ -4,8 +4,6 @@
   items:
     - name: Che cos'è Xamarin
       href: what-is-xamarin.md
-    - name: Requisiti
-      href: requirements.md
     - name: Installazione
       href: installation/index.md
       items:
@@ -14,15 +12,19 @@
           items:
             - name: Installazione delle anteprime di Xamarin (Windows)
               href: installation/windows-preview.md
+            - name: Disinstallazione di Xamarin da Visual Studio
+              href: installation/uninstalling-xamarin.md
         - name: Installazione di Visual Studio per Mac
           href: /visualstudio/mac/installation/
           items:
             - name: Installazione delle anteprime di Xamarin (Mac)
               href: /visualstudio/mac/update/
+            - name: Disinstallazione di Visual Studio per Mac
+              href: /visualstudio/mac/uninstall
         - name: Istruzioni di configurazione del firewall di Xamarin
           href: installation/firewall.md
-        - name: Disinstallazione di Xamarin
-          href: installation/uninstalling-xamarin.md
+    - name: Piattaforme supportate
+      href: supported-platforms.md
     - name: Prima app
       href: first-app/index.md
     - name: Guide rapide introduttive

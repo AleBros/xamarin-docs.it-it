@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659832"
 ---
 In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi di accesso ai dati create in precedenza.
@@ -74,7 +74,7 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
 
     Immettere diversi elementi di dati, se si tocca [`Button`](xref:Xamarin.Forms.Button) per ogni elemento di dati. Ciò salverà i dati nel database e ripopolerà [`ListView`](xref:Xamarin.Forms.ListView) con tutti i dati dei database:
 
-    [![Screenshot della persistenza di dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
+    [![Screenshot della persistenza dei dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
 
     Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/data-cloud/data/databases.md)
 
@@ -144,6 +144,6 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
 
     Immettere diversi elementi di dati, se si tocca [`Button`](xref:Xamarin.Forms.Button) per ogni elemento di dati. Ciò salverà i dati nel database e ripopolerà [`ListView`](xref:Xamarin.Forms.ListView) con tutti i dati dei database:
 
-    [![Screenshot della persistenza di dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
+    [![Screenshot della persistenza dei dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
 
     Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/data-cloud/data/databases.md)

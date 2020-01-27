@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277290"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -35,7 +35,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Editor in iOS e Android](../images/create-editor.png "Elemento Editor contenente testo segnaposto")](../images/create-editor-large.png#lightbox "Elemento Editor contenente testo segnaposto")
+    [![Screenshot di un editor in iOS e Android](../images/create-editor.png "Editor contenente testo segnaposto")](../images/create-editor-large.png#lightbox "Editor contenente testo segnaposto")
 
     > [!NOTE]
     > Mentre Android indica l'altezza dell'elemento [`Editor`](xref:Xamarin.Forms.Editor), iOS non lo fa.
@@ -69,7 +69,7 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Editor in iOS e Android](../images/create-editor.png "Elemento Editor contenente testo segnaposto")](../images/create-editor-large.png#lightbox "Elemento Editor contenente testo segnaposto")
+    [![Screenshot di un editor in iOS e Android](../images/create-editor.png "Editor contenente testo segnaposto")](../images/create-editor-large.png#lightbox "Editor contenente testo segnaposto")
 
     > [!NOTE]
     > Mentre Android indica l'altezza dell'elemento [`Editor`](xref:Xamarin.Forms.Editor), iOS non lo fa.

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372946"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -26,7 +26,7 @@ ms.locfileid: "61372946"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Button`](xref:Xamarin.Forms.Button) è stato modificato:
 
-    [![Screenshot di Button con l'aspetto visivo modificato in iOS e Android](../images/change-button-appearance.png "Button con aspetto modificato")](../images/change-button-appearance-large.png#lightbox "Button con aspetto modificato")
+    [![Screenshot di un pulsante con aspetto visivo modificato, in iOS e Android](../images/change-button-appearance.png "Pulsante con aspetto modificato")](../images/change-button-appearance-large.png#lightbox "Pulsante con aspetto modificato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Button`](xref:Xamarin.Forms.Button), vedere [Aspetto del pulsante](~/xamarin-forms/user-interface/button.md#button-appearance) nella guida [Pulsante Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
@@ -50,6 +50,6 @@ ms.locfileid: "61372946"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Button`](xref:Xamarin.Forms.Button) è stato modificato:
 
-    [![Screenshot di Button con l'aspetto visivo modificato in iOS e Android](../images/change-button-appearance.png "Button con aspetto modificato")](../images/change-button-appearance-large.png#lightbox "Button con aspetto modificato")
+    [![Screenshot di un pulsante con aspetto visivo modificato, in iOS e Android](../images/change-button-appearance.png "Pulsante con aspetto modificato")](../images/change-button-appearance-large.png#lightbox "Pulsante con aspetto modificato")
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Button`](xref:Xamarin.Forms.Button), vedere [Aspetto del pulsante](~/xamarin-forms/user-interface/button.md#button-appearance) nella guida [Pulsante Xamarin.Forms](~/xamarin-forms/user-interface/button.md).

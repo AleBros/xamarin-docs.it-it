@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560002"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,7 +23,7 @@ ms.locfileid: "67560002"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio orientate orizzontalmente in StackLayout in iOS e Android](../images/orientation.png "StackLayout contenente istanze di Label orientate orizzontalmente")](../images/orientation-large.png#lightbox "StackLayout contenente istanze di Label orientate orizzontalmente")
+    [![Screenshot di visualizzazioni figlio orientate orizzontalmente in un controllo StackLayout, in iOS e Android](../images/orientation.png "StackLayout che contiene istanze di etichette orientate orizzontalmente")](../images/orientation-large.png#lightbox "StackLayout che contiene istanze di etichette orientate orizzontalmente")
 
     Si noti che le istanze di [`Label`](xref:Xamarin.Forms.Label) all'interno di [`StackLayout`](xref:Xamarin.Forms.StackLayout) sono ora allineate orizzontalmente anziché verticalmente.
 
@@ -44,7 +44,7 @@ ms.locfileid: "67560002"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio orientate orizzontalmente in StackLayout in iOS e Android](../images/orientation.png "StackLayout contenente istanze di Label orientate orizzontalmente")](../images/orientation-large.png#lightbox "StackLayout contenente istanze di Label orientate orizzontalmente")
+    [![Screenshot di visualizzazioni figlio orientate orizzontalmente in un controllo StackLayout, in iOS e Android](../images/orientation.png "StackLayout che contiene istanze di etichette orientate orizzontalmente")](../images/orientation-large.png#lightbox "StackLayout che contiene istanze di etichette orientate orizzontalmente")
 
     Si noti che le istanze di [`Label`](xref:Xamarin.Forms.Label) all'interno di [`StackLayout`](xref:Xamarin.Forms.StackLayout) sono ora allineate orizzontalmente anziché verticalmente.
 

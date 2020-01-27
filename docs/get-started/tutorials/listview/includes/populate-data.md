@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "69541486"
 ---
 Un elemento [`ListView`](xref:Xamarin.Forms.ListView) viene popolato con dati mediante la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) che è di tipo `IEnumerable`. Il passaggio precedente ha popolato l'elemento `ListView` in XAML con una matrice di stringhe. Tuttavia, in genere un elemento `ListView` verrà popolato con dati di una raccolta, definita nel code-behind, che implementa `IEnumerable`.
@@ -187,7 +187,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento ListView popolato con dati di una raccolta in iOS e Android](../images/populate-data.png "Elemento ListView che mostra dati di una raccolta")](../images/populate-data-large.png#lightbox "Elemento ListView che mostra dati di una raccolta")
+    [![Screenshot di un controllo ListView popolato con i dati da una raccolta, in iOS e Android](../images/populate-data.png "ListView che visualizza i dati da una raccolta")](../images/populate-data-large.png#lightbox "ListView che visualizza i dati da una raccolta")
 
     L'elemento [`ListView`](xref:Xamarin.Forms.ListView) mostra la proprietà `Name` per ogni `Monkey` della raccolta `Monkeys`. Questo avviene perché, per impostazione predefinita, l'elemento `ListView` chiama il metodo `ToString` quando mostra gli oggetti di una raccolta, di cui è stato eseguito l'override nella classe `Monkey` per restituire il valore della proprietà `Name`.
 
@@ -368,6 +368,6 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento ListView popolato con dati di una raccolta in iOS e Android](../images/populate-data.png "Elemento ListView che mostra dati di una raccolta")](../images/populate-data-large.png#lightbox "Elemento ListView che mostra dati di una raccolta")
+    [![Screenshot di un controllo ListView popolato con i dati da una raccolta, in iOS e Android](../images/populate-data.png "ListView che visualizza i dati da una raccolta")](../images/populate-data-large.png#lightbox "ListView che visualizza i dati da una raccolta")
 
     L'elemento [`ListView`](xref:Xamarin.Forms.ListView) mostra la proprietà `Name` per ogni `Monkey` della raccolta `Monkeys`. Questo avviene perché, per impostazione predefinita, l'elemento `ListView` chiama il metodo `ToString` quando mostra gli oggetti di una raccolta, di cui è stato eseguito l'override nella classe `Monkey` per restituire il valore della proprietà `Name`.

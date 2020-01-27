@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4416eddfab4bfcf2b3274054db9bcfc60ed8fdec
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71059700"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
@@ -21,4 +21,4 @@ In questa esercitazione si imparerà a:
 
 Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come personalizzare il comportamento di un oggetto [`Editor`](xref:Xamarin.Forms.Editor). Gli screenshot seguenti illustrano l'applicazione finale:
 
-[![Screenshot di un Editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")
+[![Screenshot di un editor di ridimensionamento automatico, in iOS e Android](../images/customize-behavior.png "Editor di ridimensionamento automatico")](../images/customize-behavior-large.png#lightbox "Editor di ridimensionamento automatico")

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372947"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,7 +33,7 @@ ms.locfileid: "61372947"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Fare clic sull'elemento [`Button`](xref:Xamarin.Forms.Button) e osservare che il testo mostrato da esso cambia:
 
-    [![Screenshot del testo dell'elemento Button che cambia dopo il clic, in iOS e Android](../images/handle-button-click.png "Gestire il clic su un pulsante")](../images/handle-button-click-large.png#lightbox "Gestire il clic su un pulsante")
+    [![Screenshot del testo del pulsante che cambia dopo la ricezione di un clic, in iOS e Android](../images/handle-button-click.png "Gestire un clic su un pulsante")](../images/handle-button-click-large.png#lightbox "Gestire un clic su un pulsante")
 
     Per altre informazioni sulla gestione dei clic sui pulsanti, vedere [Handling button clicks](~/xamarin-forms/user-interface/button.md#handling-button-clicks) (Gestione dei clic sui pulsanti) nella guida [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md) (Button di Xamarin.Forms).
 
@@ -64,6 +64,6 @@ ms.locfileid: "61372947"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Fare clic sull'elemento [`Button`](xref:Xamarin.Forms.Button) e osservare che il testo mostrato da esso cambia:
 
-    [![Screenshot del testo dell'elemento Button che cambia dopo il clic, in iOS e Android](../images/handle-button-click.png "Gestire il clic su un pulsante")](../images/handle-button-click-large.png#lightbox "Gestire il clic su un pulsante")
+    [![Screenshot del testo del pulsante che cambia dopo la ricezione di un clic, in iOS e Android](../images/handle-button-click.png "Gestire un clic su un pulsante")](../images/handle-button-click-large.png#lightbox "Gestire un clic su un pulsante")
 
     Per altre informazioni sulla gestione dei clic sui pulsanti, vedere [Handling button clicks](~/xamarin-forms/user-interface/button.md#handling-button-clicks) (Gestione dei clic sui pulsanti) nella guida [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md) (Button di Xamarin.Forms).

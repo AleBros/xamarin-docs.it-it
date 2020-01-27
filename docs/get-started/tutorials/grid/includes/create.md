@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "72678723"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -37,7 +37,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore remoto iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichettas")
+    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichetta")
 
     Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -72,6 +72,6 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichettas")
+    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichetta")
 
     Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

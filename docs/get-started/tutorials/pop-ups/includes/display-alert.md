@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277298"
 ---
 Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente o per rivolgere semplici domande a un utente. In questo esercizio si userà il metodo [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un avviso all'utente e per porre semplici domande.
@@ -65,7 +65,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
     Dopo aver ignorato l'avviso, toccare il secondo [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot di un avviso che porge una domanda, in iOS e Android](../images/alert-question.png "Avviso che porge una domanda")](../images/alert-question-large.png#lightbox "Avviso che porge una domanda")
+    [![Screenshot di un avviso che pone una domanda, in iOS e Android](../images/alert-question.png "Avviso che pone una domanda")](../images/alert-question-large.png#lightbox "Avviso che pone una domanda")
 
     Si noti che, dopo aver selezionato una risposta alla domanda, la risposta viene visualizzata nella finestra **Output applicazione**  di Visual Studio.
 
@@ -128,7 +128,7 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
     Dopo aver ignorato l'avviso, toccare il secondo [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot di un avviso che porge una domanda, in iOS e Android](../images/alert-question.png "Avviso che porge una domanda")](../images/alert-question-large.png#lightbox "Avviso che porge una domanda")
+    [![Screenshot di un avviso che pone una domanda, in iOS e Android](../images/alert-question.png "Avviso che pone una domanda")](../images/alert-question-large.png#lightbox "Avviso che pone una domanda")
 
     Si noti che, dopo aver selezionato una risposta alla domanda, la risposta viene visualizzata nella finestra **Output applicazione**  di Visual Studio per Mac.
 

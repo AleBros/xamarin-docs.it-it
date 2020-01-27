@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61375359"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,7 +33,7 @@ ms.locfileid: "61375359"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore remoto iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Grid con contenuto che si espande in più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Elemento Grid con contenuto che si espande in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Elemento Grid con contenuto che si espande in colonne e righe")
+    [![Screenshot di una griglia con contenuto che si estende su più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Griglia con contenuto che si estende in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Griglia con contenuto che si estende in colonne e righe")
 
     Per altre informazioni sull'espansione su più righe e colonne, vedere [Estensione](~/xamarin-forms/user-interface/layouts/grid.md#spans) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -64,6 +64,6 @@ ms.locfileid: "61375359"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento Grid con contenuto che si espande in più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Elemento Grid con contenuto che si espande in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Elemento Grid con contenuto che si espande in colonne e righe")
+    [![Screenshot di una griglia con contenuto che si estende su più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Griglia con contenuto che si estende in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Griglia con contenuto che si estende in colonne e righe")
 
     Per altre informazioni sull'espansione su più righe e colonne, vedere [Estensione](~/xamarin-forms/user-interface/layouts/grid.md#spans) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

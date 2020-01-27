@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560003"
 ---
 Le dimensioni e la posizione delle viste figlio all'interno di un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dipende dai valori delle proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) delle viste figlio e dai valori delle proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -53,7 +53,7 @@ Le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio in un elemento StackLayout con opzioni di allineamento ed espansione impostate in iOS e Android](../images/alignment-expansion.png "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")
+    [![Screenshot delle visualizzazioni figlio in un controllo StackLayout, con opzioni di allineamento ed espansione impostate, in iOS e Android](../images/alignment-expansion.png "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")
 
     Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) rispetta solo le preferenze di allineamento nelle viste figlio che hanno la direzione opposta all'orientamento di `StackLayout`. Pertanto, le viste figlio [`Label`](xref:Xamarin.Forms.Label) all'interno dell'elemento `StackLayout` orientato verticalmente impostano le loro proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su uno dei campi di allineamento:
 
@@ -109,7 +109,7 @@ Le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio in un elemento StackLayout con opzioni di allineamento ed espansione impostate in iOS e Android](../images/alignment-expansion.png "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")
+    [![Screenshot delle visualizzazioni figlio in un controllo StackLayout, con opzioni di allineamento ed espansione impostate, in iOS e Android](../images/alignment-expansion.png "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "StackLayout contenente istanze di etichette, con allineamento ed espansione impostati")
 
     Un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) rispetta solo le preferenze di allineamento nelle viste figlio che hanno la direzione opposta all'orientamento di `StackLayout`. Pertanto, le viste figlio [`Label`](xref:Xamarin.Forms.Label) all'interno dell'elemento `StackLayout` orientato verticalmente impostano le loro proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su uno dei campi di allineamento:
 

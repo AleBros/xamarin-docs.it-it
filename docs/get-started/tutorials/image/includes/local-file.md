@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61384489"
 ---
 È possibile aggiungere file di immagine ai progetti della piattaforma e si può farvi riferimento dal codice Xamarin.Forms condiviso. Questo metodo di distribuzione delle immagini è necessario quando le immagini sono specifiche della piattaforma, ad esempio quando si usano risoluzioni diverse su piattaforme diverse o progettazioni leggermente differenti.
@@ -20,11 +20,11 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. In **Esplora soluzioni**, nel progetto **ImageTutorial.iOS**, espandere **Cataloghi asset** e fare doppio clic su **Asset** per aprirlo. Nella scheda **Assets.xcassets** fare clic sul pulsante **Più** e selezionare **Aggiungi set di immagini**:
 
-    ![Screenshot della creazione di un nuovo set di immagini nel catalogo asset in Visual Studio](../images/vs/new-image-set.png "Nuovo set di immagini del catalogo asset")
+    ![Screenshot della creazione di un nuovo set di immagini nel catalogo asset in Visual Studio](../images/vs/new-image-set.png "Nuovo set di immagini nel catalogo asset")
 
 1. Nella scheda **Assets.xcassets** selezionare il nuovo set di immagini e verrà visualizzato l'editor:
 
-    ![Screenshot del nuovo set di immagini nel catalogo asset in Visual Studio](../images/vs/new-image-set-editor.png "Editor del set di immagini del catalogo asset")
+    ![Screenshot del set di immagini nel catalogo asset in Visual Studio](../images/vs/new-image-set-editor.png "Editor del set di immagini del catalogo asset")
 
 1. Trascinare **XamarinLogo.png** dal file system alla casella **1x** per la categoria **Universale**:
 
@@ -38,7 +38,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. In **Esplora soluzioni**, nel progetto **ImageTutorial.Android**, espandere la cartella **Risorse**. Quindi trascinare **XamarinLogo.png** dal file system alla cartella **drawable**:
 
-    ![Screenshot del file di immagine come risorsa Android in Visual Studio](../images/vs/android-resource.png "File di immagine locale nella cartella delle risorse Android")
+    ![Screenshot del file di immagine come risorsa Android in Visual Studio](../images/vs/android-resource.png "File di immagine locale nella cartella risorse Android")
 
     > [!NOTE]
     > Visual Studio imposterà automaticamente l'azione di compilazione per l'immagine su **AndroidResource**.
@@ -58,7 +58,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di una vista Image che mostra un'immagine locale in iOS e Android](../images/local-file.png "Vista Image che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Vista Image che mostra un'immagine locale")
+    [![Screenshot di una visualizzazione immagine che mostra un'immagine locale, in iOS e Android](../images/local-file.png "Visualizzazione immagine che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Visualizzazione immagine che mostra un'immagine locale")
 
     Per altre informazioni sulle immagini locali, vedere [Immagini locali](~/xamarin-forms/user-interface/images.md#local-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
@@ -66,7 +66,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. Nel **riquadro della soluzione**, nel progetto **ImageTutorial.iOS**, fare doppio clic su **Assets.xcassets** per aprirlo. Quindi, nell'**elenco Asset** fare doppio clic e selezionare **New Image Set** (Nuovo set di immagini):
 
-    ![Screenshot della creazione di un nuovo set di immagini nel catalogo asset in Visual Studio per Mac](../images/vsmac/new-image-set.png "Nuovo set di immagini del catalogo asset")
+    ![Screenshot della creazione di un nuovo set di immagini nel catalogo asset in Visual Studio per Mac](../images/vsmac/new-image-set.png "Nuovo set di immagini nel catalogo asset")
 
 1. Nell'**elenco Asset** selezionare il nuovo set di immagini e verrà visualizzato l'editor:
 
@@ -84,7 +84,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. Nella finestra di dialogo **Add File to Folder** (Aggiungi file a cartella) selezionare **OK**.
 
-    ![Screenshot del file di immagine come risorsa Android in Visual Studio per Mac](../images/vsmac/android-resource.png "File di immagine locale nella cartella delle risorse Android")
+    ![Screenshot del file di immagine come risorsa Android in Visual Studio per Mac](../images/vsmac/android-resource.png "File di immagine locale nella cartella risorse Android")
 
     > [!NOTE]
     > Visual Studio per Mac imposterà automaticamente l'azione di compilazione per l'immagine su **AndroidResource**.
@@ -104,6 +104,6 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di una vista Image che mostra un'immagine locale in iOS e Android](../images/local-file.png "Vista Image che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Vista Image che mostra un'immagine locale")
+    [![Screenshot di una visualizzazione immagine che mostra un'immagine locale, in iOS e Android](../images/local-file.png "Visualizzazione immagine che mostra un'immagine locale")](../images/local-file-large.png#lightbox "Visualizzazione immagine che mostra un'immagine locale")
 
     Per altre informazioni sulle immagini locali, vedere [Immagini locali](~/xamarin-forms/user-interface/images.md#local-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
