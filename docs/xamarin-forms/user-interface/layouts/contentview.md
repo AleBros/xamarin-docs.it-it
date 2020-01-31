@@ -22,7 +22,7 @@ La classe [`ContentView`](xref:Xamarin.Forms.ContentView) Novell. Forms è un ti
 
 Lo screenshot seguente mostra un controllo `CardView` che deriva dalla classe `ContentView`:
 
-[schermata dell'applicazione di esempio ![CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[![schermata dell'applicazione di esempio CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
 La classe `ContentView` definisce un'unica proprietà:
 
@@ -202,7 +202,7 @@ Il data binding in una `ControlTemplate` usa l'estensione di markup `TemplateBin
 
 Gli screenshot seguenti mostrano un'istanza di `CardView` standard e `CardView` di cui è stato eseguito l'override `ControlTemplate`:
 
-[schermata di ![ControlTemplate CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[![schermata di ControlTemplate CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
 Per ulteriori informazioni sui modelli di controllo, vedere [Novell. Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

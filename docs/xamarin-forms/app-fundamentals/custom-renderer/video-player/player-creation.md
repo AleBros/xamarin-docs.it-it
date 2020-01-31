@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: 007c027772701e424aad5995c0ec025c3589171c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771779"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725091"
 ---
 # <a name="creating-the-platform-video-players"></a>Creazione di lettori video per le piattaforme
 
@@ -22,7 +22,7 @@ La soluzione [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/x
 
 ## <a name="the-video-player"></a>Lettore video
 
-La classe [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) appartiene alla libreria .NET Standard **VideoPlayerDemos** che è condivisa tra le piattaforme. Deriva da `View`:
+La classe [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/FormsVideoLibrary/VideoPlayer.cs) appartiene alla libreria .NET Standard **VideoPlayerDemos** che è condivisa tra le piattaforme. Deriva da `View`:
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ Ogni piattaforma contiene una classe denominata `VideoPlayerRenderer` che a sua 
 
 L'implementazione di un lettore video in iOS comporta l'uso di diverse classi. In primo luogo l'applicazione crea un elemento [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController), quindi imposta la proprietà [`Player`](xref:AVKit.AVPlayerViewController.Player*) su un oggetto di tipo [`AVPlayer`](xref:AVFoundation.AVPlayer). Quando viene assegnata una sorgente video al lettore sono necessarie classi aggiuntive.
 
-Come tutti i renderer, [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) per iOS contiene un attributo `ExportRenderer` che identifica la vista `VideoPlayer` con il renderer:
+Come tutti i renderer, [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/FormsVideoLibrary/VideoPlayerRenderer.csVideoPlayerRenderer.cs) per iOS contiene un attributo `ExportRenderer` che identifica la vista `VideoPlayer` con il renderer:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ In genere la proprietà `Control` della classe renderer fa quindi riferimento al
 
 ### <a name="the-android-video-view"></a>Visualizzazione video Android
 
-Il renderer Android per `VideoPlayer` si basa sulla classe [`VideoView`](xrtef:Android.Widget.VideoView) per Android. Se tuttavia l'elemento `VideoView` viene usato da solo per riprodurre un video in un'applicazione Xamarin.Forms, il video occupa tutta l'area assegnata a `VideoPlayer` senza mantenere le proporzioni corrette. Per questo motivo (come si vedrà a breve), `VideoView` viene impostato come elemento figlio di un elemento `RelativeLayout` per Android. Una direttiva `using` definisce l'elemento `ARelativeLayout` per distinguerlo da `RelativeLayout` di Xamarin.Forms e questo è il secondo argomento generico di `ViewRenderer`:
+Il renderer Android per `VideoPlayer` si basa sulla classe [`VideoView`](xref:Android.Widget.VideoView) per Android. Se tuttavia l'elemento `VideoView` viene usato da solo per riprodurre un video in un'applicazione Xamarin.Forms, il video occupa tutta l'area assegnata a `VideoPlayer` senza mantenere le proporzioni corrette. Per questo motivo (come si vedrà a breve), `VideoView` viene impostato come elemento figlio di un elemento `RelativeLayout` per Android. Una direttiva `using` definisce l'elemento `ARelativeLayout` per distinguerlo da `RelativeLayout` di Xamarin.Forms e questo è il secondo argomento generico di `ViewRenderer`:
 
 ```csharp
 using System;

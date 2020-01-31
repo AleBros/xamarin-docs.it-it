@@ -1,6 +1,6 @@
 ---
 title: Creare un'applicazione Xamarin.Forms a pagina singola
-description: Questo articolo illustra come creare un'applicazione Xamarin.Forms multipiattaforma a pagina singola, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo.
+description: Questo articolo illustra come creare un'applicazione Xamarin.Forms multipiattaforma a singola pagina, che consente di immettere una nota e renderla persistente nella risorsa di archiviazione del dispositivo.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -10,58 +10,58 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71679989"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Xamarin.Forms a pagina singola
+# <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Xamarin.Forms a singola pagina
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
-In questa Guida introduttiva si apprenderà come:
+In questo argomento di avvio rapido si apprenderà come:
 
 - Creare un'applicazione Xamarin.Forms multipiattaforma.
 - Definire l'interfaccia utente per una pagina usando eXtensible Application Markup Language (XAML).
 - Interagire con gli elementi dell'interfaccia utente XAML dal codice.
 
-Questa Guida introduttiva illustra come creare un'applicazione Xamarin.Forms multipiattaforma, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo. Il risultato è riportato di seguito:
+Questo argomento di avvio rapido illustra come creare un'applicazione Xamarin.Forms multipiattaforma, che consente di immettere una nota e renderla persistente nella risorsa di archiviazione del dispositivo. Il risultato è riportato di seguito:
 
 [![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
-- Visual Studio 2019 (versione più recente) con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** installato.
+- Visual Studio 2019 (la versione più recente) con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**.
 - Conoscenza di C#.
-- opzionale Un Mac associato per compilare l'applicazione in iOS.
+- (facoltativo) Un Mac associato per compilare l'applicazione in iOS.
 
-Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Novell](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2019"></a>Introduzione a Visual Studio 2019
 
-1. Avviare Visual Studio 2019 e nella finestra di avvio fare clic su **Crea un nuovo progetto** per creare un nuovo progetto:
+1. Avviare Visual Studio 2019 e nella finestra iniziale fare clic su **Crea un nuovo progetto** per creare un nuovo progetto:
 
     ![](single-page-images/vs/new-solution-2019.png "New Project")
 
-2. Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Xamarin.Forms)** e fare clic sul pulsante **Avanti** :
+2. Nella finestra **Crea un nuovo progetto** selezionare **Mobile** nell'elenco a discesa **Tipo di progetto**, selezionare il modello **App per dispositivi mobili (Xamarin.Forms)** e fare clic sul pulsante **Avanti**:
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
-3. Nella finestra **Configura nuovo progetto** impostare il **nome del progetto** su **Note**, scegliere un percorso appropriato per il progetto e fare clic sul pulsante **Crea** :
+3. Nella finestra **Configura il nuovo progetto** impostare **Nome progetto** su **Notes**, scegliere un percorso appropriato per il progetto e fare clic sul pulsante **Crea**:
 
     ![](single-page-images/vs/configure-project.png "Configure your Project")
 
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che la soluzione sia denominata **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva alla soluzione.
 
-4. Nella finestra di dialogo **nuova app multipiattaforma** fare clic su **app vuota**, quindi fare clic sul pulsante **OK** :
+4. Nella finestra di dialogo **Nuova app multipiattaforma** fare clic su **App vuota** e quindi sul pulsante **OK**:
 
     ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
@@ -96,9 +96,9 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [Interfaccia utente](deepdive.md#user-interface) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
 
 7. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -144,7 +144,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Save** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore dell'evento `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [Risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
@@ -164,7 +164,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     > [!NOTE]
     > I passaggi seguenti devono essere effettuati solo se si usa un [Mac associato](~/ios/get-started/installation/windows/connecting-to-mac/index.md) che soddisfa i requisiti di sistema per lo sviluppo di Xamarin.Forms.
@@ -181,18 +181,18 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
-- Visual Studio 2017, con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** installato.
+- Visual Studio 2017 con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**.
 - Conoscenza di C#.
-- opzionale Un Mac associato per compilare l'applicazione in iOS.
+- (facoltativo) Un Mac associato per compilare l'applicazione in iOS.
 
-Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Novell](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2017"></a>Introduzione a Visual Studio 2017
 
@@ -211,7 +211,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     ![](single-page-images/vs/new-app.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
 4. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
@@ -246,9 +246,9 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [Interfaccia utente](deepdive.md#user-interface) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
 
 6. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -294,7 +294,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Save** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore dell'evento `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [Risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
@@ -314,7 +314,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     > [!NOTE]
     > I passaggi seguenti devono essere effettuati solo se si usa un [Mac associato](~/ios/get-started/installation/windows/connecting-to-mac/index.md) che soddisfa i requisiti di sistema per lo sviluppo di Xamarin.Forms.
@@ -331,22 +331,22 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
-- Visual Studio per Mac (versione più recente) con supporto della piattaforma iOS e Android installato.
+- Visual Studio per Mac (versione più recente) con installato il supporto delle piattaforme Android e iOS.
 - Xcode (versione più recente).
 - Conoscenza di C#.
 
-Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Novell](~/get-started/installation/index.md).
+Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Introduzione a Visual Studio per Mac
 
-1. Avviare Visual Studio per Mac e nella finestra di avvio fare clic su **nuovo** per creare un nuovo progetto:
+1. Avviare Visual Studio per Mac e nella finestra iniziale fare clic su **Nuovo** per creare un nuovo progetto:
 
     ![](single-page-images/vsmac/new-project.png "New Solution")
 
@@ -365,7 +365,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che sia la soluzione che il progetto siano denominati **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva al progetto.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** nel **riquadro della soluzione** per aprire il file:
 
@@ -400,9 +400,9 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [Interfaccia utente](deepdive.md#user-interface) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 7. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -448,7 +448,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     }
     ```
 
-    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Salva** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore eventi `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore eventi `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) nella [Guida introduttiva a Xamarin.Forms](deepdive.md).
+    Questo codice definisce un campo `_fileName`, che fa riferimento a un file denominato `notes.txt` che archivia i dati delle note nella cartella locale dei dati delle applicazioni per l'applicazione. Quando viene eseguito il costruttore della pagina, il file viene letto, se presente, e visualizzato in [`Editor`](xref:Xamarin.Forms.Editor). Quando si seleziona **Save** premendo [`Button`](xref:Xamarin.Forms.Button), viene eseguito il gestore dell'evento `OnSaveButtonClicked`, che consente di salvare il contenuto di `Editor` nel file. Se per selezionare **Elimina** si preme `Button`, viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, che elimina il file, a condizione che esista, e rimuove qualsiasi testo da `Editor`. Per altre informazioni sull'interazione dell'utente, vedere [Risposta all'interazione dell'utente](deepdive.md#responding-to-user-interaction) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
@@ -460,7 +460,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     In caso di errori, ripetere i passaggi precedenti e correggere gli errori finché i progetti non vengono compilati correttamente.
 
-2. Nella **riquadro della soluzione**selezionare il progetto **Notes. iOS** , fare clic con il pulsante destro del mouse e selezionare **Imposta come progetto di avvio**:
+2. Nel **riquadro della soluzione** selezionare il progetto **Notes.iOS**, fare clic con il pulsante destro del mouse e scegliere **Imposta come progetto di avvio**:
 
       ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
 
@@ -472,9 +472,9 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
-4. Nella **riquadro della soluzione**selezionare il progetto **Notes. Droid** , fare clic con il pulsante destro del mouse e selezionare **Imposta come progetto di avvio**:
+4. Nel **riquadro della soluzione** selezionare il progetto **Notes.Droid**, fare clic con il pulsante destro del mouse e scegliere **Imposta come progetto di avvio**:
 
       ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
 
@@ -484,19 +484,19 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     Immettere una nota e premere il pulsante **Salva**.
 
-    Per altre informazioni su come viene avviata l'applicazione in ogni piattaforma, vedere [avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) dell' [esercitazione introduttiva di Xamarin.Forms](deepdive.md).
+    Per altre informazioni sulla modalità di avvio dell'applicazione in ogni piattaforma, vedere [Avvio dell'applicazione in ogni piattaforma](deepdive.md#launching-the-application-on-each-platform) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
 ::: zone-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa Guida introduttiva si è appreso come:
+In questo argomento di avvio rapido si è appreso come:
 
 - Creare un'applicazione Xamarin.Forms multipiattaforma.
 - Definire l'interfaccia utente per una pagina usando eXtensible Application Markup Language (XAML).
 - Interagire con gli elementi dell'interfaccia utente XAML dal codice.
 
-Per trasformare questa applicazione a pagina singola in un'applicazione a più pagine, passare alla Guida introduttiva successiva.
+Per trasformare questa applicazione a singola pagina in un'applicazione multipagina, passare all'argomento di avvio rapido successivo.
 
 > [!div class="nextstepaction"]
 > [avanti](multi-page.md)
@@ -504,4 +504,4 @@ Per trasformare questa applicazione a pagina singola in un'applicazione a più p
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Notes (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
-- [Approfondimento sulla Guida introduttiva a Xamarin.Forms](deepdive.md)
+- [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md)

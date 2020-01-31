@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: 093369010d9327cd2b19fdac09f77697532bfb75
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: c4eaebc8d5f184b1108815c37e992fa97e67aa8f
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016431"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76550020"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 
@@ -59,7 +59,7 @@ Il programma di installazione di Visual Studio 2019 e Visual Studio 2017 include
 > [!NOTE]
 >
 > - Xamarin per Visual Studio supporta qualsiasi edizione di Visual Studio 2019 o Visual Studio 2017 (Community, Professional ed Enterprise).
-> - Per usare gli SDK più recenti di Android e iOS, è necessaria la versione più recente di Visual Studio. Per i requisiti di versione specifici, vedere le note sulla versione di [Xamarin.Android](/xamarin/android/release-notes/) e le note sulla versione di [Xamarin.iOS](/xamarin/ios/release-notes/).
+> - Per usare gli ultimi SDK di Android e iOS, è necessaria l'ultima versione di Visual Studio. Per i requisiti specifici della versione, vedere [Note sulla versione di Xamarin.Android](/xamarin/android/release-notes/) e [Note sulla versione di Xamarin.iOS](/xamarin/ios/release-notes/).
 > - Lo sviluppo di app Xamarin.Forms per la piattaforma UWP (Universal Windows Platform) richiede Windows 10 con Visual Studio 2017. È consigliato Visual Studio 2019.
 
 ### <a name="testing--debugging-on-windows"></a>Test e debug in Windows
@@ -80,7 +80,7 @@ Istruzioni di [installazione](~/get-started/installation/index.md) specifiche pe
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
-Sono anche disponibili altre informazioni sui [requisiti di Xamarin.Forms e le piattaforme supportate](~/get-started/requirements.md).
+Sono anche disponibili altre informazioni sulle [piattaforme supportate di Xamarin.Forms](~/get-started/supported-platforms.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
