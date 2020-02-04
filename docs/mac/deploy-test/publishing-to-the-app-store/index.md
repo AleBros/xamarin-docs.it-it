@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2b6dcd53a9761ec3f030f3f5bf81894e9faa8b1f
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: 1a14bcc15299360a17b4c9e7a363b6d6e6f2e69a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487022"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725025"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Pubblicazione di app Xamarin.Mac in Mac App Store
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Le app Xamarin.Mac possono essere distribuite in due modi:
 
@@ -25,7 +25,7 @@ Le app Xamarin.Mac possono essere distribuite in due modi:
 
 Questo documento illustra come usare Visual Studio per Mac e Xcode per configurare un account Apple Developer e come configurare un progetto Xamarin.Mac per ogni tipo di distribuzione.
 
-## <a name="mac-developer-program"></a>Programma per sviluppatori Mac
+## <a name="mac-developer-program"></a>Programma Mac Developer
 
 Quando si aderisce al [programma Mac Developer](https://developer.apple.com/devcenter/mac/) è possibile scegliere se aderire come Individual (Singolo) o Company (Società), come illustrato nella schermata seguente:
 
@@ -40,11 +40,11 @@ Scegliere il tipo di registrazione in base alle esigenze.
 
 Questa guida descrive come creare i certificati e gli identificatori necessari per pubblicare un'app Xamarin.Mac.
 
-### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[Crea profilo di provisioning](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
+### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[Creare un profilo di provisioning](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
 
 Questa guida descrive come creare i profili di provisioning necessari per pubblicare un'app Xamarin.Mac.
 
-### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Configurazione dell'app Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
+### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Configurazione di app Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
 
 Questa guida descrive come configurare un'app Xamarin.Mac per la pubblicazione.
 
@@ -64,4 +64,4 @@ Questa guida descrive come caricare un'app Xamarin.Mac per la pubblicazione in M
 
 - [Installazione](/visualstudio/mac/installation/)
 - [Esempio Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [ID sviluppatore e GateKeeper](https://developer.apple.com/developer-id/)

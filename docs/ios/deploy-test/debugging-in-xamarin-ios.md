@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026516"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724696"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -156,9 +156,9 @@ I pulsanti avranno l'aspetto seguente in Visual Studio:
 Questi sono:
 
 - **Esegui/Arresta**: avvia/arresta l'esecuzione del codice, fino al punto di interruzione successivo.
-- **Esegui istruzione/routine (F11)**: esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
-- **Esegui istruzione (F10)**: anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
-- **Esci da istruzione/routine (MAIUSC+F11)**: torna alla riga in cui è stata chiamata la funzione corrente.
+- **Esegui istruzione/routine (F11)** : esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
+- **Esegui istruzione (F10)** : anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
+- **Esci da istruzione/routine (MAIUSC+F11)** : torna alla riga in cui è stata chiamata la funzione corrente.
 
 Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice con il debugger di Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -198,7 +198,7 @@ Questo debugger soft richiede uno schema di debug cooperativo quando è in esecu
 
 I log di arresto anomalo del sistema e l'output della classe Console verranno inviati alla console dell'iPhone. È possibile accedere a questa console con Xcode usando l'"Organizer" e selezionando il dispositivo dall'organizer.
 
-In alternativa, se non si vuole avviare Xcode, è possibile usare [iPhone Configuration Utility](https://www.apple.com/support/iphone/enterprise/) di Apple per accedere direttamente alla console. Questa presenta l'ulteriore vantaggio di poter accedere ai log della console da un computer Windows se si deve eseguire il debug di un problema sul campo.
+In alternativa, se non si vuole avviare Xcode, è possibile usare iPhone Configuration Utility di Apple per accedere direttamente alla console. Questa presenta l'ulteriore vantaggio di poter accedere ai log della console da un computer Windows se si deve eseguire il debug di un problema sul campo.
 
 Per gli utenti di Visual Studio, sono disponibili alcuni log nella finestra Output, ma è consigliabile passare al Mac per log più completi e dettagliati.
 

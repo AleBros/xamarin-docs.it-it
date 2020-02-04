@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489388"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725519"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
 
@@ -27,33 +27,33 @@ Un profilo di provisioning di sviluppo consente a un'app pensata per Mac App Sto
 > [!NOTE]
 > Lo sviluppatore deve avere già creato un certificato di sviluppo Mac prima di potere creare un profilo di provisioning di sviluppo. Specificare le informazioni richieste come illustrato in questa schermata per generare un **profilo di provisioning di sviluppo** che può essere usato per creare le build. Devono essere disponibili un certificato di sviluppo Mac valido per la selezione nella casella **Certificate** (Certificato) e almeno un sistema registrato per il test.
 
-eseguire le operazioni descritte di seguito.
+Seguire questa procedura:
 
-1. Selezionare il tipo di profilo di provisioning che occorre creare e fare clic sul pulsante **Continue** (Continua): 
+1. Selezionare il tipo di profilo di provisioning che occorre creare e fare clic sul pulsante **Continue** (Continua):
 
     [![](profiles-images/certif14.png "Selecting the profile type")](profiles-images/certif14.png#lightbox)
-2. Selezionare l'ID dell'applicazione per cui creare il profilo e fare clic sul pulsante **Continue** (Continua): 
+2. Selezionare l'ID dell'applicazione per cui creare il profilo e fare clic sul pulsante **Continue** (Continua):
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Selezionare l'ID sviluppatore usato per firmare il profilo e fare clic su **Continue** (Continua): 
+3. Selezionare l'ID sviluppatore usato per firmare il profilo e fare clic su **Continue** (Continua):
 
     [![](profiles-images/certif16.png "Selecting the developer ID")](profiles-images/certif16.png#lightbox)
-4. Selezionare i computer in cui può essere usato il profilo e fare clic su **Continue** (Continua): 
+4. Selezionare i computer in cui può essere usato il profilo e fare clic su **Continue** (Continua):
 
     [![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png#lightbox)
-5. A questo punto, immettere un nome in **Profile Name** (Nome profilo) e fare clic sul pulsante **Generate** (Genera): 
+5. A questo punto, immettere un nome in **Profile Name** (Nome profilo) e fare clic sul pulsante **Generate** (Genera):
 
     [![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png#lightbox)
-6. Fare clic sul pulsante **Download** per scaricare il nuovo profilo: 
+6. Fare clic sul pulsante **Download** per scaricare il nuovo profilo:
 
     [![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png#lightbox)
-7. I profili di provisioning di sviluppo sono installati nel riquadro Profiles Preferences (Preferenze profilo) dell'applicazione Mac **Preferenze di sistema**: 
+7. I profili di provisioning di sviluppo sono installati nel riquadro Profiles Preferences (Preferenze profilo) dell'applicazione Mac **Preferenze di sistema**:
 
     [![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png#lightbox)
-8. Nel riquadro Profiles Preferences (Preferenze profilo) saranno visualizzati tutti i profili installati: 
+8. Nel riquadro Profiles Preferences (Preferenze profilo) saranno visualizzati tutti i profili installati:
 
     [![](profiles-images/image47.png "Showing all installed profiles")](profiles-images/image47.png#lightbox)
-9. Il profilo verrà visualizzato anche nell'**utilità del certificato dello sviluppatore** nel caso in cui debba essere scaricato nuovamente: 
+9. Il profilo verrà visualizzato anche nell'**utilità del certificato dello sviluppatore** nel caso in cui debba essere scaricato nuovamente:
 
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
@@ -63,27 +63,27 @@ Sarà necessario creare un nuovo profilo di provisioning di sviluppo per ogni nu
 
 I profili di provisioning di produzione sono necessari per creare un pacchetto da inviare a Mac App Store.
 
-eseguire le operazioni descritte di seguito.
+Seguire questa procedura:
 
-1. Selezionare il tipo di profilo da creare e fare clic sul pulsante **Continue** (Continua): 
+1. Selezionare il tipo di profilo da creare e fare clic sul pulsante **Continue** (Continua):
 
     [![](profiles-images/certif21.png "Selecting the type of profile")](profiles-images/certif21.png#lightbox)
-2. Selezionare l'ID dell'app per cui creare il profilo e fare clic sul pulsante **Continue** (Continua): 
+2. Selezionare l'ID dell'app per cui creare il profilo e fare clic sul pulsante **Continue** (Continua):
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. Selezionare l'ID aziendale per la firma del profilo e fare clic sul pulsante **Continue** (Continua): 
+3. Selezionare l'ID aziendale per la firma del profilo e fare clic sul pulsante **Continue** (Continua):
 
     [![](profiles-images/certif23.png "Selecting the company ID")](profiles-images/certif23.png#lightbox)
-4. Immettere un nome in **Profile name** (Nome profilo) e fare clic sul pulsante **Generate** (Genera): 
+4. Immettere un nome in **Profile name** (Nome profilo) e fare clic sul pulsante **Generate** (Genera):
 
     [![](profiles-images/certif24.png "Generating the profile")](profiles-images/certif24.png#lightbox)
-5. Fare clic su **Download** per ottenere il file del profilo di provisioning (con estensione `.provisionprofile`): 
+5. Fare clic su **Download** per ottenere il file del profilo di provisioning (con estensione `.provisionprofile`):
 
     [![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png#lightbox)
-6. Trascinarlo in **Xcode Organizer** o fare doppio clic per installarlo. Il profilo verrà quindi visualizzato in Xcode Organizer: 
+6. Trascinarlo in **Xcode Organizer** o fare doppio clic per installarlo. Il profilo verrà quindi visualizzato in Xcode Organizer:
 
     [![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png#lightbox)
-7. Il profilo di provisioning verrà inoltre visualizzato nell'elenco: 
+7. Il profilo di provisioning verrà inoltre visualizzato nell'elenco:
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
@@ -94,5 +94,5 @@ Se lo sviluppatore decide di cambiare le funzionalità usate da un ID app (ad es
 - [Installazione](~//mac/get-started/installation.md)
 - [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Guida agli strumenti: Firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [ID sviluppatore e GateKeeper](https://developer.apple.com/developer-id/)

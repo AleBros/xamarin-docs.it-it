@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f43cb3ac5ff4d976c57a9d82c2003a08954ef1a4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 2d84d149b2eb4194de35fabc69cf44af99c04d25
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021043"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724126"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
 
@@ -20,13 +20,13 @@ Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzio
 1. **Creazione di una chiave privata** &ndash; Questo passaggio deve essere eseguito una sola volta. La chiave privata è necessaria per firmare digitalmente il file APK.
     Dopo che la chiave privata è stata creata, è possibile ignorare questo passaggio per le compilazioni di rilascio future.
 
-2. **Esecuzione di Zipalign per il file APK**  &ndash; *Zipalign* è un processo di ottimizzazione eseguito per un'applicazione. Questo processo consente ad Android di interagire in modo più efficiente con il file APK in runtime. Xamarin.Android esegue un controllo in runtime e consente l'esecuzione dell'applicazione solo se il file APK è stato sottoposto a Zipalign.
+2. **Esecuzione di Zipalign per il file APK** &ndash; *Zipalign* è un processo di ottimizzazione eseguito per un'applicazione. Questo processo consente ad Android di interagire in modo più efficiente con il file APK in runtime. Xamarin.Android esegue un controllo in runtime e consente l'esecuzione dell'applicazione solo se il file APK è stato sottoposto a Zipalign.
 
-3. **Firma del file APK** &ndash; Questo passaggio prevede l'uso dell'utilità **apksigner** di Android SDK e la firma del file APK con la chiave privata creata nel passaggio precedente. Le applicazioni sviluppate con versioni degli strumenti di compilazione di Android SDK precedenti alla versione 24.0.3 usano l'app **jarsigner** di JDK. Entrambi gli strumenti vengono trattati in dettaglio più avanti. 
+3. **Firma del file APK** &ndash; Questo passaggio prevede l'uso dell'utilità **apksigner** di Android SDK e la firma del file APK con la chiave privata creata nel passaggio precedente. Le applicazioni sviluppate con versioni degli strumenti di compilazione di Android SDK precedenti alla versione 24.0.3 usano l'app **jarsigner** di JDK. Entrambi gli strumenti vengono trattati in dettaglio più avanti.
 
-L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**. 
+L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questa guida descrive principalmente l'uso dell'utilità **apksigner** presente negli strumenti di compilazione di Android SDK versione 24.0.3 o successiva. La guida presuppone che sia già stato compilato un file APK.
 
@@ -82,7 +82,7 @@ Re-enter new password:
 [Storing xample.keystore]
 ```
 
-Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l'opzione &ndash; `list`:
+Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l'opzione &ndash;`list`:
 
 ```shell
 $ keytool -list -keystore xample.keystore
@@ -127,7 +127,7 @@ Vedere la [documentazione di Google](https://developer.android.com/studio/comman
 > [!WARNING]
 > Questa sezione si applica solo se è necessario firmare il file APK con l'utilità **jarsigner**. Per gli sviluppatori è consigliabile firmare il file APK con **apksigner**.
 
-Questa tecnica comporta la firma del file APK tramite il comando **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** di Java SDK.  Lo strumento **jarsigner** è in dotazione con Java SDK. 
+Questa tecnica comporta la firma del file APK tramite il comando **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** di Java SDK.  Lo strumento **jarsigner** è in dotazione con Java SDK.
 
 Il codice seguente illustra come firmare un file APK usando **jarsigner** e la chiave `publishingdoc` contenuta in un file di archivio chiavi denominato **xample.keystore**:
 
@@ -141,7 +141,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Application Signing](https://source.android.com/security/apksigning/) (Firma dell'applicazione)
-- [Java JAR signing](https://docs.oracle.com/javase/8/docs/technotes~/jar/jar.html#Signed_JAR_File) (Firma del file JAR Java)
 - [jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 - [zipalign](https://developer.android.com/studio/command-line/zipalign.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 7db7edd4d8143f4e456f59b97de51e3c1d202dc0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: f008ac42bfffeda2a47ca30aa2991d91f990732f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489401"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725038"
 ---
 # <a name="mac-app-configuration"></a>Configurazione di app Mac
 
@@ -20,15 +20,15 @@ ms.locfileid: "75489401"
 
 Fare clic con il pulsante destro del mouse sul progetto dell'applicazione Mac in Visual Studio per Mac e scegliere **Opzioni**.
 
-### <a name="application-settings"></a>Impostazioni applicazione
+### <a name="application-settings"></a>Impostazioni dell'applicazione
 
 Per modificare le impostazioni di un'applicazione Xamarin.Mac, fare doppio clic sul file **Info.plist** nel **riquadro della soluzione**:
 
-![Selezione del file INFO. plist](app-configuration-images/config04.png "Selezione del file INFO. plist")
+![Selezione del file info.plist](app-configuration-images/config04.png "Selezione del file info.plist")
 
 In questo modo verranno visualizzate le opzioni disponibili per l'app:
 
- [![Modifica del file INFO. plist](app-configuration-images/config01.png "Modifica del file INFO. plist")](app-configuration-images/config01-large.png#lightbox)
+ [![Modifica del file info.plist](app-configuration-images/config01.png "Modifica del file info.plist")](app-configuration-images/config01-large.png#lightbox)
 
 Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisiti di sistema seguenti:
 
@@ -38,7 +38,7 @@ Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisi
 
 La sezione **Firma Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di firmare un'app Xamarin.Mac per il test, il rilascio o il rilascio automatico tramite l'App Store Apple:
 
-[![Editor firma Mac](app-configuration-images/config02.png "Finestra di firma Mac")](app-configuration-images/config02-large.png#lightbox)
+[![Editor della firma Mac](app-configuration-images/config02.png "Editor della firma Mac")](app-configuration-images/config02-large.png#lightbox)
 
 Da qui selezionare Identità, Profilo di provisioning e tutti i diritti personalizzati usati per firmare l'app quando viene compilata. Lo sviluppatore può facoltativamente firmare il programma di installazione usato per installare l'app in un altro Mac.
 
@@ -53,4 +53,4 @@ La sezione **Compilazione Mac** della finestra di dialogo **Opzioni progetto** c
 - [Installazione](/visualstudio/mac/installation/)
 - [Esempio Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [ID sviluppatore e GateKeeper](https://developer.apple.com/developer-id/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026496"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724620"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>File iTunesMetadata.plist nelle app Xamarin.iOS
 
@@ -242,8 +242,6 @@ Per le applicazioni iOS, Apple definisce attualmente i generi e gli ID di genere
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-Per altre informazioni vedere la documentazione [Genre IDs Appendix](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) (Appendice sugli ID di genere) di Apple.
-
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
 Usare la chiave `softwareSupportedDeviceIds` per comunicare a iTunes i dispositivi iOS supportati da questa applicazione iOS. Esempio:
@@ -297,7 +295,7 @@ Le chiavi seguenti sono incluse in tutti i file `iTunesMetadata.plist` per le ap
 
 ### <a name="using-the-visual-plist-editor"></a>Uso dell'editor di file plist visivo
 
-Procedere come descritto di seguito:
+Seguire questa procedura:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file di progetto Xamarin.iOS e scegliere **Aggiungi** > **Nuovo file**.
 2. Nella finestra di dialogo Nuovo file selezionare **iOS** > **Elenco proprietà**:
@@ -328,7 +326,7 @@ Procedere come descritto di seguito:
 
 ### <a name="using-a-plain-text-editor"></a>Uso di un editor di testo normale
 
-Procedere come descritto di seguito:
+Seguire questa procedura:
 
 1. In un editor di testo normale creare un nuovo file di testo e denominarlo `iTunesMetadata.plist`.
 2. Copiare il contenuto di esempio dalla sezione [Contenuto di iTunesMetadata.plist](#iTunesMetadata_contents) sopra.
@@ -342,7 +340,7 @@ Procedere come descritto di seguito:
 
 Il plug-in Xamarin per Visual Studio supporta solo un editor visivo per i file `Info.plist` e `Entitlement.plist`, quindi è necessario creare il file `iTunesMetadata.plist` in un editor di testo standard e includerlo manualmente nel progetto Xamarin.iOS.
 
-Procedere come descritto di seguito:
+Seguire questa procedura:
 
 1. In un editor di testo normale creare un nuovo file di testo e denominarlo `iTunesMetadata.plist`.
 2. Copiare il contenuto di esempio dalla sezione [Contenuto di iTunesMetadata.plist](#iTunesMetadata_contents) sopra.

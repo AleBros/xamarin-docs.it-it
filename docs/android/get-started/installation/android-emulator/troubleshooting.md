@@ -8,16 +8,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: 675e6cebab95d2a997bf48a6c9231b5e8c661342
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020838"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794823"
 ---
 # <a name="android-emulator-troubleshooting"></a>Risoluzione dei problemi dell'emulatore Android
 
-_Questo articolo descrive i messaggi di avviso e i problemi più comuni che si verificano durante la configurazione e l'esecuzione del emulatore Android. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori, oltre a vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
+_In questo articolo vengono descritti i problemi e i messaggi di avviso più comuni che si verificano durante la configurazione e l'esecuzione dell'emulatore Android. Vengono inoltre descritte le soluzioni per risolvere questi errori e vari suggerimenti per diagnosticare problemi dell'emulatore e risolverli._
 
 ::: zone pivot="windows"
 
@@ -230,7 +230,7 @@ Se `STATE` non è impostato su `RUNNING`, per risolvere il problema vedere [How 
 
 HAXM può essere in conflitto con altre tecnologie che usano la virtualizzazione, ad esempio Hyper-V, Windows Device Guard e alcuni software antivirus:
 
-- **Hyper-V** &ndash; Se si usa una versione di Windows precedente all'**Aggiornamento di Windows 10 - aprile 2018 (build 1803)** e Hyper-V è abilitato, seguire la procedura in [Disabilitazione di Hyper-V](#disable-hyperv) per abilitare HAXM.
+- **Hyper-V** &ndash; Se si usa una versione di Windows precedente all'**Aggiornamento di Windows 10 di aprile 2018 (build 1803)** e Hyper-V è abilitato, seguire la procedura in [Disabilitazione di Hyper-V](#disable-hyperv) per abilitare HAXM.
 
 - **Device Guard** &ndash; Device Guard e Credential Guard possono impedire la disabilitazione di Hyper-V nei computer Windows. Per disabilitare Device Guard e Credential Guard, vedere [Disabling Device Guard](#disable-devguard) (Disabilitazione di Device Guard).
 
@@ -284,7 +284,7 @@ Se Device Guard è abilitato, usare la procedura seguente per disabilitarlo:
 
 1. Verificare che **Hyper-V** sia disabilitato (in **Attiva o disattiva funzionalità di Windows**), come descritto nella sezione precedente.
 
-2. Nella casella di ricerca Windows immettere **gpedit** e selezionare il risultato della ricerca **Modifica Criteri di gruppo**. Verrà avviato l'**Editor Criteri di gruppo locali**.
+2. Nella casella di ricerca Windows immettere **gpedit.msc** e selezionare il risultato della ricerca **Modifica Criteri di gruppo**. Verrà avviato l'**Editor Criteri di gruppo locali**.
 
 3. Nell'**Editor Criteri di gruppo locali** passare a **Configurazione computer > Modelli amministrativi > Sistema > Device Guard**:
 

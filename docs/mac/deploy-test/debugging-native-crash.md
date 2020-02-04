@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021661"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725493"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Debug di un arresto anomalo nativo in un app Xamarin.Mac
 
 ## <a name="overview"></a>Panoramica
 
-In alcuni casi gli errori di programmazione possono causare arresti anomali nel runtime Objective-C nativo, che, a differenza delle eccezioni di C#, non puntano a una riga specifica nel codice che è possibile cercare di correggere. In alcuni casi può essere semplice trovarli e correggerli, in altri può essere estremamente difficile tenerne traccia. 
+In alcuni casi gli errori di programmazione possono causare arresti anomali nel runtime Objective-C nativo, che, a differenza delle eccezioni di C#, non puntano a una riga specifica nel codice che è possibile cercare di correggere. In alcuni casi può essere semplice trovarli e correggerli, in altri può essere estremamente difficile tenerne traccia.
 
 Verranno ora esaminati alcuni esempi reali di arresto anomalo nativo.
 
@@ -163,40 +163,40 @@ Questa guida consente di tenere traccia di eventuali bug di questo tipo, di segn
 
 ### <a name="locating"></a>Individuazione
 
-Quasi sempre con i bug di questo tipo, il sintomo principale è un arresto anomalo nativo, in genere con elementi simili a `mono_sigsegv_signal_handler` o `_sigtrap` nei frame in alto dello stack. Cocoa sta provando a richiamare il codice C#, raggiungendo un oggetto raccolto dal Garbage Collector e provocando un arresto anomalo. Non tutti gli arresti anomali del sistema con questi simboli sono tuttavia causati da un problema di binding come questo e sarà necessario effettuare altre indagini per confermare che si tratta proprio di questo problema. 
+Quasi sempre con i bug di questo tipo, il sintomo principale è un arresto anomalo nativo, in genere con elementi simili a `mono_sigsegv_signal_handler` o `_sigtrap` nei frame in alto dello stack. Cocoa sta provando a richiamare il codice C#, raggiungendo un oggetto raccolto dal Garbage Collector e provocando un arresto anomalo. Non tutti gli arresti anomali del sistema con questi simboli sono tuttavia causati da un problema di binding come questo e sarà necessario effettuare altre indagini per confermare che si tratta proprio di questo problema.
 
 È difficile tenere traccia di questi bug perché si verificano solo **dopo** che una Garbage Collection ha eliminato l'oggetto in questione. Se si ritiene che si sia verificato uno di questi bug, aggiungere il codice seguente in un punto della sequenza di avvio:
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 Questo codice forzerà l'applicazione a eseguire il Garbage Collector ogni secondo. Eseguire nuovamente l'applicazione e provare a riprodurre il bug. Se l'arresto anomalo si verifica immediatamente o sistematicamente invece che in modo casuale, si è sulla strada giusta.
 
 ### <a name="reporting"></a>Reporting
 
-Il passaggio successivo consiste nel segnalare il problema a Xamarin in modo che il binding possa essere corretto nelle versioni future. I titolari di una licenza Business o Enterprise possono aprire un ticket all'indirizzo 
+Il passaggio successivo consiste nel segnalare il problema a Xamarin in modo che il binding possa essere corretto nelle versioni future. I titolari di una licenza Business o Enterprise possono aprire un ticket all'indirizzo
 
 [visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 In caso contrario, cercare un problema esistente:
 
-- Controllare i [forum di Xamarin.Mac](https://forums.xamarin.com/categories/mac)
+- Controllare i [forum di Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac)
 - Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues)
 - Prima di passare ai problemi di GitHub, si è tenuta traccia dei problemi di Xamarin in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi), dove è possibile cercare i problemi corrispondenti.
 - Se non si riesce a trovare un problema corrispondente, inserirne uno nuovo nel [repository di problemi GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-I problemi di GitHub sono tutti pubblici. Non è possibile nascondere commenti o allegati. 
+I problemi di GitHub sono tutti pubblici. Non è possibile nascondere commenti o allegati.
 
 Includere tutte le informazioni disponibili seguenti:
 
-- Un esempio semplice che riproduce il problema. Questo è **molto importante**, ove possibile. 
+- Un esempio semplice che riproduce il problema. Questo è **molto importante**, ove possibile.
 - L'analisi dello stack completa dell'arresto anomalo.
 - Il codice C# relativo all'arresto anomalo.   
 
@@ -250,4 +250,4 @@ Non è mai consigliabile consentire a un'eccezione C# di "eludere" il codice ges
 
 Senza perdersi nei motivi tecnici, la configurazione dell'infrastruttura per intercettare le eccezioni gestite in ogni limite gestito/nativo è piuttosto costosa e in molte operazioni comuni è presente un _numero elevato_ di transizioni. Molte operazioni, in particolare quelle che coinvolgono il thread dell'interfaccia utente devono terminare rapidamente per evitare lo stuttering dell'app e livelli di prestazioni inaccettabili. Molti di tali callback eseguono operazioni molto semplici che di rado possono generare eccezioni, quindi questo sovraccarico sarebbe costoso e inutile in tali casi.
 
-Tali istruzioni try/catch non sono quindi state configurate. Nei casi in cui il codice esegue operazioni non semplici (più complesse, ad esempio, della restituzione di un valore booleano o di una semplice operazione matematica), è possibile inserire manualmente un'istruzione try catch. 
+Tali istruzioni try/catch non sono quindi state configurate. Nei casi in cui il codice esegue operazioni non semplici (più complesse, ad esempio, della restituzione di un valore booleano o di una semplice operazione matematica), è possibile inserire manualmente un'istruzione try catch.

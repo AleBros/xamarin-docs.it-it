@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027999"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724366"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: Approfondimenti
 
@@ -26,32 +26,32 @@ Questa guida tratta gli argomenti seguenti:
 
 ::: zone pivot="windows"
 
-- **Introduzione a Visual studio** &ndash; Introduzione a Visual Studio e creazione di una nuova applicazione Novell. Android.
+- **Introduzione a Visual Studio** &ndash; Introduzione a Visual Studio e creazione di una nuova applicazione Xamarin.Android.
 
 - **Anatomia di un'applicazione Xamarin.Android**: panoramica delle parti essenziali di un'applicazione Xamarin.Android.
 
-- **Nozioni fondamentali sulle app e** informazioni di base sull'architettura &ndash; Introduzione alle attività, al manifesto Android e alla versione generale dello sviluppo per Android.
+- **Concetti fondamentali sulle app e nozioni di base sull'architettura** &ndash; Introduzione alle attività e al manifesto Android e caratteristiche generali dello sviluppo di app Android.
 
-- **Interfaccia utente** &ndash; la creazione di interfacce utente con l'Android designer.
+- **Interfaccia utente** &ndash; Creazione di interfacce utente con Android Designer.
 
-- Le **attività e il ciclo di vita delle attività** &ndash; un'introduzione al ciclo di vita delle attività e il collegamento dell'interfaccia utente nel codice.
+- **Attività e ciclo di vita delle attività** &ndash; Introduzione al ciclo di vita delle attività e all'associazione dell'interfaccia utente nel codice.
 
-- I **test, la distribuzione e i ritocchi** &ndash; completano l'applicazione con suggerimenti su test, distribuzione, generazione di elementi grafici e altro ancora.
+- **Test, distribuzione e rifiniture** &ndash; Completamento dell'applicazione con suggerimenti su esecuzione di test, distribuzione, generazione di elementi grafici e altro ancora.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **Introduzione a Visual Studio per Mac** &ndash; introduzione ai Visual Studio per Mac e alla creazione di una nuova applicazione Novell. Android.
+- **Introduzione a Visual Studio per Mac** &ndash; Introduzione a Visual Studio per Mac e creazione di una nuova applicazione Xamarin.Android.
 
-- **Anatomia di un'applicazione Novell. android** &ndash; Panoramica delle parti essenziali di un'applicazione Novell. Android.
+- **Anatomia di un'applicazione Xamarin.Android** &ndash; Presentazione delle parti essenziali di un'applicazione Xamarin.Android.
 
-- **Nozioni fondamentali sulle app e** informazioni di base sull'architettura &ndash; Introduzione alle attività, al manifesto Android e alla versione generale dello sviluppo per Android.
+- **Concetti fondamentali sulle app e nozioni di base sull'architettura** &ndash; Introduzione alle attività e al manifesto Android e caratteristiche generali dello sviluppo di app Android.
 
-- **Interfaccia utente** &ndash; la creazione di interfacce utente con l'Android designer.
+- **Interfaccia utente** &ndash; Creazione di interfacce utente con Android Designer.
 
-- Le **attività e il ciclo di vita delle attività** &ndash; un'introduzione al ciclo di vita delle attività e il collegamento dell'interfaccia utente nel codice.
+- **Attività e ciclo di vita delle attività** &ndash; Introduzione al ciclo di vita delle attività e all'associazione dell'interfaccia utente nel codice.
 
-- I **test, la distribuzione e i ritocchi** &ndash; completano l'applicazione con suggerimenti su test, distribuzione, generazione di elementi grafici e altro ancora.
+- **Test, distribuzione e rifiniture** &ndash; Completamento dell'applicazione con suggerimenti su esecuzione di test, distribuzione, generazione di elementi grafici e altro ancora.
 
 ::: zone-end
 
@@ -99,13 +99,13 @@ La schermata seguente elenca il contenuto della soluzione. Si tratta del riquadr
 
 Esaminare gli elementi all'interno del progetto per visualizzare ogni cartella e il rispettivo scopo:
 
-- **Proprietà** &ndash; contiene il file [file AndroidManifest. XML](~/android/platform/android-manifest.md) che descrive tutti i requisiti per l'applicazione Novell. Android, inclusi nome, numero di versione e autorizzazioni. La cartella **Proprietà** contiene anche [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), un file di metadati dell'assembly .NET. È buona norma inserire in questo file alcune informazioni di base sull'applicazione.
+- **Proprietà** &ndash; Contiene il file [AndroidManifest.xml](~/android/platform/android-manifest.md), che descrive tutti i requisiti dell'applicazione Xamarin.Android, inclusi nome, numero di versione e autorizzazioni. La cartella **Proprietà** contiene anche [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), un file di metadati dell'assembly .NET. È buona norma inserire in questo file alcune informazioni di base sull'applicazione.
 
-- **References** &ndash; contiene gli assembly necessari per compilare ed eseguire l'applicazione. Se si espande la directory Riferimenti, vengono visualizzati riferimenti ad assembly .NET quali [System](xref:System), System.Core e [System.Xml](xref:System.Xml), nonché un riferimento all'assembly Mono.Android di Xamarin.
+- **Riferimenti** &ndash; Contiene gli assembly necessari per compilare ed eseguire l'applicazione. Se si espande la directory Riferimenti, vengono visualizzati riferimenti ad assembly .NET quali [System](xref:System), System.Core e [System.Xml](xref:System.Xml), nonché un riferimento all'assembly Mono.Android di Xamarin.
 
-- **Asset** &ndash; contiene i file necessari per eseguire l'applicazione, inclusi i tipi di carattere, i file di dati locali e i file di testo. I file inclusi in questa cartella sono accessibili tramite la classe `Assets` generata. Per altre informazioni sugli asset Android, vedere la guida [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md) (Uso degli asset Android) di Xamarin.
+- **Asset** &ndash; Contiene i file che l'applicazione deve eseguire, inclusi tipi di carattere, file di dati locali e file di testo. I file inclusi in questa cartella sono accessibili tramite la classe `Assets` generata. Per altre informazioni sugli asset Android, vedere la guida [Using Android Assets](~/android/app-fundamentals/resources-in-android/android-assets.md) (Uso degli asset Android) di Xamarin.
 
-- **Risorse** &ndash; contiene risorse dell'applicazione, ad esempio stringhe, immagini e layout. È possibile accedere alle risorse all'interno del codice tramite la classe `Resource` generata. La guida [Risorse Android](~/android/app-fundamentals/resources-in-android/index.md) offre altri dettagli sulla directory **Risorse**. Il modello di applicazione include anche il file **AboutResources.txt**, una guida concisa alle risorse.
+- **Risorse** &ndash; Contiene le risorse dell'applicazione, ad esempio stringhe, immagini e layout. È possibile accedere alle risorse all'interno del codice tramite la classe `Resource` generata. La guida [Risorse Android](~/android/app-fundamentals/resources-in-android/index.md) offre altri dettagli sulla directory **Risorse**. Il modello di applicazione include anche il file **AboutResources.txt**, una guida concisa alle risorse.
 
 ### <a name="resources"></a>Risorse
 
@@ -113,24 +113,24 @@ La directory **Risorse** contiene quattro cartelle denominate **drawable**, **la
 
 Gli elementi sono riepilogati nella tabella riportata di seguito:
 
-- è possibile **creare** &ndash; le directory di cui è possibile creare le [risorse](https://developer.android.com/guide/topics/resources/drawable-resource.html) per la struttura, ad esempio immagini e bitmap.
+- **drawable** &ndash; La directory drawable contiene le [risorse drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html), ad esempio immagini e bitmap.
 
-- **mipmap** &ndash; la directory mipmap include i file che è stato disegnato per le diverse densità dell'icona di avvio. Nel modello predefinito, la directory drawable contiene il file dell'icona dell'applicazione, **Icon.png**.
+- **mipmap** &ndash; La directory mipmap contiene i file drawable per icone di avvio con densità diverse. Nel modello predefinito, la directory drawable contiene il file dell'icona dell'applicazione, **Icon.png**.
 
 ::: zone pivot="windows"
 
-- **layout** &ndash; la directory di layout contiene i _file di Android designer_ (con estensione aXML) che definiscono l'interfaccia utente per ogni schermata o attività. Il modello crea un layout predefinito denominato **activity_main.axml**.
+- **layout** &ndash; La directory layout contiene i _file di progettazione Android_ (con estensione axml) che definiscono l'interfaccia utente per ogni schermata o attività. Il modello crea un layout predefinito denominato **activity_main.axml**.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **layout** &ndash; la directory di layout contiene i _file di Android designer_ (con estensione aXML) che definiscono l'interfaccia utente per ogni schermata o attività. Il modello crea un layout predefinito denominato **Main.axml**.
+- **layout** &ndash; La directory layout contiene i _file di progettazione Android_ (con estensione axml) che definiscono l'interfaccia utente per ogni schermata o attività. Il modello crea un layout predefinito denominato **Main.axml**.
 
 ::: zone-end
 
-- **valori** &ndash; questa directory contiene i file XML in cui sono archiviati valori semplici, ad esempio stringhe, numeri interi e colori. Il modello crea un file per l'archiviazione di valori stringa denominato **Strings.xml**.
+- **values** &ndash; Questa directory contiene i file XML in cui sono archiviati valori semplici, ad esempio stringhe, numeri interi e colori. Il modello crea un file per l'archiviazione di valori stringa denominato **Strings.xml**.
 
-- **Resource.designer.cs** &ndash; noto anche come classe `Resource`, questo file è una classe parziale che include gli ID univoci assegnati a ogni risorsa. Questo file viene creato automaticamente dagli strumenti Xamarin.Android e viene rigenerato quando necessario. Questo file non deve essere modificato manualmente, perché Xamarin.Android sovrascrive tutte le modifiche apportate manualmente.
+- **Resource.designer.cs** &ndash; Noto anche come classe `Resource`, questo file è una classe parziale contenente gli ID univoci assegnati a ogni risorsa. Questo file viene creato automaticamente dagli strumenti Xamarin.Android e viene rigenerato quando necessario. Questo file non deve essere modificato manualmente, perché Xamarin.Android sovrascrive tutte le modifiche apportate manualmente.
 
 ## <a name="app-fundamentals-and-architecture-basics"></a>Concetti fondamentali sulle app e nozioni di base sull'architettura
 
@@ -165,7 +165,7 @@ Le prossime sezioni analizzano le relazioni tra le diverse parti dell'applicazio
 
 Nell'app **Phoneword** l'ID di **TranslateButton**è impostato su `@+id/TranslateButton`:
 
-[![Impostazione ID TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Impostazione ID TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
+[![Impostazione ID di TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Impostazione ID di TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -188,7 +188,7 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 
 ::: zone pivot="windows"
 
-[![Visualizzazione origine della finestra di progettazione](hello-android-deepdive-images/vs/05-source-view-sml.png "Visualizzazione origine della finestra di progettazione")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
+[![Visualizzazione Origine della finestra di progettazione](hello-android-deepdive-images/vs/05-source-view-sml.png "Visualizzazione Origine della finestra di progettazione")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -235,11 +235,11 @@ In Android, il ciclo di vita delle attività prevede fasi diverse a seconda dell
 
 Eseguendo l'override dei metodi del ciclo di vita di `Activity`, è possibile controllare la modalità di caricamento dell'attività, il modo in cui reagisce all'interazione dell'utente e persino che cosa accade dopo che l'attività è scomparsa dallo schermo del dispositivo. È ad esempio possibile eseguire l'override dei metodi del ciclo di vita illustrati nel diagramma precedente per eseguire alcune operazioni importanti:
 
-- **Oncreate** &ndash; crea viste, Inizializza variabili ed esegue altre operazioni di preparazione che devono essere eseguite prima che l'utente veda l'attività. Questo metodo viene chiamato solo una volta quando l'attività viene caricata in memoria. 
+- **OnCreate** &ndash; Crea le visualizzazioni, inizializza le variabili ed esegue altre operazioni di preparazione che devono essere eseguite prima che l'attività sia visibile per l'utente. Questo metodo viene chiamato solo una volta quando l'attività viene caricata in memoria.
 
-- **OnResume** &ndash; esegue tutte le attività che devono verificarsi ogni volta che l'attività torna alla schermata del dispositivo.
+- **OnResume** &ndash; Esegue tutte le attività che devono essere eseguite ogni volta che l'attività torna sullo schermo del dispositivo.
 
-- **OnPause** &ndash; esegue tutte le attività che devono essere eseguite ogni volta che l'attività lascia lo schermo del dispositivo.
+- **OnPause** &ndash; Esegue tutte le attività che devono essere eseguite ogni volta che l'attività lascia lo schermo del dispositivo.
 
 Quando si aggiunge codice personalizzato a un metodo del ciclo di vita di `Activity`, si *esegue l'override* dell'*implementazione di base* del metodo in questione. Toccando all'interno del metodo del ciclo di vita esistente (che contiene già del codice) è possibile estendere il metodo stesso con codice personalizzato. L'implementazione di base deve essere chiamata dall'interno del metodo perché il codice originale venga eseguito prima del nuovo codice. Un esempio di ciò è illustrato nella prossima sezione.
 
@@ -279,7 +279,7 @@ Nell'app **Phoneword**, la prima operazione da eseguire in `OnCreate` è il cari
 SetContentView (Resource.Layout.Main);
 ```
 
-All'avvio, `MainActivity` crea una visualizzazione basata sul contenuto del file **Main.axml**. Si noti che il nome del file di layout corrisponde al nome dell'attività &ndash; *Main*. aXML è il layout per l'attività *principale*. Ciò non è obbligatorio dal punto di vista di Android. Man mano che si aggiungono schermate all'applicazione, tuttavia, si noterà che questa convenzione di denominazione rende più facile far corrispondere il file di codice al rispettivo file di layout.
+All'avvio, `MainActivity` crea una visualizzazione basata sul contenuto del file **Main.axml**. Si noti che il nome del file di layout deve corrispondere al nome dell'attività: *Main*.axml è il layout per l'attività *Main*. Ciò non è obbligatorio dal punto di vista di Android. Man mano che si aggiungono schermate all'applicazione, tuttavia, si noterà che questa convenzione di denominazione rende più facile far corrispondere il file di codice al rispettivo file di layout.
 
 ::: zone-end
 
@@ -296,7 +296,7 @@ Ora che nel file di layout sono presenti riferimenti ai controlli, è possibile 
 
 ### <a name="responding-to-user-interaction"></a>Risposta all'interazione dell'utente
 
-In Android, l'evento `Click` è in ascolto del tocco dell'utente. In questa app, l'evento `Click` viene gestito con un'espressione lambda, ma è anche possibile usare un delegato o un gestore dell'evento denominato. Il codice finale di **TranslateButton** è simile al seguente: 
+In Android, l'evento `Click` è in ascolto del tocco dell'utente. In questa app, l'evento `Click` viene gestito con un'espressione lambda, ma è anche possibile usare un delegato o un gestore dell'evento denominato. Il codice finale di **TranslateButton** è simile al seguente:
 
 ```csharp
 translateButton.Click += (sender, e) =>
@@ -357,7 +357,7 @@ Per evitare questo problema, è buona norma inserire nella cartella **Risorse** 
 
 ::: zone pivot="windows"
 
-![cartelle mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "cartelle mipmap")
+![Cartelle mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "Cartelle mipmap")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -376,26 +376,20 @@ Non tutti hanno a disposizione un designer che crei le icone e le immagini di av
 
 ::: zone pivot="windows"
 
-- [Android asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; un generatore di browser basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri utili strumenti della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
 
 - Visual Studio &ndash; È possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
 
-- [Glifo](https://www.glyphish.com/) &ndash; set di icone predefinite di alta qualità per il download gratuito e l'acquisto.
-
-- [Fiverr](https://www.fiverr.com/) &ndash; scegliere da un'ampia gamma di finestre di progettazione per creare un set di icone, a partire da $5. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
+- [Fiverr](https://www.fiverr.com/) &ndash; Consente di scegliere da un'ampia gamma di progettisti per creare un set di icone personalizzato, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; un generatore di browser basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri utili strumenti della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; sketch è un'app Mac per la progettazione di interfacce utente, icone e altro ancora. Questa è l'app con cui è stato progettato il set delle icone e delle immagini di avvio dell'app di Xamarin. Sketch 3 è disponibile nell'App Store e costa circa 80 dollari. È anche possibile provare lo [strumento Sketch](https://bohemiancoding.com/sketch/tool/) gratuito.
+- [Pixelmator](https://www.pixelmator.com/) &ndash; Versatile app di modifica delle immagini per Mac a un costo di circa 30 dollari.
 
-- [Pixelmator](https://www.pixelmator.com/) &ndash; un'app versatile per la modifica di immagini per Mac che costi circa $30.
-
-- [Glifo](https://www.glyphish.com/) &ndash; set di icone predefinite di alta qualità per il download gratuito e l'acquisto.
-
-- [Fiverr](https://www.fiverr.com/) &ndash; scegliere da un'ampia gamma di finestre di progettazione per creare un set di icone, a partire da $5. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
+- [Fiverr](https://www.fiverr.com/) &ndash; Consente di scegliere da un'ampia gamma di progettisti per creare un set di icone personalizzato, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
 
 ::: zone-end
 
