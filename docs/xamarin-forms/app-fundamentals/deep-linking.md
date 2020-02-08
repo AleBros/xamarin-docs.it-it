@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ff5c7cb36305780d12b5fd69b7cbadec0eaef551
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771552"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940331"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi. Il deep linking consente alle applicazioni di rispondere a un risultato di ricerca che contiene dati dell'applicazione, in genere passando a una pagina a cui fa riferimento un collegamento diretto. Questo articolo illustra come usare indicizzazione e deep linking delle applicazioni per rendere disponibile per la ricerca il contenuto di applicazioni Xamarin.Forms in dispositivi iOS e Android._
 
@@ -29,7 +29,7 @@ L'indicizzazione e il deep linking delle applicazioni Xamarin.Forms rendono disp
 
 L'applicazione di esempio è una dimostrazione di un'applicazione di tipo Elenco attività, in cui i dati vengono archiviati in un database di SQLite locale, come illustrato negli screenshot seguenti:
 
-![](deep-linking-images/screenshots.png "Applicazione TodoList")
+![](deep-linking-images/screenshots.png "TodoList Application")
 
 Ogni istanza di `TodoItem` creata dall'utente viene indicizzata. È quindi possibile usare la funzionalità di ricerca specifica della piattaforma per individuare dati indicizzati dall'applicazione. Quando l'utente tocca un elemento nei risultati della ricerca per l'applicazione, l'applicazione viene avviata, si passa a `TodoItemPage` e viene visualizzato l'elemento `TodoItem` a cui fa riferimento il collegamento diretto.
 
@@ -79,6 +79,9 @@ AndroidAppLinks.Init(this);
 ```
 
 Quando si aggiunge **google-services.json** al progetto (e si imposta l'azione di compilazione *GoogleServicesJson*\*), il processo di compilazione estrae l'ID client e la chiave API, quindi aggiunge queste credenziali al file manifesto generato.
+
+> [!NOTE]
+> In questo articolo i termini collegamenti alle applicazioni e collegamenti diretti vengono spesso usati in modo intercambiabile. Tuttavia, in Android questi termini hanno significati distinti. In Android un collegamento diretto è un filtro Intent che consente agli utenti di accedere direttamente a un'attività specifica nell'app. Se si fa clic su un collegamento diretto è possibile che si apra una finestra di dialogo di disambiguazione, che consente all'utente di selezionare una delle app in grado di gestire l'URL. Un collegamento all'app Android è un collegamento diretto basato sull'URL del sito Web, che è stato verificato per l'appartenenza al sito Web. Se si fa clic su un collegamento all'app, se installata l'app si apre senza che venga aperta una finestra di dialogo di disambiguazione.
 
 Per altre informazioni, vedere [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) (Deep linking del contenuto con la navigazione URL di Xamarin.Forms) nel blog di Xamarin.
 
@@ -135,7 +138,7 @@ Questo codice aggiunge l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkE
 
 Dopo la registrazione per l'indicizzazione, un'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) può essere visualizzata nei risultati della ricerca. Lo screenshot seguente mostra il contenuto indicizzato visualizzato nei risultati della ricerca nella piattaforma iOS:
 
-![](deep-linking-images/ios-search.png "Contenuto indicizzato nei risultati della ricerca in iOS")
+![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## <a name="de-registering-indexed-content"></a>Annullamento della registrazione di contenuto indicizzato
 
@@ -234,7 +237,7 @@ I valori archiviati nella raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntr
 
 - `contentType` - Valore `string` che specifica l'identificatore di tipo uniforme del contenuto indicizzato. La convenzione consigliata da usare per questo valore è il nome di tipo della pagina contenente il contenuto indicizzato.
 - `associatedWebPage` - Valore `string` che rappresenta la pagina Web da visitare se anche il contenuto indicizzato può essere visualizzato nel Web o se l'applicazione supporta i collegamenti diretti di Safari.
-- `shouldAddToPublicIndex` - Valore `string` `true` o `false` che determina se aggiungere o meno il contenuto indicizzato all'indice del cloud pubblico di Apple, che può quindi essere presentato agli utenti che non hanno installato l'applicazione nel proprio dispositivo iOS. La semplice impostazione del contenuto per l'indicizzazione pubblica, tuttavia, non significa che verrà aggiunto automaticamente all'indice del cloud pubblico di Apple. Per altre informazioni, vedere [Public Search Indexing](~/ios/platform/search/nsuseractivity.md) (Indicizzazione per la ricerca pubblica). Si noti che questa chiave deve essere impostata su `false` quando si aggiungono dati personali alla raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues).
+- `shouldAddToPublicIndex` - Valore `string``true` o `false` che determina se aggiungere o meno il contenuto indicizzato all'indice del cloud pubblico di Apple, che può quindi essere presentato agli utenti che non hanno installato l'applicazione nel proprio dispositivo iOS. La semplice impostazione del contenuto per l'indicizzazione pubblica, tuttavia, non significa che verrà aggiunto automaticamente all'indice del cloud pubblico di Apple. Per altre informazioni, vedere [Public Search Indexing](~/ios/platform/search/nsuseractivity.md) (Indicizzazione per la ricerca pubblica). Si noti che questa chiave deve essere impostata su `false` quando si aggiungono dati personali alla raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues).
 
 > [!NOTE]
 > La raccolta `KeyValues` non viene usata nella piattaforma Android.

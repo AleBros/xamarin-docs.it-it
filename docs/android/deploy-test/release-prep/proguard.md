@@ -7,37 +7,37 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 1ae7850951060f2e89a953ce554a0dbfa286c3a1
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487990"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940685"
 ---
 # <a name="proguard"></a>ProGuard
 
-_Xamarin.Android Proguard è un compattatore di file di classe Java, Optimizer e pre-Verifier. Rileva e rimuove il codice inutilizzato, analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di Proguard, come abilitarlo nel progetto e come configurarlo. Sono inoltre disponibili diversi esempi di configurazioni Proguard._
+_ProGuard di Xamarin.Android è uno strumento di classe Java che consente di compattare, ottimizzare ed eseguire una verifica preliminare dei file. ProGuard rileva e rimuove eventuale codice non usato e analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di ProGuard e spiega come abilitare questo strumento nel progetto e come configurarlo, presentando anche alcuni esempi di configurazione._
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 ProGuard rileva e rimuove classi, campi, metodi e attributi inutilizzati dal pacchetto dell'applicazione. Può eseguire queste operazioni anche per le librerie di riferimento, consentendo di evitare il limite di 64 KB. Lo strumento ProGuard di Android SDK ottimizza anche il bytecode e rimuove le istruzioni di codice non utilizzato. ProGuard legge **file JAR di input** e quindi compatta, ottimizza e verifica in via preliminare tali file, scrivendo i risultati in uno o più **file JAR di output**. 
 
 Per elaborare i file APK di input, ProGuard esegue i passaggi seguenti: 
 
-1. Il **passaggio di compattazione** &ndash; Proguard determina in modo ricorsivo le classi e i membri della classe utilizzati. Tutte le altre classi e tutti i membri di queste vengono eliminati. 
+1. **Compattazione** &ndash; ProGuard determina in modo ricorsivo quali classi e quali membri di classi vengono usati. Tutte le altre classi e tutti i membri di queste vengono eliminati. 
 
-2. Il **passaggio di ottimizzazione** &ndash; Proguard ottimizza ulteriormente il codice. 
+2. **Ottimizzazione** &ndash; ProGuard ottimizza ulteriormente il codice. 
     Tra l'altro, ProGuard rende privati, statici o finali le classi e i metodi che non rappresentano punti di ingresso, rimuove i parametri inutilizzati e imposta alcuni metodi come inline. 
 
-3. Il **passaggio di offuscamento** &ndash; nello sviluppo di Android nativo, Proguard Rinomina le classi e i membri di classe che non sono punti di ingresso. Il mantenimento di punti di ingresso garantisce che le classi e i membri rinominati siano ancora accessibili con i nomi originari. Tuttavia, questo passaggio non è supportato da Xamarin.Android poiché l'app viene compilata nel linguaggio intermedio (IL).
+3. **Offuscamento** &ndash; Nello sviluppo Android nativo ProGuard rinomina classi e membri di classi che non rappresentano punti di ingresso. Il mantenimento di punti di ingresso garantisce che le classi e i membri rinominati siano ancora accessibili con i nomi originari. Tuttavia, questo passaggio non è supportato da Xamarin.Android poiché l'app viene compilata nel linguaggio intermedio (IL).
 
-4. **Passaggio di Preverifica** &ndash; esegue i controlli su bytecode Java ahead of Runtime e annota i file di classe per i vantaggi della macchina virtuale Java. Questo è l'unico passaggio per il quale non ha bisogno conoscere i punti di ingresso. 
+4. **Verifica preliminare** &ndash; ProGuard esegue controlli sui bytecode Java prima della fase di runtime e annota i file di classe a vantaggio della macchina virtuale Java. Questo è l'unico passaggio per il quale non ha bisogno conoscere i punti di ingresso. 
 
 Ognuno di questi passaggi è *facoltativo*. Come verrà spiegato nella prossima sezione, in Xamarin.Android ProGuard usa solo un subset di questi passaggi. 
 
 ## <a name="proguard-in-xamarinandroid"></a>ProGuard in Xamarin.Android
 
-La configurazione di ProGuard per Xamarin.Android non esegue l'offuscamento dei file APK. Non è in effetti possibile abilitare l'offuscamento tramite ProGuard, neanche tramite file di configurazione personalizzati. In Xamarin.Android, quindi, ProGuard esegue solo i passaggi di **compattazione** e **ottimizzazione**: 
+La configurazione di ProGuard per Xamarin.Android non esegue l'offuscamento dei file APK. Non è in effetti possibile abilitare l'offuscamento con ProGuard, neanche usando file di configurazione personalizzati. In Xamarin.Android, quindi, ProGuard esegue solo i passaggi di **compattazione** e **ottimizzazione**: 
 
 [![Passaggi di compattazione e ottimizzazione](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
 
@@ -75,11 +75,11 @@ Per abilitare ProGuard nel progetto dell'app, usare la procedura seguente:
 
 1. Assicurarsi che per il progetto sia impostata la configurazione **Release**. Questo passaggio è importante perché è necessario che il linker sia in esecuzione per rendere possibile l'esecuzione di ProGuard: 
 
-    [![Selezionare la configurazione Rilascio](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
+    [![Selezionare la configurazione Release](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2. Scegliere **Proguard** dall'elenco a discesa del **compattatore del codice** nella finestra **Proprietà > Opzioni Android** : 
+2. Scegliere **ProGuard** dall'elenco a discesa  **Code shrinker** nella finestra **Proprietà > Opzioni Android**: 
 
-    [![il compattatore del codice Proguard selezionato](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
+    [![Code shrinker di ProGuard selezionato](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 Per la maggior parte delle app Xamarin.Android, il file di configurazione ProGuard predefinito fornito da Xamarin.Android è sufficiente per rimuovere tutto (e solo) il codice inutilizzato. Per visualizzare la configurazione di ProGuard predefinita, aprire il file **obj\\Release\\proguard\\proguard_xamarin.cfg**.
 

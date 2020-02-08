@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 9d8b3e68aa626890fdce5c004928541ece263703
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020809"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940907"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurazione di Android SDK per Xamarin.Android
 
@@ -33,7 +33,7 @@ Xamarin Android SDK Manager viene installato come componente del carico di lavor
 
 Per usare Xamarin Android SDK Manager sono necessari i componenti seguenti:
 
-- Visual Studio 2019 Community, Professional, o Enterprise
+- Visual Studio 2019 Community, Professional o Enterprise.
 
 - OPPURE Visual Studio 2017 (edizione Community, Professional o Enterprise). È necessario Visual Studio 2017 versione 15.7 o versione successiva.
 
@@ -45,7 +45,7 @@ In Xamarin Android SDK Manager è anche necessario Java Development Kit, che vie
 
 - È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
-- Se si usa Visual Studio 15,8 Preview 5 o versione successiva, è possibile provare a usare [la distribuzione di OpenJDK per dispositivi mobili di Microsoft](openjdk.md) anziché JDK 8.
+- Se si usa Visual Studio 15.8 Preview 5 o versioni successive, è possibile provare a usare la [distribuzione Microsoft di Mobile OpenJDK](openjdk.md) anziché JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
@@ -119,7 +119,7 @@ Per impostazione predefinita Android SDK Manager scarica i componenti e gli stru
 
 [![Selezione del repository di Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Nello screenshot precedente è stato aggiunto **Android SDK Platform 28** passando al repository Google. Tenere presente che l'uso del repository Google non è supportato ed è quindi sconsigliato per lo sviluppo giornaliero.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
 
 Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 
@@ -137,7 +137,7 @@ In Xamarin Android SDK Manager è anche necessario Java Development Kit, che vie
 
 - È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
-- Se si usa Visual Studio per Mac 7,7 o versione successiva, è possibile provare a usare [la distribuzione di OpenJDK per dispositivi mobili di Microsoft](openjdk.md) anziché JDK 8.
+- Se si usa Visual Studio per Mac 7.7 o versioni successive, è possibile provare a usare la [distribuzione Microsoft di Mobile OpenJDK](openjdk.md) anziché JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
@@ -209,7 +209,7 @@ Per impostazione predefinita Android SDK Manager scarica i componenti e gli stru
 
 [![Selezione del repository di Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Nello screenshot precedente è stato aggiunto **Android SDK Platform 28** passando al repository Google. Tenere presente che l'uso del repository Google non è supportato ed è quindi sconsigliato per lo sviluppo giornaliero.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
 
 Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 

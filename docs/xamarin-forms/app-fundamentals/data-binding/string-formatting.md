@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771573"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940386"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formattazione delle stringhe di Xamarin.Forms
 
@@ -44,7 +44,7 @@ La pagina di **formattazione delle stringhe** illustra diversi utilizzi della pr
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
 
@@ -176,7 +176,7 @@ Questo approccio è illustrato nell'esempio **Better Color Selector** che usa lo
 
 Sono ora disponibili tre coppie di elementi `Slider` e `Label` associate alla stessa proprietà di origine nell'oggetto `HslColorViewModel`. L'unica differenza è che per `Label` è presente una proprietà `StringFormat` per visualizzare ogni valore `Slider`.
 
-[![Better Color Selector](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png#lightbox "Better Color Selector")
+[![Selettore colori ottimizzato](string-formatting-images/bettercolorselector-small.png "Selettore colori ottimizzato")](string-formatting-images/bettercolorselector-large.png#lightbox "Selettore colori ottimizzato")
 
 È lecito chiedersi come si possono visualizzare valori RGB (rosso, verde, blu) nel tradizionale formato esadecimale a due cifre. Questi valori interi non sono disponibili direttamente nella struttura `Color`. Una soluzione sarebbe calcolare i valori interi dei componenti dei colori all'interno dell'elemento ViewModel ed esporli come proprietà. A questo punto, si potrebbe formattarli utilizzando la specifica di formattazione `X2`.
 
