@@ -1,5 +1,6 @@
 ---
-title: Uso della navigazione watchos in Novell
+title: >
+  Uso della navigazione watchos in Xamarin
 description: Questo documento descrive come usare la navigazione in un'applicazione watchos. Vengono illustrate le interfacce modali, la navigazione gerarchica e le interfacce basate su pagine.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021739"
 ---
-# <a name="working-with-watchos-navigation-in-xamarin"></a>Uso della navigazione watchos in Novell
+# <a name="working-with-watchos-navigation-in-xamarin"></a>Uso della navigazione watchos in Xamarin
+
 
 L'opzione di navigazione più semplice disponibile nell'orologio è un semplice [popup modale](#modal) che viene visualizzato nella parte superiore della scena corrente.
 

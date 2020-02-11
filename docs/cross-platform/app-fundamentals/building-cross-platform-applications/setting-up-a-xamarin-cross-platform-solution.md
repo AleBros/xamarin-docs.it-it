@@ -1,6 +1,10 @@
 ---
-title: Parte 3-configurazione di una soluzione multipiattaforma Novell
-description: Questo documento descrive come configurare una soluzione multipiattaforma in Novell. Vengono illustrate varie strategie di condivisione del codice, ad esempio progetti condivisi e .NET Standard.
+title: >
+  Parte 3-configurazione di una soluzione multipiattaforma Xamarin
+description: >-
+  Questo documento descrive come configurare una soluzione multipiattaforma in Xamarin
+
+  . Vengono illustrate varie strategie di condivisione del codice, ad esempio progetti condivisi e .NET Standard.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: davidortinau
@@ -13,7 +17,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663273"
 ---
-# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-configurazione di una soluzione multipiattaforma Novell
+# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-configurazione di una soluzione multipiattaforma Xamarin
+
 
 Indipendentemente dalle piattaforme utilizzate, i progetti Xamarin utilizzano lo stesso formato di file di soluzione (il formato di file con estensione **sln** di Visual Studio). Le soluzioni possono essere condivise tra ambienti di sviluppo, anche quando non è possibile caricare singoli progetti, ad esempio un progetto Windows in Visual Studio per Mac.
 
@@ -26,7 +31,8 @@ Per una descrizione dettagliata dell'implementazione della condivisione del codi
 ### <a name="net-standard"></a>.NET Standard
 
 I progetti [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) offrono un modo semplice per condividere il codice tra piattaforme, producendo assembly che possono essere usati in Windows, piattaforme Xamarin (iOS, Android, Mac) e Linux.
-Questo è il modo consigliato per condividere il codice per le soluzioni Novell.
+Questo è il modo consigliato per condividere il codice per le soluzioni Xamarin
+.
 
 ### <a name="other-options"></a>Altre opzioni
 

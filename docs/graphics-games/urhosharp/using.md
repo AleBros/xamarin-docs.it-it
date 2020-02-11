@@ -575,4 +575,5 @@ ProcessOnStatus.  Inoltre, è possibile usare C# await e le API delle attività 
 
 ## <a name="copyrights"></a>Copyright
 
-Questa documentazione contiene contenuti originali di Novell Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.
+Questa documentazione contiene contenuti originali di Xamarin
+ Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.

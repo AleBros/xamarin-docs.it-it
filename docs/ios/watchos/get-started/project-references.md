@@ -1,5 +1,6 @@
 ---
-title: Riferimenti del progetto watchos in Novell
+title: >
+  Riferimenti del progetto watchos in Xamarin
 description: Questo documento descrive la relazione tra un'app iOS, un'app Watch e un'estensione dell'app Watch. Vengono illustrati i riferimenti al progetto e gli identificatori del bundle.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030162"
 ---
-# <a name="watchos-project-references-in-xamarin"></a>Riferimenti del progetto watchos in Novell
+# <a name="watchos-project-references-in-xamarin"></a>Riferimenti del progetto watchos in Xamarin
+
 
 _Spiegazione della relazione tra l'app iOS, l'app Watch e l'estensione Watch._
 

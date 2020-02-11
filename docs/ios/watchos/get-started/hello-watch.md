@@ -1,6 +1,9 @@
 ---
 title: Hello, watchos-procedura dettagliata
-description: Questo documento fornisce una procedura dettagliata per la creazione di una semplice applicazione watchos con Novell. Viene descritto come lavorare sia in Visual Studio che in Visual Studio per Mac, utilizzare gli storyboard e rispondere agli eventi nel codice.
+description: >-
+  Questo documento fornisce una procedura dettagliata per la creazione di una semplice applicazione watchos con Xamarin
+
+  . Viene descritto come lavorare sia in Visual Studio che in Visual Studio per Mac, utilizzare gli storyboard e rispondere agli eventi nel codice.
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
@@ -40,7 +43,8 @@ Dovrebbe essere possibile eseguire l'app Watch adesso, ma poiché il file dello 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
+Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Xamarin
+ iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
 
 1. Verificare che i rilievi della **casella degli strumenti** e delle **Proprietà** siano visibili,
 1. Fare clic per selezionare il controller di interfaccia,
@@ -51,7 +55,8 @@ Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con Novell iOS designer in Visual Studio:
+Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con Xamarin
+ iOS designer in Visual Studio:
 
 1. Aprire il riquadro proprietà;
 1. Modificare la classe in **InterfaceController**;

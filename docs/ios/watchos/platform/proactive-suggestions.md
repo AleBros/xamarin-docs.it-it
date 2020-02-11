@@ -1,5 +1,6 @@
 ---
-title: Suggerimenti proattivi di watchos in Novell
+title: >
+  Suggerimenti proattivi di watchos in Xamarin
 description: Questo articolo illustra come usare i suggerimenti proattivi in un'app watchos 3 per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028194"
 ---
-# <a name="watchos-proactive-suggestions-in-xamarin"></a>Suggerimenti proattivi di watchos in Novell
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>Suggerimenti proattivi di watchos in Xamarin
+
 
 _Questo articolo illustra come usare i suggerimenti proattivi in un'app watchos 3 per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente._
 

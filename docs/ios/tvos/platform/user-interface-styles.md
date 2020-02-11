@@ -1,5 +1,6 @@
 ---
-title: Stili dell'interfaccia utente di tvOS in Novell
+title: >
+  Stili dell'interfaccia utente di tvOS in Xamarin
 description: Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030571"
 ---
-# <a name="tvos-user-interface-styles-in-xamarin"></a>Stili dell'interfaccia utente di tvOS in Novell
+# <a name="tvos-user-interface-styles-in-xamarin"></a>Stili dell'interfaccia utente di tvOS in Xamarin
+
 
 _Questo articolo illustra i temi dell'interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Xamarin.tvOS._
 

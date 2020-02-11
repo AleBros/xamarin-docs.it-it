@@ -1,5 +1,6 @@
 ---
-title: Uso delle icone watchos in Novell
+title: >
+  Uso delle icone watchos in Xamarin
 description: Questo documento descrive le varie icone necessarie per un'applicazione watchos e come configurare una soluzione per includere queste icone.
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001566"
 ---
-# <a name="working-with-watchos-icons-in-xamarin"></a>Uso delle icone watchos in Novell
+# <a name="working-with-watchos-icons-in-xamarin"></a>Uso delle icone watchos in Xamarin
+
 
 Per le soluzioni Apple Watch sono necessari due set di icone:
 

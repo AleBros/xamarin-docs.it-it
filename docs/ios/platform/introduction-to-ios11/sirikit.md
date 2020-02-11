@@ -148,8 +148,10 @@ La classe deve ereditare da `INExtension`e, poiché l'esempio sta per gestire gl
 
 > [!NOTE]
 >
-> - In .NET esiste una convenzione che prevede che le interfacce siano precedute da un `I`di capitale, a cui Novell aderisce quando si associano protocolli da iOS SDK.
-> - Novell conserva anche i nomi dei tipi da iOS e Apple usa i primi due caratteri nei nomi dei tipi per riflettere il Framework a cui appartiene un tipo.
+> - In .NET esiste una convenzione che prevede che le interfacce siano precedute da un `I`di capitale, a cui Xamarin
+>    aderisce quando si associano protocolli da iOS SDK.
+> - Xamarin
+>    conserva anche i nomi dei tipi da iOS e Apple usa i primi due caratteri nei nomi dei tipi per riflettere il Framework a cui appartiene un tipo.
 > - Per il Framework di `Intents`, i tipi sono preceduti da `IN*`, ad esempio `INExtension`) ma queste _non_ sono interfacce.
 > - Segue inoltre che i protocolli (che diventano interfacce in C#) finiscono con due`I`s, ad esempio`IINAddTasksIntentHandling`.
 

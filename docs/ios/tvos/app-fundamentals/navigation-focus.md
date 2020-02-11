@@ -1,5 +1,6 @@
 ---
-title: Uso della navigazione tvOS e messa a fuoco in Novell
+title: >
+  Uso della navigazione tvOS e messa a fuoco in Xamarin
 description: Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030841"
 ---
-# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
+# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Xamarin
+
 
 _Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS._
 

@@ -1,5 +1,6 @@
 ---
-title: Riproduzione di suoni in tvOS con AVAudioPlayer in Novell
+title: >
+  Riproduzione di suoni in tvOS con AVAudioPlayer in Xamarin
 description: Questo articolo illustra come usare una classe helper per controllare la riproduzione di suoni usando un AVAudioPlayer in un'applicazione Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030768"
 ---
-# <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Riproduzione di suoni in tvOS con AVAudioPlayer in Novell
+# <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Riproduzione di suoni in tvOS con AVAudioPlayer in Xamarin
+
 
 ## <a name="about-the-avaudioplayer"></a>Informazioni su AVAudioPlayer
 

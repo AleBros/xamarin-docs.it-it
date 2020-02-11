@@ -16,7 +16,8 @@ ms.locfileid: "75728057"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
-_Gli sviluppatori Java possono sfruttare al meglio le proprie competenze e il codice esistente nella piattaforma Novell, sfruttando al tempo stesso i vantaggi del riutilizzo del codice di C#. Si noterà che la C# sintassi è molto simile alla sintassi Java e che entrambi i linguaggi forniscono funzionalità molto simili. Inoltre, si scopriranno le funzionalità esclusive C# di che semplificano lo sviluppo._
+_Gli sviluppatori Java possono sfruttare al meglio le proprie competenze e il codice esistente nella piattaforma Xamarin
+, sfruttando al tempo stesso i vantaggi del riutilizzo del codice di C#. Si noterà che la C# sintassi è molto simile alla sintassi Java e che entrambi i linguaggi forniscono funzionalità molto simili. Inoltre, si scopriranno le funzionalità esclusive C# di che semplificano lo sviluppo._
 
 ## <a name="overview"></a>Panoramica di
 
@@ -460,7 +461,8 @@ Sono inoltre disponibili molte parole chiave univoche per C# e che non hanno alc
 
 Se si hanno funzionalità Java esistenti che non si vuole convertire in C#, è possibile riutilizzare le librerie Java esistenti nelle applicazioni Xamarin.Android tramite due tecniche:
 
-- **Creare una libreria di binding Java** &ndash; usando questo approccio, si usano gli strumenti Novell per C# generare wrapper per i tipi Java. Questi wrapper vengono detti *binding*. L'applicazione Xamarin.Android può così usare il file *JAR* chiamando questi wrapper.
+- **Creare una libreria di binding Java** &ndash; usando questo approccio, si usano gli strumenti Xamarin
+   per C# generare wrapper per i tipi Java. Questi wrapper vengono detti *binding*. L'applicazione Xamarin.Android può così usare il file *JAR* chiamando questi wrapper.
 
 - **Java Native interface** &ndash; *Java Native Interface* (JNI) è un Framework che consente alle C# app di chiamare o essere chiamate dal codice Java.
 

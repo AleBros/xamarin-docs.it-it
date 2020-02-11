@@ -1,5 +1,6 @@
 ---
-title: Tecniche di interazione rapida per watchos 3 in Novell
+title: >
+  Tecniche di interazione rapida per watchos 3 in Xamarin
 description: Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Xamarin.iOS per Apple Watch.
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
@@ -14,7 +15,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028182"
 ---
-# <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
+# <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Xamarin
+
 
 _Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Xamarin.iOS per Apple Watch._
 

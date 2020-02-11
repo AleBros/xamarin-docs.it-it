@@ -1,6 +1,10 @@
 ---
-title: App di allenamento watchos in Novell
-description: Questo articolo descrive i miglioramenti apportati da Apple alle app di allenamento in watchos 3 e come implementarli in Novell.
+title: >
+  App di allenamento watchos in Xamarin
+description: >-
+  Questo articolo descrive i miglioramenti apportati da Apple alle app di allenamento in watchos 3 e come implementarli in Xamarin
+
+  .
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
 ms.technology: xamarin-ios
@@ -14,9 +18,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032746"
 ---
-# <a name="watchos-workout-apps-in-xamarin"></a>App di allenamento watchos in Novell
+# <a name="watchos-workout-apps-in-xamarin"></a>App di allenamento watchos in Xamarin
 
-_Questo articolo descrive i miglioramenti apportati da Apple alle app di allenamento in watchos 3 e come implementarli in Novell._
+
+_Questo articolo descrive i miglioramenti apportati da Apple alle app di allenamento in watchos 3 e come implementarli in Xamarin
+._
 
 Una novità di watchos 3, le app correlate all'allenamento hanno la possibilità di essere eseguite in background nell'Apple Watch e di accedere ai dati HealthKit. L'app basata su iOS 10 padre ha anche la possibilità di avviare l'app watchos 3 basata senza l'intervento dell'utente.
 
@@ -1249,7 +1255,8 @@ Apple suggerisce di usare le seguenti procedure consigliate per la progettazione
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i miglioramenti apportati da Apple per l'allenamento delle app in watchos 3 e come implementarli in Novell.
+Questo articolo ha illustrato i miglioramenti apportati da Apple per l'allenamento delle app in watchos 3 e come implementarli in Xamarin
+.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
