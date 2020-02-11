@@ -7,7 +7,7 @@ ms.author: jodou
 ms.date: 09/17/2019
 ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
 ms.sourcegitcommit: b11dc46a9ba23483195e923de88cbef173730087
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73612275"

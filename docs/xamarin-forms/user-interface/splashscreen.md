@@ -9,7 +9,7 @@ ms.author: jusjohns
 ms.date: 10/1/2019
 ms.openlocfilehash: 2624c3f35a9cfac122a0b36ea8c1684d30f57824
 ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/08/2019
 ms.locfileid: "72035755"

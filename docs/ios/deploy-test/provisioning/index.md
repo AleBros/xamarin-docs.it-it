@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: 3d0bad306c421070aaa23561f6ffa9398fb38559
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028475"
