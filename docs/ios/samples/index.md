@@ -9,7 +9,7 @@ ms.author: jusjohns
 ms.date: 12/31/2019
 ms.openlocfilehash: 7b9bb93f75faba55d5ad79f60dc5697eada36cb5
 ms.sourcegitcommit: 55167ad9db910c5c0eb5a84c0923cb07acd2530e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607632"
@@ -70,4 +70,4 @@ Illustra come usare molte visualizzazioni e controlli nel framework UIKit su tvO
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app di esempio Novell iOS e demo di codice, vedere [tutti gli esempi di Xamarin.iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS).
+Per il set completo di app di esempio Xamarin iOS e demo di codice, vedere [tutti gli esempi di Xamarin.iOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS).

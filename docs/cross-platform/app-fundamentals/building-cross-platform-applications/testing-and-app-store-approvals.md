@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016847"
@@ -46,7 +46,7 @@ Sono disponibili numerosi servizi che consentono di risolvere questi problemi, f
 
 ### <a name="test-automation"></a>Automazione di test
 
-Novell [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) può essere usato per creare script di test automatizzati dell'interfaccia utente che possono essere eseguiti localmente o caricati in [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
+Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) può essere usato per creare script di test automatizzati dell'interfaccia utente che possono essere eseguiti localmente o caricati in [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
 
 ## <a name="unit-testing"></a>Testing unità
 

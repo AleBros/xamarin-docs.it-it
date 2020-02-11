@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 01/03/2018
 ms.openlocfilehash: bce89be8bec512ac70ca40015521c7d56f3460d3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028817"
@@ -35,7 +35,7 @@ Questa guida illustra come usare `RecyclerView` nelle applicazioni Xamarin.Andro
 
 ### <a name="requirements"></a>Requisiti
 
-Anche se `RecyclerView` è spesso associato a un Lollipop Android 5,0, viene offerto come libreria di supporto &ndash; `RecyclerView` funziona con le app che hanno come destinazione API Level 7 (Android 2,1) e versioni successive. Per usare `RecyclerView` nelle applicazioni basate su Novell, è necessario quanto segue:
+Anche se `RecyclerView` è spesso associato a un Lollipop Android 5,0, viene offerto come libreria di supporto &ndash; `RecyclerView` funziona con le app che hanno come destinazione API Level 7 (Android 2,1) e versioni successive. Per usare `RecyclerView` nelle applicazioni basate su Xamarin, è necessario quanto segue:
 
 - **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 

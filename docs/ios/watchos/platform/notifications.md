@@ -1,6 +1,6 @@
 ---
-title: Notifiche watchos in Novell
-description: Questo documento descrive come usare le notifiche watchos in Novell. Viene illustrata la creazione di controller di notifica, la generazione di notifiche e il test delle notifiche.
+title: Notifiche watchos in Xamarin
+description: Questo documento descrive come usare le notifiche watchos in Xamarin. Viene illustrata la creazione di controller di notifica, la generazione di notifiche e il test delle notifiche.
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 6be46d31ac2c16d02749519907d650588dbbcbe6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028221"
 ---
-# <a name="watchos-notifications-in-xamarin"></a>Notifiche watchos in Novell
+# <a name="watchos-notifications-in-xamarin"></a>Notifiche watchos in Xamarin
 
 Le app Watch possono ricevere notifiche se l'app iOS che lo contiene li supporta. È disponibile una gestione delle notifiche incorporata, pertanto non è *necessario* aggiungere il supporto per le notifiche aggiuntivo descritto di seguito, tuttavia, se si desidera personalizzare il comportamento e l'aspetto delle notifiche, vedere.
 

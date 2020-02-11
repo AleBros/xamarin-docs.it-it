@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 2060e0786b5401b44217318b647dfa7412f934f4
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009869"
@@ -84,11 +84,11 @@ Il `Info.plist` contiene sezioni speciali per specificare le modalità di integr
 
  [![](property-lists-images/maps.png "Maps Integration")](property-lists-images/maps.png#lightbox)
 
-Per altre informazioni sull'uso delle mappe, vedere la Guida di Novell [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) .
+Per altre informazioni sull'uso delle mappe, vedere la Guida di Xamarin [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) .
 
  [![](property-lists-images/bging.png "Background Modes")](property-lists-images/bging.png#lightbox)
 
-Per altre informazioni sulle modalità in background, vedere la guida Novell [in background in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) .
+Per altre informazioni sulle modalità in background, vedere la guida Xamarin [in background in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) .
 
 ## <a name="advanced-panel"></a>Pannello avanzato
 

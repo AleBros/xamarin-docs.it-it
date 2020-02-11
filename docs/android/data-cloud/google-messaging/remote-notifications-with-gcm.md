@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/02/2019
 ms.openlocfilehash: 979df7965e6a972ffc80d786a26d36aa0a1a939b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021606"
@@ -19,7 +19,7 @@ ms.locfileid: "73021606"
 > [!WARNING]
 > Google deprecato GCM a partire dal 10 aprile 2018. I documenti e i progetti di esempio seguenti potrebbero non essere più gestiti. Il server GCM di Google e le API client verranno rimossi non appena il 29 maggio 2019. Google consiglia di eseguire la migrazione di app GCM a Firebase Cloud Messaging (FCM). Per ulteriori informazioni sulla deprecazione e la migrazione di GCM, vedere [Google Cloud Messaging deprecato](https://developers.google.com/cloud-messaging/).
 >
-> Per iniziare a usare le notifiche remote tramite la messaggistica cloud Firebase con Novell, vedere [notifiche remote con FCM](remote-notifications-with-fcm.md).
+> Per iniziare a usare le notifiche remote tramite la messaggistica cloud Firebase con Xamarin, vedere [notifiche remote con FCM](remote-notifications-with-fcm.md).
 
 _Questa procedura dettagliata fornisce una spiegazione dettagliata di come usare Google Cloud Messaging per implementare notifiche remote (dette anche notifiche push) in un'applicazione Xamarin.Android. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), spiega come impostare le autorizzazioni nel manifesto Android per l'accesso a GCM e illustra la messaggistica end-to-end con un programma di test di esempio._
 
@@ -50,15 +50,15 @@ Per iniziare, creare una nuova soluzione vuota denominata **RemoteNotifications*
 
 Prima di poter implementare il codice dell'app client, è necessario installare diversi pacchetti che verranno usati per la comunicazione con GCM. Inoltre, è necessario aggiungere l'applicazione Google Play Store al dispositivo, se non è già installata.
 
-#### <a name="add-the-xamarin-google-play-services-gcm-package"></a>Aggiungere il pacchetto Novell Google Play Services GCM
+#### <a name="add-the-xamarin-google-play-services-gcm-package"></a>Aggiungere il pacchetto Xamarin Google Play Services GCM
 
 Per ricevere i messaggi da Google Cloud Messaging, il Framework di [Google Play Services](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Gcm/) deve essere presente nel dispositivo. Senza questo Framework, un'applicazione Android non può ricevere messaggi dai server GCM. Google Play Services viene eseguito in background mentre il dispositivo Android è acceso, in ascolto silenzioso dei messaggi provenienti da GCM. Quando arrivano questi messaggi, Google Play Services converte i messaggi in Intent e quindi trasmette tali Intent alle applicazioni registrate. 
 
-In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti > Gestisci pacchetti NuGet...** ; in Visual Studio per Mac fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti...** . Cercare **novell Google Play Services-GCM** e installare il pacchetto nel progetto **ClientApp** : 
+In Visual Studio fare clic con il pulsante destro del mouse su **riferimenti > Gestisci pacchetti NuGet...** ; in Visual Studio per Mac fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti...** . Cercare **Xamarin Google Play Services-GCM** e installare il pacchetto nel progetto **ClientApp** : 
 
 [![installazione di Google Play Services](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
 
-Quando si installa **novell Google Play Services-GCM**, **Novell Google Play Services-base** viene installato automaticamente. Se viene ricevuto un errore, modificare l'impostazione *minima di Android per* il progetto in un valore diverso da **Compila con la versione SDK** e provare a eseguire di nuovo l'installazione di NuGet. 
+Quando si installa **Xamarin Google Play Services-GCM**, **Xamarin Google Play Services-base** viene installato automaticamente. Se viene ricevuto un errore, modificare l'impostazione *minima di Android per* il progetto in un valore diverso da **Compila con la versione SDK** e provare a eseguire di nuovo l'installazione di NuGet. 
 
 Modificare quindi **MainActivity.cs** e aggiungere le seguenti istruzioni `using`:
 
@@ -196,7 +196,7 @@ Ricompilare ed eseguire l'app. Verrà visualizzata una schermata simile alla sch
 
 [![Google Play Services è disponibile](remote-notifications-with-gcm-images/3-first-screen-sml.png)](remote-notifications-with-gcm-images/3-first-screen.png#lightbox)
 
-Se non si ottiene questo risultato, verificare che il Google Play Services APK sia installato nel dispositivo e che il pacchetto **novell Google Play Services-GCM** venga aggiunto al progetto **ClientApp** come descritto in precedenza. Se si riceve un errore di compilazione, provare a pulire la soluzione e a compilare nuovamente il progetto. 
+Se non si ottiene questo risultato, verificare che il Google Play Services APK sia installato nel dispositivo e che il pacchetto **Xamarin Google Play Services-GCM** venga aggiunto al progetto **ClientApp** come descritto in precedenza. Se si riceve un errore di compilazione, provare a pulire la soluzione e a compilare nuovamente il progetto. 
 
 Successivamente, verrà scritto il codice per contattare GCM e verrà restituito un token di registrazione.
 
@@ -609,7 +609,7 @@ Avviare l'app client e guardare la finestra di output. Quando il `RegistrationIn
 I/RegistrationIntentService(16103): GCM Registration Token: eX9ggabZV1Q:APA91bHjBnQXMUeBOT6JDiLpRt8m2YWtY ...
 ```
 
-A questo punto l'app client è pronta per ricevere un messaggio di notifica remoto. Dalla riga di comando, eseguire il programma **MessageSender. exe** per inviare un messaggio di notifica "Hello, Novell" all'app client.
+A questo punto l'app client è pronta per ricevere un messaggio di notifica remoto. Dalla riga di comando, eseguire il programma **MessageSender. exe** per inviare un messaggio di notifica "Hello, Xamarin" all'app client.
 Se non è ancora stato compilato il progetto **MessageSender** , eseguirlo ora.
 
 Per eseguire **MessageSender. exe** in Visual Studio, aprire un prompt dei comandi, passare alla directory **MessageSender/bin/debug** ed eseguire il comando direttamente:

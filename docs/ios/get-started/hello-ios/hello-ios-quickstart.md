@@ -11,7 +11,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5dcc37730008e6e39b96128bc1368f022daa2d06
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73023002"
@@ -286,7 +286,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Creare una nuova soluzione Xamarin.iOS selezionando **File > Nuovo > Progetto > Visual C# > iPhone e iPad > App iOS (Xamarin)** :
 
-    ![Selezionare il tipo di progetto app iOS (Novell)](hello-ios-quickstart-images/image002.w157.png "Selezionare il tipo di progetto app iOS (Novell)")
+    ![Selezionare il tipo di progetto app iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selezionare il tipo di progetto app iOS (Xamarin)")
 
     Nella finestra di dialogo successiva selezionare il modello **App visualizzazione singola** e premere **OK** per creare il progetto:
 

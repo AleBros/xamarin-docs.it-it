@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/28/2017
 ms.openlocfilehash: 21e3421125e6fd918a379c5501a44c15620f5d94
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73023784"
@@ -25,7 +25,7 @@ Mentre le funzionalità di archiviazione e di elaborazione dei dispositivi mobil
 - **Database** : il motore di database SQLite è disponibile nella piattaforma Android ed è utile per archiviare i dati strutturati necessari per eseguire query, ordinare o modificare in altro modo. L'archiviazione del database è adatta agli elenchi di dati con molte proprietà.
 - **File di immagine** : Sebbene sia possibile archiviare dati binari nel database di un dispositivo mobile, è consigliabile archiviarli direttamente nel file System. Se necessario, è possibile archiviare i nomi di file in un database per associare l'immagine ad altri dati. Quando si gestiscono immagini di grandi dimensioni o molte immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimini i file che non sono più necessari per evitare l'utilizzo dello spazio di archiviazione dell'utente.
 
-Se un database è il meccanismo di archiviazione corretto per l'app, nella parte restante di questo documento viene illustrato come usare SQLite nella piattaforma Novell.
+Se un database è il meccanismo di archiviazione corretto per l'app, nella parte restante di questo documento viene illustrato come usare SQLite nella piattaforma Xamarin.
 
 ## <a name="advantages-of-using-a-database"></a>Vantaggi dell'utilizzo di un database
 
@@ -53,7 +53,7 @@ Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvert
 - Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
 - Le visualizzazioni sono di sola lettura.
 
-Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](https://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
+Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](https://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Xamarin sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
 Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone

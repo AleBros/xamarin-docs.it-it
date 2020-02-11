@@ -9,16 +9,16 @@ ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
 ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/26/2019
 ms.locfileid: "74536507"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
-_Xamarin.iOS consente di condividere tra diverse piattaforme il C# codice indipendente dalla piattaforma scritto in. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da nozioni di fondo per gli sviluppatori Objective-C che vogliono passare a Novell e C# al linguaggio._
+_Xamarin.iOS consente di condividere tra diverse piattaforme il C# codice indipendente dalla piattaforma scritto in. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da nozioni di fondo per gli sviluppatori Objective-C che vogliono passare a Xamarin e C# al linguaggio._
 
-le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Novell C# sfruttando in posizioni in cui il codice specifico della piattaforma non è necessario, consentendo l'uso di tale codice su dispositivi non Apple. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
+le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Xamarin C# sfruttando in posizioni in cui il codice specifico della piattaforma non è necessario, consentendo l'uso di tale codice su dispositivi non Apple. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
 
 Per sfruttare i vantaggi di Xamarin mantenendo al tempo stesso gli asset Objective-C esistenti, Xamarin può essere esposto in C# tramite la tecnologia dei binding, che rende disponibile il codice Objective-C nell'ambiente gestito di C#. Inoltre, se necessario, è anche possibile eseguire il porting del codice in C# riga per riga. In ogni caso, indipendentemente dall'approccio adottato (binding o porting), è necessaria una certa conoscenza di Objective-C e C# per sfruttare in modo efficace il codice Objective-C esistente con Xamarin.iOS.
 

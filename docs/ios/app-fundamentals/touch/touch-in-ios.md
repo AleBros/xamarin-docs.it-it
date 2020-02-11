@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 9dd06044ea9c4bf28e785932d316b3222c6cd16b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009150"
@@ -128,14 +128,14 @@ Xamarin.iOS fornisce la classe `UIGestureRecognizer` come classe di base per i r
 Il modello di base per l'uso di un riconoscimento di movimento è il seguente:
 
 1. **Creare un'istanza del riconoscitore di movimento** , innanzitutto creare un'istanza di una sottoclasse `UIGestureRecognizer`. L'oggetto di cui viene creata un'istanza verrà associato a una vista e verrà sottoposto a Garbage Collection quando la vista viene eliminata. Non è necessario creare questa vista come variabile a livello di classe.
-1. **Configurare le impostazioni di movimento** : il passaggio successivo consiste nel configurare il riconoscimento del movimento. Per un elenco delle proprietà che è possibile impostare per controllare il comportamento di un'istanza di `UIGestureRecognizer`, vedere la documentazione di Novell su `UIGestureRecognizer` e le relative sottoclassi.
+1. **Configurare le impostazioni di movimento** : il passaggio successivo consiste nel configurare il riconoscimento del movimento. Per un elenco delle proprietà che è possibile impostare per controllare il comportamento di un'istanza di `UIGestureRecognizer`, vedere la documentazione di Xamarin su `UIGestureRecognizer` e le relative sottoclassi.
 1. **Configurare la destinazione** : a causa del patrimonio Objective-C, Xamarin.iOS non genera eventi quando un riconoscimento di movimento corrisponde a un movimento.  `UIGestureRecognizer` dispone di un metodo, `AddTarget`, che può accettare un delegato anonimo o un selettore Objective-C con il codice da eseguire quando il riconoscitore di movimento crea una corrispondenza.
 1. **Abilita riconoscimento movimento** : Analogamente agli eventi tocco, i movimenti sono riconosciuti solo se le interazioni tocco sono abilitate.
 1. **Aggiungere il riconoscitore di movimento alla visualizzazione** . il passaggio finale consiste nell'aggiungere il movimento a una vista chiamando `View.AddGestureRecognizer` e passandogli un oggetto del riconoscimento di movimento.
 
 Per ulteriori informazioni su come implementarli nel codice, vedere gli [esempi di riconoscimento dei movimenti](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) .
 
-Quando viene chiamata la destinazione del movimento, viene passato un riferimento al movimento che si è verificato. Ciò consente alla destinazione del movimento di ottenere informazioni sul movimento che si è verificato. La quantità di informazioni disponibili dipende dal tipo di riconoscimento dei movimenti utilizzato. Vedere la documentazione di Novell per informazioni sui dati disponibili per ogni sottoclasse `UIGestureRecognizer`.
+Quando viene chiamata la destinazione del movimento, viene passato un riferimento al movimento che si è verificato. Ciò consente alla destinazione del movimento di ottenere informazioni sul movimento che si è verificato. La quantità di informazioni disponibili dipende dal tipo di riconoscimento dei movimenti utilizzato. Vedere la documentazione di Xamarin per informazioni sui dati disponibili per ogni sottoclasse `UIGestureRecognizer`.
 
 È importante ricordare che, una volta che un riconoscitore di movimento è stato aggiunto a una vista, la vista (e tutte le visualizzazioni sottostanti) non riceverà alcun evento Touch. Per consentire gli eventi Touch contemporaneamente con i movimenti, la proprietà `CancelsTouchesInView` deve essere impostata su false, come illustrato nel codice seguente:
 

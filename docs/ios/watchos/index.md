@@ -1,6 +1,6 @@
 ---
-title: Creazione di app watchos con Novell
-description: Questo documento contiene collegamenti a diverse guide che descrivono come creare app watchos con Novell. Le guide collegate illustrano le attività iniziali, i controlli dell'interfaccia utente watchos, le funzionalità di watchos, la distribuzione e il testing e la risoluzione dei problemi
+title: Creazione di app watchos con Xamarin
+description: Questo documento contiene collegamenti a diverse guide che descrivono come creare app watchos con Xamarin. Le guide collegate illustrano le attività iniziali, i controlli dell'interfaccia utente watchos, le funzionalità di watchos, la distribuzione e il testing e la risoluzione dei problemi
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 3e572e22e6c02e5401ad0e2c2293d601660ac08f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030133"
 ---
-# <a name="building-watchos-apps-with-xamarin"></a>Creazione di app watchos con Novell
+# <a name="building-watchos-apps-with-xamarin"></a>Creazione di app watchos con Xamarin
 
 ![Interfaccia selezione Apple Watch](images/watch1.png) ![Pulsanti Apple Watch](images/watch2.png) ![Interfaccia mappa Apple Watch](images/watch3.png)
 
@@ -24,7 +24,7 @@ ms.locfileid: "73030133"
 
 * [Introduzione a watchos](~/ios/watchos/get-started/intro-to-watchos.md).
 * [Informazioni sull'installazione](~/ios/watchos/get-started/installation.md).
-* Crea la tua [prima app watchos](~/ios/watchos/get-started/hello-watch.md) con Novell.
+* Crea la tua [prima app watchos](~/ios/watchos/get-started/hello-watch.md) con Xamarin.
 
 ## <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interfaccia utente](~/ios/watchos/user-interface/index.md)
 

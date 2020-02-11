@@ -1,6 +1,6 @@
 ---
 title: Xamarin Profiler
-description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell.
+description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 06/03/2018
 ms.openlocfilehash: 8927e7b2a1b194d1bfab334736c3d024f0542b01
 ms.sourcegitcommit: 60e955ce65194ffea987409157ccc7d5db87c2ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/02/2019
 ms.locfileid: "74690205"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell._
+_Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Xamarin._
 
 Il successo di un'applicazione dipende dall'esperienza dell'utente finale. In qualità di sviluppatore, è possibile che siano state implementate alcune funzionalità molto straordinarie nell'app, ma se l'app è lenta o piena di arresti anomali, è probabile che l'utente lo elimini.
 
@@ -324,13 +324,13 @@ Selezionare **Update (Aggiorna** ) per continuare.
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>Garbage Collector e profilatura di SGen
 
-Il Garbage Collector [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) viene usato per tutte le piattaforme Novell.
+Il Garbage Collector [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) viene usato per tutte le piattaforme Xamarin.
 
 SGen è un GC generazionale, che alloca gli oggetti di un'applicazione in tre heap: Nursery, heap principale e spazio Large Object. Ciò consente un'esecuzione più rapida delle Garbage Collection. SGen è attualmente il GC predefinito per le applicazioni unificate Xamarin.Android e Xamarin.iOS.
 
 Applicazione Xamarin.iOS che usa il API classica usato il GC Boehm, un Garbage Collector conservativo e non generazionale. Poiché è conservativa, è meno probabile liberare la memoria disponibile, che può produrre risultati non accurati quando si usa il profiler. Per questo motivo, non è possibile usare lo strumento allocazioni con Boehm Garbage Collector.
 
-Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Novell non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Novell non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
+Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Xamarin non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Xamarin non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
 
 Per ulteriori informazioni sulla gestione della memoria, vedere la Guida alle [procedure consigliate per la memoria e le prestazioni](~/cross-platform/deploy-test/memory-perf-best-practices.md) .
 

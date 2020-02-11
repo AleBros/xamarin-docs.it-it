@@ -1,6 +1,6 @@
 ---
-title: Uso delle icone e delle immagini di tvOS in Novell
-description: Questo documento descrive come usare icone e immagini in un'app tvOS compilata con Novell. Illustra le immagini di avvio, le immagini sovrapposte, l'icona dell'app e altro ancora.
+title: Uso delle icone e delle immagini di tvOS in Xamarin
+description: Questo documento descrive come usare icone e immagini in un'app tvOS compilata con Xamarin. Illustra le immagini di avvio, le immagini sovrapposte, l'icona dell'app e altro ancora.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030849"
 ---
-# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Xamarin
 
 La creazione di icone e immagini accattivanti è una parte essenziale dello sviluppo di un'esperienza utente immersiva per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Xamarin.tvOS:
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 3b1d27b1489cb71d4bd1922c2de993567ddf36bd
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028615"
@@ -36,7 +36,7 @@ La prima versione di Android Wear è stata incentrata principalmente sull'estens
 
 #### <a name="wearable-notifications"></a>Notifiche indossabili
 
-Il modo più semplice per supportare Android Wear consiste nel sfruttare la natura condivisa delle notifiche tra il palmare e il dispositivo indossabile. Usando l'API di notifica del supporto V4 e la classe `WearableExtender` (disponibile nella [libreria di supporto per Novell Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), è possibile sfruttare le funzionalità native della piattaforma, ad esempio le schede di stile della posta in arrivo o l'input vocale. L'esempio [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) fornisce un codice di esempio che illustra come inviare un elenco di notifiche a un dispositivo Android Wear. 
+Il modo più semplice per supportare Android Wear consiste nel sfruttare la natura condivisa delle notifiche tra il palmare e il dispositivo indossabile. Usando l'API di notifica del supporto V4 e la classe `WearableExtender` (disponibile nella [libreria di supporto per Xamarin Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), è possibile sfruttare le funzionalità native della piattaforma, ad esempio le schede di stile della posta in arrivo o l'input vocale. L'esempio [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) fornisce un codice di esempio che illustra come inviare un elenco di notifiche a un dispositivo Android Wear. 
 
 #### <a name="companion-applications"></a>Applicazioni complementari
 

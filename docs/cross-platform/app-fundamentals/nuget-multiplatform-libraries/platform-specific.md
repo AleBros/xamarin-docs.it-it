@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: 925e08c600c695640c927ada26df376a252b3927
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016716"
@@ -49,7 +49,7 @@ Vengono creati più assembly e incorporati in un singolo pacchetto NuGet. Gli st
     ![](platform-specific-images/specific-reference-assemblies.png "Also in the Project Options window, open the Reference Assemblies section and choose   which PCL profiles the shared library will support via bait and switch")
 
     > [!NOTE]
-    > "Bait and switch" significa che gli assembly PCL conterranno solo l'API esposta dalla libreria (non può contenere il codice specifico della piattaforma). Quando NuGet viene aggiunto a un progetto Novell, le librerie condivise vengono compilate sulla libreria di classi portabile, ma gli assembly specifici della piattaforma contengono il codice effettivamente usato dal progetto iOS o Android.
+    > "Bait and switch" significa che gli assembly PCL conterranno solo l'API esposta dalla libreria (non può contenere il codice specifico della piattaforma). Quando NuGet viene aggiunto a un progetto Xamarin, le librerie condivise vengono compilate sulla libreria di classi portabile, ma gli assembly specifici della piattaforma contengono il codice effettivamente usato dal progetto iOS o Android.
 
 7. Fare clic con il pulsante destro del mouse sul progetto e scegliere **Crea pacchetto NuGet** (o compila o Distribuisci la soluzione) e il file del pacchetto NuGet **. nupkg** verrà salvato nella cartella **/bin/** (debug o versione, a seconda della configurazione).
 

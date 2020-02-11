@@ -1,6 +1,6 @@
 ---
 title: Esecuzione di servizi Android in processi remoti
-description: In genere, tutti i componenti di un'applicazione Android vengono eseguiti nello stesso processo. I servizi Android rappresentano un'eccezione significativa in quanto possono essere configurati per l'esecuzione nei propri processi e condivisi con altre applicazioni, incluse quelle di altri sviluppatori Android. Questa guida illustra come creare e usare un servizio remoto Android usando Novell.
+description: In genere, tutti i componenti di un'applicazione Android vengono eseguiti nello stesso processo. I servizi Android rappresentano un'eccezione significativa in quanto possono essere configurati per l'esecuzione nei propri processi e condivisi con altre applicazioni, incluse quelle di altri sviluppatori Android. Questa guida illustra come creare e usare un servizio remoto Android usando Xamarin.
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: f546a1403aa0af07fc69187c4cfbec8982ed7a2a
 ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/31/2019
 ms.locfileid: "75556509"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Esecuzione di servizi Android in processi remoti
 
-_In genere, tutti i componenti di un'applicazione Android vengono eseguiti nello stesso processo. I servizi Android rappresentano un'eccezione significativa in quanto possono essere configurati per l'esecuzione nei propri processi e condivisi con altre applicazioni, incluse quelle di altri sviluppatori Android. Questa guida illustra come creare e usare un servizio remoto Android usando Novell._
+_In genere, tutti i componenti di un'applicazione Android vengono eseguiti nello stesso processo. I servizi Android rappresentano un'eccezione significativa in quanto possono essere configurati per l'esecuzione nei propri processi e condivisi con altre applicazioni, incluse quelle di altri sviluppatori Android. Questa guida illustra come creare e usare un servizio remoto Android usando Xamarin._
 
 ## <a name="out-of-process-services-overview"></a>Panoramica di servizi out-of-process
 

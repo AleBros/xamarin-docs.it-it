@@ -1,6 +1,6 @@
 ---
 title: Dove si possono trovare informazioni sulla versione e i log?
-description: Questo documento descrive dove trovare i log e le informazioni sulla versione di Novell. Queste informazioni sono utili per la diagnosi dei problemi, l'invio di bug o il supporto.
+description: Questo documento descrive dove trovare i log e le informazioni sulla versione di Xamarin. Queste informazioni sono utili per la diagnosi dei problemi, l'invio di bug o il supporto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73013166"
@@ -26,14 +26,14 @@ ms.locfileid: "73013166"
   - [Log di Windows](#windows-logs)
     - Xamarin Studio
     - Xamarin for Visual Studio
-    - Programma di installazione universale Novell
+    - Programma di installazione universale Xamarin
     - Programmi di installazione singoli `.msi`, log dettagliati
     - Avvio di Visual Studio, log dettagliati
   - [Log Mac](#mac-logs)
     - Host di compilazione
   - Visual Studio per Mac
     - Xamarin Studio
-    - Programma di installazione di Novell
+    - Programma di installazione di Xamarin
 - [Output di compilazione dettagliato](#verbose-build-output-logs)
 - [Log di debug per le app Xamarin.Android e Xamarin.iOS](#debug-logs-for-xamarin-apps)
   - Log logcat Android `adb`
@@ -78,7 +78,7 @@ Per ogni posizione di log, assicurarsi di eseguire il comprimere e alleghi l'int
 
 ### <a name="a-idwindows-logs-namewindows-logs-windows-logs"></a><a id="windows-logs" name="windows-logs" />registri di Windows
 
-#### <a name="a-idwindows-logs-xamarin-vs-namewindows-logs-xamarin-vs--visual-studio-tools-for-xamarin"></a><a id="windows-logs-xamarin-vs" name="windows-logs-xamarin-vs" /> Strumenti di Visual Studio per Novell
+#### <a name="a-idwindows-logs-xamarin-vs-namewindows-logs-xamarin-vs--visual-studio-tools-for-xamarin"></a><a id="windows-logs-xamarin-vs" name="windows-logs-xamarin-vs" /> Strumenti di Visual Studio per Xamarin
 
 `%LOCALAPPDATA%\Xamarin\Logs`
 
@@ -88,7 +88,7 @@ Per ogni posizione di log, assicurarsi di eseguire il comprimere e alleghi l'int
 
 #### <a name="a-idvs-2015-namevs-2015--visual-studio-2015"></a><a id="vs-2015" name="vs-2015" /> Visual Studio 2015
 
-#### <a name="a-idwindows-universal-installer-namewindows-universal-installer--xamarin-universal-installer"></a>programma di installazione di <a id="windows-universal-installer" name="windows-universal-installer" /> Novell "Universal"
+#### <a name="a-idwindows-universal-installer-namewindows-universal-installer--xamarin-universal-installer"></a>programma di installazione di <a id="windows-universal-installer" name="windows-universal-installer" /> Xamarin "Universal"
 
 `%LOCALAPPDATA%\Xamarin\Universal`
 
@@ -126,13 +126,13 @@ Questa cartella può essere aperta anche tramite "Help-> Apri directory log".
 
 Questa cartella può essere aperta anche tramite "Help-> Apri directory log".
 
-#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a>programma di installazione di <a id="mac-universal-installer" name="mac-universal-installer" />Novell "Universal"
+#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a>programma di installazione di <a id="mac-universal-installer" name="mac-universal-installer" />Xamarin "Universal"
 
 `~/Library/Logs/XamarinInstaller/Universal`
 
 Questi sono i log del programma di installazione `XamarinInstaller.dmg`.
 
-#### <a name="a-idmac-build-host-namemac-build-host-xamarin-build-host"></a><a id="mac-build-host" name="mac-build-host" />host di compilazione Novell
+#### <a name="a-idmac-build-host-namemac-build-host-xamarin-build-host"></a><a id="mac-build-host" name="mac-build-host" />host di compilazione Xamarin
 
 `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
 

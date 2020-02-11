@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4493b1a0d06e2f44ee9a11a250395f058baa0548
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031027"
@@ -46,10 +46,10 @@ Aprire il file di `.csproj` per il progetto di app iOS in un editor di testo e q
 
 ## <a name="additional-references"></a>Riferimenti aggiuntivi
 
-- [Documentazione sull'installazione di TFS per l'uso con Novell](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
+- [Documentazione sull'installazione di TFS per l'uso con Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
 - [Attività di compilazione di Azure DevOps: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
 - [Attività di compilazione di Azure DevOps: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Questo documento illustra il comportamento attuale di Novell 3.11.666 per Visual Studio e Xamarin.iOS 8.10.3 nell'host di compilazione Mac. Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .
+Questo documento illustra il comportamento attuale di Xamarin 3.11.666 per Visual Studio e Xamarin.iOS 8.10.3 nell'host di compilazione Mac. Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .

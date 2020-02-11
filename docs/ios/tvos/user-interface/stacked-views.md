@@ -1,6 +1,6 @@
 ---
-title: Uso di viste in pila tvOS in Novell
-description: Questo documento descrive come usare le viste in pila tvOS in un'app compilata con Novell. Fornisce una panoramica generale delle visualizzazioni in pila e illustra il layout automatico, il posizionamento e il ridimensionamento di una visualizzazione in pila, usi comuni, integrazione con storyboard e altro ancora.
+title: Uso di viste in pila tvOS in Xamarin
+description: Questo documento descrive come usare le viste in pila tvOS in un'app compilata con Xamarin. Fornisce una panoramica generale delle visualizzazioni in pila e illustra il layout automatico, il posizionamento e il ridimensionamento di una visualizzazione in pila, usi comuni, integrazione con storyboard e altro ancora.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 9f2c8fb235603c5dac37fc0c25be2f070d7df98e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022152"
 ---
-# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Novell
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Xamarin
 
 Il controllo di visualizzazione dello stack (`UIStackView`) sfrutta la potenza del layout automatico e delle classi di dimensioni per gestire uno stack di visualizzazioni, orizzontalmente o verticalmente, che risponde dinamicamente alle modifiche del contenuto e alle dimensioni dello schermo del dispositivo Apple TV.
 

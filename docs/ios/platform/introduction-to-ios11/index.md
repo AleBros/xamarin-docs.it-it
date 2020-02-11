@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 09/19/2017
 ms.openlocfilehash: 7262e44fe862e7a5c71f0b1dcfa5d672932fd4ee
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032190"
@@ -27,7 +27,7 @@ Apple ha introdotto aggiornamenti dell'architettura, nuove modifiche visive e un
 ## <a name="arkitarkitindexmd"></a>[ARKit](arkit/index.md)
 
 ARKit porta la realtà aumentata in iOS, consentendo agli utenti di interagire con il mondo tramite la fotocamera del dispositivo.
-Con Novell, è anche possibile usare [ARKit con UrhoSharp](arkit/urhosharp.md).
+Con Xamarin, è anche possibile usare [ARKit con UrhoSharp](arkit/urhosharp.md).
 
 ## <a name="coremlcoremlmd"></a>[CoreML](coreml.md)
 
@@ -82,4 +82,4 @@ Sono disponibili diversi C# [esempi](https://docs.microsoft.com/samples/browse/?
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di Novell iOS 11](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11)
+- [Esempi di Xamarin iOS 11](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11)

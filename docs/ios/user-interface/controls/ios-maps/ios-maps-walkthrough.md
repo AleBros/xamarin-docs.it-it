@@ -1,6 +1,6 @@
 ---
 title: Annotazioni e sovrimpressioni in Xamarin.iOS
-description: Questo articolo presenta una procedura dettagliata che illustra come usare le funzionalità di annotazione e sovrapposizione del kit mappa. Viene illustrato come aggiungere una mappa a un'applicazione che visualizza un'annotazione e una sovrapposizione nella posizione della conferenza Novell evolve 2013.
+description: Questo articolo presenta una procedura dettagliata che illustra come usare le funzionalità di annotazione e sovrapposizione del kit mappa. Viene illustrato come aggiungere una mappa a un'applicazione che visualizza un'annotazione e una sovrapposizione nella posizione della conferenza Xamarin evolve 2013.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022008"

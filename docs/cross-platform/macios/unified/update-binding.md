@@ -1,6 +1,6 @@
 ---
 title: Eseguire la migrazione di un binding all'API unificata
-description: Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Novell esistente per supportare le API unificate per le applicazioni Xamarin.IOS e Xamarin.Mac.
+description: Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Xamarin esistente per supportare le API unificate per le applicazioni Xamarin.IOS e Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: davidortinau
@@ -8,20 +8,20 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: c8f55dd2d300da80a57c06f15cf185558cfc5e41
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015039"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
-_Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Novell esistente per supportare le API unificate per le applicazioni Xamarin.IOS e Xamarin.Mac._
+_Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Xamarin esistente per supportare le API unificate per le applicazioni Xamarin.IOS e Xamarin.Mac._
 
 ## <a name="overview"></a>Panoramica
 
 A partire dal 1 ° febbraio 2015 Apple richiede che tutti i nuovi invii a iTunes e Mac App Store siano applicazioni a 64 bit. Di conseguenza, tutte le nuove applicazioni Xamarin.iOS o Xamarin.Mac dovranno usare la nuova API unificata anziché le API MonoTouch e MonoMac classiche esistenti per supportare 64 bit.
 
-Inoltre, qualsiasi progetto di binding Novell deve supportare anche le nuove API unificate da includere in un progetto Xamarin.iOS o Xamarin.Mac a 64 bit. In questo articolo vengono illustrati i passaggi necessari per aggiornare un progetto di binding esistente per l'utilizzo del API unificata.
+Inoltre, qualsiasi progetto di binding Xamarin deve supportare anche le nuove API unificate da includere in un progetto Xamarin.iOS o Xamarin.Mac a 64 bit. In questo articolo vengono illustrati i passaggi necessari per aggiornare un progetto di binding esistente per l'utilizzo del API unificata.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni su queste modifiche ai tipi di dati, vedere il docume
 
 ## <a name="update-the-coregraphics-types"></a>Aggiornare i tipi CoreGraphics
 
-I tipi di dati Point, Size e Rectangle usati con `CoreGraphics` usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione. Quando Novell ha originariamente associato le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono ai tipi di dati in `System.Drawing`, ad esempio`RectangleF`.
+I tipi di dati Point, Size e Rectangle usati con `CoreGraphics` usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione. Quando Xamarin ha originariamente associato le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono ai tipi di dati in `System.Drawing`, ad esempio`RectangleF`.
 
 A causa dei requisiti per supportare 64 bit e i nuovi tipi di dati nativi, è necessario apportare le seguenti modifiche al codice esistente quando si chiamano `CoreGraphic` metodi:
 
@@ -132,7 +132,7 @@ Dopo aver apportato tutte le modifiche al codice, è necessario modificare il pr
 
 ## <a name="modify-the-binding-project"></a>Modificare il progetto di associazione
 
-Come passaggio finale per l'aggiornamento del progetto di binding per l'uso delle API unificate, è necessario modificare il `MakeFile` usato per compilare il progetto o il tipo di progetto Novell (se si esegue il binding da Visual Studio per Mac) e impostare _btouch_ per l'associazione le API unificate invece di quelle classiche.
+Come passaggio finale per l'aggiornamento del progetto di binding per l'uso delle API unificate, è necessario modificare il `MakeFile` usato per compilare il progetto o il tipo di progetto Xamarin (se si esegue il binding da Visual Studio per Mac) e impostare _btouch_ per l'associazione le API unificate invece di quelle classiche.
 
 ### <a name="updating-a-makefile"></a>Aggiornamento di un MakeFile
 
@@ -211,7 +211,7 @@ Con tutte queste modifiche, è possibile compilare la nuova versione di 64 bit d
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo sono state illustrate le modifiche che devono essere apportate a un progetto di associazione Novell esistente per supportare le nuove API unificate e i dispositivi a 64 bit e i passaggi necessari per compilare la nuova versione compatibile con 64 bit di un'API.
+In questo articolo sono state illustrate le modifiche che devono essere apportate a un progetto di associazione Xamarin esistente per supportare le nuove API unificate e i dispositivi a 64 bit e i passaggi necessari per compilare la nuova versione compatibile con 64 bit di un'API.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

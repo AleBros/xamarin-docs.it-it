@@ -1,6 +1,6 @@
 ---
-title: Uso dei controlli pagina di tvOS in Novell
-description: Questo documento descrive come usare i controlli pagina di tvOS in un'app compilata con Novell. Viene fornita una descrizione di alto livello dei controlli pagina, viene illustrato come impostarli negli storyboard ed esamina come rispondere agli eventi di modifica della pagina.
+title: Uso dei controlli pagina di tvOS in Xamarin
+description: Questo documento descrive come usare i controlli pagina di tvOS in un'app compilata con Xamarin. Viene fornita una descrizione di alto livello dei controlli pagina, viene illustrato come impostarli negli storyboard ed esamina come rispondere agli eventi di modifica della pagina.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 12fe9645ab832db1db37e36b0342664bbd2fe9f8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030412"
 ---
-# <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Novell
+# <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Xamarin
 
 In alcuni casi potrebbe essere necessario visualizzare una serie di pagine o immagini nell'app Xamarin.tvOS. Un controllo pagina è stato progettato per indicare in modo chiaro quale pagina di un utente si trova al di fuori del numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su uno sfondo scuro a forma ovale. Nella pagina corrente viene visualizzato un punto pieno, tutte le altre pagine vengono visualizzate come punti vuoti. Il controllo pagina Ritaglia i punti più esterni se sono presenti troppi per adattarsi all'area di sfondo.
 

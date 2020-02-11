@@ -1,6 +1,6 @@
 ---
 title: Introduzione a watchOS 5
-description: Questo documento fornisce una descrizione di alto livello di alcune API watchos 5 per Novell.
+description: Questo documento fornisce una descrizione di alto livello di alcune API watchos 5 per Xamarin.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 4aca6a8e7e78b5e9853361eaa694fed889d7f4e9
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028214"
@@ -18,7 +18,7 @@ ms.locfileid: "73028214"
 
 Questo documento fornisce una descrizione di alto livello di alcune API watchos 5.
 
-Per iniziare a creare app watchos 5 con Novell, vedere la [Guida](~/ios/platform/introduction-to-ios12/get-started.md) introduttiva
+Per iniziare a creare app watchos 5 con Xamarin, vedere la [Guida](~/ios/platform/introduction-to-ios12/get-started.md) introduttiva
 
 ## <a name="workout-improvements"></a>Miglioramenti dell'allenamento
 

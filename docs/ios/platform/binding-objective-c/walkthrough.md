@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/02/2017
 ms.openlocfilehash: f5e5af7d9b4ec85832f2d6050f632d054ba089a2
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032674"
@@ -276,7 +276,7 @@ Verrà creata la soluzione e verranno inclusi due file predefiniti:
 
     ![Avvio di un nuovo progetto](walkthrough-images/bind01vs.png "Avvio di un nuovo progetto")
 
-1. Nella finestra di dialogo nuovo progetto selezionare **Visual C# > iPhone & iPad > libreria di binding iOS (Novell)** :
+1. Nella finestra di dialogo nuovo progetto selezionare **Visual C# > iPhone & iPad > libreria di binding iOS (Xamarin)** :
 
     [![selezionare la libreria associazioni iOS](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
@@ -348,11 +348,11 @@ L'operazione successiva consiste nel creare le definizioni API per il progetto I
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivey per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
+Objective Sharpie è uno strumento da riga di comando (fornito da Xamarin) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivey per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivee Objectivey nell'host di **compilazione Mac** per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
+Objective Sharpie è uno strumento da riga di comando (fornito da Xamarin) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivee Objectivey nell'host di **compilazione Mac** per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
 
 -----
 
@@ -529,7 +529,7 @@ Seguire questa procedura per creare un'applicazione iPhone di esempio per usare 
 
 1. **Creare un progetto Xamarin.iOS** : aggiungere un nuovo progetto Xamarin.iOS denominato **InfColorPickerSample** usando il modello di **app visualizzazione singola** :
 
-    [progetto![app iOS (Novell)](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
+    [progetto![app iOS (Xamarin)](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
     [![selezionare il modello](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 

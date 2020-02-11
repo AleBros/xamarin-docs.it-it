@@ -1,6 +1,6 @@
 ---
-title: Uso di ADO.NET con Novell. iOS
-description: Questo documento descrive come usare ADO.NET come metodo per accedere a SQLite in un'applicazione Novell. iOS. Vengono illustrati i riferimenti agli assembly, mono. Data. sqlite e l'esempio BasicDataAccess.
+title: Uso di ADO.NET con Xamarin.iOS
+description: Questo documento descrive come usare ADO.NET come metodo per accedere a SQLite in un'applicazione Xamarin.iOS. Vengono illustrati i riferimenti agli assembly, mono. Data. sqlite e l'esempio BasicDataAccess.
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 2ed16c651d0b373e33d58bb73591977d3484d6e0
 ms.sourcegitcommit: be8ce3449afab22673e48b546d857431c071d66f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2020
 ms.locfileid: "76162935"
 ---
-# <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Novell. iOS
+# <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Xamarin.iOS
 
-Novell include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
+Xamarin include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
 
 ## <a name="assembly-references"></a>Riferimenti dell'assembly
 
@@ -214,7 +214,7 @@ Il tipo restituito del metodo `ExecuteScalar` è `object`: è necessario eseguir
 
 È presente un'altra libreria `Microsoft.Data.Sqlite`, che può essere [installata da NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), equivalente dal punto di vista funzionale a `Mono.Data.Sqlite` e consente gli stessi tipi di query.
 
-Si verifica un [confronto tra le due librerie](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) e alcuni [dettagli specifici di Novell](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Più importante per le app Novell. iOS, è necessario includere una chiamata di inizializzazione:
+Si verifica un [confronto tra le due librerie](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) e alcuni [dettagli specifici di Xamarin](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Più importante per le app Xamarin.iOS, è necessario includere una chiamata di inizializzazione:
 
 ```csharp
 // required for Xamarin.iOS
@@ -226,4 +226,4 @@ SQLitePCL.Batteries_V2.Init();
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Accesso ai dati di Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

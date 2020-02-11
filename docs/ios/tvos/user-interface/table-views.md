@@ -1,5 +1,5 @@
 ---
-title: Uso delle viste tabella tvOS in Novell
+title: Uso delle viste tabella tvOS in Xamarin
 description: In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: db2e692993b7d452b81024ba1d50788e82b7ab86
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022197"
 ---
-# <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Novell
+# <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Xamarin
 
 _In questo articolo viene illustrata la progettazione e l'utilizzo di viste tabella e di controller di visualizzazione tabella all'interno di un'app Xamarin.tvOS._
 
@@ -945,7 +945,7 @@ Per un'implementazione completa delle visualizzazioni di tabella all'interno di 
 
 ## <a name="table-views-in-detail"></a>Visualizzazione tabella dettagliata
 
-Poiché tvOS è basato su iOS, le visualizzazioni di tabella e i controller di visualizzazione tabella sono progettati e si comportano in modo simile. Per informazioni più dettagliate sull'uso della visualizzazione tabella in un'app Novell, vedere la documentazione relativa all' [uso di tabelle e celle](~/ios/user-interface/controls/tables/index.md) in iOS.
+Poiché tvOS è basato su iOS, le visualizzazioni di tabella e i controller di visualizzazione tabella sono progettati e si comportano in modo simile. Per informazioni più dettagliate sull'uso della visualizzazione tabella in un'app Xamarin, vedere la documentazione relativa all' [uso di tabelle e celle](~/ios/user-interface/controls/tables/index.md) in iOS.
 
 <a name="Summary" />
 

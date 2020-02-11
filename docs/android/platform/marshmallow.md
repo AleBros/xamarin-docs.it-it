@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: fb1ba92be9527d490b3d34bd4c0e454b0a750837
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019982"
@@ -57,11 +57,11 @@ Sono stati inoltre rilasciati molti aggiornamenti della libreria Android core co
 
 ## <a name="requirements"></a>Requisiti
 
-Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità di Android marshmallow nelle app basate su Novell: 
+Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità di Android marshmallow nelle app basate su Xamarin: 
 
 - **Xamarin.android** &ndash; Xamarin.Android 5.1.7.12 o versione successiva deve essere installato e configurato con Visual Studio o Xamarin Studio.
 
-- **Visual Studio per Mac** o **Visual Studio** &ndash; se si usa Visual Studio per Mac, è richiesta la versione 5.9.7.22 o successiva. Se si usa Visual Studio, è necessaria la versione 3.11.1537 o successiva di Novell Tools per Visual Studio. 
+- **Visual Studio per Mac** o **Visual Studio** &ndash; se si usa Visual Studio per Mac, è richiesta la versione 5.9.7.22 o successiva. Se si usa Visual Studio, è necessaria la versione 3.11.1537 o successiva di Xamarin Tools per Visual Studio. 
 
 - **Android SDK** &ndash; Android SDK 6,0 (API 23) o versione successiva deve essere installato tramite il Android SDK Manager.
 
@@ -73,7 +73,7 @@ Di seguito sono riportate le funzionalità necessarie per usare le nuove funzion
 
 Per iniziare a usare Android marshmallow con Xamarin.Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android marshmallow: 
 
-1. Installare gli aggiornamenti più recenti di Novell dal canale **stabile** . 
+1. Installare gli aggiornamenti più recenti di Xamarin dal canale **stabile** . 
 
 2. Installare gli strumenti e i pacchetti di Android 6,0 marshmallow SDK.
 
@@ -83,9 +83,9 @@ Per iniziare a usare Android marshmallow con Xamarin.Android, è necessario scar
 
 Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
-### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
+### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Xamarin
 
-Per aggiornare Novell in modo che includa il supporto per Android 6,0 marshmallow, modificare il canale di aggiornamento in **stabile** e installare tutti gli aggiornamenti. Per ulteriori informazioni sull'installazione degli aggiornamenti dal canale degli aggiornamenti, vedere [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
+Per aggiornare Xamarin in modo che includa il supporto per Android 6,0 marshmallow, modificare il canale di aggiornamento in **stabile** e installare tutti gli aggiornamenti. Per ulteriori informazioni sull'installazione degli aggiornamenti dal canale degli aggiornamenti, vedere [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
 
 ### <a name="install-the-android-60-sdk"></a>Installare Android 6,0 SDK
 
@@ -104,7 +104,7 @@ Per ulteriori informazioni sull'utilizzo di gestione Android SDK per installare 
 
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. 
+Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Xamarin, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. 
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione di Android 6,0 MarshMallow. Per fare riferimento al progetto per marshmallow, è necessario configurare il progetto per il **livello API 23 (supporto per Xamarin.Android v 6.0)**. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -131,7 +131,7 @@ Molte delle modifiche introdotte in Android marshmallow si concentrano sul migli
 Il sistema di autorizzazioni Android è stato significativamente ottimizzato e semplificato da Android Lollipop. In Android marshmallow gli utenti concedono le autorizzazioni caso per caso in fase di esecuzione anziché in fase di installazione. Per supportare questa funzionalità in Android marshmallow e versioni successive, è necessario progettare l'applicazione in modo da richiedere all'utente le autorizzazioni in fase di esecuzione (nel contesto in cui sono necessarie le autorizzazioni). Questa modifica rende più semplice per gli utenti iniziare a usare immediatamente l'app perché semplifica il processo di installazione e aggiornamento dell'app. 
 
 Vedere [richiesta di autorizzazioni di runtime in Android marshmallow](https://blog.xamarin.com/requesting-runtime-permissions-in-android-marshmallow/) per altri dettagli, inclusi esempi di codice, sull'implementazione delle autorizzazioni di runtime nelle app Xamarin.Android.
-Novell fornisce anche un'app di esempio che illustra il funzionamento delle autorizzazioni di runtime in Android marshmallow (e versioni successive): [RuntimePermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
+Xamarin fornisce anche un'app di esempio che illustra il funzionamento delle autorizzazioni di runtime in Android marshmallow (e versioni successive): [RuntimePermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
 
 Questa app di esempio illustra quanto segue:
 
@@ -160,7 +160,7 @@ I collegamenti e le app di esempio descritte di seguito possono essere utili per
 Nei dispositivi che supportano l'hardware di analisi delle impronte digitali, è possibile usare la nuova classe `FingerPrintManager` per autenticare un utente.
 Per altre informazioni sulla funzionalità di autenticazione con impronta digitale in Android marshmallow, vedere [l'autenticazione con impronta digitale](https://developer.android.com/preview/api-overview.html#fingerprint-authentication).
 
-Novell fornisce un'app di esempio che illustra come usare le impronte digitali registrate per autenticare un utente nell'app: [FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
+Xamarin fornisce un'app di esempio che illustra come usare le impronte digitali registrate per autenticare un utente nell'app: [FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
 
 Per usare questa app di esempio:
 
@@ -182,7 +182,7 @@ Vedere [aggiungere una conversazione all'app Android con interazioni vocali](htt
 Con la nuova funzionalità *Confirm Credentials* di Android marshmallow è possibile liberare gli utenti dal dover ricordare e immettere le password specifiche dell'app eseguendone l'autenticazione in base al tempo di sblocco del dispositivo.
 A tale scopo, utilizzare il nuovo metodo `SetUserAuthenticationValidityDurationSeconds` del `KeyGenerator`. Usare il metodo `CreateConfirmDeviceCredentialIntent` di `KeyGuardManager`per autenticare di nuovo l'utente dall'interno dell'app. Per ulteriori informazioni su questa nuova funzionalità di Android marshmallow, vedere [Confirm Credential](https://developer.android.com/preview/api-overview.html#confirm-credential).
 
-Novell fornisce un'app di esempio che illustra come usare le credenziali del dispositivo (ad esempio PIN, pattern o password) nell'app: [ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+Xamarin fornisce un'app di esempio che illustra come usare le credenziali del dispositivo (ad esempio PIN, pattern o password) nell'app: [ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
 
 Per usare questa app di esempio:
 
@@ -224,10 +224,10 @@ Android Lollipop ha introdotto la [progettazione del materiale](https://www.goog
 
 - **Schede materiali** &ndash; il nuovo widget `TabLayout` fornisce un layout orizzontale per la visualizzazione delle schede come modo per implementare la navigazione di primo livello nell'app.
 
-Per sfruttare i vantaggi della [libreria di supporto della progettazione](https://developer.android.com/tools/support-library/features.html#design) nell'app Xamarin.Android, scaricare e installare il pacchetto NuGet di [progettazione della libreria di supporto Novell Novell](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) .
+Per sfruttare i vantaggi della [libreria di supporto della progettazione](https://developer.android.com/tools/support-library/features.html#design) nell'app Xamarin.Android, scaricare e installare il pacchetto NuGet di [progettazione della libreria di supporto Xamarin Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) .
 
 Per altri dettagli (inclusi esempi di codice) sull'uso della libreria di supporto della progettazione materiale nelle app Xamarin.Android, vedere la pagina relativa alla [progettazione di materiali accattivanti con la libreria di progettazione del supporto Android](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) .
-Novell fornisce un'app di esempio che illustra la nuova libreria di progettazione Android in Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
+Xamarin fornisce un'app di esempio che illustra la nuova libreria di progettazione Android in Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
 In questo esempio vengono illustrate le seguenti funzionalità della libreria di progettazione:
 
 - Barra degli strumenti con compressione
@@ -240,7 +240,7 @@ Per ulteriori informazioni sulla libreria di progettazione, vedere la pagina rel
 
 ### <a name="additional-library-updates"></a>Aggiornamenti aggiuntivi della libreria
 
-Oltre ad Android marshmallow, Google ha annunciato aggiornamenti correlati a diverse librerie Android di base. Novell fornisce il supporto di Xamarin.Android per questi aggiornamenti tramite diversi pacchetti NuGet di versione di anteprima: 
+Oltre ad Android marshmallow, Google ha annunciato aggiornamenti correlati a diverse librerie Android di base. Xamarin fornisce il supporto di Xamarin.Android per questi aggiornamenti tramite diversi pacchetti NuGet di versione di anteprima: 
 
 - [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; la versione più recente di Google Play Services include la nuova funzionalità *invita l'app* , che consente agli utenti di condividere l'app con gli amici. Per altre informazioni su questa funzionalità, vedere [espandere la portata dell'app con gli inviti dell'app di Google](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 

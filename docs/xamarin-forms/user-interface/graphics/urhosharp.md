@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/11/2016
 ms.openlocfilehash: 60c647a9a09ebffa5a9d50c799c09cf0dbf2e4ac
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728010"
@@ -57,7 +57,7 @@ Si noti che l'esempio Usa C# 6 funzionalità e potrebbero non essere compilate i
 
 <a name="1"/>
 
-### <a name="1-create-a-xamarin-forms-page"></a>1. creare una pagina Novell Forms
+### <a name="1-create-a-xamarin-forms-page"></a>1. creare una pagina Xamarin Forms
 
 Il codice seguente illustra una pagina di Xamarin.Forms `UrhoPage` prima che qualsiasi codice correlato all'Urho è stato aggiunto:
 

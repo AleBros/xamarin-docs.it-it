@@ -8,16 +8,16 @@ ms.author: daortin
 ms.date: 04/24/2019
 ms.openlocfilehash: 9f227f51596a4ed93fd830c3f3495a90c1f7f722
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014557"
 ---
-# <a name="visual-basic-in-xamarin-android-and-ios"></a>Visual Basic in Novell Android e iOS
+# <a name="visual-basic-in-xamarin-android-and-ios"></a>Visual Basic in Xamarin Android e iOS
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 
-L'applicazione di esempio [TaskyVB](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/) illustra come Visual Basic codice compilato in una libreria di .NET standard può essere usato con Novell. Ecco alcune schermate delle app risultanti eseguite in Android e iOS:
+L'applicazione di esempio [TaskyVB](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/) illustra come Visual Basic codice compilato in una libreria di .NET standard può essere usato con Xamarin. Ecco alcune schermate delle app risultanti eseguite in Android e iOS:
 
  [![Android e iOS che esegue un'app compilata con Visual Basic](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
 
@@ -25,7 +25,7 @@ I progetti Android e iOS nell'esempio sono tutti scritti in C#. L'interfaccia ut
 
 ## <a name="sample-walkthrough"></a>Scenario di esempio
 
-Questa guida illustra come Visual Basic è stata implementata nell'esempio [TaskyVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB) Novell per iOS e Android.
+Questa guida illustra come Visual Basic è stata implementata nell'esempio [TaskyVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB) Xamarin per iOS e Android.
 
 > [!NOTE]
 > Prima di continuare con questa guida, vedere le istruzioni su [Visual Basic e .NET standard](index.md) .
@@ -190,7 +190,7 @@ Visual Studio 2017 _non è in grado_ di compilare progetti Visual Basic.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare Visual Basic codice nelle applicazioni Novell con Visual Studio e le librerie di .NET Standard. Anche se Novell non supporta direttamente Visual Basic, la compilazione di Visual Basic in una libreria .NET Standard consente l'inclusione di codice scritto con Visual Basic nelle app iOS e Android.
+Questo articolo ha illustrato come usare Visual Basic codice nelle applicazioni Xamarin con Visual Studio e le librerie di .NET Standard. Anche se Xamarin non supporta direttamente Visual Basic, la compilazione di Visual Basic in una libreria .NET Standard consente l'inclusione di codice scritto con Visual Basic nelle app iOS e Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

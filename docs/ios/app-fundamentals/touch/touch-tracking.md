@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: c3998424c8f4e9482a41e2891e65f0d13d8ac2f3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009183"
@@ -189,5 +189,5 @@ A questo punto si è appreso come è possibile tenere traccia delle singole dita
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Guida a Novell Android equivalente](~/android/app-fundamentals/touch/touch-tracking.md)
+- [Guida a Xamarin Android equivalente](~/android/app-fundamentals/touch/touch-tracking.md)
 - [FingerPaint (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

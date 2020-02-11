@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/21/2017
 ms.openlocfilehash: 8e52dbce6abd30633ffffa22e24d471fef0500ee
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003559"
@@ -22,7 +22,7 @@ ms.locfileid: "73003559"
 
 ## <a name="introduction-to-storyboardsiosuser-interfacestoryboardsindexmd"></a>[Introduzione agli storyboard](~/ios/user-interface/storyboards/index.md)
 
-Uno storyboard è una rappresentazione visiva dell'aspetto e del flusso dell'applicazione. In Novell è stata introdotta una finestra di progettazione che consente alle applicazioni Xamarin.iOS di sfruttare i vantaggi degli storyboard, in modo da poter progettare visivamente la schermata dell'applicazione e C# accedere alle visualizzazioni, ai controller e ai gli elementi segue con per un maggiore controllo. È anche possibile fare riferimento a [questa guida](~/ios/user-interface/designer/introduction.md) per una spiegazione e una procedura dettagliata del Xamarin designer per iOS
+Uno storyboard è una rappresentazione visiva dell'aspetto e del flusso dell'applicazione. In Xamarin è stata introdotta una finestra di progettazione che consente alle applicazioni Xamarin.iOS di sfruttare i vantaggi degli storyboard, in modo da poter progettare visivamente la schermata dell'applicazione e C# accedere alle visualizzazioni, ai controller e ai gli elementi segue con per un maggiore controllo. È anche possibile fare riferimento a [questa guida](~/ios/user-interface/designer/introduction.md) per una spiegazione e una procedura dettagliata del Xamarin designer per iOS
 
 ## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[Interfaccia utente in iOS](~/ios/user-interface/ios-ui/index.md)
 

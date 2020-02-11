@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/02/2019
 ms.openlocfilehash: c8363adf479f0880bfbdf6a047d495da4b849395
 ms.sourcegitcommit: a2ec4aef8457eab4310cde2a41485931263ce16b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/06/2019
 ms.locfileid: "74902254"
@@ -32,7 +32,7 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 3. Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
 
-[schermata iniziale del logo Novell di esempio ![seguito dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[schermata iniziale del logo Xamarin di esempio ![seguito dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti di
 

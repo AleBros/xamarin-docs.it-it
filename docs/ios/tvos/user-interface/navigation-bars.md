@@ -1,6 +1,6 @@
 ---
-title: Uso delle barre di spostamento di tvOS in Novell
-description: Questo documento descrive come usare le barre di navigazione in un'app tvOS compilata con Novell. Viene illustrata la configurazione delle barre di spostamento in uno storyboard e la risposta agli eventi da questi pulsanti.
+title: Uso delle barre di spostamento di tvOS in Xamarin
+description: Questo documento descrive come usare le barre di navigazione in un'app tvOS compilata con Xamarin. Viene illustrata la configurazione delle barre di spostamento in uno storyboard e la risposta agli eventi da questi pulsanti.
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030473"
 ---
-# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Novell
+# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Xamarin
 
 È possibile aggiungere barre di spostamento nella parte superiore delle visualizzazioni per visualizzare un titolo e i pulsanti della barra di navigazione facoltativa. Vengono in genere usati quando l'utente si è spostato da una pagina principale, ad esempio una visualizzazione tabella, una raccolta o un menu a una vista secondario che mostra i dettagli dell'elemento selezionato.
 

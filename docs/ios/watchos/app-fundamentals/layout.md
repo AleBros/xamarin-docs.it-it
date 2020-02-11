@@ -1,6 +1,6 @@
 ---
-title: Uso del layout watchos in Novell
-description: Questo documento descrive come creare un layout watchos usando Novell. Vengono descritti i controller di interfaccia, i gruppi, i separatori e i controlli contenuto.
+title: Uso del layout watchos in Xamarin
+description: Questo documento descrive come creare un layout watchos usando Xamarin. Vengono descritti i controller di interfaccia, i gruppi, i separatori e i controlli contenuto.
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 568d1e354d0ee840aeed980d6e8cc6b83068a1c8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001535"
 ---
-# <a name="working-with-watchos-layout-in-xamarin"></a>Uso del layout watchos in Novell
+# <a name="working-with-watchos-layout-in-xamarin"></a>Uso del layout watchos in Xamarin
 
 La progettazione di layout per le [dimensioni dello schermo](~/ios/watchos/app-fundamentals/screen-sizes.md) Apple Watch presenta problemi univoci.
 

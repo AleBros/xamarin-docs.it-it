@@ -9,14 +9,14 @@ ms.author: jusjohns
 ms.date: 12/27/2019
 ms.openlocfilehash: d67b3f68cced853f6f934121022ff682264af341
 ms.sourcegitcommit: 97d29fb174f96db59b9e82ef3911fa3bc1b72b1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/27/2019
 ms.locfileid: "75502495"
 ---
 # <a name="xamarinandroid-samples"></a>Esempi di Xamarin.Android
 
-Queste app di esempio e demo di codice per Novell Android consentono di iniziare a creare app C# per dispositivi mobili con e Novell.
+Queste app di esempio e demo di codice per Xamarin Android consentono di iniziare a creare app C# per dispositivi mobili con e Xamarin.
 
 [Tutti gli esempi di Xamarin.Android](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)
 
@@ -89,4 +89,4 @@ Come implementare una watch face personalizzata di Android Wear.
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app di esempio Novell Android e demo di codice, vedere [tutti gli esempi di Xamarin.Android](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android).
+Per il set completo di app di esempio Xamarin Android e demo di codice, vedere [tutti gli esempi di Xamarin.Android](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android).

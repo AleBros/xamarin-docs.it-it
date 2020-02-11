@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 02/02/2018
 ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028636"
@@ -19,7 +19,7 @@ Le app Android Wear sono assemblate con un'app Android completa per la distribuz
 
 ## <a name="automatic-packaging"></a>Creazione automatica dei pacchetti
 
-A partire da Novell Android 5,0, l'app Wear viene automaticamente assemblata come risorsa nell'app palmare quando si crea un riferimento al progetto dal progetto palmare al progetto Wear. Per creare questa associazione, è possibile usare i passaggi seguenti: 
+A partire da Xamarin Android 5,0, l'app Wear viene automaticamente assemblata come risorsa nell'app palmare quando si crea un riferimento al progetto dal progetto palmare al progetto Wear. Per creare questa associazione, è possibile usare i passaggi seguenti: 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

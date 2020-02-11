@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: b7d69e99327aa3d3e3e1f5e5dbc61697d1fb9b71
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489167"
@@ -50,11 +50,11 @@ Per eseguire il C++ debug del codice nativo nel progetto, attenersi alla procedu
 
 1. Fare doppio clic su **Proprietà** progetto e selezionare la pagina **Opzioni Android** .
 2. Scorrere verso il basso fino a **Opzioni di debug**.
-3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Novell)** .
+3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Xamarin)** .
 
-Gli sviluppatori C++ di Visual Studio possono vedere l'esempio di [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per provare a eseguire il debug C++ da visual studio 2019 o Visual Studio 2017 con Novell; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
+Gli sviluppatori C++ di Visual Studio possono vedere l'esempio di [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per provare a eseguire il debug C++ da visual studio 2019 o Visual Studio 2017 con Xamarin; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [SanAngeles_NativeDebug (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk)
-- [Sviluppo di applicazioni native Novell Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)
+- [Sviluppo di applicazioni native Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

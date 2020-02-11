@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 2514287fe06216d62b994cf19ba8f0901dd36c49
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003318"
@@ -19,7 +19,7 @@ ms.locfileid: "73003318"
 Esistono due meccanismi diversi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata:
 
 - **Ridimensionamento** automatico: il controllo di ridimensionamento automatico nella finestra di progettazione consente di impostare le proprietà del `AutoresizingMask`. In questo modo un controllo sarà ancorato ai bordi del contenitore e/o ne correggerà le dimensioni. Il dimensionamento automatico funziona in tutte le versioni di iOS. Questo aspetto viene descritto in dettaglio di seguito
-- **Layout automatico** : funzionalità introdotta in iOS 6 che consente un controllo con granularità fine sulle relazioni dei controlli dell'interfaccia utente. Consente di controllare le posizioni degli elementi rispetto ad altri elementi nell'area di progettazione. Questo argomento viene trattato in modo più dettagliato nel [layout automatico con la Guida di Novell iOS designer](~/ios/user-interface/designer/designer-auto-layout.md) .
+- **Layout automatico** : funzionalità introdotta in iOS 6 che consente un controllo con granularità fine sulle relazioni dei controlli dell'interfaccia utente. Consente di controllare le posizioni degli elementi rispetto ad altri elementi nell'area di progettazione. Questo argomento viene trattato in modo più dettagliato nel [layout automatico con la Guida di Xamarin iOS designer](~/ios/user-interface/designer/designer-auto-layout.md) .
 
 ## <a name="autosizing"></a>Ridimensionamento automatico
 

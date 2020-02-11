@@ -1,6 +1,6 @@
 ---
-title: Uso del testo e dei campi di ricerca di tvOS in Novell
-description: Questo documento descrive come usare i campi di testo e di ricerca in un'app tvOS compilata con Novell. Viene fornita una panoramica di alto livello dei campi di testo e di ricerca e vengono illustrate le tastiere, l'integrazione con storyboard, i modelli di dati di ricerca e altro ancora.
+title: Uso del testo e dei campi di ricerca di tvOS in Xamarin
+description: Questo documento descrive come usare i campi di testo e di ricerca in un'app tvOS compilata con Xamarin. Viene fornita una panoramica di alto livello dei campi di testo e di ricerca e vengono illustrate le tastiere, l'integrazione con storyboard, i modelli di dati di ricerca e altro ancora.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: cfe747d89b3ccbff390326c915dc1311e40a60fc
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022161"
 ---
-# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Xamarin
 
 Quando necessario, l'app Xamarin.tvOS può richiedere piccole parti di testo dall'utente (ad esempio ID utente e password) usando un campo di testo e la tastiera sullo schermo:
 

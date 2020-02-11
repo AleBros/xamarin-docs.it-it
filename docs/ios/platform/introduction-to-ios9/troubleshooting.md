@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 437698fcda6e85090cd7bdce90959300436e0bc2
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031751"
@@ -20,7 +20,7 @@ _Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi pe
 
 ## <a name="there-was-a-problem-parsing-the-xml"></a>Si è verificato un problema durante l'analisi del codice XML
 
-Novell iOS designer non supporta ancora le funzionalità di Xcode 7. Non è possibile caricare gli storyboard nella finestra di progettazione con _"si è verificato un problema durante l'analisi del codice XML"_ quando si tenta di usare nuovi elementi della finestra di progettazione iOS 9 (Xcode 7), ad esempio StackView.
+Xamarin iOS designer non supporta ancora le funzionalità di Xcode 7. Non è possibile caricare gli storyboard nella finestra di progettazione con _"si è verificato un problema durante l'analisi del codice XML"_ quando si tenta di usare nuovi elementi della finestra di progettazione iOS 9 (Xcode 7), ad esempio StackView.
 
 il supporto della finestra di progettazione iOS per le funzionalità di Xcode 7 è destinato alla prossima versione della funzionalità ciclo 6. La versione di anteprima del ciclo 6 è attualmente disponibile nel canale alfa e ha un supporto limitato per le nuove funzionalità di Xcode 7.
 

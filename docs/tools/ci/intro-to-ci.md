@@ -1,6 +1,6 @@
 ---
-title: Introduzione all'integrazione continua con Novell
-description: Questo documento descrive l'integrazione continua con Novell. Vengono illustrati il controllo della versione e diversi ambienti di integrazione continua.
+title: Introduzione all'integrazione continua con Xamarin
+description: Questo documento descrive l'integrazione continua con Xamarin. Vengono illustrati il controllo della versione e diversi ambienti di integrazione continua.
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: davidortinau
@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 07/19/2017
 ms.openlocfilehash: 2862f05f2d183c9345d2b92268ddf2101cc2492e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029808"
 ---
-# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Novell
+# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Xamarin
 
-_L'integrazione continua è una procedura di progettazione software in cui una compilazione automatizzata compila ed eventualmente testa un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository del controllo della versione del progetto. In questo articolo verranno illustrati i concetti generali dell'integrazione continua e alcune delle opzioni disponibili per l'integrazione continua con i progetti Novell._
+_L'integrazione continua è una procedura di progettazione software in cui una compilazione automatizzata compila ed eventualmente testa un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository del controllo della versione del progetto. In questo articolo verranno illustrati i concetti generali dell'integrazione continua e alcune delle opzioni disponibili per l'integrazione continua con i progetti Xamarin._
 
 Per gli sviluppatori è frequente lavorare in parallelo con i progetti software. A un certo punto, è necessario integrare tutti questi flussi di lavoro paralleli in un'unica codebase che costituisce il prodotto finale. Nei primi giorni dello sviluppo del software, questa integrazione è stata eseguita alla fine di un progetto, che era un processo difficile e rischioso.
 
@@ -55,9 +55,9 @@ Il [test di App Center](https://docs.microsoft.com/appcenter/test-cloud) risolve
 
 Sia TFS che Azure DevOps sono strettamente integrati con Visual Studio e consentono agli sviluppatori di eseguire molte attività di controllo della versione e CI dalla comodità di un singolo IDE. È disponibile anche il plug-in Team Explorer Everywhere per Eclipse (vedere di seguito). Visual Studio per Mac è [disponibile un'anteprima di TFVC](/visualstudio/mac/tf-version-control/).
 
-Le [pipeline di Azure DevOps](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) hanno il supporto diretto per i progetti Novell, in cui è possibile creare una definizione di compilazione per ogni piattaforma a cui si vuole fare riferimento (Android, iOS e Windows). Per ogni definizione di compilazione è necessaria la licenza Novell appropriata. A questo scopo, è anche possibile connettere un server di compilazione TFS che supporta Novell locale a Azure DevOps. Con questa configurazione, le compilazioni accodate ad Azure DevOps verranno delegate al server locale. Per informazioni dettagliate, fare riferimento agli [agenti di compilazione e rilascio](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). In alternativa, è possibile usare un altro strumento di compilazione, ad esempio Jenkins o team City.
+Le [pipeline di Azure DevOps](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) hanno il supporto diretto per i progetti Xamarin, in cui è possibile creare una definizione di compilazione per ogni piattaforma a cui si vuole fare riferimento (Android, iOS e Windows). Per ogni definizione di compilazione è necessaria la licenza Xamarin appropriata. A questo scopo, è anche possibile connettere un server di compilazione TFS che supporta Xamarin locale a Azure DevOps. Con questa configurazione, le compilazioni accodate ad Azure DevOps verranno delegate al server locale. Per informazioni dettagliate, fare riferimento agli [agenti di compilazione e rilascio](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). In alternativa, è possibile usare un altro strumento di compilazione, ad esempio Jenkins o team City.
 
-Un riepilogo completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Azure DevOps e Team Foundation Server, vedere [DevOps con le app Novell](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
+Un riepilogo completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Azure DevOps e Team Foundation Server, vedere [DevOps con le app Xamarin](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
 #### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
@@ -86,14 +86,14 @@ La configurazione di un ambiente di integrazione continua significa combinare un
 
 #### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps e Team Foundation Server
 
-Come illustrato, Azure DevOps e Team Foundation Server fornisce servizi di controllo della versione e di compilazione. I servizi di compilazione richiedono sempre una licenza Novell Business o Enterprise per ogni piattaforma di destinazione.
+Come illustrato, Azure DevOps e Team Foundation Server fornisce servizi di controllo della versione e di compilazione. I servizi di compilazione richiedono sempre una licenza Xamarin Business o Enterprise per ogni piattaforma di destinazione.
 
 Con Azure DevOps è possibile creare una definizione di compilazione separata per ogni piattaforma di destinazione e immettere la licenza appropriata. Una volta configurata, Azure DevOps eseguirà le compilazioni e i test nel cloud. Per ulteriori informazioni, vedere [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) .
 
 Con Team Foundation Server, configurare un computer di compilazione come indicato di seguito per piattaforme di destinazione specifiche:
 
-- **Android e Windows:** Installare Visual Studio e gli strumenti Novell (per Android e Windows) e configurarli con le licenze di Novell. È anche necessario spostare il Android SDK in un percorso condiviso sul server in cui è possibile trovare l'agente di compilazione TFS. Per informazioni dettagliate, vedere [configurazione di TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
-- **iOS e Novell:** Installare Visual Studio e gli strumenti di Novell in Windows Server con la licenza appropriata. Installare quindi Visual Studio per Mac in una macchina Mac OS X accessibile alla rete, che fungerà da host di compilazione e creerà il pacchetto dell'app finale (IPA per iOS, APP per OS X).
+- **Android e Windows:** Installare Visual Studio e gli strumenti Xamarin (per Android e Windows) e configurarli con le licenze di Xamarin. È anche necessario spostare il Android SDK in un percorso condiviso sul server in cui è possibile trovare l'agente di compilazione TFS. Per informazioni dettagliate, vedere [configurazione di TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
+- **iOS e Xamarin:** Installare Visual Studio e gli strumenti di Xamarin in Windows Server con la licenza appropriata. Installare quindi Visual Studio per Mac in una macchina Mac OS X accessibile alla rete, che fungerà da host di compilazione e creerà il pacchetto dell'app finale (IPA per iOS, APP per OS X).
 
 Il diagramma seguente illustra questa topografia:
 

@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 10/03/2018
 ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
 ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "64749931"
@@ -42,7 +42,7 @@ Di seguito sono riportate solo alcune delle numerose operazioni che è possibile
 
 ### <a name="drawing-xamagon"></a>Disegno Xamagon
 
-Questo esempio Mostra come disegnare il logo di Novell Xamagon:
+Questo esempio Mostra come disegnare il logo di Xamarin Xamagon:
 
 ```csharp
 // clear the canvas / fill with white

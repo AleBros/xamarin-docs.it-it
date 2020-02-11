@@ -10,7 +10,7 @@ ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
 ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757259"
@@ -29,11 +29,11 @@ Il Visualizzatore anteprima XAML Mostra come verrà visualizzata la pagina XAML 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare la finestra di dialogo **strumenti > opzioni > novell > modulo anteprima** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
+È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare la finestra di dialogo **strumenti > opzioni > Xamarin > modulo anteprima** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
 
 [![Opzioni anteprima Xamarin.Forms in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opzioni anteprima Xamarin.Forms in Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
-Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > novell > form anteprima** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
+Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > Xamarin > form anteprima** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
 
 #### <a name="xaml-preview-controls"></a>Controlli di anteprima XAML
 
@@ -89,7 +89,7 @@ Questa proprietà è utile se si Inizializza una libreria nel costruttore della 
 
 ## <a name="troubleshooting"></a>Troubleshooting
 
-Controllare i problemi riportati di seguito e i [Forum di Novell](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
+Controllare i problemi riportati di seguito e i [Forum di Xamarin](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
 
 ### <a name="xaml-previewer-isnt-showing-or-shows-an-error"></a>Il Visualizzatore anteprima XAML non Mostra o Mostra un errore
 

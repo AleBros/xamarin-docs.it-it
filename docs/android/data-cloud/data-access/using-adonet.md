@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 02/08/2018
 ms.openlocfilehash: 6592bd6d5cf7b78918fa2d020be723d662625e06
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73023765"
 ---
 # <a name="using-adonet-with-android"></a>Uso di ADO.NET con Android
 
-Novell include il supporto predefinito per il database SQLite disponibile in Android e può essere esposto usando una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
+Xamarin include il supporto predefinito per il database SQLite disponibile in Android e può essere esposto usando una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
 
 ## <a name="assembly-references"></a>Riferimenti dell'assembly
 

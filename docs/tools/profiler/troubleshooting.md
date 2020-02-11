@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 10/27/2017
 ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019205"
@@ -17,7 +17,7 @@ ms.locfileid: "73019205"
 
 ## <a name="logging-and-diagnostics"></a>Registrazione e diagnostica
 
-Il team di Novell può aiutare a tenere traccia dei problemi se si forniscono informazioni, tra cui:
+Il team di Xamarin può aiutare a tenere traccia dei problemi se si forniscono informazioni, tra cui:
 
 - Uno screencast del problema, dell'arresto anomalo o dell'errore e del flusso di lavoro.
 - Output del log (vedere di seguito).
@@ -35,7 +35,7 @@ Stiamo aggiungendo più registrazioni, quindi questo output dovrebbe crescere e 
 
 ### <a name="generating-mlpd-files"></a>Generazione di file con estensione MLPD
 
-Un file con **estensione MLPD** è l'output compresso del profiler del runtime di mono. Il Xamarin Profiler GUI legge i dati da un **MLPD** e li Visualizza per l'utente. i file con **estensione MLPD** sono strumenti di debug utili per Novell perché consentono ai tecnici di diagnosticare i problemi che il profiler potrebbe avere con i dati.
+Un file con **estensione MLPD** è l'output compresso del profiler del runtime di mono. Il Xamarin Profiler GUI legge i dati da un **MLPD** e li Visualizza per l'utente. i file con **estensione MLPD** sono strumenti di debug utili per Xamarin perché consentono ai tecnici di diagnosticare i problemi che il profiler potrebbe avere con i dati.
 
 Il **. MLPD** per la sessione corrente viene salvato automaticamente nella directory `/tmp` del Mac e può essere identificato dal timestamp. Se si attiva la registrazione, il primo output sarà il percorso del file con **estensione MLPD** . Il file con **estensione MLPD** verrà in genere salvato nella directory a partire da ~/var/Folders...
 

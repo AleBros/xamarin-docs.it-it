@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029626"
@@ -48,7 +48,7 @@ ms.locfileid: "73029626"
 |--- |--- |--- |
 |Mac|Supportato solo in Mac|
 |iOS|Supportato in Mac e Windows|È necessario installare Xamarin.iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
-|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Novell con un dispositivo virtuale > = 5,0|
+|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Xamarin con un dispositivo virtuale > = 5,0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
 |Console (.NET Core)|Supportato in Mac e Windows|
@@ -75,7 +75,7 @@ Collega sempre i file di log del client di cartelle di lavoro:
 
 ### <a name="platform-version-information"></a>Informazioni sulla versione della piattaforma
 
-È molto utile conoscere i dettagli relativi al sistema operativo e ai prodotti Novell installati.
+È molto utile conoscere i dettagli relativi al sistema operativo e ai prodotti Xamarin installati.
 
 Dal menu principale nelle cartelle di lavoro di:
 
@@ -106,7 +106,7 @@ Se si verificano problemi durante la connessione della cartella di lavoro di iOS
 - Android: verificare di usare un emulatore x86
 - Android: quale piattaforma emulatore sta usando? Emulatore Google?
   Emulatore Android di Visual Studio? Xamarin Android Player?
-- iOS in Windows: quale versione del simulatore iOS remoto di Novell è installato (selezionare **Installazione applicazioni** nel **Pannello di controllo**)?
+- iOS in Windows: quale versione del simulatore iOS remoto di Xamarin è installato (selezionare **Installazione applicazioni** nel **Pannello di controllo**)?
 - iOS in Windows: fornire anche le informazioni sulla versione della piattaforma per l'host di compilazione Mac
 - Il dispositivo dispone di connettività di rete (controllare tramite Web browser)?
 

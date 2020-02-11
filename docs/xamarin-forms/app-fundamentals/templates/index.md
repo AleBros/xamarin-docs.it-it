@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
 ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955691"
@@ -18,8 +18,8 @@ ms.locfileid: "75955691"
 
 ## <a name="control-templatescontrol-templatemd"></a>[Modelli di controllo](control-template.md)
 
-I modelli di controllo Novell. Forms definiscono la struttura visiva di [`ContentView`](xref:Xamarin.Forms.ContentView) controlli personalizzati derivati e [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagine derivate.
+I modelli di controllo Xamarin.Forms definiscono la struttura visiva di [`ContentView`](xref:Xamarin.Forms.ContentView) controlli personalizzati derivati e [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagine derivate.
 
 ## <a name="data-templatesdata-templatesindexmd"></a>[Modelli di dati](data-templates/index.md)
 
-I modelli di dati Novell. Forms definiscono la presentazione dei dati nei controlli supportati.
+I modelli di dati Xamarin.Forms definiscono la presentazione dei dati nei controlli supportati.

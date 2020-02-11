@@ -1,6 +1,6 @@
 ---
-title: Uso degli indicatori di stato tvOS in Novell
-description: Questo documento descrive come usare gli indicatori di stato in un'app tvOS compilata con Novell. Vengono illustrati gli indicatori di avanzamento e di attività.
+title: Uso degli indicatori di stato tvOS in Xamarin
+description: Questo documento descrive come usare gli indicatori di stato in un'app tvOS compilata con Xamarin. Vengono illustrati gli indicatori di avanzamento e di attività.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 9d346dc52437b5c079d499e142036e94cfaef65d
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030432"
 ---
-# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Novell
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Xamarin
 
 _Questo articolo illustra la progettazione e l'uso degli indicatori di stato all'interno di un'app Xamarin.tvOS._
 

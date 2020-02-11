@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/18/2018
 ms.openlocfilehash: a91fba3cd1fba3bcf2317e8f9cb25631c62491cb
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016819"
@@ -19,7 +19,7 @@ Questi articoli illustrano le diverse opzioni disponibili per la condivisione di
 
 ## <a name="code-sharing-overviewcode-sharingmd"></a>[Panoramica della condivisione del codice](code-sharing.md)
 
-Informazioni sulle diverse opzioni di condivisione del codice disponibili per i progetti Novell, tra cui librerie .NET Standard e progetti condivisi. Sono supportate anche le librerie di classi portabili, ma sono considerate deprecate a favore di .NET Standard.
+Informazioni sulle diverse opzioni di condivisione del codice disponibili per i progetti Xamarin, tra cui librerie .NET Standard e progetti condivisi. Sono supportate anche le librerie di classi portabili, ma sono considerate deprecate a favore di .NET Standard.
 
 ## <a name="net-standardcross-platformapp-fundamentalsnet-standardmd"></a>[.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
 
@@ -27,7 +27,7 @@ Informazioni sulle diverse opzioni di condivisione del codice disponibili per i 
 
 ## <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[Progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md)
 
-I progetti condivisi consentono di scrivere codice comune a cui fa riferimento una serie di progetti di applicazioni diversi. Il codice viene compilato come parte di ogni progetto di riferimento e può includere direttive del compilatore che consentono di incorporare funzionalità specifiche della piattaforma nella codebase condivisa. Questo articolo illustra come funzionano i progetti condivisi e come crearli e usarli con i progetti Novell.
+I progetti condivisi consentono di scrivere codice comune a cui fa riferimento una serie di progetti di applicazioni diversi. Il codice viene compilato come parte di ogni progetto di riferimento e può includere direttive del compilatore che consentono di incorporare funzionalità specifiche della piattaforma nella codebase condivisa. Questo articolo illustra come funzionano i progetti condivisi e come crearli e usarli con i progetti Xamarin.
 
 ## <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md)
 
@@ -37,10 +37,10 @@ I progetti libreria di classi portabili consentono di compilare e distribuire as
 
 I pacchetti NuGet possono essere generati automaticamente da progetti PCL o .NET standard. e i progetti condivisi possono essere inclusi in pacchetti NuGet "Bait and switch" usando il tipo di progetto NuGet separato. Questa sezione illustra come creare pacchetti NuGet per ogni scenario di condivisione del codice.
 
-## <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet per Novell](~/cross-platform/app-fundamentals/nuget-manual.md)
+## <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet per Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
-Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma Novell.
+Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma Xamarin.
 
-## <a name="use-cc-libraries-in-cross-platform-xamarin-projectscross-platformcppindexmd"></a>[Usare C/C++ librerie nei progetti Novell multipiattaforma](~/cross-platform/cpp/index.md)
+## <a name="use-cc-libraries-in-cross-platform-xamarin-projectscross-platformcppindexmd"></a>[Usare C/C++ librerie nei progetti Xamarin multipiattaforma](~/cross-platform/cpp/index.md)
 
-Questa tecnica consente di separare l'evoluzione delle librerie C/C++ , un' C# associazione in un NuGet e le applicazioni Novell. La funzionalità viene fornita dallaC++ libreria C-Platform nativa, ma tutto il codice specifico della piattaforma è isolato dalle applicazioni Novell finali, consentendo le prestazioni più elevate senza duplicazione del codice. 
+Questa tecnica consente di separare l'evoluzione delle librerie C/C++ , un' C# associazione in un NuGet e le applicazioni Xamarin. La funzionalità viene fornita dallaC++ libreria C-Platform nativa, ma tutto il codice specifico della piattaforma è isolato dalle applicazioni Xamarin finali, consentendo le prestazioni più elevate senza duplicazione del codice. 

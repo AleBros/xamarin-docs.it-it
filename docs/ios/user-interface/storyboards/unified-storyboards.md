@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001832"
@@ -282,9 +282,9 @@ Con uno stile di presentazione personalizzato, gli sviluppatori hanno la possibi
 
 ## <a name="working-with-size-classes"></a>Utilizzo delle classi di dimensioni
 
-Il progetto Novell Photos adattivo incluso in questo articolo offre un esempio funzionante di uso delle classi di dimensioni e dei controller di visualizzazione adattivo in un'applicazione iOS 8 Unified Interface.
+Il progetto Xamarin Photos adattivo incluso in questo articolo offre un esempio funzionante di uso delle classi di dimensioni e dei controller di visualizzazione adattivo in un'applicazione iOS 8 Unified Interface.
 
-Mentre l'applicazione crea completamente l'interfaccia utente dal codice, anziché usare IOS designer e creare uno storyboard unificato, si applicano le stesse tecniche. Più avanti in questo articolo verrà illustrato come usare le classi di dimensioni con uno storyboard unificato e iOS designer in un'applicazione Novell.
+Mentre l'applicazione crea completamente l'interfaccia utente dal codice, anziché usare IOS designer e creare uno storyboard unificato, si applicano le stesse tecniche. Più avanti in questo articolo verrà illustrato come usare le classi di dimensioni con uno storyboard unificato e iOS designer in un'applicazione Xamarin.
 
 Si esaminerà ora il modo in cui il progetto foto adattivo implementa diverse funzionalità della classe size in iOS 8 per creare un'applicazione adattiva.
 
@@ -405,7 +405,7 @@ public void UpdateForcedTraitCollection ()
 
 ### <a name="expanding-and-collapsing-the-split-view-controller"></a>Espansione e compressione del controller di visualizzazione divisa
 
-Si esaminerà quindi come il comportamento di espansione e compressione del controller di visualizzazione suddivisa è stato implementato in Novell. Nel `AppDelegate`, quando viene creato il controller di visualizzazione divisa, il delegato viene assegnato per gestire le modifiche:
+Si esaminerà quindi come il comportamento di espansione e compressione del controller di visualizzazione suddivisa è stato implementato in Xamarin. Nel `AppDelegate`, quando viene creato il controller di visualizzazione divisa, il delegato viene assegnato per gestire le modifiche:
 
 ```csharp
 public class SplitViewControllerDelegate : UISplitViewControllerDelegate
@@ -554,7 +554,7 @@ I vantaggi principali degli storyboard unificati sono:
 
 - Usare lo stesso file di storyboard per iPhone e iPad.
 - Eseguire la distribuzione all'indietro in iOS 6 e iOS 7.
-- Visualizzare in anteprima il layout per diversi dispositivi, orientamenti e versioni del sistema operativo all'interno di Novell iOS designer.
+- Visualizzare in anteprima il layout per diversi dispositivi, orientamenti e versioni del sistema operativo all'interno di Xamarin iOS designer.
 
 Questa funzionalità è completamente supportata in Visual Studio per Mac
 
@@ -674,7 +674,7 @@ Quando l'applicazione viene eseguita nel simulatore iPhone, l'elemento è mancan
 
 Per rimuovere un caso di esclusione da un elemento, è sufficiente selezionare l'elemento nella **area di progettazione**, scorrere fino alla fine di **Esplora proprietà** e fare clic sul pulsante **-** accanto al case da rimuovere.
 
-Per visualizzare un'implementazione degli storyboard unificati, vedere l'`UnifiedStoryboard` applicazione di esempio Novell iOS 8 collegata a questo documento.
+Per visualizzare un'implementazione degli storyboard unificati, vedere l'`UnifiedStoryboard` applicazione di esempio Xamarin iOS 8 collegata a questo documento.
 
 ## <a name="dynamic-launch-screens"></a>Schermate di avvio dinamico
 
@@ -693,7 +693,7 @@ Le schermate di avvio dinamico presentano le limitazioni e le considerazioni seg
 - Non usare classi personalizzate.
 - Non usare gli attributi di Runtime.
 
-Tenendo presenti le linee guida precedenti, è possibile esaminare l'aggiunta di una schermata di avvio dinamico a un progetto Novell iOS 8 esistente.
+Tenendo presenti le linee guida precedenti, è possibile esaminare l'aggiunta di una schermata di avvio dinamico a un progetto Xamarin iOS 8 esistente.
 
 Procedere come descritto di seguito:
 
@@ -717,7 +717,7 @@ Procedere come descritto di seguito:
 8. Selezionare la **destinazione applicazioni** e la scheda **generale** :
 
     [![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)
-9. Fare clic sul pulsante **Choose info. plist** , selezionare il `Info.plist` per l'app Novell e fare clic sul pulsante **Choose (Scegli** ):
+9. Fare clic sul pulsante **Choose info. plist** , selezionare il `Info.plist` per l'app Xamarin e fare clic sul pulsante **Choose (Scegli** ):
 
     [![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
 10. Nella sezione **icone e immagini di avvio dell'app** aprire l'elenco a discesa **file schermata di avvio** e scegliere il `LaunchScreen.xib` creato in precedenza:
@@ -749,13 +749,13 @@ Tornare a Visual Studio per Mac e arrestare l'esecuzione dell'applicazione.
 
 Per mantenere la compatibilità con le versioni precedenti di iOS 7, è sufficiente includere le normali risorse dell'immagine `Default.png` come di consueto nell'applicazione iOS 8. iOS restituirà il comportamento precedente e utilizzerà tali file come schermata iniziale quando viene eseguito in un dispositivo iOS 7.
 
-Per un'implementazione di una schermata di avvio dinamico in Novell, vedere le [schermate di avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
+Per un'implementazione di una schermata di avvio dinamico in Xamarin, vedere le [schermate di avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato rapidamente le classi di dimensioni e il modo in cui influiscono sul layout nei dispositivi iPhone e iPad. Questo argomento ha illustrato il funzionamento dei tratti, degli ambienti di tratti e delle raccolte di tratti con le classi di dimensioni per la creazione di interfacce unificate. Sono stati esaminati brevemente i controller di visualizzazione adattiva e il modo in cui funzionano con le classi di dimensioni all'interno delle interfacce unificate. Si è cercato di implementare classi di dimensioni e interfacce unificate C# completamente dal codice all'interno di un'applicazione Novell iOS 8.
+Questo articolo ha esaminato rapidamente le classi di dimensioni e il modo in cui influiscono sul layout nei dispositivi iPhone e iPad. Questo argomento ha illustrato il funzionamento dei tratti, degli ambienti di tratti e delle raccolte di tratti con le classi di dimensioni per la creazione di interfacce unificate. Sono stati esaminati brevemente i controller di visualizzazione adattiva e il modo in cui funzionano con le classi di dimensioni all'interno delle interfacce unificate. Si è cercato di implementare classi di dimensioni e interfacce unificate C# completamente dal codice all'interno di un'applicazione Xamarin iOS 8.
 
-Infine, in questo articolo sono state illustrate le nozioni di base sulla creazione di storyboard unificati con Novell iOS designer, che funzionerà tra i dispositivi iOS e la creazione di una singola schermata di avvio dinamico che verrà visualizzata come schermata iniziale in ogni dispositivo iOS 8.
+Infine, in questo articolo sono state illustrate le nozioni di base sulla creazione di storyboard unificati con Xamarin iOS designer, che funzionerà tra i dispositivi iOS e la creazione di una singola schermata di avvio dinamico che verrà visualizzata come schermata iniziale in ogni dispositivo iOS 8.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

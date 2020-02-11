@@ -1,5 +1,5 @@
 ---
-title: Uso delle dimensioni dello schermo watchos in Novell
+title: Uso delle dimensioni dello schermo watchos in Xamarin
 description: Questo documento descrive come usare diverse dimensioni dello schermo watchos. Viene illustrata la finestra di progettazione dell'interfaccia watchos, il simulatore watchos e le risorse immagine.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: aeaa1bb1273bc062e0ac76eaa09722827f15797f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028401"
 ---
-# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Uso delle dimensioni dello schermo watchos in Novell
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Uso delle dimensioni dello schermo watchos in Xamarin
 
 Apple Watch è disponibile in due dimensioni dello schermo:
 

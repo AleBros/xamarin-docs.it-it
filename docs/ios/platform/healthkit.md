@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 21f10c7771e1c30eabb3f42a161c6d563a5327f3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032392"
@@ -44,7 +44,7 @@ Per completare i passaggi illustrati in questo articolo, sono necessari gli elem
 > Il kit di integrità è stato introdotto in iOS 8. Attualmente, il kit di integrità non è disponibile nel simulatore iOS e il debug richiede la connessione a un dispositivo iOS fisico.
 
 ## <a name="creating-and-provisioning-a-health-kit-app"></a>Creazione e provisioning di un'app del kit di integrità
-Prima che un'applicazione Novell iOS 8 possa usare l'API HealthKit, deve essere configurata correttamente e sottoposta a provisioning. In questa sezione vengono illustrati i passaggi necessari per configurare correttamente l'applicazione Novell.
+Prima che un'applicazione Xamarin iOS 8 possa usare l'API HealthKit, deve essere configurata correttamente e sottoposta a provisioning. In questa sezione vengono illustrati i passaggi necessari per configurare correttamente l'applicazione Xamarin.
 
 Le app del kit di integrità richiedono:
 
@@ -54,7 +54,7 @@ Le app del kit di integrità richiedono:
 - `Info.plist` la cui chiave `UIRequiredDeviceCapabilities` contiene una voce con il valore `String` `healthkit`.
 - Il `Info.plist` deve avere anche le voci di spiegazione della privacy appropriate: una spiegazione `String` per la chiave `NSHealthUpdateUsageDescription` se l'app scriverà i dati e una spiegazione `String` per la chiave `NSHealthShareUsageDescription` se l'app leggerà i dati del kit di integrità.
 
-Per altre informazioni sul provisioning di un'app per iOS, l'articolo sul [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) nella serie **Introduzione** di Novell descrive la relazione tra certificati per sviluppatori, ID app, profili di provisioning e diritti delle app.
+Per altre informazioni sul provisioning di un'app per iOS, l'articolo sul [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) nella serie **Introduzione** di Xamarin descrive la relazione tra certificati per sviluppatori, ID app, profili di provisioning e diritti delle app.
 
 <a name="explicit-appid" />
 
@@ -88,7 +88,7 @@ Fare clic su **genera** e attendere la creazione del profilo. Scaricare il file 
 
 Dopo aver creato e installato un profilo di **provisioning** appropriato come descritto, sarebbe in genere opportuno creare una soluzione in Visual Studio per Mac o Visual Studio. L'accesso al kit di integrità è disponibile C# per F# qualsiasi iOS o progetto.
 
-Invece di esaminare il processo di creazione manuale di un progetto Novell iOS 8, aprire l'app di esempio collegata a questo articolo (che include uno storyboard e un codice predefiniti). Per associare l'app di esempio al **profilo di provisioning**abilitato per il kit di integrità, nel **riquadro della soluzione**, fare clic con il pulsante destro del mouse sul progetto e visualizzare la finestra di dialogo **Opzioni** . Passare al pannello **dell'applicazione iOS** e immettere l' **ID app** esplicito creato in precedenza come identificatore del **bundle**dell'app:
+Invece di esaminare il processo di creazione manuale di un progetto Xamarin iOS 8, aprire l'app di esempio collegata a questo articolo (che include uno storyboard e un codice predefiniti). Per associare l'app di esempio al **profilo di provisioning**abilitato per il kit di integrità, nel **riquadro della soluzione**, fare clic con il pulsante destro del mouse sul progetto e visualizzare la finestra di dialogo **Opzioni** . Passare al pannello **dell'applicazione iOS** e immettere l' **ID app** esplicito creato in precedenza come identificatore del **bundle**dell'app:
 
 [![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
 

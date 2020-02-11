@@ -8,16 +8,16 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016800"
 ---
 # <a name="localization"></a>Localizzazione
 
-Questa guida presenta i concetti alla base dell' *internazionalizzazione* e della *localizzazione* e fornisce collegamenti alle istruzioni su come produrre applicazioni per dispositivi mobili Novell usando questi concetti.
+Questa guida presenta i concetti alla base dell' *internazionalizzazione* e della *localizzazione* e fornisce collegamenti alle istruzioni su come produrre applicazioni per dispositivi mobili Xamarin usando questi concetti.
 
-Se si vuole passare direttamente ai dettagli tecnici sulla localizzazione delle app Novell, iniziare con uno di questi articoli sulle procedure specifiche della piattaforma:
+Se si vuole passare direttamente ai dettagli tecnici sulla localizzazione delle app Xamarin, iniziare con uno di questi articoli sulle procedure specifiche della piattaforma:
 
 - Localizzazione multipiattaforma [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
 - Localizzazione della piattaforma nativa [**Xamarin.iOS**](~/ios/app-fundamentals/localization/index.md) .
@@ -285,7 +285,7 @@ Uno dei servizi più noti è [Lionbridge](https://www.lionbridge.com/). La maggi
 
 In questo articolo sono stati introdotti alcuni dei concetti che è necessario conoscere prima di internazionalizzazione l'app e quindi la localizzazione delle risorse e viene anche illustrato come modificare le preferenze della lingua per ogni piattaforma.
 
-Questi concetti possono essere applicati alle varie tecniche di internazionalizzazione specifiche della piattaforma e tra piattaforme possibili con Novell.
+Questi concetti possono essere applicati alle varie tecniche di internazionalizzazione specifiche della piattaforma e tra piattaforme possibili con Xamarin.
 
 Continua a leggere i dettagli tecnici per la piattaforma a cui sei interessato:
 

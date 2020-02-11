@@ -1,6 +1,6 @@
 ---
-title: Risoluzione dei problemi relativi alle app tvOS compilate con Novell
-description: Questo articolo fornisce vari suggerimenti per la risoluzione dei problemi durante lo sviluppo di un'app tvOS compilata con Novell. Vengono descritti i problemi noti e gli errori specifici.
+title: Risoluzione dei problemi relativi alle app tvOS compilate con Xamarin
+description: Questo articolo fornisce vari suggerimenti per la risoluzione dei problemi durante lo sviluppo di un'app tvOS compilata con Xamarin. Vengono descritti i problemi noti e gli errori specifici.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -10,27 +10,27 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 11ac6289b7d2f278f534f5a65679754d212b5067
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030523"
 ---
-# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS compilate con Novell
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS compilate con Xamarin
 
-_Questo articolo illustra i problemi che possono verificarsi durante l'uso del supporto tvOS di Novell._
+_Questo articolo illustra i problemi che possono verificarsi durante l'uso del supporto tvOS di Xamarin._
 
 <a name="Known-Issues" />
 
 ## <a name="known-issues"></a>Problemi noti
 
-La versione corrente del supporto tvOS di Novell presenta i seguenti problemi noti:
+La versione corrente del supporto tvOS di Xamarin presenta i seguenti problemi noti:
 
 - **Mono Framework** : crittografia mono 4,3. ProtectedData non riesce a decrittografare i dati da mono 4,2. Di conseguenza, i pacchetti NuGet non vengono ripristinati con l'errore `Data unprotection failed` quando viene configurata un'origine NuGet protetta.
   - **Soluzione alternativa** : in Visual Studio per Mac è necessario aggiungere tutte le origini dei pacchetti NuGet che usano l'autenticazione della password prima di ritentare il ripristino dei pacchetti.
 - **Visual Studio per Mac w/ F# componente aggiuntivo** : errore durante la creazione di F# un modello Android in Windows. Questa operazione dovrebbe continuare a funzionare correttamente in Mac.
 - **Xamarin.Mac** : quando si esegue il progetto di modello unificato Xamarin.Mac con il Framework di destinazione impostato su `Unsupported`, è possibile che venga visualizzata la `Could not connect to the debugger` popup.
   - **Potenziale soluzione alternativa** : eseguire il downgrade della versione di mono Framework disponibile nel canale stabile.
-- **Novell Visual studio & Xamarin.iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, è possibile che venga visualizzato l'errore `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`.
+- **Xamarin Visual studio & Xamarin.iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, è possibile che venga visualizzato l'errore `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`.
 
 Segnalare eventuali bug trovati su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 

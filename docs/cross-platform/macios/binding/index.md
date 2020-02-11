@@ -1,6 +1,6 @@
 ---
 title: Binding di Objective-C
-description: In questo documento vengono forniti i collegamenti a diverse guide che descrivono come creare C# binding per il codice Objective-C, consentendo agli sviluppatori di utilizzare librerie fuori programma nelle applicazioni Novell.
+description: In questo documento vengono forniti i collegamenti a diverse guide che descrivono come creare C# binding per il codice Objective-C, consentendo agli sviluppatori di utilizzare librerie fuori programma nelle applicazioni Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 01/25/2016
 ms.openlocfilehash: b7764d63991ec636043982509319e7097ef2091b
 ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663253"

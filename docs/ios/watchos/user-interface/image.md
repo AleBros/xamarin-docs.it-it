@@ -1,6 +1,6 @@
 ---
-title: Controlli immagine watchos in Novell
-description: Questo documento descrive come usare i controlli immagine in un'applicazione watchos compilata con Novell. Viene illustrato il controllo WKInterfaceImage, il metodo seimagine, aggiungendo immagini a un'estensione del controllo, animazioni e altro ancora.
+title: Controlli immagine watchos in Xamarin
+description: Questo documento descrive come usare i controlli immagine in un'applicazione watchos compilata con Xamarin. Viene illustrato il controllo WKInterfaceImage, il metodo seimagine, aggiungendo immagini a un'estensione del controllo, animazioni e altro ancora.
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 7d24286b5d428a571afc7498afafa1171c075110
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032700"
 ---
-# <a name="watchos-image-controls-in-xamarin"></a>Controlli immagine watchos in Novell
+# <a name="watchos-image-controls-in-xamarin"></a>Controlli immagine watchos in Xamarin
 
 watchos fornisce un controllo [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) per la visualizzazione di immagini e animazioni semplici. Alcuni controlli possono anche avere un'immagine di sfondo, ad esempio pulsanti, gruppi e controller di interfaccia.
 

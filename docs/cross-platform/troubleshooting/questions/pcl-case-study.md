@@ -8,7 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.openlocfilehash: e7c0bcc7450ab718659723293f995c83b4dc517a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73013569"
@@ -16,16 +16,16 @@ ms.locfileid: "73013569"
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?
 
 > [!IMPORTANT]
-> Questo particolare esempio di `System.Diagnostic.Tracing` non produce più errori per impostazione predefinita nelle versioni più recenti di Novell. Sebbene la soluzione alternativa suggerita continui a funzionare, si noti che alcuni dei bug indicati nella sezione "livelli di errori" sono stati corretti.
+> Questo particolare esempio di `System.Diagnostic.Tracing` non produce più errori per impostazione predefinita nelle versioni più recenti di Xamarin. Sebbene la soluzione alternativa suggerita continui a funzionare, si noti che alcuni dei bug indicati nella sezione "livelli di errori" sono stati corretti.
 > Si noti inoltre che .NET Standard è ora il modo migliore per implementare API .NET multipiattaforma.
 
 ## <a name="summary"></a>Riepilogo
 
-Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni _incomplete_ . Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi PCL "System. Diagnostics. Tracing". Questa limitazione comporta tre livelli di errori quando si prova a usare la versione `portable-net45+win8+wpa81` predefinita del pacchetto NuGet di Microsoft TPL Dataflow.
+Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Xamarin consentono di usare diversi profili che hanno solo implementazioni _incomplete_ . Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi PCL "System. Diagnostics. Tracing". Questa limitazione comporta tre livelli di errori quando si prova a usare la versione `portable-net45+win8+wpa81` predefinita del pacchetto NuGet di Microsoft TPL Dataflow.
 
 ## <a name="workaround-switch-the-app-project-to-reference-the-portable-net45win8wp8wpa81-version-of-the-tpl-dataflow-library"></a>Soluzione temporanea: cambiare il progetto dell'app in modo che faccia riferimento alla versione `portable-net45+win8+wp8+wpa81` della libreria del flusso di flussi di lavoro TPL
 
-In questo modo si evitano tutti e tre i livelli di errori e funziona per tutte le versioni recenti di Novell.
+In questo modo si evitano tutti e tre i livelli di errori e funziona per tutte le versioni recenti di Xamarin.
 
 1. Aprire il file Project **. csproj** dell'applicazione in un editor di testo.
 
@@ -63,7 +63,7 @@ La versione `portable-net45+win8+wp8+wpa81` della libreria non fa riferimento a 
 
     - MTOUCH: Error MT2002: non è stato possibile risolvere l'assembly:' System. Diagnostics. Tracing, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '
 
-2. Nell' [implementazione mono corrente dei tipi in "System. Diagnostics. Tracing"](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) mancano alcuni overload del metodo ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Questo problema provocherà uno dei seguenti errori del linker durante la compilazione di un'app Novell:
+2. Nell' [implementazione mono corrente dei tipi in "System. Diagnostics. Tracing"](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) mancano alcuni overload del metodo ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Questo problema provocherà uno dei seguenti errori del linker durante la compilazione di un'app Xamarin:
 
     - /Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets: errore: errore durante l'esecuzione dell'attività LinkAssemblies: Error XA2006: riferimento all'elemento dei metadati System. void System. Diagnostics. Tracing. EventSource:: WriteEvent (System. Int32, System. Object [])' (definito in ' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ') da' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, Non è stato possibile risolvere PublicKeyToken = b03f5f7f11d50a3a '.
 
@@ -121,4 +121,4 @@ No, il pacchetto NuGet 3,0 "System. Diagnostics. Tracing" include solo implement
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .
+Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
 ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "76031416"
@@ -23,7 +23,7 @@ Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cic
 > Le app devono anche supportare iPhone Xs e le dimensioni dello schermo 12,9" di iPad Pro.
 
 > [!IMPORTANT]
-> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Novell. Forms, vedere la documentazione relativa a [Novell. Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
+> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Xamarin.Forms, vedere la documentazione relativa a [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
 

@@ -1,6 +1,6 @@
 ---
 title: Introduzione a watchOS 3
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in watchos 3 per gli sviluppatori Novell.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in watchos 3 per gli sviluppatori Xamarin.
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 10/07/2017
 ms.openlocfilehash: 5ff315270646389d67b505eef04c1aa11d0029c1
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028271"
 ---
 # <a name="introduction-to-watchos-3"></a>Introduzione a watchOS 3
 
-_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in watchos 3 per gli sviluppatori Novell._
+_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in watchos 3 per gli sviluppatori Xamarin._
 
 In questo documento vengono trattati gli argomenti seguenti:
 

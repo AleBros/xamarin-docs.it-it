@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/30/2019
 ms.openlocfilehash: a35a3750957073168bca4903e1cef79ed53a3de9
 ms.sourcegitcommit: bb6a103de620386187a08151a4cdc29a4dc53a10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/30/2019
 ms.locfileid: "71679968"
@@ -106,7 +106,7 @@ Il **MainPage. XAML** file avrà un aspetto simile al seguente (anche se la form
 </ContentPage>
 ```
 
-Le due dichiarazioni dello spazio`xmlns`dei nomi XML () fanno riferimento a URI, il primo sito Web di Novell e il secondo su Microsoft. Non ci preoccupiamo verifica quali tali scegliere gli URI. Non è presente alcun elemento. Sono semplicemente gli URI di proprietà da Xamarin e Microsoft, e in sostanza funzionano come identificatori di versione.
+Le due dichiarazioni dello spazio`xmlns`dei nomi XML () fanno riferimento a URI, il primo sito Web di Xamarin e il secondo su Microsoft. Non ci preoccupiamo verifica quali tali scegliere gli URI. Non è presente alcun elemento. Sono semplicemente gli URI di proprietà da Xamarin e Microsoft, e in sostanza funzionano come identificatori di versione.
 
 La prima dichiarazione dello spazio dei nomi XML significa che i tag definiti all'interno del file XAML senza il prefisso si riferisce alle classi in Xamarin.Forms, ad esempio `ContentPage`. La seconda dichiarazione dello spazio dei nomi definisce un prefisso di `x`. Questa opzione viene utilizzata per diversi elementi e attributi intrinseci XAML stesso e che sono supportati da altre implementazioni di XAML. Tuttavia, questi elementi e attributi sono leggermente diversi a seconda dell'anno incorporato nell'URI. Xamarin.Forms supporta la specifica di XAML 2009, ma non tutte.
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 04/20/2018
 ms.openlocfilehash: 8999efc3e954f4917e6c91a1e325d16e41c48b19
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016677"
@@ -18,9 +18,9 @@ ms.locfileid: "73016677"
 L'uso della versione più recente di [ _Transport Layer Security_ (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) è importante per garantire la protezione delle comunicazioni di rete dell'applicazione.
 
 > [!WARNING]
-> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Novell creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
+> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Xamarin creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
 >
-> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Novell in modo da usare le impostazioni seguenti, quindi ricompilare e ridistribuire le app** agli utenti.
+> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Xamarin in modo da usare le impostazioni seguenti, quindi ricompilare e ridistribuire le app** agli utenti.
 
 È necessario che i progetti facciano riferimento all'assembly **System .NET. http** e siano configurati come illustrato di seguito.
 
@@ -80,7 +80,7 @@ Gli sviluppatori di applicazioni devono prendere in considerazione queste altern
 
 ### <a name="httpclient-implementation"></a>Implementazione di HttpClient
 
-Gli sviluppatori di Novell hanno sempre potuto usare le classi di rete native nel codice, ma esiste anche un'opzione che determina quale stack di rete viene usato dalle classi `HttpClient`. Questo fornisce un'API .NET familiare con i vantaggi della velocità e della sicurezza della piattaforma nativa.
+Gli sviluppatori di Xamarin hanno sempre potuto usare le classi di rete native nel codice, ma esiste anche un'opzione che determina quale stack di rete viene usato dalle classi `HttpClient`. Questo fornisce un'API .NET familiare con i vantaggi della velocità e della sicurezza della piattaforma nativa.
 
 È possibile scegliere:
 
@@ -98,7 +98,7 @@ Le opzioni del progetto Android consentono inoltre di scegliere quale implementa
 - **Mono/gestiti** -TLS 1,1 in Android
 - **Nativo** : TLS 1,2 in Android.
 
-Per impostazione predefinita, i nuovi progetti Novell sono l'implementazione nativa che supporta TLS 1,2 (scelta consigliata per tutti i progetti). Tuttavia, se necessario, è possibile tornare al codice gestito per motivi di compatibilità.
+Per impostazione predefinita, i nuovi progetti Xamarin sono l'implementazione nativa che supporta TLS 1,2 (scelta consigliata per tutti i progetti). Tuttavia, se necessario, è possibile tornare al codice gestito per motivi di compatibilità.
 
 > [!IMPORTANT]
 > L'opzione **mono/Managed** è stata [rimossa dalle opzioni del progetto iOS e Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) .
@@ -107,7 +107,7 @@ Per impostazione predefinita, i nuovi progetti Novell sono l'implementazione nat
 
 ## <a name="platform-specific-details"></a>Dettagli specifici della piattaforma
 
-Il riepilogo precedente illustra le impostazioni a livello di progetto per l'implementazione di HttpClient e SSL/TLS nei progetti Novell. L'implementazione di HttpClient può essere impostata anche in modo dinamico nel codice. Per ulteriori informazioni, fare riferimento a queste guide specifiche della piattaforma:
+Il riepilogo precedente illustra le impostazioni a livello di progetto per l'implementazione di HttpClient e SSL/TLS nei progetti Xamarin. L'implementazione di HttpClient può essere impostata anche in modo dinamico nel codice. Per ulteriori informazioni, fare riferimento a queste guide specifiche della piattaforma:
 
 - [**Android**](~/android/app-fundamentals/http-stack.md)
 - [**iOS e Mac**](~/cross-platform/macios/http-stack.md)
@@ -121,7 +121,7 @@ Le applicazioni devono usare Transport Layer Security (TLS) 1,2, laddove possibi
 
 - [ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
 - [Ambiente Xamarin.Android](~/android/deploy-test/environment.md)
-- [Ciclo Novell 9 (febbraio 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
+- [Ciclo Xamarin 9 (febbraio 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [Note sulla versione di mono 4,8-supporto di TLS 1,2](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#tls-12-support)
 - [BoringSSL](https://boringssl.googlesource.com/boringssl/)

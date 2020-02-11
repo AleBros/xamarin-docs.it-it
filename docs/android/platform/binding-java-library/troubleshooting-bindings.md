@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 2eea51764e0e0f13c1a1a91db664872a67420d33
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73020560"
@@ -246,5 +246,5 @@ In questo articolo sono stati elencati i problemi comuni di risoluzione dei prob
 - [Progetti di libreria](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Uso di JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Abilita output di diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
-- [Novell per sviluppatori Android](~/android/get-started/java-developers.md)
+- [Xamarin per sviluppatori Android](~/android/get-started/java-developers.md)
 - [INTERFACCIA UTENTE GRAFICA DI JD](http://jd.benow.ca/)

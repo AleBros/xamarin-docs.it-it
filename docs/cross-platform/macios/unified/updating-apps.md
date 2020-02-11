@@ -1,6 +1,6 @@
 ---
 title: Aggiornamento delle app esistenti al API unificata
-description: Questo documento contiene collegamenti a diverse guide che descrivono come aggiornare le applicazioni Novell al API unificata. Vengono illustrate le app Xamarin.iOS, Xamarin.Mac. App Xamarin.Forms, tipi nativi nelle app multipiattaforma e progetti di associazione.
+description: Questo documento contiene collegamenti a diverse guide che descrivono come aggiornare le applicazioni Xamarin al API unificata. Vengono illustrate le app Xamarin.iOS, Xamarin.Mac. App Xamarin.Forms, tipi nativi nelle app multipiattaforma e progetti di associazione.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: d4904688302ac7f17c6326249ff08315d929e23c
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015016"
@@ -16,7 +16,7 @@ ms.locfileid: "73015016"
 # <a name="updating-existing-apps-to-the-unified-api"></a>Aggiornamento delle app esistenti al API unificata
 
 > [!IMPORTANT]
-> Il API classica Novell, che precedeva il API unificata, è stato deprecato.
+> Il API classica Xamarin, che precedeva il API unificata, è stato deprecato.
 >
 > - L'ultima versione di Xamarin.iOS per supportare il API classica (MonoTouch. dll) era Xamarin.iOS 9,10.
 > - Xamarin.Mac supporta ancora la API classica, ma non viene più aggiornata. Poiché è deprecato, gli sviluppatori devono spostare le applicazioni nel API unificata.

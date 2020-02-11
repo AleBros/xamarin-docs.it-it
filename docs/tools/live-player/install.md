@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 06/13/2019
 ms.openlocfilehash: 3dfe63cf3cf87a99d15879a0d4791248fa06f195
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029681"
@@ -30,12 +30,12 @@ ms.locfileid: "73029681"
 È necessario avere già l'app Xamarin Live Player nel dispositivo. Non è più disponibile per il download.
 
 1. Aprire **Visual Studio 2017**.
-2. Passare a **strumenti > opzioni...** e selezionare la **Novell > altra** scheda.
+2. Passare a **strumenti > opzioni...** e selezionare la **Xamarin > altra** scheda.
 3. Seleziona **Xamarin Live Player Abilita**:
 
     ![Selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vs2017-options.png)
 
-4. Creare o aprire un progetto Novell (o un [esempio](~/tools/live-player/samples.md)).
+4. Creare o aprire un progetto Xamarin (o un [esempio](~/tools/live-player/samples.md)).
 5. Scegliere **Live Player** nell'elenco dei dispositivi:
 
     ![L'elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices-empty-windows.png)
@@ -70,7 +70,7 @@ ms.locfileid: "73029681"
 
     [![selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
-4. Creare o aprire un progetto Novell (o un [esempio](~/tools/live-player/samples.md)).
+4. Creare o aprire un progetto Xamarin (o un [esempio](~/tools/live-player/samples.md)).
 5. Scegliere **Live Player** nell'elenco dei dispositivi.
 
     ![L'elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices.png)

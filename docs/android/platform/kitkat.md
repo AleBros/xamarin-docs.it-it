@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73027237"
@@ -533,7 +533,7 @@ Per funzionare, HCE deve poter essere eseguito in background e deve essere avvia
 
 - *OnDeactivated* : il `HostAdpuService` viene disattivato quando il servizio HCE non comunica più con il lettore NFC.
 
-Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l'attributo `Service` (per altre informazioni sugli attributi, vedere la guida al [manifesto Novell Working with Android](~/android/platform/android-manifest.md) ):
+Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l'attributo `Service` (per altre informazioni sugli attributi, vedere la guida al [manifesto Xamarin Working with Android](~/android/platform/android-manifest.md) ):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
@@ -573,7 +573,7 @@ Il servizio precedente consente al lettore NFC di interagire con l'applicazione,
 Oltre ai filtri, il file di risorse XML fornisce anche una descrizione per l'utente del servizio HCE, specifica un gruppo di supporto (applicazione di pagamento rispetto a "altro") e, nel caso di un'applicazione di pagamento, un banner 260x96 DP da visualizzare all'utente.
 
 Il programma di installazione illustrato in precedenza fornisce i blocchi predefiniti di base per un'applicazione che emula una scheda NFC. NFC richiede diversi passaggi e ulteriori test da configurare. Per altre informazioni sull'emulazione di schede basate su host, vedere il [portale della documentazione di Android](https://developer.android.com/guide/topics/connectivity/nfc/hce.html).
-Per altre informazioni sull'uso di NFC con Novell, vedere gli [esempi di Novell NFC](https://github.com/xamarin/monodroid-samples/tree/master/NfcSample).
+Per altre informazioni sull'uso di NFC con Xamarin, vedere gli [esempi di Xamarin NFC](https://github.com/xamarin/monodroid-samples/tree/master/NfcSample).
 
 ### <a name="sensors"></a>Sensori
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/18/2018
 ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016689"
@@ -17,7 +17,7 @@ ms.locfileid: "73016689"
 
 _I progetti condivisi consentono di scrivere codice comune a cui fa riferimento una serie di progetti di applicazioni diversi. Il codice viene compilato come parte di ogni progetto di riferimento e può includere direttive del compilatore che consentono di incorporare funzionalità specifiche della piattaforma nella codebase condivisa._
 
-I progetti condivisi, detti anche progetti di asset condivisi, consentono di scrivere codice condiviso tra più progetti di destinazione, incluse le applicazioni Novell.
+I progetti condivisi, detti anche progetti di asset condivisi, consentono di scrivere codice condiviso tra più progetti di destinazione, incluse le applicazioni Xamarin.
 
 Supportano le direttive del compilatore in modo che sia possibile includere in modo condizionale il codice specifico della piattaforma da compilare in un subset dei progetti che fanno riferimento al progetto condiviso. È inoltre disponibile il supporto dell'IDE per semplificare la gestione delle direttive del compilatore e visualizzare il modo in cui il codice verrà visualizzato in ogni applicazione.
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 76e883ba42ed898188a646a8a43cf1e3f123a7eb
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015606"
@@ -38,10 +38,10 @@ Sono disponibili istruzioni dettagliate per l'aggiornamento di qualsiasi applica
 
 ## <a name="binding-objective-c-librariesbindingindexmd"></a>[Binding di librerie Objective-C](binding/index.md)
 
-Novell consente di importare librerie native nelle app con binding. In questa sezione viene illustrato quanto segue:
+Xamarin consente di importare librerie native nelle app con binding. In questa sezione viene illustrato quanto segue:
 
 - funzionamento delle associazioni,
-- come compilare manualmente un progetto di binding che consente di portare il codice Objective-C in Novell e
+- come compilare manualmente un progetto di binding che consente di portare il codice Objective-C in Xamarin e
 - come usare lo strumento **Objective Sharpie** per semplificare l'automazione del processo.
 
 ## <a name="native-referencesnative-referencesmd"></a>[Riferimenti nativi](native-references.md)

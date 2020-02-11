@@ -9,7 +9,7 @@ ms.author: maleger
 ms.date: 08/13/2019
 ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
 ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75655407"
@@ -35,9 +35,9 @@ Xamarin.Forms | 4,1 o versione successiva
 
 Non è necessaria alcuna installazione o installazione aggiuntiva per usare il ricaricamento a caldo di XAML. È incorporata in Visual Studio e può essere abilitata nelle impostazioni dell'IDE. Una volta abilitata, è possibile iniziare a usare il ricaricamento a caldo di XAML eseguendo il debug dell'app in un emulatore, un simulatore o un dispositivo fisico. Attualmente, il ricaricamento a caldo di XAML funziona solo quando si esegue il debug in iOS o Android.
 
-In Windows è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricarica a caldo Novell** in **strumenti** > **Opzioni** > **Novell** > **ricarica a caldo**.
+In Windows è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricarica a caldo Xamarin** in **strumenti** > **Opzioni** > **Xamarin** > **ricarica a caldo**.
 
-In un Mac è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricaricamento a caldo di Novell** in **Visual Studio** > **Preferenze** > **progetti** > **ricaricamento a caldo**.
+In un Mac è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricaricamento a caldo di Xamarin** in **Visual Studio** > **Preferenze** > **progetti** > **ricaricamento a caldo**.
 
 ## <a name="resilient-reloading"></a>Ricaricamento resiliente
 

@@ -1,5 +1,5 @@
 ---
-title: Distribuzione e test di app tvOS in Novell
+title: Distribuzione e test di app tvOS in Xamarin
 description: Questa sezione descrive gli argomenti usati per testare un'app e come distribuirla. Gli argomenti seguenti includono elementi come gli strumenti usati per il debug, la distribuzione ai tester e la pubblicazione di un'applicazione nell'App Store di Apple TV.
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 022e458fd398366a79970635c1d064cfc2981375
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030741"
 ---
-# <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>Distribuzione e test di app tvOS in Novell
+# <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>Distribuzione e test di app tvOS in Xamarin
 
 ## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuzione di app](~/ios/tvos/deploy-test/app-distribution/index.md)
 

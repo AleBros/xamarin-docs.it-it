@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/25/2018
 ms.openlocfilehash: 371876d087c7027d4cfe2d2d9ada8b0dbedb5dd5
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488972"
@@ -35,7 +35,7 @@ In genere, ciò significa che sarà necessario determinare l'impronta digitale S
 
 Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android si trova nel percorso seguente:
 
-**C:\\utenti\\[USERNAME]\\AppData\\local\\Novell\\mono per Android\\debug. keystore**
+**C:\\utenti\\[USERNAME]\\AppData\\local\\Xamarin\\mono per Android\\debug. keystore**
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool` dal JDK. Questo strumento si trova in genere nella directory bin java:
 

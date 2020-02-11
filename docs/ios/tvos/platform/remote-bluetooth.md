@@ -1,6 +1,6 @@
 ---
-title: Controller Siri remoto e Bluetooth per tvOS in Novell
-description: Questo articolo descrive come usare i controller dei giochi di Siri remote e Bluetooth nelle app tvOS scritte con Novell.
+title: Controller Siri remoto e Bluetooth per tvOS in Xamarin
+description: Questo articolo descrive come usare i controller dei giochi di Siri remote e Bluetooth nelle app tvOS scritte con Xamarin.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 4255891174b639022a45c45c22e0022cd0403f26
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030587"
 ---
-# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Xamarin
 
 Gli utenti dell'app Xamarin.tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](#The-Siri-Remote).
 

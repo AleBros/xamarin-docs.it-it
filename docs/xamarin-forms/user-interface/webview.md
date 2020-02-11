@@ -1,6 +1,6 @@
 ---
-title: WebView di xamarin. Forms
-description: Questo articolo illustra come usare la classe WebView di xamarin. Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
+title: WebView di Xamarin.Forms
+description: Questo articolo illustra come usare la classe WebView di Xamarin.Forms per presentare locale o contenuto web di rete e i documenti per gli utenti.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
@@ -9,12 +9,12 @@ ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
 ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "76031404"
 ---
-# <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
+# <a name="xamarinforms-webview"></a>WebView di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
@@ -22,7 +22,7 @@ ms.locfileid: "76031404"
 
 ![Nel browser app](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Contenuto
+## <a name="content"></a>Content
 
 `WebView` supporta i tipi di contenuto seguenti:
 
@@ -153,7 +153,7 @@ Anche se la prima pagina è stata caricata, il `WebView` non conosce la provenie
 
 Per risolvere questo problema, è necessario indicare la `WebView` dove trovare i file nel file System. Farlo impostando il `BaseUrl` proprietà di `HtmlWebViewSource` usato dal `WebView`.
 
-Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin. Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
+Poiché il file System su ciascuno dei sistemi operativi è diverso, è necessario determinare tale URL per ogni piattaforma. Xamarin.Forms espone il `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
 
 Usare il `DependencyService`, innanzitutto definire un'interfaccia che può essere implementata in ogni piattaforma:
 
@@ -352,7 +352,7 @@ L'oggetto [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) ch
 - `Source`: elemento che ha eseguito lo spostamento.
 - `Url`: la destinazione di navigazione.
 
-Se si prevede di usare le pagine Web che impiegano molto tempo per il caricamento, provare a usare gli eventi [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) e [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) per implementare un indicatore di stato. Ad esempio:
+Se si prevede di usare le pagine Web che impiegano molto tempo per il caricamento, provare a usare gli eventi [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) e [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) per implementare un indicatore di stato. Esempio:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -403,12 +403,12 @@ Quando la `Reload` metodo viene richiamato il `ReloadRequested` viene generato l
 
 ## <a name="performance"></a>Prestazioni
 
-I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Novell. Forms 4,4, il `WebView` Novell. Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Novell. Forms 4,4, il `WebView` Novell. Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
+I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Xamarin.Forms 4,4, il `WebView` Xamarin.Forms è stato implementato in iOS dalla classe `UIWebView`. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Xamarin.Forms 4,4, il `WebView` Xamarin.Forms viene implementato in iOS dalla classe `WkWebView`, che supporta l'esplorazione più veloce.
 
 > [!NOTE]
 > In iOS, il `WkWebViewRenderer` dispone di un overload del costruttore che accetta un argomento `WkWebViewConfiguration`. In questo modo è possibile configurare il renderer durante la creazione.
 
-Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Novell. Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
+Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare il `WebView`Xamarin.Forms, per motivi di compatibilità. Questo può essere ottenuto aggiungendo il codice seguente per il **AssemblyInfo.cs** file nel progetto della piattaforma iOS per l'applicazione:
 
 ```csharp
 // Opt-in to using UIWebView instead of WkWebView.
@@ -427,9 +427,9 @@ Affinché `WebView` per lavorare, è necessario assicurarsi che le autorizzazion
 - **Android** &ndash; richiede `INTERNET` solo quando la visualizzazione di contenuto dalla rete. Contenuto locale non richiede autorizzazioni speciali.
 - **iOS** &ndash; non richiede autorizzazioni speciali.
 
-## <a name="layout"></a>Formato
+## <a name="layout"></a>Layout
 
-A differenza della maggior parte delle altre visualizzazioni, xamarin. Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
+A differenza della maggior parte delle altre visualizzazioni, Xamarin.Forms `WebView` richiede che `HeightRequest` e `WidthRequest` vengono specificati quando è contenuto in StackLayout o RelativeLayout. Se non si riesce a specificare tali proprietà, il `WebView` non eseguirà il rendering.
 
 Gli esempi seguenti illustrano i layout risultanti in uso, per il rendering `WebView`s:
 
@@ -521,14 +521,14 @@ function factorial(num) {
 
 ## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Deprecazione di UIWebView e rifiuto di App Store (ITMS-90809)
 
-A partire dall'aprile 2020, [Apple rifiuterà le app](https://developer.apple.com/news/?id=12232019b) che usano ancora l'API `UIWebView` deprecata. Mentre Novell. Forms è passato a `WKWebView` come impostazione predefinita, esiste ancora un riferimento all'SDK precedente nei file binari di Novell. Forms. Il comportamento corrente del [linker iOS](~/ios/deploy-test/linker.md) non rimuove questo e, di conseguenza, l'API `UIWebView` deprecata verrà comunque visualizzata come riferimento dall'app quando si invia all'App Store.
+A partire dall'aprile 2020, [Apple rifiuterà le app](https://developer.apple.com/news/?id=12232019b) che usano ancora l'API `UIWebView` deprecata. Mentre Xamarin.Forms è passato a `WKWebView` come impostazione predefinita, esiste ancora un riferimento all'SDK precedente nei file binari di Xamarin.Forms. Il comportamento corrente del [linker iOS](~/ios/deploy-test/linker.md) non rimuove questo e, di conseguenza, l'API `UIWebView` deprecata verrà comunque visualizzata come riferimento dall'app quando si invia all'App Store.
 
 Per risolvere il problema, è disponibile una versione di anteprima del linker. Per abilitare l'anteprima, sarà necessario fornire un argomento aggiuntivo `--optimize=experimental-xforms-product-type` al linker. 
 
 I prerequisiti per questo lavoro sono i seguenti:
 
-- È possibile usare **Novell. forms 4,5 o versioni successive** &ndash; versioni preliminari di Novell. forms 4,5.
-- **Novell. iOS 13.10.0.17 o versione successiva** &ndash; controllare la versione di Novell. iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Novell. iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
+- È possibile usare **Xamarin.Forms 4,5 o versioni successive** &ndash; versioni preliminari di Xamarin.Forms 4,5.
+- **Xamarin.iOS 13.10.0.17 o versione successiva** &ndash; controllare la versione di Xamarin.iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Xamarin.iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
 - **Rimuovere i riferimenti a `UIWebView`** &ndash; il codice non deve contenere riferimenti a `UIWebView` o a classi che usano `UIWebView`.
 
 ### <a name="configure-the-linker-preview"></a>Configurare l'anteprima del linker

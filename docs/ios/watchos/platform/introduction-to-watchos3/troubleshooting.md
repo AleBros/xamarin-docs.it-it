@@ -1,6 +1,6 @@
 ---
 title: watchos 3 risoluzione dei problemi
-description: Questo documento offre diversi suggerimenti per la risoluzione dei problemi quando si lavora con watchos 3 in Novell. I suggerimenti sono correlati a attività, Apple Pay, aggiornamento in background, NSURLConnection, privacy e altro ancora.
+description: Questo documento offre diversi suggerimenti per la risoluzione dei problemi quando si lavora con watchos 3 in Xamarin. I suggerimenti sono correlati a attività, Apple Pay, aggiornamento in background, NSURLConnection, privacy e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
@@ -9,16 +9,16 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 093ac4a3242866413042de0b650433d4369ad35f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028246"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchos 3 risoluzione dei problemi
 
-_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di watchos 3 in Novell Apple Watch app._
+_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di watchos 3 in Xamarin Apple Watch app._
 
-Questa pagina elenca alcuni problemi noti che possono verificarsi quando si usa watchos 3 con Novell e la soluzione a tali problemi.
+Questa pagina elenca alcuni problemi noti che possono verificarsi quando si usa watchos 3 con Xamarin e la soluzione a tali problemi.
 
 ## <a name="activities"></a>Attività
 

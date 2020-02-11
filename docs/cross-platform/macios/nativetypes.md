@@ -1,6 +1,6 @@
 ---
 title: Tipi nativi per iOS e macOS
-description: In questo documento viene descritto come il API unificata di Novell esegue il mapping dei tipi .NET ai tipi nativi a 32 bit e a 64 bit, in base alle esigenze, in base all'architettura di destinazione della compilazione.
+description: In questo documento viene descritto come il API unificata di Xamarin esegue il mapping dei tipi .NET ai tipi nativi a 32 bit e a 64 bit, in base alle esigenze, in base all'architettura di destinazione della compilazione.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 01/25/2016
 ms.openlocfilehash: 1168dfe0f2120e87c57b46011caba5e7a8a0c020
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015487"

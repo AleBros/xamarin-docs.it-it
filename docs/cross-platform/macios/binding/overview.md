@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 11/25/2015
 ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015874"
@@ -17,13 +17,13 @@ ms.locfileid: "73015874"
 
 _Informazioni sul funzionamento del processo di associazione_
 
-Il binding di una libreria Objective-C per l'uso con Novell richiede tre passaggi:
+Il binding di una libreria Objective-C per l'uso con Xamarin richiede tre passaggi:
 
 1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard come `interface`e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Una volta scritta la "definizione API" in C#, la si compila per produrre un assembly "binding". Questa operazione può essere eseguita dalla [**riga di comando**](#commandline) o tramite un [**progetto di binding**](#bindingproject) in Visual Studio per Mac o Visual Studio.
 
-3. L'assembly "binding" viene quindi aggiunto al progetto dell'applicazione Novell, in modo che sia possibile accedere alle funzionalità native usando l'API definita.
+3. L'assembly "binding" viene quindi aggiunto al progetto dell'applicazione Xamarin, in modo che sia possibile accedere alle funzionalità native usando l'API definita.
    Il progetto di associazione è completamente separato dai progetti dell'applicazione.
 
    > [!NOTE]

@@ -1,6 +1,6 @@
 ---
-title: Creazione manuale di pacchetti NuGet per Novell
-description: Questo documento contiene suggerimenti per la creazione di pacchetti NuGet destinati alla piattaforma Novell. Vengono descritti i profili Novell del pacchetto NuGet, NuGet PCL con dipendenze della piattaforma e collegamenti a diversi esempi Open Source.
+title: Creazione manuale di pacchetti NuGet per Xamarin
+description: Questo documento contiene suggerimenti per la creazione di pacchetti NuGet destinati alla piattaforma Xamarin. Vengono descritti i profili Xamarin del pacchetto NuGet, NuGet PCL con dipendenze della piattaforma e collegamenti a diversi esempi Open Source.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
@@ -8,23 +8,23 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728226"
 ---
-# <a name="manually-creating-nuget-packages-for-xamarin"></a>Creazione manuale di pacchetti NuGet per Novell
+# <a name="manually-creating-nuget-packages-for-xamarin"></a>Creazione manuale di pacchetti NuGet per Xamarin
 
-_Questa pagina contiene alcuni suggerimenti per facilitare la compilazione di pacchetti NuGet destinati alla piattaforma Novell._
+_Questa pagina contiene alcuni suggerimenti per facilitare la compilazione di pacchetti NuGet destinati alla piattaforma Xamarin._
 
 > [!NOTE]
 > Xamarin Studio 6,2 (e Visual Studio per Mac) include la possibilità di generare _automaticamente_ pacchetti NuGet dai progetti PCL, .NET standard o Shared. Per altri dettagli, vedere la Guida alle [librerie multipiattaforma per la condivisione del codice](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) .
 
-## <a name="nuget-package-xamarin-profiles"></a>Profili Novell del pacchetto NuGet
+## <a name="nuget-package-xamarin-profiles"></a>Profili Xamarin del pacchetto NuGet
 
-Il sito Web NuGet che [supporta più versioni e profili di .NET Framework](https://docs.nuget.org/create/enforced-package-conventions) illustra come supportare diversi Framework e profili Microsoft, ma non include i nomi dei framework di destinazione usati da Novell.
+Il sito Web NuGet che [supporta più versioni e profili di .NET Framework](https://docs.nuget.org/create/enforced-package-conventions) illustra come supportare diversi Framework e profili Microsoft, ma non include i nomi dei framework di destinazione usati da Xamarin.
 
-I principali framework di destinazione Novell attualmente in uso sono i seguenti:
+I principali framework di destinazione Xamarin attualmente in uso sono i seguenti:
 
 - **MonoAndroid** - Xamarin.Android
 - **Xamarin.iOS** -Xamarin.iOS [API unificata](~/cross-platform/macios/unified/index.md) (supporta 64 bit)
@@ -61,7 +61,7 @@ Per chiarire:
 
 ## <a name="pcl-nugets-with-platform-dependencies"></a>NuGet di PCL con dipendenze di piattaforma
 
-I profili PCL sono limitati alle API .NET Framework a cui possono accedere e certamente non possono accedere al codice specifico della piattaforma. Questi collegamenti di terze parti illustrano diversi approcci per la creazione di pacchetti NuGet che usano le API PCL e native per garantire la compatibilità per Novell e altre piattaforme:
+I profili PCL sono limitati alle API .NET Framework a cui possono accedere e certamente non possono accedere al codice specifico della piattaforma. Questi collegamenti di terze parti illustrano diversi approcci per la creazione di pacchetti NuGet che usano le API PCL e native per garantire la compatibilità per Xamarin e altre piattaforme:
 
 - [Come usare le librerie di classi portabili](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
 - [Il trucco per le esche e le opzioni PCL](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)

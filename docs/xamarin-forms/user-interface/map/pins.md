@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 10/23/2019
 ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
 ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/27/2019
 ms.locfileid: "74556167"
@@ -259,7 +259,7 @@ public class MapItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-La classe `MapItemTemplateSelector` definisce `DefaultTemplate` e `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. Il metodo `OnSelectTemplate` restituisce il `XamarinTemplate`, che Visualizza "Novell" come etichetta quando viene toccato un `Pin`, quando l'elemento ha un indirizzo che contiene "San Francisco". Quando l'elemento non dispone di un indirizzo che contiene "San Francisco", il metodo `OnSelectTemplate` restituisce l'`DefaultTemplate`.
+La classe `MapItemTemplateSelector` definisce `DefaultTemplate` e `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. Il metodo `OnSelectTemplate` restituisce il `XamarinTemplate`, che Visualizza "Xamarin" come etichetta quando viene toccato un `Pin`, quando l'elemento ha un indirizzo che contiene "San Francisco". Quando l'elemento non dispone di un indirizzo che contiene "San Francisco", il metodo `OnSelectTemplate` restituisce l'`DefaultTemplate`.
 
 > [!NOTE]
 > Un caso di utilizzo per questa funzionalità è l'associazione di proprietà di oggetti [`Pin`](xref:Xamarin.Forms.Maps.Pin) sottoclassati a proprietà diverse, in base al sottotipo di `Pin`.

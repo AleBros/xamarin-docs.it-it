@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/05/2018
 ms.openlocfilehash: c0d7bc92edd575adb5c6bce53f987926738670aa
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031057"
@@ -18,7 +18,7 @@ ms.locfileid: "73031057"
 
 ## <a name="visual-studio"></a>Visual Studio
 
-**Strumenti-opzioni di >-> impostazioni di Novell-> iOS**
+**Strumenti-opzioni di >-> impostazioni di Xamarin-> iOS**
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 

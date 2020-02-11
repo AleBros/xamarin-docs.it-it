@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 6df481688bfaa1e23cc56e6e34586f23d8ab9da6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031033"
@@ -50,7 +50,7 @@ Questi passaggi funzioneranno per qualsiasi progetto iOS che usa il motore di co
 
 - Se si preferisce, è possibile utilizzare un'attività di **spostamento** anziché un'attività di **copia** . Se si sceglie questa opzione e si esegue la compilazione in Windows, sarà necessario usare il nome completo dell'attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con le attività di compilazione XamarinVS.
 
-## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Per le versioni precedenti Xamarin Studio 6.0.0.5174 | Novell per Visual Studio 4.1.0.530
+## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Per le versioni precedenti Xamarin Studio 6.0.0.5174 | Xamarin per Visual Studio 4.1.0.530
 
 Sì, è possibile usare destinazioni MSBuild personalizzate per ottenere questo risultato. L'opzione più semplice è probabilmente copiare il file di `.ipa` dopo che è stato compilato.
 

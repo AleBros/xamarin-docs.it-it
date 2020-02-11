@@ -1,6 +1,6 @@
 ---
 title: Introduzione conF#
-description: Questo documento descrive come apprendere F# e usarlo per creare applicazioni Novell con Visual Studio 2019 e Visual Studio per Mac.
+description: Questo documento descrive come apprendere F# e usarlo per creare applicazioni Xamarin con Visual Studio 2019 e Visual Studio per Mac.
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: 1237fdfa63b6842579c93c685d5138d3086aad99
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014837"

@@ -1,6 +1,6 @@
 ---
 title: Nozioni fondamentali sulle applicazioni watchos
-description: Questo documento fornisce collegamenti a diversi documenti che descrivono i concetti fondamentali per lo sviluppo di applicazioni watchos con Novell.
+description: Questo documento fornisce collegamenti a diversi documenti che descrivono i concetti fondamentali per lo sviluppo di applicazioni watchos con Xamarin.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: bfec79d7c4278ce1382790f5048581cf74bb89c6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001468"

@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 04/24/2019
 ms.openlocfilehash: 594f7584e914b7bd8f4d7b72b3c82c42bb2fb73e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014577"
 ---
 # <a name="visual-basic-and-net-standard"></a>Visual Basic e .NET Standard
 
-I progetti Novell Android e iOS non supportano in modo nativo Visual Basic; Tuttavia, gli sviluppatori possono usare le librerie di [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) per eseguire la migrazione del codice Visual Basic esistente ad Android e iOS o per scrivere parte significativa della logica dell'applicazione in Visual Basic. Le applicazioni Xamarin.Forms possono essere create interamente in Visual Basic (esclusi i renderer personalizzati, i servizi di dipendenza e il code-behind XAML).
+I progetti Xamarin Android e iOS non supportano in modo nativo Visual Basic; Tuttavia, gli sviluppatori possono usare le librerie di [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) per eseguire la migrazione del codice Visual Basic esistente ad Android e iOS o per scrivere parte significativa della logica dell'applicazione in Visual Basic. Le applicazioni Xamarin.Forms possono essere create interamente in Visual Basic (esclusi i renderer personalizzati, i servizi di dipendenza e il code-behind XAML).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -51,7 +51,7 @@ Il progetto è ora pronto per l'aggiunta del codice Visual Basic. È possibile f
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato come utilizzare Visual Basic codice nelle applicazioni Novell con Visual Studio. Anche se Novell non supporta direttamente Visual Basic, la compilazione di Visual Basic in una libreria .NET Standard consente l'inclusione di codice scritto con Visual Basic nelle app Android e iOS.
+In questo articolo è stato illustrato come utilizzare Visual Basic codice nelle applicazioni Xamarin con Visual Studio. Anche se Xamarin non supporta direttamente Visual Basic, la compilazione di Visual Basic in una libreria .NET Standard consente l'inclusione di codice scritto con Visual Basic nelle app Android e iOS.
 
 Le pagine seguenti descrivono come usare le librerie di .NET Standard di Visual Basic.NET nelle app native o Xamarin.Forms:
 
@@ -62,5 +62,5 @@ Le pagine seguenti descrivono come usare le librerie di .NET Standard di Visual 
 
 - [TaskyVB (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 - [XamarinFormsVB (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
-- [.NET Standard e Novell](~/cross-platform/app-fundamentals/net-standard.md)
+- [.NET Standard e Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
 - [.NET Standard](/dotnet/standard/net-standard/)

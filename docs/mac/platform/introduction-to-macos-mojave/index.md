@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73017040"
@@ -18,7 +18,7 @@ ms.locfileid: "73017040"
 
 Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate di macOS Mojave.
 
-Per iniziare a creare app per macOS Mojave con Novell, vedere la [Guida introduttiva](~/mac/platform/introduction-to-macos-mojave/get-started.md) per [Xamarin.Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
+Per iniziare a creare app per macOS Mojave con Xamarin, vedere la [Guida introduttiva](~/mac/platform/introduction-to-macos-mojave/get-started.md) per [Xamarin.Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
 
 ## <a name="dark-mode"></a>Modalità scura
 

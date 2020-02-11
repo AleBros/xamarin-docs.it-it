@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 02/02/2018
 ms.openlocfilehash: 77c5eb65601e5bfdac2cbaad2e196a8ae2813981
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030315"
@@ -19,7 +19,7 @@ L'esempio [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-s
 
 ![Schermata di esempio di GridViewPager in una visualizzazione quadrata](gridviewpager-images/gridviewpager.png)
 
-Per prima cosa, aggiungere il pacchetto NuGet [Novell Android Wear support](https://www.nuget.org/packages/Xamarin.Android.Wear/) al progetto.
+Per prima cosa, aggiungere il pacchetto NuGet [Xamarin Android Wear support](https://www.nuget.org/packages/Xamarin.Android.Wear/) al progetto.
 
 Il codice XML del layout è simile al seguente:
 

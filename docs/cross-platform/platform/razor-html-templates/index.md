@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/24/2018
 ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014597"
@@ -19,15 +19,15 @@ Nel mondo dello sviluppo per dispositivi mobili il termine "app ibrida" si rifer
 
 Ci sono alcuni ambienti di sviluppo che consentono di compilare l'app per dispositivi mobili interamente in HTML e JavaScript, tuttavia tali app possono soffrire di problemi di prestazioni quando si tenta di eseguire complesse attività di elaborazione o dell'interfaccia utente e sono limitate anche nella piattaforma funzionalità a cui possono accedere.
 
-Novell offre il meglio di entrambi i mondi, soprattutto quando si usa il motore di creazione di modelli HTML Razor. Con Novell è possibile creare visualizzazioni HTML basate su modelli multipiattaforma che usano JavaScript e CSS, ma anche l'accesso completo alle API della piattaforma sottostante e l'elaborazione veloce con C#.
+Xamarin offre il meglio di entrambi i mondi, soprattutto quando si usa il motore di creazione di modelli HTML Razor. Con Xamarin è possibile creare visualizzazioni HTML basate su modelli multipiattaforma che usano JavaScript e CSS, ma anche l'accesso completo alle API della piattaforma sottostante e l'elaborazione veloce con C#.
 
-Questo documento illustra come usare il motore di creazione modelli Razor per compilare visualizzazioni HTML + JavaScript + CSS che possono essere usate tra piattaforme per dispositivi mobili usando Novell.
+Questo documento illustra come usare il motore di creazione modelli Razor per compilare visualizzazioni HTML + JavaScript + CSS che possono essere usate tra piattaforme per dispositivi mobili usando Xamarin.
 
 ## <a name="using-web-views-programmatically"></a>Utilizzo di visualizzazioni Web a livello di codice
 
 Prima di acquisire familiarità con Razor questa sezione illustra come usare le visualizzazioni Web per visualizzare direttamente il contenuto HTML, in particolare il contenuto HTML generato all'interno di un'app.
 
-Novell fornisce l'accesso completo alle API della piattaforma sottostante sia per iOS che per Android, quindi è facile creare e visualizzare HTML usando C#. Di seguito è riportata la sintassi di base per ogni piattaforma.
+Xamarin fornisce l'accesso completo alle API della piattaforma sottostante sia per iOS che per Android, quindi è facile creare e visualizzare HTML usando C#. Di seguito è riportata la sintassi di base per ogni piattaforma.
 
 ### <a name="ios"></a>iOS
 
@@ -191,7 +191,7 @@ webView.EvaluateJavascript (js);
 
 ### <a name="summary"></a>Riepilogo
 
-In questa sezione sono state introdotte le funzionalità dei controlli visualizzazione Web sia per Android che per iOS che consentono di creare applicazioni ibride con Novell, tra cui:
+In questa sezione sono state introdotte le funzionalità dei controlli visualizzazione Web sia per Android che per iOS che consentono di creare applicazioni ibride con Xamarin, tra cui:
 
 - Possibilità di caricare HTML dalle stringhe generate nel codice,
 - La possibilità di fare riferimento a file locali (CSS, JavaScript, immagini o altri file HTML),
@@ -206,11 +206,11 @@ Razor è un motore di creazione di modelli introdotto con ASP.NET MVC, originari
 
 Il motore di creazione di modelli Razor estende la C# sintassi HTML standard con in modo che sia possibile esprimere il layout e incorporare facilmente i fogli di stile CSS e JavaScript. Il modello può fare riferimento a una classe di modello, che può essere qualsiasi tipo personalizzato e le cui proprietà sono accessibili direttamente dal modello. Uno dei vantaggi principali è la possibilità di combinare facilmente HTML e C# sintassi.
 
-I modelli Razor non sono limitati all'uso sul lato server, ma possono anche essere inclusi nelle app Novell. L'uso di modelli Razor insieme alla possibilità di usare le visualizzazioni Web a livello di codice consente di compilare applicazioni ibride multipiattaforma sofisticate con Novell.
+I modelli Razor non sono limitati all'uso sul lato server, ma possono anche essere inclusi nelle app Xamarin. L'uso di modelli Razor insieme alla possibilità di usare le visualizzazioni Web a livello di codice consente di compilare applicazioni ibride multipiattaforma sofisticate con Xamarin.
 
 ### <a name="razor-template-basics"></a>Nozioni fondamentali sui modelli Razor
 
-I file modello Razor hanno estensione **cshtml** . È possibile aggiungerli a un progetto Novell dalla sezione modello di testo nella finestra di dialogo **nuovo file** :
+I file modello Razor hanno estensione **cshtml** . È possibile aggiungerli a un progetto Xamarin dalla sezione modello di testo nella finestra di dialogo **nuovo file** :
 
  ![Nuovo modello di file Razor](images/image5_400x201.png)
 
@@ -369,7 +369,7 @@ L'output del modello precedente viene visualizzato in esecuzione nel simulatore 
 
 Questa sezione ha trattato le nozioni di base sull'uso di modelli Razor per eseguire il rendering di semplici visualizzazioni di sola lettura. La sezione successiva illustra come creare app più complete usando Razor che può accettare l'input dell'utente e interoperare tra JavaScript nella visualizzazione HTML e C#.
 
-## <a name="using-razor-templates-with-xamarin"></a>Uso dei modelli Razor con Novell
+## <a name="using-razor-templates-with-xamarin"></a>Uso dei modelli Razor con Xamarin
 
 Questa sezione illustra come usare la creazione di un'applicazione ibrida personalizzata usando i modelli di soluzione in Visual Studio per Mac. Sono disponibili tre modelli dal **File > nuova finestra della soluzione >...** :
 
@@ -381,7 +381,7 @@ La **nuova** finestra della soluzione ha un aspetto simile al seguente per i pro
 
  ![Creazione di soluzioni iPhone e Android](images/image13_1139x959.png)
 
-Si noti che è possibile aggiungere facilmente un modello Razor **. cshtml** a *qualsiasi* progetto Novell esistente, non è necessario usare questi modelli di soluzione. per i progetti iOS non è necessario uno storyboard per usare Razor. è sufficiente aggiungere un controllo UIWebView a qualsiasi visualizzazione a livello di codice ed è possibile eseguire il C# rendering di modelli Razor interi nel codice.
+Si noti che è possibile aggiungere facilmente un modello Razor **. cshtml** a *qualsiasi* progetto Xamarin esistente, non è necessario usare questi modelli di soluzione. per i progetti iOS non è necessario uno storyboard per usare Razor. è sufficiente aggiungere un controllo UIWebView a qualsiasi visualizzazione a livello di codice ed è possibile eseguire il C# rendering di modelli Razor interi nel codice.
 
 Il contenuto della soluzione del modello predefinito per i progetti iPhone e Android è illustrato di seguito:
 
@@ -489,9 +489,9 @@ Il repository [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/
 - **RazorTodo** -app completamente basata su HTML con i modelli Razor.
 - **RazorNativeTodo** : USA i controlli di visualizzazione elenco nativi per iOS e Android, ma Visualizza la schermata di modifica con HTML e Razor.
 
-Queste app Novell vengono eseguite su iOS e Android, usando le librerie di classi portabili (classi portabili) per condividere codice comune, ad esempio le classi del database e del modello. I modelli Razor **. cshtml** possono anche essere inclusi nella libreria di classi portabile, in modo che siano facilmente condivisi tra le piattaforme.
+Queste app Xamarin vengono eseguite su iOS e Android, usando le librerie di classi portabili (classi portabili) per condividere codice comune, ad esempio le classi del database e del modello. I modelli Razor **. cshtml** possono anche essere inclusi nella libreria di classi portabile, in modo che siano facilmente condivisi tra le piattaforme.
 
-Entrambe le app di esempio includono la condivisione di Twitter e le API sintesi vocale dalla piattaforma nativa, dimostrando che le applicazioni ibride con Novell hanno ancora accesso a tutte le funzionalità sottostanti dalle visualizzazioni basate su modelli Razor HTML.
+Entrambe le app di esempio includono la condivisione di Twitter e le API sintesi vocale dalla piattaforma nativa, dimostrando che le applicazioni ibride con Xamarin hanno ancora accesso a tutte le funzionalità sottostanti dalle visualizzazioni basate su modelli Razor HTML.
 
 L'app **RazorTodo** usa i modelli Razor HTML per le visualizzazioni elenco e modifica. Ciò significa che è possibile compilare l'app quasi completamente in una libreria di classi portabile condivisa, inclusi il database e i modelli Razor **. cshtml** . Gli screenshot seguenti mostrano le app iOS e Android.
 
@@ -502,7 +502,7 @@ L'app **RazorNativeTodo** usa un modello Razor HTML per la visualizzazione di mo
 - Prestazioni: i controlli di scorrimento nativi usano la virtualizzazione per garantire lo scorrimento veloce e uniforme anche con elenchi di dati molto lunghi.
 - Esperienza nativa: gli elementi dell'interfaccia utente specifici della piattaforma sono facilmente abilitati, ad esempio il supporto per gli indici a scorrimento rapido in iOS e Android.
 
-Un vantaggio fondamentale della creazione di app ibride con Novell è che è possibile iniziare con un'interfaccia utente completamente basata su HTML, ad esempio il primo esempio, e quindi aggiungere funzionalità specifiche della piattaforma quando necessario (come illustrato nel secondo esempio). Di seguito sono illustrate le schermate degli elenchi nativi e le schermate di modifica di Razor HTML in iOS e Android.
+Un vantaggio fondamentale della creazione di app ibride con Xamarin è che è possibile iniziare con un'interfaccia utente completamente basata su HTML, ad esempio il primo esempio, e quindi aggiungere funzionalità specifiche della piattaforma quando necessario (come illustrato nel secondo esempio). Di seguito sono illustrate le schermate degli elenchi nativi e le schermate di modifica di Razor HTML in iOS e Android.
 
  ![RazorNativeTodo](images/BothNative_700x290.png)
 
@@ -510,7 +510,7 @@ Un vantaggio fondamentale della creazione di app ibride con Novell è che è pos
 
 Questo articolo ha illustrato le funzionalità dei controlli di visualizzazione Web disponibili in iOS e Android che semplificano la creazione di applicazioni ibride.
 
-Viene quindi illustrato il motore di creazione modello Razor e la sintassi che è possibile usare per generare facilmente codice HTML nelle app Novell usando. **cshtml** File modello Razor. Descrive anche i modelli di soluzione Visual Studio per Mac che consentono di iniziare rapidamente a creare applicazioni ibride con Novell.
+Viene quindi illustrato il motore di creazione modello Razor e la sintassi che è possibile usare per generare facilmente codice HTML nelle app Xamarin usando. **cshtml** File modello Razor. Descrive anche i modelli di soluzione Visual Studio per Mac che consentono di iniziare rapidamente a creare applicazioni ibride con Xamarin.
 
 Infine, sono stati introdotti gli esempi di RazorTodo che illustrano come combinare visualizzazioni Web con interfacce utente e API native.
 

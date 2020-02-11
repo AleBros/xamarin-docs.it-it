@@ -1,6 +1,6 @@
 ---
-title: Risoluzione dei problemi di Novell e iOS 13
-description: Questa sezione contiene suggerimenti per la risoluzione dei problemi relativi alle funzionalità Novell correlate a iOS 13.
+title: Risoluzione dei problemi di Xamarin e iOS 13
+description: Questa sezione contiene suggerimenti per la risoluzione dei problemi relativi alle funzionalità Xamarin correlate a iOS 13.
 ms.prod: xamarin
 ms.assetid: 00DE8C33-1407-45C0-A0C7-32AF1E490034
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/12/2019
 ms.openlocfilehash: 6ccd0a100e2a1f01d33fee481df85d976d2191a8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031704"

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/31/2018
 ms.openlocfilehash: 157e16da2c524029c29e767cd6b3e5eb550a2389
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021755"
@@ -36,7 +36,7 @@ Queste guide presuppongono una certa familiarità con il contenuto trattato nell
 
 ## <a name="ios-designer-basicsintroductionmd"></a>[Nozioni di base su iOS Designer](introduction.md)
 
-Questa guida illustra le funzionalità di Novell iOS designer. Illustra le nozioni di base di progettazione, mostrando come usare la finestra di progettazione per disporre i controlli in modo visivo e come modificare le proprietà.
+Questa guida illustra le funzionalità di Xamarin iOS designer. Illustra le nozioni di base di progettazione, mostrando come usare la finestra di progettazione per disporre i controlli in modo visivo e come modificare le proprietà.
 
 ## <a name="designable-controls-overviewios-designable-controls-overviewmd"></a>[Cenni preliminari sui controlli designable](ios-designable-controls-overview.md)
 
@@ -46,6 +46,6 @@ In questa guida vengono esaminati in dettaglio i controlli personalizzati, il mo
 
 Questo articolo fornisce una procedura dettagliata che illustra come creare un controllo personalizzato e usarlo in iOS designer. Viene illustrato come rendere disponibile un controllo nella casella degli strumenti della finestra di progettazione in modo che possa essere trascinato in una visualizzazione. Viene inoltre illustrato come implementare un controllo in modo che venga eseguito correttamente in fase di progettazione e in fase di esecuzione, nonché come creare proprietà che possono essere impostate in fase di progettazione.
 
-## <a name="auto-layout-with-the-xamarin-ios-designerdesigner-auto-layoutmd"></a>[Layout automatico con Novell iOS designer](designer-auto-layout.md)
+## <a name="auto-layout-with-the-xamarin-ios-designerdesigner-auto-layoutmd"></a>[Layout automatico con Xamarin iOS designer](designer-auto-layout.md)
 
 Questa guida presenta il layout automatico iOS e il nuovo flusso di lavoro dei vincoli disponibile in iOS designer.

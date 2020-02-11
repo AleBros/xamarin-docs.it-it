@@ -1,6 +1,6 @@
 ---
-title: Distribuzione e test di app watchos con Novell
-description: Questo documento descrive come distribuire e testare le app watchos compilate con Novell. Viene fornito un elenco di controllo per la distribuzione, vengono illustrati gli ID app espliciti e con caratteri jolly e vengono esaminati i gruppi di app.
+title: Distribuzione e test di app watchos con Xamarin
+description: Questo documento descrive come distribuire e testare le app watchos compilate con Xamarin. Viene fornito un elenco di controllo per la distribuzione, vengono illustrati gli ID app espliciti e con caratteri jolly e vengono esaminati i gruppi di app.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028345"
 ---
-# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Novell
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Xamarin
 
 ## <a name="deployment-checklist"></a>Elenco di controllo distribuzione
 

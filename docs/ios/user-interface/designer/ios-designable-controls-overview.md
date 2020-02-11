@@ -1,6 +1,6 @@
 ---
 title: Controlli personalizzati nel Xamarin Designer per iOS
-description: Il Xamarin Designer per iOS supporta il rendering di controlli personalizzati creati nel progetto o a cui viene fatto riferimento da origini esterne come l'archivio componenti di Novell.
+description: Il Xamarin Designer per iOS supporta il rendering di controlli personalizzati creati nel progetto o a cui viene fatto riferimento da origini esterne come l'archivio componenti di Xamarin.
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: e8c38ec407d13a99e2990a6d4cf39b5a23728b1d
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003981"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controlli personalizzati nel Xamarin Designer per iOS
 
-_Il Xamarin Designer per iOS supporta il rendering di controlli personalizzati creati nel progetto o a cui viene fatto riferimento da origini esterne come l'archivio componenti di Novell._
+_Il Xamarin Designer per iOS supporta il rendering di controlli personalizzati creati nel progetto o a cui viene fatto riferimento da origini esterne come l'archivio componenti di Xamarin._
 
 Il Xamarin Designer per iOS è uno strumento potente per la visualizzazione dell'interfaccia utente di un'applicazione e fornisce il supporto per la modifica WYSIWYG per la maggior parte delle visualizzazioni iOS e dei controller di visualizzazione. L'app può anche contenere controlli personalizzati che estendono quelli incorporati in iOS. Se questi controlli personalizzati vengono scritti tenendo conto di alcune linee guida, possono anche essere sottoposti a rendering da iOS designer, offrendo un'esperienza di modifica ancora più avanzata. Questo documento esamina le linee guida.
 

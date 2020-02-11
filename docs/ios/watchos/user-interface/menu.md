@@ -1,6 +1,6 @@
 ---
-title: Controllo menu watchos (Force Touch) in Novell
-description: Questo documento descrive come usare il gesto watchos Force Touch in Novell. Viene illustrato come rispondere a un Force Touch, come aggiungere un menu e modificare le voci di menu.
+title: Controllo menu watchos (Force Touch) in Xamarin
+description: Questo documento descrive come usare il gesto watchos Force Touch in Xamarin. Viene illustrato come rispondere a un Force Touch, come aggiungere un menu e modificare le voci di menu.
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: f848433a5a668e247142aa4f47374c2c6531b55d
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032688"
 ---
-# <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controllo menu watchos (Force Touch) in Novell
+# <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controllo menu watchos (Force Touch) in Xamarin
 
 Il kit Watch fornisce un movimento Force Touch che attiva un menu quando viene implementato in una schermata dell'app Watch.
 

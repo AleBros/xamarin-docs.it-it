@@ -1,6 +1,6 @@
 ---
 title: Argomenti avanzati sulle integrazioni
-description: Questo documento descrive gli argomenti avanzati correlati a Xamarin Workbooks integrazioni. Viene illustrato il pacchetto NuGet Xamarin.Workbook. integrations e l'esposizione API all'interno di una cartella di lavoro di Novell.
+description: Questo documento descrive gli argomenti avanzati correlati a Xamarin Workbooks integrazioni. Viene illustrato il pacchetto NuGet Xamarin.Workbook. integrations e l'esposizione API all'interno di una cartella di lavoro di Xamarin.
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/30/2017
 ms.openlocfilehash: 159fecbe1385c091c56a6ececb61bf7d020dfc1b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029605"

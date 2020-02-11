@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: 50302b0b9cf96d211c704ab9e68d1c61d11e807a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016580"
@@ -17,7 +17,7 @@ ms.locfileid: "73016580"
 
 _In questa guida viene illustrato come utilizzare tecnologie di servizi Web diverse. Gli argomenti trattati includono la comunicazione con i servizi REST, i servizi SOAP e i servizi Windows Communication Foundation._
 
-Per funzionare correttamente, molte applicazioni per dispositivi mobili dipendono dal cloud e pertanto l'integrazione dei servizi Web nelle applicazioni per dispositivi mobili è uno scenario comune. La piattaforma Novell supporta l'utilizzo di diverse tecnologie di servizi Web e include supporto integrato e di terze parti per l'utilizzo di servizi RESTful, ASMX e Windows Communication Foundation (WCF).
+Per funzionare correttamente, molte applicazioni per dispositivi mobili dipendono dal cloud e pertanto l'integrazione dei servizi Web nelle applicazioni per dispositivi mobili è uno scenario comune. La piattaforma Xamarin supporta l'utilizzo di diverse tecnologie di servizi Web e include supporto integrato e di terze parti per l'utilizzo di servizi RESTful, ASMX e Windows Communication Foundation (WCF).
 
 Per i clienti che usano Xamarin.Forms, sono disponibili esempi completi che usano ciascuna di queste tecnologie nella documentazione relativa ai [servizi Web Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml) .
 
@@ -192,7 +192,7 @@ I servizi Web RESTful usano in genere i messaggi JSON per restituire i dati al c
 
 ### <a name="systemjson"></a>System. JSON
 
-La piattaforma Novell viene fornita con il supporto per JSON predefinito. Utilizzando una `JsonObject`, è possibile recuperare i risultati come illustrato nell'esempio di codice seguente:
+La piattaforma Xamarin viene fornita con il supporto per JSON predefinito. Utilizzando una `JsonObject`, è possibile recuperare i risultati come illustrato nell'esempio di codice seguente:
 
 ```csharp
 var obj = JsonObject.Parse(json);
@@ -281,7 +281,7 @@ Un messaggio SOAP è un documento XML contenente gli elementi seguenti:
 - Elemento del *corpo* obbligatorio che contiene il messaggio SOAP destinato al destinatario.
 - Elemento *fault* facoltativo utilizzato per indicare i messaggi di errore. Se l'elemento *fault* è presente, deve essere un elemento figlio dell'elemento *Body* .
 
-SOAP può utilizzare molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può funzionare solo tramite HTTP. La piattaforma Novell supporta le implementazioni standard di SOAP 1,1 su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
+SOAP può utilizzare molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può funzionare solo tramite HTTP. La piattaforma Xamarin supporta le implementazioni standard di SOAP 1,1 su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
@@ -346,7 +346,7 @@ WCF descrive un servizio con un'ampia gamma di contratti diversi, tra cui:
 Esistono differenze tra i servizi Web ASP.NET (ASMX) e WCF, ma è importante comprendere che WCF supporta le stesse funzionalità fornite da ASMX, ovvero messaggi SOAP su HTTP.
 
 > [!IMPORTANT]
-> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS usando la classe `BasicHttpBinding`. Inoltre, il supporto WCF richiede l'utilizzo di strumenti disponibili solo in un ambiente Windows per generare il proxy.
+> Il supporto della piattaforma Xamarin per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS usando la classe `BasicHttpBinding`. Inoltre, il supporto WCF richiede l'utilizzo di strumenti disponibili solo in un ambiente Windows per generare il proxy.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
@@ -412,7 +412,7 @@ Per ulteriori informazioni sull'utilizzo di un servizio WCF, vedere [utilizzare 
 
 #### <a name="using-transport-security"></a>Uso della sicurezza del trasporto
 
-I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Novell supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un delegato `ServerCertificateValidationCallback` prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
+I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Xamarin supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un delegato `ServerCertificateValidationCallback` prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 System.Net.ServicePointManager.ServerCertificateValidationCallback +=
@@ -425,7 +425,7 @@ Questa operazione mantiene la crittografia del trasporto ignorando la convalida 
 
 #### <a name="using-client-credential-security"></a>Uso della sicurezza delle credenziali client
 
-I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Novell non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Novell supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando i `ClientCredentialType`appropriati:
+I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Xamarin non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Xamarin supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando i `ClientCredentialType`appropriati:
 
 ```csharp
 basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;

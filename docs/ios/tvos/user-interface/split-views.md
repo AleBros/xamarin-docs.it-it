@@ -1,6 +1,6 @@
 ---
-title: Uso dei controller di visualizzazione Split tvOS in Novell
-description: Questo documento descrive come usare le viste Split tvOS in un'app compilata con Novell. Viene fornita una panoramica di alto livello dei controller di visualizzazione suddivisi, come utilizzarli con gli storyboard, accedere alle visualizzazioni master e dettagli e visualizzare e nascondere la visualizzazione master.
+title: Uso dei controller di visualizzazione Split tvOS in Xamarin
+description: Questo documento descrive come usare le viste Split tvOS in un'app compilata con Xamarin. Viene fornita una panoramica di alto livello dei controller di visualizzazione suddivisi, come utilizzarli con gli storyboard, accedere alle visualizzazioni master e dettagli e visualizzare e nascondere la visualizzazione master.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022204"
 ---
-# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Uso dei controller di visualizzazione Split tvOS in Novell
+# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Uso dei controller di visualizzazione Split tvOS in Xamarin
 
 Un controller di visualizzazione suddiviso presenta e gestisce contemporaneamente un controller di visualizzazione master e dettagli affiancato sullo schermo. I controller di visualizzazione divisa vengono usati per presentare contenuti persistenti e attivabili nella visualizzazione Master (la sezione più piccola a sinistra) e i dettagli correlati nella visualizzazione dettagli (la sezione più grande a destra).
 

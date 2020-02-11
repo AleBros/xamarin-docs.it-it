@@ -1,6 +1,6 @@
 ---
-title: Uso delle impostazioni di watchos in Novell
-description: Questo documento descrive come usare le impostazioni di watchos in Novell. Viene illustrato come aggiungere impostazioni a una soluzione di controllo app, usando queste impostazioni nell'app e l'app Apple Watch sull'iPhone.
+title: Uso delle impostazioni di watchos in Xamarin
+description: Questo documento descrive come usare le impostazioni di watchos in Xamarin. Viene illustrato come aggiungere impostazioni a una soluzione di controllo app, usando queste impostazioni nell'app e l'app Apple Watch sull'iPhone.
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 1a59979b164c5200a96343caa1a44e05992763d0
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028376"
 ---
-# <a name="working-with-watchos-settings-in-xamarin"></a>Uso delle impostazioni di watchos in Novell
+# <a name="working-with-watchos-settings-in-xamarin"></a>Uso delle impostazioni di watchos in Xamarin
 
 Apple Watch app possono usare le stesse funzionalità delle impostazioni delle app iOS. l'interfaccia utente delle impostazioni viene visualizzata nell'app **Apple Watch** iPhone, ma i valori sono accessibili sia nell'app iPhone sia nell'estensione Watch.
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/25/2018
 ms.openlocfilehash: 5744bb9947b196ee319535729338bcf64a5cd09e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016753"
@@ -53,7 +53,7 @@ Vedere la [Guida ai metadati](metadata.md) per informazioni dettagliate sui meta
 
 ## <a name="further-nuget-information"></a>Ulteriori informazioni su NuGet
 
-Scopri di più sulla [creazione manuale di NuGet per Novell](~/cross-platform/app-fundamentals/nuget-manual.md) e su come [includere un pacchetto NuGet in un'app](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Scopri di più sulla [creazione manuale di NuGet per Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md) e su come [includere un pacchetto NuGet in un'app](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 La documentazione di Microsoft [NuGet](https://docs.microsoft.com/nuget/) contiene informazioni più dettagliate sul formato **nupkg** e sull'uso di pacchetti NuGet in Visual Studio.
 
@@ -62,5 +62,5 @@ Descrizione della progettazione per i progetti di pacchetti NuGet (noto anche co
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [NuGetizer-3000 casi d'uso](https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios)
-- [Creare manualmente pacchetti NuGet per Novell](~/cross-platform/app-fundamentals/nuget-manual.md)
+- [Creare manualmente pacchetti NuGet per Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 - [Documentazione di NuGet](https://docs.microsoft.com/nuget/)

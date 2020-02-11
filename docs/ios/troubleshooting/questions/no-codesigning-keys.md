@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/03/2018
 ms.openlocfilehash: 0c777b8d5326963e959d8bb13d81d7058caa6bde
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030942"
@@ -27,7 +27,7 @@ Se non è stato effettuato il provisioning di un dispositivo iOS in precedenza, 
 ## <a name="bug-when-using-ios-simulator"></a>Bug quando si usa il simulatore iOS
 
 > [!NOTE]
-> Questo problema è stato risolto nelle versioni recenti di Novell per Visual Studio. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
+> Questo problema è stato risolto nelle versioni recenti di Xamarin per Visual Studio. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
 Si è verificato un bug in Xamarin.Visual Studio 3,11 che ha causato il progetto iOS in un modello Xamarin.Forms per aggiungere i diritti di coprogettazione. plist alle compilazioni del simulatore; blocco efficace del test tramite il simulatore.
 
@@ -47,4 +47,4 @@ Si è verificato un bug in Xamarin.Visual Studio 3,11 che ha causato il progetto
 5. Ricaricare il progetto e dovrebbe essere possibile eseguire la distribuzione nel simulatore.
 
 ### <a name="next-steps"></a>Passaggi successivi
-Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .
+Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .

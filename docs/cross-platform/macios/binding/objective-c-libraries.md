@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016297"
 ---
 # <a name="binding-objective-c-libraries"></a>Binding di librerie Objective-C
 
-Quando si usa Xamarin.iOS o Xamarin.Mac, è possibile che si verifichino casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile usare i progetti di binding Novell per C# creare un'associazione alle librerie Objective-C native. Il progetto usa gli stessi strumenti usati per portare le API iOS e Mac C#.
+Quando si usa Xamarin.iOS o Xamarin.Mac, è possibile che si verifichino casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile usare i progetti di binding Xamarin per C# creare un'associazione alle librerie Objective-C native. Il progetto usa gli stessi strumenti usati per portare le API iOS e Mac C#.
 
 In questo documento viene descritto come associare le API Objective-C, se si stanno associando solo le API C, è necessario utilizzare il meccanismo .NET standard per questo [Framework P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/).
 Informazioni dettagliate su come collegare in modo statico una libreria C sono disponibili nella pagina [linking native Libraries](~/ios/platform/native-interop.md) .

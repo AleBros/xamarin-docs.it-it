@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/02/2018
 ms.openlocfilehash: 3adabbac3f56747093aa8a3def85869a92d33600
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010495"
@@ -97,9 +97,9 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Novell)** :
+1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Xamarin)** :
 
-    ![La finestra nuovo progetto con app iOS (Novell) selezionata](launch-screens-images/launch01.w157.png)
+    ![La finestra nuovo progetto con app iOS (Xamarin) selezionata](launch-screens-images/launch01.w157.png)
 
     Selezionare il modello **app visualizzazione singola** , quindi fare clic su **OK**:
 

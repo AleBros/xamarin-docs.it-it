@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 37540053cee03a83582fe19ffb1dcf9e1cf4564c
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73011736"
@@ -17,7 +17,7 @@ ms.locfileid: "73011736"
 
 ![Logo di UrhoSharp](introduction-images/urhosharp-icon.png)
 
-UrhoSharp è un potente motore di gioco 3D per gli sviluppatori Novell e .NET.  Si tratta di uno spirito simile a SceneKit e SpriteKit di Apple e includono la fisica, la navigazione, la rete e molto altro ancora.
+UrhoSharp è un potente motore di gioco 3D per gli sviluppatori Xamarin e .NET.  Si tratta di uno spirito simile a SceneKit e SpriteKit di Apple e includono la fisica, la navigazione, la rete e molto altro ancora.
 
 Si tratta di un binding .NET al motore [Urho3D](https://urho3d.github.io/) e consente agli sviluppatori di scrivere codice multipiattaforma che può essere destinato a Android, iOS, Windows e Mac con la stessa codebase ed è in grado di eseguire il rendering nei sistemi OpenGL e Direct3D.
 
@@ -188,4 +188,4 @@ Il documento [using UrhoSharp](~/graphics-games/urhosharp/using.md) Esplora in m
 
 ## <a name="copyrights"></a>Copyright
 
-Questa documentazione contiene contenuti originali di Novell Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.
+Questa documentazione contiene contenuti originali di Xamarin Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.

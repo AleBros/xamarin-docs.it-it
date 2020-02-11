@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/03/2018
 ms.openlocfilehash: 42a2694239fdd55efa91b7fa30be8a10cafb4cc5
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010329"
@@ -42,7 +42,7 @@ Queste gerarchie di visualizzazione possono essere costruite usando il [Xamarin 
 
 ## <a name="ios-blank-project-template"></a>modello di progetto vuoto iOS
 
-Per prima cosa, creare un progetto iOS in Visual Studio usando il **File > nuovo progetto C# > visual > iPhone & iPad > app iOS (Novell)** , illustrato di seguito:
+Per prima cosa, creare un progetto iOS in Visual Studio usando il **File > nuovo progetto C# > visual > iPhone & iPad > app iOS (Xamarin)** , illustrato di seguito:
 
 [![finestra di dialogo nuovo progetto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 

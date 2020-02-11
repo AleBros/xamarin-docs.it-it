@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 86e05dc0e9cd5df325126cc5a339b36dd27c1e45
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030363"
@@ -53,9 +53,9 @@ Questo [esempio di Google](https://developer.android.com/training/wearables/ui/l
 
 ## <a name="wear-ui-designer"></a>Indossare la finestra di progettazione interfaccia utente
 
-Il Android Designer Novell supporta schermate sia rettangolari che rotonde:
+Il Android Designer Xamarin supporta schermate sia rettangolari che rotonde:
 
-![Selezione della schermata di Android Wear Square nel Novell Android Designer](screen-sizes-images/design-screen-type.png)
+![Selezione della schermata di Android Wear Square nel Xamarin Android Designer](screen-sizes-images/design-screen-type.png)
 
 L'area di progettazione in stile rettangolare è illustrata di seguito:
 

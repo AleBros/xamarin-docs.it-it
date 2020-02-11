@@ -1,6 +1,6 @@
 ---
 title: Introduzione a tvOS 12
-description: Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate in tvOS 12 per le quali la versione di anteprima di Novell fornisce C# attualmente associazioni.
+description: Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate in tvOS 12 per le quali la versione di anteprima di Xamarin fornisce C# attualmente associazioni.
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030559"
@@ -18,7 +18,7 @@ ms.locfileid: "73030559"
 
 In questo documento viene fornita una panoramica di alto livello delle tvOS 12 nuove e aggiornate.
 
-Per iniziare a creare app tvOS 12 con Novell, vedere la [Guida introduttiva](~/ios/platform/introduction-to-ios12/get-started.md).
+Per iniziare a creare app tvOS 12 con Xamarin, vedere la [Guida introduttiva](~/ios/platform/introduction-to-ios12/get-started.md).
 
 ## <a name="tvuikit"></a>TVUIKit
 

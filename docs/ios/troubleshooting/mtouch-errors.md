@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: d8bb526f8e53ab2005e2e59556597c351d33f87a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031195"
@@ -2961,7 +2961,7 @@ Ciò indica che si è verificato un errore nel processo di compilazione. Inviare
 
 ### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Impossibile individuare il blocco per delegare il metodo di conversione per il metodo *.* parametro s # *. Inviare un bug in http://bugzilla.xamarin.com.
 
-Indica che un'API non è stata associata correttamente. Se si tratta di un'API esposta da Novell, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new). Se si tratta di un'associazione di terze parti, rivolgersi al fornitore.
+Indica che un'API non è stata associata correttamente. Se si tratta di un'API esposta da Xamarin, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new). Se si tratta di un'associazione di terze parti, rivolgersi al fornitore.
 
 <a name="MT8010" />
 

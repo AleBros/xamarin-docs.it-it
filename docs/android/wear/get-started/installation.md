@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 83ec214ae1838959355e99322ce5a809ead004fa
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028734"
@@ -20,7 +20,7 @@ _Questo articolo illustra i passaggi di installazione e i dettagli di configuraz
 
 ## <a name="requirements"></a>Requisiti
 
-Per creare app di Android Wear basate su Novell, è necessario quanto segue:
+Per creare app di Android Wear basate su Xamarin, è necessario quanto segue:
 
 - È necessario **Visual Studio o Visual Studio per Mac** &ndash; visual studio 2017 community o versione successiva.
 
@@ -28,7 +28,7 @@ Per creare app di Android Wear basate su Novell, è necessario quanto segue:
 
 - **Android SDK** -Android SDK 5.0.1 (API 21) o versione successiva deve essere installato tramite il gestore di Android SDK.
 
-- **Java Developer Kit** &ndash; lo sviluppo di Novell Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24).
+- **Java Developer Kit** &ndash; lo sviluppo di Xamarin Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24).
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
 

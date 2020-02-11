@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029700"
@@ -53,7 +53,7 @@ Per i clienti aziendali è disponibile l'ispezione di app in tempo reale.
 |--- |--- |--- |
 |Mac|Supportato solo in Visual Studio per Mac|
 |iOS|Supportato in Visual Studio 2017 e Visual Studio per Mac| Il comportamento del linker deve essere impostato su **No link** (in **iOS Build** Project Options) |
-|Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **Fastdev** abilitato.<br />È necessario usare gli emulatori Android di Google, Visual Studio o Novell. Gli emulatori Android 7 potrebbero non consentire l'ispezione al momento.|
+|Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **Fastdev** abilitato.<br />È necessario usare gli emulatori Android di Google, Visual Studio o Xamarin. Gli emulatori Android 7 potrebbero non consentire l'ispezione al momento.|
 |WPF|Supportato solo in Visual Studio 2017|
 
 <a name="reporting-bugs" />

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: b3adfac067964e0a0f169b5d8f8860f34deffe62
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015610"
@@ -60,7 +60,7 @@ Se si è provato a distribuire questo framework di esempio con l'app, l'esecuzio
 
 Come indicato in precedenza, per poter usare un Framework incorporato nell'app, deve essere un Framework FAT che include tutte le sezioni delle architetture di sistema per i dispositivi in cui verrà eseguita l'app.
 
-Quando il Framework e l'app consumer si trovano nello stesso progetto Xcode, questo non è un problema perché Xcode creerà sia il Framework che l'app usando le stesse impostazioni di compilazione. Poiché le app Novell non sono in grado di creare Framework incorporati, non è possibile usare questa tecnica.
+Quando il Framework e l'app consumer si trovano nello stesso progetto Xcode, questo non è un problema perché Xcode creerà sia il Framework che l'app usando le stesse impostazioni di compilazione. Poiché le app Xamarin non sono in grado di creare Framework incorporati, non è possibile usare questa tecnica.
 
 Per risolvere questo problema, è possibile usare lo strumento da riga di comando `lipo` per unire due o più Framework in un unico framework Fat contenente tutte le sezioni necessarie. Per ulteriori informazioni sull'utilizzo del comando `lipo`, consultare la documentazione relativa al [collegamento di librerie native](~/ios/platform/native-interop.md) .
 

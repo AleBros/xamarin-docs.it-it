@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/28/2019
 ms.openlocfilehash: 28cb1573262b63cc2b0ccad9f468fe36c682718d
 ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69888841"
@@ -30,11 +30,11 @@ WCF descrive un servizio con un'ampia gamma di contratti diversi, tra cui:
 Esistono differenze tra i servizi Web ASP.NET (ASMX) e WCF, ma WCF supporta le stesse funzionalità fornite da ASMX, ovvero messaggi SOAP su HTTP. Per ulteriori informazioni sull'utilizzo di un servizio ASMX, vedere la pagina relativa all'utilizzo di [ASP.NET Web Services (asmx)](~/xamarin-forms/data-cloud/web-services/asmx.md).
 
 > [!IMPORTANT]
-> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS mediante la `BasicHttpBinding` classe.
+> Il supporto della piattaforma Xamarin per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS mediante la `BasicHttpBinding` classe.
 >
 > Il supporto WCF richiede l'uso di strumenti disponibili solo in un ambiente Windows per generare il proxy e ospitare il TodoWCFService. La compilazione e il test dell'app iOS richiederanno la distribuzione di TodoWCFService in un computer Windows o come servizio Web di Azure.
 >
-> Le app Novell Forms native condividono in genere il codice con una libreria di classi .NET Standard. Tuttavia, .NET Core non supporta attualmente WCF, pertanto il progetto condiviso deve essere una libreria di classi portabile legacy. Per informazioni sul supporto di WCF in .NET Core, vedere [scelta tra .NET Core e .NET Framework per le app Server](/dotnet/standard/choosing-core-framework-server).
+> Le app Xamarin Forms native condividono in genere il codice con una libreria di classi .NET Standard. Tuttavia, .NET Core non supporta attualmente WCF, pertanto il progetto condiviso deve essere una libreria di classi portabile legacy. Per informazioni sul supporto di WCF in .NET Core, vedere [scelta tra .NET Core e .NET Framework per le app Server](/dotnet/standard/choosing-core-framework-server).
 
 La soluzione dell'applicazione di esempio include un servizio WCF che può essere eseguito localmente ed è illustrato nello screenshot seguente:
 

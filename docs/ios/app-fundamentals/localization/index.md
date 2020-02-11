@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 04/28/2017
 ms.openlocfilehash: fc67c7f683b6c55d3b4f552c2f8c113ee721be61
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009799"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in Xamarin.iOS
 
-_Questo documento illustra le funzionalità di localizzazione di iOS SDK e come accedervi con Novell._
+_Questo documento illustra le funzionalità di localizzazione di iOS SDK e come accedervi con Xamarin._
 
 Per istruzioni su come includere set di caratteri o tabelle codici nelle applicazioni che devono elaborare dati non Unicode, vedere le [codifiche di internazionalizzazione](encodings.md) .
 
@@ -36,7 +36,7 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 
 Questo valore sarà un codice di lingua, ad esempio `en` per l'inglese, `es` per lo spagnolo, `ja` per il giapponese e così via. Il valore restituito è limitato a una delle localizzazioni supportate dall'applicazione, usando le regole di fallback per determinare la migliore corrispondenza.
 
-Il codice dell'applicazione non è sempre in grado di verificare la presenza di questo valore: Novell e iOS forniscono funzionalità che consentono di fornire automaticamente la stringa o la risorsa corretta per la lingua dell'utente. Queste funzionalità sono descritte nella parte restante di questo documento.
+Il codice dell'applicazione non è sempre in grado di verificare la presenza di questo valore: Xamarin e iOS forniscono funzionalità che consentono di fornire automaticamente la stringa o la risorsa corretta per la lingua dell'utente. Queste funzionalità sono descritte nella parte restante di questo documento.
 
 > [!NOTE]
 > Usare `NSLocale.PreferredLanguages` per determinare le preferenze di lingua dell'utente, indipendentemente dalle localizzazioni supportate dall'app. I valori restituiti da questo metodo sono stati modificati in iOS 9; per informazioni dettagliate, vedere la [Nota tecnica TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) .
@@ -47,7 +47,7 @@ Gli utenti scelgono le impostazioni locali nell'app **Impostazioni** . Questa im
 
 In questo modo gli utenti possono scegliere se visualizzare i formati di 12 ore o 24 ore, se il separatore decimale è una virgola o un punto e l'ordine del giorno, del mese e dell'anno nella visualizzazione della data.
 
-Con Novell è possibile accedere alle classi iOS di Apple (`NSNumberFormatter`) e alle classi .NET in System. Globalization. Gli sviluppatori dovrebbero valutare quale sia la soluzione più adatta alle proprie esigenze, in quanto sono disponibili diverse funzionalità. In particolare, se si stanno recuperando e visualizzando i prezzi di acquisto in-app usando StoreKit, è consigliabile usare le classi di formattazione di Apple per le informazioni sui prezzi restituite.
+Con Xamarin è possibile accedere alle classi iOS di Apple (`NSNumberFormatter`) e alle classi .NET in System. Globalization. Gli sviluppatori dovrebbero valutare quale sia la soluzione più adatta alle proprie esigenze, in quanto sono disponibili diverse funzionalità. In particolare, se si stanno recuperando e visualizzando i prezzi di acquisto in-app usando StoreKit, è consigliabile usare le classi di formattazione di Apple per le informazioni sui prezzi restituite.
 
 Le impostazioni locali correnti possono essere sottoposte a query in uno dei due modi seguenti:
 
@@ -72,7 +72,7 @@ iOS genera un `NSCurrentLocaleDidChangeNotification` quando l'utente aggiorna le
 
 ## <a name="localization-basics-in-ios"></a>Nozioni fondamentali sulla localizzazione in iOS
 
-Le funzionalità seguenti di iOS sono facilmente sfruttabili in Novell per fornire le risorse localizzate da visualizzare all'utente. Vedere l' [esempio TaskyL10n](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) per informazioni su come implementare queste idee.
+Le funzionalità seguenti di iOS sono facilmente sfruttabili in Xamarin per fornire le risorse localizzate da visualizzare all'utente. Vedere l' [esempio TaskyL10n](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) per informazioni su come implementare queste idee.
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Specifica di linguaggi predefiniti e supportati in info. plist
 

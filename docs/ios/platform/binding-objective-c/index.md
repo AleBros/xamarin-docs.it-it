@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 61d1adfc997b34302f1f89f56653af906ca90135
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022216"
@@ -22,7 +22,7 @@ Seguire questi collegamenti per informazioni sull'associazione di librerie Objec
 - [**Panoramica**](~/cross-platform/macios/binding/overview.md) -
   descrive il funzionamento dell'associazione.
 - [**Binding di librerie Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  istruzioni su come associare le librerie Objective-c per l'uso nei progetti Novell.
+  istruzioni su come associare le librerie Objective-c per l'uso nei progetti Xamarin.
 - [**Guida di riferimento**](~/cross-platform/macios/binding/binding-types-reference.md) per la definizione dei tipi -
   descrive tutti gli attributi disponibili per l'associazione tra autori e il processo di generazione del binding.
 

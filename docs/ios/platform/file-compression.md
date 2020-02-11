@@ -9,14 +9,14 @@ ms.author: mandel
 ms.date: 03/04/2019
 ms.openlocfilehash: bcc63aa4e1926f5502d571bf47c83b0c8ea7e429
 ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/31/2019
 ms.locfileid: "70199517"
 ---
 # <a name="file-compression-in-xamarinios"></a>Compressione di file in Xamarin.iOS
 
-Le app Novell destinate a iOS 9,0 o macOS 10,11 (e versioni successive) possono usare il _Framework di compressione_ per comprimere (codificare) e decomprimere (decodificare) i dati. Xamarin.iOS fornisce questo framework dopo l'API Stream. Il Framework di compressione consente agli sviluppatori di interagire con i dati compressi e decompressi come se fossero flussi normali senza la necessità di utilizzare callback o delegati.
+Le app Xamarin destinate a iOS 9,0 o macOS 10,11 (e versioni successive) possono usare il _Framework di compressione_ per comprimere (codificare) e decomprimere (decodificare) i dati. Xamarin.iOS fornisce questo framework dopo l'API Stream. Il Framework di compressione consente agli sviluppatori di interagire con i dati compressi e decompressi come se fossero flussi normali senza la necessità di utilizzare callback o delegati.
 
 Il Framework di compressione fornisce supporto per gli algoritmi seguenti:
 

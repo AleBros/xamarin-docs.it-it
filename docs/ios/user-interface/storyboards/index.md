@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002435"
@@ -20,11 +20,11 @@ In questa guida verrà illustrato lo storyboard ed esaminando alcuni componenti 
 
 Prima che il formato del file di storyboard venisse introdotto da Apple come rappresentazione visiva dell'interfaccia utente di un'applicazione iOS, gli sviluppatori creavano i file XIB per ogni controller di visualizzazione e programmavano manualmente la navigazione tra ciascuna visualizzazione.  L'uso di uno storyboard consente allo sviluppatore di definire sia i controller di visualizzazione che la navigazione tra di essi in un'area di progettazione e offre la modifica WYSIWYG dell'interfaccia utente dell'applicazione.
 
-È possibile creare, aprire e modificare uno storyboard con Novell iOS designer. In questa guida verrà inoltre illustrato come utilizzare la finestra di progettazione per creare gli storyboard durante C# l'utilizzo di per programmare la navigazione.
+È possibile creare, aprire e modificare uno storyboard con Xamarin iOS designer. In questa guida verrà inoltre illustrato come utilizzare la finestra di progettazione per creare gli storyboard durante C# l'utilizzo di per programmare la navigazione.
 
 ## <a name="requirements"></a>Requisiti
 
-Gli storyboard possono essere usati con la finestra di progettazione iOS in Visual Studio per Mac o con Visual Studio 2017 con i carichi di lavoro Novell installati.
+Gli storyboard possono essere usati con la finestra di progettazione iOS in Visual Studio per Mac o con Visual Studio 2017 con i carichi di lavoro Xamarin installati.
 
 ## <a name="what-is-a-storyboard"></a>Che cos'è uno storyboard?
 
@@ -34,7 +34,7 @@ Uno storyboard è la rappresentazione visiva di tutte le schermate in un'applica
 
 Come illustrato, lo storyboard disporrà di ogni scena con contenuto già sottoposto a rendering e illustra le connessioni tra di essi.  Vale la pena notare che, quando parliamo di scene su un iPhone, è preferibile presupporre che una *scena* sullo storyboard sia uguale a una *schermata* di contenuto del dispositivo. Tuttavia, con un iPad è possibile che vengano visualizzate più scene in una sola volta, ad esempio utilizzando un controller di visualizzazione di popover.
 
-Per creare l'interfaccia utente dell'applicazione, in particolare quando si usa Novell, è possibile usare gli storyboard per molti vantaggi. In primo luogo, si tratta di una rappresentazione visiva dell'interfaccia utente, poiché tutti gli oggetti, inclusi i [controlli personalizzati](~/ios/user-interface/designer/ios-designable-controls-overview.md) , vengono sottoposti a rendering in fase di progettazione. Questo significa che prima di compilare o distribuire l'applicazione, è possibile visualizzarne l'aspetto e il flusso. Prendere l'immagine precedente, ad esempio. È possibile esaminare rapidamente l'area di progettazione del numero di scene, il layout di ogni visualizzazione e il modo in cui tutto è correlato. Questo è ciò che rende gli storyboard così potenti.
+Per creare l'interfaccia utente dell'applicazione, in particolare quando si usa Xamarin, è possibile usare gli storyboard per molti vantaggi. In primo luogo, si tratta di una rappresentazione visiva dell'interfaccia utente, poiché tutti gli oggetti, inclusi i [controlli personalizzati](~/ios/user-interface/designer/ios-designable-controls-overview.md) , vengono sottoposti a rendering in fase di progettazione. Questo significa che prima di compilare o distribuire l'applicazione, è possibile visualizzarne l'aspetto e il flusso. Prendere l'immagine precedente, ad esempio. È possibile esaminare rapidamente l'area di progettazione del numero di scene, il layout di ogni visualizzazione e il modo in cui tutto è correlato. Questo è ciò che rende gli storyboard così potenti.
 
 Gli eventi sono più gestibili con gli storyboard, in particolare quando si usa iOS designer. La maggior parte dei controlli dell'interfaccia utente avrà un elenco di possibili eventi nel riquadro delle proprietà. Il gestore eventi può essere aggiunto qui e completato in un metodo parziale nella classe controller di visualizzazione.
 

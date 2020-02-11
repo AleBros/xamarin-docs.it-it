@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 97a4a90b66e2c205ef8e9081e6989bf0f3650b16
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032401"
@@ -104,7 +104,7 @@ L'istanza di `NSUserActivity` viene recapitata quando viene chiamato il metodo d
 
 Per ulteriori informazioni, vedere la sezione relativa all' [implementazione della distribuzione](#implementing-handoff) .
 
-## <a name="enabling-handoff-in-a-xamarin-app"></a>Abilitazione della consegna in un'app Novell
+## <a name="enabling-handoff-in-a-xamarin-app"></a>Abilitazione della consegna in un'app Xamarin
 
 A causa dei requisiti di sicurezza imposti dalla consegna, un'app Xamarin.iOS che usa il Framework di consegna deve essere configurata correttamente nel portale Apple Developer e nel file di progetto Xamarin.iOS.
 

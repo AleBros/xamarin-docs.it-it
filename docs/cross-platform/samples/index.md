@@ -9,7 +9,7 @@ ms.author: jusjohns
 ms.date: 12/26/2019
 ms.openlocfilehash: f84e9c9791dec7ef8f1e9e537044dc5ee1f354b7
 ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/27/2019
 ms.locfileid: "75502774"
@@ -18,7 +18,7 @@ ms.locfileid: "75502774"
 
 App e demo di codice di esempio multipiattaforma Xamarin per iniziare a creare app per dispositivi mobili con C# e Xamarin.
 
-[Tutti gli esempi di Novell](https://docs.microsoft.com/samples/browse/?products=xamarin)
+[Tutti gli esempi di Xamarin](https://docs.microsoft.com/samples/browse/?products=xamarin)
 
 ## <a name="get-started"></a>Attività iniziali
 
@@ -38,9 +38,9 @@ Questo esempio è una dimostrazione di un'applicazione di tipo Elenco attività 
 App demo che consente al personale di vendita di tenere traccia dei risultati di vendita, gestire i clienti potenziali, visualizzare i contatti, gestire gli ordini e consultare il catalogo prodotti.
     :::column-end:::
     :::column:::
-[![Novell CRM](images/crm.png)](https://github.com/xamarin/app-crm)
+[![Xamarin CRM](images/crm.png)](https://github.com/xamarin/app-crm)
 
-### <a name="xamarin-crmhttpsgithubcomxamarinapp-crm"></a>[Novell CRM](https://github.com/xamarin/app-crm)
+### <a name="xamarin-crmhttpsgithubcomxamarinapp-crm"></a>[Xamarin CRM](https://github.com/xamarin/app-crm)
 
 App demo che consente al personale di vendita di tenere traccia dei risultati di vendita, gestire i clienti potenziali, visualizzare i contatti, gestire gli ordini e consultare il catalogo prodotti.
     :::column-end:::
@@ -87,4 +87,4 @@ Indicazioni sull'architettura Enterprise per la compilazione di app con i conten
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app di esempio multipiattaforma Novell e demo di codice, vedere [tutti gli esempi di Novell](https://docs.microsoft.com/samples/browse/?products=xamarin).
+Per il set completo di app di esempio multipiattaforma Xamarin e demo di codice, vedere [tutti gli esempi di Xamarin](https://docs.microsoft.com/samples/browse/?products=xamarin).

@@ -1,6 +1,6 @@
 ---
 title: Creazione di associazioni con Objective Sharpie
-description: Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C.
+description: Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Xamarin usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: davidortinau
@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 10/11/2017
 ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016184"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Creazione di associazioni con Objective Sharpie
 
-_Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C._
+_Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Xamarin usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C._
 
 - [Cenni preliminari sulla](#overview) [cronologia](#history) & 
 - [Introduzione](get-started.md)
@@ -33,11 +33,11 @@ Funziona analizzando i file di intestazione di una libreria nativa per eseguire 
 Objective Sharpie usa i file di intestazione di analisi Clang, quindi il binding è il più esatto e completo possibile. Questo può ridurre notevolmente il tempo e il lavoro richiesto per produrre un'associazione di qualità.
 
 > [!IMPORTANT]
-> Objective Sharpie è uno strumento per gli sviluppatori esperti di Novell con una conoscenza avanzata di Objective-C (e per estensione, C). Prima di tentare di associare una libreria Objective-C, è necessario avere una conoscenza approfondita di come compilare la libreria nativa dalla riga di comando (e una buona conoscenza del funzionamento della libreria nativa).
+> Objective Sharpie è uno strumento per gli sviluppatori esperti di Xamarin con una conoscenza avanzata di Objective-C (e per estensione, C). Prima di tentare di associare una libreria Objective-C, è necessario avere una conoscenza approfondita di come compilare la libreria nativa dalla riga di comando (e una buona conoscenza del funzionamento della libreria nativa).
 
 ## <a name="history"></a>Cronologia
 
-È in corso l'evoluzione e l'uso dell'obiettivo Sharpie internamente in Novell negli ultimi tre anni. Per quanto riguarda la potenza dell'obiettivo Sharpie, le API introdotte in Xamarin.iOS e Xamarin.Mac da iOS 8, Mac OS X 10,10 e watchos 2,0 sono state avviate interamente con Objective Sharpe. Novell si basa principalmente sull'obiettivo Sharpie per la creazione di propri prodotti.
+È in corso l'evoluzione e l'uso dell'obiettivo Sharpie internamente in Xamarin negli ultimi tre anni. Per quanto riguarda la potenza dell'obiettivo Sharpie, le API introdotte in Xamarin.iOS e Xamarin.Mac da iOS 8, Mac OS X 10,10 e watchos 2,0 sono state avviate interamente con Objective Sharpe. Xamarin si basa principalmente sull'obiettivo Sharpie per la creazione di propri prodotti.
 
 Tuttavia, Objective è uno strumento molto avanzato che richiede una conoscenza avanzata di Objective-C e C, come usare il compilatore Clang nella riga di comando e in genere come vengono combinate le librerie native. A causa di questa alta barra, abbiamo pensato che la creazione guidata di GUI consentisse di impostare le aspettative errate e, di conseguenza, l'obiettivo Sharpie è attualmente disponibile solo come strumento da riga di comando.
 

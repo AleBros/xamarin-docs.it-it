@@ -7,14 +7,14 @@ ms.author: daortin
 ms.date: 06/15/2018
 ms.openlocfilehash: fef422b799ab5280aef205f4d5e55fd91050da39
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73007330"
 ---
 # <a name="net-embedding-on-android"></a>Incorporamento .NET in Android
 
-In alcuni casi, potrebbe essere necessario aggiungere una libreria Novell .NET a un progetto Android nativo esistente. A tale scopo, è possibile usare lo strumento [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/) per trasformare la libreria .NET in una libreria nativa che può essere incorporata in un'app Android nativa basata su Java.
+In alcuni casi, potrebbe essere necessario aggiungere una libreria Xamarin .NET a un progetto Android nativo esistente. A tale scopo, è possibile usare lo strumento [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/) per trasformare la libreria .NET in una libreria nativa che può essere incorporata in un'app Android nativa basata su Java.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

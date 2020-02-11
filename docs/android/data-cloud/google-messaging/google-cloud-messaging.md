@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/02/2019
 ms.openlocfilehash: 742555da24120eaeadcc4b6232b24d23f41da283
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73023709"
@@ -19,7 +19,7 @@ ms.locfileid: "73023709"
 > [!WARNING]
 > Google deprecato GCM a partire dal 10 aprile 2018. I documenti e i progetti di esempio seguenti potrebbero non essere più gestiti. Il server GCM di Google e le API client verranno rimossi non appena il 29 maggio 2019. Google consiglia di eseguire la migrazione di app GCM a Firebase Cloud Messaging (FCM). Per altre informazioni sulla deprecazione e la migrazione di GCM, vedere la pagina relativa alla [messaggistica cloud deprecata di Google](https://developers.google.com/cloud-messaging/).
 >
-> Per iniziare a usare la messaggistica cloud Firebase con Novell, vedere [Firebase Cloud Messaging](firebase-cloud-messaging.md).
+> Per iniziare a usare la messaggistica cloud Firebase con Xamarin, vedere [Firebase Cloud Messaging](firebase-cloud-messaging.md).
 
 _Google Cloud Messaging (GCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. Questo articolo fornisce una panoramica del funzionamento di GCM e spiega come configurare i servizi Google in modo che l'app possa usare GCM._
 

@@ -1,6 +1,6 @@
 ---
-title: Risoluzione dei problemi relativi alle app tvOS 10 compilate con Novell
-description: Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di tvOS 10 in app Novell. Vengono descritti i problemi correlati all'App Store, alla compatibilità binaria, a CFNetwork HttpProtocol, CloudKit, Core Image, NSUserActivity e UIKit.
+title: Risoluzione dei problemi relativi alle app tvOS 10 compilate con Xamarin
+description: Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di tvOS 10 in app Xamarin. Vengono descritti i problemi correlati all'App Store, alla compatibilità binaria, a CFNetwork HttpProtocol, CloudKit, Core Image, NSUserActivity e UIKit.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: a6588dee675aee3e2580b70dfdea2920c6235775
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030606"
 ---
-# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS 10 compilate con Novell
+# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS 10 compilate con Xamarin
 
-Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 10 con Novell e la soluzione a questi problemi:
+Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 10 con Xamarin e la soluzione a questi problemi:
 
 - [App Store](#App-Store)
 - [Compatibilità binaria](#Binary-Compatibility)

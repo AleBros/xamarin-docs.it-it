@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: b405643096699e1d965f485bdc590afa178881d6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031826"
@@ -231,7 +231,7 @@ iOS 7 cambia quando e come viene eseguito il lavoro in background. Il completame
 - Notifiche remote: consente alle applicazioni di aggiornare il contenuto quando riceve una notifica push. Le notifiche possono essere in modalità invisibile all'utente o visualizzare un banner nella schermata di blocco.
 - Servizio trasferimento in background: consente il caricamento e il download di dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
 
-Per ulteriori informazioni sulle nuove funzionalità multitasking, vedere le sezioni iOS della [Guida in background](~/ios/app-fundamentals/backgrounding/index.md)Novell.
+Per ulteriori informazioni sulle nuove funzionalità multitasking, vedere le sezioni iOS della [Guida in background](~/ios/app-fundamentals/backgrounding/index.md)Xamarin.
 
 ## <a name="summary"></a>Riepilogo
 

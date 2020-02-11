@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/15/2018
 ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488933"
@@ -55,7 +55,7 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 Per abilitare la registrazione della distribuzione dei dispositivi in Visual Studio:
 
 1. **Strumenti > opzioni...** >
-2. Nella visualizzazione albero a sinistra selezionare **novell > Android Settings**
+2. Nella visualizzazione albero a sinistra selezionare **Xamarin > Android Settings**
 3. Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
 4. I messaggi di log vengono scritti nel file monodroid. log sul desktop.
 
@@ -277,9 +277,9 @@ Se l'app richiede prestazioni a virgola mobile decenti, ad esempio giochi, è ne
 ## <a name="could-not-locate-android-sdk"></a>Non è stato possibile individuare Android SDK
 
 Sono disponibili 2 download da Google per la Android SDK per Windows.
-Se si sceglie il programma di installazione con estensione exe, vengono scritte le chiavi del registro di sistema che indicano a Xamarin.Android dove è stato installato. Se si sceglie il file con estensione zip e lo si decomprime autonomamente, Xamarin.Android non sa dove cercare l'SDK. È possibile indicare a Xamarin.Android il percorso dell'SDK in Visual Studio passando a **strumenti > opzioni > novell > Android Settings**:
+Se si sceglie il programma di installazione con estensione exe, vengono scritte le chiavi del registro di sistema che indicano a Xamarin.Android dove è stato installato. Se si sceglie il file con estensione zip e lo si decomprime autonomamente, Xamarin.Android non sa dove cercare l'SDK. È possibile indicare a Xamarin.Android il percorso dell'SDK in Visual Studio passando a **strumenti > opzioni > Xamarin > Android Settings**:
 
-[![Android SDK percorso nelle impostazioni di Novell Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+[![Android SDK percorso nelle impostazioni di Xamarin Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 ## <a name="ide-does-not-display-target-device"></a>IDE non Visualizza il dispositivo di destinazione
 

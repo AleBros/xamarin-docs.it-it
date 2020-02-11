@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/16/2018
 ms.openlocfilehash: 617c04e2f40af535fb381362a389524d693fad0b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025645"
@@ -448,7 +448,7 @@ Di seguito è riportato un esempio di una notifica di base di Android 5,0 &ndash
 
 ![Notifica normale di esempio](local-notifications-images/13-sample-notification.png)
 
-Di seguito è riportata una schermata della notifica dopo averla modificata per visualizzare un'icona di grandi dimensioni &ndash; usa un'icona creata da un'immagine di una scimmia di codice Novell:
+Di seguito è riportata una schermata della notifica dopo averla modificata per visualizzare un'icona di grandi dimensioni &ndash; usa un'icona creata da un'immagine di una scimmia di codice Xamarin:
 
 ![Esempio di notifica icone grandi](local-notifications-images/14-large-icon-sample.png)
 

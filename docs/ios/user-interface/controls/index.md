@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: a4bf0b89a9ab336bf47ddcd104760211d912f423
 ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663434"
@@ -70,7 +70,7 @@ Il controllo di visualizzazione stack (`UIStackView`) sfrutta la potenza del lay
 
 ## <a name="tables-and-cellstablesindexmd"></a>[Tabelle e celle](tables/index.md)
 
-in questa sezione vengono presentate le classi utilizzate per creare e visualizzare le tabelle, quindi vengono forniti esempi di utilizzo in Xamarin.iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Novell iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
+in questa sezione vengono presentate le classi utilizzate per creare e visualizzare le tabelle, quindi vengono forniti esempi di utilizzo in Xamarin.iOS. Verrà utilizzato l'aspetto predefinito per le tabelle, la personalizzazione del layout, l'implementazione della modifica e l'utilizzo di Xamarin iOS designer per progettare una tabella visivamente. In alcuni casi, la visualizzazione è ovviamente un elenco di righe (ad esempio l'app musica) e altre volte è difficile riconoscere il controllo tabella, ad esempio la modifica nell'app Contatti o una conversazione nell'app messaggi.
 
 ## <a name="text-inputtext-inputmd"></a>[Input di testo](text-input.md)
 

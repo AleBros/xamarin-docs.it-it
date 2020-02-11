@@ -1,6 +1,6 @@
 ---
-title: Risorse e archiviazione dei dati di tvOS in Novell
-description: Questo articolo descrive come usare l'archiviazione di risorse e dati permanenti in un'app tvOS compilata con Novell. Illustra l'archiviazione dei dati iCloud e le risorse su richiesta.
+title: Risorse e archiviazione dei dati di tvOS in Xamarin
+description: Questo articolo descrive come usare l'archiviazione di risorse e dati permanenti in un'app tvOS compilata con Xamarin. Illustra l'archiviazione dei dati iCloud e le risorse su richiesta.
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: d84752afd5579216272895f750522a8f38ece34a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030801"
 ---
-# <a name="tvos-resources-and-data-storage-in-xamarin"></a>Risorse e archiviazione dei dati di tvOS in Novell
+# <a name="tvos-resources-and-data-storage-in-xamarin"></a>Risorse e archiviazione dei dati di tvOS in Xamarin
 
 _Questo articolo illustra l'uso delle risorse e dell'archiviazione dei dati permanenti in un'app Xamarin.tvOS._
 

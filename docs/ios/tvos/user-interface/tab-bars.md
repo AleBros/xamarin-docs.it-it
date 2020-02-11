@@ -1,6 +1,6 @@
 ---
-title: Uso dei controller della barra schede tvOS in Novell
-description: Questo documento descrive come usare i controller della barra schede in un'app tvOS compilata con Novell. Offre una visualizzazione di alto livello delle barre delle schede e illustra gli elementi della barra delle schede, l'integrazione dello storyboard e gli elementi della barra delle schede.
+title: Uso dei controller della barra schede tvOS in Xamarin
+description: Questo documento descrive come usare i controller della barra schede in un'app tvOS compilata con Xamarin. Offre una visualizzazione di alto livello delle barre delle schede e illustra gli elementi della barra delle schede, l'integrazione dello storyboard e gli elementi della barra delle schede.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: a4adc692680c0556a3cfb07b1a9f45963a81d199
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022131"
 ---
-# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Novell
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Xamarin
 
 Per molti tipi di app tvOS, la navigazione principale viene visualizzata come barra scheda in esecuzione nella parte superiore della schermata. L'utente scorre verso sinistra e verso destra nell'elenco delle categorie possibili e l'area di contenuto sotto le modifiche per riflettere la selezione dell'utente.
 

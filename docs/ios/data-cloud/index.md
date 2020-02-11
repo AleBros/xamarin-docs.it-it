@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/13/2017
 ms.openlocfilehash: e9f910804f3da9d173206d51c59e1d7ddd9b90a6
 ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663512"
@@ -18,7 +18,7 @@ ms.locfileid: "75663512"
 
 ## <a name="data-accessiosdata-clouddataindexmd"></a>[Accesso ai dati](~/ios/data-cloud/data/index.md)
 
-Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database. iOS dispone del motore di database SQLite "built in" e l'accesso ai dati viene semplificato dalla piattaforma Novell, che viene fornita con la provider di dati SQLite.
+Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database. iOS dispone del motore di database SQLite "built in" e l'accesso ai dati viene semplificato dalla piattaforma Xamarin, che viene fornita con la provider di dati SQLite.
 
 ## <a name="icloudiosdata-cloudintroduction-to-icloudmd"></a>[iCloud](~/ios/data-cloud/introduction-to-icloud.md)
 

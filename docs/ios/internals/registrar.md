@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/29/2018
 ms.openlocfilehash: f38c49ce9334a5659f0a8b5dd03e3bae8863cf5a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022271"
@@ -132,7 +132,7 @@ Questo nuovo sistema di registrazione offre le seguenti nuove funzionalità:
   - Due classi registrate con lo stesso nome.
   - Più di un metodo esportato per rispondere allo stesso selettore
 - Rimozione del codice nativo non usato:
-  - Il nuovo sistema di registrazione aggiungerà riferimenti sicuri al codice usato nelle librerie statiche, consentendo al linker nativo di rimuovere il codice nativo inutilizzato dal file binario risultante. Nelle associazioni di esempio di Novell, la maggior parte delle applicazioni diventa almeno 300K più piccola.
+  - Il nuovo sistema di registrazione aggiungerà riferimenti sicuri al codice usato nelle librerie statiche, consentendo al linker nativo di rimuovere il codice nativo inutilizzato dal file binario risultante. Nelle associazioni di esempio di Xamarin, la maggior parte delle applicazioni diventa almeno 300K più piccola.
 
 - Supporto per sottoclassi generiche di `NSObject`; Per ulteriori informazioni, vedere [generics NSObject](~/ios/internals/api-design/nsobject-generics.md) . Inoltre, il nuovo sistema di registrazione rileverà costrutti generici non supportati che in precedenza avrebbero causato un comportamento casuale in fase di esecuzione.
 
@@ -192,7 +192,7 @@ Alcuni aspetti da tenere presenti sul nuovo Registrar:
 - `--registrar:dynamic`: predefinito per le compilazioni del simulatore
 
 > [!NOTE]
-> Il API classica di Novell supportava altre opzioni, ad esempio `--registrar:legacystatic` e `--registrar:legacydynamic`. Tuttavia, queste opzioni non sono supportate dal API unificata.
+> Il API classica di Xamarin supportava altre opzioni, ad esempio `--registrar:legacystatic` e `--registrar:legacydynamic`. Tuttavia, queste opzioni non sono supportate dal API unificata.
 
 ## <a name="shortcomings-in-the-old-registration-system"></a>Carenze nel vecchio sistema di registrazione
 

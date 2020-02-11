@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 10cdec5755a5fa45989396ce53da15233553a88f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73005083"
@@ -51,7 +51,7 @@ Tutti gli esempi vengono eseguiti in Android, iOS, Mac e Windows.
 
 ## <a name="copyright"></a>Copyright
 
-Questa documentazione contiene contenuti originali di Novell Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.
+Questa documentazione contiene contenuti originali di Xamarin Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.
 
 ## <a name="license"></a>Licenza
 

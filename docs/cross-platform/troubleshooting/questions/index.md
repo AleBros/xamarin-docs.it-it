@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 05/08/2018
 ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728176"
@@ -24,9 +24,9 @@ Questa guida elenca le risorse e i metodi per determinare se la libreria esisten
 Microsoft ha sviluppato una nuova API di reflection da usare nelle librerie di classi portabili. Se si dispone di un codice di Reflection esistente che si desidera spostare in una libreria di classi portabile, potrebbe non funzionare.
 
 ### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
-Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi `System.Diagnostics.Tracing` PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
+Xamarin.iOS e Xamarin.Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Xamarin consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Xamarin.iOS né Xamarin.Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi `System.Diagnostics.Tracing` PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
 
-## <a name="nuget-packages--xamarin-components"></a>Pacchetti NuGet & componenti Novell
+## <a name="nuget-packages--xamarin-components"></a>Pacchetti NuGet & componenti Xamarin
 ### <a name="how-can-i-update-nugetnuget-updatemd"></a>[Come si aggiorna NuGet?](nuget-update.md)
 Gli aggiornamenti, le estensioni e i componenti aggiuntivi di NuGet sono disponibili nella scheda **aggiornamenti** di **Gestione pacchetti NuGet**. La navigazione dettagliata per trovare gli aggiornamenti in Visual Studio per Mac & Visual Studio è illustrata in questa guida.
 
@@ -40,11 +40,11 @@ Questo problema è stato segnalato principalmente per le soluzioni di esempio di
 Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma per semplificare le operazioni per gli sviluppatori, abbiamo ora unificato i nostri componenti e pacchetti NuGet in due. In quasi tutti i casi, è necessario usare Google Play Services. L'unico motivo per usare il pacchetto (Froyo) è la destinazione attiva di Froyo.
 
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[In quale posizione sono archiviati i componenti nel computer?](component-storage.md)
-Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
+Ogni volta che si installa un componente Xamarin in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Dove si possono trovare informazioni sulla versione e i log?](version-logs.md)
-Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Novell.
+Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Xamarin.
 
 ### <a name="when-and-how-should-i-file-a-bug-reporthowto-file-bugmd"></a>[Quando e come è opportuno registrare un report sui bug?](howto-file-bug.md)
 Questa guida fornisce suggerimenti per la creazione di report di bug di alta qualità, in modo che i tecnici siano in grado di determinare la causa (e le eventuali correzioni potenziali) per un problema in modo più efficiente.

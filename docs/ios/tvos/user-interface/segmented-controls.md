@@ -1,6 +1,6 @@
 ---
-title: Uso di controlli segmentati tvOS in Novell
-description: Questo documento descrive come usare i controlli segmentati tvOS in un'app compilata con Novell. Illustra le icone del segmento e il testo, gli eventi, la modifica dell'aspetto del controllo e altro ancora.
+title: Uso di controlli segmentati tvOS in Xamarin
+description: Questo documento descrive come usare i controlli segmentati tvOS in un'app compilata con Xamarin. Illustra le icone del segmento e il testo, gli eventi, la modifica dell'aspetto del controllo e altro ancora.
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 0bedd898232b39898e6079a204bd7409587cde82
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030403"
 ---
-# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Novell
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Xamarin
 
 Un controllo segmentato fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o un testo, e viene usato per fornire un set di scelte correlate all'utente.
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 48519431a65fba0cdc61062021ad86fb53854ef3
 ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/01/2019
 ms.locfileid: "73425468"
@@ -217,7 +217,7 @@ Quando si converte un progetto Xamarin.Forms esistente dal API classica al nuovo
 
 ### <a name="components"></a>Componenti
 
-Tutti i componenti inclusi nell'applicazione dovranno anche essere aggiornati al API unificata o si verifica un conflitto quando si tenta di eseguire la compilazione. Per qualsiasi componente incluso, sostituire la versione corrente con una nuova versione dall'archivio componenti di Novell che supporta il API unificata ed eseguire una compilazione pulita. Per tutti i componenti che non sono stati ancora convertiti dall'autore, verrà visualizzato un avviso solo 32 bit nell'archivio componenti.
+Tutti i componenti inclusi nell'applicazione dovranno anche essere aggiornati al API unificata o si verifica un conflitto quando si tenta di eseguire la compilazione. Per qualsiasi componente incluso, sostituire la versione corrente con una nuova versione dall'archivio componenti di Xamarin che supporta il API unificata ed eseguire una compilazione pulita. Per tutti i componenti che non sono stati ancora convertiti dall'autore, verrà visualizzato un avviso solo 32 bit nell'archivio componenti.
 
 ### <a name="nuget-support"></a>Supporto NuGet
 

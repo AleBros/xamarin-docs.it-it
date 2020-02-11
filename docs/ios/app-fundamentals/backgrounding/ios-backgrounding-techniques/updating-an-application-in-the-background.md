@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 2d56af364d63ff78bafbdd7d8043ae4d75d97959
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73010704"
@@ -124,7 +124,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 }
 ```
 
-Le notifiche remote devono essere usate per aggiornamenti non frequenti con contenuto cruciale per la funzionalità dell'applicazione. Per altre informazioni sulle notifiche remote, vedere la Guida alle [notifiche push di Novell in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) .
+Le notifiche remote devono essere usate per aggiornamenti non frequenti con contenuto cruciale per la funzionalità dell'applicazione. Per altre informazioni sulle notifiche remote, vedere la Guida alle [notifiche push di Xamarin in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) .
 
 > [!IMPORTANT]
 > Poiché il meccanismo di aggiornamento nelle notifiche remote è basato sul recupero in background, l'applicazione deve avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento entro 30 secondi dalla ricezione della notifica oppure iOS terminerà l'applicazione. È consigliabile associare notifiche remote con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di grandi dimensioni in background.

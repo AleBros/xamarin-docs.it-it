@@ -1,6 +1,6 @@
 ---
-title: Introduzione con watchos in Novell
-description: Questo documento contiene collegamenti a diverse guide che illustrano come iniziare a usare watchos per lo sviluppo con Novell. Il contenuto collegato fornisce un'introduzione a watchos, spiega come installare il supporto di watchos per Novell e Mostra come compilare un'applicazione iniziale.
+title: Introduzione con watchos in Xamarin
+description: Questo documento contiene collegamenti a diverse guide che illustrano come iniziare a usare watchos per lo sviluppo con Xamarin. Il contenuto collegato fornisce un'introduzione a watchos, spiega come installare il supporto di watchos per Xamarin e Mostra come compilare un'applicazione iniziale.
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: d7f693d1c91316290bb7f562a904ef3d5735bc42
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021737"
 ---
-# <a name="getting-started-with-watchos-in-xamarin"></a>Introduzione con watchos in Novell
+# <a name="getting-started-with-watchos-in-xamarin"></a>Introduzione con watchos in Xamarin
 
 _Introduzione a watchos e come creare app di controllo_
 
@@ -29,4 +29,4 @@ Come creare, compilare e avviare un nuovo progetto watchos.
 
 ## <a name="hello-watchioswatchosget-startedhello-watchmd"></a>[Salve, Guarda](~/ios/watchos/get-started/hello-watch.md)
 
-Crea la tua prima app watchos C# con e Novell.
+Crea la tua prima app watchos C# con e Xamarin.

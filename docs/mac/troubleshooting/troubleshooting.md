@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001602"
@@ -19,7 +19,7 @@ ms.locfileid: "73001602"
 
 ## <a name="overview"></a>Panoramica
 
-A volte si rimane bloccati quando si lavora a un progetto, in quanto non è possibile ottenere un'API per lavorare nel modo desiderato o nel tentativo di aggirare un bug. L'obiettivo di Novell è quello di poter scrivere le applicazioni per dispositivi mobili e desktop e sono state fornite alcune risorse per aiutare.
+A volte si rimane bloccati quando si lavora a un progetto, in quanto non è possibile ottenere un'API per lavorare nel modo desiderato o nel tentativo di aggirare un bug. L'obiettivo di Xamarin è quello di poter scrivere le applicazioni per dispositivi mobili e desktop e sono state fornite alcune risorse per aiutare.
 
 Con una qualsiasi di queste risorse, è possibile eseguire alcune operazioni di preparazione che consentono di risolvere rapidamente il problema:
 
@@ -112,7 +112,7 @@ Immettere `Entitlements` per il nome e fare clic sul pulsante **nuovo** . Se il 
 
 ## <a name="community-support-on-the-forums"></a>Supporto della community nei forum
 
-La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Xamarin.Mac](https://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
+La community di sviluppatori che usano i prodotti Xamarin è straordinaria e molti visitano i nostri [forum Xamarin.Mac](https://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Xamarin visitano periodicamente il forum per assistenza.
 
 <a name="filing-a-bug"/>
 

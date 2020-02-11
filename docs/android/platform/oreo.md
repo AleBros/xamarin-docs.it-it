@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 07/06/2018
 ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73020004"
@@ -27,7 +27,7 @@ Questo articolo è strutturato per iniziare a sviluppare app Xamarin.Android per
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare le funzionalità di Android Oreo nelle app basate su Novell, è necessario quanto segue:
+Per usare le funzionalità di Android Oreo nelle app basate su Xamarin, è necessario quanto segue:
 
 - **Visual studio** &ndash; se si usa Windows, è necessaria la versione 15,5 o successiva di Visual Studio.  Se si usa un Mac, è necessario Visual Studio per Mac versione 7.2.0.
 
@@ -71,11 +71,11 @@ Per aggiungere il supporto di Android Oreo a Visual Studio, eseguire le operazio
 
 -----
 
-Per altre informazioni sul supporto di Novell per Android Oreo, vedere le [Note sulla versione di Xamarin.Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
+Per altre informazioni sul supporto di Xamarin per Android Oreo, vedere le [Note sulla versione di Xamarin.Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
-Per creare un progetto con Xamarin.Android 8,0, è necessario prima di tutto usare Novell Android SDK Manager per installare la piattaforma SDK per **Android 8,0-Oreo** o versione successiva. È necessario installare anche Android SDK Tools 26,0 o versione successiva.
+Per creare un progetto con Xamarin.Android 8,0, è necessario prima di tutto usare Xamarin Android SDK Manager per installare la piattaforma SDK per **Android 8,0-Oreo** o versione successiva. È necessario installare anche Android SDK Tools 26,0 o versione successiva.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -105,7 +105,7 @@ Per creare un progetto con Xamarin.Android 8,0, è necessario prima di tutto usa
 
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
+Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Xamarin, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 8,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 8,0, è necessario configurare il livello API Android di destinazione del progetto su **android 8,0 (API 26)**. Si consiglia inoltre di impostare il livello di Framework di destinazione su API 26 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -123,7 +123,7 @@ Se si tenta di avviare il gestore AVD basato su Google GUI predefinito dopo l'in
 
 -----
 
-Questo messaggio viene visualizzato perché Google non fornisce più un Manager autonomo di GUI AVD che supporta l'API 26,0 e versioni successive. Per Android 8,0 Oreo è necessario usare Novell emulatore Android Manager o lo strumento da riga di comando `avdmanager` per creare dispositivi virtuali per Android Oreo.
+Questo messaggio viene visualizzato perché Google non fornisce più un Manager autonomo di GUI AVD che supporta l'API 26,0 e versioni successive. Per Android 8,0 Oreo è necessario usare Xamarin emulatore Android Manager o lo strumento da riga di comando `avdmanager` per creare dispositivi virtuali per Android Oreo.
 
 Per usare la Android Device Manager per creare e gestire i dispositivi virtuali, vedere [gestione di dispositivi virtuali con il Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Per creare dispositivi virtuali senza il Android Device Manager, attenersi alla procedura descritta nella sezione successiva.
@@ -134,14 +134,14 @@ Per usare **avdmanager** per creare un nuovo dispositivo virtuale, seguire quest
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Aprire una finestra del prompt dei comandi e impostare `JAVA_HOME` sul percorso di Java SDK nel computer. Per un'installazione Novell tipica, è possibile usare il comando seguente:
+1. Aprire una finestra del prompt dei comandi e impostare `JAVA_HOME` sul percorso di Java SDK nel computer. Per un'installazione Xamarin tipica, è possibile usare il comando seguente:
 
     ```cmd
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
 2. Aggiungere il percorso della cartella Android SDK `bin` al `PATH`.
-    Per un'installazione Novell tipica, è possibile usare il comando seguente:
+    Per un'installazione Xamarin tipica, è possibile usare il comando seguente:
 
     ```cmd
     setx PATH "%PATH%;C:\Program Files (x86)\Android\android-sdk\tools\bin"
@@ -161,7 +161,7 @@ Dopo aver **avdmanagerto** la creazione del dispositivo virtuale, questo verrà 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Aprire una finestra del **terminale** e passare alla posizione della directory Android SDK Tools nel Mac. Per un'installazione Novell tipica, è possibile usare il comando seguente:
+1. Aprire una finestra del **terminale** e passare alla posizione della directory Android SDK Tools nel Mac. Per un'installazione Xamarin tipica, è possibile usare il comando seguente:
 
     ```bash
     cd ~/Library/Developer/Xamarin/android-sdk-macosx/tools/bin

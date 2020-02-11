@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 9c5714d5819831047d10d83b4de01fc826b9cc01
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031475"
@@ -368,7 +368,7 @@ Quando viene usato con Facebook, il `SLComposeViewController` Visualizza una vis
 
 ### <a name="calling-facebook-graph-api"></a>Chiamata di Facebook API Graph
 
-Analogamente all'esempio di Twitter, l'oggetto `SLRequest` del Framework di social networking può essere usato con l'API Graph di Facebook. Il codice seguente, ad esempio, restituisce informazioni dall'API Graph sull'account Novell (espandendo il codice riportato sopra):
+Analogamente all'esempio di Twitter, l'oggetto `SLRequest` del Framework di social networking può essere usato con l'API Graph di Facebook. Il codice seguente, ad esempio, restituisce informazioni dall'API Graph sull'account Xamarin (espandendo il codice riportato sopra):
 
 ```csharp
 using Accounts;

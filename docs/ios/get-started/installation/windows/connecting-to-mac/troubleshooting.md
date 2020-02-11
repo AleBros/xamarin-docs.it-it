@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
 ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/11/2020
 ms.locfileid: "75886567"
@@ -133,7 +133,7 @@ Causa nota:
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentativo di connessione..." non giunge mai a completamento
 
-- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. (A partire da Novell 4,2, questo scenario porta invece il messaggio di errore "Impossibile connettersi"). **Soluzione alternativa**: ripristinare la **Shell di accesso** con il valore predefinito originale di **/bin/bash**.
+- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. (A partire da Xamarin 4,2, questo scenario porta invece il messaggio di errore "Impossibile connettersi"). **Soluzione alternativa**: ripristinare la **Shell di accesso** con il valore predefinito originale di **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -147,7 +147,7 @@ Cause segnalate:
 
 - **Bug [n. 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : questo errore si verifica in alcuni casi quando l'utente usa una connessione di rete wireless tra l'host di compilazione Mac e Windows. **Soluzione alternativa possibile**: spostare entrambi i computer in una connessione di rete cablata.
 
-- **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. (A partire da Novell 4,1, gli errori nel file con **estensione bashrc** non avranno più effetto sul processo di connessione). **Soluzione alternativa**: spostare il file con **estensione bashrc** in un percorso di backup oppure eliminarlo se si è certi che non è necessario.
+- **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. (A partire da Xamarin 4,1, gli errori nel file con **estensione bashrc** non avranno più effetto sul processo di connessione). **Soluzione alternativa**: spostare il file con **estensione bashrc** in un percorso di backup oppure eliminarlo se si è certi che non è necessario.
 
 - **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione alternativa**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 

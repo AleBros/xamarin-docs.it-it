@@ -1,6 +1,6 @@
 ---
 title: Panoramica di API unificata
-description: Il API unificata di Novell consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario.
+description: Il API unificata di Xamarin consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
@@ -8,17 +8,17 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 372a51ba204b3b87d1bb3917b26c0ffb8acfceb6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015129"
 ---
 # <a name="unified-api-overview"></a>Panoramica di API unificata
 
-Il API unificata di Novell consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario. Il API unificata viene usato per impostazione predefinita nei nuovi progetti Xamarin.iOS e Xamarin.Mac.
+Il API unificata di Xamarin consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario. Il API unificata viene usato per impostazione predefinita nei nuovi progetti Xamarin.iOS e Xamarin.Mac.
 
 > [!IMPORTANT]
-> Il API classica Novell, che precedeva il API unificata, è stato deprecato. 
+> Il API classica Xamarin, che precedeva il API unificata, è stato deprecato. 
 >
 > - L'ultima versione di Xamarin.iOS per supportare il API classica (MonoTouch. dll) era Xamarin.iOS 9,10.
 > - Xamarin.Mac supporta ancora la API classica, ma non viene più aggiornata. Poiché è deprecato, gli sviluppatori devono spostare le applicazioni nel API unificata.
@@ -210,7 +210,7 @@ Si noti che anche il `.ctor(NSObjectFlag)` ora è `protected` ma che è stato us
 
 Con le API unificate, `NSAction` è stato rimosso a favore del `Action`.NET standard. Si tratta di un grande miglioramento perché `Action` è un tipo .NET comune, mentre `NSAction` era specifico di Xamarin.iOS. Entrambi eseguono esattamente la stessa operazione, ma sono tipi distinti e incompatibili e hanno comportato la scrittura di più codice per ottenere lo stesso risultato.
 
-Ad esempio, se l'applicazione Novell esistente include il codice seguente:
+Ad esempio, se l'applicazione Xamarin esistente include il codice seguente:
 
 ```csharp
 UITapGestureRecognizer singleTap = new UITapGestureRecognizer (new NSAction (delegate() {

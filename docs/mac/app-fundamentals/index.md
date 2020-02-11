@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 12/17/2015
 ms.openlocfilehash: 2603360162ee9918e83b9f5c74b8086f71d02df8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030094"
@@ -62,4 +62,4 @@ Questo articolo illustra come usare una classe helper per controllare la riprodu
 
 ## <a name="reporting-bugsmacapp-fundamentalstroubleshootingmd"></a>[Segnalazione di bug](~/mac/app-fundamentals/troubleshooting.md)
 
-A volte si rimane bloccati quando si lavora a un progetto, in quanto non è possibile ottenere un'API per lavorare nel modo desiderato o nel tentativo di aggirare un bug. L'obiettivo di Novell è quello di poter scrivere le applicazioni per dispositivi mobili e desktop e sono state fornite alcune risorse per aiutare.
+A volte si rimane bloccati quando si lavora a un progetto, in quanto non è possibile ottenere un'API per lavorare nel modo desiderato o nel tentativo di aggirare un bug. L'obiettivo di Xamarin è quello di poter scrivere le applicazioni per dispositivi mobili e desktop e sono state fornite alcune risorse per aiutare.

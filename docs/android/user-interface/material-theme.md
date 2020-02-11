@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 5e83e34dab407c5be84fc5b4c3c0c445d56907e3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028753"
@@ -38,7 +38,7 @@ Poiché tema materiale è supportato solo in Android 5,0 e versioni successive, 
 
 ## <a name="requirements"></a>Requisiti
 
-Gli elementi seguenti sono necessari per usare le nuove funzionalità del tema materiale Android 5,0 nelle app basate su Novell:
+Gli elementi seguenti sono necessari per usare le nuove funzionalità del tema materiale Android 5,0 nelle app basate su Xamarin:
 
 - **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 

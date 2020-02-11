@@ -1,6 +1,6 @@
 ---
 title: Localizzazione Android
-description: In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Novell.
+description: In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Xamarin.
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: ae97297b81d33c4b9f814d4b3639984b05ce3d72
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021660"
 ---
 # <a name="android-localization"></a>Localizzazione Android
 
-_In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Novell._
+_In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Xamarin._
 
 ## <a name="android-platform-features"></a>Funzionalità della piattaforma Android
 
@@ -81,7 +81,7 @@ La maggior parte degli sviluppatori ha già familiarità con l'uso dei suffissi 
 ![Screenshot delle cartelle risorse/riportabili e di risorse/valori per più identificatori culturali](localization-images/resources.png)
 
 > [!NOTE]
-> Quando si specifica una lingua di primo livello, ad esempio `es` sono necessari solo due caratteri; Tuttavia, quando si specificano le impostazioni locali complete, il formato del nome di directory richiede un trattino e un **r** minuscolo per separare le due parti, ad esempio **PT-rBR** o **ZH-rCN**. Confrontare questo valore con il valore restituito nel codice, che presenta un carattere di sottolineatura, ad esempio `pt_BR`). Entrambi sono diversi dal valore di .NET `CultureInfo` Class USA, che ha solo un trattino (ad esempio, `pt-BR`). Tenere presenti queste differenze quando si lavora su piattaforme Novell.
+> Quando si specifica una lingua di primo livello, ad esempio `es` sono necessari solo due caratteri; Tuttavia, quando si specificano le impostazioni locali complete, il formato del nome di directory richiede un trattino e un **r** minuscolo per separare le due parti, ad esempio **PT-rBR** o **ZH-rCN**. Confrontare questo valore con il valore restituito nel codice, che presenta un carattere di sottolineatura, ad esempio `pt_BR`). Entrambi sono diversi dal valore di .NET `CultureInfo` Class USA, che ha solo un trattino (ad esempio, `pt-BR`). Tenere presenti queste differenze quando si lavora su piattaforme Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Formato file Strings. XML
 

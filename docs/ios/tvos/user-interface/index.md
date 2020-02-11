@@ -1,5 +1,5 @@
 ---
-title: Creazione di interfacce utente tvOS con Novell
+title: Creazione di interfacce utente tvOS con Xamarin
 description: Copertura dell'esperienza utente generale (UX), inclusi i controlli dell'interfaccia utente, usare i principi di progettazione Interface Builder e UX di Xcode quando si lavora con Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
@@ -9,16 +9,16 @@ ms.author: daortin
 ms.date: 06/07/2016
 ms.openlocfilehash: c8bf8aad6804fcbbc984b942fdafd12522299998
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030454"
 ---
-# <a name="building-tvos-user-interfaces-with-xamarin"></a>Creazione di interfacce utente tvOS con Novell
+# <a name="building-tvos-user-interfaces-with-xamarin"></a>Creazione di interfacce utente tvOS con Xamarin
 
 _Copertura dell'esperienza utente generale (UX), inclusi i controlli dell'interfaccia utente, usare i principi di progettazione Interface Builder e UX di Xcode quando si lavora con Xamarin.tvOS._
 
-Quando si lavora C# con e .NET in un tvOS basato su Novell, è possibile accedere agli stessi controlli dell'interfaccia utente che uno sviluppatore lavora in Objective-C o SWIFT e Xcode. Il Interface Builder di Xcode può essere usato per creare e gestire le interfacce utente oppure, facoltativamente, per crearle direttamente nel C# codice.
+Quando si lavora C# con e .NET in un tvOS basato su Xamarin, è possibile accedere agli stessi controlli dell'interfaccia utente che uno sviluppatore lavora in Objective-C o SWIFT e Xcode. Il Interface Builder di Xcode può essere usato per creare e gestire le interfacce utente oppure, facoltativamente, per crearle direttamente nel C# codice.
 
 Le guide elencate di seguito forniscono informazioni dettagliate sull'uso degli elementi dell'interfaccia utente di tvOS in un'app Xamarin.tvOS. Si consiglia di usare prima di tutto il [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md) , in quanto copre i concetti chiave e le tecniche che verranno usati in ogni articolo.
 
@@ -76,4 +76,4 @@ Questo articolo illustra come progettare e usare i campi di testo e di ricerca a
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Creazione di app per tvOS con Novell (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [Creazione di app per tvOS con Xamarin (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

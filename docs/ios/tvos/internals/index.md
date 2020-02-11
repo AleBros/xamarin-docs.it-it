@@ -1,6 +1,6 @@
 ---
-title: tvOS in Novell-elementi interni
-description: Documenti che descrivono il funzionamento interno di tvOS in Novell, basato su Xamarin.iOS. Il contenuto del collegamento illustra gli assembly, i Framework di destinazione e i concetti relativi a iOS correlati.
+title: tvOS in Xamarin-elementi interni
+description: Documenti che descrivono il funzionamento interno di tvOS in Xamarin, basato su Xamarin.iOS. Il contenuto del collegamento illustra gli assembly, i Framework di destinazione e i concetti relativi a iOS correlati.
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
@@ -9,16 +9,16 @@ ms.author: daortin
 ms.date: 06/07/2016
 ms.openlocfilehash: 4712b7b75e735da047d7f44f7c6c47f42b9ad7a8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030652"
 ---
-# <a name="tvos-in-xamarin-internals"></a>tvOS in Novell-elementi interni 
+# <a name="tvos-in-xamarin-internals"></a>tvOS in Xamarin-elementi interni 
 
 ## <a name="assembliesiostvosinternalsassembliesmd"></a>[Assembly](~/ios/tvos/internals/assemblies.md)
 
-Elenco degli assembly supportati da Novell per le applicazioni Xamarin.tvOS.
+Elenco degli assembly supportati da Xamarin per le applicazioni Xamarin.tvOS.
 
 ## <a name="target-frameworksiostvosinternalsframeworksmd"></a>[Framework di destinazione](~/ios/tvos/internals/frameworks.md)
 

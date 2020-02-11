@@ -1,6 +1,6 @@
 ---
-title: Uso della localizzazione watchos in Novell
-description: Questo documento descrive come localizzare le app watchos compilate con Novell. Illustra le app Watch, le estensioni Watch, le stringhe nel codice, il testo dello storyboard, i test e altro ancora.
+title: Uso della localizzazione watchos in Xamarin
+description: Questo documento descrive come localizzare le app watchos compilate con Xamarin. Illustra le app Watch, le estensioni Watch, le stringhe nel codice, il testo dello storyboard, i test e altro ancora.
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 82b739697705ac4c90390a36405d755a5f523159
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028409"
 ---
-# <a name="working-with-watchos-localization-in-xamarin"></a>Uso della localizzazione watchos in Novell
+# <a name="working-with-watchos-localization-in-xamarin"></a>Uso della localizzazione watchos in Xamarin
 
 _Adattamento delle app watchos per più lingue_
 

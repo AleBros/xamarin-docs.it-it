@@ -1,6 +1,6 @@
 ---
-title: Controlli tabella watchos in Novell
-description: Questo documento descrive come usare i controlli tabella watchos in Novell. Viene illustrata l'aggiunta di una tabella, l'aggiunta di un controller di riga, la creazione e il popolamento di righe, la risposta ai tocchi e altro ancora.
+title: Controlli tabella watchos in Xamarin
+description: Questo documento descrive come usare i controlli tabella watchos in Xamarin. Viene illustrata l'aggiunta di una tabella, l'aggiunta di un controller di riga, la creazione e il popolamento di righe, la risposta ai tocchi e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032671"
 ---
-# <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Novell
+# <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Xamarin
 
 Il controllo `WKInterfaceTable` watchos è molto più semplice rispetto alla controparte iOS, ma esegue un ruolo simile. Viene creato un elenco scorrevole di righe che possono avere layout personalizzati e che rispondono agli eventi di tocco.
 

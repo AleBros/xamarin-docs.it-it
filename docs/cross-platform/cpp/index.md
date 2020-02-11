@@ -1,24 +1,24 @@
 ---
 ms.assetid: EA2D979E-9151-4CE9-9289-13B6A979838B
-title: Usare C/C++ librerie con Novell
-description: Visual Studio per Mac può essere usato per compilare e integrare C/C++ codice multipiattaforma nelle app per dispositivi mobili per Android e iOS, usando Novell C#e. Questo articolo illustra come configurare ed eseguire il debug di C++ un progetto in un'app Novell.
+title: Usare C/C++ librerie con Xamarin
+description: Visual Studio per Mac può essere usato per compilare e integrare C/C++ codice multipiattaforma nelle app per dispositivi mobili per Android e iOS, usando Xamarin C#e. Questo articolo illustra come configurare ed eseguire il debug di C++ un progetto in un'app Xamarin.
 author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
 ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
 ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/08/2019
 ms.locfileid: "73842810"
 ---
-# <a name="use-cc-libraries-with-xamarin"></a>Usare C/C++ librerie con Novell
+# <a name="use-cc-libraries-with-xamarin"></a>Usare C/C++ librerie con Xamarin
 
 ## <a name="overview"></a>Panoramica
 
-Novell consente agli sviluppatori di creare app per dispositivi mobili native multipiattaforma con Visual Studio. In genere C# , le associazioni vengono utilizzate per esporre i componenti della piattaforma esistenti agli sviluppatori. In alcuni casi, tuttavia, le app Novell devono usare basi di codice esistenti. A volte i team non hanno il tempo, il budget o le risorse per trasferire una codebase di C#grandi dimensioni, ben collaudata e altamente ottimizzata.
+Xamarin consente agli sviluppatori di creare app per dispositivi mobili native multipiattaforma con Visual Studio. In genere C# , le associazioni vengono utilizzate per esporre i componenti della piattaforma esistenti agli sviluppatori. In alcuni casi, tuttavia, le app Xamarin devono usare basi di codice esistenti. A volte i team non hanno il tempo, il budget o le risorse per trasferire una codebase di C#grandi dimensioni, ben collaudata e altamente ottimizzata.
 
-[Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) consente C# di compilare il codice C/C++ e come parte della stessa soluzione, offrendo molti vantaggi, tra cui un'esperienza di debug unificata. Microsoft ha usato C/C++ e Novell in questo modo per fornire app come la fotocamera con [dispositivi mobili iperscaduti](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [pix](https://www.microsoft.com/microsoftpix).
+[Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) consente C# di compilare il codice C/C++ e come parte della stessa soluzione, offrendo molti vantaggi, tra cui un'esperienza di debug unificata. Microsoft ha usato C/C++ e Xamarin in questo modo per fornire app come la fotocamera con [dispositivi mobili iperscaduti](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [pix](https://www.microsoft.com/microsoftpix).
 
 Tuttavia, in alcuni casi è preferibile (o requisito) che i processi C/C++ strumenti e i processi esistenti vengano mantenuti e che il codice di libreria venga separato dall'applicazione, considerando la libreria come se fosse simile a un componente di terze parti. In queste situazioni, la sfida non solo espone i membri rilevanti a C# ma gestisce la libreria come dipendenza. E, naturalmente, automatizzare il maggior parte del processo possibile.  
 
@@ -32,16 +32,16 @@ Infine, il codice deve essere compilato ed eseguito correttamente in tutte le pi
 
 ## <a name="high-level-approach"></a>Approccio di alto livello
 
-La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Novell multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Xamarin.Forms.
+La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Xamarin multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Xamarin.Forms.
 
-![Approccio di alto livello per l'utilizzo diC++ C/con Novell](images/cpp-steps.jpg)
+![Approccio di alto livello per l'utilizzo diC++ C/con Xamarin](images/cpp-steps.jpg)
 
 Le quattro fasi sono:
 
 1. Compilazione del codice C/C++ source nelle librerie native specifiche della piattaforma.
 2. Wrapping delle librerie native con una soluzione di Visual Studio.
 3. Compressione e push di un pacchetto NuGet per il wrapper .NET.
-4. Utilizzo del pacchetto NuGet da un'app Novell.
+4. Utilizzo del pacchetto NuGet da un'app Xamarin.
 
 ### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>Fase 1: compilazione del codice sorgente/C++ C nelle librerie native specifiche della piattaforma
 
@@ -63,7 +63,7 @@ Infine, l'output di questa fase è costituito da un set di librerie .NET, uno pe
 
 **Fase 3: compressione e push di un pacchetto NuGet per il wrapper .NET**
 
-La terza fase sta creando un pacchetto NuGet usando gli artefatti di compilazione del passaggio precedente. Il risultato di questo passaggio è un pacchetto NuGet che può essere utilizzato da un'app Novell. Nella procedura dettagliata viene usata una directory locale che funge da feed NuGet. In produzione, questo passaggio deve pubblicare un pacchetto in un feed NuGet pubblico o privato e deve essere completamente automatizzato.
+La terza fase sta creando un pacchetto NuGet usando gli artefatti di compilazione del passaggio precedente. Il risultato di questo passaggio è un pacchetto NuGet che può essere utilizzato da un'app Xamarin. Nella procedura dettagliata viene usata una directory locale che funge da feed NuGet. In produzione, questo passaggio deve pubblicare un pacchetto in un feed NuGet pubblico o privato e deve essere completamente automatizzato.
 
 **Fase 4: utilizzo del pacchetto NuGet da un'app Xamarin.Forms**
 
@@ -128,7 +128,7 @@ extern "C" {
 }
 ```
 
-Si tratta di funzioni wrapper utilizzate sul lato [Novell](https://visualstudio.microsoft.com/xamarin/) .
+Si tratta di funzioni wrapper utilizzate sul lato [Xamarin](https://visualstudio.microsoft.com/xamarin/) .
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Wrapping della libreria nativa (fase 2)
 
@@ -769,7 +769,7 @@ Questo articolo ha illustrato come creare un'app Xamarin.Forms che usa librerie 
 ### <a name="examples"></a>Esempi
 
 - [Sviluppo di app per dispositivi mobili multipiattaforma ipercadenti conC++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
-- [Microsoft Pix (C++ e Novell)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
+- [Microsoft Pix (C++ e Xamarin)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
 - [Porta di esempio di mono San Angeles](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk/)
 
 ### <a name="further-reading"></a>Ulteriori informazioni

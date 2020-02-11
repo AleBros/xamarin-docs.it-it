@@ -1,6 +1,6 @@
 ---
-title: F#Esempi per Novell
-description: F#può essere usato per creare applicazioni Novell. Questo documento è collegato a diversi progetti di app Novell di esempio per iOS, Mac e Xamarin.F#Forms scritti in.
+title: F#Esempi per Xamarin
+description: F#può essere usato per creare applicazioni Xamarin. Questo documento è collegato a diversi progetti di app Xamarin di esempio per iOS, Mac e Xamarin.F#Forms scritti in.
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: davidortinau
@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: c330bf0a5cf8c66b765a56caaf55971ac1b4dad0
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014739"
 ---
-# <a name="f-samples-for-xamarin"></a>F#Esempi per Novell
+# <a name="f-samples-for-xamarin"></a>F#Esempi per Xamarin
 
-Questa pagina contiene collegamenti ad F# alcuni esempi che usano Novell.
+Questa pagina contiene collegamenti ad F# alcuni esempi che usano Xamarin.
 
 ## <a name="ios"></a>iOS
 

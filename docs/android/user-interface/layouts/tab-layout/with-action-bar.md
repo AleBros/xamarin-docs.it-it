@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/06/2018
 ms.openlocfilehash: 33afa963cba2e341f23326c6a7814f97f88b6870
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028777"
@@ -28,7 +28,7 @@ Si noti che `Toolbar` è un componente della barra delle azioni più recente e g
 
 Qualsiasi applicazione Xamarin.Android destinata a livello API 11 (Android 3,0) o versione successiva ha accesso alle API ActionBar come parte delle API native di Android. 
 
-Alcune delle API di ActionBar sono state riportate al livello API 7 (Android 2,1) e sono disponibili tramite la [libreria V7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat), resa disponibile per le app Xamarin.Android tramite il pacchetto [Novell Android Support Library-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) .
+Alcune delle API di ActionBar sono state riportate al livello API 7 (Android 2,1) e sono disponibili tramite la [libreria V7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat), resa disponibile per le app Xamarin.Android tramite il pacchetto [Xamarin Android Support Library-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) .
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Introduzione alle schede in ActionBar
 

@@ -1,6 +1,6 @@
 ---
 title: Introduzione a iOS 12
-description: Questo documento fornisce una descrizione di alto livello di alcune API di iOS 12 per cui la versione di anteprima C# di Novell fornisce associazioni.
+description: Questo documento fornisce una descrizione di alto livello di alcune API di iOS 12 per cui la versione di anteprima C# di Xamarin fornisce associazioni.
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
@@ -9,16 +9,16 @@ ms.author: daortin
 ms.date: 07/08/2018
 ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031997"
 ---
 # <a name="introduction-to-ios-12"></a>Introduzione a iOS 12
 
-Questo documento fornisce una descrizione di alto livello di alcune API di iOS 12 per cui la versione di anteprima C# di Novell fornisce associazioni.
+Questo documento fornisce una descrizione di alto livello di alcune API di iOS 12 per cui la versione di anteprima C# di Xamarin fornisce associazioni.
 
-Per iniziare a creare app iOS 12 con Novell, vedere la [Guida introduttiva](get-started.md)
+Per iniziare a creare app iOS 12 con Xamarin, vedere la [Guida introduttiva](get-started.md)
 
 ## <a name="arkit-2arkit2md"></a>[ARKit 2](arkit2.md)
 

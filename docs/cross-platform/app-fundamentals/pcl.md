@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/18/2018
 ms.openlocfilehash: 1684bddaf5b418f63abc7ee528f646f7795396d8
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016735"
@@ -23,7 +23,7 @@ Un componente chiave della creazione di applicazioni multipiattaforma è la poss
 
 Esistono tre approcci principali alla condivisione del codice che affrontano questo problema: **.NET standard progetti**, **progetti di asset condivisi**e **progetti libreria di classi portabile (PCL)** .
 
-- I **progetti .NET standard** rappresentano l'approccio preferito per la condivisione del codice .NET, altre informazioni sui [progetti di .NET standard e Novell](~/cross-platform/app-fundamentals/net-standard.md).
+- I **progetti .NET standard** rappresentano l'approccio preferito per la condivisione del codice .NET, altre informazioni sui [progetti di .NET standard e Xamarin](~/cross-platform/app-fundamentals/net-standard.md).
 - I **progetti di asset condivisi** utilizzano un unico set di file e offrono un modo semplice e rapido per condividere il codice all'interno di una soluzione e in genere utilizzano direttive di compilazione condizionale per specificare i percorsi del codice per varie piattaforme che lo utilizzeranno (per altre informazioni per informazioni, vedere l' [articolo progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md).
 - I progetti **PCL** sono destinati a profili specifici che supportano un set noto di classi/funzionalità BCL. Tuttavia, il lato inferiore di PCL è che spesso richiedono un lavoro di architettura aggiuntivo per separare il codice specifico del profilo nelle rispettive librerie.
 
@@ -45,7 +45,7 @@ La tabella seguente illustra alcune delle funzionalità che variano in base alla
 |Serializzazione|Y|Y|Y|Y|Y|
 |Annotazioni dei dati|4.0.3 +|Y|Y||Y|
 
-La colonna Novell riflette il fatto che Xamarin.iOS e Xamarin.Android supportano tutti i profili forniti con Visual Studio e la disponibilità delle funzionalità in tutte le librerie create sarà limitata solo dalle altre piattaforme che si sceglie di supportare.
+La colonna Xamarin riflette il fatto che Xamarin.iOS e Xamarin.Android supportano tutti i profili forniti con Visual Studio e la disponibilità delle funzionalità in tutte le librerie create sarà limitata solo dalle altre piattaforme che si sceglie di supportare.
 
 Sono inclusi i profili che sono combinazioni di:
 
@@ -198,7 +198,7 @@ Questo rende la libreria di classi portabile una soluzione ideale per la distrib
 
 ## <a name="pcl-example"></a>Esempio di PCL
 
-L'applicazione di esempio [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) illustra come è possibile usare una libreria di classi portabile con Novell.
+L'applicazione di esempio [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) illustra come è possibile usare una libreria di classi portabile con Xamarin.
 Ecco alcune schermate delle app risultanti eseguite in iOS e Android:
 
 [![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)

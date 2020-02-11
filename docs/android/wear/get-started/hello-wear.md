@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/10/2018
 ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028672"
@@ -40,7 +40,7 @@ Creare una nuova **applicazione Android Wear**:
 
 -----
 
-Questo modello include automaticamente la **libreria Novell Android Wearable Library** NuGet (e le dipendenze), in modo da poter accedere a widget specifici per l'uso. Se non viene visualizzato il modello di usura, consultare la Guida all' [installazione e](~/android/wear/get-started/installation.md) all'installazione per verificare che sia stata installata una Android SDK supportata. 
+Questo modello include automaticamente la **libreria Xamarin Android Wearable Library** NuGet (e le dipendenze), in modo da poter accedere a widget specifici per l'uso. Se non viene visualizzato il modello di usura, consultare la Guida all' [installazione e](~/android/wear/get-started/installation.md) all'installazione per verificare che sia stata installata una Android SDK supportata. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. scegliere il **Framework di destinazione** corretto
 

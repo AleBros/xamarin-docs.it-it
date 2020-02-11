@@ -1,6 +1,6 @@
 ---
 title: Accesso all'API Graph
-description: Questo documento descrive come aggiungere Azure Active Directory autenticazione a un'applicazione per dispositivi mobili compilata con Novell.
+description: Questo documento descrive come aggiungere Azure Active Directory autenticazione a un'applicazione per dispositivi mobili compilata con Xamarin.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: davidortinau
@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: 7ccfc082f86d0a0c6f8d29a477101edb72f9c92f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016623"
 ---
 # <a name="accessing-the-graph-api"></a>Accesso all'API Graph
 
-Attenersi alla procedura seguente per usare la API Graph all'interno di un'applicazione Novell:
+Attenersi alla procedura seguente per usare la API Graph all'interno di un'applicazione Xamarin:
 
 1. Per la [registrazione con Azure Active Directory](~/cross-platform/data-cloud/active-directory/get-started/register.md) nel portale di *WindowsAzure.com* ,
 2. [Configurare i servizi](~/cross-platform/data-cloud/active-directory/get-started/configure.md).

@@ -1,6 +1,6 @@
 ---
 title: Introduzione a iOS 13
-description: Questo documento fornisce una descrizione di alto livello di alcune API di iOS 13 per cui la versione di anteprima C# di Novell fornisce associazioni.
+description: Questo documento fornisce una descrizione di alto livello di alcune API di iOS 13 per cui la versione di anteprima C# di Xamarin fornisce associazioni.
 ms.prod: xamarin
 ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 09/20/2019
 ms.openlocfilehash: 75ba809df122fa9b34dc9052baa9a0faaafe0cad
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031712"

@@ -9,16 +9,16 @@ ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: cae59053374f673a56d02e86cd59fb85f313c41b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016806"
 ---
 # <a name="net-standard-library-code-sharing"></a>Condivisione del codice della libreria .NET Standard
 
-Le librerie .NET Standard hanno un'API uniforme per tutte le piattaforme .NET, tra cui Novell e .NET Core. Creare una singola libreria di .NET Standard e usarla da qualsiasi runtime che supporta la piattaforma di .NET Standard. Per informazioni dettagliate sulle piattaforme supportate, fare riferimento a [questo grafico](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) .
+Le librerie .NET Standard hanno un'API uniforme per tutte le piattaforme .NET, tra cui Xamarin e .NET Core. Creare una singola libreria di .NET Standard e usarla da qualsiasi runtime che supporta la piattaforma di .NET Standard. Per informazioni dettagliate sulle piattaforme supportate, fare riferimento a [questo grafico](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) .
 
-Sebbene .NET Standard versioni da 1,0 a 1,6 forniscano subset incrementali di .NET Framework, .NET Standard 2,0 fornisce il livello migliore di supporto per le applicazioni Novell e per il porting di librerie di classi portabili esistenti.
+Sebbene .NET Standard versioni da 1,0 a 1,6 forniscano subset incrementali di .NET Framework, .NET Standard 2,0 fornisce il livello migliore di supporto per le applicazioni Xamarin e per il porting di librerie di classi portabili esistenti.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73031081"
@@ -46,7 +46,7 @@ Se è necessario impostare le variabili di ambiente di runtime per mono, è poss
 L'invio di app che _richiedono_ bitcode, ad esempio watchos e app tvOS, deve essere eseguito con Xcode 9.
 
 ### <a name="can-i-change-the-output-path-of-the-ipa-fileipa-output-pathmd"></a>[È possibile modificare il percorso di output del file IPA?](ipa-output-path.md)
-A partire da Novell Cycle 7, è possibile usare destinazioni MSBuild personalizzate per ottenere questo risultato.
+A partire da Xamarin Cycle 7, è possibile usare destinazioni MSBuild personalizzate per ottenere questo risultato.
 
 ### <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folderipa-tfsmd"></a>[Come è possibile copiare i file di output IPA nella cartella di ricezione TFS?](ipa-tfs.md)
 Sì, in questa guida viene descritto come.
@@ -55,10 +55,10 @@ Sì, in questa guida viene descritto come.
 Sì, è possibile, ma in genere è necessario firmare nuovamente il bundle di `.app` dopo aver apportato la modifica. Si noti che la modifica del file di `.ipa` non è necessaria nel normale utilizzo. Questo articolo viene fornito esclusivamente a scopo informativo.
 
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[È possibile creare un archivio con estensione xcarchive da Visual Studio?](create-xcarchive.md)
-A partire da Novell 4, è ora possibile creare un `.xcarchive` da Windows impostando la proprietà `ArchiveOnBuild` su `true`.
+A partire da Xamarin 4, è ora possibile creare un `.xcarchive` da Windows impostando la proprietà `ArchiveOnBuild` su `true`.
 
 ### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Perché l'invio dell'app non riesce con l'errore: "Percorsi non consentiti ( "iTunesMetadata.plist" ) in ..." ?](itunesmetadata-disallowed-paths.md)
-Questo errore è il risultato di una modifica nel processo di verifica dell'app Store di Apple. Questo errore specifico _non_ è correlato alla versione specifica di Novell installata, quindi il downgrade _non_ sarà utile. Questa guida include collegamenti a ulteriori informazioni su come risolvere il problema.
+Questo errore è il risultato di una modifica nel processo di verifica dell'app Store di Apple. Questo errore specifico _non_ è correlato alla versione specifica di Xamarin installata, quindi il downgrade _non_ sarà utile. Questa guida include collegamenti a ulteriori informazioni su come risolvere il problema.
 
 ## <a name="diagnosing-specific-error-messages"></a>Diagnosi di messaggi di errore specifici
 
@@ -80,10 +80,10 @@ Questo problema si verifica quando si compila per le architetture a 32 bit, ad e
 ## <a name="deprecated"></a>Deprecato
 
 > [!IMPORTANT]
-> Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
+> Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Xamarin. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Il file IPA è di 0 byte](ipa-zero-bytes.md)
-Si sono verificati alcuni problemi noti nelle versioni precedenti di Novell che potevano causare 0 byte per il file IPA in Windows.
+Si sono verificati alcuni problemi noti nelle versioni precedenti di Xamarin che potevano causare 0 byte per il file IPA in Windows.
 
 ### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Errore IBTool: Impossibile completare l'operazione.](error-ibtool.md)
 Apple ha [corretto](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) questo `ibtool` bug in Xcode 6.1.1, quindi l'aggiornamento a Xcode 6.1.1 o versione successiva è la soluzione più semplice.

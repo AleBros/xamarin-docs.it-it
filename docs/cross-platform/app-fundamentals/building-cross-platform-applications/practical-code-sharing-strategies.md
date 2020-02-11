@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728239"
@@ -190,7 +190,7 @@ Non sono disponibili nell'API di archiviazione di tipo isolato [librerie di clas
 
 ### <a name="cross-platform-file-access-in-pcls"></a>Accesso ai file tra piattaforme con librerie di classi portabili
 
-È anche disponibile un NuGet- [PCLStorage](https://www.nuget.org/packages/PCLStorage/) , compatibile con PCL, che facilita l'accesso ai file multipiattaforma per le piattaforme supportate da Novell e le API Windows più recenti.
+È anche disponibile un NuGet- [PCLStorage](https://www.nuget.org/packages/PCLStorage/) , compatibile con PCL, che facilita l'accesso ai file multipiattaforma per le piattaforme supportate da Xamarin e le API Windows più recenti.
 
 ## <a name="network-operations"></a>Operazioni di rete
 

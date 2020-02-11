@@ -1,6 +1,6 @@
 ---
-title: Uso dell'input di testo watchos in Novell
-description: Questo documento descrive l'input di testo watchos in Novell. Viene illustrato il metodo PresentTextInputController, Scribble, testo normale, emoji e la dettatura.
+title: Uso dell'input di testo watchos in Xamarin
+description: Questo documento descrive l'input di testo watchos in Xamarin. Viene illustrato il metodo PresentTextInputController, Scribble, testo normale, emoji e la dettatura.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 156a31e37d14ce3e3cbe7173ae97b608e9d4c32e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032658"
 ---
-# <a name="working-with-watchos-text-input-in-xamarin"></a>Uso dell'input di testo watchos in Novell
+# <a name="working-with-watchos-text-input-in-xamarin"></a>Uso dell'input di testo watchos in Xamarin
 
 Il Apple Watch non fornisce una tastiera per consentire agli utenti di inserire il testo, tuttavia supporta alcune alternative intuitive:
 

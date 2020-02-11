@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dei problemi di watchos
-description: Questo documento illustra i problemi noti e le soluzioni alternative per lo sviluppo di watchos con Novell. Descrive le immagini con problemi, aggiungendo manualmente i file del controller di interfaccia, avviando un'app Watch dalla riga di comando e altro ancora.
+description: Questo documento illustra i problemi noti e le soluzioni alternative per lo sviluppo di watchos con Xamarin. Descrive le immagini con problemi, aggiungendo manualmente i file del controller di interfaccia, avviando un'app Watch dalla riga di comando e altro ancora.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032736"
@@ -85,7 +85,7 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="manually-adding-interface-controller-files"></a>Aggiunta manuale di file del controller di interfaccia
 
 > [!IMPORTANT]
-> Il supporto WatchKit di Novell include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
+> Il supporto WatchKit di Xamarin include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
 
 *Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni C#siano disponibili in:
 

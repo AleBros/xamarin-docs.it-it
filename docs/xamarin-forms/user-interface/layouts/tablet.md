@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
 ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273120"
@@ -86,9 +86,9 @@ Questo approccio può essere espanso per apportare modifiche significative ai si
 
 Il [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) è ideale per schermi di dimensioni maggiori, soprattutto sull'iPad in cui usa il [`UISplitViewController`](xref:UIKit.UISplitViewController) per offrire un'esperienza iOS nativa.
 
-Vedere [questo post di Blog di Novell](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) per informazioni su come adattare l'interfaccia utente in modo che i telefoni usino un layout e schermi più grandi possano usarlo con un altro (`MasterDetailPage`).
+Vedere [questo post di Blog di Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) per informazioni su come adattare l'interfaccia utente in modo che i telefoni usino un layout e schermi più grandi possano usarlo con un altro (`MasterDetailPage`).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Blog di Novell](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
+- [Blog di Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 - [Esempio di reshoppe](https://github.com/jamesmontemagno/myshoppe)

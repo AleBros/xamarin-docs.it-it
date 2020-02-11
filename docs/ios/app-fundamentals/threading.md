@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 1c9282c790aa5436667b37e1861a96afffcaa668
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73009443"
@@ -18,7 +18,7 @@ ms.locfileid: "73009443"
 
 Il runtime di Xamarin.iOS consente agli sviluppatori di accedere alle API di Threading .NET in modo esplicito quando si usano i thread (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si usano i modelli delegati asincroni o i metodi BeginXXX, nonché l'intera gamma di API che supportano l'attività Libreria parallela.
 
-Novell consiglia vivamente di usare la [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) per la creazione di applicazioni per alcuni motivi:
+Xamarin consiglia vivamente di usare la [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) per la creazione di applicazioni per alcuni motivi:
 
 - L'utilità di pianificazione TPL predefinita delegherà l'esecuzione dell'attività al pool di thread, che a sua volta aumenterà in modo dinamico il numero di thread necessari durante l'esecuzione del processo, evitando uno scenario in cui un numero eccessivo di thread si trova in competizione per il tempo di CPU. 
 - È più facile pensare alle operazioni in termini di attività TPL. È possibile modificarli facilmente, pianificarli, serializzare l'esecuzione o avviare molti in parallelo con un set completo di API. 

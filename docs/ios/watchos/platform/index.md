@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: e571132b5f1e30bececb8302f2dacfcd908ad42e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028285"
@@ -18,7 +18,7 @@ ms.locfileid: "73028285"
 
 ## <a name="introduction-to-watchos-5introduction-to-watchos5indexmd"></a>[Introduzione a watchOS 5](introduction-to-watchos5/index.md)
 
-Questo documento fornisce una panoramica di alto livello delle funzionalità nuove e aggiornate in watchos 5 disponibili per la creazione di app watchos con Novell.
+Questo documento fornisce una panoramica di alto livello delle funzionalità nuove e aggiornate in watchos 5 disponibili per la creazione di app watchos con Xamarin.
 
 ## <a name="introduction-to-watchos-4introduction-to-watchos4md"></a>[Introduzione a watchOS 4](introduction-to-watchos4.md)
 

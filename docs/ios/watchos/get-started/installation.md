@@ -1,6 +1,6 @@
 ---
-title: Installazione e uso di watchos in Novell
-description: Questo documento descrive come installare e usare watchos con Novell. Vengono illustrati l'installazione, la struttura del progetto watchos, l'uso di iOS designer, l'integrazione di Xcode e suggerimenti per la risoluzione dei problemi.
+title: Installazione e uso di watchos in Xamarin
+description: Questo documento descrive come installare e usare watchos con Xamarin. Vengono illustrati l'installazione, la struttura del progetto watchos, l'uso di iOS designer, l'integrazione di Xcode e suggerimenti per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 12/05/2017
 ms.openlocfilehash: f986099011dbccb0eb43c62d253ee497d46ca08e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73001688"
 ---
-# <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso di watchos in Novell
+# <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso di watchos in Xamarin
 
 watchos 4 richiede macOS Sierra (10,12) con Xcode 9.
 
@@ -74,7 +74,7 @@ Non è possibile creare una nuova "soluzione Watch"... è invece possibile aggiu
 
 <a name="designer" />
 
-### <a name="using-the-xamarin-ios-designer"></a>Uso di Novell iOS designer
+### <a name="using-the-xamarin-ios-designer"></a>Uso di Xamarin iOS designer
 
 Fare doppio clic sull'interfaccia dell'app Watch **. Storyboard** per modificare usando iOS designer. È possibile trascinare i controller di interfaccia e i controlli dell'interfaccia utente nello storyboard dalla **casella degli strumenti** e configurarli usando il riquadro delle **Proprietà** :
 
@@ -127,7 +127,7 @@ Quando si aggiungono schermate aggiuntive (oltre a quanto incluso nel modello pe
 
 Vedere le [istruzioni avanzate su come aggiungere nuovi controller di interfaccia a uno storyboard](~/ios/watchos/troubleshooting.md#add).
 
-*Questa operazione viene eseguita automaticamente da Novell iOS designer, non sono necessari passaggi manuali.*
+*Questa operazione viene eseguita automaticamente da Xamarin iOS designer, non sono necessari passaggi manuali.*
 
 ## <a name="building"></a>Compilazione
 

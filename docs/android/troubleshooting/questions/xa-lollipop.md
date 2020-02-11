@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026707"
@@ -22,7 +22,7 @@ ms.locfileid: "73026707"
 - [Xamarin.Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) ha aggiunto il supporto per Android L Preview.
 - [Xamarin.Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) ha aggiunto il supporto di Android Lollipop.
 
-Novell supporta attivamente solo la versione stabile corrente degli strumenti di Novell. Le informazioni riportate di seguito vengono fornite "così come sono" per le versioni precedenti degli strumenti. Per le informazioni più recenti sulle versioni di Novell, vedere le [Note sulla versione](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
+Xamarin supporta attivamente solo la versione stabile corrente degli strumenti di Xamarin. Le informazioni riportate di seguito vengono fornite "così come sono" per le versioni precedenti degli strumenti. Per le informazioni più recenti sulle versioni di Xamarin, vedere le [Note sulla versione](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>"Manca Android. jar per l'API livello 21" in Android L Preview
 

@@ -1,6 +1,6 @@
 ---
 title: Accesso ai dati di Xamarin.Android
-description: Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database.  Android dispone del motore di database SQLite "built in" e l'accesso per archiviare e recuperare i dati è semplificato dalla piattaforma Novell. Questo documento illustra come accedere a un database SQLite in modo multipiattaforma.
+description: Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database.  Android dispone del motore di database SQLite "built in" e l'accesso per archiviare e recuperare i dati è semplificato dalla piattaforma Xamarin. Questo documento illustra come accedere a un database SQLite in modo multipiattaforma.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 9906e617b7072ebf7b1213a7278d117dc4f560ab
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73023864"
@@ -20,7 +20,7 @@ _Per la maggior parte delle applicazioni è necessario salvare i dati sul dispos
 
 ## <a name="data-access-overview"></a>Panoramica dell'accesso ai dati
 
-Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database. Android dispone del motore di database SQLite "built in" e l'accesso ai dati viene semplificato dalla piattaforma Novell, che viene fornita con la provider di dati SQLite.
+Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database. Android dispone del motore di database SQLite "built in" e l'accesso ai dati viene semplificato dalla piattaforma Xamarin, che viene fornita con la provider di dati SQLite.
 
 Xamarin.Android supporta le API di accesso al database, ad esempio:
 

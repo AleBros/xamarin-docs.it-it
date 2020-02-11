@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016325"
@@ -21,7 +21,7 @@ A partire da iOS 11, le app a 32 bit non vengono più avviate e [tutti gli invii
 
 A partire dal 2018 gennaio, [le nuove app inviate a Mac App Store devono supportare 64 bit e le](https://developer.apple.com/news/?id=06282017a)app esistenti devono essere aggiornate entro il 2018 giugno.
 
-Il API classica di Novell (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Xamarin.iOS e Xamarin.Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
+Il API classica di Xamarin (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Xamarin.iOS e Xamarin.Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
 
 ## <a name="ios"></a>iOS
 
@@ -76,7 +76,7 @@ Per una panoramica completa delle funzionalità di diversi dispositivi iOS, vede
 
 ### <a name="64-bit-and-binary-size-increases"></a>aumento dimensioni a 64 bit e binarie
 
-Durante la transizione di Apple da 32 a 64 bit, le app iOS dovranno essere eseguite sia su hardware 32 bit che su hardware a 64 bit. Per questo motivo, il API unificata di Novell consente agli sviluppatori di usare entrambe le destinazioni.
+Durante la transizione di Apple da 32 a 64 bit, le app iOS dovranno essere eseguite sia su hardware 32 bit che su hardware a 64 bit. Per questo motivo, il API unificata di Xamarin consente agli sviluppatori di usare entrambe le destinazioni.
 
 La definizione delle architetture a 32 bit e a 64 bit aumenterà significativamente le dimensioni di un'applicazione. Questa operazione consentirà tuttavia ai dispositivi più recenti di eseguire codice ottimizzato, supportando al tempo stesso i dispositivi meno recenti.
 

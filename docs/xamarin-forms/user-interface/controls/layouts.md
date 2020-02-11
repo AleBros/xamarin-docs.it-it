@@ -1,6 +1,6 @@
 ---
 title: Layout di Xamarin.Forms
-description: Layout di xamarin. Forms vengono utilizzati per la composizione di controlli dell'interfaccia utente nelle strutture visual. Questo articolo elenca i layout inclusi in xamarin. Forms.
+description: Layout di Xamarin.Forms vengono utilizzati per la composizione di controlli dell'interfaccia utente nelle strutture visual. Questo articolo elenca i layout inclusi in Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: e247be8387ce984d6695431ec432119d01344b42
 ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955774"
 ---
 # <a name="xamarinforms-layouts"></a>Layout di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
-_Layout di xamarin. Forms vengono utilizzati per comporre i controlli dell'interfaccia utente in strutture visual._
+_Layout di Xamarin.Forms vengono utilizzati per comporre i controlli dell'interfaccia utente in strutture visual._
 
-Il [ `Layout` ](xref:Xamarin.Forms.Layout) e [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classi in xamarin. Forms sono specializzati sottotipi di viste che fungono da contenitori per le visualizzazioni e altri layout. Il `Layout` stessa classe deriva da [ `View` ](views.md). Oggetto `Layout` derivato contiene in genere per la logica per impostare la posizione e dimensioni degli elementi figlio nelle applicazioni xamarin. Forms.
+Il [ `Layout` ](xref:Xamarin.Forms.Layout) e [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classi in Xamarin.Forms sono specializzati sottotipi di viste che fungono da contenitori per le visualizzazioni e altri layout. Il `Layout` stessa classe deriva da [ `View` ](views.md). Oggetto `Layout` derivato contiene in genere per la logica per impostare la posizione e dimensioni degli elementi figlio nelle applicazioni Xamarin.Forms.
 
-[![Tipi di layout Novell. Forms](layouts-images/layouts-sml.png "Tipi di layout Novell. Forms")](layouts-images/layouts.png#lightbox "Tipi di layout Novell. Forms")
+[![Tipi di layout Xamarin.Forms](layouts-images/layouts-sml.png "Tipi di layout Xamarin.Forms")](layouts-images/layouts.png#lightbox "Tipi di layout Xamarin.Forms")
 
 Le classi che derivano da `Layout` possono essere suddivisi in due categorie:
 
@@ -54,7 +54,7 @@ Tali classi derivano da [ `Layout` ](xref:Xamarin.Forms.Layout), che definisce [
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView) è in grado di scorrere il contenuto. Impostare il [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) proprietà su una vista o a un layout troppo grande per adattarlo sullo schermo. Il contenuto di un `ScrollView` è spesso una [`StackLayout`](#stackLayout). Impostare la proprietà [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) per indicare se lo scorrimento deve essere verticale, orizzontale o entrambi.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.ScrollView) / [Guida](~/xamarin-forms/user-interface/layouts/scroll-view.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Esempio di ScrollView](layouts-images/ScrollView.png "Esempio di ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Esempio di ScrollView")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView) è in grado di scorrere il contenuto. Impostare il [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) proprietà su una vista o a un layout troppo grande per adattarlo sullo schermo. (Il contenuto di un `ScrollView` molto spesso è una [ `StackLayout` ](#stackLayout).) Impostare il [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) proprietà che indica se lo scorrimento dovrebbe essere verticale, orizzontale, o entrambi.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.ScrollView) / [Guida](~/xamarin-forms/user-interface/layouts/scroll-view.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![Esempio di ScrollView](layouts-images/ScrollView.png "Esempio di ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Esempio di ScrollView")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
@@ -116,6 +116,6 @@ Tali classi derivano da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Esempio di Xamarin.Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/29/2018
 ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026973"
@@ -68,7 +68,7 @@ Questo articolo illustra come risolvere un errore **PathTooLongException** che p
 ## <a name="deprecated"></a>Deprecato
 
 > [!NOTE]
-> Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
+> Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Xamarin. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
 ### <a name="what-version-of-xamarinandroid-added-lollipop-supportxa-lollipopmd"></a>[In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?](xa-lollipop.md)
 
@@ -76,11 +76,11 @@ Questa guida è stata scritta originariamente per Android L Preview. Xamarin.And
 
 ### <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawablemissing-action-mode-share-drawablemd"></a>[Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr 'android:actionModeShareDrawable'](missing-action-mode-share-drawable.md)
 
-Questo errore può verificarsi nelle versioni precedenti di Novell se mancano alcuni dei pacchetti di Android SDK necessari.
+Questo errore può verificarsi nelle versioni precedenti di Xamarin se mancano alcuni dei pacchetti di Android SDK necessari.
 
 ### <a name="adjusting-java-memory-parameters-for-the-android-designerandroid-designer-java-memorymd"></a>[Modifica dei parametri di memoria Java per Android Designer](android-designer-java-memory.md)
 
-I parametri di memoria predefiniti usati quando si avvia il processo di `java` per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema. A partire da Xamarin Studio 5.7.2.7 e Novell per Visual Studio 3.9.344 queste impostazioni possono essere personalizzate in base al progetto.
+I parametri di memoria predefiniti usati quando si avvia il processo di `java` per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema. A partire da Xamarin Studio 5.7.2.7 e Xamarin per Visual Studio 3.9.344 queste impostazioni possono essere personalizzate in base al progetto.
 
 ### <a name="my-android-resourcedesignercs-file-will-not-updateresource-designer-wont-updatemd"></a>[Il file Android Resource.designer.cs non verrà aggiornato](resource-designer-wont-update.md)
 

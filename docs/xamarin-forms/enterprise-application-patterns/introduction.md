@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
 ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760229"
@@ -160,7 +160,7 @@ I progetti della piattaforma contengono implementazioni degli effetti, implement
 
 ## <a name="summary"></a>Riepilogo
 
-Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Novell offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
+Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Xamarin offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
 
 Gli sviluppatori di app aziendali affrontano diverse esigenze che possono alterare l'architettura dell'app durante lo sviluppo. È quindi importante compilare un'app in modo che possa essere modificata o estesa nel tempo. La progettazione di tale adattamento può essere difficile, ma in genere comporta il partizionamento di un'app in componenti discreti, a regime di controllo libero, che possono essere facilmente integrati in un'app.
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: a7aba55f0470ad44dcce3de56ed15308439785e2
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029846"
@@ -22,7 +22,7 @@ Questo documento descrive come ottenere la configurazione per creare app di macO
 
 1. **Installare la versione più recente di Xcode 10 Beta** : gli sviluppatori Apple registrati possono scaricare e installare la versione più recente di Xcode 10 dal [portale Apple Developer](https://developer.apple.com/download/).
 
-2. **Eseguire Xcode 10** : eseguire Xcode 10 prima di aggiornare ed eseguire Visual Studio per Mac; vengono installati alcuni strumenti richiesti da Novell.
+2. **Eseguire Xcode 10** : eseguire Xcode 10 prima di aggiornare ed eseguire Visual Studio per Mac; vengono installati alcuni strumenti richiesti da Xamarin.
 
 3. **Aggiornare Visual Studio per Mac** : usare la versione stabile più recente di Visual Studio per Mac con [Xamarin.Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md) o versione successiva.
 
