@@ -9,7 +9,7 @@ ms.author: chhamo
 ms.date: 08/07/2019
 ms.openlocfilehash: df974649c8c9f1d1fb4c13d6d801eb0f6a3d1e77
 ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/09/2019
 ms.locfileid: "68876230"

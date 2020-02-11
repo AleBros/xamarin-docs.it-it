@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: a38f4b81f684d6d416e6abe017bc463e3097c6b1
 ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/28/2019
 ms.locfileid: "72980861"

@@ -8,7 +8,7 @@ ms.author: chhamo
 ms.date: 04/18/2018
 ms.openlocfilehash: 47efbaa12475f627b5963cb6613c3441a1d96aac
 ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70227846"

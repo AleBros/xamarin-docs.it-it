@@ -9,7 +9,7 @@ ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
 ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72303250"

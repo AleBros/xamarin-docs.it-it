@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 69415b59bbd376330454302981e3216c236a16bb
 ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/28/2019
 ms.locfileid: "72980926"

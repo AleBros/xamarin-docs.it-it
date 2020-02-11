@@ -9,7 +9,7 @@ author: davidortinau
 ms.author: daortin
 ms.openlocfilehash: ad2386d912dba28041c02c4fb4a8046d341a85ed
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73002262"

@@ -9,7 +9,7 @@ ms.author: miguel
 ms.date: 02/22/2018
 ms.openlocfilehash: e0127d4b24236d350e5fa967110316544c320d0f
 ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61422477"

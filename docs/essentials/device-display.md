@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 77af173bc3297ac9ccdef22dccbeab054895f772
 ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70756897"
