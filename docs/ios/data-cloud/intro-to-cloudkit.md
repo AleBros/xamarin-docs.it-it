@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/11/2016
 ms.openlocfilehash: 29ccb919f68a45212bff3b66b4bc3fbdebd24faf
 ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663460"
@@ -50,7 +50,7 @@ Al momento della stesura di questo articolo, Apple fornisce inizialmente CloudKi
 
 ## <a name="enabling-cloudkit-in-a-xamarin-application"></a>Abilitazione di CloudKit in un'applicazione Novell
 
-Prima che un'applicazione Novell possa usare il Framework CloudKit, è necessario eseguire correttamente il provisioning dell'applicazione come illustrato in dettaglio nelle guide [utilizzo delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) e [utilizzo di diritti](~/ios/deploy-test/provisioning/entitlements.md) .
+Prima che un'applicazione Xamarin possa usare il Framework CloudKit, è necessario eseguire correttamente il provisioning dell'applicazione come illustrato in dettaglio nelle guide [utilizzo delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) e [utilizzo di diritti](~/ios/deploy-test/provisioning/entitlements.md) .
 
 Per accedere a CloudKit, il file con **estensione plist dei diritti** deve includere **Abilita iCloud**, **archiviazione chiave-valore**e autorizzazioni **CloudKit** .
 
@@ -71,7 +71,7 @@ Con queste impostazioni, l'app di esempio è ora pronta ad accedere alle API del
 
 ## <a name="cloudkit-api-overview"></a>Panoramica dell'API CloudKit
 
-Prima di implementare CloudKit in un'applicazione Novell iOS, in questo articolo verranno illustrate le nozioni di base di CloudKit Framework, che include gli argomenti seguenti:
+Prima di implementare CloudKit in un'applicazione Xamarin iOS, in questo articolo verranno illustrate le nozioni di base di CloudKit Framework, che include gli argomenti seguenti:
 
 1. **Contenitori** : silo isolati di comunicazioni iCloud.
 2. **Database** : Public e private sono disponibili per l'applicazione.
@@ -348,7 +348,7 @@ public AppDelegate ThisApp {
 
 Verrà aggiunto un collegamento per accedere al `AppDelegate` e accedere ai collegamenti al database pubblico e privato creati in precedenza.
 
-Con questo codice, verrà ora esaminata l'implementazione dell'API CloudKit convenience in un'applicazione Novell iOS 8.
+Con questo codice, verrà ora esaminata l'implementazione dell'API CloudKit convenience in un'applicazione Xamarin iOS 8.
 
 ### <a name="saving-a-record"></a>Salvataggio di un record
 
@@ -489,7 +489,7 @@ CloudKit supporta i tipi di `NSPredicates` seguenti quando si utilizzano le quer
 
 #### <a name="creating-queries"></a>Creazione di query
 
-Il codice seguente può essere usato per creare un `CKQuery` in un'applicazione Novell iOS 8:
+Il codice seguente può essere usato per creare un `CKQuery` in un'applicazione Xamarin iOS 8:
 
 ```csharp
 var recordName = "MyRec";
@@ -554,7 +554,7 @@ Il grafico precedente Mostra il processo di sottoscrizione tipico come segue:
 4. Il database esegue la ricerca nell'elenco di sottoscrizioni per verificare se il nuovo record corrisponde a una delle condizioni.
 5. Se viene rilevata una corrispondenza, la notifica push viene inviata al dispositivo che ha registrato la sottoscrizione con le informazioni sul record che ne ha causato l'attivazione.
 
-Con queste informazioni, verrà ora esaminata la creazione di sottoscrizioni in un'applicazione Novell iOS 8.
+Con queste informazioni, verrà ora esaminata la creazione di sottoscrizioni in un'applicazione Xamarin iOS 8.
 
 #### <a name="creating-subscriptions"></a>Creazione di sottoscrizioni
 
@@ -850,7 +850,7 @@ Tenendo presenti questi casi d'uso, lo sviluppatore deve scegliere la tecnologia
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha trattato una rapida introduzione all'API CloudKit. È stato illustrato come eseguire il provisioning e configurare un'applicazione Novell iOS per l'uso di CloudKit. Ha trattato le funzionalità dell'API CloudKit convenience. Mostra come progettare un'applicazione abilitata per CloudKit per la scalabilità usando query e sottoscrizioni. Infine, ha mostrato le informazioni sull'account utente esposte a un'applicazione da CloudKit.
+Questo articolo ha trattato una rapida introduzione all'API CloudKit. È stato illustrato come eseguire il provisioning e configurare un'applicazione Xamarin iOS per l'uso di CloudKit. Ha trattato le funzionalità dell'API CloudKit convenience. Mostra come progettare un'applicazione abilitata per CloudKit per la scalabilità usando query e sottoscrizioni. Infine, ha mostrato le informazioni sull'account utente esposte a un'applicazione da CloudKit.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

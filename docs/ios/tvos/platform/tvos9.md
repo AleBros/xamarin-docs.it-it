@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/07/2016
 ms.openlocfilehash: 34f332eb712f479f9f9565a3894212e3cdd5aaf6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030540"
@@ -182,4 +182,4 @@ Per altre informazioni, vedere la documentazione relativa all' [uso di icone e i
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Creazione di app per tvOS con Novell (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [Creazione di app per tvOS con Xamarin (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

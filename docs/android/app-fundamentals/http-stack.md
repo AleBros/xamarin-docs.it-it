@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/20/2018
 ms.openlocfilehash: f9f9b112a083615f9cf1d74d7cf81f5ca4f7901f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019239"
@@ -21,9 +21,9 @@ Lo stack HttpClient e i selettori di implementazione SSL/TLS determinano l'imple
 I progetti devono fare riferimento all'assembly **System .NET. http** .
 
 > [!WARNING]
-> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Novell creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
+> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Xamarin creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
 >
-> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Novell con le impostazioni `Android HttpClient` e `Native TLS 1.2` illustrate di seguito, quindi ricompilare e ridistribuire le app** agli utenti.
+> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Xamarin con le impostazioni `Android HttpClient` e `Native TLS 1.2` illustrate di seguito, quindi ricompilare e ridistribuire le app** agli utenti.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

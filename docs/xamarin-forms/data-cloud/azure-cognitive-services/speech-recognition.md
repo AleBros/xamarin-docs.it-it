@@ -1,6 +1,6 @@
 ---
 title: Riconoscimento vocale con l'API del servizio vocale
-description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un'applicazione Novell. Forms.
+description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: jusjohns
 ms.date: 01/14/2020
 ms.openlocfilehash: c10b8feea5fbec21fc127262c3f1bfda50beba7f
 ms.sourcegitcommit: ba83c107c87b015dbcc9db13964fe111a0573dca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2020
 ms.locfileid: "76265152"
@@ -25,7 +25,7 @@ Il servizio riconoscimento vocale di Azure è un'API basata sul cloud che offre 
 - La **traduzione vocale** consente la traduzione in tempo reale e multilingue per sintesi vocale e sintesi vocale.
 - Gli **assistenti vocali** possono creare interfacce di conversazione simili a quelle umane per le applicazioni.
 
-Questo articolo illustra il modo in cui la sintesi vocale è implementata nell'applicazione Novell. Forms di esempio tramite il servizio di riconoscimento vocale di Azure. Gli screenshot seguenti illustrano l'applicazione di esempio in iOS e Android:
+Questo articolo illustra il modo in cui la sintesi vocale è implementata nell'applicazione Xamarin.Forms di esempio tramite il servizio di riconoscimento vocale di Azure. Gli screenshot seguenti illustrano l'applicazione di esempio in iOS e Android:
 
 [![screenshot dell'applicazione di esempio in iOS e Android](speech-recognition-images/speech-recognition-cropped.png)](speech-recognition-images/speech-recognition.png#lightbox "Screenshot dell'applicazione di esempio in iOS e Android")
 
@@ -63,7 +63,7 @@ L'applicazione di esempio usa il pacchetto NuGet **Microsoft. CognitiveServices.
 
 ## <a name="create-an-imicrophoneservice-interface"></a>Creare un'interfaccia IMicrophoneService
 
-Ogni piattaforma richiede l'autorizzazione per l'accesso al microfono. Il progetto di esempio fornisce un'interfaccia `IMicrophoneService` nel progetto condiviso e usa il `DependencyService` Novell. Forms per ottenere le implementazioni della piattaforma dell'interfaccia.
+Ogni piattaforma richiede l'autorizzazione per l'accesso al microfono. Il progetto di esempio fornisce un'interfaccia `IMicrophoneService` nel progetto condiviso e usa il `DependencyService` Xamarin.Forms per ottenere le implementazioni della piattaforma dell'interfaccia.
 
 ```csharp
 public interface IMicrophoneService

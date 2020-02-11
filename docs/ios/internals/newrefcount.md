@@ -1,6 +1,6 @@
 ---
 title: Nuovo sistema di conteggio dei riferimenti in Xamarin.iOS
-description: Questo documento descrive il sistema di conteggio dei riferimenti migliorato di Novell, abilitato per impostazione predefinita in tutte le applicazioni Xamarin.iOS.
+description: Questo documento descrive il sistema di conteggio dei riferimenti migliorato di Xamarin.abilitato per impostazione predefinita in tutte le applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 11/25/2015
 ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022295"
@@ -20,7 +20,7 @@ Per impostazione predefinita, Xamarin.iOS 9.2.1 ha introdotto il sistema di cont
 
 ## <a name="enabling-the-new-reference-counting-system"></a>Abilitazione del nuovo sistema di conteggio dei riferimenti
 
-A partire da Novell 9.2.1, per impostazione predefinita, il nuovo sistema di conteggio dei riferimenti è abilitato per **tutte** le applicazioni.
+A partire da Xamarin 9.2.1, per impostazione predefinita, il nuovo sistema di conteggio dei riferimenti è abilitato per **tutte** le applicazioni.
 
 Se si sta sviluppando un'applicazione esistente, è possibile controllare il file con estensione csproj per assicurarsi che tutte le occorrenze di `MtouchUseRefCounting` siano impostate su `true`, come indicato di seguito:
 

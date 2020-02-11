@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 104141d98cecb31cae17f4510f742387be4a3fb7
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73027244"
@@ -42,7 +42,7 @@ Oltre ai miglioramenti apportati all'interfaccia utente per quanto riguarda il t
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare le nuove funzionalità di Android 5,0 nelle app basate su Novell, è necessario quanto segue:
+Per usare le nuove funzionalità di Android 5,0 nelle app basate su Xamarin.è necessario quanto segue:
 
 - **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 
@@ -70,7 +70,7 @@ Per creare un progetto Android 5,0, è necessario installare gli strumenti e i p
 
    Per ulteriori informazioni sull'utilizzo di gestione Android SDK, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
-4. Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
+4. Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Xamarin.vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
    In Visual Studio per Mac passare a **Opzioni progetto &gt; compila &gt; generale** e impostare **Framework di destinazione** su **Android 5,0 (Lollipop)** o versione successiva:
 
     ![Impostazione del Framwework di destinazione su Android 5,0 Lollipop](lollipop-images/target-framework.png)
@@ -263,7 +263,7 @@ I layout Android 5,0 riconoscono un nuovo attributo `tint` che è possibile usar
 
 Nell'esempio seguente, per creare variazioni di tinta, viene usato un singolo asset immagine &ndash; un logo bianco con uno sfondo trasparente &ndash;:
 
-![Logo Novell bianco con sfondo trasparente](lollipop-images/xamarin-logo-white.png)
+![Logo Xamarin bianco con sfondo trasparente](lollipop-images/xamarin-logo-white.png)
 
 Questo logo viene visualizzato sopra uno sfondo circolare blu, come illustrato negli esempi seguenti. L'immagine a sinistra è il modo in cui viene visualizzato il logo senza un'impostazione `tint`. Nell'immagine centrale, l'attributo `tint` del logo è impostato su un grigio scuro. Nell'immagine a destra `tint` è impostato su un grigio chiaro:
 
@@ -465,7 +465,7 @@ Questo articolo fornisce una panoramica delle nuove funzionalità importanti di 
 
 - Nuove API per fotocamere, riproduzione audio, controllo multimediale, archiviazione, wireless/connettività e pianificazione dei processi
 
-Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Xamarin.Android.
+Se non si ha familiarità con lo sviluppo di Xamarin Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Xamarin.Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) è un'ottima introduzione per imparare a creare progetti Android.
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: e0f6d9ed1028cd825d9fd8e40fe99c4ea250612f
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032424"
@@ -635,7 +635,7 @@ Il `NSObjectConverter` viene usato ogni volta che l'applicazione deve leggere lo
 var value = NSObjectConverter.ToFloat (characteristic.Value);
 ```
 
-La riga precedente converte il valore in un `float` che può quindi essere usato nel codice Novell C# .
+La riga precedente converte il valore in un `float` che può quindi essere usato nel codice Xamarin C# .
 
 Per modificare una `HMCharacteristic`, chiamare il relativo metodo `WriteValue` ed eseguire il wrapping del nuovo valore in una chiamata di `NSObject.FromObject`. Di seguito è riportato un esempio:
 

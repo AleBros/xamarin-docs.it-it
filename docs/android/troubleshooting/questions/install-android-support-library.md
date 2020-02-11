@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 99571e0b62592597bb1fffdc8d3ed8336fe050b2
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026933"
@@ -133,6 +133,6 @@ Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-In questo documento viene illustrato il comportamento corrente a partire dal 2016 agosto. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Novell, quindi potrebbe interrompersi in futuro.
+In questo documento viene illustrato il comportamento corrente a partire dal 2016 agosto. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Xamarin.quindi potrebbe interrompersi in futuro.
 
 Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/01/2018
 ms.openlocfilehash: df00eebe682d2d06b99721a2d3c3b90d13454c75
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73013997"
@@ -47,7 +47,7 @@ OR
 
 ## <a name="additional-details"></a>Dettagli aggiuntivi
 
-1. <a name="note-1" />[ *^* ](#ref-1) idealmente la descrizione dei "sintomi visibili" deve includere un numero sufficiente di dettagli, in modo che gli altri clienti possano verificare la presenza dello stesso problema (stessi messaggi di errore, lo stesso peggioramento delle prestazioni, la stessa traccia dello stack da un arresto anomalo e _così via_). Per "circostanze precise", un esempio valido è se è possibile pronunciare un errore simile al seguente: "normalmente si è verificato il problema 75% del tempo, ma se si modifica questa operazione, è possibile evitare il problema completamente". Un altro esempio simile di "circostanza precisa" è se il downgrade a una versione precedente di Novell interrompe il problema.
+1. <a name="note-1" />[ *^* ](#ref-1) idealmente la descrizione dei "sintomi visibili" deve includere un numero sufficiente di dettagli, in modo che gli altri clienti possano verificare la presenza dello stesso problema (stessi messaggi di errore, lo stesso peggioramento delle prestazioni, la stessa traccia dello stack da un arresto anomalo e _così via_). Per "circostanze precise", un esempio valido è se è possibile pronunciare un errore simile al seguente: "normalmente si è verificato il problema 75% del tempo, ma se si modifica questa operazione, è possibile evitare il problema completamente". Un altro esempio simile di "circostanza precisa" è se il downgrade a una versione precedente di Xamarin interrompe il problema.
 
 1. <a name="note-2" />[ *^* ](#ref-2) come ci si aspetterebbe, i frammenti di testo di errore (o qualsiasi altro testo descrittivo in modo univoco) sono in genere i termini di ricerca migliori. Se il report dei bug esistente è incompleto, è possibile aggiungere dettagli o archiviare un nuovo report sui bug migliore.
 
@@ -57,10 +57,10 @@ OR
 
     1. Per gli errori che si verificano durante la compilazione di un progetto, includere l' [output di compilazione diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output) completo nel report dei bug.
 
-    1. Per gli errori che si verificano durante la compilazione o il debug di un progetto iOS da Visual Studio, eseguire la **guida > novell > log zip** dopo aver raggiunto l'errore e includere il file con estensione zip risultante nel report dei bug.
+    1. Per gli errori che si verificano durante la compilazione o il debug di un progetto iOS da Visual Studio, eseguire la **guida > Xamarin > log zip** dopo aver raggiunto l'errore e includere il file con estensione zip risultante nel report dei bug.
 
     1. Per le eccezioni o gli arresti anomali nelle app Android o iOS, includere i [log di debug pertinenti per le app Xamarin.Android e Xamarin.iOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
 
-1. <a name="note-5" />[ *^* ](#ref-5) se possibile per un problema specifico, un'opzione consiste nel ricreare il problema aggiungendo un numero ridotto di file dalla soluzione originale in una soluzione completamente nuova. Il team di Novell sarà spesso in grado di analizzare i problemi anche nei test case più grandi (presupponendo che i passaggi da riprodurre siano illustrati in modo chiaro), ma i test case più semplici offrono la migliore probabilità che il bug venga risolto rapidamente.
+1. <a name="note-5" />[ *^* ](#ref-5) se possibile per un problema specifico, un'opzione consiste nel ricreare il problema aggiungendo un numero ridotto di file dalla soluzione originale in una soluzione completamente nuova. Il team di Xamarin sarà spesso in grado di analizzare i problemi anche nei test case più grandi (presupponendo che i passaggi da riprodurre siano illustrati in modo chiaro), ma i test case più semplici offrono la migliore probabilità che il bug venga risolto rapidamente.
 
 1. <a name="note-6" />[ *^* ](#ref-6) se _non_ è possibile riprodurre il problema aggiungendo un numero ridotto di file a una nuova soluzione, è possibile eseguire il comprimere e allineare l'intera cartella della soluzione per l'app completa. Eliminare le cartelle `bin`, `obj`, `Components`e `packages` per ridurre il file zip. L'IDE e il processo di compilazione in genere ripristinano o ricreano il contenuto di queste cartelle in base alle esigenze. È anche possibile eliminare tutti i file di codice e di risorse dal progetto come si desidera, purché la soluzione risultante mostri ancora il problema originale.

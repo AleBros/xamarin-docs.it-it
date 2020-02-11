@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 09/07/2018
 ms.openlocfilehash: adcfb1457742d343f87a602885566107cf327e2d
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73027146"
@@ -106,7 +106,7 @@ Android 9 ha inoltre rimosso la libreria client Apache HTTP dal bootclasspath, q
 ```
 
 > [!NOTE]
-> Nelle versioni molto vecchie di Google Play SDK è necessaria un'app per richiedere l'autorizzazione `WRITE_EXTERNAL_STORAGE`. Questo requisito non è più necessario con le associazioni Novell recenti per Google Play Services.
+> Nelle versioni molto vecchie di Google Play SDK è necessaria un'app per richiedere l'autorizzazione `WRITE_EXTERNAL_STORAGE`. Questo requisito non è più necessario con le associazioni Xamarin recenti per Google Play Services.
 
 Il frammento di codice seguente è un esempio delle impostazioni che devono essere aggiunte a **file AndroidManifest. XML**:
 

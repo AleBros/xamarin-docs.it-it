@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 03/27/2017
 ms.openlocfilehash: e7cde22115830a845ed82aa907195521f36b6866
 ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/04/2020
 ms.locfileid: "75663273"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-configurazione di una soluzione multipiattaforma Novell
 
-Indipendentemente dalle piattaforme utilizzate, i progetti Novell utilizzano lo stesso formato di file di soluzione (il formato di file con estensione **sln** di Visual Studio). Le soluzioni possono essere condivise tra ambienti di sviluppo, anche quando non è possibile caricare singoli progetti, ad esempio un progetto Windows in Visual Studio per Mac.
+Indipendentemente dalle piattaforme utilizzate, i progetti Xamarin utilizzano lo stesso formato di file di soluzione (il formato di file con estensione **sln** di Visual Studio). Le soluzioni possono essere condivise tra ambienti di sviluppo, anche quando non è possibile caricare singoli progetti, ad esempio un progetto Windows in Visual Studio per Mac.
 
 Quando si crea una nuova applicazione multipiattaforma, il primo passaggio consiste nel creare una soluzione vuota. Questa sezione spiega cosa accade successivamente: configurazione dei progetti per la creazione di app per dispositivi mobili multipiattaforma.
 
@@ -25,17 +25,17 @@ Per una descrizione dettagliata dell'implementazione della condivisione del codi
 
 ### <a name="net-standard"></a>.NET Standard
 
-I progetti [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) offrono un modo semplice per condividere il codice tra piattaforme, producendo assembly che possono essere usati in Windows, piattaforme Novell (iOS, Android, Mac) e Linux.
+I progetti [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) offrono un modo semplice per condividere il codice tra piattaforme, producendo assembly che possono essere usati in Windows, piattaforme Xamarin (iOS, Android, Mac) e Linux.
 Questo è il modo consigliato per condividere il codice per le soluzioni Novell.
 
 ### <a name="other-options"></a>Altre opzioni
 
-In passato, Novell usava le librerie di classi portabili [(classi portabili)](~/cross-platform/app-fundamentals/pcl.md)] e i [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md). Nessuna di queste è consigliata per i nuovi progetti. ed è consigliabile eseguire la migrazione delle app esistenti per usare .NET Standard.
+In passato, Xamarin usava le librerie di classi portabili [(classi portabili)](~/cross-platform/app-fundamentals/pcl.md)] e i [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md). Nessuna di queste è consigliata per i nuovi progetti. ed è consigliabile eseguire la migrazione delle app esistenti per usare .NET Standard.
 
 ## <a name="populating-the-solution"></a>Popolamento della soluzione
 
 Indipendentemente dal metodo usato per condividere il codice, la struttura complessiva della soluzione deve implementare un'architettura a più livelli che incoraggi la condivisione del codice.
-L'approccio Novell consiste nel raggruppare il codice in due tipi di progetto:
+L'approccio Xamarin consiste nel raggruppare il codice in due tipi di progetto:
 
 - **Progetto di base (o condiviso)** : scrivere codice riutilizzabile in un'unica posizione per essere condiviso tra piattaforme diverse. Usare i principi di incapsulamento per nascondere i dettagli di implementazione laddove possibile.
 - **Progetti di applicazioni specifiche della piattaforma** : utilizzare il codice riutilizzabile con il minor accoppiamento possibile. A questo livello sono state aggiunte funzionalità specifiche della piattaforma, basate sui componenti esposti nel progetto di base.

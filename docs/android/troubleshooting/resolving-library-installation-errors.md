@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/14/2018
 ms.openlocfilehash: 41f207f5a7f7b861a3406572372ead31c957c849
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026725"
@@ -103,7 +103,7 @@ Se si è provato a usare i passaggi di ripristino automatico precedenti e sono a
 
 2. Rinominare il file con l'hash MD5 corrispondente dell'URL di download, come illustrato nella tabella precedente. Ad esempio, se è stato scaricato **android\_m2repository\_R25. zip**, rinominarlo in **0B3F1796C97C707339FB13AE8507AF50. zip**. Se l'hash MD5 per l'URL di download del file scaricato non viene visualizzato nella tabella, è possibile usare un [Generatore MD5 online](http://www.webconfs.com/online-md5-generator.php) per convertire l'URL in una stringa di hash MD5. 
 
-3. Copiare il file nella cartella Novell **zip** : 
+3. Copiare il file nella cartella Xamarin **zip** : 
 
     - In Windows questa cartella si trova in **C:\\users\\***username***\\AppData\\Local\\Novell\\zip**. 
 

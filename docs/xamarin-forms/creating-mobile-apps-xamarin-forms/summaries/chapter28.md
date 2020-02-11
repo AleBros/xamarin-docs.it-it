@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 5dcd84536cc6d80deb753fc6fe57f9090f6b2dad
 ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72697082"
@@ -186,7 +186,7 @@ Una nuova libreria per questo libro denominata [**Xamarin.FormsBook. Toolkit. Ma
 
 Il file [WyomingPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) e il file code-behind [WyomingPage.XAML.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) illustrano come usare il metodo `MoveToRegion` per visualizzare lo stato di Wyoming.
 
-In alternativa, è possibile usare il [costruttore `Map`](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) con un oggetto `MapSpan` per inizializzare il percorso della mappa. Il file [XamarinHQPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) illustra come eseguire questa operazione interamente in XAML per visualizzare la sede di Novell a San Francisco.
+In alternativa, è possibile usare il [costruttore `Map`](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) con un oggetto `MapSpan` per inizializzare il percorso della mappa. Il file [XamarinHQPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) illustra come eseguire questa operazione interamente in XAML per visualizzare la sede di Xamarin a San Francisco.
 
 ### <a name="dynamic-zooming"></a>Zoom dinamico
 

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 12/02/2016
 ms.openlocfilehash: ed0171c2b6bd98e5b29ec100d0235131d36acb05
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73013346"
@@ -23,7 +23,7 @@ ms.locfileid: "73013346"
     - Xamarin.iOS
     - Xamarin for Visual Studio
 
-2. In Esplora, eliminare tutti i file rimanenti dalle cartelle delle estensioni di Visual Studio Novell (tutte le versioni, inclusi i file di _programma_ e _i file di programma (x86)_ ):
+2. In Esplora, eliminare tutti i file rimanenti dalle cartelle delle estensioni di Visual Studio Xamarin (tutte le versioni, inclusi i file di _programma_ e _i file di programma (x86)_ ):
 
     _C:\\Program Files\*\\Microsoft Visual Studio 1\*. 0\\Common7\\IDE\\Extensions\\Novell_
 
@@ -76,7 +76,7 @@ ms.locfileid: "73013346"
 
 11. Riavviare il computer.
 
-12. Reinstallare la versione stabile corrente di Novell usando da [VisualStudio.com](https://visualstudio.com/xamarin/).
+12. Reinstallare la versione stabile corrente di Xamarin usando da [VisualStudio.com](https://visualstudio.com/xamarin/).
 
 ## <a name="additional-troubleshooting-steps-for-package-did-not-load-correctly"></a>Procedure aggiuntive per la risoluzione dei problemi per "il pacchetto non è stato caricato correttamente"
 
@@ -84,7 +84,7 @@ Nei casi in cui i passaggi precedenti non risolvono l'errore "il pacchetto non �
 
 1. Creare un nuovo account utente di Windows.
 
-2. Controllare se le estensioni di Visual Studio Novell vengono caricate senza errori per il nuovo utente.
+2. Controllare se le estensioni di Visual Studio Xamarin vengono caricate senza errori per il nuovo utente.
 
 3. Se le estensioni vengono caricate correttamente, il problema è probabilmente causato da alcune delle impostazioni archiviate per l'utente originale:
 

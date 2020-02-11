@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75489206"
@@ -81,7 +81,7 @@ Nella finestra di dialogo nuovo progetto sono disponibili sette nuovi modelli di
 - **Modifica della foto** : consente di espandere i filtri e gli strumenti di modifica già forniti da Apple nell'applicazione foto per offrire agli utenti maggiore controllo e più opzioni per la modifica delle foto.
 - **Oggi** : consente alle applicazioni di visualizzare i widget nella sezione odierna del centro notifiche.
 
-Per altre informazioni sull'uso delle estensioni delle app in Novell, vedere la Guida [introduttiva alle estensioni per le app](~/ios/platform/extensions.md) .
+Per altre informazioni sull'uso delle estensioni delle app in Xamarin.vedere la Guida [introduttiva alle estensioni per le app](~/ios/platform/extensions.md) .
 
 ### <a name="touch-id"></a>ID tocco
 

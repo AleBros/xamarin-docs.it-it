@@ -1,6 +1,6 @@
 ---
 title: Introduzione a tvOS 11
-description: Questo documento offre una breve panoramica delle nuove funzionalità disponibili per gli sviluppatori Novell in tvOS 11 e i collegamenti alle note sulla versione di Apple.
+description: Questo documento offre una breve panoramica delle nuove funzionalità disponibili per gli sviluppatori Xamarin in tvOS 11 e i collegamenti alle note sulla versione di Apple.
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 02/08/2018
 ms.openlocfilehash: 8069e28dabb804be862334dab5c75b888e23ef74
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030573"
 ---
 # <a name="introduction-to-tvos-11"></a>Introduzione a tvOS 11
 
-_Nuove funzionalità disponibili per gli sviluppatori che usano Novell per tvOS 11_
+_Nuove funzionalità disponibili per gli sviluppatori che usano Xamarin per tvOS 11_
 
 Accedere alle nuove funzionalità di tvOS 11 nelle app Xamarin.tvOS:
 

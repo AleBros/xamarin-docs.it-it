@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728265"
@@ -21,16 +21,16 @@ _Anche se non si prevede di aggiungere le funzionalità di iOS 9 all'app immedia
 > [!IMPORTANT]
 > Le informazioni contenute in questa pagina sono destinate ai clienti con app già presenti nell'App Store destinate a iOS 8 o versioni precedenti, che non hanno già inviato aggiornamenti per la compatibilità con iOS 9. Se si usano già le versioni più recenti-Xcode 7 e Xamarin.iOS 9 per lo sviluppo di app, vedere l' [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
-Quando sono state apportate le prime versioni beta di iOS 9, sono stati identificati due problemi con le versioni precedenti di Novell che si manifestavano come app meno recenti che non possono essere avviate in iOS 9.
+Quando sono state apportate le prime versioni beta di iOS 9, sono stati identificati due problemi con le versioni precedenti di Xamarin che si manifestavano come app meno recenti che non possono essere avviate in iOS 9.
 
 Questi due problemi (come [descritto nei forum](https://forums.xamarin.com/discussion/comment/131529/#Comment_131529)):
 
 - Le app compilate per iOS 8 o versioni precedenti non possono essere avviate su dispositivi a 32 bit (incluse le app compilate con il [API unificata](~/cross-platform/macios/unified/index.md)).
 - Non è stato specificato alcun errore P/Invoke con percorso completo.
 
-Se si aggiorna l'installazione di Novell all'ultima versione stabile del canale e quindi si ricompilano e ridistribuiscono le app, questi due problemi vengono risolti.
+Se si aggiorna l'installazione di Xamarin all'ultima versione stabile del canale e quindi si ricompilano e ridistribuiscono le app, questi due problemi vengono risolti.
 
-_Anche se non si prevede di aggiornare immediatamente l'app con le funzionalità di iOS 9, è consigliabile ricompilare con la versione più recente di Novell ed eseguire di nuovo l'invio all'App Store_.
+_Anche se non si prevede di aggiornare immediatamente l'app con le funzionalità di iOS 9, è consigliabile ricompilare con la versione più recente di Xamarin ed eseguire di nuovo l'invio all'App Store_.
 
 In questo modo l'app verrà eseguita in iOS 9 dopo l'aggiornamento dei clienti.
 È possibile continuare a supportare iOS 8: la ricompilazione con la versione più recente non influisce sulla versione di destinazione dell'applicazione.

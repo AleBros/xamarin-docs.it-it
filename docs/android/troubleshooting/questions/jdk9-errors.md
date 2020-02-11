@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 08/29/2018
 ms.openlocfilehash: 2ea7c9b9f900bc339d183c2f5b317792ebec5232
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026838"
@@ -52,7 +52,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 
 Se è installato JDK 9 o versione successiva, è necessario installare Java JDK 8 (1,8) o Microsoft Mobile OpenJDK Preview. Per informazioni su come installare JDK 8, vedere [ricerca per categorie aggiornare la versione di Java Development Kit (JDK)](~/android/troubleshooting/questions/update-jdk.md). Per informazioni sull'installazione di Microsoft Mobile OpenJDK, vedere [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md).
 
-Si noti che non è necessario disinstallare una versione successiva del JDK. Tuttavia, è necessario assicurarsi che Novell usi JDK 8 anziché una versione successiva di JDK. In Visual Studio fare clic su **strumenti > opzioni > novell > Android Settings**. Se il **percorso di Java Development Kit** non è impostato su un percorso JDK 8, ad esempio **C:\\programmi\\Java\\JDK 1.8.0 _111**), fare clic su **Cambia** e impostarlo sul percorso in cui è installato JDK 8. In Visual Studio per Mac passare a **preferenze > progetti > percorsi SDK > Android > Java SDK (JDK)** e fare clic su **Sfoglia** per aggiornare questo percorso.
+Si noti che non è necessario disinstallare una versione successiva del JDK. Tuttavia, è necessario assicurarsi che Xamarin usi JDK 8 anziché una versione successiva di JDK. In Visual Studio fare clic su **strumenti > opzioni > Xamarin > Android Settings**. Se il **percorso di Java Development Kit** non è impostato su un percorso JDK 8, ad esempio **C:\\programmi\\Java\\JDK 1.8.0 _111**), fare clic su **Cambia** e impostarlo sul percorso in cui è installato JDK 8. In Visual Studio per Mac passare a **preferenze > progetti > percorsi SDK > Android > Java SDK (JDK)** e fare clic su **Sfoglia** per aggiornare questo percorso.
 
 ## <a name="known-issues-with-jdk-9"></a>Problemi noti relativi a JDK 9
 

@@ -1,6 +1,6 @@
 ---
 title: Perché Jenkins non è supportato da Microsoft?
-description: Questo documento descrive, a un livello elevato, l'interazione di Novell con il sistema CI di Jenkins. Vengono inoltre illustrati alcuni problemi comuni che si verificano quando si lavora con Jenkins.
+description: Questo documento descrive, a un livello elevato, l'interazione di Xamarin con il sistema CI di Jenkins. Vengono inoltre illustrati alcuni problemi comuni che si verificano quando si lavora con Jenkins.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/05/2018
 ms.openlocfilehash: 7be60eaa1135284522ef1e6ce81c911a68ff9915
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73012219"
@@ -20,7 +20,7 @@ ms.locfileid: "73012219"
 
 Jenkins è una suite CI open source, a causa di questo problema, i problemi causati direttamente *da Jenkins dovranno* essere archiviati come problemi rispetto alla posizione in cui è stato ottenuto il codice; come il [repository Jenkins principale](https://github.com/jenkinsci/jenkins)o il repository per [Jenkins. app](https://github.com/stisti/jenkins-app).
 
-L'eccezione è rappresentata da problemi che possono essere isolati con particolari bug negli strumenti di Novell; Se si ritiene che questo sia il caso in cui è possibile controllare le [Opzioni di supporto](~/cross-platform/troubleshooting/support-options.md), anche in questo caso, il problema potrebbe essere qualcosa di diverso da quello che il team di supporto di Novell può usare *direttamente* .
+L'eccezione è rappresentata da problemi che possono essere isolati con particolari bug negli strumenti di Xamarin.Se si ritiene che questo sia il caso in cui è possibile controllare le [Opzioni di supporto](~/cross-platform/troubleshooting/support-options.md), anche in questo caso, il problema potrebbe essere qualcosa di diverso da quello che il team di supporto di Xamarin può usare *direttamente* .
 
 ## <a name="setup-jenkins-with-xamarin"></a>Configurare Jenkins con Novell
 
@@ -41,7 +41,7 @@ Le opzioni per l'impostazione del percorso dell'SDK possono variare a seconda de
 > [!IMPORTANT]
 > Questo problema è stato risolto nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
-### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins segnala una licenza Novell non valida
+### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins segnala una licenza Xamarin non valida
 I messaggi di errore relativi a questo problema sono in genere simili a
 
 > Errore XA9008: la compilazione dalla riga di comando richiede una licenza aziendale

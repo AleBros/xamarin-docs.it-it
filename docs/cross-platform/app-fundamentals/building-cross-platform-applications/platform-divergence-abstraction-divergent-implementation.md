@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75488647"
@@ -19,7 +19,7 @@ ms.locfileid: "75488647"
 
 La divergenza non è solo un problema "multipiattaforma"; i dispositivi nella piattaforma "stessa" hanno funzionalità diverse, in particolare la vasta gamma di dispositivi Android disponibili. Il più ovvio e Basic è la dimensione dello schermo, ma gli altri attributi del dispositivo possono variare e richiedere a un'applicazione di controllare determinate funzionalità e si comportano in modo diverso in base alla loro presenza (o assenza).
 
-Ciò significa che tutte le applicazioni devono gestire la degradazione normale della funzionalità, altrimenti presentano un set di funzionalità non accattivante, il più basso comune. L'integrazione completa di Novell con gli SDK nativi di ogni piattaforma consente alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare le app per l'uso di tali funzionalità.
+Ciò significa che tutte le applicazioni devono gestire la degradazione normale della funzionalità, altrimenti presentano un set di funzionalità non accattivante, il più basso comune. L'integrazione completa di Xamarin con gli SDK nativi di ogni piattaforma consente alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare le app per l'uso di tali funzionalità.
 
 Vedere la documentazione sulle funzionalità della piattaforma per una panoramica delle differenze tra le piattaforme e le funzionalità.
 
@@ -108,7 +108,7 @@ Queste librerie offrono inoltre funzionalità multipiattaforma per C# gli svilup
 
 Esistono situazioni in cui il codice condiviso dovrà comunque funzionare in modo diverso in ogni piattaforma, possibilmente accedendo a classi o funzionalità che si comportano in modo diverso. La compilazione condizionale funziona meglio con i progetti di asset condivisi, in cui viene fatto riferimento allo stesso file di origine in più progetti con simboli diversi definiti.
 
-I progetti Novell definiscono sempre `__MOBILE__`, vale a volte per i progetti di applicazioni iOS e Android. si notino il doppio carattere di sottolineatura pre e post-correzione su questi simboli.
+I progetti Xamarin definiscono sempre `__MOBILE__`, vale a volte per i progetti di applicazioni iOS e Android. si notino il doppio carattere di sottolineatura pre e post-correzione su questi simboli.
 
 ```csharp
 #if __MOBILE__

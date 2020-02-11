@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 10/11/2017
 ms.openlocfilehash: 2f1fb3706012fa86834986064a366071b644b2dc
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015958"
@@ -123,7 +123,7 @@ Per ulteriori informazioni, vedere la documentazione relativa alla [Verifica deg
 
 * L'utilizzo del modulo Clang (`@import`) viene ora rilevato automaticamente, che dovrebbe eliminare la necessità di passare manualmente `-fmodules` a Clang per le librerie che usano il supporto del nuovo modulo in Clang.
 
-* Il API unificata Novell è ora la destinazione di associazione predefinita; usare l'opzione `-classic` per fare riferimento API classica solo a 32 bit.
+* Il API unificata Xamarin è ora la destinazione di associazione predefinita; usare l'opzione `-classic` per fare riferimento API classica solo a 32 bit.
 
 ### <a name="notable-bug-fixes"></a>Correzioni di bug rilevanti
 
@@ -141,4 +141,4 @@ Correzioni di bug secondari.
 
 [Scarica v 1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
-1.1.1 è stata la prima versione principale dopo 1,5 anni di utilizzo e sviluppo interni in Novell dopo l'anteprima iniziale di Objective Sharpie del 2013 aprile. Questa versione è la prima ad essere considerata stabile e utilizzabile per un'ampia gamma di librerie native, con un nuovo back-end Clang.
+1.1.1 è stata la prima versione principale dopo 1,5 anni di utilizzo e sviluppo interni in Xamarin dopo l'anteprima iniziale di Objective Sharpie del 2013 aprile. Questa versione è la prima ad essere considerata stabile e utilizzabile per un'ampia gamma di librerie native, con un nuovo back-end Clang.

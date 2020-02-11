@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 06/21/2018
 ms.openlocfilehash: 4c559a76d7354fd957d065717ef14d91591d1be0
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019505"
@@ -21,7 +21,7 @@ _Modifiche al modo in cui il Android SDK gestisce i livelli di API e AVD install
 
 ## <a name="changes-to-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
 
-Nelle versioni recenti del SDK Tools per Android, Google ha rimosso i gestori di AVD e SDK esistenti a favore dei nuovi strumenti CLI (interfaccia della riga di comando). Il programma **Android** è stato rimosso e i manager di Google GUI (interfaccia utente grafica) in Visual Studio per Mac e le versioni precedenti di strumenti di Visual Studio per Novell non funzioneranno più oltre la versione 25.2.5 di Android SDK Tools. Ad esempio, se si tenta di usare il programma **Android** tramite la riga di comando, verrà visualizzato un messaggio di errore simile al seguente:
+Nelle versioni recenti del SDK Tools per Android, Google ha rimosso i gestori di AVD e SDK esistenti a favore dei nuovi strumenti CLI (interfaccia della riga di comando). Il programma **Android** è stato rimosso e i manager di Google GUI (interfaccia utente grafica) in Visual Studio per Mac e le versioni precedenti di strumenti di Visual Studio per Xamarin non funzioneranno più oltre la versione 25.2.5 di Android SDK Tools. Ad esempio, se si tenta di usare il programma **Android** tramite la riga di comando, verrà visualizzato un messaggio di errore simile al seguente:
 
 ```shell
 The "android" command is deprecated.
@@ -34,7 +34,7 @@ Le sezioni seguenti illustrano come gestire i dispositivi virtuali Android SDK e
 
 ### <a name="ui-tools"></a>Strumenti dell'interfaccia utente
 
-Visual Studio e Visual Studio per Mac ora forniscono sostituzioni Novell per i manager basati su GUI di Google obsoleti:
+Visual Studio e Visual Studio per Mac ora forniscono sostituzioni Xamarin per i manager basati su GUI di Google obsoleti:
 
 - Per scaricare Android SDK strumenti, le piattaforme e gli altri componenti necessari per lo sviluppo di app Xamarin.Android, usare [novell Android SDK Manager](~/android/get-started/installation/android-sdk.md) invece di Google SDK Manager legacy.
 

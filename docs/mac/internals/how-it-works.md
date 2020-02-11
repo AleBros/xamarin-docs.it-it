@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 05/25/2017
 ms.openlocfilehash: 347fb1021a290fa849ae354468bc66b0cdd8b684
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73017587"
@@ -156,7 +156,7 @@ Di seguito sono riportate alcune spiegazioni più dettagliate sul funzionamento 
 
 - [Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
 - [Registrar](~/ios/internals/registrar.md)
-- [API unificata Novell per iOS e OS X](~/cross-platform/macios/unified/index.md)
+- [API unificata Xamarin per iOS e OS X](~/cross-platform/macios/unified/index.md)
 - [Nozioni fondamentali su Theading](~/ios/app-fundamentals/threading.md)
 - [Delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Informazioni su `newrefcount`](~/ios/internals/newrefcount.md)

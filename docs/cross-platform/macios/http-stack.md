@@ -1,6 +1,6 @@
 ---
 title: Selettore di implementazione di HttpClient e SSL/TLS per iOS/macOS
-description: Lo stack HttpClient e il selettore di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dall'app Novell iOS, tvOS o macOS.
+description: Lo stack HttpClient e il selettore di implementazione SSL/TLS determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dall'app Xamarin iOS, tvOS o macOS.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 04/20/2018
 ms.openlocfilehash: 3b87eb6ae9e97be4ee34b092efce72c0d97c88b3
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73015846"
@@ -20,9 +20,9 @@ Il **selettore di implementazione di HttpClient** per Xamarin.iOS, Xamarin.TvOS 
 I progetti devono fare riferimento all'assembly **System .NET. http** .
 
 > [!WARNING]
-> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Novell creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
+> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Xamarin creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
 >
-> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Novell con l'impostazione `NSUrlSession` illustrata di seguito, quindi ricompilare e ridistribuire le app** agli utenti.
+> Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Xamarin con l'impostazione `NSUrlSession` illustrata di seguito, quindi ricompilare e ridistribuire le app** agli utenti.
 
 ## <a name="selecting-an-httpclient-stack"></a>Selezione di uno stack HttpClient
 

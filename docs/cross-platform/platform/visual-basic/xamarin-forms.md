@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 04/24/2019
 ms.openlocfilehash: e1a540eef2a4d54ead68ae4a9427b0622b668182
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014554"
@@ -119,7 +119,7 @@ Fare clic con il pulsante destro del mouse sul nodo **riferimenti** nei progetti
 
 ## <a name="limitations-of-visual-basic-in-xamarinforms"></a>Limitazioni dei Visual Basic in Xamarin.Forms
 
-Come indicato nella [pagina Portable Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md), Novell non supporta la lingua Visual Basic. Ciò significa che esistono alcune limitazioni in cui è possibile usare Visual Basic:
+Come indicato nella [pagina Portable Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md), Xamarin non supporta la lingua Visual Basic. Ciò significa che esistono alcune limitazioni in cui è possibile usare Visual Basic:
 
 - Non è possibile includere le pagine XAML nel progetto Visual Basic: il generatore code-behind può compilare C#solo. È possibile includere XAML in una libreria di classi portabile separata e C# a cui viene fatto riferimento e utilizzare l'associazione dati per popolare i file xaml tramite Visual Basic modelli. un esempio è incluso nell' [esempio](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages).
 

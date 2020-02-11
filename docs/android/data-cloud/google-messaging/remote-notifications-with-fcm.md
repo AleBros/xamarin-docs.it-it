@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 07/31/2018
 ms.openlocfilehash: ece8b46e02943774e611fda419b3e8ef6b4e8976
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021639"
@@ -132,7 +132,7 @@ Per ricevere i messaggi da FCM, è necessario aggiungere il pacchetto NuGet [Nov
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
-    [![installazione di Novell Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
+    [![installazione di Xamarin Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -142,7 +142,7 @@ Per ricevere i messaggi da FCM, è necessario aggiungere il pacchetto NuGet [Nov
 
 3. Installare il pacchetto nel progetto **FCMClient** :
 
-    [![installazione di Novell Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
+    [![installazione di Xamarin Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
 -----
 

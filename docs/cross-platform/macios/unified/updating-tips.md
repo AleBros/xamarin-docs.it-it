@@ -8,14 +8,14 @@ author: davidortinau
 ms.author: daortin
 ms.openlocfilehash: ee207ffc83f887e9c86c650b6f93fc2ff9f5b69c
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014985"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Suggerimenti per l'aggiornamento del codice per l'API unificata
 
-Quando si aggiornano soluzioni Novell obsolete alla API unificata, potrebbero verificarsi i seguenti errori.
+Quando si aggiornano soluzioni Xamarin obsolete alla API unificata, potrebbero verificarsi i seguenti errori.
 
 ## <a name="nsinvalidargumentexception-could-not-find-storyboard-error"></a>NSInvalidArgumentException non è riuscito a trovare l'errore dello storyboard
 
@@ -48,7 +48,7 @@ E aggiungere l'attributo `DependsOnTargets="_CollectBundleResources"`. analogame
         Outputs = "@(_BundleResourceWithLogicalName -> '$(_AppBundlePath)%(LogicalName)')" >
 ```
 
-Salvare il file, riavviare Visual Studio per Mac ed eseguire una ricompilazione pulita & del progetto. Una correzione per questo problema dovrebbe essere rilasciata da Novell a breve.
+Salvare il file, riavviare Visual Studio per Mac ed eseguire una ricompilazione pulita & del progetto. Una correzione per questo problema dovrebbe essere rilasciata da Xamarin a breve.
 
 ## <a name="useful-tips"></a>Suggerimenti utili
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019879"
@@ -35,7 +35,7 @@ L'elenco seguente è necessario per usare le funzionalità di torta Android nell
 
 - **Xamarin.android** &ndash; Xamarin.Android 9.0.0.17 o versione successiva deve essere installato con Visual Studio (Xamarin.Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** ).
 
-- **Java Developer Kit** &ndash; lo sviluppo di novell Android 9,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (oppure è possibile provare l'anteprima della distribuzione di Microsoft [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
+- **Java Developer Kit** &ndash; lo sviluppo di Xamarin Android 9,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (oppure è possibile provare l'anteprima della distribuzione di Microsoft [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
 
 - **Android SDK** &ndash; Android SDK API 28 o versione successiva deve essere installato tramite il Android SDK Manager.
 
@@ -77,7 +77,7 @@ Per creare un progetto con Xamarin.Android 9,0, è necessario prima di tutto usa
 
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
+Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Xamarin.vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 9,0 o versione successiva. Ad esempio, per fare riferimento al progetto per la torta Android, è necessario configurare il livello API Android di destinazione del progetto su **android 9,0** (API 28). Si consiglia inoltre di impostare il livello di Framework di destinazione sull'API 28 o versione successiva. Per altre informazioni sulla configurazione dei livelli API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 

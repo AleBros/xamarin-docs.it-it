@@ -10,7 +10,7 @@ ms.date: 08/15/2019
 ms.custom: video
 ms.openlocfilehash: 49ea5c2a8332e625710af8a9947e1cb0e0338040
 ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955822"
@@ -19,7 +19,7 @@ ms.locfileid: "75955822"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
-_Le risorse XAML sono definizioni di oggetti che possono essere condivisi e riutilizzati in un'applicazione Novell. Forms. Questi oggetti risorsa vengono archiviati in un dizionario risorse._
+_Le risorse XAML sono definizioni di oggetti che possono essere condivisi e riutilizzati in un'applicazione Xamarin.Forms. Questi oggetti risorsa vengono archiviati in un dizionario risorse._
 
 Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) è un repository per le risorse utilizzate da un'applicazione xamarin. Forms. Le risorse tipiche che vengono archiviate in un `ResourceDictionary` includono [stili](~/xamarin-forms/user-interface/styles/index.md), [modelli di controllo](~/xamarin-forms/app-fundamentals/templates/control-template.md), [modelli di data](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colori e dei convertitori di tipi.
 
@@ -215,7 +215,7 @@ Una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) locale può es
 </ContentPage>
 ```
 
-Questa sintassi non crea un'istanza della classe `MyResourceDictionary`. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta la proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) , il file code-behind (**MyResourceDictionary.XAML.cs**) non è obbligatorio e l'attributo `x:Class` può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Novell. Forms creerà automaticamente un'istanza del [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), di conseguenza i tag di `ResourceDictionary` esterni non sono necessari.
+Questa sintassi non crea un'istanza della classe `MyResourceDictionary`. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta la proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) , il file code-behind (**MyResourceDictionary.XAML.cs**) non è obbligatorio e l'attributo `x:Class` può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Xamarin.Forms creerà automaticamente un'istanza del [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), di conseguenza i tag di `ResourceDictionary` esterni non sono necessari.
 
 > [!IMPORTANT]
 > La proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) può essere impostata solo da XAML.

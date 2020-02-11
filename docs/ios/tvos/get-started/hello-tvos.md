@@ -1,6 +1,6 @@
 ---
 title: Hello, tvOS Guida introduttiva
-description: Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS.
+description: Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Xamarin.che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
@@ -9,14 +9,14 @@ ms.author: daortin
 ms.date: 02/02/2018
 ms.openlocfilehash: 35f0bc0668c6f80ee00b1253b16a8ac71770a9be
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030808"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
-_Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Novell, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS._
+_Questa guida illustra la creazione della prima app Xamarin.tvOS e del relativo ciclo di vita di sviluppo. Viene inoltre introdotta la finestra di progettazione Xamarin.che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS._
 
 Apple ha rilasciato la quinta generazione di Apple TV, Apple TV 4K, che esegue tvOS 11.
 
@@ -336,7 +336,7 @@ Quando uno di questi viene aggiunto, la classe parziale all'interno del `ViewCon
 
 In questa applicazione di esempio, quando si fa clic sul pulsante si vuole che venga eseguita un' _operazione_ , è necessario aggiungere un gestore eventi a un evento specifico sul pulsante. Per configurare questa impostazione, eseguire le operazioni seguenti:
 
-1. In Novell iOS Designer selezionare il pulsante sul controller di visualizzazione.
+1. In Xamarin iOS Designer selezionare il pulsante sul controller di visualizzazione.
 2. Nel riquadro delle proprietà selezionare la scheda **eventi** :
 
     [![](hello-tvos-images/event1.png "The Events tab")](hello-tvos-images/event1.png#lightbox)
@@ -496,4 +496,4 @@ Questo articolo fornisce una guida introduttiva allo sviluppo di app per tvOS co
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Creazione di app per tvOS con Novell (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [Creazione di app per tvOS con Xamarin (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
