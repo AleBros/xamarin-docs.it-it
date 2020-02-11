@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/03/2016
 ms.openlocfilehash: d13237f270fe01e2a91b69a60c3109843db713bf
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728014"
@@ -88,7 +88,7 @@ Dopo che è stato aggiunto correttamente una vista di CocosSharp in un'app Xamar
 
 <a name="1" />
 
-### <a name="1-creating-a-xamarin-forms-page"></a>1. creazione di una pagina Novell Forms
+### <a name="1-creating-a-xamarin-forms-page"></a>1. creazione di una pagina Xamarin Forms
 
 CocosSharp possono essere ospitati in qualsiasi contenitore di Xamarin.Forms. In questo esempio per questa pagina viene utilizzata una pagina denominata `HomePage`. `HomePage` viene divisa in metà da un `Grid` per mostrare come Xamarin.Forms CocosSharp può eseguire il rendering e contemporaneamente nella stessa pagina.
 

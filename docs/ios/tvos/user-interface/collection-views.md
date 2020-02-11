@@ -1,6 +1,6 @@
 ---
-title: Uso delle viste di raccolta tvOS in Novell
-description: Questo documento descrive come usare le visualizzazioni di raccolta in un'app tvOS compilata con Novell. Vengono illustrati i layout della visualizzazione raccolta, la creazione di celle e visualizzazioni supplementari, la risposta agli eventi utente e altro ancora.
+title: Uso delle viste di raccolta tvOS in Xamarin
+description: Questo documento descrive come usare le visualizzazioni di raccolta in un'app tvOS compilata con Xamarin. Vengono illustrati i layout della visualizzazione raccolta, la creazione di celle e visualizzazioni supplementari, la risposta agli eventi utente e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: be0208accfdc287f93cf635a22c6409cd03483e9
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030498"
 ---
-# <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Novell
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Xamarin
 
 Le visualizzazioni di raccolta consentono di visualizzare un gruppo di contenuti usando layout arbitrari. Grazie al supporto incorporato, consentono di creare layout semplici, ad esempio griglia o lineare, supportando al tempo stesso layout personalizzati.
 

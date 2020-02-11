@@ -1,6 +1,6 @@
 ---
 title: Aggiornamento di riferimenti ai componenti in NuGet
-description: Questo documento descrive come sostituire i riferimenti ai componenti con i pacchetti NuGet per la prova futura delle app, dal momento che l'archivio componenti Novell è stato interrotto.
+description: Questo documento descrive come sostituire i riferimenti ai componenti con i pacchetti NuGet per la prova futura delle app, dal momento che l'archivio componenti Xamarin è stato interrotto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/18/2018
 ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
 ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75728252"
@@ -19,11 +19,11 @@ ms.locfileid: "75728252"
 > [!IMPORTANT]
 > L'archivio componenti è stato interrotto a partire dal 15 maggio 2018 (questa chiusura è stata originariamente [annunciata](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) nel 2017 novembre).
 >
-> I componenti Novell non sono più supportati in Visual Studio e devono essere sostituiti dai pacchetti NuGet. Seguire le istruzioni riportate di seguito per rimuovere manualmente i riferimenti ai componenti dai progetti.
+> I componenti Xamarin non sono più supportati in Visual Studio e devono essere sostituiti dai pacchetti NuGet. Seguire le istruzioni riportate di seguito per rimuovere manualmente i riferimenti ai componenti dai progetti.
 
 Vedere queste istruzioni per l'aggiunta di pacchetti NuGet in [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) o [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-È disponibile un elenco di [librerie e plug](https://github.com/xamarin/XamarinComponents/blob/master/README.md) -in Novell più diffusi che consentono di trovare alternative ai componenti non disponibili come pacchetti NuGet.
+È disponibile un elenco di [librerie e plug](https://github.com/xamarin/XamarinComponents/blob/master/README.md) -in Xamarin più diffusi che consentono di trovare alternative ai componenti non disponibili come pacchetti NuGet.
 
 ## <a name="manually-removing-component-references"></a>Rimozione manuale di riferimenti ai componenti
 
@@ -105,7 +105,7 @@ Per rimuovere un componente dal progetto:
 > Le istruzioni seguenti funzionano solo con le versioni precedenti di Visual Studio.
 > Il nodo **componenti** non è più disponibile nelle versioni correnti di Visual Studio 2017 o Visual Studio per Mac.
 
-Le sezioni seguenti illustrano come aggiornare le soluzioni Novell esistenti per modificare i riferimenti ai componenti dei pacchetti NuGet.
+Le sezioni seguenti illustrano come aggiornare le soluzioni Xamarin esistenti per modificare i riferimenti ai componenti dei pacchetti NuGet.
 
 - [Componenti che contengono pacchetti NuGet](#contain)
 - [Componenti con sostituzioni NuGet](#replace)
@@ -203,6 +203,6 @@ Molti fornitori di componenti continuano a lavorare per eseguire la migrazione a
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Elenco dei plug-in e delle librerie Novell più diffusi](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
+- [Elenco dei plug-in e delle librerie Xamarin più diffusi](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Installare e usare un pacchetto NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Inclusione di un pacchetto NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

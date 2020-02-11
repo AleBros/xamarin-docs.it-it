@@ -1,6 +1,6 @@
 ---
 title: Test sui dispositivi Apple Watch
-description: Questo documento descrive come distribuire un'app watchos compilata con Novell per il testing in un Apple Watch effettivo. Vengono illustrati i dispositivi, i profili di provisioning, i test e vengono forniti alcuni suggerimenti per la risoluzione dei problemi.
+description: Questo documento descrive come distribuire un'app watchos compilata con Xamarin per il testing in un Apple Watch effettivo. Vengono illustrati i dispositivi, i profili di provisioning, i test e vengono forniti alcuni suggerimenti per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028358"

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 07/25/2018
 ms.openlocfilehash: df83bdfcc847b07754a349060c9be1613efd0b08
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73029528"
@@ -38,7 +38,7 @@ L'obiettivo di questa procedura dettagliata consiste nell'usare la Android Desig
 
 ### <a name="creating-a-new-project"></a>Creazione di un nuovo progetto
 
-Il primo passaggio consiste nel creare un nuovo progetto Xamarin.Android. Avviare Visual Studio, fare clic su **nuovo progetto...** e scegliere il modello **visual C\# > Android > Android app (Novell)** .
+Il primo passaggio consiste nel creare un nuovo progetto Xamarin.Android. Avviare Visual Studio, fare clic su **nuovo progetto...** e scegliere il modello **visual C\# > Android > Android app (Xamarin)** .
 Assegnare alla nuova app il nome **DesignerWalkthrough** e fare clic su **OK**.
 
 [App vuota![Android](designer-walkthrough-images/vs/01-android-app-w158-sml.png)](designer-walkthrough-images/vs/01-android-app-w158.png#lightbox)

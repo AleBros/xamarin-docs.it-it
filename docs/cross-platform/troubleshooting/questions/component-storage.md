@@ -8,14 +8,14 @@ ms.author: daortin
 ms.date: 05/08/2018
 ms.openlocfilehash: 9447cf903c8789078e66082e720eeecfa7bb3e0d
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014234"
 ---
 # <a name="where-are-the-components-stored-on-my-machine"></a>In quale posizione sono archiviati i componenti nel computer?
 
-Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito in due posizioni:
+Ogni volta che si installa un componente Xamarin in un progetto di app, questo viene inserito in due posizioni:
 
 1. In una cartella Components a livello di radice della cartella della soluzione. Se si rimuove il componente da tutti i progetti della soluzione, verrà rimosso anche da questa cartella.
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 446006b89b82a1f5070a45d7e296e0563d74dbe4
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032630"
@@ -41,7 +41,7 @@ Per iniziare rapidamente, si inizierà con una semplice introduzione pratica all
 
 Per questo esempio verrà creata una semplice applicazione basata su documenti che gestisce una finestra contenente una visualizzazione immagine. L'utente potrà copiare e incollare immagini tra documenti nell'app e in o da altre app o più finestre all'interno della stessa app.
 
-### <a name="creating-the-xamarin-project"></a>Creazione del progetto Novell
+### <a name="creating-the-xamarin-project"></a>Creazione del progetto Xamarin
 
 In primo luogo, si creerà una nuova app Xamarin.Mac basata su documenti che verrà aggiunta al supporto di copia e incolla per.
 

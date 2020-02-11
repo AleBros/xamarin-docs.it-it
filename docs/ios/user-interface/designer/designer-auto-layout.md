@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021815"
@@ -18,7 +18,7 @@ ms.locfileid: "73021815"
 
 Il layout automatico (detto anche "layout adattivo") è un approccio di progettazione reattivo. A differenza del sistema di layout di transizione, in cui il percorso di ogni elemento è hardcoded a un punto sullo schermo, il layout automatico riguarda le *relazioni* , ovvero le posizioni degli elementi rispetto ad altri elementi nell'area di progettazione. Il fulcro del layout automatico è l'idea di vincoli o regole che definiscono la posizione di un elemento o di un set di elementi nel contesto di altri elementi sullo schermo. Poiché gli elementi non sono collegati a una particolare posizione sullo schermo, i vincoli consentono di creare un layout adattivo che risulti valido in dimensioni dello schermo e orientamenti dei dispositivi diversi.
 
-In questa guida vengono introdotti i vincoli e le modalità di utilizzo in Novell iOS designer. Questa guida non illustra l'uso dei vincoli a livello di codice. Per informazioni sull'uso del layout automatico a livello di codice, vedere la [documentazione di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
+In questa guida vengono introdotti i vincoli e le modalità di utilizzo in Xamarin iOS designer. Questa guida non illustra l'uso dei vincoli a livello di codice. Per informazioni sull'uso del layout automatico a livello di codice, vedere la [documentazione di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
 ## <a name="requirements"></a>Requisiti
 

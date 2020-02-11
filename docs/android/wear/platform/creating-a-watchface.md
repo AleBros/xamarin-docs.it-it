@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/23/2018
 ms.openlocfilehash: 38123e2b1ef20144606bcc77ad33af572aa3707a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73030390"
@@ -37,7 +37,7 @@ Per implementare un servizio di controllo del viso, è necessario quanto segue:
 
 - Android 5,0 (livello API 21) o versione successiva nel dispositivo o nell'emulatore Wear.
 
-- È necessario aggiungere le [librerie di supporto Novell Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Xamarin.Android.
+- È necessario aggiungere le [librerie di supporto Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Xamarin.Android.
 
 Sebbene Android 5,0 sia il livello API minimo per l'implementazione di un servizio Watch Face, è consigliabile Android 5,1 o versione successiva. I dispositivi Android Wear che eseguono Android 5,1 (API 22) o versioni successive consentono di usare app per il controllo di ciò che viene visualizzato sullo schermo quando il dispositivo è in modalità di *ambiente* a basso consumo. Quando il dispositivo lascia la modalità di *ambiente* a basso consumo, è in modalità *interattiva* . Per altre informazioni su queste modalità, vedere [mantenere visibile l'app](https://developer.android.com/training/wearables/apps/always-on.html).
 
@@ -332,11 +332,11 @@ Compilare e distribuire l'app nel dispositivo Wear. Verrà visualizzata la scher
 
 3. Scorrere rapidamente da sinistra verso destra per esplorare i vari visi.
 
-4. Selezionare l'espressione di controllo di **esempio Novell** (visualizzata a destra):
+4. Selezionare l'espressione di controllo di **esempio Xamarin** (visualizzata a destra):
 
-    [![Selezione Watchface](creating-a-watchface-images/11-watchface-picker.png "Scorrere rapidamente per individuare il quadrante dell'orologio di esempio Novell")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
+    [![Selezione Watchface](creating-a-watchface-images/11-watchface-picker.png "Scorrere rapidamente per individuare il quadrante dell'orologio di esempio Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5. Toccare l'espressione di controllo di **esempio Novell** per selezionarla.
+5. Toccare l'espressione di controllo di **esempio Xamarin** per selezionarla.
 
 In questo modo il quadrante dell'orologio del dispositivo Wear viene modificato per l'uso del servizio di controllo del viso personalizzato implementato fino a questo punto:
 

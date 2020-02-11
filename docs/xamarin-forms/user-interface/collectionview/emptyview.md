@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: 9302b9a353173b0445d1d696849b4956134e555d
 ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72696900"
@@ -319,7 +319,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La classe `SearchTermTemplateSelector` definisce `DefaultTemplate` e `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. L'override del `OnSelectTemplate` restituisce `DefaultTemplate`, che visualizza un messaggio all'utente, quando la query di ricerca non è uguale a "Novell". Quando la query di ricerca è uguale a "Novell", l'override del `OnSelectTemplate` restituisce `OtherTemplate`, che visualizza un messaggio di base per l'utente:
+La classe `SearchTermTemplateSelector` definisce `DefaultTemplate` e `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. L'override del `OnSelectTemplate` restituisce `DefaultTemplate`, che visualizza un messaggio all'utente, quando la query di ricerca non è uguale a "Xamarin". Quando la query di ricerca è uguale a "Xamarin", l'override del `OnSelectTemplate` restituisce `OtherTemplate`, che visualizza un messaggio di base per l'utente:
 
 [![Screenshot della selezione di un modello di visualizzazione vuota del runtime di CollectionView in iOS e Android](emptyview-images/datatemplateselector.png "Selezione del modello di visualizzazione vuota di runtime in un oggetto CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "Selezione del modello di visualizzazione vuota di runtime in un oggetto CollectionView")
 

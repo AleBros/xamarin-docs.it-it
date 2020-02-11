@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 1db7ee95ec261739463fa2584f4acf493ac71217
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014824"
@@ -21,7 +21,7 @@ _La versione 6 del C# linguaggio continua a evolvere il linguaggio in modo da av
 > [!NOTE]
 > Per informazioni sulla versione più recente del C# linguaggio-versione 7, vedere l'articolo relativo alle [novità di 7,0 C# ](/dotnet/csharp/whats-new/csharp-7)
 
-In questo documento vengono presentate le nuove C# funzionalità di 6. È completamente supportato dal compilatore mono e gli sviluppatori possono iniziare a usare le nuove funzionalità in tutte le piattaforme di destinazione Novell.
+In questo documento vengono presentate le nuove C# funzionalità di 6. È completamente supportato dal compilatore mono e gli sviluppatori possono iniziare a usare le nuove funzionalità in tutte le piattaforme di destinazione Xamarin.
 
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 

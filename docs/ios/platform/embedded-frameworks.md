@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/05/2018
 ms.openlocfilehash: cf74c31b149c24bc6e515c0f00803a60b10d5d1c
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032541"
@@ -50,7 +50,7 @@ Fare clic con il pulsante destro del mouse sul progetto e selezionare Aggiungi r
 
   Questa operazione funzionerà per tutte le configurazioni.
 
-Nelle future versioni di Visual Studio per Mac e Novell Tools per Visual Studio sarà possibile utilizzare i Framework dall'IDE (senza modificare manualmente i file di progetto).
+Nelle future versioni di Visual Studio per Mac e Xamarin Tools per Visual Studio sarà possibile utilizzare i Framework dall'IDE (senza modificare manualmente i file di progetto).
 
 È possibile trovare alcuni progetti di esempio in [GitHub](https://github.com/rolfbjarne/embedded-frameworks)
 

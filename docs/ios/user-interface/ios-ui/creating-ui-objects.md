@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 58a1fd68dda2216a62fe6f30cf61d6d2ec7d40d5
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73003665"
@@ -28,7 +28,7 @@ Tutti i controlli descritti in questo capitolo si trovano nello spazio dei nomi 
 
 È possibile modificare i layout e i controlli dell'interfaccia utente in tre modi:
 
-- **[Novell iOS designer](~/ios/user-interface/designer/index.md)** : usare la finestra di progettazione layout predefinita di Novell per progettare le schermate. Fare doppio clic su file storyboard o XIB per modificare con la finestra di progettazione incorporata.
+- **[Xamarin iOS designer](~/ios/user-interface/designer/index.md)** : usare la finestra di progettazione layout predefinita di Xamarin per progettare le schermate. Fare doppio clic su file storyboard o XIB per modificare con la finestra di progettazione incorporata.
 - **Xcode Interface Builder** : trascinare i controlli sui layout dello schermo con Interface Builder. Aprire il file storyboard o XIB in Xcode facendo clic con il pulsante destro del mouse sul file nella **riquadro della soluzione** e scegliendo **Apri con > Xcode Interface Builder**.
 - **Using C#**  : i controlli possono essere costruiti anche a livello di codice e aggiunti alla gerarchia di visualizzazione.
 
@@ -36,7 +36,7 @@ Tutti i controlli descritti in questo capitolo si trovano nello spazio dei nomi 
 
 Indipendentemente dal metodo usato, controllare proprietà ed eventi può comunque essere modificato con C# nella logica dell'applicazione.
 
-## <a name="using-xamarin-ios-designer"></a>Uso di Novell iOS designer
+## <a name="using-xamarin-ios-designer"></a>Uso di Xamarin iOS designer
 
 Per iniziare a creare l'interfaccia utente in iOS designer, fare doppio clic su un file dello storyboard. I controlli possono essere trascinati nell'area di progettazione dalla **casella degli strumenti** , come illustrato di seguito:
 

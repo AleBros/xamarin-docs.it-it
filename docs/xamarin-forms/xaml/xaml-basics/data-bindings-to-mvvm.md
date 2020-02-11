@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 80386780d52f9a28d421d2a83981085956d06ea5
 ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/08/2019
 ms.locfileid: "73842945"
@@ -703,7 +703,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Novell evolve 2016: MVVM semplificato con Xamarin.Forms e Prism**
+**Xamarin evolve 2016: MVVM semplificato con Xamarin.Forms e Prism**
 
 ## <a name="summary"></a>Riepilogo
 

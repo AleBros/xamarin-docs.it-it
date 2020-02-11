@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 08/06/2018
 ms.openlocfilehash: 78b849434a087cf7951fe36345688251885ea00b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016905"
@@ -19,7 +19,7 @@ _Questo documento mette a confronto i diversi metodi di condivisione del codice 
 
 Sono disponibili tre metodi per la condivisione di codice tra applicazioni multipiattaforma:
 
-- [**Librerie di .NET standard**](#Net_Standard) : i progetti .NET standard possono implementare codice da condividere tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). .NET Standard 1,0-1,6 implementano set di API progressivamente più grandi, mentre .NET Standard 2,0 offre la migliore copertura della libreria di classi portabile .NET (incluse le API .NET disponibili nelle app Novell).
+- [**Librerie di .NET standard**](#Net_Standard) : i progetti .NET standard possono implementare codice da condividere tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). .NET Standard 1,0-1,6 implementano set di API progressivamente più grandi, mentre .NET Standard 2,0 offre la migliore copertura della libreria di classi portabile .NET (incluse le API .NET disponibili nelle app Xamarin).
 - [**Progetti condivisi**](#Shared_Projects) : usare il tipo di progetto di asset condiviso per organizzare il codice sorgente e usare `#if` direttive del compilatore come richiesto per gestire i requisiti specifici della piattaforma.
 - [**Librerie di classi**](#Portable_Class_Libraries) portabili (deprecate): le librerie di classi portabili (classi portabili) possono avere come destinazione più piattaforme con una superficie API comune e usare le interfacce per fornire funzionalità specifiche della piattaforma. Classi portabili sono deprecati nelle versioni più recenti di Visual Studio &ndash; usare .NET Standard.
 

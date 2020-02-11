@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/21/2018
 ms.openlocfilehash: 2c1f571efb9ec3fb726912eb1e30496bc51fe26e
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73026980"
@@ -100,7 +100,7 @@ Tuttavia, le estensioni dell'IDE Xamarin.Android attualmente non forniscono un m
 
 ## <a name="contact-information"></a>Informazioni di contatto
 
-Questo documento illustra il comportamento attuale a partire da marzo 2016. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Novell, quindi potrebbe interrompersi in futuro.
+Questo documento illustra il comportamento attuale a partire da marzo 2016. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Xamarin, quindi potrebbe interrompersi in futuro.
 
 Se si nota che la tecnica non funziona più o se si notano altri errori nel documento, è possibile aggiungere la discussione sul seguente thread del forum: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Grazie

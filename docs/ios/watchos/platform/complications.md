@@ -1,6 +1,6 @@
 ---
-title: Complicazioni watchos in Novell
-description: Questo documento descrive come usare le complicazioni watchos in Novell. Viene illustrato come aggiungere una complicazione, scrivendo una complicazione, modelli e viene fornito codice di esempio.
+title: Complicazioni watchos in Xamarin
+description: Questo documento descrive come usare le complicazioni watchos in Xamarin. Viene illustrato come aggiungere una complicazione, scrivendo una complicazione, modelli e viene fornito codice di esempio.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
@@ -9,12 +9,12 @@ ms.author: daortin
 ms.date: 07/03/2017
 ms.openlocfilehash: 5aea7ae094e0b79831a5fb84397108ca09e18360
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73028308"
 ---
-# <a name="watchos-complications-in-xamarin"></a>Complicazioni watchos in Novell
+# <a name="watchos-complications-in-xamarin"></a>Complicazioni watchos in Xamarin
 
 _watchos consente agli sviluppatori di scrivere complicazioni personalizzate per i visi di controllo_
 

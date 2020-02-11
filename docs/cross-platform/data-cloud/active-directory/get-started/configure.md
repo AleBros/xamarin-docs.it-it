@@ -1,6 +1,6 @@
 ---
 title: "Passaggio 2: Configurare l'accesso al servizio per l'applicazione per dispositivi mobili"
-description: Questo documento descrive come fornire un'applicazione Novell con accesso a un'applicazione Azure protetta da Azure Active Directory.
+description: Questo documento descrive come fornire un'applicazione Xamarin con accesso a un'applicazione Azure protetta da Azure Active Directory.
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: davidortinau
@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: eeac7b0b70b2f11304a374de7522f28d4bcad6c6
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73016673"

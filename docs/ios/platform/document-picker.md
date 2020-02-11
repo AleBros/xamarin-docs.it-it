@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: bbb38acdb3de972cd7f2e2ee04233bf7ed88897a
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73032585"
@@ -49,7 +49,7 @@ Sono disponibili diversi tipi di file che verranno immediatamente riconosciuti d
 
 ## <a name="dealing-with-documents"></a>Gestione dei documenti
 
-Prima di approfondire il codice necessario per usare la selezione documenti con Novell, in questo articolo verranno illustrate le procedure consigliate per l'utilizzo dei documenti iCloud e alcune delle modifiche apportate alle API esistenti necessarie per supportare la selezione del documento.
+Prima di approfondire il codice necessario per usare la selezione documenti con Xamarin, in questo articolo verranno illustrate le procedure consigliate per l'utilizzo dei documenti iCloud e alcune delle modifiche apportate alle API esistenti necessarie per supportare la selezione del documento.
 
 ### <a name="using-file-coordination"></a>Uso del coordinamento file
 
@@ -70,7 +70,7 @@ Si supponga che il dispositivo iOS originale o il Mac stia modificando il file, 
 
  `UIDocument` semplifica le cose (o `NSDocument` in macOS) grazie a tutti i carichi di lavoro per lo sviluppatore. Fornisce il coordinamento dei file incorporato con le code in background per impedire il blocco dell'interfaccia utente dell'applicazione.
 
- `UIDocument` espone più API di alto livello che semplificano il lavoro di sviluppo di un'applicazione Novell per qualsiasi scopo richiesto dallo sviluppatore.
+ `UIDocument` espone più API di alto livello che semplificano il lavoro di sviluppo di un'applicazione Xamarin per qualsiasi scopo richiesto dallo sviluppatore.
 
 Il codice seguente crea una sottoclasse di `UIDocument` per implementare un documento generico basato su testo che può essere usato per archiviare e recuperare testo da iCloud:
 
@@ -429,9 +429,9 @@ Chiamando il metodo `GetPromisedItemResourceValue` o `GetPromisedItemResourceVal
 
 Il modo più semplice per salvare un'anteprima consiste nell'usare `UIDocument`. Chiamando il metodo `GetFileAttributesToWrite` della `UIDocument` e impostando l'anteprima, quest'operazione verrà salvata automaticamente quando il file del documento sarà. Il daemon iCloud vedrà questa modifica e la propaga a iCloud. In Mac OS X le anteprime vengono generate automaticamente per lo sviluppatore dal plug-in Quick Look.
 
-Con le nozioni di base sull'uso dei documenti basati su iCloud, insieme alle modifiche apportate all'API esistente, è possibile implementare il controller di visualizzazione selezione documento in un'applicazione Novell iOS 8 per dispositivi mobili.
+Con le nozioni di base sull'uso dei documenti basati su iCloud, insieme alle modifiche apportate all'API esistente, è possibile implementare il controller di visualizzazione selezione documento in un'applicazione Xamarin iOS 8 per dispositivi mobili.
 
-## <a name="enabling-icloud-in-xamarin"></a>Abilitazione di iCloud in Novell
+## <a name="enabling-icloud-in-xamarin"></a>Abilitazione di iCloud in Xamarin
 
 Prima di poter usare la selezione documenti in un'applicazione Xamarin.iOS, è necessario abilitare il supporto iCloud nell'applicazione e tramite Apple. 
 
@@ -805,7 +805,7 @@ public AppDelegate ThisApp {
 
 Verrà aggiunto un collegamento per accedere al `AppDelegate` e accedere ai collegamenti iCloud creati in precedenza.
 
-Con questo codice, verrà ora esaminata l'implementazione del controller di visualizzazione selezione documento in un'applicazione Novell iOS 8.
+Con questo codice, verrà ora esaminata l'implementazione del controller di visualizzazione selezione documento in un'applicazione Xamarin iOS 8.
 
 ## <a name="using-the-document-picker-view-controller"></a>Uso del controller di visualizzazione selezione documento
 
@@ -831,14 +831,14 @@ In iOS 8 un'applicazione è in grado di accedere ai documenti all'esterno del pr
 
 Usando la nuova selezione documenti iCloud (`UIDocumentPickerViewController`), un'applicazione iOS può individuare e accedere direttamente all'esterno del contenitore dell'applicazione. Il `UIDocumentPickerViewController` fornisce un meccanismo che consente all'utente di concedere l'accesso e modificare i documenti individuati tramite le autorizzazioni.
 
-Un'applicazione deve acconsentire esplicitamente alla visualizzazione dei documenti nel selettore di documenti iCloud ed essere disponibile affinché altre applicazioni possano individuarle e utilizzarle. Per fare in modo che un'applicazione Novell iOS 8 condivida il contenitore dell'applicazione, modificarlo `Info.plist` file in un editor di testo standard e aggiungere le due righe seguenti alla fine del dizionario (tra i tag di `<dict>...</dict>`):
+Un'applicazione deve acconsentire esplicitamente alla visualizzazione dei documenti nel selettore di documenti iCloud ed essere disponibile affinché altre applicazioni possano individuarle e utilizzarle. Per fare in modo che un'applicazione Xamarin iOS 8 condivida il contenitore dell'applicazione, modificarlo `Info.plist` file in un editor di testo standard e aggiungere le due righe seguenti alla fine del dizionario (tra i tag di `<dict>...</dict>`):
 
 ```xml
 <key>NSUbiquitousContainerIsDocumentScopePublic</key>
 <true/>
 ```
 
-Il `UIDocumentPickerViewController` fornisce un'ottima interfaccia utente nuova che consente all'utente di scegliere i documenti. Per visualizzare il controller di visualizzazione selezione documento in un'applicazione Novell iOS 8, seguire questa procedura:
+Il `UIDocumentPickerViewController` fornisce un'ottima interfaccia utente nuova che consente all'utente di scegliere i documenti. Per visualizzare il controller di visualizzazione selezione documento in un'applicazione Xamarin iOS 8, seguire questa procedura:
 
 ```csharp
 using MobileCoreServices;
