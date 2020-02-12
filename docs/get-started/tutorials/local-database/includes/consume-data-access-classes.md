@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: caee3eeda90a560f032c17657072ae5ba5023a69
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659832"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135036"
 ---
 In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi di accesso ai dati create in precedenza.
 
@@ -36,7 +36,7 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da due istanze [`Entry`](xref:Xamarin.Forms.Entry), un [`Button`](xref:Xamarin.Forms.Button) e un [`ListView`](xref:Xamarin.Forms.ListView) in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Ogni `Entry` ha la propria proprietà [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) impostata, che specifica il testo segnaposto che viene visualizzato prima dell'input dell'utente. `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. `ListView` imposta la proprietà [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che usa [`TextCell`](xref:Xamarin.Forms.TextCell) per definire l'aspetto di ciascuna riga in [`ListView`](xref:Xamarin.Forms.ListView). I dati `TextCell` associano le proprie proprietà [`Text`](xref:Xamarin.Forms.TextCell.Text) e [`Detail`](xref:Xamarin.Forms.TextCell.Detail) alle proprietà `Name` e `Age` di ciascun oggetto `Person`, rispettivamente.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da due istanze [`Entry`](xref:Xamarin.Forms.Entry), un [`Button`](xref:Xamarin.Forms.Button) e un [`ListView`](xref:Xamarin.Forms.ListView) in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Ogni `Entry` ha la propria proprietà [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) impostata, che specifica il testo segnaposto che viene visualizzato prima dell'input dell'utente. `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. `ListView` imposta la proprietà [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che usa [`TextCell`](xref:Xamarin.Forms.TextCell) per definire l'aspetto di ciascuna riga in [`ListView`](xref:Xamarin.Forms.ListView). I dati `TextCell` associano le proprie proprietà [`Text`](xref:Xamarin.Forms.TextCell.Text) e [`Detail`](xref:Xamarin.Forms.TextCell.Detail) alle proprietà `Name` e `Age` di ciascun oggetto `Person`, rispettivamente.
 
     Inoltre, le istanze [`Entry`](xref:Xamarin.Forms.Entry) e [`ListView`](xref:Xamarin.Forms.ListView) hanno nomi specificati con l'attributo `x:Name`. Ciò consente al file code-behind di accedere a questi oggetti usando i nomi assegnati.
 
@@ -106,7 +106,7 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da due istanze [`Entry`](xref:Xamarin.Forms.Entry), un [`Button`](xref:Xamarin.Forms.Button) e un [`ListView`](xref:Xamarin.Forms.ListView) in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Ogni `Entry` ha la propria proprietà [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) impostata, che specifica il testo segnaposto che viene visualizzato prima dell'input dell'utente. `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. `ListView` imposta la proprietà [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che usa [`TextCell`](xref:Xamarin.Forms.TextCell) per definire l'aspetto di ciascuna riga in [`ListView`](xref:Xamarin.Forms.ListView). I dati `TextCell` associano le proprie proprietà [`Text`](xref:Xamarin.Forms.TextCell.Text) e [`Detail`](xref:Xamarin.Forms.TextCell.Detail) alle proprietà `Name` e `Age` di ciascun oggetto `Person`, rispettivamente.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da due istanze [`Entry`](xref:Xamarin.Forms.Entry), un [`Button`](xref:Xamarin.Forms.Button) e un [`ListView`](xref:Xamarin.Forms.ListView) in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Ogni `Entry` ha la propria proprietà [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) impostata, che specifica il testo segnaposto che viene visualizzato prima dell'input dell'utente. `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. `ListView` imposta la proprietà [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che usa [`TextCell`](xref:Xamarin.Forms.TextCell) per definire l'aspetto di ciascuna riga in [`ListView`](xref:Xamarin.Forms.ListView). I dati `TextCell` associano le proprie proprietà [`Text`](xref:Xamarin.Forms.TextCell.Text) e [`Detail`](xref:Xamarin.Forms.TextCell.Detail) alle proprietà `Name` e `Age` di ciascun oggetto `Person`, rispettivamente.
 
     Inoltre, le istanze [`Entry`](xref:Xamarin.Forms.Entry) e [`ListView`](xref:Xamarin.Forms.ListView) hanno nomi specificati con l'attributo `x:Name`. Ciò consente al file code-behind di accedere a questi oggetti usando i nomi assegnati.
 

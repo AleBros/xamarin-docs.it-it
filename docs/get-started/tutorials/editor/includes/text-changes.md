@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 19afeed47f1c06c89c58dfd996d360698b19fc9c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 653d3677f96d7da78af61531c535b1b7db684e7e
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "61373386"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135093"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. In **MainPage.XAML** modificare la dichiarazione [`Editor`](xref:Xamarin.Forms.Editor) in modo che imposti un gestore per gli eventi [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) e [`Completed`](xref:Xamarin.Forms.Editor.Completed):
+1. In **MainPage.XAML** modificare la dichiarazione [`Editor`](xref:Xamarin.Forms.Editor) in modo che imposti un gestore per gli eventi [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Editor.Completed):
 
     ```xaml
     <Editor Placeholder="Enter multi-line text here"
@@ -17,7 +17,7 @@ ms.locfileid: "61373386"
             Completed="OnEditorCompleted" />
     ```
 
-    Questo codice imposta l'evento [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) su un gestore eventi denominato `OnEditorTextChanged` e l'evento [`Completed`](xref:Xamarin.Forms.Editor.Completed) su un gestore eventi denominato `OnEditorCompleted`. Entrambi i gestori eventi verranno creati nel passaggio successivo.
+    Questo codice imposta l'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) su un gestore eventi denominato `OnEditorTextChanged` e l'evento [`Completed`](xref:Xamarin.Forms.Editor.Completed) su un gestore eventi denominato `OnEditorCompleted`. Entrambi i gestori eventi verranno creati nel passaggio successivo.
 
 1. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **EditorTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere i gestori eventi `OnEditorTextChanged` e `OnEditorCompleted` alla classe:
 
@@ -39,19 +39,19 @@ ms.locfileid: "61373386"
     Quando viene completato il processo di modifica, viene eseguito il metodo `OnEditorCompleted`. Ciò si ottiene non focalizzando su [`Editor`](xref:Xamarin.Forms.Editor), o anche facendo clic sul pulsante "Fine" in iOS. L'argomento `sender` è l'oggetto `Editor` responsabile dell'attivazione dell'evento `TextChanged` e può essere usato per accedere all'oggetto `Editor`.
 
     > [!IMPORTANT]
-    > Il testo immesso in [`Editor`](xref:Xamarin.Forms.Editor) viene archiviato nella proprietà [`Text`](xref:Xamarin.Forms.Editor.Text).
+    > Il testo immesso in [`Editor`](xref:Xamarin.Forms.Editor) viene archiviato nella proprietà [`Text`](xref:Xamarin.Forms.InputView.Text).
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
     [![Screenshot dell'editor contenente testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
 
-    Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
+    Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
     Per altre informazioni sugli eventi [`Editor`](xref:Xamarin.Forms.Editor), vedere [Interattività](~/xamarin-forms/user-interface/text/editor.md#interactivity) nella guida [Editor Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. In **MainPage.XAML** modificare la dichiarazione [`Editor`](xref:Xamarin.Forms.Editor) in modo che imposti un gestore per gli eventi [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) e [`Completed`](xref:Xamarin.Forms.Editor.Completed):
+1. In **MainPage.XAML** modificare la dichiarazione [`Editor`](xref:Xamarin.Forms.Editor) in modo che imposti un gestore per gli eventi [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Editor.Completed):
 
     ```xaml
     <Editor Placeholder="Enter multi-line text here"
@@ -60,7 +60,7 @@ ms.locfileid: "61373386"
             Completed="OnEditorCompleted" />
     ```
 
-    Questo codice imposta l'evento [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) su un gestore eventi denominato `OnEditorTextChanged` e l'evento [`Completed`](xref:Xamarin.Forms.Editor.Completed) su un gestore eventi denominato `OnEditorCompleted`. Entrambi i gestori eventi verranno creati nel passaggio successivo.
+    Questo codice imposta l'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) su un gestore eventi denominato `OnEditorTextChanged` e l'evento [`Completed`](xref:Xamarin.Forms.Editor.Completed) su un gestore eventi denominato `OnEditorCompleted`. Entrambi i gestori eventi verranno creati nel passaggio successivo.
 
 1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **EditorTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere i gestori eventi `OnEditorTextChanged` e `OnEditorCompleted` alla classe:
 
@@ -82,12 +82,12 @@ ms.locfileid: "61373386"
     Quando viene completato il processo di modifica, viene eseguito il metodo `OnEditorCompleted`. Ciò si ottiene non focalizzando su [`Editor`](xref:Xamarin.Forms.Editor), o anche facendo clic sul pulsante "Fine" in iOS. L'argomento `sender` è l'oggetto `Editor` responsabile dell'attivazione dell'evento `TextChanged` e può essere usato per accedere all'oggetto `Editor`.
 
     > [!IMPORTANT]
-    > Il testo immesso in [`Editor`](xref:Xamarin.Forms.Editor) viene archiviato nella proprietà [`Text`](xref:Xamarin.Forms.Editor.Text).
+    > Il testo immesso in [`Editor`](xref:Xamarin.Forms.Editor) viene archiviato nella proprietà [`Text`](xref:Xamarin.Forms.InputView.Text).
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
     [![Screenshot dell'editor contenente testo, in iOS e Android](../images/text-changes.png "Editor con testo")](../images/text-changes-large.png#lightbox "Editor con testo")
 
-    Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
+    Impostare i punti di interruzione nei due gestori di eventi, immettere il testo in [`Editor`](xref:Xamarin.Forms.Editor) e osservare la generazione dell'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged). Non focalizzare `Editor` per osservare generazione dell'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
     Per altre informazioni sugli eventi [`Editor`](xref:Xamarin.Forms.Editor), vedere [Interattività](~/xamarin-forms/user-interface/text/editor.md#interactivity) nella guida [Editor Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).

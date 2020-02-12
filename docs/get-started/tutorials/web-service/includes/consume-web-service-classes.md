@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659834"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135150"
 ---
 In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `RestService`, che a sua volta recupera i dati dall'API Web [OpenWeatherMap](https://openweathermap.org/).
 
@@ -67,7 +67,7 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) e una serie di istanze di [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Entry` viene prepopolato con "Seattle" tramite l'impostazione della relativa proprietà [`Text`](xref:Xamarin.Forms.Entry.Text). `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. La metà delle istanze di `Label` visualizza testo statico, mentre le istanze rimanenti usano il data binding alle proprietà di `WeatherData`. In fase di esecuzione, le istanze di `Label` che usano il data binding esamineranno le rispettive proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per individuare l'oggetto `WeatherData` da usare nelle espressioni di binding. Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) e una serie di istanze di [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Entry` viene prepopolato con "Seattle" tramite l'impostazione della relativa proprietà [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. La metà delle istanze di `Label` visualizza testo statico, mentre le istanze rimanenti usano il data binding alle proprietà di `WeatherData`. In fase di esecuzione, le istanze di `Label` che usano il data binding esamineranno le rispettive proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per individuare l'oggetto `WeatherData` da usare nelle espressioni di binding. Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Inoltre, per [`Entry`](xref:Xamarin.Forms.Entry) viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto usando il nome assegnato.
 
@@ -187,7 +187,7 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) e una serie di istanze di [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Entry` viene prepopolato con "Seattle" tramite l'impostazione della relativa proprietà [`Text`](xref:Xamarin.Forms.Entry.Text). `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. La metà delle istanze di `Label` visualizza testo statico, mentre le istanze rimanenti usano il data binding alle proprietà di `WeatherData`. In fase di esecuzione, le istanze di `Label` che usano il data binding esamineranno le rispettive proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per individuare l'oggetto `WeatherData` da usare nelle espressioni di binding. Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) e una serie di istanze di [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Entry` viene prepopolato con "Seattle" tramite l'impostazione della relativa proprietà [`Text`](xref:Xamarin.Forms.InputView.Text). `Button` imposta il relativo evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) su un gestore eventi denominato `OnButtonClicked`, che verrà creato nel passaggio successivo. La metà delle istanze di `Label` visualizza testo statico, mentre le istanze rimanenti usano il data binding alle proprietà di `WeatherData`. In fase di esecuzione, le istanze di `Label` che usano il data binding esamineranno le rispettive proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per individuare l'oggetto `WeatherData` da usare nelle espressioni di binding. Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Inoltre, per [`Entry`](xref:Xamarin.Forms.Entry) viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto usando il nome assegnato.
 

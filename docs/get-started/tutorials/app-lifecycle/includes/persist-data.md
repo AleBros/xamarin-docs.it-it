@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67841457"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135047"
 ---
 La sottoclasse [`Application`](xref:Xamarin.Forms.Application) ha un dizionario statico [`Properties`](xref:Xamarin.Forms.Application.Properties) che può essere usato per archiviare dati fra le modifiche di stato del ciclo di vita. Il dizionario usa una chiave `string` e archivia un valore `object`. Il dizionario viene salvato automaticamente sul dispositivo e non è ripopolato quando l'applicazione viene riavviata.
 
@@ -82,7 +82,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
 
 1. In **Esplora soluzioni**, nel progetto **AppLifecycleTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere un override per il metodo `OnAppearing` e il gestore eventi `OnEntryCompleted` alla classe:
 
@@ -100,7 +100,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     }
     ```
 
-    Il metodo `OnAppearing` recupera il valore della proprietà `App.DisplayText` e lo imposta come valore della proprietà [`Text`](xref:Xamarin.Forms.Entry.Text) dell'elemento [`Entry`](xref:Xamarin.Forms.Entry).
+    Il metodo `OnAppearing` recupera il valore della proprietà `App.DisplayText` e lo imposta come valore della proprietà [`Text`](xref:Xamarin.Forms.InputView.Text) dell'elemento [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > L'override del metodo `OnAppearing` viene eseguito dopo che è stato eseguito il layout dell'elemento [`ContentPage`](xref:Xamarin.Forms.ContentPage), ma subito prima che diventi visibile. Pertanto, questo è un buon momento per impostare il contenuto delle viste Xamarin.Forms.
@@ -186,7 +186,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
 
 1. Nel **riquadro della soluzione**, nel progetto **AppLifecycleTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere un override per il metodo `OnAppearing` e il gestore eventi `OnEntryCompleted` alla classe:
 
@@ -204,7 +204,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     }
     ```
 
-    Il metodo `OnAppearing` recupera il valore della proprietà `App.DisplayText` e lo imposta come valore della proprietà [`Text`](xref:Xamarin.Forms.Entry.Text) dell'elemento [`Entry`](xref:Xamarin.Forms.Entry).
+    Il metodo `OnAppearing` recupera il valore della proprietà `App.DisplayText` e lo imposta come valore della proprietà [`Text`](xref:Xamarin.Forms.InputView.Text) dell'elemento [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > L'override del metodo `OnAppearing` viene eseguito dopo che è stato eseguito il layout dell'elemento [`ContentPage`](xref:Xamarin.Forms.ContentPage), ma subito prima che diventi visibile. Pertanto, questo è un buon momento per impostare il contenuto delle viste Xamarin.Forms.
