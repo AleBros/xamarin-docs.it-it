@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 3936fe16ee768505c53ec119c51dcbecef7e6fbe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "73842962"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131056"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Approfondimenti per la guida di avvio rapido di Xamarin.Forms
 
@@ -383,7 +383,7 @@ Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarch
 
 Il data binding viene usato per semplificare il modo in cui un'applicazione Xamarin.Forms visualizza i propri dati e interagisce con essi. Stabilisce una connessione tra l'interfaccia utente e l'applicazione sottostante. La classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene la maggior parte dell'infrastruttura per supportare il data binding.
 
-Il data binding (o associazione di dati) consente di connettere due oggetti, detti oggetti di *origine* e di *destinazione*. L'oggetto di *origine* visualizza i dati. L'oggetto di *destinazione* usa (e spesso visualizza) i dati dall'oggetto di origine. Ad esempio un [`Editor`](xref:Xamarin.Forms.Editor) (oggetto di *destinazione*) associa comunemente la proprietà [`Text`](xref:Xamarin.Forms.Editor.Text) a una proprietà `string` pubblica in un oggetto di *origine*. Il diagramma che segue illustra la relazione di associazione:
+Il data binding (o associazione di dati) consente di connettere due oggetti, detti oggetti di *origine* e di *destinazione*. L'oggetto di *origine* visualizza i dati. L'oggetto di *destinazione* usa (e spesso visualizza) i dati dall'oggetto di origine. Ad esempio un [`Editor`](xref:Xamarin.Forms.Editor) (oggetto di *destinazione*) associa comunemente la proprietà [`Text`](xref:Xamarin.Forms.InputView.Text) a una proprietà `string` pubblica in un oggetto di *origine*. Il diagramma che segue illustra la relazione di associazione:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 
@@ -432,7 +432,7 @@ L'[`Editor`](xref:Xamarin.Forms.Editor) in `NoteEntryPage` esegue quindi il bind
         ... />
 ```
 
-Viene definita un'associazione tra la proprietà [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) e la proprietà `Text` dell'oggetto di *origine*. Le modifiche apportate nell'`Editor` vengono propagate automaticamente all'oggetto `Note`. Analogamente, se si apportano modifiche alla proprietà `Note.Text` il motore di binding di Xamarin.Forms aggiorna anche il contenuto dell'`Editor`. Questa funzionalità è detta *associazione bidirezionale*.
+Viene definita un'associazione tra la proprietà [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) e la proprietà `Text` dell'oggetto di *origine*. Le modifiche apportate nell'`Editor` vengono propagate automaticamente all'oggetto `Note`. Analogamente, se si apportano modifiche alla proprietà `Note.Text` il motore di binding di Xamarin.Forms aggiorna anche il contenuto dell'`Editor`. Questa funzionalità è detta *associazione bidirezionale*.
 
 Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 

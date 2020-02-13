@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 92e2ceeea901e2acea70118e75d936f3b3ac94db
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199986"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131133"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
@@ -113,7 +113,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.HelpText` – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-In alcune piattaforme, per i controlli di modifica come [`Entry`](xref:Xamarin.Forms.Entry), la proprietà `HelpText` può essere talvolta omessa e sostituita con testo segnaposto. Ad esempio, "Inserisci qui il tuo nome" è un buon candidato per la proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) che inserisce il testo nel controllo prima dell'effettivo input dell'utente.
+In alcune piattaforme, per i controlli di modifica come [`Entry`](xref:Xamarin.Forms.Entry), la proprietà `HelpText` può essere talvolta omessa e sostituita con testo segnaposto. Ad esempio, "Inserisci qui il tuo nome" è un buon candidato per la proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) che inserisce il testo nel controllo prima dell'effettivo input dell'utente.
 
 <a name="labeledby" />
 
