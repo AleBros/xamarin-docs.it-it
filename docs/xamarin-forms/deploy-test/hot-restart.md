@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: jimmgarrido
 ms.author: jigarrid
 ms.date: 01/14/2020
-ms.openlocfilehash: fb607ab605322499e42f500e4f3bf08c1c267c23
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 2cf925a96e952e6b760da9ca5416e124a3e3716b
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519685"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071153"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Riavvio rapido Xamarin (anteprima)
 
@@ -52,7 +52,7 @@ Il riavvio rapido Xamarin consente di testare rapidamente le modifiche apportate
 > È consigliabile usare il provisioning automatico in modo che i dispositivi iOS aggiuntivi possano essere facilmente configurati per la distribuzione. È tuttavia possibile disabilitarlo e continuare a usare il provisioning manuale se sono presenti i profili di provisioning corretti.
 
 ## <a name="use-xamarin-hot-restart"></a>Usare il riavvio rapido Xamarin
-Dopo la configurazione iniziale, il dispositivo connesso verrà visualizzato nel menu a discesa della destinazione di debug. Per eseguire il debug dell'app, selezionare il dispositivo nel menu a discesa e fare clic sul pulsante **Esegui**. Potrebbe essere necessario aprire manualmente l'app nel dispositivo per avviare la sessione di debug.
+Dopo la configurazione iniziale, il dispositivo connesso verrà visualizzato nel menu a discesa della destinazione di debug. Per eseguire il debug dell'app, selezionare il dispositivo nel menu a discesa e fare clic sul pulsante **Esegui**. Potrebbe essere visualizzato un messaggio in Visual Studio che richiede di avviare manualmente l'app nel dispositivo per avviare la sessione di debug.
 
 È possibile apportare modifiche ai file di codice durante il debug, quindi fare clic sul pulsante **Riavvia** sulla barra degli strumenti di debug o usare **CTRL+MAIUSC+F5** per riavviare la sessione di debug con le nuove modifiche applicate:
 
@@ -66,6 +66,7 @@ Dopo la configurazione iniziale, il dispositivo connesso verrà visualizzato nel
 
 ## <a name="troubleshoot"></a>Risolvere i problemi
 - La configurazione guidata non rileverà iTunes se è stato installato tramite Microsoft Store. Sarà necessario disinstallare prima tale versione, quindi scaricare il [programma di installazione da Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
+- È presente un problema noto a causa del quale l'abilitazione di compilazioni specifiche del dispositivo impedisce all'app di accedere alla modalità di debug. Per risolvere il problema, è necessario disabilitare questa opzione in **Proprietà > Compilazione iOS** e ritentare il debug. Questo problema verrà risolto in una versione futura.
 - Se l'app è già presente nel dispositivo, il tentativo di distribuzione con il riavvio rapido potrebbe non riuscire con un errore `AMDeviceStartHouseArrestService`. Per ovviare al problema, disinstallare l'app nel dispositivo, quindi distribuirla di nuovo.
 
 Per segnalare problemi aggiuntivi, usare lo strumento di feedback in [Guida > Invia commenti e suggerimenti > Segnala un problema](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem).

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: d046962bf08b85069b1a698324db76a4ac3286d9
+ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489895"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144648"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
@@ -22,7 +22,7 @@ I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che mod
 
 È possibile assegnare un trigger direttamente a un controllo o aggiungerlo a un dizionario risorse a livello di pagina o a livello di app perché sia applicato a più controlli.
 
-Esistono quattro tipi di trigger:
+Esistono diversi tipi di trigger:
 
 - [Trigger di proprietà](#property): si verifica quando una proprietà su un controllo è impostata su un particolare valore.
 
@@ -31,6 +31,20 @@ Esistono quattro tipi di trigger:
 - [Trigger di evento](#event): si verifica quando un evento avviene su un controllo.
 
 - [MultiTrigger](#multi): consente di impostare più condizioni di trigger prima che si verifichi un'azione.
+
+- [Trigger adattivo](#adaptive) (anteprima): consente di reagire alle modifiche della larghezza e dell'altezza di una finestra dell'applicazione.
+
+- [Trigger di confronto](#compare) (anteprima): si verifica quando vengono confrontati due valori.
+
+- [Trigger del dispositivo](#device) (anteprima): si verifica per l'esecuzione nel dispositivo specificato. 
+
+- [Trigger di orientamento](#orientation) (anteprima): si verifica quando cambia l'orientamento del dispositivo.
+
+Per usare i trigger di anteprima, assicurarsi di abilitarli usando il flag di funzionalità in `App.xaml.cs`:
+
+```csharp
+Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
+```
 
 <a name="property" />
 
@@ -147,7 +161,7 @@ L'implementazione di un'azione trigger deve eseguire le operazioni seguenti:
 
 - Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
 
-- Facoltativamente, esporre le proprietà che possono essere impostate in XAML quando il trigger viene dichiarato. Per un esempio, vedere la classe `VisualElementPopTriggerAction` nell'applicazione di esempio associata.
+- Esporre facoltativamente le proprietà che possono essere impostate in XAML quando viene dichiarato il trigger. Per un esempio, vedere la classe `VisualElementPopTriggerAction` nell'applicazione di esempio associata.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -171,7 +185,7 @@ Il trigger di evento può quindi essere utilizzato da XAML:
 
 Considerare che quando i trigger vengono condivisi in un oggetto `ResourceDictionary`, un'istanza viene condivisa tra i controlli, in modo che gli stati configurati una volta vengano applicati a tutti.
 
-Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions`[descritti di seguito](#enterexit).
+Si noti che i trigger di evento non supportano le raccolte `EnterActions` e `ExitActions` [descritte di seguito](#enterexit).
 
 <a name="multi" />
 
@@ -280,12 +294,12 @@ Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane ina
 
 Un altro modo per implementare le modifiche quando si verifica un trigger consiste nell'aggiungere le raccolte `EnterActions` e `ExitActions` e specificare le implementazioni `TriggerAction<T>`.
 
-La raccolta di [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) viene utilizzata per definire un `IList` di oggetti di [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) che verranno richiamati quando viene soddisfatta la condizione del trigger. La raccolta [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) viene utilizzata per definire un `IList` di oggetti `TriggerAction` che verranno richiamati dopo che la condizione di trigger non viene più soddisfatta.
+La raccolta [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) viene usata per definire un `IList` di oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) che verranno richiamati quando viene soddisfatta la condizione del trigger. La raccolta [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) viene usata per definire un `IList` di oggetti `TriggerAction` che verranno richiamati quando la condizione del trigger non è più soddisfatta.
 
 > [!NOTE]
-> Gli oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definiti nelle raccolte `EnterActions` e `ExitActions` vengono ignorati dalla classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) .    
+> Gli oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definiti nelle raccolte `EnterActions` e `ExitActions` vengono ignorati dalla classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger).    
 
-È possibile fornire *sia `EnterActions` sia* `ExitActions`, nonché `Setter`in un trigger, ma tenere presente che i `Setter`vengono chiamati immediatamente (non attendono il completamento del `EnterAction` o del `ExitAction`). In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
+In un trigger è possibile specificare *sia* `EnterActions` che `ExitActions`, ma anche elementi `Setter`. Si consideri tuttavia che gli elementi `Setter` vengono chiamati immediatamente e non attendono il completamento di `EnterAction` o `ExitAction`. In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -333,6 +347,141 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
+
+<a name="adaptive" />
+
+## <a name="adaptive-trigger-preview"></a>Trigger adattivo (anteprima)
+
+Un `AdaptiveTrigger` viene attivato automaticamente quando la finestra ha la larghezza o l'altezza specificata. Un `AdaptiveTrigger` accetta due possibili proprietà:
+
+- **MinWindowHeight**
+- **MinWindowWidth**
+
+<a name="compare"/>
+
+## <a name="compare-trigger-preview"></a>Trigger di confronto (anteprima)
+
+`CompareStateTrigger` è un `StateTrigger` molto versatile che viene attivato se **Value** è uguale a **Property**.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="Checked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="True" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Green" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="UnChecked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="False" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>     
+    </VisualStateManager.VisualStateGroups>  
+    <Frame
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        BackgroundColor="White"
+        Margin="24">
+        <StackLayout
+            Orientation="Horizontal">
+            <CheckBox 
+                x:Name="CheckBox"
+                VerticalOptions="Center"/>
+            <Label
+                Text="Checked/Uncheck the CheckBox to modify the Grid BackgroundColor"
+                VerticalOptions="Center"/>
+        </StackLayout>
+    </Frame>
+</Grid>
+```
+
+Questo esempio illustra come modificare la proprietà **BackgroundColor** per un controllo **Grid** in base allo stato della proprietà **IsChecked** di **CheckBox**. **StateTrigger** supporta associazioni che offrono molte possibilità per il confronto di valori non solo degli elementi dell'interfaccia utente, ma anche da **BindingContext**.
+
+<a name="device" />
+
+## <a name="device-trigger-preview"></a>Trigger del dispositivo (anteprima)
+
+Un `DeviceTrigger` consente di controllare come viene applicato uno stato durante l'esecuzione in una piattaforma del dispositivo specifica, in modo analogo all'uso di `OnPlatform`.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Android">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="Android" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="iOS">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="iOS" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>  
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This page changes the color based on the device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+Nell'esempio precedente il colore di sfondo sarà blu in un dispositivo Android e rosso in un dispositivo iOS.
+
+<a name="orientation" />
+
+## <a name="orientation-trigger-preview"></a>Trigger di orientamento (anteprima)
+
+Un `OrientationTrigger` supporta la modifica dello stato di visualizzazione quando il dispositivo cambia orientamento da orizzontale a verticale e viceversa.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Landscape">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Landscape" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="Portrait">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Portrait" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This Grid changes the color based on the orientation device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+Nell'esempio precedente lo sfondo è blu quando il dispositivo è nell'orientamento orizzontale ed è rosso con l'orientamento verticale.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

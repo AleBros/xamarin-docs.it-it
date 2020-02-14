@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: ab39c79c59855c9f78184614176b1658ee0e29b2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d16eef4fe5422fb5cf3c039c66d1b0f113727fd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772106"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131123"
 ---
 # <a name="attached-behaviors"></a>Comportamenti associati
 
@@ -80,7 +80,7 @@ public static class NumericValidationBehavior
 }
 ```
 
-La classe `NumericValidationBehavior` contiene una proprietà associata denominata `AttachBehavior` con un getter e un setter `static`, che controlla l'aggiunta o la rimozione del comportamento del controllo a cui verrà associata. Tale proprietà associata registra il metodo `OnAttachBehaviorChanged` che verrà eseguito quando cambia il valore della proprietà. Questo metodo registra, o annulla la registrazione di, un gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), in base al valore della proprietà associata `AttachBehavior`. La funzionalità di base del comportamento è fornita dal metodo `OnEntryTextChanged`, che analizza il valore immesso nel controllo [`Entry`](xref:Xamarin.Forms.Entry) dall'utente e imposta la proprietà `TextColor` su rosso se il valore non è `double`.
+La classe `NumericValidationBehavior` contiene una proprietà associata denominata `AttachBehavior` con un getter e un setter `static`, che controlla l'aggiunta o la rimozione del comportamento del controllo a cui verrà associata. Tale proprietà associata registra il metodo `OnAttachBehaviorChanged` che verrà eseguito quando cambia il valore della proprietà. Questo metodo registra, o annulla la registrazione di, un gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), in base al valore della proprietà associata `AttachBehavior`. La funzionalità di base del comportamento è fornita dal metodo `OnEntryTextChanged`, che analizza il valore immesso nel controllo [`Entry`](xref:Xamarin.Forms.Entry) dall'utente e imposta la proprietà `TextColor` su rosso se il valore non è `double`.
 
 ## <a name="consuming-an-attached-behavior"></a>Uso di un comportamento associato
 
@@ -103,7 +103,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 In fase di esecuzione, il comportamento risponderà all'interazione con il controllo in base all'implementazione del comportamento. Gli screenshot seguenti illustrano il comportamento associato che risponde a input non valido:
 
-[![](attached-images/screenshots-sml.png "Esempio di applicazione con comportamento associato")](attached-images/screenshots.png#lightbox "Esempio di applicazione con comportamento associato")
+[![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png#lightbox "Sample Application with Attached Behavior")
 
 > [!NOTE]
 > I comportamenti associati vengono scritti per un tipo di controllo specifico, o per una superclasse che è possibile applicare a molti controlli, e devono essere aggiunti solo a controlli compatibili. Il tentativo di associare un comportamento a un controllo incompatibile genererà un comportamento imprevisto dettato dall'implementazione del comportamento.
@@ -123,7 +123,7 @@ var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-In fase di esecuzione, il metodo `OnAttachBehaviorChanged` sarà eseguito quando il valore della proprietà associata `AttachBehavior` è impostato su `false`. Il metodo `OnAttachBehaviorChanged` eseguirà quindi l'annullamento della registrazione del gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), affinché il comportamento non venga eseguito quando l'utente interagisce con il controllo.
+In fase di esecuzione, il metodo `OnAttachBehaviorChanged` sarà eseguito quando il valore della proprietà associata `AttachBehavior` è impostato su `false`. Il metodo `OnAttachBehaviorChanged` eseguirà quindi l'annullamento della registrazione del gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), affinché il comportamento non venga eseguito quando l'utente interagisce con il controllo.
 
 ## <a name="summary"></a>Riepilogo
 
