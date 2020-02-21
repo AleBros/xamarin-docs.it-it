@@ -1,41 +1,41 @@
 ---
 title: Controllo DualScreenInfo di Xamarin.Forms
-description: Questa guida illustra come usare il controllo DualScreenInfo di Xamarin.Forms per ottimizzare l'esperienza delle app per dispositivi con doppio schermo, ad esempio Surface Duo e Surface Neo.
+description: Questa guida illustra come usare la classe DualScreenInfo di Xamarin.Forms per ottimizzare l'esperienza delle app per dispositivi con doppio schermo, ad esempio Surface Duo e Surface Neo.
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: cae704b7d6300a9dc5eb456f0dec8989813c6581
-ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
+ms.openlocfilehash: e9a01ed3720f1501423eb1c0746d311918af82fb
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77145615"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480587"
 ---
 # <a name="xamarinforms-dualscreeninfo"></a>Controllo DualScreenInfo di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
 
-_DualScreenInfo può essere usato per rilevare modifiche dei layout e visualizzare informazioni su tale modifiche, rispetto alla relazione corrente con schermi doppi._
+La classe `DualScreenInfo` consente di determinare il riquadro in cui si trova la visualizzazione, le dimensioni del riquadro, l'orientamento del dispositivo, l'angolo della cerniera e altro ancora.
 
 ## <a name="properties"></a>Proprietà
 
-- `SpanningBounds`: nel layout esteso a due schermi, questa proprietà restituirà due rettangoli che indicano i limiti di ogni area visibile. Se la finestra non è estesa, verrà restituita una matrice vuota.
-- `HingeBounds`: posizione della cerniera sullo schermo.
-- `IsLandscape`: indica se il dispositivo è in modalità orizzontale. Questa informazione è utile perché le API di orientamento native non segnalano correttamente l'orientamento con le applicazioni estese.
-- `PropertyChanged`: generato in presenza di modifiche delle proprietà.
+- `SpanningBounds`: nel layout esteso a due schermi, questa proprietà restituisce due rettangoli che indicano i limiti di ogni area visibile. Se la finestra non è estesa, verrà restituita una matrice vuota.
+- `HingeBounds`: indica la posizione della cerniera sullo schermo.
+- `IsLandscape`: indica se il dispositivo è in modalità orizzontale. Questa informazione è utile perché le API di orientamento native non segnalano correttamente l'orientamento quando un'applicazione è estesa.
 - `SpanMode`: indica se il layout è in modalità Tall, Wide o SinglePane.
 
-## <a name="android-only-property"></a>Proprietà solo Android
+Viene inoltre generato un evento `PropertyChanged` in presenza di modifiche delle proprietà.
 
-Questa proprietà è disponibile solo quando si accede a DualScreenInfo dal progetto della piattaforma Android.
-È possibile usare questa proprietà da un renderer personalizzato.
+## <a name="poll-hinge-angle-on-android"></a>Recuperare l'angolo della cerniera in Android
+
+La proprietà seguente è disponibile solo quando si accede a `DualScreenInfo` dal progetto della piattaforma Android:
 
 - `GetHingeAngleAsync`: recupera l'angolo corrente della cerniera del dispositivo. Quando si usa il simulatore, è possibile impostare HingeAngle modificando il sensore di pressione.
 
-## <a name="android-custom-renderer-for-polling-hinge-angle"></a>Renderer personalizzato Android per il polling dell'angolo della cerniera
+Questa proprietà può essere usata da un renderer personalizzato Android:
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer
@@ -89,7 +89,9 @@ public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRender
 }
 ```
 
-## <a name="access-dualscreeninfo-for-application-window"></a>Accedere a DualScreenInfo per la finestra dell'applicazione
+## <a name="access-dualscreeninfo-in-your-application-window"></a>Accedere a DualScreenInfo nella finestra dell'applicazione
+
+Il codice seguente illustra come accedere a `DualScreenInfo` per la finestra dell'applicazione:
 
 ```csharp
 DualScreenInfo currentWindow = DualScreenInfo.Current;
@@ -104,11 +106,11 @@ if(currentWindow.SpanMode == TwoPaneViewMode.SinglePane)
 }
 else if(currentWindow.SpanMode == TwoPaneViewMode.Tall)
 {
-    // window is spanned across two screens and oriented as landscape
+    // window is spanned across two screens and oriented top-bottom
 }
 else if(currentWindow.SpanMode == TwoPaneViewMode.Wide)
 {
-    // window is spanned across two screens and oriented as portrait
+    // window is spanned across two screens and oriented side-by-side
 }
 
 // Detect if any of the properties on DualScreenInfo change.
@@ -117,20 +119,26 @@ else if(currentWindow.SpanMode == TwoPaneViewMode.Wide)
 currentWindow.PropertyChanged += OnDualScreenInfoChanged;
 ```
 
-## <a name="apply-dualscreeninfo-to-your-own-layouts"></a>Applicare DualScreenInfo ai layout personalizzati
+## <a name="apply-dualscreeninfo-to-layouts"></a>Applicare DualScreenInfo ai layout
 
-DualScreenInfo include un costruttore che può accettare un layout e fornire informazioni sul layout in relazione ai dispositivi con doppio schermo.
+La classe `DualScreenInfo` include un costruttore che può accettare un layout e fornire informazioni sul layout in relazione ai dispositivi con doppio schermo:
 
 ```xaml
 <Grid x:Name="grid" ColumnSpacing="0">
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="{Binding Column1Width}"></ColumnDefinition>
-        <ColumnDefinition Width="{Binding Column2Width}"></ColumnDefinition>
-        <ColumnDefinition Width="{Binding Column3Width}"></ColumnDefinition>
+        <ColumnDefinition Width="{Binding Column1Width}" />
+        <ColumnDefinition Width="{Binding Column2Width}" />
+        <ColumnDefinition Width="{Binding Column3Width}" />
     </Grid.ColumnDefinitions>
-
-    <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="End" Text="I should be on the left side of the hinge"></Label>
-    <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="2" Text="I should be on the right side of the hinge"></Label>
+    <Label FontSize="Large"
+           VerticalOptions="Center"
+           HorizontalOptions="End"
+           Text="I should be on the left side of the hinge" />
+    <Label FontSize="Large"
+           VerticalOptions="Center"
+           HorizontalOptions="Start"
+           Grid.Column="2"
+           Text="I should be on the right side of the hinge" />
 </Grid>
 ```
 
@@ -197,6 +205,8 @@ public partial class GridUsingDualScreenInfo : ContentPage
     }
 }
 ```
+
+Lo screenshot seguente mostra il layout risultante:
 
 ![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
 
