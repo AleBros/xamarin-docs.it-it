@@ -508,6 +508,8 @@
           href: ~/essentials/accelerometer.md?context=xamarin/ios
         - name: Informazioni sull'app
           href: ~/essentials/app-information.md?context=xamarin/ios
+        - name: Tema dell'app
+          href: ~/essentials/app-theme.md?context=xamarin/ios
         - name: Barometro
           href: ~/essentials/barometer.md?context=xamarin/ios
         - name: Batteria
@@ -550,6 +552,8 @@
           href: ~/essentials/open-browser.md?context=xamarin/ios
         - name: Sensore di orientamento
           href: ~/essentials/orientation-sensor.md?context=xamarin/ios
+        - name: Autorizzazioni
+          href: ~/essentials/permissions.md?context=xamarin/ios
         - name: Dialer telefono
           href: ~/essentials/phone-dialer.md?context=xamarin/ios
         - name: 'Estensioni piattaforma (dimensioni, rettangolo, punto)'
@@ -942,6 +946,8 @@
               href: ~/essentials/accelerometer.md?context=xamarin/watchos
             - name: Informazioni sull'app
               href: ~/essentials/app-information.md?context=xamarin/watchos
+            - name: Tema dell'app
+              href: ~/essentials/app-theme.md?context=xamarin/watchos
             - name: Barometro
               href: ~/essentials/barometer.md?context=xamarin/watchos
             - name: Batteria
@@ -968,6 +974,8 @@
               href: ~/essentials/maps.md?context=xamarin/watchos
             - name: Sensore di orientamento
               href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
+            - name: Autorizzazioni
+              href: ~/essentials/permissions.md?context=xamarin/watchos
             - name: 'Estensioni piattaforma (dimensioni, rettangolo, punto)'
               href: ~/essentials/platform-extensions.md?context=xamarin/watchos
             - name: Preferenze
@@ -1043,6 +1051,8 @@
               href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
             - name: Informazioni sull'app
               href: ~/essentials/app-information.md?context=xamarin/tvos
+            - name: Tema dell'app
+              href: ~/essentials/app-theme.md?context=xamarin/tvos
             - name: Convertitori di colori
               href: ~/essentials/color-converters.md?context=xamarin/tvos
             - name: Connettività
@@ -1055,6 +1065,8 @@
               href: ~/essentials/geocoding.md?context=xamarin/tvos
             - name: Thread principale
               href: ~/essentials/main-thread.md?context=xamarin/tvos
+            - name: Autorizzazioni
+              href: ~/essentials/permissions.md?context=xamarin/tvos
             - name: 'Estensioni piattaforma (dimensioni, rettangolo, punto)'
               href: ~/essentials/platform-extensions.md?context=xamarin/tvos
             - name: Preferenze
