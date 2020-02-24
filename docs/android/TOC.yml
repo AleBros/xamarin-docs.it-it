@@ -373,6 +373,11 @@
                   href: platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md
             - name: Risoluzione dei problemi delle associazioni
               href: platform/binding-java-library/troubleshooting-bindings.md
+        - name: Associare una libreria Kotlin
+          href: platform/binding-kotlin-library/index.md
+          items:
+            - name: Procedura dettagliata
+              href: platform/binding-kotlin-library/walkthrough.md
         - name: Uso di librerie native
           href: platform/native-libraries.md
         - name: Renderscript

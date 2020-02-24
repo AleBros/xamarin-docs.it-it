@@ -322,6 +322,11 @@
           items:
             - name: 'Procedura dettagliata: Binding di una libreria Objective-C in iOS'
               href: platform/binding-objective-c/walkthrough.md
+        - name: Associare librerie iOS Swift
+          href: platform/binding-swift/index.md
+          items:
+            - name: Procedura dettagliata
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: Contacts e ContactsUI
