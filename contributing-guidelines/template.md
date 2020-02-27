@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
+ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "76530864"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553568"
 ---
 # <a name="metadata-and-markdown-template"></a>Modello Markdown e metadati
 
@@ -95,7 +95,7 @@ Le intestazioni di secondo livello verranno usate per generare il sommario della
 
 ## <a name="text-styling"></a>Stile del testo
 
-*Corsivo*: da usare per file, cartelle, percorsi (posizionare gli elementi lunghi su una riga distinta), nuovi termini, URL (a meno che non ne venga eseguito il rendering come collegamenti, in base all'impostazione predefinita).
+_Corsivo_: da usare per file, cartelle, percorsi (posizionare gli elementi lunghi su una riga distinta), nuovi termini, URL (a meno che non ne venga eseguito il rendering come collegamenti, in base all'impostazione predefinita).
 
 **Grassetto**: da usare per gli elementi dell'interfaccia utente.
 
