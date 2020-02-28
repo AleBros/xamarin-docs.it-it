@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: Avviare l'app per le mappe native
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Avviare i comandi
@@ -620,6 +622,8 @@
           items:
             - name: Panoramica
               href: platform/android/index.md
+            - name: Migrazione AndroidX
+              href: platform/android/androidx-migration.md
             - name: AppCompat e Material Design
               href: platform/android/appcompat-material-design.md
             - name: Riempimento e ombreggiature dei pulsanti
@@ -662,6 +666,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: Colore di sfondo della cella
               href: platform/ios/cell-background-color.md
+            - name: Selezione di un elemento in un DatePicker
+              href: platform/ios/datepicker-selection.md
             - name: Colore del cursore per Entry
               href: platform/ios/entry-cursor-color.md
             - name: Dimensioni del carattere per Entry
@@ -702,16 +708,24 @@
               href: platform/ios/slider-thumb.md
             - name: Modalità di transizione con scorrimento rapido SwipeView
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: Barra schede traslucida per TabbedPage
+              href: platform/ios/tabbedpage-translucent-tabbar.md
+            - name: Selezione di un elemento in un TimePicker
+              href: platform/ios/timepicker-selection.md
             - name: Sfocatura per VisualElement
               href: platform/ios/visualelement-blur.md
             - name: Ombreggiature per VisualElement
               href: platform/ios/visualelement-drop-shadow.md
             - name: Modalità colore legacy per VisualElement
               href: platform/ios/legacy-color-mode.md
+            - name: Primo risponditore per VisualElement
+              href: platform/ios/visualelement-first-responder.md
         - name: WINDOWS
           items:
             - name: Panoramica
               href: platform/windows/index.md
+            - name: Directory immagine predefinita
+              href: platform/windows/default-image-directory.md
             - name: Ordine di lettura InputView
               href: platform/windows/inputview-reading-order.md
             - name: SelectionMode per ListView
