@@ -253,14 +253,16 @@
         - name: Doppio schermo
           href: app-fundamentals/dual-screen/index.md
           items:
-            - name: Modelli a doppio schermo
+            - name: Modelli per doppio schermo
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: TwoPaneView
+            - name: Layout per doppio schermo
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: DualScreenInfo
+            - name: Funzionalità del dispositivo per doppio schermo
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: DualScreenHelper
+            - name: Helper per la piattaforma per doppio schermo
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: Trigger per doppio schermo
+              href: app-fundamentals/dual-screen/triggers.md
         - name: Effetti
           href: app-fundamentals/effects/index.md
           items:
