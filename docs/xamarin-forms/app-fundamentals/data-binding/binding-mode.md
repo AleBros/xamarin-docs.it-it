@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545647"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567063"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
 
@@ -47,9 +47,9 @@ Inizialmente l'ordine potrebbe apparire invertito, con `Label` che è ora l'orig
 
 Come prevedibile, l'elemento `Slider` viene inizializzato sul valore 1 in base al valore `Opacity` iniziale di `Label`. Questo è illustrato nello screenshot iOS a sinistra:
 
-[![Associazione inversa](binding-mode-images/reversebinding-small.png "Associazione inversa")](binding-mode-images/reversebinding-large.png#lightbox "Associazione inversa")
+[![Binding inverso](binding-mode-images/reversebinding-small.png "Binding inverso")](binding-mode-images/reversebinding-large.png#lightbox "Binding inverso")
 
-Tuttavia, potrebbe essere sorprendente che la `Slider` continui a funzionare, come illustrato nella schermata Android. Questo potrebbe suggerire che il data binding funziona meglio quando la destinazione di binding è `Slider` anziché `Label`, perché l'inizializzazione funziona come previsto.
+Tuttavia, sorprendentemente `Slider` continua a funzionare, come dimostrato dagli screenshot di Android. Questo potrebbe suggerire che il data binding funziona meglio quando la destinazione di binding è `Slider` anziché `Label`, perché l'inizializzazione funziona come previsto.
 
 La differenza tra l'esempio **Reverse Binding** (Binding inverso) e gli esempi precedenti sta nella *modalità di binding*.
 
@@ -58,10 +58,10 @@ La differenza tra l'esempio **Reverse Binding** (Binding inverso) e gli esempi p
 La modalità di binding viene specificata con un membro dell'enumerazione [`BindingMode`](xref:Xamarin.Forms.BindingMode):
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; dati sono disponibili in entrambe le direzioni tra l'origine e la destinazione
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; dati passa dall'origine alla destinazione
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati passa dalla destinazione all'origine
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati passano dall'origine alla destinazione, ma solo quando viene modificato il `BindingContext` (nuovo con Xamarin.forms 3,0)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; i dati vengono trasferiti in entrambe le direzioni tra origine e destinazione
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; i dati vengono trasferiti dall'origine alla destinazione
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; i dati vengono trasferiti dalla destinazione all'origine
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; i dati vengono trasferiti dall'origine alla destinazione, ma solo quando viene modificato `BindingContext` (nuova funzionalità di Xamarin.Forms 3.0)
 
 Ogni proprietà con binding ha un valore di binding predefinito che viene impostato quando viene creata la proprietà con binding, ed è disponibile nella proprietà [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) dell'oggetto `BindableProperty`. Questa modalità di binding predefinita indica la modalità attiva quando la proprietà è una destinazione per il data binding.
 
@@ -111,7 +111,7 @@ La pagina **Simple Color Selector** (Selettore colori semplice) illustra l'uso d
 
 ViewModel è l'origine del data binding. L'elemento ViewModel *non* definisce proprietà con binding, ma implementa un meccanismo di notifica che consente all'infrastruttura di binding di ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è l'interfaccia [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), che definisce un singolo evento denominato [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). In genere una classe che implementa questa interfaccia attiva l'evento quando il valore di una delle sue proprietà pubbliche viene modificato. Non è necessario che l'evento venga attivato se la proprietà non cambia mai. (L'interfaccia `INotifyPropertyChanged` viene anche implementata da `BindableObject` e viene attivato un evento `PropertyChanged` ogni volta che il valore di una proprietà con binding cambia.)
 
-La classe `HslColorViewModel` definisce cinque proprietà: le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
+La classe `HslColorViewModel` definisce cinque proprietà: Le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -255,15 +255,15 @@ Il file XAML **Simple Color Selector** (Selettore colori semplice) crea un'istan
 </ContentPage>
 ```
 
-`BoxView`, `Label` e tre viste `Slider` ereditano il contesto di binding da `Grid`. Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà `Color` di `BoxView` e la proprietà `Text` di `Label` i data binding sono `OneWay`: le proprietà nella vista vengono impostate dalle proprietà in ViewModel.
+`BoxView`, `Label` e tre viste `Slider` ereditano il contesto di binding da `Grid`. Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà `Color` di `BoxView` e la proprietà `Text` di `Label`, i data binding sono `OneWay`: Le proprietà nella vista vengono impostate dalle proprietà in ViewModel.
 
 Tuttavia la proprietà `Value` di `Slider` è `TwoWay`. In questo modo ogni elemento `Slider` può essere impostato da ViewModel, e a sua volta ViewModel può essere impostato da ogni `Slider`.
 
 Alla prima esecuzione del programma, `BoxView`, `Label` e tre elementi `Slider` vengono impostati da ViewModel sulla base della proprietà iniziale `Color` definita al momento della creazione dell'istanza di ViewModel. Questo è illustrato nello screenshot iOS a sinistra:
 
-[![Selettore colori semplici](binding-mode-images/simplecolorselector-small.png "Selettore colori semplici")](binding-mode-images/simplecolorselector-large.png#lightbox "Selettore colori semplici")
+[![Selettore colori semplice](binding-mode-images/simplecolorselector-small.png "Selettore colori semplice")](binding-mode-images/simplecolorselector-large.png#lightbox "Selettore colori semplice")
 
-Quando si modificano i dispositivi di scorrimento, i `BoxView` e i `Label` vengono aggiornati di conseguenza, come illustrato nello screenshot di Android.
+Quando si azionano i dispositivi di scorrimento, `BoxView` e `Label` vengono aggiornati di conseguenza, come illustrato nello screenshot di Android.
 
 La creazione di istanze di ViewModel nel dizionario risorse è un approccio comune. È anche possibile creare un'istanza di ViewModel nei tag elemento proprietà per la proprietà `BindingContext`. Nel file XAML **Simple Color Selector** (Selettore colori semplice), provare a rimuovere `HslColorViewModel` dal dizionario risorse e impostarlo sulla proprietà `BindingContext` di `Grid` come illustrato di seguito:
 
@@ -396,7 +396,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
     bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
     {
-        if (Object.Equals(storage, value))
+        if (object.Equals(storage, value))
             return false;
 
         storage = value;

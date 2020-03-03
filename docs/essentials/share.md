@@ -4,20 +4,20 @@ description: La classe Share in Xamarin.Essentials consente a un'applicazione di
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 01/06/2020
 ms.custom: video
-ms.openlocfilehash: ade1baa90f8a3b6a35e89d53de6d5f9b841c8f9e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f964967dce0dbb7e49d52a7f865b0fe8a9957bbe
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764974"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545207"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Condividi
 
 La classe **Share** consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -77,18 +77,33 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
+## <a name="presentation-location"></a>Posizione della presentazione
+
+Quando si richiede una condivisione in iPadOS è possibile presentarla in un controllo popup. È possibile specificare la posizione usando la proprietà `PresentationSourceBounds`:
+
+```csharp
+await Share.RequestAsync(new ShareFileRequest
+{
+    Title = Title,
+    File = new ShareFile(file),
+    PresentationSourceBounds = DeviceInfo.Platform== DevicePlatform.iOS && DeviceInfo.Idiom == DeviceIdiom.Tablet
+                            ? new System.Drawing.Rectangle(0, 20, 0, 0)
+                            : System.Drawing.Rectangle.Empty
+});
+```
+
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - La proprietà `Subject` viene usata per l'oggetto desiderato di un messaggio.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - `Subject` non viene usata.
 - `Title` non viene usata.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - Se non impostata, `Title` userà il nome dell'applicazione per impostazione predefinita.
 - `Subject` non viene usata.

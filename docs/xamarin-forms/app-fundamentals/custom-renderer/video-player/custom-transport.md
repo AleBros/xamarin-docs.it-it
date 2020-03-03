@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771822"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636016"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
@@ -522,7 +522,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Pulsanti Play, Pause e Stop
 
-L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Si tratta di:
+L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Questi sono:
 
 - 0x23F5 (triangolo nero medio rivolto verso destra) oppure &#x23F5; per **Play**
 - 0x23F8 (due barre verticali) oppure &#x23F8; per **Pause**
@@ -613,7 +613,7 @@ La pagina **Custom Transport** (Trasporto personalizzato) imposta la proprietà 
 </ContentPage>
 ```
 
-I trigger di dati sono descritti in dettaglio nell'articolo [Trigger di dati](~/xamarin-forms/app-fundamentals/triggers.md#data).
+I trigger di dati sono descritti in dettaglio nell'articolo [Trigger di dati](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers).
 
 Il file code-behind include i gestori per gli eventi `Clicked` del pulsante:
 
