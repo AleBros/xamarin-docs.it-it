@@ -6,20 +6,20 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: e388df2b4c7201cad01789de1676f79bec8d351e
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: daab2b3a18eeea2f50c9518144b3396fbba90928
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488543"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545128"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introduzione a Xamarin.Essentials
 
 Xamarin.Essentials offre una singola API multipiattaforma supportata da qualsiasi applicazione iOS, Android o UWP accessibile da codice condiviso, indipendentemente dal modo in cui viene creata l'interfaccia utente. Per altre informazioni sui sistemi operativi supportati, vedere la [guida al supporto delle piattaforme e delle funzionalità](platform-feature-support.md).
 
-## <a name="installation"></a>Installazione di
+## <a name="installation"></a>Installazione
 
-Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuovo progetto in Visual Studio. Può essere aggiunto a qualsiasi esistente usando Visual Studio con i passaggi seguenti.
+Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuovo progetto in Visual Studio. È anche possibile aggiungerlo usando Visual Studio con i passaggi seguenti.
 
 1. Scaricare e installare [Visual Studio](https://visualstudio.microsoft.com/) con [Visual Studio Tools per Xamarin](~/get-started/installation/index.md).
 
@@ -31,13 +31,13 @@ Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuo
 3. Aggiungere il pacchetto NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a ogni progetto:
 
     <!--markdownlint-disable MD023 -->
-    # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+    # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
     Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome della soluzione e scegliere **Gestisci pacchetti NuGet**. Cercare **Xamarin.Essentials** e installare il pacchetto in **TUTTI** i progetti, incluse le librerie Android, iOS, UWP e .NET Standard.
 
-    # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+    # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-    Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **aggiungi > Aggiungi pacchetti NuGet...** . Cercare **Xamarin.Essentials** e installare il pacchetto in **tutti i** progetti, incluse le librerie Android, iOS e .NET standard.
+    Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi > Aggiungi pacchetti NuGet**. Cercare **Xamarin.Essentials** e installare il pacchetto in **TUTTI** i progetti, incluse le librerie Android, iOS e .NET Standard.
 
     -----
 
@@ -49,11 +49,11 @@ Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuo
 
 5. Xamarin.Essentials richiede una configurazione specifica della piattaforma:
 
-    # <a name="androidtabandroid"></a>[Android](#tab/android)
+    # <a name="android"></a>[Android](#tab/android)
 
-    Xamarin.Essentials supporta come versione minima Android 4.4, corrispondente al livello API 19, ma la versione Android di destinazione per la compilazione deve essere 9.0, corrispondente al livello API 28. In Visual Studio queste due versioni sono impostate nella finestra di dialogo delle proprietà del progetto per il progetto Android, nella scheda Manifesto Android. In Visual Studio per Mac sono impostati nella finestra di dialogo Opzioni progetto per il progetto Android, nella scheda applicazione Android.
+    Xamarin.Essentials supporta come versione minima Android 4.4, corrispondente al livello API 19, ma la versione Android di destinazione per la compilazione deve essere 9.0, corrispondente al livello API 28. (In Visual Studio, queste due versioni vengono impostate nella finestra di dialogo Proprietà del progetto per il progetto Android, nella scheda Manifesto Android. In Visual Studio per Mac, l'impostazione viene eseguita nella finestra di dialogo Opzioni progetto per il progetto Android, nella scheda Applicazione Android.)
 
-    Xamarin.Essentials installa la versione 28.0.0.1 delle librerie Xamarin.Android.Support richieste. Anche qualsiasi altra libreria Xamarin.Android.Support richiesta dall'applicazione deve essere aggiornata alla versione 28.0.0.1 usando Gestione pacchetti NuGet. Tutte le librerie Xamarin.Android.Support usate dall'applicazione deve essere uguali e la versione non deve essere inferiore a 28.0.0.1. Fare riferimento alla [pagina di risoluzione dei problemi](troubleshooting.md) in caso di problemi durante l'aggiunta dei pacchetti NuGet di Xamarin.Essentials o l'aggiornamento dei pacchetti NuGet nella soluzione.
+    Xamarin.Essentials installa la versione 28.0.0.3 delle librerie Xamarin.Android.Support richieste. Anche qualsiasi altra libreria Xamarin.Android.Support richiesta dall'applicazione deve essere aggiornata alla versione 28.0.0.3 usando Gestione pacchetti NuGet. Tutte le librerie Xamarin.Android.Support usate dall'applicazione devono essere uguali e con la versione 28.0.0.3 o successive. Fare riferimento alla [pagina di risoluzione dei problemi](troubleshooting.md) in caso di problemi durante l'aggiunta dei pacchetti NuGet di Xamarin.Essentials o l'aggiornamento dei pacchetti NuGet nella soluzione.
 
     In `MainLauncher` o per qualsiasi `Activity` avviata del progetto Android, Xamarin.Essentials deve essere inizializzato nel metodo `OnCreate`:
 
@@ -76,11 +76,11 @@ Xamarin.Essentials è disponibile come pacchetto NuGet ed è incluso in ogni nuo
     }
     ```
 
-    # <a name="iostabios"></a>[iOS](#tab/ios)
+    # <a name="ios"></a>[iOS](#tab/ios)
 
     Non è necessaria alcuna configurazione aggiuntiva.
 
-    # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+    # <a name="uwp"></a>[UWP](#tab/uwp)
 
     Non è necessaria alcuna configurazione aggiuntiva.
 

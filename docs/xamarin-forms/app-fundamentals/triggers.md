@@ -6,47 +6,21 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2016
-ms.openlocfilehash: d046962bf08b85069b1a698324db76a4ac3286d9
-ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
+ms.date: 02/21/2020
+ms.openlocfilehash: bf9c06dae0df7da1cc69a85d8436376494039959
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144648"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635704"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
-I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
+I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà. Inoltre, i trigger di stato, un gruppo specializzato di trigger, definiscono quando è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
 
 È possibile assegnare un trigger direttamente a un controllo o aggiungerlo a un dizionario risorse a livello di pagina o a livello di app perché sia applicato a più controlli.
-
-Esistono diversi tipi di trigger:
-
-- [Trigger di proprietà](#property): si verifica quando una proprietà su un controllo è impostata su un particolare valore.
-
-- [Trigger di dati](#data) : usa il data binding per eseguire il trigger sulla base delle proprietà di un altro controllo.
-
-- [Trigger di evento](#event): si verifica quando un evento avviene su un controllo.
-
-- [MultiTrigger](#multi): consente di impostare più condizioni di trigger prima che si verifichi un'azione.
-
-- [Trigger adattivo](#adaptive) (anteprima): consente di reagire alle modifiche della larghezza e dell'altezza di una finestra dell'applicazione.
-
-- [Trigger di confronto](#compare) (anteprima): si verifica quando vengono confrontati due valori.
-
-- [Trigger del dispositivo](#device) (anteprima): si verifica per l'esecuzione nel dispositivo specificato. 
-
-- [Trigger di orientamento](#orientation) (anteprima): si verifica quando cambia l'orientamento del dispositivo.
-
-Per usare i trigger di anteprima, assicurarsi di abilitarli usando il flag di funzionalità in `App.xaml.cs`:
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
-
-<a name="property" />
 
 ## <a name="property-triggers"></a>Trigger di proprietà
 
@@ -75,11 +49,11 @@ Le parti importanti della dichiarazione del trigger sono le seguenti:
 
 - **Setter**: è possibile aggiungere una raccolta di elementi `Setter` quando la condizione di trigger è soddisfatta. È necessario specificare gli oggetti `Property` e `Value` da impostare.
 
-- **EnterActions ed ExitActions** (non illustrate): parti scritte nel codice che possono essere usate in aggiunta o al posto degli elementi `Setter`. Sono [descritte di seguito](#enterexit).
+- **EnterActions ed ExitActions** (non illustrate): parti scritte nel codice che possono essere usate in aggiunta o al posto degli elementi `Setter`. Sono [descritte di seguito](#enteractions-and-exitactions).
 
-### <a name="applying-a-trigger-using-a-style"></a>Applicazione di un trigger usando lo stile
+### <a name="applying-a-trigger-using-a-style"></a>Applicazione di un trigger tramite uno stile
 
-È anche possibile aggiungere trigger a una dichiarazione `Style` in un controllo, in una pagina o in un oggetto `ResourceDictionary` dell'applicazione. In questo esempio viene dichiarato uno stile implicito, vale a dire `Key` non è impostato. In questo caso sarà applicato a tutti i controlli `Entry` della pagina.
+È anche possibile aggiungere trigger a una dichiarazione `Style` in un controllo, in una pagina o in un oggetto `ResourceDictionary` dell'applicazione. Questo esempio dichiara uno stile implicito, ovvero uno stile in cui non è impostato alcun elemento `Key`. Ciò significa che viene applicato a tutti i controlli `Entry` della pagina.
 
 ```xaml
 <ContentPage.Resources>
@@ -96,8 +70,6 @@ Le parti importanti della dichiarazione del trigger sono le seguenti:
     </ResourceDictionary>
 </ContentPage.Resources>
 ```
-
-<a name="data" />
 
 ## <a name="data-triggers"></a>Trigger di dati
 
@@ -131,9 +103,7 @@ che fa riferimento alle proprietà di un altro controllo. Quando la lunghezza di
 > [!TIP]
 > Quando viene valutato `Path=Text.Length`, specificare sempre un valore predefinito per la proprietà di destinazione, ad esempio `Text=""`). In caso contrario, il valore sarà `null` e il trigger non funzionerà come previsto.
 
-Oltre a specificare elementi `Setter`, è anche possibile scrivere le parti [`EnterActions` e `ExitActions`](#enterexit).
-
-<a name="event" />
+Oltre a specificare elementi `Setter`, è anche possibile scrivere le parti [`EnterActions` e `ExitActions`](#enteractions-and-exitactions).
 
 ## <a name="event-triggers"></a>Trigger di evento
 
@@ -185,9 +155,7 @@ Il trigger di evento può quindi essere utilizzato da XAML:
 
 Considerare che quando i trigger vengono condivisi in un oggetto `ResourceDictionary`, un'istanza viene condivisa tra i controlli, in modo che gli stati configurati una volta vengano applicati a tutti.
 
-Si noti che i trigger di evento non supportano le raccolte `EnterActions` e `ExitActions` [descritte di seguito](#enterexit).
-
-<a name="multi" />
+Si noti che i trigger di evento non supportano le raccolte `EnterActions` e `ExitActions` [descritte di seguito](#enteractions-and-exitactions).
 
 ## <a name="multi-triggers"></a>MultiTrigger
 
@@ -288,8 +256,6 @@ Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane ina
 
 ![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
-<a name="enterexit" />
-
 ## <a name="enteractions-and-exitactions"></a>EnterActions ed ExitActions
 
 Un altro modo per implementare le modifiche quando si verifica un trigger consiste nell'aggiungere le raccolte `EnterActions` e `ExitActions` e specificare le implementazioni `TriggerAction<T>`.
@@ -348,142 +314,316 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-<a name="adaptive" />
+## <a name="state-triggers"></a>Trigger di stato
 
-## <a name="adaptive-trigger-preview"></a>Trigger adattivo (anteprima)
+I trigger di stato, introdotti in Xamarin.Forms 4.5, sono un gruppo specializzato di trigger che definiscono le condizioni in base alle quali è necessari applicare [`VisualState`](xref:Xamarin.Forms.VisualState). Attualmente, tuttavia, i trigger di stato sono sperimentali e possono essere usati solo aggiungendo al file *App.xaml.cs* la riga di codice seguente:
 
-Un `AdaptiveTrigger` viene attivato automaticamente quando la finestra ha la larghezza o l'altezza specificata. Un `AdaptiveTrigger` accetta due possibili proprietà:
+```csharp
+Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
+```
 
-- **MinWindowHeight**
-- **MinWindowWidth**
+I trigger di stato vengono aggiunti alla raccolta [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) di [`VisualState`](xref:Xamarin.Forms.VisualState). Questa raccolta può contenere un solo o più trigger di stato. [`VisualState`](xref:Xamarin.Forms.VisualState) viene applicato quando nella raccolta è attivo un qualsiasi trigger di stato.
 
-<a name="compare"/>
+Quando si usano trigger di stato per controllare lo stato degli oggetti visivi, per determinare quale trigger (e quale oggetto [`VisualState`](xref:Xamarin.Forms.VisualState) corrispondente) è attivo, Xamarin.Forms usa le regole di precedenza seguenti:
 
-## <a name="compare-trigger-preview"></a>Trigger di confronto (anteprima)
+1. Qualsiasi trigger che derivi da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+1. [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) attivato perché la condizione [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) è soddisfatta.
+1. [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) attivato perché la condizione [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) è soddisfatta.
 
-`CompareStateTrigger` è un `StateTrigger` molto versatile che viene attivato se **Value** è uguale a **Property**.
+Se sono attivi più trigger, ad esempio due trigger personalizzati, contemporaneamente, il primo trigger dichiarato nel markup ha la precedenza.
+
+> [!NOTE]
+> I trigger di stato possono essere impostati in [`Style`](xref:Xamarin.Forms.Style) o direttamente negli elementi.
+
+Per altre informazioni sugli stati degli oggetti visivi, vedere [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
+### <a name="state-trigger"></a>Trigger di stato
+
+La classe [`StateTrigger`](xref:Xamarin.Forms.StateTrigger), che deriva dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase), ha una proprietà [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) associabile. `StateTrigger` attiva una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) quando la proprietà `IsActive` cambia valore.
+
+La classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase), che rappresenta la classe di base per tutti i trigger di stato, ha una proprietà [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) e un evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged). Questo evento viene generato ogni volta che si verifica una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState).
+
+> [!IMPORTANT]
+> La proprietà associabile [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) nasconde la proprietà [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) ereditata.
+
+L'esempio di codice XAML seguente illustra un elemento [`Style`](xref:Xamarin.Forms.Style) che include oggetti [`StateTrigger`](xref:Xamarin.Forms.StateTrigger):
 
 ```xaml
+<Style TargetType="Grid">
+    <Setter Property="VisualStateManager.VisualStateGroups">
+        <VisualStateGroupList>
+            <VisualStateGroup>
+                <VisualState x:Name="Checked">
+                    <VisualState.StateTriggers>
+                        <StateTrigger IsActive="{Binding IsToggled}"
+                                      IsActiveChanged="OnCheckedStateIsActiveChanged" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="Black" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Unchecked">
+                    <VisualState.StateTriggers>
+                        <StateTrigger IsActive="{Binding IsToggled, Converter={StaticResource inverseBooleanConverter}}"
+                                      IsActiveChanged="OnUncheckedStateIsActiveChanged" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="White" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateGroupList>
+    </Setter>
+</Style>
+```
+
+In questo esempio, l'elemento [`Style`](xref:Xamarin.Forms.Style) implicito ha come destinazioni oggetti [`Grid`](xref:Xamarin.Forms.Grid). Quando la proprietà `IsToggled` dell'oggetto associato corrisponde a `true`, il colore di sfondo di `Grid` viene impostato sul nero. Quando la proprietà `IsToggled` dell'oggetto associato diventa `false`, viene attivata una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) e il colore di sfondo di `Grid` diventa bianco.
+
+Inoltre, ogni volta che si verifica una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState), viene generato l'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) per `VisualState`. Ogni `VisualState` registra un gestore per questo evento:
+
+```csharp
+void OnCheckedStateIsActiveChanged(object sender, EventArgs e)
+{
+    StateTriggerBase stateTrigger = sender as StateTriggerBase;
+    Console.WriteLine($"Checked state active: {stateTrigger.IsActive}");
+}
+
+void OnUncheckedStateIsActiveChanged(object sender, EventArgs e)
+{
+    StateTriggerBase stateTrigger = sender as StateTriggerBase;
+    Console.WriteLine($"Unchecked state active: {stateTrigger.IsActive}");
+}
+```
+
+In questo esempio, quando viene attivato un gestore per l'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged), il gestore genera come output se [`VisualState`](xref:Xamarin.Forms.VisualState) è attivo o meno. Quando si passa dallo stato di visualizzazione `Checked` allo stato di visualizzazione `Unchecked`, ad esempio, nella finestra della console vengono visualizzati i messaggi seguenti:
+
+```
+Checked state active: False
+Unchecked state active: True
+```
+
+> [!NOTE]
+> È possibile creare trigger di stato personalizzati derivandoli dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+
+### <a name="adaptive-trigger"></a>Trigger adattivi
+
+[`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) attiva una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) quando la finestra assume l'altezza o la larghezza specificata. Questo trigger ha due proprietà associabili:
+
+- [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), di tipo `double`, che indica l'altezza minima della finestra in corrispondenza della quale è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
+- [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), di tipo `double`, che indica la larghezza minima della finestra in corrispondenza della quale è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
+
+> [!NOTE]
+> [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) deriva dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) e può quindi allegare un gestore all'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged).
+
+L'esempio di codice XAML seguente illustra un elemento [`Style`](xref:Xamarin.Forms.Style) che include oggetti [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger):
+
+```xaml
+<Style TargetType="StackLayout">
+    <Setter Property="VisualStateManager.VisualStateGroups">
+        <VisualStateGroupList>
+            <VisualStateGroup>
+                <VisualState x:Name="Vertical">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="Orientation"
+                                Value="Vertical" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Horizontal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="Orientation"
+                                Value="Horizontal" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateGroupList>
+    </Setter>
+</Style>
+```
+
+In questo esempio, l'elemento [`Style`](xref:Xamarin.Forms.Style) implicito ha come destinazioni oggetti [`StackLayout`](xref:Xamarin.Forms.StackLayout). Quando la larghezza della finestra è compresa tra 0 e 800 unità indipendenti dal dispositivo, gli oggetti `StackLayout` a cui è applicato `Style` hanno un orientamento verticale. Quando la larghezza della finestra è >= 800 unità indipendenti dal dispositivo, viene attivata la modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) e l'orientamento di `StackLayout` passa a orizzontale:
+
+![VisualState verticale in StackLayout](triggers-images/adaptivetrigger-vertical.png "Esempio di AdaptiveTrigger")
+![VisualState orizzontale in StackLayout](triggers-images/adaptivetrigger-horizontal.png "Esempio di AdaptiveTrigger")
+
+Le proprietà [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) e [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) possono essere usate in modo indipendente o in combinazione. Il codice XAML seguente illustra un esempio di impostazione di entrambe le proprietà:
+
+```xaml
+<AdaptiveTrigger MinWindowWidth="800"
+                 MinWindowHeight="1200"/>
+```
+
+In questo esempio, [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) indica che l'elemento [`VisualState`](xref:Xamarin.Forms.VisualState) corrispondente viene applicato quando la larghezza della finestra corrente è >= 800 unità indipendenti dal dispositivo e l'altezza della finestra corrente è >= 1200 unità indipendenti dal dispositivo.
+
+### <a name="compare-state-trigger"></a>Trigger di stato di confronto
+
+[`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) attiva una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) quando una proprietà è uguale a un valore specifico. Questo trigger ha due proprietà associabili:
+
+- [`Property`](xref:Xamarin.Forms.CompareStateTrigger.Property), di tipo `object`, che indica la proprietà sottoposta a confronto dal trigger.
+- [`Value`](xref:Xamarin.Forms.CompareStateTrigger.Value), di tipo `object`, che indica il valore in corrispondenza del quale è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
+
+> [!NOTE]
+> [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) deriva dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) e può quindi allegare un gestore all'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged).
+
+L'esempio di codice XAML seguente illustra un elemento [`Style`](xref:Xamarin.Forms.Style) che include oggetti [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger):
+
+```xaml
+<Style TargetType="Grid">
+    <Setter Property="VisualStateManager.VisualStateGroups">
+        <VisualStateGroupList>
+            <VisualStateGroup>
+                <VisualState x:Name="Checked">
+                    <VisualState.StateTriggers>
+                        <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                             Value="True" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="Black" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Unchecked">
+                    <VisualState.StateTriggers>
+                        <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                             Value="False" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="White" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateGroupList>
+    </Setter>
+</Style>
+...
 <Grid>
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState x:Name="Checked">
-                <VisualState.StateTriggers>
-                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="True" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Green" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="UnChecked">
-                <VisualState.StateTriggers>
-                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="False" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Red" />
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>     
-    </VisualStateManager.VisualStateGroups>  
-    <Frame
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        BackgroundColor="White"
-        Margin="24">
-        <StackLayout
-            Orientation="Horizontal">
-            <CheckBox 
-                x:Name="CheckBox"
-                VerticalOptions="Center"/>
-            <Label
-                Text="Checked/Uncheck the CheckBox to modify the Grid BackgroundColor"
-                VerticalOptions="Center"/>
+    <Frame BackgroundColor="White"
+           CornerRadius="12"
+           Margin="24"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="checkBox"
+                      VerticalOptions="Center" />
+            <Label Text="Check the CheckBox to modify the Grid background color."
+                   VerticalOptions="Center" />
         </StackLayout>
     </Frame>
 </Grid>
 ```
 
-Questo esempio illustra come modificare la proprietà **BackgroundColor** per un controllo **Grid** in base allo stato della proprietà **IsChecked** di **CheckBox**. **StateTrigger** supporta associazioni che offrono molte possibilità per il confronto di valori non solo degli elementi dell'interfaccia utente, ma anche da **BindingContext**.
+In questo esempio, l'elemento [`Style`](xref:Xamarin.Forms.Style) implicito ha come destinazioni oggetti [`Grid`](xref:Xamarin.Forms.Grid). Quando la proprietà [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) di [`CheckBox`](xref:Xamarin.Forms.CheckBox) è `false`, il colore di sfondo di `Grid` viene impostato sul bianco. Quando la proprietà `CheckBox.IsChecked` diventa `true`, viene attivata una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) e il colore di sfondo di `Grid` diventa nero:
 
-<a name="device" />
+[![Screenshot di un cambiamento attivato dello stato dell'oggetto visivo, in iOS e Android](triggers-images/comparestatetrigger-unchecked.png "Esempio di CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Esempio di CompareStateTrigger")
+[![Screenshot di un cambiamento attivato dello stato dell'oggetto visivo, in iOS e Android](triggers-images/comparestatetrigger-checked.png "Esempio di CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Esempio di CompareStateTrigger")
 
-## <a name="device-trigger-preview"></a>Trigger del dispositivo (anteprima)
+### <a name="device-state-trigger"></a>Trigger di stato del dispositivo
 
-Un `DeviceTrigger` consente di controllare come viene applicato uno stato durante l'esecuzione in una piattaforma del dispositivo specifica, in modo analogo all'uso di `OnPlatform`.
+[`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) attiva una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) in base alla piattaforma del dispositivo in cui è in esecuzione l'app. Questo trigger ha un'unica proprietà associabile:
 
-```xaml
-<Grid>
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState
-                x:Name="Android">
-                <VisualState.StateTriggers>
-                    <DeviceStateTrigger Device="Android" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Blue" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState
-                x:Name="iOS">
-                <VisualState.StateTriggers>
-                    <DeviceStateTrigger Device="iOS" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Red" />
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>  
-    </VisualStateManager.VisualStateGroups>  
-    <Label
-        Text="This page changes the color based on the device where the App is running."
-        HorizontalOptions="Center"
-        VerticalOptions="Center"/>
-</Grid>
-```
+- [`Device`](xref:Xamarin.Forms.DeviceStateTrigger.Device), di tipo `string`, che indica la piattaforma del dispositivo in cui è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
 
-Nell'esempio precedente il colore di sfondo sarà blu in un dispositivo Android e rosso in un dispositivo iOS.
+> [!NOTE]
+> [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) deriva dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) e può quindi allegare un gestore all'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged).
 
-<a name="orientation" />
-
-## <a name="orientation-trigger-preview"></a>Trigger di orientamento (anteprima)
-
-Un `OrientationTrigger` supporta la modifica dello stato di visualizzazione quando il dispositivo cambia orientamento da orizzontale a verticale e viceversa.
+L'esempio di codice XAML seguente illustra un elemento [`Style`](xref:Xamarin.Forms.Style) che include oggetti `DeviceStateTrigger`:
 
 ```xaml
-<Grid>
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState
-                x:Name="Landscape">
-                <VisualState.StateTriggers>
-                    <OrientationStateTrigger Orientation="Landscape" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Blue" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState
-                x:Name="Portrait">
-                <VisualState.StateTriggers>
-                    <OrientationStateTrigger Orientation="Portrait" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Property="BackgroundColor" Value="Red" />
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>  
-    <Label
-        Text="This Grid changes the color based on the orientation device where the App is running."
-        HorizontalOptions="Center"
-        VerticalOptions="Center"/>
-</Grid>
+<Style x:Key="DeviceStateTriggerPageStyle"
+       TargetType="ContentPage">
+    <Setter Property="VisualStateManager.VisualStateGroups">
+        <VisualStateGroupList>
+            <VisualStateGroup>
+                <VisualState x:Name="iOS">
+                    <VisualState.StateTriggers>
+                        <DeviceStateTrigger Device="iOS" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="Silver" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Android">
+                    <VisualState.StateTriggers>
+                        <DeviceStateTrigger Device="Android" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="#2196F3" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="UWP">
+                    <VisualState.StateTriggers>
+                        <DeviceStateTrigger Device="UWP" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="Aquamarine" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateGroupList>
+    </Setter>
+</Style>
 ```
 
-Nell'esempio precedente lo sfondo è blu quando il dispositivo è nell'orientamento orizzontale ed è rosso con l'orientamento verticale.
+In questo esempio, l'elemento [`Style`](xref:Xamarin.Forms.Style) esplicito ha come destinazioni oggetti [`ContentPage`](xref:Xamarin.Forms.ContentPage). Oggetti `ContentPage` che utilizzano lo stile impostano il proprio colore di sfondo su argento in iOS, su azzurro chiaro in Android e su acquamarina nella piattaforma UWP. Gli screenshot seguenti visualizzano le pagine finali in iOS e Android:
+
+[![Screenshot dello stato della modifica attivata di un oggetto visivo in iOS e Android](triggers-images/devicestatetrigger.png "Esempio di DeviceStateTrigger")](triggers-images/devicestatetrigger-large.png#lightbox "Esempio di DeviceStateTrigger")
+
+### <a name="orientation-state-trigger"></a>Trigger di stato dell'orientamento
+
+[`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) attiva una modifica di [`VisualState`](xref:Xamarin.Forms.VisualState) quando l'orientamento del dispositivo cambia. Questo trigger ha un'unica proprietà associabile:
+
+- [`Orientation`](xref:Xamarin.Forms.OrientationStateTrigger.Orientation), di tipo [`DeviceOrientation`](xref:Xamarin.Forms.Internals.DeviceOrientation), che indica l'orientamento a cui è necessario applicare [`VisualState`](xref:Xamarin.Forms.VisualState).
+
+> [!NOTE]
+> [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) deriva dalla classe [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) e può quindi allegare un gestore all'evento [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged).
+
+L'esempio di codice XAML seguente illustra un elemento [`Style`](xref:Xamarin.Forms.Style) che include oggetti `OrientationStateTrigger`:
+
+```xaml
+<Style x:Key="OrientationStateTriggerPageStyle"
+       TargetType="ContentPage">
+    <Setter Property="VisualStateManager.VisualStateGroups">
+        <VisualStateGroupList>
+            <VisualStateGroup>
+                <VisualState x:Name="Portrait">
+                    <VisualState.StateTriggers>
+                        <OrientationStateTrigger Orientation="Portrait" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="Silver" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Landscape">
+                    <VisualState.StateTriggers>
+                        <OrientationStateTrigger Orientation="Landscape" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor"
+                                Value="White" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateGroupList>
+    </Setter>
+</Style>
+```
+
+In questo esempio, l'elemento [`Style`](xref:Xamarin.Forms.Style) esplicito ha come destinazioni oggetti [`ContentPage`](xref:Xamarin.Forms.ContentPage). Gli oggetti `ContentPage` che utilizzano lo stile impostano il proprio colore di sfondo su argento quando l'orientamento è verticale e impostano il colore di sfondo su bianco quando l'orientamento è orizzontale.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di trigger](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
-- [Documentazione per le API di Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [API trigger di Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)
