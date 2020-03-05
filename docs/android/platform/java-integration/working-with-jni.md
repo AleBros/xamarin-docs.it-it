@@ -1,30 +1,30 @@
 ---
-title: Uso di JNI e Xamarin.Android
-description: Xamarin.Android consente la scrittura di app C# Android con anziché Java. Con Xamarin.Android sono disponibili diversi assembly che forniscono binding per le librerie Java, inclusi mono. Android. dll e mono. Android. GoogleMaps. dll. Tuttavia, le associazioni non vengono fornite per ogni possibile libreria Java e i binding forniti potrebbero non associare tutti i tipi e i membri Java. Per usare i tipi e i membri Java non associati, è possibile usare l'interfaccia Java Native (JNI). Questo articolo illustra come usare JNI per interagire con i tipi e i membri Java dalle applicazioni Xamarin.Android.
+title: Uso di JNI e Novell. Android
+description: Novell. Android consente la scrittura di app C# Android con anziché Java. Con Novell. Android sono disponibili diversi assembly che forniscono binding per le librerie Java, inclusi mono. Android. dll e mono. Android. GoogleMaps. dll. Tuttavia, le associazioni non vengono fornite per ogni possibile libreria Java e i binding forniti potrebbero non associare tutti i tipi e i membri Java. Per usare i tipi e i membri Java non associati, è possibile usare l'interfaccia Java Native (JNI). Questo articolo illustra come usare JNI per interagire con i tipi e i membri Java dalle applicazioni Novell. Android.
 ms.prod: xamarin
 ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 4d4274770263b120e856cf8db01a71f7ed124a63
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 0fa717a775ff2f1ace9e248a8afde8d373e8a1f8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027174"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292988"
 ---
-# <a name="working-with-jni-and-xamarinandroid"></a>Uso di JNI e Xamarin.Android
+# <a name="working-with-jni-and-xamarinandroid"></a>Uso di JNI e Novell. Android
 
-_Xamarin.Android consente la scrittura di app C# Android con anziché Java. Con Xamarin.Android sono disponibili diversi assembly che forniscono binding per le librerie Java, inclusi mono. Android. dll e mono. Android. GoogleMaps. dll. Tuttavia, le associazioni non vengono fornite per ogni possibile libreria Java e i binding forniti potrebbero non associare tutti i tipi e i membri Java. Per usare i tipi e i membri Java non associati, è possibile usare l'interfaccia Java Native (JNI). Questo articolo illustra come usare JNI per interagire con i tipi e i membri Java dalle applicazioni Xamarin.Android._
+_Novell. Android consente la scrittura di app C# Android con anziché Java. Con Novell. Android sono disponibili diversi assembly che forniscono binding per le librerie Java, inclusi mono. Android. dll e mono. Android. GoogleMaps. dll. Tuttavia, le associazioni non vengono fornite per ogni possibile libreria Java e i binding forniti potrebbero non associare tutti i tipi e i membri Java. Per usare i tipi e i membri Java non associati, è possibile usare l'interfaccia Java Native (JNI). Questo articolo illustra come usare JNI per interagire con i tipi e i membri Java dalle applicazioni Novell. Android._
 
 ## <a name="overview"></a>Panoramica
 
 Non è sempre necessario o possibile creare un wrapper gestito chiamabile (MCW) per richiamare il codice Java. In molti casi, il JNI "inline" è perfettamente accettabile e utile per l'uso monouso di membri Java non associati. Spesso è più semplice usare JNI per richiamare un solo metodo su una classe Java anziché generare un'intera associazione. jar.
 
-Xamarin.Android fornisce l'assembly `Mono.Android.dll`, che fornisce un binding per la libreria `android.jar` di Android. I tipi e i membri non presenti all'interno `Mono.Android.dll` e i tipi non presenti all'interno di `android.jar` possono essere utilizzati dall'associazione manuale. Per associare tipi e membri Java, è possibile usare l' **interfaccia nativa Java** (**JNI**) per cercare i tipi, leggere e scrivere i campi e richiamare i metodi.
+Novell. Android fornisce l'assembly `Mono.Android.dll`, che fornisce un binding per la libreria `android.jar` di Android. I tipi e i membri non presenti all'interno `Mono.Android.dll` e i tipi non presenti all'interno di `android.jar` possono essere utilizzati dall'associazione manuale. Per associare tipi e membri Java, è possibile usare l' **interfaccia nativa Java** (**JNI**) per cercare i tipi, leggere e scrivere i campi e richiamare i metodi.
 
-L'API JNI in Xamarin.Android è concettualmente molto simile all'API `System.Reflection` in .NET: consente di cercare i tipi e i membri in base al nome, a leggere e scrivere i valori dei campi, richiamare metodi e altro ancora. È possibile usare JNI e l'attributo personalizzato `Android.Runtime.RegisterAttribute` per dichiarare metodi virtuali che possono essere associati per supportare l'override di. È possibile associare le interfacce in modo che possano essere implementate in C#.
+L'API JNI in Novell. Android è concettualmente molto simile all'API `System.Reflection` in .NET: consente di cercare i tipi e i membri in base al nome, a leggere e scrivere i valori dei campi, richiamare metodi e altro ancora. È possibile usare JNI e l'attributo personalizzato `Android.Runtime.RegisterAttribute` per dichiarare metodi virtuali che possono essere associati per supportare l'override di. È possibile associare le interfacce in modo che possano essere implementate in C#.
 
 In questo documento viene illustrato quanto segue:
 
@@ -36,8 +36,8 @@ In questo documento viene illustrato quanto segue:
 
 ## <a name="requirements"></a>Requisiti
 
-JNI, esposto tramite lo [spazio dei nomi Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv), è disponibile in tutte le versioni di Xamarin.Android.
-Per associare tipi e interfacce Java, è necessario usare Xamarin.Android 4,0 o versione successiva.
+JNI, esposto tramite lo [spazio dei nomi Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv), è disponibile in tutte le versioni di Novell. Android.
+Per associare tipi e interfacce Java, è necessario usare Novell. Android 4,0 o versione successiva.
 
 ## <a name="managed-callable-wrappers"></a>Wrapper richiamabili gestiti
 
@@ -55,7 +55,7 @@ Il primo scopo è esclusivamente per praticità e incapsulamento della complessi
 Android Callable Wrapper (ACW) è necessario ogni volta che il runtime di Android (ART) deve richiamare il codice gestito; questi wrapper sono necessari perché non è possibile registrare le classi con l'arte in fase di esecuzione.
 In particolare, la funzione [defineClass](https://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986) JNI non è supportata dal runtime di Android. I wrapper richiamabili Android comportano quindi la mancanza di supporto per la registrazione dei tipi runtime.
 
-Ogni volta che il codice Android deve eseguire un metodo virtuale o di interfaccia sottoposto a override o implementato nel codice gestito, Xamarin.Android deve fornire un proxy Java in modo che questo metodo venga inviato al tipo gestito appropriato. Questi tipi di proxy Java sono codice Java che hanno la stessa classe di base e l'elenco di interfacce Java come tipo gestito, implementando gli stessi costruttori e dichiarando i metodi di interfaccia e di classe base sottoposti a override.
+Ogni volta che il codice Android deve eseguire un metodo virtuale o di interfaccia sottoposto a override o implementato nel codice gestito, Novell. Android deve fornire un proxy Java in modo che questo metodo venga inviato al tipo gestito appropriato. Questi tipi di proxy Java sono codice Java che hanno la stessa classe di base e l'elenco di interfacce Java come tipo gestito, implementando gli stessi costruttori e dichiarando i metodi di interfaccia e di classe base sottoposti a override.
 
 Android Callable Wrapper vengono generati dal programma **monodroid. exe** durante il [processo di compilazione](~/android/deploy-test/building-apps/build-process.md)e vengono generati per tutti i tipi che (direttamente o indirettamente) ereditano [java. lang. Object](xref:Java.Lang.Object).
 
@@ -64,7 +64,7 @@ Android Callable Wrapper vengono generati dal programma **monodroid. exe** duran
 In alcuni casi potrebbe essere necessario implementare un'interfaccia Android, ad esempio [Android. Content. IComponentCallbacks](xref:Android.Content.IComponentCallbacks).
 
 Tutte le classi e le interfacce Android estendono l'interfaccia [Android. Runtime. IJavaObject](xref:Android.Runtime.IJavaObject) ; Pertanto, tutti i tipi Android devono implementare `IJavaObject`.
-Xamarin.Android sfrutta questo fatto &ndash; USA `IJavaObject` per fornire a Android un proxy Java (un wrapper richiamabile Android) per il tipo gestito specificato. Poiché **monodroid. exe** cerca solo `Java.Lang.Object` sottoclassi (che devono implementare `IJavaObject`), la sottoclasse `Java.Lang.Object` fornisce un modo per implementare le interfacce nel codice gestito. Esempio:
+Novell. Android sfrutta questo fatto &ndash; USA `IJavaObject` per fornire a Android un proxy Java (un wrapper richiamabile Android) per il tipo gestito specificato. Poiché **monodroid. exe** cerca solo `Java.Lang.Object` sottoclassi (che devono implementare `IJavaObject`), la sottoclasse `Java.Lang.Object` fornisce un modo per implementare le interfacce nel codice gestito. Ad esempio,
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -77,7 +77,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-### <a name="implementation-details"></a>Dettagli sull'implementazione
+### <a name="implementation-details"></a>Dettagli dell'implementazione
 
 *La parte restante di questo articolo fornisce i dettagli di implementazione soggetti a modifiche senza preavviso* (e viene presentato qui solo perché gli sviluppatori possono essere curiosi di sapere cosa sta accadendo dietro le quinte).
 
@@ -141,7 +141,7 @@ Si noti che la classe di base viene mantenuta e vengono fornite dichiarazioni di
 
 ### <a name="exportattribute-and-exportfieldattribute"></a>ExportAttribute e ExportFieldAttribute
 
-In genere, Xamarin.Android genera automaticamente il codice Java che comprende ACW; Questa generazione è basata sui nomi di classe e metodo quando una classe deriva da una classe Java ed esegue l'override dei metodi Java esistenti. Tuttavia, in alcuni scenari, la generazione del codice non è adeguata, come descritto di seguito:
+In genere, Novell. Android genera automaticamente il codice Java che comprende ACW; Questa generazione è basata sui nomi di classe e metodo quando una classe deriva da una classe Java ed esegue l'override dei metodi Java esistenti. Tuttavia, in alcuni scenari, la generazione del codice non è adeguata, come descritto di seguito:
 
 - Android supporta i nomi di azione negli attributi XML del layout, ad esempio l'attributo XML di [Android: OnClick](xref:Android.Views.View.IOnClickListener.OnClick*) . Quando viene specificato, l'istanza di visualizzazione inflat tenta di cercare il metodo Java.
 
@@ -149,19 +149,17 @@ In genere, Xamarin.Android genera automaticamente il codice Java che comprende A
 
 - L'interfaccia [Android. OS. Parcelable](xref:Android.OS.Parcelable) prevede che una classe di implementazione deve avere un campo statico `CREATOR` di tipo `Parcelable.Creator`. Il codice Java generato richiede un campo esplicito. Con lo scenario standard, non è possibile eseguire l'output del campo nel codice Java dal codice gestito.
 
-Poiché la generazione del codice non fornisce una soluzione per generare metodi Java arbitrari con nomi arbitrari, a partire da Xamarin.Android 4,2, sono stati introdotti [ExportAttribute](xref:Java.Interop.ExportAttribute) e [ExportFieldAttribute](xref:Java.Interop.ExportFieldAttribute) per offrire una soluzione ai precedenti scenari. Entrambi gli attributi si trovano nello spazio dei nomi `Java.Interop`:
+Poiché la generazione del codice non fornisce una soluzione per generare metodi Java arbitrari con nomi arbitrari, a partire da Novell. Android 4,2, [ExportAttribute](xref:Java.Interop.ExportAttribute) e [ExportFieldAttribute](xref:Java.Interop.ExportFieldAttribute) sono stati introdotti per offrire una soluzione agli scenari precedenti. Entrambi gli attributi si trovano nello spazio dei nomi `Java.Interop`:
 
 - `ExportAttribute` &ndash; specifica il nome di un metodo e i tipi di eccezione previsti (per assegnare "genera" espliciti in Java). Quando viene usato in un metodo, il metodo "Esporta" un metodo Java che genera un codice di invio alla chiamata JNI corrispondente al metodo gestito. Questa operazione può essere utilizzata con `android:onClick` e `java.io.Serializable`.
 
 - `ExportFieldAttribute` &ndash; specifica il nome di un campo. Si trova su un metodo che funziona come inizializzatore di campo. Questa operazione può essere utilizzata con `android.os.Parcelable`.
 
-Il progetto di esempio [ExportAttribute](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) illustra come usare questi attributi.
-
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Risoluzione dei problemi relativi a ExportAttribute e ExportFieldAttribute
 
 - Il pacchetto non riesce a causa della mancata creazione di **mono. Android. Export. dll** &ndash; se è stato usato `ExportAttribute` o `ExportFieldAttribute` su alcuni metodi del codice o delle librerie dipendenti, è necessario aggiungere **mono. Android. Export. dll**. Questo assembly è isolato per supportare il codice di callback da Java. È separato da **mono. Android. dll** perché aggiunge dimensioni aggiuntive all'applicazione.
 
-- Nella build di rilascio `MissingMethodException` si verifica per i metodi di esportazione &ndash; nella build di rilascio `MissingMethodException` si verifica per i metodi di esportazione. Questo problema è stato risolto nella versione più recente di Xamarin.Android.
+- Nella build di rilascio `MissingMethodException` si verifica per i metodi di esportazione &ndash; nella build di rilascio `MissingMethodException` si verifica per i metodi di esportazione. Questo problema è stato risolto nella versione più recente di Novell. Android.
 
 ### <a name="exportparameterattribute"></a>ExportParameterAttribute
 
@@ -178,7 +176,7 @@ Quando sono necessari tipi come questi per i metodi esportati, è necessario uti
 
 ### <a name="annotation-attribute"></a>Attributo annotation
 
-In Xamarin.Android 4,2 sono stati convertiti `IAnnotation` tipi di implementazione in attributi (System. Attribute) e è stato aggiunto il supporto per la generazione di annotazioni nei wrapper Java.
+In Novell. Android 4,2 sono stati convertiti `IAnnotation` tipi di implementazione in attributi (System. Attribute) e è stato aggiunto il supporto per la generazione di annotazioni nei wrapper Java.
 
 Ciò significa che le seguenti modifiche direzionali:
 
@@ -202,7 +200,7 @@ Si applicano inoltre le seguenti limitazioni:
 
 Il binding di una classe significa scrivere un wrapper gestito chiamabile per semplificare la chiamata del tipo Java sottostante.
 
-L'associazione di metodi virtuali e astratti per consentire C# l'override da richiede Xamarin.Android 4,0. Tuttavia, qualsiasi versione di Xamarin.Android può associare metodi non virtuali, metodi statici o metodi virtuali senza supportare le sostituzioni.
+L'associazione di metodi virtuali e astratti per consentire C# l'override da richiede Novell. Android 4,0. Tuttavia, qualsiasi versione di Novell. Android può associare metodi non virtuali, metodi statici o metodi virtuali senza supportare le sostituzioni.
 
 Un'associazione contiene in genere gli elementi seguenti:
 
@@ -263,7 +261,7 @@ Molti dei tipi [Android. Runtime](xref:Android.Runtime) hanno `FromJniHandle` me
 
 ### <a name="method-binding"></a>Associazione al metodo
 
-I metodi Java vengono esposti C# come metodi e C# come proprietà. Ad esempio, il metodo Java [. lang. Runtime. runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) del metodo Java viene associato come metodo [java. lang. Runtime. runFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) e il metodo [java. lang. Object. GetClass](https://developer.android.com/reference/java/lang/Object.html#getClass) viene associato come oggetto [java. lang. Object. Class ](xref:Java.Lang.Object.Class)proprietà.
+I metodi Java vengono esposti C# come metodi e C# come proprietà. Ad esempio, il metodo Java [. lang. Runtime. runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) del metodo Java viene associato come metodo [java. lang. Runtime. runFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) e il metodo [java. lang. Object. GetClass](https://developer.android.com/reference/java/lang/Object.html#getClass) viene associato come proprietà [java. lang. Object. Class](xref:Java.Lang.Object.Class) .
 
 La chiamata al metodo è un processo in due passaggi:
 
@@ -346,13 +344,13 @@ Quando si crea una sottoclasse `Java.Lang.Object`, entra in gioco una semantica 
 
 1. In caso contrario, viene creata un'istanza di [Android callable wrapper](~/android/platform/java-integration/android-callable-wrappers.md) (ACW) corrispondente a `this.GetType` tramite il costruttore predefinito. I wrapper richiamabili Android vengono generati durante la creazione del pacchetto per ogni sottoclasse `Java.Lang.Object` per cui `RegisterAttribute.DoNotGenerateAcw` non è impostato su `true`.
 
-Per i tipi che non sono associazioni di classi, questa è la semantica prevista: la creazione C# di un'istanza di `Mono.Samples.HelloWorld.HelloAndroid` deve creare un'istanza di `mono.samples.helloworld.HelloAndroid`Java che è un wrapper richiamabile Android generato.
+Per i tipi che non sono associazioni di classi, questa è la semantica prevista: la creazione C# di un'istanza di `Mono.Samples.HelloWorld.HelloAndroid` deve creare un'istanza di `mono.samples.helloworld.HelloAndroid` Java che è un wrapper richiamabile Android generato.
 
 Per le associazioni di classi, questo può essere il comportamento corretto se il tipo Java contiene un costruttore predefinito e/o nessun altro costruttore deve essere richiamato. In caso contrario, è necessario fornire un costruttore che esegua le azioni seguenti:
 
 1. Richiamando [java. lang. Object (IntPtr, JniHandleOwnership)](xref:Java.Lang.Object#ctor*) anziché il costruttore predefinito `Java.Lang.Object`. Questa operazione è necessaria per evitare la creazione di una nuova istanza di Java.
 
-1. Prima di creare istanze Java, controllare il valore di [java. lang. Object. handle](xref:Java.Lang.Object.Handle) . La proprietà `Object.Handle` avrà un valore diverso da `IntPtr.Zero` se è stato creato un wrapper richiamabile Android nel codice Java e l'associazione di classi viene costruita per contenere l'istanza di Android Callable Wrapper creata. Ad esempio, quando Android crea un'istanza di `mono.samples.helloworld.HelloAndroid`, il wrapper richiamabile Android verrà creato per primo e il costruttore Java `HelloAndroid` creerà un'istanza del tipo di `Mono.Samples.HelloWorld.HelloAndroid` corrispondente, con la proprietà `Object.Handle` impostata sull'istanza java prima dell'esecuzione del costruttore.
+1. Prima di creare istanze Java, controllare il valore di [java. lang. Object. handle](xref:Java.Lang.Object.Handle) . La proprietà `Object.Handle` avrà un valore diverso da `IntPtr.Zero` se è stato creato un wrapper richiamabile Android nel codice Java e l'associazione di classi viene costruita per contenere l'istanza di Android Callable Wrapper creata. Ad esempio, quando Android crea un'istanza di `mono.samples.helloworld.HelloAndroid`, il wrapper richiamabile Android verrà creato per primo e il costruttore Java `HelloAndroid` creerà un'istanza del tipo di `Mono.Samples.HelloWorld.HelloAndroid` corrispondente, con la proprietà `Object.Handle` impostata sull'istanza Java prima dell'esecuzione del costruttore.
 
 1. Se il tipo di runtime corrente non è uguale al tipo dichiarante, è necessario creare un'istanza del wrapper richiamabile di Android corrispondente e usare [Object. tohandle](xref:Java.Lang.Object.SetHandle*) per archiviare l'handle restituito da [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*).
 
@@ -395,7 +393,7 @@ public Integer (int value)
 }
 ```
 
-I metodi [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) sono helper per l'esecuzione di un `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`e `JNIEnv.DeleteGlobalReference` sul valore restituito da `JNIEnv.FindClass`. Per informazioni dettagliate, vedere la sezione successiva.
+I metodi [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) sono helper per l'esecuzione di un `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`e `JNIEnv.DeleteGlobalReference` sul valore restituito da `JNIEnv.FindClass`. Per informazioni dettagliate, vedere la sezione che segue.
 
 <a name="_Supporting_Inheritance,_Interfaces_1" />
 
@@ -403,11 +401,11 @@ I metodi [JNIEnv. CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) s
 
 La creazione di una sottoclasse di un tipo Java o l'implementazione di un'interfaccia Java richiede la generazione di [Android callable wrapper](~/android/platform/java-integration/android-callable-wrappers.md) (ACWs) generati per ogni sottoclasse `Java.Lang.Object` durante il processo di creazione del pacchetto. La generazione di ACW viene controllata tramite l'attributo personalizzato [Android. Runtime. RegisterAttribute](xref:Android.Runtime.RegisterAttribute) .
 
-Per C# i tipi, il costruttore dell'attributo personalizzato`[Register]`richiede un argomento: il [riferimento di tipo semplificato JNI](#_Simplified_Type_References_1) per il tipo Java corrispondente. In questo modo è possibile fornire nomi diversi C#tra Java e.
+Per C# i tipi, il costruttore dell'attributo personalizzato `[Register]` richiede un argomento: il [riferimento di tipo semplificato JNI](#_Simplified_Type_References_1) per il tipo Java corrispondente. In questo modo è possibile fornire nomi diversi C#tra Java e.
 
-Prima di Xamarin.Android 4,0, l'attributo personalizzato `[Register]` non era disponibile per i tipi Java esistenti "alias". Ciò è dovuto al fatto che il processo di generazione di ACW genera ACWs per ogni `Java.Lang.Object` sottoclasse rilevata.
+Prima di Novell. Android 4,0, l'attributo personalizzato `[Register]` non era disponibile per i tipi Java esistenti "alias". Ciò è dovuto al fatto che il processo di generazione di ACW genera ACWs per ogni `Java.Lang.Object` sottoclasse rilevata.
 
-In Xamarin.Android 4,0 è stata introdotta la proprietà [RegisterAttribute. DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) . Questa proprietà indica al processo di generazione ACW di *ignorare* il tipo annotato, consentendo la dichiarazione di nuovi wrapper gestiti chiamabili che non comporteranno la generazione di ACWs al momento della creazione del pacchetto. In questo modo è possibile associare i tipi Java esistenti. Si consideri, ad esempio, la semplice classe Java seguente, `Adder`, che contiene un metodo, `add`, che aggiunge ad Integer e restituisce il risultato:
+In Novell. Android 4,0 è stata introdotta la proprietà [RegisterAttribute. DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) . Questa proprietà indica al processo di generazione ACW di *ignorare* il tipo annotato, consentendo la dichiarazione di nuovi wrapper gestiti chiamabili che non comporteranno la generazione di ACWs al momento della creazione del pacchetto. In questo modo è possibile associare i tipi Java esistenti. Si consideri, ad esempio, la semplice classe Java seguente, `Adder`, che contiene un metodo, `add`, che aggiunge ad Integer e restituisce il risultato:
 
 ```java
 package mono.android.test;
@@ -438,11 +436,11 @@ partial class ManagedAdder : Adder {
 }
 ```
 
-In questo caso, C# il tipo di `Adder` *alias* il tipo di`Adder`Java. L'attributo `[Register]` viene usato per specificare il nome JNI del tipo di `mono.android.test.Adder` Java e la proprietà `DoNotGenerateAcw` viene usata per impedire la generazione di ACW. Questo comporterà la generazione di un ACW per il tipo di `ManagedAdder`, che consente di sottoclassare correttamente il tipo di `mono.android.test.Adder`. Se la proprietà `RegisterAttribute.DoNotGenerateAcw` non è stata usata, il processo di compilazione di Xamarin.Android avrebbe generato un nuovo tipo di `mono.android.test.Adder` Java. Ciò comporterebbe errori di compilazione, in quanto il tipo di `mono.android.test.Adder` sarebbe presente due volte, in due file distinti.
+In questo caso, C# il tipo di `Adder` *alias* il tipo di `Adder` Java. L'attributo `[Register]` viene usato per specificare il nome JNI del tipo di `mono.android.test.Adder` Java e la proprietà `DoNotGenerateAcw` viene usata per impedire la generazione di ACW. Questo comporterà la generazione di un ACW per il tipo di `ManagedAdder`, che consente di sottoclassare correttamente il tipo di `mono.android.test.Adder`. Se la proprietà `RegisterAttribute.DoNotGenerateAcw` non è stata usata, il processo di compilazione di Novell. Android avrebbe generato un nuovo tipo di `mono.android.test.Adder` Java. Ciò comporterebbe errori di compilazione, in quanto il tipo di `mono.android.test.Adder` sarebbe presente due volte, in due file distinti.
 
 ### <a name="binding-virtual-methods"></a>Associazione di metodi virtuali
 
-`ManagedAdder` sottoclassi del tipo di `Adder` Java, ma non è particolarmente interessante: il C# tipo di`Adder`non definisce metodi virtuali, quindi`ManagedAdder`non può eseguire l'override di alcun elemento.
+`ManagedAdder` sottoclassi del tipo di `Adder` Java, ma non è particolarmente interessante: il C# tipo di `Adder` non definisce metodi virtuali, quindi `ManagedAdder` non può eseguire l'override di alcun elemento.
 
 Il binding `virtual` metodi per consentire l'override dalle sottoclassi richiede diverse operazioni che devono essere eseguite nelle due categorie seguenti:
 
@@ -452,7 +450,7 @@ Il binding `virtual` metodi per consentire l'override dalle sottoclassi richiede
 
 #### <a name="method-binding"></a>Associazione al metodo
 
-Un'associazione al metodo richiede l'aggiunta di due membri del supporto C# alla definizione`Adder`:`ThresholdType`e`ThresholdClass`.
+Un'associazione al metodo richiede l'aggiunta di due membri del supporto C# alla definizione `Adder`: `ThresholdType`e `ThresholdClass`.
 
 ##### <a name="thresholdtype"></a>ThresholdType
 
@@ -555,7 +553,7 @@ public class ManagedAdder extends mono.android.test.Adder {
 }
 ```
 
-Si noti che viene dichiarato un metodo di `@Override`, che delega a un metodo con prefisso `n_`con lo stesso nome. In questo modo, quando il codice Java richiama `ManagedAdder.add`, viene richiamato `ManagedAdder.n_add`, che consente l'esecuzione dell' C# override del`ManagedAdder.Add`metodo.
+Si noti che viene dichiarato un metodo di `@Override`, che delega a un metodo con prefisso `n_`con lo stesso nome. In questo modo, quando il codice Java richiama `ManagedAdder.add`, viene richiamato `ManagedAdder.n_add`, che consente l'esecuzione dell' C# override del `ManagedAdder.Add` metodo.
 
 Quindi, la domanda più importante: in che modo `ManagedAdder.n_add` viene collegato al `ManagedAdder.Add`?
 
@@ -567,7 +565,7 @@ Il puntatore a funzione deve essere una funzione che accetta due argomenti punta
 int FunctionName(JNIEnv *env, jobject this, int a, int b)
 ```
 
-Xamarin.Android non espone un metodo `RegisterNatives`. Al contrario, ACW e MCW forniscono insieme le informazioni necessarie per richiamare `RegisterNatives`: l'ACW contiene il nome del metodo e la firma del tipo JNI, l'unico elemento mancante è un puntatore a funzione per l'associazione.
+Novell. Android non espone un metodo `RegisterNatives`. Al contrario, ACW e MCW forniscono insieme le informazioni necessarie per richiamare `RegisterNatives`: l'ACW contiene il nome del metodo e la firma del tipo JNI, l'unico elemento mancante è un puntatore a funzione per l'associazione.
 
 Questo è il punto in cui viene inserito il *metodo del connettore* . Il terzo `[Register]` parametro dell'attributo personalizzato è il nome di un metodo definito nel tipo registrato o una classe di base del tipo registrato che non accetta parametri e restituisce un `System.Delegate`. Il `System.Delegate` restituito a sua volta fa riferimento a un metodo con la firma della funzione JNI corretta. Infine, il delegato restituito dal metodo del connettore *deve* avere una radice, in modo che il Garbage Collector non la raccolga, perché il delegato viene fornito a Java.
 
@@ -681,7 +679,7 @@ Il binding `abstract` metodi è in gran parte identico all'associazione di metod
 
 1. Viene creato un tipo di `Invoker` non `abstract` che consente di sottoclassere il tipo astratto. Il tipo di `Invoker` deve eseguire l'override di tutti i metodi astratti dichiarati nella classe di base e l'implementazione sottoposta a override è l'implementazione dell'associazione al metodo, sebbene il caso di invio non virtuale possa essere ignorato.
 
-Si supponga, ad esempio, che il metodo `mono.android.test.Adder.add` sia stato `abstract`. L' C# associazione cambierebbe in modo che `Adder.Add`fossero astratte e venisse definito un nuovo tipo di`AdderInvoker`che implementava`Adder.Add`:
+Si supponga, ad esempio, che il metodo `mono.android.test.Adder.add` sia stato `abstract`. L' C# associazione cambierebbe in modo che `Adder.Add` fossero astratte e venisse definito un nuovo tipo di `AdderInvoker` che implementava `Adder.Add`:
 
 ```csharp
 partial class Adder {
@@ -722,7 +720,7 @@ public interface Progress {
 
 Le associazioni di interfaccia includono due parti: C# la definizione dell'interfaccia e una definizione invoker per l'interfaccia.
 
-### <a name="interface-definition"></a>Definizione di interfaccia
+### <a name="interface-definition"></a>Definizione dell'interfaccia
 
 La C# definizione dell'interfaccia deve soddisfare i requisiti seguenti:
 
@@ -737,7 +735,7 @@ La C# definizione dell'interfaccia deve soddisfare i requisiti seguenti:
 
 Quando si associano `abstract` e `virtual` metodi, viene eseguita la ricerca del metodo del connettore all'interno della gerarchia di ereditarietà del tipo in fase di registrazione. Le interfacce non possono avere metodi contenenti corpi, quindi questa operazione non funziona, quindi è necessario specificare un tipo che indichi dove si trova il metodo del connettore. Il tipo viene specificato all'interno della stringa del metodo del connettore, dopo i due punti `':'`e deve essere il nome del tipo completo di assembly del tipo che contiene l'invoker.
 
-Le dichiarazioni del metodo di interfaccia sono una traduzione del metodo Java corrispondente utilizzando tipi *compatibili* . Per i tipi Java Builtin, i tipi compatibili sono i C# tipi corrispondenti, ad esempio `int`java C# è`int`. Per i tipi di riferimento, il tipo compatibile è un tipo che può fornire un handle JNI del tipo Java appropriato.
+Le dichiarazioni del metodo di interfaccia sono una traduzione del metodo Java corrispondente utilizzando tipi *compatibili* . Per i tipi Java Builtin, i tipi compatibili sono i C# tipi corrispondenti, ad esempio `int` java C# è `int`. Per i tipi di riferimento, il tipo compatibile è un tipo che può fornire un handle JNI del tipo Java appropriato.
 
 I membri di interfaccia non verranno richiamati direttamente da Java &ndash; la chiamata verrà mediata tramite il tipo invoker &ndash; quindi è consentita una certa flessibilità.
 
@@ -753,7 +751,7 @@ public interface IAdderProgress : IJavaObject {
 ```
 
 Si noti che in precedenza viene mappato il parametro Java `int[]` a un [&gt;JavaArray&lt;int ](xref:Android.Runtime.JavaArray`1).
-Questa operazione non è necessaria: è possibile che sia stata C# associata a un`int[]`o a un`IList<int>`oppure a un altro elemento. Indipendentemente dal tipo scelto, il `Invoker` deve essere in grado di tradurlo in un tipo di `int[]` Java per la chiamata.
+Questa operazione non è necessaria: è possibile che sia stata C# associata a un `int[]`o a un `IList<int>`oppure a un altro elemento. Indipendentemente dal tipo scelto, il `Invoker` deve essere in grado di tradurlo in un tipo di `int[]` Java per la chiamata.
 
 ### <a name="invoker-definition"></a>Definizione invoker
 
@@ -975,7 +973,7 @@ Molti metodi JNIEnv restituiscono *riferimenti a oggetti* *JNI* , che sono simil
 
 I riferimenti locali vengono creati con *la maggior parte dei* metodi di creazione di riferimenti.
 Android consente di esistere solo un numero limitato di riferimenti locali in un determinato momento, in genere pari a 512. I riferimenti locali possono essere eliminati tramite [JNIEnv. DeleteLocalRef](xref:Android.Runtime.JNIEnv.DeleteLocalRef*).
-A differenza di JNI, non tutti i metodi JNIEnv di riferimento che restituiscono riferimenti a oggetti restituiscono riferimenti locali. [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) restituisce un riferimento *globale* . Si consiglia vivamente di eliminare i riferimenti locali il più rapidamente possibile, possibilmente costruendo un [oggetto Java. lang. Object](xref:Java.Lang.Object) intorno all'oggetto e specificando `JniHandleOwnership.TransferLocalRef` all'oggetto [java. lang. Object (handle IntPtr, JniHandleOwnership Transfer)](xref:Java.Lang.Object#ctor*) Costruttore.
+A differenza di JNI, non tutti i metodi JNIEnv di riferimento che restituiscono riferimenti a oggetti restituiscono riferimenti locali. [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*) restituisce un riferimento *globale* . Si consiglia vivamente di eliminare i riferimenti locali il più rapidamente possibile, possibilmente costruendo un [oggetto Java. lang. Object](xref:Java.Lang.Object) intorno all'oggetto e specificando `JniHandleOwnership.TransferLocalRef` al costruttore [java. lang. Object (handle IntPtr, JniHandleOwnership Transfer)](xref:Java.Lang.Object#ctor*) .
 
 I riferimenti globali vengono creati da [JNIEnv. NewGlobalRef](xref:Android.Runtime.JNIEnv.NewGlobalRef*) e [JNIEnv. FindClass](xref:Android.Runtime.JNIEnv.FindClass*).
 Possono essere eliminati con [JNIEnv. DeleteGlobalRef](xref:Android.Runtime.JNIEnv.DeleteGlobalRef*).
@@ -985,7 +983,7 @@ I riferimenti globali vulnerabili sono disponibili solo in Android v 2.2 (Froyo)
 
 ### <a name="dealing-with-jni-local-references"></a>Gestione dei riferimenti locali di JNI
 
-I metodi [JNIEnv. GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv. GetStaticObjectField](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [JNIEnv. CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [JNIEnv. CallNonvirtualObjectMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) e [JNIEnv. CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) restituiscono un `IntPtr` contenente un oggetto JNI riferimento locale a un oggetto Java o `IntPtr.Zero` se Java ha restituito `null`. A causa del numero limitato di riferimenti locali che possono essere in attesa contemporaneamente (512 voci), è consigliabile assicurarsi che i riferimenti vengano eliminati in modo tempestivo. È possibile gestire i riferimenti locali in tre modi: eliminarli in modo esplicito, creare un'istanza di `Java.Lang.Object` per mantenerli e usare `Java.Lang.Object.GetObject<T>()` per creare un wrapper richiamabile gestito.
+I metodi [JNIEnv. GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv. GetStaticObjectField](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [JNIEnv. CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [JNIEnv. CallNonvirtualObjectMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) e [JNIEnv. CALLSTATICOBJECTMETHOD](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) restituiscono un `IntPtr` contenente un riferimento locale JNI a un oggetto Java oppure `IntPtr.Zero` se Java ha restituito `null`. A causa del numero limitato di riferimenti locali che possono essere in attesa contemporaneamente (512 voci), è consigliabile assicurarsi che i riferimenti vengano eliminati in modo tempestivo. È possibile gestire i riferimenti locali in tre modi: eliminarli in modo esplicito, creare un'istanza di `Java.Lang.Object` per mantenerli e usare `Java.Lang.Object.GetObject<T>()` per creare un wrapper richiamabile gestito.
 
 ### <a name="explicitly-deleting-local-references"></a>Eliminazione esplicita di riferimenti locali
 
@@ -1036,7 +1034,7 @@ Il tipo `T` deve soddisfare i requisiti seguenti:
 
 1. `T` deve essere un tipo riferimento.
 
-1. `T` necessario implementare l'interfaccia `IJavaObject`.
+1. `T` deve implementare l'interfaccia `IJavaObject`.
 
 1. Se `T` non è una classe o un'interfaccia astratta, `T` deve fornire un costruttore con i tipi di parametro `(IntPtr,
     JniHandleOwnership)`.
@@ -1293,7 +1291,7 @@ dove `*` è il tipo restituito del metodo.
 
 ## <a name="jni-type-signatures"></a>Firme di tipo JNI
 
-Le [firme di tipo JNI](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432) sono [riferimenti di tipo JNI](#_JNI_Type_References) (anche se non riferimenti ai tipi semplificati), ad eccezione dei metodi. Con i metodi, la firma del tipo JNI è una parentesi aperta `'('`, seguita dai riferimenti al tipo per tutti i tipi di parametro concatenati (senza virgole separate o nient'altro), seguiti da una parentesi di chiusura `')'`, seguita da Riferimento al tipo JNI del tipo restituito dal metodo.
+Le [firme di tipo JNI](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432) sono [riferimenti di tipo JNI](#_JNI_Type_References) (anche se non riferimenti ai tipi semplificati), ad eccezione dei metodi. Con i metodi, la firma del tipo JNI è una parentesi aperta `'('`, seguita dai riferimenti al tipo per tutti i tipi di parametro concatenati (senza virgole separate o nient'altro), seguiti da una parentesi di chiusura `')'`, seguita dal riferimento al tipo JNI del tipo restituito del metodo.
 
 Ad esempio, dato il metodo Java:
 
@@ -1307,7 +1305,7 @@ La firma del tipo JNI sarà:
 (ILjava/lang/String;[I)J
 ```
 
-In generale, *è consigliabile usare* il comando `javap` per determinare le firme JNI. Ad esempio, la firma del tipo JNI del metodo [java. lang. thread. state. valueOf (String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) è "(Ljava/lang/String;) Ljava/lang/thread $ state;", mentre la firma del tipo JNI del metodo [java. lang. thread. state. Values](https://developer.android.com/reference/java/lang/Thread.State.html#values) è "() [Ljava/ lang/thread $ state; ". Osservare i punti e virgola finali; che *fanno* parte della firma del tipo JNI.
+In generale, *è consigliabile usare* il comando `javap` per determinare le firme JNI. Ad esempio, la firma del tipo JNI del metodo [java. lang. thread. state. valueOf (String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) è "(Ljava/lang/String;) Ljava/lang/thread $ state;", mentre la firma del tipo JNI del metodo [java. lang. thread. state. Values](https://developer.android.com/reference/java/lang/Thread.State.html#values) è "() [Ljava/lang/thread $ state;". Osservare i punti e virgola finali; che *fanno* parte della firma del tipo JNI.
 
 <a name="_JNI_Type_References" />
 
@@ -1355,7 +1353,7 @@ Un riferimento a un tipo è un riferimento a un tipo incorporato o un riferiment
 I riferimenti ai tipi vengono usati con i riferimenti ai tipi di matrice e con le firme JNI.
 
 Un ulteriore modo per ottenere un riferimento al tipo consiste nel leggere l'output di `'javap -s -classpath android.jar fully.qualified.Java.Name'`.
-A seconda del tipo richiesto, è possibile utilizzare una dichiarazione del costruttore o un tipo restituito del metodo per determinare il nome JNI. Esempio:
+A seconda del tipo richiesto, è possibile utilizzare una dichiarazione del costruttore o un tipo restituito del metodo per determinare il nome JNI. Ad esempio,
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State

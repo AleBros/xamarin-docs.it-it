@@ -1,5 +1,5 @@
 ---
-title: Acquisto in-app in Xamarin.iOS
+title: Acquisto in-app in Novell. iOS
 description: Questo documento descrive come vendere prodotti e servizi digitali usando le API di StoreKit. Sono disponibili collegamenti a guide che illustrano la configurazione, i prodotti utilizzabili, i prodotti non utilizzabili, le transazioni, le sottoscrizioni e altro ancora.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032348"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292226"
 ---
-# <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Xamarin.iOS
+# <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
 le applicazioni iOS possono vendere prodotti o servizi digitali usando StoreKit, un set di API fornite da iOS che comunicano con i server Apple per condurre transazioni finanziarie con l'utente tramite il proprio ID Apple. Le API StoreKit riguardano principalmente il recupero delle informazioni sul prodotto e l'esecuzione di transazioni. non esiste alcun componente dell'interfaccia utente. Le applicazioni che implementano l'acquisto in-app devono compilare la propria interfaccia utente e tenere traccia degli elementi acquistati con codice personalizzato per fornire all'utente i prodotti o i servizi richiesti.
 
@@ -26,13 +26,13 @@ Per fornire funzionalità di acquisto in-app, è necessario eseguire una serie d
 - **Compilazione dell'interfaccia utente e dei prodotti stessi** : i prodotti devono essere implementati, inclusi i meccanismi per tenere traccia di ogni acquisto e backup/ripristino, se appropriato.
 - **Monitoraggio delle vendite e della ricezione dei fondi** : usare le informazioni fornite da iTunes Connect per monitorare le tendenze di vendita e tenere traccia del reddito.
 
-Questo documento illustra come eseguire tutti questi passaggi per fornire acquisti in-app con Xamarin.iOS.
+Questo documento illustra come eseguire tutti questi passaggi per fornire acquisti in-app con Novell. iOS.
 
 ## <a name="requirements"></a>Requisiti
 
-Per supportare l'acquisto in-app, è necessario usare Xamarin.iOS 5,0 o versione successiva con Xcode 7 e versioni successive.
+Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione successiva con Xcode 7 e versioni successive.
 
-## <a name="contents"></a>Contenuti
+## <a name="contents"></a>Sommario
 
 - [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
@@ -48,12 +48,12 @@ Per supportare l'acquisto in-app, è necessario usare Xamarin.iOS 5,0 o versione
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Xamarin.iOS. È stato analizzato:
+Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Novell. iOS. È stato analizzato:
 
 - **portale di provisioning iOS** : linee guida per abilitare la funzionalità di acquisto in-app.
 - **iTunes Connect** : configurazione dei prodotti da vendere nell'app.
 - **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
-- **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Xamarin.iOS.
+- **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.
 - **Creazione di report** : Panoramica delle statistiche disponibili tramite iTunes Connect.
 
 ## <a name="related-links"></a>Collegamenti correlati
@@ -65,7 +65,6 @@ Questo articolo ha introdotto il concetto di acquisto in-app, descritto come con
 - [Identificatori del prodotto di acquisto in-app Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota tecnica di acquisto in-app](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [Invio del primo App Store](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [Centro risorse App Store](https://developer.apple.com/appstore/index.html)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html) (Suggerimenti per l'invio nell'App Store)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida sulle recensioni nell'App Store)
 - [Gestione delle app](https://developer.apple.com/appstore/resources/managing/index.html)

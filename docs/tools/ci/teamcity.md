@@ -1,19 +1,19 @@
 ---
-title: Uso del team City con Xamarin
+title: Uso del team City con Novell
 description: Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare applicazioni per dispositivi mobili e quindi inviarli a Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 94bc775366d832e0994b8d3c74a45123ff56c13b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029795"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292229"
 ---
-# <a name="using-team-city-with-xamarin"></a>Uso del team City con Xamarin
+# <a name="using-team-city-with-xamarin"></a>Uso del team City con Novell
 
 _Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare applicazioni per dispositivi mobili e quindi inviarli a Xamarin Test Cloud._
 
@@ -48,7 +48,7 @@ L'esperienza con [App Center Test](https://docs.microsoft.com/appcenter/test-clo
 Il server di compilazione deve essere un computer autonomo, che esegue OS X, dedicato all'integrazione continua. Idealmente, il server di compilazione non sarà responsabile di altri ruoli, ad esempio un server di database, un server Web o una workstation per sviluppatori.
 
 > [!IMPORTANT]
-> In questa guida non viene illustrata l'installazione di Xamarin.
+> In questa guida non viene illustrata l'installazione di Novell.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -56,12 +56,12 @@ Il server di compilazione deve essere un computer autonomo, che esegue OS X, ded
 
 Un passaggio cruciale per la configurazione di un server di compilazione consiste nell'installare tutti gli strumenti, il software e i certificati necessari per compilare le applicazioni per dispositivi mobili. È importante che il server di compilazione sia in grado di compilare la soluzione mobile ed eseguire tutti i test. Per ridurre al minimo i problemi di configurazione, è necessario installare il software e gli strumenti nello stesso account utente che ospita TeamCity. Di seguito è riportato un elenco degli elementi necessari:
 
-1. **Visual Studio per Mac** : sono inclusi Xamarin.iOS e Xamarin.Android.
-2. **Accedi all'archivio componenti di Xamarin** : si tratta di un passaggio facoltativo ed è necessario solo se l'applicazione usa componenti dall'archivio componenti di Xamarin. L'accesso proattivo nell'archivio componenti a questo punto impedirà eventuali problemi quando una compilazione TeamCity tenta di compilare l'applicazione.
+1. **Visual Studio per Mac** : sono inclusi Novell. iOS e Novell. Android.
+2. **Accedi all'archivio componenti di Novell** : si tratta di un passaggio facoltativo ed è necessario solo se l'applicazione usa componenti dall'archivio componenti di Novell. L'accesso proattivo nell'archivio componenti a questo punto impedirà eventuali problemi quando una compilazione TeamCity tenta di compilare l'applicazione.
 3. **Xcode** : Xcode è necessario per compilare e firmare le applicazioni iOS.
 4. **Strumenti da riga di comando Xcode** : questa procedura è descritta nel passaggio 1 della sezione relativa all'installazione della Guida relativa all' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Firma di identità & profili di provisioning** : importare i certificati e il profilo di provisioning tramite Xcode. Per altri dettagli, vedere la Guida di Apple sull' [esportazione di identità di firma e profili di provisioning](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) .
-6. **Keystore Android** : copiare gli archivi chiavi Android necessari in una directory a cui l'utente TeamCity può accedere, ad esempio  `~/Documents/keystores/MyAndroidApp1`.
+6. **Keystore Android** : copiare i keystore Android necessari in una directory a cui l'utente TeamCity può accedere, ad esempio `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** : si tratta di un passaggio facoltativo se l'applicazione include test scritti con Calabash. Per ulteriori informazioni, vedere la Guida [installazione di Calabash in OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) e la guida sull' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
 
 Il diagramma seguente illustra tutti questi componenti:
@@ -87,7 +87,7 @@ Lo script di compilazione può essere semplice come un file di PowerShell (in Wi
 
 - [**Fake**](https://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL F# basato su, che consente di utilizzare le librerie .NET esistenti, se necessario.
 
-Il linguaggio di scripting utilizzato dipende dalle preferenze e dai requisiti. L'esempio [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contiene un esempio di uso di rake come [script di compilazione](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
+Il linguaggio di scripting utilizzato dipende dalle preferenze e dai requisiti.
 
 > [!NOTE]
 > È possibile utilizzare un sistema di compilazione basato su XML, ad esempio MSBuild o NAnt, ma questi non hanno l'espressività e la gestibilità di un linguaggio DSL dedicato alla creazione di software.
@@ -118,11 +118,11 @@ Lo script di compilazione deve essere in grado di eseguire i passaggi seguenti:
 
 Questi due passaggi verranno illustrati in dettaglio di seguito.
 
-#### <a name="compiling-a-xamarinios-application"></a>Compilazione di un'applicazione Xamarin.iOS
+#### <a name="compiling-a-xamarinios-application"></a>Compilazione di un'applicazione Novell. iOS
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-#### <a name="compiling-a-xamarinandroid-application"></a>Compilazione di un'applicazione Xamarin.Android
+#### <a name="compiling-a-xamarinandroid-application"></a>Compilazione di un'applicazione Novell. Android
 
 Per compilare un'applicazione Android, usare **xbuild** (o **MSBuild** in Windows):
 
@@ -130,9 +130,9 @@ Per compilare un'applicazione Android, usare **xbuild** (o **MSBuild** in Window
 /Library/Frameworks/Mono.framework/Commands/xbuild /t:SignAndroidPackage /p:Configuration=Release /path/to/android.csproj
 ```
 
-Si noti che per compilare l'applicazione Xamarin Android **xbuild** usa il progetto e che per compilare l'applicazione iOS **xbuild** richiede la soluzione.
+Si noti che per compilare l'applicazione Novell Android **xbuild** usa il progetto e che per compilare l'applicazione iOS **xbuild** richiede la soluzione.
 
-#### <a name="submitting-xamarinuitests-to-test-cloud"></a>Invio di Xamarin.UITests a Test Cloud
+#### <a name="submitting-xamarinuitests-to-test-cloud"></a>Invio di Novell. UITests a Test Cloud
 
 UITests vengono inviati utilizzando l'applicazione `test-cloud.exe`, come illustrato nel frammento di codice seguente:
 
@@ -142,7 +142,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 Quando si esegue il test, i risultati del test verranno restituiti sotto forma di file XML di tipo NUnit denominato **report. XML**. TeamCity visualizzerà le informazioni nel log di compilazione.
 
-Per altre informazioni su come inviare UITests a Test Cloud, vedere Preparazione delle app [Xamarin.Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) o [preparazione delle app Xamarin.iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+Per altre informazioni su come inviare UITests a Test Cloud, vedere Preparazione delle app [Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) o [preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Invio di test di Calabash a Test Cloud
 
@@ -159,7 +159,7 @@ $ calabash-android build </path/to/signed/APK>
 $ test-cloud submit /path/to/APK <test-cloud-team-api-key> --devices <ANDROID_DEVICE_ID> --profile=android --config=config/cucumber.yml --pretty
 ```
 
-Per ulteriori informazioni sull'invio di test di Calabash, consultare la Guida di Xamarin sull' [invio di test Calabash a test cloud](https://github.com/calabash/calabash-ios/wiki).
+Per ulteriori informazioni sull'invio di test di Calabash, consultare la Guida di Novell sull' [invio di test Calabash a test cloud](https://github.com/calabash/calabash-ios/wiki).
 
 ## <a name="creating-a-teamcity-project"></a>Creazione di un progetto TeamCity
 
@@ -203,12 +203,12 @@ Una volta installato TeamCity e Visual Studio per Mac possibile compilare il pro
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida ha illustrato come usare TeamCity per compilare applicazioni per dispositivi mobili Xamarin e quindi inviarle a Test Cloud. È stato illustrato come creare uno script di compilazione per automatizzare il processo di compilazione. Lo script di compilazione occupa la compilazione dell'applicazione, l'invio a Test Cloud e l'attesa dei risultati
+Questa guida ha illustrato come usare TeamCity per compilare applicazioni per dispositivi mobili Novell e quindi inviarle a Test Cloud. È stato illustrato come creare uno script di compilazione per automatizzare il processo di compilazione. Lo script di compilazione occupa la compilazione dell'applicazione, l'invio a Test Cloud e l'attesa dei risultati
 
 È stato quindi illustrato come creare un progetto in TeamCity che accoda una compilazione ogni volta che uno sviluppatore eseguirà il commit del codice e chiamerà lo script di compilazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Preparazione delle app Xamarin.Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
-- [Preparazione delle app Xamarin.iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Preparazione delle app Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
+- [Preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Installazione e configurazione di TeamCity](https://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

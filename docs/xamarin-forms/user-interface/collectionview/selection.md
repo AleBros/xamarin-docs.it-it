@@ -1,5 +1,5 @@
 ---
-title: Selezione di Xamarin.Forms CollectionView
+title: Selezione di Novell. Forms CollectionView
 description: Per impostazione predefinita, la selezione di CollectionView è disabilitata. Tuttavia, è possibile abilitare una selezione singola o multipla.
 ms.prod: xamarin
 ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 1858d98b37df7d98f725b377280a971b3034ef0d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696367"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78292161"
 ---
-# <a name="xamarinforms-collectionview-selection"></a>Selezione di Xamarin.Forms CollectionView
+# <a name="xamarinforms-collectionview-selection"></a>Selezione di Novell. Forms CollectionView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce le proprietà seguenti che controllano la selezione degli elementi:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), di tipo [`SelectionMode`](xref:Xamarin.Forms.SelectionMode), la modalità di selezione.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), di tipo `object`, l'elemento selezionato nell'elenco. Questa proprietà ha una modalità di associazione predefinita di `TwoWay` e ha un valore `null` se non è selezionato alcun elemento.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), di tipo `IList<object>`, gli elementi selezionati nell'elenco. Questa proprietà ha una modalità di associazione predefinita di `OneWay` e ha un valore `null` se non è selezionato alcun elemento.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), di tipo `object`, l'elemento selezionato nell'elenco. Questa proprietà ha una modalità di associazione predefinita di `TwoWay`e ha un valore `null` se non è selezionato alcun elemento.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), di tipo `IList<object>`, gli elementi selezionati nell'elenco. Questa proprietà ha una modalità di associazione predefinita di `OneWay`e ha un valore `null` se non è selezionato alcun elemento.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), di tipo `ICommand`, che viene eseguito quando viene modificato l'elemento selezionato.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), di tipo `object`, che corrisponde al parametro passato al `SelectionChangedCommand`.
 
@@ -30,7 +30,7 @@ Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xam
 
 Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionView) selezione è disabilitata. Tuttavia, questo comportamento può essere modificato impostando il valore della proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) su uno dei membri dell'enumerazione [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) :
 
-- `None`: indica che non è possibile selezionare gli elementi. Questo è il valore predefinito.
+- `None`: indica che non è possibile selezionare gli elementi. Si tratta del valore predefinito.
 - `Single`: indica che è possibile selezionare un singolo elemento, con l'elemento selezionato evidenziato.
 - `Multiple`: indica che è possibile selezionare più elementi con gli elementi selezionati evidenziati.
 
@@ -38,6 +38,8 @@ Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionVi
 
 - `PreviousSelection`: l'elenco di elementi selezionati prima della modifica della selezione.
 - `CurrentSelection`: l'elenco di elementi selezionati, dopo la modifica della selezione.
+
+Inoltre, [`CollectionView`](xref:Xamarin.Forms.CollectionView) dispone di un metodo `UpdateSelectedItems` che aggiorna la proprietà [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) con un elenco di elementi selezionati, mentre genera solo una singola notifica di modifica.
 
 ## <a name="single-selection"></a>Selezione singola
 
@@ -305,7 +307,7 @@ In questo esempio il valore della proprietà [`Style.TargetType`](xref:Xamarin.F
 
 [![Screenshot di un elenco di ritrovi verticali con un colore di selezione singola personalizzato, in iOS e Android](selection-images/single-selection-color.png "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")](selection-images/single-selection-color-large.png#lightbox "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")
 
-Per ulteriori informazioni sugli stati visivi, vedere [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="disable-selection"></a>Disabilita selezione
 
@@ -326,7 +328,7 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-Quando la proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) è impostata su `None`, non è possibile selezionare gli elementi del [`CollectionView`](xref:Xamarin.Forms.CollectionView) , la proprietà [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) resterà `null` e l'evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) non verrà generato.
+Quando la proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) è impostata su `None`, non è possibile selezionare gli elementi del [`CollectionView`](xref:Xamarin.Forms.CollectionView) , la proprietà [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) resterà `null`e l'evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) non verrà generato.
 
 > [!NOTE]
 > Quando viene selezionato un elemento e la proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) viene modificata da `Single` a `None`, la proprietà [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) verrà impostata su `null` e l'evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) verrà generato con una proprietà `CurrentSelection` vuota.
@@ -334,4 +336,4 @@ Quando la proprietà [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.Se
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Gestore dello stato di visualizzazione di Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Gestore dello stato di visualizzazione di Novell. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

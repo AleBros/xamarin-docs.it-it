@@ -1,131 +1,131 @@
 ---
 title: Riepilogo del capitolo 13. Bitmap
-description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 13. Bitmap'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 13. Bitmap'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: e4746ed94a008d382ce15bb9cd7c52365d9ba574
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334621"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291530"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Riepilogo del capitolo 13. Bitmap
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
-> [!NOTE] 
-> Le note in questa pagina indicano le aree in cui Xamarin.Forms è diversa dal materiale presentato nel libro.
+> [!NOTE]
+> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
-Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) elemento consente di visualizzare una bitmap. Tutte le piattaforme di Xamarin.Forms supportano i formati di file JPEG, PNG, GIF e BMP.
+L'elemento [`Image`](xref:Xamarin.Forms.Image) Novell. Forms Visualizza una bitmap. Tutte le piattaforme di xamarin. Forms supportano i formati di file JPEG, PNG, GIF e BMP.
 
-Le bitmap in Xamarin.Forms provengono da quattro posizioni:
+Le bitmap in xamarin. Forms provengono da quattro posizioni:
 
 - Tramite il web come specificato da un URL
 - Incorporato come risorsa nella libreria condivisa
 - Incorporato come risorsa nei progetti di applicazione della piattaforma
-- Da qualsiasi luogo in cui possono fare riferimento .NET `Stream` dell'oggetto, tra cui `MemoryStream`
+- Da qualsiasi posizione a cui è possibile fare riferimento da un oggetto `Stream` .NET, incluso `MemoryStream`
 
 Le risorse di bitmap nella libreria condivisa sono indipendenti dalla piattaforma, mentre le risorse di bitmap in progetti di piattaforma sono specifiche della piattaforma.
 
-> [!NOTE] 
+> [!NOTE]
 > Il testo del libro viene fatto riferimento a librerie di classi portabili, che sono stati sostituiti dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
 
-La bitmap viene specificata impostando il [ `Source` ](xref:Xamarin.Forms.Image.Source) proprietà della `Image` a un oggetto di tipo [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), una classe astratta con tre derivati:
+La bitmap viene specificata impostando la proprietà [`Source`](xref:Xamarin.Forms.Image.Source) di `Image` su un oggetto di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), una classe astratta con tre derivati:
 
-- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) per l'accesso a una mappa di bit tramite il sito web basato su un `Uri` oggetto impostato su relativi [ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri) proprietà
-- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) per l'accesso a una mappa di bit archiviato in un progetto di applicazione della piattaforma basato su una cartella e il percorso impostato su relativi [ `File` ](xref:Xamarin.Forms.FileImageSource.File) proprietà
-- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) per il caricamento di una bitmap con .NET `Stream` oggetto specificato, restituendo un `Stream` da un `Func` impostato su relativo [ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream) proprietà
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) per l'accesso a una bitmap sul Web basata su un oggetto `Uri` impostato sulla relativa proprietà [`Uri`](xref:Xamarin.Forms.UriImageSource.Uri)
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) per l'accesso a una bitmap archiviata in un progetto di applicazione della piattaforma in base a una cartella e un percorso di file impostati sulla relativa proprietà [`File`](xref:Xamarin.Forms.FileImageSource.File)
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) per il caricamento di una bitmap utilizzando un oggetto .NET `Stream` specificato restituendo un `Stream` da un `Func` impostato sulla relativa proprietà [`Stream`](xref:Xamarin.Forms.StreamImageSource.Stream)
 
-In alternativa (e più comunemente) è possibile usare i metodi statici seguenti del `ImageSource` classe, che restituiscono `ImageSource` oggetti:
+In alternativa, e più comunemente, è possibile usare i metodi statici seguenti della classe `ImageSource`, che restituiscono tutti `ImageSource` oggetti:
 
-- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) per l'accesso a una mappa di bit tramite il sito web basato su un `Uri` oggetto
-- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) per l'accesso a un'immagine bitmap archiviata come una risorsa incorporata nell'applicazione di libreria di classi Portabile; [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) oppure [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) per accedere a una mappa di bit in un altro assembly di origine
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) per l'accesso a una bitmap sul Web in base a un oggetto `Uri`
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) per l'accesso a una bitmap archiviata come risorsa incorporata nell'applicazione PCL; [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) o [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) per accedere a una bitmap in un altro assembly di origine
 - [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) per l'accesso a una bitmap da un progetto di applicazione della piattaforma
-- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) per il caricamento di una mappa di bit basata su un `Stream` oggetto
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) per il caricamento di una bitmap basata su un oggetto `Stream`
 
-È disponibile un equivalente della classe di `Image.FromResource` metodi. Il `UriImageSource` classe è utile se è necessario controllare la memorizzazione nella cache. Il `FileImageSource` classe è utile in XAML. `StreamImageSource` è utile per il caricamento asincrono di `Stream` oggetti, mentre `ImageSource.FromStream` è sincrona.
+Non esiste alcuna classe equivalente ai metodi `Image.FromResource`. La classe `UriImageSource` è utile se è necessario controllare la memorizzazione nella cache. La classe `FileImageSource` è utile in XAML. `StreamImageSource` è utile per il caricamento asincrono di oggetti `Stream`, mentre `ImageSource.FromStream` è sincrono.
 
 ## <a name="platform-independent-bitmaps"></a>Bitmap indipendente dalla piattaforma
 
-Il [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) progetto carica una bitmap nel web tramite `ImageSource.FromUri`. Il `Image` elemento è impostato sul `Content` proprietà del `ContentPage`, in modo che è vincolato alla dimensione della pagina. Indipendentemente dalle dimensioni della mappa di bit, un vincolata `Image` elemento viene adattato alla dimensione del relativo contenitore e la mappa di bit viene visualizzato in dimensioni massime all'interno di `Image` elemento mantenendo le proporzioni della bitmap. Aree dei `Image` bitmap possono essere impostate con oltre [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor).
+Il progetto [**WebBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) carica una bitmap sul web usando `ImageSource.FromUri`. L'elemento `Image` viene impostato sulla proprietà `Content` della `ContentPage`, quindi è vincolato alle dimensioni della pagina. Indipendentemente dalle dimensioni della bitmap, un elemento `Image` vincolato viene esteso alle dimensioni del relativo contenitore e la bitmap viene visualizzata nella dimensione massima all'interno dell'elemento `Image` mantenendo le proporzioni della bitmap. Le aree del `Image` oltre la bitmap possono essere colorate con [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor).
 
-Il [ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) esempio è simile, ma imposta semplicemente la `Source` proprietà all'URL. La conversione viene gestita dal [ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter) classe.
+L'esempio [**WebBitmapXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) è simile, ma imposta semplicemente la proprietà `Source` sull'URL. La conversione viene gestita dalla classe [`ImageSourceConverter`](xref:Xamarin.Forms.ImageSourceConverter) .
 
 ### <a name="fit-and-fill"></a>Adattamento e riempimento
 
-È possibile controllare come la bitmap viene estesa impostando il [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) proprietà della `Image` a uno dei seguenti membri del [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumerazione:
+È possibile controllare il modo in cui la bitmap viene estesa impostando la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) della `Image` su uno dei seguenti membri dell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) :
 
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): rispetta proporzioni (impostazione predefinita)
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): rispetta le proporzioni (impostazione predefinita)
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill): riempie l'area, non rispetta le proporzioni
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): riempie l'area, ma rispetta proporzioni, operazione eseguita da parte della bitmap di ritaglio
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): riempie l'area ma rispetta le proporzioni, eseguite mediante il ritaglio di una parte della bitmap
 
 ### <a name="embedded-resources"></a>Risorse incorporate
 
-È possibile aggiungere un file bitmap a una libreria di classi Portabile o in una cartella nella libreria di classi Portabile. Assegnargli un **Build Action** dei **EmbeddedResource**. Il [ **ResourceBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) esempio viene illustrato come usare `ImageSource.FromResource` per caricare il file. Il nome della risorsa passato al metodo è costituito il nome dell'assembly, seguito da un punto, seguito dal nome della cartella facoltativa e un punto, seguito dal nome di file.
+È possibile aggiungere un file bitmap a una libreria di classi Portabile o in una cartella nella libreria di classi Portabile. Assegnare un' **azione di compilazione** di **EmbeddedResource**. Nell'esempio [**ResourceBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) viene illustrato come utilizzare `ImageSource.FromResource` per caricare il file. Il nome della risorsa passato al metodo è costituito il nome dell'assembly, seguito da un punto, seguito dal nome della cartella facoltativa e un punto, seguito dal nome di file.
 
-I set di programma il `VerticalOptions` e `HorizontalOptions` proprietà del `Image` al `LayoutOptions.Center`, che rende il `Image` elemento non vincolato. Il `Image` e la mappa di bit sono della stessa dimensione:
+Il programma imposta le proprietà `VerticalOptions` e `HorizontalOptions` del `Image` su `LayoutOptions.Center`, rendendo l'elemento `Image` non vincolato. Le dimensioni del `Image` e della bitmap sono le stesse:
 
 - In iOS e Android, il `Image` è la dimensione in pixel della bitmap. È presente un mapping uno a uno tra bitmap e pixel sullo schermo.
-- Nella piattaforma Windows universale, la `Image` è la dimensione in pixel della bitmap in unità indipendenti dal dispositivo. Nella maggior parte dei dispositivi, ogni pixel bitmap occupa più pixel sullo schermo.
+- In piattaforma UWP (Universal Windows Platform), il `Image` è la dimensione in pixel della bitmap in unità indipendenti dal dispositivo. Nella maggior parte dei dispositivi, ogni pixel bitmap occupa più pixel sullo schermo.
 
-Il [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) esempio inserisce un `Image` in un parametro vertical `StackLayout` in XAML. Un'estensione di markup denominata [ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) consente di fare riferimento alla risorsa incorporata in XAML. Questa classe consente di caricare solo le risorse dall'assembly in cui si trova attualmente, in modo che non può essere inserito in una libreria.
+L'esempio [**StackedBitmap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) inserisce un `Image` in un `StackLayout` verticale in XAML. Un'estensione di markup denominata [`ImageResourceExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) consente di fare riferimento alla risorsa incorporata in XAML. Questa classe consente di caricare solo le risorse dall'assembly in cui si trova attualmente, in modo che non può essere inserito in una libreria.
 
 ### <a name="more-on-sizing"></a>Ulteriori informazioni sul ridimensionamento
 
 È spesso preferibile dimensione bitmap in modo coerente tra tutte le piattaforme.
-Sperimentare **StackedBitmap**, è possibile impostare un `WidthRequest` sul `Image` elemento in un parametro vertical `StackLayout` alle dimensioni coerenti tra le piattaforme, ma è solo possibile ridurre le dimensioni utilizzando questa tecnica.
+Con la sperimentazione di **StackedBitmap**, è possibile impostare un `WidthRequest` sull'elemento `Image` in un `StackLayout` verticale per rendere le dimensioni coerenti tra le piattaforme, ma è possibile ridurre solo le dimensioni utilizzando questa tecnica.
 
-È anche possibile impostare il `HeightRequest` per creare l'immagine con dimensioni coerenti nelle piattaforme, ma la larghezza della bitmap vincolata limiterà la versatilità di questa tecnica. Per un'immagine in un parametro vertical `StackLayout`, `HeightRequest` deve essere evitata.
+È anche possibile impostare l'`HeightRequest` per rendere le dimensioni delle immagini coerenti sulle piattaforme, ma la larghezza vincolata della bitmap limiterà la versatilità di questa tecnica. Per un'immagine in un `StackLayout`verticale, è consigliabile evitare `HeightRequest`.
 
-L'approccio migliore consiste nell'iniziare con una bitmap maggiore della larghezza di telefono in unità indipendenti dal dispositivo e impostare `WidthRequest` la larghezza desiderata in unità indipendenti dal dispositivo. Questa funzionalità viene illustrata la [ **DeviceIndBitmapSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DeviceIndBitmapSize) esempio.
+L'approccio migliore consiste nell'iniziare con una bitmap più ampia della larghezza del telefono in unità indipendenti dal dispositivo e impostare `WidthRequest` sulla larghezza desiderata in unità indipendenti dal dispositivo. Questa operazione è illustrata nell'esempio [**DeviceIndBitmapSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DeviceIndBitmapSize) .
 
-Il [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) Visualizza capitolo 7 di Lewis Carroll *Alice Adventures nel meraviglie* con le illustrazioni originale da John Tenniel:
+Il [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) Visualizza il capitolo 7 delle avventure di Alice di Lewis Carroll *in Wonderland* con le illustrazioni originali di John Tenniel:
 
-[![Screenshot tripla della corsa party tè](images/ch13fg16-small.png "Mad testo del libro tè Party Hatters")](images/ch13fg16-large.png#lightbox "testo del libro tè Party Hatters corsa")
+[![Schermata tripla della parte pazza del tè](images/ch13fg16-small.png "Testo del libro di Mad Hatters Tea Party")](images/ch13fg16-large.png#lightbox "Testo del libro di Mad Hatters Tea Party")
 
 ### <a name="browsing-and-waiting"></a>Esplorazione e in attesa
 
-Il [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) esempio consente all'utente di esplorare le immagini predefinite archiviate sul sito web di Xamarin. Usa .NET [ `WebRequest` ](xref:System.Net.WebRequest) classe per scaricare un file JSON con l'elenco delle bitmap.
+L'esempio [**ImageBrowser**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) consente all'utente di spostarsi tra le immagini predefinite archiviate nel sito Web Novell. Usa la classe .NET [`WebRequest`](xref:System.Net.WebRequest) per scaricare un file JSON con l'elenco delle bitmap.
 
 > [!NOTE]
-> Programmi di Xamarin.Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. 
+> I programmi Novell. Forms devono usare [`HttpClient`](xref:System.Net.Http.HttpClient) anziché [`WebRequest`](xref:System.Net.WebRequest) per l'accesso ai file tramite Internet.
 
-Il programma Usa un' [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) per indicare che un elemento sta succedendo. Quando viene caricato ogni bitmap, di sola lettura [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) proprietà della `Image` è `true`. Il `IsLoading` proprietà è supportata da una proprietà associabile, pertanto un `PropertyChanged` evento viene generato quando tale proprietà viene modificata. Associa un gestore per questo evento, il programma e Usa l'impostazione corrente di `IsLoaded` per impostare il [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) proprietà del `ActivityIndicator`.
+Il programma usa un [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) per indicare che l'operazione è in corso. Quando viene caricata ogni bitmap, viene `true`la proprietà di sola lettura [`IsLoading`](xref:Xamarin.Forms.Image.IsLoading) di `Image`. La proprietà `IsLoading` è supportata da una proprietà associabile, pertanto viene generato un evento `PropertyChanged` quando tale proprietà viene modificata. Il programma connette un gestore a questo evento e usa l'impostazione corrente di `IsLoaded` per impostare la proprietà [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) dell'`ActivityIndicator`.
 
 ## <a name="streaming-bitmaps"></a>Le bitmap di streaming
 
-Il `ImageSource.FromStream` metodo crea un' `ImageSource` basato su .NET `Stream`. Il metodo deve essere passato un `Func` oggetto restituito da una `Stream` oggetto.
+Il metodo `ImageSource.FromStream` crea una `ImageSource` basata su un `Stream`.NET. Al metodo deve essere passato un oggetto `Func` che restituisce un oggetto `Stream`.
 
 ### <a name="accessing-the-streams"></a>L'accesso a flussi
 
-Il [ **BitmapStreams** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/BitmapStreams) esempio viene illustrato come usare il `ImaageSource.FromStream` metodo per caricare un'immagine bitmap archiviata come una risorsa incorporata e per caricare una bitmap attraverso il web.
+Nell'esempio [**BitmapStreams**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/BitmapStreams) viene illustrato come utilizzare il metodo `ImaageSource.FromStream` per caricare una bitmap archiviata come risorsa incorporata e caricare una bitmap sul Web.
 
 ### <a name="generating-bitmaps-at-run-time"></a>Generazione di immagini bitmap in fase di esecuzione
 
-Tutte le piattaforme di Xamarin.Forms supportano il formato di file BMP non compresso, facili da creare nel codice e quindi archiviare in un `MemoryStream`. Questa tecnica consente di creare modo algoritmico bitmap in fase di esecuzione, come implementato nel [ `BmpMaker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) classe la **Xamrin.FormsBook.Toolkit** libreria.
+Tutte le piattaforme Novell. Forms supportano il formato di file BMP non compresso, che è facile da costruire nel codice e quindi archiviare in un `MemoryStream`. Questa tecnica consente a algoritmicamente di creare bitmap in fase di esecuzione, implementate nella classe [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) nella libreria **Xamarin. FormsBook. Toolkit** .
 
-Il "eseguire in prima persona" [ **DiyGradientBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) esempio dimostra l'uso di `BmpMaker` per creare una bitmap con un'immagine della sfumatura.
+Nell'esempio [**DiyGradientBitmap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) "fai da te" viene illustrato l'uso di `BmpMaker` per creare una bitmap con un'immagine di sfumatura.
 
 ## <a name="platform-specific-bitmaps"></a>Bitmap specifiche della piattaforma
 
-Tutte le piattaforme di Xamarin.Forms consentono di archiviare le immagini bitmap negli assembly di applicazione della piattaforma. Quando è recuperato da un'applicazione Xamarin.Forms, tali bitmap piattaforma sono di tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Viene utilizzato per:
+Tutte le piattaforme di xamarin. Forms consentono di archiviare le immagini bitmap negli assembly di applicazione della piattaforma. Quando vengono recuperate da un'applicazione Novell. Forms, le bitmap della piattaforma sono di tipo [`FileImageSource`](xref:Xamarin.Forms.FileImageSource). Viene utilizzato per:
 
-- il [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) proprietà di [`MenuItem`](xref:Xamarin.Forms.MenuItem)
-- il [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) proprietà di [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
-- il [ `Image` ](xref:Xamarin.Forms.Button) proprietà di `Button`
+- proprietà [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) di [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- proprietà [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) di [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- proprietà [`Image`](xref:Xamarin.Forms.Button) di `Button`
 
 Gli assembly di piattaforma contengono già le bitmap per le icone e schermate iniziali:
 
-- Nel progetto iOS nel **risorse** cartella
-- Nel progetto Android, nelle sottocartelle della **risorse** cartella
-- Nei progetti di Windows, nelle **asset** cartella (anche se le piattaforme Windows non si limitano le bitmap in tale cartella)
+- Nel progetto iOS, nella cartella **risorse**
+- Nel progetto Android, in sottocartelle della cartella **risorse**
+- Nei progetti Windows, nella cartella **Asset** (anche se le piattaforme Windows non limitano le bitmap a tale cartella)
 
-Il [ **PlatformBitmaps** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/PlatformBitmaps) esempio Usa codice per visualizzare un'icona dai progetti della piattaforma dell'applicazione.
+L'esempio [**PlatformBitmaps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/PlatformBitmaps) usa il codice per visualizzare un'icona dai progetti di applicazione della piattaforma.
 
 ### <a name="bitmap-resolutions"></a>Risoluzioni di bitmap
 
@@ -134,18 +134,18 @@ Tutte le piattaforme per consentire l'archiviazione di più versioni delle immag
 In iOS, tali bitmap si differenziano per un suffisso nel nome file:
 
 - Senza suffisso per i dispositivi di 160 DPI (1 pixel nell'unità indipendenti dal dispositivo)
-- '@2x' suffisso per i dispositivi 320 DPI (2 pixel per il DIU)
-- '@3x' suffisso per i dispositivi di 480 DPI (3 pixel per il DIU)
+- suffisso '@2x' per i dispositivi 320 DPI (2 pixel a DIU)
+- suffisso '@3x' per i dispositivi 480 DPI (da 3 pixel a DIU)
 
 Una mappa di bit deve essere visualizzato come quadrato da 1 esisterebbe in tre versioni:
 
 - Jpg 160 pixel quadrati
-- MyImage@2x.jpg 320 pixel quadrati
-- MyImage@3x.jpg 480 pixel quadrati
+- MyImage@2x.jpg al quadrato di 320 pixel
+- MyImage@3x.jpg al quadrato di 480 pixel
 
 Il programma per fare riferimento a questa bitmap come jpg, ma la versione corretta è recuperata in fase di esecuzione in base alla risoluzione dello schermo. Quando non è vincolato, la bitmap verrà sempre il rendering in 160 unità indipendenti dal dispositivo.
 
-Per Android, bitmap vengono archiviate in varie sottocartelle del **risorse** cartella:
+Per Android, le bitmap vengono archiviate in varie sottocartelle della cartella **Resources** :
 
 - drawable-ldpi (bassa DPI) per i dispositivi 120 DPI (0,75 pixel per il DIU)
 - drawable-mdpi (medium) per i dispositivi di 160 DPI (1 pixel per il DIU)
@@ -163,48 +163,48 @@ Per una mappa di bit deve essere sottoposto a rendering in un quadrato di pollic
 - drawable-xxhdpi/jpg 480 pixel quadrati
 - drawable-xxxhdpi o jpg a 640 pixel quadrati
 
-La mappa di bit sarà sempre il rendering in 160 unità indipendenti dal dispositivo. (Il modello di soluzione Xamarin.Forms standard include solo il hdpi xhdpi e le cartelle xxhdpi.)
+La mappa di bit sarà sempre il rendering in 160 unità indipendenti dal dispositivo. (Il modello di soluzione xamarin. Forms standard include solo il hdpi xhdpi e le cartelle xxhdpi.)
 
 Il progetto UWP supporta uno schema di denominazione mappa di bit costituita da un fattore di scala espressa in pixel per ogni unità indipendenti dal dispositivo espressa in percentuale, ad esempio:
 
 - MyImage.scale-200.jpg 320 pixel quadrati
 
-Solo alcuni percentuali sono valide. I programmi di esempio per questo libro includono solo le immagini con **scalabilità-200** suffissi, ma i modelli di soluzione Xamarin.Forms correnti includono **scala 100**, **scala-125**, **scalabilità-150**, e **scalabilità-400**.
+Solo alcuni percentuali sono valide. I programmi di esempio per questo libro includono solo immagini con suffissi **scale-200** , ma i modelli di soluzione Novell. Forms correnti includono **scale-100**, **scale-125**, **scale-150**e **Scale-400**.
 
-Quando si aggiungono le bitmap per i progetti di piattaforma, il **azione di compilazione** deve essere:
+Quando si aggiungono bitmap ai progetti della piattaforma, l' **azione di compilazione** deve essere la seguente:
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- PIATTAFORMA UWP: **Content**
+- UWP: **contenuto**
 
-Il [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) esempio crea due oggetti a pulsante costituiti `Image` gli elementi con un `TapGestureRecognizer` installato. Lo scopo è che gli oggetti di essere quadrata di un pollice. Il `Source` proprietà di `Image` viene impostato utilizzando `OnPlatform` e `On` oggetti per fare riferimento a nomi di file potenzialmente diversi sulle piattaforme. Le immagini bitmap includono numeri che indica le dimensioni in pixel, in modo da visualizzare le bitmap di dimensione viene recuperato e viene eseguito il rendering.
+L'esempio [**ImageTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) crea due oggetti di tipo Button costituiti da elementi di `Image` con un `TapGestureRecognizer` installato. Lo scopo è che gli oggetti di essere quadrata di un pollice. La proprietà `Source` di `Image` viene impostata utilizzando `OnPlatform` e `On` oggetti per fare riferimento a nomi file potenzialmente diversi sulle piattaforme. Le immagini bitmap includono numeri che indica le dimensioni in pixel, in modo da visualizzare le bitmap di dimensione viene recuperato e viene eseguito il rendering.
 
 ### <a name="toolbars-and-their-icons"></a>Le barre degli strumenti e le icone
 
-Uno degli usi principali delle bitmap specifiche della piattaforma è la barra degli strumenti Xamarin.Forms, che viene costruita aggiungendo [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) oggetti per il [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) insieme definito dal `Page`. `ToobarItem` deriva da [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) da cui eredita alcune proprietà.
+Uno degli utilizzi principali delle bitmap specifiche della piattaforma è la barra degli strumenti Novell. Forms, costruita aggiungendo [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) oggetti alla raccolta [`ToolbarItems`](xref:Xamarin.Forms.Page.ToolbarItems) definita da `Page`. `ToobarItem` deriva da [`MenuItem`](xref:Xamarin.Forms.MenuItem) da cui eredita alcune proprietà.
 
-La più importante `ToolbarItem` proprietà sono:
+Le proprietà `ToolbarItem` più importanti sono:
 
-- [`Text`](xref:Xamarin.Forms.MenuItem.Text) per il testo che potrebbe essere visualizzato in base alla piattaforma e `Order`
-- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) di tipo `FileImageSource` per l'immagine che potrebbe essere visualizzato in base alla piattaforma e `Order`
-- [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) typu [ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder), un'enumerazione con tre membri [ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default), [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary), e [ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) per il testo che potrebbe apparire a seconda della piattaforma e della `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) di tipo `FileImageSource` per l'immagine che potrebbe apparire a seconda della piattaforma e `Order`
+- [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) di tipo [`ToolbarItemOrder`](xref:Xamarin.Forms.ToolbarItemOrder), un'enumerazione con tre membri, [`Default`](xref:Xamarin.Forms.ToolbarItemOrder.Default), [`Primary`](xref:Xamarin.Forms.ToolbarItemOrder.Primary)e [`Secondary`](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
-Il numero di `Primary` dovrebbero essere limitati a tre o quattro elementi. È necessario includere un `Text` impostazione per tutti gli elementi. Per la maggior parte delle piattaforme, solo il `Primary` elementi richiedono un' `Icon` ma richiede Windows 8.1 un `Icon` per tutti gli elementi. Le icone devono essere 32 device independent unit quadrati. Il `FileImageSource` tipo indica che essi sono specifiche della piattaforma.
+Il numero di elementi di `Primary` deve essere limitato a tre o quattro. È necessario includere un'impostazione `Text` per tutti gli elementi. Per la maggior parte delle piattaforme, solo gli elementi `Primary` richiedono un `Icon` ma Windows 8.1 richiede un `Icon` per tutti gli elementi. Le icone devono essere 32 device independent unit quadrati. Il tipo di `FileImageSource` indica che sono specifici della piattaforma.
 
-Il `ToolbarItem` viene attivato un [ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked) eventi quando si tocca, molto simile a un `Button`. `ToolbarItem` supporta inoltre [ `Command` ](xref:Xamarin.Forms.MenuItem.Command) e [ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter) proprietà spesso usate in relazione a MVVM. (Vedere [capitolo 18, MVVM](chapter18.md)).
+Il `ToolbarItem` genera un evento di [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) quando viene toccato, molto simile a un `Button`. `ToolbarItem` supporta anche le proprietà [`Command`](xref:Xamarin.Forms.MenuItem.Command) e [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) spesso utilizzate per la connessione a MVVM. (Vedere il [capitolo 18, MVVM](chapter18.md)).
 
-IOS e Android richiedono che una pagina che visualizzi una barra degli strumenti sia un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) o una pagina di navigazione da un `NavigationPage`. Il [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) programmare set il `MainPage` proprietà del relativo `App` classe per il [ `NavigationPage` costruttore](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) con un `ContentPage` argomento e viene illustrato il gestore di evento e la costruzione di una barra degli strumenti.
+Sia per iOS che per Android è necessario che una pagina che visualizzi una barra degli strumenti sia un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) o una pagina a cui si accede da un `NavigationPage`. Il programma [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) imposta la proprietà `MainPage` della relativa classe `App` sul [Costruttore`NavigationPage`](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) con un argomento `ContentPage` e illustra la costruzione e il gestore eventi di una barra degli strumenti.
 
 ### <a name="button-images"></a>Icone dei pulsanti
 
-È anche possibile usare bitmap specifiche della piattaforma per impostare il [ `Image` ](xref:Xamarin.Forms.Button.Image) proprietà della `Button` in una bitmap del quadrato 32 device independent unit, come dimostrato dal [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) esempio.
+È anche possibile usare bitmap specifiche della piattaforma per impostare la proprietà [`Image`](xref:Xamarin.Forms.Button.Image) di `Button` su una bitmap di 32 unità indipendenti dal dispositivo, come illustrato nell'esempio [**ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) .
 
 > [!NOTE]
-> È stata migliorata l'uso delle immagini sui pulsanti. Visualizzare [usando le bitmap con pulsanti](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
+> È stata migliorata l'uso delle immagini sui pulsanti. Vedere [uso di bitmap con i pulsanti](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Capitolo 13 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
-- [Esempi di capitolo 13](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
+- [Esempi capitolo 13](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [Uso delle immagini](~/xamarin-forms/user-interface/images.md)
-- [Utilizzo di immagini bitmap con i pulsanti](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)
+- [Uso di bitmap con pulsanti](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

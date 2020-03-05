@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
-ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
-ms.translationtype: HT
+ms.openlocfilehash: 10d2ae6ac35f02d75ef6e04a0531ec3f5dafd668
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75667039"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292160"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
 _Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android, disponibile nei dispositivi Android che eseguono Android 5,0 (livello API 21) e versioni successive._
 
-## <a name="overview"></a>Panoramica di 
+## <a name="overview"></a>Panoramica 
 
 Uno dei modi migliori per garantire che un'applicazione Android sia in grado di rispondere all'utente è garantire che il lavoro complesso o a esecuzione prolungata venga eseguito in background. Tuttavia, è importante che il lavoro in background non influisca negativamente sull'esperienza dell'utente con il dispositivo. 
 
@@ -41,7 +41,7 @@ L'utilità di pianificazione dei processi Android è un framework integrato nel 
 - Un `Android.App.Job.JobService` è una classe astratta che deve essere estesa con la logica che eseguirà il processo sul thread principale dell'applicazione. Ciò significa che il `JobService` è responsabile della modalità di esecuzione del lavoro in modo asincrono.
 - Un oggetto `Android.App.Job.JobInfo` include i criteri per guidare Android quando il processo deve essere eseguito.
 
-Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Xamarin.Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
+Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Novell. Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
 
 - **bool OnStartJob (parametri JobParameters)** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` eseguire in modo asincrono il lavoro e restituire `true` se il lavoro rimane disponibile oppure `false` se il lavoro viene eseguito.
     
@@ -55,7 +55,7 @@ Per pianificare il lavoro con l'utilità di pianificazione dei processi Android,
 
 In questa guida verrà illustrato in dettaglio come implementare una classe di `JobService` e pianificarla con l'`JobScheduler`.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 L'utilità di pianificazione dei processi Android richiede il livello di API Android 21 (Android 5,0) o versione successiva. 
 
@@ -76,7 +76,7 @@ Tutto il lavoro eseguito dalla libreria dell'utilità di pianificazione dei proc
 3. Impostare la proprietà `Permission` della `ServiceAttribute` sul `android.permission.BIND_JOB_SERVICE`di stringa.
 4. Eseguire l'override del metodo `OnStartJob`, aggiungendo il codice per eseguire il lavoro. Android richiamerà questo metodo sul thread principale dell'applicazione per eseguire il processo. Per evitare di bloccare l'applicazione, è necessario eseguire un lavoro che comporterà più tempo.
 5. Al termine del lavoro, il `JobService` deve chiamare il metodo `JobFinished`. Questo metodo rappresenta il modo in cui `JobService` indica al `JobScheduler` che il lavoro è stato eseguito. La mancata chiamata `JobFinished` comporterà la `JobService` l'inserimento di richieste non necessarie sul dispositivo, riducendo la durata della batteria. 
-6. È consigliabile anche eseguire l'override del metodo `OnStopJob`. Questo metodo viene chiamato da Android quando il processo viene arrestato prima del completamento e fornisce all'`JobService` la possibilità di eliminare correttamente le risorse. Questo metodo deve restituire `true` se è necessario ripianificare il processo oppure `false` se non è auspicabile eseguire di nuovo il processo.
+6. È consigliabile anche eseguire l'override del metodo `OnStopJob`. Questo metodo viene chiamato da Android quando il processo viene arrestato prima del completamento e fornisce all'`JobService` la possibilità di eliminare correttamente le risorse. Questo metodo deve restituire `true` se è necessario ripianificare il processo oppure `false` se non è consigliabile eseguire di nuovo il processo.
 
 Il codice seguente è un esempio della `JobService` più semplice per un'applicazione, usando TPL per eseguire in modo asincrono alcune operazioni:
 
@@ -109,7 +109,7 @@ public class DownloadJob : JobService
 
 ### <a name="creating-a-jobinfo-to-schedule-a-job"></a>Creazione di un JobInfo per pianificare un processo
 
-Le applicazioni Xamarin.Android non creano direttamente un'istanza di un `JobService`, bensì passano un oggetto `JobInfo` al `JobScheduler`. Il `JobScheduler` creerà un'istanza dell'oggetto `JobService` richiesto, pianificando ed eseguendo il `JobService` in base ai metadati nel `JobInfo`. Un oggetto `JobInfo` deve contenere le seguenti informazioni:
+Le applicazioni Novell. Android non creano direttamente un'istanza di un `JobService`, bensì passano un oggetto `JobInfo` al `JobScheduler`. Il `JobScheduler` creerà un'istanza dell'oggetto `JobService` richiesto, pianificando ed eseguendo il `JobService` in base ai metadati nel `JobInfo`. Un oggetto `JobInfo` deve contenere le seguenti informazioni:
 
 - **JobId** &ndash; si tratta di un valore `int` usato per identificare un processo al `JobScheduler`. Il riutilizzo di questo valore aggiornerà eventuali processi esistenti. Il valore deve essere univoco per l'applicazione. 
 - **JobService** &ndash; questo parametro è un `ComponentName` che identifica in modo esplicito il tipo che il `JobScheduler` deve usare per eseguire un processo. 
@@ -148,7 +148,7 @@ Una potente funzionalità dell'utilità di pianificazione dei processi Android �
 
 Il `SetBackoffCriteria` fornisce alcune indicazioni sul tempo di attesa del `JobScheduler` prima di ritentare l'esecuzione di un processo. Sono disponibili due parti per i criteri backoff: un ritardo in millisecondi (valore predefinito di 30 secondi) e il tipo di back off da usare (a volte definito _criterio backoff_ o i _criteri di ripetizione dei tentativi_). I due criteri sono incapsulati nella `Android.App.Job.BackoffPolicy` enum:
 
-- `BackoffPolicy.Exponential` &ndash; un criterio di backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. La prima volta che si verifica un errore in un processo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Rappresenta il valore predefinito.
+- `BackoffPolicy.Exponential` &ndash; un criterio di backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. La prima volta che si verifica un errore in un processo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Si tratta del valore predefinito.
 - `BackoffPolicy.Linear` &ndash; questa strategia è una backoff lineare che il processo deve essere ripianificato per l'esecuzione a intervalli prestabiliti (fino a quando non ha esito positivo). Il backoff lineare è più adatto per il lavoro che deve essere completato il prima possibile o per i problemi che si risolveranno rapidamente. 
 
 Per altri dettagli su come creare un oggetto `JobInfo`, vedere [la documentazione di Google relativa alla classe `JobInfo.Builder`](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).
@@ -179,7 +179,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 ### <a name="scheduling-a-job"></a>Pianificazione di un processo
 
-Per pianificare un processo, un'applicazione Xamarin.Android otterrà un riferimento al servizio di sistema `JobScheduler` e chiamerà il metodo `JobScheduler.Schedule` con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule` restituirà immediatamente uno dei due valori integer:
+Per pianificare un processo, un'applicazione Novell. Android otterrà un riferimento al servizio di sistema `JobScheduler` e chiamerà il metodo `JobScheduler.Schedule` con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule` restituirà immediatamente uno dei due valori integer:
 
 - **JobScheduler. ResultSuccess** &ndash; il processo è stato pianificato correttamente. 
 - **JobScheduler. ResultFailure** &ndash; non è stato possibile pianificare il processo. Questa situazione è in genere causata da parametri `JobInfo` in conflitto.

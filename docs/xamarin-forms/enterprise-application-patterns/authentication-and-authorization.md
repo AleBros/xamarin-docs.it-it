@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 7ced28a5ed379b761ffcc9841f5d0e923ec747e7
-ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
-ms.translationtype: HT
+ms.openlocfilehash: 528ccd66cc013f83752d93251cb9714115b29819
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75667052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292910"
 ---
 # <a name="authentication-and-authorization"></a>Autenticazione e autorizzazione
 
 L'autenticazione è il processo di recupero delle credenziali di identificazione, ad esempio il nome e la password, da un utente e la convalida delle credenziali rispetto a un'autorità. Se le credenziali sono valide, l'entità che ha inviato le credenziali viene considerata un'identità autenticata. Una volta autenticata un'identità, un processo di autorizzazione determina se tale identità ha accesso a una determinata risorsa.
 
-Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Xamarin.Forms che comunica con un'applicazione Web MVC ASP.NET, tra cui l'uso di ASP.NET Core identità, provider di autenticazione esterni, ad esempio Microsoft, Google, Il middleware di autenticazione di Facebook o Twitter. L'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione con un microservizio di identità in contenitori che usa IdentityServer 4. L'app per dispositivi mobili richiede token di sicurezza da IdentityServer per l'autenticazione di un utente o per l'accesso a una risorsa. Per IdentityServer per emettere token per conto di un utente, l'utente deve accedere a IdentityServer. Tuttavia, IdentityServer non fornisce un'interfaccia utente o un database per l'autenticazione. Nell'applicazione di riferimento eShopOnContainers viene quindi usata ASP.NET Core identità a questo scopo.
+Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Novell. Forms che comunica con un'applicazione Web MVC ASP.NET, tra cui l'uso di ASP.NET Core identità, provider di autenticazione esterni, ad esempio Microsoft, Google, Il middleware di autenticazione di Facebook o Twitter. L'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione con un microservizio di identità in contenitori che usa IdentityServer 4. L'app per dispositivi mobili richiede token di sicurezza da IdentityServer per l'autenticazione di un utente o per l'accesso a una risorsa. Per IdentityServer per emettere token per conto di un utente, l'utente deve accedere a IdentityServer. Tuttavia, IdentityServer non fornisce un'interfaccia utente o un database per l'autenticazione. Nell'applicazione di riferimento eShopOnContainers viene quindi usata ASP.NET Core identità a questo scopo.
 
 ## <a name="authentication"></a>Autenticazione
 
@@ -100,7 +100,7 @@ Dopo la chiamata del metodo `services.AddIdentityServer`, vengono chiamate API F
 > [!TIP]
 > Caricare dinamicamente la configurazione di IdentityServer 4. Le API di IdentityServer 4 consentono di configurare IdentityServer da un elenco in memoria di oggetti di configurazione. Nell'applicazione di riferimento eShopOnContainers queste raccolte in memoria sono hardcoded nell'applicazione. Negli scenari di produzione, tuttavia, possono essere caricati dinamicamente da un file di configurazione o da un database.
 
-Per informazioni sulla configurazione di IdentityServer per l'uso di ASP.NET Core identità, vedere [uso di ASP.NET Core identità](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) nella documentazione di IdentityServer.
+Per informazioni sulla configurazione di IdentityServer per l'uso di ASP.NET Core identità, vedere [uso di ASP.NET Core identità](https://identityserver4.readthedocs.io/en/latest/quickstarts/6_aspnet_identity.html) nella documentazione di IdentityServer.
 
 #### <a name="configuring-api-resources"></a>Configurazione delle risorse API
 
@@ -474,11 +474,11 @@ Per altre informazioni sul modo in cui l'app per dispositivi mobili eShopOnConta
 
 ## <a name="summary"></a>Riepilogo
 
-Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Xamarin.Forms che comunica con un'applicazione Web MVC ASP.NET. L'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione con un microservizio di identità in contenitori che usa IdentityServer 4. IdentityServer è un framework open source di OpenID Connect e OAuth 2,0 per ASP.NET Core che si integra con ASP.NET Core identità per eseguire bearer token l'autenticazione.
+Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Novell. Forms che comunica con un'applicazione Web MVC ASP.NET. L'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione con un microservizio di identità in contenitori che usa IdentityServer 4. IdentityServer è un framework open source di OpenID Connect e OAuth 2,0 per ASP.NET Core che si integra con ASP.NET Core identità per eseguire bearer token l'autenticazione.
 
 L'app per dispositivi mobili richiede token di sicurezza da IdentityServer per l'autenticazione di un utente o per l'accesso a una risorsa. Quando si accede a una risorsa, un token di accesso deve essere incluso nella richiesta alle API che richiedono l'autorizzazione. Il middleware di IdentityServer consente di convalidare i token di accesso in ingresso per assicurarsi che vengano inviati da un'autorità emittente attendibile e che siano validi per l'uso con l'API che li riceve.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (esempio)](https://github.com/dotnet-architecture/eShopOnContainers)

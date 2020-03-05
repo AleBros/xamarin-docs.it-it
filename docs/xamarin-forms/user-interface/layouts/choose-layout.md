@@ -1,28 +1,28 @@
 ---
-title: Scegliere un layout di Xamarin.Forms
-description: Le classi di layout Xamarin.Forms consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione.
+title: Scegliere un layout di Novell. Forms
+description: Le classi di layout Novell. Forms consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione.
 ms.prod: xamarin
 ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.openlocfilehash: d029e679400b9523df8e03d509230849fa0c96c4
+ms.sourcegitcommit: 9ae537efc106f56aeec562773004c6f708704ae9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "69893998"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78291791"
 ---
-# <a name="choose-a-xamarinforms-layout"></a>Scegliere un layout di Xamarin.Forms
+# <a name="choose-a-xamarinforms-layout"></a>Scegliere un layout di Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Le classi di layout Xamarin.Forms consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione. La scelta di una classe di layout richiede la conoscenza del modo in cui il layout posiziona gli elementi figlio e il modo in cui il layout ridimensiona gli elementi figlio. Inoltre, potrebbe essere necessario annidare i layout per creare il layout desiderato.
+Le classi di layout Novell. Forms consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione. La scelta di una classe di layout richiede la conoscenza del modo in cui il layout posiziona gli elementi figlio e il modo in cui il layout ridimensiona gli elementi figlio. Inoltre, potrebbe essere necessario annidare i layout per creare il layout desiderato.
 
-Nell'immagine seguente vengono illustrati i layout tipici che è possibile ottenere con le classi di layout Xamarin.Forms principali:
+Nell'immagine seguente vengono illustrati i layout tipici che è possibile ottenere con le classi di layout Novell. Forms principali:
 
-[![Classi di layout principali in Xamarin.Forms](images/layouts.png "Classi di layout Xamarin.Forms")](images/layouts-large.png#lightbox "Classi di layout Xamarin.Forms")
+[![Classi di layout principali in Novell. Forms](images/layouts.png "Classi di layout Novell. Forms")](images/layouts-large.png#lightbox "Classi di layout Novell. Forms")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -73,7 +73,7 @@ L'operazione risulta dispendiosa poiché vengono eseguiti calcoli di layout non 
 > [!TIP]
 > Quando si usa un [`StackLayout`](xref:Xamarin.Forms.StackLayout), assicurarsi che sia impostato un solo elemento figlio su [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). Questa proprietà garantisce che l'elemento figlio specificato occupi lo spazio più ampio che `StackLayout` è in grado di assegnare ed è dispendioso eseguire questi calcoli più di una volta.
 
-Per altre informazioni, vedere [Xamarin.Forms StackLayout](stack-layout.md).
+Per altre informazioni, vedere [Novell. Forms StackLayout](stack-layout.md).
 
 ## <a name="grid"></a>Grid
 
@@ -97,7 +97,7 @@ Nel codice XAML seguente viene illustrato come creare un [`Grid`](xref:Xamarin.F
         <ColumnDefinition />
     </Grid.ColumnDefinitions>    
     <Label Text="Column 0, Row 0"
-           Width="200" />
+           WidthRequest="200" />
     <Label Grid.Column="1"
            Text="Column 1, Row 0" />
     <Label Grid.Row="1"
@@ -113,12 +113,12 @@ In questo esempio, il dimensionamento funziona nel modo seguente:
 - Ogni riga ha un'altezza esplicita di 50 unità indipendenti dal dispositivo.
 - La larghezza della prima colonna è impostata su [`Auto`](xref:Xamarin.Forms.GridLength.Auto)ed è quindi il più ampio necessario per i relativi elementi figlio. In questo caso, si tratta di 200 unità indipendenti dal dispositivo per adattarsi alla larghezza della prima [`Label`](xref:Xamarin.Forms.Label).
 
-Lo spazio può essere distribuito all'interno di una colonna o di una riga usando il ridimensionamento automatico, che consente alle dimensioni delle colonne e delle righe di adattarsi al contenuto. Questa operazione viene eseguita impostando l'altezza di un [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)o la larghezza di un [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) [`Auto`](xref:Xamarin.Forms.GridLength.Auto). Il dimensionamento proporzionale può essere utilizzato anche per distribuire lo spazio disponibile tra le righe e le colonne della griglia in base alle proporzioni ponderate. Questa operazione viene eseguita impostando l'altezza di un `RowDefinition` o la larghezza di un `ColumnDefinition` su un valore che utilizza l'operatore `*`.
+Lo spazio può essere distribuito all'interno di una colonna o di una riga usando il ridimensionamento automatico, che consente alle dimensioni delle colonne e delle righe di adattarsi al contenuto. Questa operazione viene eseguita impostando l'altezza di un [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)o la larghezza di un [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) [`Auto`](xref:Xamarin.Forms.GridLength.Auto). Il dimensionamento proporzionale può essere utilizzato anche per distribuire lo spazio disponibile tra le righe e le colonne della griglia in base alle proporzioni ponderate. Questa operazione viene eseguita impostando l'altezza di un `RowDefinition`o la larghezza di un `ColumnDefinition`su un valore che utilizza l'operatore `*`.
 
 > [!CAUTION]
 > Provare a verificare che il minor numero possibile di righe e colonne sia impostato su [`Auto`](xref:Xamarin.Forms.GridLength.Auto) dimensioni. Ogni riga o colonna ridimensionata automaticamente causerà l'esecuzione di ulteriori calcoli di layout da parte del motore di layout. Usare invece righe e colonne con dimensioni fisse, se possibile. In alternativa, impostare righe e colonne in modo da occupare una quantità proporzionale di spazio con il valore di enumerazione [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) .
 
-Per ulteriori informazioni, vedere [Xamarin.Forms Grid](grid.md).
+Per ulteriori informazioni, vedere [Novell. Forms Grid](grid.md).
 
 ## <a name="flexlayout"></a>FlexLayout
 
@@ -142,7 +142,7 @@ In questo esempio il layout funziona nel modo seguente:
 - La proprietà [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) è impostata su `Center`, che fa sì che ogni elemento sia centrato orizzontalmente.
 - La proprietà [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) è impostata su `SpaceEvenly`, che alloca tutti gli spazi verticali rimanenti equamente tra tutti gli elementi e sopra il primo elemento e sotto l'ultimo elemento.
 
-Per altre informazioni, vedere [Xamarin.Forms FlexLayout](flex-layout.md).
+Per altre informazioni, vedere [Novell. Forms FlexLayout](flex-layout.md).
 
 ## <a name="relativelayout"></a>RelativeLayout
 
@@ -186,12 +186,12 @@ In questo esempio il layout funziona nel modo seguente:
 - Alla [`BoxView`](xref:Xamarin.Forms.BoxView) blu viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Si trova nell'angolo superiore sinistro del layout, ovvero la posizione predefinita.
 - Al [`BoxView`](xref:Xamarin.Forms.BoxView) rosso viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Viene posizionata nell'angolo superiore destro del layout.
 - Al [`BoxView`](xref:Xamarin.Forms.BoxView) grigio viene assegnata una larghezza esplicita di 15 unità indipendenti dal dispositivo e l'altezza è impostata su 75% dell'altezza del padre.
-- Al [`BoxView`](xref:Xamarin.Forms.BoxView) verde non viene assegnata una dimensione esplicita. La relativa posizione viene impostata in relazione all'`BoxView` `pole` denominata.
+- Al [`BoxView`](xref:Xamarin.Forms.BoxView) verde non viene assegnata una dimensione esplicita. La relativa posizione viene impostata in relazione all'`BoxView` `pole`denominata.
 
 > [!WARNING]
 > Evitare di utilizzare un `RelativeLayout` quando possibile. Causa un notevole aumento del lavoro per la CPU.
 
-Per altre informazioni, vedere [Xamarin.Forms sul relativelayout](relative-layout.md).
+Per altre informazioni, vedere [Novell. Forms sul relativelayout](relative-layout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -231,7 +231,7 @@ In questo esempio il layout funziona nel modo seguente:
 > [!CAUTION]
 > Evitare di utilizzare la proprietà [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) quando possibile, perché il motore di layout eseguirà calcoli di layout aggiuntivi.
 
-Per altre informazioni, vedere [Xamarin.Forms AbsoluteLayout](absolute-layout.md).
+Per altre informazioni, vedere [Novell. Forms AbsoluteLayout](absolute-layout.md).
 
 ## <a name="input-transparency"></a>Trasparenza input
 
@@ -248,11 +248,11 @@ Inoltre, le prestazioni di rendering della pagina possono essere migliorate anch
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Layout di Xamarin.Forms (video)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.Forms StackLayout](stack-layout.md)
-- [Griglia Xamarin.Forms](grid.md)
-- [Xamarin.Forms FlexLayout](flex-layout.md)
-- [Xamarin.Forms AbsoluteLayout](absolute-layout.md)
-- [Xamarin.Forms sul relativelayout](relative-layout.md)
+- [Layout di Novell. Forms (video)](https://youtu.be/4HlLjTZQzjM)
+- [Novell. Forms StackLayout](stack-layout.md)
+- [Griglia Novell. Forms](grid.md)
+- [Novell. Forms FlexLayout](flex-layout.md)
+- [Novell. Forms AbsoluteLayout](absolute-layout.md)
+- [Novell. Forms sul relativelayout](relative-layout.md)
 - [Ottimizzare le prestazioni del layout](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compressione del layout](layout-compression.md)

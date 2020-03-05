@@ -6,12 +6,12 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
-ms.translationtype: HT
+ms.openlocfilehash: 8ffb62c8715ff60e9b0ea3b2bc536f3441fb8765
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978385"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293076"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introduzione allo sviluppo di giochi con monogame
 
@@ -43,8 +43,6 @@ Gli sviluppatori che hanno familiarità con XNA acquisiranno già familiarità c
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Progetto MonoGame WalkingGame (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
-- [Tipi di carattere XNB iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [Tipi di carattere XNB Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [Monogame Android in NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [Monogame iOS in NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [Documentazione dell'API monogame](http://www.monogame.net/documentation/?page=main)

@@ -1,5 +1,5 @@
 ---
-title: Sottoscrizioni e creazione di report in Xamarin.iOS
+title: Sottoscrizioni e creazione di report in Novell. iOS
 description: Questo documento descrive le sottoscrizioni senza rinnovo, le sottoscrizioni gratuite, le sottoscrizioni rinnovate automaticamente e l'uso di iTunes Connect per creare report su questi elementi.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032296"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291523"
 ---
-# <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Xamarin.iOS
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Informazioni sulle sottoscrizioni senza rinnovo
 
 Le sottoscrizioni che non si rinnovano sono destinate ai prodotti che rappresentano la vendita di un servizio con una restrizione temporale, ad esempio l'accesso a una settimana a un'applicazione di navigazione o l'accesso limitato al tempo a un archivio dati.   
-   
+
 Differenze principali tra sottoscrizioni non di rinnovo e altri tipi di prodotto:
 
-- La definizione di prodotto in iTunes Connect non include il termine. Il codice dell'applicazione deve essere in grado di dedurre il periodo di validità dall'ID prodotto. 
-- Possono essere acquistati più volte (ad esempio un prodotto consumabile). Le applicazioni sono necessarie per gestire i termini della sottoscrizione, la scadenza e il rinnovo e impediscono all'utente di acquistare sottoscrizioni sovrapposte. 
-- Gli acquisti non sono supportati dalla funzione di ripristino StoreKit. Se la sottoscrizione deve essere disponibile in tutti i dispositivi di un utente, l'applicazione dovrà progettare e implementare questa funzionalità in combinazione con un server remoto. Le applicazioni sono anche responsabili del backup dello stato della sottoscrizione nei casi in cui viene eseguito il backup di un dispositivo, quindi il ripristino da un backup. 
+- La definizione di prodotto in iTunes Connect non include il termine. Il codice dell'applicazione deve essere in grado di dedurre il periodo di validità dall'ID prodotto.
+- Possono essere acquistati più volte (ad esempio un prodotto consumabile). Le applicazioni sono necessarie per gestire i termini della sottoscrizione, la scadenza e il rinnovo e impediscono all'utente di acquistare sottoscrizioni sovrapposte.
+- Gli acquisti non sono supportati dalla funzione di ripristino StoreKit. Se la sottoscrizione deve essere disponibile in tutti i dispositivi di un utente, l'applicazione dovrà progettare e implementare questa funzionalità in combinazione con un server remoto. Le applicazioni sono anche responsabili del backup dello stato della sottoscrizione nei casi in cui viene eseguito il backup di un dispositivo, quindi il ripristino da un backup.
 - Panoramica dell'implementazione
-- Le sottoscrizioni che non si rinnovano in genere devono essere implementate tramite il flusso di lavoro distribuito dal server e gestite come prodotti utilizzabili. 
+- Le sottoscrizioni che non si rinnovano in genere devono essere implementate tramite il flusso di lavoro distribuito dal server e gestite come prodotti utilizzabili.
 
 ## <a name="about-free-subscriptions"></a>Informazioni sulle sottoscrizioni gratuite
 
@@ -49,7 +49,7 @@ Le sottoscrizioni rinnovate automaticamente devono essere implementate usando il
 Il segreto condiviso di acquisto in-app deve essere usato nella richiesta JSON quando si verificano sottoscrizioni rinnovabili automaticamente nel server. Il segreto condiviso viene creato/accessibile tramite iTunes Connect.
 
 Dal home page iTunes Connect selezionare **app personali**:   
-   
+
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Selezionare un'applicazione e fare clic sulla scheda **acquisti in-app** :
@@ -57,7 +57,7 @@ Selezionare un'applicazione e fare clic sulla scheda **acquisti in-app** :
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Nella parte inferiore della pagina selezionare **Visualizza o genera un segreto condiviso**:
-   
+
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
@@ -101,16 +101,15 @@ Per semplificare il test delle sottoscrizioni, le relative durate vengono compre
 ## <a name="reporting"></a>Reporting
 
 iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) fornisce:   
-   
+
  **Vendite e tendenze** : Visualizza i dettagli relativi a download di app, aggiornamenti e acquisti in-app.   
-   
+
  **Pagamenti e report finanziari** : dettagli sul reddito guadagnato dalle app, oltre a elencare i pagamenti effettuati per l'utente e il relativo importo.
 
 Di seguito è riportato un esempio di report sulle vendite e le tendenze:   
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
-   
- È disponibile anche un' [app per **dispositivi mobili iOS di ITC Connect**(collegamento iTunes)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
-gli screenshot di iPhone per alcune delle statistiche disponibili sono illustrati di seguito:   
-   
+
+ È disponibile anche un'app per **dispositivi mobili iOS Connect** . gli screenshot di iPhone per alcune delle statistiche disponibili sono illustrati di seguito:   
+
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

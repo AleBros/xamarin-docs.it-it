@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016847"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291533"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - Test e approvazioni per App Store
 
@@ -31,7 +31,7 @@ Esistono differenze minime tra le funzionalità supportate da .NET nei dispositi
 
 Il telefono cellulare e l'ecosistema di Tablet crescono continuamente, rendendo impossibile testare il numero sempre maggiore di dispositivi disponibili. Per risolvere questo problema, numerosi servizi offrono la possibilità di controllare in remoto molti dispositivi diversi, in modo che le applicazioni possano essere installate e testate senza dover investire direttamente in molti componenti hardware.
 
-[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offre un modo semplice per testare le applicazioni iOS e Android su centinaia di dispositivi diversi.
+App Center Test offre un modo semplice per testare le applicazioni iOS e Android su centinaia di dispositivi diversi. Per altre informazioni, vedere [preparazione delle app Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) e [preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### <a name="test-management"></a>Gestione test
 
@@ -46,17 +46,17 @@ Sono disponibili numerosi servizi che consentono di risolvere questi problemi, f
 
 ### <a name="test-automation"></a>Automazione di test
 
-Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) può essere usato per creare script di test automatizzati dell'interfaccia utente che possono essere eseguiti localmente o caricati in [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
+Novell [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) può essere usato per creare script di test automatizzati dell'interfaccia utente che possono essere eseguiti localmente o caricati in [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
 
 ## <a name="unit-testing"></a>Testing unità
 
 ### <a name="touchunit"></a>Touch. unit
 
-Xamarin.iOS include un Framework di unit test denominato touch. Unit che segue i test di scrittura in stile JUnit/NUnit.
+Novell. iOS include un Framework di unit test denominato touch. Unit che segue i test di scrittura in stile JUnit/NUnit.
 
-Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Xamarin.iOS](~/ios/deploy-test/touch.unit.md) .
+Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Novell. iOS](~/ios/deploy-test/touch.unit.md) .
 
-### <a name="andrunit"></a>Andr. unit
+### <a name="andrunit"></a>Andr.Unit
 
 È disponibile un equivalente open source di touch. Unit per Android denominato Andr. Unit. È possibile scaricarlo da [GitHub](https://github.com/spouliot/Andr.Unit) e leggere lo strumento nel [Blog di@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 

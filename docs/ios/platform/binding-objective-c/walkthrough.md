@@ -1,24 +1,24 @@
 ---
 title: 'Procedura dettagliata: associazione di una libreria Objective-C di iOS'
-description: Questo articolo fornisce una procedura dettagliata per la creazione di un'associazione Xamarin.iOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, l'associazione e l'uso dell'associazione in un'applicazione Xamarin.iOS.
+description: Questo articolo fornisce una procedura dettagliata per la creazione di un'associazione Novell. iOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, l'associazione e l'uso dell'associazione in un'applicazione Novell. iOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: f5e5af7d9b4ec85832f2d6050f632d054ba089a2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032674"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292840"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: associazione di una libreria Objective-C di iOS
 
-_Questo articolo fornisce una procedura dettagliata per la creazione di un'associazione Xamarin.iOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, l'associazione e l'uso dell'associazione in un'applicazione Xamarin.iOS._
+_Questo articolo fornisce una procedura dettagliata per la creazione di un'associazione Novell. iOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, l'associazione e l'uso dell'associazione in un'applicazione Novell. iOS._
 
-Quando si utilizza iOS, è possibile che si verifichino casi in cui si desidera utilizzare una libreria Objective-C di terze parti. In questi casi, è possibile usare un _progetto di binding_ Xamarin.iOS per creare un' [ C# associazione](~/cross-platform/macios/binding/overview.md) che consentirà di utilizzare la libreria nelle applicazioni Xamarin.iOS.
+Quando si utilizza iOS, è possibile che si verifichino casi in cui si desidera utilizzare una libreria Objective-C di terze parti. In questi casi, è possibile usare un _progetto di binding_ Novell. iOS per creare un' [ C# associazione](~/cross-platform/macios/binding/overview.md) che consentirà di utilizzare la libreria nelle applicazioni Novell. iOS.
 
 In genere nell'ecosistema iOS è possibile trovare le librerie in 3 varianti:
 
@@ -28,16 +28,16 @@ In genere nell'ecosistema iOS è possibile trovare le librerie in 3 varianti:
 
 Nel primo e secondo scenario è già presente una libreria statica CocoaTouch precompilata, quindi in questo articolo verrà illustrato il terzo scenario. Tenere presente che prima di iniziare a creare un'associazione, controllare sempre la licenza fornita con la libreria per assicurarsi di poterla associare.
 
-Questo articolo fornisce una procedura dettagliata per la creazione di un progetto di associazione usando il progetto open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-c come esempio, ma tutte le informazioni contenute in questa guida possono essere adattate per l'uso con qualsiasi libreria Objective-c di terze parti. . La libreria InfColorPicker offre un controller di visualizzazione riutilizzabile che consente all'utente di selezionare un colore in base alla rappresentazione HSB, rendendo la selezione di colore più intuitiva.
+Questo articolo fornisce una procedura dettagliata per la creazione di un progetto di associazione usando il progetto open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-c come esempio, ma tutte le informazioni contenute in questa guida possono essere adattate per l'uso con qualsiasi libreria Objective-c di terze parti. La libreria InfColorPicker offre un controller di visualizzazione riutilizzabile che consente all'utente di selezionare un colore in base alla rappresentazione HSB, rendendo la selezione di colore più intuitiva.
 
 [![](walkthrough-images/run01.png "Example of the InfColorPicker library running on iOS")](walkthrough-images/run01.png#lightbox)
 
-Verranno illustrati tutti i passaggi necessari per utilizzare questa particolare API Objective-C in Xamarin.iOS:
+Verranno illustrati tutti i passaggi necessari per utilizzare questa particolare API Objective-C in Novell. iOS:
 
 - Innanzitutto, verrà creata una libreria statica Objective-C con Xcode.
-- Quindi, questa libreria statica verrà associata a Xamarin.iOS.
-- A questo punto, indicare in che modo objective è in grado di ridurre il carico di lavoro generando automaticamente alcune delle definizioni API necessarie per l'associazione Xamarin.iOS.
-- Infine, si creerà un'applicazione Xamarin.iOS che usa l'associazione.
+- Quindi, questa libreria statica verrà associata a Novell. iOS.
+- A questo punto, indicare in che modo objective è in grado di ridurre il carico di lavoro generando automaticamente alcune delle definizioni API necessarie per l'associazione Novell. iOS.
+- Infine, si creerà un'applicazione Novell. iOS che usa l'associazione.
 
 Nell'applicazione di esempio viene illustrato come usare un delegato forte per la comunicazione tra l'API InfColorPicker e C# il codice. Dopo aver visto come usare un delegato forte, viene illustrato come usare i delegati vulnerabili per eseguire le stesse attività.
 
@@ -47,18 +47,18 @@ Questo articolo presuppone che l'utente abbia familiarità con Xcode e il lingua
 
 - **Xcode e iOS SDK** : Xcode di Apple e la versione più recente dell'API iOS devono essere installate e configurate nel computer dello sviluppatore.
 - **[Strumenti da riga di comando Xcode](#Installing_the_Xcode_Command_Line_Tools)** : è necessario installare gli strumenti da riga di comando Xcode per la versione attualmente installata di Xcode (vedere di seguito per i dettagli di installazione).
-- **Visual Studio per Mac o Visual Studio** : la versione più recente di Visual Studio per Mac o Visual Studio deve essere installata e configurata nel computer di sviluppo. Per lo sviluppo di un'applicazione Xamarin.iOS è necessario un Mac Apple e, quando si usa Visual Studio, è necessario essere connessi a [un host di compilazione Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **Visual Studio per Mac o Visual Studio** : la versione più recente di Visual Studio per Mac o Visual Studio deve essere installata e configurata nel computer di sviluppo. Per lo sviluppo di un'applicazione Novell. iOS è necessario un Mac Apple e, quando si usa Visual Studio, è necessario essere connessi a [un host di compilazione Novell. iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 - **La versione più recente di Objective Sharpie** : una copia corrente dello strumento Objective Sharpe scaricato da [qui](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Se è già stato installato Objective Sharpie, è possibile aggiornarlo alla versione più recente usando il `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Installazione degli strumenti da riga di comando Xcode
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Come indicato in precedenza, verranno utilizzati gli strumenti da riga di comando Xcode (in particolare `make` e `lipo`) in questa procedura dettagliata. Il `make` comando è un'utilità UNIX molto comune che consente di automatizzare la compilazione di librerie e programmi eseguibili usando un _makefile_ che specifica come deve essere compilato il programma. Il `lipo` comando è un'utilità della riga di comando OS X per la creazione di file con più architetture. verranno combinati più file di `.a` in un unico file che può essere usato da tutte le architetture hardware.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Come indicato in precedenza, si utilizzeranno gli strumenti da riga di comando Xcode nell' **host di compilazione Mac** (in particolare `make` e `lipo`) in questa procedura dettagliata. Il `make` comando è un'utilità UNIX molto comune che consente di automatizzare la compilazione di librerie e programmi eseguibili utilizzando un _makefile_ per specificare come compilare il programma. Il `lipo` comando è un'utilità della riga di comando OS X per la creazione di file con più architetture. verranno combinati più file di `.a` in un unico file che può essere usato da tutte le architetture hardware.
 
@@ -90,9 +90,9 @@ Con gli strumenti da riga di comando installati, è possibile continuare con la 
 In questa procedura dettagliata verranno illustrati i passaggi seguenti:
 
 - **[Creare una libreria statica](#Creating_A_Static_Library)** : questo passaggio prevede la creazione di una libreria statica del codice Objective-C **InfColorPicker** . La libreria statica avrà l'estensione del file `.a` e verrà incorporata nell'assembly .NET del progetto di libreria.
-- **[Creare un progetto di binding Xamarin.iOS](#Create_a_Xamarin.iOS_Binding_Project)** : dopo avere creato una libreria statica, verrà usato per creare un progetto di binding Xamarin.iOS. Il progetto di binding è costituito dalla libreria statica appena creata e dai metadati sotto forma C# di codice in cui viene illustrato come usare l'API Objective-C. Questi metadati sono comunemente definiti definizioni API. Per semplificare la creazione delle definizioni dell'API, si userà **[Objective a scopo](#Using_Objective_Sharpie)** .
+- **[Creare un progetto di binding Novell. iOS](#Create_a_Xamarin.iOS_Binding_Project)** : dopo avere creato una libreria statica, verrà usato per creare un progetto di binding Novell. iOS. Il progetto di binding è costituito dalla libreria statica appena creata e dai metadati sotto forma C# di codice in cui viene illustrato come usare l'API Objective-C. Questi metadati sono comunemente definiti definizioni API. Per semplificare la creazione delle definizioni dell'API, si userà **[Objective a scopo](#Using_Objective_Sharpie)** .
 - **[Normalizzare le definizioni dell'API](#Normalize_the_API_Definitions)** : Objective Sharpie fa un ottimo lavoro per aiutarci, ma non può eseguire tutte le operazioni. Verranno illustrate alcune modifiche che è necessario apportare alle definizioni API prima di poterle usare.
-- **[Usare la libreria di binding](#Using_the_Binding)** . verrà infine creata un'applicazione Xamarin.iOS per illustrare come usare il nuovo progetto di associazione creato.
+- **[Usare la libreria di binding](#Using_the_Binding)** . verrà infine creata un'applicazione Novell. iOS per illustrare come usare il nuovo progetto di associazione creato.
 
 Ora che sono stati illustrati i passaggi necessari, è possibile passare al resto della procedura dettagliata.
 
@@ -180,7 +180,7 @@ La creazione di un file binario FAT è un processo in tre passaggi:
 
 Sebbene questi tre passaggi siano piuttosto semplici, potrebbe essere necessario ripeterli in futuro quando la libreria Objective-C riceve gli aggiornamenti o se sono necessarie correzioni di bug. Se si decide di automatizzare questi passaggi, sarà possibile semplificare la manutenzione e il supporto futuri del progetto di binding iOS.
 
-Sono disponibili molti strumenti per automatizzare tali attività: uno script della shell, [rake](https://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)e [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando si installano gli strumenti da riga di comando Xcode, viene installato anche `make`, in modo che sia il sistema di compilazione che verrà usato per questa procedura dettagliata. Di seguito è riportato un **makefile** che è possibile usare per creare una libreria condivisa multiarchitettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
+Sono disponibili molti strumenti per automatizzare tali attività: uno script della shell, [rake](https://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)e make. Quando si installano gli strumenti da riga di comando Xcode, viene installato anche `make`, in modo che sia il sistema di compilazione che verrà usato per questa procedura dettagliata. Di seguito è riportato un **makefile** che è possibile usare per creare una libreria condivisa multiarchitettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -241,13 +241,13 @@ A questo punto, abbiamo completato il primo passaggio dell'associazione iOS crea
 
 <a name="Create_a_Xamarin.iOS_Binding_Project"/>
 
-## <a name="create-a-xamarinios-binding-project"></a>Creare un progetto di binding Xamarin.iOS
+## <a name="create-a-xamarinios-binding-project"></a>Creare un progetto di binding Novell. iOS
 
-Prima di poter usare **Objective-Sharpie** per automatizzare il processo di associazione, è necessario creare un progetto di binding Xamarin.iOS per ospitare le definizioni delle API (che useremo **Objective-Sharpie** per la compilazione) e creare il C# binding per noi.
+Prima di poter usare **Objective-Sharpie** per automatizzare il processo di associazione, è necessario creare un progetto di binding Novell. iOS per ospitare le definizioni delle API (che useremo **Objective-Sharpie** per la compilazione) e creare il C# binding per noi.
 
 Eseguire le operazioni seguenti:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Avviare Visual Studio per Mac.
 1. Scegliere **nuovo** > soluzione dal menu **file** **...** :
@@ -258,7 +258,7 @@ Eseguire le operazioni seguenti:
 
     ![](walkthrough-images/bind02.png "Select iOS Binding Project")
 
-1. Fare clic sul pulsante **Avanti** .
+1. Fare clic sul pulsante **Avanti**.
 
 1. Immettere "InfColorPickerBinding" come **nome del progetto** e fare clic sul pulsante **Crea** per creare la soluzione:
 
@@ -268,7 +268,7 @@ Verrà creata la soluzione e verranno inclusi due file predefiniti:
 
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Avviare Visual Studio.
 
@@ -276,7 +276,7 @@ Verrà creata la soluzione e verranno inclusi due file predefiniti:
 
     ![Avvio di un nuovo progetto](walkthrough-images/bind01vs.png "Avvio di un nuovo progetto")
 
-1. Nella finestra di dialogo nuovo progetto selezionare **Visual C# > iPhone & iPad > libreria di binding iOS (Xamarin)** :
+1. Nella finestra di dialogo nuovo progetto selezionare **Visual C# > iPhone & iPad > libreria di binding iOS (Novell)** :
 
     [![selezionare la libreria associazioni iOS](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
@@ -299,7 +299,7 @@ Ora che è pronto il progetto di associazione di base, è necessario aggiungere 
 
 Per aggiungere la libreria, attenersi alla procedura seguente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare clic con il pulsante destro del mouse sulla cartella **riferimenti nativi** nel riquadro della soluzione e scegliere **Aggiungi riferimenti nativi**:
 
@@ -312,7 +312,7 @@ Per aggiungere la libreria, attenersi alla procedura seguente:
 
     ![](walkthrough-images/bind04.png "Including a file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Copiare il `libInfColorPickerSDK.a` dall' **host di compilazione Mac** e incollarlo nel progetto di binding.
 
@@ -328,9 +328,9 @@ Per aggiungere la libreria, attenersi alla procedura seguente:
 
 -----
 
-Quando viene aggiunto **un** file al progetto, Xamarin.iOS imposta automaticamente l' **azione di compilazione** del file su **ObjcBindingNativeLibrary**e crea un file speciale denominato `libInfColorPickerSDK.linkwith.cs`.
+Quando viene aggiunto **un** file al progetto, Novell. iOS imposta automaticamente l' **azione di compilazione** del file su **ObjcBindingNativeLibrary**e crea un file speciale denominato `libInfColorPickerSDK.linkwith.cs`.
 
-Questo file contiene l'attributo `LinkWith` che indica a Xamarin.iOS come gestire la libreria statica appena aggiunta. Il contenuto di questo file è illustrato nel frammento di codice seguente:
+Questo file contiene l'attributo `LinkWith` che indica a Novell. iOS come gestire la libreria statica appena aggiunta. Il contenuto di questo file è illustrato nel frammento di codice seguente:
 
 ```csharp
 using ObjCRuntime;
@@ -346,13 +346,13 @@ L'operazione successiva consiste nel creare le definizioni API per il progetto I
 
 ## <a name="using-objective-sharpie"></a>Uso di Sharpe Objective
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Objective Sharpie è uno strumento da riga di comando (fornito da Xamarin) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivey per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
+Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivey per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Objective Sharpie è uno strumento da riga di comando (fornito da Xamarin) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivee Objectivey nell'host di **compilazione Mac** per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
+Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivee Objectivey nell'host di **compilazione Mac** per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
 
 -----
 
@@ -375,11 +375,12 @@ Options:
   -v, --versionShow version information
 
 Available Tools:
-
-  xcode    Get information about Xcode installations and available SDKs.
-
-  bind     Create a Xamarin C# binding to Objective-C APIs
-Europa:Resources kmullins$
+  xcode              Get information about Xcode installations and available SDKs.
+  pod                Create a Xamarin C# binding to Objective-C CocoaPods
+  bind               Create a Xamarin C# binding to Objective-C APIs
+  update             Update to the latest release of Objective Sharpie
+  verify-docs        Show cross reference documentation for [Verify] attributes
+  docs               Open the Objective Sharpie online documentation
 ```
 
 Ai fini di questa procedura dettagliata, verranno usati gli strumenti di Sharpie seguenti:
@@ -394,11 +395,14 @@ Europa:Resources kmullins$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]+
 
 Options:
-  -h, --help                 Show detailed help
-  -v, --verbose              Be verbose with output
-      --sdks                 List all available Xcode SDKs. Pass -verbose for
-                               more details.
-Europa:Resources kmullins$
+  -h, -help           Show detailed help
+  -v, -verbose        Be verbose with output
+
+Xcode Options:
+  -sdks               List all available Xcode SDKs. Pass -verbose for more
+                        details.
+  -sdkpath SDK        Output the path of the SDK
+  -frameworks SDK     List all available framework directories in a given SDK.
 ```
 
 Prima di poter avviare il processo di binding, è necessario ottenere informazioni sugli SDK installati correnti immettendo il comando seguente nel terminale `sharpie xcode -sdks`:
@@ -419,7 +423,7 @@ Immettere il comando seguente nell'app Terminal:
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Dove `[full-path-to-project]` è il percorso completo della directory in cui si trova il file di progetto **InfColorPicker** Xcode nel computer e [iPhone-OS] è l'SDK di iOS installato, come indicato dal comando `sharpie xcode -sdks`. Si noti che in questo esempio è stato passato **\*. h** come parametro, che include *tutti* i file di intestazione in questa directory. in genere, è consigliabile non eseguire questa operazione, ma leggere attentamente i file di intestazione per trovare il file con **estensione h** di primo livello. che fa riferimento a tutti gli altri file rilevanti e passa semplicemente a Objective Sharpe.
+Dove `[full-path-to-project]` è il percorso completo della directory in cui si trova il file di progetto **InfColorPicker** Xcode nel computer e [iPhone-OS] è l'SDK di iOS installato, come indicato dal comando `sharpie xcode -sdks`. Si noti che in questo esempio è stato passato **\*. h** come parametro, che include *tutti* i file di intestazione in questa directory. in genere, è consigliabile evitare di eseguire questa operazione, ma leggere attentamente i file di intestazione per trovare il file con **estensione h** di primo livello che fa riferimento a tutti gli altri file rilevanti e passarlo solo a Objective Sharpe.
 
 Nel terminale verrà generato l' [output](walkthrough-images/os05.png) seguente:
 
@@ -452,15 +456,15 @@ E i file **InfColorPicker.enums.cs** e **InfColorPicker.cs** verranno creati nel
 
 [![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Aprire entrambi i file nel progetto di Binding creato in precedenza. Copiare il contenuto del file **InfColorPicker.cs** e incollarlo nel file **ApiDefinition.cs** , sostituendo il blocco di codice `namespace ...` esistente con il contenuto del file **InfColorPicker.cs** (lasciando inalterate le istruzioni `using`):
 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Aprire entrambi i file nel progetto di Binding creato in precedenza. Copiare il contenuto del file **InfColorPicker.cs** (dall'host di **compilazione Mac**) e incollarlo nel file **ApiDefinition.cs** , sostituendo il blocco di codice `namespace ...` esistente con il contenuto del file **InfColorPicker.cs** (lasciando le istruzioni `using` intatte).
+Aprire entrambi i file nel progetto di Binding creato in precedenza. Copiare il contenuto del file **InfColorPicker.cs** (dall'host di **compilazione Mac**) e incollarlo nel file **ApiDefinition.cs** , sostituendo il blocco di codice `namespace ...` esistente con il contenuto del file **InfColorPicker.cs** (lasciando inalterate le istruzioni `using`).
 
 -----
 
@@ -485,13 +489,13 @@ A questo punto, viene eseguita la stessa operazione con il contenuto del file di
 
 È anche possibile notare che l'obiettivo Sharpie ha annotato l'associazione con `[Verify]` attributi. Questi attributi indicano che è necessario verificare che l'obiettivo Sharpie abbia fatto la corretta operazione confrontando l'associazione con la dichiarazione C/Objective-C originale (che verrà fornita in un commento sopra la dichiarazione associata). Una volta verificate le associazioni, è necessario rimuovere l'attributo Verify. Per ulteriori informazioni, vedere la guida alla [Verifica](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 A questo punto, il progetto di associazione deve essere completo e pronto per la compilazione. Si creerà il progetto di binding e si assicurerà che non si siano verificati errori:
 
 [Compilare il progetto di associazione e verificare che non siano presenti errori](walkthrough-images/os12.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 A questo punto, il progetto di associazione deve essere completo e pronto per la compilazione. Si creerà il progetto di binding e si assicurerà che non si siano verificati errori.
 
@@ -503,9 +507,9 @@ A questo punto, il progetto di associazione deve essere completo e pronto per la
 
 Seguire questa procedura per creare un'applicazione iPhone di esempio per usare la libreria di binding iOS creata in precedenza:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. **Creare un progetto Xamarin.iOS** : aggiungere un nuovo progetto Xamarin.iOS denominato **InfColorPickerSample** alla soluzione, come illustrato nelle schermate seguenti:
+1. **Creare un progetto Novell. iOS** : aggiungere un nuovo progetto Novell. iOS denominato **InfColorPickerSample** alla soluzione, come illustrato nelle schermate seguenti:
 
     ![](walkthrough-images/use01.png "Adding a Single View App")
 
@@ -519,17 +523,17 @@ Seguire questa procedura per creare un'applicazione iPhone di esempio per usare 
 
     ![](walkthrough-images/use03.png "Adding a Button to the view")
 
-1. **Aggiungere InfColorPickerView. xib** -la libreria InfColorPicker Objective-C include un file con **estensione XIB** . Xamarin.iOS non includerà questo **. xib** nel progetto di associazione, che causerà errori di run-time nell'applicazione di esempio. La soluzione alternativa consiste nell'aggiungere il file con **estensione XIB** al progetto Xamarin.iOS. Selezionare il progetto Xamarin.iOS, fare clic con il pulsante destro del mouse e scegliere **aggiungi > Aggiungi file**e aggiungere il file con **estensione XIB** come illustrato nello screenshot seguente:
+1. **Aggiungere InfColorPickerView. xib** -la libreria InfColorPicker Objective-C include un file con **estensione XIB** . Novell. iOS non includerà questo **. xib** nel progetto di associazione, che causerà errori di run-time nell'applicazione di esempio. La soluzione alternativa consiste nell'aggiungere il file con **estensione XIB** al progetto Novell. iOS. Selezionare il progetto Novell. iOS, fare clic con il pulsante destro del mouse e scegliere **aggiungi > Aggiungi file**e aggiungere il file con **estensione XIB** come illustrato nello screenshot seguente:
 
     ![](walkthrough-images/use04.png "Add the InfColorPickerView.xib")
 
 1. Quando viene richiesto, copiare il file con **estensione XIB** nel progetto.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. **Creare un progetto Xamarin.iOS** : aggiungere un nuovo progetto Xamarin.iOS denominato **InfColorPickerSample** usando il modello di **app visualizzazione singola** :
+1. **Creare un progetto Novell. iOS** : aggiungere un nuovo progetto Novell. iOS denominato **InfColorPickerSample** usando il modello di **app visualizzazione singola** :
 
-    [progetto![app iOS (Xamarin)](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
+    [progetto ![app iOS (Novell)](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
     [![selezionare il modello](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
@@ -541,13 +545,13 @@ Seguire questa procedura per creare un'applicazione iPhone di esempio per usare 
 
     ![](walkthrough-images/use03vs.png "Create the iPhone User Interface")
 
-1. **Aggiungere InfColorPickerView. xib** -la libreria InfColorPicker Objective-C include un file con **estensione XIB** . Xamarin.iOS non includerà questo **. xib** nel progetto di associazione, che causerà errori di run-time nell'applicazione di esempio. La soluzione alternativa consiste nell'aggiungere il file con **estensione XIB** al progetto Xamarin.iOS dall'host di **compilazione Mac**. Selezionare il progetto Xamarin.iOS, fare clic con il pulsante destro del mouse e scegliere **aggiungi** > **elemento esistente**e aggiungere il file **. xib** .
+1. **Aggiungere InfColorPickerView. xib** -la libreria InfColorPicker Objective-C include un file con **estensione XIB** . Novell. iOS non includerà questo **. xib** nel progetto di associazione, che causerà errori di run-time nell'applicazione di esempio. La soluzione alternativa consiste nell'aggiungere il file con **estensione XIB** al progetto Novell. iOS dall'host di **compilazione Mac**. Selezionare il progetto Novell. iOS, fare clic con il pulsante destro del mouse e scegliere **aggiungi** > **elemento esistente**e aggiungere il file **. xib** .
 
 -----
 
 Verranno ora esaminati rapidamente i protocolli in Objective-C e il modo in cui vengono gestiti nel binding e C# nel codice.
 
-### <a name="protocols-and-xamarinios"></a>Protocolli e Xamarin.iOS
+### <a name="protocols-and-xamarinios"></a>Protocolli e Novell. iOS
 
 In Objective-C, un protocollo definisce i metodi (o messaggi) che possono essere usati in determinate circostanze. Concettualmente, sono molto simili alle interfacce in C#. Una delle differenze principali tra un protocollo Objective-C e C# un'interfaccia è che i protocolli possono avere metodi facoltativi che non devono essere implementati da una classe. Objective-C usa la parola chiave @optional viene usata per indicare quali metodi sono facoltativi. Per ulteriori informazioni sui protocolli [, vedere eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 
@@ -582,11 +586,11 @@ public partial interface InfColorPickerControllerDelegate {
 
 ```
 
-Quando viene compilata la libreria di associazione, Xamarin.iOS creerà una classe base astratta denominata `InfColorPickerControllerDelegate`, che implementa questa interfaccia con i metodi virtuali.
+Quando viene compilata la libreria di associazione, Novell. iOS creerà una classe base astratta denominata `InfColorPickerControllerDelegate`, che implementa questa interfaccia con i metodi virtuali.
 
-È possibile implementare questa interfaccia in un'applicazione Xamarin.iOS in due modi:
+È possibile implementare questa interfaccia in un'applicazione Novell. iOS in due modi:
 
-- Il **delegato sicuro** : l'uso di un delegato sicuro C# comporta la creazione di una classe che esegue le sottoclassi`InfColorPickerControllerDelegate`ed esegue l'override dei metodi appropriati. **InfColorPickerController** utilizzerà un'istanza di questa classe per comunicare con i relativi client.
+- Il **delegato sicuro** : l'uso di un delegato sicuro C# comporta la creazione di una classe che esegue le sottoclassi `InfColorPickerControllerDelegate` ed esegue l'override dei metodi appropriati. **InfColorPickerController** utilizzerà un'istanza di questa classe per comunicare con i relativi client.
 - **Delegato debole** : un delegato debole è una tecnica leggermente diversa che prevede la creazione di un metodo pubblico in una classe, ad esempio `InfColorPickerSampleViewController`, e quindi l'esposizione del metodo al protocollo di `InfColorPickerDelegate` tramite un attributo `Export`.
 
 I delegati Strong forniscono IntelliSense, indipendenza dai tipi e incapsulamento migliore. Per questi motivi, è consigliabile usare delegati sicuri, in cui è possibile, anziché un delegato vulnerabile.
@@ -595,7 +599,7 @@ In questa procedura dettagliata verranno illustrate entrambe le tecniche: implem
 
 ### <a name="implementing-a-strong-delegate"></a>Implementazione di un delegato sicuro
 
-Terminare l'applicazione Xamarin.iOS usando un delegato sicuro per rispondere al messaggio di `colorPickerControllerDidFinish:`:
+Terminare l'applicazione Novell. iOS usando un delegato sicuro per rispondere al messaggio di `colorPickerControllerDidFinish:`:
 
 **Sottoclasse InfColorPickerControllerDelegate** : aggiungere una nuova classe al progetto denominato `ColorSelectedDelegate`. Modificare la classe in modo che disponga del codice seguente:
 
@@ -623,7 +627,7 @@ namespace InfColorPickerSample
 }
 ```
 
-Xamarin.iOS eseguirà il binding del delegato Objective-C creando una classe base astratta denominata `InfColorPickerControllerDelegate`. Sottoclassare questo tipo ed eseguire l'override del metodo `ColorPickerControllerDidFinish` per accedere al valore della proprietà `ResultColor` di `InfColorPickerController`.
+Novell. iOS eseguirà il binding del delegato Objective-C creando una classe base astratta denominata `InfColorPickerControllerDelegate`. Sottoclassare questo tipo ed eseguire l'override del metodo `ColorPickerControllerDidFinish` per accedere al valore della proprietà `ResultColor` di `InfColorPickerController`.
 
 **Creare un'istanza di ColorSelectedDelegate** : il gestore eventi richiederà un'istanza del tipo di `ColorSelectedDelegate` creato nel passaggio precedente. Modificare la classe `InfColorPickerSampleViewController` e aggiungere la variabile di istanza seguente alla classe:
 
@@ -663,11 +667,11 @@ Per prima cosa si ottiene un'istanza di `InfColorPickerController` tramite un me
 
 [![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
 
-La procedura è stata completata. A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Xamarin.iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
+Congratulazioni! A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Novell. iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
 
 ### <a name="implementing-a-weak-delegate"></a>Implementazione di un delegato vulnerabile
 
-Anziché sottoclassare una classe associata al protocollo Objective-C per un delegato particolare, Xamarin.iOS consente anche di implementare i metodi di protocollo in qualsiasi classe che deriva da `NSObject`, decorare i metodi con l'`ExportAttribute`e quindi fornire il selettori appropriati. Quando si accetta questo approccio, si assegna un'istanza della classe alla proprietà `WeakDelegate` anziché alla proprietà `Delegate`. Un delegato debole offre la flessibilità necessaria per portare la classe Delegate a una gerarchia di ereditarietà diversa. Vediamo come implementare e usare un delegato debole nell'applicazione Xamarin.iOS.
+Anziché sottoclassare una classe associata al protocollo Objective-C per un delegato particolare, Novell. iOS consente anche di implementare i metodi di protocollo in qualsiasi classe che deriva da `NSObject`, decorare i metodi con l'`ExportAttribute`e quindi fornire i selettori appropriati. Quando si accetta questo approccio, si assegna un'istanza della classe alla proprietà `WeakDelegate` anziché alla proprietà `Delegate`. Un delegato debole offre la flessibilità necessaria per portare la classe Delegate a una gerarchia di ereditarietà diversa. Vediamo come implementare e usare un delegato debole nell'applicazione Novell. iOS.
 
 **Crea gestore eventi per TouchUpInside** : consente di creare un nuovo gestore eventi per l'evento `TouchUpInside` del pulsante cambia colore di sfondo. Questo gestore riempirà lo stesso ruolo del gestore `HandleTouchUpInsideWithStrongDelegate` creato nella sezione precedente, ma userà un delegato debole anziché un delegato forte. Modificare la classe `ViewController`e aggiungere il metodo seguente:
 
@@ -704,15 +708,14 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 ```
 
-Eseguire l'applicazione. Dovrebbe ora comportarsi esattamente come in precedenza, ma usa un delegato debole anziché il delegato forte. A questo punto è stata completata questa procedura dettagliata. A questo punto è necessario comprendere come creare e utilizzare un progetto di binding Xamarin.iOS.
+Eseguire l'applicazione. Dovrebbe ora comportarsi esattamente come in precedenza, ma usa un delegato debole anziché il delegato forte. A questo punto è stata completata questa procedura dettagliata. A questo punto è necessario comprendere come creare e utilizzare un progetto di binding Novell. iOS.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il processo di creazione e uso di un progetto di binding Xamarin.iOS. In primo luogo è stato illustrato come compilare una libreria Objective-C esistente in una libreria statica. È stato quindi illustrato come creare un progetto di binding Xamarin.iOS e come usare Objective Sharpie per generare le definizioni API per la libreria Objective-C. È stato illustrato come aggiornare e modificare le definizioni delle API generate per renderle appropriate per l'utilizzo pubblico. Al termine del progetto di binding Xamarin.iOS, si è passati a usare tale binding in un'applicazione Xamarin.iOS, con particolare attenzione all'uso di delegati sicuri e delegati vulnerabili.
+Questo articolo ha illustrato il processo di creazione e uso di un progetto di binding Novell. iOS. In primo luogo è stato illustrato come compilare una libreria Objective-C esistente in una libreria statica. È stato quindi illustrato come creare un progetto di binding Novell. iOS e come usare Objective Sharpie per generare le definizioni API per la libreria Objective-C. È stato illustrato come aggiornare e modificare le definizioni delle API generate per renderle appropriate per l'utilizzo pubblico. Al termine del progetto di binding Novell. iOS, si è passati a usare tale binding in un'applicazione Novell. iOS, con particolare attenzione all'uso di delegati sicuri e delegati vulnerabili.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di binding (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Dettagli associazione](~/cross-platform/macios/binding/overview.md)
 - [Guida di riferimento ai tipi di binding](~/cross-platform/macios/binding/binding-types-reference.md)

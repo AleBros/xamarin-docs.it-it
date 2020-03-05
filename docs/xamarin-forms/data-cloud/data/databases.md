@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: HT
+ms.openlocfilehash: 52b227b0244a83ec4a7466cca7591c6b712f1c76
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728278"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "78292300"
 ---
 # <a name="xamarinforms-local-databases"></a>Database locali Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-Il motore di database SQLite consente alle applicazioni Xamarin.Forms di caricare e salvare oggetti dati nel codice condiviso. Nell'applicazione di esempio viene utilizzata una tabella di database SQLite per archiviare gli elementi todo. Questo articolo descrive come usare SQLite.Net nel codice condiviso per archiviare e recuperare le informazioni in un database locale.
+Il motore di database SQLite consente alle applicazioni Novell. Forms di caricare e salvare oggetti dati nel codice condiviso. Nell'applicazione di esempio viene utilizzata una tabella di database SQLite per archiviare gli elementi todo. Questo articolo descrive come usare SQLite.Net nel codice condiviso per archiviare e recuperare le informazioni in un database locale.
 
 [![screenshot dell'app Todo in iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "App Todo in iOS e Android")
 
@@ -27,7 +27,7 @@ Integrare SQLite.NET nelle app per dispositivi mobili attenendosi alla procedura
 1. [Installare il pacchetto NuGet](#install-the-sqlite-nuget-package).
 1. [Configurare le costanti](#configure-app-constants).
 1. [Creare una classe di accesso al database](#create-a-database-access-class).
-1. [Accedere ai dati in Xamarin.Forms](#access-data-in-xamarinforms).
+1. [Accedere ai dati in Novell. Forms](#access-data-in-xamarinforms).
 1. [Configurazione avanzata](#advanced-configuration).
 
 ## <a name="install-the-sqlite-nuget-package"></a>Installare il pacchetto NuGet SQLite
@@ -38,7 +38,7 @@ Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha qu
 
 - **Creato da:** Frank A. Krueger
 - **ID:** sqlite-net-PCL
-- **Collegamento NuGet:** [sqlite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Collegamento a NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
 > Nonostante il nome del pacchetto, usare il pacchetto NuGet **sqlite-net-pcl** anche nei progetti .NET Standard.
@@ -92,7 +92,7 @@ Una classe wrapper di database astrae il livello di accesso ai dati dal resto de
 
 ### <a name="lazy-initialization"></a>Inizializzazione differita
 
-Il `TodoItemDatabase` utilizza la classe .NET `Lazy` per ritardare l'inizializzazione del database fino a quando non viene eseguito per la prima volta. L'uso dell'inizializzazione differita impedisce al processo di caricamento del database di ritardare l'avvio dell'app. Per ulteriori informazioni, vedere [Lazy&lt;t&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+Il `TodoItemDatabase` utilizza la classe .NET `Lazy` per ritardare l'inizializzazione del database fino a quando non viene eseguito per la prima volta. L'uso dell'inizializzazione differita impedisce al processo di caricamento del database di ritardare l'avvio dell'app. Per ulteriori informazioni, vedere [Lazy&lt;t&gt; Class](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -175,7 +175,7 @@ Per altre informazioni, vedere [modello asincrono basato su attività (TAP)](htt
 La classe `TodoItemDatabase` include metodi per i quattro tipi di manipolazione dei dati: create, Read, Edit e DELETE. La libreria SQLite.NET fornisce una semplice mappa relazionale a oggetti (ORM) che consente di archiviare e recuperare oggetti senza scrivere istruzioni SQL.
 
 ```csharp
-public static class TodoItemDatabase {
+public class TodoItemDatabase {
 
     // ...
 
@@ -214,9 +214,9 @@ public static class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Xamarin.Forms
+## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Novell. Forms
 
-La classe `App` Xamarin.Forms espone un'istanza della classe `TodoItemDatabase`:
+La classe `App` Novell. Forms espone un'istanza della classe `TodoItemDatabase`:
 
 ```csharp
 public static TodoItemDatabase Database
@@ -232,7 +232,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-Questa proprietà consente ai componenti Xamarin.Forms di chiamare i metodi per il recupero e la manipolazione dei dati nell'istanza di `Database` in risposta all'interazione dell'utente. Ad esempio:
+Questa proprietà consente ai componenti Novell. Forms di chiamare i metodi per il recupero e la manipolazione dei dati nell'istanza di `Database` in risposta all'interazione dell'utente. Ad esempio,
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -279,7 +279,7 @@ In generale, lo stesso processo di trasferimento, ridenominazione o copia di un 
 - È necessario chiudere tutte le connessioni al database prima di tentare di spostare il file di database.
 - Se si usa la [registrazione write-ahead](#write-ahead-logging), SQLite creerà un file di accesso alla memoria condivisa (con estensione SHM) e un file (log write-ahead) (con estensione Wal). Assicurarsi di applicare anche le modifiche apportate a questi file.
 
-Per altre informazioni, vedere [gestione dei file in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md).
+Per altre informazioni, vedere [gestione dei file in Novell. Forms](~/xamarin-forms/data-cloud/data/files.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -289,4 +289,4 @@ Per altre informazioni, vedere [gestione dei file in Xamarin.Forms](~/xamarin-fo
 - [Uso di SQLite con Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Uso di SQLite con iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
 - [Modello asincrono basato su attività (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1)
+- [Lazy&lt;T&gt; classe](xref:System.Lazy`1)

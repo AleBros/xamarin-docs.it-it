@@ -1,5 +1,5 @@
 ---
-title: Pulsanti in Xamarin.iOS
+title: Pulsanti in Novell. iOS
 description: La classe UIButton viene usata per rappresentare diversi stili di pulsante nelle schermate iOS. Questa guida presenta le diverse opzioni per l'uso dei pulsanti in iOS.
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: a8dfd267fe9f5f838927fc216d53c2475398ed16
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 0619488199c202e1877e4cfa60d622ef247e2b3f
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022118"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "78292372"
 ---
-# <a name="buttons-in-xamarinios"></a>Pulsanti in Xamarin.iOS
+# <a name="buttons-in-xamarinios"></a>Pulsanti in Novell. iOS
 
 In iOS la classe `UIButton` rappresenta un controllo Button.
 
@@ -69,7 +69,7 @@ Le proprietà di un pulsante possono essere modificate a livello di codice o con
 Per rispondere al tocco di un pulsante, fornire un gestore per l'evento `TouchUpInside` del pulsante:
 
 ```csharp
-button.TouchUpInside += (sender, e) => {
+myButton.TouchUpInside += (sender, e) => {
     DoSomething();
 };
 ```
@@ -91,13 +91,13 @@ i controlli `UIButton` possono esistere in diversi Stati, ciascuno specificato d
 
 > [!NOTE]
 > Per un elenco completo di tutti i valori `UIControlState`, vedere l' [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
-> documentazione.
+> online.
 
 Ad esempio, per impostare il colore del titolo e il colore dell'ombreggiatura per `UIControlState.Normal`:
 
 ```csharp
-button.SetTitleColor(UIColor.White, UIControlState.Normal);
-button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
+myButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+myButton.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
 Il codice seguente imposta il titolo del pulsante su una stringa con attributi (stilizzata) per `UIControlState.Normal` e `UIControlState.Highlighted`:
@@ -115,9 +115,9 @@ myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlight
 I pulsanti con `UIButtonType` di `Custom` non hanno stili predefiniti. Tuttavia, è possibile configurare l'aspetto del pulsante impostando un'immagine per i diversi stati:
 
 ```csharp
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
 A seconda che l'utente tocchi o meno il pulsante, verrà eseguito il rendering come una delle immagini seguenti (rispettivamente`UIControlState.Normal`, `UIControlState.Highlighted` e `UIControlState.Selected` Stati):

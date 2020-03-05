@@ -1,22 +1,22 @@
 ---
-title: 'Xamarin.Essentials: Informazioni sul dispositivo'
+title: 'Xamarin.Essentials: Device Information'
 description: Questo documento descrive la classe DeviceInfo in Xamarin.Essentials, che fornisce informazioni sul dispositivo cui viene eseguita l'applicazione.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 29b67e4410a3549e4e2cd63121ffa2e2205e0941
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940808"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295417"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informazioni sul dispositivo
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Device Information
 
 La classe **DeviceInfo** fornisce informazioni sul dispositivo in cui viene eseguita l'applicazione.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -79,9 +79,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
-iOS non espone un'API per consentire agli sviluppatori di ottenere il nome del dispositivo iOS specifico. Viene invece restituito un identificatore hardware, ad esempio _iPhone10,6_ che fa riferimento all'iPhone X. Apple non mette a disposizione un mapping di questi identificatori, che è tuttavia reperibile in [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (una fonte non ufficiale).
+iOS non espone un'API che consente agli sviluppatori di ottenere il modello del dispositivo iOS specifico. Viene invece restituito un identificatore hardware, ad esempio _iPhone10, 6_ che fa riferimento a iPhone X. Un mapping di questi identificatori non viene fornito da Apple, ma si trova in queste fonti (non ufficiali) [il wiki di iPhone](https://www.theiphonewiki.com/wiki/Models) e [ottiene il modello iOS](https://github.com/dannycabrera/Get-iOS-Model).
 
 --------------
 

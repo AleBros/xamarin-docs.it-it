@@ -1,19 +1,19 @@
 ---
-title: Autorizzazioni in Xamarin.Android
+title: Autorizzazioni in Novell. Android
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 911f56026a1495099e81a542b30b280f26b6a9e1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025451"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292364"
 ---
-# <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Xamarin.Android
+# <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Novell. Android
 
 ## <a name="overview"></a>Panoramica
 
@@ -29,7 +29,7 @@ Le autorizzazioni vengono dichiarate in **file AndroidManifest. XML** dallo svil
 Le app Android devono verificare in fase di esecuzione per verificare se sono autorizzati ad accedere a una risorsa protetta. Se l'app non dispone delle autorizzazioni necessarie, deve effettuare richieste usando le nuove API fornite dal Android SDK per consentire all'utente di concedere le autorizzazioni. Le autorizzazioni sono divise in due categorie:
 
 - Le **normali autorizzazioni** &ndash; si tratta di autorizzazioni che comportano un rischio di sicurezza limitato per la sicurezza o la privacy dell'utente. Android 6,0 concederà automaticamente le autorizzazioni normali al momento dell'installazione. Per un [elenco completo delle autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html), vedere la documentazione di Android.
-- Le autorizzazioni **pericolose** &ndash; diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere esplicitamente concesse dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
+- Le autorizzazioni **pericolose** &ndash; diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere concesse in modo esplicito dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
 
 > [!IMPORTANT]
 > La categoria a cui appartiene un'autorizzazione può cambiare nel tempo.  È possibile che un'autorizzazione che è stata categorizzata come "normale" possa essere elevata nei livelli API futuri in un'autorizzazione pericolosa.
@@ -40,11 +40,11 @@ Prima di richiedere una o più autorizzazioni, è consigliabile fornire una spie
 
 L'intero flusso di lavoro per la verifica e la richiesta delle autorizzazioni è noto come controllo _delle autorizzazioni di run-time_ e può essere riepilogato nel diagramma seguente: 
 
-[grafico del flusso di controllo delle autorizzazioni di runtime![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
+[grafico del flusso di controllo delle autorizzazioni di runtime ![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 La libreria di supporto Android consente di eseguire il backporting di alcune delle nuove API per le autorizzazioni per le versioni precedenti di Android. Queste API sottoportate controlleranno automaticamente la versione di Android nel dispositivo, pertanto non è necessario eseguire ogni volta un controllo a livello di API.  
 
-Questo documento illustra come aggiungere autorizzazioni a un'applicazione Xamarin.Android e in che modo le app destinate a Android 6,0 (API level 23) o versione successiva devono eseguire un controllo delle autorizzazioni di Runtime.
+Questo documento illustra come aggiungere autorizzazioni a un'applicazione Novell. Android e in che modo le app destinate a Android 6,0 (API level 23) o versione successiva devono eseguire un controllo delle autorizzazioni di Runtime.
 
 > [!NOTE]
 > È possibile che le autorizzazioni per l'hardware possano influenzare il modo in cui l'app viene filtrata in base Google Play. Ad esempio, se l'app richiede l'autorizzazione per la fotocamera, Google Play non visualizzerà l'app nella Google Play Store su un dispositivo in cui non è installata una fotocamera.
@@ -53,7 +53,7 @@ Questo documento illustra come aggiungere autorizzazioni a un'applicazione Xamar
 
 ## <a name="requirements"></a>Requisiti
 
-Si consiglia vivamente che i progetti Xamarin.Android includano il pacchetto NuGet [Xamarin.Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Questo pacchetto backporting le API specifiche per le versioni precedenti di Android, offrendo un'interfaccia comune senza la necessità di verificare costantemente la versione di Android su cui è in esecuzione l'app.
+Si consiglia vivamente che i progetti Novell. Android includano il pacchetto NuGet [Novell. Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Questo pacchetto backporting le API specifiche per le versioni precedenti di Android, offrendo un'interfaccia comune senza la necessità di verificare costantemente la versione di Android su cui è in esecuzione l'app.
 
 ## <a name="requesting-system-permissions"></a>Richiesta delle autorizzazioni di sistema
 
@@ -75,7 +75,7 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'element
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 È possibile dichiarare le autorizzazioni utilizzando il supporto dello strumento incorporato in Visual Studio:
 
@@ -91,7 +91,7 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'element
 
     [![le autorizzazioni della fotocamera di esempio selezionate](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 È possibile dichiarare le autorizzazioni utilizzando il supporto dello strumento incorporato in Visual Studio per Mac:
 
@@ -109,7 +109,7 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'element
     
 -----
 
-Xamarin.Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, vengono `INTERNET` e `READ_EXTERNAL_STORAGE`due autorizzazioni rilevanti. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
+Novell. Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, vengono `INTERNET` e `READ_EXTERNAL_STORAGE`due autorizzazioni rilevanti. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
 
 Per le app destinate a Android 5.1 (livello API 22) o inferiore, non è necessario eseguire altre operazioni. Le app che verranno eseguite in Android 6,0 (API 23 Level 23) o versioni successive dovrebbero passare alla sezione successiva su come eseguire i controlli delle autorizzazioni in fase di esecuzione. 
 
@@ -213,4 +213,4 @@ Questa guida ha illustrato come aggiungere e verificare le autorizzazioni in un 
 
 - [Elenco di autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html)
 - [App di esempio per le autorizzazioni di runtime](https://github.com/xamarin/monodroid-samples/tree/master/android-m/RuntimePermissions)
-- [Gestione delle autorizzazioni in Xamarin.Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)
+- [Gestione delle autorizzazioni in Novell. Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)

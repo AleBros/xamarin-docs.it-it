@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 11f1d38eb10421d4ecef3e2039688b2d9a6d9e6e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: aab121ed5f811baf38eed48cf891ccdf076eaf44
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027823"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291643"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -79,5 +79,3 @@ Per un esempio di codice completo in cui viene usato Android Beam, illustrato ne
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo di Android Beam (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

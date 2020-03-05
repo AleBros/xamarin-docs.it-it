@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: a90c56102f77e3f64d9333eec03b025d24888977
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528371"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "78291585"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto
 
-È possibile che venga visualizzato un `The "LinkAssemblies" task failed unexpectedly` messaggio di errore quando si compila un progetto Xamarin.Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. Ulteriori informazioni: [Xamarin.Forms per i requisiti di Android](~/get-started/requirements.md#android))
+È possibile che venga visualizzato un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando si compila un progetto Novell. Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. (Altre informazioni: [piattaforme supportate per Novell. Forms](~/get-started/supported-platforms.md#android-platform-support))
 
 La risoluzione di questo problema consiste nel verificare che siano disponibili le versioni di Android SDK supportate più recenti e impostare il **Framework di destinazione** sulla piattaforma installata più recente. Si consiglia inoltre di impostare la versione di **Android di destinazione** sull'ultima piattaforma installata e la **versione minima di Android** sull'API 19 o successiva. Questa operazione è considerata la configurazione supportata.
 
@@ -24,7 +24,7 @@ La risoluzione di questo problema consiste nel verificare che siano disponibili 
 
 1. Fare clic con il pulsante destro del mouse sul progetto Android e scegliere **Opzioni** dal menu.
 2. Nella finestra di dialogo **Opzioni progetto** passare a **Compila > generale**.
-3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)**  alla piattaforma installata più recente.
+3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)** per la piattaforma installata più recente.
 4. Nella finestra di dialogo **Opzioni progetto** passare a **Compila > applicazione Android**.
 5. Impostare la **versione minima di Android** sul livello API 19 o versione successiva e la **versione di Android di destinazione** sull'ultima piattaforma installata scelta in (3).
 
@@ -32,7 +32,7 @@ La risoluzione di questo problema consiste nel verificare che siano disponibili 
 
 1. Fare clic con il pulsante destro del mouse sul progetto Android e scegliere **appropriate** nel menu.
 2. Nelle proprietà del progetto passare a **applicazione**.
-3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)**  alla piattaforma installata più recente.
+3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)** per la piattaforma installata più recente.
 4. Nelle proprietà del progetto passare a **manifesto Android**.
 5. Impostare la **versione minima di Android** sul livello API 19 o versione successiva e la **versione di Android di destinazione** sull'ultima piattaforma installata scelta in (3).
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 62859e19c533d7b200833996b44a65cb275805c6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 6180896002d19c51bce47bf53aaecdc11b0cae6e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029258"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292085"
 ---
-# <a name="xamarinandroid-edit-text"></a>Testo di modifica di Xamarin.Android
+# <a name="xamarinandroid-edit-text"></a>Testo di modifica di Novell. Android
 
 In questa sezione si userà il widget [EDITTEXT](xref:Android.Widget.EditText) per creare un campo di testo per l'input dell'utente. Una volta immesso il testo nel campo, il tasto **invio** visualizzerà il testo in un messaggio di avviso popup.
 
-Aprire **Resources/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEXT](xref:Android.Widget.EditText) a un layout contenitore. Nell'esempio seguente **activity_main. aXML** include un `EditText` che è stato aggiunto a una `LinearLayout`:
+Aprire **risorse/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEXT](xref:Android.Widget.EditText) a un layout contenitore. Nell'esempio seguente **activity_main. aXML** dispone di un `EditText` che è stato aggiunto a un `LinearLayout`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +44,7 @@ Per gestire l'input di testo dell'utente, aggiungere il codice seguente alla fin
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
 edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
     e.Handled = false;
-    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) 
+    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
     {
         Toast.MakeText(this, edittext.Text, ToastLength.Short).Show();
         e.Handled = true;
@@ -64,7 +64,7 @@ Eseguire l'applicazione e immettere testo nel campo di testo. Quando si preme il
 
 [![esempi di immissione di testo in EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e* [*condivise dal progetto open source Android*](https://code.google.com/policies.html) *e usate in base alle condizioni descritte nella* [*licenza Creative Commons 2,5 Attribution*](https://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione relativa ai* [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella* [*licenza Creative Commons 2,5 Attribution*](https://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione relativa ai* [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## <a name="related-links"></a>Collegamenti correlati
 

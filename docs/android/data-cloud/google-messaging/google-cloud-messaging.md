@@ -7,23 +7,23 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2019
-ms.openlocfilehash: 742555da24120eaeadcc4b6232b24d23f41da283
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: e9b0337c9cdcfbd8f738a11c5dffff427df620bc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023709"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292084"
 ---
 # <a name="google-cloud-messaging"></a>Google Cloud Messaging
 
 > [!WARNING]
 > Google deprecato GCM a partire dal 10 aprile 2018. I documenti e i progetti di esempio seguenti potrebbero non essere più gestiti. Il server GCM di Google e le API client verranno rimossi non appena il 29 maggio 2019. Google consiglia di eseguire la migrazione di app GCM a Firebase Cloud Messaging (FCM). Per altre informazioni sulla deprecazione e la migrazione di GCM, vedere la pagina relativa alla [messaggistica cloud deprecata di Google](https://developers.google.com/cloud-messaging/).
 >
-> Per iniziare a usare la messaggistica cloud Firebase con Xamarin, vedere [Firebase Cloud Messaging](firebase-cloud-messaging.md).
+> Per iniziare a usare la messaggistica cloud Firebase con Novell, vedere [Firebase Cloud Messaging](firebase-cloud-messaging.md).
 
 _Google Cloud Messaging (GCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. Questo articolo fornisce una panoramica del funzionamento di GCM e spiega come configurare i servizi Google in modo che l'app possa usare GCM._
 
-[logo Google Cloud Messaging![](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
+[logo Google Cloud Messaging ![](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
 
 Questo argomento fornisce una panoramica di alto livello del modo in cui Google Cloud Messaging instrada i messaggi tra l'app e un server app e fornisce una procedura dettagliata per l'acquisizione delle credenziali in modo che l'app possa usare i servizi GCM.
 
@@ -35,11 +35,9 @@ Google Cloud Messaging (GCM) è un servizio che gestisce l'invio, il routing e l
 
 Usando GCM, i server app possono inviare messaggi a un singolo dispositivo, a un gruppo di dispositivi o a un numero di dispositivi che hanno sottoscritto un argomento. L'app client può usare GCM per sottoscrivere i messaggi downstream da un server app (ad esempio, per ricevere notifiche remote). GCM consente inoltre alle app client di inviare messaggi upstream al server app.
 
-Per informazioni sull'implementazione di un server app per GCM, vedere [informazioni sul server di connessione GCM](https://developers.google.com/cloud-messaging/server).
-
 ## <a name="google-cloud-messaging-in-action"></a>Google Cloud Messaging in azione
 
-Quando i messaggi downstream vengono inviati da un server app a un'app client, il server app invia il messaggio a un *server di connessione di GCM*. il server di connessione GCM, a sua volta, trasmette il messaggio a un dispositivo che esegue l'app client. I messaggi possono essere inviati tramite HTTP o [XMPP](https://developers.google.com/cloud-messaging/ccs) (Extensible Messaging and Presence Protocol). Poiché le app client non sono sempre connesse o in esecuzione, il server di connessione GCM Accoda e archivia i messaggi, inviarli alle app client quando si riconnettono e diventano disponibili. Analogamente, GCM accoda i messaggi upstream dall'app client al server app se il server app non è disponibile.
+Quando i messaggi downstream vengono inviati da un server app a un'app client, il server app invia il messaggio a un *server di connessione di GCM*. il server di connessione GCM, a sua volta, trasmette il messaggio a un dispositivo che esegue l'app client. I messaggi possono essere inviati tramite HTTP o [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (Extensible Messaging and Presence Protocol). Poiché le app client non sono sempre connesse o in esecuzione, il server di connessione GCM Accoda e archivia i messaggi, inviarli alle app client quando si riconnettono e diventano disponibili. Analogamente, GCM accoda i messaggi upstream dall'app client al server app se il server app non è disponibile.
 
 GCM usa le credenziali seguenti per identificare il server app e l'app client e usa queste credenziali per autorizzare le transazioni dei messaggi tramite GCM:
 
@@ -61,7 +59,7 @@ Le sezioni seguenti illustrano come usare queste credenziali quando le app clien
 
 Prima di eseguire la messaggistica, è necessario che un'app client installata in un dispositivo si registri prima con GCM. L'app client deve completare la procedura di registrazione illustrata nel diagramma seguente:
 
-[procedura di registrazione di![app](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
+[procedura di registrazione di ![app](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1. L'app client contatta GCM per ottenere un token di registrazione, passando l'ID mittente a GCM.
 
@@ -74,13 +72,11 @@ Il server app memorizza nella cache il token di registrazione per le comunicazio
 Quando l'app client non desidera più ricevere messaggi dal server app, può inviare una richiesta al server app per eliminare il token di registrazione. Se l'app client riceve messaggi di argomento, descritti più avanti in questo articolo, è possibile annullare la sottoscrizione dell'argomento.
 Se l'app client viene disinstallata da un dispositivo, GCM lo rileva e invia automaticamente una notifica al server app per eliminare il token di registrazione.
 
-Google sta [registrando le app client](https://developers.google.com/cloud-messaging/registration) illustra il processo di registrazione in modo più dettagliato. viene illustrata l'annullamento della registrazione e l'annullamento della sottoscrizione e viene descritto il processo di annullamento della registrazione quando viene disinstallata un'app client.
-
 ### <a name="downstream-messaging"></a>Messaggistica downstream
 
 Quando il server applicazioni Invia un messaggio downstream all'app client, segue i passaggi illustrati nel diagramma seguente:
 
-[diagramma di archiviazione e di avanzamento della messaggistica![downstream](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
+[diagramma di archiviazione e di avanzamento della messaggistica ![downstream](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
 
 1. Il server app invia il messaggio a GCM.
 
@@ -96,15 +92,15 @@ Per informazioni dettagliate (inclusi esempi di codice) sulla ricezione di messa
 
 #### <a name="topic-messaging"></a>Messaggistica degli argomenti
 
-La *messaggistica degli argomenti* è un tipo di messaggistica downstream in cui il server applicazioni Invia un singolo messaggio a più dispositivi dell'app client che sottoscrivono un argomento, ad esempio una previsione meteorologica. I messaggi di argomento possono avere una lunghezza fino a 2 KB e la messaggistica degli argomenti supporta fino a 1 milione sottoscrizioni per app. Se GCM viene usato solo per la messaggistica degli argomenti, l'app client non è necessaria per inviare un token di registrazione al server app. La [messaggistica dell'argomento di implementazione](https://developers.google.com/cloud-messaging/topic-messaging) di Google spiega come inviare messaggi da un server app a più dispositivi che sottoscrivono un argomento specifico.
+La *messaggistica degli argomenti* è un tipo di messaggistica downstream in cui il server applicazioni Invia un singolo messaggio a più dispositivi dell'app client che sottoscrivono un argomento, ad esempio una previsione meteorologica. I messaggi di argomento possono avere una lunghezza fino a 2 KB e la messaggistica degli argomenti supporta fino a 1 milione sottoscrizioni per app. Se GCM viene usato solo per la messaggistica degli argomenti, l'app client non è necessaria per inviare un token di registrazione al server app.
 
 #### <a name="group-messaging"></a>Messaggistica del gruppo
 
-La *messaggistica del gruppo* è un tipo di messaggistica downstream in cui il server app invia un singolo messaggio a più dispositivi dell'app client che appartengono a un gruppo (ad esempio, un gruppo di dispositivi che appartengono a un singolo utente). I messaggi di gruppo possono avere una lunghezza fino a 2 KB per i dispositivi iOS e fino a 4KB di lunghezza per i dispositivi Android. Un gruppo è limitato a un massimo di 20 membri. La [messaggistica del gruppo di dispositivi](https://developers.google.com/cloud-messaging/notifications) di Google spiega in che modo i server app possono inviare un singolo messaggio a più istanze di app client in esecuzione su dispositivi appartenenti a un gruppo.
+La *messaggistica del gruppo* è un tipo di messaggistica downstream in cui il server app invia un singolo messaggio a più dispositivi dell'app client che appartengono a un gruppo (ad esempio, un gruppo di dispositivi che appartengono a un singolo utente). I messaggi di gruppo possono avere una lunghezza fino a 2 KB per i dispositivi iOS e fino a 4KB di lunghezza per i dispositivi Android. Un gruppo è limitato a un massimo di 20 membri.
 
 ### <a name="upstream-messaging"></a>Messaggistica upstream
 
-Se l'app client si connette a un server che supporta [XMPP](https://developers.google.com/cloud-messaging/ccs), può inviare messaggi al server app come illustrato nel diagramma seguente:
+Se l'app client si connette a un server che supporta [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref), può inviare messaggi al server app come illustrato nel diagramma seguente:
 
 [![diagramma di messaggistica upstream](google-cloud-messaging-images/04-upstream-sml.png)](google-cloud-messaging-images/04-upstream.png#lightbox)
 
@@ -118,7 +114,7 @@ Se l'app client si connette a un server che supporta [XMPP](https://developers.g
 
 5. Il server app elabora il messaggio.
 
-[I messaggi upstream](https://developers.google.com/cloud-messaging/ccs#upstream) di Google spiegano come strutturare i messaggi con codifica JSON e come inviarli ai server app che eseguono il server di connessione cloud basato su XMPP di Google.
+[I messaggi upstream](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref#upstream) di Google spiegano come strutturare i messaggi con codifica JSON e come inviarli ai server app che eseguono il server di connessione cloud basato su XMPP di Google.
 
 <a name="settingup" />
 
@@ -132,7 +128,7 @@ Prima di poter usare i servizi GCM nell'app, è prima necessario acquisire le cr
 
     [![creazione di un progetto XamarinGCM](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
-2. Immettere quindi il nome del pacchetto per l'app (in questo esempio, il nome del pacchetto è **com. Xamarin.gcmexample**) e fare clic su **continua per scegliere e configurare i servizi**:
+2. Immettere quindi il nome del pacchetto per l'app (in questo esempio, il nome del pacchetto è **com. Novell. gcmexample**) e fare clic su **continua per scegliere e configurare i servizi**:
 
     [![immissione del nome del pacchetto](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png#lightbox)
 
@@ -164,8 +160,6 @@ Per visualizzare la **chiave API**, fare clic su **gestione API** e quindi fare 
 [![la visualizzazione della chiave API](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
 ## <a name="for-further-reading"></a>Ulteriori informazioni
-
-- Google [registra le app client](https://developers.google.com/cloud-messaging/registration) descrive il processo di registrazione client in modo più dettagliato e fornisce informazioni sulla configurazione del nuovo tentativo automatico e sulla sincronizzazione dello stato di registrazione.
 
 - [Rfc 6120](https://tools.ietf.org/html/rfc6120) e [RFC 6121](https://tools.ietf.org/html/rfc6121) spiegano e definiscono il protocollo XMPP (Extensible Messaging and Presence Protocol).
 

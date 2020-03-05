@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.openlocfilehash: fd9bced0d2185fd9bd0d18932921c101b2ed207c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489089"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292990"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive ai Framework iOS 9
 
@@ -51,17 +51,16 @@ Per ulteriori informazioni, vedere la documentazione relativa [al multitasking p
 
 Il Framework CloudKit semplifica lo sviluppo di applicazioni che accedono a iCloud. Questo include il recupero dei dati delle applicazioni e dei diritti degli asset, nonché la possibilità di archiviare in modo sicuro le informazioni sull'applicazione. Questo kit offre agli utenti un livello di anonimità consentendo l'accesso alle applicazioni con gli ID iCloud senza condividere le informazioni personali.
 
-Il nuovo Framework _dei servizi Web di CloudKit_ fornisce una libreria JavaScript (CloudKit js) che può essere incorporata nel sito Web per consentire l'accesso agli stessi dati e contenuti basati su CloudKit dell'app Xamarin.iOS.
+Il nuovo Framework _dei servizi Web di CloudKit_ fornisce una libreria JavaScript (CloudKit js) che può essere incorporata nel sito Web per consentire l'accesso agli stessi dati e contenuti basati su CloudKit dell'app Novell. iOS.
 
 > [!IMPORTANT]
 > Prima di poter accedere, presentare o aggiornare il contenuto da un database CloudKit usando CloudKit JS, è necessario aver definito in precedenza lo schema del database.
 
 Per ulteriori informazioni, consultare i documenti seguenti:
 
-- [Introduzione a CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) : Introduzione all'uso di CloudKit in un'app Xamarin.iOS.
+- [Introduzione a CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) : Introduzione all'uso di CloudKit in un'app Novell. iOS.
 - [CloudKit avvio rapido](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) -Introduzione a CloudKit di Apple.
 - Informazioni di [riferimento su CLOUDKIT JS](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -documentazione di Apple CloudKit js.
-- [Riferimento ai servizi Web di CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -riferimento di Apple che descrive l'interfaccia http a CloudKit.
 - [Catalogo di CloudKit: Introduzione a CloudKit (Cocoa e JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -app di esempio Apple con CloudKit e CloudKit js.
 
 > [!IMPORTANT]
@@ -101,7 +100,7 @@ Per altre informazioni, vedere la Guida di [riferimento per NSProcessInfo](https
 
 ### <a name="reacting-to-low-power-mode"></a>Reazione a una modalità a basso consumo
 
-Usare la proprietà `LowPowerModeEnabled` della classe [NSProcessInfo](xref:Foundation.NSProcessInfo) per determinare se la modalità a basso consumo è stata abilitata nel dispositivo iOS in cui è in esecuzione l'app. Ad esempio:
+Usare la proprietà `LowPowerModeEnabled` della classe [NSProcessInfo](xref:Foundation.NSProcessInfo) per determinare se la modalità a basso consumo è stata abilitata nel dispositivo iOS in cui è in esecuzione l'app. Ad esempio,
 
 ```csharp
 // Is the device in low power mode?
@@ -117,9 +116,9 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 Apple ha incluso le seguenti modifiche al Framework [HealthKit](xref:HealthKit) in iOS 9:
 
 - Supporto per l'eliminazione in blocco e il rilevamento dell'eliminazione di voci nel database HealthKit. Per ulteriori informazioni, vedere le informazioni di [riferimento sulle classi](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) e HKHealthStore di Apple.
-- Sono state aggiunte nuove categorie e caratteristiche di rilevamento alla classe `HKQuantityTypeIdentifier` (ad esempio `UVExposure`) e alla classe `HKCategoryTypeIdentifier` (ad esempio `OvulationTestResult`). Per ulteriori informazioni, vedere le informazioni di [riferimento sulle costanti HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) di Apple.
+- Sono state aggiunte nuove categorie e caratteristiche di rilevamento alla classe `HKQuantityTypeIdentifier` (ad esempio `UVExposure`) e alla classe `HKCategoryTypeIdentifier` (ad esempio `OvulationTestResult`). 
 
-Per altre informazioni sull'uso di HealthKit in Xamarin.iOS, vedere la documentazione [introduttiva di HealthKit](~/ios/platform/healthkit.md) .
+Per altre informazioni sull'uso di HealthKit in Novell. iOS, vedere la documentazione [introduttiva di HealthKit](~/ios/platform/healthkit.md) .
 
 ## <a name="local-authentication-framework-changes"></a>Modifiche al Framework di autenticazione locale
 
@@ -131,7 +130,7 @@ Apple ha incluso le seguenti modifiche al Framework di [autenticazione locale](x
 - Possibilità di usare il _contesto di autenticazione_ nelle chiamate keychain e il supporto per la valutazione degli elenchi di controllo di accesso keychain.
 - Possibilità di annullare un prompt utente dal codice.
 
-Per altre informazioni, vedere [Touch ID e Face ID con Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
+Per altre informazioni, vedere [Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md).
 
 ### <a name="lacontext-changes"></a>LAContext modifiche
 
@@ -156,24 +155,24 @@ Apple ha incluso le seguenti modifiche al Framework [MapKit](xref:MapKit) in iOS
 - I risultati della ricerca restituiti da MapKit e dalla classe [CLGeocoder](xref:CoreLocation.CLGeocoder) possono fornire anche il fuso orario del risultato.
 - È ora possibile personalizzare completamente le annotazioni della mappa presentate dall'app iOS usando la proprietà `DetailCalloutAccessoryView` della classe [MKAnnotationView](xref:MapKit.MKAnnotationView) .
 
-Per altre informazioni sull'uso delle mappe e delle annotazioni in Xamarin.iOS e sul [riferimento CLGeocoder](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) di Apple, vedere l'argomento relativo alle [mappe iOS](~/ios/user-interface/controls/ios-maps/index.md) e alla [procedura dettagliata-esplorazione delle annotazioni e sovrimpressioni nella](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) documentazione di MapKit.
+Per altre informazioni sull'uso delle mappe e delle annotazioni in Novell. iOS e sul [riferimento CLGeocoder](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) di Apple, vedere l'argomento relativo alle [mappe iOS](~/ios/user-interface/controls/ios-maps/index.md) e alla [procedura dettagliata-esplorazione delle annotazioni e sovrimpressioni nella](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) documentazione di MapKit.
 
 ## <a name="passkit-framework-additions"></a>Aggiunte a PassKit Framework
 
 Apple ha incluso le seguenti modifiche al Framework [PassKit](xref:PassKit) in iOS 9:
 
 - Apple Pay supporta ora sia le carte di credito sia le carte di credito, insieme alle schede di individuazione. Per ulteriori informazioni, vedere la sezione **reti di pagamento** del [riferimento alla classe PKPaymentRequest](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html#//apple_ref/doc/uid/TP40014832) di Apple.
-- Direttamente all'interno di un'app Xamarin.iOS, è ora possibile aggiungere reti di pagamento e emittenti di schede a Apple Pay. Per altri dettagli, vedere [riferimento alla classe PKAddPaymentPassViewController](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) di Apple.
+- Direttamente all'interno di un'app Novell. iOS, è ora possibile aggiungere reti di pagamento e emittenti di schede a Apple Pay. Per altri dettagli, vedere [riferimento alla classe PKAddPaymentPassViewController](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) di Apple.
 
-Per altre informazioni sull'uso di PassKit in Xamarin.iOS, vedere la documentazione [introduttiva di PassKit](~/ios/platform/passkit.md) .
+Per altre informazioni sull'uso di PassKit in Novell. iOS, vedere la documentazione [introduttiva di PassKit](~/ios/platform/passkit.md) .
 
 ## <a name="safari-services-framework-additions"></a>Aggiunte di Framework per i Servizi Safari
 
 Apple ha incluso le seguenti modifiche al Framework dei [Servizi Safari](xref:SafariServices) in iOS 9:
 
-- È ora possibile usare la nuova classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) per visualizzare il contenuto Web all'interno di un'app Xamarin.iOS. Offre la possibilità di condividere i dati e i cookie dei siti Web con l'app Safari e include diverse funzionalità di Safari, ad esempio lettore e riempimento automatico. [SFSafariViewController](xref:SafariServices.SFSafariViewController) funzionalità di un pulsante **Fine** che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
+- È ora possibile usare la nuova classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) per visualizzare il contenuto Web all'interno di un'app Novell. iOS. Offre la possibilità di condividere i dati e i cookie dei siti Web con l'app Safari e include diverse funzionalità di Safari, ad esempio lettore e riempimento automatico. [SFSafariViewController](xref:SafariServices.SFSafariViewController) include un pulsante **done** che restituirà gli utenti all'app al termine della visualizzazione del contenuto Web.
 
-Poiché la classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) è adatta per la visualizzazione di una singola pagina di contenuto Web, è consigliabile usarla per sostituire tutti i controlli [WKWebKit](xref:WebKit.WKWebView) o [UIWebView](xref:UIKit.UIWebView) all'interno delle app Xamarin.iOS esistenti.
+Poiché la classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) è adatta per la visualizzazione di una singola pagina di contenuto Web, è consigliabile usarla per sostituire tutti i controlli [WKWebKit](xref:WebKit.WKWebView) o [UIWebView](xref:UIKit.UIWebView) all'interno delle app Novell. iOS esistenti.
 
 ### <a name="displaying-a-website"></a>Visualizzazione di un sito Web
 
@@ -203,7 +202,7 @@ Per altre informazioni, vedere la Guida [introduttiva a 3D Touch](~/ios/platform
 
 Usando i metodi `FinishedLaunching (application, launchOptions)` o `WillFinishLaunching (Application, launchOptions)` della classe [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) , è ora possibile aprire un documento e modificarlo sul posto (anziché lavorare a una copia).
 
-Per supportare la nuova funzionalità di apertura sul posto, aggiungere la chiave di `LSSupportsOpeningDocumentsInPlace` al file **info. plist** dell'app Xamarin.iOS con un valore di `YES`.
+Per supportare la nuova funzionalità di apertura sul posto, aggiungere la chiave di `LSSupportsOpeningDocumentsInPlace` al file **info. plist** dell'app Novell. iOS con un valore di `YES`.
 
 Per ulteriori informazioni, vedere la Guida di [riferimento a UIApplicationDelegate](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) di Apple.
 
@@ -215,13 +214,13 @@ Per altri dettagli, vedere la [Guida alla gestione degli eventi di Apple per iOS
 
 ### <a name="fetching-tailored-content"></a>Recupero di contenuto personalizzato
 
-La nuova classe `NSDataAsset` consente a un'app Xamarin.iOS di recuperare contenuti personalizzati per la memoria e le funzionalità grafiche del dispositivo iOS in cui è attualmente in esecuzione.
+La nuova classe `NSDataAsset` consente a un'app Novell. iOS di recuperare contenuti personalizzati per la memoria e le funzionalità grafiche del dispositivo iOS in cui è attualmente in esecuzione.
 
 ### <a name="new-layout-anchors"></a>Nuovi ancoraggi del layout
 
-Le nuove classi di ancoraggio del layout `NSLayoutAnchor` e `NSLayoutDimension` funzionano con le nuove proprietà di ancoraggio della classe [UIView](xref:UIKit.UIView) (ad esempio `LeadingAnchor` e `WidthAnchor`) per semplificare il layout in iOS 9.
+Le nuove classi di ancoraggio del layout `NSLayoutAnchor` e `NSLayoutDimension` funzionano con le nuove proprietà di ancoraggio della classe [UIView](xref:UIKit.UIView) , ad esempio `LeadingAnchor` e `WidthAnchor`, per semplificare il layout in iOS 9.
 
-Per altre informazioni sull'uso delle classi di layout automatico e di dimensioni in un'app Xamarin.iOS e [riferimento NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)di Apple, riferimento a [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [riferimento a UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) per altre informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per altre informazioni sull'uso delle classi di layout automatico e di dimensioni in un'app Novell. iOS e [riferimento NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)di Apple, riferimento a [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [riferimento a UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) per altre informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ### <a name="new-readable-content-margins"></a>Nuovi margini di contenuto leggibili
 
@@ -253,7 +252,7 @@ Prima di iOS 9, i controlli [UIPickerView](xref:UIKit.UIPickerView) e [UIDatePic
 
 In iOS 9 questo ridimensionamento automatico non si verifica più e viene eseguito il rendering dei controlli a una larghezza di 320 punti su tutti i dispositivi iOS, indipendentemente dalle dimensioni dello schermo e dall'orientamento.
 
-Per correggere questa situazione, utilizzare le classi layout automatico e dimensioni per aggiungere la larghezza del controllo ai bordi del contenitore padre (visualizzazione) e specificare l'altezza richiesta. Per altre informazioni sull'uso del layout automatico e delle classi di dimensioni in un'app Xamarin.iOS, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per correggere questa situazione, utilizzare le classi layout automatico e dimensioni per aggiungere la larghezza del controllo ai bordi del contenitore padre (visualizzazione) e specificare l'altezza richiesta. Per altre informazioni sull'uso del layout automatico e delle classi di dimensioni in un'app Novell. iOS, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ### <a name="new-uitextinputassistantitem-class"></a>Nuova classe UITextInputAssistantItem
 

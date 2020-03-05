@@ -1,20 +1,20 @@
 ---
-title: Scorrimento CarouselView Xamarin.Forms
+title: Scorrimento CarouselView Novell. Forms
 description: Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CarouselView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione.
 ms.prod: xamarin
 ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.date: 01/28/2020
+ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489752"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78291536"
 ---
-# <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Xamarin.Forms
+# <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Novell. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -132,7 +132,7 @@ Questo codice di esempio genera lo scorrimento minimo necessario per scorrere l'
 > [!NOTE]
 > Il membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) viene usato per impostazione predefinita, se non viene specificato l'argomento `position` quando si chiama il metodo di `ScrollTo`.
 
-### <a name="start"></a>Inizio
+### <a name="start"></a>Inizia
 
 Il membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato all'inizio della visualizzazione:
 
@@ -195,7 +195,7 @@ CarouselView carouselView = new CarouselView
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento saranno visibili, anche quando il contenuto si adatterà alla visualizzazione.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non saranno visibili, anche se il contenuto non rientra nella visualizzazione.
 
-## <a name="snap-points"></a>Punti di ancoraggio
+## <a name="snap-points"></a>Punti di aggancio
 
 Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto ed è controllato dalle proprietà seguenti della classe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
 
@@ -217,6 +217,10 @@ L'enumerazione [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) definisce i
 
 Per impostazione predefinita, in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `SnapPointsType.MandatorySingle`, in modo da garantire che lo scorrimento scorra un solo elemento alla volta.
 
+Gli screenshot seguenti mostrano un [`CarouselView`](xref:Xamarin.Forms.CarouselView) con l'allineamento disattivato:
+
+[![Screenshot di un CarouselView senza punti di aggancio, in iOS e Android](scrolling-images/snappoints-none.png "CarouselView senza punti di aggancio")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView senza punti di aggancio")
+
 ### <a name="snap-points-alignment"></a>Allineamento punti di aggancio
 
 L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center`e `End`.
@@ -224,7 +228,7 @@ L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) d
 > [!IMPORTANT]
 > Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory`o `MandatorySingle`.
 
-#### <a name="start"></a>Inizio
+#### <a name="start"></a>Inizia
 
 Il membro `SnapPointsAlignment.Start` indica che i punti di allineamento sono allineati al bordo di elementi iniziali. Nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
 
@@ -254,7 +258,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento a sinistra verrà allineato a sinistra della visualizzazione.
+Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento a sinistra verrà allineato a sinistra della visualizzazione:
+
+[![Screenshot di un CarouselView con punti di aggancio iniziali, in iOS e Android](scrolling-images/snappoints-start.png "CarouselView con punti di aggancio iniziali")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView con punti di aggancio iniziali")
 
 #### <a name="center"></a>Center
 
@@ -288,7 +294,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento centrale verrà allineato al centro della visualizzazione.
+Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento centrale verrà allineato al centro della visualizzazione:
+
+[![Screenshot di un CarouselView con punti di allineamento al centro, in iOS e Android](scrolling-images/snappoints-center.png "CarouselView con punti di allineamento centrali")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView con punti di allineamento centrali")
 
 #### <a name="end"></a>Fine
 
@@ -321,6 +329,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento a destra verrà allineato a destra della visualizzazione.
+
+[![Screenshot di un CarouselView con punti di blocco finali, in iOS e Android](scrolling-images/snappoints-end.png "CarouselView con punti di allineamento finali")](scrolling-images/snappoints-end-large.png#lightbox "CarouselView con punti di allineamento finali")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,5 +1,5 @@
 ---
-title: Selettori Objective-C in Xamarin.iOS
+title: Selettori Objective-C in Novell. iOS
 description: In questo documento viene illustrato come interagire con i selettori Objective C#-C da. Viene descritto come richiamare i selettori e le considerazioni tecniche che devono essere presi in considerazione quando si esegue questa operazione.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017
-ms.openlocfilehash: 79f226c137c3ab6b1dd2de9f92cb868056aa9d59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 2a4d255500f68497fe7cb0cc439c5f9c0504b0f2
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022281"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292516"
 ---
-# <a name="objective-c-selectors-in-xamarinios"></a>Selettori Objective-C in Xamarin.iOS
+# <a name="objective-c-selectors-in-xamarinios"></a>Selettori Objective-C in Novell. iOS
 
-Il linguaggio Objective-C si basa su *selettori*. Un selettore è un messaggio che può essere inviato a un oggetto o a una *classe*. [Xamarin.iOS](~/ios/internals/api-design/index.md) esegue il mapping di selettori di istanza ai metodi di istanza e ai selettori di classe per i metodi statici.
+Il linguaggio Objective-C si basa su *selettori*. Un selettore è un messaggio che può essere inviato a un oggetto o a una *classe*. [Novell. iOS](~/ios/internals/api-design/index.md) esegue il mapping di selettori di istanza ai metodi di istanza e ai selettori di classe per i metodi statici.
 
 Diversamente dalle normali funzioni C (e come C++ le funzioni membro), non è possibile richiamare direttamente un selettore usando [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) , i selettori vengono inviati a una classe Objective-C o a un'istanza usando il [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-funzione.
+.
 
 Per ulteriori informazioni sui messaggi in Objective-C, vedere la guida sull' [utilizzo degli oggetti](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) di Apple.
 
@@ -38,17 +38,17 @@ Questa API presenta le caratteristiche seguenti:
 - Il tipo restituito è `CGSize` per l'API unificata.
 - Il `font` parametro è un [UIFont](xref:UIKit.UIFont) (e un tipo (indirettamente) derivato da [NSObject](xref:Foundation.NSObject)ed è mappato a [System. IntPtr](xref:System.IntPtr).
 - Viene eseguito il mapping del parametro `width`, un `CGFloat`, al `nfloat`.
-- Il parametro `lineBreakMode`, un [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in Xamarin.iOS come [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
+- Il parametro `lineBreakMode`, un [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in Novell. iOS come [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 Enumerazione.
 
 Riunendola, il `objc_msgSend` dichiarazione deve corrispondere:
 
 ```csharp
 CGSize objc_msgSend(
-    IntPtr target, 
-    IntPtr selector, 
-    IntPtr font, 
-    nfloat width, 
+    IntPtr target,
+    IntPtr selector,
+    IntPtr font,
+    nfloat width,
     UILineBreakMode mode
 );
 ```
@@ -58,7 +58,7 @@ Dichiararlo come segue:
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
 static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -76,7 +76,7 @@ nfloat width = ...
 UILineBreakMode mode = ...
 
 CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
-    target.Handle, 
+    target.Handle,
     selector.Handle,
     font == null ? IntPtr.Zero : font.Handle,
     width,
@@ -90,7 +90,7 @@ Se il valore restituito fosse una struttura di dimensioni inferiori a 8 byte, ad
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
 static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
     out CGSize retval,
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -111,7 +111,7 @@ CGSize size;
 
 if (Runtime.Arch == Arch.SIMULATOR)
     size = cgsize_objc_msgSend_IntPtr_float_int(
-        target.Handle, 
+        target.Handle,
         selector.Handle,
         font == null ? IntPtr.Zero : font.Handle,
         width,
@@ -137,7 +137,7 @@ La chiamata di un selettore prevede tre passaggi:
 
 ### <a name="selector-targets"></a>Destinazioni del selettore
 
-Una destinazione del selettore è un'istanza dell'oggetto o una classe Objective-C. Se la destinazione è un'istanza di e proviene da un tipo Xamarin.iOS associato, usare la proprietà [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) .
+Una destinazione del selettore è un'istanza dell'oggetto o una classe Objective-C. Se la destinazione è un'istanza di e proviene da un tipo Novell. iOS associato, usare la proprietà [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) .
 
 Se la destinazione è una classe, utilizzare [`ObjCRuntime.Class`](xref:ObjCRuntime.Class) per ottenere un riferimento all'istanza della classe, quindi utilizzare la proprietà [`Class.Handle`](xref:ObjCRuntime.Class.Handle) .
 
@@ -154,8 +154,8 @@ per ottenere un `IntPtr` per un'istanza di tipo Objective-C.
 
 Esiste più di una funzione `objc_msgSend`:
 
-- Usare [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) per i selettori che restituiscono uno struct. In ARM sono inclusi tutti i tipi restituiti che non sono un'enumerazione o uno dei tipi incorporati C (`char`, `short`, `int`, `long`, `float``double`). In x86 (il simulatore), questo metodo deve essere usato per tutte le strutture di dimensioni superiori a 8 byte (`CGSize` è di 8 byte e non usa `objc_msgSend_stret` nel simulatore). 
-- Usare [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) per i selettori che restituiscono un valore a virgola mobile solo su x86. Questa funzione non deve essere usata su ARM; usare invece `objc_msgSend`. 
+- Usare [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) per i selettori che restituiscono uno struct. In ARM sono inclusi tutti i tipi restituiti che non sono un'enumerazione o uno dei tipi incorporati C (`char`, `short`, `int`, `long`, `float``double`). In x86 (il simulatore), questo metodo deve essere usato per tutte le strutture di dimensioni superiori a 8 byte (`CGSize` è di 8 byte e non usa `objc_msgSend_stret` nel simulatore).
+- Usare [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) per i selettori che restituiscono un valore a virgola mobile solo su x86. Questa funzione non deve essere usata su ARM; usare invece `objc_msgSend`.
 - La funzione [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) principale viene utilizzata per tutti gli altri selettori.
 
 Dopo aver deciso quali funzioni `objc_msgSend` è necessario chiamare (il simulatore e il dispositivo possono richiedere un metodo diverso), è possibile usare un metodo di [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) normale per dichiarare la funzione per una chiamata successiva.
@@ -183,7 +183,7 @@ if (Runtime.Arch == Arch.DEVICE)
     PointF ret;
     Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, myHandle, selector.Handle);
     return ret;
-} 
+}
 else
 {
     return Messaging.PointF_objc_msgSend_PointF_IntPtr (myHandle, selector.Handle);
@@ -201,7 +201,3 @@ per qualsiasi tipo di valore che non sia un'enumerazione o uno dei tipi di base 
 ### <a name="creating-your-own-signatures"></a>Creazione di firme personalizzate
 
 Il [GIST](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) seguente può essere usato per creare le proprie firme, se necessario.
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- Esempio [di selettori Objective-C](https://developer.xamarin.com/samples/mac-ios/Objective-C/)

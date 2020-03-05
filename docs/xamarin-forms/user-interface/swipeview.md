@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms SwipeView
-description: Xamarin.Forms SwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida che vengono rivelate da un gesto di scorrimento.
+title: Novell. Forms SwipeView
+description: Novell. Forms SwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida che vengono rivelate da un gesto di scorrimento.
 ms.prod: xamarin
 ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
-ms.openlocfilehash: 4119a650c431013bb0c8e680de600ed4e73d0c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.date: 02/11/2020
+ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490388"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78292756"
 ---
-# <a name="xamarinforms-swipeview"></a>Xamarin.Forms SwipeView
+# <a name="xamarinforms-swipeview"></a>Novell. Forms SwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -24,7 +24,7 @@ Il `SwipeView` è un controllo contenitore che esegue il wrapping di un elemento
 
 [![Screenshot di SwipeView swipe items in a CollectionView, in iOS e Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe elementi")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe elementi")
 
-`SwipeView` è disponibile in Xamarin.Forms 4,4. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS, alla classe `MainActivity` in Android o alla classe di `App` in UWP, prima di chiamare `Forms.Init`:
+`SwipeView` è disponibile in Novell. Forms 4,4. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS, alla classe `MainActivity` in Android o alla classe di `App` in UWP, prima di chiamare `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("SwipeView_Experimental");
@@ -57,7 +57,7 @@ Inoltre, `SwipeView` definisce un metodo `Close`, che chiude gli elementi di sco
 
 Un `SwipeView` deve definire il contenuto a cui il `SwipeView` esegue il wrapping e gli elementi di scorrimento che vengono rivelati dal gesto di scorrimento. Gli elementi swipe sono uno o più oggetti `SwipeItem` posizionati in una delle quattro raccolte `SwipeView` direzionali: `LeftItems`, `RightItems`, `TopItems`o `BottomItems`.
 
-Nell'esempio seguente viene mostrato come creare un `SwipeView` in XAML:
+Nell'esempio seguente viene illustrato come creare un'istanza di un `SwipeView` in XAML:
 
 ```xaml
 <SwipeView>
@@ -82,6 +82,49 @@ Nell'esempio seguente viene mostrato come creare un `SwipeView` in XAML:
                VerticalOptions="Center" />
     </Grid>
 </SwipeView>
+```
+
+Il codice C# equivalente è il seguente:
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
 ```
 
 In questo esempio, il contenuto del `SwipeView` è un [`Grid`](xref:Xamarin.Forms.Grid) che contiene un [`Label`](xref:Xamarin.Forms.Label):
@@ -114,7 +157,7 @@ Ogni elemento swipe viene definito come oggetto `SwipeItem` inserito in una dell
 - Evento `Invoked`, che viene generato quando viene eseguito l'elemento swipe.
 
 > [!IMPORTANT]
-> La classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce diverse proprietà, tra cui `Command`, `CommandParameter`, `IconImageSource`e `Text`. Queste proprietà possono essere impostate su un oggetto `SwipeItem` per definirne l'aspetto e per definire un `ICommand` eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md).
+> La classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce diverse proprietà, tra cui `Command`, `CommandParameter`, `IconImageSource`e `Text`. Queste proprietà possono essere impostate su un oggetto `SwipeItem` per definirne l'aspetto e per definire un `ICommand` eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md).
 
 Nell'esempio seguente vengono illustrati due oggetti `SwipeItem` nella raccolta `LeftItems` di un `SwipeView`:
 
@@ -136,14 +179,16 @@ Nell'esempio seguente vengono illustrati due oggetti `SwipeItem` nella raccolta 
 </SwipeView>
 ```
 
-L'aspetto di ogni `SwipeItem` viene definito dalle proprietà `Text`, `IconImageSource`e `BackgroundColor`:
+L'aspetto di ogni `SwipeItem` è definito da una combinazione delle proprietà `Text`, `IconImageSource`e `BackgroundColor`:
 
 [![Screenshot di SwipeView swipe Items, in iOS e Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe elementi")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe elementi")
 
 Quando viene toccato un `SwipeItem`, il relativo evento `Invoked` viene generato e gestito dal relativo gestore eventi registrato. In alternativa, la proprietà `Command` può essere impostata su un'implementazione di `ICommand` che verrà eseguita quando viene richiamato il `SwipeItem`.
 
 > [!NOTE]
-> Oltre a definire gli elementi di scorrimento come `SwipeItem` oggetti, è anche possibile definire visualizzazioni di elementi con scorrimento personalizzato. Per altre informazioni, vedere [elementi swipe personalizzati](#custom-swipe-items).
+> Quando l'aspetto di un `SwipeItem` viene definito solo usando le proprietà `Text` o `IconImageSource`, il contenuto viene sempre centrato.
+
+Oltre a definire gli elementi di scorrimento come `SwipeItem` oggetti, è anche possibile definire visualizzazioni di elementi con scorrimento personalizzato. Per altre informazioni, vedere [elementi swipe personalizzati](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Direzione scorrimento
 
@@ -288,4 +333,4 @@ Inoltre, quando si definisce la proprietà `Command` di un `SwipeItem` o `SwipeI
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [SwipeView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)
+- [MenuItem di Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

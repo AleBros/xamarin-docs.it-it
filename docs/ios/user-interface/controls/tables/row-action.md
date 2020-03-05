@@ -1,5 +1,5 @@
 ---
-title: Uso di azioni di riga in Xamarin.iOS
+title: Uso di azioni di riga in Novell. iOS
 description: Questa guida illustra come creare azioni di scorrimento personalizzate per le righe della tabella con UISwipeActionsConfiguration o UITableViewRowAction
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 542ae6696bae8fccfa6d5ed9842bce126760da37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021860"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292744"
 ---
-# <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Xamarin.iOS
+# <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Novell. iOS
 
 _Questa guida illustra come creare azioni di scorrimento personalizzate per le righe della tabella con UISwipeActionsConfiguration o UITableViewRowAction_
 
@@ -33,7 +33,7 @@ Per implementare le azioni di scorrimento rapido con `UISwipeActionsConfiguratio
 
 1. Eseguire l'override di metodi `GetLeadingSwipeActionsConfiguration` e/o `GetTrailingSwipeActionsConfiguration`. Questi metodi restituiscono un `UISwipeActionsConfiguration`.
 2. Creare un'istanza della `UISwipeActionsConfiguration` da restituire. Questa classe accetta una matrice di `UIContextualAction`.
-3. Creare un oggetto `UIContextualAction`.
+3. Creare un `UIContextualAction`.
 
 Queste informazioni sono descritte più dettagliatamente nelle sezioni seguenti.
 
@@ -71,7 +71,7 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-È importante sottolineare che l'ordine in cui vengono visualizzate le azioni dipende dal modo in cui vengono passate nell'array. Ad esempio, il codice precedente per gli scorrimenti iniziali Visualizza le azioni così come:
+È importante tenere presente che l'ordine in cui le azioni vengono visualizzate dipende dalla modalità con cui vengono passate nell'array. Ad esempio, il codice precedente per gli scorrimenti iniziali Visualizza le azioni così come:
 
 ![Azioni di scorrimento iniziali visualizzate in una riga di tabella](row-action-images/action03.png)
 
@@ -83,7 +83,7 @@ Questo frammento di codice usa anche la nuova proprietà `PerformsFirstActionWit
 
 <a name="create-uicontextualaction" />
 
-### <a name="create-a-uicontextualaction"></a>Creare una `UIContextualAction`
+### <a name="create-a-uicontextualaction"></a>Creare un `UIContextualAction`
 
 L'azione contestuale è la posizione in cui si crea effettivamente l'azione che verrà visualizzata quando l'utente scorre una riga della tabella.
 
@@ -117,7 +117,7 @@ Una volta create le azioni contestuali, è possibile usare per inizializzare il 
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-Per definire una o più azioni di riga personalizzate per un `UITableView`, sarà necessario creare un'istanza della classe `UITableViewDelegate` ed eseguire l'override del metodo `EditActionsForRow`. Esempio:
+Per definire una o più azioni di riga personalizzate per un `UITableView`, sarà necessario creare un'istanza della classe `UITableViewDelegate` ed eseguire l'override del metodo `EditActionsForRow`. Ad esempio,
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-Il metodo statico `UITableViewRowAction.Create` viene usato per creare un nuovo `UITableViewRowAction` che visualizzerà un **pulsante di** uscita rapido quando l'utente scorre orizzontalmente in una riga della tabella. Successivamente, una nuova istanza del `TableDelegate` viene creata e collegata al `UITableView`. Esempio:
+Il metodo statico `UITableViewRowAction.Create` viene usato per creare un nuovo `UITableViewRowAction` che visualizzerà un **pulsante di** uscita rapido quando l'utente scorre orizzontalmente in una riga della tabella. Successivamente, una nuova istanza del `TableDelegate` viene creata e collegata al `UITableView`. Ad esempio,
 
 ```csharp
 TableDelegate tableDelegate;

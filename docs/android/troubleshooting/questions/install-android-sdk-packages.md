@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2018
-ms.openlocfilehash: d48767ea29c5f610e02fade20ae92c5e085cc9be
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 24c70c2e869f59091a1519af6d1165dbea9cc467
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026954"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292513"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>Quali pacchetti di Android SDK è necessario installare?
 
-L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Sebbene i singoli sviluppatori debbano variare, i pacchetti seguenti saranno in genere necessari per lo sviluppo con Xamarin.Android:
+L'installazione del Android SDK non include automaticamente tutti i pacchetti minimi necessari per lo sviluppo. Sebbene i singoli sviluppatori debbano variare, i pacchetti seguenti saranno in genere necessari per lo sviluppo con Novell. Android:
 
 ## <a name="tools"></a>Strumenti
 
@@ -28,7 +28,7 @@ Installare gli strumenti più recenti dalla cartella Tools in SDK Manager:
 
 ## <a name="android-platforms"></a>Piattaforme Android
 
-Installare la "piattaforma SDK" per le versioni di Android impostate come minimo & destinazione. 
+Installare la "piattaforma SDK" per le versioni di Android impostate come minimo & destinazione.
 
 Esempi:
 
@@ -46,8 +46,5 @@ Esempi:
 
 Questi sono necessari solo se si vuole usare gli emulatori Android predefiniti da Google. Per ulteriori informazioni, vedere la pagina relativa all' [installazione di emulatore Android](~/android/get-started/installation/android-emulator/index.md)
 
-## <a name="extras"></a>Extras
+## <a name="extras"></a>Extra
 Le Android SDK aggiuntive non sono in genere necessarie; è tuttavia utile conoscerli poiché potrebbero essere necessari a seconda del caso d'uso.
-
-## <a name="further-reading"></a>Ulteriori informazioni
-Nella guida riportata di seguito vengono illustrate queste opzioni e viene illustrato in dettaglio i diversi pacchetti disponibili in SDK Manager: [Guida all'installazione di Android SDK Manager](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)

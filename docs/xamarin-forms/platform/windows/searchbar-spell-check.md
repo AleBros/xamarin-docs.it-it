@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 863748a7af057d2ea3e53719c332cd555ff3b698
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: da75d42e0e0bcf38dd2ff50999b705125dc4e2b5
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656868"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291654"
 ---
 # <a name="searchbar-spell-check-on-windows"></a>SearchBar Controllo ortografico in Windows
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa piattaforma UWP (Universal Windows Platform) specifica della piattaforma consente a [`SearchBar`](xref:Xamarin.Forms.SearchBar) un oggetto di interagire con il motore di controllo ortografico. Vengono utilizzati in XAML, impostando il [`SearchBar.IsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.IsSpellCheckEnabledProperty) proprietà associata una `boolean` valore:
+Questa piattaforma UWP (Universal Windows Platform) specifica della piattaforma consente a un [`SearchBar`](xref:Xamarin.Forms.SearchBar) di interagire con il motore di controllo ortografico. Viene utilizzato in XAML impostando la proprietà associata [`SearchBar.IsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.IsSpellCheckEnabledProperty) su un valore `boolean`:
 
 ```xaml
 <ContentPage ...
@@ -30,7 +30,7 @@ Questa piattaforma UWP (Universal Windows Platform) specifica della piattaforma 
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -40,18 +40,18 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 searchBar.On<Windows>().SetIsSpellCheckEnabled(true);
 ```
 
-Il `SearchBar.On<Windows>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo nella piattaforma Windows universale. Il [`SearchBar.SetIsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.SetIsSpellCheckEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.SearchBar},System.Boolean)) metodo, nelle [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, attiva il controllo ortografico e disattiva. Inoltre, il `SearchBar.SetIsSpellCheckEnabled` metodo può essere utilizzato per attivare o disattivare il controllo ortografico chiamando il [`SearchBar.GetIsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.GetIsSpellCheckEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.SearchBar})) metodo da restituire se il correttore ortografico è abilitato:
+Il metodo `SearchBar.On<Windows>` specifica che questa specifica della piattaforma verrà eseguita solo nel piattaforma UWP (Universal Windows Platform). Il metodo [`SearchBar.SetIsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.SetIsSpellCheckEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.SearchBar},System.Boolean)) , nello spazio dei nomi [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) , attiva e disattiva il controllo ortografico. Inoltre, è possibile usare il metodo `SearchBar.SetIsSpellCheckEnabled` per attivare o disabilitare il controllo ortografico chiamando il metodo [`SearchBar.GetIsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.GetIsSpellCheckEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.SearchBar})) per restituire se il correttore ortografico è abilitato:
 
 ```csharp
 searchBar.On<Windows>().SetIsSpellCheckEnabled(!searchBar.On<Windows>().GetIsSpellCheckEnabled());
 ```
 
-Il risultato è che il testo immesso nel [`SearchBar`](xref:Xamarin.Forms.SearchBar) può essere il controllo ortografia, con un'ortografia errata viene indicata che l'utente:
+Il risultato è che il testo immesso nel [`SearchBar`](xref:Xamarin.Forms.SearchBar) può essere sottoposto a ortografia, con le ortografie non corrette indicate all'utente:
 
-![SearchBar ortografico controllo specifico per la piattaforma](searchbar-spell-check-images/searchbar-spellcheck.png "SearchBar ortografico controllo specifico per la piattaforma")
+![Controllo ortografico di SearchBar specifico della piattaforma](searchbar-spell-check-images/searchbar-spellcheck.png "Controllo ortografico di SearchBar specifico della piattaforma")
 
 > [!NOTE]
-> Il `SearchBar` classe la [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi contiene inoltre [`EnableSpellCheck`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.EnableSpellCheck*) e [`DisableSpellCheck`](xre:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.DisableSpellCheck*) metodi che possono essere usati per abilitare e disabilitare controllo ortografico nel `SearchBar`, rispettivamente.
+> La classe `SearchBar` nello spazio dei nomi [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dispone anche di [`EnableSpellCheck`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.EnableSpellCheck*) e [`DisableSpellCheck`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.DisableSpellCheck*) metodi che possono essere usati per abilitare e disabilitare il controllo ortografico rispettivamente sul `SearchBar`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

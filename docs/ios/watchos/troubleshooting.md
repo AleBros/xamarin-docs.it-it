@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dei problemi di watchos
-description: Questo documento illustra i problemi noti e le soluzioni alternative per lo sviluppo di watchos con Xamarin. Descrive le immagini con problemi, aggiungendo manualmente i file del controller di interfaccia, avviando un'app Watch dalla riga di comando e altro ancora.
+description: Questo documento illustra i problemi noti e le soluzioni alternative per lo sviluppo di watchos con Novell. Descrive le immagini con problemi, aggiungendo manualmente i file del controller di interfaccia, avviando un'app Watch dalla riga di comando e altro ancora.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032736"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291524"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -36,9 +36,9 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per i pro
 <a name="deploy" />
 
 - Le versioni precedenti di Visual Studio per Mac visualizzano erroneamente una delle icone **AppleCompanionSettings** come 88x88 pixel; Se si tenta di inviare all'App Store, viene restituito un **errore di icona mancante** .
-    Questa icona deve essere 87x87 pixel (29 unità per **@3x** schermate retina). Non è possibile risolvere questo problema in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** (in modo che corrisponda a [questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Questa icona deve essere 87x87 pixel (29 unità per **@3x** schermate retina). Questa operazione non può essere risolta in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** .
 
-- Se il file **info. plist > ID bundle WKApp** del progetto di estensione Watch non è [impostato correttamente](~/ios/watchos/get-started/project-references.md) in modo da corrispondere all' **ID bundle**dell'app Watch, il debugger non riuscirà a connettersi e Visual Studio per Mac aspetterà il messaggio *"in attesa del debugger Connetti "* .
+- Se il file **info. plist > ID bundle WKApp** del progetto di estensione Watch non è [impostato correttamente](~/ios/watchos/get-started/project-references.md) in modo da corrispondere all' **ID bundle**dell'app Watch, il debugger non riuscirà a connettersi e Visual Studio per Mac aspetterà il messaggio *"in attesa della connessione del debugger"* .
 
 - Il debug è supportato nella modalità di **notifica** , ma può essere inaffidabile. Il nuovo tentativo può a volte funzionare. Verificare che il `WKCompanionAppBundleIdentifier` **info. plist** dell'app Watch sia impostato in modo che corrisponda all'identificatore del bundle dell'app padre/contenitore iOS, ovvero quella che viene eseguita nell'iPhone.
 
@@ -85,7 +85,7 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="manually-adding-interface-controller-files"></a>Aggiunta manuale di file del controller di interfaccia
 
 > [!IMPORTANT]
-> Il supporto WatchKit di Xamarin include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
+> Il supporto WatchKit di Novell include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
 
 *Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni C#siano disponibili in:
 
@@ -166,7 +166,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
     Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -257,7 +257,7 @@ Gli argomenti rimanenti sono illustrati di seguito:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obbligatorio. Specifica il percorso di Xcode (6,2 o versione successiva).
+Obbligatoria. Specifica il percorso di Xcode (6,2 o versione successiva).
 
 Esempio:
 

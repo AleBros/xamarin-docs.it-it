@@ -1,19 +1,19 @@
 ---
-title: Xamarin.Android TextureView
+title: Novell. Android TextureView
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2017
-ms.openlocfilehash: 5d6b1b01cf9597a1d7ae9de762eff1514b494663
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 2ffa544789e0d605a241c8e038c790650a7fc6a3
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029129"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292147"
 ---
-# <a name="xamarinandroid-textureview"></a>Xamarin.Android TextureView
+# <a name="xamarinandroid-textureview"></a>Novell. Android TextureView
 
 La classe `TextureView` è una vista che usa il rendering 2D con accelerazione hardware per consentire la visualizzazione di un flusso di contenuto video o OpenGL. Ad esempio, lo screenshot seguente mostra il `TextureView` visualizzare un feed live dalla fotocamera del dispositivo:
 
@@ -30,16 +30,16 @@ public class TextureViewActivity : Activity,
 {
     Camera _camera;
     TextureView _textureView;
-       
+
     protected override void OnCreate (Bundle bundle)
     {
         base.OnCreate (bundle);
         _textureView = new TextureView (this);
         _textureView.SurfaceTextureListener = this;
-           
+
         SetContentView (_textureView);
     }
-       
+
     public void OnSurfaceTextureAvailable (
         Android.Graphics.SurfaceTexture surface,
         int width, int height)
@@ -56,7 +56,7 @@ public class TextureViewActivity : Activity,
         } catch (Java.IO.IOException ex) {
             Console.WriteLine (ex.Message);
         }
-           
+
         // this is the sort of thing TextureView enables
         _textureView.Rotation = 45.0f;
         _textureView.Alpha = 0.5f;
@@ -73,6 +73,4 @@ Per usare la `TextureView`, è necessario abilitare l'accelerazione hardware, ch
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [TextureViewDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
-- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)
+- [TextureViewDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)/)

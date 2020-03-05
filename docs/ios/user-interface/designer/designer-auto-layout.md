@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021815"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293081"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con il Xamarin Designer per iOS
 
 Il layout automatico (detto anche "layout adattivo") è un approccio di progettazione reattivo. A differenza del sistema di layout di transizione, in cui il percorso di ogni elemento è hardcoded a un punto sullo schermo, il layout automatico riguarda le *relazioni* , ovvero le posizioni degli elementi rispetto ad altri elementi nell'area di progettazione. Il fulcro del layout automatico è l'idea di vincoli o regole che definiscono la posizione di un elemento o di un set di elementi nel contesto di altri elementi sullo schermo. Poiché gli elementi non sono collegati a una particolare posizione sullo schermo, i vincoli consentono di creare un layout adattivo che risulti valido in dimensioni dello schermo e orientamenti dei dispositivi diversi.
 
-In questa guida vengono introdotti i vincoli e le modalità di utilizzo in Xamarin iOS designer. Questa guida non illustra l'uso dei vincoli a livello di codice. Per informazioni sull'uso del layout automatico a livello di codice, vedere la [documentazione di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
+In questa guida vengono introdotti i vincoli e le modalità di utilizzo in Novell iOS designer. Questa guida non illustra l'uso dei vincoli a livello di codice. Per informazioni sull'uso del layout automatico a livello di codice, vedere la [documentazione di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -69,7 +69,7 @@ La finestra popup Editor vincoli consente di aggiungere e aggiornare contemporan
 
 Per modificare i vincoli nella visualizzazione selezionata, fare clic sui puntini di sospensione per visualizzare i vincoli popopov: ![modifica di popopov](designer-auto-layout-images/constraints-popup.png)
 
-Quando si apre il programma Constraints, vengono visualizzati tutti i vincoli preimpostati nella vista. È possibile impostare tutti i vincoli di spaziatura selezionando **tutti i lati** della casella combinata nell'angolo superiore destro e selezionare **Cancella tutto** per rimuoverli. 
+Quando si apre il programma Constraints, vengono visualizzati tutti i vincoli preimpostati nella vista. È possibile impostare tutti i vincoli di spaziatura selezionando **tutti i lati** della casella combinata nell'angolo superiore destro e selezionare **Cancella tutto** per rimuoverli.
 
 La funzione **W** imposterà Width e **H** imposterà il vincolo Height. Quando si controllano le **proporzioni**, l'altezza e la larghezza delle visualizzazioni saranno controllate su diverse dimensioni dello schermo, la larghezza della visualizzazione viene utilizzata come numeratore per la razione e l'altezza come denominatore.
 
@@ -185,7 +185,7 @@ Per accedere a un vincolo nel codice, è necessario prima esporlo in iOS designe
 3. Assegnare quindi un **nome** al vincolo nella scheda **widget** di **Esplora proprietà**:
 
     [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
-4. Salvare le modifiche.
+4. Fare clic su Salva per salvare le modifiche.
 
 Con le modifiche sopra riportate, è possibile accedere al vincolo nel codice e modificarne le proprietà. Ad esempio, è possibile usare il comando seguente per impostare l'altezza della visualizzazione collegata su zero:
 
@@ -201,7 +201,7 @@ Data la seguente impostazione per il vincolo in iOS designer:
 
 Anziché aggiornare immediatamente la visualizzazione collegata in risposta alle modifiche dei vincoli, il motore di layout automatico pianifica un _passaggio di layout posticipato_ per il prossimo futuro. Durante questo passaggio posticipato, non solo il vincolo della visualizzazione specificata viene aggiornato, i vincoli per ogni visualizzazione nella gerarchia vengono ricalcolati e aggiornati per adattarsi al nuovo layout.
 
-In qualsiasi momento, è possibile pianificare il passaggio di layout posticipato chiamando il metodo `SetNeedsLayout` o `SetNeedsUpdateConstraints` della visualizzazione padre. 
+In qualsiasi momento, è possibile pianificare il passaggio di layout posticipato chiamando il metodo `SetNeedsLayout` o `SetNeedsUpdateConstraints` della visualizzazione padre.
 
 Il passaggio di layout posticipato è costituito da due passaggi univoci attraverso la gerarchia di visualizzazione:
 
@@ -210,7 +210,7 @@ Il passaggio di layout posticipato è costituito da due passaggi univoci attrave
 
 ### <a name="animating-constraint-changes"></a>Animazione delle modifiche ai vincoli
 
-Oltre a modificare le proprietà dei vincoli, è possibile usare l'animazione di base per aggiungere un'animazione alle modifiche ai vincoli di una vista. Esempio:
+Oltre a modificare le proprietà dei vincoli, è possibile usare l'animazione di base per aggiungere un'animazione alle modifiche ai vincoli di una vista. Ad esempio,
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -234,4 +234,3 @@ In questa guida è stato introdotto il layout di iOS auto (o "Adaptive") e il co
 - [Procedura dettagliata per i controlli iOS designable](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Panoramica di Android Designer](~/android/user-interface/android-designer/index.md)
 - [Vincoli a livello di codice](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Apple-Guida al layout automatico](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

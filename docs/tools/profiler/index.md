@@ -1,21 +1,21 @@
 ---
 title: Xamarin Profiler
-description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Xamarin.
+description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
 ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: 8927e7b2a1b194d1bfab334736c3d024f0542b01
-ms.sourcegitcommit: 60e955ce65194ffea987409157ccc7d5db87c2ba
-ms.translationtype: HT
+ms.openlocfilehash: cb109055b476fee6d34041940c682187074f4e7d
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74690205"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295443"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Xamarin._
+_Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell._
 
 Il successo di un'applicazione dipende dall'esperienza dell'utente finale. In qualità di sviluppatore, è possibile che siano state implementate alcune funzionalità molto straordinarie nell'app, ma se l'app è lenta o piena di arresti anomali, è probabile che l'utente lo elimini.
 
@@ -34,7 +34,7 @@ Il Xamarin Profiler è un'applicazione autonoma ed è integrato con Visual Studi
 
 Scaricare il pacchetto di installazione per la piattaforma:
 
-- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.10-15.pkg)
+- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.13-11.pkg)
 - [**Windows**](https://dl.xamarin.com/profiler/XamarinProfiler.Windows.Installer.1.6.10-15.msi)
 
 Una volta scaricato, avviare il programma di installazione per aggiungere il Xamarin Profiler al sistema.
@@ -53,13 +53,13 @@ Il Xamarin Profiler fornisce agli sviluppatori un modo per profilare le applicaz
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Xamarin.iOS, Xamarin.Android e Xamarin.Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le app Xamarin.Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -98,13 +98,13 @@ Prima di poter profilare correttamente l'app, è necessario consentire la profil
 
 - iOS:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   **Compilazione > debug iOS > Abilita profilatura**
 
   ![Finestra di dialogo Opzioni iOS in Visual Studio per Mac](images/ios-options-mac.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **Proprietà > compilazione iOS > Abilita profilatura**
 
@@ -114,13 +114,13 @@ Prima di poter profilare correttamente l'app, è necessario consentire la profil
 
 - Android:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   **Creare > debug Android > abilitare la strumentazione per sviluppatori**
 
   ![Finestra di dialogo Opzioni Android in Visual Studio per Mac](images/android-project-options.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **Creare > debug Android > abilitare la strumentazione per sviluppatori**
 
@@ -132,7 +132,7 @@ Prima di poter profilare correttamente l'app, è necessario consentire la profil
 
 Il Xamarin Profiler può essere avviato dall'IDE quando si esegue la profilatura dell'applicazione iOS o Android o come applicazione autonoma.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 #### <a name="launching-from-visual-studio-for-mac"></a>Avvio da Visual Studio per Mac
 
@@ -141,7 +141,7 @@ Il Xamarin Profiler può essere avviato dall'IDE quando si esegue la profilatura
 
   ![Avvio del profiler da Visual Studio per Mac](images/start-profiling-xs.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 #### <a name="launching-from-visual-studio"></a>Avvio da Visual Studio
 
@@ -162,13 +162,13 @@ Il profiler può essere usato per misurare la memoria e le prestazioni. Questa o
 
 Per salvare una sessione di profilatura in qualsiasi momento, scegliere **File > Salva con nome...** dalla barra dei menu del profiler. Questo consente di salvare il file in formato _MLPD_ , un formato speciale e altamente compresso per i dati di profilatura.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Una volta installato, il Xamarin Profiler si trova nella cartella applicazioni, come illustrato nella schermata seguente:
 
 ![Apri profiler autonomo da Mac](images/applications.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Dopo l'installazione, è possibile trovare Xamarin Profiler applicazione nella directory dell'applicazione:
 
@@ -184,11 +184,11 @@ Per ulteriori informazioni, vedere [generazione di file con estensione MLPD](~/t
 
 Il Xamarin Profiler è costituito da cinque sezioni, come illustrato di seguito:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [sezioni di ![Profiler in Visual Studio per Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [sezioni di ![Profiler in Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
@@ -206,11 +206,11 @@ Lo strumento allocazioni fornisce informazioni dettagliate sugli oggetti dell'ap
 
 Nella parte superiore del profiler è disponibile il grafico allocazioni, che consente di visualizzare la quantità di memoria allocata a intervalli regolari durante la profilatura. Attualmente il grafico allocazioni è il numero totale di allocazioni e non le dimensioni dell'heap in quel momento. In un certo senso, non verrà mai arrestato, ma solo aumenterà. Sono inclusi gli oggetti allocati nello stack. A seconda della versione di runtime utilizzata, il grafico può avere un aspetto diverso, anche per la stessa app.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [Strumento allocazioni ![](images/allocations1.png)](images/allocations1.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Strumento allocazioni ![](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
@@ -220,11 +220,11 @@ Sono disponibili diverse visualizzazioni dati nello strumento allocazioni, che c
 
 - **Allocazioni** : viene visualizzato un elenco di tutte le allocazioni e i gruppi in base al nome della classe. In questo modo viene fornita una panoramica delle classi e dei metodi utilizzati, della frequenza di utilizzo e della dimensione collettiva delle classi utilizzate. Se si fa doppio clic su una classe, viene visualizzata la memoria allocata: 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   [Scheda allocazioni ![](images/allocations3.png)](images/allocations3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [Scheda allocazioni ![](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
@@ -236,11 +236,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
     1. **Albero delle chiamate invertito** : considera l'analisi dello stack dall'alto verso il basso. Si tratta di un'opzione di visualizzazione utile che indica i metodi più profondi in cui la CPU ha speso il suo tempo.
     2. **Separa per thread** : questa opzione consente di organizzare l'albero delle chiamate per thread.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   [Scheda albero delle chiamate ![](images/allocations2.png)](images/allocations2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [Scheda albero delle chiamate ![](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
@@ -248,11 +248,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
 
 - **Snapshot** : in questo riquadro vengono visualizzate informazioni sugli snapshot di memoria. Per generare questi dati durante la profilatura di un'applicazione attiva, fare clic sul pulsante della _fotocamera_ sulla barra degli strumenti in corrispondenza di ogni punto in cui si desidera visualizzare la memoria mantenuta e rilasciata. È quindi possibile fare clic su ogni snapshot per esaminare cosa accade dietro le quinte. Si noti che gli snapshot possono essere effettuati solo quando si esegue la profilatura in tempo reale di un'app. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   [Scheda snapshot ![](images/allocations4.png)](images/allocations4.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [Scheda snapshot ![](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
@@ -264,13 +264,13 @@ Lo strumento Profiler tempo misura esattamente la quantità di tempo impiegato i
 
 Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza il numero di campioni ricevuti dall'app durante l'esecuzione:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [Strumento Profiler ![Time](images/time1.png)](images/time1.png#lightbox) 
 
 [Strumento ![Time Profiler-elenco di esempi](images/time3.png)](images/time3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Strumento Profiler ![Time](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
@@ -280,11 +280,11 @@ Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza i
 
 - **Albero delle chiamate** : indica la quantità di tempo impiegato in ogni metodo:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
   [Strumento Profiler tempo ![-albero delle chiamate](images/time2.png)](images/time2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [Strumento Profiler tempo ![-albero delle chiamate](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
@@ -294,11 +294,11 @@ Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza i
 
 Tramite l'utilizzo di C# e F# del codice gestito, può essere abbastanza comune e sfortunatamente piuttosto semplice creare riferimenti a oggetti che non verranno mai eliminati. Questo strumento consente di individuare tali oggetti e visualizzare i cicli a cui viene fatto riferimento nell'applicazione.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [Strumentazione cicli ![](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Strumentazione cicli ![](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
@@ -310,11 +310,11 @@ Attualmente, è possibile profilare solo le configurazioni di debug predefinite.
 
 Se si profila un'app con qualsiasi altra configurazione, verrà visualizzata la finestra di dialogo messaggio seguente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![finestra di dialogo di errore di profilatura](images/image001.png)](images/image001.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![finestra di dialogo di errore di profilatura](images/image1vs.png)](images/image1vs.png#lightbox) 
 
@@ -324,13 +324,13 @@ Selezionare **Update (Aggiorna** ) per continuare.
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>Garbage Collector e profilatura di SGen
 
-Il Garbage Collector [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) viene usato per tutte le piattaforme Xamarin.
+Il Garbage Collector [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) viene usato per tutte le piattaforme Novell.
 
-SGen è un GC generazionale, che alloca gli oggetti di un'applicazione in tre heap: Nursery, heap principale e spazio Large Object. Ciò consente un'esecuzione più rapida delle Garbage Collection. SGen è attualmente il GC predefinito per le applicazioni unificate Xamarin.Android e Xamarin.iOS.
+SGen è un GC generazionale, che alloca gli oggetti di un'applicazione in tre heap: Nursery, heap principale e spazio Large Object. Ciò consente un'esecuzione più rapida delle Garbage Collection. SGen è attualmente il GC predefinito per le applicazioni unificate Novell. Android e Novell. iOS.
 
-Applicazione Xamarin.iOS che usa il API classica usato il GC Boehm, un Garbage Collector conservativo e non generazionale. Poiché è conservativa, è meno probabile liberare la memoria disponibile, che può produrre risultati non accurati quando si usa il profiler. Per questo motivo, non è possibile usare lo strumento allocazioni con Boehm Garbage Collector.
+Applicazione Novell. iOS che usa il API classica usato il GC Boehm, un Garbage Collector conservativo e non generazionale. Poiché è conservativa, è meno probabile liberare la memoria disponibile, che può produrre risultati non accurati quando si usa il profiler. Per questo motivo, non è possibile usare lo strumento allocazioni con Boehm Garbage Collector.
 
-Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Xamarin non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Xamarin non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
+Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Novell non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Novell non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
 
 Per ulteriori informazioni sulla gestione della memoria, vedere la Guida alle [procedure consigliate per la memoria e le prestazioni](~/cross-platform/deploy-test/memory-perf-best-practices.md) .
 

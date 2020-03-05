@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: HT
+ms.openlocfilehash: 7413fbe3f08988cfdb7c7b4e5237539aca250772
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728148"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292440"
 ---
 # <a name="viewpager-with-views"></a>ViewPager con visualizzazioni
 
 _ViewPager è un gestore di layout che consente di implementare la navigazione gestuale. La navigazione gestuale consente all'utente di scorrere verso sinistra e destra per scorrere le pagine di dati. Questa guida illustra come implementare un'interfaccia utente di swipeable con ViewPager e PagerTabStrip, usando le visualizzazioni come pagine di dati (una guida successiva illustra come usare i frammenti per le pagine)._
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa guida è una procedura dettagliata che fornisce una dimostrazione dettagliata di come usare `ViewPager` per implementare una raccolta di immagini di alberi decidui e sempreverdi. In questa app, l'utente scorre verso sinistra e verso destra attraverso un "catalogo ad albero" per visualizzare le immagini dell'albero. Nella parte superiore di ogni pagina del catalogo, il nome dell'albero è elencato in una`PagerTabStrip`e un'immagine dell'albero viene visualizzata in un `ImageView`. Un adapter viene utilizzato per interfacciare il `ViewPager` al modello di dati sottostante. Questa app implementa un adapter derivato da `PagerAdapter`. 
 
@@ -62,18 +62,13 @@ Aprire **risorse/layout/Main. aXML** e sostituirne il contenuto con il codice XM
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
-This XML defines a `ViewPager` that occupies the entire screen. Note that
-you must use the fully-qualified name **android.support.v4.view.ViewPager**
-because `ViewPager` is packaged in a support library. `ViewPager` is
-available only from 
-[Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
-it is not available in the Android SDK. 
+Questo XML definisce un `ViewPager` che occupa l'intero schermo. Si noti che è necessario usare il nome completo **Android. support. v4. View. viewpager** perché `ViewPager` è incluso in una libreria di supporto. `ViewPager` è disponibile solo dalla [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). non è disponibile nel Android SDK. 
 
-## Set up ViewPager
+## <a name="set-up-viewpager"></a>Configurare ViewPager
 
-Edit **MainActivity.cs** and add the following `using` statement:
+Modificare **MainActivity.cs** e aggiungere l'istruzione `using` seguente:
 
 ```csharp
 using Android.Support.V4.View;
@@ -91,7 +86,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Questo codice esegue le seguenti operazioni:
+Il codice esegue le attività seguenti:
 
 1. Imposta la visualizzazione dalla risorsa di layout **Main. aXML** .
 
@@ -207,7 +202,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Questo codice esegue le seguenti operazioni:
+Il codice esegue le attività seguenti:
 
 1. Crea un'istanza di un nuovo `ImageView` per visualizzare l'immagine della struttura ad albero in corrispondenza della posizione specificata. Il `MainActivity` dell'app è il contesto che verrà passato al costruttore di `ImageView`.
 
@@ -234,7 +229,7 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Questo codice esegue le seguenti operazioni:
+Il codice esegue le attività seguenti:
 
 1. Esegue il cast del `View` contenitore passato in un riferimento `ViewPager`.
 

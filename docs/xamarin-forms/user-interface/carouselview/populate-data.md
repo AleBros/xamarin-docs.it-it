@@ -1,20 +1,20 @@
 ---
-title: Dati CarouselView di Xamarin.Forms
+title: Dati CarouselView di Novell. Forms
 description: Un CarouselView viene popolato con i dati impostando la relativa proprietà ItemsSource su una raccolta che implementa IEnumerable.
 ms.prod: xamarin
 ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.date: 02/27/2019
+ms.openlocfilehash: 154d039e95ccc2de28e09a7162a32a19f8f84656
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488224"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "78292755"
 ---
-# <a name="xamarinforms-carouselview-data"></a>Dati CarouselView di Xamarin.Forms
+# <a name="xamarinforms-carouselview-data"></a>Dati CarouselView di Novell. Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -78,7 +78,7 @@ Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) 
 
 [![Screenshot di CarouselView contenente gli elementi di testo in iOS e Android](populate-data-images/text.png "Elementi di testo in un CarouselView")](populate-data-images/text-large.png#lightbox "Elementi di testo in un CarouselView")
 
-Per informazioni su come modificare l'orientamento [`CarouselView`](xref:Xamarin.Forms.CarouselView) , vedere [Xamarin.Forms CarouselView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CarouselView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
+Per informazioni su come modificare l'orientamento [`CarouselView`](xref:Xamarin.Forms.CarouselView) , vedere [Novell. Forms CarouselView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CarouselView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Associazione dati
 
@@ -98,7 +98,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 In questo esempio, i dati della proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) vengono associati alla proprietà `Monkeys` dell'elemento ViewModel connesso.
 
 > [!NOTE]
-> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Xamarin.Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Novell. Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -253,7 +253,7 @@ La classe `MonkeyDataTemplateSelector` definisce `AmericanMonkey` e `OtherMonkey
 
 [![Screenshot della selezione del modello di elemento del runtime CarouselView, in iOS e Android](populate-data-images/datatemplateselector.png "Selezione del modello di elemento di runtime in un CarouselView")](populate-data-images/datatemplateselector-large.png#lightbox "Selezione del modello di elemento di runtime in un CarouselView")
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 > [!IMPORTANT]
 > Quando si usa [`CarouselView`](xref:Xamarin.Forms.CarouselView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CarouselView` non ha alcun concetto di celle.
@@ -264,29 +264,29 @@ Gli indicatori, che rappresentano il numero di elementi e la posizione corrente 
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-In questo esempio viene eseguito il rendering del `IndicatorView` sotto l'`CarouselView`, con un indicatore per ogni elemento nella `CarouselView`. Il `IndicatorView` viene popolato con i dati impostando la proprietà `ItemsSourceBy` sull'oggetto `CarouselView`. Ogni indicatore è un cerchio grigio chiaro, mentre l'indicatore che rappresenta l'elemento corrente nel `CarouselView` è grigio scuro:
+In questo esempio viene eseguito il rendering del `IndicatorView` sotto l'`CarouselView`, con un indicatore per ogni elemento nella `CarouselView`. Il `IndicatorView` viene popolato con i dati impostando la proprietà `CarouselView.IndicatorView` sull'oggetto `IndicatorView`. Ogni indicatore è un cerchio grigio chiaro, mentre l'indicatore che rappresenta l'elemento corrente nel `CarouselView` è grigio scuro:
 
 [![Screenshot di CarouselView e IndicatorView, su iOS e Android](populate-data-images/indicators.png "Cerchi IndicatorView")](populate-data-images/indicators-large.png#lightbox "Cerchi IndicatorView")
 
 > [!IMPORTANT]
-> Impostando la proprietà `ItemsSourceBy` si ottiene il binding della proprietà `IndicatorView.Position` alla proprietà `CarouselView.Position` e l'associazione della proprietà `IndicatorView.ItemsSource` alla proprietà `CarouselView.ItemsSource`.
+> Impostando la proprietà `CarouselView.IndicatorView` si ottiene il binding della proprietà `IndicatorView.Position` alla proprietà `CarouselView.Position` e l'associazione della proprietà `IndicatorView.ItemsSource` alla proprietà `CarouselView.ItemsSource`.
 
-Per ulteriori informazioni sugli indicatori, vedere [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
+Per ulteriori informazioni sugli indicatori, vedere [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
-## <a name="pull-to-refresh"></a>Aggiornamento tramite trascinamento verso il basso
+## <a name="pull-to-refresh"></a>Pull per aggiornare
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) supporta il pull per aggiornare la funzionalità tramite il `RefreshView`, che consente di visualizzare i dati da aggiornare effettuando il pull sugli elementi. Il `RefreshView` è un controllo contenitore che fornisce il pull per aggiornare la funzionalità al relativo elemento figlio, purché l'elemento figlio supporti il contenuto scorrevole. Pertanto, il pull per l'aggiornamento viene implementato per un `CarouselView` impostando il valore come figlio di un `RefreshView`:
 
@@ -323,7 +323,7 @@ Quando l'utente avvia un aggiornamento, viene eseguito il `ICommand` definito da
 
 Il valore della proprietà `RefreshView.IsRefreshing` indica lo stato corrente del `RefreshView`. Quando un aggiornamento viene attivato dall'utente, questa proprietà passerà automaticamente a `true`. Una volta completato l'aggiornamento, è necessario reimpostare la proprietà su `false`.
 
-Per ulteriori informazioni su `RefreshView`, vedere [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+Per ulteriori informazioni su `RefreshView`, vedere [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Caricare i dati in modo incrementale
 
@@ -379,8 +379,8 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
-- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Data Binding Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creare un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
+- [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Associazione di dati di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

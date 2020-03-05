@@ -1,5 +1,5 @@
 ---
-title: Schermate di avvio per le app Xamarin.iOS
+title: Schermate di avvio per le app Novell. iOS
 description: Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 3adabbac3f56747093aa8a3def85869a92d33600
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292153"
 ---
-# <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Xamarin.iOS
+# <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
 
 _Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato._
 
@@ -28,7 +28,7 @@ In questa breve procedura dettagliata viene descritto come creare una schermata 
 
 In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyboard unificato per fornire la schermata di avvio anziché usare una o più immagini di avvio statiche. Quando si crea uno storyboard di avvio in iOS designer, usare le classi di dimensioni e il layout automatico per definire layout diversi per diversi ambienti di visualizzazione. Con le classi di dimensioni e il layout automatico, lo sviluppatore può creare una singola schermata di avvio con un aspetto corretto su tutti i dispositivi e gli ambienti di visualizzazione.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. In Visual Studio per Mac creare un nuovo progetto selezionando **File > nuova soluzione** e scegliendo **app visualizzazione singola**: 
 
@@ -89,17 +89,17 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 
     ![Etichetta con vincoli di layout](launch-screens-images/launch11.png)
 
-12. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere i vincoli per classi di dimensioni specifiche:
+12. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere vincoli per classi di dimensioni specifiche:
 
     ![Schermata di avvio sottoposta a rendering come iPhone X con orientamento orizzontale](launch-screens-images/launch12.png)
 
 13. Salvare le modifiche apportate allo storyboard. Eseguire l'app in un simulatore o un dispositivo e la schermata di avvio sarà visibile durante l'avvio dell'app.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Xamarin)** :
+1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Novell)** :
 
-    ![La finestra nuovo progetto con app iOS (Xamarin) selezionata](launch-screens-images/launch01.w157.png)
+    ![La finestra nuovo progetto con app iOS (Novell) selezionata](launch-screens-images/launch01.w157.png)
 
     Selezionare il modello **app visualizzazione singola** , quindi fare clic su **OK**:
 
@@ -172,7 +172,7 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
     
     ![Etichetta con vincoli di layout](launch-screens-images/launch14-vs.png) 
 
-15. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere i vincoli per classi di dimensioni specifiche:
+15. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere vincoli per classi di dimensioni specifiche:
 
     ![Schermata di avvio sottoposta a rendering come iPhone X con orientamento orizzontale](launch-screens-images/launch15-vs.png) 
 
@@ -187,7 +187,7 @@ Per ulteriori informazioni sulla creazione di una schermata di avvio con uno sto
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>Migrazione agli storyboard della schermata di avvio
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di avvio, fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file.** Selezionare **iOS** > **schermata di avvio** e fare clic sul pulsante **nuovo** :
 
@@ -204,7 +204,7 @@ Per usare il nuovo storyboard come schermata di avvio, seguire questa procedura:
 
     ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file...** : 
 

@@ -1,27 +1,27 @@
 ---
 title: Uso di Jenkins con Xamarin
-description: Questo documento descrive come usare Jenkins per l'integrazione continua con le applicazioni Xamarin. Viene illustrato come installare, configurare e usare Jenkins.
+description: Questo documento descrive come usare Jenkins per l'integrazione continua con le applicazioni Novell. Viene illustrato come installare, configurare e usare Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d420faf59d940bb111b5ecd326a29083cab012e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 4f91e683b826657a9740de7e0b98137858130042
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029918"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292009"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso di Jenkins con Xamarin
 
-_questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Xamarin. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare applicazioni Xamarin.iOS e Xamarin.Android quando viene eseguito il commit delle modifiche nel sistema di gestione del codice sorgente._
+_Questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare applicazioni Novell. iOS e Novell. Android quando viene eseguito il commit delle modifiche nel sistema di gestione del codice sorgente._
 
-[Introduzione all'integrazione continua con Xamarin](~/tools/ci/intro-to-ci.md) introduce l'integrazione continuata come una pratica di sviluppo software utile che fornisce un avviso tempestivo di codice interrotto o incompatibile. CI consente agli sviluppatori di risolvere problemi e problemi non appena si verificano e mantiene il software in uno stato adatto per la distribuzione. Questa procedura dettagliata illustra come usare il contenuto di entrambi i documenti insieme.
+[Introduzione all'integrazione continua con Novell](~/tools/ci/intro-to-ci.md) introduce l'integrazione continuata come una pratica di sviluppo software utile che fornisce un avviso tempestivo di codice interrotto o incompatibile. CI consente agli sviluppatori di risolvere problemi e problemi non appena si verificano e mantiene il software in uno stato adatto per la distribuzione. Questa procedura dettagliata illustra come usare il contenuto di entrambi i documenti insieme.
 
 Questa guida illustra come installare Jenkins in un computer dedicato che esegue OS X e configurarlo per l'esecuzione automatica all'avvio del computer. Quando Jenkins viene installato, vengono installati altri plug-in per supportare MS Build. Jenkins supporta git da box. Se TFS è usato per il controllo del codice sorgente, è necessario installare anche un plug-in aggiuntivo e le utilità della riga di comando.
 
-Dopo aver configurato Jenkins e aver installato tutti i plug-in necessari, si creeranno uno o più processi per compilare i progetti Xamarin.Android e Xamarin.iOS. Un processo è una raccolta di passaggi e metadati necessari per eseguire alcune operazioni. Un processo è in genere costituito dagli elementi seguenti:
+Dopo aver configurato Jenkins e aver installato tutti i plug-in necessari, si creeranno uno o più processi per compilare i progetti Novell. Android e Novell. iOS. Un processo è una raccolta di passaggi e metadati necessari per eseguire alcune operazioni. Un processo è in genere costituito dagli elementi seguenti:
 
 - **Gestione del codice sorgente (SCM)** : si tratta di una voce di metadati nei file di configurazione di Jenkins che contiene informazioni su come connettersi al controllo del codice sorgente e sui file da recuperare.
 - **Trigger** : i trigger vengono usati per avviare un processo in base a determinate azioni, ad esempio quando uno sviluppatore esegue il commit delle modifiche nel repository del codice sorgente.
@@ -30,13 +30,13 @@ Dopo aver configurato Jenkins e aver installato tutti i plug-in necessari, si cr
 - **Notifiche** : un processo può inviare un tipo di notifica sullo stato di una compilazione.
 - **Sicurezza** : Sebbene sia facoltativo, è consigliabile abilitare anche le funzionalità di sicurezza di Jenkins.
 
-Questa guida illustra come configurare un server Jenkins che copre ognuno di questi punti. Al termine, è necessario avere una conoscenza approfondita di come configurare e configurare Jenkins per la creazione di file IPA e APK per i progetti per dispositivi mobili Xamarin.
+Questa guida illustra come configurare un server Jenkins che copre ognuno di questi punti. Al termine, è necessario avere una conoscenza approfondita di come configurare e configurare Jenkins per la creazione di file IPA e APK per i progetti per dispositivi mobili Novell.
 
 ## <a name="requirements"></a>Requisiti
 
 Il server di compilazione ideale è un computer autonomo dedicato all'unico scopo di creare ed eventualmente testare l'applicazione. Un computer dedicato garantisce che gli elementi che potrebbero essere necessari per altri ruoli, ad esempio quelli di un server Web, non incontaminano la compilazione. Se, ad esempio, il server di compilazione funge anche da server Web, il server Web potrebbe richiedere una versione in conflitto di una libreria comune. A causa di questo conflitto, il server Web potrebbe non funzionare correttamente oppure Jenkins potrebbe creare compilazioni che non funzionano se distribuite agli utenti.
 
-Il server di compilazione per le app per dispositivi mobili Xamarin è configurato in modo molto simile alla workstation di uno sviluppatore. Dispone di un account utente in cui verranno installati Jenkins, Visual Studio per Mac e Xamarin.iOS e Xamarin.Android. È necessario installare anche tutti i certificati di firma del codice, i profili di provisioning e gli archivi di chiavi. *L'account utente del server di compilazione, in genere, è separato dagli account sviluppatore. Assicurarsi di installare e configurare tutti i software, le chiavi e i certificati mentre si è connessi con l'account utente del server di compilazione.*
+Il server di compilazione per le app per dispositivi mobili Novell è configurato in modo molto simile alla workstation di uno sviluppatore. Dispone di un account utente in cui verranno installati Jenkins, Visual Studio per Mac e Novell. iOS e Novell. Android. È necessario installare anche tutti i certificati di firma del codice, i profili di provisioning e gli archivi di chiavi. *L'account utente del server di compilazione, in genere, è separato dagli account sviluppatore. Assicurarsi di installare e configurare tutti i software, le chiavi e i certificati mentre si è connessi con l'account utente del server di compilazione.*
 
 Il diagramma seguente illustra tutti questi elementi in un tipico server di compilazione Jenkins:
 
@@ -95,7 +95,7 @@ In questo modo Jenkins. app verrà avviata automaticamente ogni volta che l'uten
 
 Fare clic sul pulsante **Opzioni di accesso** , quindi scegliere l'account che verrà usato da OS X per l'accesso in fase di avvio.
 
-A questo punto Jenkins è stato installato. Tuttavia, se si vuole creare applicazioni per dispositivi mobili Xamarin, è necessario installare alcuni plug-in.
+A questo punto Jenkins è stato installato. Tuttavia, se si vuole creare applicazioni per dispositivi mobili Novell, è necessario installare alcuni plug-in.
 
 ### <a name="installing-plugins"></a>Installazione di plug-in
 
@@ -295,8 +295,8 @@ Il polling SCM è un trigger comune perché fornisce un rapido feedback quando u
 
 Le compilazioni periodiche vengono spesso usate per creare una versione dell'applicazione che può essere distribuita ai tester. Una compilazione periodica, ad esempio, potrebbe essere pianificata per il venerdì sera, in modo che i membri del team di QA possano testare il lavoro della settimana precedente.
 
-### <a name="compiling-a-xamarinios-applications"></a>Compilazione di applicazioni Xamarin.iOS
-I progetti Xamarin.iOS possono essere compilati dalla riga di comando usando `xbuild` o `msbuild`. Il comando della shell verrà eseguito nel contesto dell'account utente che esegue Jenkins. È importante che l'account utente abbia accesso al profilo di provisioning in modo che l'applicazione possa essere assemblata correttamente per la distribuzione. È possibile aggiungere questo comando della shell alla pagina di configurazione del processo.
+### <a name="compiling-a-xamarinios-applications"></a>Compilazione di applicazioni Novell. iOS
+I progetti Novell. iOS possono essere compilati dalla riga di comando usando `xbuild` o `msbuild`. Il comando della shell verrà eseguito nel contesto dell'account utente che esegue Jenkins. È importante che l'account utente abbia accesso al profilo di provisioning in modo che l'applicazione possa essere assemblata correttamente per la distribuzione. È possibile aggiungere questo comando della shell alla pagina di configurazione del processo.
 
 Scorrere verso il basso fino alla sezione **Build** . Fare clic sul pulsante **Aggiungi istruzione di compilazione** e selezionare **Esegui Shell**, come illustrato nello screenshot seguente:
 
@@ -304,9 +304,9 @@ Scorrere verso il basso fino alla sezione **Build** . Fare clic sul pulsante **A
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-### <a name="building-a-xamarinandroid-project"></a>Creazione di un progetto Xamarin.Android
+### <a name="building-a-xamarinandroid-project"></a>Creazione di un progetto Novell. Android
 
-La creazione di un progetto Xamarin.Android è un concetto molto simile alla creazione di un progetto Xamarin.iOS. Per creare un file APK da un progetto Xamarin.Android, è necessario configurare Jenkins per eseguire i due passaggi seguenti:
+La creazione di un progetto Novell. Android è un concetto molto simile alla creazione di un progetto Novell. iOS. Per creare un file APK da un progetto Novell. Android, è necessario configurare Jenkins per eseguire i due passaggi seguenti:
 
 - Compilare il progetto usando il plug-in MSBuild
 - Firmare e zip allineare l'APK con un keystore di versione valido.
@@ -323,7 +323,7 @@ Una volta aggiunta l'istruzione di compilazione al progetto, compilare i campi d
 
 ![](jenkins-walkthrough-images/image37.png "Once the build step is added to the project, fill in the form fields that appear")
 
-Questa istruzione di compilazione verrà eseguita `xbuild` nella cartella **$Workspace** . Il file di compilazione MSBuild è impostato sul file **Xamarin.Android. csproj** . Gli **argomenti della riga di comando** specificano una build di rilascio della **PackageForAndroid**di destinazione. Il prodotto di questo passaggio sarà un file APK che si trova nel percorso seguente:
+Questa istruzione di compilazione verrà eseguita `xbuild` nella cartella **$Workspace** . Il file di compilazione MSBuild è impostato sul file **Novell. Android. csproj** . Gli **argomenti della riga di comando** specificano una build di rilascio della **PackageForAndroid**di destinazione. Il prodotto di questo passaggio sarà un file APK che si trova nel percorso seguente:
 
 ```
 $WORKSPACE/[PROJECT NAME]/bin/Release
@@ -337,7 +337,7 @@ Questo APK non è pronto per la distribuzione, perché non è stato firmato con 
 
 #### <a name="signing-and-zipaligning-the-apk-for-release"></a>Firma e Zipaligning dell'APK per la versione
 
-La firma e il zipaligning dell'APK sono tecnicamente due attività separate eseguite da due strumenti della riga di comando distinti dal Android SDK. Tuttavia, è consigliabile eseguirli in un'unica azione di compilazione. Per ulteriori informazioni sulla firma e il zipaligning di un APK, vedere la documentazione di Xamarin relativa alla preparazione di un'applicazione Android per la versione.
+La firma e il zipaligning dell'APK sono tecnicamente due attività separate eseguite da due strumenti della riga di comando distinti dal Android SDK. Tuttavia, è consigliabile eseguirli in un'unica azione di compilazione. Per ulteriori informazioni sulla firma e il zipaligning di un APK, vedere la documentazione di Novell relativa alla preparazione di un'applicazione Android per la versione.
 
 Entrambi i comandi richiedono parametri della riga di comando che possono variare da progetto a progetto. Inoltre, alcuni di questi parametri della riga di comando sono password che non devono essere visualizzate nell'output della console quando la compilazione è in esecuzione. Alcuni di questi parametri della riga di comando verranno archiviati nelle variabili di ambiente. Le variabili di ambiente necessarie per la firma e/o l'allineamento zip sono descritte nella tabella seguente:
 
@@ -387,11 +387,11 @@ Una volta apportate tutte le azioni di compilazione, è consigliabile attivare u
 
 ### <a name="submitting-tests-to-test-cloud"></a>Invio di test a Test Cloud
 
-I test automatizzati possono essere inviati a Test Cloud usando i comandi della shell. Per altre informazioni sulla configurazione di un'esecuzione dei test in Xamarin Test Cloud, vedere questa guida per l'uso di [Xamarin. UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
+I test automatizzati possono essere inviati a Test Cloud usando i comandi della shell. Per altre informazioni sulla configurazione di un'esecuzione dei test in Xamarin Test Cloud, vedere [preparazione delle app Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) e [preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ## <a name="summary"></a>Riepilogo
 
-In questa guida è stato introdotto Jenkins come server di compilazione in macOS e configurato per compilare e preparare le applicazioni per dispositivi mobili Xamarin per la versione. Jenkins è stato installato in un computer macOS insieme a diversi plug-in per supportare il processo di compilazione. È stato creato e configurato un processo che effettuerà il pull del codice da TFS o Git e quindi compilerà tale codice in un'applicazione per la versione pronta. Sono stati anche esaminati due modi diversi per pianificare l'esecuzione dei processi.
+In questa guida è stato introdotto Jenkins come server di compilazione in macOS e configurato per compilare e preparare le applicazioni per dispositivi mobili Novell per la versione. Jenkins è stato installato in un computer macOS insieme a diversi plug-in per supportare il processo di compilazione. È stato creato e configurato un processo che effettuerà il pull del codice da TFS o Git e quindi compilerà tale codice in un'applicazione per la versione pronta. Sono stati anche esaminati due modi diversi per pianificare l'esecuzione dei processi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

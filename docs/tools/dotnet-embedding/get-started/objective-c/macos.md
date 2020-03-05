@@ -6,20 +6,20 @@ ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: d081795ecfcc5d0aa2559b866fcc57076fe8248b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: f0e2128bca5d2965395647353cd5a95a4030439f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007018"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292373"
 ---
 # <a name="getting-started-with-macos"></a>Introduzione a macOS
 
-## <a name="what-you-will-need"></a>Elementi necessari
+## <a name="what-you-will-need"></a>Materiale necessario
 
 * Seguire le istruzioni nella Guida introduttiva a [Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) .
 
-## <a name="hello-world"></a>Hello world
+## <a name="hello-world"></a>Hello World
 
 Per prima cosa, creare un semplice esempio Hello World in C#.
 
@@ -40,7 +40,7 @@ public class MyNSView : NSTextView
 }
 ```
 
-Compilare il progetto. L'assembly risultante verrà salvato come **~/Projects/Hello-from-CSharp/Hello-from-CSharp/bin/debug/Hello-from-CSharp.dll**.
+Compilazione del progetto. L'assembly risultante verrà salvato come **~/Projects/Hello-from-CSharp/Hello-from-CSharp/bin/debug/Hello-from-CSharp.dll**.
 
 ### <a name="bind-the-managed-assembly"></a>Associare l'assembly gestito
 
@@ -82,7 +82,7 @@ Aprire **ViewController. m**e sostituire il contenuto con:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -94,5 +94,3 @@ Aprire **ViewController. m**e sostituire il contenuto con:
 Infine, eseguire il progetto Xcode e verrà visualizzato un risultato simile al seguente:
 
 ![Hello C# dall'esempio in esecuzione nel simulatore](macos-images/hello-from-csharp-mac.png)
-
-Un esempio più completo e migliore [è disponibile qui](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

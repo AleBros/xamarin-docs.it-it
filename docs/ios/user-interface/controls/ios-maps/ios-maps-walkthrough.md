@@ -1,20 +1,20 @@
 ---
-title: Annotazioni e sovrimpressioni in Xamarin.iOS
-description: Questo articolo presenta una procedura dettagliata che illustra come usare le funzionalità di annotazione e sovrapposizione del kit mappa. Viene illustrato come aggiungere una mappa a un'applicazione che visualizza un'annotazione e una sovrapposizione nella posizione della conferenza Xamarin evolve 2013.
+title: Annotazioni e sovrimpressioni in Novell. iOS
+description: Questo articolo presenta una procedura dettagliata che illustra come usare le funzionalità di annotazione e sovrapposizione del kit mappa. Viene illustrato come aggiungere una mappa a un'applicazione che visualizza un'annotazione e una sovrapposizione nella posizione della conferenza Novell evolve 2013.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 7e9010eb579f28e62b5f7ab72ac061e9898e7ecf
+ms.sourcegitcommit: a9b180651863cb7da31d3af14182fe3ad44796f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022008"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "78292294"
 ---
-# <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Xamarin.iOS
+# <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Novell. iOS
 
 L'applicazione che verrà compilata in questa procedura dettagliata è illustrata di seguito:
 
@@ -80,7 +80,7 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
 
     ```
 
-1. Creare una nuova istanza di `MapDelegate` e assegnarla alla `Delegate` dell'`MKMapView`. Anche in questo caso, implcodeent il `MapDelegate`:
+1. Creare una nuova istanza di `MapDelegate` e assegnarla alla `Delegate` dell'`MKMapView`. Anche in questo caso, la `MapDelegate` verrà implementata a breve:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -107,7 +107,7 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
 
     e stringa:
 
-    `Maps Walkthrough Docs Sample`
+    `Maps Walkthrough Docs Sample`.
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs: classe per le annotazioni personalizzate
 
@@ -245,7 +245,7 @@ Il codice è stato completato in `ViewDidLoad`. A questo punto è necessario imp
     }
     ```
 
-1. Per nascondere l'immagine quando l'utente deseleziona l'annotazione toccando qualsiasi altra posizione sulla mappa, implementare il `DidSelectAnnotationView` metodo come segue:
+1. Per nascondere l'immagine quando l'utente deseleziona l'annotazione toccando qualsiasi altra posizione sulla mappa, implementare il `DidDeselectAnnotationView` metodo come segue:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)

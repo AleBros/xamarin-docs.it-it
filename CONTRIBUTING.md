@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
+ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751926"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261618"
 ---
-# <a name="contributing"></a>Contributi al codice
+# <a name="contributing"></a>Contributo
 
 Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione di Xamarin.
 
@@ -14,7 +14,7 @@ Questa pagina illustra il processo di base per l'aggiornamento del contenuto nel
 
 - [Contratto di licenza con il collaboratore](LICENSE)
 
-## <a name="process-for-contributing"></a>Processo per apportare il contributo
+## <a name="process-for-contributing"></a>Processo per fornire il contributo
 
 ### <a name="small-changes--edits"></a>Piccole modifiche e modifiche
 
@@ -41,7 +41,7 @@ Per i contributi con modifiche importanti e i nuovi contenuti, [aprire un proble
 
 **Prima di iniziare a scrivere il contenuto, ottenere un feedback per la proposta attraverso il problema.**
 
-Se si tratta di un nuovo argomento, è possibile usare il [file modello](../contributing-guidelines/template.md) come punto di partenza. Il file contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
+Se si tratta di un nuovo argomento, è possibile usare il [file modello](../contributing-guidelines/template.md) come punto di partenza. Contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
 
 Aggiungere eventuali immagini e altre risorse statiche alla sottocartella denominata **\<nomepagina>-images**. Se si sta creando una nuova cartella per il contenuto, aggiungere una cartella images alla nuova cartella.
 
@@ -64,6 +64,10 @@ Il team di Xamarin esamina la richiesta pull e informa l'utente (tramite feedbac
 Dopo aver applicato il feedback e se le modifiche sono corrette, i responsabili eseguono il merge della richiesta pull.
 
 A intervalli stabiliti viene eseguito il push di tutti i commit dal ramo master al sito attivo e l'utente può visualizzare i propri contributi in https://docs.microsoft.com/xamarin/.
+
+### <a name="contributing-to-international-content"></a>Aggiunta di contributi ai contenuti internazionali
+
+I contributi per il contenuto del computer tradotto (MT) non sono attualmente accettati per il momento. Per migliorare la qualità del contenuto MT, è stato effettuato il passaggio a un motore MT neurale. Accettiamo e incoraggiamo i contributi per il contenuto della traduzione umana (HT), usato per il training del motore Neural MT. Nel tempo, i contributi ai contenuti HT miglioreranno la qualità di HT e MT. Gli argomenti MT avranno una dichiarazione di non responsabilità che informa che parte dell'argomento può essere MT e il pulsante **modifica** non viene visualizzato perché è disabilitato.
 
 ## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
 

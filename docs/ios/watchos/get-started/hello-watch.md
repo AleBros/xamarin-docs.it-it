@@ -1,21 +1,18 @@
 ---
 title: Hello, watchos-procedura dettagliata
-description: >-
-  Questo documento fornisce una procedura dettagliata per la creazione di una semplice applicazione watchos con Xamarin
-
-  . Viene descritto come lavorare sia in Visual Studio che in Visual Studio per Mac, utilizzare gli storyboard e rispondere agli eventi nel codice.
+description: Questo documento fornisce una procedura dettagliata per la creazione di una semplice applicazione watchos con Novell. Viene descritto come lavorare sia in Visual Studio che in Visual Studio per Mac, utilizzare gli storyboard e rispondere agli eventi nel codice.
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032767"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291526"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchos-procedura dettagliata
 
@@ -31,20 +28,19 @@ Verificare che gli identificatori del bundle seguano la convenzione \*. watchkit
 
 Dovrebbe essere possibile eseguire l'app Watch adesso, ma poiché il file dello storyboard nell'app Watch è vuoto, non sarà possibile dirlo.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ![](hello-watch-images/projectstructure.png "The Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
 
 -----
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Xamarin
- iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
+Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
 
 1. Verificare che i rilievi della **casella degli strumenti** e delle **Proprietà** siano visibili,
 1. Fare clic per selezionare il controller di interfaccia,
@@ -53,10 +49,9 @@ Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Xamarin
 
     ![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con Xamarin
- iOS designer in Visual Studio:
+Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con Novell iOS designer in Visual Studio:
 
 1. Aprire il riquadro proprietà;
 1. Modificare la classe in **InterfaceController**;
@@ -73,11 +68,11 @@ Creare l'interfaccia utente:
 1. Trascinare e rilasciare un **pulsante** e un' **etichetta** nella scena e
 1. Impostare il testo e gli attributi dei controlli come illustrato:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
 
@@ -92,7 +87,7 @@ Creare l'interfaccia utente:
 
 ![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-Dopo aver salvato lo storyboard, il **InterfaceController.designer.cs** viene aggiornato con i nomi e le azioni del controllo. Se si apre il file dopo che è stato aggiornato, è possibile visualizzare il modo in cui il `RegisterAttribute` corrisponde al controller e il modo C# in cui i controlli dell'interfaccia utente corrispondono alle variabili di istanza contrassegnate con il`OutletAttribute`e come le azioni vengono mappate ai metodi parziali contrassegnati con il`ActionAttribute`:
+Dopo aver salvato lo storyboard, il **InterfaceController.designer.cs** viene aggiornato con i nomi e le azioni del controllo. Se si apre questo file dopo che è stato aggiornato, è possibile visualizzare il modo in cui il `RegisterAttribute` corrisponde al controller e il modo C# in cui i controlli dell'interfaccia utente corrispondono alle variabili di istanza contrassegnate con il `OutletAttribute` e come le azioni vengono mappate ai metodi parziali contrassegnati con il `ActionAttribute`:
 
 ```csharp
 // WARNING
@@ -160,6 +155,5 @@ Congratulazioni, è disponibile un'app Watch.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Introduzione (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Installazione e configurazione](~/ios/watchos/get-started/installation.md)
 - [Video dell'app First Watch](https://blog.xamarin.com/your-first-watch-kit-app/)

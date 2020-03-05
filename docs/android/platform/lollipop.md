@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 104141d98cecb31cae17f4510f742387be4a3fb7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 297c7806ce8a880d65c38ef0e4672e41fee5acfe
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027244"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292148"
 ---
 # <a name="lollipop-features"></a>Funzioni Lollipop
 
@@ -42,21 +42,21 @@ Oltre ai miglioramenti apportati all'interfaccia utente per quanto riguarda il t
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare le nuove funzionalità di Android 5,0 nelle app basate su Xamarin.è necessario quanto segue:
+Per usare le nuove funzionalità di Android 5,0 nelle app basate su Novell, è necessario quanto segue:
 
-- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
+- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite il Android SDK Manager.
 
-- **Java Developer Kit** &ndash; Xamarin.Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** &ndash; Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
 
 ## <a name="setting-up-an-android-50-project"></a>Configurazione di un progetto Android 5,0
 
-Per creare un progetto Android 5,0, è necessario installare gli strumenti e i pacchetti SDK più recenti. Usare la procedura seguente per configurare un progetto Xamarin.Android destinato a Android 5,0:
+Per creare un progetto Android 5,0, è necessario installare gli strumenti e i pacchetti SDK più recenti. Usare la procedura seguente per configurare un progetto Novell. Android destinato a Android 5,0:
 
-1. Installare gli strumenti di Xamarin.Android e attivare la licenza di Novell. Per ulteriori informazioni sull'installazione di Xamarin.Android, vedere [configurazione e installazione](~/android/get-started/installation/index.md) .
+1. Installare gli strumenti di Novell. Android e attivare la licenza di Novell. Per ulteriori informazioni sull'installazione di Novell. Android, vedere [configurazione e installazione](~/android/get-started/installation/index.md) .
 
 2. Se si usa Visual Studio per Mac, installare gli aggiornamenti più recenti di Android 5,0.
 
@@ -70,7 +70,7 @@ Per creare un progetto Android 5,0, è necessario installare gli strumenti e i p
 
    Per ulteriori informazioni sull'utilizzo di gestione Android SDK, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
-4. Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo per Android con Xamarin.vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
+4. Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. Quando si crea un progetto Android, assicurarsi di configurare le impostazioni di versione per Android 5,0.
    In Visual Studio per Mac passare a **Opzioni progetto &gt; compila &gt; generale** e impostare **Framework di destinazione** su **Android 5,0 (Lollipop)** o versione successiva:
 
     ![Impostazione del Framwework di destinazione su Android 5,0 Lollipop](lollipop-images/target-framework.png)
@@ -79,7 +79,7 @@ Per creare un progetto Android 5,0, è necessario installare gli strumenti e i p
 
     ![Impostazione delle versioni di Android minime e di destinazione su automatico](lollipop-images/minimum-android-version.png)
 
-5. Configurare un emulatore o un dispositivo Android per testare l'app. Se si usa un emulatore, vedere [emulatore Android installazione](~/android/get-started/installation/android-emulator/index.md) per informazioni su come configurare un emulatore Android da usare con Xamarin Studio o Visual Studio. Se si usa un dispositivo Android, vedere [la pagina relativa alla configurazione dell'SDK di anteprima](https://developer.android.com/preview/setup-sdk.html) per informazioni su come aggiornare il dispositivo per Android 5,0. Per configurare il dispositivo Android per l'esecuzione e il debug di applicazioni Xamarin.Android, vedere [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
+5. Configurare un emulatore o un dispositivo Android per testare l'app. Se si usa un emulatore, vedere [emulatore Android installazione](~/android/get-started/installation/android-emulator/index.md) per informazioni su come configurare un emulatore Android da usare con Xamarin Studio o Visual Studio. Se si usa un dispositivo Android, vedere [la pagina relativa alla configurazione dell'SDK di anteprima](https://developer.android.com/preview/setup-sdk.html) per informazioni su come aggiornare il dispositivo per Android 5,0. Per configurare il dispositivo Android per l'esecuzione e il debug di applicazioni Novell. Android, vedere [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
 
 Nota: se si sta aggiornando un progetto Android esistente destinato a Android L Preview, è necessario aggiornare il Framework di **destinazione** e la **versione di Android** ai valori descritti in precedenza.
 
@@ -105,7 +105,7 @@ Le notifiche sono state modificate in modo significativo in Android 5,0:
 
 - **I suoni e le vibrazioni vengono gestiti in modo diverso** &ndash; suoni di notifica e le vibrazioni sono ora gestite da `Notification.Builder` invece che da `Ringtone`, `MediaPlayer`e `Vibrator`.
 
-- La **nuova combinazione di colori** &ndash; in base al tema Material, il rendering delle notifiche viene eseguito con testo scuro su sfondi bianco o molto chiaro. Inoltre, i canali alpha nelle icone di notifica possono essere modificati da Android per coordinarsi con le combinazioni di colori del sistema. 
+- La **nuova combinazione di colori** &ndash; in base al tema Material, il rendering delle notifiche viene eseguito con testo scuro su sfondi bianco o molto chiaro. Inoltre, i canali alpha nelle icone di notifica possono essere modificati da Android per coordinarsi con le combinazioni di colori del sistema.
 
 - È ora possibile visualizzare le notifiche di **lockscreen** &ndash; notifiche nel dispositivo lockscreen.
 
@@ -113,7 +113,7 @@ Le notifiche sono state modificate in modo significativo in Android 5,0:
 
 Nella maggior parte dei casi, la funzionalità di notifica delle app esistente a Android 5,0 richiede i passaggi seguenti:
 
-1. Convertire il codice per usare `Notification.Builder` (o `NotificationsCompat.Builder`) per la creazione di notifiche. 
+1. Convertire il codice per usare `Notification.Builder` (o `NotificationsCompat.Builder`) per la creazione di notifiche.
 
 2. Verificare che gli asset di notifica esistenti siano visualizzabili nella nuova combinazione di colori del tema Material.
 
@@ -133,13 +133,13 @@ Il nuovo tema del materiale Android 5,0 introduce modifiche apportate all'aspett
 
 Android 5,0 accoglie la schermata iniziale visualizzata a sinistra. Lo screenshot centrale è la prima schermata dell'elenco di app e lo screenshot a destra è la schermata **Impostazioni** . La specifica di [progettazione materiale](https://material.io/guidelines/material-design/introduction.html) di Google illustra le regole di progettazione sottostanti rispetto al nuovo concetto di tema di materiali.
 
-Il tema materiale include tre versioni predefinite che è possibile usare nell'app: il tema scuro `Theme.Material` (impostazione predefinita), il tema `Theme.Material.Light` e il tema `Theme.Material.Light.DarkActionBar`: 
+Il tema materiale include tre versioni predefinite che è possibile usare nell'app: il tema scuro `Theme.Material` (impostazione predefinita), il tema `Theme.Material.Light` e il tema `Theme.Material.Light.DarkActionBar`:
 
 [![screenshot dei temi Dark, Light e DarkActionBar](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
-Per altre informazioni sull'uso delle funzionalità del tema materiale nelle app Xamarin.Android, vedere [tema del materiale](~/android/user-interface/material-theme.md).
+Per altre informazioni sull'uso delle funzionalità del tema materiale nelle app Novell. Android, vedere [tema del materiale](~/android/user-interface/material-theme.md).
 
-## <a name="animations"></a>Animations
+## <a name="animations"></a>Animazioni
 
 Android 5,0 fornisce animazioni di feedback tocco, animazioni di transizione delle attività e animazioni di transizione dello stato di visualizzazione per rendere più intuitive le interfacce delle app. Inoltre, le app Android 5,0 possono usare le animazioni per *rivelare gli effetti* per nascondere o rivelare le visualizzazioni. È possibile usare le impostazioni di *movimento curvo* per configurare la modalità di rendering delle animazioni in modo rapido o lento.
 
@@ -263,7 +263,7 @@ I layout Android 5,0 riconoscono un nuovo attributo `tint` che è possibile usar
 
 Nell'esempio seguente, per creare variazioni di tinta, viene usato un singolo asset immagine &ndash; un logo bianco con uno sfondo trasparente &ndash;:
 
-![Logo Xamarin bianco con sfondo trasparente](lollipop-images/xamarin-logo-white.png)
+![Logo Novell bianco con sfondo trasparente](lollipop-images/xamarin-logo-white.png)
 
 Questo logo viene visualizzato sopra uno sfondo circolare blu, come illustrato negli esempi seguenti. L'immagine a sinistra è il modo in cui viene visualizzato il logo senza un'impostazione `tint`. Nell'immagine centrale, l'attributo `tint` del logo è impostato su un grigio scuro. Nell'immagine a destra `tint` è impostato su un grigio chiaro:
 
@@ -343,7 +343,7 @@ Il sistema di notifica in Android 5,0 è stato aggiornato in modo significativo 
 
 ![Esempio di una notifica Android 5,0 non espansa](lollipop-images/expanded-notification-contracted.png)
 
-Quando viene visualizzata un'icona di grandi dimensioni in una notifica (come illustrato nell'esempio precedente), Android 5,0 presenta l'icona piccola come un badge sull'icona grande. 
+Quando viene visualizzata un'icona di grandi dimensioni in una notifica (come illustrato nell'esempio precedente), Android 5,0 presenta l'icona piccola come un badge sull'icona grande.
 
 In Android 5,0, le notifiche possono essere visualizzate anche sul dispositivo lockscreen.
 Ecco ad esempio una schermata di esempio di un lockscreen con una sola notifica:
@@ -352,7 +352,8 @@ Ecco ad esempio una schermata di esempio di un lockscreen con una sola notifica:
 
 Gli utenti possono fare doppio toccare una notifica in LockScreen per sbloccare il dispositivo e passare all'app che ha originato tale notifica oppure scorrere la notifica per ignorarla. Le notifiche hanno una nuova impostazione di *visibilità* che determina la quantità di contenuto che è possibile visualizzare nella schermata di blocco. Gli utenti possono scegliere se consentire il contenuto sensibile da visualizzare nelle notifiche di lockscreen.
 
-Android 5,0 introduce un nuovo formato di presentazione delle notifiche con priorità alta chiamato *Heads-up*. Le notifiche Heads-up scorrono verso il basso dalla parte superiore della schermata per alcuni secondi e quindi ritirate alla sfumatura della notifica nella parte superiore della schermata. Le notifiche relative alle intestazioni consentono all'interfaccia utente del sistema di inserire informazioni importanti davanti all'utente senza compromettere l'attività attualmente in esecuzione. Nell'esempio seguente viene illustrata una semplice notifica Heads-up visualizzata all'inizio di un'app:
+Android 5,0 introduce un nuovo formato di presentazione delle notifiche con priorità alta chiamato *Heads-up*. Le notifiche Heads-up scorrono verso il basso dalla parte superiore della schermata per alcuni secondi e quindi ritirate alla sfumatura della notifica nella parte superiore della schermata. Le notifiche relative alle intestazioni consentono all'interfaccia utente del sistema di inserire informazioni importanti davanti all'utente senza compromettere l'attività attualmente in esecuzione.
+Nell'esempio seguente viene illustrata una semplice notifica Heads-up visualizzata all'inizio di un'app:
 
 [![esempio di una notifica di testa](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
@@ -441,7 +442,7 @@ Android 5,0 aggiunge i miglioramenti apportati alle API seguenti per la connetti
 
 Per altre informazioni sulle nuove API wireless e di connettività in Android 5,0, vedere [wireless e connettività](https://developer.android.com/preview/api-overview.html#Wireless).
 
-### <a name="job-scheduling"></a>Pianificazione di processi
+### <a name="job-scheduling"></a>Pianificazione dei processi
 
 Android 5,0 introduce una nuova API `JobScheduler` che consente agli utenti di ridurre al minimo lo svuotamento della batteria pianificando determinate attività da eseguire solo quando il dispositivo è collegato e caricato. Questa funzionalità dell'utilità di pianificazione dei processi può essere usata anche per pianificare un'attività da eseguire quando le condizioni sono più adatte a tale attività, ad esempio il download di un file di grandi dimensioni quando il dispositivo è connesso tramite una rete Wi-Fi anziché una rete a consumo.
 
@@ -449,11 +450,11 @@ Per altre informazioni sulle nuove API di pianificazione dei processi in Android
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo fornisce una panoramica delle nuove funzionalità importanti di Android 5,0 per gli sviluppatori di app Xamarin.Android:
+Questo articolo fornisce una panoramica delle nuove funzionalità importanti di Android 5,0 per gli sviluppatori di app Novell. Android:
 
 - Tema Material
 
-- Animations
+- Animazioni
 
 - Visualizza ombre ed elevazione
 
@@ -465,7 +466,7 @@ Questo articolo fornisce una panoramica delle nuove funzionalità importanti di 
 
 - Nuove API per fotocamere, riproduzione audio, controllo multimediale, archiviazione, wireless/connettività e pianificazione dei processi
 
-Se non si ha familiarità con lo sviluppo di Xamarin Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Xamarin.Android.
+Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Novell. Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) è un'ottima introduzione per imparare a creare progetti Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
@@ -473,4 +474,3 @@ Se non si ha familiarità con lo sviluppo di Xamarin Android, vedere [installazi
 - [Android L Developer Preview](https://developer.android.com/preview/index.html)
 - [Ottenere il Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Progettazione materiale](https://developer.android.com/preview/material/index.html)
-- [Principi di progettazione del materiale](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

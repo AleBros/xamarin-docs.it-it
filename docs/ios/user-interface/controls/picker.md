@@ -1,20 +1,20 @@
 ---
-title: Controllo selezione in Xamarin.iOS
-description: Questo documento descrive come progettare e usare i controlli di selezione in un'app Xamarin.iOS. Viene illustrato come implementare una selezione nel codice e in iOS designer.
+title: Controllo selezione in Novell. iOS
+description: Questo documento descrive come progettare e usare i controlli di selezione in un'app Novell. iOS. Viene illustrato come implementare una selezione nel codice e in iOS designer.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 43dbafe16d7cbabdb3b7902dd3d46d845f213fcd
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021986"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292908"
 ---
-# <a name="picker-control-in-xamarinios"></a>Controllo selezione in Xamarin.iOS
+# <a name="picker-control-in-xamarinios"></a>Controllo selezione in Novell. iOS
 
 Un [`UIPickerView`](xref:UIKit.UIPickerView) consente di selezionare un valore da un elenco scorrendo i singoli componenti di un'interfaccia simile a una rotellina.
 
@@ -168,9 +168,9 @@ var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
 components.Year = -60;
-NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
+NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
 datePickerView.MinimumDate = minDate;
-datePickerView.MaximumDate = NSDate.Now;
+datePickerView.MaximumDate = currentDate;
 ```
 
 > [!TIP]
@@ -193,7 +193,7 @@ datePickerView.MinuteInterval = 10;
 
 I selezionatori Data supportano quattro [modalità](xref:UIKit.UIDatePickerMode), descritte di seguito:
 
-##### <a name="uidatepickermodetime"></a>UIDatePickerMode. Time
+##### <a name="uidatepickermodetime"></a>UIDatePickerMode.Time
 
 `UIDatePickerMode.Time` Visualizza l'ora con un selettore di ora e minuti e una designazione AM o PM facoltativa:
 
@@ -201,9 +201,9 @@ I selezionatori Data supportano quattro [modalità](xref:UIKit.UIDatePickerMode)
 datePickerView.Mode = UIDatePickerMode.Time;
 ```
 
-![UIDatePickerMode. Time](picker-images/image8.png "UIDatePickerMode. Time")
+![UIDatePickerMode. Time](picker-images/image8.png "UIDatePickerMode.Time")
 
-##### <a name="uidatepickermodedate"></a>UIDatePickerMode. date
+##### <a name="uidatepickermodedate"></a>UIDatePickerMode.Date
 
 `UIDatePickerMode.Date` Visualizza la data con selettore mese, giorno e anno:
 
@@ -211,7 +211,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 datePickerView.Mode = UIDatePickerMode.Date;
 ```
 
-![UIDatePickerMode. date](picker-images/image7.png "UIDatePickerMode. date")
+![UIDatePickerMode. date](picker-images/image7.png "UIDatePickerMode.Date")
 
 L'ordine dei selettori dipende dalle impostazioni locali della selezione data, che per impostazione predefinita usa le impostazioni locali del sistema. L'immagine precedente Mostra il layout dei selettori nelle impostazioni locali `en_US`, ma il seguente modifica l'ordine in Day | Mese | Anno
 
@@ -221,7 +221,7 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 
 ![Giorno | Mese | Anno](picker-images/image9.png "Giorno | Mese | Anno")
 
-##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode. DateAndTime
+##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode.DateAndTime
 
 `UIDatePickerMode.DateAndTime` Visualizza una vista abbreviata della data, l'ora in ore e minuti e una designazione AM o PM facoltativa (a seconda che venga usato un clock di 12 o 24 ore):
 
@@ -229,12 +229,12 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode. DateAndTime")
+![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode.DateAndTime")
 
 Come con [`UIDatePickerMode.Date`](#uidatepickermodedate), l'ordine dei selettori e l'utilizzo di un clock di 12 o 24 ore dipendono dalle impostazioni locali della selezione data.
 
 > [!TIP]
-> Utilizzare la proprietà `Date` per acquisire il valore di un selettore di data in modalità `UIDatePickerMode.Time`, `UIDatePickerMode.Date` o `UIDatePickerMode.DateAndTime`. Questo valore viene archiviato come `NSDate`.
+> Utilizzare la proprietà `Date` per acquisire il valore di un selettore di data in modalità `UIDatePickerMode.Time`, `UIDatePickerMode.Date`o `UIDatePickerMode.DateAndTime`. Questo valore viene archiviato come `NSDate`.
 
 ##### <a name="uidatepickermodecountdowntimer"></a>UIDatePickerMode.CountDownTimer
 
@@ -260,7 +260,7 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 Per formattare una `NSDate`, utilizzare una [`NSDateFormatter`](xref:Foundation.NSDateFormatter).
 
-Per usare un `NSDateFormatter`, chiamare il relativo metodo [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Esempio:
+Per usare un `NSDateFormatter`, chiamare il relativo metodo [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Ad esempio,
 
 ```csharp
 var date = NSDate.Now;
@@ -291,10 +291,10 @@ timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 
 Diversi valori `NSDateFormatterStyle` visualizzano le ore come indicato di seguito:
 
-- `NSDateFormatterStyle.Full`:7:46:00 PM ora legale orientale
-- `NSDateFormatterStyle.Long`:7:47:00 PM EDT
-- `NSDateFormatterStyle.Medium`:7:47:00 PM
-- `NSDateFormatterSytle.Short`:7:47 PM
+- `NSDateFormatterStyle.Full`: 7:46:00 PM ora legale orientale
+- `NSDateFormatterStyle.Long`: 7:47:00 PM EDT
+- `NSDateFormatterStyle.Medium`: 7:47:00 PM
+- `NSDateFormatterSytle.Short`: 7:47 PM
 
 ##### <a name="datestyle"></a>DateStyle
 
@@ -308,12 +308,12 @@ dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 Vari valori `NSDateFormatterStyle` visualizzano le date come segue:
 
 - `NSDateFormatterStyle.Full`: mercoledì 2 agosto 2017 alle 7:48 PM
-- `NSDateFormatterStyle.Long`:2 agosto 2017 alle 7:49 PM
-- `NSDateFormatterStyle.Medium`:2 agosto, 2017, 7:49 PM
-- `NSDateFormatterStyle.Short`:8/2/17, 7:50 PM
+- `NSDateFormatterStyle.Long`: 2 agosto 2017 alle 7:49 PM
+- `NSDateFormatterStyle.Medium`: 2 agosto, 2017, 7:49 PM
+- `NSDateFormatterStyle.Short`: 8/2/17, 7:50 PM
 
 > [!NOTE]
-> `DateFormat` e `DateStyle` / `TimeStyle` forniscono modi diversi per specificare la formattazione di data e ora. Le proprietà impostate più di recente determinano l'output del formattatore di data.
+> `DateFormat` e `DateStyle`/`TimeStyle` forniscono modi diversi per specificare la formattazione di data e ora. Le proprietà impostate più di recente determinano l'output del formattatore di data.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

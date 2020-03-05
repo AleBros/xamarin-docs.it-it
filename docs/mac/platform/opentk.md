@@ -1,58 +1,58 @@
 ---
-title: Introduzione a OpenTK in Xamarin.Mac
-description: Questo articolo fornisce un'introduzione all'uso di OpenTK in un'applicazione Xamarin.Mac. Viene illustrata la creazione e la gestione di una finestra di gioco, il rendering di un oggetto semplice e la visualizzazione dell'oggetto all'utente.
+title: Introduzione a OpenTK in Novell. Mac
+description: Questo articolo fornisce un'introduzione all'uso di OpenTK in un'applicazione Novell. Mac. Viene illustrata la creazione e la gestione di una finestra di gioco, il rendering di un oggetto semplice e la visualizzazione dell'oggetto all'utente.
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029871"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292089"
 ---
-# <a name="introduction-to-opentk-in-xamarinmac"></a>Introduzione a OpenTK in Xamarin.Mac
+# <a name="introduction-to-opentk-in-xamarinmac"></a>Introduzione a OpenTK in Novell. Mac
 
-OpenTK (The Open Toolkit) è una libreria avanzata di basso livello C# che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo. Questo articolo fornisce una breve introduzione all'uso di OpenTK in un'app Xamarin.Mac.
+OpenTK (The Open Toolkit) è una libreria avanzata di basso livello C# che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo. Questo articolo fornisce una breve introduzione all'uso di OpenTK in un'app Novell. Mac.
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base di OpenTK in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base di OpenTK in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi `Register` e `Export` usati per collegare le C# classi agli oggetti Objective-c e agli elementi dell'interfaccia utente.
 
 <a name="About_OpenTK" />
 
 ## <a name="about-opentk"></a>Informazioni su OpenTK
 
-Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria avanzata di basso C# livello che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. L'uso di OpenTK in un'app Xamarin.Mac offre le funzionalità seguenti:
+Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria avanzata di basso C# livello che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. L'uso di OpenTK in un'app Novell. Mac offre le funzionalità seguenti:
 
 - **Sviluppo rapido** : OpenTK fornisce tipi di dati avanzati e documentazione inline per migliorare il flusso di lavoro di codifica e rilevare gli errori in modo più semplice e rapido.
 - **Facile integrazione** : OpenTK è stato progettato per integrarsi facilmente con le applicazioni .NET.
 - **Licenza permissive** : OpenTK è distribuito con le licenze MIT/X11 ed è completamente gratuito.
 - **Binding indipendenti dai tipi avanzati** : OpenTK supporta le versioni più recenti di OpenGL, OpenGL | ES, OpenAL e OpenCL con il caricamento automatico delle estensioni, il controllo degli errori e la documentazione inline.
-- **Opzioni GUI flessibili** : OpenTK fornisce la finestra di gioco nativa a prestazioni elevate progettata specificamente per i giochi e Xamarin.Mac.
+- **Opzioni GUI flessibili** : OpenTK fornisce la finestra di gioco nativa a prestazioni elevate progettata specificamente per i giochi e Novell. Mac.
 - **Codice completamente gestito e conforme a CLS** : OpenTK supporta le versioni a 32 bit e a 64 bit di MacOS senza librerie non gestite.
 - **Toolkit per Math 3D** OpenTK fornisce struct `Vector`, `Matrix`, `Quaternion` e `Bezier` tramite il suo 3D Math Toolkit.
 
 OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo.
 
-Per ulteriori informazioni, vedere il sito Web [del Toolkit di apertura](http://www.opentk.com) .
+Per ulteriori informazioni, vedere il sito Web [del Toolkit di apertura](https://opentk.net) .
 
 <a name="OpenTK_Quickstart" />
 
 ## <a name="opentk-quickstart"></a>Guida introduttiva a OpenTK
 
-Come introduzione rapida all'uso di OpenTK in un'app Xamarin.Mac, verrà creata una semplice applicazione che apre una visualizzazione del gioco, esegue il rendering di un triangolo semplice in tale visualizzazione e connette la visualizzazione del gioco alla finestra principale dell'app Mac per visualizzare il triangolo all'utente.
+Come introduzione rapida all'uso di OpenTK in un'app Novell. Mac, verrà creata una semplice applicazione che apre una visualizzazione del gioco, esegue il rendering di un triangolo semplice in tale visualizzazione e connette la visualizzazione del gioco alla finestra principale dell'app Mac per visualizzare il triangolo all'utente.
 
 <a name="Starting_a_New_Project" />
 
 ### <a name="starting-a-new-project"></a>Avvio di un nuovo progetto
 
-Avviare Visual Studio per Mac e creare una nuova soluzione Xamarin.Mac. Selezionare **Mac** > **app** > **generale** > **app Cocoa**:
+Avviare Visual Studio per Mac e creare una nuova soluzione Novell. Mac. Selezionare **Mac** > **app** > **generale** > **app Cocoa**:
 
 [![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
 
@@ -66,7 +66,7 @@ Fare clic sul pulsante **Crea** per compilare il nuovo progetto.
 
 ### <a name="including-opentk"></a>Inclusione di OpenTK
 
-Prima di poter usare Open TK in un'applicazione Xamarin.Mac, è necessario includere un riferimento all'assembly OpenTK. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** e scegliere **modifica riferimenti.**
+Prima di poter usare Open TK in un'applicazione Novell. Mac, è necessario includere un riferimento all'assembly OpenTK. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** e scegliere **modifica riferimenti.**
 
 Inserire un segno di spunta per `OpenTK` e fare clic sul pulsante **OK** :
 
@@ -168,7 +168,7 @@ Di seguito viene illustrato in dettaglio il codice.
 
 ### <a name="required-apis"></a>API richieste
 
-Per usare OpenTK in una classe Xamarin.Mac sono necessari diversi riferimenti. All'inizio della definizione sono state incluse le istruzioni `using` seguenti:
+Per usare OpenTK in una classe Novell. Mac sono necessari diversi riferimenti. All'inizio della definizione sono state incluse le istruzioni `using` seguenti:
 
 ```csharp
 using System;
@@ -247,7 +247,7 @@ Game.UpdateFrame += (sender, e) =>
 ```
 
 > [!IMPORTANT]
-> L'implementazione di Xamarin.Mac di OpenTK non include il `Input API`, quindi è necessario usare le API fornite da Apple per aggiungere il supporto della tastiera e del mouse. Facoltativamente, è possibile creare un'istanza personalizzata della `MonoMacGameView` ed eseguire l'override dei metodi `KeyDown` e `KeyUp`.
+> L'implementazione di Novell. Mac di OpenTK non include il `Input API`, quindi è necessario usare le API fornite da Apple per aggiungere il supporto della tastiera e del mouse. Facoltativamente, è possibile creare un'istanza personalizzata della `MonoMacGameView` ed eseguire l'override dei metodi `KeyDown` e `KeyUp`.
 
 <a name="The_RenderFrame_Event" />
 
@@ -280,13 +280,13 @@ Game.RenderFrame += (sender, e) =>
 Il codice di rendering viene in genere eseguito con una chiamata a `GL.Clear` per rimuovere tutti gli elementi esistenti prima di disegnare i nuovi elementi.
 
 > [!IMPORTANT]
-> Per la versione Xamarin.Mac di OpenTK **non** chiamare il metodo `SwapBuffers` dell'istanza di `MonoMacGameView` alla fine del codice di rendering. In questo modo la visualizzazione del gioco si attiverà rapidamente anziché visualizzare la visualizzazione sottoposta a rendering.
+> Per la versione Novell. Mac di OpenTK **non** chiamare il metodo `SwapBuffers` dell'istanza di `MonoMacGameView` alla fine del codice di rendering. In questo modo la visualizzazione del gioco si attiverà rapidamente anziché visualizzare la visualizzazione sottoposta a rendering.
 
 <a name="Running_the_Game_View" />
 
 ### <a name="running-the-game-view"></a>Esecuzione della visualizzazione del gioco
 
-Con tutti gli eventi richiesti definiti e la visualizzazione del gioco collegata alla finestra principale del Mac dell'app, viene letto per eseguire la visualizzazione del gioco e visualizzare la grafica. Usare il codice riportato di seguito.
+Con tutti gli eventi richiesti definiti e la visualizzazione del gioco collegata alla finestra principale del Mac dell'app, viene letto per eseguire la visualizzazione del gioco e visualizzare la grafica. Usare il codice seguente:
 
 ```csharp
 // Run the game at 60 updates per second
@@ -305,7 +305,7 @@ Se si ridimensiona la finestra, anche la visualizzazione del gioco verrà ripart
 
 ### <a name="where-to-next"></a>Posizione successiva
 
-Con le nozioni di base sull'uso di OpenTk in un'applicazione Xamarin.Mac, di seguito sono riportati alcuni suggerimenti su come provare a eseguire le operazioni seguenti:
+Con le nozioni di base sull'uso di OpenTk in un'applicazione Novell. Mac, di seguito sono riportati alcuni suggerimenti su come provare a eseguire le operazioni seguenti:
 
 - Provare a modificare il colore del triangolo e il colore di sfondo della visualizzazione del gioco negli eventi `Load` e `RenderFrame`.
 - Modificare il colore del triangolo quando l'utente preme un tasto nel `UpdateFrame` e `RenderFrame` eventi oppure creare una propria classe di `MonoMacGameView` personalizzata ed eseguire l'override dei metodi `KeyUp` e `KeyDown`.
@@ -313,15 +313,15 @@ Con le nozioni di base sull'uso di OpenTk in un'applicazione Xamarin.Mac, di seg
 - Usare un ciclo `for` per eseguire il rendering di diversi triangoli nell'evento `RenderFrame`.
 - Ruotare la fotocamera per fornire una visualizzazione diversa del triangolo nello spazio 3D. Hint: usare il metodo `Matrix4.CreateTranslation` per creare una matrice di traslazione e chiamare il metodo `GL.LoadMatrix` per caricarla. È anche possibile usare le classi `Vector2`, `Vector3`, `Vector4` e `Matrix4` per le manipolazioni della fotocamera.
 
-Per altri esempi, vedere il repository [GitHub di OpenTK Samples](https://github.com/opentk/opentk/tree/master/Source/Examples) . Contiene un elenco ufficiale di esempi di uso di OpenTK. È necessario adattare questi esempi per l'uso di con la versione Xamarin.Mac di OpenTK.
+Per altri esempi, vedere il repository [GitHub di OpenTK Samples](https://github.com/opentk/opentk/tree/master/Source/Examples) . Contiene un elenco ufficiale di esempi di uso di OpenTK. È necessario adattare questi esempi per l'uso di con la versione Novell. Mac di OpenTK.
 
-Per un esempio Xamarin.Mac più complesso di un'implementazione di OpenTK, vedere l'esempio [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) .
+Per un esempio Novell. Mac più complesso di un'implementazione di OpenTK, vedere l'esempio [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) .
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato rapidamente l'uso di OpenTK in un'applicazione Xamarin.Mac. È stato illustrato come creare una finestra del gioco, come allinearla a una finestra Mac e come eseguire il rendering di una forma semplice nella finestra del gioco.
+Questo articolo ha esaminato rapidamente l'uso di OpenTK in un'applicazione Novell. Mac. È stato illustrato come creare una finestra del gioco, come allinearla a una finestra Mac e come eseguire il rendering di una forma semplice nella finestra del gioco.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -329,6 +329,6 @@ Questo articolo ha esaminato rapidamente l'uso di OpenTK in un'applicazione Xama
 - [MonoMacGameView (esempio)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
-- [Open Toolkit](http://www.opentk.com)
+- [Open Toolkit](https://opentk.net)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

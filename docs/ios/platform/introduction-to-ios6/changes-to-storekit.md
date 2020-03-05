@@ -1,22 +1,22 @@
 ---
 title: Modifiche di StoreKit in iOS 6
-description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Xamarin.iOS."
+description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Novell. iOS."
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1d49be1f4339b658e8202d4091b9a12b45d7b507
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031912"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292003"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Modifiche di StoreKit in iOS 6
 
-_iOS 6 ha introdotto due modifiche all'API di Store Kit: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Xamarin.iOS._
+_iOS 6 ha introdotto due modifiche all'API di Store Kit: la possibilità di visualizzare i prodotti iTunes (e App Store/da iBookstore) dall'app e una nuova opzione di acquisto in-app in cui Apple ospiterà i file scaricabili. In questo documento viene illustrato come implementare tali funzionalità con Novell. iOS._
 
 Le principali modifiche apportate al kit di archiviazione in iOS6 sono queste due nuove funzionalità:
 
@@ -27,7 +27,7 @@ Vedere le guide di [acquisto in-app](~/ios/platform/in-app-purchasing/index.md) 
 
 ## <a name="requirements"></a>Requisiti
 
-Le funzionalità di Store Kit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Xamarin.iOS 6,0.
+Le funzionalità di Store Kit descritte in questo documento richiedono iOS 6 e Xcode 4,5, insieme a Novell. iOS 6,0.
 
 ## <a name="in-app-content-display--purchasing"></a>Visualizzazione del contenuto in-app & acquisti
 
@@ -100,7 +100,7 @@ L'applicazione di esempio include codice che illustra come aprire App Store, iTu
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
@@ -115,11 +115,11 @@ Se l'ID Apple usato non è valido, si verificherà l'errore seguente, che può g
 
 ### <a name="reading-objective-c-documentation"></a>Lettura della documentazione di Objective-C
 
-Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come evento `Finished` nel `SKStoreProductViewController` in Xamarin.iOS.
+Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come evento `Finished` nel `SKStoreProductViewController` in Novell. iOS.
 
 ## <a name="determining-apple-ids"></a>Determinazione degli ID Apple
 
-L'ID Apple richiesto dall'`SKStoreProductViewController` è un *numero* (da non confondere con ID bundle come "com. Xamarin.MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
+L'ID Apple richiesto dall'`SKStoreProductViewController` è un *numero* (da non confondere con ID bundle come "com. Novell. MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
 
 ### <a name="itunesconnect"></a>iTunesConnect
 
@@ -131,18 +131,18 @@ Per le applicazioni pubblicate, è facile trovare l' **ID Apple** in iTunes Conn
 
 ### <a name="search-api"></a>API di ricerca
 
-Apple fornisce un'API di ricerca dinamica per eseguire query su tutti i prodotti nell'App Store, in iTunes e in da iBookstore. Le informazioni su come accedere all'API di ricerca sono reperibili nelle [risorse affiliate di Apple](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), anche se l'API è esposta a chiunque, non solo alle consociate registrate. Il codice JSON risultante può essere analizzato per individuare la `trackId` che rappresenta l'ID Apple da usare con `SKStoreProductViewController`.
+Apple fornisce un'API di ricerca dinamica per eseguire query su tutti i prodotti nell'App Store, in iTunes e in da iBookstore. Le informazioni su come accedere all'API di ricerca sono reperibili nelle risorse affiliate di Apple, anche se l'API è esposta a chiunque, non solo alle consociate registrate. Il codice JSON risultante può essere analizzato per individuare la `trackId` che rappresenta l'ID Apple da usare con `SKStoreProductViewController`.
 
 I risultati includeranno anche altri metadati, tra cui informazioni di visualizzazione e URL di grafica che possono essere usati per eseguire il rendering del prodotto nell'app.
 
-Ecco alcuni esempi:
+Di seguito sono riportati alcuni esempi:
 
-- **app iBooks** - [https://itunes.apple.com/search?term=ibooks&amp ; entity = software&amp; Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot e l'iBook di Kangaroo** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = eBook&amp; Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **app iBooks** - [https://itunes.apple.com/search?term=ibooks&amp; entity = software&amp;Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot e l'iBook di Kangaroo** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entity = eBook&amp;Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Feed partner Enterprise
 
-Apple fornisce ai partner approvati un dump completo dei dati di tutti i prodotti, sotto forma di file flat disponibili per il database scaricabili. Se si è idonei per l'accesso al [feed del partner aziendale](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), l'ID Apple per qualsiasi prodotto si trova in tale set di dati.
+Apple fornisce ai partner approvati un dump completo dei dati di tutti i prodotti, sotto forma di file flat disponibili per il database scaricabili. Se si è idonei per l'accesso al feed del partner aziendale, l'ID Apple per qualsiasi prodotto si trova in tale set di dati.
 
 Molti utenti del feed partner aziendale sono membri del [programma affiliato](https://www.apple.com/itunes/affiliates) che consente di guadagnare le commissioni sulle vendite del prodotto. `SKStoreProductViewController` non supporta gli ID affiliati (al momento della stesura di questo documento).
 
@@ -170,15 +170,15 @@ e l'ID Apple è **496963922**.
 Se gli acquisti in-app sono costituiti da contenuto scaricabile (ad esempio libri o altri supporti, grafica a livello di gioco e configurazione o altri file di grandi dimensioni), questi file vengono ospitati nel server Web e le app devono incorporare il codice per scaricarle in modo sicuro dopo acquisto. A partire da iOS 6, Apple ospiterà i file nei server, eliminando la necessità di un server separato. La funzionalità è disponibile solo per prodotti non utilizzabili (non utilizzabili o sottoscrizioni). I vantaggi dell'uso del servizio di hosting di Apple includono:
 
 - Risparmiare sull'hosting & costi della larghezza di banda.
-- Probabilmente più scalabile rispetto a qualsiasi host server attualmente in uso. 
-- Meno codice da scrivere, dal momento che non è necessario compilare alcuna elaborazione sul lato server. 
+- Probabilmente più scalabile rispetto a qualsiasi host server attualmente in uso.
+- Meno codice da scrivere, dal momento che non è necessario compilare alcuna elaborazione sul lato server.
 - Il download in background viene implementato per l'utente.
 
 Nota: il test del contenuto di acquisto in-app ospitato nel simulatore iOS non è supportato, pertanto è necessario eseguire il test con un dispositivo reale.
 
 ### <a name="hosted-content-basics"></a>Nozioni di base sul contenuto ospitato
 
-Prima di iOS 6, erano disponibili due modi per fornire un prodotto (descritto più dettagliatamente nella documentazione di [acquisto in-app di Xamarin](~/ios/platform/in-app-purchasing/index.md) ):
+Prima di iOS 6, erano disponibili due modi per fornire un prodotto (descritto più dettagliatamente nella documentazione di [acquisto in-app di Novell](~/ios/platform/in-app-purchasing/index.md) ):
 
 - **Prodotti predefiniti** : funzionalità che vengono sbloccate acquistando, ma che sono compilate nell'applicazione (codice o risorse incorporate). Esempi di prodotti incorporati includono filtri foto sbloccati o Power-up in gioco.
 - **Prodotti distribuiti dal server** : dopo l'acquisto, l'applicazione deve scaricare il contenuto da un server in uso. Questo contenuto viene scaricato durante l'acquisto, archiviato nel dispositivo e quindi sottoposto a rendering come parte del prodotto. Gli esempi includono libri, problemi di riviste o livelli di gioco costituiti da file di configurazione e arte di sfondo.
@@ -269,7 +269,8 @@ Il modo più semplice per caricare i pacchetti di contenuto è con lo **strument
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-Il pacchetto di contenuto verrà quindi visualizzato nell'archivio come illustrato di seguito. Il tipo di archivio e l'icona mostrano che questa riga è un **Archivio del contenuto di acquisto in-app**. Fare clic su **convalida...** per verificare la presenza di errori nel pacchetto di contenuto senza eseguire effettivamente il caricamento.
+Il pacchetto di contenuto verrà quindi visualizzato nell'archivio come illustrato di seguito.
+Il tipo di archivio e l'icona mostrano che questa riga è un **Archivio del contenuto di acquisto in-app**. Fare clic su **convalida...** per verificare la presenza di errori nel pacchetto di contenuto senza eseguire effettivamente il caricamento.
 
 [![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
 
@@ -469,7 +470,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -524,7 +525,6 @@ Questo articolo ha introdotto due nuove funzionalità di Store Kit in iOS6: acqu
 - [Acquisti in-app](~/ios/platform/in-app-purchasing/index.md)
 - [Guida di riferimento a StoreKit Framework](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Riferimento alla classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [Riferimento all'API di ricerca di iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

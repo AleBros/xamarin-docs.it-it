@@ -1,5 +1,5 @@
 ---
-title: Sicurezza del trasporto delle app in Xamarin.iOS
+title: Sicurezza del trasporto delle app in Novell. iOS
 description: Sicurezza del trasporto app impone connessioni sicure tra le risorse Internet, ad esempio il server back-end dell'app, e l'app.
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
@@ -7,24 +7,24 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: e0ab824eff4c8bb18a2bd1998862df433cdade1a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 84d235bb7c6874255ea025ff5897e150bd6f023b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011109"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291646"
 ---
-# <a name="app-transport-security-in-xamarinios"></a>Sicurezza del trasporto delle app in Xamarin.iOS
+# <a name="app-transport-security-in-xamarinios"></a>Sicurezza del trasporto delle app in Novell. iOS
 
 _Sicurezza del trasporto app impone connessioni sicure tra le risorse Internet, ad esempio il server back-end dell'app, e l'app._
 
-In questo articolo vengono introdotte le modifiche di sicurezza applicate dalla sicurezza del trasporto app in un'app iOS 9 e il [significato per i progetti Xamarin.iOS](#xamarinsupport), che includerà le [Opzioni di configurazione di ATS](#config) e verrà illustrato come [rifiutare esplicitamente ATS](#optout) Se necessario, ATS. Poiché ATS è abilitato per impostazione predefinita, eventuali connessioni Internet non sicure genereranno un'eccezione nelle app iOS 9 (a meno che non sia stata consentita in modo esplicito).
+In questo articolo vengono introdotte le modifiche di sicurezza applicate dalla sicurezza del trasporto app in un'app iOS 9 e il [significato per i progetti Novell. iOS](#xamarinsupport), che includerà le [Opzioni di configurazione di ATS](#config) e verrà illustrato come [rifiutare esplicitamente](#optout) ATS ATS, se necessario. Poiché ATS è abilitato per impostazione predefinita, eventuali connessioni Internet non sicure genereranno un'eccezione nelle app iOS 9 (a meno che non sia stata consentita in modo esplicito).
 
 ## <a name="about-app-transport-security"></a>Informazioni sulla sicurezza del trasporto app
 
 Come indicato in precedenza, ATS garantisce che tutte le comunicazioni Internet in iOS 9 e OS X El Capitan siano conformi alle procedure consigliate per la connessione sicura, impedendo in tal modo la divulgazione accidentale di informazioni riservate direttamente tramite l'app o una libreria utilizzo.
 
-Per le app esistenti, implementare il protocollo `HTTPS` quando possibile. Per le nuove app Xamarin.iOS, è consigliabile usare `HTTPS` esclusivamente durante la comunicazione con le risorse Internet. Inoltre, la comunicazione API di alto livello deve essere crittografata usando TLS versione 1,2 con segretezza diretta.
+Per le app esistenti, implementare il protocollo `HTTPS` quando possibile. Per le nuove app Novell. iOS, è consigliabile usare `HTTPS` esclusivamente durante la comunicazione con le risorse Internet. Inoltre, la comunicazione API di alto livello deve essere crittografata usando TLS versione 1,2 con segretezza diretta.
 
 Tutte le connessioni effettuate con [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) o [NSUrlSession](xref:Foundation.NSUrlSession) utilizzeranno ATS per impostazione predefinita nelle app compilate per iOS 9 e OS X 10,11 (El Capitan).
 
@@ -64,13 +64,13 @@ Per ulteriori informazioni sull'utilizzo delle classi di comunicazione Internet 
 
 <a name="xamarinsupport" />
 
-## <a name="supporting-ats-in-xamarinios"></a>Supporto di ATS in Xamarin.iOS
+## <a name="supporting-ats-in-xamarinios"></a>Supporto di ATS in Novell. iOS
 
-Poiché ATS è abilitato per impostazione predefinita in iOS 9 e OS X El Capitan, se l'app Xamarin.iOS o una raccolta o un servizio che usa effettua la connessione a Internet, è necessario eseguire un'azione o le connessioni comporteranno la generazione di un'eccezione.
+Poiché ATS è abilitato per impostazione predefinita in iOS 9 e OS X El Capitan, se l'app Novell. iOS o una raccolta o un servizio che usa effettua la connessione a Internet, è necessario eseguire un'azione o le connessioni comporteranno la generazione di un'eccezione.
 
 Per un'app esistente, Apple suggerisce di supportare il protocollo `HTTPS` il prima possibile. Se non si è in grado di connettersi a un servizio Web di terze parti che non supporta `HTTPS` o se il supporto di `HTTPS` non è pratico, è possibile rifiutare esplicitamente ATS. Per altri dettagli, vedere la sezione relativa alla disattivazione [di ATS di](#optout) seguito.
 
-Per una nuova app Xamarin.iOS, è consigliabile usare `HTTPS` esclusivamente durante la comunicazione con le risorse Internet. Anche in questo caso, è possibile che si verifichino situazioni, ad esempio l'uso di un servizio Web di terze parti, e che sia necessario rifiutare esplicitamente ATS.
+Per una nuova app Novell. iOS, è consigliabile usare `HTTPS` esclusivamente durante la comunicazione con le risorse Internet. Anche in questo caso, è possibile che si verifichino situazioni, ad esempio l'uso di un servizio Web di terze parti, e che sia necessario rifiutare esplicitamente ATS.
 
 Inoltre, ATS impone la crittografia delle comunicazioni API di alto livello usando TLS versione 1,2 con segretezza diretta. Per altri dettagli, vedere le sezioni [relative ai requisiti di connessione ATS](#ats-connection-requirements) e alle [crittografie compatibili con ATS](#ats-compatible-ciphers) .
 
@@ -81,7 +81,7 @@ Il livello TLS è controllato dal servizio Web che si sta utilizzando ed è quin
 A seconda del server a cui si sta parlando, soprattutto se si tratta di un servizio di terze parti, potrebbe essere necessario disabilitare la riservatezza in avanti o selezionare un livello TLS più basso. Per altri dettagli, vedere la sezione relativa alla [configurazione delle opzioni ATS](#configuring-ats-options) di seguito.
 
 > [!IMPORTANT]
-> La sicurezza del trasporto delle app non si applica alle app Xamarin che usano **implementazioni HTTPClient gestite**. Si applica alle connessioni usando solo **implementazioni CFNetwork HTTPClient** o solo **implementazioni NSURLSession HTTPClient** .
+> La sicurezza del trasporto delle app non si applica alle app Novell che usano **implementazioni HTTPClient gestite**. Si applica alle connessioni usando solo **implementazioni CFNetwork HTTPClient** o solo **implementazioni NSURLSession HTTPClient** .
 
 ### <a name="setting-the-httpclient-implementation"></a>Impostazione dell'implementazione di HTTPClient
 
@@ -91,13 +91,13 @@ Per impostare l'implementazione di HTTPClient usata da un'app iOS, fare doppio c
 
 #### <a name="managed-handler"></a>Gestore gestito
 
-Il gestore gestito è il gestore HttpClient completamente gestito che è stato fornito con le versioni precedenti di Xamarin.iOS ed è il gestore predefinito.
+Il gestore gestito è il gestore HttpClient completamente gestito che è stato fornito con le versioni precedenti di Novell. iOS ed è il gestore predefinito.
 
-I professionisti
+Vantaggi:
 
-- È il più compatibile con Microsoft .NET e la versione precedente di Xamarin.
+- È il più compatibile con Microsoft .NET e la versione precedente di Novell.
 
-Svantaggi
+Svantaggi:
 
 - Non è completamente integrato con iOS (ad esempio, è limitato a TLS 1,0).
 - È in genere molto più lento rispetto alle API native.
@@ -107,12 +107,12 @@ Svantaggi
 
 Il gestore basato su CFNetwork è basato sul Framework di `CFNetwork` nativo.
 
-I professionisti
+Vantaggi:
 
 - Usa l'API nativa per ottenere prestazioni migliori e dimensioni eseguibili più piccole.
 - Aggiunge il supporto per gli standard più recenti, ad esempio TLS 1,2.
 
-Svantaggi
+Svantaggi:
 
 - Richiede iOS 6 o versione successiva.
 - Non disponibile per watchos.
@@ -122,12 +122,12 @@ Svantaggi
 
 Il gestore basato su NSUrlSession è basato sull'API `NSUrlSession` nativa.
 
-I professionisti
+Vantaggi:
 
 - Usa l'API nativa per ottenere prestazioni migliori e dimensioni eseguibili più piccole.
 - Aggiunge il supporto per gli standard più recenti, ad esempio TLS 1,2.
 
-Svantaggi
+Svantaggi:
 
 - Richiede iOS 7 o versione successiva.
 - Alcune funzionalità e opzioni di HttpClient non sono disponibili.
@@ -136,13 +136,13 @@ Svantaggi
 
 Quando si tenta di connettersi a Internet, direttamente o da una visualizzazione Web in iOS 9, è possibile che venga visualizzato un errore nel formato seguente:
 
-> La sicurezza del trasporto app ha bloccato un HTTP non crittografato (http://www.-the-blocked-domain.com) carico delle risorse perché non è protetto. Le eccezioni temporanee possono essere configurate tramite il file INFO. plist dell'app.
+> La sicurezza del trasporto app ha bloccato un carico di risorse HTTP (`http://www.-the-blocked-domain.com`) non crittografato poiché non è sicuro. Le eccezioni temporanee possono essere configurate tramite il file INFO. plist dell'app.
 
 In iOS9, la sicurezza del trasporto app (ATS) applica connessioni sicure tra le risorse Internet, ad esempio il server back-end dell'app, e l'app. Inoltre, ATS richiede la comunicazione con il protocollo `HTTPS` e la comunicazione API di alto livello per la crittografia con la versione 1,2 di TLS con segretezza diretta.
 
 Poiché ATS è abilitato per impostazione predefinita nelle app compilate per iOS 9 e OS X 10,11 (El Capitan), tutte le connessioni che usano `NSURLConnection`, `CFURL` o `NSURLSession` saranno soggette ai requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, avranno esito negativo con un'eccezione.
 
-Apple fornisce anche l' [app di esempio TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) che può essere compilata (o eventualmente transcodificata in C#Xamarin e) e usata per diagnosticare i problemi di ATS/TLS. Per informazioni su come risolvere il problema, vedere la sezione relativa alla disattivazione [di ATS riportata di](#optout) seguito.
+Apple fornisce anche l' [app di esempio TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) che può essere compilata (o eventualmente transcodificata in C#Novell e) e usata per diagnosticare i problemi di ATS/TLS. Per informazioni su come risolvere il problema, vedere la sezione relativa alla disattivazione [di ATS riportata di](#optout) seguito.
 
 <a name="config" />
 
@@ -188,7 +188,7 @@ Ogni chiave presenta il tipo e il significato seguenti:
 
 Anche se Apple consiglia di usare il protocollo `HTTPS` e di proteggere le comunicazioni con le informazioni basate su Internet, è possibile che non sia sempre possibile. Ad esempio, se si sta comunicando con un servizio Web di terze parti o usando annunci distribuiti tramite Internet nell'app.
 
-Se l'app Xamarin.iOS deve effettuare una richiesta a un dominio non sicuro, le seguenti modifiche al file **info. plist** dell'app disabilitano le impostazioni predefinite di sicurezza applicate da ATS per un determinato dominio:
+Se l'app Novell. iOS deve effettuare una richiesta a un dominio non sicuro, le seguenti modifiche al file **info. plist** dell'app disabilitano le impostazioni predefinite di sicurezza applicate da ATS per un determinato dominio:
 
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -247,7 +247,7 @@ Anche in questo caso, la disabilitazione di ATS dovrebbe essere utilizzata _solo
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stata introdotta la sicurezza del trasporto app (ATS) e viene descritta la modalità di applicazione delle comunicazioni sicure con Internet. Per prima cosa, abbiamo trattato le modifiche che ATS richiede per un'app Xamarin.iOS in esecuzione in iOS 9. Il controllo delle funzionalità e delle opzioni di ATS è stato analizzato. Infine, abbiamo trattato di rifiutare esplicitamente ATS nell'app Xamarin.iOS.
+In questo articolo è stata introdotta la sicurezza del trasporto app (ATS) e viene descritta la modalità di applicazione delle comunicazioni sicure con Internet. Per prima cosa, abbiamo trattato le modifiche che ATS richiede per un'app Novell. iOS in esecuzione in iOS 9. Il controllo delle funzionalità e delle opzioni di ATS è stato analizzato. Infine, abbiamo trattato di rifiutare esplicitamente ATS nell'app Novell. iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

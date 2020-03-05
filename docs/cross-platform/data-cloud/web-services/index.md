@@ -6,30 +6,30 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 50302b0b9cf96d211c704ab9e68d1c61d11e807a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: ebd7cad9ef33a44dbc7aa469bb4e866bdfea2e61
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016580"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291718"
 ---
 # <a name="introduction-to-web-services"></a>Introduzione ai servizi Web
 
 _In questa guida viene illustrato come utilizzare tecnologie di servizi Web diverse. Gli argomenti trattati includono la comunicazione con i servizi REST, i servizi SOAP e i servizi Windows Communication Foundation._
 
-Per funzionare correttamente, molte applicazioni per dispositivi mobili dipendono dal cloud e pertanto l'integrazione dei servizi Web nelle applicazioni per dispositivi mobili è uno scenario comune. La piattaforma Xamarin supporta l'utilizzo di diverse tecnologie di servizi Web e include supporto integrato e di terze parti per l'utilizzo di servizi RESTful, ASMX e Windows Communication Foundation (WCF).
+Per funzionare correttamente, molte applicazioni per dispositivi mobili dipendono dal cloud e pertanto l'integrazione dei servizi Web nelle applicazioni per dispositivi mobili è uno scenario comune. La piattaforma Novell supporta l'utilizzo di diverse tecnologie di servizi Web e include supporto integrato e di terze parti per l'utilizzo di servizi RESTful, ASMX e Windows Communication Foundation (WCF).
 
-Per i clienti che usano Xamarin.Forms, sono disponibili esempi completi che usano ciascuna di queste tecnologie nella documentazione relativa ai [servizi Web Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml) .
+Per i clienti che usano Novell. Forms, sono disponibili esempi completi che usano ciascuna di queste tecnologie nella documentazione relativa ai [servizi Web Novell. Forms](~/xamarin-forms/data-cloud/index.yml) .
 
 > [!IMPORTANT]
 > In iOS 9, la sicurezza del trasporto app (ATS) applica connessioni sicure tra le risorse Internet (ad esempio il server back-end dell'app) e l'app, impedendo in tal modo la divulgazione accidentale di informazioni riservate.
-> Poiché ATS è abilitato per impostazione predefinita nelle app compilate per iOS 9, tutte le connessioni saranno soggette ai requisiti di sicurezza di ATS. Se le connessioni non soddisfano questi requisiti, avranno esito negativo con un'eccezione.
+> Poiché ATS è abilitata per impostazione predefinita nelle App per iOS 9, tutte le connessioni saranno soggetti a requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, si avrà esito negativo con un'eccezione.
 
 È possibile rifiutare esplicitamente ATS se non è possibile usare il protocollo `HTTPS` e proteggere le comunicazioni per le risorse Internet. Questa operazione può essere eseguita aggiornando il file **info. plist** dell'app. Per altre informazioni, vedere [sicurezza del trasporto delle app](~/ios/app-fundamentals/ats.md).
 
 ## <a name="rest"></a>REST
 
-REST (Representational State Transfer) è uno stile di architettura per la creazione di servizi Web. Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP usati dai Web browser per recuperare le pagine Web e inviare dati ai server. I verbi sono:
+Representational State Transfer (REST) è uno stile architetturale per la creazione di servizi web. Richieste REST vengono effettuate tramite HTTP utilizzando gli stessi verbi HTTP che utilizzano i web browser per recuperare le pagine web e per inviare dati ai server. I verbi sono:
 
 - **Get** : questa operazione viene usata per recuperare i dati dal servizio Web.
 - **Post** : questa operazione viene usata per creare un nuovo elemento di dati nel servizio Web.
@@ -37,13 +37,13 @@ REST (Representational State Transfer) è uno stile di architettura per la creaz
 - **Patch** : questa operazione viene usata per aggiornare un elemento di dati nel servizio Web descrivendo una serie di istruzioni su come modificare l'elemento. Questo verbo non viene utilizzato nell'applicazione di esempio.
 - **Delete** : questa operazione viene usata per eliminare un elemento di dati nel servizio Web.
 
-Le API del servizio Web che rispettano REST sono denominate API RESTful e vengono definite usando:
+Le API che rispettano REST del servizio Web vengono chiamate le API RESTful e vengono definiti utilizzando:
 
 - URI di base.
 - Metodi HTTP, ad esempio GET, POST, PUT, PATCH o DELETE.
-- Tipo di supporto per i dati, ad esempio JavaScript Object Notation (JSON).
+- Un tipo di supporto per i dati, ad esempio JavaScript Object Notation (JSON).
 
-La semplicità di REST ha aiutato a renderlo il metodo principale per accedere ai servizi Web nelle applicazioni per dispositivi mobili.
+La semplicità di REST ci ha aiutati a renderlo il principale metodo per l'accesso ai servizi web nelle applicazioni per dispositivi mobili.
 
 ## <a name="consuming-rest-services"></a>Utilizzo dei servizi REST
 
@@ -165,7 +165,7 @@ In genere, le classi specifiche della piattaforma per l'utilizzo di servizi Web 
 
 ### <a name="servicestack"></a>ServiceStack
 
-Un'altra opzione per chiamare i servizi Web è la libreria [dello stack dei servizi](https://www.servicestack.net/) . Ad esempio, il codice seguente illustra come usare il metodo `IServiceClient.GetAsync` dello stack di servizi per emettere una richiesta di servizio:
+Un'altra opzione per chiamare i servizi Web è la libreria [dello stack dei servizi](https://servicestack.net) . Ad esempio, il codice seguente illustra come usare il metodo `IServiceClient.GetAsync` dello stack di servizi per emettere una richiesta di servizio:
 
 ```csharp
 client.GetAsync<CustomersResponse>("",
@@ -186,13 +186,13 @@ client.GetAsync<CustomersResponse>("",
 
 ## <a name="consuming-restful-data"></a>Utilizzo di dati RESTful
 
-I servizi Web RESTful usano in genere i messaggi JSON per restituire i dati al client. JSON è un formato di interscambio dei dati basato su testo che genera payload Compact, con conseguente riduzione dei requisiti di larghezza di banda quando si inviano dati. In questa sezione vengono esaminati i meccanismi per l'utilizzo delle risposte RESTful in JSON e di POX (Plain-Old-XML).
+Servizi web rESTful utilizzano in genere i messaggi JSON per restituire dati al client. JSON è un formato di interscambio dei dati basato su testo che genera payload Compact, con conseguente riduzione dei requisiti di larghezza di banda quando si inviano dati. In questa sezione vengono esaminati i meccanismi per l'utilizzo delle risposte RESTful in JSON e di POX (Plain-Old-XML).
 
 <a name="Using_System.JSON" />
 
-### <a name="systemjson"></a>System. JSON
+### <a name="systemjson"></a>System.JSON
 
-La piattaforma Xamarin viene fornita con il supporto per JSON predefinito. Utilizzando una `JsonObject`, è possibile recuperare i risultati come illustrato nell'esempio di codice seguente:
+La piattaforma Novell viene fornita con il supporto per JSON predefinito. Utilizzando una `JsonObject`, è possibile recuperare i risultati come illustrato nell'esempio di codice seguente:
 
 ```csharp
 var obj = JsonObject.Parse(json);
@@ -227,7 +227,7 @@ term.RxCUI = properties["rxcui"].Value<string>();
 
 <a name="Using_ServiceStack.Text" />
 
-### <a name="servicestacktext"></a>ServiceStack. Text
+### <a name="servicestacktext"></a>ServiceStack.Text
 
 ServiceStack. Text è una libreria di serializzazione JSON progettata per funzionare con la libreria ServiceStack. Nell'esempio di codice seguente viene illustrato come analizzare JSON utilizzando un `ServiceStack.Text.JsonObject`:
 
@@ -272,20 +272,20 @@ var result = doc.Root.Descendants("rxtermsProperties")
 
 ## <a name="aspnet-web-service-asmx"></a>Servizio Web ASP.NET (ASMX)
 
-ASMX consente di compilare servizi Web che inviano messaggi utilizzando il Simple Object Access Protocol (SOAP). SOAP è un protocollo indipendente dalla piattaforma e indipendente dalla lingua per la creazione e l'accesso ai servizi Web. I consumer di un servizio ASMX non devono conoscere alcuna piattaforma, modello a oggetti o linguaggio di programmazione utilizzato per implementare il servizio. È sufficiente comprendere come inviare e ricevere messaggi SOAP.
+ASMX consente di compilare servizi Web che inviano messaggi utilizzando il Simple Object Access Protocol (SOAP). SOAP è un protocollo indipendente dalla piattaforma e indipendenti dal linguaggio per la creazione e accesso ai servizi web. I consumer di un servizio ASMX non sono necessario conoscere il linguaggio sul modello a oggetti, piattaforma o linguaggio di programmazione usato per implementare il servizio. Devono solo per informazioni su come inviare e ricevere messaggi SOAP.
 
-Un messaggio SOAP è un documento XML contenente gli elementi seguenti:
+Un messaggio SOAP è un documento XML che contiene gli elementi seguenti:
 
 - Elemento radice denominato *Envelope* che identifica il documento XML come messaggio SOAP.
 - Elemento *intestazione* facoltativo che contiene informazioni specifiche dell'applicazione, ad esempio i dati di autenticazione. Se l'elemento dell' *intestazione* è presente, deve essere il primo elemento figlio dell'elemento *Envelope* .
 - Elemento del *corpo* obbligatorio che contiene il messaggio SOAP destinato al destinatario.
 - Elemento *fault* facoltativo utilizzato per indicare i messaggi di errore. Se l'elemento *fault* è presente, deve essere un elemento figlio dell'elemento *Body* .
 
-SOAP può utilizzare molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può funzionare solo tramite HTTP. La piattaforma Xamarin supporta le implementazioni standard di SOAP 1,1 su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
+SOAP possono agire su molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può essere utilizzato solo su HTTP. La piattaforma Xamarin supporta implementazioni SOAP 1.1 standard su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
-È necessario generare un *proxy* per utilizzare un servizio ASMX, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante l'utilizzo di metadati del servizio che definiscono i metodi e la configurazione del servizio associata. Questi metadati vengono esposti come documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy viene compilato usando Visual Studio per Mac o Visual Studio per aggiungere un riferimento Web per il servizio Web ai progetti specifici della piattaforma.
+È necessario generare un *proxy* per utilizzare un servizio ASMX, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito dall'utilizzo dei metadati del servizio che definisce i metodi e la configurazione del servizio associato. Questi metadati vengono esposti come documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy viene compilato usando Visual Studio per Mac o Visual Studio per aggiungere un riferimento Web per il servizio Web ai progetti specifici della piattaforma.
 
 L'URL del servizio Web può essere un'origine remota ospitata o una risorsa file system locale accessibile tramite il prefisso del percorso `file:///`, ad esempio:
 
@@ -305,7 +305,7 @@ Se si dispone di un proxy esistente che è stato generato con strumenti compatib
 
 ### <a name="consuming-the-proxy"></a>Utilizzo del proxy
 
-Le classi proxy generate forniscono metodi per l'utilizzo del servizio Web che utilizza il modello di progettazione APM (Asynchronous Programming Model). In questo modello un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
+Le classi proxy generate forniscono metodi per l'utilizzo del servizio web che usano il modello di progettazione modello di programmazione asincrono (APM). In questo modello un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
 
 Il metodo *BeginOperationName* avvia l'operazione asincrona e restituisce un oggetto che implementa l'interfaccia `IAsyncResult`. Dopo la chiamata a *BeginOperationName*, un'applicazione può continuare a eseguire le istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un thread del pool di thread.
 
@@ -334,25 +334,25 @@ Per ulteriori informazioni sull'utilizzo di un servizio ASMX, vedere la pagina r
 
 ## <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-WCF è il Framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di creare applicazioni distribuite sicure, affidabili, transazionali e interoperabili.
+WCF è il Framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare applicazioni distribuite sicure, affidabili, transazionali e interoperabile.
 
-WCF descrive un servizio con un'ampia gamma di contratti diversi, tra cui:
+WCF descrive un servizio con un'ampia gamma di contratti diversi che includono i seguenti:
 
 - **Contratti dati** : definiscono le strutture di dati che costituiscono la base per il contenuto in un messaggio.
 - **Contratti di messaggio** : comporre messaggi da contratti dati esistenti.
 - **Contratti di errore** : consente di specificare errori SOAP personalizzati.
-- **Contratti di servizio** : specificare le operazioni supportate dai servizi e i messaggi necessari per interagire con ogni operazione. Specificano anche eventuali comportamenti di errore personalizzati che possono essere associati a operazioni su ogni servizio.
+- **Contratti di servizio** : specificare le operazioni supportate dai servizi e i messaggi necessari per interagire con ogni operazione. Specificano anche eventuali comportamenti di errore personalizzato che possono essere associato a operazioni su ogni servizio.
 
-Esistono differenze tra i servizi Web ASP.NET (ASMX) e WCF, ma è importante comprendere che WCF supporta le stesse funzionalità fornite da ASMX, ovvero messaggi SOAP su HTTP.
+Esistono differenze tra servizi Web ASP.NET (ASMX) e WCF, ma è importante comprendere che WCF supporta le stesse funzionalità offerte da ASMX: messaggi SOAP su HTTP.
 
 > [!IMPORTANT]
-> Il supporto della piattaforma Xamarin per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS usando la classe `BasicHttpBinding`. Inoltre, il supporto WCF richiede l'utilizzo di strumenti disponibili solo in un ambiente Windows per generare il proxy.
+> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS usando la classe `BasicHttpBinding`. Inoltre, il supporto WCF richiede l'uso degli strumenti disponibili solo in un ambiente di Windows per generare il proxy.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
-È necessario generare un *proxy* per utilizzare un servizio WCF, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante l'utilizzo di metadati del servizio che definiscono i metodi e la configurazione del servizio associata. Questi metadati vengono esposti sotto forma di documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy può essere compilato usando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 per aggiungere un riferimento al servizio per il servizio Web a una libreria di .NET Standard.
+È necessario generare un *proxy* per utilizzare un servizio WCF, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito dall'utilizzo dei metadati del servizio che definiscono i metodi e la configurazione del servizio associato. Questi metadati viene esposta sotto forma di un documento di servizi Web (WSDL, Web Services Description Language) generato dal servizio web. Il proxy può essere compilato usando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 per aggiungere un riferimento al servizio per il servizio Web a una libreria di .NET Standard.
 
-Un'alternativa alla creazione del proxy utilizzando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 consiste nell'utilizzare lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe). Per ulteriori informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+Un'alternativa alla creazione del proxy utilizzando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 è usare la strumento ServiceModel Metadata Utility Tool (svcutil.exe). Per ulteriori informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -379,11 +379,11 @@ binding.ReceiveTimeout = timeout;
 client = new Service1Client (binding, new EndpointAddress ("http://192.168.1.100/Service1.svc"));
 ```
 
-Un'associazione viene utilizzata per specificare i dettagli di trasporto, codifica e protocollo necessari per la comunicazione tra le applicazioni e i servizi. Il `BasicHttpBinding` specifica che i messaggi SOAP con codifica testo verranno inviati tramite il protocollo di trasporto HTTP. La specifica di un indirizzo endpoint consente all'applicazione di connettersi a istanze diverse del servizio WCF, purché siano presenti più istanze pubblicate.
+Viene utilizzata un'associazione per specificare il trasporto, codifica e i dettagli di protocollo necessari per le applicazioni e servizi comunicare tra loro. Il `BasicHttpBinding` specifica che i messaggi SOAP con codifica testo verranno inviati tramite il protocollo di trasporto HTTP. Specifica un indirizzo endpoint consente all'applicazione di connettersi alle diverse istanze del servizio WCF, condizione che sono presenti più istanze pubblicate.
 
 ### <a name="consuming-the-proxy"></a>Utilizzo del proxy
 
-Le classi proxy generate forniscono metodi per l'utilizzo dei servizi Web che utilizzano il modello di progettazione APM (Asynchronous Programming Model). In questo modello, un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
+Le classi proxy generate forniscono metodi per l'uso dei servizi web che usano il modello di progettazione modello di programmazione asincrono (APM). In questo modello, un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
 
 Il metodo *BeginOperationName* avvia l'operazione asincrona e restituisce un oggetto che implementa l'interfaccia `IAsyncResult`. Dopo la chiamata a *BeginOperationName*, un'applicazione può continuare a eseguire le istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un thread del pool di thread.
 
@@ -412,7 +412,7 @@ Per ulteriori informazioni sull'utilizzo di un servizio WCF, vedere [utilizzare 
 
 #### <a name="using-transport-security"></a>Uso della sicurezza del trasporto
 
-I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Xamarin supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un delegato `ServerCertificateValidationCallback` prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
+I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Novell supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un delegato `ServerCertificateValidationCallback` prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 System.Net.ServicePointManager.ServerCertificateValidationCallback +=
@@ -425,7 +425,7 @@ Questa operazione mantiene la crittografia del trasporto ignorando la convalida 
 
 #### <a name="using-client-credential-security"></a>Uso della sicurezza delle credenziali client
 
-I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Xamarin non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Xamarin supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando i `ClientCredentialType`appropriati:
+I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Novell non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Novell supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando i `ClientCredentialType`appropriati:
 
 ```csharp
 basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
@@ -444,6 +444,6 @@ Per ulteriori informazioni sull'autenticazione di base HTTP, anche se nel contes
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Servizi Web in Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml)
+- [Servizi Web in Novell. Forms](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

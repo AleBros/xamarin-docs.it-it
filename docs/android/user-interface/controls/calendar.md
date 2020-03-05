@@ -1,19 +1,19 @@
 ---
-title: Calendario di Xamarin.Android
+title: Calendario di Novell. Android
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 3d74e2db541e1f30c7626cd1b08228c1e8f57a42
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: d9c655a503ebdd9ebc08646fb385cdd8f4aa5753
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029324"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291922"
 ---
-# <a name="xamarinandroid-calendar"></a>Calendario di Xamarin.Android
+# <a name="xamarinandroid-calendar"></a>Calendario di Novell. Android
 
 ## <a name="calendar-api"></a>API Calendar
 
@@ -276,5 +276,3 @@ Come si può notare, Android consente un accesso semplice e potente per recupera
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo sul calendario (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
-- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

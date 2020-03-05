@@ -6,24 +6,24 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015874"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292903"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Cenni preliminari sui binding Objective-C
 
 _Informazioni sul funzionamento del processo di associazione_
 
-Il binding di una libreria Objective-C per l'uso con Xamarin richiede tre passaggi:
+Il binding di una libreria Objective-C per l'uso con Novell richiede tre passaggi:
 
-1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard come `interface`e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard come `interface` e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Una volta scritta la "definizione API" in C#, la si compila per produrre un assembly "binding". Questa operazione può essere eseguita dalla [**riga di comando**](#commandline) o tramite un [**progetto di binding**](#bindingproject) in Visual Studio per Mac o Visual Studio.
 
-3. L'assembly "binding" viene quindi aggiunto al progetto dell'applicazione Xamarin, in modo che sia possibile accedere alle funzionalità native usando l'API definita.
+3. L'assembly "binding" viene quindi aggiunto al progetto dell'applicazione Novell, in modo che sia possibile accedere alle funzionalità native usando l'API definita.
    Il progetto di associazione è completamente separato dai progetti dell'applicazione.
 
    > [!NOTE]
@@ -35,7 +35,7 @@ Il binding di una libreria Objective-C per l'uso con Xamarin richiede tre passag
 
 ## <a name="command-line-bindings"></a>Associazioni della riga di comando
 
-È possibile utilizzare il `btouch-native` per Xamarin.iOS (o `bmac-native` se si utilizza Xamarin.Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native`per iOS o`bmac-native`per Mac).
+È possibile utilizzare il `btouch-native` per Novell. iOS (o `bmac-native` se si utilizza Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native` per iOS o `bmac-native` per Mac).
 
 La sintassi generale per richiamare questi strumenti è la seguente:
 
@@ -73,9 +73,9 @@ Per informazioni su come analizzare le librerie native, i framework nativi e Coc
 
 È possibile utilizzare l'attributo [[Register]](xref:Foundation.RegisterAttribute) , l'attributo [[Export]](xref:Foundation.ExportAttribute) e la [chiamata manuale del selettore Objective-c](~/ios/internals/objective-c-selectors.md) per associare manualmente i tipi Objective-c nuovi (precedentemente non associati).
 
-Per prima cosa, trovare un tipo che si vuole associare. Ai fini della discussione (e semplicità), verrà associato il tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (che è già stato associato a [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è solo per scopi di esempio).
+Per prima cosa, trovare un tipo che si vuole associare. Ai fini della discussione (e semplicità), verrà associato il tipo [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) (che è già stato associato a [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è solo per scopi di esempio).
 
-In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare l'attributo `[Register]` per modificare il nome del tipo che Xamarin.iOS registrerà con il runtime di Objective-C. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
+In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare l'attributo `[Register]` per modificare il nome del tipo che Novell. iOS registrerà con il runtime di Objective-C. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {

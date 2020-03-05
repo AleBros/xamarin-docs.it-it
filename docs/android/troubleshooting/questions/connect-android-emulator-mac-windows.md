@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: 2c1f571efb9ec3fb726912eb1e30496bc51fe26e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 49d1eea60f766f4cb61484a6e441506cf8f046ff
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026980"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293074"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
 
@@ -37,8 +37,7 @@ Per connettersi alla emulatore Android in esecuzione su un Mac da una macchina v
 
     Il numero di porta dispari è quello usato per la connessione a `adb`. Vedere anche [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4. _Opzione 1_: usare [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
-    per inoltrare i pacchetti TCP in ingresso ricevuti esternamente sulla porta 5555 (o qualsiasi altra porta desiderata) alla porta con numero dispari sull'interfaccia di loopback (**127.0.0.1 5555** in questo esempio) e per inoltrare i pacchetti in uscita viceversa.
+4. _Opzione 1_: usare `nc` per inoltrare i pacchetti TCP in ingresso ricevuti esternamente sulla porta 5555 (o qualsiasi altra porta desiderata) alla porta con numero dispari sull'interfaccia di loopback (**127.0.0.1 5555** in questo esempio) e per inoltrare i pacchetti in uscita viceversa.
 
     ```bash
     cd /tmp
@@ -48,10 +47,9 @@ Per connettersi alla emulatore Android in esecuzione su un Mac da una macchina v
 
     Fino a quando i comandi `nc` rimanere in esecuzione in una finestra del terminale, i pacchetti verranno inoltrati come previsto. È possibile digitare Control-C nella finestra del terminale per uscire dai comandi `nc` una volta terminato l'uso dell'emulatore.
 
-    L'opzione 1 è in genere più semplice dell'opzione 2, soprattutto se le **Preferenze di sistema > sicurezza & Privacy > firewall** è attivata. 
+    L'opzione 1 è in genere più semplice dell'opzione 2, soprattutto se le **Preferenze di sistema > sicurezza & Privacy > firewall** è attivata.
 
-    _Opzione 2_: usare [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
-    per reindirizzare i pacchetti TCP dalla porta `5555` (o qualsiasi altra porta desiderata) nell'interfaccia di [rete condivisa](https://kb.parallels.com/en/4948) con la porta con numero dispari sull'interfaccia di loopback (`127.0.0.1:5555` in questo esempio):
+    _Opzione 2_: usare `pfctl` per reindirizzare i pacchetti TCP dalla porta `5555` (o qualsiasi altra porta desiderata) nell'interfaccia di [rete condivisa](https://kb.parallels.com/en/4948) per la porta con numero dispari sull'interfaccia di loopback (`127.0.0.1:5555` in questo esempio):
 
     ```bash
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
@@ -77,7 +75,7 @@ Se è stato abilitato _login remoto_ nel Mac, è possibile usare `ssh` porta di 
 
 3. Eseguire `ssh` in Windows per impostare la porta bidirezionale per l'invio tra una porta locale in Windows (`localhost:15555` in questo esempio) e la porta dell'emulatore dispari sull'interfaccia di loopback del Mac (`127.0.0.1:5555` in questo esempio):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 
@@ -96,11 +94,11 @@ Una piccola attenzione: se si usa la porta `5555` per la porta locale, `adb` ril
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>La tecnica alternativa che usa `adb -H` non è ancora supportata
 
 In teoria, un altro approccio consiste nell'usare la funzionalità incorporata di `adb`per connettersi a un server di `adb` in esecuzione in un computer remoto (vedere ad esempio [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)).
-Tuttavia, le estensioni dell'IDE Xamarin.Android attualmente non forniscono un modo per configurare tale opzione.
+Tuttavia, le estensioni dell'IDE Novell. Android attualmente non forniscono un modo per configurare tale opzione.
 
-## <a name="contact-information"></a>Informazioni di contatto
+## <a name="contact-information"></a>Informazioni contatto
 
-Questo documento illustra il comportamento attuale a partire da marzo 2016. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Xamarin, quindi potrebbe interrompersi in futuro.
+Questo documento illustra il comportamento attuale a partire da marzo 2016. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Novell, quindi potrebbe interrompersi in futuro.
 
 Se si nota che la tecnica non funziona più o se si notano altri errori nel documento, è possibile aggiungere la discussione sul seguente thread del forum: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
-Grazie
+Grazie.

@@ -6,12 +6,12 @@ ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: 6fffad744fa2f60239b0c96f01ff241e2cad9252
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: d951952103a94dfc60a8083a75998611b635cda9
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016064"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292742"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>Attributi di verifica dell'obiettivo Sharpie
 

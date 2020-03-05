@@ -6,14 +6,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 13271b50353d95ecd2db40e25d549788111530f7
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029002"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292986"
 ---
-# <a name="xamarinandroid-gridlayout"></a>Xamarin.Android GridLayout
+# <a name="xamarinandroid-gridlayout"></a>Novell. Android GridLayout
 
 Il `GridLayout` è una nuova sottoclasse `ViewGroup` che supporta la disposizione di viste in una griglia 2D, simile a una tabella HTML, come illustrato di seguito:
 
@@ -236,5 +236,3 @@ In questo modo si ottiene un layout per il `TextViews` simile al layout preceden
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [GridLayoutDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

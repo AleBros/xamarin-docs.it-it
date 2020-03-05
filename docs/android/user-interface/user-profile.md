@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2018
-ms.openlocfilehash: 252a104118b0419f33abdf7f522ad8fc358e3f76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 395f7c477f1f2bdb608aec918f877f6d320d75cc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028704"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291717"
 ---
 # <a name="user-profile"></a>Profilo utente
 
@@ -23,7 +23,7 @@ var uri = ContactsContract.Contacts.ContentUri;
 
 // Setup the "projection" (columns we want) for only the ID and display name:
 string[] projection = {
-    ContactsContract.Contacts.InterfaceConsts.Id, 
+    ContactsContract.Contacts.InterfaceConsts.Id,
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
 
 // Use a CursorLoader to retrieve the user's contacts data:
@@ -47,7 +47,7 @@ if (cursor != null)
 
 A partire da Android 4 (livello API 14), la classe [ContactsContact. profile](xref:Android.Provider.ContactsContract.Profile) è disponibile tramite il provider di `ContactsContract`. Il `ContactsContact.Profile` fornisce l'accesso al profilo personale per il proprietario di un dispositivo, che include i dati di contatto, ad esempio il nome e il numero di telefono del proprietario del dispositivo.
 
-## <a name="required-permissions"></a>Autorizzazioni necessarie
+## <a name="required-permissions"></a>Autorizzazioni richieste
 
 Per leggere e scrivere i dati di contatto, le applicazioni devono richiedere rispettivamente le autorizzazioni `READ_CONTACTS` e `WRITE_CONTACTS`.
 Inoltre, per leggere e modificare il profilo utente, le applicazioni devono richiedere le autorizzazioni `READ_PROFILE` e `WRITE_PROFILE`.
@@ -107,5 +107,3 @@ Lavorare con il profilo utente è simile all'interazione con altri dati in Andro
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [ContactsProviderDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
-- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

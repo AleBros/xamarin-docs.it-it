@@ -1,20 +1,20 @@
 ---
-title: Visualizzazioni Web in Xamarin.iOS
-description: Questo documento descrive i vari modi in cui un'app Xamarin.iOS può visualizzare il contenuto Web. Vengono illustrati WKWebView, SFSafariViewController, Safari e la sicurezza del trasporto app.
+title: Visualizzazioni Web in Novell. iOS
+description: Questo documento descrive i vari modi in cui un'app Novell. iOS può visualizzare il contenuto Web. Vengono illustrati WKWebView, SFSafariViewController, Safari e la sicurezza del trasporto app.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 933edb1c0681f3fc9cbb8d81aa3091a65c4346e3
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
-ms.translationtype: HT
+ms.openlocfilehash: 8640800717a88e800503e93c339eeb080707374e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031352"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293002"
 ---
-# <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in Xamarin.iOS
+# <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in Novell. iOS
 
 Nel corso della durata di iOS Apple ha rilasciato una serie di modi per gli sviluppatori di app di incorporare funzionalità di visualizzazione Web nelle app. La maggior parte degli utenti usa il Web browser Safari incorporato sul dispositivo iOS e quindi prevede che le funzionalità di visualizzazione Web di altre app siano coerenti con questa esperienza. Si aspettano che gli stessi movimenti funzionino, le prestazioni siano uguali e la funzionalità stessa.
 
@@ -22,11 +22,11 @@ iOS 11 ha introdotto nuove modifiche per `WKWebView` e `SFSafariViewController`.
 
 ## <a name="wkwebview"></a>WKWebView
 
-`WKWebView` è stato introdotto in iOS 8 che consente agli sviluppatori di app di implementare un'interfaccia di esplorazione Web simile a quella di Mobile Safari. Ciò è dovuto in parte al fatto che `WKWebView` usa il motore di Nitro JavaScript, lo stesso motore usato da Mobile Safari. `WKWebView` deve sempre essere usato su UIWebView, laddove possibile, a causa delle [prestazioni migliori](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview), compilate in movimenti intuitivi e della facilità di interazione tra la pagina Web e l'app.
-  
+`WKWebView` è stato introdotto in iOS 8 che consente agli sviluppatori di app di implementare un'interfaccia di esplorazione Web simile a quella di Mobile Safari. Ciò è dovuto in parte al fatto che `WKWebView` usa il motore di Nitro JavaScript, lo stesso motore usato da Mobile Safari. `WKWebView` deve sempre essere usato su UIWebView, laddove possibile, a causa delle prestazioni migliori, compilate in movimenti intuitivi e della facilità di interazione tra la pagina Web e l'app.
+
 `WKWebView` possono essere aggiunti all'app in modo quasi identico a UIWebView. Tuttavia, lo sviluppatore dispone di un maggiore controllo sull'interfaccia utente/UX e sulle funzionalità. Con la creazione e la visualizzazione dell'oggetto visualizzazione Web verrà visualizzata la pagina richiesta, tuttavia è possibile controllare la modalità di presentazione della visualizzazione, il modo in cui l'utente può spostarsi e il modo in cui l'utente esce dalla visualizzazione.  
 
-Il codice seguente può essere usato per avviare un `WKWebView` nell'app Xamarin.iOS:
+Il codice seguente può essere usato per avviare un `WKWebView` nell'app Novell. iOS:
 
 ```csharp
 WKWebView webView = new WKWebView(View.Frame, new WKWebViewConfiguration());
@@ -39,7 +39,7 @@ webView.LoadRequest(request);
 
 È importante notare che `WKWebView` si trova nello spazio dei nomi `WebKit`, pertanto sarà necessario aggiungere questa direttiva using all'inizio della classe.
 
-`WKWebView` può essere usato anche nelle app Xamarin.Mac ed è consigliabile usarlo per creare un'app Mac/iOS multipiattaforma.
+`WKWebView` può essere usato anche nelle app Novell. Mac ed è consigliabile usarlo per creare un'app Mac/iOS multipiattaforma.
 
 La ricetta relativa alla [gestione degli avvisi di JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/handle_javascript_alerts) fornisce anche informazioni sull'uso di WKWebView con JavaScript.
 
@@ -49,11 +49,11 @@ La ricetta relativa alla [gestione degli avvisi di JavaScript](https://github.co
 
  `SFSafariViewController` è essenzialmente un'mini safari ' che può essere incorporato nell'app. Analogamente a WKWebView, USA lo stesso motore di Nitro JavaScript, ma offre anche una gamma di funzionalità Safari aggiuntive, come il riempimento automatico, il lettore e la possibilità di condividere cookie e dati con Safari per dispositivi mobili. L'interazione tra l'utente e il `SFSafariViewController` non è accessibile all'app. L'app non avrà accesso a nessuna delle funzionalità predefinite di Safari.
 
-Inoltre, per impostazione predefinita, implementa un pulsante **Fatto**, che consente all'utente di tornare facilmente alla tua app e di inoltrare e tornare indietro pulsanti di navigazione, consentendo all'utente di navigare attraverso una pila di pagine web. Inoltre, fornisce all'utente una barra degli indirizzi, per consentirgli di ricordare che si trovano nella pagina Web prevista. La barra degli indirizzi non consente all'utente di modificare l'URL. 
+Per impostazione predefinita, implementa anche un pulsante **done** , che consente all'utente di tornare facilmente all'app e i pulsanti di spostamento avanti e indietro, consentendo all'utente di spostarsi tra una pila di pagine Web. Inoltre, fornisce all'utente una barra degli indirizzi, per consentirgli di ricordare che si trovano nella pagina Web prevista. La barra degli indirizzi non consente all'utente di modificare l'URL.
 
 Queste implementazioni non possono essere modificate, quindi `SFSafariViewController` è ideale da usare come browser predefinito se l'app vuole presentare una pagina Web senza alcuna personalizzazione.
 
-Il codice seguente può essere usato per avviare un `SFSafariViewController` nell'app Xamarin.iOS:
+Il codice seguente può essere usato per avviare un `SFSafariViewController` nell'app Novell. iOS:
 
 ```csharp
 var sfViewController = new SFSafariViewController(url);
@@ -93,15 +93,15 @@ Per altre informazioni su ATS, incluso come implementarlo nell'app, vedere la gu
 
 > [!IMPORTANT]
 > `UIWebView` è stato deprecato. Le app che usano questo controllo [non verranno accettate nell'App Store a partire dal 2020 aprile e le app esistenti dovranno essere rimosse da dicembre 2020](https://developer.apple.com/news/?id=12232019b).
-> 
+>
 > [La documentazione di Apple `UIWebView`](https://developer.apple.com/documentation/uikit/uiwebview) suggerisce che le app usino invece [`WKWebView`](#wkwebview) .
 
 > [!IMPORTANT]
-> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Xamarin.Forms, vedere la documentazione relativa a [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
+> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Novell. Forms, vedere la documentazione relativa a [Novell. Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 `UIWebView` è il modo legacy di Apple di fornire contenuto Web nell'app. È stata rilasciata in iOS 2,0 ed è stata deprecata a partire da 8,0.
 
-Per aggiungere un UIWebView all'app Xamarin.iOS, usare il codice seguente:
+Per aggiungere un UIWebView all'app Novell. iOS, usare il codice seguente:
 
 ```csharp
 webView = new UIWebView (View.Bounds);

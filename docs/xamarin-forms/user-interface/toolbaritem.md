@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms ToolbarItem
+title: Novell. Forms ToolbarItem
 description: La classe ToolbarItem è un tipo speciale di pulsante usato nella barra di spostamento di un'applicazione.
 ms.prod: xamarin
 ms.assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1
@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: 0812347e85b0ccb6aa0bbb16649a89bb4d961c9b
-ms.sourcegitcommit: a14edebf00f3e0f8944e59042ca7aa5c42173e30
-ms.translationtype: HT
+ms.openlocfilehash: afdf9029f836ac8e55b2bb338b31f669af946c12
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72780346"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "78292590"
 ---
-# <a name="xamarinforms-toolbaritem"></a>Xamarin.Forms ToolbarItem
+# <a name="xamarinforms-toolbaritem"></a>Novell. Forms ToolbarItem
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
-La classe [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Xamarin.Forms è un tipo speciale di pulsante che può essere aggiunto alla raccolta di `ToolbarItems` di un oggetto `Page`. Ogni oggetto `ToolbarItem` verrà visualizzato come pulsante nella barra di spostamento dell'applicazione. Un'istanza di `ToolbarItem` può avere un'icona e apparire come una voce di menu primaria o secondaria. La classe `ToolbarItem` eredita da [`MenuItem`](xref:Xamarin.Forms.MenuItem).
+La classe [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Novell. Forms è un tipo speciale di pulsante che può essere aggiunto alla raccolta di `ToolbarItems` di un oggetto `Page`. Ogni oggetto `ToolbarItem` verrà visualizzato come pulsante nella barra di spostamento dell'applicazione. Un'istanza di `ToolbarItem` può avere un'icona e apparire come una voce di menu primaria o secondaria. La classe `ToolbarItem` eredita da [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
 Gli screenshot seguenti mostrano `ToolbarItem` oggetti nella barra di spostamento in iOS e Android:
 
@@ -72,7 +72,7 @@ this.ToolbarItems.Add(item);
 Il file rappresentato dal `string`, fornito come proprietà `IconImageSource`, deve esistere in ogni progetto di piattaforma.
 
 > [!NOTE]
-> Gli asset immagine vengono gestiti in modo diverso in ogni piattaforma. Un `ImageSource` può provenire da origini che includono un file locale o una risorsa incorporata, un URI o un flusso. Per ulteriori informazioni sull'impostazione della proprietà `IconImageSource` e delle immagini in Xamarin.Forms, vedere [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+> Gli asset immagine vengono gestiti in modo diverso in ogni piattaforma. Un `ImageSource` può provenire da origini che includono un file locale o una risorsa incorporata, un URI o un flusso. Per ulteriori informazioni sull'impostazione della proprietà `IconImageSource` e delle immagini in Novell. Forms, vedere [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="define-button-behavior"></a>Comportamento dei pulsanti Definisci
 
@@ -100,11 +100,17 @@ void OnItemClicked(object sender, EventArgs e)
 }
 ```
 
-`ToolbarItem` oggetti possono inoltre utilizzare le proprietà `Command` e `CommandParameter` per rispondere all'input dell'utente senza gestori eventi. Per ulteriori informazioni sull'interfaccia `ICommand` e sul data binding MVVM, vedere [Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+`ToolbarItem` oggetti possono inoltre utilizzare le proprietà `Command` e `CommandParameter` per rispondere all'input dell'utente senza gestori eventi. Per ulteriori informazioni sull'interfaccia `ICommand` e sul data binding MVVM, vedere [Novell. Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+
+## <a name="enable-or-disable-a-toolbaritem-at-runtime"></a>Abilitare o disabilitare un ToolbarItem in fase di esecuzione
+
+Per abilitare la disabilitazione di un `ToolbarItem` in fase di esecuzione, associare la relativa proprietà `Command` a un'implementazione di `ICommand` e assicurarsi che un delegato `canExecute` abiliti e abiliti il `ICommand` come appropriato.
+
+Per altre informazioni, vedere [abilitare o disabilitare un MenuItem in fase di esecuzione](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
 
 ## <a name="primary-and-secondary-menus"></a>Menu primari e secondari
 
-Il `ToolbarItemOrder` enum dispone di valori `Default`, `Primary` e `Secondary`.
+Il `ToolbarItemOrder` enum dispone di valori `Default`, `Primary`e `Secondary`.
 
 Quando la proprietà `Order` è impostata su `Primary`, l'oggetto `ToolbarItem` verrà visualizzato nella barra di spostamento principale in tutte le piattaforme. per gli oggetti `ToolbarItem` viene assegnata la priorità al titolo della pagina, che verrà troncato per creare spazio per gli elementi. Gli screenshot seguenti mostrano `ToolbarItem` oggetti nel menu principale in iOS e Android:
 
@@ -120,5 +126,5 @@ Quando la proprietà `Order` è impostata su `Secondary`, il comportamento varia
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [Demo di ToolbarItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
-* [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
-* [MenuItem Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)
+* [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)
+* [MenuItem di Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

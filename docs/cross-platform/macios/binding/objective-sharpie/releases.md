@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 2f1fb3706012fa86834986064a366071b644b2dc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: f60be3f7dc14749f5cd58d5228c17fa85282cd78
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015958"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292515"
 ---
 # <a name="objective-sharpie-release-history"></a>Cronologia delle versioni di Objective Sharpe
 
@@ -43,7 +43,7 @@ ms.locfileid: "73015958"
 
 * Supporto per CocoaPods 1,0
 * Miglioramento dell'affidabilità del binding CocoaPods compilando prima un `.framework` nativo e quindi associando
-* Copiare `.framework` CocoaPods e la definizione di associazione in una directory `Binding` per rendere più semplice l'integrazione con i progetti di binding Xamarin.iOS e Xamarin.Mac
+* Copiare `.framework` CocoaPods e la definizione di associazione in una directory `Binding` per rendere più semplice l'integrazione con i progetti di binding Novell. iOS e Novell. Mac
 
 ## <a name="30-october-5-2015"></a>3,0 (5 ottobre 2015)
 
@@ -58,11 +58,9 @@ ms.locfileid: "73015958"
 
 ## <a name="216-march-17-2015"></a>2.1.6 (17 marzo 2015)
 
-[Scarica v 2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
-
 * Associazione di espressioni operatore binario fisso: il lato sinistro dell'espressione è stato erroneamente scambiato con il lato destro, ad esempio `1 << 0` è stato associato in modo errato come `0 << 1`. Grazie a Adam Kemp, ho notato questo!
 * È stato risolto un problema relativo a `NSInteger` e `NSUInteger` essere associato come `int` e `uint` anziché `nint` e `nuint` in i386; `-DNS_BUILD_32_LIKE_64` viene ora passato a Clang per fare in modo che l'analisi `objc/NSObjCRuntime.h` funzioni come previsto in i386.
-* L'architettura predefinita per Mac OS X SDK, ad esempio `-sdk macosx10.10`, è ora x86_64 anziché i386, quindi è possibile omettere `-arch` a meno che non si desideri eseguire l'override del valore predefinito.
+* L'architettura predefinita per Mac OS X SDK, ad esempio `-sdk macosx10.10`, è ora x86_64 al posto di i386, quindi è possibile omettere `-arch` a meno che non si desideri eseguire l'override del valore predefinito.
 
 ## <a name="210-march-15-2015"></a>2.1.0 (15 marzo 2015)
 
@@ -95,7 +93,7 @@ Objective Sharpie 2,0 si basa su 3.6.1 Clang.
 
 * È stata migliorata l'euristica di denominazione per le enumerazioni anonime che sono immediatamente precedute da un `typedef` la risoluzione in un tipo integrale incorporato, ad esempio `long` o `int`.
 
-* I puntatori C sono ora associati C# come puntatori`unsafe`anziché`System.IntPtr`. In questo modo si ottiene una maggiore chiarezza nell'associazione quando si desidera trasformare i parametri del puntatore in `out` o `ref` parametri. Non è sempre possibile dedurre che un parametro debba essere `out` o `ref`, quindi il puntatore viene mantenuto nell'associazione per facilitare il controllo.
+* I puntatori C sono ora associati C# come puntatori `unsafe` anziché `System.IntPtr`. In questo modo si ottiene una maggiore chiarezza nell'associazione quando si desidera trasformare i parametri del puntatore in `out` o `ref` parametri. Non è sempre possibile dedurre che un parametro debba essere `out` o `ref`, quindi il puntatore viene mantenuto nell'associazione per facilitare il controllo.
 
 * Un'eccezione all'associazione del puntatore precedente è quando viene rilevato un puntatore a 2 rango a un oggetto Objective-C come parametro. In questi casi, la convenzione è predominante e il parametro verrà associato come `out` (ad esempio `NSError **error` → `out NSError error`).
 
@@ -123,7 +121,7 @@ Per ulteriori informazioni, vedere la documentazione relativa alla [Verifica deg
 
 * L'utilizzo del modulo Clang (`@import`) viene ora rilevato automaticamente, che dovrebbe eliminare la necessità di passare manualmente `-fmodules` a Clang per le librerie che usano il supporto del nuovo modulo in Clang.
 
-* Il API unificata Xamarin è ora la destinazione di associazione predefinita; usare l'opzione `-classic` per fare riferimento API classica solo a 32 bit.
+* Il API unificata Novell è ora la destinazione di associazione predefinita; usare l'opzione `-classic` per fare riferimento API classica solo a 32 bit.
 
 ### <a name="notable-bug-fixes"></a>Correzioni di bug rilevanti
 
@@ -135,10 +133,10 @@ Per ulteriori informazioni, vedere la documentazione relativa alla [Verifica deg
 
 [Scarica v 1.1.35](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.35.pkg)
 
-Correzioni di bug secondari.
+Correzione di bug secondari.
 
 ## <a name="111-december-15-2014"></a>1.1.1:15 dicembre 2014
 
 [Scarica v 1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
-1.1.1 è stata la prima versione principale dopo 1,5 anni di utilizzo e sviluppo interni in Xamarin dopo l'anteprima iniziale di Objective Sharpie del 2013 aprile. Questa versione è la prima ad essere considerata stabile e utilizzabile per un'ampia gamma di librerie native, con un nuovo back-end Clang.
+1.1.1 è stata la prima versione principale dopo 1,5 anni di utilizzo e sviluppo interni in Novell dopo l'anteprima iniziale di Objective Sharpie del 2013 aprile. Questa versione è la prima ad essere considerata stabile e utilizzabile per un'ampia gamma di librerie native, con un nuovo back-end Clang.

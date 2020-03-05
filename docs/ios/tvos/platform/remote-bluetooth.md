@@ -1,34 +1,34 @@
 ---
-title: Controller Siri remoto e Bluetooth per tvOS in Xamarin
-description: Questo articolo descrive come usare i controller dei giochi di Siri remote e Bluetooth nelle app tvOS scritte con Xamarin.
+title: Controller Siri remoto e Bluetooth per tvOS in Novell
+description: Questo articolo descrive come usare i controller dei giochi di Siri remote e Bluetooth nelle app tvOS scritte con Novell.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 4255891174b639022a45c45c22e0022cd0403f26
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: c0338fce694d61dc19484c56dbc00bb854d0d0d7
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030587"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292002"
 ---
-# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Xamarin
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
 
-Gli utenti dell'app Xamarin.tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](#The-Siri-Remote).
+Gli utenti dell'app Novell. tvOS non interagisce direttamente con l'interfaccia, come con iOS, dove toccano immagini sullo schermo del dispositivo, ma indirettamente da tutta la stanza usando [Siri Remote](#The-Siri-Remote).
 
 Se l'app è un gioco, è possibile compilare facoltativamente il supporto per i [controller di gioco Bluetooth](#Bluetooth-Game-Controllers) di terze parti, creati per iOS (IFM) nell'app.
 
 [![](remote-bluetooth-images/intro01.png "The Bluetooth Remote and Game Controller")](remote-bluetooth-images/intro01.png#lightbox)
 
-In questo articolo vengono descritti i pulsanti di [Siri Remote](#The-Siri-Remote), [Touch Surface](#Touch-Surface-Gestures) e [Siri Remote](#Siri-Remote-Buttons) e viene illustrato come utilizzarli tramite [movimenti e storyboard](#Gestures-and-Storyboards), [movimenti e codice](#Gestures-and-Code) e [gestione degli eventi di basso livello](#Low-Level-Event-Handling). Infine, viene illustrato come [usare i controller di gioco](#Working-with-Game-Controllers) in un'app Xamarin.tvOS.
+In questo articolo vengono descritti i pulsanti di [Siri Remote](#The-Siri-Remote), [Touch Surface](#Touch-Surface-Gestures) e [Siri Remote](#Siri-Remote-Buttons) e viene illustrato come utilizzarli tramite [movimenti e storyboard](#Gestures-and-Storyboards), [movimenti e codice](#Gestures-and-Code) e [gestione degli eventi di basso livello](#Low-Level-Event-Handling). Infine, viene illustrato come [usare i controller di gioco](#Working-with-Game-Controllers) in un'app Novell. tvOS.
 
 <a name="The-Siri-Remote" />
 
 ## <a name="the-siri-remote"></a>Siri remoto
 
-La modalità principale con cui gli utenti interagiranno con Apple TV e con l'app Xamarin.tvOS è tramite l'inclusivo Siri remote. Apple ha progettato la modalità remota per colmare la distanza tra l'utente seduto sul divano e l'interfaccia utente di Apple TV visualizzata nella stanza dello schermo TV.
+La modalità principale con cui gli utenti interagiranno con Apple TV e con l'app Novell. tvOS è tramite l'inclusivo Siri remote. Apple ha progettato la modalità remota per colmare la distanza tra l'utente seduto sul divano e l'interfaccia utente di Apple TV visualizzata nella stanza dello schermo TV.
 
 La tua sfida come sviluppatore di app tvOS è la creazione di un'interfaccia utente rapida, facile da usare e visivamente accattivante che sfrutta la superficie di tocco, l'accelerometro e i pulsanti di Siri remote.
 
@@ -36,20 +36,20 @@ La tua sfida come sviluppatore di app tvOS è la creazione di un'interfaccia ute
 
 Siri Remote presenta le seguenti funzionalità e gli utilizzi previsti nell'app tvOS:
 
-|Funzionalità|Utilizzo generale delle app|Utilizzo app gioco|
+|Caratteristica|Utilizzo generale delle app|Utilizzo app gioco|
 |---|---|---|
-|**Superficie di tocco**<br />Scorrere rapidamente per spostarsi, premere per selezionare e tenere premuto per i menu contestuali.|**Toccare/scorrere rapidamente**<br />Spostamento dell'interfaccia utente tra elementi attivabili.<br /><br />**Clicca**<br />Attiva l'elemento selezionato (messa a fuoco).|**Toccare/scorrere rapidamente**<br />Dipende dalla progettazione dei giochi e può essere usato come D-Pad toccando i bordi.<br /><br />**Clicca**<br />Eseguire la funzione del pulsante principale.|
+|**Superficie di tocco**<br />Scorrere rapidamente per spostarsi, premere per selezionare e tenere premuto per i menu contestuali.|**Toccare/scorrere rapidamente**<br />Spostamento dell'interfaccia utente tra elementi attivabili.<br /><br />**Fare clic**<br />Attiva l'elemento selezionato (messa a fuoco).|**Toccare/scorrere rapidamente**<br />Dipende dalla progettazione dei giochi e può essere usato come D-Pad toccando i bordi.<br /><br />**Fare clic**<br />Eseguire la funzione del pulsante principale.|
 |**Menu**<br />Premere per tornare alla schermata o al menu precedente.|Torna alla schermata precedente e si chiude alla schermata iniziale di Apple TV dalla schermata principale dell'app.|Sospendere e riprendere il gameplay, tornare alla schermata precedente e uscire dalla schermata iniziale di Apple TV dalla schermata principale dell'app.|
-|**Siri/ricerca**<br />In paesi con Siri, premere e tenere premuto per il controllo vocale, in tutti gli altri paesi, Visualizza la schermata di ricerca.|N/D|N/D|
+|**Siri/ricerca**<br />In paesi con Siri, premere e tenere premuto per il controllo vocale, in tutti gli altri paesi, Visualizza la schermata di ricerca.|n/d|n/d|
 |**Riproduzione/sospensione**<br />Riprodurre e sospendere i supporti o fornire una funzione secondaria nelle app.|Avvia la riproduzione dei supporti e sospende/riprende la riproduzione.|Esegue la funzione del pulsante secondario o ignora il video introduttivo (se esistente).|
-|**Home**<br />Premere per tornare alla schermata iniziale, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto per sospendere il dispositivo.|N/D|N/D|
-|**Volume**<br />Controlla il volume del dispositivo audio/video collegato.|N/D|N/D|
+|**Home**<br />Premere per tornare alla schermata iniziale, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto per sospendere il dispositivo.|n/d|n/d|
+|**Volume**<br />Controlla il volume del dispositivo audio/video collegato.|n/d|n/d|
 
 <a name="Touch-Surface-Gestures" />
 
 ## <a name="touch-surface-gestures"></a>Movimenti della superficie di tocco
 
-La superficie di tocco di Siri Remote è in grado di rilevare un'ampia gamma di movimenti a dito singolo a cui è possibile rispondere nell'app Xamarin.tvOS:
+La superficie di tocco di Siri Remote è in grado di rilevare un'ampia gamma di movimenti a dito singolo a cui è possibile rispondere nell'app Novell. tvOS:
 
 |Scorrimento rapido|Fare clic su|Tocco|
 |---|---|---|
@@ -78,7 +78,7 @@ Inoltre, le pressioni dei pulsanti di menu possono essere rilevate usando un ric
 
 ## <a name="gestures-and-storyboards"></a>Movimenti e storyboard
 
-Il modo più semplice per usare Siri remote nell'app Xamarin.tvOS consiste nell'aggiungere i riconoscitori di movimento alle visualizzazioni in progettazione interfaccia.
+Il modo più semplice per usare Siri remote nell'app Novell. tvOS consiste nell'aggiungere i riconoscitori di movimento alle visualizzazioni in progettazione interfaccia.
 
 Per aggiungere un sistema di riconoscimento dei movimenti, procedere come segue:
 
@@ -186,7 +186,7 @@ namespace tvRemote
 
 ## <a name="low-level-event-handling"></a>Gestione degli eventi di basso livello
 
-Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Xamarin.tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello della pressione del pulsante tramite `UIPress` eventi.
+Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Novell. tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello della pressione del pulsante tramite `UIPress` eventi.
 
 Un evento `UIPress` consiste nel tvOS di un evento `UITouch` per iOS, ad eccezione del fatto che `UIPress` restituisce informazioni sulle pressioni dei pulsanti sul Siri remoto o su altri dispositivi Bluetooth collegati (ad esempio un controller di gioco). `UIPress` eventi descrivono il pulsante premuto e il relativo stato (inizio, annullato, modificato o terminato).
 
@@ -269,7 +269,7 @@ Come per gli eventi di `UITouch`, se è necessario implementare uno degli overri
 
 ## <a name="bluetooth-game-controllers"></a>Controller del gioco Bluetooth
 
-Oltre al comando standard Siri Remote fornito con Apple TV, i controller di gioco Bluetooth di terze parti, eseguiti per iOS (IFM), possono essere abbinati a Apple TV e usati per controllare l'app Xamarin.tvOS.
+Oltre al comando standard Siri Remote fornito con Apple TV, i controller di gioco Bluetooth di terze parti, eseguiti per iOS (IFM), possono essere abbinati a Apple TV e usati per controllare l'app Novell. tvOS.
 
 [![](remote-bluetooth-images/game01.png "Bluetooth Game Controllers")](remote-bluetooth-images/game01.png#lightbox)
 
@@ -280,20 +280,20 @@ I controller dei giochi possono essere usati per migliorare la giocabilità e fo
 
 Un controller di gioco presenta le funzionalità e gli utilizzi previsti seguenti all'interno dell'app tvOS:
 
-|Funzionalità|Utilizzo generale delle app|Utilizzo app gioco|
+|Caratteristica|Utilizzo generale delle app|Utilizzo app gioco|
 |---|---|---|
 |**D-Pad**|Consente di spostarsi tra gli elementi dell'interfaccia utente (modifica lo stato attivo).|Dipende da gioco.|
 |**A**|Attiva l'elemento selezionato (messa a fuoco).|Esegue la funzione del pulsante Primary e conferma le azioni della finestra di dialogo.|
 |**B**|Torna alla schermata precedente o esce dalla schermata iniziale se si trova nella schermata principale dell'app.|Esegue la funzione del pulsante secondario o torna alla schermata precedente.|
 |**X**|Avvia la riproduzione dei supporti o sospende/riprende la riproduzione.|Dipende da gioco.|
-|**Y**|N/D|Dipende da gioco.|
+|**S**|n/d|Dipende da gioco.|
 |**Menu**|Torna alla schermata precedente o esce dalla schermata iniziale se si trova nella schermata principale dell'app.|Sospendere o riprendere il gameplay, tornare alla schermata precedente o uscire dalla schermata iniziale se si trova nella schermata principale dell'app.|
 |**Pulsante sinistro**|Consente di spostarsi verso sinistra.|Dipende da gioco.|
 |**Trigger a sinistra**|Consente di spostarsi verso sinistra.|Dipende da gioco.|
 |**Pulsante destro della spalla**|Consente di spostarsi a destra.|Dipende da gioco.|
 |**Trigger a destra**|Sposta a destra|Dipende da gioco.|
 |**Levetta a sinistra**|Consente di spostarsi tra gli elementi dell'interfaccia utente (modifica lo stato attivo).|Dipende da gioco.|
-|**Levetta destro**|N/D|Dipende da gioco.|
+|**Levetta destro**|n/d|Dipende da gioco.|
 
 Apple fornisce i suggerimenti seguenti per lavorare con i controller di gioco:
 
@@ -305,7 +305,7 @@ Apple fornisce i suggerimenti seguenti per lavorare con i controller di gioco:
 
 ## <a name="working-with-game-controllers"></a>Uso dei controller di gioco
 
-Come indicato in precedenza, oltre alla versione standard di Siri Remote fornita con Apple TV, l'utente può facoltativamente associare un controller di gioco Bluetooth di terze parti, creato per iOS (IFM) e usarlo per controllare l'app Xamarin.tvOS.
+Come indicato in precedenza, oltre alla versione standard di Siri Remote fornita con Apple TV, l'utente può facoltativamente associare un controller di gioco Bluetooth di terze parti, creato per iOS (IFM) e usarlo per controllare l'app Novell. tvOS.
 
 Se l'app richiede un input del controller di basso livello, è possibile usare il [Framework di Game controller](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) di Apple con le modifiche seguenti per tvOS:
 
@@ -316,7 +316,7 @@ Se l'app richiede un input del controller di basso livello, è possibile usare i
 
 ### <a name="game-controller-support-requirements"></a>Requisiti del supporto del controller di gioco
 
-Apple presenta diversi requisiti specifici che devono essere soddisfatti se l'app Xamarin.tvOS supporta i controller di gioco:
+Apple presenta diversi requisiti specifici che devono essere soddisfatti se l'app Novell. tvOS supporta i controller di gioco:
 
 - **È necessario supportare Siri Remote** . è sempre necessario supportare Siri remote. Il gioco non può richiedere la riproducibilità di un controller di gioco di terze parti.
 - **È necessario supportare il layout di controllo esteso** : tutti i controller di gioco tvOS sono controller estesi non formfitting.
@@ -327,7 +327,7 @@ Apple presenta diversi requisiti specifici che devono essere soddisfatti se l'ap
 
 ### <a name="enabling-game-controller-support"></a>Abilitazione del supporto del controller di gioco
 
-Per abilitare il supporto del controller di gioco nell'app Xamarin.tvOS, fai doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica:
+Per abilitare il supporto del controller di gioco nell'app Novell. tvOS, fai doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica:
 
 [![](remote-bluetooth-images/game02.png "The Info.plist editor")](remote-bluetooth-images/game02.png#lightbox)
 

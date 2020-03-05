@@ -1,5 +1,5 @@
 ---
-title: Messaggi di errore di Xamarin.Mac (MMP)
+title: Messaggi di errore di Novell. Mac (MMP)
 description: Questo documento elenca gli errori generati da MMP, lo strumento usato per creare un pacchetto di assembly compilati in un'applicazione Mac eseguibile.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 32fecaff7f6896c03f3ac094d478fef3338f844d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: b1125ab554bd9c73917c106c7486b742f16e628a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025727"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292587"
 ---
-# <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore di Xamarin.Mac (MMP)
+# <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore di Novell. Mac (MMP)
 
 ## <a name="mm0xxx-mmp-error-messages"></a>MM0xxx: messaggi di errore MMP
 
-Ad esempio, parametri, ambiente, strumenti mancanti.
+ad esempio parametri, ambiente, strumenti mancanti.
 
 <a name="MM0000" />
 
@@ -35,7 +35,7 @@ Il modo più semplice per ottenere le informazioni esatte sulla versione consist
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: questa versione di Xamarin.Mac richiede mono {0} (la versione corrente di mono è {1}). Aggiornare mono. Framework da http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: questa versione di Novell. Mac richiede mono {0} (la versione corrente di mono è {1}). Aggiornare mono. Framework da http://mono-project.com/Downloads
 
 <a name="MM0003" />
 
@@ -119,25 +119,25 @@ Si è verificato un errore durante il caricamento degli assembly dai riferimenti
 
 <a name="MM0071" />
 
-#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: piattaforma sconosciuta: *. Questo indica in genere un bug in Xamarin.Mac; inviare un report sui bug in https://bugzilla.xamarin.com con una test case.
+#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: piattaforma sconosciuta: *. Questo indica in genere un bug in Novell. Mac; inviare un report sui bug in https://bugzilla.xamarin.com con una test case.
 
-Questo indica in genere un bug in Xamarin.Mac; inviare un report sui bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) con una test case.
+Questo indica in genere un bug in Novell. Mac; inviare un report sui bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) con una test case.
 
 <a name="MM0073" />
 
-#### <a name="mm0073-xamarinmac--does-not-support-a-deployment-target-of--the-minimum-is--please-select-a-newer-deployment-target-in-your-projects-infoplist"></a>MM0073: Xamarin.Mac \* non supporta una destinazione di distribuzione di \* (il valore minimo è \*). Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
+#### <a name="mm0073-xamarinmac--does-not-support-a-deployment-target-of--the-minimum-is--please-select-a-newer-deployment-target-in-your-projects-infoplist"></a>MM0073: Novell. Mac \* non supporta una destinazione di distribuzione di \* (il valore minimo è \*). Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
 
 La destinazione di distribuzione minima è quella specificata nel messaggio di errore. Selezionare una destinazione di distribuzione più recente nel file INFO. plist del progetto.
 
-Se non è possibile aggiornare la destinazione di distribuzione, usare una versione precedente di Xamarin.Mac.
+Se non è possibile aggiornare la destinazione di distribuzione, usare una versione precedente di Novell. Mac.
 
 <a name="MM0074" />
 
-#### <a name="mm0074-xamarinmac--does-not-support-a-deployment-target-of--the-maximum-is--please-select-an-older-deployment-target-in-your-projects-infoplist-or-upgrade-to-a-newer-version-of-xamarinmac"></a>MM0074: Xamarin.Mac \* non supporta una destinazione di distribuzione di \* (il massimo è \*). Selezionare una destinazione di distribuzione precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Xamarin.Mac.
+#### <a name="mm0074-xamarinmac--does-not-support-a-deployment-target-of--the-maximum-is--please-select-an-older-deployment-target-in-your-projects-infoplist-or-upgrade-to-a-newer-version-of-xamarinmac"></a>MM0074: Novell. Mac \* non supporta una destinazione di distribuzione di \* (il massimo è \*). Selezionare una destinazione di distribuzione precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Novell. Mac.
 
-Xamarin.Mac non supporta l'impostazione della destinazione di distribuzione minima su una versione superiore rispetto alla versione per la quale è stata creata questa versione specifica di Xamarin.Mac.
+Novell. Mac non supporta l'impostazione della destinazione di distribuzione minima su una versione superiore rispetto alla versione per la quale è stata creata questa versione specifica di Novell. Mac.
 
-Selezionare una destinazione di distribuzione minima precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Xamarin.Mac.
+Selezionare una destinazione di distribuzione minima precedente nel file INFO. plist del progetto o eseguire l'aggiornamento a una versione più recente di Novell. Mac.
 
 <a name="MM0079" />
 
@@ -152,15 +152,15 @@ Selezionare una destinazione di distribuzione minima precedente nel file INFO. p
 
 <a name="MM0091" />
 
-#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091: questa versione di Xamarin.Mac richiede il \* SDK (fornito con Xcode \*). Aggiornare Xcode per ottenere i file di intestazione necessari o usare il registrar dinamico oppure impostare il comportamento del linker gestito per collegare solo gli SDK della piattaforma o del Framework di collegamento (per provare a evitare le nuove API).
+#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091: questa versione di Novell. Mac richiede il \* SDK (fornito con Xcode \*). Aggiornare Xcode per ottenere i file di intestazione necessari o usare il registrar dinamico oppure impostare il comportamento del linker gestito per collegare solo gli SDK della piattaforma o del Framework di collegamento (per provare a evitare le nuove API).
 
-Xamarin.Mac richiede che i file di intestazione, dalla versione SDK specificata nel messaggio di errore, creino l'applicazione con il registrar statico. Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario, inclusi tutti i file di intestazione necessari. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
+Novell. Mac richiede che i file di intestazione, dalla versione SDK specificata nel messaggio di errore, creino l'applicazione con il registrar statico. Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario, inclusi tutti i file di intestazione necessari. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
 
 Una possibile soluzione alternativa consiste nell'abilitare il linker gestito. Questa operazione rimuoverà l'API non usata, incluso, nella maggior parte dei casi, la nuova API in cui i file di intestazione sono mancanti (o incompleti). Questa operazione non funzionerà tuttavia se il progetto usa l'API introdotta in un SDK più recente rispetto a quella fornita da Xcode.
 
-Una seconda potenziale soluzione alternativa consiste nell'usare invece il registrar dinamico. In questo modo si imposterà un costo di avvio per la registrazione dinamica dei tipi, ma si rimuoverà il requisito del file di intestazione. 
+Una seconda potenziale soluzione alternativa consiste nell'usare invece il registrar dinamico. In questo modo si imposterà un costo di avvio per la registrazione dinamica dei tipi, ma si rimuoverà il requisito del file di intestazione.
 
-Una soluzione Last-Straw è quella di usare una versione precedente di Xamarin.Mac, che supporta l'SDK richiesto dal progetto.
+Una soluzione Last-Straw è quella di usare una versione precedente di Novell. Mac, che supporta l'SDK richiesto dal progetto.
 
 <a name="MM0097" />
 
@@ -200,7 +200,7 @@ Quando si esegue `--runregistrar`, deve essere fornito almeno un assembly radice
 
 #### <a name="mm0131-product-assembly-0-not-found-in-assembly-list-1"></a>MM0131: l'assembly '{0}' del prodotto non è stato trovato nell'elenco di assembly:'{1}'
 
-Quando si esegue `--runregistrar`, l'elenco di assembly deve includere l'assembly del prodotto, Xamarin.Mac, XamMac.
+Quando si esegue `--runregistrar`, l'elenco di assembly deve includere l'assembly del prodotto, Novell. Mac, XamMac.
 
 <a name="MM0132" />
 
@@ -210,7 +210,7 @@ L'ottimizzazione specificata non è stata riconosciuta.
 
 Il formato accettato è `[+|-]optimization-name`, dove `optimization-name` è uno dei valori elencati nel messaggio di errore.
 
-Per una descrizione completa di ogni ottimizzazione, vedere [ottimizzazioni delle compilazioni](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations).
+Per una descrizione completa di ogni ottimizzazione, vedere [ottimizzazioni delle compilazioni](~/cross-platform/macios/optimizations.md) .
 
 <a name="MM0133" />
 
@@ -220,9 +220,9 @@ Per una descrizione completa di ogni ottimizzazione, vedere [ottimizzazioni dell
 
 #### <a name="mm0134-32-bit-applications-should-be-migrated-to-64-bit"></a>MM0134: è necessario eseguire la migrazione delle applicazioni a 32 bit a 64 bit.
 
-Apple ha annunciato che non consentirà l'invii di App Store macOS di app a 32 bit (a partire dal 2018 gennaio). 
+Apple ha annunciato che non consentirà l'invii di App Store macOS di app a 32 bit (a partire dal 2018 gennaio).
 
-Inoltre, le applicazioni a 32 bit non vengono eseguite sulla versione di macOS dopo High Sierra "senza compromessi". 
+Inoltre, le applicazioni a 32 bit non vengono eseguite sulla versione di macOS dopo High Sierra "senza compromessi".
 
 Per altri dettagli: https://developer.apple.com/news/?id=06282017a
 
@@ -232,13 +232,13 @@ Si consiglia di aggiornare l'applicazione e tutte le dipendenze a 64 bit.
 
 #### <a name="mm0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MM0135: non è stato collegato il Framework di sistema '{0}' (a cui fa riferimento l'assembly '{1}') perché è stato introdotto in {2} {3}e viene usato {2} SDK {4}.
 
-Per compilare l'applicazione, Xamarin.Mac deve collegarsi a librerie di sistema, alcune delle quali dipendono dalla versione SDK specificata nel messaggio di errore. Poiché si sta usando una versione precedente dell'SDK, le chiamate a tali API possono avere esito negativo in fase di esecuzione.
+Per compilare l'applicazione, Novell. Mac deve collegarsi a librerie di sistema, alcune delle quali dipendono dalla versione SDK specificata nel messaggio di errore. Poiché si sta usando una versione precedente dell'SDK, le chiamate a tali API possono avere esito negativo in fase di esecuzione.
 
 Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
 
 In alternativa, consentire al [linker](https://docs.microsoft.com/xamarin/mac/deploy-test/linker) gestito di rimuovere le API inutilizzate, tra cui, nella maggior parte dei casi, quelle nuove che richiedono la libreria specificata. Tuttavia, questa operazione non funzionerà se il progetto richiede API introdotte in un SDK più recente rispetto a quello fornito da Xcode.
 
-Come ultima soluzione di paglia, usare una versione precedente di Xamarin.Mac che non richiede che questi nuovi SDK siano presenti durante il processo di compilazione.
+Come ultima soluzione di paglia, usare una versione precedente di Novell. Mac che non richiede che questi nuovi SDK siano presenti durante il processo di compilazione.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx: copia del file/collegamenti simbolici (correlati al progetto)
 
@@ -270,11 +270,11 @@ Come ultima soluzione di paglia, usare una versione precedente di Xamarin.Mac ch
 
 <a name="MM1406" />
 
-#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406: il Framework di destinazione '{0}' non è valido quando destinazione Xamarin.Mac 4,5 .NET Fram.
+#### <a name="mm1406-target-framework-0-is-invalid-when-targeting-xamarinmac-45-net-framwork"></a>MM1406: il Framework di destinazione '{0}' non è valido se la destinazione è Novell. Mac 4,5 .NET Fram.
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: mancata corrispondenza tra il riferimento Xamarin.Mac '{0}' e il Framework di destinazione selezionato '{1}'.
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: mancata corrispondenza tra il riferimento Novell. Mac '{0}' e il Framework di destinazione selezionato '{1}'.
 
 ### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: errori di raccolta assembly (senza necessità del linker)
 
@@ -334,7 +334,7 @@ Come ultima soluzione di paglia, usare una versione precedente di Xamarin.Mac ch
 
 <a name="MM2007" />
 
-#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: Xamarin.Mac API unificata rispetto a un profilo .NET completo non supporta il collegamento. Passare il flag-nolink.
+#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: Novell. Mac API unificata rispetto a un profilo .NET completo non supporta il collegamento. Passare il flag-nolink.
 
 <a name="MM2009" />
 
@@ -358,7 +358,7 @@ Come ultima soluzione di paglia, usare una versione precedente di Xamarin.Mac ch
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: le estensioni Xamarin.Mac non supportano il collegamento. La richiesta di collegamento verrà ignorata. \*\* questo messaggio è obsoleto in XM 3.6 + \*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: le estensioni Novell. Mac non supportano il collegamento. La richiesta di collegamento verrà ignorata. \*\* questo messaggio è obsoleto in XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -376,7 +376,7 @@ Come ultima soluzione di paglia, usare una versione precedente di Xamarin.Mac ch
 
 <a name="MM2100" />
 
-#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100: Xamarin.Mac API classica non supporta il collegamento alla piattaforma.
+#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100: Novell. Mac API classica non supporta il collegamento alla piattaforma.
 
 <a name="MM2103" />
 
@@ -426,7 +426,7 @@ Si consiglia di usare `lipo` per rimuovere le architetture non necessarie in mod
 
 <a name="MM2109"/>
 
-#### <a name="mm2109-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2109: Xamarin.Mac API classica non supporta il collegamento alla piattaforma.
+#### <a name="mm2109-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2109: Novell. Mac API classica non supporta il collegamento alla piattaforma.
 
 ## <a name="mm3xxx-aot"></a>MM3xxx: AOT
 
@@ -513,7 +513,7 @@ In caso contrario, inviare un [problema](https://github.com/xamarin/xamarin-maci
 
 <a name="MM5203" />
 
-#### <a name="mm5203-cant-find-libxammaca-likely-because-of-a-corrupted-xamarinmac-installation-please-reinstall-xamarinmac"></a>MM5203: Impossibile trovare libxammac. a, probabilmente a causa di un'installazione Xamarin.Mac danneggiata. Reinstallare Xamarin.Mac.
+#### <a name="mm5203-cant-find-libxammaca-likely-because-of-a-corrupted-xamarinmac-installation-please-reinstall-xamarinmac"></a>MM5203: Impossibile trovare libxammac. a, probabilmente a causa di un'installazione Novell. Mac danneggiata. Reinstallare Novell. Mac.
 
 <a name="MM5204" />
 
@@ -609,7 +609,7 @@ Vedere l' [avviso mTouch equivalente](~/ios/troubleshooting/mtouch-errors.md#MT5
 
 #### <a name="mm8025-failed-to-compute-the-token-reference-for-the-type-typeassemblyqualifiedname-because-reasons"></a>MM8025: non è stato possibile calcolare il riferimento al token per il tipo ' {Type. AssemblyQualifiedName}' perché {reasons}
 
-Ciò indica un bug in Xamarin.Mac. Inviare un bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac).
+Ciò indica un bug in Novell. Mac. Inviare un bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac).
 
 Una possibile soluzione alternativa consiste nel disabilitare l'ottimizzazione `register-protocols` passando `--optimize:-register-protocols` come argomento MMP aggiuntivo nelle opzioni di compilazione Mac del progetto.
 
@@ -617,6 +617,6 @@ Una possibile soluzione alternativa consiste nel disabilitare l'ottimizzazione `
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: * non è supportato quando il registrar dinamico è stato collegato.
 
-Questo indica in genere un bug in Xamarin.Mac, perché il registrar dinamico non deve essere collegato se necessario. Inviare un bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. Mac, perché il registrar dinamico non deve essere collegato se necessario. Inviare un bug in [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
 È possibile forzare il linker a lasciare il registrar dinamico aggiungendo `--optimize=-remove-dynamic-registrar` agli argomenti MMP aggiuntivi nelle opzioni di compilazione Mac del progetto.

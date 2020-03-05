@@ -1,18 +1,18 @@
 ---
 title: Tema Material
-description: Come eseguire il tema dell'app Xamarin.Android con il tema materiale
+description: Come eseguire il tema dell'app Novell. Android con il tema materiale
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e83e34dab407c5be84fc5b4c3c0c445d56907e3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028753"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291843"
 ---
 # <a name="material-theme"></a>Tema Material
 
@@ -38,13 +38,13 @@ Poiché tema materiale è supportato solo in Android 5,0 e versioni successive, 
 
 ## <a name="requirements"></a>Requisiti
 
-Gli elementi seguenti sono necessari per usare le nuove funzionalità del tema materiale Android 5,0 nelle app basate su Xamarin:
+Gli elementi seguenti sono necessari per usare le nuove funzionalità del tema materiale Android 5,0 nelle app basate su Novell:
 
-- **Xamarin.android** &ndash; Xamarin.Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
+- **Novell. android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 
 - **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite il Android SDK Manager.
 
-- **Java jdk 1,8** &ndash; JDK 1,7 può essere usato se si destinazione in modo specifico il livello API 23 e versioni precedenti. JDK 1,8 è disponibile da [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- **Java jdk 1,8** &ndash; JDK 1,7 può essere usato se la destinazione specifica è il livello API 23 e versioni precedenti. JDK 1,8 è disponibile da [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Per informazioni su come configurare un progetto di app Android 5,0, vedere [configurazione di un progetto android 5,0](~/android/platform/lollipop.md).
 
@@ -70,7 +70,7 @@ Nell'esempio seguente l'applicazione *MyApp* viene configurata per l'utilizzo de
 </application>
 ```
 
-In alternativa, è possibile impostare l'attributo `Theme` dell'applicazione in **AssemblyInfo.cs** (o **Properties.cs**). Esempio:
+In alternativa, è possibile impostare l'attributo `Theme` dell'applicazione in **AssemblyInfo.cs** (o **Properties.cs**). Ad esempio,
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -199,7 +199,7 @@ Per applicare uno stile a una singola visualizzazione, attenersi alla procedura 
 </style>
 ```
 
-- Nel layout impostare l'attributo `style` per la visualizzazione in modo che corrisponda al nome dello stile personalizzato scelto nel passaggio precedente. Esempio:
+- Nel layout impostare l'attributo `style` per la visualizzazione in modo che corrisponda al nome dello stile personalizzato scelto nel passaggio precedente. Ad esempio,
 
 ```xml
 <android.support.v7.widget.CardView
@@ -219,7 +219,7 @@ In questo esempio, la `CardView` personalizzata viene visualizzata con il colore
 
 Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0 ma ripristina automaticamente uno stile compatibile verso il basso nelle versioni precedenti di Android, seguire questa procedura:
 
-- Definire un tema personalizzato in **Resources/values-V21/Styles. XML** che deriva da uno stile del tema del materiale. Esempio:
+- Definire un tema personalizzato in **Resources/values-V21/Styles. XML** che deriva da uno stile del tema del materiale. Ad esempio,
 
 ```xml
 <resources>
@@ -229,7 +229,7 @@ Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0
 </resources>
 ```
 
-- Definire un tema personalizzato in **Resources/values/styles. XML** che deriva da un tema precedente, ma usa lo stesso nome di tema indicato in precedenza. Esempio:
+- Definire un tema personalizzato in **Resources/values/styles. XML** che deriva da un tema precedente, ma usa lo stesso nome di tema indicato in precedenza. Ad esempio,
 
 ```xml
 <resources>
@@ -240,7 +240,7 @@ Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0
 ```
 
 - In **file AndroidManifest. XML**configurare l'app con il nome del tema personalizzato. 
-    Esempio:
+    Ad esempio,
 
 ```xml
 <application android:label="MyApp" 

@@ -7,20 +7,20 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: c97c931445122cbaa613b87e3778f4dc9e92f4d0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 4cf32bae208efa67acbb08f2e4525e4571b14b16
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023660"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291520"
 ---
 # <a name="firebase-cloud-messaging"></a>Firebase Cloud Messaging
 
 _Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. Questo articolo fornisce una panoramica del funzionamento di FCM e spiega come configurare i servizi Google in modo che l'app possa usare FCM._
 
-[immagine del Hero![Firebase Cloud Messaging](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
+[immagine del Hero ![Firebase Cloud Messaging](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
 
-Questo argomento fornisce una panoramica generale del modo in cui Firebase Cloud Messaging instrada i messaggi tra l'app Xamarin.Android e un server app e fornisce una procedura dettagliata per l'acquisizione delle credenziali in modo che l'app possa usare i servizi FCM.
+Questo argomento fornisce una panoramica generale del modo in cui Firebase Cloud Messaging instrada i messaggi tra l'app Novell. Android e un server app e fornisce una procedura dettagliata per l'acquisizione delle credenziali in modo che l'app possa usare i servizi FCM.
 
 ## <a name="overview"></a>Panoramica
 
@@ -34,7 +34,7 @@ Con FCM, i server app possono inviare messaggi a un singolo dispositivo, a un gr
 
 ## <a name="fcm-in-action"></a>Messaggistica cloud Firebase in azione
 
-Quando un messaggio downstream viene inviato a un'app client da un server applicazioni, il server app invia il messaggio a un *server di connessione FCM* fornito da Google; il server di connessione FCM, a sua volta, trasmette il messaggio a un dispositivo che esegue l'app client. I messaggi possono essere inviati tramite HTTP o [XMPP](https://developers.google.com/cloud-messaging/ccs) (Extensible Messaging and Presence Protocol). Poiché le app client non sono sempre connesse o in esecuzione, il server di connessione FCM Accoda e archivia i messaggi, inviarli alle app client quando si riconnettono e diventano disponibili. Analogamente, FCM accoda i messaggi upstream dall'app client al server app se il server app non è disponibile. Per ulteriori informazioni sui server di connessione FCM, vedere [informazioni su Firebase Cloud Messaging Server](https://firebase.google.com/docs/cloud-messaging/server).
+Quando un messaggio downstream viene inviato a un'app client da un server applicazioni, il server app invia il messaggio a un *server di connessione FCM* fornito da Google; il server di connessione FCM, a sua volta, trasmette il messaggio a un dispositivo che esegue l'app client. I messaggi possono essere inviati tramite HTTP o [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (Extensible Messaging and Presence Protocol). Poiché le app client non sono sempre connesse o in esecuzione, il server di connessione FCM Accoda e archivia i messaggi, inviarli alle app client quando si riconnettono e diventano disponibili. Analogamente, FCM accoda i messaggi upstream dall'app client al server app se il server app non è disponibile. Per ulteriori informazioni sui server di connessione FCM, vedere [informazioni su Firebase Cloud Messaging Server](https://firebase.google.com/docs/cloud-messaging/server).
 
 FCM usa le credenziali seguenti per identificare il server app e l'app client e usa queste credenziali per autorizzare le transazioni dei messaggi tramite FCM:
 
@@ -47,7 +47,7 @@ FCM usa le credenziali seguenti per identificare il server app e l'app client e 
 - <a name="fcm-in-action-registration-token"></a>Il **token di registrazione** &ndash; il token di *registrazione* (noto anche come *ID istanza*) è l'identità FCM dell'app client in un determinato dispositivo. Il token di registrazione viene generato in fase di esecuzione &ndash; l'app riceve un token di registrazione quando viene registrato per la prima volta con FCM mentre è in esecuzione in un dispositivo. Il token di registrazione autorizza un'istanza dell'app client (in esecuzione su quel particolare dispositivo) a ricevere i messaggi da FCM.
     Un esempio di token di registrazione è `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS`, ovvero una stringa molto lungo.
 
-La [configurazione di Firebase Cloud Messaging](#setup_fcm) (più avanti in questa guida) fornisce istruzioni dettagliate per la creazione di un progetto e la generazione di queste credenziali. Quando si crea un nuovo progetto nella [console di Firebase](https://console.firebase.google.com/), viene creato un file di credenziali denominato **Google-services. JSON** &ndash; aggiungere questo file al progetto Xamarin.Android come descritto in [notifiche remote con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
+La [configurazione di Firebase Cloud Messaging](#setup_fcm) (più avanti in questa guida) fornisce istruzioni dettagliate per la creazione di un progetto e la generazione di queste credenziali. Quando si crea un nuovo progetto nella [console di Firebase](https://console.firebase.google.com/), viene creato un file di credenziali denominato **Google-services. JSON** &ndash; aggiungere questo file al progetto Novell. Android come descritto in [notifiche remote con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 Le sezioni seguenti illustrano come usare queste credenziali quando le app client comunicano con i server app tramite FCM.
 
@@ -57,7 +57,7 @@ Le sezioni seguenti illustrano come usare queste credenziali quando le app clien
 
 Prima di eseguire la messaggistica è necessario che un'app client si registri prima con FCM. L'app client deve completare la procedura di registrazione illustrata nel diagramma seguente:
 
-[diagramma per la procedura di registrazione dell'app![](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
+[diagramma per la procedura di registrazione dell'app ![](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1. L'app client contatta FCM per ottenere un token di registrazione, passando l'ID mittente, la chiave API e l'ID app a FCM.
 
@@ -93,7 +93,7 @@ Per informazioni dettagliate sulla ricezione di messaggi FCM downstream in Andro
 
 La *messaggistica degli argomenti* consente a un server applicazioni di inviare un messaggio a più dispositivi che hanno scelto un argomento specifico. È anche possibile comporre e inviare messaggi di argomento tramite l'interfaccia utente grafica delle notifiche Firebase console. FCM gestisce il routing e il recapito dei messaggi di argomento ai client sottoscritti. Questa funzionalità può essere usata per messaggi quali avvisi meteorologici, quotazioni azionarie e notizie sul titolo.
 
-[diagramma di messaggistica dell'argomento![](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
+[diagramma di messaggistica dell'argomento ![](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
 
 I passaggi seguenti vengono usati nell'argomento messaggistica (dopo che l'app client ottiene un token di registrazione come illustrato in precedenza):
 
@@ -113,7 +113,7 @@ Prima di poter usare i servizi FCM nell'app, è necessario creare un nuovo proge
 
 1. Accedere alla [console di Firebase](https://console.firebase.google.com/) con l'account Google (ad esempio, l'indirizzo Gmail) e fare clic su **Crea nuovo progetto**:
 
-    [pulsante![Crea nuovo progetto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
+    [pulsante ![Crea nuovo progetto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
 
     Se si dispone di un progetto esistente, fare clic su **Importa un progetto Google**.
 
@@ -125,7 +125,7 @@ Prima di poter usare i servizi FCM nell'app, è necessario creare un nuovo proge
 
     [![aggiungere Firebase all'app Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
-4. Nella schermata successiva immettere il nome del pacchetto dell'app. In questo esempio, il nome del pacchetto è **com. Xamarin.fcmexample**. Questo valore deve corrispondere al nome del pacchetto dell'app Android. È anche possibile immettere un nome alternativo per l'app nel campo del **soprannome dell'app** :
+4. Nella schermata successiva immettere il nome del pacchetto dell'app. In questo esempio, il nome del pacchetto è **com. Novell. fcmexample**. Questo valore deve corrispondere al nome del pacchetto dell'app Android. È anche possibile immettere un nome alternativo per l'app nel campo del **soprannome dell'app** :
 
     [![immissione dell'esempio di FCM come nome alternativo dell'app](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
@@ -141,7 +141,7 @@ Prima di poter usare i servizi FCM nell'app, è necessario creare un nuovo proge
 
 Per un esempio dettagliato di come aggiungere **Google-Services. JSON** a un progetto di app per ricevere i messaggi di notifica push FCM in Android, vedere [notifiche remote con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-## <a name="for-further-reading"></a>Per ulteriori informazioni
+## <a name="for-further-reading"></a>Per altre informazioni
 
 - [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) di Google offre una panoramica delle funzionalità chiave di Firebase per la messaggistica cloud, una spiegazione del funzionamento e le istruzioni di configurazione.
 
