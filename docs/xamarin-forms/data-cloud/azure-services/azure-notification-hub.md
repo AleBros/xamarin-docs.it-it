@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-ms.openlocfilehash: 8b633481d74810bc4d86d68f8c36d55980092510
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 778f56ec844e2802c1e1bc783824d55218678761
+ms.sourcegitcommit: e9d88587aafc912124b87732d81c3910247ad811
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78291789"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78337296"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Inviare e ricevere notifiche push con hub di notifica di Azure e Novell. Forms
 
@@ -518,6 +518,7 @@ Hub di notifica di Azure consente di verificare che l'applicazione possa ricever
 1. Quando si verifica che un'applicazione può ricevere notifiche push, è necessario usare un dispositivo fisico. I dispositivi virtuali Android e iOS potrebbero non essere configurati correttamente per ricevere notifiche push.
 1. L'applicazione Android di esempio registra il token e i modelli una volta quando viene emesso il token Firebase. Durante i test potrebbe essere necessario richiedere un nuovo token e ripetere la registrazione con l'hub di notifica di Azure. Il modo migliore per forzare questo problema consiste nel pulire il progetto, eliminare le cartelle `bin` e `obj` e disinstallare l'applicazione dal dispositivo prima di ricompilarla e distribuirla.
 1. Molte parti del flusso di notifiche push vengono eseguite in modo asincrono. Ciò può comportare un mancato raggiungimento di punti di interruzione o il raggiungimento di un ordine imprevisto. Usare la registrazione del dispositivo o del debug per tracciare l'esecuzione senza interrompere il flusso dell'applicazione. Filtrare il log del dispositivo Android usando il `DebugTag` specificato in `Constants`.
+1. Quando il debug viene arrestato in Visual Studio, l'app viene forzata. Tutti i ricevitori di messaggi o altri servizi avviati come parte del processo di debug verranno chiusi e non risponderanno agli eventi del messaggio.
 
 ## <a name="create-a-notification-dispatcher"></a>Creazione di un dispatcher di notifiche
 
