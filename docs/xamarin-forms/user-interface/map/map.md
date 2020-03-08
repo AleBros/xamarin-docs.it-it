@@ -1,5 +1,5 @@
 ---
-title: Controllo mappa Xamarin.Forms
+title: Controllo mappa Novell. Forms
 description: Il controllo mappa è una visualizzazione multipiattaforma per la visualizzazione e l'annotazione delle mappe. Usa il controllo mappa nativo per ogni piattaforma, offrendo un'esperienza di mapping rapida e familiare per gli utenti.
 ms.prod: xamarin
 ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019
 ms.openlocfilehash: 1cfda90360557af1160d421f18807f8b534967a8
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426230"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912679"
 ---
-# <a name="xamarinforms-map-control"></a>Controllo mappa Xamarin.Forms
+# <a name="xamarinforms-map-control"></a>Controllo mappa Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -54,7 +54,7 @@ Un [`Map`](xref:Xamarin.Forms.Maps.Map) può essere visualizzato aggiungendolo a
 ```
 
 > [!NOTE]
-> Per fare riferimento ai controlli Xamarin.Forms. Maps è necessaria una definizione di spazio dei nomi `xmlns` aggiuntiva. Nell'esempio precedente viene fatto riferimento allo spazio dei nomi `Xamarin.Forms.Maps` tramite la parola chiave `maps`.
+> Per fare riferimento ai controlli Novell. Forms. Maps è necessaria una definizione di spazio dei nomi `xmlns` aggiuntiva. Nell'esempio precedente viene fatto riferimento allo spazio dei nomi `Xamarin.Forms.Maps` tramite la parola chiave `maps`.
 
 Il codice C# equivalente è il seguente:
 
@@ -106,15 +106,15 @@ Map map = new Map
 
 Gli screenshot seguenti mostrano un [`Map`](xref:Xamarin.Forms.Maps.Map) quando la proprietà [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) è impostata su `Street`:
 
-[![Screenshot del controllo mappa con il tipo di mappa stradale, in iOS e Android](map-images/maptype-street.png "Controllo mappa con la via MapType")](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
+[![Screenshot del controllo mappa con il tipo di mappa stradale, in iOS e Android](map-images/maptype-street.png "Controllo mappa con la via MapType")](map-images/maptype-street-large.png#lightbox "Controllo mappa con il tipo di mappa stradale")
 
 Gli screenshot seguenti mostrano un [`Map`](xref:Xamarin.Forms.Maps.Map) quando la proprietà [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) è impostata su `Satellite`:
 
-[![Screenshot del controllo mappa con il tipo di mappa satellite, in iOS e Android](map-images/maptype-satellite.png "Controllo mappa con il MapType satellite")](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
+[![Screenshot del controllo mappa con il tipo di mappa satellite, in iOS e Android](map-images/maptype-satellite.png "Controllo mappa con il MapType satellite")](map-images/maptype-satellite-large.png#lightbox "Controllo mappa con il tipo di mappa satellite")
 
 Gli screenshot seguenti mostrano un [`Map`](xref:Xamarin.Forms.Maps.Map) quando la proprietà [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) è impostata su `Hybrid`:
 
-[![Screenshot del controllo mappa con il tipo di mappa ibrida, in iOS e Android](map-images/maptype-hybrid.png "Controllo mappa con MapType ibrido")](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
+[![Screenshot del controllo mappa con il tipo di mappa ibrida, in iOS e Android](map-images/maptype-hybrid.png "Controllo mappa con MapType ibrido")](map-images/maptype-hybrid-large.png#lightbox "Controllo mappa con il tipo di mappa ibrida")
 
 ## <a name="display-a-specific-location-on-a-map"></a>Visualizzare una posizione specifica in una mappa
 
@@ -206,7 +206,7 @@ In questo esempio, il metodo [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveTo
 Il comportamento di un [`Map`](xref:Xamarin.Forms.Maps.Map) può essere personalizzato impostando alcune proprietà e gestendo l'evento `MapClicked`.
 
 > [!NOTE]
-> È possibile ottenere un ulteriore comportamento della mappa customizatin creando un renderer personalizzato della mappa. Per altre informazioni, vedere [personalizzazione di un mapping di Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
+> È possibile ottenere un ulteriore comportamento della mappa customizatin creando un renderer personalizzato della mappa. Per altre informazioni, vedere [personalizzazione di un mapping di Novell. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
 ### <a name="disable-scroll"></a>Disabilita scorrimento
 
@@ -309,5 +309,5 @@ map.MapClicked += OnMapClicked;
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Posizione e distanza della mappa](position-distance.md)
-- [Personalizzazione di un mapping di Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Personalizzazione di un mapping di Novell. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)

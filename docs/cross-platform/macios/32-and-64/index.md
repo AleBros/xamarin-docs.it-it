@@ -1,17 +1,17 @@
 ---
 title: Considerazioni sulla piattaforma a 32/64 bit
-description: Questo documento descrive le varie considerazioni da tenere presenti quando si è interessati a architetture a 32 bit e a 64 bit per un'applicazione Xamarin.iOS o Xamarin.Mac.
+description: Questo documento descrive le varie considerazioni da tenere presenti quando si è interessati a architetture a 32 bit e a 64 bit per un'applicazione Novell. iOS o Novell. Mac.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016325"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910749"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulla piattaforma a 32/64 bit
 
@@ -21,22 +21,22 @@ A partire da iOS 11, le app a 32 bit non vengono più avviate e [tutti gli invii
 
 A partire dal 2018 gennaio, [le nuove app inviate a Mac App Store devono supportare 64 bit e le](https://developer.apple.com/news/?id=06282017a)app esistenti devono essere aggiornate entro il 2018 giugno.
 
-Il API classica di Xamarin (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Xamarin.iOS e Xamarin.Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
+Il API classica di Novell (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Novell. iOS e Novell. Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
 
 ## <a name="ios"></a>iOS
 
 <a name="enable-64" />
 
-### <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione di Build a 64 bit di app Xamarin.iOS
+### <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione di Build a 64 bit di app Novell. iOS
 
 > [!WARNING]
-> Questa sezione è inclusa per motivi cronologici e consente di spostare i progetti Xamarin.iOS meno recenti nel API unificata e supportare 64 bit. Per impostazione predefinita, tutti i nuovi progetti Xamarin.iOS utilizzeranno il API unificata e la destinazione 64 bit.
+> Questa sezione è inclusa per motivi cronologici e consente di spostare i progetti Novell. iOS meno recenti nel API unificata e supportare 64 bit. Per impostazione predefinita, tutti i nuovi progetti Novell. iOS utilizzeranno il API unificata e la destinazione 64 bit.
 
-Per le applicazioni per dispositivi mobili Xamarin.iOS convertite nel API unificata, gli sviluppatori devono aggiornare manualmente le impostazioni di compilazione per la destinazione 64 bit:
+Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unificata, gli sviluppatori devono aggiornare manualmente le impostazioni di compilazione per la destinazione 64 bit:
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare doppio clic sul progetto dell'app per aprire la finestra **Opzioni progetto** .
 2. Selezionare **compilazione iOS**.
@@ -51,7 +51,7 @@ Per le applicazioni per dispositivi mobili Xamarin.iOS convertite nel API unific
 5. Fare clic su **OK**.
 6. Eseguire una compilazione pulita.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto dell'app e selezionare **Proprietà**.
 2. Selezionare **compilazione iOS**.
@@ -63,7 +63,7 @@ Per le applicazioni per dispositivi mobili Xamarin.iOS convertite nel API unific
     
    [![Impostazione delle architetture supportate su una delle combinazioni ARM64](Images/VS01.png "Impostazione delle architetture supportate su una delle combinazioni ARM64")](Images/VS01-large.png#lightbox)
 
-5. Salvare le modifiche.
+5. Fare clic su Salva per salvare le modifiche.
 6. Eseguire una compilazione pulita.
 
 -----
@@ -76,7 +76,7 @@ Per una panoramica completa delle funzionalità di diversi dispositivi iOS, vede
 
 ### <a name="64-bit-and-binary-size-increases"></a>aumento dimensioni a 64 bit e binarie
 
-Durante la transizione di Apple da 32 a 64 bit, le app iOS dovranno essere eseguite sia su hardware 32 bit che su hardware a 64 bit. Per questo motivo, il API unificata di Xamarin consente agli sviluppatori di usare entrambe le destinazioni.
+Durante la transizione di Apple da 32 a 64 bit, le app iOS dovranno essere eseguite sia su hardware 32 bit che su hardware a 64 bit. Per questo motivo, il API unificata di Novell consente agli sviluppatori di usare entrambe le destinazioni.
 
 La definizione delle architetture a 32 bit e a 64 bit aumenterà significativamente le dimensioni di un'applicazione. Questa operazione consentirà tuttavia ai dispositivi più recenti di eseguire codice ottimizzato, supportando al tempo stesso i dispositivi meno recenti.
 
@@ -86,7 +86,7 @@ La definizione delle architetture a 32 bit e a 64 bit aumenterà significativame
 ## <a name="mac"></a>Mac
 
 > [!IMPORTANT]
-> A partire dal 2018 gennaio, tutte le nuove app Mac inviate a Mac App Store devono supportare 64 bit. Le app Mac App Store esistenti e i relativi aggiornamenti devono supportare 64 bit a partire da giugno 2018. Vedere l' [annuncio di Apple](https://developer.apple.com/news/?id=06282017a) e [una guida che illustra come aggiornare le app Xamarin.Mac a 64 bit](~/cross-platform/macios/32-and-64/mac-64-bit.md).
+> A partire dal 2018 gennaio, tutte le nuove app Mac inviate a Mac App Store devono supportare 64 bit. Le app Mac App Store esistenti e i relativi aggiornamenti devono supportare 64 bit a partire da giugno 2018. Vedere l' [annuncio di Apple](https://developer.apple.com/news/?id=06282017a) e [una guida che illustra come aggiornare le app Novell. Mac a 64 bit](~/cross-platform/macios/32-and-64/mac-64-bit.md).
 
 La maggior parte dei moderni computer Mac supporta sia applicazioni a 32 bit che a 64 bit.   MacOS 10,6 (Snow Leopard) è stato l'ultimo sistema operativo per l'esecuzione su sistemi a 32 bit.   La maggior parte dei computer Mac rilasciati da 2010 supporta entrambi i sistemi.
 
@@ -104,9 +104,9 @@ Questa modalità è limitata perché non è possibile usare molti Framework disp
 
 Per Mac, questa è la modalità di funzionamento preferita poiché la maggior parte dei Mac attualmente in uso supporta la modalità a 64 bit ed è possibile accedere al set completo di Framework fornito da Apple.
 
-### <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Abilitazione di Build a 64 bit di app Xamarin.Mac
+### <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Abilitazione di Build a 64 bit di app Novell. Mac
 
-Per informazioni sulla compilazione di un'app a 64 bit con Xamarin.Mac, vedere la Guida [aggiornamento delle applicazioni unificate di Xamarin.Mac a 64 bit](~/cross-platform/macios/32-and-64/mac-64-bit.md) .
+Per informazioni sulla compilazione di un'app a 64 bit con Novell. Mac, vedere la Guida [aggiornamento delle applicazioni unificate di Novell. Mac a 64 bit](~/cross-platform/macios/32-and-64/mac-64-bit.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

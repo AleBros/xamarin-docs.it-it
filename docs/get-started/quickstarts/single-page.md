@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "71679989"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911761"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Xamarin.Forms a singola pagina
 
@@ -61,7 +61,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
     ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
@@ -211,7 +211,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
     ![](single-page-images/vs/new-app.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 4. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
@@ -350,7 +350,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
     ![](single-page-images/vsmac/new-project.png "New Solution")
 
-2. Nella finestra di dialogo, **Scegli un modello per il nuovo progetto** fare clic su **Multipiattaforma > App**, selezionare il modello **App Forms vuota** e fare clic sul pulsante **Avanti**:
+2. Nella finestra di dialogo **Scegli un modello per il nuovo progetto** fare clic su **Multipiattaforma > App**, selezionare il modello **App Forms vuota** e fare clic sul pulsante **Avanti**:
 
     ![](single-page-images/vsmac/choose-template.png "Choose a Template")
 
@@ -365,7 +365,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che sia la soluzione che il progetto siano denominati **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva al progetto.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** nel **riquadro della soluzione** per aprire il file:
 
@@ -402,7 +402,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
     Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [Interfaccia utente](deepdive.md#user-interface) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
 7. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -454,7 +454,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
 ### <a name="building-the-quickstart"></a>Compilazione della guida rapida
 
-1. In Visual Studio per Mac, selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. I progetti vengono compilati e viene visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
+1. In Visual Studio per Mac selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. I progetti vengono compilati e viene visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
 
       ![](single-page-images/vsmac/build-successful.png "Build Successful")
 
@@ -490,7 +490,7 @@ Per altre informazioni su questi prerequisiti, vedere [Installazione di Xamarin]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questo argomento di avvio rapido si è appreso come:
+In questa guida introduttiva si è appreso come:
 
 - Creare un'applicazione Xamarin.Forms multipiattaforma.
 - Definire l'interfaccia utente per una pagina usando eXtensible Application Markup Language (XAML).
@@ -499,7 +499,7 @@ In questo argomento di avvio rapido si è appreso come:
 Per trasformare questa applicazione a singola pagina in un'applicazione multipagina, passare all'argomento di avvio rapido successivo.
 
 > [!div class="nextstepaction"]
-> [avanti](multi-page.md)
+> [Avanti](multi-page.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

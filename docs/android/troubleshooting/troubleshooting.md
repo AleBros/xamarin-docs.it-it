@@ -8,18 +8,18 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
 ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488933"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912430"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
 ## <a name="getting-diagnostic-information"></a>Recupero delle informazioni di diagnostica
 
-Xamarin.Android presenta alcune posizioni da considerare quando si verificano diversi bug.
-Sono inclusi:
+Novell. Android presenta alcune posizioni da considerare quando si verificano diversi bug.
+incluse le seguenti:
 
 1. Output di MSBuild di diagnostica.
 2. Log di distribuzione del dispositivo.
@@ -36,7 +36,7 @@ Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 1. Fare clic su **strumenti > opzioni...**
 2. Nella visualizzazione albero a sinistra selezionare **progetti e soluzioni > compila ed Esegui**
 3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dell'output di compilazione di MSBuild su diagnostica
-4. Fare clic su **OK**
+4. Fare clic su **OK**.
 5. Pulire e ricompilare il pacchetto.
 6. L'output di diagnostica è visibile all'interno del pannello di output.
 
@@ -45,7 +45,7 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 1. Fare clic su **Visual Studio per Mac > preferenze...**
 2. Nella visualizzazione albero a sinistra selezionare **progetti > compila**
 3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su diagnostica
-4. Fare clic su **OK**
+4. Fare clic su **OK**.
 5. Riavviare Visual Studio per Mac
 6. Pulire e ricompilare il pacchetto.
 7. L'output di diagnostica è visibile all'interno del riquadro errori (**visualizzare > rilievi > errori** ) facendo clic sul pulsante output compilazione.
@@ -55,7 +55,7 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 Per abilitare la registrazione della distribuzione dei dispositivi in Visual Studio:
 
 1. **Strumenti > opzioni...** >
-2. Nella visualizzazione albero a sinistra selezionare **Xamarin > Android Settings**
+2. Nella visualizzazione albero a sinistra selezionare **novell > Android Settings**
 3. Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
 4. I messaggi di log vengono scritti nel file monodroid. log sul desktop.
 
@@ -67,7 +67,7 @@ Visual Studio per Mac scrive sempre i log di distribuzione del dispositivo. Trov
 ## <a name="android-debug-log-output"></a>Output del log di debug Android
 
 Android scriverà molti messaggi nel [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin.Android usa le proprietà di sistema di Android per controllare la generazione di altri messaggi nel log di debug Android. Le proprietà di sistema di Android possono essere impostate tramite il comando *seprop* all'interno del [Android Debug Bridge (ADB)](https://developer.android.com/guide/developing/tools/adb.html):
+Novell. Android usa le proprietà di sistema di Android per controllare la generazione di altri messaggi nel log di debug Android. Le proprietà di sistema di Android possono essere impostate tramite il comando *seprop* all'interno del [Android Debug Bridge (ADB)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -77,7 +77,7 @@ Le proprietà di sistema vengono lette durante l'avvio del processo e devono per
 
 ### <a name="xamarinandroid-system-properties"></a>Proprietà di sistema di Xamarin.Android
 
-Xamarin.Android supporta le proprietà di sistema seguenti:
+Novell. Android supporta le proprietà di sistema seguenti:
 
 - *debug. mono. debug*: se una stringa non vuota, equivale a `*mono-debug*`.
 
@@ -109,7 +109,7 @@ Xamarin.Android supporta le proprietà di sistema seguenti:
 
 ## <a name="deleting-bin-and-obj"></a>Eliminazione di `bin` e `obj`
 
-Xamarin.Android ha sofferto in passato da una situazione simile alla seguente:
+Novell. Android ha sofferto in passato da una situazione simile alla seguente:
 
 - Si verifica un errore di compilazione o di runtime sconosciuto.
 - È `Clean`, `Rebuild`o eliminare manualmente le directory di `bin` e `obj`.
@@ -123,11 +123,11 @@ Se si verifica un problema di questo tipo:
 1. Salvare il log di compilazione corrente. Provare di nuovo a compilare e registrare un [log di compilazione di diagnostica](#diagnostic-msbuild-output).
 1. Inviare un [report sui bug][bug].
 
-Prima di eliminare le directory di `bin` e `obj`, eseguirne la compressione e salvarle per una diagnosi successiva, se necessario. Probabilmente è possibile semplicemente `Clean` il progetto di applicazione Xamarin.Android per ricominciare a funzionare.
+Prima di eliminare le directory di `bin` e `obj`, eseguirne la compressione e salvarle per una diagnosi successiva, se necessario. Probabilmente è possibile semplicemente `Clean` il progetto di applicazione Novell. Android per ricominciare a funzionare.
 
 [bug]: https://github.com/xamarin/xamarin-android/wiki/Submitting-Bugs,-Feature-Requests,-and-Pull-Requests
 
-## <a name="xamarinandroid-cannot-resolve-systemvaluetuple"></a>Xamarin.Android non è in grado di risolvere System. ValueTuple
+## <a name="xamarinandroid-cannot-resolve-systemvaluetuple"></a>Novell. Android non è in grado di risolvere System. ValueTuple
 
 Questo errore si verifica a causa di un'incompatibilità con Visual Studio.
 
@@ -175,12 +175,12 @@ Per abilitare la registrazione loggig di riferimento globale (GREF), la propriet
 adb shell setprop debug.mono.log gref
 ```
 
-Xamarin.Android usa i riferimenti globali Android per fornire i mapping tra le istanze Java e le istanze gestite associate, come quando si richiama un metodo Java, è necessario fornire a Java un'istanza java.
+Novell. Android usa i riferimenti globali Android per fornire i mapping tra le istanze Java e le istanze gestite associate, come quando si richiama un metodo Java, è necessario fornire a Java un'istanza java.
 
 Sfortunatamente, gli emulatori Android consentono di esistere solo riferimenti globali 2000 alla volta. L'hardware ha un limite di 52000 riferimenti globali molto più elevato. Il limite inferiore può essere problematico durante l'esecuzione di applicazioni nell'emulatore, quindi sapere da *dove* proviene l'istanza può essere molto utile.
 
 > [!NOTE]
-> Il conteggio dei riferimenti globali è interno a Xamarin.Android e non (e non può) includere riferimenti globali estratte da altre librerie native caricate nel processo. Utilizzare il conteggio dei riferimenti globale come una stima.
+> Il conteggio dei riferimenti globali è interno a Novell. Android e non (e non può) includere riferimenti globali estratte da altre librerie native caricate nel processo. Utilizzare il conteggio dei riferimenti globale come una stima.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)
@@ -209,7 +209,7 @@ Ci sono quattro messaggi di conseguenza:
 - Creazione di riferimento globale debole: queste sono le righe che iniziano con *+ w +* .
 - Distruzione di riferimento globale debole: si tratta di righe che iniziano con *-w-* .
 
-In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Xamarin.Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Xamarin.Android. Il valore handle *o obj-handle* *è il valore* dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
+In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il valore handle *o obj-handle* *è il valore* dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
 
 Come parte del processo GC, i riferimenti globali (+ g +) vengono convertiti in riferimenti globali vulnerabili (causando + w + e-g-), viene attivato un GC sul lato Java, quindi viene eseguito il controllo del riferimento globale debole per verificare se è stato raccolto. Se è ancora attivo, viene creato un nuovo Gref intorno al Ref debole (+ g +,-w-); in caso contrario, il riferimento debole viene eliminato (-w).
 
@@ -264,7 +264,7 @@ I [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) p
 
 In alternativa, "My app esegue 10x più velocemente con la build di debug rispetto alla build di versione!"
 
-Xamarin.Android supporta più dispositivi ABI: *ARMEABI*, *ARMEABI-v7a*e *x86*. Il dispositivo ABIs può essere specificato all'interno delle **proprietà del progetto > scheda applicazione > architetture supportate**.
+Novell. Android supporta più dispositivi ABI: *ARMEABI*, *ARMEABI-v7a*e *x86*. Il dispositivo ABIs può essere specificato all'interno delle **proprietà del progetto > scheda applicazione > architetture supportate**.
 
 Le compilazioni di debug usano un pacchetto Android che fornisce tutte le ABI, quindi utilizzerà l'ABI più veloce per il dispositivo di destinazione.
 
@@ -277,9 +277,9 @@ Se l'app richiede prestazioni a virgola mobile decenti, ad esempio giochi, è ne
 ## <a name="could-not-locate-android-sdk"></a>Non è stato possibile individuare Android SDK
 
 Sono disponibili 2 download da Google per la Android SDK per Windows.
-Se si sceglie il programma di installazione con estensione exe, vengono scritte le chiavi del registro di sistema che indicano a Xamarin.Android dove è stato installato. Se si sceglie il file con estensione zip e lo si decomprime autonomamente, Xamarin.Android non sa dove cercare l'SDK. È possibile indicare a Xamarin.Android il percorso dell'SDK in Visual Studio passando a **strumenti > opzioni > Xamarin > Android Settings**:
+Se si sceglie il programma di installazione con estensione exe, vengono scritte le chiavi del registro di sistema che indicano a Novell. Android dove è stato installato. Se si sceglie il file con estensione zip e lo si decomprime autonomamente, Novell. Android non sa dove cercare l'SDK. È possibile indicare a Novell. Android il percorso dell'SDK in Visual Studio passando a **strumenti > opzioni > novell > Android Settings**:
 
-[![Android SDK percorso nelle impostazioni di Xamarin Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+[![Android SDK percorso nelle impostazioni di Novell Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 ## <a name="ide-does-not-display-target-device"></a>IDE non Visualizza il dispositivo di destinazione
 
@@ -433,7 +433,7 @@ Riavviare Visual Studio o Visual Studio per Mac e provare a ricompilare. Gli ele
 
 ## <a name="javalangclasscastexception-monoandroidruntimejavaobject-cannot-be-cast-to"></a>Impossibile eseguire il cast di Java. lang. ClassCastException: mono. Android. Runtime. JavaObject a...
 
-Xamarin.Android 4. x non esegue correttamente il marshalling di tipi generici annidati. Si consideri, ad esempio, il codice C\# seguente usando [SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter):
+Novell. Android 4. x non esegue correttamente il marshalling di tipi generici annidati. Si consideri, ad esempio, il codice C\# seguente usando [SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter):
 
 ```csharp
 // BAD CODE; DO NOT USE
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-Il problema è che Xamarin.Android esegue erroneamente il marshalling dei tipi generici annidati. `List<IDictionary<string, object>>` viene sottoposto a marshalling a un oggetto [java.lang.ArrrayList](xref:Java.Util.ArrayList), ma `ArrayList` contiene le istanze `mono.android.runtime.JavaObject` (che fanno riferimento alle istanze `Dictionary<string, object>`) anziché un elemento che implementa [java.util.Map](xref:Java.Util.IMap), con l'eccezione seguente:
+Il problema è che Novell. Android esegue erroneamente il marshalling dei tipi generici annidati. È in corso il marshalling del `List<IDictionary<string, object>>` a un oggetto [java. lang. ArrrayList](xref:Java.Util.ArrayList), ma il `ArrayList` contiene `mono.android.runtime.JavaObject` istanze (che fanno riferimento alle istanze di `Dictionary<string, object>`) invece di un elemento che implementa [java. util. map](xref:Java.Util.IMap), causando la seguente eccezione:
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -515,7 +515,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceException impreviste
 
-Occasionalmente, il [logdidebugAndroid](~/android/deploy-test/debugging/android-debug-log.md)menzioneràleeccezioniNullReferenceExceptionche&ldquo;nonpossonoverificarsi&rdquo;oprovengonodalcodicediruntimedimonoperAndroidpocoprimachel'app muoia:
+Occasionalmente, il [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) menzionerà le eccezioni NullReferenceException che non &ldquo;possono verificarsi,&rdquo; o provengono dal codice di runtime di mono per Android poco prima che l'app muoia:
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object
@@ -526,7 +526,7 @@ E/mono(15202):   at Android.Views.View+IOnTouchListenerAdapter.n_OnTouch_Landroi
 E/mono(15202):   at (wrapper dynamic-method) object:b039cbb0-15e9-4f47-87ce-442060701362 (intptr,intptr,intptr,intptr)
 ```
 
-oppure
+o
 
 ```shell
 E/mono    ( 4176): Unhandled Exception:

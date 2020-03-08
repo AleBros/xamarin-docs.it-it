@@ -1,6 +1,6 @@
 ---
-title: Storyboard unificati in Xamarin.iOS
-description: Questo documento descrive gli storyboard unificati in Xamarin.iOS. Gli storyboard unificati consentono agli sviluppatori di supportare più dimensioni dello schermo con una singola definizione di interfaccia.
+title: Storyboard unificati in Novell. iOS
+description: Questo documento descrive gli storyboard unificati in Novell. iOS. Gli storyboard unificati consentono agli sviluppatori di supportare più dimensioni dello schermo con una singola definizione di interfaccia.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001832"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915171"
 ---
-# <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Xamarin.iOS
+# <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Novell. iOS
 
 iOS 8 include un nuovo meccanismo più semplice da usare per la creazione dell'interfaccia utente, lo storyboard unificato. Con un singolo storyboard per coprire tutte le diverse dimensioni dello schermo hardware, è possibile creare visualizzazioni rapide e reattive in uno stile di tipo "progettazione, utilizzo e molti".
 
@@ -80,7 +80,7 @@ Il file della schermata di avvio viene visualizzato come schermata iniziale ment
 
 Una novità di iOS 8, lo sviluppatore può creare un singolo file Atomic `.xib` in Xcode che usa le classi di layout e dimensioni automatiche per creare una *schermata di avvio dinamico* che funzionerà per ogni dispositivo, risoluzione e orientamento. Questo non solo riduce la quantità di lavoro richiesto allo sviluppatore per creare e gestire tutte le risorse di immagine necessarie, ma riduce le dimensioni del bundle installato dell'applicazione.
 
-## <a name="traits"></a>Tratti
+## <a name="traits"></a>Caratteristiche
 
 I tratti sono proprietà che possono essere usate per determinare la modalità di modifica di un layout in base alle modifiche apportate all'ambiente. Sono costituiti da un set di proprietà (il `HorizontalSizeClass` e `VerticalSizeClass` in base `UIUserInterfaceSizeClass`), nonché l'idioma di interfaccia (`UIUserInterfaceIdiom`) e la scala di visualizzazione.
 
@@ -112,10 +112,10 @@ In questa sezione vengono descritti i tipi tipici di raccolte di tratti che l'ut
 
 Di seguito è riportato un tipico insieme di tratti che lo sviluppatore potrebbe vedere su un iPhone:
 
-|proprietà|Value|
+|Proprietà|Valore|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
-|`VerticalSizeClass`|Regular|
+|`VerticalSizeClass`|Normale|
 |`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
@@ -123,7 +123,7 @@ Il set precedente rappresenterebbe una raccolta di tratti completa, in quanto di
 
 È anche possibile disporre di una raccolta di tratti in cui mancano alcuni dei relativi valori (a cui Apple fa riferimento come non *specificato*):
 
-|proprietà|Value|
+|Proprietà|Valore|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Non specificato|
@@ -214,11 +214,11 @@ In primo luogo, iOS 8 esegue alcune operazioni di installazione per preparare la
 
 iOS 8 fornisce diverse richiamate che lo sviluppatore può usare per partecipare alla modifica del tratto, come illustrato nella tabella seguente:
 
-|Phase|Callback|Descrizione|
+|Fase|Callback|Descrizione|
 |--- |--- |--- |
-|Configurazione|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Questo metodo viene chiamato all'inizio di una modifica del tratto prima che un insieme di tratti venga impostato sul nuovo valore.</li><li>Il metodo viene chiamato quando il valore della raccolta di tratti è stato modificato ma prima che venga eseguita un'animazione.</li></ul>|
+|Programma di installazione|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Questo metodo viene chiamato all'inizio di una modifica del tratto prima che un insieme di tratti venga impostato sul nuovo valore.</li><li>Il metodo viene chiamato quando il valore della raccolta di tratti è stato modificato ma prima che venga eseguita un'animazione.</li></ul>|
 |Animazione|`WillTransitionToTraitCollection`|Il coordinatore della transizione che viene passato a questo metodo dispone di una proprietà `AnimateAlongside` che consente allo sviluppatore di aggiungere animazioni che verranno eseguite insieme alle animazioni predefinite.|
-|Pulizia|`WillTransitionToTraitCollection`|Fornisce un metodo che consente agli sviluppatori di includere il proprio codice di pulitura dopo che è stata effettuata la transizione.|
+|Eliminazione|`WillTransitionToTraitCollection`|Fornisce un metodo che consente agli sviluppatori di includere il proprio codice di pulitura dopo che è stata effettuata la transizione.|
 
 Il metodo `WillTransitionToTraitCollection` è ideale per animare i controller di visualizzazione insieme alle modifiche apportate alla raccolta dei tratti. Il metodo `WillTransitionToTraitCollection` è disponibile solo nei controller di visualizzazione (`UIViewController`) e non in altri ambienti di tratti, ad esempio `UIViews`.
 
@@ -242,7 +242,7 @@ In un controller di visualizzazione suddiviso, il controller di visualizzazione 
 
 ### <a name="showing-view-controllers"></a>Visualizzazione di controller di visualizzazione
 
-Un'altra modifica apportata da Apple a iOS 8 è la modalità con cui lo sviluppatore Mostra i controller di visualizzazione. In passato, se l'applicazione dispone di un controller di visualizzazione foglia, ad esempio un controller di visualizzazione tabella, e lo sviluppatore ne ha mostrato uno diverso (ad esempio, in risposta all'utente che tocca una cella), l'applicazione raggiungerà di nuovo la gerarchia del controller fino al Controller di visualizzazione di spostamento e chiamare il metodo `PushViewController` per visualizzare la nuova visualizzazione.
+Un'altra modifica apportata da Apple a iOS 8 è la modalità con cui lo sviluppatore Mostra i controller di visualizzazione. In passato, se l'applicazione dispone di un controller di visualizzazione foglia, ad esempio un controller di visualizzazione tabella, e lo sviluppatore ne ha mostrato uno diverso (ad esempio, in risposta all'utente che tocca una cella), l'applicazione raggiungerà di nuovo la gerarchia del controller per il controller di visualizzazione di navigazione e chiamerà il metodo `PushViewController` per visualizzare la nuova visualizzazione.
 
 Questo ha presentato un accoppiamento molto stretto tra il controller di spostamento e l'ambiente in cui era in esecuzione. In iOS 8, Apple ha separato questa impostazione fornendo due nuovi metodi:
 
@@ -259,7 +259,7 @@ Questa sezione illustra il modo in cui questi metodi sono implementati in iOS 8.
 
  [![](unified-storyboards-images/gettargetforaction.png "The new GetTargetForAction method")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-Questo metodo percorre la catena della gerarchia finché non viene trovato il controller di visualizzazione del contenitore corretto. Esempio:
+Questo metodo percorre la catena della gerarchia finché non viene trovato il controller di visualizzazione del contenitore corretto. Ad esempio,
 
 1. Se viene chiamato un metodo di `ShowViewController`, il primo controller di visualizzazione nella catena che implementa questo metodo è il controller di spostamento, quindi viene utilizzato come elemento padre della nuova visualizzazione.
 1. Se invece è stato chiamato un metodo di `ShowDetailViewController`, il controller di visualizzazione divisa è il primo controller di visualizzazione per implementarlo, quindi viene usato come padre.
@@ -282,9 +282,9 @@ Con uno stile di presentazione personalizzato, gli sviluppatori hanno la possibi
 
 ## <a name="working-with-size-classes"></a>Utilizzo delle classi di dimensioni
 
-Il progetto Xamarin Photos adattivo incluso in questo articolo offre un esempio funzionante di uso delle classi di dimensioni e dei controller di visualizzazione adattivo in un'applicazione iOS 8 Unified Interface.
+Il progetto Novell Photos adattivo incluso in questo articolo offre un esempio funzionante di uso delle classi di dimensioni e dei controller di visualizzazione adattivo in un'applicazione iOS 8 Unified Interface.
 
-Mentre l'applicazione crea completamente l'interfaccia utente dal codice, anziché usare IOS designer e creare uno storyboard unificato, si applicano le stesse tecniche. Più avanti in questo articolo verrà illustrato come usare le classi di dimensioni con uno storyboard unificato e iOS designer in un'applicazione Xamarin.
+Mentre l'applicazione crea completamente l'interfaccia utente dal codice, anziché usare IOS designer e creare uno storyboard unificato, si applicano le stesse tecniche. Più avanti in questo articolo verrà illustrato come usare le classi di dimensioni con uno storyboard unificato e iOS designer in un'applicazione Novell.
 
 Si esaminerà ora il modo in cui il progetto foto adattivo implementa diverse funzionalità della classe size in iOS 8 per creare un'applicazione adattiva.
 
@@ -294,7 +294,7 @@ Quando si esegue l'applicazione Adaptive Photos su un iPhone, quando l'utente ru
 
  [![](unified-storyboards-images/rotation.png "The Split View Controller will display both the master and details view as seen here")](unified-storyboards-images/rotation.png#lightbox)
 
-Questa operazione viene eseguita eseguendo l'override del metodo `UpdateConstraintsForTraitCollection` del controller di visualizzazione e modificando i vincoli in base al valore della `VerticalSizeClass`. Esempio:
+Questa operazione viene eseguita eseguendo l'override del metodo `UpdateConstraintsForTraitCollection` del controller di visualizzazione e modificando i vincoli in base al valore della `VerticalSizeClass`. Ad esempio,
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -350,7 +350,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>Aggiunta di animazioni di transizione
 
-Quando il controller di visualizzazione divisa nell'applicazione foto adattiva passa da compresso a espanso, le animazioni vengono aggiunte alle animazioni predefinite eseguendo l'override del metodo `WillTransitionToTraitCollection` del controller di visualizzazione. Esempio:
+Quando il controller di visualizzazione divisa nell'applicazione foto adattiva passa da compresso a espanso, le animazioni vengono aggiunte alle animazioni predefinite eseguendo l'override del metodo `WillTransitionToTraitCollection` del controller di visualizzazione. Ad esempio,
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -405,7 +405,7 @@ public void UpdateForcedTraitCollection ()
 
 ### <a name="expanding-and-collapsing-the-split-view-controller"></a>Espansione e compressione del controller di visualizzazione divisa
 
-Si esaminerà quindi come il comportamento di espansione e compressione del controller di visualizzazione suddivisa è stato implementato in Xamarin. Nel `AppDelegate`, quando viene creato il controller di visualizzazione divisa, il delegato viene assegnato per gestire le modifiche:
+Si esaminerà quindi come il comportamento di espansione e compressione del controller di visualizzazione suddivisa è stato implementato in Novell. Nel `AppDelegate`, quando viene creato il controller di visualizzazione divisa, il delegato viene assegnato per gestire le modifiche:
 
 ```csharp
 public class SplitViewControllerDelegate : UISplitViewControllerDelegate
@@ -544,7 +544,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Esaminare più da vicino l'applicazione Adaptive Photos per visualizzare tutti i modi in cui le classi di dimensioni, le raccolte di tratti e i controller di visualizzazione adattivo possono essere usati per creare facilmente un'applicazione unificata in Xamarin.iOS.
+Esaminare più da vicino l'applicazione Adaptive Photos per visualizzare tutti i modi in cui le classi di dimensioni, le raccolte di tratti e i controller di visualizzazione adattivo possono essere usati per creare facilmente un'applicazione unificata in Novell. iOS.
 
 ## <a name="unified-storyboards"></a>Storyboard unificati
 
@@ -554,7 +554,7 @@ I vantaggi principali degli storyboard unificati sono:
 
 - Usare lo stesso file di storyboard per iPhone e iPad.
 - Eseguire la distribuzione all'indietro in iOS 6 e iOS 7.
-- Visualizzare in anteprima il layout per diversi dispositivi, orientamenti e versioni del sistema operativo all'interno di Xamarin iOS designer.
+- Visualizzare in anteprima il layout per diversi dispositivi, orientamenti e versioni del sistema operativo all'interno di Novell iOS designer.
 
 Questa funzionalità è completamente supportata in Visual Studio per Mac
 
@@ -562,7 +562,7 @@ Questa funzionalità è completamente supportata in Visual Studio per Mac
 
 ### <a name="enabling-size-classes"></a>Abilitazione di classi di dimensioni
 
-Per impostazione predefinita, qualsiasi nuovo progetto Xamarin.iOS ci consentirà di ridimensionare le classi. Per usare le classi di dimensioni e i gli elementi segue adattivi all'interno di uno storyboard da un progetto precedente, è necessario prima convertirlo nel formato dello storyboard unificato di Xcode 6 dall'interno della finestra di progettazione di iOS.
+Per impostazione predefinita, qualsiasi nuovo progetto Novell. iOS ci consentirà di ridimensionare le classi. Per usare le classi di dimensioni e i gli elementi segue adattivi all'interno di uno storyboard da un progetto precedente, è necessario prima convertirlo nel formato dello storyboard unificato di Xcode 6 dall'interno della finestra di progettazione di iOS.
 
 A tale scopo, aprire lo storyboard da convertire nella finestra di progettazione iOS e selezionare la casella di controllo **usa classi di dimensioni** :
 
@@ -674,13 +674,13 @@ Quando l'applicazione viene eseguita nel simulatore iPhone, l'elemento è mancan
 
 Per rimuovere un caso di esclusione da un elemento, è sufficiente selezionare l'elemento nella **area di progettazione**, scorrere fino alla fine di **Esplora proprietà** e fare clic sul pulsante **-** accanto al case da rimuovere.
 
-Per visualizzare un'implementazione degli storyboard unificati, vedere l'`UnifiedStoryboard` applicazione di esempio Xamarin iOS 8 collegata a questo documento.
+Per visualizzare un'implementazione degli storyboard unificati, vedere l'`UnifiedStoryboard` applicazione di esempio Novell iOS 8 collegata a questo documento.
 
 ## <a name="dynamic-launch-screens"></a>Schermate di avvio dinamico
 
 Il file della schermata di avvio viene visualizzato come schermata iniziale mentre viene avviata un'applicazione iOS per fornire commenti e suggerimenti all'utente che l'app è effettivamente avviata. Prima di iOS 8, lo sviluppatore avrebbe dovuto includere più asset di immagini `Default.png` per ogni tipo di dispositivo, orientamento e risoluzione dello schermo in cui l'applicazione verrebbe eseguita. Ad esempio, `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`e così via.
 
-Il factoring nei nuovi dispositivi iPhone 6 e iPhone 6 Plus (e il prossimo Apple Watch) con tutti i dispositivi iPhone e iPad esistenti, rappresenta un'ampia gamma di dimensioni variabili, orientamenti e risoluzioni di `Default.png` asset dell'immagine della schermata iniziale che devono essere creato e mantenuto. Inoltre, questi file possono avere dimensioni molto elevate e comportano il "gonfiore" del bundle di applicazioni finali, aumentando la quantità di tempo necessaria per scaricare l'applicazione dall'iTunes App Store (probabilmente impedendone la recapito in una rete cellulare) e aumentando la quantità di spazio di archiviazione necessario sul dispositivo dell'utente finale.
+Il factoring nei nuovi dispositivi iPhone 6 e iPhone 6 Plus (e il prossimo Apple Watch) con tutti i dispositivi iPhone e iPad esistenti, rappresenta un'ampia gamma di dimensioni variabili, orientamenti e risoluzioni di `Default.png` asset di immagini della schermata iniziale che devono essere creati e gestiti. Inoltre, questi file possono avere dimensioni molto elevate e comportano il "gonfiore" del bundle di applicazioni finali, aumentando la quantità di tempo necessaria per scaricare l'applicazione dall'iTunes App Store (probabilmente impedendone la recapito in una rete cellulare) e aumentando la quantità di spazio di archiviazione necessario sul dispositivo dell'utente finale.
 
 Una novità di iOS 8, lo sviluppatore può creare un singolo file Atomic `.xib` in Xcode che usa le classi di layout e dimensioni automatiche per creare una *schermata di avvio dinamico* che funzionerà per ogni dispositivo, risoluzione e orientamento. Questo non solo riduce la quantità di lavoro richiesto allo sviluppatore per creare e gestire tutte le risorse di immagine necessarie, ma riduce notevolmente le dimensioni del bundle installato dell'applicazione.
 
@@ -693,9 +693,9 @@ Le schermate di avvio dinamico presentano le limitazioni e le considerazioni seg
 - Non usare classi personalizzate.
 - Non usare gli attributi di Runtime.
 
-Tenendo presenti le linee guida precedenti, è possibile esaminare l'aggiunta di una schermata di avvio dinamico a un progetto Xamarin iOS 8 esistente.
+Tenendo presenti le linee guida precedenti, è possibile esaminare l'aggiunta di una schermata di avvio dinamico a un progetto Novell iOS 8 esistente.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Aprire **Visual Studio per Mac** e caricare la **soluzione** per aggiungere la schermata avvio dinamico a.
 2. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul file di `MainStoryboard.storyboard` e scegliere **Apri con** > **Xcode Interface Builder**:
@@ -713,11 +713,11 @@ Procedere come descritto di seguito:
 6. Modificare la progettazione della schermata di avvio aggiungendo elementi grafici e usando vincoli di layout per posizionarli per i dispositivi, gli orientamenti e le dimensioni dello schermo specificati:
 
     [![](unified-storyboards-images/dls05.png "Editing the design of the launch screen")](unified-storyboards-images/dls05.png#lightbox)
-7. Salvare le modifiche apportate al `LaunchScreen.xib`.
+7. Salvare le modifiche in `LaunchScreen.xib`.
 8. Selezionare la **destinazione applicazioni** e la scheda **generale** :
 
     [![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)
-9. Fare clic sul pulsante **Choose info. plist** , selezionare il `Info.plist` per l'app Xamarin e fare clic sul pulsante **Choose (Scegli** ):
+9. Fare clic sul pulsante **Choose info. plist** , selezionare il `Info.plist` per l'app Novell e fare clic sul pulsante **Choose (Scegli** ):
 
     [![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
 10. Nella sezione **icone e immagini di avvio dell'app** aprire l'elenco a discesa **file schermata di avvio** e scegliere il `LaunchScreen.xib` creato in precedenza:
@@ -749,13 +749,13 @@ Tornare a Visual Studio per Mac e arrestare l'esecuzione dell'applicazione.
 
 Per mantenere la compatibilità con le versioni precedenti di iOS 7, è sufficiente includere le normali risorse dell'immagine `Default.png` come di consueto nell'applicazione iOS 8. iOS restituirà il comportamento precedente e utilizzerà tali file come schermata iniziale quando viene eseguito in un dispositivo iOS 7.
 
-Per un'implementazione di una schermata di avvio dinamico in Xamarin, vedere le [schermate di avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
+Per un'implementazione di una schermata di avvio dinamico in Novell, vedere le [schermate di avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato rapidamente le classi di dimensioni e il modo in cui influiscono sul layout nei dispositivi iPhone e iPad. Questo argomento ha illustrato il funzionamento dei tratti, degli ambienti di tratti e delle raccolte di tratti con le classi di dimensioni per la creazione di interfacce unificate. Sono stati esaminati brevemente i controller di visualizzazione adattiva e il modo in cui funzionano con le classi di dimensioni all'interno delle interfacce unificate. Si è cercato di implementare classi di dimensioni e interfacce unificate C# completamente dal codice all'interno di un'applicazione Xamarin iOS 8.
+Questo articolo ha esaminato rapidamente le classi di dimensioni e il modo in cui influiscono sul layout nei dispositivi iPhone e iPad. Questo argomento ha illustrato il funzionamento dei tratti, degli ambienti di tratti e delle raccolte di tratti con le classi di dimensioni per la creazione di interfacce unificate. Sono stati esaminati brevemente i controller di visualizzazione adattiva e il modo in cui funzionano con le classi di dimensioni all'interno delle interfacce unificate. Si è cercato di implementare classi di dimensioni e interfacce unificate C# completamente dal codice all'interno di un'applicazione Novell iOS 8.
 
-Infine, in questo articolo sono state illustrate le nozioni di base sulla creazione di storyboard unificati con Xamarin iOS designer, che funzionerà tra i dispositivi iOS e la creazione di una singola schermata di avvio dinamico che verrà visualizzata come schermata iniziale in ogni dispositivo iOS 8.
+Infine, in questo articolo sono state illustrate le nozioni di base sulla creazione di storyboard unificati con Novell iOS designer, che funzionerà tra i dispositivi iOS e la creazione di una singola schermata di avvio dinamico che verrà visualizzata come schermata iniziale in ogni dispositivo iOS 8.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

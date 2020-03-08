@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725234"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914446"
 ---
 # <a name="xamarinforms-control-templates"></a>Modelli di controllo Xamarin.Forms
 
@@ -253,7 +253,7 @@ In questo esempio, l'estensione di markup `TemplateBinding` risolve le espressio
 [![Screenshot degli oggetti CardView basati su modelli, in iOS e Android](control-template-images/templatebinding-controltemplate.png "Oggetti CardView basati su modelli")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Oggetti CardView basati su modelli")
 
 > [!IMPORTANT]
-> L'uso dell'estensione di markup `TemplateBinding` equivale a impostare il `BindingContext` dell'elemento radice nel modello sul relativo elemento padre basato su modelli con l'estensione di markup `RelativeSource` e quindi a risolvere le associazioni degli oggetti figlio con l'estensione di markup `Binding`. L'estensione di markup `TemplateBinding` crea infatti un `Binding` con `RelativeBindingSource.TemplatedParent` come `Source`.
+> L'uso dell'estensione di markup `TemplateBinding` equivale a impostare il `BindingContext` dell'elemento radice nel modello sul relativo elemento padre basato su modelli con l'estensione di markup `RelativeSource` e quindi a risolvere le associazioni degli oggetti figlio con l'estensione di markup `Binding`. L'estensione di markup `TemplateBinding` crea infatti un `Binding` con `Source` come `RelativeBindingSource.TemplatedParent`.
 
 ## <a name="apply-a-controltemplate-with-a-style"></a>Applicare un ControlTemplate con uno stile
 
@@ -296,7 +296,7 @@ Nell'esempio di codice XAML seguente viene illustrato uno stile *implicito* che 
 </ContentPage>
 ```
 
-In questo esempio, il [`Style`](xref:Xamarin.Forms.Style) *implicito* viene applicato automaticamente a ogni oggetto `CardView` e imposta la proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) di ogni `CardView` su `CardViewControlTemplate`.
+In questo esempio, il[ `Style`implicito](xref:Xamarin.Forms.Style) viene applicato automaticamente a ogni oggetto `CardView` e imposta la proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) di ogni `CardView` su `CardViewControlTemplate`.
 
 Per altre informazioni sugli stili, vedere [Stili di Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 
@@ -494,7 +494,7 @@ In fase di esecuzione, quando `TealTemplate` viene applicato alla pagina, il con
 
 ## <a name="get-a-named-element-from-a-template"></a>Ottenere un elemento denominato da un modello
 
-Gli elementi denominati in un modello di controllo possono essere recuperati dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. È possibile ottenere questo risultato con il metodo `GetTemplateChild`, che restituisce l'elemento denominato nella struttura ad albero visuale di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) di cui viene creata un'istanza, se trovato. In caso contrario, restituirà `null`.
+Gli elementi denominati in un modello di controllo possono essere recuperati dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. È possibile ottenere questo risultato con il metodo `GetTemplateChild`, che restituisce l'elemento denominato nella struttura ad albero visuale di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) di cui viene creata un'istanza, se trovato. In caso contrario, viene restituito `null`.
 
 Dopo la creazione di un'istanza di un modello di controllo, viene chiamato il metodo `OnApplyTemplate` del modello. Il metodo `GetTemplateChild` deve pertanto essere chiamato da un override di `OnApplyTemplate` nel controllo basato su modelli o nella pagina basata su modelli.
 
@@ -544,7 +544,7 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 }
 ```
 
-In questo esempio, l'oggetto [`Label`](xref:Xamarin.Forms.Label) denominato `changeThemeLabel` viene recuperato dopo la creazione dell'istanza del `ControlTemplate`. La classe `AccessTemplateElementPage` può quindi accedere e modificare `changeThemeLabel`. Gli screenshot seguenti mostrano che il testo visualizzato da `Label` è stato modificato:
+In questo esempio, l'oggetto [`Label`](xref:Xamarin.Forms.Label) denominato `changeThemeLabel` viene recuperato dopo la creazione dell'istanza del `ControlTemplate`. La classe `changeThemeLabel` può quindi accedere e modificare `AccessTemplateElementPage`. Gli screenshot seguenti mostrano che il testo visualizzato da `Label` è stato modificato:
 
 [![Screenshot dell'oggetto pagina basata su modelli, in iOS e Android](control-template-images/get-named-element.png "ContentPage basata su modelli")](control-template-images/get-named-element-large.png#lightbox "ContentPage basata su modelli")
 

@@ -1,6 +1,6 @@
 ---
 title: Migliorare le prestazioni delle app Xamarin.Forms
-description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
 ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487165"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913139"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Migliorare le prestazioni delle app Xamarin.Forms
 
@@ -20,9 +20,9 @@ ms.locfileid: "75487165"
 
 **Evoluzione 2016: ottimizzazione delle prestazioni delle app con Xamarin.Forms**
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
-Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 > [!NOTE]
 > Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
@@ -176,10 +176,10 @@ La velocità di risposta complessiva dell'applicazione può essere migliorata e 
 - Restituisce un oggetto `Task`, anziché restituire un oggetto `Task` atteso, quando non è necessario elaborare il risultato di un'operazione asincrona. Questa operazione è più efficiente a causa del minor cambio di contesto eseguito.
 - Usare la libreria del flusso di dati Task Parallel Library (TPL) in scenari come l'elaborazione di dati quando diventano disponibili o quando sono presenti più operazioni che devono comunicare tra loro in modo asincrono. Per ulteriori informazioni, vedere [dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
 
-### <a name="ui"></a>Interfaccia utente di
+### <a name="ui"></a>UI
 
 - Chiamare una versione asincrona di un'API, se disponibile. Questo consente di mantenere sbloccato il thread dell'interfaccia utente, contribuendo a migliorare l'esperienza utente dell'applicazione.
-- Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+- Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Novell. Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
     > [!IMPORTANT]
     > Viene eseguito automaticamente il marshalling di tutte le proprietà del controllo aggiornate tramite data binding al thread dell'interfaccia utente.
@@ -341,6 +341,6 @@ Per altre informazioni sui renderer personalizzati, vedere l'articolo relativo a
 - [Shell di Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [CollectionView di Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/index.md)
 - [Prestazioni di ListView](~/xamarin-forms/user-interface/listview/performance.md)
-- [Ottimizzazione delle risorse immagine](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)
+- [Ottimizzare le risorse immagine](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)
 - [Stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
 - [Personalizzazione di controlli in ogni piattaforma](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

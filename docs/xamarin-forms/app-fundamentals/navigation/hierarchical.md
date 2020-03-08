@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621093"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915669"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
-_La classe NavigationPage offre un'esperienza di navigazione gerarchica in cui l'utente è in grado di scorrere le pagine avanti e indietro in base alle esigenze. La classe implementa la navigazione come stack LIFO (Last-In, First-Out) di oggetti Pagina. Questo articolo illustra come usare la classe NavigationPage per eseguire la navigazione in uno stack di pagine._
+_La classe NavigationPage fornisce un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. La classe implementa lo spostamento come uno stack LIFO (Last-in, First-out) di oggetti Page. Questo articolo illustra come usare la classe NavigationPage per eseguire la navigazione in uno stack di pagine._
 
 Per passare da una pagina all'altra, un'applicazione esegue il push di una nuova pagina nello stack di navigazione, in cui diventa la pagina attiva, come illustrato nel diagramma seguente:
 
-![](hierarchical-images/pushing.png "Eseguire il push di una pagina nello stack di navigazione")
+![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
 
 Per tornare alla pagina precedente, l'applicazione preleva la pagina corrente dallo stack di navigazione e la nuova pagina in primo piano diventa la pagina attiva, come illustrato nel diagramma seguente:
 
-![](hierarchical-images/popping.png "Prelievo di una pagina dallo stack di navigazione")
+![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
 I metodi di navigazione sono esposti dalla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) in qualsiasi tipo di [`Page`](xref:Xamarin.Forms.Page) derivata. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
 
@@ -36,7 +36,7 @@ I metodi di navigazione sono esposti dalla proprietà [`Navigation`](xref:Xamari
 
 Nella navigazione gerarchica la classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) viene usata per navigare in uno stack di oggetti [`ContentPage`](xref:Xamarin.Forms.ContentPage). Gli screenshot seguenti illustrano i componenti principali della `NavigationPage` in ogni piattaforma:
 
-![](hierarchical-images/navigationpage-components.png "Componenti della NavigationPage")
+![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
 
 Il layout di una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) dipende dalla piattaforma:
 
@@ -60,9 +60,9 @@ public App ()
 }
 ```
 
-Di conseguenza l'istanza `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) viene inserita tramite push nello stack di navigazione, in cui diventa la pagina attiva e la pagina radice dell'applicazione. Questo è illustrato negli screenshot seguenti:
+In questo modo viene eseguito il push dell'istanza di [`ContentPage`](xref:Xamarin.Forms.ContentPage) `Page1Xaml` nello stack di navigazione, in cui diventa la pagina attiva e la pagina radice dell'applicazione. Questo è illustrato negli screenshot seguenti:
 
-![](hierarchical-images/mainpage.png "Pagina radice dello stack di navigazione")
+![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
 > [!NOTE]
 > La proprietà [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) di un'istanza [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) fornisce l'accesso alla prima pagina nello stack di navigazione.
@@ -80,7 +80,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 Di conseguenza l'istanza `Page2Xaml` viene inserita tramite push nello stack di navigazione, in cui diventa la pagina attiva. Questo è illustrato negli screenshot seguenti:
 
-![](hierarchical-images/secondpage.png "Pagina di cui è stato eseguito il push nello stack di navigazione")
+![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
 
 Quando si richiama il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*), si verificano gli eventi seguenti:
 
@@ -182,7 +182,7 @@ public MainPage (string date)
 
 I dati vengono quindi visualizzati nella pagina impostando la proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text), come illustrato negli screenshot seguenti:
 
-![](hierarchical-images/passing-data-constructor.png "Passaggio dei dati tramite un costruttore di pagina")
+![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Passaggio dei dati tramite BindingContext
 
@@ -268,7 +268,7 @@ public class SecondPageCS : ContentPage
 
 I dati vengono quindi visualizzati nella pagina tramite una serie di controlli [`Label`](xref:Xamarin.Forms.Label), come illustrato negli screenshot seguenti:
 
-![](hierarchical-images/passing-data-bindingcontext.png "Passaggio dei dati tramite BindingContext")
+![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Nozioni di base sul data binding).
 
@@ -280,11 +280,11 @@ La proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) esp
 
 Il metodo [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) inserisce una pagina specificata nello stack di navigazione prima di una pagina specificata esistente, come illustrato nel diagramma seguente:
 
-![](hierarchical-images/insert-page-before.png "Inserimento di una pagina nello stack di navigazione")
+![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
 
 Il metodo [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) rimuove la pagina specificata dallo stack di navigazione, come illustrato nel diagramma seguente:
 
-![](hierarchical-images/remove-page.png "Rimozione di una pagina dallo stack di navigazione")
+![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
 
 Questi metodi consentono un'esperienza di navigazione personalizzata, come la sostituzione di una pagina di accesso con una nuova pagina, dopo un accesso con esito positivo. Nell'esempio di codice seguente viene illustrato questo scenario:
 
@@ -339,7 +339,7 @@ public class TitleViewPage : ContentPage
 
 Il risultato è la visualizzazione di [`Slider`](xref:Xamarin.Forms.Slider) nella barra di spostamento sulla [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
 
-[![Dispositivo di scorrimento TitleView](hierarchical-images/titleview-small.png "TitleView dispositivo di scorrimento")](hierarchical-images/titleview-large.png#lightbox "TitleView dispositivo di scorrimento")
+[![Dispositivo di scorrimento TitleView](hierarchical-images/titleview-small.png "Dispositivo di scorrimento TitleView")](hierarchical-images/titleview-large.png#lightbox "Dispositivo di scorrimento TitleView")
 
 > [!IMPORTANT]
 > Molte viste non saranno più visualizzate nella barra di spostamento, a meno che non vengano specificate le dimensioni della vista con le proprietà [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest). In alternativa, può essere eseguito il wrapping della vista in un [`StackLayout`](xref:Xamarin.Forms.StackLayout) con le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) impostate sui valori appropriati.

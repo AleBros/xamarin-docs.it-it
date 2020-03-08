@@ -1,6 +1,6 @@
 ---
 title: Uso di TestFlight per distribuire app Xamarin.iOS
-description: TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Xamarin.iOS. Questo articolo descrive in dettaglio tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect.
+description: TestFlight ora è di proprietà da Apple ed è lo strumento principale per il test beta delle app Xamarin.iOS. Questo articolo descrive in dettaglio tutti i passaggi del processo TestFlight, dal caricamento dell'app all'interazione con iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
@@ -8,21 +8,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028480"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917545"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
-_TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Xamarin.iOS. In questo articolo vengono illustrati tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
+_TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Novell. iOS. In questo articolo vengono illustrati tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
 
 Il test della versione beta è parte integrante del ciclo di sviluppo software. Esistono numerose applicazioni multipiattaforma che è possibile usare per semplificare questo processo, ad esempio [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing) e ovviamente il test della versione beta dell'app nativa di Google Play per le app Android. Questo documento descrive lo strumento TestFlight di Apple.
 
 TestFlight è il servizio offerto da Apple per testare la versione beta di app iOS ed è accessibile solo tramite [iTunes Connect](https://itunesconnect.apple.com/). È attualmente disponibile per le app iOS 8.0 e versioni successive. TestFlight consente di testare la versione beta con utenti interni ed esterni e, potendo questi ultimi rivedere poi la versione beta dell'app, semplifica considerevolmente il processo di revisione finale al momento della pubblicazione nell'App Store.
 
-In passato, il file binario veniva generato in Visual Studio per Mac e caricato nel sito Web di TestFlightApp per la distribuzione ai tester. Al nuovo processo sono stati aggiunti numerosi miglioramenti che consentono di avere nell'App Store app ben testate e di qualità elevata. Esempio:
+In passato, il file binario veniva generato in Visual Studio per Mac e caricato nel sito Web di TestFlightApp per la distribuzione ai tester. Al nuovo processo sono stati aggiunti numerosi miglioramenti che consentono di avere nell'App Store app ben testate e di qualità elevata. Ad esempio,
 
 - La revisione della versione beta dell'app richiesta per il test esterno aumenta le probabilità di accettazione della revisione finale nell'App Store, in quanto in entrambi i casi è necessaria la conformità alle linee guida di Apple.
 - Prima di caricare l'app, è necessario registrarla in iTunes Connect. In questo modo si garantisce che non vi siano discordanze tra profili di provisioning, nomi e certificati.
@@ -93,7 +93,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ### <a name="create-an-archive"></a>Creare un archivio
 
@@ -120,10 +120,10 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
  Fare riferimento alla sezione [Invio dell'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) per altre informazioni su questi passaggi.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
- Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Questi sono:
+ Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. ovvero:
 
 1. Caricare un pacchetto IPA creato con il comando di compilazione del pacchetto ad-hoc.
 1. Caricare un bundle `.app` compresso.
@@ -145,7 +145,7 @@ Tornare alla sezione **My Apps** (App personali) e verificare che l'applicazione
 
 ## <a name="manage-beta-testing"></a>Gestire il test della versione beta
 
-### <a name="add-metadata"></a>Aggiungere i metadati
+### <a name="add-metadata"></a>Aggiungere metadati
 
 Per iniziare a usare TestFlight, selezionare la scheda **Prerelease** (Versione provvisoria) dell'app. Sono disponibili tre schede contenenti un elenco di compilazioni, tester interni ed esterni, come illustrato di seguito:
 

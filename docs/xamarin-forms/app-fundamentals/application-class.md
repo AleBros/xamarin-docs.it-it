@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842974"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916478"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App di Xamarin.Forms
 
@@ -223,7 +223,7 @@ Si noti che `Forms.Init()` deve essere chiamato da **App.xaml.cs** nel progetto 
 
 Per altre informazioni, vedere [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md) (Impostazione di progetti Windows), che include i passaggi per aggiungere un progetto UWP a una soluzione Xamarin.Forms esistente non destinata a UWP.
 
-## <a name="related-video"></a>Video correlati
+## <a name="related-video"></a>Video correlato
 
 > [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
 

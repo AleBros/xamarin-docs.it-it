@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029626"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914390"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Installazione e requisiti per le cartelle di lavoro
 
@@ -21,13 +21,13 @@ ms.locfileid: "73029626"
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Verificare i [requisiti](#requirements) indicati di seguito.
 2. Scaricare e installare [Xamarin Workbooks per Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Inizia a [giocare](~/tools/workbooks/workbook.md) con le cartelle di lavoro.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Verificare i [requisiti](#requirements) indicati di seguito.
 2. Scaricare e installare [Xamarin Workbooks per Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
@@ -37,18 +37,18 @@ ms.locfileid: "73029626"
 
 ## <a name="requirements"></a>Requisiti
 
-#### <a name="supported-operating-systems"></a>Supported Operating Systems
+#### <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
 - **Mac** -OS X 10,11 o versione successiva
 - **Windows** -Windows 7 o versione successiva (con Internet Explorer 11 o versione successiva e .NET 4.6.1 o versione successiva)
 
 #### <a name="supported-app-platforms"></a>Piattaforme per le app supportate
 
-|Piattaforma app|Supporto del sistema operativo|Note|
+|Piattaforma dell'app|Supporto del sistema operativo|Note|
 |--- |--- |--- |
 |Mac|Supportato solo in Mac|
-|iOS|Supportato in Mac e Windows|È necessario installare Xamarin.iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
-|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Xamarin con un dispositivo virtuale > = 5,0|
+|iOS|Supportato in Mac e Windows|È necessario installare Novell. iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
+|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Novell con un dispositivo virtuale > = 5,0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
 |Console (.NET Core)|Supportato in Mac e Windows|
@@ -57,7 +57,7 @@ ms.locfileid: "73029626"
 
 [Segnala i problemi in GitHub][bugs]e Includi tutte le informazioni seguenti:
 
-### <a name="log-files"></a>File di registro
+### <a name="log-files"></a>File di log
 
 Collega sempre i file di log del client di cartelle di lavoro:
 
@@ -75,7 +75,7 @@ Collega sempre i file di log del client di cartelle di lavoro:
 
 ### <a name="platform-version-information"></a>Informazioni sulla versione della piattaforma
 
-È molto utile conoscere i dettagli relativi al sistema operativo e ai prodotti Xamarin installati.
+È molto utile conoscere i dettagli relativi al sistema operativo e ai prodotti Novell installati.
 
 Dal menu principale nelle cartelle di lavoro di:
 
@@ -93,7 +93,7 @@ Visual Studio
 - **> Della guida su Visual Studio > informazioni sulla copia**
 - Indicare la versione del sistema operativo e se si eseguono Windows a 32 bit o a 64 bit.
 
-### <a name="samples"></a>Esempi
+### <a name="samples"></a>Samples
 
 Se è possibile collegare o creare un collegamento al file con **estensione Workbooks** in cui si verificano problemi, questo potrebbe contribuire a risolvere il bug più rapidamente.
 
@@ -106,13 +106,13 @@ Se si verificano problemi durante la connessione della cartella di lavoro di iOS
 - Android: verificare di usare un emulatore x86
 - Android: quale piattaforma emulatore sta usando? Emulatore Google?
   Emulatore Android di Visual Studio? Xamarin Android Player?
-- iOS in Windows: quale versione del simulatore iOS remoto di Xamarin è installato (selezionare **Installazione applicazioni** nel **Pannello di controllo**)?
+- iOS in Windows: quale versione del simulatore iOS remoto di Novell è installato (selezionare **Installazione applicazioni** nel **Pannello di controllo**)?
 - iOS in Windows: fornire anche le informazioni sulla versione della piattaforma per l'host di compilazione Mac
 - Il dispositivo dispone di connettività di rete (controllare tramite Web browser)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Disinstalla
+## <a name="uninstall"></a>Disinstallare
 
 ### <a name="windows"></a>WINDOWS
 
@@ -155,7 +155,7 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
 ## <a name="downgrading"></a>Declassamento
 
-L'identificatore del bundle per le **cartelle di lavoro di/Applications/Xamarin.app** è stato modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1,4, perché le cartelle di lavoro e il controllo ora sono completamente divisi.
+L'identificatore del bundle per le **cartelle di lavoro di/Applications/Xamarin. app** è stato modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1,4, perché le cartelle di lavoro e il controllo ora sono completamente divisi.
 
 A causa di un bug nei programmi di installazione precedenti, non è possibile effettuare il downgrade di 1,4 o versioni successive usando i programmi di installazione 1.3.2 o precedenti.
 

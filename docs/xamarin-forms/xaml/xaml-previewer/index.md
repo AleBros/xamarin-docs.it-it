@@ -1,6 +1,6 @@
 ---
-title: Visualizzatore anteprima XAML per Xamarin.Forms
-description: Questo articolo illustra come usare il Visualizzatore anteprima XAML per visualizzare i layout di Xamarin.Forms sottoposti a rendering durante la digitazione. Il Visualizzatore anteprima XAML è disponibile in Visual Studio 2019 e Visual Studio 2019 per Mac.
+title: Visualizzatore anteprima XAML per Novell. Forms
+description: Questo articolo illustra come usare il Visualizzatore anteprima XAML per visualizzare i layout di Novell. Forms sottoposti a rendering durante la digitazione. Il Visualizzatore anteprima XAML è disponibile in Visual Studio 2019 e Visual Studio 2019 per Mac.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -9,41 +9,41 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68757259"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918014"
 ---
-# <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per Xamarin.Forms
+# <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per Novell. Forms
 
-_Visualizza i layout di Xamarin.Forms sottoposti a rendering durante la digitazione_
+_Visualizza i layout di Novell. Forms sottoposti a rendering durante la digitazione_
 
 ## <a name="overview"></a>Panoramica
 
-Il Visualizzatore anteprima XAML Mostra come verrà visualizzata la pagina XAML di Xamarin.Forms in iOS e Android. Quando si apportano modifiche a XAML, verranno visualizzate in anteprima immediatamente insieme al codice. Il Visualizzatore anteprima XAML è disponibile in Visual Studio e Visual Studio per Mac.
+Il Visualizzatore anteprima XAML Mostra come verrà visualizzata la pagina XAML di Novell. Forms in iOS e Android. Quando si apportano modifiche a XAML, verranno visualizzate in anteprima immediatamente insieme al codice. Il Visualizzatore anteprima XAML è disponibile in Visual Studio e Visual Studio per Mac.
 
-## <a name="getting-started"></a>Per iniziare
+## <a name="getting-started"></a>Introduzione
 
 ::: zone pivot="windows"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare la finestra di dialogo **strumenti > opzioni > Xamarin > modulo anteprima** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
+È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare la finestra di dialogo **strumenti > opzioni > novell > modulo anteprima** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
 
-[![Opzioni anteprima Xamarin.Forms in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opzioni anteprima Xamarin.Forms in Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Opzioni anteprima Novell. Forms in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opzioni anteprima Novell. Forms in Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
-Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > Xamarin > form anteprima** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
+Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > novell > form anteprima** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
 
 #### <a name="xaml-preview-controls"></a>Controlli di anteprima XAML
 
 Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAML o entrambi selezionando questi pulsanti nel riquadro visualizzazione divisa. Il pulsante centrale scambia il lato del Visualizzatore anteprima e del codice:
 
-[![Controlli dell'anteprima di Xamarin.Forms per passare dalla progettazione, dall'origine alla visualizzazione divisa in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Controlli dell'anteprima di Xamarin.Forms per passare dalla progettazione, dall'origine alla visualizzazione divisa in Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Controlli dell'anteprima di Novell. Forms per passare dalla progettazione, dall'origine alla visualizzazione divisa in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Controlli dell'anteprima di Novell. Forms per passare dalla progettazione, dall'origine alla visualizzazione divisa in Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 È possibile modificare se la schermata è divisa verticalmente o orizzontalmente oppure comprimere completamente un riquadro:
 
-[![Controlli dell'orientamento del riquadro anteprima Xamarin.Forms in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Controlli dell'orientamento del riquadro anteprima Xamarin.Forms in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Controlli dell'orientamento del riquadro anteprima Novell. Forms in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Controlli dell'orientamento del riquadro anteprima Novell. Forms in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAM
 
 Il pulsante **Anteprima** viene visualizzato nell'editor quando si apre una pagina XAML. Mostrare o nascondere il Visualizzatore anteprime premendo i pulsanti **Anteprima** o **Dividi** nella parte inferiore sinistra di una finestra del documento XAML:
 
-[Visualizzatore anteprima ![Xamarin.Forms abilitato con il pulsante di anteprima o di divisione](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![visualizzatore anteprime Novell. Forms abilitato con il pulsante di anteprima o di divisione](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > Nelle versioni precedenti di Visual Studio per Mac, il pulsante **Anteprima** si trovava in alto a destra nella finestra.
@@ -87,16 +87,16 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Questa proprietà è utile se si Inizializza una libreria nel costruttore della pagina che non viene eseguita in fase di progettazione.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Controllare i problemi riportati di seguito e i [Forum di Xamarin](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
+Controllare i problemi riportati di seguito e i [Forum di Novell](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
 
 ### <a name="xaml-previewer-isnt-showing-or-shows-an-error"></a>Il Visualizzatore anteprima XAML non Mostra o Mostra un errore
 
 * L'avvio del Visualizzatore anteprime potrebbe richiedere del tempo. verrà visualizzato il "inizializzazione del rendering" fino a quando non è pronto.
 * Provare a chiudere e riaprire il file XAML.
 * Verificare che la classe `App` disponga di un costruttore senza parametri.
-* Verificare la versione di Xamarin.Forms. deve essere almeno Xamarin.Forms 3,6. È possibile eseguire l'aggiornamento alla versione più recente di Xamarin.Forms tramite NuGet.
+* Verificare la versione di Novell. Forms. deve essere almeno Novell. Forms 3,6. È possibile eseguire l'aggiornamento alla versione più recente di Novell. Forms tramite NuGet.
 * Controllare l'installazione di JDK: l'anteprima di Android richiede almeno [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 * Provare a eseguire il wrapping di tutte le classi C# inizializzate nel code-behind della pagina in `if (!DesignMode.IsDesignModeEnabled)`.
 

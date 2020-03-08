@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
 ms.openlocfilehash: b646893d8bbe63aa537c973c90552e0367735e47
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021211"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913634"
 ---
 # <a name="signing-the-android-application-package"></a>Firma del pacchetto dell'applicazione Android
 
 In [Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md) è stato usato lo strumento **Gestione archivi** per compilare l'app e inserirla in un archivio per la firma e la pubblicazione. Questa sezione spiega come creare un'identità di firma di Android e un nuovo certificato di firma per le applicazioni Android e come pubblicare l'app archiviata *ad hoc* nel disco. Il pacchetto dell'applicazione Android (APK) risultante può essere trasferito localmente in dispositivi Android senza passare attraverso un app store.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive), la finestra di dialogo **Canale di distribuzione** offre due opzioni di distribuzione. Selezionare **Ad hoc**:
 
 [![Finestra di dialogo Canale di distribuzione](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive), la finestra di dialogo **Firma e distribuisci** offre due opzioni di distribuzione. Selezionare **Ad hoc** e fare clic su **Avanti**:
 
@@ -38,7 +38,7 @@ In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#a
 
 ## <a name="create-a-new-certificate"></a>Creare un nuovo certificato
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Dopo la selezione di **Ad hoc**, Visual Studio apre la pagina **Identità di firma** della finestra di dialogo, come illustrato nello screenshot seguente. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato).
 
@@ -67,7 +67,7 @@ Ad esempio, usando **chimp** come alias, i passaggi precedenti consentono di cre
 
 Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o MD5 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Dopo che si è fatto clic su **Ad hoc**, Visual Studio per Mac apre la finestra di dialogo **Identità di firma Android**, come illustrato nel prossimo screenshot. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato). Se un certificato esiste già, fare clic sul pulsante **Importa una chiave esistente** per importarlo e quindi passare a [Firma APK](#sign-the-apk). In alternativa, fare clic sul pulsante **Crea una nuova chiave** per creare un nuovo certificato:
 
@@ -94,7 +94,7 @@ Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o 
 
 ## <a name="sign-the-apk"></a>Firmare il pacchetto APK
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Quando si fa clic su **Crea**, un nuovo archivio chiavi, contenente un nuovo certificato, viene salvato ed elencato in **Identità di firma**, come illustrato nel prossimo screenshot. Per pubblicare un'app in Google Play, fare clic su **Annulla** e passare a [Pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 Per eseguire la pubblicazione *ad hoc* e pubblicare l'app per la distribuzione indipendente, selezionare l'identità di firma da usare e fare clic su **Salva con nome**. In questo screenshot, ad esempio, è selezionata l'identità di firma **chimp** creata in precedenza:
@@ -118,7 +118,7 @@ Lo screenshot seguente illustra un esempio di app pronta per la pubblicazione, *
 
 [![APK visualizzato in Esplora risorse](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Come si è visto, all'archivio chiavi è stato aggiunto un nuovo certificato. Per pubblicare un'app in Google Play, fare clic su **Annulla** e passare a [Pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 In alternativa, fare clic su **Avanti** per pubblicare l'app *ad hoc* (per la distribuzione indipendente), come illustrato in questo esempio:
@@ -129,7 +129,7 @@ La finestra di dialogo **Pubblica come ad hoc** visualizza un riepilogo dell'app
 
 [![Pubblica come ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
-La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Salva**.
+La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Save**.
 
 ![Finestra di dialogo File APK di output](images/xs/06-output-apk-file.png)
 
