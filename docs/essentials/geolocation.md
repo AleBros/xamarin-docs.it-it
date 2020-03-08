@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Georilevazione'
+title: 'Xamarin.Essentials: Geolocation'
 description: Questo documento descrive la classe Geolocation in Xamarin.Essentials, che fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558673"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910811"
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
 
 La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 
@@ -22,7 +22,7 @@ La classe **Geolocation** fornisce le API per recuperare le coordinate di georil
 
 Per accedere alla funzionalità **Geolocation**, è necessaria la configurazione seguente specifica della piattaforma:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Le autorizzazioni Coarse e Fine Location sono obbligatorie e devono essere configurate nel progetto Android. Se inoltre l'app usa come destinazione Android 5.0 (livello API 21) o versione successiva, è necessario dichiarare che l'app usa le funzionalità hardware nel file manifesto. È possibile aggiungerla nei modi seguenti:
 
@@ -50,7 +50,7 @@ Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiunger
 
 Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare le autorizzazioni **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Il file **Info.plist** dell'app deve contenere la chiave `NSLocationWhenInUseUsageDescription` per accedere alla posizione del dispositivo.
 
@@ -63,7 +63,7 @@ Oppure modificare manualmente il file, aggiungere quanto segue e aggiornare la l
 <string>Fill in a reason why your app needs access to location.</string>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 È necessario impostare l'autorizzazione `Location` per l'applicazione. A tale scopo, aprire **Package.appxmanifest**, selezionare la scheda **Capabilities** (Capacità) e selezionare **Location** (Posizione).
 
@@ -146,7 +146,7 @@ catch (Exception ex)
 
 La tabella seguente indica l'accuratezza per ogni piattaforma:
 
-### <a name="lowest"></a>Più bassa
+### <a name="lowest"></a>Minima
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -154,7 +154,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | iOS | 3000 |
 | UWP | 1000 - 5000 |
 
-### <a name="low"></a>Bassa
+### <a name="low"></a>Basso
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -170,7 +170,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | iOS | 100 |
 | UWP | 30 - 500 |
 
-### <a name="high"></a>High
+### <a name="high"></a>Alto
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -178,7 +178,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | iOS | 10 |
 | UWP | <= 10 |
 
-### <a name="best"></a>Ottimale
+### <a name="best"></a>Massima
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -208,7 +208,7 @@ if (location != null)
 
 Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi `CalculateDistance` che consentono di calcolare la distanza tra due località geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
 
-Di seguito è riportato un esempio:
+Ad esempio:
 
 ```csharp
 Location boston = new Location(42.358056, -71.063611);

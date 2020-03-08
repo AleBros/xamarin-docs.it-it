@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78291778"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914353"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -39,7 +39,7 @@ In questa guida vengono illustrati entrambi gli approcci:
 
 Per usare `ViewPager` nel progetto di app, è necessario installare il pacchetto della [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-## <a name="architecture"></a>Architettura
+## <a name="architecture"></a>Architecture
 
 Vengono usati tre componenti per implementare la navigazione gestuale con `ViewPager`:
 

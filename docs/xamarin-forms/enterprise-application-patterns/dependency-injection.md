@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567910"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915256"
 ---
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
@@ -55,7 +55,7 @@ L'utilizzo di un contenitore di inserimento delle dipendenze presenta diversi va
 - Un contenitore facilita la testabilità consentendo di simulare le dipendenze.
 - Un contenitore aumenta la gestibilità consentendo di aggiungere facilmente nuove classi all'app.
 
-Nel contesto di un'app Xamarin.Forms che usa MVVM, viene in genere usato un contenitore di inserimento delle dipendenze per la registrazione e la risoluzione di modelli di visualizzazione e per la registrazione dei servizi e l'inserimento in modelli di visualizzazione.
+Nel contesto di un'app Novell. Forms che usa MVVM, viene in genere usato un contenitore di inserimento delle dipendenze per la registrazione e la risoluzione di modelli di visualizzazione e per la registrazione dei servizi e l'inserimento in modelli di visualizzazione.
 
 Sono disponibili molti contenitori di inserimento delle dipendenze, con l'app per dispositivi mobili eShopOnContainers che usa TinyIoC per gestire la creazione di istanze di classi di servizi e modelli di visualizzazione nell'app. TinyIoC è stato scelto dopo la valutazione di una serie di contenitori diversi e offre prestazioni superiori sulle piattaforme mobili rispetto alla maggior parte dei contenitori noti. Semplifica la creazione di app a regime di controllo libero e fornisce tutte le funzionalità comunemente presenti nei contenitori di inserimento delle dipendenze, inclusi i metodi per registrare i mapping dei tipi, risolvere oggetti, gestire la durata degli oggetti e inserire oggetti dipendenti in costruttori di oggetti risolti. Per ulteriori informazioni su TinyIoC, vedere [TinyIoC](https://github.com/grumpydev/TinyIoC/wiki) in GitHub.com.
 
@@ -163,7 +163,7 @@ La prima volta che il tipo di `LoginViewModel` viene risolto, il contenitore cre
 > [!NOTE]
 > I tipi registrati come Singleton vengono eliminati quando il contenitore viene eliminato.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 L'inserimento di dipendenze consente di separare i tipi concreti dal codice che dipende da questi tipi. USA in genere un contenitore che include un elenco di registrazioni e mapping tra interfacce e tipi astratti e i tipi concreti che implementano o estendono questi tipi.
 

@@ -7,23 +7,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029700"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917588"
 ---
 # <a name="inspector-installation-and-requirements"></a>Installazione e requisiti di Inspector
 
 ## <a name="download-and-installation"></a>Download e installazione
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Scaricare e installare [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selezionare il carico **di lavoro sviluppo di applicazioni per dispositivi mobili con .NET** .
 1. [Accedere](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) per abilitare la sottoscrizione Enterprise.
 1. [Esamina](~/tools/inspector/inspect.md) la tua app.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Scaricare e installare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/).
 1. [Accedere](https://docs.microsoft.com/visualstudio/mac/activation) per abilitare la sottoscrizione Enterprise.
@@ -33,7 +33,7 @@ ms.locfileid: "73029700"
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
 - **Mac** -OS X 10,11 o versione successiva
 - **Windows** -Windows 7 o versione successiva (con Internet Explorer 11 o versione successiva e .NET 4.6.1 o versione successiva)
@@ -49,11 +49,11 @@ Per i clienti aziendali è disponibile l'ispezione di app in tempo reale.
 
 ### <a name="supported-app-platforms"></a>Piattaforme per le app supportate
 
-|Piattaforma app|Supporto IDE|Note|
+|Piattaforma dell'app|Supporto IDE|Note|
 |--- |--- |--- |
 |Mac|Supportato solo in Visual Studio per Mac|
 |iOS|Supportato in Visual Studio 2017 e Visual Studio per Mac| Il comportamento del linker deve essere impostato su **No link** (in **iOS Build** Project Options) |
-|Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **Fastdev** abilitato.<br />È necessario usare gli emulatori Android di Google, Visual Studio o Xamarin. Gli emulatori Android 7 potrebbero non consentire l'ispezione al momento.|
+|Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **Fastdev** abilitato.<br />È necessario usare gli emulatori Android di Google, Visual Studio o Novell. Gli emulatori Android 7 potrebbero non consentire l'ispezione al momento.|
 |WPF|Supportato solo in Visual Studio 2017|
 
 <a name="reporting-bugs" />
@@ -80,7 +80,7 @@ Visual Studio
 - **> Della guida su Visual Studio > informazioni sulla copia**
 - Indicare la versione del sistema operativo e se si eseguono Windows a 32 bit o a 64 bit.
 
-### <a name="log-files"></a>File di registro
+### <a name="log-files"></a>File di log
 
 Alleghi sempre i file di log del client IDE e Inspector.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760159"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915293"
 ---
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle app aziendali
 
@@ -24,7 +24,7 @@ Nel contesto del modello MVC (Model-View-ViewModel), sarà spesso necessario un 
 
 **Figura 6-1**: classi di convalida nell'app per dispositivi mobili eShopOnContainers
 
-Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>` e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` dell'istanza di `ValidatableObject<T>` e la proprietà `IsValid` dell'istanza `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
+Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>`e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` dell'istanza di `ValidatableObject<T>` e la proprietà `IsValid` dell'istanza `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
 
 La notifica delle modifiche alle proprietà viene fornita dalla classe `ExtendedBindableObject`, quindi un controllo [`Entry`](xref:Xamarin.Forms.Entry) può essere associato alla proprietà `IsValid` dell'istanza di `ValidatableObject<T>` nella classe del modello di visualizzazione per ricevere una notifica che indica se i dati immessi sono validi o meno.
 
@@ -148,7 +148,7 @@ L'approccio di convalida usato nell'app per dispositivi mobili eShopOnContainers
 
 ### <a name="triggering-validation-manually"></a>Attivazione manuale della convalida
 
-La convalida può essere attivata manualmente per una proprietà del modello di visualizzazione. Questa situazione si verifica ad esempio nell'app per dispositivi mobili eShopOnContainers quando l'utente tocca il pulsante di **accesso** nella `LoginView` quando si usano i servizi fittizi. Il delegato Command chiama il metodo `MockSignInAsync` nel `LoginViewModel`, che richiama la convalida eseguendo il metodo `Validate`, illustrato nell'esempio di codice seguente:
+La convalida può essere attivata manualmente per una proprietà del modello di visualizzazione. Questa situazione si verifica ad esempio nell'app per dispositivi mobili eShopOnContainers quando l'utente tocca il pulsante di **accesso** nella `LoginView`quando si usano i servizi fittizi. Il delegato Command chiama il metodo `MockSignInAsync` nel `LoginViewModel`, che richiama la convalida eseguendo il metodo `Validate`, illustrato nell'esempio di codice seguente:
 
 ```csharp
 private bool Validate()  
@@ -374,7 +374,7 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-Il metodo `OnAttached` Recupera il controllo nativo per il controllo [`Entry`](xref:Xamarin.Forms.Entry) Xamarin.Forms e aggiorna il colore della linea chiamando il metodo `UpdateLineColor`. L'override del `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili sul controllo `Entry` aggiornando il colore della linea se la proprietà `LineColor` associata viene modificata o se la proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) del `Entry` viene modificata. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
+Il metodo `OnAttached` Recupera il controllo nativo per il controllo [`Entry`](xref:Xamarin.Forms.Entry) Novell. Forms e aggiorna il colore della linea chiamando il metodo `UpdateLineColor`. L'override del `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili sul controllo `Entry` aggiornando il colore della linea se la proprietà `LineColor` associata viene modificata o se la proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) del `Entry` viene modificata. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 Quando vengono immessi dati validi nel controllo [`Entry`](xref:Xamarin.Forms.Entry) , viene applicata una linea nera nella parte inferiore del controllo per indicare che non è presente alcun errore di convalida. La figura 6-3 illustra un esempio di questo.
 
@@ -420,11 +420,11 @@ L'interfaccia utente Visualizza i messaggi di errore di convalida nei controlli 
 
 Ogni [`Label`](xref:Xamarin.Forms.Label) viene associato alla proprietà `Errors` dell'oggetto modello di visualizzazione da convalidare. La proprietà `Errors` viene fornita dalla classe `ValidatableObject<T>` ed è di tipo `List<string>`. Poiché la proprietà `Errors` può contenere più errori di convalida, viene utilizzata l'istanza `FirstValidationErrorConverter` per recuperare il primo errore dalla raccolta per la visualizzazione.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 L'app per dispositivi mobili eShopOnContainers esegue la convalida sincrona sul lato client delle proprietà del modello di visualizzazione e notifica all'utente eventuali errori di convalida evidenziando il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente perché i dati non sono validi.
 
-Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>` e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` della `ValidatableObject<T>`instance e la proprietà `IsValid` dell'istanza di `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
+Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>`e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` dell'istanza di `ValidatableObject<T>`e la proprietà `IsValid` dell'istanza `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
