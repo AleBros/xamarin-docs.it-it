@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155259"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910736"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,6 +28,7 @@ Seguire le guide per integrare queste funzionalità di Xamarin.Essentials nelle 
 
 * [Accelerometro](accelerometer.md?context=xamarin/xamarin-forms) - Recuperare i dati di accelerazione del dispositivo in uno spazio tridimensionale.
 * [Informazioni sull'app](app-information.md?context=xamarin/xamarin-forms) - Trovare informazioni sull'applicazione.
+* [Tema app](app-theme.md?context=xamarin/xamarin-forms) : rileva il tema corrente richiesto per l'applicazione.
 * [Barometro](barometer.md?context=xamarin/xamarin-forms) - Monitorare il barometro per rilevare modifiche della pressione.
 * [Batteria](battery.md?context=xamarin/xamarin-forms) - Rilevare facilmente livello della batteria, fonte di alimentazione e stato.
 * [Appunti](clipboard.md?context=xamarin/xamarin-forms) - Impostare e leggere rapidamente e facilmente testo negli Appunti.
