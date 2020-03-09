@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031416"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913573"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -23,7 +23,7 @@ Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cic
 > Le app devono anche supportare iPhone Xs e le dimensioni dello schermo 12,9" di iPad Pro.
 
 > [!IMPORTANT]
-> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Xamarin.Forms, vedere la documentazione relativa a [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
+> Per informazioni sulle risorse relative all'`UIWebView` avviso di deprecazione (ITMS-90809) durante l'uso di Novell. Forms, vedere la documentazione relativa a [Novell. Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
 
@@ -65,7 +65,7 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 8. **Scaricare** infine il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario [aggiornare i profili](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) per assicurarsi che siano visibili in Xcode.
 
-In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, attenersi alla seguente procedura:
+In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A questo scopo, eseguire la procedura seguente.
 
 1. Selezionare il team e fare clic su **Gestisci certificati...** :[![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
 
@@ -121,11 +121,11 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 7. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
  Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio per Mac, potrebbe essere necessario uscire da Visual Studio per Mac e aggiornare in Xcode l'elenco di identità di firma e di profili di provisioning disponibili, seguendo le istruzioni della sezione [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) (Richiesta di identità di firma).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio, potrebbe essere necessario uscire da Visual Studio e aggiornare in Xcode (nel Mac dell'host di compilazione) l'elenco di identità di firma e di profili di provisioning disponibili, seguendo le istruzioni della sezione [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) (Richiesta di identità di firma).
 
@@ -137,7 +137,7 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamarin.iOS per venderla nell'App Store iTunes, selezionare il profilo di distribuzione creato prima.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
  In Visual Studio per Mac seguire questa procedura:
 
@@ -153,9 +153,9 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
     ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
 5. Fare clic su **OK** per salvare le modifiche.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- In Visual Studio seguire questa procedura:
+ In Visual Studio eseguire le operazioni seguenti:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Proprietà** per aprirle e modificarle.
 2. Selezionare **Firma del bundle iOS** e **Versione | iPhone** dall'elenco a discesa **Configurazione**:
@@ -177,9 +177,9 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 
 Dopo il corretto provisioning dell'applicazione, il passaggio successivo prevede la configurazione delle app in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa), una suite di strumenti basati sul Web che consentono, a titolo di esempio, di gestire le applicazioni iOS nell'App Store.
 
-È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter essere inviata ad Apple per la revisione e, infine, rilasciata come app gratuita o in vendita in App Store.
+È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter inviare l'app ad Apple per la revisione e, infine, essere rilasciata come app gratuita o in vendita nell'App Store.
 
-Per altri dettagli, vedere la documentazione [Configuring an App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) (Configurazione di un'app in iTunes Connect).
+Per altri dettagli, vedere la documentazione [Configurazione di un'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 
 <a name="submitting" />
 
@@ -191,11 +191,11 @@ Per altre informazioni sulla pubblicazione di applicazioni nell'App Store, veder
 
 <a name="windows" />
 
-## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle delle app nuovamente in Windows
+## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle dell'app nuovamente in Windows
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato i componenti chiave della preparazione di un'applicazione Xamarin.iOS per la distribuzione nell'App Store.
 

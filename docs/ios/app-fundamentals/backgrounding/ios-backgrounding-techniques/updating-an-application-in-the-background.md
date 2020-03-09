@@ -1,6 +1,6 @@
 ---
-title: Aggiornamento di un'app Xamarin.iOS in background
-description: Questo documento descrive i vari modi per aggiornare un'app Xamarin.iOS in background, ad esempio il monitoraggio dell'area, il recupero in background e le notifiche remote.
+title: Aggiornamento di un'app Novell. iOS in background
+description: Questo documento descrive i vari modi per aggiornare un'app Novell. iOS in background, ad esempio il monitoraggio dell'area, il recupero in background e le notifiche remote.
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 2d56af364d63ff78bafbdd7d8043ae4d75d97959
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010704"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915767"
 ---
-# <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Xamarin.iOS in background
+# <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Novell. iOS in background
 
 L'aggiornamento in background è il processo di riattivazione di un'applicazione sospesa o non in esecuzione e l'aggiornamento con nuovo contenuto. iOS offre tre opzioni per l'aggiornamento del contenuto in background:
 
@@ -124,7 +124,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 }
 ```
 
-Le notifiche remote devono essere usate per aggiornamenti non frequenti con contenuto cruciale per la funzionalità dell'applicazione. Per altre informazioni sulle notifiche remote, vedere la Guida alle [notifiche push di Xamarin in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) .
+Le notifiche remote devono essere usate per aggiornamenti non frequenti con contenuto cruciale per la funzionalità dell'applicazione. Per altre informazioni sulle notifiche remote, vedere la Guida alle [notifiche push di Novell in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) .
 
 > [!IMPORTANT]
 > Poiché il meccanismo di aggiornamento nelle notifiche remote è basato sul recupero in background, l'applicazione deve avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento entro 30 secondi dalla ricezione della notifica oppure iOS terminerà l'applicazione. È consigliabile associare notifiche remote con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di grandi dimensioni in background.
