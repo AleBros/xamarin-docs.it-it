@@ -8,40 +8,40 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
 ms.openlocfilehash: 6c066f89dc8f558a9154138bf38ad4326fe21291
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642528"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918167"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>L'accesso ai bit di pixel bitmap SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Come illustrato nell'articolo [ **SkiaSharp salvataggio di bitmap per i file**](saving.md), generalmente le bitmap vengono archiviate nei file in un formato compresso, come JPEG o PNG. Contrariamente, una bitmap di SkiaSharp archiviata nella memoria non viene compresso. Sono archiviati come una serie sequenziale di pixel. Questo formato non compresso facilita il trasferimento delle bitmap a una superficie di visualizzazione.
+Come illustrato nell'articolo [**salvataggio di bitmap SkiaSharp in file**](saving.md), le bitmap vengono in genere archiviate in file in formato compresso, ad esempio JPEG o png. Contrariamente, una bitmap di SkiaSharp archiviata nella memoria non viene compresso. Sono archiviati come una serie sequenziale di pixel. Questo formato non compresso facilita il trasferimento delle bitmap a una superficie di visualizzazione.
 
-Il blocco di memoria occupato da una bitmap SkiaSharp è organizzato in modo molto semplice: Inizia con la prima riga di pixel, da sinistra a destra, quindi continua con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
+Il blocco di memoria occupato da una bitmap di SkiaSharp è organizzato in modo molto semplice: inizia con la prima riga del pixel, da sinistra a destra e continua quindi con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
 
 Questo articolo descrive come un'applicazione può ottenere l'accesso a tali pixel, direttamente tramite l'accesso a blocco di memoria della bitmap in pixel, o indirettamente. In alcuni casi, potrebbe essere necessario un programma analizzare i pixel di un'immagine e creare un istogramma di qualche tipo. Più comunemente, le applicazioni possono costruire immagini univoche creando modo algoritmico i pixel che compongono la bitmap:
 
-![Esempi di bit di pixel](pixel-bits-images/PixelBitsSample.png "Pixel bit di esempio")
+![Esempi di bit pixel](pixel-bits-images/PixelBitsSample.png "Esempio di bit di pixel")
 
 ## <a name="the-techniques"></a>Le tecniche
 
-SkiaSharp offre diverse tecniche per l'accesso ai bit di pixel della bitmap. Quello che si sceglie in genere è un compromesso tra la codifica di comodità (che è correlata alla manutenzione e la facilità di debug) e le prestazioni. Nella maggior parte dei casi, si userà uno dei seguenti metodi e proprietà di `SKBitmap` per l'accesso ai pixel della bitmap:
+SkiaSharp offre diverse tecniche per l'accesso ai bit di pixel della bitmap. Quello che si sceglie in genere è un compromesso tra la codifica di comodità (che è correlata alla manutenzione e la facilità di debug) e le prestazioni. Nella maggior parte dei casi, si userà uno dei seguenti metodi e proprietà di `SKBitmap` per accedere ai pixel della bitmap:
 
-- Il `GetPixel` e `SetPixel` metodi consentono di ottenere o impostare il colore di un singolo pixel.
-- Il `Pixels` proprietà ottiene una matrice di colori dei pixel per l'intera bitmap, o imposta la matrice di colori.
-- `GetPixels` Restituisce l'indirizzo della memoria pixel utilizzata per la bitmap.
-- `SetPixels` sostituisce l'indirizzo della memoria pixel utilizzata per la bitmap.
+- I metodi `GetPixel` e `SetPixel` consentono di ottenere o impostare il colore di un singolo pixel.
+- La proprietà `Pixels` ottiene una matrice di colori pixel per l'intera bitmap o imposta la matrice di colori.
+- `GetPixels` restituisce l'indirizzo della memoria pixel utilizzata dalla bitmap.
+- `SetPixels` sostituisce l'indirizzo della memoria pixel utilizzata dalla bitmap.
 
 È possibile considerare le prime due tecniche come "generale" e i due secondi come "livello basso." Esistono alcuni altri metodi e proprietà che è possibile usare, ma questi sono i più importanti.
 
-Consente di visualizzare le differenze di prestazioni tra queste tecniche, il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione contiene una pagina denominata **Bitmap sfumatura** che Crea una bitmap con pixel che combinano le sfumature di colore rosso e blue per creare una sfumatura. Il programma consente di creare otto copie diverse di questa bitmap, tutti con tecniche diverse per l'impostazione di pixel della bitmap. Ognuno di tali otto bitmap viene creato in un metodo separato che imposta una breve descrizione della tecnica e calcola il tempo necessario per impostare tutti i pixel. Ogni metodo esegue il ciclo attraverso la logica di impostazione di pixel 100 volte per ottenere una stima più accurata delle prestazioni.
+Per consentire all'utente di visualizzare le differenze di prestazioni tra queste tecniche, l'applicazione [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contiene una pagina denominata **bitmap con sfumature** che consente di creare una bitmap con pixel che combinano tonalità rosse e blu per creare una sfumatura. Il programma consente di creare otto copie diverse di questa bitmap, tutti con tecniche diverse per l'impostazione di pixel della bitmap. Ognuno di tali otto bitmap viene creato in un metodo separato che imposta una breve descrizione della tecnica e calcola il tempo necessario per impostare tutti i pixel. Ogni metodo esegue il ciclo attraverso la logica di impostazione di pixel 100 volte per ottenere una stima più accurata delle prestazioni.
 
 ### <a name="the-setpixel-method"></a>Il metodo SetPixel
 
-Se è sufficiente impostare o ottenere singoli pixel diverse, il [ `SetPixel` ](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) e [ `GetPixel` ](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) metodi sono ideali. Per ognuno di questi due metodi, specificare la colonna di tipo integer e riga. Indipendentemente dal formato pixel, questi due metodi consentono di ottenere o impostare il numero di pixel come un `SKColor` valore:
+Se è necessario impostare o ottenere solo diversi pixel, i metodi [`SetPixel`](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) e [`GetPixel`](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) sono ideali. Per ognuno di questi due metodi, specificare la colonna di tipo integer e riga. Indipendentemente dal formato pixel, questi due metodi consentono di ottenere o impostare il pixel come valore di `SKColor`:
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -49,9 +49,9 @@ bitmap.SetPixel(col, row, color);
 SKColor color = bitmap.GetPixel(col, row);
 ```
 
-Il `col` argomento deve essere compresa tra 0 e uno minore del `Width` proprietà bitmap e `row` compreso tra 0 e uno minore del `Height` proprietà.
+Il `col` argomento deve essere compreso tra 0 e uno minore della proprietà `Width` della bitmap e `row` intervallo compreso tra 0 e uno minore della proprietà `Height`.
 
-Ecco il metodo **Bitmap sfumatura** che imposta il contenuto di un bitmap utilizzando il `SetPixel` (metodo). La bitmap è 256 x 256 pixel e il `for` i cicli sono impostate come hardcoded con l'intervallo di valori:
+Ecco il metodo nella **bitmap sfumatura** che imposta il contenuto di una bitmap usando il metodo `SetPixel`. La bitmap è 256 di 256 pixel e i cicli `for` sono hardcoded con l'intervallo di valori:
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -83,11 +83,11 @@ public class GradientBitmapPage : ContentPage
 
 Il set di colori per ogni pixel ha un componente rossa uguale alla colonna di bitmap e un componente blu uguale alla riga. La bitmap risultante è nera in alto a sinistra, rosso in alto a destra, blu in basso a sinistra e magenta in basso a destra, con sfumature altrove.
 
-Il `SetPixel` metodo è chiamato 65.536 volte e indipendentemente dal fatto che come efficiente questo metodo potrebbe essere, in genere non è una buona idea eseguire che molte chiamate di API se è disponibile un'alternativa. Per fortuna, sono disponibili numerose alternative.
+Il metodo `SetPixel` è denominato 65.536 volte e indipendentemente dal livello di efficienza di questo metodo, in genere non è consigliabile fare in modo che molte chiamate API siano disponibili in alternativa. Per fortuna, sono disponibili numerose alternative.
 
 ### <a name="the-pixels-property"></a>La proprietà di pixel
 
-`SKBitmap` definisce un [ `Pixels` ](xref:SkiaSharp.SKBitmap.Pixels) proprietà che restituisce una matrice di `SKColor` i valori per l'intera bitmap. È anche possibile usare `Pixels` per impostare una matrice di valori di colore per la bitmap:
+`SKBitmap` definisce una proprietà [`Pixels`](xref:SkiaSharp.SKBitmap.Pixels) che restituisce una matrice di valori `SKColor` per l'intera bitmap. È anche possibile usare `Pixels` per impostare una matrice di valori di colore per la bitmap:
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -97,9 +97,9 @@ bitmap.Pixels = pixels;
 
 I pixel vengono disposti nella matrice a partire dalla prima riga, da sinistra a destra, quindi la seconda riga e così via. Il numero totale di colori nella matrice è uguale al prodotto di bitmap larghezza e altezza.
 
-Anche se questa proprietà viene visualizzata sia efficiente, tenere presente che i pixel vengono copiati dalla bitmap nella matrice e dalla matrice in bitmap e i pixel vengono convertiti da e verso `SKColor` valori.
+Sebbene questa proprietà risulti efficiente, tenere presente che i pixel vengono copiati dalla bitmap nella matrice e dalla matrice di nuovo nella bitmap e i pixel vengono convertiti da e in `SKColor` valori.
 
-Ecco il metodo `GradientBitmapPage` classe che consente di impostare la mappa di bit usando la `Pixels` proprietà. Il metodo alloca un' `SKColor` matrice di dimensioni necessarie, ma sarebbe possibile utilizzare il `Pixels` proprietà per creare tale matrice:
+Ecco il metodo nella classe `GradientBitmapPage` che imposta la bitmap usando la proprietà `Pixels`. Il metodo alloca una matrice di `SKColor` della dimensione richiesta, ma potrebbe aver usato la proprietà `Pixels` per creare la matrice:
 
 ```csharp
 SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
@@ -125,27 +125,27 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 }
 ```
 
-Si noti che l'indice della `pixels` deve essere calcolato dalla matrice di `row` e `col` variabili. La riga viene moltiplicata per il numero di pixel in ogni riga (256 in questo caso) e quindi la colonna viene aggiunta.
+Si noti che l'indice della matrice di `pixels` deve essere calcolato dalle variabili `row` e `col`. La riga viene moltiplicata per il numero di pixel in ogni riga (256 in questo caso) e quindi la colonna viene aggiunta.
 
-`SKBitmap` definisce inoltre una simile `Bytes` proprietà, che restituisce una matrice di byte per l'intera bitmap, ma è più complessa per le bitmap a colori.
+`SKBitmap` definisce anche una proprietà di `Bytes` simile, che restituisce una matrice di byte per l'intera bitmap, ma è più complessa per le bitmap a colori completi.
 
 ### <a name="the-getpixels-pointer"></a>Il puntatore GetPixels
 
-Potenzialmente è la tecnica più potente per accedere ai pixel della bitmap [ `GetPixels` ](xref:SkiaSharp.SKBitmap.GetPixels), non deve essere confusa con il `GetPixel` metodo o il `Pixels` proprietà. Si noterà immediatamente una differenza con `GetPixels` in quanto restituisce un elemento non è molto comune nella programmazione c#:
+Potenzialmente la tecnica più potente per accedere ai pixel bitmap è [`GetPixels`](xref:SkiaSharp.SKBitmap.GetPixels), da non confondere con il metodo `GetPixel` o la proprietà `Pixels`. Si noterà immediatamente una differenza con `GetPixels` in quanto restituisce un elemento non molto comune nella C# programmazione:
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
 ```
 
-.NET [ `IntPtr` ](xref:System.IntPtr) tipo rappresenta un puntatore. Viene chiamato `IntPtr` perché è la lunghezza di un intero nel processore nativo del computer in cui il programma viene eseguito, in genere a 32 bit o 64 bit di lunghezza. Il `IntPtr` che `GetPixels` restituisce è l'indirizzo del blocco di memoria usata per archiviare i pixel dell'oggetto bitmap effettivo.
+Il tipo di [`IntPtr`](xref:System.IntPtr) .NET rappresenta un puntatore. Viene chiamato `IntPtr` perché è la lunghezza di un numero intero nel processore nativo del computer in cui viene eseguito il programma, in genere 32 bit o 64 bit. Il `IntPtr` restituito da `GetPixels` è l'indirizzo del blocco di memoria effettivo usato dall'oggetto bitmap per archiviare i pixel.
 
-È possibile convertire le `IntPtr` in un linguaggio c# puntatore tipo usando il [ `ToPointer` ](xref:System.IntPtr.ToPointer) (metodo). La sintassi di puntatore in c# è lo stesso come C e C++:
+È possibile convertire il `IntPtr` in un C# tipo di puntatore usando il metodo [`ToPointer`](xref:System.IntPtr.ToPointer) . La sintassi di puntatore in c# è lo stesso come C e C++:
 
 ```csharp
 byte* ptr = (byte*)pixelsAddr.ToPointer();
 ```
 
-Il `ptr` variabile è di tipo _puntatore ai byte_. Ciò `ptr` variabile consente di accedere ai singoli byte di memoria che vengono usati per archiviare i pixel della bitmap. Per leggere un byte la memoria o scrivere un byte per la memoria è usare codice simile al seguente:
+Il `ptr` variabile è di tipo _byte Pointer_. Questa `ptr` variabile consente di accedere ai singoli byte di memoria utilizzati per archiviare i pixel della bitmap. Per leggere un byte la memoria o scrivere un byte per la memoria è usare codice simile al seguente:
 
 ```csharp
 byte pixelComponent = *ptr;
@@ -153,13 +153,13 @@ byte pixelComponent = *ptr;
 *ptr = pixelComponent;
 ```
 
-In questo contesto, l'asterisco è il linguaggio c# _operatore di riferimento indiretto_ e viene usato per fare riferimento al contenuto della memoria a cui punta `ptr`. Inizialmente `ptr` punta al primo byte del pixel prima della prima riga della bitmap, ma è possibile eseguire operazioni aritmetiche sul `ptr` variabile per spostarlo in altre posizioni all'interno della bitmap.
+In questo contesto, l'asterisco è l' C# _operatore di riferimento indiretto_ e viene usato per fare riferimento al contenuto della memoria a cui punta `ptr`. Inizialmente, `ptr` punta al primo byte del primo pixel della prima riga della bitmap, ma è possibile eseguire operazioni aritmetiche sulla variabile `ptr` per spostarla in altre posizioni all'interno della bitmap.
 
-Uno svantaggio è che è possibile usare ciò `ptr` variabile solo in un blocco di codice contrassegnato con il `unsafe` (parola chiave). Inoltre, l'assembly deve essere contrassegnato in modo che blocchi unsafe. Questa operazione viene eseguita nelle proprietà del progetto.
+Uno svantaggio è che è possibile usare questa `ptr` variabile solo in un blocco di codice contrassegnato con la parola chiave `unsafe`. Inoltre, l'assembly deve essere contrassegnato in modo che blocchi unsafe. Questa operazione viene eseguita nelle proprietà del progetto.
 
 Tramite i puntatori in c# è molto potente, ma anche molto pericolose. È necessario assicurarsi che sia non accedere memoria oltre ciò che dovrebbe per fare riferimento il puntatore del mouse. Si tratta di uno dei motivi per usare puntatore associato con la parola "unsafe".
 
-Ecco il metodo `GradientBitmapPage` classe che utilizza il `GetPixels` (metodo). Si noti che il `unsafe` blocco che comprende tutto il codice usando il puntatore ai byte:
+Ecco il metodo nella classe `GradientBitmapPage` che usa il metodo `GetPixels`. Si noti il blocco `unsafe` che include tutto il codice utilizzando il puntatore byte:
 
 ```csharp
 SKBitmap FillBitmapBytePtr(out string description, out int milliseconds)
@@ -193,11 +193,11 @@ SKBitmap FillBitmapBytePtr(out string description, out int milliseconds)
 }
 ```
 
-Quando la `ptr` variabile prima di tutto viene ottenuta dal `ToPointer` (metodo), punta al primo byte del pixel più a sinistra della prima riga della bitmap. Il `for` loop per `row` e `col` sono impostati in modo che `ptr` può essere incrementato con la `++` operatore dopo ogni byte di ogni pixel è impostato. Per le altre 99 scorre in ciclo i pixel, di `ptr` deve essere impostata torna all'inizio della bitmap.
+Quando la variabile `ptr` viene ottenuta per la prima volta dal metodo `ToPointer`, punta al primo byte del pixel più a sinistra della prima riga della bitmap. I cicli di `for` per `row` e `col` sono configurati in modo che il `ptr` possa essere incrementato con l'operatore `++` dopo che è stato impostato ogni byte di ogni pixel. Per gli altri 99 cicli attraverso i pixel, il `ptr` deve essere impostato di nuovo all'inizio della bitmap.
 
-Ogni pixel è quattro byte di memoria, pertanto è necessario impostare separatamente ogni byte. Qui il codice si presuppone che i byte sono in rosso ordine, verde, blu e alfa, che è coerente con il `SKColorType.Rgba8888` tipo dei colori. Si ricorderà che questo è il tipo di colore predefinito per iOS e Android, ma non per la piattaforma Windows universale. Per impostazione predefinita, la piattaforma UWP crea le bitmap con il `SKColorType.Bgra8888` tipo dei colori. Per questo motivo, prevede di visualizzare alcuni risultati diversi che utilizzano tale piattaforma.
+Ogni pixel è quattro byte di memoria, pertanto è necessario impostare separatamente ogni byte. Il codice si basa sul presupposto che i byte siano in ordine rosso, verde, blu e alfa, coerente con il tipo di colore `SKColorType.Rgba8888`. Si ricorderà che questo è il tipo di colore predefinito per iOS e Android, ma non per la piattaforma Windows universale. Per impostazione predefinita, UWP crea bitmap con il tipo di colore `SKColorType.Bgra8888`. Per questo motivo, prevede di visualizzare alcuni risultati diversi che utilizzano tale piattaforma.
 
-È possibile eseguire il cast del valore restituito da `ToPointer` a un `uint` puntatore anziché un `byte` puntatore. In questo modo un pixel intero accessibile in un'unica istruzione. Applicando la `++` operatore da tale puntatore aumenta in modo da quattro byte in modo che punti al pixel Avanti:
+È possibile eseguire il cast del valore restituito da `ToPointer` a un puntatore `uint` invece che a un puntatore di `byte`. In questo modo un pixel intero accessibile in un'unica istruzione. Se si applica l'operatore `++` a tale puntatore, questo viene incrementato di quattro byte per puntare al pixel successivo:
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -237,7 +237,7 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-Il pixel è impostato tramite la `MakePixel` metodo che costruisce un pixel intero dai componenti rossi, verdi, blu e alfa. Tenere presente che il `SKColorType.Rgba8888` formato ha un byte pixel ordinamento simile al seguente:
+Il pixel viene impostato usando il metodo `MakePixel`, che costruisce un pixel Integer dai componenti rosso, verde, blu e alfa. Tenere presente che il formato di `SKColorType.Rgba8888` ha un ordine di byte in pixel simile al seguente:
 
 RR GG, BB AA
 
@@ -245,11 +245,11 @@ Ma il numero intero che corrisponde a tali byte è:
 
 AABBGGRR
 
-Il byte meno significativo dell'intero archiviato per primo in conformità con architettura little-endian. Ciò `MakePixel` metodo non funziona correttamente per le bitmap con il `Bgra8888` tipo dei colori.
+Il byte meno significativo dell'intero archiviato per primo in conformità con architettura little-endian. Questo metodo di `MakePixel` non funzionerà correttamente per le bitmap con il tipo di colore `Bgra8888`.
 
-Il `MakePixel` metodo è contrassegnato con il [ `MethodImplOptions.AggressiveInlining` ](xref:System.Runtime.CompilerServices.MethodImplOptions) opzione a incoraggiare al compilatore di evitare rendendo questo un metodo separato, ma per compilare il codice in cui viene chiamato il metodo. Questa vista migliora le prestazioni.
+Il metodo `MakePixel` viene contrassegnato con l'opzione [`MethodImplOptions.AggressiveInlining`](xref:System.Runtime.CompilerServices.MethodImplOptions) per invitare il compilatore a evitare di creare questo metodo separato, ma di compilare invece il codice in cui viene chiamato il metodo. Questa vista migliora le prestazioni.
 
-È interessante notare che il `SKColor` struttura definisce una conversione esplicita dal `SKColor` in un intero senza segno, il che significa che un `SKColor` valore può essere creato e una conversione `uint` può essere usato al posto di `MakePixel`:
+È interessante notare che la struttura `SKColor` definisce una conversione esplicita da `SKColor` a una Unsigned Integer, il che significa che è possibile creare un valore di `SKColor` ed è possibile utilizzare una conversione a `uint` anziché `MakePixel`:
 
 ```csharp
 SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
@@ -280,21 +280,21 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-L'unica domanda è la seguente: È il formato intero del `SKColor` valore nell'ordine `SKColorType.Rgba8888` del tipo di colore o del `SKColorType.Bgra8888` tipo di colore oppure è interamente un altro? La risposta alla domanda dovrà essere rivelata al più presto.
+L'unica domanda è la seguente: è il formato integer del valore `SKColor` nell'ordine del tipo di colore `SKColorType.Rgba8888`, o il tipo di colore `SKColorType.Bgra8888` oppure è un altro elemento interamente? La risposta alla domanda dovrà essere rivelata al più presto.
 
 ### <a name="the-setpixels-method"></a>Metodo SetPixels
 
-`SKBitmap` definisce anche un metodo denominato [ `SetPixels` ](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)), che viene chiamato come segue:
+`SKBitmap` definisce anche un metodo denominato [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)), che viene chiamato come segue:
 
 ```csharp
 bitmap.SetPixels(intPtr);
 ```
 
-È importante ricordare che `GetPixels` Ottiene un `IntPtr` che fa riferimento il blocco di memoria utilizzato da bitmap per archiviare i pixel. Il `SetPixels` chiamare _sostituisce_ tale blocco di memoria con il blocco di memoria a cui fanno riferimento le `IntPtr` specificato come il `SetPixels` argomento. La bitmap di quindi libera il blocco di memoria che utilizzava in precedenza. La volta successiva `GetPixels` viene chiamato, ottiene il blocco di memoria impostato con `SetPixels`.
+Si ricordi che `GetPixels` ottiene un `IntPtr` che fa riferimento al blocco di memoria usato dalla bitmap per archiviare i pixel. La chiamata `SetPixels` _sostituisce_ il blocco di memoria con il blocco di memoria a cui fa riferimento il `IntPtr` specificato come argomento `SetPixels`. La bitmap di quindi libera il blocco di memoria che utilizzava in precedenza. La volta successiva che viene chiamato `GetPixels`, ottiene il blocco di memoria impostato con `SetPixels`.
 
-Inizialmente, può sembrare come se `SetPixels` ti offre non sono più potenza e prestazioni rispetto a `GetPixels` pur essendo meno utile. Con `GetPixels` è ottenere il blocco di memoria della bitmap e accedervi. Con `SetPixels` è possibile allocare e accedere a parte della memoria e quindi impostare questo valore come il blocco di memoria della bitmap.
+In primo luogo, sembra che `SetPixels` non fornisca più potenza e prestazioni rispetto a `GetPixels` con una minore praticità. Con `GetPixels` è possibile ottenere il blocco di memoria bitmap e accedervi. Con `SetPixels` è possibile allocare e accedere a una certa memoria, quindi impostarla come blocco di memoria bitmap.
 
-Tuttavia, `SetPixels` l'utilizzo di offre un vantaggio sintattico distinto: Consente di accedere ai bit di pixel bitmap usando una matrice. Ecco il metodo `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
+Tuttavia, l'uso di `SetPixels` offre un vantaggio sintattico distinto: consente di accedere ai bit di pixel bitmap usando una matrice. Ecco il metodo in `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -329,7 +329,7 @@ SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
 }
 ```
 
-Quindi, dopo che la matrice è stata compilata con pixel, un `unsafe` blocco e una `fixed` istruzione consente di ottenere un puntatore ai byte che fa riferimento a questa matrice. Tale puntatore ai byte può quindi essere convertito in un `IntPtr` da passare al `SetPixels`.
+Quindi, dopo che la matrice è stata riempita con pixel, viene usato un blocco `unsafe` e un'istruzione `fixed` per ottenere un puntatore di byte che punta a questa matrice. È possibile eseguire il cast di tale puntatore a un `IntPtr` per passare al `SetPixels`.
 
 La matrice creata non deve essere una matrice di byte. Può essere una matrice di interi con solo due dimensioni per la colonna e riga:
 
@@ -363,9 +363,9 @@ SKBitmap FillBitmapUintBuffer(out string description, out int milliseconds)
 }
 ```
 
-Il `MakePixel` metodo anche in questo caso viene usato per combinare i componenti di colore in un pixel a 32 bit.
+Il metodo `MakePixel` viene usato di nuovo per combinare i componenti di colore in un pixel a 32 bit.
 
-Solo per motivi di completezza, ecco lo stesso codice, ma con un `SKColor` cast a un intero senza segno:
+Per completezza, di seguito è riportato lo stesso codice, ma con un `SKColor` valore di cui è stato eseguito il cast a una Unsigned Integer:
 
 ```csharp
 SKBitmap FillBitmapUintBufferColor(out string description, out int milliseconds)
@@ -399,7 +399,7 @@ SKBitmap FillBitmapUintBufferColor(out string description, out int milliseconds)
 
 ### <a name="comparing-the-techniques"></a>Confronto tra le tecniche
 
-Il costruttore del **colore sfumato** pagina chiama tutte le otto versioni dei metodi illustrati in precedenza e Salva i risultati:
+Il costruttore della pagina **colore sfumatura** chiama tutti gli otto metodi illustrati sopra e salva i risultati:
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -432,7 +432,7 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-Il costruttore si conclude con la creazione di un `SKCanvasView` per visualizzare le bitmap risultante. Il `PaintSurface` gestore divide la superficie in otto rettangoli e le chiamate `Display` visualizzare ciascuna di esse:
+Il costruttore termina creando un `SKCanvasView` per visualizzare le bitmap risultanti. Il gestore `PaintSurface` divide la relativa superficie in otto rettangoli e chiama `Display` per visualizzare ciascuno di essi:
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -480,7 +480,7 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-Per consentire al compilatore di ottimizzare il codice, questa pagina è stata eseguita in **rilascio** modalità. Ecco la pagina in esecuzione in un simulatore di iPhone 8 in un MacBook Pro, un telefono Android di Nexus 5 e Surface Pro 3 che esegue Windows 10. A causa delle differenze di hardware, evitare di confronto tra i tempi di prestazioni tra i dispositivi, ma invece consultare i tempi relativi in ogni dispositivo:
+Per consentire al compilatore di ottimizzare il codice, questa pagina è stata eseguita in modalità di **rilascio** . Ecco la pagina in esecuzione in un simulatore di iPhone 8 in un MacBook Pro, un telefono Android di Nexus 5 e Surface Pro 3 che esegue Windows 10. A causa delle differenze di hardware, evitare di confronto tra i tempi di prestazioni tra i dispositivi, ma invece consultare i tempi relativi in ogni dispositivo:
 
 [![Bitmap sfumatura](pixel-bits-images/GradientBitmap.png "Bitmap sfumatura")](pixel-bits-images/GradientBitmap-Large.png#lightbox)
 
@@ -488,22 +488,22 @@ Ecco una tabella che consolida i tempi di esecuzione in millisecondi:
 
 | API       | Tipo di dati | iOS  | Android | UWP  |
 | --------- | --------- | ----:| -------:| ----:|
-| SetPixel  |           | 3.17 |   10.77 | versione 3.49 |
-| Pixel    |           | per 0,32 |    1,23 | 0,07 |
-| GetPixels | byte      | 0,09 |    0,24 | 0.10 |
-|           | uint      | 0,06 |    0,26 | 0,05 |
+| SetPixel  |           | 3,17 |   10.77 | 3.49 |
+| Pixel    |           | 0,32 |    1.23 | 0,07 |
+| GetPixels | byte      | 0,09 |    0,24 | 0,10 |
+|           | uint      | 0.06 |    0,26 | 0.05 |
 |           | SKColor   | 0,29 |    0,99 | 0,07 |
-| SetPixels | byte      | 1.33 |    6.78 | 0.11 |
-|           | uint      | 0,14 |    0.69 | 0,06 |
-|           | SKColor   | 0.35 |    1.93 | 0.10 |
+| SetPixels | byte      | 1.33 |    6.78 | 0,11 |
+|           | uint      | 0,14 |    0,69 | 0.06 |
+|           | SKColor   | 0,35 |    1,93 | 0,10 |
 
-Come previsto, la chiamata `SetPixel` volte 65.536 è il modo effeicient minimi per impostare i pixel della bitmap. La compilazione un' `SKColor` matrice e impostando il `Pixels` proprietà è molto meglio e persino Confronta agevolmente con alcune del `GetPixels` e `SetPixels` tecniche. Lavora `uint` valori di pixel è veloce rispetto all'impostazione separato `byte` componenti e la conversione il `SKColor` valore intero senza segno aggiunge overhead per il processo.
+Come previsto, la chiamata di `SetPixel` 65.536 volte è il modo meno effeicient per impostare i pixel di una bitmap. Il riempimento di una matrice di `SKColor` e l'impostazione della proprietà `Pixels` sono molto migliori e anche il confronto con alcune delle tecniche di `GetPixels` e `SetPixels`. L'utilizzo dei valori di `uint` pixel è in genere più veloce rispetto all'impostazione di componenti `byte` separati e la conversione del valore `SKColor` in un Unsigned Integer aggiunge un sovraccarico al processo.
 
-È anche interessante confrontare le varie sfumature: Le prime righe di ogni piattaforma sono le stesse e mostrano la sfumatura come previsto. Ciò significa che il `SetPixel` metodo e `Pixels` proprietà creare correttamente pixel da colori indipendentemente dal formato pixel sottostante.
+È interessante confrontare le sfumature diverse: le prime righe di ogni piattaforma sono uguali e mostrare la sfumatura nel modo previsto. Ciò significa che il metodo `SetPixel` e la proprietà `Pixels` creano correttamente pixel dai colori indipendentemente dal formato pixel sottostante.
 
-Le due righe successive di iOS e Android schermate sono anche gli stessi, a conferma del fatto che il piccolo `MakePixel` per il valore predefinito è correttamente definito metodo `Rgba8888` formato pixel per queste piattaforme.
+Anche le due righe successive degli screenshot iOS e Android sono le stesse, che confermano che il piccolo metodo di `MakePixel` è definito correttamente per il formato di `Rgba8888` pixel predefinito per queste piattaforme.
 
-La riga nella parte inferiore di iOS e Android schermate con le versioni precedenti, è che indica che l'intero senza segno ottenuto eseguendo il cast di un `SKColor` valore è nel formato:
+La riga inferiore degli screenshot iOS e Android è indietro, che indica che la Unsigned Integer ottenuta eseguendo il cast di un valore `SKColor` è nel formato seguente:
 
 AARRGGBB
 
@@ -511,19 +511,19 @@ I byte sono nell'ordine:
 
 GG BB RR AA
 
-Questo è il `Bgra8888` ordinamento anziché il `Rgba8888` ordering. Il `Brga8888` formato è il valore predefinito per la piattaforma Windows universale, motivo per cui le sfumature nell'ultima riga di tale schermata sono gli stessi della prima riga. Ma le due righe centrale non sono corrette perché si presuppone che il codice di creazione di tali bitmap un `Rgba8888` ordering.
+Si tratta dell'ordinamento `Bgra8888` anziché dell'ordine di `Rgba8888`. Il formato `Brga8888` è l'impostazione predefinita per la piattaforma Windows universale, motivo per cui le sfumature nell'ultima riga dello screenshot corrispondono alla prima riga. Tuttavia, le due righe centrali non sono corrette perché il codice che crea tali bitmap presuppone un `Rgba8888` ordinamento.
 
-Se si desidera usare lo stesso codice per l'accesso ai bit di pixel in ogni piattaforma, è possibile creare in modo esplicito un' `SKBitmap` usando il `Rgba8888` o `Bgra8888` formato. Se si desidera eseguire il cast `SKColor` usare i valori per pixel delle bitmap, `Bgra8888`.
+Se si vuole usare lo stesso codice per accedere a bit di pixel in ogni piattaforma, è possibile creare in modo esplicito un `SKBitmap` usando il formato `Rgba8888` o `Bgra8888`. Se si desidera eseguire il cast dei valori `SKColor` ai pixel bitmap, utilizzare `Bgra8888`.
 
 ## <a name="random-access-of-pixels"></a>Accesso casuale di pixel
 
-Il `FillBitmapBytePtr` e `FillBitmapUintPtr` metodi nel **Bitmap sfumatura** pagina tratto vantaggi da `for` cicli progettati per riempire la bitmap in sequenza, dalla prima riga per riga inferiore e in ogni riga da sinistra a destra. Il pixel è stato possibile impostare con la stessa istruzione il puntatore viene incrementato.
+I metodi `FillBitmapBytePtr` e `FillBitmapUintPtr` nella pagina **bitmap sfumatura** traggono vantaggio dai cicli `for` progettati per riempire la bitmap in sequenza, dalla riga superiore alla riga inferiore e in ogni riga da sinistra a destra. Il pixel è stato possibile impostare con la stessa istruzione il puntatore viene incrementato.
 
-In alcuni casi è necessario accedere i pixel in modo casuale anziché in sequenza. Se si usa il `GetPixels` approccio, è necessario calcolare i puntatori basati sulla riga e colonna. Questa funzionalità viene illustrata la **arcobaleno seno** pagina, che crea una bitmap che mostra un arcobaleno sotto forma di un ciclo di una curva seno.
+In alcuni casi è necessario accedere i pixel in modo casuale anziché in sequenza. Se si usa l'approccio `GetPixels`, sarà necessario calcolare i puntatori in base alla riga e alla colonna. Questa operazione viene illustrata nella pagina del **seno arcobaleno** , che consente di creare una bitmap che mostra un arcobaleno sotto forma di un ciclo di una curva seno.
 
-I colori dell'arcobaleno sono più facili da creare usando il modello di colori HSL (hue, saturation, luminosità). Il `SKColor.FromHsl` metodo crea un `SKColor` valore usando i valori di tonalità compresi tra 0 e 360 (ad esempio gli angoli di un cerchio, ma passa da rosso, verde e blu e nuovamente su rosso) e i valori di saturazione e luminosità compreso tra 0 e 100. Per i colori di un arcobaleno, impostare la saturazione a un massimo di 100 e la luminosità per un punto medio pari a 50.
+I colori dell'arcobaleno sono più facili da creare usando il modello di colori HSL (hue, saturation, luminosità). Il metodo `SKColor.FromHsl` crea un valore `SKColor` usando valori di tonalità compresi tra 0 e 360 (ad esempio, gli angoli di un cerchio, ma passando da rosso, verde e blu e viceversa), e valori di saturazione e luminosità compresi tra 0 e 100. Per i colori di un arcobaleno, impostare la saturazione a un massimo di 100 e la luminosità per un punto medio pari a 50.
 
-**Seno arcobaleno** crea l'immagine da scorrendo le righe della bitmap e quindi eseguire i cicli di valori di tonalità 360. Da ogni valore di tonalità, e calcola una colonna mappa di bit che si basa inoltre su un valore del seno:
+**Rainbow sine** crea questa immagine eseguendo il ciclo delle righe della bitmap e quindi scorrendo i valori di tonalità 360. Da ogni valore di tonalità, e calcola una colonna mappa di bit che si basa inoltre su un valore del seno:
 
 ```csharp
 public class RainbowSinePage : ContentPage
@@ -581,49 +581,49 @@ public class RainbowSinePage : ContentPage
 }
 ```
 
-Si noti che il costruttore crea la mappa di bit in base il `SKColorType.Bgra8888` formato:
+Si noti che il costruttore crea la bitmap in base al formato `SKColorType.Bgra8888`:
 
 ```csharp
 bitmap = new SKBitmap(360 * 3, 1024, SKColorType.Bgra8888, SKAlphaType.Unpremul);
 ```
 
-Ciò consente al programma di usare la conversione di `SKColor` i valori in `uint` pixel estrema semplicità. Anche se non svolgono un ruolo in questo programma specifico, ogni volta che utilizza il `SKColor` conversione impostare pixel, è necessario specificare anche `SKAlphaType.Unpremul` perché `SKColor` non premoltiplicare relativi componenti di colore per il valore alfa.
+Ciò consente al programma di utilizzare la conversione dei valori `SKColor` in `uint` pixel senza preoccuparsi. Sebbene non svolga un ruolo in questo particolare programma, ogni volta che si usa la conversione `SKColor` per impostare i pixel, è necessario specificare anche `SKAlphaType.Unpremul` perché `SKColor` non premoltiplica i componenti di colore per il valore alfa.
 
-Il costruttore utilizza quindi il `GetPixels` metodo per ottenere un puntatore al primo pixel della bitmap:
+Il costruttore usa quindi il metodo `GetPixels` per ottenere un puntatore al primo pixel della bitmap:
 
 ```csharp
 uint* basePtr = (uint*)bitmap.GetPixels().ToPointer();
 ```
 
-Per qualsiasi particolare riga e colonna, un valore di offset deve essere aggiunto a `basePtr`. Questo offset è la riga moltiplicata per la larghezza della bitmap, nonché la colonna:
+Per ogni riga e colonna specifica, è necessario aggiungere un valore di offset a `basePtr`. Questo offset è la riga moltiplicata per la larghezza della bitmap, nonché la colonna:
 
 ```csharp
 uint* ptr = basePtr + bitmap.Width * row + col;
 ```
 
-Il `SKColor` viene archiviato in memoria con il puntatore ' this ':
+Il valore `SKColor` viene archiviato in memoria utilizzando questo puntatore:
 
 ```csharp
 *ptr = (uint)SKColor.FromHsl(hue, 100, 50);
 ```
 
-Nel `PaintSurface` gestore del `SKCanvasView`, la bitmap viene adattata per riempire l'area di visualizzazione:
+Nel gestore `PaintSurface` della `SKCanvasView`, la bitmap viene estesa in modo da riempire l'area di visualizzazione:
 
-[![Seno arcobaleno](pixel-bits-images/RainbowSine.png "arcobaleno seno")](pixel-bits-images/RainbowSine-Large.png#lightbox)
+[![Seno arcobaleno](pixel-bits-images/RainbowSine.png "Seno arcobaleno")](pixel-bits-images/RainbowSine-Large.png#lightbox)
 
 ## <a name="from-one-bitmap-to-another"></a>Da una singola bitmap a un'altra
 
-Un numero molto elevato le attività di elaborazione di immagini includere la modifica pixel come vengono trasferiti da una singola bitmap a altro. Questa tecnica è dimostrata nel **regolazione del colore** pagina. La pagina viene caricata una delle risorse di bitmap e quindi consente di modificare l'immagine utilizzando tre `Slider` viste:
+Un numero molto elevato le attività di elaborazione di immagini includere la modifica pixel come vengono trasferiti da una singola bitmap a altro. Questa tecnica è illustrata nella pagina di **regolazione del colore** . La pagina carica una delle risorse bitmap e quindi consente di modificare l'immagine con tre visualizzazioni `Slider`:
 
-[![La regolazione dei colori](pixel-bits-images/ColorAdjustment.png "la regolazione dei colori")](pixel-bits-images/ColorAdjustment-Large.png#lightbox)
+[![Regolazione del colore](pixel-bits-images/ColorAdjustment.png "Regolazione del colore")](pixel-bits-images/ColorAdjustment-Large.png#lightbox)
 
-Per ogni colore del pixel, il primo `Slider` aggiunge un valore compreso tra 0 e 360, di tonalità, ma usa quindi l'operatore per mantenere il risultato compreso tra 0 e 360, modulo shifting in modo efficace i colori nell'ambito (come illustrato nella schermata UWP). La seconda `Slider` consente di scegliere un fattore di moltiplicazione tra lo 0,5 e 2 da applicare alla saturazione e il terzo `Slider` esegue la stessa operazione per la luminosità, come illustrato nello screenshot di Android.
+Per ogni colore pixel, il primo `Slider` aggiunge un valore da 0 a 360 alla tonalità, ma usa quindi l'operatore modulo per tenere il risultato compreso tra 0 e 360, spostando in modo efficace i colori lungo lo spettro, come illustrato nella schermata UWP. Il secondo `Slider` consente di selezionare un fattore di moltiplicazione compreso tra 0,5 e 2 da applicare alla saturazione e la terza `Slider` esegue la stessa operazione per la luminosità, come illustrato nello screenshot di Android.
 
-Il programma mantiene due bitmap, bitmap di origine denominata `srcBitmap` e la bitmap di destinazione modificato denominato `dstBitmap`. Ogni volta che un `Slider` viene spostato, viene calcolato automaticamente tutti i pixel nuovo `dstBitmap`. Naturalmente, gli utenti verranno utilizzate spostando il `Slider` viste molto rapidamente, in modo che si desiderano ottenere prestazioni ottimali è possibile gestire. Questa operazione comporta il `GetPixels` metodo per la bitmap di origine e di destinazione.
+Il programma gestisce due bitmap, la bitmap di origine originale denominata `srcBitmap` e la bitmap di destinazione modificata denominata `dstBitmap`. Ogni volta che viene spostato un `Slider`, il programma calcola tutti i nuovi pixel `dstBitmap`. Naturalmente, gli utenti sperimentano spostando rapidamente le visualizzazioni `Slider`, quindi si desiderano le migliori prestazioni che è possibile gestire. Questo implica il metodo `GetPixels` per le bitmap di origine e di destinazione.
 
-Il **regolazione del colore** pagina non di controllare il formato di colore delle bitmap di origine e destinazione. Contiene invece leggermente diverso per la logica per `SKColorType.Rgba8888` e `SKColorType.Bgra8888` formati. L'origine e destinazione possono essere formati diversi, e il programma continuerà a funzionare.
+La pagina di **regolazione del colore** non controlla il formato dei colori delle bitmap di origine e di destinazione. Contiene invece una logica leggermente diversa per i formati `SKColorType.Rgba8888` e `SKColorType.Bgra8888`. L'origine e destinazione possono essere formati diversi, e il programma continuerà a funzionare.
 
-Ecco il programma, ad eccezione di essenziale `TransferPixels` metodo che consente di trasferire i pixel formano l'origine alla destinazione. Il costruttore imposta `dstBitmap` uguale a `srcBitmap`. Il `PaintSurface` gestore visualizza `dstBitmap`:
+Ecco il programma, ad eccezione del metodo di `TransferPixels` cruciale che trasferisce i pixel sotto forma di origine alla destinazione. Il costruttore imposta `dstBitmap` uguale a `srcBitmap`. Il gestore `PaintSurface` Visualizza `dstBitmap`:
 
 ```csharp
 public partial class ColorAdjustmentPage : ContentPage
@@ -668,9 +668,9 @@ public partial class ColorAdjustmentPage : ContentPage
 }
 ```
 
-Il `ValueChanged` gestore per il `Slider` viste calcola i valori di regolazione e chiamate `TransferPixels`.
+Il gestore `ValueChanged` per le visualizzazioni `Slider` calcola i valori di regolazione e chiama `TransferPixels`.
 
-L'intera `TransferPixels` metodo è contrassegnato come `unsafe`. Inizia ottenendo i puntatori di byte per i bit di pixel delle bitmap entrambi e quindi scorre in ciclo tutte le righe e colonne. Dalla bitmap di origine, il metodo ottiene quattro byte per ogni pixel. Questi potrebbero essere in entrambi i `Rgba8888` o `Bgra8888` ordine. Verifica per il tipo di colore consente un `SKColor` valore deve essere creato. I componenti HSL sono quindi estratti, modificati e utilizzati per ricreare il `SKColor` valore. A seconda che la bitmap di destinazione sia `Rgba8888` o `Bgra8888`, i byte vengono archiviati in bitmp la destinazione:
+L'intero `TransferPixels` metodo è contrassegnato come `unsafe`. Inizia ottenendo i puntatori di byte per i bit di pixel delle bitmap entrambi e quindi scorre in ciclo tutte le righe e colonne. Dalla bitmap di origine, il metodo ottiene quattro byte per ogni pixel. Questi possono essere nell'ordine `Rgba8888` o `Bgra8888`. Il controllo del tipo di colore consente la creazione di un valore `SKColor`. I componenti HSL vengono quindi estratti, modificati e usati per ricreare il valore `SKColor`. A seconda che la bitmap di destinazione sia `Rgba8888` o `Bgra8888`, i byte vengono archiviati nella bitmp di destinazione:
 
 ```csharp
 public partial class ColorAdjustmentPage : ContentPage
@@ -741,13 +741,13 @@ public partial class ColorAdjustmentPage : ContentPage
 }
 ```
 
-È probabile che le prestazioni di questo metodo può essere ulteriormente migliorati tramite la creazione di metodi separati per le varie combinazioni di tipi di colore delle bitmap di origine e di destinazione ed evitare il controllo del tipo per ogni pixel. Un'altra opzione consiste nell'utilizzare più `for` loop per la `col` variabile basata sul tipo di colore.
+È probabile che le prestazioni di questo metodo può essere ulteriormente migliorati tramite la creazione di metodi separati per le varie combinazioni di tipi di colore delle bitmap di origine e di destinazione ed evitare il controllo del tipo per ogni pixel. Un'altra opzione consiste nel disporre di più cicli `for` per la variabile `col` in base al tipo di colore.
 
 ## <a name="posterization"></a>Posterizzazione
 
-È un altro processo comune che prevede l'accesso ai bit di pixel _posterizzazione_. Il numero se colori codificata in pixel della bitmap viene ridotto in modo che il risultato è simile a un poster mano utilizzando una tavolozza dei colori limitato.
+Un altro processo comune che prevede l'accesso a bits pixel è la _posterzzazione_. Il numero se colori codificata in pixel della bitmap viene ridotto in modo che il risultato è simile a un poster mano utilizzando una tavolozza dei colori limitato.
 
-Il **Posterizza** pagina esegue questo processo su una delle immagini monkey:
+La pagina **posterizzazione** esegue questo processo in una delle immagini Monkey:
 
 ```csharp
 public class PosterizePage : ContentPage
@@ -787,11 +787,11 @@ public class PosterizePage : ContentPage
 }
 ```
 
-Il codice nel costruttore accede a ogni pixel, esegue un'operazione con AND bit per bit con il valore 0xE0E0E0FF e quindi archivia il risultato nella bitmap. I valori 0xE0E0E0FF mantiene 3 bit più significativi di ogni componente del colore e imposta i bit più bassi 5 su 0. Anziché 2<sup>24</sup> o 16.777.216 colori, la bitmap viene ridotto a 2<sup>9</sup> o 512 colori:
+Il codice nel costruttore accede a ogni pixel, esegue un'operazione con AND bit per bit con il valore 0xE0E0E0FF e quindi archivia il risultato nella bitmap. I valori 0xE0E0E0FF mantiene 3 bit più significativi di ogni componente del colore e imposta i bit più bassi 5 su 0. Invece di 2<sup>24</sup> o 16.777.216 colori, la bitmap è ridotta a 2<sup>9</sup> o 512 colori:
 
-[![Posterizzazione](pixel-bits-images/Posterize.png "posterizzazione")](pixel-bits-images/posterizzazione-Large.png#lightbox)
+[![Posterizzazione](pixel-bits-images/Posterize.png "Posterizzazione")](pixel-bits-images/Posterize-Large.png#lightbox)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
