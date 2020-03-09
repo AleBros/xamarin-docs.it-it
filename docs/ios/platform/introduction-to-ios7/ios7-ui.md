@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031856"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78933254"
 ---
 # <a name="ios-7-user-interface-overview"></a>Panoramica dell'interfaccia utente di iOS 7
 
@@ -201,7 +201,7 @@ Nell'app si noterà che la visualizzazione è nuovamente riposizionata, quindi l
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-Si noti che gli effetti delle API `TopLayoutGuide/BottomLayoutGuide` e `EdgesForExtendedLayout` sono simili, ma hanno lo scopo di colmare obiettivi diversi. La modifica dell'impostazione di `EdgesForExtendedLayout` dal valore predefinito può correggere le visualizzazioni ritagliate nelle applicazioni progettate per iOS 6, ma una progettazione iOS 7 valida deve rispettare l'estetica a schermo intero e offrire un'esperienza di visualizzazione a schermo intero, che si basa su `TopLayoutGuide` e `BottomLayoutGuide` per la corretta esecuzione Posizionare il contenuto che deve essere modificato in una posizione comoda per l'utente.
+Si noti che gli effetti delle API `TopLayoutGuide/BottomLayoutGuide` e `EdgesForExtendedLayout` sono simili, ma hanno lo scopo di colmare obiettivi diversi. La modifica dell'impostazione di `EdgesForExtendedLayout` dal valore predefinito può correggere le visualizzazioni ritagliate nelle applicazioni progettate per iOS 6, ma una progettazione iOS 7 valida deve rispettare l'estetica a schermo intero e offrire un'esperienza di visualizzazione a schermo intero, basandosi su `TopLayoutGuide` e `BottomLayoutGuide` per posizionare correttamente il contenuto che deve essere modificato in una posizione ottimale per l'utente.
 
 Per un esempio funzionante, vedere [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) .
 
@@ -258,7 +258,7 @@ Il colore della tinta può essere applicato anche alle immagini quando il `Rende
 
 In iOS 7, l'utente può specificare le dimensioni del testo nelle impostazioni di sistema. Con il tipo dinamico, il tipo di carattere viene regolato dinamicamente in modo da risultare valido indipendentemente dalle dimensioni. `UIFont.PreferredFontForTextStyle` deve essere utilizzato per ottenere un tipo di carattere ottimizzato per le dimensioni controllate dall'utente.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo illustra le modifiche apportate agli elementi dell'interfaccia utente in iOS 7. Esamina alcune delle modifiche apportate alle viste e ai controlli in UIKit, evidenziando sia le modifiche visive che le modifiche apportate alle API correlate. Infine, introduce nuove API per lavorare con il contenuto a schermo intero, il nuovo supporto dei colori tinta e il tipo dinamico.
 

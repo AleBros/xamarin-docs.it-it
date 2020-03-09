@@ -1,6 +1,6 @@
 ---
 title: Tre tipi di curve di Bézier
-description: Questo articolo illustra come usare SkiaSharp per eseguire il rendering le curve di Bézier cubica continua, quadratiche e conica nelle applicazioni Xamarin.Forms e questo concetto è illustrato con esempio di codice.
+description: Questo articolo illustra come usare SkiaSharp per eseguire il rendering le curve di Bézier cubica continua, quadratiche e conica nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
@@ -8,33 +8,33 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
 ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759424"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915910"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Scopri come usare SkiaSharp per eseguire il rendering di curve di Bézier cubica continua, quadratiche e conica_
+_Scopri come usare SkiaSharp per eseguire il rendering di curve di Bézier cubiche, quadratiche e coniche_
 
 La curva di Bézier denominata dopo Pierre Bézier (1910: 1999), un francese engineer presso l'azienda automobilistica europea alleanza Renault, che hanno usato la curva per la progettazione assistita da computer di corpi di automobili.
 
-Le curve di Bézier sono note per essere particolarmente adatte alla progettazione interattiva: Si tratta &mdash; di un comportamento corretto in altre parole, non ci sono singolarità che fanno sì che la curva diventi infinita o &mdash; ingombrante e che in genere siano gradevoli da un punto di vista estetico:
+Le curve di Bézier sono note per la progettazione interattiva. si tratta di un comportamento corretto &mdash; in altre parole, non ci sono singolarità che comportano la curva di diventare infinite o difficili da &mdash; e sono in genere gradevoli dal punto di vista estetico:
 
 ![Curva di Bezier di esempio](beziers-images/beziersample.png)
 
 Contorni dei caratteri dei tipi di carattere basati su computer sono in genere definite con curve di Bézier.
 
-L'articolo di Wikipedia relativo [ **curva di Bézier** ](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contiene alcune informazioni utili in background. Il termine *curva di Bézier* fa effettivamente riferimento è una famiglia di curve simile. SkiaSharp supporta tre tipi di curve di Bézier, denominate il *cubica*, il *quadratica*e il *conica*. Conica è noto anche come il *quadratica razionale*.
+L'articolo di Wikipedia sulla [**curva di Bézier**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contiene alcune informazioni di base utili. Il termine *curva di Bézier* fa effettivamente riferimento a una famiglia di curve simili. SkiaSharp supporta tre tipi di curve di Bézier, denominate *cubiche*, *quadratiche*e *coniche*. La conica è nota anche come *quadratico razionale*.
 
 ## <a name="the-cubic-bzier-curve"></a>Curva di Bézier cubica
 
 La radice cubica è il tipo di curva di Bézier che molti sviluppatori ritengono di quando l'oggetto di curve di Bézier viene visualizzata.
 
-È possibile aggiungere una curva di Bézier cubica continua a un `SKPath` utilizzando il [ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKPoint)) metodo con tre `SKPoint` parametri, o il [ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)) overload con separato `x` e `y` parametri:
+È possibile aggiungere una curva di Bézier cubica a un oggetto `SKPath` usando il metodo [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKPoint)) con tre parametri di `SKPoint` oppure l'overload di [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)) con i parametri `x` e `y` distinti:
 
 ```csharp
 public void CubicTo (SKPoint point1, SKPoint point2, SKPoint point3)
@@ -44,14 +44,14 @@ public void CubicTo (Single x1, Single y1, Single x2, Single y2, Single x3, Sing
 
 La curva inizia nel punto corrente per il contorno. La curva di Bézier cubica completata è definita da quattro punti:
 
-- punto di inizio: punto corrente nel contorno, o (0, 0) se `MoveTo` non è stato chiamato
-- punto di controllo prima di tutto: `point1` nella `CubicTo` chiamare
-- secondo punto di controllo: `point2` nella `CubicTo` chiamare
-- punto di fine: `point3` nella `CubicTo` chiamare
+- punto iniziale: punto corrente nel contorno o (0,0) se non è stato chiamato `MoveTo`
+- primo punto di controllo: `point1` nella chiamata `CubicTo`
+- secondo punto di controllo: `point2` nella chiamata `CubicTo`
+- endpoint: `point3` nella chiamata `CubicTo`
 
 La curva risultante inizia in corrispondenza del punto di inizio e termina in corrispondenza del punto di fine. La curva in genere non passa attraverso due punti di controllo; il controllo punta invece molto simile a magneti per eseguire il pull della curva conseguirli (funzione).
 
-Il modo migliore per farsi un'idea della curva di Bézier cubica è dalle sperimentazioni. Questo è lo scopo del **curva di Bézier** pagina, che deriva da `InteractivePage`. Il [ **BezierCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) file creare un'istanza di `SKCanvasView` e un `TouchEffect`. Il [ **BezierCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) consente di creare quattro file code-behind `TouchPoint` gli oggetti nel relativo costruttore. Il `PaintSurface` gestore eventi crea un' `SKPath` per eseguire il rendering di una curva di Bézier basata su quattro `TouchPoint` gli oggetti e disegna inoltre linee punteggiate tangente dai punti di controllo per i punti finali:
+Il modo migliore per farsi un'idea della curva di Bézier cubica è dalle sperimentazioni. Questo è lo scopo della pagina della **curva di Bezier** che deriva da `InteractivePage`. Il file [**BezierCurvePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) crea un'istanza del `SKCanvasView` e di un `TouchEffect`. Il file code-behind [**BezierCurvePage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) crea quattro oggetti `TouchPoint` nel relativo costruttore. Il gestore dell'evento `PaintSurface` crea un `SKPath` per eseguire il rendering di una curva di Bézier in base ai quattro oggetti `TouchPoint` e disegna anche le linee tangente punteggiate dai punti di controllo agli endpoint:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -93,11 +93,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione:
 
-[![Schermata tripla della pagina curva di Bezier](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
+[![schermata tripla della pagina curva di Bezier](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
 
 Matematica, la curva è una polinomiale cubica. La curva interseca al massimo una linea retta in tre punti. In corrispondenza del punto di inizio, la curva è sempre una linea retta dall'inizio tangente e nella stessa direzione, puntare al primo punto di controllo. In corrispondenza del punto di fine, la curva è sempre una linea retta nel secondo controllo tangente e nella stessa direzione, puntare al punto finale.
 
-Curva di Bézier cubica è sempre limitata da un quadrilatero convesso che collega i quattro punti. Questa operazione viene definita un' *struttura convessa*. Se si trovano i punti di controllo sulla linea retta tra i punti iniziale e finale, quindi la curva di Bézier esegue il rendering come una linea retta. Ma la curva può inoltre superare stesso, come illustrato di seguito nella terza schermata.
+Curva di Bézier cubica è sempre limitata da un quadrilatero convesso che collega i quattro punti. Si tratta di una struttura *convessa*. Se si trovano i punti di controllo sulla linea retta tra i punti iniziale e finale, quindi la curva di Bézier esegue il rendering come una linea retta. Ma la curva può inoltre superare stesso, come illustrato di seguito nella terza schermata.
 
 Una distribuzione del percorso può contenere più curve di Bézier cubiche collegate, ma la connessione tra due curve di Bézier cubiche verrà smooth solo se i seguenti tre punti sono collineari (vale a dire si trovano su una linea retta):
 
@@ -105,35 +105,35 @@ Una distribuzione del percorso può contenere più curve di Bézier cubiche coll
 - il punto finale della curva prima, che è anche il punto iniziale della curva secondo
 - il primo punto di controllo della curva secondo
 
-Nel prossimo articolo sul [ **dati del tracciato SVG**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md), sarà possibile osservare che una funzionalità che semplificano la definizione di curve di Bézier collegate smooth.
+Nell'articolo successivo sui [**dati del percorso SVG**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)si scoprirà una funzionalità per semplificare la definizione di curve di Bézier con connessione uniforme.
 
-In alcuni casi è utile conoscere le equazioni parametriche sottostanti che eseguono il rendering di una curva di Bézier cubica. Per la *t* compreso tra 0 e 1, equazioni parametriche sono i seguenti:
+In alcuni casi è utile conoscere le equazioni parametriche sottostanti che eseguono il rendering di una curva di Bézier cubica. Per *t* compreso tra 0 e 1, le equazioni parametriche sono le seguenti:
 
 x(t) = (1-t) ³x₀ 3t + (1-t) ²x₁ 3t² + (1-t) x₂ t³x₃ +
 
 y(t) = (1-t) ³y₀ 3t + (1-t) ²y₁ 3t² + (1-t) y₂ t³y₃ +
 
-L'esponente massima pari a 3 conferma che si tratta di polynomials cubica. È facile verificare che, quando `t` è uguale a 0, il punto (x₀, y₀), ovvero il punto di inizio e quando `t` è uguale a 1, il punto (x₃, y₃), ovvero il punto finale. In prossimità del punto iniziale (per valori bassi di `t`), il primo punto di controllo (x₁, y₁) ha un nome sicuro effetto e quasi il punto finale (valori elevati di l ' ') secondo punto di controllo (x₂, y₂) ha un effetto sicuro.
+L'esponente massima pari a 3 conferma che si tratta di polynomials cubica. È facile verificare che quando `t` è uguale a 0, il punto è (x ₀, y ₀), che è il punto iniziale e quando `t` è uguale a 1, il punto è (x ₃, y ₃), ovvero il punto finale. In prossimità del punto iniziale (per i valori bassi di `t`), il primo punto di controllo (x ₁, y ₁) ha un effetto forte e, in prossimità del punto finale (valori elevati di ' t'), il secondo punto di controllo (x ₂, y ₂) ha un effetto forte.
 
 ## <a name="bezier-curve-approximation-to-circular-arcs"></a>Curva di Bézier approssimazione per gli archi circolari
 
-In alcuni casi è consigliabile usare una curva di Bezier per il rendering di un arco circolare. Una curva di Bézier cubica approssimare un arco circolare molto bene fino a un quarto di cerchio, in modo da quattro curve di Bézier collegate possono definire un cerchio intero. Viene illustrata questa approssimazione nei due articoli pubblicati più di 25 anni fa:
+A volte è utile usare una curva di Bézier per eseguire il rendering di un arco circolare. Una curva di Bézier cubica può approssimare un arco circolare molto bene fino a un cerchio di quarto, quindi quattro curve di Bézier connesse possono definire un cerchio intero. Viene illustrata questa approssimazione nei due articoli pubblicati più di 25 anni fa:
 
-> Tor Dokken, et al., "Buona approssimazione dei cerchi da curve di Bézier curvatura continua," *Computer Aided geometrica progettazione 7* (1990), 33: 41.
+> Tor Dokken, et al, "una corretta approssimazione dei cerchi per curvare-curve di Bézier continue", " *Computer Aided Geometric Design 7* (1990), 33-41.
 
-> "Approssimazione di archi circolari da cubica Polynomials,", Michael Goldapp *geometrica progettazione 8 assistita* (1991), 227 238.
+> Michael Goldapp, "approssimazione di archi circolari in base ai polinomi cubici", " *Computer Aided Geometric Design 8* (1991), 227-238.
 
-Il diagramma seguente mostra quattro punti etichettati `pto`, `pt1`, `pt2`, e `pt3` la definizione di una curva di Bézier (mostrata in rosso) che simula un arco circolare:
+Il diagramma seguente mostra quattro punti con etichetta `pto`, `pt1`, `pt2`e `pt3` la definizione di una curva di Bézier (mostrata in rosso) che si avvicina a un arco circolare:
 
 ![Approssimazione di un arco circolare con una curva di Bézier](beziers-images/bezierarc45.png)
 
-Le righe all'inizio e fine per i punti di controllo sono tangente al controllo circle e la curva di Bézier e hanno una lunghezza pari *L*. Il primo articolo citato in precedenza indica che la curva di Bézier migliore offre un'approssimazione di un arco circolare quando tale lunghezza *L* viene calcolato come segue:
+Le linee dall'inizio e dalla fine puntano ai punti di controllo sono tangenti al cerchio e alla curva di Bézier e hanno una lunghezza pari a *L*. Il primo articolo citato sopra indica che la curva di Bézier è più simile a un arco circolare quando tale lunghezza *L* viene calcolata nel modo seguente:
 
 L = 4 × tan(α / 4) / 3
 
 La figura mostra un angolo di 45 gradi, in modo 0.265 è uguale a L. Nel codice, tale valore viene moltiplicato il raggio del cerchio desiderato.
 
-Il **arco circolare Bezier** pagina consente di sperimentare la definizione di una curva di Bezier per simulare un arco circolare per gli angoli che vanno fino a 180 gradi. Il [ **BezierCircularArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml) file creare un'istanza il `SKCanvasView` e un `Slider` per la selezione angolo. Il `PaintSurface` gestore dell'evento nel [ **BezierCircularArgPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml.cs) file code-behind Usa una trasformazione per impostare il punto (0, 0) al centro dell'area di disegno. Consente di disegnare un cerchio centrato su quel punto per il confronto e quindi calcola i due punti di controllo della curva di Bézier:
+La pagina di **arco circolare di Bezier** consente di provare a definire una curva di Bézier per approssimare un arco circolare per gli angoli compresi tra un massimo di 180 gradi. Il file [**BezierCircularArcPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml) crea un'istanza del `SKCanvasView` e di un `Slider` per la selezione dell'angolo. Il gestore dell'evento `PaintSurface` nel file code-behind [**BezierCircularArgPage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml.cs) usa una trasformazione per impostare il punto (0,0) sul centro dell'area di disegno. Consente di disegnare un cerchio centrato su quel punto per il confronto e quindi calcola i due punti di controllo della curva di Bézier:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -207,11 +207,11 @@ float Magnitude(SKPoint v)
 
 ```
 
-I punti iniziale e finale (`point0` e `point3`) vengono calcolati in base a equazioni parametriche normale per il controllo circle. Poiché il cerchio è centrato al (0, 0), questi aspetti possono anche essere considerati come vettori radiali dal centro del cerchio per la circonferenza. I punti di controllo sono nelle righe che vengono tangente al controllo circle, pertanto sono ad angolo retto per questi vettori radiali. Un vettore ad angolo retto a un altro è semplicemente il vettore originale con le coordinate X e Y scambiate e uno di essi effettuate negativo.
+I punti iniziale e finale (`point0` e `point3`) vengono calcolati in base alle equazioni parametriche normali per il cerchio. Poiché il cerchio è centrato al (0, 0), questi aspetti possono anche essere considerati come vettori radiali dal centro del cerchio per la circonferenza. I punti di controllo sono nelle righe che vengono tangente al controllo circle, pertanto sono ad angolo retto per questi vettori radiali. Un vettore ad angolo retto a un altro è semplicemente il vettore originale con le coordinate X e Y scambiate e uno di essi effettuate negativo.
 
 Ecco il programma in esecuzione con diverse angolazioni:
 
-[![Schermata tripla della pagina di arco circolare di Bezier](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
+[![schermata tripla della pagina di arco circolare di Bezier](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
 
 Esaminare attentamente la terza schermata e si noterà che la curva di Bézier in particolare si differenzia da un semicerchio quando l'angolo è 180 gradi, mentre la schermata di iOS che indica che sembra contenere un cerchio di quarto correttamente durante l'angolo è 90 gradi.
 
@@ -219,9 +219,9 @@ Calcolare le coordinate di due punti di controllo è piuttosto semplice, quando 
 
 ![Approssimazione di un cerchio del trimestre con una curva di Bézier](beziers-images/bezierarc90.png)
 
-Se il raggio del cerchio è 100, allora *L* è 55 e che è un numero facile da ricordare.
+Se il raggio del cerchio è 100, *L* è 55 e questo è un numero semplice da ricordare.
 
-Il **elevazione al quadrato del cerchio** pagina consente di animare una figura tra un cerchio e un quadrato. Il cerchio viene approssimato da cui coordinate vengono visualizzati nella prima colonna di questa definizione di matrice in quattro curve di Bézier il [ `SquaringTheCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/SquaringTheCirclePage.cs) classe:
+La **quadratura della pagina del cerchio** anima una figura tra un cerchio e un quadrato. Il cerchio è approssimato da quattro curve di Bézier le cui coordinate sono mostrate nella prima colonna di questa definizione di matrice nella classe [`SquaringTheCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/SquaringTheCirclePage.cs) :
 
 ```csharp
 public class SquaringTheCirclePage : ContentPage
@@ -246,9 +246,9 @@ public class SquaringTheCirclePage : ContentPage
 }
 ```
 
-La seconda colonna contiene le coordinate dei quattro curve di Bézier che definiscono un quadrato con area equivale a circa l'area del cerchio. (Disegno un quadrato con il *esatta* area sotto forma di cerchio specificato consiste nello classico irrisolvibile geometrica [elevazione al quadrato del cerchio](https://en.wikipedia.org/wiki/Squaring_the_circle).) Per il rendering di un quadrato con curve di Bézier, due punti di controllo per ogni curva sono uguali e sono collineari con i punti iniziale e finale, in modo che la curva di Bézier viene eseguito il rendering come una linea retta.
+La seconda colonna contiene le coordinate dei quattro curve di Bézier che definiscono un quadrato con area equivale a circa l'area del cerchio. (Il disegno di un quadrato con l'area *esatta* come un determinato cerchio è il problema geometrico solubile classico per [la quadratura del cerchio](https://en.wikipedia.org/wiki/Squaring_the_circle)). Per il rendering di un quadrato con curve di Bézier, i due punti di controllo per ogni curva sono gli stessi e sono colineari con i punti iniziale e finale, quindi la curva di Bézier viene sottoposta a rendering come linea retta.
 
-La terza colonna della matrice è per i valori interpolati per un'animazione. La pagina consente di impostare un timer per 16 millisecondi e il `PaintSurface` gestore viene chiamato con che frequenza:
+La terza colonna della matrice è per i valori interpolati per un'animazione. La pagina imposta un timer per 16 millisecondi e il gestore `PaintSurface` viene chiamato alla velocità seguente:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -291,13 +291,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-I punti sono interpolati basata su un valore sinusoidally intermittenti di `t`. I punti interpolati vengono quindi utilizzati per costruire una serie di quattro curve di Bézier collegate. Di seguito è riportata l'animazione in esecuzione:
+I punti vengono interpolati in base a un valore con oscillazione sinusoidale del `t`. I punti interpolati vengono quindi utilizzati per costruire una serie di quattro curve di Bézier collegate. Di seguito è riportata l'animazione in esecuzione:
 
-[![Schermata tripla del quadrato della pagina del cerchio](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
+[![triplice screenshot del quadrato della pagina del cerchio](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
 
 Un'animazione di questo tipo sarebbe impossibile senza le curve che sono modo algoritmico sufficientemente flessibile da sottoporre a rendering come gli archi circolari e linee rette.
 
-Il **Bezier infinito** pagina consente anche di sfruttare la capacità di una curva di Bézier per simulare un arco circolare. Di seguito è riportato il `PaintSurface` gestore il [ `BezierInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) classe:
+La pagina **Infinity di Bezier** sfrutta anche la capacità di una curva di Bézier di approssimare un arco circolare. Ecco il gestore `PaintSurface` dalla classe [`BezierInfinityPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -338,13 +338,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Potrebbe essere un esercizio ottimo per tracciare queste coordinate su carta grafico per visualizzare il tipo di correlazione. Il simbolo di infinito è centrato intorno al punto (0, 0) e dispone di due cicli centri di (–150, 0) e (150, 0) e raggio pari a 100. Nella serie di `CubicTo` comandi, è possibile visualizzare coordinate dei punti di controllo in modo semplice i valori –95 e –205 X, tali valori sono –150 + /-55, 205 e 95 (150 + /-55), oltre 250 e –250 per i lati destro e sinistro. L'unica eccezione è quando il simbolo di infinito incrocia al centro. In tal caso, i punti di controllo hanno coordinate con una combinazione di 50 e da – 50 per appiattire la curva vicino al centro.
+Potrebbe essere un esercizio ottimo per tracciare queste coordinate su carta grafico per visualizzare il tipo di correlazione. Il simbolo di infinito è centrato intorno al punto (0, 0) e dispone di due cicli centri di (–150, 0) e (150, 0) e raggio pari a 100. Nella serie di comandi di `CubicTo`, è possibile visualizzare le coordinate X dei punti di controllo che assumono valori di-95 e-205 (tali valori sono – 150 Plus e meno 55), 205 e 95 (150 Plus e meno 55), oltre a 250 e-250 per il lato destro e sinistro. L'unica eccezione è quando il simbolo di infinito incrocia al centro. In tal caso, i punti di controllo hanno coordinate con una combinazione di 50 e da – 50 per appiattire la curva vicino al centro.
 
 Ecco il simbolo di infinito:
 
-[![Schermata tripla della pagina dell'infinito di Bézier](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
+[![schermata tripla della pagina dell'infinito di Bézier](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
 
-È un po' più efficiente verso il centro di accesso di un numero infinito sottoposto a rendering dal **arco infinito** pagina dalle [ **tre modi per disegnare un arco** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) articolo.
+È leggermente più uniforme verso il centro rispetto al segno di infinito sottoposto a rendering dalla pagina **Infinity Arc** dei [**tre modi per creare un articolo di arco**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) .
 
 ## <a name="the-quadratic-bzier-curve"></a>La curva di Bézier quadratica
 
@@ -354,7 +354,7 @@ x(t) = (1-t) ²x₀ 2t + (1-t) x₁ t²x₂ +
 
 y(t) = (1-t) ²y₀ 2t + (1-t) y₁ t²y₂ +
 
-Per aggiungere una curva di Bézier quadratica in un percorso, usare il [ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint)) metodo o il [ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(System.Single,System.Single,System.Single,System.Single)) overload con separato `x` e `y` coordinate:
+Per aggiungere una curva di Bézier quadratica a un tracciato, usare il metodo [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint)) o l'overload [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo(System.Single,System.Single,System.Single,System.Single)) con coordinate `x` e `y` separate:
 
 ```csharp
 public void QuadTo (SKPoint point1, SKPoint point2)
@@ -362,9 +362,9 @@ public void QuadTo (SKPoint point1, SKPoint point2)
 public void QuadTo (Single x1, Single y1, Single x2, Single y2)
 ```
 
-I metodi di aggiungono una curva dalla posizione corrente per `point2` con `point1` come punto di controllo.
+I metodi aggiungono una curva dalla posizione corrente a `point2` con `point1` come punto di controllo.
 
-È possibile sperimentare curve di Bézier quadratiche con il **quadratica** pagina, che è molto simile al **curva di Bézier** pagina ma contiene solo tre punti di tocco. Di seguito è riportato il `PaintSurface` gestore nel [ **QuadraticCurve.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/QuadraticCurvePage.xaml.cs) file code-behind:
+È possibile sperimentare curve di Bézier quadratiche con la pagina della **curva quadratica** , che è molto simile alla pagina della **curva di Bezier** , ad eccezione del fatto che contiene solo tre punti di tocco. Ecco il gestore `PaintSurface` nel file code-behind [**QuadraticCurve.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/QuadraticCurvePage.xaml.cs) :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -405,19 +405,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 E qui è in esecuzione:
 
-[![Schermata tripla della pagina della curva quadratica](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
+[![schermata tripla della pagina della curva quadratica](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
 
 Le linee punteggiate sono tangente della curva nel punto di inizio e fine e soddisfare in corrispondenza del punto di controllo.
 
 Se necessaria una curva di una forma generale, ma si preferisce la praticità di un solo punto di controllo anziché due, è consigliabile di Bézier quadratica. Esegue il rendering di Bézier quadratica in modo più efficiente rispetto a qualsiasi altra curva, motivo per cui viene usato internamente nel Skia per eseguire il rendering ellittici.
 
-Tuttavia, la forma di una curva di Bézier quadratica non ellittica, motivo per cui sono necessari più Béziers quadratica per simulare un arco ellittico. Di Bézier quadratica è invece un segmento di un parabolica.
+Tuttavia, la forma di una curva di Bézier quadratica non è ellittica, motivo per cui sono necessari più Bézier quadratici per approssimare un arco ellittico. La Bézier quadratica è invece un segmento di una parabola.
 
 ## <a name="the-conic-bzier-curve"></a>La curva di Bézier conica
 
-La curva di Bézier conica &mdash; noto anche come il razionale curva di Bézier quadratica &mdash; è un'aggiunta relativamente recente della famiglia di curve di Bézier. Ad esempio la curva di Bézier quadratica, la curva di Bézier quadratica razionale implica un punto di partenza, un punto finale e un punto di controllo. Ma la curva di Bézier quadratica razionale richiede anche un *peso* valore. Viene chiamato un *razionali* quadratica poiché le formule parametriche coinvolgono rapporti.
+La curva di Bézier conica &mdash; nota anche come curva di Bézier quadratica razionale &mdash; è un'aggiunta relativamente recente alla famiglia di curve di Bézier. Ad esempio la curva di Bézier quadratica, la curva di Bézier quadratica razionale implica un punto di partenza, un punto finale e un punto di controllo. Tuttavia, la curva di Bézier quadratica razionale richiede anche un valore di *peso* . Viene chiamato un quadratino *razionale* perché le formule parametriche coinvolgono i rapporti.
 
-Le equazioni parametriche per X e Y sono percentuali che condividono il denominatore stesso. Di seguito è riportato l'equazione per il denominatore *t* compreso tra 0 a 1 e il valore di peso *w*:
+Le equazioni parametriche per X e Y sono percentuali che condividono il denominatore stesso. Di seguito è illustrata l'equazione per il denominatore per *t* compreso tra 0 e 1 e il valore di peso *w*:
 
 Ät = (1-t) ² + 2wt(1 – t) + t²
 
@@ -429,9 +429,9 @@ x(t) = ((1 – t)²x₀ + 2wt(1 – t)x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ 2wt + (1-t) y₁ t²y₂ +)) Ät ÷
 
-Vengono inoltre chiamate razionali curve di Bézier quadratiche *coniche* perché possono rappresentare esattamente i segmenti di una sezione conica &mdash; hyperbolas, parabolas, sui puntini di sospensione e cerchi.
+Anche le curve di Bézier quadratiche razionali sono denominate *coniche* , in quanto possono rappresentare esattamente segmenti di qualsiasi sezione conica &mdash; iperboli, parabole, ellissi e cerchi.
 
-Per aggiungere una curva di Bézier quadratica rational a un percorso, usare il [ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) metodo o il [ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(System.Single,System.Single,System.Single,System.Single,System.Single)) overload con separato `x` e `y` coordinate:
+Per aggiungere una curva di Bézier quadratica razionale a un tracciato, usare il metodo [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) o l'overload [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo(System.Single,System.Single,System.Single,System.Single,System.Single)) con coordinate `x` e `y` separate:
 
 ```csharp
 public void ConicTo (SKPoint point1, SKPoint point2, Single weight)
@@ -439,9 +439,9 @@ public void ConicTo (SKPoint point1, SKPoint point2, Single weight)
 public void ConicTo (Single x1, Single y1, Single x2, Single y2, Single weight)
 ```
 
-Si noti che l'elemento finale `weight` parametro.
+Si noti il parametro finale `weight`.
 
-Il **curva conica** pagina consente di sperimentare queste curve. La classe `ConicCurvePage` deriva da `InteractivePage`. Il [ **ConicCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) crea un'istanza di file un `Slider` per selezionare un valore di ponderazione compreso tra -2 e 2. Il [ **ConicCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) vengono creati tre file code-behind `TouchPoint` oggetti e il `PaintSurface` gestore esegue semplicemente il rendering la curva risultante con le righe al controllo della tangente punti:
+La pagina della **curva conica** consente di sperimentare le curve. La classe `ConicCurvePage` deriva da `InteractivePage`. Il file [**ConicCurvePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) crea un'istanza di un `Slider` per selezionare un valore di peso compreso tra-2 e 2. Il file code-behind [**ConicCurvePage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) crea tre oggetti `TouchPoint` e il gestore `PaintSurface` esegue semplicemente il rendering della curva risultante con le linee tangente nei punti di controllo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -483,19 +483,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione:
 
-[![Schermata tripla della pagina a curva conica](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
+[![schermata tripla della pagina a curva conica](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
 
 Come può notare, il punto di controllo sembra pull la curva per lo più quando il peso è elevato. Quando il peso è uguale a zero, la curva diventa una linea retta tra il punto iniziale per il punto finale.
 
-In teoria, i pesi negativi sono consentiti e causano la curva a piegare *assente* dal punto di controllo. Tuttavia, ne vengono ponderati-1 o di sotto causa il denominatore in equazioni parametriche diventare negativo per particolari valori di *t*. Probabilmente per questo motivo, i pesi negativi vengono ignorati nel `ConicTo` metodi. Il **curva conica** programma consente di impostare pesi negativi, ma come si può vedere eseguendo più esperimenti, pesi negativi hanno lo stesso effetto un peso pari a zero e causano una linea retta da sottoporre a rendering.
+In teoria, i pesi negativi sono consentiti e determinano la curvatura della *curva dal punto di controllo* . Tuttavia, i pesi di-1 o di seguito fanno sì che il denominatore nelle equazioni parametriche diventi negativo per determinati valori di *t*. Per questo motivo, è probabile che i pesi negativi vengano ignorati nei metodi `ConicTo`. Il programma di **curva conica** consente di impostare pesi negativi, ma come è possibile vedere sperimentando, i pesi negativi hanno lo stesso effetto di un peso di zero e determinano il rendering di una linea retta.
 
-È molto semplice derivare il punto di controllo e il peso da usare il `ConicTo` metodo consente di disegnare un arco circolare fino a (ma non con) un semicerchio. Nel diagramma seguente, le tangenti dai punti iniziale e finale soddisfano in corrispondenza del punto di controllo.
+È molto facile derivare il punto di controllo e il peso per usare il metodo `ConicTo` per creare un arco circolare fino a un semicerchio, ma non includerlo. Nel diagramma seguente, le tangenti dai punti iniziale e finale soddisfano in corrispondenza del punto di controllo.
 
 ![Rendering di Arco conico di un arco circolare](beziers-images/conicarc.png)
 
-È possibile usare la trigonometria per determinare la distanza del punto di controllo dal centro del cerchio: Si tratta del raggio del cerchio diviso per il coseno della metà dell'angolo α. Per disegnare un arco circolare tra i punti iniziale e finale, impostare il peso su tale stesso coseno metà dell'angolo. Si noti che se l'angolo è 180 gradi, quindi le righe tangente mai conformi e il peso è uguale a zero. Ma per gli angoli minore di 180 gradi, i calcoli matematici funzionano correttamente.
+È possibile usare trigonometria per determinare la distanza del punto di controllo dal centro del cerchio: è il raggio del cerchio diviso per metà dell'angolo α il coseno. Per disegnare un arco circolare tra i punti iniziale e finale, impostare il peso su tale stesso coseno metà dell'angolo. Si noti che se l'angolo è 180 gradi, quindi le righe tangente mai conformi e il peso è uguale a zero. Ma per gli angoli minore di 180 gradi, i calcoli matematici funzionano correttamente.
 
-Il **arco circolare conica** pagina viene illustrata questa. Il [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea un'istanza di file un `Slider` per la selezione angolo. Il `PaintSurface` gestore nel [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) file code-behind viene calcolato il punto di controllo e il peso:
+Questa operazione viene illustrata nella pagina di **arco circolare conica** . Il file [**ConicCircularArc. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea un'istanza di un `Slider` per la selezione dell'angolo. Il gestore `PaintSurface` nel file code-behind [**ConicCircularArc.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcola il punto di controllo e il peso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -545,15 +545,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Come si può notare, non vi è alcuna differenza tra visual il `ConicTo` percorso mostrati in rosso e il cerchio sottostante visualizzati per riferimento:
+Come si può notare, non esiste alcuna differenza visiva tra il percorso di `ConicTo` mostrato in rosso e il cerchio sottostante visualizzato come riferimento:
 
-[![Schermata tripla della pagina di arco circolare conica](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
+[![schermata tripla della pagina di arco circolare conica](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
 
 Ma impostare l'angolo di 180 gradi e il matematica hanno esito negativo.
 
-Rappresenta un problema in questo caso che `ConicTo` nepodporuje pesi negativi, poiché in teoria (basato su equazioni parametriche), è possibile eseguire il cerchio con un'altra chiamata a `ConicTo` con gli stessi punti, ma un valore negativo del peso. In tal modo la creazione di un cerchio intero con appena due `ConicTo` curve basato su qualsiasi angolatura tra (ma non inclusa) zero gradi e 180 gradi.
+In questo caso, in questo caso, `ConicTo` non supporta i pesi negativi, perché in teoria, in base alle equazioni parametriche, il cerchio può essere completato con un'altra chiamata a `ConicTo` con gli stessi punti ma con un valore negativo del peso. Ciò consentirebbe la creazione di un cerchio intero con solo due curve `ConicTo` basate su qualsiasi angolo compreso tra (ma senza includere) zero gradi e 180 gradi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

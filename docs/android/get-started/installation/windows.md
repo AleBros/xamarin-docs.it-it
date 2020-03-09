@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020696"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912467"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
@@ -21,7 +21,7 @@ _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.A
 ## <a name="overview"></a>Panoramica
 
 Poiché Xamarin è ora incluso gratuitamente in tutte le edizioni di Visual Studio e non richiede una licenza separata, è possibile usare il programma di installazione di Visual Studio per scaricare e installare gli strumenti di Xamarin.Android.
-(L'installazione manuale e i passaggi di licenza richiesti per le versioni precedenti di Xamarin.Android non sono più necessari). In questa guida si apprenderà quanto segue:
+(L'installazione manuale e i passaggi di licenza richiesti per le versioni precedenti di Novell. Android non sono più necessari). In questa guida si apprenderà quanto segue:
 
 - Configurare percorsi personalizzati per Java Development Kit, Android SDK e Android NDK.
 
@@ -71,9 +71,9 @@ L'[emulatore Android](https://developer.android.com/studio/run/emulator) può es
 
 L'emulazione di un dispositivo Android in un computer richiede i componenti seguenti:
 
-- **Emulatore Android di Google**: si tratta di un emulatore basato su [QEMU](https://www.qemu.org/) che crea un dispositivo virtualizzato eseguito nella workstation dello sviluppatore.
-- **Immagine dell'emulatore**: un'_immagine dell'emulatore_ è un modello o una specifica dell'hardware e del sistema operativo che deve essere virtualizzato. Ad esempio, un'immagine dell'emulatore identificherà i requisiti hardware per Nexus 5X che esegue Android 7.0 con Google Play Services installato. Un'altra immagine dell'emulatore potrebbe specificare una tablet da 10" che esegue Android 6.0.
-- **Dispositivo virtuale Android (AVD)** un _dispositivo virtuale Android_ è un dispositivo Android emulato creato da un'immagine dell'emulatore. Durante l'esecuzione e il test di app Android, Xamarin.Android avvierà l'emulatore Android, avviano un AVD specifico, installerà il pacchetto APK ed eseguirà l'app.
+- **Google emulatore Android** &ndash; questo è un emulatore basato su [QEMU](https://www.qemu.org/) che consente di creare un dispositivo virtualizzato in esecuzione nella workstation dello sviluppatore.
+- **Un'immagine dell'emulatore** &ndash; un' _immagine dell'emulatore_ è un modello o una specifica dell'hardware e del sistema operativo che deve essere virtualizzato. Ad esempio, un'immagine dell'emulatore identificherà i requisiti hardware per Nexus 5X che esegue Android 7.0 con Google Play Services installato. Un'altra immagine dell'emulatore potrebbe specificare una tablet da 10" che esegue Android 6.0.
+- **Android Virtual Device (AVD)** &ndash; un _dispositivo virtuale Android_ è un dispositivo Android emulato creato da un'immagine dell'emulatore. Durante l'esecuzione e il test di app Android, Xamarin.Android avvierà l'emulatore Android, avviano un AVD specifico, installerà il pacchetto APK ed eseguirà l'app.
 
 Grazie a immagini dell'emulatore speciali ottimizzate per l'architettura x86 e a una delle due tecnologie di virtualizzazione, è possibile ottenere un miglioramento significativo delle prestazioni durante lo sviluppo di computer x86:
 
@@ -101,9 +101,9 @@ Nella finestra di dialogo **Nuovo progetto** selezionare **Android** in **Modell
 
 [![Finestra di dialogo Nuovo progetto per la creazione di un'app Android vuota](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
-La procedura è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
+L'operazione è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo si è appreso come configurare e installare la piattaforma Xamarin.Android in Windows, come configurare Visual Studio con percorsi di installazione personalizzati per Java JDK e Android SDK (facoltativo), come avviare SDK Manager per installare altri componenti Android SDK, come configurare un dispositivo Android o un emulatore e come iniziare a creare la prima applicazione.
 
@@ -111,9 +111,9 @@ Il passaggio successivo consiste nel seguire le esercitazioni [Hello, Android](~
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Download di Visual Studio](https://visualstudio.microsoft.com/vs/)
+- [Scaricare Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Installazione degli strumenti di Visual Studio per Xamarin](~/get-started/installation/windows.md)
-- [Requisiti di sistema](~/cross-platform/get-started/requirements.md)
+- [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)
 - [Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md)
 - [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md)

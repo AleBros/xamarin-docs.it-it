@@ -9,11 +9,11 @@ ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545665"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912629"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Binding di base di Xamarin.Forms
 
@@ -97,7 +97,7 @@ Tuttavia l'inclusione del nome della classe è un buon promemoria dell'oggetto d
 
 Quando si aziona l'elemento `Slider`, l'elemento `Label` ruota di conseguenza:
 
-[![Associazione di codice di base](basic-bindings-images/basiccodebinding-small.png "Associazione di codice di base")](basic-bindings-images/basiccodebinding-large.png#lightbox "Associazione di codice di base")
+[![Basic Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
 
 La pagina **Basic Xaml Binding** (Binding XAML di base) è identica alla pagina **Basic Code Binding** (Binding di codice di base) salvo per il fatto che definisce l'intero data binding in XAML:
 
@@ -193,11 +193,11 @@ Il costruttore `Binding` ha 6 parametri, pertanto il parametro `source` è speci
 
 L'esecuzione del programma può dare risultati inattesi:
 
-[![Associazione di codice alternativa](basic-bindings-images/alternativecodebinding-small.png "Associazione di codice alternativa")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Associazione di codice alternativa")
+[![Alternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
 
 La schermata iOS a sinistra visualizza l'aspetto della schermata quando la pagina viene visualizzata per la prima volta. Dove si trova `Label`?
 
-Il problema è che `Slider` ha un valore iniziale pari a 0. Di conseguenza anche la proprietà `Scale` di `Label` è impostata su 0, e questo sovrascrive il valore predefinito 1. Di conseguenza, inizialmente `Label` non è visibile. Come dimostra lo screenshot di Android, è possibile modificare il `Slider` per riportare il `Label`, ma la sua scomparsa iniziale è la disconcerting.
+Il problema è che `Slider` ha un valore iniziale pari a 0. Di conseguenza anche la proprietà `Scale` di `Label` è impostata su 0, e questo sovrascrive il valore predefinito 1. Di conseguenza, inizialmente `Label` non è visibile. Come dimostra lo screenshot di Android, è possibile modificare `Slider` in modo da rendere di nuovo visibile `Label`, ma la scomparsa iniziale dell'elemento può risultare inattesa.
 
 L'[articolo successivo](binding-mode.md) illustra come evitare questo problema inizializzando `Slider` in base al valore predefinito della proprietà `Scale`.
 
@@ -255,7 +255,7 @@ Le estensioni di markup XAML sono in genere delimitate da parentesi graffe, ma p
 </Label>
 ```
 
-Ora le proprietà `Source` e `Path` sono attributi XAML normali: i valori vengono visualizzati all'interno di virgolette e gli attributi non sono separati da una virgola. Anche l'estensione di markup `x:Reference` può trasformarsi in un elemento oggetto:
+Ora le proprietà `Source` e `Path` sono attributi XAML normali: i valori vengono visualizzati racchiusi tra virgolette e gli attributi non sono separati da una virgola. Anche l'estensione di markup `x:Reference` può trasformarsi in un elemento oggetto:
 
 ```xaml
 <Label Text="TEXT"
@@ -325,7 +325,7 @@ L'esempio **Binding Context Inheritance** (Ereditarietà del contesto di binding
 
 La proprietà `BindingContext` di `StackLayout` è impostata sull'oggetto `slider`. Questo contesto di binding viene ereditato sia da `Label` che da `BoxView` e le proprietà `Rotation` di entrambi sono impostate sulla proprietà `Value` di `Slider`:
 
-[![Ereditarietà del contesto di associazione](basic-bindings-images/bindingcontextinheritance-small.png "Ereditarietà del contesto di binding")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Ereditarietà del contesto di binding")
+[![Ereditarietà del contesto di binding](basic-bindings-images/bindingcontextinheritance-small.png "Ereditarietà del contesto di binding")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Ereditarietà del contesto di binding")
 
 Nell'[articolo seguente](binding-mode.md) si vedrà come la *modalità di binding* può modificare il flusso di dati tra gli oggetti di origine e destinazione.
 
