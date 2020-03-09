@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78291583"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917552"
 ---
 # <a name="unified-api-overview"></a>Panoramica di API unificata
 
@@ -134,7 +134,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>Matrici e System. Collections. Generic
 
-Poiché C# gli indicizzatori prevedono un tipo di `int`, è necessario eseguire il cast esplicito di `nint` valori `int` per accedere agli elementi in una raccolta o in una matrice. Ad esempio,
+Poiché C# gli indicizzatori prevedono un tipo di `int`, è necessario eseguire il cast esplicito di `nint` valori `int` per accedere agli elementi in una raccolta o in una matrice. Ad esempio:
 
 ```csharp
 public List<string> Names = new List<string>();

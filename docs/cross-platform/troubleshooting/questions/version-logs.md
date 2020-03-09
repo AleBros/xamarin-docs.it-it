@@ -1,6 +1,6 @@
 ---
 title: Dove si possono trovare informazioni sulla versione e i log?
-description: Questo documento descrive dove trovare i log e le informazioni sulla versione di Xamarin. Queste informazioni sono utili per la diagnosi dei problemi, l'invio di bug o il supporto.
+description: Questo documento descrive dove trovare i log e le informazioni sulla versione di Novell. Queste informazioni sono utili per la diagnosi dei problemi, l'invio di bug o il supporto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013166"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912473"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Dove si possono trovare informazioni sulla versione e i log?
 
@@ -26,7 +26,7 @@ ms.locfileid: "73013166"
   - [Log di Windows](#windows-logs)
     - Xamarin Studio
     - Xamarin for Visual Studio
-    - Programma di installazione universale Xamarin
+    - Programma di installazione universale Novell
     - Programmi di installazione singoli `.msi`, log dettagliati
     - Avvio di Visual Studio, log dettagliati
   - [Log Mac](#mac-logs)
@@ -35,7 +35,7 @@ ms.locfileid: "73013166"
     - Xamarin Studio
     - Programma di installazione di Xamarin
 - [Output di compilazione dettagliato](#verbose-build-output-logs)
-- [Log di debug per le app Xamarin.Android e Xamarin.iOS](#debug-logs-for-xamarin-apps)
+- [Log di debug per le app Novell. Android e Novell. iOS](#debug-logs-for-xamarin-apps)
   - Log logcat Android `adb`
   - log del simulatore iOS (su Mac)
   - log del dispositivo iOS (su Mac)
@@ -78,7 +78,7 @@ Per ogni posizione di log, assicurarsi di eseguire il comprimere e alleghi l'int
 
 ### <a name="a-idwindows-logs-namewindows-logs-windows-logs"></a><a id="windows-logs" name="windows-logs" />registri di Windows
 
-#### <a name="a-idwindows-logs-xamarin-vs-namewindows-logs-xamarin-vs--visual-studio-tools-for-xamarin"></a><a id="windows-logs-xamarin-vs" name="windows-logs-xamarin-vs" /> Strumenti di Visual Studio per Xamarin
+#### <a name="a-idwindows-logs-xamarin-vs-namewindows-logs-xamarin-vs--visual-studio-tools-for-xamarin"></a><a id="windows-logs-xamarin-vs" name="windows-logs-xamarin-vs" /> Strumenti di Visual Studio per Novell
 
 `%LOCALAPPDATA%\Xamarin\Logs`
 
@@ -88,7 +88,7 @@ Per ogni posizione di log, assicurarsi di eseguire il comprimere e alleghi l'int
 
 #### <a name="a-idvs-2015-namevs-2015--visual-studio-2015"></a><a id="vs-2015" name="vs-2015" /> Visual Studio 2015
 
-#### <a name="a-idwindows-universal-installer-namewindows-universal-installer--xamarin-universal-installer"></a>programma di installazione di <a id="windows-universal-installer" name="windows-universal-installer" /> Xamarin "Universal"
+#### <a name="a-idwindows-universal-installer-namewindows-universal-installer--xamarin-universal-installer"></a>programma di installazione di <a id="windows-universal-installer" name="windows-universal-installer" /> Novell "Universal"
 
 `%LOCALAPPDATA%\Xamarin\Universal`
 
@@ -126,13 +126,13 @@ Questa cartella può essere aperta anche tramite "Help-> Apri directory log".
 
 Questa cartella può essere aperta anche tramite "Help-> Apri directory log".
 
-#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a>programma di installazione di <a id="mac-universal-installer" name="mac-universal-installer" />Xamarin "Universal"
+#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a>programma di installazione di <a id="mac-universal-installer" name="mac-universal-installer" />Novell "Universal"
 
 `~/Library/Logs/XamarinInstaller/Universal`
 
 Questi sono i log del programma di installazione `XamarinInstaller.dmg`.
 
-#### <a name="a-idmac-build-host-namemac-build-host-xamarin-build-host"></a><a id="mac-build-host" name="mac-build-host" />host di compilazione Xamarin
+#### <a name="a-idmac-build-host-namemac-build-host-xamarin-build-host"></a><a id="mac-build-host" name="mac-build-host" />host di compilazione Novell
 
 `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
 
@@ -148,7 +148,7 @@ Questi sono i log del programma di installazione `XamarinInstaller.dmg`.
      - Visual Studio (Windows): Visualizza **output > > Visualizza output da: compilazione**
      - Visual Studio per Mac: **visualizza > rilievi > errori > output di compilazione (tabulazione)**
 
-## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />i log di debug per le app Xamarin.Android e Xamarin.iOS
+## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />i log di debug per le app Novell. Android e Novell. iOS
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
@@ -160,7 +160,7 @@ Si noti che questa voce di menu verrà visualizzata solo dopo l'avvio dell'app.
 
 **Visualizzare l'output > > visualizzare l'output da: debug**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />i log logcat [`adb`](https://developer.android.com/tools/help/adb.html) Android
+### <a name="a-idadb-logcat-nameadb-logcat-android-adb-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />i log logcat [`adb`](https://developer.android.com/tools/help/adb.html) Android
 
 Dopo aver eseguito il comando `adb`, alleghi il file **android_logcat. txt** dal desktop. Queste istruzioni presuppongono che sia collegato un solo dispositivo.
 
