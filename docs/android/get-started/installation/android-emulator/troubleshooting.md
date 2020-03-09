@@ -9,15 +9,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794823"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912526"
 ---
 # <a name="android-emulator-troubleshooting"></a>Risoluzione dei problemi dell'emulatore Android
 
-_In questo articolo vengono descritti i problemi e i messaggi di avviso più comuni che si verificano durante la configurazione e l'esecuzione dell'emulatore Android. Vengono inoltre descritte le soluzioni per risolvere questi errori e vari suggerimenti per diagnosticare problemi dell'emulatore e risolverli._
+_Questo articolo descrive i messaggi di avviso e i problemi più comuni che si verificano durante la configurazione e l'esecuzione del emulatore Android. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori, oltre a vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
 
 ::: zone pivot="windows"
 
@@ -39,7 +39,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Esempio:
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
 
    ```shell
    List of devices attached
@@ -70,7 +70,7 @@ Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google
 
 <a name="perf-win" />
 
-## <a name="performance-issues"></a>Problemi relativi alle prestazioni
+## <a name="performance-issues"></a>Problemi di prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 
@@ -139,7 +139,7 @@ VT feature disabled in BIOS/UEFI
 Per risolvere questo problema, eseguire il riavvio del computer in modalità BIOS e abilitare le opzioni seguenti:
 
 - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
-- Protezione esecuzione programmi basata su hardware.
+- Protezione esecuzione programmi imposta dall'hardware.
 
 Se l'accelerazione hardware è abilitata e il BIOS è configurato correttamente, l'emulatore dovrebbe essere in esecuzione con l'accelerazione hardware.
 Si potrebbero comunque riscontrare problemi specifici di Hyper-V e HAXM, come descritto di seguito.
@@ -375,7 +375,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Esempio:
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
 
    ```shell
    List of devices attached
@@ -406,7 +406,7 @@ Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google
 
 <a name="perf-mac" />
 
-## <a name="performance-issues"></a>Problemi relativi alle prestazioni
+## <a name="performance-issues"></a>Problemi di prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 

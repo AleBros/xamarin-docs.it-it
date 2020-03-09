@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487763"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910859"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
 
@@ -20,7 +20,7 @@ Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene a
 
 - Le app Watch possono [eseguire codice](#run-code) sull'app padre nell'iPhone.
 
-- Espressioni di controllo delle estensioni can [condividere un percorso di archiviazione](#shared-storage) con l'app iPhone padre.
+- Le estensioni Watch possono [condividere un percorso di archiviazione](#shared-storage) con l'app per iPhone padre.
 
 - Usare la consegna per passare i dati da una notifica all'app Watch, inviando l'utente a uno specifico controller di interfaccia nell'app.
 
@@ -35,11 +35,11 @@ Questi due esempi illustrano come usare `WCSession` per eseguire codice e inviar
 
 ## <a name="shared-storage"></a>Archiviazione condivisa
 
-Se si configura un [gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) quindi estensioni iOS 8 (incluse le estensioni di espressioni di controllo) possono condividere dati con l'app padre.
+Se si configura un [gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) , le estensioni iOS 8 (incluse le estensioni Watch) possono condividere dati con l'app padre.
 
 ### <a name="nsuserdefaults"></a>NSUserDefaults
 
-Il codice seguente può essere scritto l'estensione dell'app watch sia l'app iPhone padre in modo che si può fare riferimento a un set comune di `NSUserDefaults`:
+Il codice seguente può essere scritto sia nell'estensione dell'app Watch che nell'app per iPhone padre, in modo che possano fare riferimento a un set comune di `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -57,7 +57,7 @@ var count = shared.IntForKey ("count");
 
 <a name="files" />
 
-### <a name="files"></a>Files
+### <a name="files"></a>File
 
 L'estensione di app e guardare iOS è anche possibile condividere i file usando un percorso di file comuni.
 
@@ -70,11 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Nota: se il percorso `null` quindi selezionare il [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per assicurarsi che i profili di provisioning siano stati configurati correttamente e sono stati scaricati o installati nel computer di sviluppo.
+Nota: se il percorso è `null`, controllare la [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per assicurarsi che i profili di provisioning siano stati configurati correttamente e che siano stati scaricati o installati nel computer di sviluppo.
 
-Per altre informazioni, vedere la [le funzionalità di gruppi di App](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentazione.
+Per ulteriori informazioni, vedere la documentazione relativa alle [funzionalità del gruppo di app](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Riferimento WKInterfaceController di Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Apple condivisione dei dati con l'App che lo contiene](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Apple condivide i dati con l'app che lo contiene](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
