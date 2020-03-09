@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/11/2020
 ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292301"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918612"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Interazione CarouselView di Novell. Forms
 
@@ -49,7 +49,7 @@ Quando l'elemento attualmente visualizzato viene modificato, la proprietà `Curr
 > [!IMPORTANT]
 > La proprietà `Position` viene modificata quando viene modificata la proprietà `CurrentItem`. Questo comporterà l'esecuzione del `PositionChangedCommand` e la generazione dell'evento `PositionChanged`.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>Event
 
 Nell'esempio di codice XAML riportato di seguito viene illustrato un [`CarouselView`](xref:Xamarin.Forms.CarouselView) che utilizza un gestore eventi per rispondere alla modifica dell'elemento corrente:
 
@@ -122,7 +122,7 @@ Quando l'elemento attualmente visualizzato viene modificato, la proprietà `Posi
 > [!NOTE]
 > Se si imposta la proprietà `Position` su 0, il primo elemento della raccolta sottostante verrà visualizzato.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>Event
 
 Nell'esempio di codice XAML riportato di seguito viene illustrato un [`CarouselView`](xref:Xamarin.Forms.CarouselView) che utilizza un gestore eventi per rispondere alla modifica della proprietà `Position`:
 

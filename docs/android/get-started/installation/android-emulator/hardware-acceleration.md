@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: a724a21dfffead307ca3d65d5ff134cf2d7c90db
-ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77374036"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912309"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Accelerazione hardware per le prestazioni dell'emulatore (Hyper-V e HAXM)
 
@@ -24,11 +24,11 @@ Tuttavia, l'emulatore Android viene eseguito troppo lentamente se nel computer c
 
 | Scenario    | HAXM        | WHPX       | Hypervisor.Framework |
 | ----------- | ----------- | -----------| ----------- |
-| È disponibile un processore Intel | x | x | x |
-| È disponibile un processore AMD   |   | x |   |
-| Si vuole supportare Hyper-V |   | x |   |
+| È disponibile un processore Intel | X | X | X |
+| È disponibile un processore AMD   |   | X |   |
+| Si vuole supportare Hyper-V |   | X |   |
 | Si vuole supportare la virtualizzazione annidata |   | Limitato |   |
-| Si vogliono usare tecnologie come Docker  |   | x | x |
+| Si vogliono usare tecnologie come Docker  |   | X | X |
 
 ::: zone pivot="windows"
 
@@ -72,7 +72,7 @@ Hyper-V viene eseguito nella piattaforma Windows Hypervisor. Per usare l'emulato
 - Nel BIOS del computer è necessario abilitare gli elementi seguenti:
 
   - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
-  - Protezione esecuzione programmi basata su hardware.
+  - Protezione esecuzione programmi imposta dall'hardware.
 
 - Il computer deve disporre dell'Aggiornamento di Windows 10 - aprile 2018 (build 1803) o versione successiva. È possibile verificare se la versione di Windows è aggiornata usando la procedura seguente:
 
@@ -89,7 +89,7 @@ Per verificare che l'hardware e il software del computer siano compatibili con H
 systeminfo
 ```
 
-Se tutti i requisiti di Hyper-V elencati hanno un valore **Yes**, i computer possono supportare Hyper-V. Esempio:
+Se tutti i requisiti di Hyper-V elencati hanno un valore **Yes**, i computer possono supportare Hyper-V. Ad esempio:
 
 [![Output di systeminfo di esempio](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
@@ -130,7 +130,7 @@ Se l'hardware supporta HAXM, è possibile controllare se HAXM è già installato
     sc query intelhaxm
     ```
 
-2. Esaminare l'output per vedere se il processo HAXM è in esecuzione. In caso affermativo, lo stato di `intelhaxm` verrà visualizzato come `RUNNING`. Esempio:
+2. Esaminare l'output per vedere se il processo HAXM è in esecuzione. In caso affermativo, lo stato di `intelhaxm` verrà visualizzato come `RUNNING`. Ad esempio:
 
     ![Output del comando sc query se HAXM è disponibile](hardware-acceleration-images/win/05-sc_query-w158.png)
 
@@ -152,7 +152,7 @@ I pacchetti di installazione di HAXM per Windows sono disponibili nella pagina [
 
 Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine del sistema basata su **x86**. Se si usa un'immagine del sistema basata su ARM, il dispositivo virtuale non verrà accelerato e verrà eseguito lentamente.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win) dell'emulatore Android.
 
@@ -241,7 +241,7 @@ I pacchetti di installazione di HAXM per macOS sono disponibili nella pagina [In
 
    [![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac) dell'emulatore Android.
 

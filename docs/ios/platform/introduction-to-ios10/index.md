@@ -1,6 +1,6 @@
 ---
 title: Introduzione a iOS 10
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 10 per gli sviluppatori Xamarin.iOS.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 10 per gli sviluppatori Novell. iOS.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032219"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910857"
 ---
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 
@@ -28,7 +28,7 @@ Apple ha aggiunto diverse nuove API e servizi in iOS 10, oltre a molti miglioram
 
 La tecnologia di visualizzazione del vero tono di Apple usa il sensore luce di ambiente in un dispositivo iOS per modificare dinamicamente il colore e l'intensità dello schermo in modo che corrispondano alle condizioni di illuminazione correnti. iOS 10 fornisce la nuova chiave [UIWhitePointAdaptivityStyle](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW31) che può essere aggiunta al file di `Info.plist` dell'app e controlla il modo in cui il valore True Tone applica lo spostamento dei colori standard. 
 
-Sono disponibili i valori seguenti:
+Sono disponibili i valori seguenti.
 
 - `UIWhitePointAdaptivityStyleStandard` **predefinita** : usare il punto di adattività bianco standard.
 - `UIWhitePointAdaptivityStyleReading`: usato per le app con lo stato attivo per la lettura.
@@ -52,7 +52,7 @@ Inoltre, le estensioni dell'app tastiera di terze parti presentano i miglioramen
 - La nuova proprietà `DocumentInputMode` della classe `UITextDocumentProxy` può determinare la lingua di input di un documento e consentire all'estensione della tastiera di allinearsi a tale lingua.
 - Il nuovo metodo di `HandleInputModeList` consente all'estensione della tastiera di visualizzare il menu di selezione della tastiera del sistema in risposta alla chiave globo toccata.
 
-Per altre informazioni, vedere l' [Introduzione alle estensioni](~/ios/platform/extensions.md), l' [integrazione di app](~/ios/platform/message-app-integration/index.md)per i messaggi, l'introduzione [ai suggerimenti proattivi](~/ios/platform/search/proactive-suggestions.md), l' [Introduzione a SiriKit](~/ios/platform/sirikit/index.md), l' [Introduzione alle notifiche utente](~/ios/platform/user-notifications/index.md) e Apple [ Guida alla programmazione dell'estensione dell'app](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Per altre informazioni, vedere l' [Introduzione alle estensioni](~/ios/platform/extensions.md), l' [integrazione di app](~/ios/platform/message-app-integration/index.md)per i messaggi, l'introduzione [ai suggerimenti proattivi](~/ios/platform/search/proactive-suggestions.md), l' [Introduzione a SiriKit](~/ios/platform/sirikit/index.md), l' [Introduzione alle notifiche utente](~/ios/platform/user-notifications/index.md) e la [Guida alla programmazione dell'estensione app](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)di Apple.
 
 ## <a name="app-search-enhancements"></a>Miglioramenti per la ricerca nelle app
 
@@ -97,7 +97,7 @@ Per ulteriori informazioni, vedere la Guida [introduttiva a Callkit](~/ios/platf
 
 ## <a name="message-app-integration"></a>Integrazione dell'app Messaggi
 
-iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Xamarin.iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
+iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
 
 - **Sticker pack** : contiene una raccolta di adesivi che l'utente può aggiungere a un messaggio. È possibile creare pacchetti di adesivi senza scrivere codice.
 - **app iMessage** : può presentare un'interfaccia utente personalizzata all'interno dell'app Messages per la selezione di adesivi, l'immissione di testo, inclusi i file multimediali (con conversioni di tipi facoltative) e la creazione, la modifica e l'invio di messaggi di interazione.
@@ -147,7 +147,7 @@ Per ulteriori informazioni, vedere la guida ai [miglioramenti per la sicurezza e
 
 ## <a name="sirikit"></a>SiriKit
 
-Una novità di iOS 10, SiriKit consente a un'app Xamarin.iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
+Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
 SiriKit supporta i seguenti domini del servizio:
 
@@ -168,7 +168,7 @@ Per ulteriori informazioni, vedere la Guida [introduttiva a SiriKit](~/ios/platf
 
 iOS 10 include un nuovo Speech API che consente all'app di supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato).
 
-Poiché il riconoscimento vocale richiede la trasmissione e l'archiviazione temporanea dei dati nei server Apple, l'app _deve_ richiedere l'autorizzazione dell'utente per eseguire il riconoscimento includendo la chiave di `NSSpeechRecognitionUsageDescription` nel file di `Info.plist` e chiamando il `SFSpeechRecognizer.RequestAutorization` Metodo.
+Poiché il riconoscimento vocale richiede la trasmissione e l'archiviazione temporanea dei dati nei server Apple, l'app _deve_ richiedere l'autorizzazione dell'utente per eseguire il riconoscimento includendo la chiave di `NSSpeechRecognitionUsageDescription` nel file di `Info.plist` e chiamando il metodo di `SFSpeechRecognizer.RequestAutorization`.
 
 Per ulteriori informazioni, vedere la Guida [introduttiva al riconoscimento vocale](~/ios/platform/speech.md) .
 
