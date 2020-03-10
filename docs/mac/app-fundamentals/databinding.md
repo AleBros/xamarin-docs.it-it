@@ -1,5 +1,5 @@
 ---
-title: Data Binding e codifica chiave-valore in Xamarin.Mac
+title: Data Binding e codifica chiave-valore in Novell. Mac
 description: Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding agli elementi dell'interfaccia utente nella Interface Builder di Xcode.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
@@ -8,35 +8,35 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030212"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918789"
 ---
-# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Xamarin.Mac
+# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Novell. Mac
 
 _Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding agli elementi dell'interfaccia utente nella Interface Builder di Xcode._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, si ha accesso alla stessa codifica chiave-valore e data binding tecniche che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per eseguire il binding dei dati con elementi dell'interfaccia utente anziché scrivere codice.
+Quando si lavora C# con e .NET in un'applicazione Novell. Mac, si ha accesso alla stessa codifica chiave-valore e data binding tecniche che uno sviluppatore lavora in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per eseguire il binding dei dati con elementi dell'interfaccia utente anziché scrivere codice.
 
-Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
 [![Esempio di app in esecuzione](databinding-images/intro01.png "Esempio di app in esecuzione")](databinding-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi agli oggetti Objective-c e agli elementi dell'interfaccia utente.
 
 <a name="What_is_Key-Value_Coding" />
 
 ## <a name="what-is-key-value-coding"></a>Che cos'è la codifica chiave-valore
 
-Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Xamarin.Mac, si ottiene l'accesso ad altre funzionalità di macOS (precedentemente note come OS X), ad esempio KVO (Key-Value osservating), data binding, core data, associazioni Cocoa e script.
+Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, si ottiene l'accesso ad altre funzionalità di macOS (precedentemente note come OS X), ad esempio KVO (Key-Value osservating), data binding, core data, associazioni Cocoa e script.
 
-Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
 Ad esempio, esaminiamo la definizione di classe seguente di un oggetto conforme a KVC:
 
@@ -70,7 +70,7 @@ namespace MacDatabinding
 
 In primo luogo, l'attributo `[Register("PersonModel")]` registra la classe e la espone a Objective-C. Quindi, la classe deve ereditare da `NSObject` (o da una sottoclasse che eredita da `NSObject`), aggiunge diversi metodi di base che consentono alla classe di essere conformi a KVC. Successivamente, l'attributo `[Export("Name")]` espone la proprietà `Name` e definisce il valore della chiave che verrà usato in un secondo momento per accedere alla proprietà tramite le tecniche KVC e KVO.
 
-Infine, per poter essere in grado di modificare il valore della proprietà in base al valore della proprietà, è necessario che la funzione di accesso incapsulare le modifiche apportate al valore `WillChangeValue` e `DidChangeValue` chiamate al metodo (specificando la stessa chiave dell'attributo `Export`).  Esempio:
+Infine, per poter essere in grado di modificare il valore della proprietà in base al valore della proprietà, è necessario che la funzione di accesso incapsulare le modifiche apportate al valore `WillChangeValue` e `DidChangeValue` chiamate al metodo (specificando la stessa chiave dell'attributo `Export`).  Ad esempio,
 
 ```csharp
 set {
@@ -159,7 +159,7 @@ Modificare il valore della proprietà `Name` in `Jane Doe`.
 
 ### <a name="observing-value-changes"></a>Osservazione delle modifiche ai valori
 
-Utilizzando l'osservazione chiave-valore (KVO), è possibile aggiungere un Observer a una chiave specifica di una classe conforme a KVC e ricevere una notifica ogni volta che il valore della chiave viene modificato (utilizzando tecniche KVC o accedendo direttamente alla proprietà specificata nel C# codice). Esempio:
+Utilizzando l'osservazione chiave-valore (KVO), è possibile aggiungere un Observer a una chiave specifica di una classe conforme a KVC e ricevere una notifica ogni volta che il valore della chiave viene modificato (utilizzando tecniche KVC o accedendo direttamente alla proprietà specificata nel C# codice). Ad esempio,
 
 ```csharp
 // Watch for the name value changing
@@ -175,13 +175,13 @@ Per ulteriori informazioni, vedere l' [introduzione di Apple alla guida alla pro
 
 ## <a name="data-binding"></a>Associazione dati
 
-Le sezioni seguenti illustrano come è possibile usare una codifica chiave-valore e una classe conforme all'osservazione del valore chiave per associare i dati agli elementi dell'interfaccia utente nel Interface Builder di Xcode, anziché leggere e C# scrivere valori usando il codice. In questo modo si separa il _modello di dati_ dalle viste usate per visualizzarle, rendendo l'applicazione Xamarin.Mac più flessibile e facile da gestire. Si riduce inoltre significativamente la quantità di codice da scrivere.
+Le sezioni seguenti illustrano come è possibile usare una codifica chiave-valore e una classe conforme all'osservazione del valore chiave per associare i dati agli elementi dell'interfaccia utente nel Interface Builder di Xcode, anziché leggere e C# scrivere valori usando il codice. In questo modo si separa il _modello di dati_ dalle viste usate per visualizzarle, rendendo l'applicazione Novell. Mac più flessibile e facile da gestire. Si riduce inoltre significativamente la quantità di codice da scrivere.
 
 <a name="Defining_your_Data_Model" />
 
 ### <a name="defining-your-data-model"></a>Definizione del modello di dati
 
-Prima di poter associare un elemento dell'interfaccia utente in Interface Builder, è necessario avere una classe conforme a KVC/KVO definita nell'applicazione Xamarin.Mac per agire come _modello di dati_ per l'associazione. Il modello di dati fornisce tutti i dati che verranno visualizzati nell'interfaccia utente e riceve eventuali modifiche ai dati che l'utente effettua nell'interfaccia utente durante l'esecuzione dell'applicazione.
+Prima di poter associare un elemento dell'interfaccia utente in Interface Builder, è necessario avere una classe conforme a KVC/KVO definita nell'applicazione Novell. Mac per agire come _modello di dati_ per l'associazione. Il modello di dati fornisce tutti i dati che verranno visualizzati nell'interfaccia utente e riceve eventuali modifiche ai dati che l'utente effettua nell'interfaccia utente durante l'esecuzione dell'applicazione.
 
 Se, ad esempio, si scrive un'applicazione che gestisce un gruppo di dipendenti, è possibile utilizzare la classe seguente per definire il modello di dati:
 
@@ -317,7 +317,7 @@ namespace MacDatabinding
 }
 ```
 
-La maggior parte delle funzionalità di questa classe è stata descritta nella sezione informazioni sulla [codifica chiave-valore](#What_is_Key-Value_Coding) precedente. Tuttavia, verranno esaminati alcuni elementi specifici e alcune aggiunte apportate per consentire a questa classe di agire come modello di dati per i **controller di array** e i **controller di albero** (che verranno utilizzati in un secondo momento per le **visualizzazioni ad albero**di associazione dati, le **visualizzazioni struttura** e **visualizzazioni della raccolta**).
+La maggior parte delle funzionalità di questa classe è stata descritta nella sezione informazioni sulla [codifica chiave-valore](#What_is_Key-Value_Coding) precedente. Tuttavia, verranno esaminati alcuni elementi specifici e alcune aggiunte apportate per consentire a questa classe di agire come modello di dati per i **controller di array** e i controller di **albero** (che verranno utilizzati in un secondo momento per le **visualizzazioni ad albero**di associazione dati, le **visualizzazioni struttura** e le **visualizzazioni di raccolta**).
 
 Innanzitutto, poiché un dipendente potrebbe essere un responsabile, abbiamo usato una `NSArray` (in particolare un `NSMutableArray`, in modo che i valori possano essere modificati) per consentire ai dipendenti di essere collegati:
 
@@ -334,7 +334,7 @@ public NSArray People {
 Ecco due punti da considerare:
 
 1. È stato usato un `NSMutableArray` anziché una matrice C# o una raccolta standard, perché si tratta di un requisito per l'associazione dei dati ai controlli AppKit, ad esempio le **visualizzazioni tabella**, le **visualizzazioni struttura** e le **raccolte**.
-2. È stata esposta la matrice di dipendenti eseguendone il cast a un `NSArray` per scopi data binding e C# il nome formattato,`People`, è stato impostato su uno che data binding previsto,`personModelArray`nel formato **{class_name} array** (si noti che il primo carattere è stato in lettere minuscole).
+2. È stata esposta la matrice di dipendenti eseguendone il cast a un `NSArray` per scopi data binding e C# il nome formattato, `People`, è stato impostato su uno che data binding previsto, `personModelArray` nel formato **{class_name} matrice** (si noti che il primo carattere è stato fatto in lettere minuscole).
 
 Successivamente, è necessario aggiungere alcuni metodi pubblici con nome specifico per supportare i **controller array** e i **controller di albero**:
 
@@ -417,7 +417,7 @@ Nel resto di questo articolo verrà usato il modello di dati `PersonModel`.
 
 ### <a name="simple-data-binding"></a>Data binding semplice
 
-Con il modello di dati definito, viene ora esaminato un semplice esempio di data binding nella Interface Builder di Xcode. Si consentirà ad esempio di aggiungere un modulo all'applicazione Xamarin.Mac che può essere usata per modificare la `PersonModel` definita in precedenza. Verranno aggiunti alcuni campi di testo e una casella di controllo per visualizzare e modificare le proprietà del modello.
+Con il modello di dati definito, viene ora esaminato un semplice esempio di data binding nella Interface Builder di Xcode. Si consentirà ad esempio di aggiungere un modulo all'applicazione Novell. Mac che può essere usata per modificare la `PersonModel` definita in precedenza. Verranno aggiunti alcuni campi di testo e una casella di controllo per visualizzare e modificare le proprietà del modello.
 
 Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare la classe `SimpleViewController`:
 
@@ -739,7 +739,7 @@ Se si esegue l'applicazione, il contorno verrà popolato con la matrice di `Pers
 Il data binding con una visualizzazione di raccolta è molto simile al binding con una visualizzazione tabella, perché viene usato un controller di matrice per fornire i dati per la raccolta. Poiché la visualizzazione raccolta non ha un formato di visualizzazione preimpostato, è necessario più lavoro per fornire commenti e suggerimenti sull'interazione dell'utente e per tenere traccia della selezione dell'utente.
 
 > [!IMPORTANT]
-> A causa di un problema in Xcode 7 e macOS 10,11 (e versioni successive), le visualizzazioni di raccolta non possono essere usate all'interno di un file storyboard (con estensione Storyboard). Sarà quindi necessario continuare a usare i file con estensione XIB per definire le visualizzazioni di raccolta per le app Xamarin.Mac. Per ulteriori informazioni, vedere la documentazione relativa alle [viste della raccolta](~/mac/user-interface/collection-view.md) .
+> A causa di un problema in Xcode 7 e macOS 10,11 (e versioni successive), le visualizzazioni di raccolta non possono essere usate all'interno di un file storyboard (con estensione Storyboard). Sarà quindi necessario continuare a usare i file con estensione XIB per definire le visualizzazioni di raccolta per le app Novell. Mac. Per ulteriori informazioni, vedere la documentazione relativa alle [viste della raccolta](~/mac/user-interface/collection-view.md) .
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 
@@ -858,7 +858,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 ## <a name="debugging-native-crashes"></a>Debug di arresti anomali nativi
 
-La creazione di un errore nelle associazioni dati può causare un _arresto anomalo nativo_ del codice non gestito e causare un errore di `SIGABRT` dell'applicazione Xamarin.Mac:
+La creazione di un errore nelle associazioni dati può causare un _arresto anomalo nativo_ del codice non gestito e causare un errore di `SIGABRT` dell'applicazione Novell. Mac:
 
 [![Esempio di una finestra di dialogo di arresto anomalo nativo](databinding-images/debug01.png "Esempio di una finestra di dialogo di arresto anomalo nativo")](databinding-images/debug01-large.png#lightbox)
 
@@ -887,7 +887,7 @@ Questa riga indica che la chiave `Title` non esiste nell'oggetto a cui si sta as
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore in un'applicazione Xamarin.Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Infine, ha mostrato data binding complesse usando **controller di array** e **controller di albero**.
+Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore in un'applicazione Novell. Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Infine, ha mostrato data binding complesse usando **controller di array** e **controller di albero**.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

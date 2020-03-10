@@ -1,6 +1,6 @@
 ---
-title: Framework di visione in Xamarin.iOS
-description: Questo documento descrive come usare il Framework di visione di iOS 11 in Xamarin.iOS. In particolare, vengono illustrati il rilevamento del rettangolo e il rilevamento del viso.
+title: Framework di visione in Novell. iOS
+description: Questo documento descrive come usare il Framework di visione di iOS 11 in Novell. iOS. In particolare, vengono illustrati il rilevamento del rettangolo e il rilevamento del viso.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
 ms.openlocfilehash: b58e7b1fffed3253d9765401d52f16b751db134d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032062"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910841"
 ---
-# <a name="vision-framework-in-xamarinios"></a>Framework di visione in Xamarin.iOS
+# <a name="vision-framework-in-xamarinios"></a>Framework di visione in Novell. iOS
 
 Il Framework di visione aggiunge una serie di nuove funzionalità di elaborazione delle immagini a iOS 11, tra cui:
 

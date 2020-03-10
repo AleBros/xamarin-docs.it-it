@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 67b760a58628950caa33fe9009c5023c8696691c
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292840"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946317"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: associazione di una libreria Objective-C di iOS
 
@@ -420,10 +420,13 @@ Dal precedente è possibile vedere che nel computer è installato `iphoneos9.3` 
 Immettere il comando seguente nell'app Terminal:
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Dove `[full-path-to-project]` è il percorso completo della directory in cui si trova il file di progetto **InfColorPicker** Xcode nel computer e [iPhone-OS] è l'SDK di iOS installato, come indicato dal comando `sharpie xcode -sdks`. Si noti che in questo esempio è stato passato **\*. h** come parametro, che include *tutti* i file di intestazione in questa directory. in genere, è consigliabile evitare di eseguire questa operazione, ma leggere attentamente i file di intestazione per trovare il file con **estensione h** di primo livello che fa riferimento a tutti gli altri file rilevanti e passarlo solo a Objective Sharpe.
+Dove `[full-path-to-project]` è il percorso completo della directory in cui si trova il file di progetto **InfColorPicker** Xcode nel computer e [iPhone-OS] è l'SDK di iOS installato, come indicato dal comando `sharpie xcode -sdks`. Si noti che in questo esempio è stato passato **\*. h** come parametro, che include *tutti* i file di intestazione in questa directory. in genere, è consigliabile evitare di eseguire questa operazione, ma leggere attentamente i file di intestazione per trovare il file con **estensione h** di primo livello che fa riferimento a tutti gli altri file rilevanti e passarlo solo a Objective Sharpe. 
+
+> [!TIP] 
+> Per l'argomento `-scope`, passare la cartella che contiene le intestazioni che si desidera associare. Senza l'argomento `-scope`, l'obiettivo Sharpie tenterà di generare binding per qualsiasi intestazione iOS SDK importata, ad esempio `#import <UIKit.h>`, ottenendo un file di definizioni molto grande che genererà errori durante la compilazione del progetto di associazione. Con il set di argomenti di `-scope`, l'obiettivo Sharpie non genererà binding per le intestazioni esterne alla cartella con ambito. 
 
 Nel terminale verrà generato l' [output](walkthrough-images/os05.png) seguente:
 

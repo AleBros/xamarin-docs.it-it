@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78915184"
 ---
 # <a name="xamarinios-api-design"></a>Progettazione dell'API Novell. iOS
@@ -76,7 +76,7 @@ Questi sono alcuni dei principi di progettazione per i binding Novell. iOS (si a
   - C#sistema di eventi
   - Esporre C# delegati (espressioni lambda, metodi anonimi e `System.Delegate`) a API Objective-C come blocchi
 
-### <a name="assemblies"></a>Assembly
+### <a name="assemblies"></a>Assemblies
 
 Novell. iOS include diversi assembly che costituiscono il *profilo Novell. iOS*. Ulteriori informazioni sono contenute nella pagina [assembly](~/cross-platform/internals/available-assemblies.md) .
 
@@ -93,7 +93,7 @@ Lo spazio dei nomi [Foundation](xref:Foundation) fornisce i tipi di dati di base
 
 Novell. iOS rispecchia C# la gerarchia delle classi di Objective-C. Ad esempio, la classe base Objective-C NSObject è utilizzabile C# da tramite [Foundation. NSObject](xref:Foundation.NSObject).
 
-Sebbene questo spazio dei nomi fornisca associazioni per i tipi di base Objective-C sottostanti, in alcuni casi è stato eseguito il mapping dei tipi sottostanti ai tipi .NET. Ad esempio:
+Sebbene questo spazio dei nomi fornisca associazioni per i tipi di base Objective-C sottostanti, in alcuni casi è stato eseguito il mapping dei tipi sottostanti ai tipi .NET. Ad esempio,
 
 - Anziché gestire NSString e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), il runtime li espone come C# [stringa](xref:System.String)e [matrici](xref:System.Array)fortemente tipizzate nell'API.
 
@@ -358,7 +358,7 @@ Il modello viene usato anche per fornire i dati su richiesta per alcuni controll
 Oltre alla proprietà fortemente tipizzata, esiste anche un delegato debole tipizzato che consente allo sviluppatore di associare elementi in modo diverso, se necessario.
 Ovunque una proprietà `Delegate` fortemente tipizzata venga esposta nell'associazione di Novell. iOS, viene esposta anche una proprietà `WeakDelegate` corrispondente.
 
-Quando si usa il `WeakDelegate`, l'utente è responsabile della decorazione corretta della classe usando l'attributo [Export](xref:Foundation.ExportAttribute) per specificare il selettore. Ad esempio:
+Quando si usa il `WeakDelegate`, l'utente è responsabile della decorazione corretta della classe usando l'attributo [Export](xref:Foundation.ExportAttribute) per specificare il selettore. Ad esempio,
 
 ```csharp
 class Notifier : NSObject  {
@@ -595,13 +595,13 @@ Quando si usano Visual Studio per Mac e InterfaceBuilder, non è necessario preo
 
 Un concetto di base della programmazione Objective-C è costituito dai selettori. Sono spesso disponibili API che richiedono il passaggio di un selettore o prevede che il codice risponda a un selettore.
 
-La creazione di nuovi selettori in C# è molto semplice: è sufficiente creare una nuova istanza della classe `ObjCRuntime.Selector` e usare il risultato in qualsiasi posizione nell'API che la richiede. Ad esempio:
+La creazione di nuovi selettori in C# è molto semplice: è sufficiente creare una nuova istanza della classe `ObjCRuntime.Selector` e usare il risultato in qualsiasi posizione nell'API che la richiede. Ad esempio,
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-Per un C# metodo che risponde a una chiamata del selettore, deve ereditare dal tipo C# di `NSObject` e il metodo deve essere decorato con il nome del selettore usando l'attributo `[Export]`. Ad esempio:
+Per un C# metodo che risponde a una chiamata del selettore, deve ereditare dal tipo C# di `NSObject` e il metodo deve essere decorato con il nome del selettore usando l'attributo `[Export]`. Ad esempio,
 
 ```csharp
 public class MyMath : NSObject {

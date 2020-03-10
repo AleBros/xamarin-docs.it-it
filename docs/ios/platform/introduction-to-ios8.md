@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489206"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910818"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -22,11 +22,11 @@ iOS 7 ha modificato visivamente l'intera interfaccia utente iOS rispetto a quant
 
 Se iOS 7 riguardava la delucenza degli utenti, iOS 8 si concentra sul fatto che gli sviluppatori hanno una gamma completa di questi nuovi strumenti. 
 
-Questa guida presenta le nuove API per gli sviluppatori Xamarin.iOS.  
+Questa guida presenta le nuove API per gli sviluppatori Novell. iOS.  
 
 Sono inoltre disponibili alcune API deprecate in iOS 8, che sono descritte in dettaglio alla fine di questo documento.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 Per creare app iOS 8 in Visual Studio per Mac, è necessario quanto segue:
 
@@ -36,7 +36,7 @@ Per creare app iOS 8 in Visual Studio per Mac, è necessario quanto segue:
 
 ## <a name="home-and-leisure"></a>Casa e tempo libero
 
-iOS 8 ha contribuito a piantare con forza Apple e il dispositivo iOS direttamente nel cuore della casa attraverso l'uso di HomeKit e HealthKit. In questa sezione verrà esaminato il funzionamento di questi nuovi Framework e il modo in cui possono essere integrati nell'applicazione Xamarin.iOS.
+iOS 8 ha contribuito a piantare con forza Apple e il dispositivo iOS direttamente nel cuore della casa attraverso l'uso di HomeKit e HealthKit. In questa sezione verrà esaminato il funzionamento di questi nuovi Framework e il modo in cui possono essere integrati nell'applicazione Novell. iOS.
 
 ## <a name="homekit"></a>HomeKit
 
@@ -44,7 +44,7 @@ Il controllo dei dispositivi da iPhone non è una nuova applicazione di tecnolog
 
 Con HomeKit, le app di terze parti e Siri possono individuare accessori e aggiungerli al database di configurazione della Home page personale, modificare e agire su questi dati e comunicare con gli accessori e i relativi servizi per eseguire un'azione.
 
-### <a name="configuration"></a>Configurazione di
+### <a name="configuration"></a>Configurazione
 
 Il diagramma seguente illustra la gerarchia di base della configurazione degli accessori HomeKit:
 
@@ -58,7 +58,7 @@ Per altre informazioni, vedere la Guida di [HomeKit](~/ios/platform/homekit.md) 
 
 HealthKit è un Framework introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni relative allo stato di integrità. Il sistema operativo garantisce la privacy e la sicurezza delle informazioni di integrità e, con l'app per l'integrità, un dashboard per l'utente. Con l'autorizzazione dell'utente, le applicazioni possono leggere e scrivere un'ampia gamma di informazioni sull'integrità.
 
-Per altre informazioni sull'uso di questo nell'app Xamarin.iOS, vedere la Guida [introduttiva a HealthKit](~/ios/platform/healthkit.md) .
+Per altre informazioni sull'uso di questo nell'app Novell. iOS, vedere la Guida [introduttiva a HealthKit](~/ios/platform/healthkit.md) .
 
 ## <a name="extending-iphone-functionality"></a>Estensione della funzionalità iPhone
 Con iOS 8, agli sviluppatori viene assegnato un maggiore controllo sugli utenti che possono usare la propria app ed è stata aumentata la funzionalità per la comunicazione più aperta tra app di terze parti. Funzionalità come le estensioni delle app e il selettore documenti aprono un mondo di possibilità per l'uso delle applicazioni nell'ecosistema di Apple.
@@ -81,9 +81,9 @@ Nella finestra di dialogo nuovo progetto sono disponibili sette nuovi modelli di
 - **Modifica della foto** : consente di espandere i filtri e gli strumenti di modifica già forniti da Apple nell'applicazione foto per offrire agli utenti maggiore controllo e più opzioni per la modifica delle foto.
 - **Oggi** : consente alle applicazioni di visualizzare i widget nella sezione odierna del centro notifiche.
 
-Per altre informazioni sull'uso delle estensioni delle app in Xamarin.vedere la Guida [introduttiva alle estensioni per le app](~/ios/platform/extensions.md) .
+Per altre informazioni sull'uso delle estensioni delle app in Novell, vedere la Guida [introduttiva alle estensioni per le app](~/ios/platform/extensions.md) .
 
-### <a name="touch-id"></a>ID tocco
+### <a name="touch-id"></a>Touch ID
 
 Touch ID è stato introdotto in iOS 7 come mezzo per autenticare l'utente, in modo analogo a un codice di accesso. Tuttavia, era limitato allo sblocco del dispositivo, all'uso dell'app Store, all'uso di iTunes e all'autenticazione solo del keychain di iCloud 
 
@@ -93,13 +93,13 @@ In primo luogo, consente ai servizi Keychain esistenti di usare nuovi elenchi di
 
 In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare l'ID tocco, quindi `EvaluatePolicy` per avviare l'operazione di autenticazione.
 
-Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Xamarin.iOS, vedere l'articolo relativo a [Touch ID e Face ID nelle guide di Xamarin.iOS](~/ios/platform/touch-id-face-id.md) .
+Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Novell. iOS, vedere l'articolo relativo a [Touch ID e Face ID nelle guide di Novell. iOS](~/ios/platform/touch-id-face-id.md) .
 
 ### <a name="document-picker"></a>Selezione documenti
 
 Selezione documenti funziona con un'unità iCloud utenti per consentire all'utente di aprire i file che sono stati creati in un'altra app, importarli e modificarli ed esportarli nuovamente. In questo modo viene creato un flusso di lavoro intuitivo e, di conseguenza, un'esperienza molto migliore per gli utenti. la sincronizzazione di iCloud riprende questo passaggio. tutte le modifiche apportate in un'applicazione verranno inoltre riflesse in modo coerente in tutti i dispositivi.
 
-Per informazioni più dettagliate sulla selezione dei documenti e per informazioni su come integrarla in un'applicazione Xamarin.iOS, vedere la Guida [introduttiva alla selezione dei documenti](~/ios/platform/document-picker.md) .
+Per informazioni più dettagliate sulla selezione dei documenti e per informazioni su come integrarla in un'applicazione Novell. iOS, vedere la Guida [introduttiva alla selezione dei documenti](~/ios/platform/document-picker.md) .
 
 ### <a name="handoff"></a>Handoff
 
@@ -172,5 +172,5 @@ In questo articolo sono state esaminate alcune delle nuove funzionalità introdo
 - [Introduzione a selezione documenti](~/ios/platform/document-picker.md)
 - [Introduzione a HealthKit](~/ios/platform/healthkit.md)
 - [Introduzione ai controlli della fotocamera manuale](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Touch ID e Face ID con Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
+- [Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md)
 - [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md)

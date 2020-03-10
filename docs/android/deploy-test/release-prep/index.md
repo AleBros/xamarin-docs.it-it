@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
 ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021197"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911006"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -19,19 +19,19 @@ Dopo aver scritto il codice di un'applicazione e averla testata, è necessario p
 
 Usare la procedura seguente per compilare l'app per il rilascio:
 
-- **[Specificare l'icona dell'applicazione](#Specify_the_Application_Icon)** &ndash; Per ogni applicazione Xamarin.Android deve essere specificata un'icona di applicazione. Anche se tecnicamente non è necessaria, alcuni mercati, ad esempio Google Play, la richiedono.
+- **[Specificare l'icona dell'applicazione](#Specify_the_Application_Icon)** &ndash; ogni applicazione Novell. Android deve avere un'icona dell'applicazione specificata. Anche se tecnicamente non è necessaria, alcuni mercati, ad esempio Google Play, la richiedono.
 
-- **[Specificare la versione dell'applicazione](#Versioning)** &ndash; Questo passaggio prevede l'inizializzazione o l'aggiornamento delle informazioni di controllo della versione. Questo è importante per gli aggiornamenti futuri dell'applicazione e per verificare che gli utenti siano informati riguardo alla versione dell'applicazione installata.
+- **[Versione l'applicazione](#Versioning)** &ndash; questo passaggio comporta l'inizializzazione o l'aggiornamento delle informazioni sul controllo delle versioni. Questo è importante per gli aggiornamenti futuri dell'applicazione e per verificare che gli utenti siano informati riguardo alla versione dell'applicazione installata.
 
-- **[Compattare il file APK](#shrink_apk)** &ndash; La dimensione dell'APK finale può essere notevolmente ridotta usando il linker di Xamarin.Android per il codice gestito e ProGuard per il bytecode Java.
+- **[Compattare l'apk](#shrink_apk)** &ndash; la dimensione dell'APK finale può essere notevolmente ridotta tramite il linker Novell. Android sul codice gestito e Proguard sul bytecode Java.
 
-- **[Proteggere l'applicazione](#protect_app)** &ndash; Impedire a utenti o malintenzionati di eseguire operazioni di debug, reverse engineering o manomissione dell'applicazione disabilitando il debug, nascondendo il codice gestito, aggiungendo funzionalità anti-debug e anti-manomissione e usando la compilazione nativa.
+- **[Proteggere l'applicazione](#protect_app)** &ndash; impedire a utenti o utenti malintenzionati di eseguire il debug, la manomissione o la Reverse Engineering dell'applicazione disabilitando il debug, offuscando il codice gestito, aggiungendo anti-debug e anti-manomissione e usando la compilazione nativa.
 
-- **[Impostare proprietà per la creazione di pacchetti](#Set_Packaging_Properties)** &ndash; Le proprietà per la creazione di pacchetti controllano la creazione del pacchetto dell'applicazione Android (APK). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze.
+- **[Impostare le proprietà](#Set_Packaging_Properties)** per la creazione di pacchetti &ndash; proprietà dei pacchetti controllano la creazione del pacchetto dell'applicazione Android (apk). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze.
 
-- **[Compilare](#Compile)** &ndash; Questo passaggio consente di compilare il codice e gli asset per verificare che la compilazione avvenga in modalità di rilascio.
+- **[Compila](#Compile)** &ndash; questo passaggio compila il codice e gli asset per verificare che venga compilato in modalità di rilascio.
 
-- **[Archiviare per la pubblicazione](#archive)** &ndash; Questo passaggio consente di compilare l'app e di inserirla in un archivio per la firma e la pubblicazione.
+- **[Archivia per la pubblicazione](#archive)** &ndash; questo passaggio compila l'app e la inserisce in un archivio per la firma e la pubblicazione.
 
 Ognuno di questi passaggi è descritto in dettaglio di seguito.
 
@@ -43,13 +43,13 @@ Ognuno di questi passaggi è descritto in dettaglio di seguito.
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio 2017 e versioni successive specificare l'icona dell'applicazione usando la sezione **Manifesto Android** delle **proprietà** del progetto, come illustrato nello screenshot seguente:
 
 [![Impostare l'icona dell'applicazione](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 In Visual Studio per Mac è anche possibile specificare l'icona dell'applicazione usando la sezione **Applicazione Android** delle **opzioni del progetto**, come illustrato nello screenshot seguente:
 
@@ -71,17 +71,17 @@ In genere, `using Android.App` viene dichiarato all'inizio di **AssemblyInfo.cs*
 
 Il controllo delle versioni è importante per la distribuzione e la manutenzione delle applicazioni Android. Senza una qualche forma di controllo delle versioni, è difficile determinare se e come un'applicazione debba essere aggiornata. Per facilitare il controllo delle versioni, Android riconosce due tipi diversi di informazioni: 
 
-- **Numero di versione**: un valore intero, usato internamente da Android e dall'applicazione, che rappresenta la versione dell'applicazione. La maggior parte delle applicazioni all'inizio hanno questo valore impostato su 1, che si incrementa a ogni compilazione. Tale valore non ha alcuna relazione o affinità con l'attributo del nome di versione (vedere sotto). Applicazioni e servizi di pubblicazione non devono rendere visualizzabile il valore agli utenti. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionCode`. 
+- Il **numero di versione** &ndash; un valore integer (usato internamente da Android e dall'applicazione) che rappresenta la versione dell'applicazione. La maggior parte delle applicazioni all'inizio hanno questo valore impostato su 1, che si incrementa a ogni compilazione. Tale valore non ha alcuna relazione o affinità con l'attributo del nome di versione (vedere sotto). Applicazioni e servizi di pubblicazione non devono rendere visualizzabile il valore agli utenti. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionCode`. 
 
-- **Nome della versione**: una stringa che viene usata solo per comunicare all'utente informazioni sulla versione dell'applicazione installata in un dispositivo specifico. Il nome della versione deve essere visualizzato agli utenti o in Google Play. Questa stringa non viene usata internamente da Android. Il nome della versione può essere qualsiasi valore stringa che consenta a un utente di identificare la build installata nel dispositivo. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionName`. 
+- **Nome versione** &ndash; una stringa utilizzata solo per la comunicazione di informazioni all'utente sulla versione dell'applicazione (come installato in un dispositivo specifico). Il nome della versione deve essere visualizzato agli utenti o in Google Play. Questa stringa non viene usata internamente da Android. Il nome della versione può essere qualsiasi valore stringa che consenta a un utente di identificare la build installata nel dispositivo. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionName`. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio questi valori possono essere impostati nella sezione **Manifesto Android** delle **proprietà** del progetto, come illustrato nello screenshot seguente:
 
 [![Impostare il numero di versione](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Questi valori possono essere impostati usando la sezione **Compila > Applicazione Android** di **Opzioni progetto**, come illustra lo screenshot seguente:
 
@@ -103,34 +103,34 @@ La modalità di rilascio disattiva il runtime condiviso e attiva il collegamento
 
 - Configurazione: solo assembly SDK &ndash; Xamarin.Android 4.2.5 Dimensioni = 3,0 MB.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Impostare le opzioni del linker nella sezione **Opzioni Android** delle **proprietà** del progetto:
 
-[![Opzioni linker](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
+[![Opzioni del linker](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
 
 Il menu a discesa **Collegamento** include le seguenti opzioni per il controllo del linker:
 
-- **Nessuno** &ndash; Disattiva il linker. Non viene eseguito alcun collegamento.
+- **None** &ndash; disattiva il linker; non verrà eseguito alcun collegamento.
 
-- **Solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
+- **Solo gli assembly SDK** &ndash; verranno collegati solo gli assembly [richiesti da Novell. Android](~/cross-platform/internals/available-assemblies.md). 
     Gli altri assembly non verranno collegati.
 
-- **Assembly SDK e utente** &ndash; Verranno collegati tutti gli assembly richiesti dall'applicazione, non solo quelli richiesti da Xamarin.Android.
+- **Assembly SDK e utente** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Impostare le opzioni del linker nella scheda **Linker** della sezione **Compilazione Android** delle **opzioni del progetto**, come indicato nello screenshot seguente:
 
-[![Opzioni linker](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
+[![Opzioni del linker](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
 Di seguito sono riportate le opzioni di controllo del linker:
 
-- **Non collegare** &ndash; Disattiva il linker. Non viene eseguito alcun collegamento.
+- **Non collegare** &ndash; questo disattiva il linker; non verrà eseguito alcun collegamento.
 
-- **Collega solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
+- **Collega solo assembly SDK** &ndash; verranno collegati solo gli assembly [richiesti da Novell. Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
 
-- **Collega tutti gli assembly** &ndash; Verranno collegati tutti gli assembly richiesti dall'applicazione, non solo quelli richiesti da Xamarin.Android.
+- **Collegare tutti gli assembly** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
 
 -----
 
@@ -144,11 +144,11 @@ ProGuard non è un'alternativa al linker di Xamarin.Android. Il linker di Xamari
 
 Quando l'opzione **Abilita ProGuard** è selezionata, Xamarin.Android esegue lo strumento ProGuard sull'APK risultante. Viene generato un file di configurazione ProGuard che ProGuard usa in fase di compilazione. Xamarin.Android supporta anche azioni di compilazione *ProguardConfiguration* personalizzate. È possibile aggiungere un file di configurazione ProGuard personalizzato al progetto, fare clic con il pulsante destro del mouse sul file e selezionarlo come un'azione di compilazione come illustrato nell'esempio seguente: 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Azione di compilazione di ProGuard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![Azione di compilazione di ProGuard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -187,7 +187,7 @@ Si noti che le compilazioni di debug impostano automaticamente alcune autorizzaz
 
 ### <a name="application-protection-with-dotfuscator"></a>Protezione dell'applicazione con Dotfuscator
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Anche con il [debug disabilitato](#Disable_Debugging), è comunque possibile che gli utenti malintenzionati riescano a creare un nuovo pacchetto di un'applicazione, aggiungendo o rimuovendo opzioni di configurazione o autorizzazioni. Ciò consente di decodificare o manomettere l'applicazione o di eseguirne il debug.
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) consente di nascondere il codice gestito e inserire il codice di rilevamento dello stato di sicurezza del runtime in un'app Xamarin.Android in fase di compilazione, per rilevare e rispondere nel caso in cui l'app venga eseguita in un dispositivo rooted.
@@ -198,7 +198,7 @@ Per usare Dotfuscator, fare clic su **Strumenti > PreEmptive Protection - Dotfus
 Per configurare Dotfuscator CE, vedere le istruzioni relative all'[uso di Dotfuscator Community Edition con Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).
 Dopo la configurazione, Dotfuscator CE proteggerà automaticamente ogni build creata.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Anche con il [debug disabilitato](#Disable_Debugging), è comunque possibile che gli utenti malintenzionati riescano a creare un nuovo pacchetto di un'applicazione, aggiungendo o rimuovendo opzioni di configurazione o autorizzazioni. Ciò consente di decodificare o manomettere l'applicazione o di eseguirne il debug.
 Benché non supporti Visual Studio per Mac, è possibile usare [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) con Visual Studio per nascondere il codice gestito e inserire il codice di rilevamento dello stato di sicurezza del runtime in un'app Xamarin.Android in fase di compilazione, per rilevare e rispondere nel caso in cui l'app venga eseguita in un dispositivo rooted.
@@ -216,7 +216,7 @@ Quando questa opzione è abilitata, gli assembly vengono aggregati in una raccol
 
 Questa opzione richiede una licenza Enterprise ed è disponibile solo quando l'opzione **Usa Fast Deployment** è disabilitata. L'opzione **Crea un bundle di assembly nel codice nativo** è disabilitata per impostazione predefinita.
 
-Si noti che l'opzione **Crea un bundle di assembly nel codice nativo** *non* significa che gli assembly vengono compilati in codice nativo. Non è possibile usare [**Compilazione AOT**](#aot) per compilare gli assembly in codice nativo in quanto attualmente si tratta solo di una funzionalità sperimentale che non viene usata in produzione.
+Si noti che l'opzione **Crea un bundle di assembly nel codice nativo***non* significa che gli assembly vengono compilati in codice nativo. Non è possibile usare [**Compilazione AOT**](#aot) per compilare gli assembly in codice nativo in quanto attualmente si tratta solo di una funzionalità sperimentale che non viene usata in produzione.
 
 <a name="aot" />
 
@@ -237,13 +237,13 @@ Il _Compilatore ottimizzatore LLVM_  crea codice compilato più rapido e di dime
 
 ## <a name="set-packaging-properties"></a>Impostare le proprietà per la creazione di pacchetti
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Le proprietà per la creazione di pacchetti possono essere impostate nella sezione **Opzioni Android** delle **proprietà** del progetto, come illustrato nello screenshot seguente:
 
 [![Proprietà per la creazione di pacchetti](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Le proprietà per la creazione di pacchetti possono essere impostate in **Opzioni Android**, come illustrato nello screenshot seguente:
 
@@ -263,7 +263,7 @@ Quando questa opzione è abilitata, viene creato un APK per ogni ABI supportato,
 
 ### <a name="multi-dex"></a>Multidex
 
-Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite a 65.000 metodi si basa sul numero di metodi di Java cui un'app _fa riferimento_, compresi quelli nelle eventuali raccolte da cui l'applicazione dipende. Non si basa sul numero di metodi _scritti nel codice sorgente_. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
+Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite a 65.000 metodi si basa sul numero di metodi di Java cui un'app _fa riferimento_, compresi quelli nelle eventuali raccolte da cui l'applicazione dipende. Non si basa sul numero di metodi &ndash;scritti nel codice sorgente _. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
 
 È possibile che un'app non usi tutti i metodi in tutte le raccolte cui fa riferimento, quindi è possibile che uno strumento come ProGuard (vedere sopra) possa rimuovere i metodi non usati dal codice. La procedura consigliata consiste nell'abilitare **Abilita multidex** solo se assolutamente necessario, ovvero se l'app fa riferimento a più di 65.000 metodi Java anche dopo l'uso di ProGuard.
 
@@ -273,13 +273,13 @@ Per altre informazioni su multidex, vedere [Configurare le app con più di 64.00
 
 ## <a name="compile"></a>Compile
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Al termine di tutti i passaggi precedenti, l'app è pronta per la compilazione. Selezionare **Compila > Ricompila soluzione** per verificare che la compilazione avvenga in modalità di rilascio. Si noti che questo passaggio non genera ancora un file APK.
 
 L'articolo sulla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) descrive le procedure di creazione del pacchetto e di firma più in dettaglio.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionando **Compila > Compila tutto**, per verificare che la compilazione avvenga in modalità di rilascio. Si noti che questo passaggio non genera ancora un file APK.
 
@@ -289,7 +289,7 @@ Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionand
 
 ## <a name="archive-for-publishing"></a>Archiviare per la pubblicazione
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per iniziare il processo di pubblicazione, fare clic con il pulsante destro del mouse sul progetto nel **riquadro della soluzione** e selezionare **Archivio...**  dal menu di scelta rapida:
 
@@ -320,14 +320,14 @@ La funzionalità **Gestione archivi** è costituita da un **elenco di soluzioni*
 L'**elenco di soluzioni** visualizza tutte le soluzioni con almeno un progetto archiviato. L'**elenco di soluzioni** comprende le seguenti sezioni:
 
 - **Soluzione corrente** &ndash; Visualizza la soluzione corrente. Si noti che quest'area può essere vuota se per la soluzione corrente non esiste un archivio.
-- **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni con un archivio.
+- **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni che dispongono di un archivio.
 - Casella di testo **Ricerca** (in alto) &ndash; Filtra le soluzioni elencate nell'elenco **Tutti gli archivi** in base alla stringa di ricerca immessa nella casella di testo.
 
 L'**elenco di archivi** visualizza l'elenco di tutti gli archivi per la soluzione selezionata. L'**elenco di archivi** comprende le seguenti sezioni:
 
-- **Nome della soluzione selezionata** &ndash; Nome della soluzione selezionata nell'**elenco di soluzioni**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
-- **Filtro Piattaforme** &ndash; Campo che consente di filtrare gli archivi in base al tipo di piattaforma (ad esempio iOS o Android).
-- **Archivi** &ndash; Elenco degli archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
+- **Nome della soluzione selezionata** &ndash; Visualizza il nome della soluzione selezionata nell' **elenco della soluzione**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
+- **Filtro piattaforme** &ndash; questo campo rende possibile filtrare gli archivi per tipo di piattaforma (ad esempio iOS o Android).
+- **Archivia gli elementi** &ndash; elenco di archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
 
 Il **riquadro dei dettagli** visualizza informazioni aggiuntive su ogni archivio. Consente inoltre all'utente di avviare il flusso di lavoro di distribuzione o aprire la cartella in cui è stata creata la distribuzione. La sezione **Commenti per la build** consente di includere commenti sulla compilazione nell'archivio.
 
@@ -343,11 +343,11 @@ La finestra di dialogo **Canale di distribuzione** visualizza informazioni sull'
 
 È possibile scegliere uno dei seguenti canali di distribuzione:
 
-- **Ad hoc** &ndash; Salva su disco un APK firmato che può essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
+- &ndash; **ad hoc** salva un file apk firmato su disco che può essere sideload ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
 
-- **Google Play** &ndash; Pubblica un file APK firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
+- **Google Play** &ndash; pubblica un apk firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per avviare il processo di pubblicazione, selezionare **Compila > Archivia per la pubblicazione**:
 
@@ -363,9 +363,9 @@ In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, *
 
 Da qui è possibile selezionare il canale di distribuzione:
 
-- **Ad hoc**: salva su disco un pacchetto dell'applicazione Android firmato in modo che possa essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
+- &ndash; **ad hoc** Salva su disco un apk firmato, in modo che possa essere sideload ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
 
-- **Google Play** &ndash; Pubblica un file APK firmato in Google Play.
+- **Google Play** &ndash; pubblica un apk firmato in Google Play.
     Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
 -----

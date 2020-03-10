@@ -7,58 +7,37 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.custom: video
-ms.date: 01/22/2019
-ms.openlocfilehash: bdc8366e75455755cbb2f533b6707f72e33436e2
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
-ms.translationtype: HT
+ms.date: 03/05/2020
+ms.openlocfilehash: 0947f31700310b7da80dfa412c18585962a337ac
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425579"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946302"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso della firma automatica per richiedere certificati e profili di sviluppo._
+_Dopo aver installato correttamente Novell. iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso del provisioning automatico per richiedere certificati e profili di sviluppo._
 
 ## <a name="requirements"></a>Requisiti
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+Il provisioning automatico è disponibile in Visual Studio per Mac, Visual Studio 2019 e Visual Studio 2017 (versione 15,7 e successive). 
 
-- Visual Studio per Mac 7.3 o versione successiva
-- Xcode 9 o versione successiva
+Per usare questa funzionalità, è necessario anche un account Apple Developer a pagamento. Altre informazioni sugli account per sviluppatori Apple sono disponibili nella Guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+> [!NOTE]
+> Prima di iniziare, assicurarsi di accettare prima di tutto i contratti di licenza in [Apple Developer Portal](https://developer.apple.com/account/) o nell' [App Store Connect](https://appstoreconnect.apple.com/).
 
-- Visual Studio 2019
-- oppure Visual Studio 2017 15.7 o versione successiva
 
-È anche necessario disporre di un collegamento a un host di compilazione Mac che includa quanto segue:
+## <a name="enable-automatic-provisioning"></a>Abilitare il provisioning automatico
 
-- Xcode 10 o versione successiva
+Prima di avviare il processo di firma automatica, è necessario assicurarsi di avere un ID Apple aggiunto in Visual Studio, come descritto nella Guida alla [gestione degli account Apple](~/cross-platform/macios/apple-account-management.md) . 
 
------
-
-## <a name="enabling-automatic-signing"></a>Abilitazione della firma automatica
-
-Prima di avviare il processo di firma automatica, verificare di avere un ID Apple aggiunto in Visual Studio, come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple). Dopo aver aggiunto un ID Apple, è possibile usare qualsiasi _team_ associato. In questo modo è possibile creare certificati, profili e altri ID per il team. L'ID del team viene usato anche per creare un prefisso per un ID app che verrà incluso nel profilo di provisioning. Questo ID consente a Apple di verificare l'identità dell'utente.
-
-> [!IMPORTANT]
-> Prima di iniziare, assicurarsi di accedere a [iTunes Connect](https://itunesconnect.apple.com/) oppure [appleid.apple.com](https://appleid.apple.com) per verificare di avere accettato i criteri per l'account Apple più recenti. Se richiesto, completare i passaggi per accettare eventuali nuovi contratti per l'account da Apple. Se non si accetta l'informativa sulla privacy di maggio 2018, verrà visualizzato uno degli avvisi seguenti quando si tenta di eseguire il provisioning del dispositivo:
->
-> ```
-> Unexpected authentication failure. Reason: {
-> "authType" : "sa"
-> }
-> ```
->
-> Oppure
->
-> ```
-> Authentication Service Is Unavailable
-> ```
+Dopo aver aggiunto un ID Apple, è possibile usare qualsiasi _team_ associato. In questo modo è possibile creare certificati, profili e altri ID per il team. L'ID del team viene usato anche per creare un prefisso per un ID app che verrà incluso nel profilo di provisioning. Questo ID consente a Apple di verificare l'identità dell'utente.
 
 Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, seguire questa procedura:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Aprire un progetto iOS in Visual Studio per Mac.
 
@@ -76,32 +55,29 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
     Se il processo di firma automatica non riesce, nel riquadro **Firma automatica** viene visualizzato il motivo dell'errore.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Associare Visual Studio 2019 a un computer Mac, come descritto nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> [!NOTE]
+> Se si usa Visual Studio 2017 o Visual Studio 2019 (versione 16,4 e precedenti), è necessario [associarlo a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) prima di procedere.
 
-2. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e selezionare **Proprietà**. Passare quindi alla scheda **Firma del bundle iOS**.
+1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto iOS e scegliere **Proprietà**. Passare quindi alla scheda **firma bundle iOS** :
 
-3. Selezionare lo schema **Provisioning automatico**:
+    ![Screenshot della pagina di firma del bundle nelle proprietà di iOS.](automatic-provisioning-images/bundle-signing-win.png)
 
-    ![Selezione di uno schema automatico](automatic-provisioning-images/prov4.png)
+2. Selezionare lo schema di **provisioning automatico** .
 
-4. Selezionare il team nella casella combinata **Team** per avviare il processo di firma automatica.
+3. Selezionare il team dal menu a discesa **Team** per avviare il processo di firma automatica. Visual Studio indicherà se il processo è stato completato correttamente:
 
-    ![Selezione del team](automatic-provisioning-images/prov3.png)
-
-5. Viene avviato il processo di firma automatica. Visual Studio tenta di generare un ID dell'app, un profilo di provisioning e un'identità di firma da usare per la firma. È possibile visualizzare il processo di generazione nell'output di compilazione:
-
-    ![Output di compilazione che mostra la generazione di elementi](automatic-provisioning-images/prov5.png)
+    ![Screenshot della pagina di firma del bundle che evidenzia il messaggio "provisioning automatico completato".](automatic-provisioning-images/signing-success-win.png)
 
 -----
 
-## <a name="triggering-automatic-provisioning"></a>Attivazione del provisioning automatico
+## <a name="run-automatic-provisioning"></a>Eseguire il provisioning automatico
 
-Dopo l'abilitazione della firma automatica, Visual Studio per Mac aggiorna questi elementi, se necessario, quando si verifica uno degli eventi seguenti:
+Quando il provisioning automatico è abilitato, Visual Studio eseguirà di nuovo il processo, se necessario, quando si verifica una delle situazioni seguenti:
 
 - Un dispositivo iOS viene collegato al Mac
-  - Viene automaticamente verificato se il dispositivo è registrato sul portale Apple Developer. Se non lo è, viene aggiunto e viene generato un nuovo profilo di provisioning che lo contiene.
+  - Viene automaticamente verificato se il dispositivo è registrato sul portale Apple Developer. In caso contrario, verrà aggiunto e generato un nuovo profilo di provisioning che lo contiene.
 - L'ID bundle dell'app viene modificato
   - Questa modifica causa l'aggiornamento dell'ID app. Viene quindi creato un nuovo profilo di provisioning che contiene questo ID app.
 - Una funzionalità supportata viene abilitata nel file Entitlements.plist
@@ -110,14 +86,14 @@ Dopo l'abilitazione della firma automatica, Visual Studio per Mac aggiorna quest
 
 ## <a name="wildcard-app-ids"></a>ID app con caratteri jolly
 
-A partire da Visual Studio per Mac 7.6, il provisioning automatico tenta di creare e usare l'ID app con caratteri jolly i profili di provisioning per impostazione predefinita, anziché un ID app esplicito in base all'**identificatore del bundle** specificato in **Info.plist**. Gli ID app con caratteri jolly riducono il numero di profili e ID da gestire nel portale per sviluppatori Apple.
+In Visual Studio per Mac e Visual Studio 2019 (versione 16,5 o successiva), il provisioning automatico tenterà per impostazione predefinita di creare e usare un ID app con caratteri jolly e un profilo di provisioning invece di un ID app esplicito in base all' **identificatore del bundle** specificato in **info. plist**. Gli ID app con caratteri jolly riducono il numero di profili e ID da gestire nel portale per sviluppatori Apple.
 
 In alcuni casi, l'entitlement dell'app richiede un ID app esplicito. Gli entitlement seguenti non supportano gli ID app con caratteri jolly:
 
 - Gruppi di app
 - Domini associati
 - Apple Pay
-- Game Center
+- Area giochi
 - HealthKit
 - HomeKit
 - Hotspot
@@ -126,12 +102,15 @@ In alcuni casi, l'entitlement dell'app richiede un ID app esplicito. Gli entitle
 - NFC
 - VPN personale
 - Notifiche push
-- Configurazione accessori wireless
+- Configurazione degli accessori wireless
 
-Se l'app usa uno di questi entitlement, Visual Studio per Mac proverà a creare un ID app esplicito (anziché un carattere jolly).
+Se l'app usa uno di questi diritti, Visual Studio tenterà di creare un ID app esplicito (anziché un carattere jolly).
 
-> [!NOTE]
-> Il provisioning automatico con ID app con caratteri jolly è attualmente disponibile solo in Visual Studio per Mac.
+## <a name="troubleshoot"></a>Risoluzione dei problemi 
+
+- L'approvazione di un nuovo account per sviluppatore Apple può richiedere diverse ore. Non sarà possibile abilitare il provisioning automatico fino a quando l'account non è stato approvato.
+- Se il processo di provisioning automatico ha esito negativo con il messaggio di errore `Authentication Service Is Unavailable`, accedere a [App Store Connect](https://appstoreconnect.apple.com/) o [appleid.Apple.com](https://appleid.apple.com) per verificare di aver accettato i contratti di servizio più recenti.
+- Se viene restituito il messaggio di errore `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, assicurarsi che il team selezionato disponga di un abbonamento attivo al programma Apple Developer. Per usare un account Apple Developer a pagamento, vedere la Guida [relativa al provisioning gratuito per le app Novell. iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
