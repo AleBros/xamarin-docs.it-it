@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android: Approfondimenti'
+title: 'Hello, Android: approfondimenti'
 description: In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -10,15 +10,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724366"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911786"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android: Approfondimenti
+# <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
 
-_In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android._
+_In questa guida in due parti si creerà la prima applicazione Novell. Android e si svilupperanno le nozioni di base dello sviluppo di applicazioni Android con Novell. Verranno introdotti gli strumenti, i concetti e i passaggi necessari per compilare e distribuire un'applicazione Novell. Android._
 
 In [Hello, Android: guida introduttiva](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) è stata compilata ed eseguita la prima applicazione Xamarin.Android. È ora il momento di acquisire una conoscenza più approfondita del funzionamento delle applicazioni Android, per poter creare programmi più complessi. Questa guida riprende i passaggi eseguiti nella procedura dettagliata relativa a Hello, Android, per consentire la comprensione delle operazioni effettuate e la conoscenza delle funzioni fondamentali dello sviluppo di applicazioni Android.
 
@@ -197,7 +197,7 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 
 ::: zone-end
 
-Questo codice sorgente XML deve contenere quattro elementi di controllo: due elementi **TextView**, un elemento **EditText** e un elemento **Button**. Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
+Questo codice sorgente XML deve contenere quattro elementi di controllo: due **TextView**s, uno **EDITTEXT** e un elemento **Button** . Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
 
 La trattazione degli strumenti e dei concetti alla base della parte visiva dell'interfaccia utente è completata. È il momento di passare al codice che consente il funzionamento dell'interfaccia utente, con l'analisi delle attività e del loro ciclo di vita.
 
@@ -247,7 +247,7 @@ Il ciclo di vita delle attività è una parte importante e complessa di Android.
 
 ### <a name="oncreate"></a>OnCreate
 
-Android chiama il metodo `OnCreate` di `Activity` quando crea l'attività, prima che la schermata venga visualizzata. È possibile eseguire l'override del metodo `OnCreate` del ciclo di vita per creare visualizzazioni e preparare l'attività alla visualizzazione:
+Android chiama il metodo `Activity` di `OnCreate` quando crea l'attività, prima che la schermata venga visualizzata. È possibile eseguire l'override del metodo `OnCreate` del ciclo di vita per creare visualizzazioni e preparare l'attività alla visualizzazione:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -279,7 +279,7 @@ Nell'app **Phoneword**, la prima operazione da eseguire in `OnCreate` è il cari
 SetContentView (Resource.Layout.Main);
 ```
 
-All'avvio, `MainActivity` crea una visualizzazione basata sul contenuto del file **Main.axml**. Si noti che il nome del file di layout deve corrispondere al nome dell'attività: *Main*.axml è il layout per l'attività *Main*. Ciò non è obbligatorio dal punto di vista di Android. Man mano che si aggiungono schermate all'applicazione, tuttavia, si noterà che questa convenzione di denominazione rende più facile far corrispondere il file di codice al rispettivo file di layout.
+All'avvio, `MainActivity` crea una visualizzazione basata sul contenuto del file **Main.axml**. Si noti che il nome del file di layout deve corrispondere al nome dell'attività: &ndash;Main *.axml è il layout per l'attività* Main *. Ciò non è obbligatorio dal punto di vista di Android. Man mano che si aggiungono schermate all'applicazione, tuttavia, si noterà che questa convenzione di denominazione rende più facile far corrispondere il file di codice al rispettivo file di layout.
 
 ::: zone-end
 
@@ -372,7 +372,7 @@ Android selezionerà l'icona con la densità appropriata:
 
 ### <a name="generate-custom-icons"></a>Generare icone personalizzate
 
-Non tutti hanno a disposizione un designer che crei le icone e le immagini di avvio personalizzate necessarie per mettere in risalto un'app. Ecco alcuni approcci alternativi per la generazione di grafica personalizzata per le app:
+Non tutti hanno a disposizione una finestra di progettazione per creare le icone personalizzate e le immagini di avvio che devono essere rilevate da un'app. Ecco alcuni approcci alternativi per la generazione di immagini personalizzate per le app:
 
 ::: zone pivot="windows"
 
