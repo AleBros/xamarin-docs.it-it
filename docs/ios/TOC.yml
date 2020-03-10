@@ -658,15 +658,6 @@
               href: deploy-test/provisioning/entitlements.md
             - name: Informazioni di riferimento su valori/chiavi Info.plist
               href: deploy-test/provisioning/infoplist-reference.md
-            - name: Fastlane
-              href: deploy-test/provisioning/fastlane/index.md
-              items:
-                - name: cert
-                  href: deploy-test/provisioning/fastlane/cert.md
-                - name: sigh
-                  href: deploy-test/provisioning/fastlane/sigh.md
-                - name: match
-                  href: deploy-test/provisioning/fastlane/match.md
         - name: Compilazione per dispositivi diversi
           href: deploy-test/compiling-for-different-devices.md
         - name: Ambiente
