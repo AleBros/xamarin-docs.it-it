@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912526"
 ---
 # <a name="android-emulator-troubleshooting"></a>Risoluzione dei problemi dell'emulatore Android
@@ -39,7 +39,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio,
 
    ```shell
    List of devices attached
@@ -70,7 +70,7 @@ Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google
 
 <a name="perf-win" />
 
-## <a name="performance-issues"></a>Problemi di prestazioni
+## <a name="performance-issues"></a>Prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 
@@ -258,7 +258,7 @@ Se si usa una versione di Windows precedente all'**Aggiornamento di Windows 10 -
 
     ![Disabilitazione di Hyper-V nella finestra di dialogo Funzionalità Windows](troubleshooting-images/win/03-uncheck-hyper-v.png)
 
-3. Riavviare il computer.
+3. Riavvia il computer.
 
 In alternativa, è possibile usare il cmdlet PowerShell seguente per disabilitare l'hypervisor Hyper-V:
 
@@ -375,7 +375,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio,
 
    ```shell
    List of devices attached
@@ -406,7 +406,7 @@ Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google
 
 <a name="perf-mac" />
 
-## <a name="performance-issues"></a>Problemi di prestazioni
+## <a name="performance-issues"></a>Prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 

@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 8. Codice e XAML in armonia
-description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 8. Codice e XAML in armonia'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 8. Codice e XAML in armonia'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 75f153499edb6d979f9a0269a1439eaf8ca53878
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334246"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Riepilogo del capitolo 8. Codice e XAML in armonia
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 
 In questo capitolo esamina un livello più profondo XAML e in particolare come codice e XAML interagiscono.
 
@@ -28,7 +28,7 @@ Anche se queste sono le tecniche per utilizzo generico, vengono utilizzate princ
 
 ### <a name="constructors-with-arguments"></a>Costruttori con argomenti
 
-Il [ **ParameteredConstructorDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ParameteredConstructorDemo) esempio viene illustrato come usare il `x:Arguments` tag per specificare gli argomenti del costruttore. Questi argomenti devono essere racchiuso tra tag di elemento che indica il tipo dell'argomento. Per i tipi di dati .NET di base, sono disponibili i seguenti tag:
+L'esempio [**ParameteredConstructorDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ParameteredConstructorDemo) illustra come usare il tag `x:Arguments` per specificare gli argomenti del costruttore. Questi argomenti devono essere racchiuso tra tag di elemento che indica il tipo dell'argomento. Per i tipi di dati .NET di base, sono disponibili i seguenti tag:
 
 - `x:Object`
 - `x:Boolean`
@@ -47,39 +47,39 @@ Il [ **ParameteredConstructorDemo** ](https://github.com/xamarin/xamarin-forms-b
 
 ### <a name="can-i-call-methods-from-xaml"></a>È possibile chiamare i metodi da XAML?
 
-Il [ **FactoryMethodDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) esempio viene illustrato come usare il `x:FactoryMethod` elemento per specificare un metodo factory che viene richiamato per creare un oggetto. Tale metodo factory deve essere pubblico e statico e deve creare un oggetto del tipo in cui è definito. (Ad esempio la [ `Color.FromRgb` ](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) metodo qualifica perché è statico e pubblico e restituisce un valore di tipo `Color`.) Gli argomenti al metodo factory vengono specificati all'interno di `x:Arguments` tag.
+Nell'esempio [**FactoryMethodDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FactoryMethodDemo) viene illustrato come utilizzare l'elemento `x:FactoryMethod` per specificare un metodo factory richiamato per creare un oggetto. Tale metodo factory deve essere pubblico e statico e deve creare un oggetto del tipo in cui è definito. Ad esempio, il metodo [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) si qualifica perché è Public e static e restituisce un valore di tipo `Color`. Gli argomenti per il metodo factory sono specificati all'interno di `x:Arguments` tag.
 
 ## <a name="the-xname-attribute"></a>L'attributo X:Name
 
-Il `x:Name` attributo consente a un oggetto creata un'istanza in XAML per essere assegnato un nome. Le regole per tali nomi sono gli stessi nomi di variabili c#. Dopo la restituzione del `InitializeComponent` chiamare nel costruttore, il file code-behind può fare riferimento a questi nomi per accedere all'elemento XAML corrispondente. I nomi vengono effettivamente convertiti dal parser XAML in campi privati nella classe parziale generata.
+L'attributo `x:Name` consente di assegnare un nome a un oggetto di cui è stata creata un'istanza in XAML. Le regole per tali nomi sono gli stessi nomi di variabili c#. In seguito alla restituzione della chiamata `InitializeComponent` nel costruttore, il file code-behind può fare riferimento a questi nomi per accedere all'elemento XAML corrispondente. I nomi vengono effettivamente convertiti dal parser XAML in campi privati nella classe parziale generata.
 
-Il [ **XamlClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlClock) esempio dimostra l'uso di `x:Name` per consentire il file code-behind mantenere due `Label` elementi definiti in XAML aggiornato con la data e ora correnti.
+Nell'esempio [**XamlClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlClock) viene illustrato l'utilizzo di `x:Name` per consentire al file code-behind di mantenere due elementi `Label` definiti in XAML aggiornati con la data e l'ora correnti.
 
-Lo stesso nome non può essere usato per più elementi nella stessa pagina. Si tratta di un particolare problema se si usa `OnPlatform` creare parallele oggetti denominati per ogni piattaforma. Il [ **PlatformSpecificLabele** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/PlatformSpecificLabels) esempio viene illustrato un modo migliore per eseguire un'operazione simile.
+Lo stesso nome non può essere usato per più elementi nella stessa pagina. Si tratta di un problema particolare se si usa `OnPlatform` per creare oggetti denominati paralleli per ogni piattaforma. Nell'esempio [**PlatformSpecificLabele**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/PlatformSpecificLabels) viene illustrato un modo migliore per eseguire un'operazione simile.
 
 ## <a name="custom-xaml-based-views"></a>Visualizzazioni personalizzate basate su XAML
 
-Esistono diversi modi per evitare la ripetizione di markup in XAML. Una tecnica comune consiste nel creare una nuova classe basata su XAML che deriva da [ `ContentView` ](xref:Xamarin.Forms.ContentView). Questa tecnica è dimostrata nel [ **ColorViewList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList) esempio. Il `ColorView` deriva dalla classe `ContentView` per visualizzare un determinato colore e il relativo nome, mentre le `ColorViewListPage` deriva dalla classe `ContentPage` come di consueto e in modo esplicito crea 17 istanze di `ColorView`.
+Esistono diversi modi per evitare la ripetizione di markup in XAML. Una tecnica comune consiste nel creare una nuova classe basata su XAML che deriva da [`ContentView`](xref:Xamarin.Forms.ContentView). Questa tecnica è illustrata nell'esempio [**ColorViewList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/ColorViewList) . La classe `ColorView` deriva da `ContentView` per visualizzare un colore particolare e il relativo nome, mentre la classe `ColorViewListPage` deriva da `ContentPage` come di consueto e crea in modo esplicito 17 istanze di `ColorView`.
 
-L'accesso di `ColorView` classe in XAML richiede un'altra dichiarazione dello spazio dei nomi XML, comunemente denominata `local` per le classi nello stesso assembly.
+Per accedere alla classe `ColorView` in XAML è necessaria un'altra dichiarazione dello spazio dei nomi XML, comunemente denominata `local` per le classi nello stesso assembly.
 
 ## <a name="events-and-handlers"></a>Gli eventi e gestori
 
-Gli eventi possono essere assegnati a gestori eventi in XAML, ma il gestore dell'evento stesso deve essere implementato nel file code-behind. Il [ **XamlKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlKeypad) viene illustrato come compilare un'interfaccia utente tastierino in XAML e come implementare il `Clicked` gestori nel file code-behind.
+Gli eventi possono essere assegnati a gestori eventi in XAML, ma il gestore dell'evento stesso deve essere implementato nel file code-behind. [**XamlKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/XamlKeypad) illustra come creare un'interfaccia utente per la tastiera in XAML e come implementare i gestori `Clicked` nel file code-behind.
 
 ## <a name="tap-gestures"></a>Movimenti di tocco
 
-Qualsiasi `View` oggetto possibile ottenere l'input tocco e generare gli eventi da quell'input. Il `View` classe definisce un [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) proprietà di raccolta che può contenere uno o più istanze di classi che derivano da [ `GestureRecognizer` ](xref:Xamarin.Forms.GestureRecognizer).
+Qualsiasi `View` oggetto può ottenere input tocco e generare eventi da tale input. La classe `View` definisce una proprietà di raccolta [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) che può contenere una o più istanze di classi che derivano da [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer).
 
-Il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) genera [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) gli eventi. Il [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) programma illustra come collegare `TapGestureRecognizer` gli oggetti a quattro `BoxView` elementi per creare un gioco imitazione:
+Il [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) genera eventi di [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) . Il programma [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) illustra come aggiungere oggetti `TapGestureRecognizer` a quattro elementi `BoxView` per creare un gioco di imitazione:
 
-[![Tripla screenshot della scelta monkey](images/ch08fg07-small.png "imitazione Game")](images/ch08fg07-large.png#lightbox "imitazione gioco")
+[![Schermata tripla del tocco scimmia](images/ch08fg07-small.png "Gioco di imitazione")](images/ch08fg07-large.png#lightbox "Gioco di imitazione")
 
-Ma il **MonkeyTap** suono realmente necessario programma. (Vedere [capitolo successivo](chapter09.md).)
+Ma il programma **MonkeyTap** richiede effettivamente un suono. Vedere [il capitolo successivo](chapter09.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Capitolo 8 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
-- [Esempi di capitolo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
-- [Capitolo 8 F# esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
+- [Esempi capitolo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+- [Esempio del F# capitolo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)

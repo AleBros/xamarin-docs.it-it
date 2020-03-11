@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
 ms.openlocfilehash: e027d41e98c26ef1659c27ab05df3052e19cc670
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027142"
 ---
 # <a name="location-services-on-android"></a>Servizi di posizione in Android
@@ -73,7 +73,7 @@ else
 }
 ```
 
-Le app devono essere a tolleranza dello scenario in cui l'utente non concede l'autorizzazione (o ha revocato l'autorizzazione) ed è in grado di gestire la situazione in modo normale. Per ulteriori informazioni sull'implementazione dei controlli delle autorizzazioni di runtime in Xamarin.Android, vedere la [Guida alle autorizzazioni](~/android/app-fundamentals/permissions.md) .
+Le app devono essere a tolleranza dello scenario in cui l'utente non concede l'autorizzazione (o ha revocato l'autorizzazione) ed è in grado di gestire la situazione in modo normale. Per ulteriori informazioni sull'implementazione dei controlli delle autorizzazioni di runtime in Novell. Android, vedere la [Guida alle autorizzazioni](~/android/app-fundamentals/permissions.md) .
 
 ## <a name="using-the-fused-location-provider"></a>Uso del provider di percorsi con fusibile
 
@@ -84,7 +84,7 @@ L'API del provider di percorsi con fusibile fornisce un'ampia gamma di altri str
 Il provider del percorso fuso fa parte di [Google Play Services](https://developer.android.com/google/play-services/index.html).
 Il pacchetto di Google Play Services deve essere installato e configurato correttamente nell'applicazione affinché l'API del provider di percorsi con fusibile funzioni e il dispositivo disponga del Google Play Services APK installato.
 
-Prima che un'applicazione Xamarin.Android possa usare il provider di percorsi con fusibile, deve aggiungere il pacchetto **Xamarin.GooglePlayServices. Maps** al progetto. Inoltre, è necessario aggiungere le istruzioni `using` seguenti a tutti i file di origine che fanno riferimento alle classi descritte di seguito:
+Prima che un'applicazione Novell. Android possa usare il provider di percorsi con fusibile, deve aggiungere il pacchetto **Novell. GooglePlayServices. Maps** al progetto. Inoltre, è necessario aggiungere le istruzioni `using` seguenti a tutti i file di origine che fanno riferimento alle classi descritte di seguito:
 
 ```csharp
 using Android.Gms.Common;
@@ -93,7 +93,7 @@ using Android.Gms.Location;
 
 ### <a name="checking-if-google-play-services-is-installed"></a>Verifica dell'installazione di Google Play Services
 
-Un Xamarin.Android si arresterà in modo anomalo se tenta di usare il provider di percorsi con fusibile quando Google Play Services non è installato (o non aggiornato), si verificherà un'eccezione di Runtime.  Se Google Play Services non è installato, l'applicazione deve eseguire il fallback al servizio di localizzazione Android illustrato in precedenza. Se Google Play Services non è aggiornato, l'app potrebbe visualizzare un messaggio all'utente che richiede di aggiornare la versione installata di Google Play Services.
+Un Novell. Android si arresterà in modo anomalo se tenta di usare il provider di percorsi con fusibile quando Google Play Services non è installato (o non aggiornato), si verificherà un'eccezione di Runtime.  Se Google Play Services non è installato, l'applicazione deve eseguire il fallback al servizio di localizzazione Android illustrato in precedenza. Se Google Play Services non è aggiornato, l'app potrebbe visualizzare un messaggio all'utente che richiede di aggiornare la versione installata di Google Play Services.
 
 Questo frammento di codice è un esempio di come un'attività Android può verificare a livello di codice se Google Play Services è installato:
 
@@ -123,7 +123,7 @@ bool IsGooglePlayServicesInstalled()
 
 ### <a name="fusedlocationproviderclient"></a>FusedLocationProviderClient
 
-Per interagire con il provider di percorsi con fusibile, un'applicazione Xamarin.Android deve avere un'istanza del `FusedLocationProviderClient`. Questa classe espone i metodi necessari per sottoscrivere gli aggiornamenti della posizione e per recuperare l'ultima posizione nota del dispositivo.
+Per interagire con il provider di percorsi con fusibile, un'applicazione Novell. Android deve avere un'istanza del `FusedLocationProviderClient`. Questa classe espone i metodi necessari per sottoscrivere gli aggiornamenti della posizione e per recuperare l'ultima posizione nota del dispositivo.
 
 Il metodo `OnCreate` di un'attività è un punto adatto per ottenere un riferimento al `FusedLocationProviderClient`, come illustrato nel frammento di codice seguente:
 
@@ -141,7 +141,7 @@ public class MainActivity: AppCompatActivity
 
 ### <a name="getting-the-last-known-location"></a>Recupero dell'ultima posizione nota
 
-Il metodo `FusedLocationProviderClient.GetLastLocationAsync()` fornisce un modo semplice e non bloccante per un'applicazione Xamarin.Android per ottenere rapidamente l'ultima posizione nota del dispositivo con un sovraccarico di codifica minimo.
+Il metodo `FusedLocationProviderClient.GetLastLocationAsync()` fornisce un modo semplice e non bloccante per un'applicazione Novell. Android per ottenere rapidamente l'ultima posizione nota del dispositivo con un sovraccarico di codifica minimo.
 
 Questo frammento di codice illustra come usare il metodo `GetLastLocationAsync` per recuperare il percorso del dispositivo:
 
@@ -166,7 +166,7 @@ async Task GetLastLocationFromDevice()
 
 ### <a name="subscribing-to-location-updates"></a>Sottoscrizione degli aggiornamenti della posizione
 
-Un'applicazione Xamarin.Android può anche sottoscrivere gli aggiornamenti del percorso dal provider di percorsi con fusibile usando il metodo `FusedLocationProviderClient.RequestLocationUpdatesAsync`, come illustrato nel frammento di codice seguente:
+Un'applicazione Novell. Android può anche sottoscrivere gli aggiornamenti del percorso dal provider di percorsi con fusibile usando il metodo `FusedLocationProviderClient.RequestLocationUpdatesAsync`, come illustrato nel frammento di codice seguente:
 
 ```csharp
 await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
@@ -174,7 +174,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 Questo metodo accetta due parametri:
 
-- **`Android.Gms.Location.LocationRequest`** &ndash; un oggetto `LocationRequest` è il modo in cui un'applicazione Xamarin.Android passa i parametri sulla modalità di funzionamento del provider di percorsi con fusibile. Il `LocationRequest` include informazioni quali il modo in cui devono essere effettuate le richieste frequenti o l'importanza di un aggiornamento del percorso preciso. Una richiesta di posizione importante, ad esempio, fa sì che il dispositivo usi il GPS e, di conseguenza, più potenza, quando viene determinato il percorso. Questo frammento di codice Mostra come creare un `LocationRequest` per una posizione con accuratezza elevata, verificando approssimativamente ogni cinque minuti per un aggiornamento della località (ma non prima di due minuti tra le richieste). Il provider di percorsi con fusibile utilizzerà un `LocationRequest` come materiale sussidiario per il provider di località da usare quando si tenta di determinare la posizione del dispositivo:
+- **`Android.Gms.Location.LocationRequest`** &ndash; un oggetto `LocationRequest` è il modo in cui un'applicazione Novell. Android passa i parametri sulla modalità di funzionamento del provider di percorsi con fusibile. Il `LocationRequest` include informazioni quali il modo in cui devono essere effettuate le richieste frequenti o l'importanza di un aggiornamento del percorso preciso. Una richiesta di posizione importante, ad esempio, fa sì che il dispositivo usi il GPS e, di conseguenza, più potenza, quando viene determinato il percorso. Questo frammento di codice Mostra come creare un `LocationRequest` per una posizione con accuratezza elevata, verificando approssimativamente ogni cinque minuti per un aggiornamento della località (ma non prima di due minuti tra le richieste). Il provider di percorsi con fusibile utilizzerà un `LocationRequest` come materiale sussidiario per il provider di località da usare quando si tenta di determinare la posizione del dispositivo:
 
     ```csharp
     LocationRequest locationRequest = new LocationRequest()
@@ -183,9 +183,9 @@ Questo metodo accetta due parametri:
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
 
-- **`Android.Gms.Location.LocationCallback`** &ndash; per la ricezione degli aggiornamenti del percorso, un'applicazione Xamarin.Android deve sottoclassare la `LocationProvider` classe astratta. Questa classe espone due metodi che potrebbero essere richiamati dal provider di percorsi con fusibile per aggiornare l'app con le informazioni sulla posizione. Questo argomento verrà illustrato in dettaglio di seguito.
+- **`Android.Gms.Location.LocationCallback`** &ndash; per la ricezione degli aggiornamenti del percorso, un'applicazione Novell. Android deve sottoclassare la `LocationProvider` classe astratta. Questa classe espone due metodi che potrebbero essere richiamati dal provider di percorsi con fusibile per aggiornare l'app con le informazioni sulla posizione. Questo argomento verrà illustrato in dettaglio di seguito.
 
-Per notificare a un'applicazione Xamarin.Android un percorso di aggiornamento, il provider del percorso con fusibile richiama il `LocationCallBack.OnLocationResult(LocationResult result)`. Il parametro `Android.Gms.Location.LocationResult` conterrà le informazioni sul percorso di aggiornamento.
+Per notificare a un'applicazione Novell. Android un percorso di aggiornamento, il provider del percorso con fusibile richiama il `LocationCallBack.OnLocationResult(LocationResult result)`. Il parametro `Android.Gms.Location.LocationResult` conterrà le informazioni sul percorso di aggiornamento.
 
 Quando il provider del percorso con fusibile rileva una modifica nella disponibilità dei dati del percorso, chiamerà il metodo `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)`. Se la proprietà `LocationAvailability.IsLocationAvailable` restituisce `true`, si può presupporre che i risultati della posizione del dispositivo segnalati da `OnLocationResult` siano accurati e aggiornati in base alle esigenze del `LocationRequest`. Se `IsLocationAvailable` è false, nessun risultato del percorso verrà restituito da `OnLocationResult`.
@@ -337,7 +337,7 @@ else
 > [!NOTE]
 > Se l'utente ha disabilitato tutti i provider di posizione, `GetBestProvider` restituirà `null`. Per vedere come funziona questo codice in un dispositivo reale, assicurarsi di abilitare le reti GPS, Wi-Fi e cellulari in **Impostazioni Google > percorso >** come illustrato in questa schermata:
 >
-> [schermata Impostazioni![modalità percorso in un telefono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
+> [schermata Impostazioni ![modalità percorso in un telefono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
 >
 > La schermata seguente illustra l'applicazione location in esecuzione usando `GetBestProvider`:
 >

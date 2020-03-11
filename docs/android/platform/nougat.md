@@ -1,6 +1,6 @@
 ---
 title: Funzionalità torrone
-description: Come iniziare a usare Xamarin.Android per sviluppare app per Android torrone.
+description: Come iniziare a usare Novell. Android per sviluppare app per Android torrone.
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
@@ -8,28 +8,28 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
 ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027095"
 ---
 # <a name="nougat-features"></a>Funzionalità torrone
 
-_Come iniziare a usare Xamarin.Android per sviluppare app per Android torrone._
+_Come iniziare a usare Novell. Android per sviluppare app per Android torrone._
 
-Questo articolo fornisce una descrizione delle funzionalità introdotte in Android torrone, spiega come preparare Xamarin.Android for Android torrone Development e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità torrone di Android in App Xamarin.Android.
+Questo articolo fornisce una descrizione delle funzionalità introdotte in Android torrone, spiega come preparare Novell. Android for Android torrone Development e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità torrone di Android in App Novell. Android.
 
 ## <a name="overview"></a>Panoramica
 
-Il [torrone Android](https://developer.android.com/about/versions/nougat/android-7.0.html) è il follow-up di Google per Android 6,0 marshmallow. Xamarin.Android fornisce il supporto per le **associazioni Android 7. x** in Xamarin Android 7,0 e versioni successive. Il torrone Android aggiunge molte nuove API per le funzionalità torrone descritte di seguito. Queste API sono disponibili per le app Xamarin.Android quando si usa Xamarin.Android 7,0.
+Il [torrone Android](https://developer.android.com/about/versions/nougat/android-7.0.html) è il follow-up di Google per Android 6,0 marshmallow. Novell. Android fornisce il supporto per le **associazioni Android 7. x** in novell Android 7,0 e versioni successive. Il torrone Android aggiunge molte nuove API per le funzionalità torrone descritte di seguito. Queste API sono disponibili per le app Novell. Android quando si usa Novell. Android 7,0.
 
 [![le immagini Hero di Tablet e telefoni Android che eseguono il torrone Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 Per altre informazioni sulle API Android 7. x, vedere [android 7,1 per sviluppatori](https://developer.android.com/preview/api-overview.html).
-Per un elenco dei problemi noti di Xamarin.Android 7,0, vedere le [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
+Per un elenco dei problemi noti di Novell. Android 7,0, vedere le [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
-Il torrone Android offre molte nuove funzionalità interessanti per gli sviluppatori Xamarin.Android. Queste funzionalità comprendono:
+Il torrone Android offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità comprendono:
 
 - **Supporto** di più finestre &ndash; questa funzionalità avanzata consente agli utenti di aprire contemporaneamente due app sullo schermo.
 
@@ -45,28 +45,28 @@ Questo articolo illustra come iniziare a creare app con il torrone Android per p
 
 Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità del torrone Android nelle app basate su Novell:
 
-- **Visual Studio o Visual Studio per Mac** &ndash; se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Xamarin è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
+- **Visual Studio o Visual Studio per Mac** &ndash; se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
 
-- **Xamarin.android** &ndash; Xamarin.Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - **Android SDK** -Android SDK 7,0 (API 24) o versione successiva deve essere installato tramite il Android SDK Manager.
 
-- **Java Developer Kit** &ndash; lo sviluppo di Xamarin Android 7,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 8 supporta anche i livelli API precedenti a 24). La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** &ndash; lo sviluppo di novell Android 7,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 8 supporta anche i livelli API precedenti a 24). La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
 
-Si noti che le app devono essere ricompilate con Xamarin C6SR4 o versione successiva per funzionare in modo affidabile con il torrone Android. Dal momento che Android torrone può collegarsi solo a [librerie native fornite da NDK](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), le app esistenti che usano librerie come **mono. Data. sqlite. dll** potrebbero arrestarsi in modo anomalo quando vengono eseguite su un sistema operativo Android se non vengono ricompilate correttamente.
+Si noti che le app devono essere ricompilate con Novell C6SR4 o versione successiva per funzionare in modo affidabile con il torrone Android. Dal momento che Android torrone può collegarsi solo a [librerie native fornite da NDK](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), le app esistenti che usano librerie come **mono. Data. sqlite. dll** potrebbero arrestarsi in modo anomalo quando vengono eseguite su un sistema operativo Android se non vengono ricompilate correttamente.
 
 ## <a name="getting-started"></a>Introduzione
 
-Per iniziare a usare il torrone Android con Xamarin.Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android torrone:
+Per iniziare a usare il torrone Android con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android torrone:
 
-1. Installare gli aggiornamenti più recenti di Xamarin.Android dalla Novell.
+1. Installare gli aggiornamenti più recenti di Novell. Android dalla Novell.
 
 2. Installare gli strumenti e i pacchetti **Android 7,0 (API 24)** o versioni successive.
 
-3. Creare un nuovo progetto Xamarin.Android destinato a Android torrone.
+3. Creare un nuovo progetto Novell. Android destinato a Android torrone.
 
 4. Configurare un emulatore o un dispositivo per il torrone Android.
 
@@ -74,11 +74,11 @@ Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
 ### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
 
-Per aggiungere il supporto Xamarin per il torrone Android, modificare il canale degli aggiornamenti in Visual Studio o Visual Studio per Mac nel canale stabile e applicare gli aggiornamenti più recenti. Se sono necessarie anche funzionalità attualmente disponibili solo nel canale Alpha o beta, è possibile passare al canale alfa o beta (i canali alpha e beta forniscono anche il supporto per Android 7. x). Per informazioni su come modificare il canale degli aggiornamenti (versioni), vedere [modifica del canale degli aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
+Per aggiungere il supporto Novell per il torrone Android, modificare il canale degli aggiornamenti in Visual Studio o Visual Studio per Mac nel canale stabile e applicare gli aggiornamenti più recenti. Se sono necessarie anche funzionalità attualmente disponibili solo nel canale Alpha o beta, è possibile passare al canale alfa o beta (i canali alpha e beta forniscono anche il supporto per Android 7. x). Per informazioni su come modificare il canale degli aggiornamenti (versioni), vedere [modifica del canale degli aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
 
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
-Per creare un progetto con Xamarin Android 7,0, è necessario prima di tutto usare gestione Android SDK per installare la **piattaforma SDK Android N (API 24)** o versione successiva. È necessario installare anche la **Android SDK Tools**più recente:
+Per creare un progetto con Novell Android 7,0, è necessario prima di tutto usare gestione Android SDK per installare la **piattaforma SDK Android N (API 24)** o versione successiva. È necessario installare anche la **Android SDK Tools**più recente:
 
 1. Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > aprire Android SDK manager&hellip;** . in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
 
@@ -96,11 +96,11 @@ Per creare un progetto con Xamarin Android 7,0, è necessario prima di tutto usa
 
     [![configurazione del percorso JDK 8 in strumenti opzioni](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
-    Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > opzioni > Xamarin > Android Settings**. In Visual Studio per Mac fare clic su **preferenze > progetti > percorsi SDK > Android**.
+    Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > opzioni > novell > Android Settings**. In Visual Studio per Mac fare clic su **preferenze > progetti > percorsi SDK > Android**.
 
-### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
+### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Xamarin.vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
+Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 7,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 7,0, è necessario configurare il livello API Android di destinazione del progetto su **android 7,0 (API 24-torrone)** . Si consiglia di impostare il livello di Framework di destinazione su API 24 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -134,7 +134,7 @@ Gli utenti possono trascinare un divisore tra le app per ridimensionarle e posso
 
 [![app di esempio in esecuzione in modalità a più finestre sia verticale che orizzontale](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-È possibile configurare il modo in cui le attività dell'app Xamarin.Android supportano la modalità a più finestre. È ad esempio possibile configurare gli attributi che impostano le dimensioni minime e l'altezza e la larghezza predefinite dell'app in modalità a più finestre. È possibile utilizzare la nuova proprietà `Activity.IsInMultiWindowMode` per determinare se l'attività è in modalità a più finestre. Ad esempio:
+È possibile configurare il modo in cui le attività dell'app Novell. Android supportano la modalità a più finestre. È ad esempio possibile configurare gli attributi che impostano le dimensioni minime e l'altezza e la larghezza predefinite dell'app in modalità a più finestre. È possibile utilizzare la nuova proprietà `Activity.IsInMultiWindowMode` per determinare se l'attività è in modalità a più finestre. Ad esempio:
 
 ```csharp
 if (!IsInMultiWindowMode) {
@@ -191,7 +191,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-L'app di esempio del servizio C# di [messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include codice che illustra come estendere le notifiche con un oggetto`RemoteInput`. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
+L'app di esempio del servizio C# di [messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include codice che illustra come estendere le notifiche con un oggetto `RemoteInput`. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
 
 #### <a name="bundled-notifications"></a>Notifiche in bundle
 
@@ -218,14 +218,14 @@ Android 7,1 ha introdotto una funzionalità di *collegamenti alle app* che conse
 Per attivare il menu dei tasti di scelta rapida, l'utente preme a lungo l'icona dell'app per un secondo o più &ndash; il menu viene visualizzato con una vibrazione rapida.
 Se si rilascia la pressione, il menu rimarrà:
 
-[schermata di esempio![di un menu di scelta rapida dell'app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
+[schermata di esempio ![di un menu di scelta rapida dell'app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
 Questa funzionalità è disponibile solo per il livello API 25 o superiore.
 Per altre informazioni sulla nuova funzionalità di collegamenti alle app in Android 7,1, vedere l'argomento [tasti di scelta rapida](https://developer.android.com/guide/topics/ui/shortcuts.html) per le app Android.
 
 ### <a name="sample-code"></a>Codice di esempio
 
-Sono disponibili diversi esempi di Xamarin.Android per illustrare come sfruttare i vantaggi delle funzionalità torrone di Android:
+Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare i vantaggi delle funzionalità torrone di Android:
 
 - [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) illustra l'uso dell'API multifinestra disponibile nel torrone Android. È possibile passare l'app di esempio in modalità multiwindows per vedere come influiscono sul ciclo di vita e sul comportamento dell'app.
 
@@ -239,9 +239,9 @@ Sono disponibili diversi esempi di Xamarin.Android per illustrare come sfruttare
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato introdotto il torrone Android ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Xamarin.Android nel torrone Android. Fornisce inoltre una panoramica delle funzionalità principali disponibili in Android torrone, con collegamenti ad esempi di codice sorgente che consentono di iniziare a creare app per il torrone Android.
+In questo articolo è stato introdotto il torrone Android ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android nel torrone Android. Fornisce inoltre una panoramica delle funzionalità principali disponibili in Android torrone, con collegamenti ad esempi di codice sorgente che consentono di iniziare a creare app per il torrone Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Android 7,1 per sviluppatori](https://developer.android.com/about/versions/nougat/android-7.1.html)
-- [Note sulla versione di Xamarin Android 7,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)
+- [Note sulla versione di Novell Android 7,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)

@@ -1,6 +1,6 @@
 ---
 title: Metadati per le associazioni Java
-description: C#il codice in Xamarin.Android chiama le librerie Java tramite binding, un meccanismo che astrae i dettagli di basso livello specificati in Java Native Interface (JNI). Xamarin.Android offre uno strumento che genera queste associazioni. Questo strumento consente allo sviluppatore di controllare il modo in cui viene creata un'associazione usando i metadati, che consente procedure come la modifica degli spazi dei nomi e la ridenominazione dei membri. In questo documento viene illustrato il funzionamento dei metadati, vengono riepilogati gli attributi supportati dai metadati e viene illustrato come risolvere i problemi di associazione modificando questi metadati.
+description: C#il codice in Novell. Android chiama le librerie Java tramite binding, un meccanismo che astrae i dettagli di basso livello specificati in Java Native Interface (JNI). Novell. Android offre uno strumento che genera queste associazioni. Questo strumento consente allo sviluppatore di controllare il modo in cui viene creata un'associazione usando i metadati, che consente procedure come la modifica degli spazi dei nomi e la ridenominazione dei membri. In questo documento viene illustrato il funzionamento dei metadati, vengono riepilogati gli attributi supportati dai metadati e viene illustrato come risolvere i problemi di associazione modificando questi metadati.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
@@ -8,19 +8,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: 25a5d79084f7caa78eec4011c047bd19a63ef748
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75487789"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
-_C#il codice in Xamarin.Android chiama le librerie Java tramite binding, un meccanismo che astrae i dettagli di basso livello specificati in Java Native Interface (JNI). Xamarin.Android offre uno strumento che genera queste associazioni. Questo strumento consente allo sviluppatore di controllare il modo in cui viene creata un'associazione usando i metadati, che consente procedure come la modifica degli spazi dei nomi e la ridenominazione dei membri. In questo documento viene illustrato il funzionamento dei metadati, vengono riepilogati gli attributi supportati dai metadati e viene illustrato come risolvere i problemi di associazione modificando questi metadati._
+_C#il codice in Novell. Android chiama le librerie Java tramite binding, un meccanismo che astrae i dettagli di basso livello specificati in Java Native Interface (JNI). Novell. Android offre uno strumento che genera queste associazioni. Questo strumento consente allo sviluppatore di controllare il modo in cui viene creata un'associazione usando i metadati, che consente procedure come la modifica degli spazi dei nomi e la ridenominazione dei membri. In questo documento viene illustrato il funzionamento dei metadati, vengono riepilogati gli attributi supportati dai metadati e viene illustrato come risolvere i problemi di associazione modificando questi metadati._
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
-Una **libreria di binding Java** Xamarin.Android tenta di automatizzare gran parte del lavoro necessario per l'associazione di una libreria Android esistente con l'ausilio di uno strumento noto a volte come _Generatore di binding_. Quando si associa una libreria Java, Xamarin.Android esamina le classi Java e genera un elenco di tutti i pacchetti, i tipi e i membri che devono essere associati. Questo elenco di API viene archiviato in un file XML che si trova nella **directory\{progetto} \obj\Release\api.XML** per una build **di rilascio** e in **\{directory del progetto} \Obj\Debug\api.XML** per una build di **debug** .
+Una **libreria di binding Java** Novell. Android tenta di automatizzare gran parte del lavoro necessario per l'associazione di una libreria Android esistente con l'ausilio di uno strumento noto a volte come _Generatore di binding_. Quando si associa una libreria Java, Novell. Android esamina le classi Java e genera un elenco di tutti i pacchetti, i tipi e i membri che devono essere associati. Questo elenco di API viene archiviato in un file XML che si trova nella **directory\{progetto} \obj\Release\api.XML** per una build **di rilascio** e in **\{directory del progetto} \Obj\Debug\api.XML** per una build di **debug** .
 
 ![Percorso del file API. XML nella cartella obj/debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
@@ -50,7 +50,7 @@ In questo esempio **API. XML** dichiara una classe nel pacchetto di `android` de
 In molti casi, l'assistenza umana è necessaria per rendere l'API Java più ".NET like" o per correggere i problemi che impediscono la compilazione dell'assembly di associazione. Ad esempio, potrebbe essere necessario modificare i nomi dei pacchetti Java in spazi dei nomi .NET, rinominare una classe o modificare il tipo restituito di un metodo.
 
 Queste modifiche non vengono realizzate modificando direttamente il **file API. XML** .
-Al contrario, le modifiche vengono registrate in file XML speciali forniti dal modello libreria di associazione Java. Quando si compila l'assembly di binding Xamarin.Android, il generatore di binding sarà influenzato da questi file di mapping quando si crea l'assembly di associazione
+Al contrario, le modifiche vengono registrate in file XML speciali forniti dal modello libreria di associazione Java. Quando si compila l'assembly di binding Novell. Android, il generatore di binding sarà influenzato da questi file di mapping quando si crea l'assembly di associazione
 
 Questi file di mapping XML possono essere trovati nella cartella **transforms** del progetto:
 
@@ -111,7 +111,7 @@ Di seguito sono elencati alcuni degli elementi XPath usati più di frequente per
 
 ### <a name="adding-types"></a>Aggiunta di tipi
 
-L'elemento `add-node` indica al progetto di binding Xamarin.Android di aggiungere una nuova classe wrapper a **API. XML**. Il frammento di codice seguente, ad esempio, consente di indirizzare il generatore di associazione per creare una classe con un costruttore e un singolo campo:
+L'elemento `add-node` indica al progetto di binding Novell. Android di aggiungere una nuova classe wrapper a **API. XML**. Il frammento di codice seguente, ad esempio, consente di indirizzare il generatore di associazione per creare una classe con un costruttore e un singolo campo:
 
 ```xml
 <add-node path="/api/package[@name='org.alljoyn.bus']">
@@ -124,7 +124,7 @@ L'elemento `add-node` indica al progetto di binding Xamarin.Android di aggiunger
 
 ### <a name="removing-types"></a>Rimozione di tipi
 
-È possibile indicare al generatore di binding Xamarin.Android di ignorare un tipo Java e non associarlo. Questa operazione viene eseguita aggiungendo un `remove-node` elemento XML al file **Metadata. XML** :
+È possibile indicare al generatore di binding Novell. Android di ignorare un tipo Java e non associarlo. Questa operazione viene eseguita aggiungendo un `remove-node` elemento XML al file **Metadata. XML** :
 
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
@@ -132,7 +132,7 @@ L'elemento `add-node` indica al progetto di binding Xamarin.Android di aggiunger
 
 ### <a name="renaming-members"></a>Ridenominazione di membri
 
-La ridenominazione dei membri non può essere eseguita modificando direttamente il file **API. XML** perché Xamarin.Android richiede i nomi originali JNI (Java Native Interface). Pertanto, non è possibile modificare l'attributo `//class/@name`; in caso contrario, l'associazione non funzionerà.
+La ridenominazione dei membri non può essere eseguita modificando direttamente il file **API. XML** perché Novell. Android richiede i nomi originali JNI (Java Native Interface). Pertanto, non è possibile modificare l'attributo `//class/@name`; in caso contrario, l'associazione non funzionerà.
 
 Si consideri il caso in cui si desidera rinominare un tipo `android.Manifest`.
 A tale scopo, è possibile provare a modificare direttamente il **file API. XML** e rinominare la classe come segue:
@@ -149,7 +149,7 @@ Il generatore di associazioni creerà il codice seguente C# per la classe wrappe
 public class NewName : Java.Lang.Object { ... }
 ```
 
-Si noti che la classe wrapper è stata rinominata in `NewName`, mentre il tipo Java originale è ancora `Manifest`. Per la classe di binding Xamarin.Android non è più possibile accedere a metodi su `android.Manifest`; la classe wrapper è associata a un tipo Java non esistente.
+Si noti che la classe wrapper è stata rinominata in `NewName`, mentre il tipo Java originale è ancora `Manifest`. Per la classe di binding Novell. Android non è più possibile accedere a metodi su `android.Manifest`; la classe wrapper è associata a un tipo Java non esistente.
 
 Per modificare correttamente il nome gestito di un tipo o di un metodo di cui è stato eseguito il Wrapped, è necessario impostare l'attributo `managedName` come illustrato nell'esempio seguente:
 
@@ -162,13 +162,13 @@ Per modificare correttamente il nome gestito di un tipo o di un metodo di cui è
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>Ridenominazione di classi wrapper `EventArg`
 
-Quando il generatore di binding Xamarin.Android identifica un metodo di impostazione `onXXX` per un _tipo_di C# listener, viene generata una sottoclasse di evento e `EventArgs` per supportare un'API .NET con aroma per il modello di listener basato su Java. Si consideri, ad esempio, la classe e il metodo Java seguenti:
+Quando il generatore di binding Novell. Android identifica un metodo di impostazione `onXXX` per un _tipo_di C# listener, viene generata una sottoclasse di evento e `EventArgs` per supportare un'API .NET con aroma per il modello di listener basato su Java. Si consideri, ad esempio, la classe e il metodo Java seguenti:
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
 ```
 
-Xamarin.Android eliminerà il prefisso `on` dal metodo setter e userà invece `2DSignNextManuever` come base per il nome della sottoclasse `EventArgs`. Alla sottoclasse verrà assegnato un nome simile al seguente:
+Novell. Android eliminerà il prefisso `on` dal metodo setter e userà invece `2DSignNextManuever` come base per il nome della sottoclasse `EventArgs`. Alla sottoclasse verrà assegnato un nome simile al seguente:
 
 ```csharp
 NavigationManager.2DSignNextManueverEventArgs
@@ -239,7 +239,7 @@ Modifica il tipo restituito di un metodo. Questa operazione non modifica l'attri
 
 ### <a name="obfuscated"></a>offuscato
 
-Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Xamarin.Android C# e la relativa capacità di generare classi wrapper. Le caratteristiche delle classi offuscate includono: 
+Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Novell. Android C# e la relativa capacità di generare classi wrapper. Le caratteristiche delle classi offuscate includono: 
 
 - Il nome della classe include una **$** , ovvero **una classe $. Class**
 - Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**
@@ -269,9 +269,9 @@ Un caso specializzato di utilizzo di `propertyName` comporta una situazione in c
 
 Si noti che i metodi setter e getter verranno comunque creati dal generatore di associazioni.
 
-### <a name="sender"></a>sender
+### <a name="sender"></a>mittente
 
-Specifica quale parametro di un metodo deve essere il `sender` parametro quando viene eseguito il mapping del metodo a un evento. Il valore può essere `true` o `false`. Ad esempio:
+Specifica quale parametro di un metodo deve essere il `sender` parametro quando viene eseguito il mapping del metodo a un evento. Il valore può essere `true` o `false`. Ad esempio,
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -326,7 +326,7 @@ Dato il `SKRealReachSettings` enum definito in precedenza, il file **EnumMethods
 
 La prima riga di `method` esegue il mapping del valore restituito del metodo `getMeasurementUnit` Java al `SKMeasurementUnit` enum. Il secondo `method` riga esegue il mapping del primo parametro dell'`setMeasurementUnit` alla stessa enumerazione.
 
-Con tutte queste modifiche, è possibile usare il codice seguente in Xamarin.Android per impostare la `MeasurementUnit`: 
+Con tutte queste modifiche, è possibile usare il codice seguente in Novell. Android per impostare la `MeasurementUnit`: 
 
 ```csharp
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
@@ -334,7 +334,7 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come Xamarin.Android usa i metadati per trasformare una definizione dell'API dal formato *Google* *AOSP*. Una volta incluse le modifiche possibili utilizzando *Metadata. XML*, sono state esaminate le limitazioni rilevate durante la ridenominazione dei membri e viene visualizzato l'elenco degli attributi XML supportati, che descrive quando ogni attributo deve essere utilizzato.
+Questo articolo ha illustrato come Novell. Android usa i metadati per trasformare una definizione dell'API dal formato *Google* *AOSP*. Una volta incluse le modifiche possibili utilizzando *Metadata. XML*, sono state esaminate le limitazioni rilevate durante la ridenominazione dei membri e viene visualizzato l'elenco degli attributi XML supportati, che descrive quando ogni attributo deve essere utilizzato.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

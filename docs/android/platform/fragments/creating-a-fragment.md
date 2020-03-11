@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018
 ms.openlocfilehash: 0e8d3748c7ddd337cf2f27f5b272b208e79d503a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027508"
 ---
 # <a name="creating-a-fragment"></a>Creazione di un frammento
 
-Per creare un frammento, una classe deve ereditare da `Android.App.Fragment` e quindi eseguire l'override del metodo `OnCreateView`. `OnCreateView` verrà chiamata dall'attività host quando è il momento di inserire il frammento sullo schermo e restituirà una `View`. Un `OnCreateView` tipico creerà questo `View` comportando la creazione di un file di layout e la relativa associazione a un contenitore padre. Le caratteristiche del contenitore sono importanti perché Android applicherà i parametri del layout dell'elemento padre all'interfaccia utente del frammento. Questa condizione è illustrata nell'esempio che segue.
+Per creare un frammento, una classe deve ereditare da `Android.App.Fragment` e quindi eseguire l'override del metodo `OnCreateView`. `OnCreateView` verrà chiamata dall'attività host quando è il momento di inserire il frammento sullo schermo e restituirà una `View`. Un `OnCreateView` tipico creerà questo `View` comportando la creazione di un file di layout e la relativa associazione a un contenitore padre. Le caratteristiche del contenitore sono importanti perché Android applicherà i parametri del layout dell'elemento padre all'interfaccia utente del frammento. L'esempio seguente illustra questi concetti.
 
 ```csharp
 public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -87,15 +87,15 @@ Se non viene usato nessuno dei due metodi precedenti, il frammento presuppone l'
 
 ### <a name="package-name-case"></a>Case nome pacchetto
 
-Android non consente caratteri maiuscoli nei nomi dei pacchetti; verrà generata un'eccezione quando si tenta di ingrandire la vista se il nome di un pacchetto contiene un carattere maiuscolo. Tuttavia, Xamarin.Android è più indulgente e tollera i caratteri maiuscoli nello spazio dei nomi.
+Android non consente caratteri maiuscoli nei nomi dei pacchetti; verrà generata un'eccezione quando si tenta di ingrandire la vista se il nome di un pacchetto contiene un carattere maiuscolo. Tuttavia, Novell. Android è più indulgente e tollera i caratteri maiuscoli nello spazio dei nomi.
 
-Ad esempio, entrambi i frammenti di codice seguenti funzioneranno con Xamarin.Android. Tuttavia, il secondo frammento di codice causerà la generazione di un `android.view.InflateException` da parte di un'applicazione Android pura basata su Java.
+Ad esempio, entrambi i frammenti di codice seguenti funzioneranno con Novell. Android. Tuttavia, il secondo frammento di codice causerà la generazione di un `android.view.InflateException` da parte di un'applicazione Android pura basata su Java.
 
 ```xml
 <fragment class="com.example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-OR
+OPPURE
 
 ```xml
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
@@ -106,7 +106,7 @@ OR
 Il ciclo di vita dei frammenti è indipendente dal ciclo di vita [dell'attività di hosting](~/android/app-fundamentals/activity-lifecycle/index.md).
 Ad esempio, quando un'attività viene sospesa, tutti i frammenti associati vengono sospesi. Il diagramma seguente illustra il ciclo di vita del frammento.
 
-[diagramma di flusso![che illustra il ciclo di vita del frammento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
+[diagramma di flusso ![che illustra il ciclo di vita del frammento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Metodi del ciclo di vita della creazione di frammenti
 
@@ -230,4 +230,4 @@ public override void OnCreate(Bundle savedState)
 
 La schermata seguente mostra come dovrebbe apparire questo menu:
 
-[schermata di esempio![dell'app My trips che visualizza le voci di menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)
+[schermata di esempio ![dell'app My trips che visualizza le voci di menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

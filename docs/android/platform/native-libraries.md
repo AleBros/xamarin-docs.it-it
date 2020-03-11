@@ -7,21 +7,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: b7d69e99327aa3d3e3e1f5e5dbc61697d1fb9b71
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75489167"
 ---
 # <a name="using-native-libraries"></a>Uso di librerie native
 
-Xamarin.Android supporta l'utilizzo di librerie native tramite il meccanismo PInvoke standard. È anche possibile aggregare librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione APK.
+Novell. Android supporta l'utilizzo di librerie native tramite il meccanismo PInvoke standard. È anche possibile aggregare librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione APK.
 
-Per distribuire una libreria nativa con un'applicazione Xamarin.Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **AndroidNativeLibrary**.
+Per distribuire una libreria nativa con un'applicazione Novell. Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **AndroidNativeLibrary**.
 
-Per distribuire una libreria nativa con un progetto di libreria Xamarin.Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **EmbeddedNativeLibrary**.
+Per distribuire una libreria nativa con un progetto di libreria Novell. Android, aggiungere il file binario della libreria al progetto e impostare l' **azione di compilazione** su **EmbeddedNativeLibrary**.
 
-Si noti che poiché Android supporta più interfacce binarie dell'applicazione (ABI), Xamarin.Android deve essere in grado di stabilire per quale ABI è stata compilata la libreria nativa.
+Si noti che poiché Android supporta più interfacce binarie dell'applicazione (ABI), Novell. Android deve essere in grado di stabilire per quale ABI è stata compilata la libreria nativa.
 Esistono due modi per farlo:
 
 1. Percorso "sniffing"
@@ -44,17 +44,17 @@ Per ulteriori informazioni sull'utilizzo delle librerie native, vedere [interope
 ## <a name="debugging-native-code-with-visual-studio"></a>Debug del codice nativo con Visual Studio
 
 Se si usa *Visual studio 2019* o *Visual Studio 2017*, non è necessario modificare i file di progetto come descritto in precedenza.
-È possibile compilare ed eseguire C++ il debug all'interno della soluzione Xamarin.Android aggiungendo un riferimento di C++ progetto a un progetto di **libreria condivisa dinamica (Android)** .
+È possibile compilare ed eseguire C++ il debug all'interno della soluzione Novell. Android aggiungendo un riferimento di C++ progetto a un progetto di **libreria condivisa dinamica (Android)** .
 
 Per eseguire il C++ debug del codice nativo nel progetto, attenersi alla procedura seguente:
 
 1. Fare doppio clic su **Proprietà** progetto e selezionare la pagina **Opzioni Android** .
 2. Scorrere verso il basso fino a **Opzioni di debug**.
-3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Xamarin)** .
+3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Novell)** .
 
-Gli sviluppatori C++ di Visual Studio possono vedere l'esempio di [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per provare a eseguire il debug C++ da visual studio 2019 o Visual Studio 2017 con Xamarin; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
+Gli sviluppatori C++ di Visual Studio possono vedere l'esempio di [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per provare a eseguire il debug C++ da visual studio 2019 o Visual Studio 2017 con Novell; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [SanAngeles_NativeDebug (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk)
-- [Sviluppo di applicazioni native Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)
+- [Sviluppo di applicazioni native Novell Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

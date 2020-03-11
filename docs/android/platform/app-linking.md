@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75487828"
 ---
 # <a name="app-linking-in-android"></a>Collegamento di app in Android
@@ -36,11 +36,11 @@ Se per l'utente non sono installate app che supportano l'URI e ne viene successi
 
 Questa guida illustra come configurare un'applicazione Android 6,0 e come creare e pubblicare il file di collegamenti di asset digitali per supportare il collegamento di app in Android 6,0.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-Questa guida richiede Xamarin.Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
+Questa guida richiede Novell. Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
 
-Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Xamarin. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
+Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Novell. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
 
 ## <a name="configuring-app-linking-in-android-60"></a>Configurazione del collegamento di app in Android 6,0
 
@@ -53,7 +53,7 @@ La configurazione di collegamenti app in Android 6,0 prevede due passaggi princi
 
 ### <a name="configuring-the-intent-filter"></a>Configurazione del filtro preventivo
 
-È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Xamarin.Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
+È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Novell. Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
 
 - **`Intent.ActionView`** &ndash; questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
 - **`Categories`** &ndash; il filtro preventivo deve registrare sia Intent **[. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che Intent **[. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web.
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     - **`Domain`** &ndash; i domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
     - **`Status`** &ndash; questo è lo stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarata ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
 
-    Ad esempio:
+    Ad esempio,
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

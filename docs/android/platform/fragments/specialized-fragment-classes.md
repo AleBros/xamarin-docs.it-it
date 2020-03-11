@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018
 ms.openlocfilehash: b004fbf121374a2bb3bf5d85f45d8cae293573bf
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027306"
 ---
 # <a name="specialized-fragment-classes"></a>Classi di frammenti specializzate
@@ -254,7 +254,7 @@ public class PrefFragment : PreferenceFragment
 
 ### <a name="querying-activities-to-create-a-preference-fragment"></a>Esecuzione di query sulle attività per creare un frammento di preferenza
 
-Un'altra tecnica per la creazione di una `PreferenceFragment` implica l'esecuzione di query sulle attività. Ogni attività può utilizzare i [metadati\_chiave\_attributo preferenza](xref:Android.Preferences.PreferenceManager.MetadataKeyPreferences) che punterà a un file di risorse XML. In Xamarin.Android questa operazione viene eseguita decorando un'attività con il `MetaDataAttribute`e quindi specificando il file di risorse da usare. La classe `PreferenceFragment` fornisce il metodo [AddPreferenceFromIntent](xref:Android.Preferences.PreferenceFragment.AddPreferencesFromIntent*) che può essere usato per eseguire una query su un'attività per trovare questa risorsa XML e per ingrandire una gerarchia delle preferenze.
+Un'altra tecnica per la creazione di una `PreferenceFragment` implica l'esecuzione di query sulle attività. Ogni attività può utilizzare i [metadati\_chiave\_attributo preferenza](xref:Android.Preferences.PreferenceManager.MetadataKeyPreferences) che punterà a un file di risorse XML. In Novell. Android questa operazione viene eseguita decorando un'attività con il `MetaDataAttribute`e quindi specificando il file di risorse da usare. La classe `PreferenceFragment` fornisce il metodo [AddPreferenceFromIntent](xref:Android.Preferences.PreferenceFragment.AddPreferencesFromIntent*) che può essere usato per eseguire una query su un'attività per trovare questa risorsa XML e per ingrandire una gerarchia delle preferenze.
 
 Un esempio di questo processo è disponibile nel frammento di codice seguente, che usa `AddPreferencesFromIntent` per creare un `PreferenceFragment`:
 

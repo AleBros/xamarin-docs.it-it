@@ -1,6 +1,6 @@
 ---
 title: Android 9 Pie
-description: Come iniziare a sviluppare app per Android 9 a torta con Xamarin.Android.
+description: Come iniziare a sviluppare app per Android 9 a torta con Novell. Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
 ms.technology: xamarin-android
@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019879"
 ---
 # <a name="android-pie-features"></a>Funzionalità a torta Android
 
-_Come iniziare a sviluppare app per Android 9 a torta con Xamarin.Android._
+_Come iniziare a sviluppare app per Android 9 a torta con Novell. Android._
 
 [Android 9 Pie](https://developer.android.com/about/versions/pie/) è ora disponibile da Google. In questa versione sono state rese disponibili numerose nuove funzionalità e API e molte di esse sono necessarie per sfruttare le nuove funzionalità hardware nei dispositivi Android più recenti.
 
 ![Immagine del Hero a torta Android](pie-images/01-android-p-logo.png)
 
-Questo articolo è strutturato per iniziare a sviluppare app Xamarin.Android per la torta Android. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e preparare un emulatore o un dispositivo per il test. Viene inoltre fornita una descrizione delle nuove funzionalità di Android Pie e viene fornito un esempio di codice sorgente che illustra come utilizzare alcune delle principali funzionalità della torta Android.
+Questo articolo è strutturato per iniziare a sviluppare app Novell. Android per la torta Android. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e preparare un emulatore o un dispositivo per il test. Viene inoltre fornita una descrizione delle nuove funzionalità di Android Pie e viene fornito un esempio di codice sorgente che illustra come utilizzare alcune delle principali funzionalità della torta Android.
 
-Xamarin.Android 9,0 fornisce supporto per la torta Android. Per altre informazioni sul supporto di Xamarin.Android per la torta Android, vedere le note sulla versione di [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) .
+Novell. Android 9,0 fornisce supporto per la torta Android. Per altre informazioni sul supporto di Novell. Android per la torta Android, vedere le note sulla versione di [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -33,21 +33,21 @@ L'elenco seguente è necessario per usare le funzionalità di torta Android nell
 - È consigliabile usare **Visual studio** &ndash; visual studio 2019.
     Se si usa Visual Studio 2017, in Windows Update per Visual Studio 2017 versione 15,8 o successiva. In macOS eseguire l'aggiornamento a Visual Studio 2017 per Mac versione 7,6 o successiva.
 
-- **Xamarin.android** &ndash; Xamarin.Android 9.0.0.17 o versione successiva deve essere installato con Visual Studio (Xamarin.Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** ).
+- **Novell. android** &ndash; Novell. Android 9.0.0.17 o versione successiva deve essere installato con Visual Studio (Novell. Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** ).
 
-- **Java Developer Kit** &ndash; lo sviluppo di Xamarin Android 9,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (oppure è possibile provare l'anteprima della distribuzione di Microsoft [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
+- **Java Developer Kit** &ndash; lo sviluppo di novell Android 9,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (oppure è possibile provare l'anteprima della distribuzione di Microsoft [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
 
 - **Android SDK** &ndash; Android SDK API 28 o versione successiva deve essere installato tramite il Android SDK Manager.
 
-## <a name="getting-started"></a>Per iniziare
+## <a name="getting-started"></a>Introduzione
 
-Per iniziare a sviluppare app a torta Android con Xamarin.Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare il primo progetto a torta Android:
+Per iniziare a sviluppare app a torta Android con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare il primo progetto a torta Android:
 
 1. È consigliato Visual Studio 2019. Se si usa Visual Studio 2017, eseguire l'aggiornamento a [Visual studio 2017 versione 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o successiva. Se si usa Visual Studio per Mac, eseguire l'aggiornamento a [Visual Studio 2017 per Mac versione 7,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o successiva.
 
 2. Installare i pacchetti e gli strumenti di **Android Pie (API 28)** tramite SDK Manager.
 
-3. Creare un nuovo progetto Xamarin.Android destinato a **Android 9,0**.
+3. Creare un nuovo progetto Novell. Android destinato a **Android 9,0**.
 
 4. Configurare un emulatore o un dispositivo per il test delle app a torta Android.
 
@@ -61,11 +61,11 @@ Se si usa Visual Studio 2017, eseguire l'aggiornamento a Visual Studio 2017 vers
 
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
-Per creare un progetto con Xamarin.Android 9,0, è necessario prima di tutto usare gestione Android SDK per installare la piattaforma SDK per **Android Pie (livello API 28)** o versione successiva.
+Per creare un progetto con Novell. Android 9,0, è necessario prima di tutto usare gestione Android SDK per installare la piattaforma SDK per **Android Pie (livello API 28)** o versione successiva.
 
 1. Avviare SDK Manager. In Visual Studio fare clic su **strumenti > Android > Android SDK Manager**. In Visual Studio per Mac fare clic su **strumenti > SDK Manager**.
 
-2. Nell'angolo in basso a destra fare clic sull'icona a forma di ingranaggio e selezionare **Repository > Google (non supportato)**:
+2. Nell'angolo in basso a destra fare clic sull'icona a forma di ingranaggio e selezionare **Repository > Google (non supportato)** :
 
     [![l'impostazione del repository su Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
@@ -75,9 +75,9 @@ Per creare un progetto con Xamarin.Android 9,0, è necessario prima di tutto usa
 
 4. Se si usa un emulatore, creare un dispositivo virtuale che supporti il **livello API 28**. Per ulteriori informazioni sulla creazione di dispositivi virtuali, vedere [gestione di dispositivi virtuali con il Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Xamarin.Android
+### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
-Creare un nuovo progetto Xamarin.Android. Se non si ha familiarità con lo sviluppo di Android con Xamarin.vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Xamarin.Android.
+Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 9,0 o versione successiva. Ad esempio, per fare riferimento al progetto per la torta Android, è necessario configurare il livello API Android di destinazione del progetto su **android 9,0** (API 28). Si consiglia inoltre di impostare il livello di Framework di destinazione sull'API 28 o versione successiva. Per altre informazioni sulla configurazione dei livelli API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -164,7 +164,7 @@ Nell'esempio seguente viene illustrato come includere un'immagine in una notific
     ```
 
 2. Creare un `Notification.MessagingStyle.Message` contenente l'immagine da inviare, passando l'immagine al nuovo metodo [Notification. MessagingStyle. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
-   Esempio:
+   Ad esempio,
 
     ```csharp
     Uri imageUri = Uri.Parse("android.resource://com.xamarin.pminidemo/drawable/example_image");
@@ -173,14 +173,14 @@ Nell'esempio seguente viene illustrato come includere un'immagine in una notific
             .SetData("image/", imageUri);
     ```
 
-3. Aggiungere il messaggio a un oggetto `Notification.MessagingStyle`. Esempio:
+3. Aggiungere il messaggio a un oggetto `Notification.MessagingStyle`. Ad esempio,
 
     ```csharp
     Notification.MessagingStyle style = new Notification.MessagingStyle(fromPerson)
             .AddMessage(message);
     ```
 
-4. Inserire lo stile nel generatore di notifiche. Esempio:
+4. Inserire lo stile nel generatore di notifiche. Ad esempio,
 
     ```csharp
     builder = new Notification.Builder(this, MY_CHANNEL)
@@ -191,7 +191,7 @@ Nell'esempio seguente viene illustrato come includere un'immagine in una notific
         .SetChannelId(MY_CHANNEL);
     ```
 
-5. Pubblicare la notifica. Esempio:
+5. Pubblicare la notifica. Ad esempio,
 
     ```csharp
     const int notificationId = 1000;
@@ -245,11 +245,11 @@ Per altre informazioni sulle modifiche del comportamento per le app destinate a 
 
 ## <a name="sample-code"></a>Codice di esempio
 
-[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) è un'app di esempio Xamarin.Android per la torta Android che illustra come impostare le modalità di ritaglio dello schermo, come usare la nuova classe `Person` e come inviare una notifica che include un'immagine.
+[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) è un'app di esempio Novell. Android per la torta Android che illustra come impostare le modalità di ritaglio dello schermo, come usare la nuova classe `Person` e come inviare una notifica che include un'immagine.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato Android Pie ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Xamarin.Android con la torta Android. Fornisce una panoramica delle funzionalità principali disponibili in Android Pie, con esempi di codice sorgente per alcune di queste funzionalità.
+Questo articolo ha presentato Android Pie ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android con la torta Android. Fornisce una panoramica delle funzionalità principali disponibili in Android Pie, con esempi di codice sorgente per alcune di queste funzionalità.
 Sono inclusi collegamenti alla documentazione API e agli argomenti per sviluppatori Android che consentono di iniziare a creare app per la torta Android. Ha evidenziato anche le modifiche più importanti del comportamento della torta Android che potrebbero influito sulle app esistenti.
 
 ## <a name="related-links"></a>Collegamenti correlati

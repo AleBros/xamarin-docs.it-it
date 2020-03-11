@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms (scorrimento)
+title: Novell. Forms (scorrimento)
 description: Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CollectionView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697225"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913166"
 ---
-# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms (scorrimento)
+# <a name="xamarinforms-collectionview-scrolling"></a>Novell. Forms (scorrimento)
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce due metodi [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , che scorrono gli elementi nella visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione, mentre l'altro scorre l'elemento specificato nella visualizzazione. Entrambi gli overload hanno argomenti aggiuntivi che possono essere specificati per indicare il gruppo a cui appartiene l'elemento, la posizione esatta dell'elemento dopo il completamento dello scorrimento e l'animazione dello scorrimento.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) generato quando viene richiamato uno dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Il [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l'evento `ScrollToRequested` dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item` e `ScrollToPosition`. Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al metodo `ScrollTo`.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) generato quando viene richiamato uno dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Il [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l'evento `ScrollToRequested` dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item`e `ScrollToPosition`. Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al metodo `ScrollTo`.
 
 Inoltre, [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce un evento `Scrolled` generato per indicare che si è verificato lo scorrimento. Il `ItemsViewScrolledEventArgs` oggetto che accompagna l'evento `Scrolled` dispone di molte proprietà. Per ulteriori informazioni, vedere [rilevamento dello scorrimento](#detect-scrolling).
 
@@ -134,7 +134,7 @@ Questo codice di esempio genera lo scorrimento minimo necessario per scorrere l'
 > [!NOTE]
 > Il membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) viene usato per impostazione predefinita, se non viene specificato l'argomento `position` quando si chiama il metodo di `ScrollTo`.
 
-### <a name="start"></a>Inizio
+### <a name="start"></a>Inizia
 
 Il membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato all'inizio della visualizzazione:
 
@@ -229,12 +229,12 @@ Per impostazione predefinita, la proprietà [`SnapPointsType`](xref:Xamarin.Form
 
 ### <a name="snap-points-alignment"></a>Allineamento punti di aggancio
 
-L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center` e `End`.
+L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center`e `End`.
 
 > [!IMPORTANT]
-> Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory` o `MandatorySingle`.
+> Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory`o `MandatorySingle`.
 
-#### <a name="start"></a>Inizio
+#### <a name="start"></a>Inizia
 
 Il membro `SnapPointsAlignment.Start` indica che i punti di allineamento sono allineati al bordo di elementi iniziali.
 

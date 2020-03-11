@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
 ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
-ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75886593"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
@@ -19,9 +19,9 @@ Il simulatore iOS remoto per Windows consente di testare le app in un simulatore
 
 [![simulatore iOS in esecuzione in Windows](images/hero-sml.png "simulatore iOS in esecuzione in Windows")](images/hero.png#lightbox)
 
-## <a name="getting-started"></a>Per iniziare
+## <a name="getting-started"></a>Introduzione
 
-Il simulatore iOS remoto per Windows viene installato automaticamente come parte di Xamarin in Visual Studio 2019 e Visual Studio 2017. Per usarlo, seguire questa procedura:
+Il simulatore iOS remoto per Windows viene installato automaticamente come parte di Novell in Visual Studio 2019 e Visual Studio 2017. Per usarlo, seguire questa procedura:
 
 1. [Associare Visual 2019 a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. In Visual Studio avviare il debug di un progetto iOS o tvOS. Il simulatore iOS remoto per Windows verrà visualizzato nel computer Windows.
@@ -67,7 +67,7 @@ i suoni iOS non vengono uditi nel computer Windows.
 
 ## <a name="disabling-the-remoted-ios-simulator-for-windows"></a>Disabilitazione del simulatore iOS remoto per Windows
 
-Per disabilitare il simulatore iOS remoto per Windows, passare a **strumenti > opzioni > Xamarin > impostazioni iOS** e deselezionare il **simulatore remoto per Windows**.
+Per disabilitare il simulatore iOS remoto per Windows, passare a **strumenti > opzioni > novell > impostazioni iOS** e deselezionare il **simulatore remoto per Windows**.
 
 [![casella di controllo per l'utilizzo del simulatore](images/options-sml.png "casella di controllo per l'utilizzo del simulatore")](images/options.png#lightbox)
 
@@ -78,6 +78,6 @@ Se questa opzione è disabilitata, il debug apre il simulatore iOS nell'host di 
 Se si verificano problemi con il simulatore iOS remoto, è possibile visualizzare i log nei percorsi seguenti:
 
 - **Mac** -`~/Library/Logs/Xamarin/Simulator.Server`
-- **Windows** : `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+- **Windows** -`%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
 
 Se si [segnala un problema in Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), è possibile che i log vengano collegati (sono disponibili opzioni per la conservazione dei caricamenti privati).

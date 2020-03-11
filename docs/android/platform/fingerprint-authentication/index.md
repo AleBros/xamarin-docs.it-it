@@ -1,6 +1,6 @@
 ---
 title: Autenticazione con impronta digitale
-description: Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Xamarin.Android.
+description: Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Novell. Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
@@ -8,21 +8,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 4a4b6ee7a123683a9d5a140c46c0b3542767ffa3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027516"
 ---
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
-_Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Xamarin.Android._
+_Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Novell. Android._
 
 ## <a name="fingerprint-authentication-overview"></a>Panoramica dell'autenticazione con impronta digitale
 
 L'arrivo di scanner di impronte digitali nei dispositivi Android fornisce le applicazioni con un'alternativa al tradizionale metodo di nome utente/password dell'autenticazione utente. L'uso delle impronte digitali per autenticare un utente consente a un'applicazione di incorporare la sicurezza meno intrusiva rispetto a un nome utente e una password.
 
-Le API FingerprintManager sono destinate a dispositivi con scanner di impronte digitali ed eseguono il livello API 23 (Android 6,0) o versione successiva. Le API si trovano nello spazio dei nomi `Android.Hardware.Fingerprints`. La libreria di supporto Android V4 fornisce le versioni delle API per le impronte digitali destinate alle versioni precedenti di Android. Le API di compatibilità si trovano nello spazio dei nomi `Android.Support.v4.Hardware.Fingerprint` e vengono distribuite tramite il [pacchetto NuGet Xamarin.Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+Le API FingerprintManager sono destinate a dispositivi con scanner di impronte digitali ed eseguono il livello API 23 (Android 6,0) o versione successiva. Le API si trovano nello spazio dei nomi `Android.Hardware.Fingerprints`. La libreria di supporto Android V4 fornisce le versioni delle API per le impronte digitali destinate alle versioni precedenti di Android. Le API di compatibilità si trovano nello spazio dei nomi `Android.Support.v4.Hardware.Fingerprint` e vengono distribuite tramite il [pacchetto NuGet Novell. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
 [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e la relativa controparte della libreria di supporto, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) è la classe principale per l'uso dell'hardware di analisi delle impronte digitali. Questa classe è un wrapper Android SDK intorno al servizio a livello di sistema che gestisce le interazioni con l'hardware stesso. È responsabile dell'avvio dello scanner per le impronte digitali e della risposta ai commenti e suggerimenti dello scanner. Questa classe dispone di un'interfaccia piuttosto semplice con solo tre membri:
 

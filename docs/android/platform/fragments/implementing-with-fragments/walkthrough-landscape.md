@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
 ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020273"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>Procedura dettagliata per i frammenti &ndash; Landscape
 
-La [procedura dettagliata relativa ai frammenti &ndash; parte 1](./walkthrough.md) ha illustrato come creare e usare frammenti in un'app Android destinata a schermate più piccole in un telefono. Il passaggio successivo di questa procedura dettagliata consiste nel modificare l'applicazione in modo da sfruttare lo spazio orizzontale aggiuntivo sul tablet &ndash; sarà presente un'attività che sarà sempre l'elenco dei riascolti (il `TitlesFragment`) e `PlayQuoteFragment` verrà aggiunto dinamicamente all'attività in r esponse a una selezione eseguita dall'utente:
+La [procedura dettagliata relativa ai frammenti &ndash; parte 1](./walkthrough.md) ha illustrato come creare e usare frammenti in un'app Android destinata a schermate più piccole in un telefono. Il passaggio successivo di questa procedura dettagliata consiste nel modificare l'applicazione in modo da sfruttare lo spazio orizzontale aggiuntivo sul tablet &ndash; sarà presente un'attività che sarà sempre l'elenco dei riascolti (il `TitlesFragment`) e `PlayQuoteFragment` verrà aggiunto dinamicamente all'attività in risposta a una selezione eseguita dall'utente:
 
-[App![in esecuzione sul tablet](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
+[App ![in esecuzione sul tablet](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
 Anche i telefoni eseguiti in modalità orizzontale trarranno vantaggio da questa funzionalità avanzata:
 
@@ -38,11 +38,11 @@ Quando si crea un'attività principale in un dispositivo Android, Android decide
 
 Creare un layout alternativo destinato all'orientamento **orizzontale** attenendosi alla procedura descritta nella Guida [layout alternativi](/xamarin/android/user-interface/android-designer/alternative-layout-views) . Questa operazione dovrebbe aggiungere un nuovo file di risorse di layout al progetto, **Resources/layout/activity_main. aXML**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![layout alternativo in Esplora soluzioni](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![layout alternativo in riquadro della soluzione](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 

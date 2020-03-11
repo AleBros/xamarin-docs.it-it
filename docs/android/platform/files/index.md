@@ -1,6 +1,6 @@
 ---
-title: Accesso ai file con Xamarin.Android
-description: Questa guida descrive l'accesso ai file in Xamarin.Android
+title: Accesso ai file con Novell. Android
+description: Questa guida descrive l'accesso ai file in Novell. Android
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
@@ -8,31 +8,31 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020423"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78914211"
 ---
-# <a name="file-storage-and-access-with-xamarinandroid"></a>Archiviazione file e accesso con Xamarin.Android
+# <a name="file-storage-and-access-with-xamarinandroid"></a>Archiviazione file e accesso con Novell. Android
 
 Un requisito comune per le app Android è modificare i file &ndash; salvare immagini, scaricare documenti o esportare dati da condividere con altri programmi. Android (basato su Linux) supporta questa operazione fornendo spazio per l'archiviazione di file. Android raggruppa il file System in due tipi diversi di archiviazione:
 
 * **Archiviazione interna** &ndash; si tratta di una parte delle file System a cui è possibile accedere solo dall'applicazione o dal sistema operativo.
 * **Archiviazione esterna** &ndash; si tratta di una partizione per l'archiviazione di file accessibile da tutte le app, dall'utente e possibilmente da altri dispositivi. In alcuni dispositivi, l'archiviazione esterna può essere rimovibile (ad esempio una scheda SD).
 
-Questi raggruppamenti sono solo concettuali e non fanno necessariamente riferimento a una singola partizione o directory sul dispositivo. Un dispositivo Android fornirà sempre la partizione per l'archiviazione interna e l'archiviazione esterna. È possibile che alcuni dispositivi dispongano di più partizioni considerate come archiviazione esterna. Indipendentemente dalla partizione, le API per la lettura, la scrittura o la creazione di file sono le stesse. Sono disponibili due set di API che possono essere usate da un'applicazione Xamarin.Android per l'accesso ai file:
+Questi raggruppamenti sono solo concettuali e non fanno necessariamente riferimento a una singola partizione o directory sul dispositivo. Un dispositivo Android fornirà sempre la partizione per l'archiviazione interna e l'archiviazione esterna. È possibile che alcuni dispositivi dispongano di più partizioni considerate come archiviazione esterna. Indipendentemente dalla partizione, le API per la lettura, la scrittura o la creazione di file sono le stesse. Sono disponibili due set di API che possono essere usate da un'applicazione Novell. Android per l'accesso ai file:
 
-1. **Le API .NET (fornite da mono e incapsulate da Xamarin.Android)** &ndash; includono gli [Helper file System](~/essentials/file-system-helpers.md?context=xamarin/android) forniti da [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android). Le API .NET forniscono la migliore compatibilità multipiattaforma e, di conseguenza, questa guida sarà basata su queste API.
-1. **Le API native di accesso ai file Java (fornite da Java e incapsulate da Xamarin.Android)** &ndash; Java forniscono le proprie API per la lettura e la scrittura di file. Si tratta di un'alternativa completamente accettabile alle API .NET, ma sono specifici di Android e non sono adatti per le app che sono progettate per essere multipiattaforma.
+1. **Le API .NET (fornite da mono e incapsulate da Novell. Android)** &ndash; includono gli [Helper file System](~/essentials/file-system-helpers.md?context=xamarin/android) forniti da [Novell. Essentials](~/essentials/index.md?context=xamarin/android). Le API .NET forniscono la migliore compatibilità multipiattaforma e, di conseguenza, questa guida sarà basata su queste API.
+1. **Le API native di accesso ai file Java (fornite da Java e incapsulate da Novell. Android)** &ndash; Java forniscono le proprie API per la lettura e la scrittura di file. Si tratta di un'alternativa completamente accettabile alle API .NET, ma sono specifici di Android e non sono adatti per le app che sono progettate per essere multipiattaforma.
 
-La lettura e la scrittura nei file sono quasi identiche in Xamarin.Android così come per qualsiasi altra applicazione .NET. L'app Xamarin.Android determina il percorso del file che verrà modificato, quindi usa idiomi .NET standard per l'accesso ai file. Poiché i percorsi effettivi di archiviazione interna ed esterna possono variare da dispositivo a dispositivo o dalla versione Android alla versione Android, non è consigliabile codificare in modo rigido il percorso dei file. Usare invece le API Xamarin.Android per determinare il percorso dei file. In questo modo, le API .NET per la lettura e la scrittura di file espongono le API Android native che consentono di determinare il percorso dei file in un archivio interno ed esterno.
+La lettura e la scrittura nei file sono quasi identiche in Novell. Android così come per qualsiasi altra applicazione .NET. L'app Novell. Android determina il percorso del file che verrà modificato, quindi usa idiomi .NET standard per l'accesso ai file. Poiché i percorsi effettivi di archiviazione interna ed esterna possono variare da dispositivo a dispositivo o dalla versione Android alla versione Android, non è consigliabile codificare in modo rigido il percorso dei file. Usare invece le API Novell. Android per determinare il percorso dei file. In questo modo, le API .NET per la lettura e la scrittura di file espongono le API Android native che consentono di determinare il percorso dei file in un archivio interno ed esterno.
 
 Prima di illustrare le API necessarie per l'accesso ai file, è importante comprendere alcuni dei dettagli relativi all'archiviazione interna ed esterna. Questo argomento verrà illustrato nella sezione successiva.
 
 ## <a name="internal-vs-external-storage"></a>Archiviazione interna e esterna
 
-A livello concettuale, l'archiviazione interna e l'archiviazione esterna sono molto simili &ndash; sono entrambe le posizioni in cui un'app Xamarin.Android può salvare i file. Questa somiglianza può comportare confusione per gli sviluppatori che non hanno familiarità con Android, perché non è chiaro quando un'app deve usare l'archiviazione interna e l'archiviazione esterna.
+A livello concettuale, l'archiviazione interna e l'archiviazione esterna sono molto simili &ndash; sono entrambe le posizioni in cui un'app Novell. Android può salvare i file. Questa somiglianza può comportare confusione per gli sviluppatori che non hanno familiarità con Android, perché non è chiaro quando un'app deve usare l'archiviazione interna e l'archiviazione esterna.
 
 Archiviazione interna si riferisce alla memoria non volatile che Android alloca al sistema operativo, apk e per le singole app. Questo spazio non è accessibile ad eccezione del sistema operativo o delle app. Android alloca una directory nella partizione di archiviazione interna per ogni app. Quando l'app viene disinstallata, verranno eliminati anche tutti i file conservati nell'archivio interno di tale directory. L'archiviazione interna è più adatta per i file che sono accessibili solo all'app e che non verranno condivisi con altre app o avranno un valore minimo quando l'app viene disinstallata. In Android 6,0 o versione successiva, il backup dei file nell'archiviazione interna può essere eseguito automaticamente da Google usando la [funzionalità di backup automatico in android 6,0](https://developer.android.com/guide/topics/data/autobackup). L'archiviazione interna presenta gli svantaggi seguenti:
 
@@ -45,9 +45,9 @@ L'archiviazione esterna si riferisce all'archiviazione di file che non è una ri
 > [!NOTE]
 > Per i dispositivi che supportano più utenti, Android fornirà a ogni utente la propria directory nell'archivio interno ed esterno. Questa directory non è accessibile ad altri utenti nel dispositivo. Questa separazione è invisibile alle app, purché non codificano i percorsi dei file in una risorsa di archiviazione interna o esterna.
 
-Come regola generale, le app Xamarin.Android dovrebbero preferire il salvataggio dei file nella risorsa di archiviazione interna quando è ragionevole e si basano sull'archiviazione esterna quando i file devono essere condivisi con altre app, sono molto grandi o devono essere conservati anche se l'app viene disinstallata. Un file di configurazione, ad esempio, è più adatto per una risorsa di archiviazione interna, perché non ha importanza ad eccezione dell'app che la crea.  Al contrario, le foto sono un buon candidato per l'archiviazione esterna. Possono essere di grandi dimensioni e, in molti casi, l'utente può volerne condividerle o accedervi anche se l'app viene disinstallata.
+Come regola generale, le app Novell. Android dovrebbero preferire il salvataggio dei file nella risorsa di archiviazione interna quando è ragionevole e si basano sull'archiviazione esterna quando i file devono essere condivisi con altre app, sono molto grandi o devono essere conservati anche se l'app viene disinstallata. Un file di configurazione, ad esempio, è più adatto per una risorsa di archiviazione interna, perché non ha importanza ad eccezione dell'app che la crea.  Al contrario, le foto sono un buon candidato per l'archiviazione esterna. Possono essere di grandi dimensioni e, in molti casi, l'utente può volerne condividerle o accedervi anche se l'app viene disinstallata.
 
-Questa guida si concentra sull'archiviazione interna. Per informazioni dettagliate sull'uso dell'archiviazione esterna in un'applicazione Xamarin.Android, vedere la Guida all' [archiviazione esterna](~/android/platform/files/external-storage.md) .
+Questa guida si concentra sull'archiviazione interna. Per informazioni dettagliate sull'uso dell'archiviazione esterna in un'applicazione Novell. Android, vedere la Guida all' [archiviazione esterna](~/android/platform/files/external-storage.md) .
 
 ## <a name="working-with-internal-storage"></a>Utilizzo dell'archiviazione interna
 
@@ -60,11 +60,11 @@ La directory di archiviazione interna per un'applicazione è determinata dal sis
 In questo documento verrà fatto riferimento alla directory di archiviazione interna come _archiviazione\_interna_.
 
 > [!IMPORTANT]
-> Il percorso esatto della directory di archiviazione interna può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso della directory di archiviazione dei file interni e usare invece le API Xamarin.Android, ad esempio `System.Environment.GetFolderPath()`.
+> Il percorso esatto della directory di archiviazione interna può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso della directory di archiviazione dei file interni e usare invece le API Novell. Android, ad esempio `System.Environment.GetFolderPath()`.
 
-Per ottimizzare la condivisione del codice, le app Xamarin.Android (o le app Xamarin.Forms destinate a Xamarin.Android) devono usare il metodo [`System.Environment.GetFolderPath()`](xref:System.Environment.GetFolderPath*) . In Xamarin.Android questo metodo restituirà una stringa per una directory che corrisponde alla posizione `Android.Content.Context.FilesDir`. Questo metodo accetta un enum, `System.Environment.SpecialFolder`, che viene usato per identificare un set di costanti enumerate che rappresentano i percorsi di cartelle speciali usate dal sistema operativo. Non tutti i valori di `System.Environment.SpecialFolder` eseguiranno il mapping a una directory valida in Xamarin.Android. Nella tabella seguente viene descritto il percorso previsto per un determinato valore di `System.Environment.SpecialFolder`:
+Per ottimizzare la condivisione del codice, le app Novell. Android (o le app Novell. Forms destinate a Novell. Android) devono usare il metodo [`System.Environment.GetFolderPath()`](xref:System.Environment.GetFolderPath*) . In Novell. Android questo metodo restituirà una stringa per una directory che corrisponde alla posizione `Android.Content.Context.FilesDir`. Questo metodo accetta un enum, `System.Environment.SpecialFolder`, che viene usato per identificare un set di costanti enumerate che rappresentano i percorsi di cartelle speciali usate dal sistema operativo. Non tutti i valori di `System.Environment.SpecialFolder` eseguiranno il mapping a una directory valida in Novell. Android. Nella tabella seguente viene descritto il percorso previsto per un determinato valore di `System.Environment.SpecialFolder`:
 
-| System. Environment. SpecialFolder | Percorso  |
+| System.Environment.SpecialFolder | Percorso  |
 |----------------------|---|
 | `ApplicationData` | **/.Config di _archiviazione interna\__** |
 | `Desktop` | **/Desktop di _archiviazione interna\__** |
@@ -121,9 +121,9 @@ public async Task<int> ReadCountAsync()
 }
 ```
 
-## <a name="using--xamarinessentials-ndash-file-system-helpers"></a>Uso di Xamarin.Essentials &ndash; helper del file System
+## <a name="using--xamarinessentials-ndash-file-system-helpers"></a>Uso di Novell. Essentials &ndash; helper del file System
 
-[Xamarin.Essentials](~/essentials/file-system-helpers.md?context=xamarin/android) è un set di API per la scrittura di codice compatibile multipiattaforma. Gli [helper del file System](~/essentials/file-system-helpers.md?context=xamarin/android) sono una classe che contiene una serie di helper per semplificare l'individuazione della cache e delle directory di dati dell'applicazione. Questo frammento di codice fornisce un esempio di come trovare la directory di archiviazione interna e la directory della cache per un'app:
+[Novell. Essentials](~/essentials/file-system-helpers.md?context=xamarin/android) è un set di API per la scrittura di codice compatibile multipiattaforma. Gli [helper del file System](~/essentials/file-system-helpers.md?context=xamarin/android) sono una classe che contiene una serie di helper per semplificare l'individuazione della cache e delle directory di dati dell'applicazione. Questo frammento di codice fornisce un esempio di come trovare la directory di archiviazione interna e la directory della cache per un'app:
 
 ```csharp
 // Get the path to a file on internal storage
@@ -145,6 +145,6 @@ I file pubblici verranno prelevati dal `MediaStore`. Directory con un nome di fi
 
 * [Archiviazione esterna](~/android/platform/files/external-storage.md)
 * [Salvare i file nell'archiviazione del dispositivo](https://developer.android.com/training/data-storage/files)
-* [Helper del file System Xamarin.Essentials](~/essentials/file-system-helpers.md?context=xamarin/android)
+* [Helper del file System Novell. Essentials](~/essentials/file-system-helpers.md?context=xamarin/android)
 * [Backup dei dati utente con backup automatico](https://developer.android.com/guide/topics/data/autobackup)
 * [Archiviazione adottabile](https://source.android.com/devices/storage/adoptable)

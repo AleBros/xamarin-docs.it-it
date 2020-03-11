@@ -1,6 +1,6 @@
 ---
 title: Associazione di un file AAR
-description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File AAR.
+description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File AAR.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
 ms.openlocfilehash: 103720c8cb47b1ac4cfe5cfadeb6b18828318ad3
-ms.sourcegitcommit: 5a23c66f81853884480aca666d649a56d68c01cb
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73618540"
 ---
 # <a name="binding-an-aar"></a>Associazione di un file AAR
 
-_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Xamarin.Android da un dispositivo Android. File AAR._
+_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File AAR._
 
 ## <a name="overview"></a>Panoramica
 
@@ -68,7 +68,7 @@ public class TextCounter
 
 Questa app di esempio, inoltre, recupererà e visualizzerà una risorsa immagine composta in un pacchetto in **textanalyzer. AAR**:
 
-[immagine di ![Monkey Xamarin](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
+[immagine di ![Monkey Novell](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 Questa risorsa immagine si trova in **res/disegnatore/Monkey. png** in **textanalyzer. AAR**.
 
@@ -106,9 +106,9 @@ Prima di iniziare con la procedura seguente, scaricare il file di archivio Andro
 
 ### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
-Per utilizzare questo. DLL nell'app Xamarin.Android, è necessario innanzitutto aggiungere un riferimento alla libreria Bindings. Attenersi alla procedura seguente:
+Per utilizzare questo. DLL nell'app Novell. Android, è necessario innanzitutto aggiungere un riferimento alla libreria Bindings. Eseguire la procedura descritta di seguito:
 
-1. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. L'app che utilizza la libreria dei binding potrebbe trovarsi anche in una soluzione diversa. Creare una nuova app Xamarin.Android: fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. Assegnare al nuovo progetto il nome **BindingTest**:
+1. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. L'app che utilizza la libreria dei binding potrebbe trovarsi anche in una soluzione diversa. Creare una nuova app Novell. Android: fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. Assegnare al nuovo progetto il nome **BindingTest**:
 
     [![creare un nuovo progetto BindingTest](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
@@ -132,7 +132,7 @@ Lo screenshot precedente evidenzia i due `TextAnalyzer` metodi che l'app di esem
 
 ### <a name="accessing-aar-types"></a>Accesso. Tipi AAR
 
-Dopo aver aggiunto un riferimento all'app che punta alla libreria di associazione, è possibile accedere ai tipi Java in. AAR come si accede C# ai tipi (grazie ai C# Wrapper). C#il codice dell'app può chiamare `TextAnalyzer`metodi, come illustrato in questo esempio:
+Dopo aver aggiunto un riferimento all'app che punta alla libreria di associazione, è possibile accedere ai tipi Java in. AAR come si accede C# ai tipi (grazie ai C# Wrapper). C#il codice dell'app può chiamare `TextAnalyzer` metodi, come illustrato in questo esempio:
 
 ```csharp
 using Com.Xamarin.Textcounter;
@@ -254,7 +254,7 @@ Provare a toccare il pulsante per il **conteggio delle consonanti** . Inoltre, �
 
 ### <a name="accessing-aar-resources"></a>Accesso. Risorse AAR
 
-Gli strumenti Xamarin uniscono i dati **R** da. AAR nella classe di **risorse** dell'app. Di conseguenza, è possibile accedere a. Le risorse AAR dal layout (e dal code-behind) nello stesso modo in cui si accede alle risorse presenti nel percorso delle **risorse** del progetto.
+Gli strumenti Novell uniscono i dati **R** da. AAR nella classe di **risorse** dell'app. Di conseguenza, è possibile accedere a. Le risorse AAR dal layout (e dal code-behind) nello stesso modo in cui si accede alle risorse presenti nel percorso delle **risorse** del progetto.
 
 Per accedere a una risorsa immagine, è possibile usare il nome **Resource. disegnatore** per l'immagine compressa all'interno di. Aar. Ad esempio, è possibile fare riferimento a **Image. png** in. File AAR usando `@drawable/image`:
 
@@ -262,7 +262,7 @@ Per accedere a una risorsa immagine, è possibile usare il nome **Resource. dise
 <ImageView android:src="@drawable/image" ... />
 ```
 
-È anche possibile accedere ai layout delle risorse che si trovano in. Aar. A tale scopo, usare il nome **Resource. layout** per il layout incluso nel. Aar. Esempio:
+È anche possibile accedere ai layout delle risorse che si trovano in. Aar. A tale scopo, usare il nome **Resource. layout** per il layout incluso nel. Aar. Ad esempio,
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
@@ -288,7 +288,7 @@ Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e prese
 
 [![BindingTest che Visualizza il conteggio delle consonanti](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
-La procedura è stata completata. La libreria Java è stata associata correttamente. Aar!
+Congratulazioni! La libreria Java è stata associata correttamente. Aar!
 
 ## <a name="summary"></a>Riepilogo
 

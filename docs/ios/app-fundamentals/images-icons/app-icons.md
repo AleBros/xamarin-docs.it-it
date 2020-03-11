@@ -1,6 +1,6 @@
 ---
-title: Icone dell'applicazione in Xamarin.iOS
-description: "Questo documento descrive come usare varie icone dell'applicazione in Xamarin.iOS: icona dell'applicazione stessa, icone di Spotlight, icone delle impostazioni e immagini di iTunes."
+title: Icone dell'applicazione in Novell. iOS
+description: "Questo documento descrive come usare varie icone dell'applicazione in Novell. iOS: icona dell'applicazione stessa, icone di Spotlight, icone delle impostazioni e immagini di iTunes."
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
 ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488432"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916518"
 ---
-# <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Xamarin.iOS
+# <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Novell. iOS
 
 Gli argomenti seguenti vengono descritti nel dettaglio:
 
@@ -26,7 +26,7 @@ Gli argomenti seguenti vengono descritti nel dettaglio:
 
 ## <a name="application-spotlight-and-settings-icons"></a>Icone di applicazione, Spotlight e impostazioni
 
-Nello stesso modo in cui un'app Xamarin.iOS può usare asset di immagine per i controlli dell'interfaccia utente e come icone di documento, gli asset di immagine possono essere usati per fornire le icone dell'applicazione. Gli screenshot seguenti di un iPad illustrano i tre usi delle icone in iOS:
+Nello stesso modo in cui un'app Novell. iOS può usare asset di immagine per i controlli dell'interfaccia utente e come icone di documento, gli asset di immagine possono essere usati per fornire le icone dell'applicazione. Gli screenshot seguenti di un iPad illustrano i tre usi delle icone in iOS:
 
 - **Icona dell'applicazione** : ogni app iOS deve definire un'icona dell'applicazione. Questa è l'icona che l'utente toccherà dalla schermata iniziale di iOS per avviare l'app. Questa icona viene inoltre utilizzata da Game Center, se applicabile. Esempio: 
 
@@ -38,7 +38,7 @@ Nello stesso modo in cui un'app Xamarin.iOS può usare asset di immagine per i c
 
     [![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png#lightbox)
 
-Per supportare tutti i tipi di icona richiesti da un'app Xamarin.iOS destinata a iOS 5 tramite iOS 9 (o versione successiva), saranno necessarie le risoluzioni e le dimensioni degli asset immagine seguenti:
+Per supportare tutti i tipi di icona richiesti da un'app Novell. iOS destinata a iOS 5 tramite iOS 9 (o versione successiva), saranno necessarie le risoluzioni e le dimensioni degli asset immagine seguenti:
 
 ### <a name="iphone-icon-sizes"></a>Dimensioni delle icone iPhone
 
@@ -109,7 +109,7 @@ Per le icone, è possibile aggiungere un set di immagini di `AppIcon` speciale a
 
 Per usare un catalogo asset, seguire questa procedura:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
 2. Scorrere verso il basso fino alla sezione **icone iPhone** .
@@ -129,7 +129,7 @@ Per usare un catalogo asset, seguire questa procedura:
 7. Fare clic sul pulsante **Apri** per includere l'immagine nel progetto e impostarla in xcasset.
 8. Ripetere per tutte le immagini necessarie.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic su * * info.  \* * file nella **Esplora soluzioni**:
 
@@ -166,7 +166,7 @@ Se si usa il metodo ad hoc per la distribuzione dell'app (per gli utenti azienda
 
 Per specificare l'illustrazione di iTunes, seguire questa procedura:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
 2. Scorrere fino alla sezione **iTunes artwork** dell'Editor: 
@@ -175,7 +175,7 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 3. Per le immagini mancanti, fare clic sull'anteprima nell'editor, selezionare il file di immagine per la grafica iTunes desiderata dalla finestra di dialogo Apri file e fare clic su **OK** .
 4. Ripetere questo passaggio fino a quando non sono state specificate tutte le immagini necessarie per l'app.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
 

@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027807"
 ---
 # <a name="working-with-the-android-manifest"></a>Uso del manifesto Android
 
-**File AndroidManifest. XML** è un file potente della piattaforma Android che consente di descrivere le funzionalità e i requisiti dell'applicazione per Android. Tuttavia, l'utilizzo di tale servizio non è semplice. Xamarin.Android consente di ridurre al minimo questa difficoltà consentendo di aggiungere attributi personalizzati alle classi, che verranno quindi usate per generare automaticamente il manifesto. Il nostro obiettivo è che il 99% degli utenti non debba mai modificare manualmente **file AndroidManifest. XML**. 
+**File AndroidManifest. XML** è un file potente della piattaforma Android che consente di descrivere le funzionalità e i requisiti dell'applicazione per Android. Tuttavia, l'utilizzo di tale servizio non è semplice. Novell. Android consente di ridurre al minimo questa difficoltà consentendo di aggiungere attributi personalizzati alle classi, che verranno quindi usate per generare automaticamente il manifesto. Il nostro obiettivo è che il 99% degli utenti non debba mai modificare manualmente **file AndroidManifest. XML**. 
 
 **File AndroidManifest. XML** viene generato come parte del processo di compilazione e il codice XML trovato all'interno di **Properties/file AndroidManifest. XML** viene unito a XML generato da attributi personalizzati. Il **file file AndroidManifest. XML** risultante Unito si trova nella sottodirectory **obj** ; ad esempio, si trova in **obj/debug/Android/file AndroidManifest. XML** per le compilazioni di debug. Il processo di Unione è semplice: USA gli attributi personalizzati all'interno del codice per generare elementi XML e *inserisce* tali elementi in **file AndroidManifest. XML**. 
 
@@ -55,7 +55,7 @@ L'attributo `[Activity]` non ha alcun effetto sui tipi di `abstract`; i tipi di 
 
 ### <a name="activity-name"></a>Nome attività
 
-A partire da Xamarin.Android 5,1, il nome del tipo di un'attività è basato sull'MD5SUM del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. (Prima di Xamarin.Android 5,1, il nome di tipo predefinito dell'attività è stato creato dallo spazio dei nomi minuscolo e dal nome della classe). 
+A partire da Novell. Android 5,1, il nome del tipo di un'attività è basato sull'MD5SUM del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. (Prima di Novell. Android 5,1, il nome di tipo predefinito dell'attività è stato creato dallo spazio dei nomi minuscolo e dal nome della classe). 
 
 Se si desidera eseguire l'override di questa impostazione predefinita e specificare in modo esplicito il nome dell'attività, utilizzare la proprietà [`Name`](xref:Android.App.ActivityAttribute.Name) : 
 
@@ -78,7 +78,7 @@ Questo esempio produce il frammento XML seguente:
 ### <a name="activity-title-bar"></a>Barra del titolo attività
 
 Per impostazione predefinita, Android assegna all'applicazione una barra del titolo quando viene eseguita. Il valore usato per questa operazione è [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). Nella maggior parte dei casi, questo valore è diverso dal nome della classe. Per specificare l'etichetta dell'app sulla barra del titolo, usare la proprietà [`Label`](xref:Android.App.ActivityAttribute.Label) .
-Esempio: 
+Ad esempio, 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -96,7 +96,7 @@ Questo esempio produce il frammento XML seguente:
 
 ### <a name="launchable-from-application-chooser"></a>Avviabile da selezione applicazione
 
-Per impostazione predefinita, l'attività non viene visualizzata nella schermata di avvio dell'applicazione Android. Ciò è dovuto al fatto che nell'applicazione saranno presenti molte attività e che non si desidera un'icona per ciascuna di esse. Per specificare quale deve essere avviabile dall'utilità di avvio dell'applicazione, utilizzare la proprietà [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) . Esempio: 
+Per impostazione predefinita, l'attività non viene visualizzata nella schermata di avvio dell'applicazione Android. Ciò è dovuto al fatto che nell'applicazione saranno presenti molte attività e che non si desidera un'icona per ciascuna di esse. Per specificare quale deve essere avviabile dall'utilità di avvio dell'applicazione, utilizzare la proprietà [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) . Ad esempio, 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -119,7 +119,7 @@ Questo esempio produce il frammento XML seguente:
 
 ### <a name="activity-icon"></a>Icona attività
 
-Per impostazione predefinita, all'attività verrà assegnata l'icona di avvio predefinita fornita dal sistema. Per usare un'icona personalizzata, aggiungere prima il **. png** alle **risorse/disegnatore**, impostare l'azione di compilazione su **AndroidResource**, quindi usare la proprietà [`Icon`](xref:Android.App.ActivityAttribute.Icon) per specificare l'icona da usare. Esempio: 
+Per impostazione predefinita, all'attività verrà assegnata l'icona di avvio predefinita fornita dal sistema. Per usare un'icona personalizzata, aggiungere prima il **. png** alle **risorse/disegnatore**, impostare l'azione di compilazione su **AndroidResource**, quindi usare la proprietà [`Icon`](xref:Android.App.ActivityAttribute.Icon) per specificare l'icona da usare. Ad esempio, 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -148,7 +148,7 @@ Quando si aggiungono le autorizzazioni per il manifesto Android, come descritto 
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-Le compilazioni di debug impostano automaticamente alcune autorizzazioni per semplificare il debug (ad esempio `INTERNET` e `READ_EXTERNAL_STORAGE`) &ndash; queste impostazioni sono impostate solo nell'oggetto **obj/debug/Android/file AndroidManifest. XML** generato e non vengono visualizzate come abilitate nella **richiesta impostazioni delle autorizzazioni** . 
+Le compilazioni di debug impostano automaticamente alcune autorizzazioni per semplificare il debug (ad esempio `INTERNET` e `READ_EXTERNAL_STORAGE`) &ndash; queste impostazioni sono impostate solo nell'oggetto **obj/debug/Android/file AndroidManifest. XML** generato e non vengono visualizzate come abilitate nelle impostazioni delle **autorizzazioni necessarie** . 
 
 Ad esempio, se si esamina il file manifesto generato in **obj/debug/Android/file AndroidManifest. XML**, è possibile che vengano visualizzati gli elementi di autorizzazione aggiunti seguenti: 
 
@@ -157,7 +157,7 @@ Ad esempio, se si esamina il file manifesto generato in **obj/debug/Android/file
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-Nella versione build di rilascio del manifesto (in **obj/debug/Android/file AndroidManifest. XML**) queste autorizzazioni *non* vengono configurate automaticamente. Se si ritiene che il cambio a una build di rilascio provochi la perdita di un'autorizzazione disponibile nella build di debug da parte dell'app, verificare di aver impostato in modo esplicito questa autorizzazione nelle impostazioni delle **autorizzazioni necessarie** per l'app (vedere **compilare > Android Applicazione** in Visual Studio per Mac; vedere **proprietà > manifesto Android** in Visual Studio). 
+Nella versione build di rilascio del manifesto (in **obj/debug/Android/file AndroidManifest. XML**) queste autorizzazioni *non* vengono configurate automaticamente. Se si ritiene che il cambio a una build di rilascio provochi la perdita di un'autorizzazione disponibile nella build di debug da parte dell'app, verificare di aver impostato in modo esplicito questa autorizzazione nelle impostazioni delle **autorizzazioni necessarie** per l'app (vedere **compilare > applicazione Android** in Visual Studio per Mac; vedere **Proprietà > manifesto Android** in Visual Studio). 
 
 ## <a name="advanced-features"></a>Funzionalità avanzate
 
@@ -166,7 +166,7 @@ Nella versione build di rilascio del manifesto (in **obj/debug/Android/file Andr
 Il manifesto Android fornisce un modo per descrivere le funzionalità dell'attività. Questa operazione viene eseguita tramite gli [Intent](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) e i [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 attributo personalizzato. È possibile specificare quali azioni sono appropriate per l'attività con la [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 e quali categorie sono appropriate con la [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-. È necessario fornire almeno un'attività (motivo per cui le attività vengono fornite nel costruttore). `[IntentFilter]` possono essere fornite più volte e ogni utilizzo produce un elemento `<intent-filter/>` separato all'interno del `<activity/>`. Esempio:
+. È necessario fornire almeno un'attività (motivo per cui le attività vengono fornite nel costruttore). `[IntentFilter]` possono essere fornite più volte e ogni utilizzo produce un elemento `<intent-filter/>` separato all'interno del `<activity/>`. Ad esempio,
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

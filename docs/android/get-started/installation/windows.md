@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912467"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
@@ -103,7 +103,7 @@ Nella finestra di dialogo **Nuovo progetto** selezionare **Android** in **Modell
 
 L'operazione è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questo articolo si è appreso come configurare e installare la piattaforma Xamarin.Android in Windows, come configurare Visual Studio con percorsi di installazione personalizzati per Java JDK e Android SDK (facoltativo), come avviare SDK Manager per installare altri componenti Android SDK, come configurare un dispositivo Android o un emulatore e come iniziare a creare la prima applicazione.
 

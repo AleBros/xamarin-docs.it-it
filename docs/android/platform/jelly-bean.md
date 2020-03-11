@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: a638ccf7810c737faaeded7fcc98fcf657c85288
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027203"
 ---
 # <a name="jelly-bean-features"></a>Funzionalità Jelly Bean
@@ -20,7 +20,7 @@ _Questo documento fornisce una panoramica di alto livello delle nuove funzionali
 
 ## <a name="overview"></a>Panoramica
 
-Android 4,1 (livello API 16), noto anche come "Jelly Bean", è stato rilasciato il 9 luglio 2012. Questo articolo fornisce un'introduzione generale ad alcune delle nuove funzionalità di Android 4,1 per gli sviluppatori che usano Xamarin.Android. Alcune di queste nuove funzionalità introdotte sono i miglioramenti apportati alle animazioni per l'avvio di un'attività, nuovi suoni per una fotocamera e un supporto migliorato per la navigazione dello stack dell'applicazione. È ora possibile tagliare e incollare con Intent.
+Android 4,1 (livello API 16), noto anche come "Jelly Bean", è stato rilasciato il 9 luglio 2012. Questo articolo fornisce un'introduzione generale ad alcune delle nuove funzionalità di Android 4,1 per gli sviluppatori che usano Novell. Android. Alcune di queste nuove funzionalità introdotte sono i miglioramenti apportati alle animazioni per l'avvio di un'attività, nuovi suoni per una fotocamera e un supporto migliorato per la navigazione dello stack dell'applicazione. È ora possibile tagliare e incollare con Intent.
 
 La stabilità delle applicazioni Android è stata migliorata con la possibilità di isolare la dipendenza da provider di contenuti instabili. I servizi possono anche essere isolati in modo che siano accessibili solo dall'attività che le ha avviate.
 
@@ -30,13 +30,13 @@ Sono state aggiunte infine alcune nuove autorizzazioni in Android 4,1.
 
 ## <a name="requirements"></a>Requisiti
 
-Per lo sviluppo di applicazioni Xamarin.Android con Jelly Bean è necessario che Xamarin.Android 4.2.6 o versione successiva e Android 4,1 (API level 16) venga installato tramite Android SDK Manager, come illustrato nella schermata seguente:
+Per lo sviluppo di applicazioni Novell. Android con Jelly Bean è necessario che Novell. Android 4.2.6 o versione successiva e Android 4,1 (API level 16) venga installato tramite Android SDK Manager, come illustrato nella schermata seguente:
 
 [![la selezione di Android 4,1 in gestione Android SDK](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
 ## <a name="whats-new"></a>Novità
 
-### <a name="animations"></a>Animations
+### <a name="animations"></a>Animazioni
 
 Le attività possono essere avviate tramite animazioni zoom o animazioni personalizzate utilizzando la classe `ActivityOptions`. Per supportare queste animazioni, vengono forniti i nuovi metodi seguenti:
 
@@ -143,7 +143,7 @@ Per creare un servizio che può essere utilizzato da altri servizi, la classe `N
 
 Per individuare i servizi sulla rete e l'implementazione di `Nsd.DiscoveryListener` passati a `NsdManager.discoverServices()`.
 
-#### <a name="network-usage"></a>Utilizzo della rete
+#### <a name="network-usage"></a>Utilizzo rete
 
 Un nuovo metodo, `ConnectivityManager.IsActiveNetworkMetered` consente a un dispositivo di verificare se è connesso a una rete a consumo. Questo metodo può essere utilizzato per semplificare la gestione dell'utilizzo dei dati, in modo da informare accuratamente gli utenti che potrebbero essere presenti costi costosi per le operazioni sui dati.
 
@@ -174,7 +174,7 @@ Alla classe `Intent` ora può essere associato un oggetto `ClipData` tramite la 
 
 Un servizio isolato è un servizio che viene eseguito con il proprio processo speciale e non dispone di autorizzazioni specifiche. L'unica comunicazione con il servizio è l'avvio del servizio e l'associazione tramite l'API del servizio. È possibile dichiarare un servizio come isolato impostando la proprietà `IsolatedProcess="true"` nell'`ServiceAttribute` che adorna una classe del servizio.
 
-### <a name="media"></a>Supporti
+### <a name="media"></a>Supporto
 
 La nuova classe `Android.Media.MediaCodec` fornisce un'API per i codec multimediali di basso livello. Le applicazioni possono eseguire query sul sistema per scoprire quali codec di basso livello sono disponibili nel dispositivo.
 
@@ -199,15 +199,15 @@ Android 4,1 consente alle applicazioni maggiore flessibilità e controllo con la
 
 - `Notification.BigPictureStyle`: si tratta di una classe helper che genera notifiche in cui sarà presente un'immagine. Nell'immagine seguente viene illustrato un esempio di notifica con una grande immagine:
 
- [schermata di esempio![di una notifica BigPictureStyle](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
+ [schermata di esempio ![di una notifica BigPictureStyle](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 - `Notification.BigTextStyle`: si tratta di una classe helper che genera notifiche contenenti più righe di testo, ad esempio la posta elettronica. Un esempio di questo nuovo stile di notifica può essere visualizzato nella schermata seguente:
 
- [schermata di esempio![di una notifica BigTextStyle](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
+ [schermata di esempio ![di una notifica BigTextStyle](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 - `Notification.InboxStyle`: si tratta di una classe helper che genera notifiche contenenti un elenco di stringhe, ad esempio frammenti da un messaggio di posta elettronica, come illustrato in questo screenshot:
 
- [schermata di esempio![di una notifica Notification. InboxStyle](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
+ [schermata di esempio ![di una notifica Notification. InboxStyle](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
 È possibile aggiungere fino a due pulsanti di azione nella parte inferiore di un messaggio di notifica quando la notifica usa lo stile normale o più grande.
 Un esempio può essere illustrato nello screenshot seguente, in cui i pulsanti di azione sono visibili nella parte inferiore della notifica:

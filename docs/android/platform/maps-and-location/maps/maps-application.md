@@ -1,6 +1,6 @@
 ---
 title: Avvio dell'applicazione Maps
-description: Come avviare l'applicazione Maps predefinita dall'app Xamarin.Android.
+description: Come avviare l'applicazione Maps predefinita dall'app Novell. Android.
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
@@ -8,19 +8,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
 ms.openlocfilehash: 7b74f564f2b6e9613874a774258a7e999002e61a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027072"
 ---
 # <a name="launching-the-maps-application"></a>Avvio dell'applicazione Maps
 
-Il modo più semplice per lavorare con le mappe in Xamarin.Android consiste nell'utilizzare l'applicazione Maps predefinita illustrata di seguito:
+Il modo più semplice per lavorare con le mappe in Novell. Android consiste nell'utilizzare l'applicazione Maps predefinita illustrata di seguito:
 
-[schermata di esempio![dell'app Google Maps predefinita](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
+[schermata di esempio ![dell'app Google Maps predefinita](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
-Quando si usa l'applicazione Maps, la mappa non sarà inclusa nell'applicazione. All'applicazione viene invece avviata l'applicazione Maps e viene caricata esternamente la mappa. La sezione successiva esamina come usare Xamarin.Android per avviare mappe come quella precedente.
+Quando si usa l'applicazione Maps, la mappa non sarà inclusa nell'applicazione. All'applicazione viene invece avviata l'applicazione Maps e viene caricata esternamente la mappa. La sezione successiva esamina come usare Novell. Android per avviare mappe come quella precedente.
 
 ## <a name="creating-the-intent"></a>Creazione della finalità
 
@@ -48,15 +48,15 @@ Il codice precedente usava lo schema geografico per creare un URI. Questo schema
 
 Le versioni dell'URI che accettano una query (ovvero l'indirizzo via o i termini di ricerca) usano il servizio geocodificatore di Google per recuperare il percorso che viene quindi visualizzato sulla mappa. Ad esempio, l'URI `geo:0,0?q=coop+Cambridge` restituisce la mappa riportata di seguito:
 
-[schermata di esempio![che Mostra Google Maps con un termine di ricerca](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
+[schermata di esempio ![che Mostra Google Maps con un termine di ricerca](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 Per ulteriori informazioni sugli schemi URI Geo, vedere [la pagina relativa alla visualizzazione di un percorso su una mappa](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 ## <a name="street-view"></a>Visualizzazione via
 
-Oltre allo schema geografico, Android supporta anche il caricamento di viste via da uno scopo. Di seguito è riportato un esempio di applicazione di visualizzazione via, avviata da Xamarin.Android:
+Oltre allo schema geografico, Android supporta anche il caricamento di viste via da uno scopo. Di seguito è riportato un esempio di applicazione di visualizzazione via, avviata da Novell. Android:
 
-[schermata di esempio![di una visualizzazione via](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
+[schermata di esempio ![di una visualizzazione via](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Per avviare una visualizzazione via, è sufficiente usare il `google.streetview` schema URI, come illustrato nel codice seguente:
 

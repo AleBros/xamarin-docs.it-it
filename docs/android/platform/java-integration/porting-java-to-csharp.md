@@ -1,6 +1,6 @@
 ---
-title: Porting di Java C# a per Xamarin.Android
-description: Una terza opzione per l'uso di Java in un'applicazione Xamarin.Android consiste nel trasferire il codice sorgente C#Java a.
+title: Porting di Java C# a per Novell. Android
+description: Una terza opzione per l'uso di Java in un'applicazione Novell. Android consiste nel trasferire il codice sorgente C#Java a.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/05/2016
 ms.openlocfilehash: 8f96fcc4aadcd8f082d55dc568b2517f048edaf2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027198"
 ---
-# <a name="porting-java-to-c-for-xamarinandroid"></a>Porting di Java C# a per Xamarin.Android
+# <a name="porting-java-to-c-for-xamarinandroid"></a>Porting di Java C# a per Novell. Android
 
 Questo approccio può essere interessante per le organizzazioni che:
 

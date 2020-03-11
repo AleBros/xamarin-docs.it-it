@@ -1,6 +1,6 @@
 ---
 title: Implementazione di frammenti-procedura dettagliata
-description: Questo articolo illustra come usare i frammenti per sviluppare applicazioni Xamarin.Android.
+description: Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android.
 ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
@@ -9,19 +9,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
 ms.openlocfilehash: b601fc37cc75dcd43c3688de8d302f0a47a06b35
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027411"
 ---
 # <a name="implementing-fragments---walkthrough"></a>Implementazione di frammenti-procedura dettagliata
 
-_I frammenti sono componenti indipendenti e modulari che consentono di risolvere la complessità delle app Android destinate ai dispositivi con diverse dimensioni dello schermo. Questo articolo illustra come creare e usare i frammenti durante lo sviluppo di applicazioni Xamarin.Android._
+_I frammenti sono componenti indipendenti e modulari che consentono di risolvere la complessità delle app Android destinate ai dispositivi con diverse dimensioni dello schermo. Questo articolo illustra come creare e usare i frammenti durante lo sviluppo di applicazioni Novell. Android._
 
 ## <a name="overview"></a>Panoramica
 
-Questa sezione illustra come creare e usare i frammenti in un'applicazione Xamarin.Android. Questa applicazione visualizzerà i titoli di diversi giochi di William Shakespeare in un elenco. Quando l'utente tocca il titolo di una riproduzione, l'app visualizzerà una citazione da tale riproduzione in un'attività separata:
+Questa sezione illustra come creare e usare i frammenti in un'applicazione Novell. Android. Questa applicazione visualizzerà i titoli di diversi giochi di William Shakespeare in un elenco. Quando l'utente tocca il titolo di una riproduzione, l'app visualizzerà una citazione da tale riproduzione in un'attività separata:
 
 [![app in esecuzione in un telefono Android in modalità verticale](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 

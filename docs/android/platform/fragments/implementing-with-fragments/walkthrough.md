@@ -1,5 +1,5 @@
 ---
-title: Procedura dettagliata per i frammenti di Xamarin.Android-parte 1
+title: Procedura dettagliata per i frammenti di Novell. Android-parte 1
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 043ad02f9ca9148910364ac82917551ee58d72ba
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027408"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>Procedura dettagliata per i frammenti &ndash; telefono
 
-Questa è la prima parte di una procedura dettagliata che creerà un'app Xamarin.Android destinata a un dispositivo Android con orientamento verticale. In questa procedura dettagliata viene illustrato come creare frammenti in Xamarin.Android e come aggiungerli a un esempio.
+Questa è la prima parte di una procedura dettagliata che creerà un'app Novell. Android destinata a un dispositivo Android con orientamento verticale. In questa procedura dettagliata viene illustrato come creare frammenti in Novell. Android e come aggiungerli a un esempio.
 
 [![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
@@ -29,14 +29,14 @@ Per questa app verranno create le classi seguenti:
 
 ## <a name="1-create-the-android-project"></a>1. creare il progetto Android
 
-Creare un nuovo progetto Xamarin.Android denominato **FragmentSample**.
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+Creare un nuovo progetto Novell. Android denominato **FragmentSample**.
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![creare un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[![creare un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![la creazione di un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[![la creazione di un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
 Si consiglia di selezionare **lo sviluppo moderno** per questa procedura dettagliata.
 
@@ -51,7 +51,7 @@ I dati per questa applicazione verranno archiviati in due matrici di stringhe ha
 * `Shakespeare.Titles` &nbsp; questa matrice conterrà un elenco di riproduzioni di William Shakespeare. Si tratta dell'origine dati per il `TitlesFragment`.
 * `Shakespeare.Dialogue` &nbsp; questa matrice conterrà un elenco di virgolette da uno dei giochi contenuti in `Shakespeare.Titles`. Si tratta dell'origine dati per il `PlayQuoteFragment`.
 
-Aggiungere una nuova C# classe al progetto **FragmentSample** e denominarla **Shakespeare.cs**. All'interno di questo file creare una C# nuova classe denominata`Shakespeare`con il contenuto seguente
+Aggiungere una nuova C# classe al progetto **FragmentSample** e denominarla **Shakespeare.cs**. All'interno di questo file creare una C# nuova classe denominata `Shakespeare` con il contenuto seguente
 
 ```csharp
 class Shakespeare
@@ -84,11 +84,11 @@ class Shakespeare
 
 Il `PlayQuoteFragment` è un frammento Android che visualizzerà un'offerta per una riproduzione Shakespeare selezionata dall'utente in precedenza nell'applicazione. questo frammento non userà un file di layout Android; al contrario, creerà dinamicamente l'interfaccia utente. Aggiungere una nuova classe di `Fragment` denominata `PlayQuoteFragment` al progetto:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![aggiungere una nuova C# classe](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![aggiungere una nuova C# classe](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
 
@@ -140,11 +140,11 @@ Il metodo `OnCreateView` verrà richiamato da Android quando è il momento di es
 
 I frammenti devono essere ospitati all'interno di un'attività, quindi questa app richiede un'attività che ospiterà il `PlayQuoteFragment`. L'attività aggiungerà in modo dinamico il frammento al relativo layout in fase di esecuzione. Aggiungere una nuova attività all'applicazione e denominarla `PlayQuoteActivity`:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![aggiungere attività Android al progetto](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![aggiungere attività Android al progetto](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
 
@@ -178,11 +178,11 @@ Il `TitlesFragment` creerà una sottoclasse di un frammento specializzato noto c
 
 Per iniziare, aggiungere un nuovo frammento al progetto e denominarlo **TitlesFragment**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![aggiungere il frammento Android al progetto](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![aggiungere il frammento Android al progetto](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
 

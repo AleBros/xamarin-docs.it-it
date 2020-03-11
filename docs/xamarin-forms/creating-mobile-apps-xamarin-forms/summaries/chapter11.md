@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 11. Infrastruttura associabile
-description: 'Creazione di App per dispositivi mobili con Xamarin.Forms: Riepilogo del capitolo 11. Infrastruttura associabile'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 11. Infrastruttura associabile'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,35 +8,35 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334366"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Riepilogo del capitolo 11. Infrastruttura associabile
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
-Ogni programmatore in c# abbia familiarità con c# *proprietà*. Proprietà contengono una *impostata* funzione di accesso e/o una *ottenere* della funzione di accesso. Vengono spesso chiamati *le proprietà CLR* per Common Language Runtime.
+Ogni C# programmatore ha familiarità C# con le *proprietà*. Le proprietà contengono una funzione di accesso *set* e/o una funzione di accesso *Get* . Spesso sono denominate *proprietà CLR* per Common Language Runtime.
 
-Xamarin.Forms definisce una definizione di proprietà avanzate chiamata un *la proprietà associabile* incapsulato dal [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) classe e supportata dal [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)classe. Queste classi sono sostanzialmente distinte ma correlate: Il `BindableProperty` viene usato per definire la proprietà stessa. `BindableObject` è simile a `object` in quanto si tratta di una classe di base per le classi che definiscono le proprietà associabili.
+Novell. Forms definisce una definizione di proprietà avanzata denominata *proprietà associabile* incapsulata dalla classe [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e supportata dalla classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) . Queste classi sono correlate ma piuttosto distinte: il `BindableProperty` viene usato per definire la proprietà stessa; `BindableObject` è come `object` in quanto si tratta di una classe di base per le classi che definiscono proprietà associabili.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>La gerarchia di classi Xamarin.Forms
+## <a name="the-xamarinforms-class-hierarchy"></a>La gerarchia di classi xamarin. Forms
 
-Il [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) esempio Usa la reflection per visualizzare una gerarchia di classi di Xamarin.Forms e illustrano il ruolo fondamentale `BindableObject` in questa gerarchia. `BindableObject` deriva da `Object` ed è la classe principale [ `Element` ](xref:Xamarin.Forms.Element) da cui [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) deriva. Si tratta della classe padre per [ `Page` ](xref:Xamarin.Forms.Page) e [ `View` ](xref:Xamarin.Forms.View), che è la classe padre da [ `Layout` ](xref:Xamarin.Forms.Layout):
+Nell'esempio [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) viene utilizzata la reflection per visualizzare una gerarchia di classi di Novell. Forms e viene illustrato il ruolo cruciale svolto da `BindableObject` in questa gerarchia. `BindableObject` deriva da `Object` e è la classe padre per [`Element`](xref:Xamarin.Forms.Element) da cui deriva [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Si tratta della classe padre per [`Page`](xref:Xamarin.Forms.Page) e [`View`](xref:Xamarin.Forms.View), che è la classe padre da [`Layout`](xref:Xamarin.Forms.Layout):
 
-[![Schermata triplo della gerarchia di classi di condivisione](images/ch11fg01-small.png "gerarchia di classe condivisione")](images/ch11fg01-large.png#lightbox "condivisione gerarchia di classe")
+[![Schermata tripla della condivisione della gerarchia di classi](images/ch11fg01-small.png "Condivisione gerarchia classi")](images/ch11fg01-large.png#lightbox "Condivisione gerarchia classi")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Un'anteprima in BindableObject e BindableProperty
 
-Nelle classi che derivano da `BindableObject` molte proprietà CLR si parla di "supportata da" proprietà associabili. Ad esempio, il [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà del `Label` classe è una proprietà CLR, ma la `Label` classe definisce anche un campo statico pubblico sola lettura denominato [ `TextProperty` ](xref:Xamarin.Forms.Label.TextProperty) di tipo `BindableProperty`.
+Nelle classi che derivano da `BindableObject` molte proprietà CLR sono dette "supportate da" proprietà associabili. Ad esempio, la proprietà [`Text`](xref:Xamarin.Forms.Label.Text) della classe `Label` è una proprietà CLR, ma la classe `Label` definisce anche un campo statico pubblico di sola lettura denominato [`TextProperty`](xref:Xamarin.Forms.Label.TextProperty) di tipo `BindableProperty`.
 
-Un'applicazione può impostare o ottenere il `Text` proprietà di `Label` normalmente, o l'applicazione può impostare il `Text` chiamando il [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) metodo definito dal `BindableObject` con un `Label.TextProperty` argomento. In modo analogo, un'applicazione può ottenere il valore del `Text` proprietà chiamando i [ `GetValue` ](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) metodo, con un `Label.TextProperty` argomento. Ciò viene dimostrata la [ **PropertySettings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PropertySettings) esempio.
+Un'applicazione può impostare o ottenere la proprietà `Text` di `Label` normalmente oppure l'applicazione può impostare il `Text` chiamando il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) definito da `BindableObject` con un argomento `Label.TextProperty`. Analogamente, un'applicazione può ottenere il valore della proprietà `Text` chiamando il metodo [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) , nuovamente con un argomento `Label.TextProperty`. Questa operazione è illustrata nell'esempio [**PropertySettings**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PropertySettings) .
 
-In effetti, il `Text` proprietà CLR è interamente implementato mediante il `SetValue` e `GetValue` metodi definiti dal `BindableObject` in combinazione con il `Label.TextProperty` proprietà statica.
+Il `Text` proprietà CLR viene infatti implementato interamente mediante i metodi `SetValue` e `GetValue` definiti da `BindableObject` insieme alla proprietà statica `Label.TextProperty`.
 
-`BindableObject` e `BindableProperty` forniscono il supporto per:
+`BindableObject` e `BindableProperty` forniscono supporto per:
 
 - Fornire i valori predefiniti delle proprietà
 - Archiviare i relativi valori correnti
@@ -48,51 +48,51 @@ In effetti, il `Text` proprietà CLR è interamente implementato mediante il `Se
 - Il supporto di stili
 - Supporto di risorse dinamiche
 
-Ogni volta che una proprietà supportata da modifica una proprietà associabile, `BindableObject` viene attivato un [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventi che identifica la proprietà che è stato modificato. Questo evento non viene generato quando la proprietà è impostata sullo stesso valore.
+Ogni volta che una proprietà supportata da una proprietà associabile viene modificata, `BindableObject` genera un evento di [`PropertyChanged`](xref:Xamarin.Forms.BindableObject.PropertyChanged) che identifica la proprietà che è stata modificata. Questo evento non viene generato quando la proprietà è impostata sullo stesso valore.
 
-Alcune proprietà non sono supportate da proprietà associabile e alcune classi di Xamarin.Forms &mdash; , ad esempio `Span` &mdash; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare proprietà associabili poiché `BindableObject` definisce le `SetValue` e `GetValue` metodi.
+Alcune proprietà non sono supportate da proprietà associabili e alcune classi Novell. Forms &mdash; come `Span` &mdash; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare proprietà associabili perché `BindableObject` definisce i metodi di `SetValue` e `GetValue`.
 
-In quanto `Span` non deriva da `BindableObject`, nessuna delle proprietà &mdash; , ad esempio `Text` &mdash; sono supportati da una proprietà associabile. È per questo motivo un `DynamicResource` impostazione nella `Text` proprietà di `Span` genera un'eccezione nel [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) esempio nel capitolo precedente. Il [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) esempio viene illustrato come impostare una risorsa dinamica nel codice utilizzando il [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) definito dal metodo `Element`. Il primo argomento è un oggetto di tipo `BindableProperty`.
+Poiché `Span` non deriva da `BindableObject`, nessuna delle proprietà &mdash; come `Text` &mdash; è supportata da una proprietà associabile. Questo è il motivo per cui un'impostazione `DynamicResource` nella proprietà `Text` di `Span` genera un'eccezione nell'esempio [**DynamicVsStatic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) del capitolo precedente. L'esempio [**DynamicVsStaticCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) illustra come impostare le risorse dinamiche nel codice usando il metodo [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) definito da `Element`. Il primo argomento è un oggetto di tipo `BindableProperty`.
 
-Analogamente, il [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) metodo definito da `BindableObject` è un primo argomento di tipo `BindableProperty`.
+Analogamente, il metodo [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) definito da `BindableObject` dispone di un primo argomento di tipo `BindableProperty`.
 
 ## <a name="defining-bindable-properties"></a>La definizione di proprietà associabili
 
-È possibile definire le proprietà associabili usando il metodo statico [ `BindableProperty.Create` ](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) metodo per creare un campo statico di sola lettura di tipo `BindableProperty`.
+È possibile definire proprietà associabili personalizzate utilizzando il metodo statico [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) per creare un campo statico di sola lettura di tipo `BindableProperty`.
 
-Come illustrato nel [ `AltLabel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) classe la [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) libreria. La classe deriva da `Label` e consente di specificare una dimensione del carattere in punti. È dimostrata nel [ **PointSizedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) esempio.
+Questa operazione viene illustrata nella classe [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) nella libreria [**Novell. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) . La classe deriva da `Label` e consente di specificare le dimensioni del carattere in punti. Viene illustrato nell'esempio [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) .
 
-Quattro argomenti del `BindableProperty.Create` metodo sono necessari:
+Sono necessari quattro argomenti del metodo `BindableProperty.Create`:
 
-- `propertyName`: il nome di testo della proprietà (lo stesso come il nome della proprietà CLR)
-- `returnType`: il tipo della proprietà CLR
-- `declaringType`: il tipo della classe dichiara la proprietà
-- `defaultValue`: il valore della proprietà predefinito
+- `propertyName`: il nome di testo della proprietà (uguale al nome della proprietà CLR)
+- `returnType`: tipo della proprietà CLR
+- `declaringType`: tipo della classe che dichiara la proprietà.
+- `defaultValue`: valore predefinito della proprietà.
 
-In quanto `defaultValue` JE typu `object`, il compilatore deve essere in grado di determinare il tipo del valore predefinito. Ad esempio, se il `returnType` viene `double`, il `defaultValue` deve essere impostato su un valore come 0,0, anziché solo 0 o la mancata corrispondenza tra tipi generano un'eccezione in fase di esecuzione.
+Poiché `defaultValue` è di tipo `object`, il compilatore deve essere in grado di determinare il tipo del valore predefinito. Se, ad esempio, il `returnType` è `double`, il `defaultValue` deve essere impostato su un valore come 0,0 anziché solo su 0 oppure il tipo non corrispondente attiverà un'eccezione in fase di esecuzione.
 
 È anche molto comune per una proprietà associabile da includere:
 
-- `propertyChanged`: quando la proprietà cambia valore chiamato un metodo statico. Il primo argomento è l'istanza della classe di cui è stata modificata.
+- `propertyChanged`: metodo statico chiamato quando la proprietà cambia valore. Il primo argomento è l'istanza della classe di cui è stata modificata.
 
-Altri argomenti `BindableProperty.Create` sono meno frequenti:
+Gli altri argomenti per `BindableProperty.Create` non sono comuni:
 
-- `defaultBindingMode`: utilizzato in combinazione con l'associazione dati (come descritto nella [ **capitolo 16. Associazione dati**](chapter16.md))
-- `validateValue`: un callback per verificare la presenza di un valore valido
+- `defaultBindingMode`: utilizzato in relazione al data binding, come illustrato nel [**capitolo 16. Data Binding**](chapter16.md))
+- `validateValue`: callback per verificare la presenza di un valore valido
 - `propertyChanging`: un callback per indicare quando la proprietà sta per essere modificata
-- `coerceValue`: un callback da assegnare un valore impostato su un altro valore
-- `defaultValueCreate`: un callback per creare un valore predefinito che non può essere condivisi tra le istanze della classe (ad esempio, una raccolta)
+- `coerceValue`: un callback per forzare un valore impostato su un altro valore
+- `defaultValueCreate`: un callback per creare un valore predefinito che non può essere condiviso tra le istanze della classe (ad esempio, una raccolta)
 
 ### <a name="the-read-only-bindable-property"></a>La proprietà associabile di sola lettura
 
-Sola lettura, può essere una proprietà associabile. Creazione di una proprietà associabile di sola lettura è necessario chiamare il metodo statico [ `BindableProperty.CreateReadOnly` ](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) per definire un campo di sola lettura statico privato di tipo [ `BindablePropertyKey` ](xref:Xamarin.Forms.BindablePropertyKey).
+Sola lettura, può essere una proprietà associabile. La creazione di una proprietà associabile di sola lettura richiede la chiamata al metodo statico [`BindableProperty.CreateReadOnly`](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) per definire un campo statico privato di sola lettura di tipo [`BindablePropertyKey`](xref:Xamarin.Forms.BindablePropertyKey).
 
-Quindi, definire la proprietà CLR `set` funzione di accesso agli come `private` per chiamare un [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) overload con il `BindablePropertyKey` oggetto. Ciò impedisce che la proprietà viene impostata all'esterno della classe.
+Definire quindi la proprietà CLR `set` accesore come `private` per chiamare un overload [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) con l'oggetto `BindablePropertyKey`. Ciò impedisce che la proprietà viene impostata all'esterno della classe.
 
-Ciò è dimostrato nel [ `CountedLabel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) classe usata nel [ **BaskervillesCount** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) esempio.
+Questa operazione viene illustrata nella classe [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) utilizzata nell'esempio [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Capitolo 11 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
-- [Esempi di capitolo 11](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+- [Testo completo del capitolo 11 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
+- [Esempi del capitolo 11](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 - [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md)

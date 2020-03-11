@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/17/2018
 ms.openlocfilehash: 746a096f93036e63b29bc917826259f88426cead
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020274"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introduzione con l'autenticazione con impronta digitale
 
-Per iniziare, verrà prima di tutto illustrato come configurare un progetto Xamarin.Android in modo che l'applicazione sia in grado di usare l'autenticazione con impronta digitale:
+Per iniziare, verrà prima di tutto illustrato come configurare un progetto Novell. Android in modo che l'applicazione sia in grado di usare l'autenticazione con impronta digitale:
 
 1. Aggiornare **file AndroidManifest. XML** per dichiarare le autorizzazioni richieste dalle API per le impronte digitali.
 2. Ottenere un riferimento al `FingerprintManager`.
@@ -23,13 +23,13 @@ Per iniziare, verrà prima di tutto illustrato come configurare un progetto Xama
 
 ## <a name="requesting-permissions-in-the-application-manifest"></a>Richiesta di autorizzazioni nel manifesto dell'applicazione
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Un'applicazione Android deve richiedere l'autorizzazione `USE_FINGERPRINT` nel manifesto. Lo screenshot seguente illustra come aggiungere questa autorizzazione all'applicazione in Visual Studio:
 
 [![abilitare l'uso di\_impronta digitale nella schermata del manifesto Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Un'applicazione Android deve richiedere l'autorizzazione `USE_FINGERPRINT` nel manifesto. Lo screenshot seguente illustra come aggiungere questa autorizzazione all'applicazione in Visual Studio per Mac:
 

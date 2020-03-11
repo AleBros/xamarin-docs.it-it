@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027237"
 ---
 # <a name="kitkat-features"></a>Funzionalità di KitKat
@@ -30,11 +30,11 @@ Android 4,4 (API level 19), noto anche come "KitKat", è stato rilasciato alla f
 
 - [Strumenti di sviluppo](#developer_tools) &ndash; screencast sulle applicazioni in azione con il client di Android Debug Bridge, disponibile come parte del Android SDK.
 
-Questa guida fornisce indicazioni per la migrazione di un'applicazione Xamarin.Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Xamarin.Android.
+Questa guida fornisce indicazioni per la migrazione di un'applicazione Novell. Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Novell. Android.
 
 ## <a name="requirements"></a>Requisiti
 
-Per sviluppare applicazioni Xamarin.Android con KitKat, è necessario *Xamarin.Android 4.11.0* o versione successiva e Android 4,4 (API level 19) installato tramite Android SDK Manager, come illustrato nello screenshot seguente:
+Per sviluppare applicazioni Novell. Android con KitKat, è necessario *Novell. Android 4.11.0* o versione successiva e Android 4,4 (API level 19) installato tramite Android SDK Manager, come illustrato nello screenshot seguente:
 
 [![la selezione di Android 4,4 in gestione Android SDK](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
@@ -155,7 +155,7 @@ La schermata seguente mostra l'app prima dell'animazione:
 
 La schermata seguente mostra l'app dopo l'animazione:
 
-[schermata![app dopo il completamento dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
+[schermata ![app dopo il completamento dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 È possibile ottenere un maggiore controllo sulla transizione con le scene, descritte nella sezione successiva.
 
@@ -308,7 +308,7 @@ Il codice seguente definisce un tema con lo stato e le barre di navigazione tras
 
 La schermata seguente mostra il tema precedente con le barre di spostamento e lo stato di traslucido:
 
-[schermata di esempio![dell'app con lo stato e le barre di navigazione trasparenti](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
+[schermata di esempio ![dell'app con lo stato e le barre di navigazione trasparenti](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -319,7 +319,7 @@ La schermata seguente mostra il tema precedente con le barre di spostamento e lo
 Storage Access Framework (SAF) è un nuovo modo per consentire agli utenti di interagire con contenuto archiviato, ad esempio immagini, video e documenti. Anziché presentare agli utenti una finestra di dialogo per scegliere un'applicazione per la gestione del contenuto, KitKat apre una nuova interfaccia utente che consente agli utenti di accedere ai dati in un unico percorso di aggregazione. Una volta scelto il contenuto, l'utente tornerà all'applicazione che ha richiesto il contenuto e l'esperienza dell'app continuerà normalmente.
 
 Questa modifica richiede due azioni sul lato sviluppatore: prima di tutto, le app che richiedono contenuto dai provider devono essere aggiornate a un nuovo modo di richiedere il contenuto. In secondo luogo, le applicazioni che scrivono i dati in un `ContentProvider` devono essere modificate per l'utilizzo del nuovo Framework. Entrambi gli scenari dipendono dalla nuova [`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
-API.
+.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
 
@@ -399,18 +399,18 @@ Per altre informazioni sul caricamento, la creazione e la modifica del contenuto
 Il contenuto di stampa è semplificato in KitKat con l'introduzione dei [servizi di stampa](xref:Android.PrintServices) e `PrintManager`. KitKat è anche la prima versione dell'API per sfruttare appieno le [API del servizio di stampa cloud di Google](https://developers.google.com/cloud-print/) usando l' [applicazione Google Cloud Print](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
 La maggior parte dei dispositivi forniti con KitKat Scarica automaticamente Google Cloud Print app e il plug-in del [servizio di stampa HP](https://play.google.com/store/apps/details?id=com.hp.android.printservice)quando si connette per la prima volta al Wi-Fi. Un utente può verificare le impostazioni di stampa del dispositivo passando a **impostazioni > sistema > stampa**:
 
-[schermata di esempio![della schermata impostazioni di stampa](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
+[schermata di esempio ![della schermata impostazioni di stampa](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 > [!NOTE]
 > Sebbene le API di stampa siano configurate per l'uso con Google Cloud Print per impostazione predefinita, Android consente agli sviluppatori di preparare il contenuto di stampa usando le nuove API e di inviarlo ad altre applicazioni per gestire la stampa.
 
 #### <a name="printing-html-content"></a>Stampa di contenuto HTML
 
-KitKat crea automaticamente un [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) per una visualizzazione web con `WebView.CreatePrintDocumentAdapter`. La stampa di contenuto Web è un lavoro coordinato tra un [`WebViewClient`](xref:Android.Webkit.WebViewClient) che attende il caricamento del contenuto HTML e consente all'attività di rendere disponibile l'opzione di stampa nel menu opzioni e l'attività, che attende che l'utente selezioni l'opzione di stampa e c `Print`nel `PrintManager`. In questa sezione viene illustrata la configurazione di base necessaria per stampare contenuto HTML a schermo intero.
+KitKat crea automaticamente un [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) per una visualizzazione web con `WebView.CreatePrintDocumentAdapter`. La stampa di contenuto Web è un lavoro coordinato tra un [`WebViewClient`](xref:Android.Webkit.WebViewClient) che attende il caricamento del contenuto HTML e consente all'attività di rendere disponibile l'opzione di stampa nel menu opzioni e l'attività, che attende che l'utente selezioni l'opzione di stampa e chiami `Print`sul `PrintManager`. In questa sezione viene illustrata la configurazione di base necessaria per stampare contenuto HTML a schermo intero.
 
 Si noti che il caricamento e la stampa del contenuto Web richiede l'autorizzazione Internet:
 
-[Impostazione dell'autorizzazione Internet nelle opzioni dell'app![](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
+[Impostazione dell'autorizzazione Internet nelle opzioni dell'app ![](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### <a name="print-menu-item"></a>Voce di menu Stampa
 
@@ -533,7 +533,7 @@ Per funzionare, HCE deve poter essere eseguito in background e deve essere avvia
 
 - *OnDeactivated* : il `HostAdpuService` viene disattivato quando il servizio HCE non comunica più con il lettore NFC.
 
-Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l'attributo `Service` (per altre informazioni sugli attributi, vedere la guida al [manifesto Xamarin Working with Android](~/android/platform/android-manifest.md) ):
+Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l'attributo `Service` (per altre informazioni sugli attributi, vedere la guida al [manifesto Novell Working with Android](~/android/platform/android-manifest.md) ):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
@@ -573,7 +573,7 @@ Il servizio precedente consente al lettore NFC di interagire con l'applicazione,
 Oltre ai filtri, il file di risorse XML fornisce anche una descrizione per l'utente del servizio HCE, specifica un gruppo di supporto (applicazione di pagamento rispetto a "altro") e, nel caso di un'applicazione di pagamento, un banner 260x96 DP da visualizzare all'utente.
 
 Il programma di installazione illustrato in precedenza fornisce i blocchi predefiniti di base per un'applicazione che emula una scheda NFC. NFC richiede diversi passaggi e ulteriori test da configurare. Per altre informazioni sull'emulazione di schede basate su host, vedere il [portale della documentazione di Android](https://developer.android.com/guide/topics/connectivity/nfc/hce.html).
-Per altre informazioni sull'uso di NFC con Xamarin, vedere gli [esempi di Xamarin NFC](https://github.com/xamarin/monodroid-samples/tree/master/NfcSample).
+Per altre informazioni sull'uso di NFC con Novell, vedere gli [esempi di Novell NFC](https://github.com/xamarin/monodroid-samples/tree/master/NfcSample).
 
 ### <a name="sensors"></a>Sensori
 
@@ -624,7 +624,7 @@ public class MainActivity : Activity, ISensorEventListener
 
 `OnSensorChanged` viene chiamato se il conteggio dei passaggi viene aggiornato mentre l'applicazione è in primo piano. Se l'applicazione entra in background o il dispositivo è in stato di sospensione, `OnSensorChanged` non verrà chiamato; Tuttavia, i passaggi continueranno a essere conteggiati fino a quando non viene chiamato `UnregisterListener`.
 
-Tenere presente che *il valore del numero di passaggi è cumulativo in tutte le applicazioni che registrano il sensore*. Ciò significa che, anche se si disinstalla e si reinstalla l'applicazione e si inizializza la variabile `count` a 0 all'avvio dell'applicazione, il valore restituito dal sensore rimarrà il numero totale di passaggi eseguiti durante la registrazione del sensore, indipendentemente dal fatto che il applicazione o un'altra. È possibile impedire l'aggiunta dell'applicazione al contatore dei passaggi chiamando `UnregisterListener` sul `SensorManager`, come illustrato nel codice seguente:
+Tenere presente che *il valore del numero di passaggi è cumulativo in tutte le applicazioni che registrano il sensore*. Ciò significa che anche se si disinstalla e si reinstalla l'applicazione e si inizializza la variabile `count` a 0 all'avvio dell'applicazione, il valore restituito dal sensore rimarrà il numero totale di passaggi eseguiti durante la registrazione del sensore, sia per l'applicazione che per un altro. È possibile impedire l'aggiunta dell'applicazione al contatore dei passaggi chiamando `UnregisterListener` sul `SensorManager`, come illustrato nel codice seguente:
 
 ```csharp
 protected override void OnPause()

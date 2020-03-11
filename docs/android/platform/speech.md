@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018
 ms.openlocfilehash: e8c7d1a4fb3537644ed3b7737158a5e50abcdae5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019759"
 ---
 # <a name="android-speech"></a>Sintesi vocale Android
@@ -47,7 +47,7 @@ Senza flessione (enfasi posta su parole o parti di parole specifiche), si tratta
 
 Senza un'elaborazione audio piuttosto potente per sfruttare la flessione e un grado di intelligenza artificiale per comprendere il contesto, il software non può neanche iniziare a capire cosa ne è stato detto, il migliore è un semplice telefono che consente di convertire il riconoscimento vocale in testo.
 
-## <a name="setting-up"></a>Impostazione
+## <a name="setting-up"></a>Configurazione
 
 Prima di usare il sistema di riconoscimento vocale, è sempre consigliabile verificare per verificare che il dispositivo disponga di un microfono. Si verificherà un piccolo tentativo di eseguire l'app in un pad Kindle o Google note senza un microfono installato.
 

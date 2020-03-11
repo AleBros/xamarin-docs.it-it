@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
 ms.openlocfilehash: 9c9b9f5a205a2eef7db9f27e8d09b10ce65a4318
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027052"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Modifica dei parametri di memoria Java per Android Designer
 
 I parametri di memoria predefiniti usati quando si avvia il processo di `java` per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema.
 
-A partire da Xamarin Studio 5.7.2.7 (e versioni successive, Visual Studio per Mac) e Strumenti di Visual Studio per Xamarin 3.9.344, queste impostazioni possono essere personalizzate in base al progetto.
+A partire da Xamarin Studio 5.7.2.7 (e versioni successive, Visual Studio per Mac) e Strumenti di Visual Studio per Novell 3.9.344, queste impostazioni possono essere personalizzate in base al progetto.
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Nuove proprietà di Android designer e corrispondenti opzioni Java
 
@@ -30,7 +30,7 @@ I nomi di proprietà seguenti corrispondono all'opzione della [riga di comando](
 
 - **AndroidDesignerJavaRendererPermSize** -XX: MaxPermSize
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Aprire la soluzione in Visual Studio.
 
@@ -62,7 +62,7 @@ I nomi di proprietà seguenti corrispondono all'opzione della [riga di comando](
 
 8. Riavviare Visual Studio e riaprire la soluzione.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Aprire la soluzione in Visual Studio per Mac per assicurarsi che la directory della soluzione contenga un file di `.userprefs`.
 
@@ -96,7 +96,7 @@ I nomi di proprietà seguenti corrispondono all'opzione della [riga di comando](
 
 8. Ripetere i passaggi 5-7 per ogni progetto Android nella soluzione che contiene i file di layout `.axml`. (Ovvero, aggiungere un `<MonoDevelop.Ide.ItemProperties.ProjectName>` elemento per ogni progetto).
 
-9. Salvare e chiudere il file di `.userprefs`.
+9. Salvare e chiudere il file `.userprefs`.
 
 10. Riavviare Visual Studio per Mac e riaprire la soluzione.
 

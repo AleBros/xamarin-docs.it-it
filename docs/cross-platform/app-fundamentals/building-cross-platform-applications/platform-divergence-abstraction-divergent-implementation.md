@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.openlocfilehash: c8b4dcbfbf65bc4059125404b0d20ed35fa31f29
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488647"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088935"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - Gestione di più piattaforme
 
@@ -19,7 +19,7 @@ ms.locfileid: "75488647"
 
 La divergenza non è solo un problema "multipiattaforma"; i dispositivi nella piattaforma "stessa" hanno funzionalità diverse, in particolare la vasta gamma di dispositivi Android disponibili. Il più ovvio e Basic è la dimensione dello schermo, ma gli altri attributi del dispositivo possono variare e richiedere a un'applicazione di controllare determinate funzionalità e si comportano in modo diverso in base alla loro presenza (o assenza).
 
-Ciò significa che tutte le applicazioni devono gestire la degradazione normale della funzionalità, altrimenti presentano un set di funzionalità non accattivante, il più basso comune. L'integrazione completa di Xamarin con gli SDK nativi di ogni piattaforma consente alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare le app per l'uso di tali funzionalità.
+Ciò significa che tutte le applicazioni devono gestire la degradazione normale della funzionalità, altrimenti presentano un set di funzionalità non accattivante, il più basso comune. L'integrazione completa di Novell con gli SDK nativi di ogni piattaforma consente alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare le app per l'uso di tali funzionalità.
 
 Vedere la documentazione sulle funzionalità della piattaforma per una panoramica delle differenze tra le piattaforme e le funzionalità.
 
@@ -95,20 +95,20 @@ I vantaggi e gli svantaggi delle interfacce si applicano ugualmente all'ereditar
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Vedere la documentazione di [Xamarin.Forms](~/get-started/index.yml) .
+Vedere la documentazione di [Novell. Forms](~/get-started/index.yml) .
 
 ### <a name="other-cross-platform-libraries"></a>Altre librerie multipiattaforma
 
 Queste librerie offrono inoltre funzionalità multipiattaforma per C# gli sviluppatori:
 
-- [**Xamarin.Essentials**](~/essentials/index.md) : API multipiattaforma per le funzionalità comuni.
+- [**Novell. Essentials**](~/essentials/index.md) : API multipiattaforma per le funzionalità comuni.
 - [**SkiaSharp**](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) : grafica 2D multipiattaforma.
 
 ## <a name="conditional-compilation"></a>Compilazione condizionale
 
 Esistono situazioni in cui il codice condiviso dovrà comunque funzionare in modo diverso in ogni piattaforma, possibilmente accedendo a classi o funzionalità che si comportano in modo diverso. La compilazione condizionale funziona meglio con i progetti di asset condivisi, in cui viene fatto riferimento allo stesso file di origine in più progetti con simboli diversi definiti.
 
-I progetti Xamarin definiscono sempre `__MOBILE__`, vale a volte per i progetti di applicazioni iOS e Android. si notino il doppio carattere di sottolineatura pre e post-correzione su questi simboli.
+I progetti Novell definiscono sempre `__MOBILE__`, vale a volte per i progetti di applicazioni iOS e Android. si notino il doppio carattere di sottolineatura pre e post-correzione su questi simboli.
 
 ```csharp
 #if __MOBILE__
@@ -118,7 +118,7 @@ I progetti Xamarin definiscono sempre `__MOBILE__`, vale a volte per i progetti 
 
 #### <a name="ios"></a>iOS
 
-Xamarin.iOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
+Novell. iOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
 
 ```csharp
 #if __IOS__
@@ -140,7 +140,7 @@ Sono disponibili anche simboli specifici per l'espressione di controllo e la TV:
 
 #### <a name="android"></a>Android
 
-Il codice che deve essere compilato solo in applicazioni Xamarin.Android può usare gli elementi seguenti
+Il codice che deve essere compilato solo in applicazioni Novell. Android può usare gli elementi seguenti
 
 ```csharp
 #if __ANDROID__
@@ -158,10 +158,12 @@ Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quin
 
 #### <a name="mac"></a>Mac
 
-Attualmente non è disponibile un simbolo predefinito per Xamarin.Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo, ad esempio `__MAC__`
+Novell. Mac definisce `__MACOS__` che è possibile usare per compilare solo per macOS:
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)

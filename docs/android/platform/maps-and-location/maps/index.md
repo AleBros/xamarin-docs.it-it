@@ -1,6 +1,6 @@
 ---
-title: Come usare Google Maps e il percorso con Xamarin.Android
-description: Questo articolo illustra come usare le mappe e il percorso con Xamarin.Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2.
+title: Come usare Google Maps e il percorso con Novell. Android
+description: Questo articolo illustra come usare le mappe e il percorso con Novell. Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
@@ -8,19 +8,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
 ms.openlocfilehash: d877f415bb96024bb41edc2be9aec108ae248e88
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020037"
 ---
-# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con Xamarin.Android
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con Novell. Android
 
-_Questo articolo illustra come usare le mappe e il percorso con Xamarin.Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2._
+_Questo articolo illustra come usare le mappe e il percorso con Novell. Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2._
 
 ## <a name="maps-overview"></a>Panoramica delle mappe
 
-Le tecnologie di mapping sono un complemento universale ai dispositivi mobili. I computer desktop e i portatili non tendono a avere la consapevolezza della posizione incorporata. D'altra parte, i dispositivi mobili usano tali applicazioni per individuare i dispositivi e visualizzare le informazioni sulla posizione modificabile. Android offre una tecnologia incorporata potente che Visualizza i dati relativi alla posizione sulle mappe usando l'hardware del percorso che può essere disponibile nel dispositivo. Questo articolo illustra una serie di informazioni che le applicazioni Maps in Xamarin.Android devono offrire, tra cui: 
+Le tecnologie di mapping sono un complemento universale ai dispositivi mobili. I computer desktop e i portatili non tendono a avere la consapevolezza della posizione incorporata. D'altra parte, i dispositivi mobili usano tali applicazioni per individuare i dispositivi e visualizzare le informazioni sulla posizione modificabile. Android offre una tecnologia incorporata potente che Visualizza i dati relativi alla posizione sulle mappe usando l'hardware del percorso che può essere disponibile nel dispositivo. Questo articolo illustra una serie di informazioni che le applicazioni Maps in Novell. Android devono offrire, tra cui: 
 
 - Utilizzo dell'applicazione mappe predefinite per aggiungere rapidamente la funzionalità di mapping.
 - Uso dell'API Maps per controllare la visualizzazione di una mappa.

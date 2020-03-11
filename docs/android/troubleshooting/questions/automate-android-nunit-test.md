@@ -8,16 +8,16 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2018
 ms.openlocfilehash: 1246eeac63a0ae232396d4c2fd69d8bf516f5e3e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73026995"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Come si può automatizzare un progetto di test Android NUnit?
 
 > [!NOTE]
-> Questa guida illustra come automatizzare un progetto di test di Android NUnit, non un progetto Xamarin.UITest. Le guide Xamarin.UITest sono disponibili [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
+> Questa guida illustra come automatizzare un progetto di test di Android NUnit, non un progetto Novell. UITest. Le guide Novell. UITest sono disponibili [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
 
 Quando si crea un progetto di **app per unit test (Android)** in Visual Studio (o in un progetto di **unit test Android** in Visual Studio per Mac), questo progetto non eseguirà automaticamente i test per impostazione predefinita.
 Per eseguire test NUnit in un dispositivo di destinazione, è possibile creare una sottoclasse [Android. app. Instrumentation](xref:Android.App.Instrumentation) avviata usando il comando seguente: 
@@ -55,11 +55,11 @@ I passaggi seguenti illustrano questo processo:
     }
     ```
 
-    In questo file `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (da **Xamarin.Android. NUnitLite. dll**) viene sottoclassato per creare `TestInstrumentation`.
+    In questo file `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (da **Novell. Android. NUnitLite. dll**) viene sottoclassato per creare `TestInstrumentation`.
 
 2. Implementare il costruttore `TestInstrumentation` e il metodo `AddTests`. Il metodo `AddTests` controlla i test effettivamente eseguiti.
 
-3. Modificare il file di `.csproj` per aggiungere **TestInstrumentation.cs**. Esempio:
+3. Modificare il file di `.csproj` per aggiungere **TestInstrumentation.cs**. Ad esempio,
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -92,7 +92,7 @@ I passaggi seguenti illustrano questo processo:
 Per altre informazioni sull'uso del comando `adb shell am instrument` per l'esecuzione di unit test, vedere l'argomento relativo agli sviluppatori Android [che eseguono test con ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
 > [!NOTE]
-> Con la versione [Xamarin.Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , i nomi di pacchetto predefiniti per Android Callable Wrapper saranno basati sull'md5sum del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. Assicurarsi quindi di usare la proprietà `Name` sull'attributo `Instrumentation` per generare un nome di classe ACW/classe leggibile.
+> Con la versione [Novell. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , i nomi di pacchetto predefiniti per Android Callable Wrapper saranno basati sull'md5sum del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. Assicurarsi quindi di usare la proprietà `Name` sull'attributo `Instrumentation` per generare un nome di classe ACW/classe leggibile.
 
 _Il nome di ACW deve essere usato nel comando `adb` precedente_.
-La ridenominazione/refactoring C# della classe richiede pertanto la modifica del comando`RunTests`per usare il nome di ACW corretto.
+La ridenominazione/refactoring C# della classe richiede pertanto la modifica del comando `RunTests` per usare il nome di ACW corretto.

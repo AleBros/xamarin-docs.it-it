@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/23/2016
 ms.openlocfilehash: 61edd0e4b532f18a8fc28502e5bb990703068776
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027498"
 ---
 # <a name="scanning-for-fingerprints"></a>Analisi delle impronte digitali
 
-Ora che si è appreso come preparare un'applicazione Xamarin.Android per l'uso dell'autenticazione con impronta digitale, tornare al metodo `FingerprintManager.Authenticate` e discutere il suo posto nell'autenticazione con impronta digitale Android 6,0. In questo elenco è descritta una rapida panoramica del flusso di lavoro per l'autenticazione con impronta digitale:
+Ora che si è appreso come preparare un'applicazione Novell. Android per l'uso dell'autenticazione con impronta digitale, tornare al metodo `FingerprintManager.Authenticate` e discutere il suo posto nell'autenticazione con impronta digitale Android 6,0. In questo elenco è descritta una rapida panoramica del flusso di lavoro per l'autenticazione con impronta digitale:
 
 1. Richiama `FingerprintManager.Authenticate`, passando una `CryptoObject` e un'istanza di `FingerprintManager.AuthenticationCallback`. Il `CryptoObject` viene usato per garantire che il risultato dell'autenticazione con impronta digitale non sia stato alterato. 
 2. Sottoclasse della classe [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html) . Viene fornita un'istanza di questa classe per `FingerprintManager` quando viene avviata l'autenticazione con impronta digitale. Al termine dell'analisi dell'impronta digitale, verrà richiamato uno dei metodi di callback in questa classe.

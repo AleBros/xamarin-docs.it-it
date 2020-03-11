@@ -1,6 +1,6 @@
 ---
 title: Personalizzazione delle associazioni
-description: È possibile personalizzare un'associazione Xamarin.Android modificando i metadati che controllano il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione degli errori di compilazione e per il data shaping dell'API risultante, in modo che C#sia più coerente con/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare JavaDoc per recuperare i nomi dei parametri del metodo.
+description: È possibile personalizzare un'associazione Novell. Android modificando i metadati che controllano il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione degli errori di compilazione e per il data shaping dell'API risultante, in modo che C#sia più coerente con/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare JavaDoc per recuperare i nomi dei parametri del metodo.
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
 ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020648"
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 
-_È possibile personalizzare un'associazione Xamarin.Android modificando i metadati che controllano il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione degli errori di compilazione e per il data shaping dell'API risultante, in modo che C#sia più coerente con/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare JavaDoc per recuperare i nomi dei parametri del metodo._
+_È possibile personalizzare un'associazione Novell. Android modificando i metadati che controllano il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione degli errori di compilazione e per il data shaping dell'API risultante, in modo che C#sia più coerente con/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare JavaDoc per recuperare i nomi dei parametri del metodo._
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin.Android automatizza gran parte del processo di associazione. Tuttavia, in alcuni casi è necessaria una modifica manuale per risolvere i problemi seguenti:
+Novell. Android automatizza gran parte del processo di associazione. Tuttavia, in alcuni casi è necessaria una modifica manuale per risolvere i problemi seguenti:
 
-- Risoluzione degli errori di compilazione causati da tipi mancanti, tipi offuscati, nomi duplicati, problemi di visibilità delle classi e altre situazioni che non possono essere risolti dagli strumenti Xamarin.Android. 
+- Risoluzione degli errori di compilazione causati da tipi mancanti, tipi offuscati, nomi duplicati, problemi di visibilità delle classi e altre situazioni che non possono essere risolti dagli strumenti Novell. Android. 
 
-- Modifica del mapping usato da Xamarin.Android per associare l'API Android a tipi diversi in C# (ad esempio, molti sviluppatori preferiscono eseguire il mapping delle costanti C# Java `int`alle costanti`enum`).
+- Modifica del mapping usato da Novell. Android per associare l'API Android a tipi diversi in C# (ad esempio, molti sviluppatori preferiscono eseguire il mapping delle costanti C# Java `int` alle costanti `enum`).
 
 - Rimozione dei tipi inutilizzati che non devono essere associati. 
 
@@ -32,7 +32,7 @@ Xamarin.Android automatizza gran parte del processo di associazione. Tuttavia, i
 
 È possibile apportare alcune o tutte queste modifiche modificando i metadati che controllano il processo di associazione.
 
-## <a name="guides"></a>Guide
+## <a name="guides"></a>Guides
 
 Le guide seguenti descrivono i metadati che controllano il processo di associazione e spiegano come modificare i metadati per risolvere questi problemi:
 

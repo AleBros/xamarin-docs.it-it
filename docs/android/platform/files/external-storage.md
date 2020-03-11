@@ -1,6 +1,6 @@
 ---
-title: Accesso ai file in un archivio esterno con Xamarin.Android
-description: Questa guida illustra l'accesso ai file nell'archiviazione esterna in Xamarin.Android
+title: Accesso ai file in un archivio esterno con Novell. Android
+description: Questa guida illustra l'accesso ai file nell'archiviazione esterna in Novell. Android
 ms.prod: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
 ms.technology: xamarin-android
@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020478"
 ---
 # <a name="external-storage"></a>Archiviazione esterna
@@ -22,7 +22,7 @@ In passato, lo spazio di archiviazione esterno faceva riferimento a una partizio
 
 Nei dispositivi che hanno più utenti, ogni utente avrà una directory dedicata sulla partizione di archiviazione esterna primaria per l'archiviazione esterna. Le app in esecuzione come un utente non avranno accesso ai file di un altro utente nel dispositivo. I file per tutti gli utenti sono ancora leggibili in tutto il mondo e possono essere scritti in tutto il mondo. Tuttavia, Android effettuerà il sandboxing di ogni profilo utente dagli altri.
 
-La lettura e la scrittura nei file sono quasi identiche in Xamarin.Android così come per qualsiasi altra applicazione .NET. L'app Xamarin.Android determina il percorso del file che verrà modificato, quindi usa idiomi .NET standard per l'accesso ai file. Poiché i percorsi effettivi di archiviazione interna ed esterna possono variare da dispositivo a dispositivo o dalla versione Android alla versione Android, non è consigliabile codificare in modo rigido il percorso dei file. Al contrario, Xamarin.Android espone le API native di Android che consentono di determinare il percorso dei file in un archivio interno ed esterno.
+La lettura e la scrittura nei file sono quasi identiche in Novell. Android così come per qualsiasi altra applicazione .NET. L'app Novell. Android determina il percorso del file che verrà modificato, quindi usa idiomi .NET standard per l'accesso ai file. Poiché i percorsi effettivi di archiviazione interna ed esterna possono variare da dispositivo a dispositivo o dalla versione Android alla versione Android, non è consigliabile codificare in modo rigido il percorso dei file. Al contrario, Novell. Android espone le API native di Android che consentono di determinare il percorso dei file in un archivio interno ed esterno.
 
 Questa guida illustra i concetti e le API in Android specifici per l'archiviazione esterna.
 
@@ -66,7 +66,7 @@ Il parametro per `GetExternalFilesDir()` è una stringa che specifica una _direc
 Per i dispositivi che dispongono di più partizioni di archiviazione esterne, ogni partizione avrà una directory destinata ai file privati. Il metodo `Android.Content.Context.GetExternalFilesDirs(string type)` restituirà una matrice di `Java.IO.Files`. Ogni oggetto rappresenterà una directory privata specifica dell'applicazione in tutti i dispositivi di archiviazione condivisi/esterni in cui l'applicazione può inserire i file di sua proprietà.
 
 > [!IMPORTANT]
-> Il percorso esatto della directory di archiviazione esterna privata può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso di questa directory e usare invece le API Xamarin.Android, ad esempio `Android.Content.Context.GetExternalFilesDir()`.
+> Il percorso esatto della directory di archiviazione esterna privata può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso di questa directory e usare invece le API Novell. Android, ad esempio `Android.Content.Context.GetExternalFilesDir()`.
 
 ### <a name="public-external-files"></a>File esterni pubblici
 
@@ -87,14 +87,14 @@ Se ad esempio si chiama `Environment.GetExternalStoragePublicDirectory(Environme
 ```
 
 > [!IMPORTANT]
-> Il percorso esatto della directory di archiviazione esterna pubblica può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso di questa directory e usare invece le API Xamarin.Android, ad esempio `Android.OS.Environment.ExternalStorageDirectory`.
+> Il percorso esatto della directory di archiviazione esterna pubblica può variare da dispositivo a dispositivo e da una versione all'altra di Android. Per questo motivo, le app non devono impostare come hardcoded il percorso di questa directory e usare invece le API Novell. Android, ad esempio `Android.OS.Environment.ExternalStorageDirectory`.
 
 ## <a name="working-with-external-storage"></a>Utilizzo dell'archiviazione esterna
 
-Una volta che un'app Xamarin.Android ha ottenuto il percorso completo di un file, deve usare una delle API .NET standard per la creazione, la lettura, la scrittura o l'eliminazione di file. Questa operazione massimizza la quantità di codice compatibile multipiattaforma per un'app. Tuttavia, prima di tentare di accedere a un file, un'app Xamarin.Android deve garantire che sia possibile accedere a tale file.
+Una volta che un'app Novell. Android ha ottenuto il percorso completo di un file, deve usare una delle API .NET standard per la creazione, la lettura, la scrittura o l'eliminazione di file. Questa operazione massimizza la quantità di codice compatibile multipiattaforma per un'app. Tuttavia, prima di tentare di accedere a un file, un'app Novell. Android deve garantire che sia possibile accedere a tale file.
 
 1. **Verificare &ndash; di archiviazione esterna** a seconda della natura dell'archiviazione esterna, è possibile che potrebbe non essere montata e utilizzabile dall'app. Tutte le app devono controllare lo stato della risorsa di archiviazione esterna prima di provare a usarla.
-2. **Eseguire un controllo delle autorizzazioni di runtime** &ndash; un'app Android deve richiedere l'autorizzazione all'utente per accedere all'archiviazione esterna. Ciò significa che è necessario eseguire una richiesta di autorizzazione in fase di esecuzione prima di qualsiasi accesso ai file. Le [autorizzazioni per la Guida in Xamarin.Android](~/android/app-fundamentals/permissions.md) contengono altre informazioni sulle autorizzazioni per Android.
+2. **Eseguire un controllo delle autorizzazioni di runtime** &ndash; un'app Android deve richiedere l'autorizzazione all'utente per accedere all'archiviazione esterna. Ciò significa che è necessario eseguire una richiesta di autorizzazione in fase di esecuzione prima di qualsiasi accesso ai file. Le [autorizzazioni per la Guida in Novell. Android](~/android/app-fundamentals/permissions.md) contengono altre informazioni sulle autorizzazioni per Android.
 
 Ognuna di queste due attività verrà illustrata di seguito.
 
@@ -137,13 +137,13 @@ Tutte le app Android devono dichiarare una delle due autorizzazioni per l'archiv
 > [!NOTE]
 > Se l'utente concede `WRITE_EXTERNAL_STORAGE`, anche `READ_EXTERNAL_STORAGE` viene concesso in modo implicito. Non è necessario richiedere entrambe le autorizzazioni in **file AndroidManifest. XML**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 È possibile aggiungere le autorizzazioni anche usando la scheda **manifesto Android** delle **proprietà della soluzione**:
 
 ![Esplora soluzioni le autorizzazioni necessarie per Visual Studio](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 È possibile aggiungere le autorizzazioni anche usando la scheda **manifesto Android** del **riquadro proprietà soluzione**:
 
@@ -155,7 +155,7 @@ In generale, tutte le autorizzazioni pericolose devono essere approvate dall'ute
 
 ![Diagramma di flusso dei controlli delle autorizzazioni di archiviazione esterni](./images/external-permission-check-flowchart.png)
 
-Per ulteriori informazioni sull'esecuzione delle richieste di autorizzazione di runtime, consultare le autorizzazioni della Guida [in Xamarin.Android](~/android/app-fundamentals/permissions.md). Il [LocalFiles](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles) di **esempio monodroid** Mostra anche un modo per eseguire i controlli delle autorizzazioni di Runtime.
+Per ulteriori informazioni sull'esecuzione delle richieste di autorizzazione di runtime, consultare le autorizzazioni della Guida [in Novell. Android](~/android/app-fundamentals/permissions.md). Il [LocalFiles](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles) di **esempio monodroid** Mostra anche un modo per eseguire i controlli delle autorizzazioni di Runtime.
 
 #### <a name="granting-and-revoking-permissions-with-adb"></a>Concessione e revoca delle autorizzazioni con ADB
 
@@ -169,7 +169,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Eliminazione di file
 
-È possibile usare qualsiasi C# API standard per eliminare un file dalla risorsa di archiviazione esterna, ad esempio [`System.IO.File.Delete`](xref:System.IO.File.Delete*). È anche possibile usare le API Java a scapito della portabilità del codice. Esempio:
+È possibile usare qualsiasi C# API standard per eliminare un file dalla risorsa di archiviazione esterna, ad esempio [`System.IO.File.Delete`](xref:System.IO.File.Delete*). È anche possibile usare le API Java a scapito della portabilità del codice. Ad esempio,
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");
@@ -177,5 +177,5 @@ System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/file
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Esempio di file locali Xamarin.Android su **monodroid-esempi**](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles)
-* [Autorizzazioni in Xamarin.Android](~/android/app-fundamentals/permissions.md)
+* [Esempio di file locali Novell. Android su **monodroid-esempi**](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles)
+* [Autorizzazioni in Novell. Android](~/android/app-fundamentals/permissions.md)

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018
 ms.openlocfilehash: 3e57e0cd2fa87db8035fa68995b69f231151fa09
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020535"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Creazione di un ContentProvider personalizzato
@@ -156,9 +156,9 @@ Poiché l'utilizzo di codice usa gli URI per eseguire richieste di una `ContentP
 
 Il `UriMatcher` nell'esempio verrà inizializzato con due URI:
 
-1. *"com. Xamarin.Sample. VegetableProvider/vegetables"* &ndash; richiesta di restituire l'elenco completo di ortaggi.
+1. *"com. Novell. Sample. VegetableProvider/vegetables"* &ndash; richiesta di restituire l'elenco completo di ortaggi.
 
-2. *"com. Xamarin.Sample. VegetableProvider/vegetables/\#"* &ndash; dove il \# è un segnaposto per un parametro numerico (il `_id` della riga nel database). Un segnaposto asterisco ("\*") può essere usato anche per trovare la corrispondenza con un parametro di testo.
+2. *"com. Novell. Sample. VegetableProvider/vegetables/\#"* &ndash; dove il \# è un segnaposto per un parametro numerico (il `_id` della riga nel database). Un segnaposto asterisco ("\*") può essere usato anche per trovare la corrispondenza con un parametro di testo.
 
 Nel codice vengono usate le costanti per fare riferimento ai valori dei metadati, ad esempio l'autorità e il percorso di\_di BASE. I codici restituiti verranno utilizzati nei metodi che eseguono l'analisi URI per determinare quali dati restituire.
 

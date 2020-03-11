@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/16/2017
 ms.openlocfilehash: 8685be4bb1cc45ff04dc8d9f7d8e64e7b1483b60
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027030"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>Dove è possibile impostare i percorsi di Android SDK?
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-In Visual Studio passare a **strumenti > opzioni > Xamarin > le impostazioni Android** per visualizzare e impostare il percorso Android SDK:
+In Visual Studio passare a **strumenti > opzioni > novell > le impostazioni Android** per visualizzare e impostare il percorso Android SDK:
 
 [![scheda percorsi di esempio in Preferenze](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
@@ -39,9 +39,9 @@ Il percorso predefinito per ogni percorso è il seguente:
 Si noti che il numero di versione di NDK può variare. Ad esempio, anziché **Android-NDK-r13b**, potrebbe trattarsi di una versione precedente, ad esempio **Android-NDK-r10e**.
 
 Per impostare il percorso di Android SDK, immettere il percorso completo della directory Android SDK nella casella **Android SDK percorso** . È possibile passare alla posizione Android SDK in Esplora file, copiare il percorso dalla barra degli indirizzi e incollare il percorso nella casella **percorso Android SDK** .
-Ad esempio, se il percorso del Android SDK è **C:\\users\\username\\AppData\\Local\\Android\\SDK**, deselezionare il percorso precedente nella casella percorso **Android SDK** , incollare il percorso , quindi fare clic su **OK**.
+Ad esempio, se il percorso del Android SDK è **C:\\users\\username\\AppData\\Local\\Android\\SDK**, deselezionare il percorso precedente nella casella **percorso Android SDK** , incollare il percorso e fare clic su **OK**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 In Visual Studio per Mac passare a **preferenze > progetti > percorsi SDK > Android**. Nella pagina **Android** fare clic sulla scheda **percorsi** per visualizzare e impostare il percorso dell'SDK:
 

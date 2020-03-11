@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
-ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
+ms.openlocfilehash: 2dea16633181d6b1120a5f9a90da685df66e5451
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "78292222"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031005"
 ---
 # <a name="advanced-manual-real-world-example"></a>Esempio avanzato (manuale) del mondo reale
 
@@ -124,7 +124,10 @@ Done.
 
 Si noterà che è stato passato un argomento `-scope build/Headers` a Objective Sharpe. Poiché le librerie C e Objective-C devono `#import` o `#include` altri file di intestazione che sono dettagli di implementazione della libreria e non dell'API da associare, l'argomento `-scope` indica a Objective Sharp di ignorare qualsiasi API non definita in un file in un punto qualsiasi all'interno della directory `-scope`.
 
-Si noterà che l'argomento `-scope` è spesso facoltativo per le librerie implementate in modo semplice, ma non vi è alcun danno in modo esplicito.
+Si noterà che l'argomento `-scope` è spesso facoltativo per le librerie implementate in modo semplice, ma non vi è alcun danno in modo esplicito. 
+
+> [!TIP]
+> Se le intestazioni della libreria importano tutte le intestazioni di iOS SDK, ad esempio `#import <Foundation.h>`, sarà necessario impostare l'ambito in caso contrario Objective Sharpe genererà le definizioni di binding per l'intestazione iOS SDK importata, ottenendo così un'associazione enorme che probabilmente genererà errori durante la compilazione del progetto di associazione. 
 
 È stato inoltre specificato `-c -Ibuild/headers`. In primo luogo, l'argomento `-c` indica a Objective Sharpy di arrestare l'interpretazione degli argomenti della riga di comando e passare gli argomenti successivi _direttamente al compilatore Clang_. Pertanto, `-Ibuild/Headers` è un argomento del compilatore Clang che indica a Clang di cercare le inclusioni in `build/Headers`, che è la posizione in cui si trovano le intestazioni POP. Senza questo argomento, Clang non è in grado di individuare i file che `POP.h` è `#import`. _Quasi tutti i "problemi" con l'uso dell'obiettivo Sharpie si riducono per capire cosa passare a Clang_.
 

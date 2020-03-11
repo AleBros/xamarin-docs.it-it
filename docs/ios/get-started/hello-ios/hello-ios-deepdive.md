@@ -10,11 +10,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724772"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911773"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -83,7 +83,7 @@ Questa sezione studia le relazioni illustrate nel diagramma seguente:
 
 [![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
 
-### <a name="main-method"></a>metodo Main
+### <a name="main-method"></a>Metodo Main
 
 Il punto di ingresso principale di un'applicazione iOS è la classe `Application`. La classe `Application` è definita nel file **Main.cs** e contiene un metodo `Main` statico. Contiene una nuova istanza dell'applicazione Xamarin.iOS e passa il nome della classe *delegata dell'applicazione* che gestirà gli eventi del sistema operativo. Di seguito è riportato il codice del modello per il metodo statico `Main`:
 
@@ -435,7 +435,7 @@ L'app verrà distribuita nel dispositivo iOS:
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Generare icone e immagini di avvio personalizzate
 
-Non tutti hanno a disposizione un designer che crei le icone e le immagini di avvio personalizzate necessarie per mettere in risalto un'app. Ecco alcuni approcci alternativi per la generazione di grafica personalizzata per le app:
+Non tutti hanno a disposizione una finestra di progettazione per creare le icone personalizzate e le immagini di avvio che devono essere rilevate da un'app. Ecco alcuni approcci alternativi per la generazione di immagini personalizzate per le app:
 
 ::: zone pivot="macos"
 
@@ -454,11 +454,11 @@ Per altre informazioni sulle dimensioni e sui requisiti delle icone, vedere la [
 
 ## <a name="summary"></a>Riepilogo
 
-La procedura è stata completata. A questo punto si ha una solida conoscenza dei componenti delle applicazioni Xamarin.iOS e degli strumenti necessari per creare tali applicazioni.
+Congratulazioni! A questo punto si ha una solida conoscenza dei componenti delle applicazioni Xamarin.iOS e degli strumenti necessari per creare tali applicazioni.
 Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-ios-multiscreen/index.md), l'applicazione verrà estesa in modo da gestire più schermate. Nello stesso tempo, verrà implementato un controller di spostamento, verranno illustrati gli Storyboard Segue e verrà presentato lo schema MVC (Model, View, Controller).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
-- [Portale di provisioning iOS](https://developer.apple.com/account/#/overview)
+- [Portale di provisioning di iOS](https://developer.apple.com/account/#/overview)
