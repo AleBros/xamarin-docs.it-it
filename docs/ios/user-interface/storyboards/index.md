@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3d9531bbaa38a0a0a9bb42d22c79a63fda75c449
+ms.sourcegitcommit: 926f9a44065b41c7d74794a94bee66b61e903bf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292583"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79134009"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
 
@@ -187,6 +187,10 @@ La schermata seguente mostra due controller di visualizzazione nell'area di prog
     [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
 2. Fare clic con il pulsante destro del mouse sul file dello storyboard e scegliere **Apri con > Xcode Interface Builder** per aprirlo in Xcode.
+
+    *Se si preferisce usare il generatore di interfacce di Xcode per impostazione predefinita, è possibile sceglierlo nelle preferenze di Visual Studio per Mac in **progetti > iOS**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
 
 3. In Xcode aprire la libreria (tramite **visualizza > Mostra libreria** o *MAIUSC + comando + L*) per visualizzare un elenco di oggetti che possono essere aggiunti allo storyboard. Aggiungere un `Navigation Controller` allo storyboard trascinando l'oggetto dall'elenco nello storyboard. Per impostazione predefinita, il `Navigation Controller` fornirà due schermate; la schermata a destra è una `TableViewController` che verrà sostituita con una visualizzazione più semplice, in modo che possa essere rimossa facendo clic sulla visualizzazione e premendo il tasto CANC.
 
