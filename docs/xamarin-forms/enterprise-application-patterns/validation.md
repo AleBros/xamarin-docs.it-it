@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915293"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305283"
 ---
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle app aziendali
 
@@ -420,7 +420,7 @@ L'interfaccia utente Visualizza i messaggi di errore di convalida nei controlli 
 
 Ogni [`Label`](xref:Xamarin.Forms.Label) viene associato alla proprietà `Errors` dell'oggetto modello di visualizzazione da convalidare. La proprietà `Errors` viene fornita dalla classe `ValidatableObject<T>` ed è di tipo `List<string>`. Poiché la proprietà `Errors` può contenere più errori di convalida, viene utilizzata l'istanza `FirstValidationErrorConverter` per recuperare il primo errore dalla raccolta per la visualizzazione.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 L'app per dispositivi mobili eShopOnContainers esegue la convalida sincrona sul lato client delle proprietà del modello di visualizzazione e notifica all'utente eventuali errori di convalida evidenziando il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente perché i dati non sono validi.
 

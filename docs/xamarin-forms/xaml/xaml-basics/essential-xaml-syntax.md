@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: f79a07a04eddeea1441f7938fdef210a37fb920a
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918397"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305493"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
@@ -525,7 +525,7 @@ Questo è il modo standard per impostare una proprietà di `Padding` dipendente 
 > [!NOTE]
 > Il `OnPlatform` estensione di markup può essere usato anche in XAML per personalizzare l'aspetto dell'interfaccia utente in base alla piattaforma. Fornisce le stesse funzionalità delle classi `OnPlatform` e `On`, ma con una rappresentazione più concisa. Per altre informazioni, vedere [estensione di markup onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Con gli elementi di proprietà e le proprietà associate, gran parte della sintassi XAML di base è stata stabilita. Tuttavia, talvolta è necessario impostare le proprietà agli oggetti in modo indiretto, ad esempio, da un dizionario risorse. Questo approccio è trattato nella parte successiva, parte [3. Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
 

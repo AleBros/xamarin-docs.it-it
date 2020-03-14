@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032077"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304758"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Aggiornamenti della progettazione visiva in iOS 11
 
@@ -76,9 +76,9 @@ iOS 7 ha [introdotto](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen)
 
 L'area Safe è un nuovo modo per considerare lo spazio visibile dell'applicazione e la modalità di aggiunta dei vincoli tra una vista e una visualizzazione Super. Si consideri, ad esempio, l'immagine seguente:
 
-[Guida al layout![area sicura rispetto alla parte superiore e inferiore](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
+[Guida al layout ![area sicura rispetto alla parte superiore e inferiore](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-In precedenza, se è stata aggiunta una vista e si desidera che sia visibile nell'area verde precedente, è necessario vincolarla alla parte _inferiore_ del `TopLayoutGuide` e alla _parte superiore_ del `BottomLayoutGuide`. In iOS 11 è invece necessario vincolarlo alla _parte superiore_ e _inferiore_ dell'area sicura. Vedere l'esempio seguente:
+In precedenza, se è stata aggiunta una vista e si desidera che sia visibile nell'area verde precedente, è necessario vincolarla alla parte _inferiore_ del `TopLayoutGuide` e alla _parte superiore_ del `BottomLayoutGuide`. In iOS 11 è invece necessario vincolarlo alla _parte superiore_ e _inferiore_ dell'area sicura. Di seguito è riportato un esempio:
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;

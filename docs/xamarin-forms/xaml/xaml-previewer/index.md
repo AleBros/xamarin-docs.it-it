@@ -9,11 +9,11 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918014"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305318"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per Novell. Forms
 

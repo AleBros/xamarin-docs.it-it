@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915773"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304394"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
 
@@ -281,11 +281,11 @@ Se l'app Novell. tvOS è un gioco e hai incluso Game Center supporto, saranno ne
 
 ||Icone di Achievement|Illustrazioni del dashboard|Grafica Leaderboard|
 |---|---|---|---|
-|Dimensioni visibili|200x200px|923x150px|N/D|
-|Dimensioni effettive|320x320px|N/D|659x371px|
-|Dimensioni zona sicure|N/D|N/D|618x348px|
-|Dimensioni con stato non attivo|N/D|N/D|548x309px|
-|Dimensioni con stato attivo|N/D|N/D|618x348px|
+|Dimensioni visibili|200x200px|923x150px|n/d|
+|Dimensioni effettive|320x320px|n/d|659x371px|
+|Dimensioni zona sicure|n/d|n/d|618x348px|
+|Dimensioni con stato non attivo|n/d|n/d|548x309px|
+|Dimensioni con stato attivo|n/d|n/d|618x348px|
 
 Per ulteriori informazioni sull'utilizzo di Game Center, vedere la guida alla [programmazione Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)di Apple.
 

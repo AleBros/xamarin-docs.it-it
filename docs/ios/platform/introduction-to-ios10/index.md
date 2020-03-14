@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910857"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304772"
 ---
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 
@@ -42,7 +42,7 @@ Apple ha fornito diversi nuovi punti di estensione dell'app in iOS 10:
 
 - Directory di chiamata
 - Interfaccia utente Intent e Intent
-- Messaggi
+- Messages
 - Contenuto della notifica
 - Notification Services
 - Sticker Pack

@@ -6,17 +6,17 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910811"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304324"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
 
 La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -148,15 +148,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="lowest"></a>Minima
 
-| Piattaforma | Distanza (in metri) |
+| Platform | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
 | UWP | 1000 - 5000 |
 
-### <a name="low"></a>Basso
+### <a name="low"></a>Bassa
 
-| Piattaforma | Distanza (in metri) |
+| Platform | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
@@ -164,15 +164,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="medium-default"></a>Media (impostazione predefinita)
 
-| Piattaforma | Distanza (in metri) |
+| Platform | Distanza (in metri) |
 | --- | --- |
 | Android | 100 - 500 |
 | iOS | 100 |
 | UWP | 30 - 500 |
 
-### <a name="high"></a>Alto
+### <a name="high"></a>Alta
 
-| Piattaforma | Distanza (in metri) |
+| Platform | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | 10 |
@@ -180,7 +180,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="best"></a>Massima
 
-| Piattaforma | Distanza (in metri) |
+| Platform | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | ~0 |

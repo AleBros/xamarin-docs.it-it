@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
 ms.openlocfilehash: aa717792bdaefe24d957c9781934933b67aaf92b
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914522"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305332"
 ---
 # <a name="listview-interactivity"></a>Interattività ListView
 
@@ -24,7 +24,7 @@ La classe [`ListView`](xref:Xamarin.Forms.ListView) Novell. Forms supporta l'int
 
 La modalità di selezione [`ListView`](xref:Xamarin.Forms.ListView) viene controllata impostando la proprietà [`ListView.SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) su un valore dell'enumerazione [`ListViewSelectionMode`](xref:Xamarin.Forms.ListViewSelectionMode) :
 
-- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) indica che è possibile selezionare un singolo elemento, con l'elemento selezionato evidenziato. Questo è il valore predefinito.
+- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) indica che è possibile selezionare un singolo elemento, con l'elemento selezionato evidenziato. Si tratta del valore predefinito.
 - [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None) indica che non è possibile selezionare gli elementi.
 
 Quando un utente tocca un elemento, vengono generati due eventi:

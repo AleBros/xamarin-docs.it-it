@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 0f523c7149366cff85164f26f3f47b87801002cb
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916491"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305255"
 ---
 # <a name="enterprise-app-navigation"></a>Esplorazione di app aziendali
 
@@ -300,7 +300,7 @@ Questo metodo richiama la navigazione all'`MainViewModel`e la navigazione seguen
 
 Un'app potrebbe dover interagire con l'utente durante un'operazione di navigazione, in modo che l'utente possa confermare o annullare la navigazione. Questo potrebbe essere necessario, ad esempio, quando l'utente tenta di spostarsi prima di completare una pagina di immissione dati. In questa situazione, un'app deve fornire una notifica che consenta all'utente di uscire dalla pagina o di annullare l'operazione di spostamento prima che si verifichi. Questa operazione può essere eseguita in una classe modello di visualizzazione utilizzando la risposta di una notifica per controllare se la navigazione viene richiamata o meno.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
 

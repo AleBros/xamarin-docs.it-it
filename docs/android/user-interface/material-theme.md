@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916799"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304548"
 ---
 # <a name="material-theme"></a>Tema Material
 
@@ -70,7 +70,7 @@ Nell'esempio seguente l'applicazione *MyApp* viene configurata per l'utilizzo de
 </application>
 ```
 
-In alternativa, è possibile impostare l'attributo `Theme` dell'applicazione in **AssemblyInfo.cs** (o **Properties.cs**). Ad esempio:
+In alternativa, è possibile impostare l'attributo `Theme` dell'applicazione in **AssemblyInfo.cs** (o **Properties.cs**). Ad esempio,
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -199,7 +199,7 @@ Per applicare uno stile a una singola visualizzazione, attenersi alla procedura 
 </style>
 ```
 
-- Nel layout impostare l'attributo `style` per la visualizzazione in modo che corrisponda al nome dello stile personalizzato scelto nel passaggio precedente. Ad esempio:
+- Nel layout impostare l'attributo `style` per la visualizzazione in modo che corrisponda al nome dello stile personalizzato scelto nel passaggio precedente. Ad esempio,
 
 ```xml
 <android.support.v7.widget.CardView
@@ -219,7 +219,7 @@ In questo esempio, la `CardView` personalizzata viene visualizzata con il colore
 
 Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0 ma ripristina automaticamente uno stile compatibile verso il basso nelle versioni precedenti di Android, seguire questa procedura:
 
-- Definire un tema personalizzato in **Resources/values-V21/Styles. XML** che deriva da uno stile del tema del materiale. Ad esempio:
+- Definire un tema personalizzato in **Resources/values-V21/Styles. XML** che deriva da uno stile del tema del materiale. Ad esempio,
 
 ```xml
 <resources>
@@ -229,7 +229,7 @@ Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0
 </resources>
 ```
 
-- Definire un tema personalizzato in **Resources/values/styles. XML** che deriva da un tema precedente, ma usa lo stesso nome di tema indicato in precedenza. Ad esempio:
+- Definire un tema personalizzato in **Resources/values/styles. XML** che deriva da un tema precedente, ma usa lo stesso nome di tema indicato in precedenza. Ad esempio,
 
 ```xml
 <resources>
@@ -240,7 +240,7 @@ Per applicare uno stile all'app in modo che usi il tema materiale in Android 5,0
 ```
 
 - In **file AndroidManifest. XML**configurare l'app con il nome del tema personalizzato. 
-    Ad esempio:
+    Ad esempio,
 
 ```xml
 <application android:label="MyApp" 
@@ -260,7 +260,7 @@ Quando l'app viene eseguita in un dispositivo Android 5,0, userà la definizione
 
 Per altre informazioni sulla compatibilità dei temi con le versioni precedenti di Android, vedere [risorse alternative](~/android/app-fundamentals/resources-in-android/alternate-resources.md).
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Questo articolo ha introdotto il nuovo stile dell'interfaccia utente del tema materiale incluso in Android 5,0 (Lollipop). Sono state descritte le tre versioni di tema Material predefinite che è possibile usare per applicare uno stile all'app, ma è stato illustrato come creare un tema personalizzato per la personalizzazione dell'app e viene fornito un esempio di come tema una singola visualizzazione. Infine, questo articolo ha illustrato come usare il tema materiale nell'app mantenendo la compatibilità verso il basso con le versioni precedenti di Android.
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916607"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304534"
 ---
 # <a name="debug-on-a-wear-device"></a>Eseguire il debug in un dispositivo Wear
 
@@ -148,6 +148,6 @@ Per eseguire il debug dell'app Wear con un'app complementare:
 
 4. Eseguire ed eseguire il debug dell'app Wear sul dispositivo.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come configurare un dispositivo Android Wear per l'uso del debug da Visual Studio tramite Bluetooth e come eseguire il debug di un'app Wear con un'app per telefono complementare. Sono stati inoltre forniti suggerimenti comuni per il debug di un'app Wear tramite Bluetooth.

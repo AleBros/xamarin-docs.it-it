@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915252"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305192"
 ---
 # <a name="containerized-microservices"></a>Microservizi in contenitori
 
@@ -144,7 +144,7 @@ Questo approccio di comunicazione uno-a-molti usa gli eventi per implementare tr
 
 Per informazioni sull'implementazione del bus di eventi, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 I microservizi offrono un approccio per lo sviluppo e la distribuzione di applicazioni, adatti ai requisiti di agilità, scalabilità e affidabilità delle applicazioni cloud moderne. Uno dei vantaggi principali dei microservizi è che è possibile scalare orizzontalmente in modo indipendente, il che significa che è possibile ridimensionare un'area funzionale specifica che richiede una maggiore potenza di elaborazione o larghezza di banda di rete per supportare la richiesta, senza inutilmente ridimensionare le aree di applicazione che non sta riscontrando un aumento della domanda.
 

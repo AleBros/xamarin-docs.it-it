@@ -10,11 +10,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911786"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304037"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
 
@@ -418,6 +418,6 @@ Quando si seleziona un servizio e si fa clic su **Aggiungi pacchetto**, Visual S
 
 ## <a name="summary"></a>Riepilogo
 
-La procedura è stata completata. A questo punto si dovrebbe avere una solida conoscenza dei componenti delle applicazioni Xamarin.Android e degli strumenti necessari per creare tali applicazioni.
+Congratulazioni! A questo punto si dovrebbe avere una solida conoscenza dei componenti delle applicazioni Xamarin.Android e degli strumenti necessari per creare tali applicazioni.
 
 Nella prossima esercitazione della serie _introduttiva_, l'applicazione verrà estesa in modo da gestire più schermate e nello stesso tempo si esamineranno concetti più avanzati dell'architettura Android.

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 3ad3661ff50ad7f4be95421de57dc5017392a59f
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 38052eee1b71ace9795f5c16bdf714f9538e353d
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78291999"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303476"
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -41,6 +41,10 @@ Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni pi
 ## <a name="app-linking"></a>[Collegamento di app](~/android/platform/app-linking.md)
 
 Questa guida illustra in che modo Android 6,0 supporta il _collegamento di app_, una tecnica che consente alle app per dispositivi mobili di rispondere agli URL nei siti Web. Verrà illustrato come implementare il collegamento di app in un'applicazione Android 6,0 e come configurare un sito Web per concedere le autorizzazioni all'app per dispositivi mobili per gestire i collegamenti all'app per il dominio.
+
+## <a name="androidx"></a>[AndroidX](~/android/platform/androidx.md)
+
+Questo articolo fornisce una descrizione dell'uso di AndroidX nei progetti Novell. Android e fornisce collegamenti alla documentazione che illustra come eseguire la migrazione dell'applicazione dalla libreria del supporto Android a AndroidX.
 
 ## <a name="android-10"></a>[Android 10](~/android/platform/android-10.md)
 

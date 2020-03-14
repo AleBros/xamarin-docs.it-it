@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78913573"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304233"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -195,7 +195,7 @@ Per altre informazioni sulla pubblicazione di applicazioni nell'App Store, veder
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i componenti chiave della preparazione di un'applicazione Xamarin.iOS per la distribuzione nell'App Store.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2019
 ms.openlocfilehash: 1ae176cfebdde31038c30895d1bf562ff3396eaa
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915345"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305535"
 ---
 # <a name="xamarinforms-editor"></a>Editor di xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "78915345"
 
 _Input di testo su più righe_
 
-Il controllo [`Editor`](xref:Xamarin.Forms.Editor) viene usato per accettare l'input su più righe. Questo articolo illustra le attività seguenti:
+Il controllo [`Editor`](xref:Xamarin.Forms.Editor) viene usato per accettare l'input su più righe. Questo articolo riguarda:
 
 - **[Personalizzazione](#customization)** &ndash; opzioni di tastiera e colore.
 - **[Interattività](#interactivity)** &ndash; gli eventi che possono essere ascoltati per fornire interattività.
@@ -344,7 +344,7 @@ void EditorTextChanged (object sender, TextChangedEventArgs e)
 
 L'evento completato può essere sottoscritti nel codice e XAML:
 
-In codice:
+Nel codice:
 
 ```csharp
 public partial class EditorPage : ContentPage

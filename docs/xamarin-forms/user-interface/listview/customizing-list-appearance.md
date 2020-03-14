@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
 ms.openlocfilehash: 90b0e0f3802ce766decb802c9406d72b5966360e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915333"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304009"
 ---
 # <a name="listview-appearance"></a>Aspetto ListView
 
@@ -160,7 +160,7 @@ Di seguito è riportato un esempio di personalizzazione di intestazione del grup
 
 È possibile impostare il `Header` e/o `Footer` su un valore `string` oppure è possibile impostarli su un layout più complesso. Sono inoltre disponibili `HeaderTemplate` e `FooterTemplate` proprietà che consentono di creare layout più complessi per l'intestazione e il piè di pagina che supportano data binding.
 
-Per creare un'intestazione o un piè di pagina di base, è sufficiente impostare le proprietà dell'intestazione o del piè di pagina sul testo che si desidera visualizzare. In codice:
+Per creare un'intestazione o un piè di pagina di base, è sufficiente impostare le proprietà dell'intestazione o del piè di pagina sul testo che si desidera visualizzare. Nel codice:
 
 ```csharp
 ListView HeaderList = new ListView()
@@ -273,7 +273,7 @@ XAML:
 
 Impostazione predefinita, tutte le righe in un ListView dispongono della stessa altezza. ListView ha due proprietà che può essere utilizzata per modificare questo comportamento:
 
-- `HasUnevenRows` &ndash; `true`valore di `false` /, le righe presentano altezze variabili se impostate su `true`. Il valore predefinito è `false`.
+- `HasUnevenRows` &ndash; `true`valore di `false` /, le righe presentano altezze variabili se impostate su `true`. L'impostazione predefinita è `false`.
 - `RowHeight` &ndash; imposta l'altezza di ogni riga quando `HasUnevenRows` è `false`.
 
 È possibile impostare l'altezza di tutte le righe impostando la proprietà `RowHeight` nel `ListView`.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915256"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305178"
 ---
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
@@ -163,7 +163,7 @@ La prima volta che il tipo di `LoginViewModel` viene risolto, il contenitore cre
 > [!NOTE]
 > I tipi registrati come Singleton vengono eliminati quando il contenitore viene eliminato.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 L'inserimento di dipendenze consente di separare i tipi concreti dal codice che dipende da questi tipi. USA in genere un contenitore che include un elenco di registrazioni e mapping tra interfacce e tipi astratti e i tipi concreti che implementano o estendono questi tipi.
 
