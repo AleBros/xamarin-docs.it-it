@@ -7,13 +7,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 02/04/2019
-ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 03/16/2020
+ms.openlocfilehash: 465783c0771b666a276d18f47cf5d3d458d52933
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305318"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423928"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per Novell. Forms
 
@@ -29,11 +29,11 @@ Il Visualizzatore anteprima XAML Mostra come verrà visualizzata la pagina XAML 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare la finestra di dialogo **strumenti > opzioni > novell > modulo anteprima** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
+È possibile aprire il Visualizzatore anteprima XAML facendo clic sulle frecce nel riquadro visualizzazione divisa. Se si desidera modificare il comportamento predefinito della visualizzazione divisa, utilizzare gli **strumenti > opzioni > novell > finestra di dialogo Anteprima XAML Novell. Forms** . In questa finestra di dialogo è possibile selezionare la visualizzazione del documento predefinita e l'orientamento della divisione.
 
 [![Opzioni anteprima Novell. Forms in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opzioni anteprima Novell. Forms in Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
-Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > novell > form anteprima** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
+Quando si apre un file XAML, l'editor si aprirà a dimensione completa o accanto al Visualizzatore anteprima, in base alle impostazioni selezionate nella finestra di dialogo **strumenti > opzioni > novell > finestra di dialogo Anteprima XAML Novell. Forms** . Tuttavia, la suddivisione può essere modificata per ogni file nella finestra dell'editor.
 
 #### <a name="xaml-preview-controls"></a>Controlli di anteprima XAML
 
@@ -44,6 +44,10 @@ Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAM
 È possibile modificare se la schermata è divisa verticalmente o orizzontalmente oppure comprimere completamente un riquadro:
 
 [![Controlli dell'orientamento del riquadro anteprima Novell. Forms in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Controlli dell'orientamento del riquadro anteprima Novell. Forms in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Abilitare o disabilitare il Visualizzatore anteprima XAML
+
+È possibile disattivare il Visualizzatore anteprima XAML in **strumenti > opzioni > novell > finestra di dialogo Anteprima XAML Novell. Forms** selezionando l' **editor XML predefinito** come **editor XAML predefinito**. Questa operazione disattiva anche la struttura del documento, il pannello delle proprietà e la casella degli strumenti XAML. Per riattivare il Visualizzatore anteprima XAML e questi strumenti, modificare l' **editor XAML predefinito** in Visualizzatore **Anteprima Novell. Forms**.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -56,6 +60,10 @@ Il pulsante **Anteprima** viene visualizzato nell'editor quando si apre una pagi
 
 > [!NOTE]
 > Nelle versioni precedenti di Visual Studio per Mac, il pulsante **Anteprima** si trovava in alto a destra nella finestra.
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Abilitare o disabilitare il Visualizzatore anteprima XAML
+
+È possibile disattivare il Visualizzatore anteprima XAML nella finestra di dialogo **Preferenze di Visual Studio > > editor di testo > XAML** selezionando **editor XML predefinito** come **editor XAML predefinito**. Questa operazione disattiva anche la struttura del documento, il pannello delle proprietà e la casella degli strumenti XAML. Per riattivare il Visualizzatore anteprima XAML e questi strumenti, modificare l' **editor XAML predefinito** in Visualizzatore **Anteprima Novell. Forms**.
 
 ::: zone-end
 
@@ -87,7 +95,7 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Questa proprietà è utile se si Inizializza una libreria nel costruttore della pagina che non viene eseguita in fase di progettazione.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Controllare i problemi riportati di seguito e i [Forum di Novell](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
 
