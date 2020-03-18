@@ -6,18 +6,18 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
+ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78295404"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79497043"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferences
 
 La classe **Preferences** consente di archiviare le preferenze dell'applicazione in un archivio chiave/valore.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -44,7 +44,7 @@ var myValue = Preferences.Get("my_key", "default_value");
 Per verificare se una determinata _chiave_ esiste in Preferenze:
 
 ```csharp
-bool hasKey = Preferences.HasKey("my_key");
+bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
 Per rimuovere la _chiave_ dalle preferenze:
@@ -72,6 +72,15 @@ In **Preferences** sono supportati i tipi di dati seguenti:
 - **long**
 - **string**
 - **DateTime**
+
+## <a name="integrate-with-system-settings"></a>Integrazione con le impostazioni di sistema
+
+Le preferenze sono archiviate in modo nativo, che consentono di integrare le impostazioni nelle impostazioni di sistema native. Segui gli esempi e le documetnation della piattaforma per l'integrazione con la piattaforma:
+
+* Apple: [implementazione di un bundle di impostazioni iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Esempio di preferenze Applicaton iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Impostazioni watchos](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Introduzione con le schermate delle impostazioni](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Dettagli dell'implementazione
 
