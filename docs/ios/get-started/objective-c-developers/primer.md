@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
-ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
-ms.translationtype: HT
+ms.openlocfilehash: 56ee74e7a276edc960d2251bd33ccb90c1fa3cb4
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74536507"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070370"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
-_Xamarin.iOS consente di condividere tra diverse piattaforme il C# codice indipendente dalla piattaforma scritto in. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da nozioni di fondo per gli sviluppatori Objective-C che vogliono passare a Xamarin e C# al linguaggio._
+_Novell. iOS consente di condividere tra diverse piattaforme il C# codice indipendente dalla piattaforma scritto in. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da nozioni di fondo per gli sviluppatori Objective-C che vogliono passare a Novell e C# al linguaggio._
 
-le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Xamarin C# sfruttando in posizioni in cui il codice specifico della piattaforma non è necessario, consentendo l'uso di tale codice su dispositivi non Apple. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
+le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Novell C# sfruttando in posizioni in cui il codice specifico della piattaforma non è necessario, consentendo l'uso di tale codice su dispositivi non Apple. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
 
 Per sfruttare i vantaggi di Xamarin mantenendo al tempo stesso gli asset Objective-C esistenti, Xamarin può essere esposto in C# tramite la tecnologia dei binding, che rende disponibile il codice Objective-C nell'ambiente gestito di C#. Inoltre, se necessario, è anche possibile eseguire il porting del codice in C# riga per riga. In ogni caso, indipendentemente dall'approccio adottato (binding o porting), è necessaria una certa conoscenza di Objective-C e C# per sfruttare in modo efficace il codice Objective-C esistente con Xamarin.iOS.
 
@@ -85,7 +85,7 @@ Essendo un superset di C, Objective-C usa intestazioni per le dichiarazioni pubb
 Ad esempio, il codice seguente include lo spazio dei nomi `UIKit`, rendendo disponibili tutte le classi nello spazio dei nomi per l'implementazione:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes
@@ -145,6 +145,6 @@ Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare u
 
 Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) di Microsoft.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo sono state messe a confronto diverse funzionalità dei linguaggi Objective-C e C#. In alcuni casi, sono state descritte le caratteristiche simili in entrambi i linguaggi, come i blocchi e le espressioni lambda o le categorie e i metodi di estensione. Sono state inoltre illustrate le differenze tra i linguaggi, ad esempio per quanto riguarda gli spazi dei nomi in C# e il significato della parola chiave static.

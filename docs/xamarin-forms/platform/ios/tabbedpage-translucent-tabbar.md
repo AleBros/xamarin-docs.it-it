@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020
-ms.openlocfilehash: c321884039674d3abb1a4b510ddfe2c062c28211
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 55fda0be2e260c5aa4a34ab2dcc1ac3cac33b92a
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292102"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070296"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>Barra schede TabbedPage traslucida in iOS
 
@@ -41,7 +41,7 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 Il metodo `TabbedPage.On<iOS>` specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il metodo `TabbedPage.SetTranslucencyMode`, nello spazio dei nomi [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , viene usato per impostare la modalità di traslucidità della barra della scheda in un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) specificando uno dei seguenti valori di enumerazione `TranslucencyMode`:
 
 - `Default`, che imposta la barra delle schede sulla relativa modalità di traslucidità predefinita. Questo è il valore predefinito per la proprietà `TabbedPage.TranslucencyMode`.
-- `Transparent`, che imposta la barra delle schede come traslucida.
+- `Translucent`, che imposta la barra delle schede come traslucida.
 - `Opaque`, che imposta la barra delle schede come opaca.
 
 Inoltre, è possibile usare il metodo `GetTranslucencyMode` per recuperare il valore corrente dell'enumerazione `TranslucencyMode` applicata al [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).

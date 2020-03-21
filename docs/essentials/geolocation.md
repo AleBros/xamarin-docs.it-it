@@ -5,18 +5,18 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304324"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070350"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
 
 La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -148,15 +148,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="lowest"></a>Minima
 
-| Platform | Distanza (in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
 | UWP | 1000 - 5000 |
 
-### <a name="low"></a>Bassa
+### <a name="low"></a>Basso
 
-| Platform | Distanza (in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
@@ -164,15 +164,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="medium-default"></a>Media (impostazione predefinita)
 
-| Platform | Distanza (in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 100 - 500 |
 | iOS | 100 |
 | UWP | 30 - 500 |
 
-### <a name="high"></a>Alta
+### <a name="high"></a>Alto
 
-| Platform | Distanza (in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | 10 |
@@ -180,7 +180,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="best"></a>Massima
 
-| Platform | Distanza (in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | ~0 |
@@ -217,6 +217,24 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 ```
 
 Il costruttore `Location` ha gli argomenti di latitudine e longitudine in quest'ordine. I valori di latitudine positiva sono a nord dell'equatore e i valori di longitudine positiva sono a est del Meridiano di Greenwich. Usare l'argomento finale per `CalculateDistance` per specificare miglia o chilometri. La classe `UnitConverters` definisce anche i metodi `KilometersToMiles` e `MilesToKilometers` per eseguire la conversione da un'unità di misura all'altra.
+
+## <a name="platform-differences"></a>Differenze tra le piattaforme
+
+L'altitudine viene calcolata in modo diverso in ogni piattaforma.
+
+# <a name="android"></a>[Android](#tab/android)
+
+In Android, [Altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponibile, viene restituito in metri sopra l'ellissoide di riferimento WGS 84. Se il percorso non ha un'altitudine, viene restituito 0,0.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+In iOS, l' [altitudine](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) viene misurata in metri. I valori positivi indicano le Altitude sopra il livello del mare, mentre i valori negativi indicano le Altitude al di sotto del livello Sea.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+In UWP, l'altitudine viene restituita in metri. Per ulteriori informazioni, vedere la documentazione di [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) .
+
+-----
 
 ## <a name="api"></a>API
 

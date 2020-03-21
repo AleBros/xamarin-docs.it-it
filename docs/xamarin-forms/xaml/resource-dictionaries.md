@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2020
 ms.custom: video
-ms.openlocfilehash: f5266049e1498d902864185a61cba6d3730f9594
-ms.sourcegitcommit: 2836f2003a5b745b042ee6003a3d6a11b9139e44
+ms.openlocfilehash: 496251ec9596b9ef76fb34149acca184b5934c37
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292750"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070401"
 ---
 # <a name="resource-dictionaries"></a>Dizionari di risorse
 
@@ -150,7 +150,7 @@ Ecco un altro modo per considerare la precedenza `ResourceDictionary`: quando il
 
 ## <a name="stand-alone-resource-dictionaries"></a>Dizionari risorse autonome
 
-Una classe derivata da `ResourceDictionary` può anche trovarsi in un file autonomo separato. Più precisamente, una classe derivata da `ResourceDictionary` in genere richiede una _coppia_ di file perché le risorse sono definite in un file XAML, ma è necessario anche un file code-behind con una chiamata di `InitializeComponent`. Il file risultante può quindi essere condiviso tra le applicazioni.
+Una classe derivata da `ResourceDictionary` può anche trovarsi in un file autonomo separato. Il file risultante può quindi essere condiviso tra le applicazioni.
 
 Per creare un file di questo tipo, aggiungere una nuova **visualizzazione contenuto** o elemento della **pagina contenuto** al progetto (ma non una **visualizzazione contenuto** o una **pagina contenuto** con solo un C# file). Nel file e C# nel file XAML modificare il nome della classe di base da `ContentView` o da `ContentPage` a `ResourceDictionary`. Nel file XAML, il nome della classe di base è l'elemento di primo livello.
 
@@ -215,7 +215,7 @@ Una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) locale può es
 </ContentPage>
 ```
 
-Questa sintassi non crea un'istanza della classe `MyResourceDictionary`. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta la proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) , il file code-behind (**MyResourceDictionary.XAML.cs**) non è obbligatorio e l'attributo `x:Class` può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Novell. Forms creerà automaticamente un'istanza del [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), di conseguenza i tag di `ResourceDictionary` esterni non sono necessari.
+Questa sintassi non crea un'istanza della classe `MyResourceDictionary`. Al contrario, fa riferimento il file XAML. Per questo motivo, quando si imposta la proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) , non è necessario un file code-behind e l'attributo `x:Class` può essere rimosso dal tag radice del file **ResourceDictionary. XAML** . Inoltre, quando si uniscono dizionari risorse usando questo approccio, Novell. Forms creerà automaticamente un'istanza del [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), di conseguenza i tag di `ResourceDictionary` esterni non sono necessari.
 
 > [!IMPORTANT]
 > La proprietà [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) può essere impostata solo da XAML.
