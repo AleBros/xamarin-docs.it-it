@@ -956,6 +956,8 @@
           href: internals/class-hierarchy.md
         - name: Risoluzione delle dipendenze
           href: internals/dependency-resolution.md
+        - name: Flag sperimentali
+          href: internals/experimental-flags.md
         - name: Renderer veloci
           href: internals/fast-renderers.md
         - name: Collegamento all'origine
