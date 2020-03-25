@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
-ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.date: 03/23/2020
+ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697136"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247600"
 ---
 # <a name="xamarinforms-data-binding"></a>Data binding di Xamarin.Forms
 
@@ -28,7 +28,7 @@ Per gestire correttamente il processo, è necessario segnalare al programma le m
 
 ## <a name="the-data-binding-solution"></a>La soluzione offerta dal data binding
 
-Il data binding consente di automatizzare questo processo ed elimina la necessità di usare gestori degli eventi. Gli eventi sono comunque necessari, tuttavia, poiché l'infrastruttura di data binding li utilizza. Le associazioni dati possono essere implementate nel codice o in XAML, ma sono molto più comuni in XAML in cui consentono di ridurre le dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori degli eventi con codice dichiarativo o markup, l'applicazione diventa più semplice e chiara.
+Il data binding consente di automatizzare questo processo ed elimina la necessità di usare gestori degli eventi. I data binding possono essere implementati nel codice o in XAML, ma sono molto più comuni in XAML dove contribuiscono alla riduzione delle dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori degli eventi con codice dichiarativo o markup, l'applicazione diventa più semplice e chiara.
 
 Uno dei due oggetti coinvolti in un data binding è quasi sempre un elemento che deriva da `View` e fa parte dell'interfaccia visiva di una pagina. L'altro oggetto può essere:
 
@@ -39,44 +39,44 @@ Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDem
 
 I data binding sono illustrati nelle seguenti serie di articoli:
 
-## <a name="basic-bindingsbasic-bindingsmd"></a>[Binding di base](basic-bindings.md)
+## <a name="basic-bindings"></a>[Binding di base](basic-bindings.md)
 
 Informazioni sulla differenza tra l'origine e la destinazione del data binding con esempi di data binding semplici nel codice e in XAML.
 
-## <a name="binding-modebinding-modemd"></a>[Modalità di binding](binding-mode.md)
+## <a name="binding-mode"></a>[Modalità di binding](binding-mode.md)
 
 Illustra in che modo la modalità di binding può controllare il flusso di dati tra i due oggetti.
 
-## <a name="string-formattingstring-formattingmd"></a>[Formattazione delle stringhe](string-formatting.md)
+## <a name="string-formatting"></a>[Formattazione delle stringhe](string-formatting.md)
 
 Usare un data binding per formattare e visualizzare gli oggetti come stringhe.
 
-## <a name="binding-pathbinding-pathmd"></a>[Percorso di binding](binding-path.md)
+## <a name="binding-path"></a>[Percorso di binding](binding-path.md)
 
 Informazioni dettagliate sulla proprietà `Path` del data binding per l'accesso a proprietà secondarie e ai membri della raccolta.
 
-## <a name="binding-value-convertersconvertersmd"></a>[Convertitori di valori per i binding](converters.md)
+## <a name="binding-value-converters"></a>[Convertitori di valori per i binding](converters.md)
 
 Usare i convertitori di valori dei binding per modificare i valori all'interno del data binding.
 
-## <a name="relative-bindingsrelative-bindingsmd"></a>[Associazioni relative](relative-bindings.md)
+## <a name="relative-bindings"></a>[Binding relativi](relative-bindings.md)
 
 Utilizzare le associazioni relative per impostare l'origine dell'associazione in relazione alla posizione della destinazione del binding.
 
-## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallback di binding](binding-fallbacks.md)
+## <a name="binding-fallbacks"></a>[Fallback di binding](binding-fallbacks.md)
 
 Per rendere più solidi i data binding, definire i valori di fallback da usare se il processo di binding ha esito negativo.
 
-## <a name="the-command-interfacecommandingmd"></a>[Interfaccia di comando](commanding.md)
+## <a name="the-command-interface"></a>[Interfaccia di comando](commanding.md)
 
 Implementare la proprietà `Command` con i data binding.
 
-## <a name="compiled-bindingscompiled-bindingsmd"></a>[Binding compilati](compiled-bindings.md)
+## <a name="compiled-bindings"></a>[Binding compilati](compiled-bindings.md)
 
 Usare binding compilati per migliorare le prestazioni del data binding.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
+- [Demo sul data binding (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

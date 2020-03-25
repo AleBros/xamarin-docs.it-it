@@ -7,69 +7,73 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 70d03e2ed35970835e0343bc416041845e0edb29
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 4b7d3d19ce8766ccdbfc41163fcad44074e832b8
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028039"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159763"
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 
 Questa sezione include guide che illustrano come testare un'applicazione, ottimizzarne le prestazioni, prepararla per il rilascio, firmarla con un certificato e pubblicarla in un app store.
 
-## <a name="application-package-sizesapp-package-sizemd"></a>[Dimensioni del pacchetto dell'applicazione](app-package-size.md)
+## <a name="application-package-sizes"></a>[Dimensioni del pacchetto dell'applicazione](app-package-size.md)
 
 Questo articolo esamina le parti costituenti di un pacchetto dell'applicazione Xamarin.Android e le strategie associate che possono essere usate per una distribuzione efficiente del pacchetto durante le fasi di debug e rilascio dello sviluppo.
 
-## <a name="building-appsbuilding-appsindexmd"></a>[Creazione di app](building-apps/index.md)
+## <a name="apply-changes"></a>[Applica modifiche](apply-changes.md)
+
+Questa guida illustra la funzionalità applica modifiche che consente di effettuare il push delle modifiche alle risorse nell'app in esecuzione senza riavviare l'app.
+
+## <a name="building-apps"></a>[Creazione di app](building-apps/index.md)
 
 Questa sezione descrive il funzionamento del processo di compilazione e illustra come compilare APK specifici di ABI.
 
-## <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulatore della riga di comando](command-line-emulator.md)
+## <a name="command-line-emulator"></a>[Emulatore della riga di comando](command-line-emulator.md)
 
 Questo articolo illustra brevemente l'avvio dell'emulatore tramite la riga di comando.
 
-## <a name="debuggingandroiddeploy-testdebuggingindexmd"></a>[Debug](~/android/deploy-test/debugging/index.md)
+## <a name="debugging"></a>[Debug](~/android/deploy-test/debugging/index.md)
 
 Le guide nella sezione consentono di eseguire il debug di un'applicazione con emulatori Android, dispositivi Android reali e il registro di debug.
 
-## <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
+## <a name="setting-the-debuggable-attribute"></a>[Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
 
 Questo articolo illustra come impostare l'attributo debuggable in modo che strumenti come `adb` possano comunicare con JVM.
 
-## <a name="environmentenvironmentmd"></a>[Ambiente](environment.md)
+## <a name="environment"></a>[Environment](environment.md)
 
 Questo articolo descrive l'ambiente di esecuzione Xamarin.Android e le proprietà di sistema Android che hanno effetto sull'esecuzione del programma.
 
-## <a name="gdbgdbmd"></a>[GDB](gdb.md)
+## <a name="gdb"></a>[GDB](gdb.md)
 
 Questo articolo illustra come usare `gdb` per il debug di un'applicazione Xamarin.Android.
 
-## <a name="installing-a-system-appinstall-system-appmd"></a>[Installazione di un'app di sistema](install-system-app.md)
+## <a name="installing-a-system-app"></a>[Installazione di un'app di sistema](install-system-app.md)
 
 Questa guida illustra come installare un'app Xamarin.Android come applicazione di sistema in un dispositivo Android o come parte di una ROM personalizzata.
 
-## <a name="linking-on-androidlinkermd"></a>[Collegamento in Android](linker.md)
+## <a name="linking-on-android"></a>[Collegamento in Android](linker.md)
 
 Questo articolo illustra il processo di collegamento usato da Xamarin.Android per ridurre le dimensioni finali di un'applicazione. Descrive i diversi livelli di collegamento che possono essere eseguiti e fornisce indicazioni e suggerimenti per la risoluzione dei problemi per poter limitare gli errori che potrebbero derivare dall'uso del linker.
 
-## <a name="xamarinandroid-performanceandroiddeploy-testperformancemd"></a>[Xamarin.Android Performance](~/android/deploy-test/performance.md) (Prestazioni di Xamarin.Android)
+## <a name="xamarinandroid-performance"></a>[Xamarin.Android Performance](~/android/deploy-test/performance.md) (Prestazioni di Xamarin.Android)
 
 Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
-## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Profilatura delle app Android](~/android/deploy-test/profiling.md)
+## <a name="profiling-android-apps"></a>[Profilatura delle app Android](~/android/deploy-test/profiling.md)
 
 Questa guida spiega come usare gli strumenti del profiler per esaminare le prestazioni e l'utilizzo della memoria di un'app Android.
 
-## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md)
+## <a name="preparing-an-application-for-release"></a>[Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md)
 
 Dopo aver scritto il codice di un'applicazione e averla testata, è necessario preparare il pacchetto per la distribuzione. La prima attività di preparazione del pacchetto è la compilazione dell'applicazione per il rilascio, che essenzialmente comporta l'impostazione di alcuni attributi dell'applicazione.
 
-## <a name="signing-the-android-application-packageandroiddeploy-testsigningindexmd"></a>[Signing the Android Application Package](~/android/deploy-test/signing/index.md) (Firma del pacchetto dell'applicazione Android)
+## <a name="signing-the-android-application-package"></a>[Signing the Android Application Package](~/android/deploy-test/signing/index.md) (Firma del pacchetto dell'applicazione Android)
 
 Informazioni su come creare un'identità di firma di Android e un nuovo certificato di firma per le applicazioni Android e su come firmare l'applicazione con il certificato di firma. Questo argomento illustra anche come esportare l'applicazione su disco per la distribuzione *ad hoc*. Il pacchetto dell'applicazione Android (APK) risultante può essere trasferito localmente in dispositivi Android senza passare attraverso un app store.
 
-## <a name="publishing-an-applicationandroiddeploy-testpublishingindexmd"></a>[Publishing an Application](~/android/deploy-test/publishing/index.md) (Pubblicazione di un'applicazione)
+## <a name="publishing-an-application"></a>[Publishing an Application](~/android/deploy-test/publishing/index.md) (Pubblicazione di un'applicazione)
 
 Questa serie di articoli illustra i passaggi per la distribuzione al pubblico di un'applicazione creata con Xamarin.Android. La distribuzione può essere eseguita tramite canali, come ad esempio la posta elettronica, un server Web privato, Google Play o Amazon Appstore per Android.

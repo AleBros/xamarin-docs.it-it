@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: a9dce962c35e5f9cfdcd674da9ad71cf8935e7d4
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.openlocfilehash: 7c469a011a70840cfe94a7f87ed77f03968a3525
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159821"
 ---
 # <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in Novell. iOS
 
@@ -114,12 +114,12 @@ Se si have ' NT di recente un'applicazione iOS all'App Store di Apple, è possib
 
 Per scoprirlo, è possibile aggiungere `--warn-on-type-ref=UIKit.UIWebView` agli **argomenti aggiuntivi di mTouch** del progetto. In questo modo verrà visualizzato un avviso per **qualsiasi** riferimento all'`UIWebView` deprecato all'interno dell'applicazione (e tutte le relative dipendenze). Vengono usati avvisi diversi per segnalare i tipi **prima** e **dopo** l'esecuzione del linker gestito.
 
-Gli avvisi, come altri, possono essere trasformati in errori usando `-warnaserror:`. Questa operazione può essere utile se si desidera assicurarsi che una nuova dipendenza da `UIWebView` non venga aggiunta dopo le verifiche. Ad esempio:
+Gli avvisi, come altri, possono essere trasformati in errori usando `-warnaserror:`. Questa operazione può essere utile se si desidera assicurarsi che una nuova dipendenza da `UIWebView` non venga aggiunta dopo le verifiche. Ad esempio,
 
 * `-warnaserror:1502` segnalerà gli errori se vengono trovati riferimenti in assembly precollegati.
 * `-warnaserror:1503` segnalerà gli errori se vengono trovati riferimenti negli assembly post-collegamento.
 
-È anche possibile silenziare gli avvisi se i risultati di pre/post-collegamento non sono utili. Ad esempio:
+È anche possibile silenziare gli avvisi se i risultati di pre/post-collegamento non sono utili. Ad esempio,
 
 * `-nowarn:1502` **non** segnalerà gli avvisi se vengono trovati riferimenti negli assembly precollegati.
 * `-nowarn:1503` **non** segnalerà gli avvisi se vengono trovati riferimenti negli assembly post-collegamento.
@@ -146,7 +146,7 @@ Una soluzione *valida* consiste nell'aggiungere `--optimization=force-rejected-t
 
 #### <a name="support-for-ios-7x-or-earlier"></a>Supporto per iOS 7. x (o versioni precedenti)
 
-`UIWebView` fa parte di iOS a partire dalla versione 2.0. Le sostituzioni più comuni sono `WKWebView` (iOS 8) e `SFSafariViewController` (iOS 9). Se l'applicazione supporta ancora versioni precedenti di iOS, è necessario considerare le opzioni seguenti:
+`UIWebView` è stato parte di iOS dalla versione 2.0. Le sostituzioni più comuni sono `WKWebView` (iOS 8) e `SFSafariViewController` (iOS 9). Se l'applicazione supporta ancora versioni precedenti di iOS, è necessario considerare le opzioni seguenti:
 
 * Rendere iOS 8 la versione di destinazione minima (una decisione relativa al tempo di compilazione).
 * Usare `WKWebView` solo se l'app è in esecuzione in iOS 8 + (decisione in fase di esecuzione).

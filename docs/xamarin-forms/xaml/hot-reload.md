@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
-ms.openlocfilehash: 225b7dc7dc639031b3198a8fb9e7fe9fb9d7ee7f
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+ms.openlocfilehash: a6cb5a0e3573ebf998bb2f81c08ff63c81678b54
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159808"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Ricaricamento a caldo di XAML per Novell. Forms
 
@@ -59,7 +59,7 @@ Il ricaricamento a caldo di XAML supporta il debug simultaneo in Visual Studio e
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-* Altre destinazioni Novell. Forms, ad esempio UWP e MacOS, *non* sono ancora supportate. È possibile tenere traccia dello stato di avanzamento del supporto di UWP [qui](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
+* Altre destinazioni Novell. Forms, ad esempio UWP e macOS, *non* sono ancora supportate. È possibile tenere traccia dello stato di avanzamento del supporto di UWP [qui](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
 * Non è possibile aggiungere, rimuovere o rinominare i file o i pacchetti NuGet durante una sessione di ricaricamento a caldo di XAML. Se si aggiunge o rimuove un file o un pacchetto NuGet, ricompilare e ridistribuire l'app per continuare a usare il ricaricamento a caldo di XAML.
 * Per un'esperienza ottimale, impostare il linker in modo che **non venga collegato** o **collegato** . L'impostazione di **link SDK only** funziona la maggior parte del tempo, ma in alcuni casi potrebbe non riuscire. Le impostazioni del linker sono disponibili nelle opzioni di compilazione per Android e iOS.
 * Per eseguire il debug su un iPhone fisico è necessario che l'interprete usi il ricaricamento a caldo di XAML. A tale scopo, aprire le impostazioni del progetto, selezionare la scheda compilazione iOS e verificare che **l'opzione Abilita l'interprete mono** sia abilitata. Potrebbe essere necessario modificare l'opzione **Platform** nella parte superiore della pagina delle proprietà su **iPhone**.
@@ -72,7 +72,7 @@ Il ricaricamento a caldo di XAML supporta il debug simultaneo in Visual Studio e
 * [Suggerimenti e trucchi per il ricaricamento a caldo di XAML](https://devblogs.microsoft.com/xamarin/tips-tricks-xaml-hot-reload/)
 * [Ricaricamento a caldo di XAML per Novell. Forms-approfondimento: Novell Show](https://www.youtube.com/watch?v=crhjjPjzknk)
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 * Se non è possibile inizializzare il ricaricamento a caldo di XAML:
   * Aggiornare la versione di Novell. Forms.
