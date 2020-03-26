@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
+ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303925"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80261310"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -27,7 +27,7 @@ Usare la procedura seguente per compilare l'app per il rilascio:
 
 - **[Proteggere l'applicazione](#protect_app)** &ndash; impedire a utenti o utenti malintenzionati di eseguire il debug, la manomissione o la Reverse Engineering dell'applicazione disabilitando il debug, offuscando il codice gestito, aggiungendo anti-debug e anti-manomissione e usando la compilazione nativa.
 
-- **[Impostare le proprietà](#Set_Packaging_Properties)** per la creazione di pacchetti &ndash; proprietà dei pacchetti controllano la creazione del pacchetto dell'applicazione Android (apk). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze.
+- **[Impostare le proprietà](#Set_Packaging_Properties)** per la creazione di pacchetti &ndash; proprietà dei pacchetti controllano la creazione del pacchetto dell'applicazione Android (apk). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze. Inoltre, è possibile fornire agli utenti un bundle di app Android ottimizzato per i dispositivi.
 
 - **[Compila](#Compile)** &ndash; questo passaggio compila il codice e gli asset per verificare che venga compilato in modalità di rilascio.
 
@@ -269,9 +269,19 @@ Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti 
 
 Per altre informazioni su multidex, vedere [Configurare le app con più di 64.000 metodi](https://developer.android.com/tools/building/multidex.html).
 
+### <a name="android-app-bundles"></a>Bundle di app Android
+
+I bundle di app sono diversi da apk perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, si tratta di un formato destinato a essere caricato con tutte le risorse e il codice compilato. Al termine del caricamento del bundle dell'app firmata, Google Play avrà tutti gli elementi necessari per compilare e firmare i apk dell'applicazione e per fornirli agli utenti usando il recapito dinamico.
+
+Per abilitare il supporto per bundle di app Android, è necessario acconsentire esplicitamente al valore `bundle` della proprietà **formato pacchetto Android** nelle opzioni del progetto Android. Prima di eseguire questa operazione, assicurarsi di modificare il progetto in una configurazione `Release` perché i bundle di app sono destinati solo ai pacchetti di versione.
+
+È ora possibile generare un bundle dell'app seguendo il [flusso di archiviazione](#archive). Verrà generato un bundle dell'app per l'applicazione.
+
+Per altre informazioni sui bundle di app Android, vedere [bundle di app Android](https://developer.android.com/guide/app-bundle/).
+
 <a name="Compile" />
 
-## <a name="compile"></a>Compile
+## <a name="compile"></a>Compilazione
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
