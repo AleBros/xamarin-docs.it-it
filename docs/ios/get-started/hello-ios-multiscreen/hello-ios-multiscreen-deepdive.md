@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304632"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
@@ -28,11 +28,11 @@ Nell'esercitazione [Hello, iOS](~/ios/get-started/hello-ios/index.md) abbiamo ap
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-Nel nostro esempio, i dati sono stati raccolti nella prima schermata, passati dal primo controller di visualizzazione al secondo e visualizzati dalla seconda schermata. Questa separazione di schermate, controller di visualizzazione e dati segue lo schema *MCV (Model, View, Controller)* . Nelle prossime sezioni esamineremo i vantaggi dello schema, i suoi componenti e spiegheremo come vengono usati nell'applicazione Phoneword.
+Nel nostro esempio, i dati sono stati raccolti nella prima schermata, passati dal primo controller di visualizzazione al secondo e visualizzati dalla seconda schermata. Questa separazione di schermate, controller di visualizzazione e dati segue lo schema *MCV (Model, View, Controller)*. Nelle prossime sezioni esamineremo i vantaggi dello schema, i suoi componenti e spiegheremo come vengono usati nell'applicazione Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Vantaggi dello schema MVC
 
-MVC è uno *schema progettuale*, vale a dire una soluzione di architettura riutilizzabile per un problema comune o un caso d'uso nel codice. MVC è un'architettura per applicazioni con un'*interfaccia utente grafica (GUI)* . Assegna agli oggetti nell'applicazione uno dei tre ruoli *Modello* (logica di dati o applicazione), *Visualizzazione* (interfaccia utente) e *Controller* (code-behind). La figura seguente illustra le relazioni tra le tre parti dello schema MVC e l'utente:
+MVC è uno *schema progettuale*, vale a dire una soluzione di architettura riutilizzabile per un problema comune o un caso d'uso nel codice. MVC è un'architettura per applicazioni con un'*interfaccia utente grafica (GUI)*. Assegna agli oggetti nell'applicazione uno dei tre ruoli *Modello* (logica di dati o applicazione), *Visualizzazione* (interfaccia utente) e *Controller* (code-behind). La figura seguente illustra le relazioni tra le tre parti dello schema MVC e l'utente:
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
@@ -80,14 +80,14 @@ Il controller di spostamento svolge tre funzioni principali:
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
-- **Include una barra del titolo**: la parte superiore del controller di spostamento viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
+- **Fornisce una barra del titolo:** la parte superiore del controller di spostamento è denominata *barra del titolo* . È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the view controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>Controller visualizzazione radice
 
 Un controller di spostamento non gestisce una gerarchia di visualizzazione del contenuto, pertanto non ha nulla da visualizzare di per sé.
-Un controller di spostamento è invece associato a un *controller visualizzazione radice*:
+Al contrario, un controller di navigazione è associato a un controller di *visualizzazione radice:Instead,* a navigation controller is paired with a Root view controller :
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "A navigation controller is paired with a Root view controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
@@ -97,7 +97,7 @@ Il controller visualizzazione radice rappresenta il primo controller di visualiz
 
 ### <a name="additional-navigation-options"></a>Opzioni di navigazione aggiuntive
 
-Il controller di spostamento è un modo comune per gestire la navigazione in iOS, ma non è l'unica opzione. Ad esempio, un [controller di barra schede](~/ios/user-interface/controls/creating-tabbed-applications.md) può suddividere un'applicazione in diverse aree funzionali e un [controller doppia visualizzazione](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) può essere usato per creare visualizzazioni master/dettagli. La combinazione dei controller di spostamento con questi altri paradigmi di spostamento offre molti metodi flessibili per la presentazione e la navigazione del contenuto in iOS.
+Il controller di spostamento è un modo comune per gestire la navigazione in iOS, ma non è l'unica opzione. Ad esempio, un [Controller barra delle](~/ios/user-interface/controls/creating-tabbed-applications.md) schede può suddividere un'applicazione in diverse aree funzionali e un controller di visualizzazione [divisa](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) può essere utilizzato per creare visualizzazioni master/dettagli. La combinazione dei controller di spostamento con questi altri paradigmi di spostamento offre molti metodi flessibili per la presentazione e la navigazione del contenuto in iOS.
 
 ## <a name="handling-transitions"></a>Gestione delle transizioni
 
@@ -203,6 +203,6 @@ In seguito spiegheremo come compilare applicazioni multipiattaforma con Xamarin 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
+- [Hello, iOS (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portale di provisioning di iOS](https://developer.apple.com/ios/manage/overview/index.action)

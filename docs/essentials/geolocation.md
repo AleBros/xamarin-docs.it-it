@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80070350"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
@@ -146,7 +146,7 @@ catch (Exception ex)
 
 La tabella seguente indica l'accuratezza per ogni piattaforma:
 
-### <a name="lowest"></a>Minima
+### <a name="lowest"></a>Più bassa
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -178,7 +178,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | iOS | 10 |
 | UWP | <= 10 |
 
-### <a name="best"></a>Massima
+### <a name="best"></a>Ottimale
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
@@ -189,7 +189,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 <a name="calculate-distance" />
 
 ## <a name="detecting-mock-locations"></a>Rilevamento di località fittizie
-Alcuni dispositivi possono restituire una località fittizia proposta dal provider o da un'applicazione che fornisce località fittizie. È possibile rilevarle usando `IsFromMockProvider` su qualsiasi [`Location`](xref:Xamarin.Essentials.Location).
+Alcuni dispositivi possono restituire una località fittizia proposta dal provider o da un'applicazione che fornisce località fittizie. È possibile rilevare `IsFromMockProvider` questo [`Location`](xref:Xamarin.Essentials.Location)utilizzando il su qualsiasi file .
 
 ```csharp
 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
@@ -206,7 +206,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi `CalculateDistance` che consentono di calcolare la distanza tra due località geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
+Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi `CalculateDistance` e definiscono metodi che consentono di calcolare la distanza tra due posizioni geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
 
 Ad esempio:
 
@@ -220,19 +220,19 @@ Il costruttore `Location` ha gli argomenti di latitudine e longitudine in quest'
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-L'altitudine viene calcolata in modo diverso in ogni piattaforma.
+L'altitudine viene calcolata in modo diverso su ogni piattaforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
-In Android, [Altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponibile, viene restituito in metri sopra l'ellissoide di riferimento WGS 84. Se il percorso non ha un'altitudine, viene restituito 0,0.
+Su Android, [l'altitudine,](https://developer.android.com/reference/android/location/Location#getAltitude())se disponibile, viene restituita in metri sopra l'ellissoide di riferimento WGS 84. Se questa posizione non ha un'altitudine, viene restituito 0,0.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-In iOS, l' [altitudine](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) viene misurata in metri. I valori positivi indicano le Altitude sopra il livello del mare, mentre i valori negativi indicano le Altitude al di sotto del livello Sea.
+Su iOS, [l'altitudine](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) viene misurata in metri. I valori positivi indicano altitudini sopra il livello del mare, mentre i valori negativi indicano altitudini sotto il livello del mare.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-In UWP, l'altitudine viene restituita in metri. Per ulteriori informazioni, vedere la documentazione di [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) .
+Su UWP, l'altitudine viene restituita in metri. Per altre informazioni, vedere la documentazione di [AltitudeReferenceSystem.See the AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
 
 -----
 

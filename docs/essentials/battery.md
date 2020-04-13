@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Batteria'
+title: 'Xamarin.Essentials: Battery'
 description: Questo documento descrive la classe Battery in Xamarin.Essentials, che consente di controllare le informazioni sulla batteria del dispositivo e di monitorare eventuali modifiche.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756927"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batteria
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Battery
 
 La classe **Battery** consente di controllare le informazioni sulla batteria del dispositivo e monitorare eventuali modifiche e fornisce informazioni sullo stato di risparmio energia del dispositivo, che indica se il dispositivo è in esecuzione in modalità basso consumo. Le applicazioni dovrebbero evitare l'elaborazione in background se lo stato di risparmio energia del dispositivo è attivo.
 
@@ -23,9 +23,9 @@ La classe **Battery** consente di controllare le informazioni sulla batteria del
 
 Per accedere alla funzionalità **Battery**, è necessaria la configurazione seguente specifica della piattaforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
-L'autorizzazione `Battery` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla seguendo uno dei metodi seguenti:
+L'autorizzazione `Battery` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla nei modi seguenti:
 
 Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
@@ -33,9 +33,9 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
-In alternativa, è possibile aggiornare il Manifesto Android:
+OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **androidmanifest. XML** nella cartella **Proprietà** e aggiungere il codice seguente nel nodo del **manifesto**.
+Aprire il file **AndroidManifest.xml** nella cartella **Properties** e aggiungere quanto segue all'interno del nodo del **manifesto.**
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -43,11 +43,11 @@ Aprire il file **androidmanifest. XML** nella cartella **Proprietà** e aggiunge
 
 Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare l'autorizzazione **Battery** (Batteria). Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
@@ -164,16 +164,16 @@ Se lo stato di risparmio energia diventa `On`, l'applicazione deve interrompere 
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Non esistono differenze per questa piattaforma.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - Per testare le API, deve essere usato il dispositivo. 
 - Verrà restituito solo `AC` o `Battery` per `PowerSource`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - Verrà restituito solo `AC` o `Battery` per `PowerSource`.
 

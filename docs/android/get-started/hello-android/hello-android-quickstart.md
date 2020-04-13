@@ -10,21 +10,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: ab401c24fc486ba69fe01aff76e1a9b7d53122d0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028028"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: guida introduttiva
 
-_In questa guida divisa in due parti è possibile creare per la prima volta un'applicazione Xamarin.Android usando Visual Studio e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin._
+_In questa guida divisa in due parti verrà creata per la prima volta un'applicazione Xamarin.Android usando Visual Studio e si apprenderanno le nozioni di base dello sviluppo di applicazioni Android con Xamarin._
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 
 Verrà creata un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e visualizza il numero di telefono numerico all'utente. L'applicazione finale ha l'aspetto seguente:
 
-[![Screenshot dell'app completata](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+[![Screenshot dell'app al termine](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
 ::: zone pivot="windows"
 
@@ -34,7 +34,7 @@ Per seguire questa procedura dettagliata è necessario quanto segue:
 
 - Windows 10.
 
-- Visual Studio 2019 o Visual Studio 2017 (versione 15,8 o successiva): community, Professional o Enterprise.
+- Visual Studio 2019 o Visual Studio 2017 (versione 15.8 o successiva): Community, Professional o Enterprise.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -49,7 +49,7 @@ Per seguire questa procedura dettagliata è necessario quanto segue:
 
 ::: zone-end
 
-In questa procedura si presuppone che l'ultima versione di Xamarin.Android sia installata e in esecuzione sulla piattaforma desiderata. Per istruzioni sull'istallazione di Xamarin.Android, vedere le guide relative all'[installazione di Xamarin.Android](~/android/get-started/installation/index.md).
+In questa procedura si presuppone che l'ultima versione di Xamarin.Android sia installata e in esecuzione sulla piattaforma desiderata. Per una guida all'installazione di Xamarin.Android, vedere le guide di [installazione di Xamarin.Android](~/android/get-started/installation/index.md).
 
 ## <a name="configuring-emulators"></a>Configurazione degli emulatori
 
@@ -64,11 +64,11 @@ Avviare Visual Studio. Fare clic su **File > Nuovo > Progetto** per creare un nu
 Nella finestra di dialogo **Nuovo progetto** fare clic sul modello **App Android**.
 Assegnare un nome al nuovo progetto `Phoneword` e fare clic su **OK**:
 
-[![Nuovo progetto Phoneword](hello-android-quickstart-images/vs/01-new-project-name-w158-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w158.png#lightbox)
+[![Il nuovo progetto è Phoneword](hello-android-quickstart-images/vs/01-new-project-name-w158-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w158.png#lightbox)
 
 Nella finestra di dialogo **Nuova app Android** fare clic su **App vuota** e fare clic su **OK** per creare il nuovo progetto:
 
-[![Selezionare il modello App vuota](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
+[![Selezionare il modello Applicazione vuota](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
 
 ## <a name="create-a-layout"></a>Creare un layout
 
@@ -80,7 +80,7 @@ Nella finestra di dialogo **Nuova app Android** fare clic su **App vuota** e far
 Dopo aver creato il nuovo progetto, espandere la cartella **Risorse** e quindi la cartella di **layout** in **Esplora soluzioni**.
 Fare doppio clic su **activity_main.axml** per aprirlo in Android Designer. Questo è il file di layout per la schermata dell'app:
 
-[![Aprire il file AXML dell'attività](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+[![Apri attività afilexml](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
 
 > [!TIP]
 > Le versioni più recenti di Visual Studio contengono un modello di app leggermente diverso.
@@ -90,19 +90,19 @@ Fare doppio clic su **activity_main.axml** per aprirlo in Android Designer. Ques
 
 Dalla **Casella degli strumenti** (l'area a sinistra) immettere `text` nel campo di ricerca e trascinare un widget **Testo (grande)** nell'area di progettazione (l'area al centro):
 
-[![Aggiungere widget di testo di grandi dimensioni](hello-android-quickstart-images/vs/04-large-text-w158-sml.png)](hello-android-quickstart-images/vs/04-large-text-w158.png#lightbox)
+[![Aggiungi widget di testo di grandi dimensioni](hello-android-quickstart-images/vs/04-large-text-w158-sml.png)](hello-android-quickstart-images/vs/04-large-text-w158.png#lightbox)
 
 Con l'opzione **Testo (grande)** selezionata nell'area di progettazione, usare il riquadro **Proprietà** per modificare la proprietà `Text` del widget **Testo (grande)** in `Enter a Phoneword:`:
 
-[![Impostare le proprietà di un testo di grandi dimensioni](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
+[![Impostare proprietà di testo di grandi dimensioni](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
 
-Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)** . Il posizionamento del widget non avverrà finché il puntatore del mouse non verrà spostato in un punto del layout che può accettare il widget. Nelle schermate seguenti, il widget non può essere posizionato (come illustrato a sinistra) finché il puntatore del mouse non viene spostato appena sotto il precedente `TextView` (come illustrato a destra):
+Trascinare un widget **Testo normale** dalla Casella **degli strumenti** all'area di progettazione e posizionarlo sotto il widget **Testo (Grande).** Il posizionamento del widget non avverrà finché il puntatore del mouse non verrà spostato in un punto del layout che può accettare il widget. Nelle schermate seguenti, il widget non può essere posizionato (come illustrato a sinistra) finché il puntatore del mouse non viene spostato appena sotto il precedente `TextView` (come illustrato a destra):
 
-[![Il mouse indica il punto in cui il widget può essere posizionato](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
+[![Il mouse indica dove è possibile posizionare il widget](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
 
 Quando il **Testo normale** (un widget `EditText`) è inserito correttamente, verrà visualizzato come illustrato nello screenshot seguente:
 
-[![Aggiungere un widget Testo normale](hello-android-quickstart-images/vs/06b-plain-text-w158-sml.png)](hello-android-quickstart-images/vs/06b-plain-text-w158.png#lightbox)
+[![Aggiungi widget testo normale](hello-android-quickstart-images/vs/06b-plain-text-w158-sml.png)](hello-android-quickstart-images/vs/06b-plain-text-w158.png#lightbox)
 
 Con il widget **Testo normale** selezionato nell'area di progettazione, usare il riquadro **Proprietà** per modificare la proprietà `Id` del widget **Testo normale** in `@+id/PhoneNumberText` e modificare la proprietà `Text` in `1-855-XAMARIN`:
 
@@ -110,27 +110,27 @@ Con il widget **Testo normale** selezionato nell'area di progettazione, usare il
 
 Trascinare un **Pulsante** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo normale**:
 
-[![Trascinare il pulsante di traduzione nell'area di progettazione](hello-android-quickstart-images/vs/08-drag-button-w158-sml.png)](hello-android-quickstart-images/vs/08-drag-button-w158.png#lightbox)
+[![Trascinare il pulsante di traslazione al progetto](hello-android-quickstart-images/vs/08-drag-button-w158-sml.png)](hello-android-quickstart-images/vs/08-drag-button-w158.png#lightbox)
 
 Con il **Pulsante** selezionato nell'area di progettazione, usare il riquadro **Proprietà** per modificarne la proprietà `Text` in `Translate` e la proprietà `Id` in `@+id/TranslateButton`:
 
-[![Impostare le proprietà del pulsante di traduzione](hello-android-quickstart-images/vs/09-translate-button-w158-sml.png)](hello-android-quickstart-images/vs/09-translate-button-w158.png#lightbox)
+[![Impostare le proprietà dei pulsanti di traslazione](hello-android-quickstart-images/vs/09-translate-button-w158-sml.png)](hello-android-quickstart-images/vs/09-translate-button-w158.png#lightbox)
 
 Trascinare un oggetto **TextView** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Pulsante**. Modificare la proprietà `Text` dell'oggetto **TextView** su una stringa vuota e impostare la relativa proprietà `Id` in `@+id/TranslatedPhoneword`:
 
-[![Impostare le proprietà nella visualizzazione di testo.](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)
+[![Impostare le proprietà nella vista di testo.](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)
 
 Salvare premendo **CTRL+S**.
 
 ## <a name="write-some-code"></a>Scrivere codice
 
-Il passaggio successivo consiste nell'aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** nel riquadro **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento...**  come illustrato di seguito:
+Il passaggio successivo consiste nell'aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** nel riquadro **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento... ** come illustrato di seguito:
 
-[![Aggiungere un nuovo elemento](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
+[![Aggiungi nuovo elemento](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
 
 Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C# > Codice > File di codice** e assegnare al nuovo file di codice il nome **PhoneTranslator.cs**:
 
-[![Aggiungere PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-w158-sml.png)](hello-android-quickstart-images/vs/14-add-class-w158.png#lightbox)
+[![Aggiungi PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-w158-sml.png)](hello-android-quickstart-images/vs/14-add-class-w158.png#lightbox)
 
 Viene creata una nuova classe C# vuota. Inserire il codice seguente nel file:
 
@@ -255,7 +255,7 @@ translateButton.Click += (sender, e) =>
 
 Salvare selezionando **File > Salva tutto** (o premendo **CTRL-MAIUSC-S**) e compilare l'applicazione selezionando **Compila > Ricompila soluzione** (o premendo **CTRL-MAIUSC-B**). 
 
-Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Visual Studio.
+Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Visual Studio.
 
 ## <a name="set-the-app-name"></a>Impostare il nome dell'app
 
@@ -273,7 +273,7 @@ L'applicazione &ndash; è ora funzionante ed occorre quindi impostare il nome de
 Testare l'applicazione eseguendola su un dispositivo Android o un emulatore.
 Toccare il pulsante **TRANSLATE** (CONVERTI) per convertire **1-855-XAMARIN** in un numero di telefono:
 
-[![Screenshot dell'app in esecuzione](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+[![Screenshot dell'esecuzione dell'app](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
 Per eseguire l'app in un dispositivo Android, vedere come [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
 
@@ -284,9 +284,9 @@ Avviare Visual Studio per Mac dalla cartella **Applicazioni** o da **Spotlight**
 
 Fare clic su **Nuovo progetto...** per creare un nuovo progetto.
 
-Nela finestra di dialogo **Scegli un modello per il nuovo progetto** fare clic su **Android > App** e selezionare il modello **App Android**. Scegliere **Avanti**.
+Nela finestra di dialogo **Scegli un modello per il nuovo progetto** fare clic su **Android > App** e selezionare il modello **App Android**. Fare clic su **Avanti**.
 
-[![Scegliere il modello App Android](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
+[![Scegliere il modello di app Android](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
 
 Nella finestra di dialogo **Configura l'app Android** assegnare alla nuova app il nome `Phoneword` e fare clic su **Avanti**.
 
@@ -304,21 +304,21 @@ Nella finestra di dialogo **Configura nuova app Android** lasciare i nomi della 
 Dopo aver creato il nuovo progetto, espandere la cartella **Risorse** e quindi la cartella di **layout** nel riquadro della **soluzione**.
 Fare doppio clic su **Main.axml** per aprirlo in Android Designer. Questo è il file di layout della schermata visualizzata in Android Designer:
 
-[![Aprire Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
+[![Apri Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
 Selezionare **Hello World, Click Me!** **Pulsante** nell'area di progettazione e premere il tasto **Canc** per rimuoverlo. 
 
 Dalla **Casella degli strumenti** (l'area a destra) immettere `text` nel campo di ricerca e trascinare un widget **Testo (grande)** nell'area di progettazione (l'area al centro):
 
-[![Aggiungere widget di testo di grandi dimensioni](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png#lightbox)
+[![Aggiungi widget di testo di grandi dimensioni](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png#lightbox)
 
 Con il widget **Testo (grande)** selezionato nell'area di progettazione, è possibile usare il riquadro **Proprietà** per modificare la proprietà `Text` del widget **Testo (grande)** in `Enter a Phoneword:` come illustrato di seguito:
 
-[![Impostare le proprietà del widget di testo di grandi dimensioni](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
+[![Impostare proprietà widget di testo di grandi dimensioni](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
-Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)** . Si noti che è possibile usare il campo di ricerca per individuare i widget per nome:
+Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)**. Si noti che è possibile usare il campo di ricerca per individuare i widget per nome:
 
-[![Aggiungere un widget Testo normale](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
+[![Aggiungi widget testo normale](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
 Con il widget **Testo normale** selezionato nell'area di progettazione, è possibile usare il riquadro **Proprietà** per modificare la proprietà `Id` del widget **Testo normale** in `@+id/PhoneNumberText` e modificare la proprietà `Text` in `1-855-XAMARIN`:
 
@@ -330,17 +330,17 @@ Trascinare un **Pulsante** dalla **Casella degli strumenti** all'area di progett
 
 Con l'opzione **Pulsante** selezionata nell'area di progettazione, è possibile usare il riquadro **Proprietà** per modificare la proprietà `Id` del **Pulsante** in `@+id/TranslateButton` e modificare la proprietà `Text` in `Translate`:
 
-[![Configurare come pulsante di traduzione](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png#lightbox)
+[![Configura come pulsante di traduzione](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png#lightbox)
 
 Trascinare un oggetto **TextView** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Pulsante**. Con l'opzione **TextView** selezionata, impostare la proprietà `id` di **TextView** su `@+id/TranslatedPhoneWord` e modificare `text` in una stringa vuota:
 
-[![Impostare le proprietà nella visualizzazione di testo.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
+[![Impostare le proprietà nella vista di testo.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
 
 Salvare premendo **&#8984;+S**.
 
 ## <a name="write-some-code"></a>Scrivere codice
 
-Aggiungere ora codice per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic sull'icona di ingranaggio accanto al progetto **Phoneword** nel riquadro della **soluzione** e scegliendo **Aggiungi > Nuovo file...** :
+Aggiungere ora codice per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic sull'icona di ingranaggio accanto al progetto **Phoneword** nel riquadro della **soluzione** e scegliendo **Aggiungi > Nuovo file... **:
 
 [![Aggiungere un nuovo file al progetto](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
@@ -475,7 +475,7 @@ translateButton.Click += (sender, e) =>
 
 Salvare e compilare l'applicazione selezionando **Compila > Compila tutto** o premendo **&#8984;+B**. Se la compilazione dell'applicazione viene eseguita, viene visualizzato un messaggio di operazione completata nella parte superiore di Visual Studio per Mac:
 
-Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Xamarin.Android e Visual Studio per Mac.
+Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Xamarin.Android e Visual Studio per Mac.
 
 ## <a name="set-the-label-and-app-icon"></a>Impostare l'etichetta e l'icona dell'app
 
@@ -495,11 +495,11 @@ namespace Phoneword
 
 A questo punto è possibile impostare l'icona dell'applicazione. Per impostazione predefinita, Visual Studio per Mac offre un'icona predefinita per il progetto. Eliminare questi file dall'applicazione e sostituirli con un'icona diversa. Espandere la cartella **Risorse** nel **riquadro della soluzione**. Si noti che sono presenti cinque cartelle che iniziano con **mipmap -** e che ogni cartella contiene un singolo file **Icon.png**:
 
-[![Cartelle mipmap- e file Icon.png](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
+[![mipmap- cartelle e file Icon.png](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
 
 È necessario eliminare ognuno di questi file di icona dal progetto. Fare clic con il pulsante destro su ogni file **Icon.png** e selezionare **Rimuovi** dal menu di scelta rapida:
 
-[![Eliminare il file Icon.png predefinito](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png#lightbox)
+[![Elimina il file Icon.png predefinito](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png#lightbox)
 
 Fare clic sul pulsante **Elimina** nella finestra di dialogo.
 
@@ -511,19 +511,19 @@ Dalla finestra di dialogo di selezione passare alla directory delle icone delle 
 
 Nella finestra di dialogo **Aggiungi file a cartella** selezionare **Copia file nella directory** e fare clic su **OK**:
 
-[![Finestra di dialogo Copia file nella directory](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
+[![Copiare il file nella finestra di dialogo della directory](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
 
 Ripetere questi passaggi per ogni cartella **mipmap-** fino a quando le cartelle delle icone delle app Xamarin **mipmap-** non vengono copiate nelle cartelle **mipmap-** corrispondenti nel progetto **Phoneword**.
 
 Dopo aver copiato tutte le icone nel progetto Xamarin.Android, aprire la finestra di dialogo **Opzioni progetto** facendo clic con il pulsante destro del mouse sul progetto nel **riquadro della soluzione**. Selezionare **Compila > Applicazione Android** e selezionare `@mipmap/icon` dalla casella combinata **Icona applicazione**:
 
-[![Impostazione dell'icona di progetto](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
+[![Impostazione dell'icona del progetto](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
 
 ## <a name="run-the-app"></a>Eseguire l'app
 
 Infine, testare l'applicazione eseguendola su un dispositivo Android o un emulatore e convertendo Phoneword:
 
-[![Screenshot dell'app completata](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
+[![Screenshot dell'app al termine](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 Per eseguire l'app in un dispositivo Android, vedere come [configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md).
 
@@ -535,4 +535,4 @@ L'applicazione Xamarin.Android è stata completata.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Icone delle app Android Xamarin (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (Phoneword - Esempio)
+- [Phoneword (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)

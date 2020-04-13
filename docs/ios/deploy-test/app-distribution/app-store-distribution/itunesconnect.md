@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: aefd649fe1859306e5499addc1c08f4e42b2b424
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026692"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
@@ -61,10 +61,10 @@ Per aggiungere un'applicazione iOS in iTunes Connect è necessario essere un **a
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Fare clic su **My Apps** (App personali):
+1. Clicca su **Le mie app**:
 
     [![](itunesconnect-images/add01.png "Click on My Apps")](itunesconnect-images/add01.png#lightbox)
-2. Fare clic sul segno **+** nell'angolo superiore sinistro e selezionare **New iOS App** (Nuova app iOS):
+2. Fai **+** clic sull'angolo in alto a sinistra e seleziona **Nuova app iOS**:
 
     [![](itunesconnect-images/add02.png "Adding a New iOS App")](itunesconnect-images/add02.png#lightbox)
 3. iTunes Connect visualizzerà la finestra di dialogo **New iOS App** (Nuova app iOS):
@@ -106,7 +106,7 @@ Attualmente sono richieste le dimensioni schermo e le risoluzioni seguenti:
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **Screenshots** (Screenshot).
@@ -179,7 +179,7 @@ Apple richiede che lo sviluppatore indichi un collegamento al sito Web in cui po
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **Name** (Nome).
@@ -215,11 +215,11 @@ Per un'icona dell'app che sarà visualizzata nell'App Store, è necessaria un'im
 
 Per altre informazioni, vedere il documento [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html#//apple_ref/doc/uid/TP40006556) (Linee guida di iOS Human Interface) di Apple e la sezione relativa alle icone dell'app di grandi dimensioni nella documentazione [General App Information](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW7) (Informazioni generali sull'app)
 
-### <a name="app-id"></a>App ID
+### <a name="app-id"></a>ID app
 
 Si tratta di un numero di identificazione univoco assegnato all'applicazione da Apple quando viene creato il record iTunes Connect. È possibile usare questo numero per chiamare varie interfacce basate sul Web di Apple, tra cui le informazioni dell'App Store nel sito Web.
 
-### <a name="version-number"></a>Numero versione
+### <a name="version-number"></a>Numero di versione
 
 Si tratta della versione corrente e attiva dell'applicazione, che l'utente visualizza nell'App Store.
 
@@ -244,7 +244,7 @@ Apple consente di offrire informazioni sul copyright dell'applicazione e richied
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **General App Information** (Informazioni generali sull'app).
@@ -269,7 +269,7 @@ Per le app di gioco iOS che supportano Game Center di Apple, è possibile specif
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **Game Center**.
@@ -293,7 +293,7 @@ Usare questa sezione per comunicare al personale Apple che revisionerà l'applic
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **App Review Information** (Informazioni sulla revisione delle app).
@@ -317,7 +317,7 @@ Selezionare questa casella se si vuole che l'applicazione sia offerta a un prezz
 
 ### <a name="custom-business-to-business-application"></a>Applicazione Business to Business personalizzata
 
-Un'applicazione configurata come **applicazione business to business personalizzata** sarà disponibile solo per i clienti di **Volume Purchase Program** specificati in iTunes Connect e sarà disponibile solo nei territori applicabili (ad esempio, , I clienti di Volume Purchase Program per gli Stati Uniti devono usare l'App Store Volume Purchase Program per le aziende.
+Un'applicazione impostata come **applicazione personalizzata** Business to Business sarà disponibile solo per i clienti **Volume Purchase Program** specificati in iTunes Connect e sarà disponibile solo nei territori applicabili (ad esempio, i clienti di U.S. Volume Purchase Program devono utilizzare il programma di acquisto del volume dell'App Store degli Stati Uniti per le aziende).
 
 Le applicazioni Business to Business personalizzate non sono disponibili agli istituti didattici o ai comuni clienti dell'App Store. Per altre informazioni sull'*App Store Volume Purchase Program for Business*, visitare la pagina delle [domande frequenti](https://vpp.itunes.apple.com/faq) di Apple. Per altre informazioni su come i clienti possono iscriversi al **Volume Purchase Program**, visitare la pagina dei [programmi di distribuzione](https://enroll.vpp.itunes.apple.com).
 
@@ -325,7 +325,7 @@ Le applicazioni Business to Business personalizzate non sono disponibili agli is
 
 Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Selezionare **My Apps** (App personali).
+1. Fare clic su **Le mie applicazioni**.
 2. Fare clic sull'**icona** dell'applicazione.
 3. Selezionare la scheda **Pricing** (Prezzi):
 
@@ -334,7 +334,7 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
 5. Selezionare il prezzo desiderato dall'elenco a discesa **Price Tier** (livello di prezzo).
 6. Abilitare facoltativamente l'opzione **Educational Discounts** (Sconti per uso didattico).
 7. Eventualmente definire l'applicazione come **Custom Business to Business Application** (Applicazione Business to Business personalizzata).
-8. Fare clic sul pulsante **Save** (Salva) per salvare le modifiche.
+8. Fare clic sul pulsante **Salva** per salvare le modifiche apportate.
 
 <a name="iap" />
 
@@ -348,7 +348,7 @@ Per altre informazioni sull'uso degli acquisti nell'app in un'applicazione Xamar
 
 ## <a name="viewing-application-reviews"></a>Visualizzazione delle recensione sull'applicazione
 
-Dopo aver rilasciato l'applicazione all'App Store, gli utenti che acquistano o scaricano gratuitamente l'applicazione possono scrivere recensioni sull'applicazione e lasciare una classificazione a stelle. Usare questa sezione per visualizzare le recensioni. Esempio:
+Dopo aver rilasciato l'applicazione all'App Store, gli utenti che acquistano o scaricano gratuitamente l'applicazione possono scrivere recensioni sull'applicazione e lasciare una classificazione a stelle. Usare questa sezione per visualizzare le recensioni. Ad esempio:
 
 [![](itunesconnect-images/reviews01.png "Viewing Application Reviews")](itunesconnect-images/reviews01.png#lightbox)
 
@@ -358,7 +358,7 @@ Questo articolo descrive come usare iTunes Connect per preparare un'applicazione
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md)
+- [Utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md)
 - [iOS App Development Workflow Guide: Distributing Applications](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html) (Guida al flusso di lavoro di sviluppo di app iOS: distribuzione delle applicazioni)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html) (Suggerimenti per l'invio nell'App Store)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida sulle recensioni nell'App Store)

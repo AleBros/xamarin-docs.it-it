@@ -1,6 +1,6 @@
 ---
 title: Utilità di pianificazione di processo Android
-description: Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android.
+description: Questa guida illustra come pianificare il lavoro in background usando l'API Utilità di pianificazione processi Android.This guide discusses how to schedule background work using the Android Job Scheduler API.
 ms.prod: xamarin
 ms.assetid: 673BB8C3-C5CC-43EC-BA8F-758F15D986C9
 ms.technology: xamarin-android
@@ -8,77 +8,77 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
 ms.openlocfilehash: 10d2ae6ac35f02d75ef6e04a0531ec3f5dafd668
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78292160"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
-_Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android, disponibile nei dispositivi Android che eseguono Android 5,0 (livello API 21) e versioni successive._
+_Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android, disponibile nei dispositivi Android che eseguono Android 5.0 (livello API 21) e versioni successive._
 
 ## <a name="overview"></a>Panoramica 
 
-Uno dei modi migliori per garantire che un'applicazione Android sia in grado di rispondere all'utente è garantire che il lavoro complesso o a esecuzione prolungata venga eseguito in background. Tuttavia, è importante che il lavoro in background non influisca negativamente sull'esperienza dell'utente con il dispositivo. 
+Uno dei modi migliori per mantenere un'applicazione Android reattiva all'utente consiste nel garantire che il lavoro complesso o a esecuzione prolungata venga eseguito in background. Tuttavia, è importante che il lavoro in background non influisca negativamente sull'esperienza dell'utente con il dispositivo. 
 
-Un processo in background, ad esempio, può eseguire il polling di un sito Web ogni tre o quattro minuti per cercare le modifiche apportate a un determinato set di dati Questa situazione sembra benigna, ma potrebbe avere un effetto disastroso sulla durata della batteria. L'applicazione riattiverà ripetutamente il dispositivo, eleva la CPU a uno stato di alimentazione superiore, accende le radio, effettua le richieste di rete e quindi elabora i risultati. Peggiora perché il dispositivo non si spegne immediatamente e torna allo stato di inattività a basso consumo. Il lavoro in background pianificato in modo non corretto può inavvertitamente impedire che il dispositivo si trovi in uno stato con requisiti di alimentazione superflui e Questa attività apparentemente innocente (polling di un sito Web) rende il dispositivo inutilizzabile in un periodo di tempo relativamente breve.
+Ad esempio, un processo in background potrebbe eseguire il polling di un sito Web ogni tre o quattro minuti per eseguire una query per le modifiche a un determinato set di dati. Questo sembra benigno, tuttavia avrebbe un impatto disastroso sulla durata della batteria. L'applicazione riattiverà ripetutamente il dispositivo, eleverà la CPU a uno stato di alimentazione superiore, accenderà le radio, effettuerà le richieste di rete e quindi elaborazione dei risultati. Peggiora perché il dispositivo non si spegne immediatamente e ritorna allo stato di inattività a basso consumo. Il lavoro in background non programmato correttamente può inavvertitamente mantenere il dispositivo in uno stato con requisiti di alimentazione inutili ed eccessivi. Questa attività apparentemente innocente (polling di un sito web) renderà il dispositivo inutilizzabile in un periodo di tempo relativamente breve.
 
-Android fornisce le API seguenti che consentono di eseguire il lavoro in background, ma non sono sufficienti per la pianificazione intelligente dei processi. 
+Android fornisce le seguenti API per facilitare l'esecuzione di lavoro in background, ma da soli non sono sufficienti per la pianificazione intelligente dei processi. 
 
-- I servizi **[Intent](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; Intent sono ottimi per l'esecuzione del lavoro, ma non forniscono alcun modo per pianificare il lavoro.
-- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; queste API consentono solo la pianificazione del lavoro, ma non forniscono alcun modo per eseguire effettivamente il lavoro. Inoltre, AlarmManager consente solo vincoli basati sul tempo, il che significa generare un allarme in un determinato momento o dopo che è trascorso un determinato periodo di tempo. 
-- I **[ricevitori di trasmissioni](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; un'app Android possono configurare i ricevitori di trasmissioni per eseguire il lavoro in risposta a eventi a livello di sistema o Intent. Tuttavia, i ricevitori di trasmissioni non forniscono alcun controllo sul momento in cui il processo deve essere eseguito. Inoltre, le modifiche apportate al sistema operativo Android verranno limitate quando i ricevitori di trasmissioni funzioneranno o i tipi di lavoro a cui possono rispondere. 
+- **[I servizi intento](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; di intenti sono ideali per l'esecuzione del lavoro, tuttavia non forniscono alcun modo per pianificare il lavoro.
+- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; Queste API consentono solo di pianificare il lavoro, ma non forniscono alcun modo per eseguire effettivamente il lavoro. Inoltre, il AlarmManager consente solo vincoli basati sul tempo, il che significa generare un allarme in un determinato momento o dopo un determinato periodo di tempo è trascorso. 
+- **[Ricevitori](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; di trasmissione Un'app Android può configurare ricevitori di trasmissione per eseguire operazioni in risposta a eventi o finalità a livello di sistema. Tuttavia, i ricevitori broadcast non forniscono alcun controllo su quando il processo deve essere eseguito. Anche le modifiche nel sistema operativo Android limiteranno quando i ricevitori di trasmissione funzioneranno, o il tipo di lavoro a cui possono rispondere. 
 
-Sono disponibili due funzionalità principali per eseguire in modo efficiente il lavoro in background (talvolta definito _processo in background_ o _processo_):
+Esistono due caratteristiche chiave per eseguire in modo efficiente il lavoro in background (talvolta indicato come un lavoro in _background_ o un _lavoro_):
 
-1. **Pianificare in modo intelligente il lavoro** &ndash; è importante che, quando un'applicazione esegue il lavoro in background, come un valido cittadino. Idealmente, l'applicazione non deve richiedere l'esecuzione di un processo. Al contrario, l'applicazione deve specificare le condizioni che devono essere soddisfatte per il momento in cui il processo può essere eseguito, quindi pianificare il processo con il sistema operativo che eseguirà il lavoro quando vengono soddisfatte le condizioni. Ciò consente ad Android di eseguire il processo per garantire la massima efficienza del dispositivo. Ad esempio, è possibile che le richieste di rete vengano eseguite in batch in modo che vengano eseguite contemporaneamente per sfruttare al massimo l'overhead richiesto per la rete.
-2. L' **incapsulamento del lavoro** &ndash; il codice per eseguire le operazioni in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente semplice da ripianificare se il lavoro non viene completato per qualche motivo.
+1. **Pianificazione intelligente del lavoro** &ndash; È importante che quando un'applicazione sta facendo il lavoro in background che lo fa come un buon cittadino. In teoria, l'applicazione non deve richiedere l'esecuzione di un processo. Al contrario, l'applicazione deve specificare le condizioni che devono essere soddisfatte per quando il processo può essere eseguito e quindi pianificare il processo con il sistema operativo che eseguirà il lavoro quando vengono soddisfatte le condizioni. Ciò consente ad Android di eseguire il processo per garantire la massima efficienza sul dispositivo. Ad esempio, le richieste di rete possono essere raggruppate in batch per l'esecuzione contemporanea per sfruttare al massimo l'overhead associato alla rete.
+2. **Incapsulamento del lavoro** &ndash; Il codice per eseguire il lavoro in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente facile da ripianificare se il lavoro non viene completato per qualche motivo.
 
-L'utilità di pianificazione dei processi Android è un framework integrato nel sistema operativo Android che fornisce un'API Fluent per semplificare la pianificazione del lavoro in background.  L'utilità di pianificazione dei processi Android è costituita dai tipi seguenti:
+L'utilità di pianificazione dei processi Android è un framework integrato nel sistema operativo Android che fornisce un'API fluente per semplificare la pianificazione del lavoro in background.  L'utilità di pianificazione dei processi Android è costituita dai seguenti tipi:
 
-- Il `Android.App.Job.JobScheduler` è un servizio di sistema usato per pianificare, eseguire e, se necessario, annullare i processi per conto di un'applicazione Android.
-- Un `Android.App.Job.JobService` è una classe astratta che deve essere estesa con la logica che eseguirà il processo sul thread principale dell'applicazione. Ciò significa che il `JobService` è responsabile della modalità di esecuzione del lavoro in modo asincrono.
-- Un oggetto `Android.App.Job.JobInfo` include i criteri per guidare Android quando il processo deve essere eseguito.
+- Il `Android.App.Job.JobScheduler` è un servizio di sistema che viene utilizzato per pianificare, eseguire e, se necessario, annullare, processi per conto di un'applicazione Android.The is a system service that is used to schedule, execute, and if necessary cancel, jobs for behalf of an Android application.
+- Un `Android.App.Job.JobService` è una classe astratta che deve essere estesa con la logica che eseguirà il processo nel thread principale dell'applicazione. Ciò significa `JobService` che l'oggetto è responsabile del modo in cui il lavoro deve essere eseguito in modo asincrono.
+- Un `Android.App.Job.JobInfo` oggetto contiene i criteri per guidare Android quando il processo deve essere eseguito.
 
-Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Novell. Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
+Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Xamarin.Android deve incapsulare il codice in una classe che estende la `JobService` classe. `JobService`dispone di tre metodi del ciclo di vita che possono essere chiamati durante la durata del processo:
 
-- **bool OnStartJob (parametri JobParameters)** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` eseguire in modo asincrono il lavoro e restituire `true` se il lavoro rimane disponibile oppure `false` se il lavoro viene eseguito.
+- **bool OnStartJob(JobParameters parametri)** &ndash; Questo metodo `JobScheduler` viene chiamato da per eseguire il lavoro ed viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` per eseguire in modo `true` asincrono il lavoro `false` e tornare se c'è lavoro rimanente, o se il lavoro è fatto.
     
-    Quando il `JobScheduler` chiama questo metodo, richiede e mantiene un Wakelock da Android per la durata del processo. Al termine del processo, è responsabilità del `JobService` indicare il `JobScheduler` di questo fatto chiamando il metodo `JobFinished` (descritto di seguito).
+    Quando `JobScheduler` chiama questo metodo, richiederà e conserverà un wakelock da Android per la durata del processo. Al termine del processo, è responsabilità di indicare `JobService` il `JobScheduler` `JobFinished` fatto di questo fatto chiamando il metodo (descritto di seguito).
 
-- **JobFinished (JobParameters Parameters, bool needsReschedule)** &ndash; questo metodo deve essere chiamato dal `JobService` per indicare al `JobScheduler` che il lavoro è stato eseguito. Se `JobFinished` non viene chiamato, il `JobScheduler` non rimuoverà il Wakelock, causando un esaurimento della batteria superfluo. 
+- **JobFinished(JobParameters parameters, bool needsReschedule)** &ndash; Questo metodo `JobService` deve `JobScheduler` essere chiamato da parte di per indicare che il lavoro è stato eseguito. Se `JobFinished` non viene `JobScheduler` chiamato, il non rimuoverà il wakelock, causando inutili scarico della batteria. 
 
-- **bool OnStopJob (parametri JobParameters)** &ndash; questa operazione viene chiamata quando il processo viene arrestato in modo anomalo da Android. Deve restituire `true` se il processo deve essere ripianificato in base ai criteri di ripetizione dei tentativi (descritti più avanti in modo più dettagliato).
+- **bool OnStopJob(JobParameters parameters)** &ndash; Viene chiamato quando il processo viene interrotto prematuramente da Android. Deve restituire `true` se il processo deve essere riprogrammato in base ai criteri di ripetizione dei tentativi (illustrati di seguito in modo più dettagliato).
 
-È possibile specificare _vincoli_ o _trigger_ che controlleranno quando un processo può o deve essere eseguito. Ad esempio, è possibile vincolare un processo in modo che venga eseguito solo quando il dispositivo viene caricato o per avviare un processo quando viene acquisita un'immagine.
+È possibile specificare _vincoli_ o _trigger_ che controlleranno quando un processo può o deve essere eseguito. Ad esempio, è possibile vincolare un processo in modo che venga eseguito solo quando il dispositivo è in carica o per avviare un processo quando viene scattata una foto.
 
-In questa guida verrà illustrato in dettaglio come implementare una classe di `JobService` e pianificarla con l'`JobScheduler`.
+Questa guida verrà illustrato in `JobService` dettaglio come implementare una classe e pianificarla con il `JobScheduler`file .
 
 ## <a name="requirements"></a>Requisiti
 
-L'utilità di pianificazione dei processi Android richiede il livello di API Android 21 (Android 5,0) o versione successiva. 
+L'utilità di pianificazione dei processi Android richiede android API livello 21 (Android 5.0) o superiore. 
 
-## <a name="using-the-android-job-scheduler"></a>Uso dell'utilità di pianificazione dei processi Android
+## <a name="using-the-android-job-scheduler"></a>Utilizzo dell'utilità di pianificazione dei processi AndroidUsing the Android Job Scheduler
 
-Per l'uso dell'API JobScheduler Android sono disponibili tre passaggi:
+Esistono tre passaggi per l'utilizzo dell'API Android JobScheduler:There are three steps for using the Android JobScheduler API:
 
 1. Implementare un tipo JobService per incapsulare il lavoro.
-2. Usare un oggetto `JobInfo.Builder` per creare l'oggetto `JobInfo` che conterrà i criteri per l'`JobScheduler` per eseguire il processo. 
-3. Pianificare il processo utilizzando `JobScheduler.Schedule`.
+2. Utilizzare `JobInfo.Builder` un oggetto `JobInfo` per creare l'oggetto `JobScheduler` che conterrà i criteri per l'esecuzione del processo. 
+3. Pianificare il `JobScheduler.Schedule`processo utilizzando .
 
-### <a name="implement-a-jobservice"></a>Implementare una JobService
+### <a name="implement-a-jobservice"></a>Implementare un JobServiceImplement a JobService
 
-Tutto il lavoro eseguito dalla libreria dell'utilità di pianificazione dei processi Android deve essere eseguito in un tipo che estende la classe astratta `Android.App.Job.JobService`. La creazione di un `JobService` è molto simile alla creazione di una `Service` con il Framework Android: 
+Tutto il lavoro eseguito dalla libreria di utilità di `Android.App.Job.JobService` pianificazione processi Android deve essere eseguito in un tipo che estende la classe astratta. Creazione `JobService` di un è `Service` molto simile alla creazione di un con il framework Android:Creating a is very similar to creating a with the Android framework: 
 
-1. Estendere la classe `JobService`.
-2. Decorare la sottoclasse con il `ServiceAttribute` e impostare il parametro `Name` su una stringa costituita dal nome del pacchetto e dal nome della classe (vedere l'esempio seguente).
-3. Impostare la proprietà `Permission` della `ServiceAttribute` sul `android.permission.BIND_JOB_SERVICE`di stringa.
-4. Eseguire l'override del metodo `OnStartJob`, aggiungendo il codice per eseguire il lavoro. Android richiamerà questo metodo sul thread principale dell'applicazione per eseguire il processo. Per evitare di bloccare l'applicazione, è necessario eseguire un lavoro che comporterà più tempo.
-5. Al termine del lavoro, il `JobService` deve chiamare il metodo `JobFinished`. Questo metodo rappresenta il modo in cui `JobService` indica al `JobScheduler` che il lavoro è stato eseguito. La mancata chiamata `JobFinished` comporterà la `JobService` l'inserimento di richieste non necessarie sul dispositivo, riducendo la durata della batteria. 
-6. È consigliabile anche eseguire l'override del metodo `OnStopJob`. Questo metodo viene chiamato da Android quando il processo viene arrestato prima del completamento e fornisce all'`JobService` la possibilità di eliminare correttamente le risorse. Questo metodo deve restituire `true` se è necessario ripianificare il processo oppure `false` se non è consigliabile eseguire di nuovo il processo.
+1. Estendi la `JobService` classe.
+2. Decorare la sottoclasse `ServiceAttribute` con `Name` il e impostare il parametro su una stringa costituita dal nome del pacchetto e dal nome della classe (vedere l'esempio seguente).
+3. Impostare `Permission` la `ServiceAttribute` proprietà su `android.permission.BIND_JOB_SERVICE` su .
+4. Eseguire `OnStartJob` l'override del metodo, aggiungendo il codice per eseguire il lavoro. Android richiamerà questo metodo sul thread principale dell'applicazione per eseguire il processo. Lavoro che richiederà più tempo che alcuni millisecondi devono essere eseguiti su un thread per evitare di bloccare l'applicazione.
+5. Al termine del lavoro, `JobService` è `JobFinished` necessario chiamare il metodo . Questo metodo `JobService` è `JobScheduler` il modo in cui indica che il lavoro viene eseguito. La mancata chiamata `JobFinished` `JobService` comporterà l'utilizzo di richieste non necessarie sul dispositivo, riducendo la durata della batteria. 
+6. È consigliabile eseguire anche `OnStopJob` l'override del metodo. Questo metodo viene chiamato da Android quando il processo viene `JobService` arrestato prima che venga completato e offre l'opportunità di eliminare correttamente le risorse. Questo metodo `true` deve restituire se è necessario ripianificare il processo o `false` se non è opportuno rieseguire il processo.
 
-Il codice seguente è un esempio della `JobService` più semplice per un'applicazione, usando TPL per eseguire in modo asincrono alcune operazioni:
+Il codice seguente è un `JobService` esempio del più semplice per un'applicazione, utilizzando la proprietà TPL per eseguire alcune operazioni in modo asincrono:The following code is an example of the simplest for an application, using the TPL to asynchronously perform some work:
 
 ```csharp
 [Service(Name = "com.xamarin.samples.downloadscheduler.DownloadJob", 
@@ -107,14 +107,14 @@ public class DownloadJob : JobService
 }
 ```
 
-### <a name="creating-a-jobinfo-to-schedule-a-job"></a>Creazione di un JobInfo per pianificare un processo
+### <a name="creating-a-jobinfo-to-schedule-a-job"></a>Creazione di un JobInfo per pianificare un processoCreating a JobInfo to schedule a job
 
-Le applicazioni Novell. Android non creano direttamente un'istanza di un `JobService`, bensì passano un oggetto `JobInfo` al `JobScheduler`. Il `JobScheduler` creerà un'istanza dell'oggetto `JobService` richiesto, pianificando ed eseguendo il `JobService` in base ai metadati nel `JobInfo`. Un oggetto `JobInfo` deve contenere le seguenti informazioni:
+Le applicazioni Xamarin.Android `JobService` non fanno un'istanza `JobInfo` diretta, `JobScheduler`ma passeranno un oggetto all'oggetto . Verrà `JobScheduler` creata un'istanza dell'oggetto `JobService` `JobService` richiesto, pianificando `JobInfo`ed eseguendo l'oggetto in base ai metadati nel file . Un `JobInfo` oggetto deve contenere le seguenti informazioni:
 
-- **JobId** &ndash; si tratta di un valore `int` usato per identificare un processo al `JobScheduler`. Il riutilizzo di questo valore aggiornerà eventuali processi esistenti. Il valore deve essere univoco per l'applicazione. 
-- **JobService** &ndash; questo parametro è un `ComponentName` che identifica in modo esplicito il tipo che il `JobScheduler` deve usare per eseguire un processo. 
+- **JobId** &ndash; si `int` tratta di un valore utilizzato `JobScheduler`per identificare un processo per l'oggetto . Riutilizzando questo valore verranno aggiornati tutti i processi esistenti. Il valore deve essere univoco per l'applicazione. 
+- **JobService** &ndash; questo parametro è un `ComponentName` che `JobScheduler` identifica in modo esplicito il tipo che deve essere utilizzato per eseguire un processo. 
 
-Questo metodo di estensione illustra come creare una `JobInfo.Builder` con un `Context`Android, ad esempio un'attività:
+Questo metodo di estensione `JobInfo.Builder` viene illustrato `Context`come creare un con un Android , ad esempio un'attività:This extension method demonstrates how to create a with an Android , such as an Activity:
 
 ```csharp
 public static class JobSchedulerHelpers
@@ -133,29 +133,29 @@ var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
-Una potente funzionalità dell'utilità di pianificazione dei processi Android è la possibilità di controllare quando viene eseguito un processo o in quali condizioni può essere eseguito un processo. Nella tabella seguente vengono descritti alcuni dei metodi `JobInfo.Builder` che consentono a un'applicazione di influenzare quando è possibile eseguire un processo:  
+Una funzionalità potente di Android Job Scheduler è la possibilità di controllare quando un processo viene eseguito o in quali condizioni un processo può essere eseguito. La tabella seguente descrive alcuni `JobInfo.Builder` dei metodi che consentono a un'app di influenzare l'esecuzione di un processo:  
 
 |  Metodo | Descrizione   |
 |---|---|
 | `SetMinimumLatency`  | Specifica che deve essere osservato un ritardo (in millisecondi) prima dell'esecuzione di un processo. |
-| `SetOverridingDeadline`  | Dichiara che il processo deve essere eseguito prima della scadenza (in millisecondi). |
+| `SetOverridingDeadline`  | Dichiara che il processo deve essere eseguito prima che sia trascorso questo tempo (in millisecondi). |
 | `SetRequiredNetworkType`  | Specifica i requisiti di rete per un processo. |
-| `SetRequiresBatteryNotLow` | Il processo può essere eseguito solo quando l'utente non visualizza un avviso "batteria insufficiente". |
-| `SetRequiresCharging` | Il processo può essere eseguito solo quando la batteria viene addebitata. |
+| `SetRequiresBatteryNotLow` | Il processo può essere eseguito solo quando il dispositivo non visualizza un avviso di "batteria scarica" per l'utente. |
+| `SetRequiresCharging` | Il processo può essere eseguito solo quando la batteria è in carica. |
 | `SetDeviceIdle` | Il processo verrà eseguito quando il dispositivo è occupato. |
 | `SetPeriodic` | Specifica che il processo deve essere eseguito regolarmente. |
-| `SetPersisted` | Il processo deve essere perisist tra i riavvii del dispositivo. | 
+| `SetPersisted` | Il lavoro dovrebbe perisist tra i riavvii del dispositivo. | 
 
-Il `SetBackoffCriteria` fornisce alcune indicazioni sul tempo di attesa del `JobScheduler` prima di ritentare l'esecuzione di un processo. Sono disponibili due parti per i criteri backoff: un ritardo in millisecondi (valore predefinito di 30 secondi) e il tipo di back off da usare (a volte definito _criterio backoff_ o i _criteri di ripetizione dei tentativi_). I due criteri sono incapsulati nella `Android.App.Job.BackoffPolicy` enum:
+L'oggetto `SetBackoffCriteria` fornisce alcune `JobScheduler` indicazioni su quanto tempo l'attesa deve essere attendere prima di tentare di eseguire nuovamente un processo. Esistono due parti dei criteri di backoff: un ritardo in millisecondi (valore predefinito di 30 secondi) e il tipo di back off che deve essere utilizzato (talvolta definito _criterio di backoff_ o _criterio di ripetizione dei tentativi)._ I due criteri sono `Android.App.Job.BackoffPolicy` incapsulati nell'enumerazione:
 
-- `BackoffPolicy.Exponential` &ndash; un criterio di backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. La prima volta che si verifica un errore in un processo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Si tratta del valore predefinito.
-- `BackoffPolicy.Linear` &ndash; questa strategia è una backoff lineare che il processo deve essere ripianificato per l'esecuzione a intervalli prestabiliti (fino a quando non ha esito positivo). Il backoff lineare è più adatto per il lavoro che deve essere completato il prima possibile o per i problemi che si risolveranno rapidamente. 
+- `BackoffPolicy.Exponential`&ndash; Un criterio di backoff esponenziale aumenterà il valore di backoff iniziale in modo esponenziale dopo ogni errore. La prima volta che un processo ha esito negativo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo ha esito negativo, la libreria attenderà almeno 60 secondi prima di tentare di eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Si tratta del valore predefinito.
+- `BackoffPolicy.Linear`&ndash; Questa strategia è un backoff lineare che il processo deve essere riprogrammato per l'esecuzione a intervalli prestabiliti (fino a quando non riesce). Il backoff lineare è più adatto per lavori che devono essere completati il prima possibile o per problemi che si risolveranno rapidamente. 
 
-Per altri dettagli su come creare un oggetto `JobInfo`, vedere [la documentazione di Google relativa alla classe `JobInfo.Builder`](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).
+Per maggiori dettagli `JobInfo` sulla creazione di un oggetto, leggi [la documentazione di Google per la `JobInfo.Builder` classe](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).
 
-#### <a name="passing-parameters-to-a-job-via-the-jobinfo"></a>Passaggio di parametri a un processo tramite JobInfo
+#### <a name="passing-parameters-to-a-job-via-the-jobinfo"></a>Passaggio di parametri a un processo tramite JobInfoPassing parameters to a job via the JobInfo
 
-I parametri vengono passati a un processo creando un `PersistableBundle` passato insieme al metodo `Job.Builder.SetExtras`:
+I parametri vengono passati `PersistableBundle` a un processo `Job.Builder.SetExtras` creando un oggetto che viene passato insieme al metodo :
 
 ```csharp
 var jobParameters = new PersistableBundle();
@@ -166,7 +166,7 @@ var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1)
                      .Build();
 ```
 
-È possibile accedere al `PersistableBundle` dalla proprietà `Android.App.Job.JobParameters.Extras` nel metodo `OnStartJob` di un `JobService`:
+È `PersistableBundle` possibile accedervi `Android.App.Job.JobParameters.Extras` dalla `OnStartJob` proprietà `JobService`nel metodo di :
 
 ```csharp
 public override bool OnStartJob(JobParameters jobParameters)
@@ -179,12 +179,12 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 ### <a name="scheduling-a-job"></a>Pianificazione di un processo
 
-Per pianificare un processo, un'applicazione Novell. Android otterrà un riferimento al servizio di sistema `JobScheduler` e chiamerà il metodo `JobScheduler.Schedule` con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule` restituirà immediatamente uno dei due valori integer:
+Per pianificare un processo, un'applicazione Xamarin.Android otterrà un riferimento al servizio di `JobScheduler` sistema e chiamerà il `JobScheduler.Schedule` metodo con l'oggetto `JobInfo` creato nel passaggio precedente. `JobScheduler.Schedule`verrà restituito immediatamente con uno dei due due valori interi:
 
-- **JobScheduler. ResultSuccess** &ndash; il processo è stato pianificato correttamente. 
-- **JobScheduler. ResultFailure** &ndash; non è stato possibile pianificare il processo. Questa situazione è in genere causata da parametri `JobInfo` in conflitto.
+- **JobScheduler.ResultSuccess** &ndash; Il processo è stato pianificato correttamente. 
+- **Impossibile pianificare** &ndash; il processo. Ciò è in `JobInfo` genere causato da parametri in conflitto.
 
-Questo codice è un esempio di pianificazione di un processo e di notificare all'utente i risultati del tentativo di pianificazione:
+Questo codice è un esempio di pianificazione di un processo e notifica all'utente i risultati del tentativo di pianificazione:
 
 ```csharp
 var jobScheduler = (JobScheduler)GetSystemService(JobSchedulerService);
@@ -204,7 +204,7 @@ else
 
 ### <a name="cancelling-a-job"></a>Annullamento di un processo
 
-È possibile annullare tutti i processi pianificati o solo un singolo processo usando il metodo `JobsScheduler.CancelAll()` o il metodo `JobScheduler.Cancel(jobId)`:
+È possibile annullare tutti i processi pianificati o solo `JobsScheduler.CancelAll()` un singolo `JobScheduler.Cancel(jobId)` processo utilizzando il metodo o il metodo:
 
 ```csharp
 // Cancel all jobs
@@ -216,12 +216,12 @@ jobScheduler.Cancel(1)
   
 ## <a name="summary"></a>Riepilogo
 
-Questa guida ha illustrato come usare l'utilità di pianificazione dei processi Android per eseguire in modo intelligente il lavoro in background. È stato illustrato come incapsulare il lavoro da eseguire come `JobService` e come usare i `JobScheduler` per pianificare il lavoro, specificando i criteri con una `JobTrigger` e come gestire gli errori con un `RetryStrategy`.
+Questa guida illustra come usare l'utilità di pianificazione dei processi di Android per eseguire il lavoro in modo intelligente in background. Viene illustrato come incapsulare il `JobService` lavoro da eseguire `JobScheduler` come un e come utilizzare `JobTrigger` il per pianificare tale lavoro, specificando i criteri con un e come gli errori devono essere gestiti con un `RetryStrategy`oggetto .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Pianificazione intelligente del processo](https://developer.android.com/topic/performance/scheduling.html)
+- [Pianificazione intelligente dei processi](https://developer.android.com/topic/performance/scheduling.html)
 - [Informazioni di riferimento sull'API JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)
-- [Pianificazione di processi come un Pro con JobScheduler](https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129)
-- [Ottimizzazioni della memoria e della batteria Android-Google I/O 2016 (video)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)
-- [Android JobScheduler-René Ruppert](https://www.youtube.com/watch?v=aSjBBPYjelE)
+- [Pianificazione di processi come un professionista con JobScheduler](https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129)
+- [Ottimizzazioni della batteria e della memoria Android - Google I/O 2016 (video)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)
+- [Android JobScheduler - René Ruppert](https://www.youtube.com/watch?v=aSjBBPYjelE)

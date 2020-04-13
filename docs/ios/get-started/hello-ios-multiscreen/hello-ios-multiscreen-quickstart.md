@@ -10,10 +10,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: c89a3616bfa239ba919ae9750082bcef48c9f890
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023364"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS Multiscreen - Guida introduttiva
@@ -34,26 +34,26 @@ Questa guida inizia dal punto in cui è terminato il documento Hello, iOS e rich
 
 In questa procedura dettagliata verrà aggiunta la schermata Call History all'applicazione **Phoneword**.
 
-1. Aprire l'applicazione **Phoneword** in Visual Studio per Mac. Se necessario, è possibile scaricare l'applicazione Phoneword completata nella [procedura dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md) da [qui](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
+1. Aprire l'applicazione **Phoneword** in Visual Studio per Mac. Se necessario, l'applicazione Phoneword completata dalla guida [dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md) può essere scaricata da [qui](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 2. Aprire il file **Main.storyboard** dal **riquadro della soluzione**:
 
     ![](hello-ios-multiscreen-quickstart-images/02new.png "The Main.storyboard in the iOS Designer")
 
-3. Trascinare un **controller di spostamento** dalla **casella degli strumenti** nell'area di progettazione. Può essere necessario fare zoom indietro per visualizzare tutti gli elementi nell'area di progettazione:
+3. Trascinare un controller di navigazione dalla **casella degli strumenti** nell'area di progettazione (potrebbe essere necessario eseguire lo zoom indietro per adattarli tutti nell'area di progettazione:Drag a navigation **controller** from the Toolbox onto the design surface (You might need to zoom out to fit these all on the design surface!):
 
     ![](hello-ios-multiscreen-quickstart-images/03new.png "Drag a navigation controller from the Toolbox onto the design surface")
 
-4. Trascinare il **Sourceless Segue**, ovvero la freccia grigia a sinistra del controller di visualizzazione singolo, al **controller di spostamento** per modificare il punto iniziale dell'applicazione:
+4. Trascinare il **segue senza origine** (ovvero la freccia grigia a sinistra del controller di visualizzazione singola) nel controller di **navigazione** per modificare il punto iniziale dell'applicazione:
 
     ![](hello-ios-multiscreen-quickstart-images/04new.png "Drag the Sourceless Segue to the navigation controller to change the starting point of the application")
 
-5. Selezionare il **controller visualizzazione radice** esistente facendo clic sulla barra in basso e premere **Delete** per rimuoverlo dall'area di progettazione.
-Spostare la scena **Phoneword** accanto al **controller di spostamento**:
+5. Selezionare il controller di **visualizzazione radice** esistente facendo clic sulla barra inferiore e premere **CANC** per rimuoverlo dall'area di progettazione.
+Quindi, spostare la scena **Phoneword** accanto al **controller di navigazione**:
 
     ![](hello-ios-multiscreen-quickstart-images/05new.png "Move the Phoneword scene next to the navigation controller")
 
-6. Impostare **ViewController** come **controller visualizzazione radice** del controller di spostamento. Premere il tasto **CTRL** e fare clic all'interno del **controller di spostamento**. Dovrebbe apparire una linea blu. Continuando a tenere premuto il tasto **CTRL**, trascinare dal **controller di spostamento** alla scena **Phoneword** e rilasciare. Questa operazione si chiama _trascinamento con CTRL_:
+6. Impostare **ViewController** come controller di **visualizzazione radice**del controller di spostamento. Premere il tasto **Ctrl** e fare clic all'interno del **controller di navigazione**. Dovrebbe apparire una linea blu. Quindi, tenendo premuto il **tasto Ctrl,** trascinare dal controller di **navigazione** alla scena **Phoneword** e rilasciare. Questa operazione si chiama _trascinamento con CTRL_:
 
     ![](hello-ios-multiscreen-quickstart-images/06.png "Drag from the navigation controller to the Phoneword scene and release")
 
@@ -61,7 +61,7 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
 
     ![](hello-ios-multiscreen-quickstart-images/07new.png "Setting the relationship to Root")
 
-    **ViewController** ora è il **controller visualizzazione radice del controller di spostamento**:
+    **Il ViewController** è ora controller di visualizzazione radice del controller di spostamento:The ViewController is now the **navigation controller's Root view controller:**
 
     ![](hello-ios-multiscreen-quickstart-images/08.png "The ViewController is now the navigation controllers Root view controller")
 
@@ -73,15 +73,15 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
 
     ![](hello-ios-multiscreen-quickstart-images/10new.png "Make the new Button the same width as the Call Button")
 
-10. Nel **riquadro delle proprietà** modificare il **nome** del pulsante in **CallHistoryButton** e modificare il **titolo** in **Call History**:
+10. Nel **riquadro**proprietà modificare il **nome** del pulsante in **CallHistoryButton** e il **titolo** in **Cronologia chiamate**:
 
     ![](hello-ios-multiscreen-quickstart-images/11new.png "Change the Name of the Button to CallHistoryButton and change the Title to Call History")
 
-11. Creare la schermata **Call History**. Trascinare un **controller visualizzazione tabella** dalla **casella degli strumenti** nell'area di progettazione:
+11. Creare la schermata **Call History**. Dalla **Casella degli strumenti**trascinare un controller della **visualizzazione tabella** nell'area di progettazione:
 
     ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
 
-12. Selezionare il **controller visualizzazione tabella** facendo clic sulla barra nera nella parte inferiore della scena. Nel **riquadro delle proprietà** modificare la classe del **controller visualizzazione tabella** in `CallHistoryController` e premere **INVIO**:
+12. Selezionare quindi il controller della **vista tabella** facendo clic sulla barra nera nella parte inferiore della scena. Nel **riquadro proprietà**, modificare la classe `CallHistoryController` del controller della visualizzazione **tabella** e premere **INVIO**:
 
     ![](hello-ios-multiscreen-quickstart-images/13new.png "Change the table view controllers class to CallHistoryController")
 
@@ -141,18 +141,18 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
 
     Salvare l'applicazione (**⌘ + s**) e compilarla (**⌘ + b**) per verificare che non siano presenti errori.
 
-14. Creare un _elemento Segue_ (transizione) tra la scena **Phoneword** e la scena **Call History**.
-  Nella **scena Phoneword** selezionare il **pulsante Call History** e trascinare premendo CTRL dal **pulsante** alla scena **Call History**:
+14. Creare un _segue_ (transizione) tra la scena **Phoneword** e la scena **Cronologia chiamate.**
+  Nella **scena Phoneword**, selezionare il **pulsante Cronologia chiamate** e premere CTRL e trascinare dal **pulsante** alla scena **Cronologia chiamate:**
 
     ![](hello-ios-multiscreen-quickstart-images/15.png "Ctrl-drag from the Button to the Call History scene")
 
-    Selezionare **Visualizza** nel popover **Action Segue**
+    Dal popover **Action Segue,** selezionare **Mostra**
 
     iOS Designer aggiungerà un elemento Segue tra le due scene:
 
     ![](hello-ios-multiscreen-quickstart-images/17new.png "The Segue between the two scenes")
 
-15. Aggiungere un **titolo** al **controller visualizzazione tabella** selezionando la barra nera nella parte inferiore della scena e modificando il **titolo del controller visualizzazione** in **Call History** nel **riquadro delle proprietà**:
+15. Aggiungere un **titolo** al controller di **visualizzazione tabella** selezionando la barra nera nella parte inferiore della scena e modificando il titolo del controller di **visualizzazione** in **Cronologia chiamate** nel **riquadro Proprietà**:
 
     ![](hello-ios-multiscreen-quickstart-images/18new.png "Change the view controller title to Call History in the Properties Pad")
 
@@ -160,7 +160,7 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
 
     Questa app archivierà i numeri di telefono come un elenco di stringhe.
 
-    Aggiungere una direttiva `using` per `System.Collections.Generic` nella parte superiore di **ViewController**:
+    Aggiungere `using` una `System.Collections.Generic` direttiva per nella parte superiore di **ViewController**:
 
     ```csharp
     using System.Collections.Generic;
@@ -260,9 +260,9 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
     - Il codice **CallButton** è stato modificato per aggiungere i numeri di telefono composti all'elenco dei numeri di telefono chiamando `PhoneNumbers.Add(translatedNumber)`.
     - È stato aggiunto il metodo `PrepareForSegue`.
 
-    Salvare e compilare l'applicazione per verificare che non vi siano errori.
+    Salvare e compilare l'applicazione per verificare che non ci siano errori.
 
-18. Premere il pulsante di **avvio** per avviare l'applicazione all'interno del **simulatore iOS**:
+18. Premere il pulsante **Start** per avviare l'applicazione all'interno del **simulatore iOS**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Press the Start button to launch the application inside the iOS Simulator")
 
@@ -281,20 +281,20 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
     ![](hello-ios-multiscreen-quickstart-images/image1.png "The Main.storyboard in the iOS Designer")
 
-3. Trascinare un **controller di spostamento** dalla **casella degli strumenti** nell'area di progettazione:
+3. Trascinare un controller di navigazione dalla **casella degli strumenti** nell'area di progettazione:Drag a navigation **controller** from the Toolbox onto the design surface:
 
     ![](hello-ios-multiscreen-quickstart-images/image2.png "Drag a navigation controller from the Toolbox onto the design surface")
 
-4. Trascinare il **Sourceless Segue**, ovvero la freccia grigia a sinistra della scena **Phoneword** dalla scena **Phoneword** al **controller di spostamento** per modificare il punto iniziale dell'applicazione:
+4. Trascinare il **Segue senza origine** (ovvero la freccia grigia a sinistra della scena **Phoneword)** dalla scena **Phoneword** al controller di **navigazione** per modificare il punto di partenza dell'applicazione:
 
     ![](hello-ios-multiscreen-quickstart-images/image3.png "Drag the Sourceless Segue to the navigation controller to change the starting point of the application")
 
-5. Selezionare il **controller visualizzazione radice** facendo clic sulla barra nera e premere **Delete** per rimuoverlo dall'area di progettazione.
-  Spostare la scena **Phoneword** accanto al **controller di spostamento**:
+5. Selezionare il **controller di visualizzazione radice** facendo clic sulla barra nera e premere **CANC** per rimuoverlo dall'area di progettazione.
+  Quindi, spostare la scena **Phoneword** accanto al **controller di navigazione**:
 
     ![](hello-ios-multiscreen-quickstart-images/image4.png "Move the Phoneword scene next to the navigation controller")
 
-6. Impostare **ViewController** come controller visualizzazione radice del controller di spostamento. Premere il tasto **CTRL** e fare clic all'interno del **controller di spostamento**. Dovrebbe apparire una linea blu. Continuando a tenere premuto il tasto **CTRL**, trascinare dal **controller di spostamento** alla scena **Phoneword** e rilasciare. Questa operazione si chiama _trascinamento con CTRL_:
+6. Impostare il **ViewController** come controller di visualizzazione radice del controller di navigazione. Premere il tasto **CTRL** e fare clic all'interno del **controller di spostamento**. Dovrebbe apparire una linea blu. Quindi, tenendo premuto il **tasto Ctrl,** trascinare dal controller di **navigazione** alla scena **Phoneword** e rilasciare. Questa operazione si chiama _trascinamento con CTRL_:
 
     ![](hello-ios-multiscreen-quickstart-images/image5.png "Drag from the navigation controller to the Phoneword scene and release")
 
@@ -302,7 +302,7 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
     ![](hello-ios-multiscreen-quickstart-images/image6.png "Set the relationship to Root")
 
-    **ViewController** ora è il **controller visualizzazione radice del controller di spostamento.**
+    Il **ViewController** è ora il controller di visualizzazione radice del controller di **spostamento.**
 
 8. Fare doppio clic sulla barra del **titolo** della schermata **Phoneword** e modificare il **titolo** in **Phoneword**:
 
@@ -316,11 +316,11 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
     ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
 
-11. Creare la schermata **Call History**. Trascinare un **controller visualizzazione tabella** dalla **casella degli strumenti** nell'area di progettazione:
+11. Creare la schermata **Call History**. Dalla **Casella degli strumenti**trascinare un controller della **visualizzazione tabella** nell'area di progettazione:
 
     ![](hello-ios-multiscreen-quickstart-images/image10.png "Drag a table view controller onto the design surface")
 
-12. Selezionare il **controller visualizzazione tabella** facendo clic sulla barra nera nella parte inferiore della scena. Nel **riquadro delle proprietà** modificare la classe del **controller visualizzazione tabella** in `CallHistoryController` e premere **INVIO**:
+12. Selezionare il controller della **vista tabella** facendo clic sulla barra nera nella parte inferiore della scena. In **Esplora proprietà**modificare la classe **del controller del controller della visualizzazione tabella** `CallHistoryController` e premere **INVIO:**
 
     ![](hello-ios-multiscreen-quickstart-images/image11.png "Change the table view controllers class to CallHistoryController")
 
@@ -381,8 +381,8 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
     Salvare l'applicazione e compilarla per verificare che non siano presenti errori. Per il momento si possono ignorare gli avvisi relativi alla compilazione.
 
-14. Creare un _elemento Segue_ (transizione) tra la scena **Phoneword** e la scena **Call History**.
-  Nella **scena Phoneword** selezionare il **pulsante Call History** e **trascinare premendo CTRL** dal **pulsante** alla scena **Call History**:
+14. Creare un _segue_ (transizione) tra la scena **Phoneword** e la scena **Cronologia chiamate.**
+  Nella **scena Phoneword**, selezionare il **pulsante Cronologia chiamate** e **premere CTRL e trascinare** dal **pulsante** alla scena **Cronologia chiamate:**
 
     ![](hello-ios-multiscreen-quickstart-images/image13.png "Ctrl-drag from the Button to the Call History scene")
 
@@ -394,7 +394,7 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
     ![](hello-ios-multiscreen-quickstart-images/image15.png "The Segue between the two scenes")
 
-15. Aggiungere un **titolo** al **controller visualizzazione tabella** selezionando la barra nera nella parte inferiore della scena e modificando il **titolo del controller visualizzazione** in **Call History** nel **riquadro delle proprietà**:
+15. Aggiungere un **titolo** al controller di **visualizzazione tabella** selezionando la barra nera nella parte inferiore della scena e modificando il controller di visualizzazione **> Titolo** alla cronologia delle **chiamate** in **Esplora proprietà**:
 
     ![](hello-ios-multiscreen-quickstart-images/image16.png "Change the view controller Title to Call History")
 
@@ -501,9 +501,9 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
     - Il codice **CallButton** è stato modificato per aggiungere i numeri di telefono composti all'elenco dei numeri di telefono chiamando `PhoneNumbers.Add(translatedNumber)`
     - È stato aggiunto il metodo `PrepareForSegue`
 
-    Salvare e compilare l'applicazione per verificare che non vi siano errori.
+    Salvare e compilare l'applicazione per verificare che non ci siano errori.
 
-    Salvare e compilare l'applicazione per verificare che non vi siano errori.
+    Salvare e compilare l'applicazione per verificare che non ci siano errori.
 
 18. Premere il pulsante di **avvio** per avviare l'applicazione all'interno del **simulatore iOS**:
 
@@ -517,6 +517,6 @@ L'app è ora in grado di gestire la navigazione usando gli elementi Storyboard S
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
+- [Hello, iOS (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Portale di provisioning di iOS](https://developer.apple.com/ios/manage/overview/index.action)

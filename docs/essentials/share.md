@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Condividi'
+title: 'Xamarin.Essentials: Share'
 description: La classe Share in Xamarin.Essentials consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 01/06/2020
 ms.custom: video
 ms.openlocfilehash: f964967dce0dbb7e49d52a7f865b0fe8a9957bbe
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545207"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Condividi
+# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Share
 
 La classe **Share** consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 
@@ -77,9 +77,9 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
-## <a name="presentation-location"></a>Posizione della presentazione
+## <a name="presentation-location"></a>Posizione presentazione
 
-Quando si richiede una condivisione in iPadOS è possibile presentarla in un controllo popup. È possibile specificare la posizione usando la proprietà `PresentationSourceBounds`:
+Quando richiedi una condivisione su iPadOS hai la possibilità di presentare in un controllo pop over. È possibile specificare `PresentationSourceBounds` la posizione utilizzando la proprietà:
 
 ```csharp
 await Share.RequestAsync(new ShareFileRequest

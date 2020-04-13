@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 39ee1039104052b8799debf19f09439f57a1791d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028091"
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
-Un espediente piuttosto comune a cui ricorrono gli sviluppatori per il debug delle proprie applicazioni sono le chiamate a `Console.WriteLine`. In una piattaforma per dispositivi mobili come Android, tuttavia, la console non è disponibile. I dispositivi Android specificano un log che è possibile usare durante la scrittura delle app. Questo log viene a volte indicato come _logcat_ a causa del comando digitato per recuperarlo. Usare la strumento **Log di debug** per visualizzare i dati registrati.
+Un espediente piuttosto comune a cui ricorrono gli sviluppatori per il debug delle proprie applicazioni sono le chiamate a `Console.WriteLine`. In una piattaforma per dispositivi mobili come Android, tuttavia, la console non è disponibile. I dispositivi Android specificano un log che è possibile usare durante la scrittura delle app. Questo è talvolta indicato come _logcat_ a causa del comando che si digita per recuperarlo. Usare la strumento **Log di debug** per visualizzare i dati registrati.
 
 ## <a name="android-debug-log-overview"></a>Panoramica del log di debug Android
 
@@ -32,11 +32,11 @@ Lo strumento **Log di debug** fornisce un modo per visualizzare l'output del log
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Accesso al log di debug da Visual Studio
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per aprire lo strumento **Log del dispositivo** fare clic sull'icona **Log del dispositivo (logcat)** sulla barra degli strumenti:
 
-[![Percorso dello strumento Log del dispositivo sulla barra degli strumenti](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
+[![Posizione dello strumento Device Log sulla barra degli strumenti](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
 
 In alternativa, avviare lo strumento **Log del dispositivo** da uno dei comandi di menu seguenti:
 
@@ -45,9 +45,9 @@ In alternativa, avviare lo strumento **Log del dispositivo** da uno dei comandi 
 
 Lo screenshot seguente mostra le varie parti della finestra dello **strumento di debug**:
 
-[![Parti della finestra dello strumento di debug](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
+[![Parti della finestra Strumento di debug](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
-- **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
+- **Device Selector** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
 
 - **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
 
@@ -59,23 +59,23 @@ Lo screenshot seguente mostra le varie parti della finestra dello **strumento di
 
 - **Casella di ricerca** &ndash; Consente di immettere stringhe di ricerca per filtrare le voci di log e visualizzarne un subset.
 
-Quando la finestra dello strumento **Log di debug** è visualizzata, usare il menu a discesa dei dispositivi per scegliere il dispositivo Android da monitorare:
+Quando viene visualizzata la finestra degli strumenti **Registro di debug,** utilizzare il menu a discesa del dispositivo per scegliere il dispositivo Android da monitorare:
 
-[![Posizione del selettore di dispositivo](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+[![Posizione del selettore del dispositivo](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiunge automaticamente le voci di log da un'app &ndash; in esecuzione. Queste voci di log vengono visualizzate nella tabella delle voci di log. Il passaggio da un dispositivo all'altro arresta e avvia la registrazione per il dispositivo. Si noti che è necessario caricare un progetto Android prima che vengano visualizzati tutti i dispositivi nel selettore di dispositivo. Se il dispositivo non compare nel selettore di dispositivo, verificare che sia disponibile nel menu a discesa dei dispositivi di Visual Studio accanto al pulsante **Start**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per aprire il **Log del dispositivo** fare clic su **Visualizza > Riquadri > Log del dispositivo**:
 
-[![Percorso della voce di menu Log del dispositivo](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
+[![Posizione della voce di menu Registro dispositivo](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
 
 Lo screenshot seguente mostra le varie parti della finestra dello **strumento di debug**:
 
-[![Funzionalità della finestra dello strumento di debug](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
+[![Funzionalità della finestra Strumento di debug](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
-- **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
+- **Device Selector** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
 
 - **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
 
@@ -95,7 +95,7 @@ Lo screenshot seguente mostra le varie parti della finestra dello **strumento di
 
 Quando la finestra dello strumento Log di debug è visualizzata, usare il menu a discesa dei dispositivi per scegliere il dispositivo Android da monitorare:
 
-[![Posizione del selettore di dispositivo](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+[![Posizione del selettore del dispositivo](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
 Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiunge automaticamente le voci di log da un'app &ndash; in esecuzione. Queste voci di log vengono visualizzate nella tabella delle voci di log. Il passaggio da un dispositivo all'altro arresta e avvia la registrazione per il dispositivo. Si noti che è necessario caricare un progetto Android prima che vengano visualizzati tutti i dispositivi nel selettore di dispositivo. Se il dispositivo non compare nel selettore di dispositivo, verificare che sia disponibile nel menu a discesa dei dispositivi di Visual Studio accanto al pulsante **Start**.
 
@@ -103,7 +103,7 @@ Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiu
 
 ## <a name="accessing-from-the-command-line"></a>Accesso dalla riga di comando
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Un'altra opzione per visualizzare il log di debug è tramite la riga di comando. Aprire una finestra del prompt dei comandi e passare alla cartella platform-tools di Android SDK (in genere, la cartella platform-tools dell'SDK si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools**).
 
@@ -113,7 +113,7 @@ Se è collegato solo un singolo dispositivo (dispositivo fisico o emulatore), è
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Un'altra opzione per visualizzare il log di debug è tramite la riga di comando. Aprire una finestra di Terminale e passare alla cartella platform-tools di Android SDK (in genere, la cartella platform-tools dell'SDK si trova in **/Users/nomeutente/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 
@@ -132,7 +132,7 @@ Per informazioni sugli altri comandi disponibili, immettere **adb** e leggere i 
 ## <a name="writing-to-the-debug-log"></a>Scrittura nel log di debug
 
 È possibile scrivere messaggi nel **log di debug** usando i metodi della classe [Android.Util.Log](xref:Android.Util.Log).
-Esempio: 
+Ad esempio: 
 
 ```csharp
 string tag = "myapp";
@@ -150,7 +150,7 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-È anche possibile usare `Console.WriteLine` per la scrittura nel **log di debug**. Questi messaggi vengono visualizzati in logcat con un formato di output leggermente diverso (questa tecnica è particolarmente utile durante il debug delle app Xamarin.Forms su Android):
+È anche possibile usare `Console.WriteLine` per la scrittura nel **** log di debug&ndash;. Questi messaggi vengono visualizzati in logcat con un formato di output leggermente diverso (questa tecnica è particolarmente utile durante il debug delle app Xamarin.Forms su Android):
 
 ```csharp
 System.Console.WriteLine ("DEBUG - Button Clicked!");
@@ -179,7 +179,7 @@ In particolare, individuare la riga corrispondente all'espressione regolare che 
 
 Questa è la riga che corrisponde all'inizio di un'attività e la *maggior parte* dei messaggi successivi (ma non tutti) deve essere correlata all'applicazione.
 
-Si noti che ogni messaggio contiene l'identificatore di processo (PID) del processo che genera il messaggio. Nel messaggio `ActivityManager` sopra riportato, il processo `12944` ha generato il messaggio. Per individuare il processo dell'applicazione in fase di debug, cercare il messaggio **mono.MonoRuntimeProvider**: 
+Si noti che ogni messaggio contiene l'identificatore di processo (PID) del processo che genera il messaggio. Nel messaggio `ActivityManager` sopra riportato, il processo `12944` ha generato il messaggio. Per determinare quale processo è il processo dell'applicazione sottoposta a debug, cercare il **mono. Messaggio MonoRuntimeProvider:** 
 
 ```shell
 I/ActivityThread(  602): Pub TouchTest.TouchTest.__mono_init__: mono.MonoRuntimeProvider

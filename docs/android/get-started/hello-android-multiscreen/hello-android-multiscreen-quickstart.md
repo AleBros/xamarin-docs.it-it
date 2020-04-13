@@ -10,23 +10,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75607906"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
 
-_Questa guida in due parti espande l'applicazione Phoneword per gestire una seconda schermata. I blocchi predefiniti di base per le applicazioni Android sono stati introdotti con un approfondimento dell'architettura Android._
+_Questa guida in due parti espande l'applicazione Phoneword per gestire una seconda schermata. Lungo la strada, i blocchi predefiniti delle applicazioni Android di base vengono introdotti con un'immersione più profonda nell'architettura Android._
 
 Nella parte relativa alla procedura dettagliata di questa guida, verrà aggiunta una seconda schermata all'applicazione [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) per tenere traccia della cronologia dei numeri convertiti tramite l'app. L'[applicazione finale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) avrà una seconda schermata che visualizzerà i numeri che sono stati "convertiti", come illustrato nello screenshot a destra:
 
-[![Screenshot dell'app di esempio](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Schermate dell'app di esempio](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 L'[approfondimento](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md) associato consente di rivedere ciò che è stato fatto e illustra l'architettura, lo spostamento e altri concetti nuovi di Android incontrati durante la trattazione.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 Questa guida inizia dal punto in cui [Hello, Android](~/android/get-started/hello-android/index.md) termina. È quindi necessario aver completato [Hello, Android: guida introduttiva](~/android/get-started/hello-android/hello-android-quickstart.md).
 Se si vuole passare direttamente alla procedura dettagliata che segue, è possibile scaricare la versione completata di [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (da Hello, Android: guida introduttiva) e usarla per iniziare la procedura dettagliata.
@@ -52,7 +52,7 @@ Dalla **Casella degli strumenti** trascinare un oggetto **Pulsante** nell'area d
 
 Impostare la proprietà **Testo** del pulsante su `@string/translationHistory`. Android Designer interpreterà questa istruzione in modo letterale, ma con poche modifiche il testo del pulsante verrà visualizzato correttamente:
 
-[![Impostare il testo del pulsante della cronologia delle conversioni](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
+[![Impostare il testo del pulsante Cronologia traduzioni](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
 Espandere il nodo **values** nella cartella **Risorse** in **Esplora soluzioni** e fare doppio clic sul file di risorse stringa, **Strings.xml**:
 
@@ -70,15 +70,15 @@ Aggiungere il nome e il valore della stringa `translationHistory` al file **Stri
 
 Il testo del pulsante **Translation History** (Cronologia delle conversioni) dovrebbe aggiornarsi per riflettere il nuovo valore della stringa:
 
-[![Il pulsante riflette il nuovo valore della stringa](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
+[![Button riflette il nuovo valore stringa](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
 
 Dopo aver selezionato il pulsante **Translation History** (Cronologia delle conversioni) nell'area di progettazione, individuare l'impostazione `enabled` nel riquadro **Proprietà** e impostarne il valore su `false` per disabilitare il pulsante. Il pulsante diventerà più scuro all'interno dell'area di progettazione:
 
-[![Disabilitare il pulsante della cronologia delle conversioni](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
+[![Pulsante Disattiva cronologia traduzioni](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>Creazione della seconda attività
 
-Creare una seconda attività per consentire il funzionamento della seconda schermata. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e scegliere **Aggiungi > Nuovo elemento...** :
+Creare una seconda attività per consentire il funzionamento della seconda schermata. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e scegliere **Aggiungi > Nuovo elemento...**:
 
 [![Aggiungere un nuovo file](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -172,11 +172,11 @@ translateButton.Click += (sender, e) =>
 
 Salvare e compilare l'applicazione per verificare che non ci siano errori.
 
-### <a name="running-the-app"></a>Esecuzione dell'applicazione
+### <a name="running-the-app"></a>Esecuzione dell'app
 
 Distribuire l'applicazione in un emulatore o in un dispositivo. Gli screenshot seguenti illustrano l'applicazione **Phoneword** in esecuzione:
 
-[![Screenshot di esempio](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Schermate di esempio](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -196,11 +196,11 @@ Dalla **Casella degli strumenti** trascinare un oggetto **Pulsante** nell'area d
 
 Impostare la proprietà **Testo** del pulsante su `@string/translationHistory`. Android Designer interpreterà questa istruzione in modo letterale, ma con poche modifiche il testo del pulsante verrà visualizzato correttamente:
 
-[![Impostare il testo del pulsante della cronologia delle conversioni](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
+[![Impostare il testo del pulsante Cronologia traduzioni](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
 Espandere il nodo **values** nella cartella **Risorse** nel **riquadro della soluzione** e fare doppio clic sul file di risorse stringa, **Strings.xml**:
 
-[![Aprire Strings](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
+[![Stringhe aperte](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
 
 Aggiungere il nome e il valore della stringa `translationHistory` al file **Strings.xml** e salvarlo:
 
@@ -214,15 +214,15 @@ Aggiungere il nome e il valore della stringa `translationHistory` al file **Stri
 
 Il testo del pulsante **Translation History** (Cronologia delle conversioni) dovrebbe aggiornarsi per riflettere il nuovo valore della stringa:
 
-[![Il pulsante riflette il nuovo valore della stringa](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
+[![Button riflette il nuovo valore stringa](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
-Dopo aver selezionato il pulsante **Translation History** (Cronologia delle conversioni) nell'area di progettazione, aprire la scheda **Comportamento** nel **riquadro delle proprietà** e fare doppio clic sulla casella di controllo **Abilitato**  per disabilitare il pulsante. Il pulsante diventerà più scuro all'interno dell'area di progettazione:
+Dopo aver selezionato il pulsante **Translation History** (Cronologia delle conversioni) nell'area di progettazione, aprire la scheda **Comportamento** nel **riquadro delle proprietà** e fare doppio clic sulla casella di controllo **Abilitato ** per disabilitare il pulsante. Il pulsante diventerà più scuro all'interno dell'area di progettazione:
 
-[![Disabilitare il pulsante della cronologia delle conversioni](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
+[![Pulsante Disattiva cronologia traduzioni](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>Creazione della seconda attività
 
-Creare una seconda attività per consentire il funzionamento della seconda schermata. Nel **riquadro della soluzione** fare clic sull'icona grigia a forma di ingranaggio accanto al progetto **Phoneword** e scegliere **Aggiungi > Nuovo File...** :
+Creare una seconda attività per consentire il funzionamento della seconda schermata. Nel **riquadro della soluzione** fare clic sull'icona grigia a forma di ingranaggio accanto al progetto **Phoneword** e scegliere **Aggiungi > Nuovo File... **:
 
 Nella finestra di dialogo **Nuovo file** scegliere **Android > Attività**, assegnare all'attività il nome `TranslationHistoryActivity` e quindi fare clic su **Aggiungi**.
 
@@ -309,11 +309,11 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-### <a name="running-the-app"></a>Esecuzione dell'applicazione
+### <a name="running-the-app"></a>Esecuzione dell'app
 
 Distribuire l'applicazione in un emulatore o in un dispositivo. Gli screenshot seguenti illustrano l'applicazione **Phoneword** in esecuzione:
 
-[![Screenshot di esempio](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Schermate di esempio](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 
@@ -322,5 +322,5 @@ L'applicazione Xamarin.Android multischermata è stata completata. È ora possib
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Icone e schermate di avvio delle app Xamarin (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (Phoneword - Esempio)
+- [Phoneword (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 - [PhonewordMultiscreen (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) (PhonewordMultiscreen - Esempio)

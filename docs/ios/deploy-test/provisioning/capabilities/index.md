@@ -1,6 +1,6 @@
 ---
 title: Uso delle funzionalità in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità.
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
@@ -8,22 +8,22 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
 ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028559"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione di provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità._
 
 Apple offre agli sviluppatori alcune _capacità_, spesso chiamate _servizi app_, che consentono di estendere le funzionalità e di ampliare le potenzialità dell'uso delle app iOS. Le funzionalità consentono agli sviluppatori di aggiungere all'applicazione una maggiore integrazione delle funzioni della piattaforma, ad esempio: la possibilità di avviare transazioni monetarie dall'app, servizi del dispositivo aggiuntivi, come Siri, e altro ancora.
 Queste funzionalità possono essere usate con i progetti Xamarin.iOS. L'elenco completo dei servizi è il seguente:
 
 - Gruppi di app
 - Domini associati
-- Protezione dati
+- Protezione dei dati
 - Game Center
 - HealthKit
 - HomeKit
@@ -72,7 +72,7 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio o
 
 ## <a name="using-the-ide"></a>Utilizzo di IDE
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per Mac. Per aggiungere funzionalità, seguire questa procedura:
 
@@ -80,7 +80,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Opzione Automatically manage signing (Gestisci automaticamente la firma)](images/manage-signing.png)
 
-2. Aprire il file **Entitlements.plist** e selezionare la funzionalità che si vuole aggiungere:
+2. Aprire il file **Entitlements.plist** e selezionare la funzionalità che si desidera aggiungere:
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image17.png)
 
@@ -92,7 +92,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzionalità in Visual Studio 2019, seguire questa procedura:
 
@@ -130,7 +130,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
     ![Sezione degli ID app nel centro sviluppatori](images/image6.png)
 
-4. Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo ID app.
+4. Premi **+** il pulsante nell'angolo in alto a destra per creare un nuovo ID app.
 5. Immettere una descrizione dell'ID app e immettere un ID bundle nel formato `com.domain.appname`. Questo ID bundle deve corrispondere all'ID bundle nel progetto:
 
     ![Aggiunta dei dettagli dell'ID app](images/image7.png)
@@ -150,13 +150,13 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 ### <a name="creating-a-provisioning-profile"></a>Creazione di un profilo di provisioning
 
-Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi riportati di seguito.
+Creare ora un profilo di provisioning contenente tale ID app. Attenersi alla procedura seguente:
 
 1. Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
 
     ![Sezione dei profili di provisioning](images/image10.png)
 
-2. Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
+2. Premi **+** il pulsante nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
 3. Selezionare il tipo di profilo di provisioning necessario e fare clic su **Continue** (Continua):
 
     ![Selezione del profilo di provisioning](images/image11.png)

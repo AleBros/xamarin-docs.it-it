@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: dee49d556173ec0b9544820f129eef8a9cce404f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021313"
 ---
 # <a name="publishing-independently"></a>Pubblicazione indipendente
@@ -21,7 +21,7 @@ ms.locfileid: "73021313"
 
 Sono disponibili diverse licenze per lo sviluppo, l'implementazione e la distribuzione di app Xamarin.Android:
 
-- **Visual Studio Community** &ndash; Per studenti, piccoli team e sviluppatori di sistemi operativi che usano Windows.
+- **Community di** &ndash; Visual Studio Per studenti, piccoli team e sviluppatori OSS che utilizzano Windows.
 
 - **Visual Studio Professional** &ndash; Per singoli sviluppatori o piccoli team (solo Windows). Questa licenza offre una sottoscrizione standard o cloud senza restrizioni di utilizzo.
 
@@ -33,7 +33,7 @@ Visitare il sito [visualstudio.com](https://visualstudio.microsoft.com/xamarin/)
 
 Per impostazione predefinita, Android impedisce agli utenti di scaricare e installare applicazioni da posizioni diverse da Google Play. Per consentire l'installazione da origini non marketplace, è necessario abilitare l'impostazione *Origini sconosciute* in un dispositivo prima di installare un'applicazione. Questa opzione è disponibile in **Impostazioni > Sicurezza**, come illustrato nello screenshot seguente:
 
-[![Schermata delle impostazioni Sicurezza](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
+[![Schermata Impostazioni di sicurezza](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 > [!IMPORTANT]
 > Alcuni provider di rete potrebbero impedire l'installazione di applicazioni da origini sconosciute, indipendentemente da questa impostazione.
@@ -42,7 +42,7 @@ Per impostazione predefinita, Android impedisce agli utenti di scaricare e insta
 
 Allegare la versione finale dell'APK a un messaggio di posta elettronica è un modo semplice e rapido per distribuire un'applicazione agli utenti. Quando l'utente apre il messaggio di posta elettronica in un dispositivo Android, il sistema riconoscerà l'APK allegato e visualizzerà un pulsante **Installa** come illustrato nella figura seguente:
 
-[![Pulsante Installa per l'allegato](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
+[![Pulsante Installa per allegato](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Anche se la distribuzione tramite posta elettronica è semplice, offre poche protezioni da atti di pirateria informatica o dalla distribuzione non autorizzata. È consigliabile riservarla ai casi in cui i destinatari dell'applicazione sono pochi e ci si può fidare che non distribuiscano l'applicazione.
 
@@ -55,7 +55,7 @@ Anche se la distribuzione tramite posta elettronica è semplice, offre poche pro
 L'installazione manuale è una terza opzione per l'installazione di applicazioni. Per eseguire l'installazione manuale di un'applicazione:
 
 1. **Distribuire una copia dell'APK all'utente** &ndash; Ad esempio, distribuire la copia tramite un CD o un'unità flash USB.
-1. **L'utente installa l'applicazione in un dispositivo Android** &ndash; Usare lo strumento da riga di comando *Android Debug Bridge* (**adb**). **adb** è uno strumento da riga di comando versatile che consente la comunicazione con un'istanza dell'emulatore o con un dispositivo Android. Android SDK include **adb** nella directory **\<sdk>/platform-tools/** .
+1. **L'utente installa l'applicazione in un dispositivo Android**  &ndash; Usare lo strumento da riga di comando *Android Debug Bridge* (**adb**). **adb** è uno strumento da riga di comando versatile che consente la comunicazione con un'istanza dell'emulatore o con un dispositivo Android. Android SDK include **adb** nella directory **\<sdk>/platform-tools/**.
 
 Il dispositivo Android deve essere collegato con un cavo USB al computer.
 I computer Windows potrebbero anche richiedere ulteriori driver USB dal fornitore del telefono per essere riconosciuti da **adb**. Le istruzioni per l'installazione di questi driver USB aggiuntivi esulano dagli scopi di questo documento.

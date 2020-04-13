@@ -1,6 +1,6 @@
 ---
-title: Integrazione Java con Novell. Android
-description: L'ecosistema Java include una vasta gamma di componenti. Molti di questi componenti possono essere usati per ridurre il tempo necessario per lo sviluppo di un'applicazione Android. Questo documento introduce e fornisce una panoramica di alto livello di alcuni dei modi in cui gli sviluppatori possono usare questi componenti Java esistenti per migliorare l'esperienza di sviluppo di applicazioni Novell. Android.
+title: Integrazione Java con Xamarin.Android
+description: L'ecosistema Java include una vasta e diversificata collezione di componenti. Molti di questi componenti possono essere utilizzati per ridurre il tempo necessario per sviluppare un'applicazione Android. Questo documento introdurrà e fornirà una panoramica generale di alcuni dei modi in cui gli sviluppatori possono utilizzare questi componenti Java esistenti per migliorare la loro esperienza di sviluppo di applicazioni Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
@@ -8,44 +8,44 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: ecaa02e036c74074b4fa922ea079355b72ff02e2
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020091"
 ---
-# <a name="java-integration-with-xamarinandroid"></a>Integrazione Java con Novell. Android
+# <a name="java-integration-with-xamarinandroid"></a>Integrazione Java con Xamarin.Android
 
-_L'ecosistema Java include una vasta gamma di componenti. Molti di questi componenti possono essere usati per ridurre il tempo necessario per lo sviluppo di un'applicazione Android. Questo documento introduce e fornisce una panoramica di alto livello di alcuni dei modi in cui gli sviluppatori possono usare questi componenti Java esistenti per migliorare l'esperienza di sviluppo di applicazioni Novell. Android._
+_L'ecosistema Java include una vasta e diversificata collezione di componenti. Molti di questi componenti possono essere utilizzati per ridurre il tempo necessario per sviluppare un'applicazione Android. Questo documento introdurrà e fornirà una panoramica generale di alcuni dei modi in cui gli sviluppatori possono utilizzare questi componenti Java esistenti per migliorare la loro esperienza di sviluppo di applicazioni Xamarin.Android._
 
 ## <a name="overview"></a>Panoramica
 
-Data la portata dell'ecosistema Java, è molto probabile che tutte le funzionalità necessarie per un'applicazione Novell. Android siano già state codificate in Java. Per questo motivo, è interessante provare a usare queste librerie esistenti durante la creazione di un'applicazione Novell. Android.
+Data l'estensione dell'ecosistema Java, è molto probabile che qualsiasi funzionalità necessaria per un'applicazione Xamarin.Android sia già stata codificata in Java. Per questo motivo, è interessante provare e riutilizzare queste librerie esistenti durante la creazione di un'applicazione Xamarin.Android.
 
-Esistono tre modi possibili per riutilizzare le librerie Java in un'applicazione Novell. Android: 
+Esistono tre modi per riutilizzare le librerie Java in un'applicazione Xamarin.Android:There are three possible ways to reuse Java libraries in a Xamarin.Android application: 
 
-- **Creare una libreria di binding Java** &ndash; con questa tecnica, viene usato un progetto Novell. Android per creare C# wrapper intorno ai tipi Java. Un'applicazione Novell. Android può quindi fare riferimento C# ai wrapper creati da questo progetto e quindi usare il file di `.jar`. 
+- **Creare una libreria** &ndash; di associazioni Java Con questa tecnica, un progetto Xamarin.Android viene utilizzato per creare wrapper di C , intorno ai tipi Java. Un'applicazione Xamarin.Android può quindi fare riferimento ai wrapper di `.jar` C , creati da questo progetto e quindi utilizzare il file. 
 
-- **Java Native interface** &ndash; *Java Native* *Interface* (JNI) è un Framework che consente a codice non Java (ad esempio C++ o C#) di chiamare o essere chiamato da codice Java in esecuzione all'interno di un JVM. 
+- **Java Native Interface** &ndash; (Java *Native* *Interface)* è un framework che consente a codice non Java (ad esempio, C , C , o C ) di chiamare o essere chiamato dal codice Java in esecuzione all'interno di una JVM. 
 
-- **Porta il codice** &ndash; questo metodo implica l'esecuzione del codice sorgente Java e la relativa conversione in C#. Questa operazione può essere eseguita manualmente o usando uno strumento automatizzato, ad esempio affila. 
+- **Convertire il codice** &ndash; Questo metodo comporta l'assunzione del codice sorgente Java e quindi la conversione in C . Questa operazione può essere eseguita manualmente o utilizzando uno strumento automatico come Nitidezza. 
 
-Alla base delle prime due tecniche è JNI ( *Java Native Interface* ). JNI è un Framework che consente alle applicazioni non scritte in Java di interagire con il codice Java in esecuzione in un Java Virtual Machine. Novell. Android USA JNI per creare *Binding* per C# il codice. 
+Al centro delle prime due tecniche è la *Java Native Interface* (JNI). JNI è un framework che consente alle applicazioni non scritte in Java di interagire con il codice Java in esecuzione in una Java Virtual Machine. Xamarin.Android usa JNI per creare associazioni per *il* codice C. 
 
-La prima tecnica è un approccio dichiarativo e più automatizzato per l'associazione di librerie Java. Comporta l'uso di Visual Studio per Mac o di un tipo di progetto di Visual Studio fornito da Novell. Android &ndash; libreria dei binding Java. Per creare correttamente queste associazioni, è possibile che una libreria di associazioni Java richieda alcune modifiche manuali, ma non tutti gli approcci JNI. Vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md) per altre informazioni sulle librerie di binding Java. 
+La prima tecnica è un approccio più automatizzato e dichiarativo per l'associazione di librerie Java.The first technique is a more automated, declarative approach to binding Java libraries. Implica l'utilizzo di Visual Studio per Mac o di un tipo &ndash; di progetto di Visual Studio fornito da Xamarin.Android la libreria di associazioni Java.It involves using either Visual Studio for Mac or a Visual Studio project type that is provided by Xamarin.Android the Java Bindings Library. Per creare correttamente queste associazioni, una libreria di associazioni Java può ancora richiedere alcune modifiche manuali, ma non come molti come sarebbe un approccio JNI puro. Per ulteriori informazioni sulle librerie di associazione Java, vedere [Associazione](~/android/platform/binding-java-library/index.md) di una libreria Java.See Binding a Java Library for more information about Java Binding libraries. 
 
-La seconda tecnica, che usa JNI, funziona a un livello molto inferiore, ma può fornire un controllo più preciso e l'accesso a metodi Java che in genere non sarebbero accessibili tramite una libreria di binding Java. 
+La seconda tecnica, utilizzando JNI, funziona a un livello molto inferiore, ma può fornire un controllo più preciso e l'accesso ai metodi Java che normalmente non sarebbero accessibili tramite una libreria di associazione Java. 
 
-La terza tecnica è radicalmente diversa dalle due precedenti: porting del codice da Java a C#. Il porting del codice da un linguaggio a un altro può essere un processo molto laborioso, ma è possibile ridurre tale impegno con l'ausilio di uno strumento denominato *affila*. Sharp è uno strumento open source che è un Java aC# Converter. 
+La terza tecnica è radicalmente diversa dalle due precedenti: il porting del codice da Java a C . Portare il codice da una lingua all'altra può essere un processo molto laborioso, ma è possibile ridurre tale sforzo con l'aiuto di uno strumento chiamato *Sharpen*. Sharpen è uno strumento open source che è un convertitore da Java a C. 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo documento fornisce una panoramica di alto livello di alcuni dei diversi modi in cui le librerie di Java possono essere riutilizzate in un'applicazione Novell. Android. Sono stati introdotti i concetti relativi alle associazioni e ai wrapper richiamabili gestiti e sono state illustrate le C#opzioni per il porting di codice Java a. 
+Questo documento ha fornito una panoramica generale di alcuni dei diversi modi in cui le librerie da Java possono essere riutilizzate in un'applicazione Xamarin.Android.This document provided a high-level overview of some of the different ways that libraries from Java can be reused in a Xamarin.Android application. Sono stati introdotti i concetti di associazioni e wrapper richiamabili gestiti e sono state illustrate le opzioni per il porting del codice Java in C. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Architettura](~/android/internals/architecture.md)
+- [Architecture](~/android/internals/architecture.md)
 - [Associazione di una libreria Java](~/android/platform/binding-java-library/index.md)
-- [Uso di JNI](~/android/platform/java-integration/working-with-jni.md)
+- [Lavorare con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Nitidezza](https://github.com/slluis/sharpen)
-- [Interfaccia java nativa](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Interfaccia nativa Java](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: ff1bc56ab1cf02e9e5354da94bebd0661da34bc5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028163"
 ---
 # <a name="application-package-size"></a>Dimensioni del pacchetto dell'applicazione
@@ -48,7 +48,7 @@ In Android la copia e l'installazione di un pacchetto sono relativamente lente, 
 
 La prima volta che si esegue il debug nel dispositivo, vengono copiati due pacchetti di grandi dimensioni denominati *Runtime condiviso* e *Piattaforma condivisa*. Runtime condiviso contiene il runtime Mono e la libreria di classi base, mentre Piattaforma condivisa contiene gli assembly specifici del livello API di Android:
 
-[![Dimensioni del pacchetto Runtime condiviso](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
+[![Dimensioni del pacchetto di runtime condivisoShared runtime package size](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 La copia di questi componenti principali viene eseguita solo una volta perché richiede molto tempo, ma consente alle applicazioni successive in esecuzione in modalità di debug di utilizzarli. Viene infine copiata l'applicazione effettiva, che è piccola e veloce:
 

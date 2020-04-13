@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73016520"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
 <a name="profiler" />
 
@@ -43,7 +43,7 @@ L'interfaccia `IDisposable` rappresenta un meccanismo che consente il rilascio d
 I consumer di tipi possono quindi chiamare l'implementazione di `IDisposable.Dispose` per liberare risorse quando l'istanza non è più necessaria. Per raggiungere questo obiettivo sono possibili due approcci:
 
 - Wrapping dell'oggetto `IDisposable` in un'istruzione `using`.
-- Wrapping della chiamata a `IDisposable.Dispose` in un blocco `try` / `finally`.
+- Wrapping della chiamata a `IDisposable.Dispose` in un blocco `try`/`finally`.
 
 ### <a name="wrapping-the-idisposable-object-in-a-using-statement"></a>Wrapping dell'oggetto IDisposable in un'istruzione using
 
@@ -254,8 +254,8 @@ Per altre informazioni, vedere [Panoramica del supporto asincrono](~/cross-platf
 
 I linguaggi gestiti, come C#, usano la Garbage Collection per recuperare la memoria allocata oggetti non più in uso. I due Garbage Collector usati dalla piattaforma Xamarin sono:
 
-- [**SGen** ](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/): Garbage Collector generazionale che rappresenta il Garbage Collector predefinito nella piattaforma Xamarin.
-- [**Boehm** ](http://www.hboehm.info/gc/): Garbage Collector non generazionale conservativo. È il Garbage Collector predefinito per le applicazioni Xamarin.iOS che usano l'API classica.
+- [**SGen**](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/): Garbage Collector generazionale che rappresenta il Garbage Collector predefinito nella piattaforma Xamarin.
+- [**Boehm**](http://www.hboehm.info/gc/): Garbage Collector non generazionale conservativo. È il Garbage Collector predefinito per le applicazioni Xamarin.iOS che usano l'API classica.
 
 Per allocare spazio per gli oggetti, SGen utilizza uno dei tre heap seguenti:
 
@@ -367,13 +367,13 @@ Per trasferire dati tra un'applicazione e un servizio Web, è consigliabile usar
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con la piattaforma Xamarin. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Prestazioni di Xamarin.iOS](~/ios/deploy-test/performance.md)
-- [Xamarin.Android Performance](~/android/deploy-test/performance.md) (Prestazioni di Xamarin.Android)
+- [Prestazioni di Xamarin.Android](~/android/deploy-test/performance.md)
 - [Introduzione a Xamarin Profiler](~/tools/profiler/index.md)
-- [Prestazioni di Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
-- [Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
+- [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
+- [Panoramica del supporto asincronoAsync Support Overview](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)

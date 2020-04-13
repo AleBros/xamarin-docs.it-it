@@ -1,6 +1,6 @@
 ---
 title: Funzionalità Apple Pay in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Apple Pay.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Apple Pay.
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304660"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Funzionalità Apple Pay in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità di Apple Pay._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione di provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Apple Pay._
 
 Apple Pay consente agli utenti di pagare beni tramite il dispositivo iOS. Questa sezione descrive come creare tutti i componenti necessari per Apple Pay nel centro sviluppatori Apple.
 
@@ -34,7 +34,7 @@ I passaggi seguenti consentono di creare gli elementi elencati sopra:
 
 Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accettare pagamenti e viene passato al metodo `PaymentRequest` di PassKit e usato nell'entitlement Apple Pay:
 
-1. Visitare il [centro sviluppatori Apple](https://developer.apple.com/account/) e passare alla sezione Certificates, Identifier, and Profiles (Certificati, identificatori e profili):
+1. Aprire il [centro sviluppatori Apple](https://developer.apple.com/account/) e passare alla sezione Certificates, Identifiers, and Profiles (Certificati, identificatori e profili):
 
     ![Selezione dell'ID esercente nel centro sviluppatori](apple-pay-capabilities-images/image57.png)
 
@@ -44,7 +44,7 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 
     ![Dettagli del nuovo ID esercente](apple-pay-capabilities-images/image58.png)
 
-4. Confermare i dettagli e  **registrare**  l'ID: 
+4. Confermare i dettagli e **registrare** il proprio ID: 
 
     ![Conferma dell'ID esercente](apple-pay-capabilities-images/image59.png)
 
@@ -52,11 +52,11 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 
 ## <a name="create-an-app-id-with-the-apple-pay-capability-that-includes-the-merchant-id"></a>Creare con la funzionalità Apple Pay un ID app che include l'ID esercente
 
-1. Nel [centro sviluppatori](https://developer.apple.com/account/) fare clic su **App IDs** (ID app) in **Identifiers** (Identificatori):
+1. Nel [Centro per sviluppatori](https://developer.apple.com/account/) fare clic su **Url app** in **Identificatori**:
 
     ![Selezionare l'ID app nel centro sviluppatori](apple-pay-capabilities-images/image6.png)
 
-2. Selezionare il pulsante **+** per aggiungere un nuovo ID app:
+2. Seleziona **+** il pulsante per aggiungere un nuovo ID app:
 
     ![Pulsante per aggiungere un nuovo ID app](apple-pay-capabilities-images/image27.png)
 
@@ -74,9 +74,9 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 
 6. Tornare all'elenco di ID app e selezionare quello appena creato:  
 
-    ![Modificare l'ID app](apple-pay-capabilities-images/image38.png)
+    ![Modifica ID app](apple-pay-capabilities-images/image38.png)
 
-7. Scorrere fino alla fine di questa sezione espansa e fare clic su **Edit** (Modifica).
+7. Scorrere verso il basso fino alla fine di questa sezione espansa e fare clic su **Modifica**.
 8. Scorrere l'elenco verso il basso fino ad Apple Pay e fare clic sul pulsante **Edit** (Modifica):  
 
     ![Modificare i dettagli dell'ID app di Apple Pay](apple-pay-capabilities-images/image39.png)
@@ -89,7 +89,7 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 
     ![Schermata di conferma](apple-pay-capabilities-images/image41.png)
 
-Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo di provisioning, come descritto nella guida [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Uso delle funzionalità).
+Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo di provisioning, come descritto nella guida [Utilizzo delle funzionalità.](~/ios/deploy-test/provisioning/capabilities/index.md)
 
 <a name="certificate" />
 
@@ -154,6 +154,6 @@ Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero esse
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questo _non_ è l'impostazione predefinita per le compilazioni di debug e del simulatore iOS.
+* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**.Questa _non_ è l'impostazione predefinita per le compilazioni di Debug e iOS Simulator.This is not the default setting for Debug and iOS Simulator builds.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 7d9b7dfc12c27a195e3cb797167690cded348803
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488907"
 ---
 # <a name="custom-linker-configuration"></a>Configurazione personalizzata del linker
@@ -64,4 +64,4 @@ Infine, qualsiasi tipo il cui nome completo (incluso lo spazio dei nomi) corrisp
 
 - [Collegamento in iOS](~/ios/deploy-test/linker.md)
 - [Collegamento in Android](~/android/deploy-test/linker.md)
-- [Repository GitHub del linker con esempi](https://github.com/mono/linker)
+- [Repo del linker GitHub con esempi](https://github.com/mono/linker)

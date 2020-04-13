@@ -10,10 +10,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304611"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
@@ -28,7 +28,7 @@ Questa guida consente di sviluppare le competenze e le conoscenze necessarie per
 
 Visual Studio per Mac è un ambiente di sviluppo integrato open source gratuito che combina le funzionalità di Visual Studio e di XCode. Include una finestra di progettazione visiva completamente integrata, un editor di testo completo di strumenti di refactoring, un browser di assembly, l'integrazione del codice sorgente e altro ancora. Questa guida presenta alcune funzionalità di base di Visual Studio per Mac, ma se non si ha familiarità con questo strumento, vedere la documentazione di [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/).
 
-Visual Studio per Mac segue la prassi di Visual Studio di organizzare il codice in *soluzioni* e *progetti*. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto di iPhone tramite il modello **App visualizzazione singola**. La soluzione iniziale era simile a quanto segue:
+Visual Studio per Mac segue la pratica di Visual Studio di organizzare il codice in *soluzioni* e *progetti*. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto iPhone utilizzando il modello **Applicazione a vista singola.** La soluzione iniziale era simile a quanto segue:
 
 ![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
 
@@ -39,7 +39,7 @@ Visual Studio per Mac segue la prassi di Visual Studio di organizzare il codice 
 
 Visual Studio è un potente ambiente di sviluppo integrato di Microsoft. Include una finestra di progettazione visiva completamente integrata, un editor di testo completo di strumenti di refactoring, un browser di assembly, l'integrazione del codice sorgente e altro ancora. Questa guida introduce alcune funzionalità di Visual Studio di base con gli Strumenti Xamarin per Visual Studio.
 
-Visual Studio consente di organizzare il codice in soluzioni e progetti. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto di iPhone tramite il modello **App visualizzazione singola**. La soluzione iniziale era simile a quanto segue:
+Visual Studio consente di organizzare il codice in soluzioni e progetti. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto iPhone utilizzando il modello **Applicazione a vista singola.** La soluzione iniziale era simile a quanto segue:
 
 ![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
 
@@ -49,31 +49,31 @@ Visual Studio consente di organizzare il codice in soluzioni e progetti. Una sol
 
 ::: zone pivot="macos"
 
-A sinistra è presente il **Pad della soluzione**, che contiene la struttura di directory e tutti i file associati alla soluzione:
+A sinistra c'è la **soluzione Pad**, che contiene la struttura di directory e tutti i file associati alla soluzione:
 
 ![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-A destra è presente il **riquadro della soluzione**, che contiene la struttura di directory e tutti i file associati alla soluzione:
+A destra è la **soluzione Pane**, che contiene la struttura di directory e tutti i file associati alla soluzione:
 
 ![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
 
 ::: zone-end
 
-Nella procedura dettagliata [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) è stata creata la soluzione **Phoneword** ed è stato inserito un progetto iOS, **Phoneword_iOS**, all'interno di questa. Gli elementi all'interno del progetto sono:
+Nella procedura dettagliata [Hello, iOS,](~/ios/get-started/hello-ios/hello-ios-quickstart.md) è stata creata una soluzione denominata **Phoneword** e ne è stato inserito un progetto iOS, **Phoneword_iOS** - al suo interno. Gli elementi all'interno del progetto sono:
 
-- **Riferimenti**: contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), nonché un riferimento all'assembly Xamarin.iOS.
-- **Pacchetti**: la directory Pacchetti contiene pacchetti NuGet pronti all'uso.
-- **Risorse**: nella cartella Risorse sono archiviati altri file multimediali.
+- **Riferimenti** - Contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), nonché un riferimento all'assembly Xamarin.iOS.
+- **Pacchetti:** la directory packages contiene pacchetti NuGet già pronti.
+- **Risorse:** la cartella delle risorse archivia altri supporti.
 - **Main.cs**: contiene il punto di ingresso principale dell'applicazione. Per avviare l'applicazione, è necessario passare il nome della classe principale dell'applicazione, `AppDelegate`.
 - **AppDelegate.cs**: questo file contiene la classe principale dell'applicazione ed è responsabile della creazione della finestra, della compilazione dell'interfaccia utente e dell'ascolto di eventi generati dal sistema operativo.
 - **Main.storyboard**: lo Storyboard contiene la progettazione visiva dell'interfaccia utente dell'applicazione. I file dello Storyboard vengono aperti in un editor grafico, iOS Designer.
-- **ViewController.cs**: il controller di visualizzazione aziona la schermata (visualizzazione) che viene visualizzata e toccata dall'utente. Il controller di visualizzazione è responsabile della gestione delle interazioni tra l'utente e la visualizzazione.
-- **ViewController.designer.cs**: `designer.cs` è un file generato automaticamente che funge da elemento di associazione tra i controlli nella visualizzazione e le relative rappresentazioni in codice nel controller di visualizzazione. Poiché si tratta di un file di meccanismi interni, l'IDE sovrascriverà tutte le modifiche manuali e nella maggior parte dei casi questo file può essere ignorato. Per altre informazioni sulla relazione tra la finestra di progettazione visiva e il codice di supporto, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione a iOS Designer).
-- **Info.plist**: in **Info.plist** vengono impostate le proprietà dell'applicazione, ad esempio il nome, le icone, le immagini di avvio e così via. Si tratta di un file avanzato, per il quale è disponibile un'introduzione completa nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà).
-- **Entitlements.plist**: l'elenco delle proprietà di entitlement consente di specificare le *funzionalità* dell'applicazione (dette anche tecnologie dell'App Store), ad esempio iCloud, PassKit e così via. Altre informazioni sul file **Entitlements.plist** sono disponibili nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà). Per un'introduzione generale agli entitlement, vedere la guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md).
+- **ViewController.cs:** il controller di visualizzazione alimenta lo schermo (visualizzazione) che un utente vede e tocca. Il controller di visualizzazione è responsabile della gestione delle interazioni tra l'utente e la visualizzazione.
+- **ViewController.designer.cs** : `designer.cs` si tratta di un file generato automaticamente che funge da associazione tra i controlli nella visualizzazione e le relative rappresentazioni di codice nel controller di visualizzazione. Poiché si tratta di un file di meccanismi interni, l'IDE sovrascriverà tutte le modifiche manuali e nella maggior parte dei casi questo file può essere ignorato. Per altre informazioni sulla relazione tra la finestra di progettazione visiva e il codice di supporto, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione a iOS Designer).
+- **Info.plist**: in **Info.plist** vengono impostate le proprietà dell'applicazione, ad esempio il nome, le icone, le immagini di avvio e così via. Questo è un file potente e un'introduzione completa è disponibile nella guida Utilizzo degli elenchi di [proprietà.](~/ios/app-fundamentals/property-lists.md)
+- **Entitlements.plist:** l'elenco delle proprietà dei diritti ci consente di specificare *le funzionalità* dell'applicazione (chiamate anche tecnologie App Store) come iCloud, PassKit e altro ancora. Altre informazioni sul file **Entitlements.plist** sono disponibili nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà). Per un'introduzione generale agli entitlement, vedere la guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md).
 
 ## <a name="architecture-and-app-fundamentals"></a>Concetti fondamentali dell'architettura e delle app
 
@@ -136,7 +136,7 @@ Dopo che l'applicazione ha definito la finestra (Window), può iniziare a carica
 
 ## <a name="user-interface"></a>Interfaccia utente
 
-L'interfaccia utente di un'app iOS è come una vetrina: l'applicazione ha in genere una sola vetrina (corrispondente alla finestra), ma può riempirla con tutti gli oggetti necessari. Gli oggetti e la loro disposizione possono essere modificati secondo le esigenze dell'applicazione. Gli oggetti di questo scenario, ovvero gli elementi visibili per l'utente, sono chiamati visualizzazioni. In un'applicazione con un'unica finestra, le visualizzazioni vengono disposte una sopra l'altra in una *gerarchia di visualizzazione del contenuto* gestita da un unico controller di visualizzazione. Le applicazioni con più schermate hanno più gerarchie di visualizzazione del contenuto, ognuna con un proprio controller di visualizzazione, e l'applicazione inserisce visualizzazioni nella finestra per creare gerarchie di visualizzazione del contenuto diverse in base alla schermata visualizzata dall'utente.
+L'interfaccia utente di un'app iOS è come una vetrina: l'applicazione ha in genere una sola vetrina (corrispondente alla finestra), ma può riempirla con tutti gli oggetti necessari. Gli oggetti e la loro disposizione possono essere modificati secondo le esigenze dell'applicazione. Gli oggetti di questo scenario, ovvero gli elementi visibili per l'utente, sono chiamati visualizzazioni. Per compilare una singola schermata in un'applicazione, le visualizzazioni sono impilate una sopra l'altra in una *gerarchia*di visualizzazione del contenuto e la gerarchia è gestita da un singolo controller di visualizzazione. Le applicazioni con più schermate hanno più gerarchie di visualizzazione del contenuto, ognuna con un proprio controller di visualizzazione, e l'applicazione inserisce visualizzazioni nella finestra per creare gerarchie di visualizzazione del contenuto diverse in base alla schermata visualizzata dall'utente.
 
 Questa sezione approfondisce l'argomento dell'interfaccia utente descrivendo le visualizzazioni, le gerarchie di visualizzazione del contenuto e iOS Designer.
 
@@ -148,11 +148,11 @@ iOS Designer è uno strumento visivo per la creazione di interfacce utente in Xa
 
 ![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
 
-Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate dell'applicazione, nonché le transizioni e le relazioni tra le schermate. La rappresentazione di una schermata di un'applicazione in uno Storyboard è chiamata _scena_. Ogni scena rappresenta un controller di visualizzazione e la pila di visualizzazioni gestite da quest'ultimo (gerarchia di visualizzazione del contenuto). Quando si crea un nuovo progetto di **applicazione visualizzazione singola** da un modello, Visual Studio per Mac genera automaticamente un file Storyboard denominato `Main.storyboard` e lo popola con un'unica scena, come illustrato nello screenshot seguente:
+Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate dell'applicazione, nonché le transizioni e le relazioni tra le schermate. La rappresentazione di una schermata di un'applicazione in uno Storyboard è chiamata _scena_. Ogni scena rappresenta un controller di visualizzazione e la pila di visualizzazioni gestite da quest'ultimo (gerarchia di visualizzazione del contenuto). Quando viene creato un nuovo progetto **di applicazione a visualizzazione singola** da `Main.storyboard` un modello, Visual Studio per Mac genera automaticamente un file Storyboard chiamato e lo popola con una singola scena, come illustrato nella schermata seguente:When a new Single View Application project is created from a template, Visual Studio for Mac automatically generates a Storyboard file called and populates it with a single Scene, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
-È possibile selezionare la barra di colore nero nella parte inferiore della schermata dello Storyboard per scegliere il controller di visualizzazione per la scena. Il controller di visualizzazione è un'istanza della classe `UIViewController` che contiene il codice sottostante per la gerarchia di visualizzazione del contenuto. Le proprietà del controller di visualizzazione possono essere visualizzate e impostate all'interno del **riquadro delle proprietà**, come illustrato nello screenshot seguente:
+È possibile selezionare la barra di colore nero nella parte inferiore della schermata dello Storyboard per scegliere il controller di visualizzazione per la scena. Il controller di visualizzazione è un'istanza della classe `UIViewController` che contiene il codice sottostante per la gerarchia di visualizzazione del contenuto. Le proprietà in questo controller di visualizzazione possono essere visualizzate e impostate all'interno del **riquadro Proprietà**, come illustrato nella schermata seguente:
 
 ![](hello-ios-deepdive-images/image35.png "The Properties Pane")
 
@@ -161,11 +161,11 @@ Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate
 
 ![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
 
-Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate dell'applicazione, nonché le transizioni e le relazioni tra le schermate. La rappresentazione di una schermata di un'applicazione in uno Storyboard è chiamata _scena_. Ogni scena rappresenta un controller di visualizzazione e la pila di visualizzazioni gestite da quest'ultimo (gerarchia di visualizzazione del contenuto). Quando si crea un nuovo progetto di **applicazione visualizzazione singola** da un modello, Visual Studio genera automaticamente un file Storyboard denominato `Main.storyboard` e lo popola con un'unica scena, come illustrato nello screenshot seguente:
+Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate dell'applicazione, nonché le transizioni e le relazioni tra le schermate. La rappresentazione di una schermata di un'applicazione in uno Storyboard è chiamata _scena_. Ogni scena rappresenta un controller di visualizzazione e la pila di visualizzazioni gestite da quest'ultimo (gerarchia di visualizzazione del contenuto). Quando viene creato un nuovo progetto **di applicazione a visualizzazione** singola `Main.storyboard` da un modello, Visual Studio genera automaticamente un file Storyboard chiamato e lo popola con una singola scena, come illustrato nella schermata seguente:When a new Single View Application project is created from a template, Visual Studio automatically generates a Storyboard file called and populates it with a single Scene, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
-È possibile selezionare la barra nella parte inferiore della schermata dello Storyboard per scegliere il controller di visualizzazione per la scena. Il controller di visualizzazione è un'istanza della classe `UIViewController` che contiene il codice sottostante per la gerarchia di visualizzazione del contenuto. Le proprietà del controller di visualizzazione possono essere visualizzate e impostate all'interno del **riquadro Proprietà**, come illustrato nello screenshot seguente:
+È possibile selezionare la barra nella parte inferiore della schermata dello Storyboard per scegliere il controller di visualizzazione per la scena. Il controller di visualizzazione è un'istanza della classe `UIViewController` che contiene il codice sottostante per la gerarchia di visualizzazione del contenuto. Le proprietà in questo controller di visualizzazione possono essere visualizzate e impostate all'interno del **riquadro Proprietà**, come illustrato nella schermata seguente:
 
 ![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
 
@@ -177,9 +177,9 @@ A sinistra della scena si trova una freccia grigia con l'icona della bandierina,
 
  [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
 
-La freccia grigia rappresenta una transizione dello Storyboard denominata *Segue* (si pronuncia "seg-way"). Poiché questa transizione non ha origine, viene detta *Sourceless Segue*. Un Sourceless Segue punta alla prima scena le cui visualizzazioni vengono caricate nella finestra dell'applicazione all'avvio di quest'ultima. Tale scena e le visualizzazioni all'interno di questa sono i primi elementi che l'utente vede quando l'applicazione viene caricata.
+La freccia grigia rappresenta una transizione storyboard denominata *Segue* (pronunciata "seg-way"). Poiché questo segue non ha origine, viene chiamato *Sourceless Segue*. Un Sourceless Segue punta alla prima scena le cui visualizzazioni vengono caricate nella finestra dell'applicazione all'avvio di quest'ultima. Tale scena e le visualizzazioni all'interno di questa sono i primi elementi che l'utente vede quando l'applicazione viene caricata.
 
-Quando si crea un'interfaccia utente, è possibile trascinare visualizzazioni aggiuntive dalla **casella degli strumenti** alla visualizzazione principale nell'area di progettazione, come illustrato nello screenshot seguente:
+Quando si compila un'interfaccia utente, le visualizzazioni aggiuntive possono essere trascinate dalla **casella degli strumenti** nella visualizzazione principale nell'area di progettazione, come illustrato nella schermata seguente:When building a user interface, additional Views can be dragged from the Toolbox onto the main view on the design surface, as illustrated by the screenshot below:
 
 ::: zone pivot="macos"
 
@@ -192,7 +192,7 @@ Quando si crea un'interfaccia utente, è possibile trascinare visualizzazioni ag
 
 ::: zone-end
 
-Queste visualizzazioni aggiuntive sono dette *visualizzazioni secondarie*. La visualizzazione radice e le visualizzazioni secondarie fanno parte di una *gerarchia di visualizzazione del contenuto* gestita da `ViewController`. La struttura di tutti gli elementi presenti nella scena può essere esaminata nel riquadro **Struttura documento**:
+Queste visualizzazioni aggiuntive sono dette *visualizzazioni secondarie*. Insieme, la visualizzazione radice e le visualizzazioni secondarie fanno `ViewController`parte di una *gerarchia* di visualizzazione del contenuto gestita dall'oggetto . La struttura di tutti gli elementi nella scena può essere visualizzata esaminandola nel **riquadro Struttura documento:**
 
 ::: zone pivot="macos"
 
@@ -222,7 +222,7 @@ La prossima sezione analizza la gerarchia di visualizzazione del contenuto rappr
 
 ## <a name="content-view-hierarchy"></a>Gerarchia di visualizzazione del contenuto
 
-Una _gerarchia di visualizzazione del contenuto_ è una serie di visualizzazioni e visualizzazioni secondarie disposte in pila e gestite da un unico controller di visualizzazione, come illustrato nel diagramma riportato di seguito:
+Una gerarchia di _visualizzazioni contenuto_ è uno stack di visualizzazioni e visualizzazioni secondarie gestite da un singolo controller di visualizzazione, come illustrato nel diagramma seguente:A Content View Hierarchy is a stack of Views and Subviews managed by a single view controller, as illustrated by the diagram below:
 
  [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
 
@@ -253,28 +253,28 @@ A ogni gerarchia di visualizzazione del contenuto corrisponde un controller di v
 
 ::: zone pivot="macos"
 
-All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Quando si seleziona il controller di visualizzazione, vengono visualizzate le proprietà nel **riquadro delle proprietà**:
+All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Selezionando il controller di visualizzazione vengono visualizzate le relative proprietà nel **riquadro Proprietà:**
 
 ![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
-È possibile impostare una classe controller di visualizzazione personalizzata per la gerarchia di visualizzazione del contenuto rappresentata da questa scena modificando la proprietà **Classe** nella sezione **Identità** del **riquadro delle proprietà**. L'applicazione **Phoneword**, ad esempio, imposta `ViewController` come controller di visualizzazione per la prima schermata, come illustrato nello screenshot riportato di seguito:
+È possibile impostare una classe controller di visualizzazione personalizzata per la gerarchia di visualizzazione contenuto rappresentata da questa scena modificando la proprietà **Class** nella sezione **Identity** del **riquadro delle proprietà**. Ad esempio, l'applicazione `ViewController` Phoneword imposta il controller di visualizzazione come per la prima schermata, come illustrato nella schermata seguente:For example, our **Phoneword** application sets the as the view controller for our first screen, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Quando si seleziona il controller di visualizzazione, vengono visualizzate le proprietà nel **riquadro Proprietà**:
+All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Selezionando il controller di visualizzazione vengono visualizzate le relative proprietà nel **riquadro Proprietà**:
 
 ![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
-È possibile impostare una classe controller di visualizzazione personalizzata per la gerarchia di visualizzazione del contenuto rappresentata da questa scena modificando la proprietà **Classe** nella sezione **Identità** del **riquadro Proprietà**. L'applicazione **Phoneword**, ad esempio, imposta `ViewController` come controller di visualizzazione per la prima schermata, come illustrato nello screenshot riportato di seguito:
+È possibile impostare una classe controller di visualizzazione personalizzata per la gerarchia di visualizzazione contenuto rappresentata da questa scena modificando la proprietà **Class** nella sezione **Identity** del **riquadro Proprietà**. Ad esempio, l'applicazione `ViewController` Phoneword imposta il controller di visualizzazione come per la prima schermata, come illustrato nella schermata seguente:For example, our **Phoneword** application sets the as the view controller for our first screen, as illustrated by the screenshot below:
 
 ![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
 
 ::: zone-end
 
-Questa operazione collega la rappresentazione del controller di visualizzazione nello Storyboard alla classe C# `ViewController`. Aprire il file `ViewController.cs`. Si noti che ViewController è una *sottoclasse* di `UIViewController`, come illustrato nel codice seguente:
+Questa operazione collega la rappresentazione del controller di visualizzazione nello Storyboard alla classe C# `ViewController`. Aprire `ViewController.cs` il controller di visualizzazione file `UIViewController`e avviso è una *sottoclasse* di , come illustrato dal codice seguente:
 
 ```csharp
 public partial class ViewController : UIViewController
@@ -297,14 +297,14 @@ Il controller di visualizzazione ha il compito di caricare e scaricare le gerarc
 
 Ecco i metodi di base del ciclo di vita e le funzioni corrispondenti:
 
-- **ViewDidLoad**: viene chiamato *una volta* la prima volta che il controller di visualizzazione carica la propria gerarchia di visualizzazione del contenuto in memoria. Questo è un ottimo momento per eseguire la configurazione iniziale, perché è il momento in cui le visualizzazioni secondarie diventano disponibili nel codice.
-- **ViewWillAppear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere aggiunta a una gerarchia di visualizzazione del contenuto e compare sullo schermo.
-- **ViewWillDisappear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere rimossa da una gerarchia di visualizzazione del contenuto e scompare dallo schermo. Questo evento del ciclo di vita viene usato per la pulizia e il salvataggio dello stato.
+- **ViewDidLoad** -chiamato *una volta* la prima volta che il controller di visualizzazione carica la gerarchia di visualizzazione del contenuto in memoria. Questo è un ottimo momento per eseguire la configurazione iniziale, perché è il momento in cui le visualizzazioni secondarie diventano disponibili nel codice.
+- **ViewWillAppear** -chiamato ogni volta che la visualizzazione di un controller di visualizzazione sta per essere aggiunto a una gerarchia di visualizzazione del contenuto e vengono visualizzati sullo schermo.
+- **ViewWillDisappear** -chiamato ogni volta che la visualizzazione di un controller di visualizzazione sta per essere rimosso da una gerarchia di visualizzazione del contenuto e scompaiono dallo schermo. Questo evento del ciclo di vita viene usato per la pulizia e il salvataggio dello stato.
 - **ViewDidAppear** e **ViewDidDisappear**: vengono chiamati quando una visualizzazione viene rispettivamente aggiunta o rimossa dalla gerarchia di visualizzazione del contenuto.
 
 Quando si aggiunge codice personalizzato a una qualsiasi fase del ciclo di vita, è necessario *eseguire l'override* dell'*implementazione di base* del metodo corrispondente del ciclo di vita. A questo scopo, toccare il metodo del ciclo di vita esistente, a cui è già associato del codice, e ampliare quest'ultimo con codice aggiuntivo. L'implementazione di base viene chiamata dall'interno del metodo per assicurarsi che il codice originale venga eseguito prima del nuovo codice. Un esempio di queste operazioni è illustrato nella prossima sezione.
 
-Per altre informazioni sull'uso dei controller di visualizzazione, vedere [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) (Guida alla programmazione del controller di visualizzazione) e [UIViewController reference](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc) (Informazioni di riferimento su UIViewController) nel sito Web Apple.
+Per altre informazioni sull'uso dei controller di visualizzazione, vedere Guida alla programmazione del controller di visualizzazione di Apple [per iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) e il [riferimento UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
 ### <a name="responding-to-user-interaction"></a>Risposta all'interazione dell'utente
 
@@ -315,7 +315,7 @@ Nel progetto `Phoneword_iOS`, è stato aggiunto il pulsante `TranslateButton` al
 
 [![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
 
-Quando viene assegnato un **Nome** al controllo **Pulsante** nel **riquadro delle proprietà**, iOS Designer ne esegue automaticamente il mapping a un controllo in  **ViewController.designer.cs**, rendendo disponibile il pulsante `TranslateButton` all'interno della classe `ViewController`. I controlli diventano disponibili a partire dalla fase `ViewDidLoad` del ciclo di vita della visualizzazione. Per rispondere al tocco dell'utente viene quindi usato questo metodo del ciclo di vita:
+Quando viene assegnato un **Nome** al controllo **Pulsante** nel **riquadro delle proprietà**, iOS Designer ne esegue automaticamente il mapping a un controllo in ** ViewController.designer.cs**, rendendo disponibile il pulsante `TranslateButton` all'interno della classe `ViewController`. I controlli diventano disponibili a partire dalla fase `ViewDidLoad` del ciclo di vita della visualizzazione. Per rispondere al tocco dell'utente viene quindi usato questo metodo del ciclo di vita:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -355,7 +355,7 @@ public override void ViewDidLoad ()
 
 L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa guida. Essi includono:
 
-- **Modifica del testo del pulsante**: l'app Phoneword ha illustrato come modificare il testo di un **Pulsante** chiamando `SetTitle` per il **Pulsante** stesso e passando il nuovo testo e lo  **stato del controllo**del _Pulsante_. Il codice seguente, ad esempio, modifica il testo dell'elemento CallButton in "Call" (Chiama):
+- **Modifica del testo del pulsante**: l'app Phoneword ha illustrato come modificare il testo di un **Pulsante** chiamando `SetTitle` per il **Pulsante** stesso e passando il nuovo testo e lo ** stato del controllo**del _Pulsante_. Il codice seguente, ad esempio, modifica il testo dell'elemento CallButton in "Call" (Chiama):
 
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
@@ -387,7 +387,7 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
     }
     ```
 
-- **Visualizzazione di un avviso**: quando un utente tenta di effettuare una chiamata telefonica in un dispositivo che non supporta tali chiamate, ad esempio il simulatore o un iPod Touch, viene visualizzata una finestra di dialogo di avviso che informa l'utente che la chiamata non può essere effettuata. Il codice seguente crea e popola un controller di avvisi:
+- **Mostra un avviso:** quando un utente tenta di effettuare una chiamata telefonica su un dispositivo che non supporta le chiamate, ad esempio il simulatore o un iPod Touch, viene visualizzata una finestra di dialogo di avviso per indire all'utente che la chiamata telefonica non può essere effettuata. Il codice seguente crea e popola un controller di avvisi:
 
     ```csharp
     if (!UIApplication.SharedApplication.OpenUrl (url)) {
@@ -435,7 +435,7 @@ L'app verrà distribuita nel dispositivo iOS:
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Generare icone e immagini di avvio personalizzate
 
-Non tutti hanno a disposizione una finestra di progettazione per creare le icone personalizzate e le immagini di avvio che devono essere rilevate da un'app. Ecco alcuni approcci alternativi per la generazione di immagini personalizzate per le app:
+Non tutti hanno una finestra di progettazione disponibile per creare le icone personalizzate e le immagini di avvio di cui un'app deve distinguersi. Ecco diversi approcci alternativi per generare grafica dell'app personalizzata:
 
 ::: zone pivot="macos"
 
@@ -459,6 +459,6 @@ Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
+- [Hello, iOS (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portale di provisioning di iOS](https://developer.apple.com/account/#/overview)

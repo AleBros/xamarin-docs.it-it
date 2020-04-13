@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79305024"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App di Xamarin.Forms
@@ -20,10 +20,10 @@ ms.locfileid: "79305024"
 La classe di base `Application` offre le funzionalità seguenti, che vengono esposte nella sottoclasse predefinita `App` del progetto:
 
 * Una proprietà `MainPage`, dove deve essere impostata la pagina iniziale per l'app.
-* Un [dizionario `Properties`](#Properties_Dictionary) persistente per archiviare valori semplici per tutte le modifiche di stato del ciclo di vita.
+* Dizionario [ `Properties` ](#Properties_Dictionary) persistente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
 * Una proprietà `Current` statica che contiene un riferimento all'oggetto applicazione corrente.
 
-Espone inoltre [metodi del ciclo di vita](~/xamarin-forms/app-fundamentals/app-lifecycle.md), ad esempio `OnStart`, `OnSleep` e `OnResume`, nonché eventi di navigazione modale.
+Espone inoltre [metodi del](~/xamarin-forms/app-fundamentals/app-lifecycle.md) `OnStart`ciclo `OnSleep`di `OnResume` vita quali , , e nonché eventi di spostamento modale.
 
 A seconda del modello scelto, la classe `App` può essere definita in uno dei due modi seguenti:
 
@@ -54,7 +54,7 @@ public partial class App : Application
 }
 ```
 
-Oltre a impostare la proprietà [`MainPage`](xref:Xamarin.Forms.Application.MainPage), il code-behind deve anche chiamare il metodo `InitializeComponent` per caricare e analizzare il codice XAML associato.
+Oltre a impostare la [`MainPage`](xref:Xamarin.Forms.Application.MainPage) proprietà, il code-behind deve chiamare anche il `InitializeComponent` metodo per caricare e analizzare il codice XAML associato.
 
 ## <a name="mainpage-property"></a>Proprietà MainPage
 

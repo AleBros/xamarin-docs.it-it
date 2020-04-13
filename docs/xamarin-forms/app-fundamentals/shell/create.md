@@ -8,21 +8,21 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68739300"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Creare un'applicazione shell Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Il processo per la creazione di un'applicazione shell Xamarin.Forms è il seguente:
 
 1. Creare una nuova applicazione Xamarin.Forms oppure caricare un'applicazione esistente che si vuole convertire in applicazione shell.
 1. Aggiungere un file XAML al progetto di codice condiviso, che rappresenta una sottoclasse della classe `Shell`. Per altre informazioni, vedere [Creare una sottoclasse della classe Shell](#subclass-the-shell-class).
-1. Impostare la proprietà [`MainPage`](xref:Xamarin.Forms.Application.MainPage) della classe `App` dell'applicazione sull'oggetto `Shell` sottoclassato. Per altre informazioni, vedere [Bootstrap dell'applicazione shell](#bootstrap-the-shell-application).
+1. Impostare [`MainPage`](xref:Xamarin.Forms.Application.MainPage) la proprietà della `App` classe dell'applicazione `Shell` sull'oggetto sottoclassato. Per altre informazioni, vedere [Bootstrap dell'applicazione shell](#bootstrap-the-shell-application).
 1. Descrivere la gerarchia visiva dell'applicazione nella classe `Shell` sottoclassata. Per altre informazioni, vedere [Descrivere la gerarchia visiva dell'applicazione](#describe-the-visual-hierarchy-of-the-application).
 
 ## <a name="subclass-the-shell-class"></a>Creare una sottoclasse della classe Shell
@@ -56,7 +56,7 @@ namespace Xaminals
 
 ## <a name="bootstrap-the-shell-application"></a>Bootstrap dell'applicazione shell
 
-Dopo aver creato il file XAML che crea una sottoclasse dell'oggetto `Shell`, la proprietà [`MainPage`](xref:Xamarin.Forms.Application.MainPage) della classe `App` deve essere impostata sull'oggetto `Shell` sottoclassato:
+Dopo aver creato il file `Shell` XAML [`MainPage`](xref:Xamarin.Forms.Application.MainPage) che crea `App` una sottoclasse dell'oggetto, la proprietà della classe deve essere impostata sull'oggetto sottoclassato: `Shell`
 
 ```csharp
 namespace Xaminals
@@ -128,14 +128,14 @@ Il codice XAML seguente mostra un esempio di classe `Shell` sottoclassata:
 
 Quando eseguito, questo codice XAML visualizza `CatsPage`, perché è il primo elemento del contenuto dichiarato nella classe `Shell` sottoclassata:
 
-[![Screenshot di un'app shell, in iOS e Android](create-images/cats.png "App shell")](create-images/cats-large.png#lightbox "App shell")
+[![Screenshot di un'app Shell, su iOS e Android](create-images/cats.png "App Shell")](create-images/cats-large.png#lightbox "App Shell")
 
 Premendo l'icona hamburger oppure scorrendo rapidamente da sinistra viene visualizzato il riquadro a comparsa:
 
 [![Screenshot di un riquadro a comparsa della shell, in iOS e Android](create-images/flyout-reduced.png "Riquadro a comparsa della shell")](create-images/flyout-reduced-large.png#lightbox "Riquadro a comparsa della shell")
 
 > [!IMPORTANT]
-> In un'applicazione shell ogni elemento [`ContentPage`](xref:Xamarin.Forms.ContentPage) figlio di un oggetto `ShellContent` viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading) nella guida [Schede della shell Xamarin.Forms](tabs.md).
+> In un'applicazione [`ContentPage`](xref:Xamarin.Forms.ContentPage) Shell, ogni elemento `ShellContent` figlio di un oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading) nella guida [Schede della shell Xamarin.Forms](tabs.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

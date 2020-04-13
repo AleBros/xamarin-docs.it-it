@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771489"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passare parametri a un effetto come proprietà associate
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
-_Le proprietà associate possono essere usate per definire i parametri di effetto che rispondono a modifiche delle proprietà in fase di esecuzione. Questo articolo spiega come usare le proprietà associate per passare i parametri a un effetto e come modificare un parametro in fase di esecuzione._
+_Le proprietà associate possono essere utilizzate per definire i parametri degli effetti che rispondono alle modifiche delle proprietà di runtime. In questo articolo viene illustrato l'utilizzo delle proprietà associate per passare i parametri a un effetto e la modifica di un parametro in fase di esecuzione._
 
 Il processo di creazione dei parametri per un effetto che rispondono a modifiche delle proprietà in fase di esecuzione è il seguente:
 
@@ -33,13 +33,13 @@ I parametri possono quindi essere passati all'effetto aggiungendo le proprietà 
 > [!NOTE]
 > Le proprietà associate sono un tipo speciale di proprietà associabile, definite in una classe ma associate ad altri oggetti. Sono riconoscibili in XAML perché si presentano come attributi che contengono una classe e un nome di proprietà separati da un punto. Per altre informazioni, vedere [Proprietà associate](~/xamarin-forms/xaml/attached-properties.md).
 
-L'applicazione di esempio illustra un `ShadowEffect` che aggiunge un'ombreggiatura al testo visualizzato da un controllo [`Label`](xref:Xamarin.Forms.Label). Inoltre, il colore dell'ombreggiatura può essere modificato in fase di esecuzione. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazione tra di esse:
+L'applicazione di `ShadowEffect` esempio viene illustrato un che [`Label`](xref:Xamarin.Forms.Label) aggiunge un'ombreggiatura al testo visualizzato da un controllo. Inoltre, il colore dell'ombreggiatura può essere modificato in fase di esecuzione. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazioni tra di essi:
 
-![](attached-properties-images/shadow-effect.png "Responsabilità dei progetti per l'effetto di ombreggiatura")
+![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
-Un controllo [`Label`](xref:Xamarin.Forms.Label) per la `HomePage` è personalizzato da `LabelShadowEffect` in ogni progetto specifico della piattaforma. I parametri vengono passati a ogni `LabelShadowEffect` tramite le proprietà associate nella classe `ShadowEffect`. Ogni classe `LabelShadowEffect` deriva dalla classe `PlatformEffect` per ogni piattaforma. Il risultato è l'aggiunta di un'ombreggiatura al testo visualizzato dal controllo `Label`, come illustrato negli screenshot seguenti:
+Un [`Label`](xref:Xamarin.Forms.Label) controllo `HomePage` su è personalizzato `LabelShadowEffect` dal in ogni progetto specifico della piattaforma. I parametri vengono passati a ogni `LabelShadowEffect` tramite le proprietà associate nella classe `ShadowEffect`. Ogni classe `LabelShadowEffect` deriva dalla classe `PlatformEffect` per ogni piattaforma. Il risultato è l'aggiunta di un'ombreggiatura al testo visualizzato dal controllo `Label`, come illustrato negli screenshot seguenti:
 
-![](attached-properties-images/screenshots.png "Effetto di ombreggiatura per ogni piattaforma")
+![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>Creazione di parametri di effetto
 
@@ -99,14 +99,14 @@ public static class ShadowEffect
 
 L'elemento `ShadowEffect` contiene cinque proprietà associate, con getter e setter `static` per ogni proprietà associata. Quattro di queste proprietà rappresentano i parametri da passare a ogni `LabelShadowEffect` specifico della piattaforma. La classe `ShadowEffect` definisce anche una proprietà associata `HasShadow` che verrà usata per controllare l'aggiunta dell'effetto al controllo, o la sua rimozione dal controllo, a cui la classe `ShadowEffect` verrà associata. Tale proprietà associata registra il metodo `OnHasShadowChanged` che verrà eseguito quando cambia il valore della proprietà. Questo metodo aggiunge o rimuove l'effetto in base al valore della proprietà `HasShadow` associata.
 
-La classe `LabelShadowEffect` annidata, che crea una sottoclasse della classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), supporta l'aggiunta e la rimozione dell'effetto. La classe `RoutingEffect` rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno, in genere specifico della piattaforma. Ciò semplifica il processo di rimozione dell'effetto, poiché non è previsto l'accesso alle informazioni sul tipo in fase di compilazione per un effetto specifico della piattaforma. Il costruttore `LabelShadowEffect` chiama il costruttore della classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e dell'ID univoco specificato per ogni classe di effetto specifica della piattaforma. Questo abilita l'aggiunta e la rimozione dell'effetto nel metodo `OnHasShadowChanged`, come indicato di seguito:
+La `LabelShadowEffect` classe annidata, [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) che sottoclassi della classe, supporta l'aggiunta e la rimozione degli effetti. La classe `RoutingEffect` rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno, in genere specifico della piattaforma. Ciò semplifica il processo di rimozione dell'effetto, poiché non è previsto l'accesso alle informazioni sul tipo in fase di compilazione per un effetto specifico della piattaforma. Il costruttore `LabelShadowEffect` chiama il costruttore della classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e dell'ID univoco specificato per ogni classe di effetto specifica della piattaforma. Questo abilita l'aggiunta e la rimozione dell'effetto nel metodo `OnHasShadowChanged`, come indicato di seguito:
 
-- **Aggiunta dell'effetto**: una nuova istanza di `LabelShadowEffect` viene aggiunta alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo. Questa operazione sostituisce l'utilizzo del metodo [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) per aggiungere l'effetto.
+- **Aggiunta dell'effetto**: una nuova istanza di `LabelShadowEffect` viene aggiunta alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo. Questo sostituisce [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) utilizzando il metodo per aggiungere l'effetto.
 - **Rimozione dell'effetto**: la prima istanza di `LabelShadowEffect` della raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo viene recuperata e rimossa.
 
 ## <a name="consuming-the-effect"></a>Utilizzo dell'effetto
 
-Ogni elemento `LabelShadowEffect` specifico della piattaforma può essere utilizzato aggiungendo le proprietà associate a un controllo [`Label`](xref:Xamarin.Forms.Label), come illustrato nell'esempio di codice XAML seguente:
+Ogni specifico `LabelShadowEffect` della piattaforma può essere utilizzato aggiungendo [`Label`](xref:Xamarin.Forms.Label) le proprietà associate a un controllo, come illustrato nell'esempio di codice XAML seguente:Each platform-specific can be consumed by adding the attached properties to a control, as demonstrated in the following XAML code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" ...
@@ -122,7 +122,7 @@ Ogni elemento `LabelShadowEffect` specifico della piattaforma può essere utiliz
 </Label>
 ```
 
-Il codice C# equivalente per il controllo [`Label`](xref:Xamarin.Forms.Label) è visualizzato nell'esempio seguente:
+Nell'esempio di codice seguente viene illustrato l'equivalente [`Label`](xref:Xamarin.Forms.Label) in C:
 
 ```csharp
 var label = new Label {
@@ -151,9 +151,9 @@ ShadowEffect.SetDistanceY (label, 5);
 ShadowEffect.SetColor (label, color));
 ```
 
-L'impostazione della proprietà associata `ShadowEffect.HasShadow`su `true` esegue il metodo `ShadowEffect.OnHasShadowChanged` che aggiunge o rimuove `LabelShadowEffect` dal controllo [`Label`](xref:Xamarin.Forms.Label). In entrambi gli esempi di codice, la proprietà associata `ShadowEffect.Color` fornisce i valori di colore specifici della piattaforma. Per altre informazioni, vedere [Classe Device](~/xamarin-forms/platform/device.md).
+L'impostazione `ShadowEffect.HasShadow` della `true` proprietà `ShadowEffect.OnHasShadowChanged` associata su esegue `LabelShadowEffect` il [`Label`](xref:Xamarin.Forms.Label) metodo che aggiunge o rimuove l'oggetto al controllo. In entrambi gli esempi di codice, la proprietà associata `ShadowEffect.Color` fornisce i valori di colore specifici della piattaforma. Per altre informazioni, vedere [Classe Device](~/xamarin-forms/platform/device.md).
 
-Inoltre, con un [`Button`](xref:Xamarin.Forms.Button) il colore dell'ombreggiatura può essere modificato in fase di esecuzione. Quando si fa clic su `Button`, il codice seguente cambia il colore dell'ombreggiatura impostando la proprietà associata `ShadowEffect.Color`:
+Inoltre, un [`Button`](xref:Xamarin.Forms.Button) oggetto consente di modificare il colore dell'ombreggiatura in fase di esecuzione. Quando si fa clic su `Button`, il codice seguente cambia il colore dell'ombreggiatura impostando la proprietà associata `ShadowEffect.Color`:
 
 ```csharp
 ShadowEffect.SetColor (label, Color.Teal);
@@ -174,7 +174,7 @@ Gli effetti che possono essere utilizzati aggiungendo le proprietà associate a 
 </Style>
 ```
 
-[`Style`](xref:Xamarin.Forms.Style) può essere applicato a un elemento [`Label`](xref:Xamarin.Forms.Label) impostando la relativa proprietà [`Style`](xref:Xamarin.Forms.NavigableElement.Style) sull'istanza di `Style` utilizzando l'estensione di markup `StaticResource`, come illustrato nell'esempio di codice seguente:
+L'oggetto può [`Label`](xref:Xamarin.Forms.Label) essere applicato [`Style`](xref:Xamarin.Forms.NavigableElement.Style) a `Style` un impostando `StaticResource` la relativa proprietà sull'istanza utilizzando l'estensione di markup, come illustrato nell'esempio di codice seguente:The [`Style`](xref:Xamarin.Forms.Style) can be applied to a by setting its property to the instance using the markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -233,7 +233,7 @@ namespace EffectsDemo.iOS
     }
 ```
 
-Il metodo `OnAttached` chiama i metodi che recuperano i valori della proprietà associata utilizzando i getter `ShadowEffect` e che impostano le proprietà `Control.Layer` sui valori necessari per creare l'ombreggiatura. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
+Il metodo `OnAttached` chiama i metodi che recuperano i valori della proprietà associata utilizzando i getter `ShadowEffect` e che impostano le proprietà `Control.Layer` sui valori necessari per creare l'ombreggiatura. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 #### <a name="responding-to-property-changes"></a>Rispondere alle modifiche delle proprietà
 
@@ -318,7 +318,7 @@ namespace EffectsDemo.Droid
     }
 ```
 
-Il metodo `OnAttached` chiama i metodi che recuperano i valori della proprietà associata utilizzando i getter `ShadowEffect` e chiama il metodo [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) per creare un'ombreggiatura utilizzando i valori della proprietà. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
+Il `OnAttached` metodo chiama i metodi che recuperano i valori della proprietà associati utilizzando i `ShadowEffect` getter e chiama un metodo che chiama il [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) metodo per creare un'ombreggiatura utilizzando i valori della proprietà. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 #### <a name="responding-to-property-changes"></a>Rispondere alle modifiche delle proprietà
 
@@ -404,7 +404,7 @@ namespace EffectsDemo.UWP
 }
 ```
 
-La piattaforma UWP non include un effetto di ombreggiatura, pertanto l'implementazione di `LabelShadowEffect` in entrambe le piattaforme ne simula uno tramite l'aggiunta di un secondo elemento [`Label`](xref:Xamarin.Forms.Label) sfalsato dietro all'elemento `Label` primario. Il metodo `OnAttached` crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Quindi chiama i metodi che recuperano i valori della proprietà associata utilizzando i getter `ShadowEffect` e crea l'ombreggiatura impostando le proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) per controllare il colore e la posizione dell'elemento `Label`. `shadowLabel` viene quindi inserito sfalsato dietro l'elemento `Label` primario. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
+La piattaforma Windows universale non fornisce un effetto `LabelShadowEffect` ombra e pertanto l'implementazione [`Label`](xref:Xamarin.Forms.Label) su `Label`entrambe le piattaforme simula uno aggiungendo un secondo offset dietro il primario . Il metodo `OnAttached` crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Chiama quindi i metodi che recuperano `ShadowEffect` i valori delle proprietà associate utilizzando [`TextColor`](xref:Xamarin.Forms.Label.TextColor) [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)i [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) getter e crea l'ombreggiatura impostando le proprietà , e per controllare il colore e la posizione dell'oggetto `Label`. `shadowLabel` viene quindi inserito sfalsato dietro all'elemento `Label` primario. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 #### <a name="responding-to-property-changes"></a>Rispondere alle modifiche delle proprietà
 
@@ -436,7 +436,7 @@ Questo articolo ha spiegato come usare le proprietà associate per passare i par
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](xref:Xamarin.Forms.Effect)
+- [Effetto](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
 - [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange) (Esempio di effetto di ombreggiatura)

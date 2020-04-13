@@ -8,22 +8,22 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
 ms.openlocfilehash: 2121bc34cf208226e1cf24c44b4d596586f494e2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73029416"
 ---
 # <a name="getting-started-with-xamarinmac"></a>Introduzione a Xamarin.Mac
 
-## <a name="installationmacget-startedinstallationmd"></a>[Installazione](~/mac/get-started/installation.md)
+## <a name="installation"></a>[Installazione](~/mac/get-started/installation.md)
 
 In questo articolo viene illustrata l'installazione di Xamarin.Mac, inclusi i requisiti, il software prerequisito e l'attivazione.
 
-## <a name="hello-macmacget-startedhello-macmd"></a>[Hello, Mac](~/mac/get-started/hello-mac.md)
+## <a name="hello-mac"></a>[Hello, Mac](~/mac/get-started/hello-mac.md)
 
-Questa guida descrive i passaggi per creare per la prima volta una semplice app Xamarin.Mac e illustra la toolchain di sviluppo che include Visual Studio per Mac, Xcode e Interface Builder. Vengono inoltre descritti gli outlet e le azioni che espongono i comandi dell'interfaccia utente al codice e infine viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.Mac.
+Questa guida descrive i passaggi per creare per la prima volta una semplice app Xamarin.Mac e illustra la toolchain di sviluppo che include Visual Studio per Mac, Xcode e Interface Builder. Vengono descritti anche gli outlet e le azioni che espongono i comandi dell'interfaccia utente al codice e infine viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.Mac.
 
-## <a name="related-documentationmacget-startedrelatedmd"></a>[Related Documentation](~/mac/get-started/related.md) (Documentazione correlata)
+## <a name="related-documentation"></a>[Documentazione correlata](~/mac/get-started/related.md)
 
 Collegamenti ad altra documentazione utile.

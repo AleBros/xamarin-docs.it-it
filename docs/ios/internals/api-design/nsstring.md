@@ -1,6 +1,6 @@
 ---
-title: NSString in Novell. iOS e Novell. Mac
-description: Questo documento descrive come Novell. iOS converte in modo trasparente gli oggetti NSString C# in oggetti stringa, quando ciò non accade.
+title: NSString in Xamarin.iOS e Xamarin.Mac
+description: In questo documento viene descritto come Xamarin.iOS converte in modo trasparente NSString oggetti in oggetti stringa C , quando questo non accade.
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
@@ -8,25 +8,25 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: f744f4ed5619e4e7f4a9d85897c4451bf7e5b9bc
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022355"
 ---
-# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString in Novell. iOS e Novell. Mac
+# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString in Xamarin.iOS e Xamarin.Mac
 
-La progettazione di Novell. iOS e Novell. Mac chiama l'API use per esporre il tipo di stringa .NET nativo, `string`, per la manipolazione delle stringhe in C# e altri linguaggi di programmazione .NET e per esporre la stringa come tipo di dati esposto dall'api anziché `NSString` tipo di dati.
+La progettazione di Xamarin.iOS e Xamarin.Mac richiede l'API di utilizzo `string`per esporre il tipo di stringa .NET nativo, , per la modifica delle `NSString` stringhe in linguaggi di programmazione .NET e per esporre la stringa come tipo di dati esposto dall'API anziché il tipo di dati.
 
-Ciò significa che gli sviluppatori non devono necessariamente tenere le stringhe destinate a essere usate per la chiamata a Novell. iOS & API Novell. Mac (unificata) in un tipo speciale (`Foundation.NSString`), è possibile usare `System.String` di mono per tutte le operazioni e ogni volta che un'API in Novell. iOS o Novell. Mac richiede una stringa, l'associazione API si occupa del marshalling delle informazioni.
+Ciò significa che gli sviluppatori non devono mantenere le stringhe che devono essere utilizzate per chiamare Xamarin.iOS &`Foundation.NSString`Xamarin.Mac API `System.String` (Unified) in un tipo speciale ( ), possono continuare a utilizzare Mono per tutte le operazioni e ogni volta che un'API in Xamarin.iOS o Xamarin.Mac richiede una stringa, il nostro binding API si occupa di effettuare il marshalling delle informazioni.
 
-La proprietà "Text" di Objective-C in un `UILabel` di tipo `NSString`, ad esempio, è dichiarata come segue:
+Ad esempio, la proprietà Objective-C `UILabel` "text" in un tipo `NSString`, viene dichiarata in questo modo:
 
 ```objc
 @property(nonatomic, copy) NSString *text
 ```
 
-Questo è esposto in Novell. iOS come:
+Questo è esposto in Xamarin.iOS come:
 
 ```csharp
 class UILabel {
@@ -34,19 +34,19 @@ class UILabel {
 }
 ```
 
-Dietro le quinte, l'implementazione di questa proprietà esegue il C# marshalling della stringa in un `NSString` e chiama il metodo `objc_msgSend` nello stesso modo in cui è presente Objective-C.
+Dietro le quinte, l'implementazione di questa proprietà `NSString` esegue `objc_msgSend` il marshalling della stringa di C , in un e chiama il metodo nello stesso modo in cui Objective-C.
 
-Sono disponibili alcune API Objective-C di terze parti che non utilizzano un `NSString`, ma utilizzano invece una stringa C ("*char*"). In questi casi, è comunque possibile usare il C# tipo di dati String, ma è necessario usare l'attributo [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) per informare il generatore di binding che questa stringa non deve essere sottoposta a marshalling come `NSString`, ma invece come stringa C.
+Esistono una manciata di API Objective-C di terze `NSString`parti che non utilizzano un oggetto , ma utilizzano invece una stringa C (un "*char*"). In questi casi, è comunque possibile utilizzare il tipo di dati stringa C , ma è necessario utilizzare l'attributo [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) per informare il generatore di associazione che questa stringa non deve essere sottoposta a marshalling come `NSString`, ma come stringa C.
 
  <a name="Exceptions_to_the_Rule" />
 
 ## <a name="exceptions-to-the-rule"></a>Eccezioni alla regola
 
-In Novell. iOS e Novell. Mac è stata creata un'eccezione a questa regola. La decisione tra il momento in cui si espongono `string`s e quando si crea un'eccezione ed espone `NSString`s, viene eseguita se il metodo di   `NSString`potrebbe eseguire un confronto del puntatore anziché un confronto di contenuto.
+Sia in Xamarin.iOS che in Xamarin.Mac, abbiamo fatto un'eccezione a questa regola. La decisione tra `string`quando esponiamo s, `NSString`e quando facciamo `NSString` un except e expose s, viene presa se il metodo potrebbe eseguire un confronto del puntatore invece di un confronto del contenuto.
 
-Questo problema può verificarsi quando un'API Objective-C usa un `NSString`pubblico  costante come token che rappresenta un'azione, anziché confrontare il contenuto effettivo della stringa.
+Ciò può verificarsi quando un Objective-C API usa una costante pubblica `NSString` come token che rappresenta un'azione, anziché confrontare il contenuto effettivo della stringa.
 
-In questi casi, vengono esposte `NSString`API  ed è presente una minoranza di API. Si noterà anche che le proprietà NSString sono esposte in alcune classi. Tali proprietà `NSString` vengono esposte per elementi come le notifiche. Si tratta di proprietà che in genere hanno un aspetto simile al seguente:
+In questi `NSString`  casi, le API sono esposte e sono presenti una minoranza di API con questo. Si noterà inoltre che NSString proprietà sono esposte in alcune classi. Tali `NSString` proprietà sono esposte per elementi come le notifiche. Queste sono proprietà di solito assomigliano a questo:
 
 ```csharp
 class Foo {
@@ -54,9 +54,9 @@ class Foo {
 }
 ```
 
-Le notifiche sono chiavi utilizzate per la classe `NSNotification` quando si desidera eseguire la registrazione per un evento specifico trasmesso dal runtime.
+Le notifiche sono chiavi `NSNotification` utilizzate per la classe quando si desidera registrarsi per un determinato evento trasmesso dal runtime.
 
-Le chiavi in genere hanno un aspetto simile al seguente:
+Le chiavi di solito hanno un aspetto simile al seguente:
 
 ```csharp
 class Foo {
@@ -64,4 +64,4 @@ class Foo {
 }
 ```
 
-Un'altra posizione in cui `NSString`s sono esposte nell'API è come token usati come parametri per determinate API in iOS o OS X che accettano `NSDictionary` oggetti come parametri. Il dizionario contiene in genere chiavi `NSString`. Novell. iOS, per convenzione, assegna un nome alle proprietà `NSString` statiche aggiungendo il nome "Key".
+Un'altra `NSString`posizione in cui s sono esposti nell'API è come token che vengono utilizzati `NSDictionary` come parametri per determinate API in iOS o OS X che accettano oggetti come parametri. Il dizionario `NSString` contiene in genere le chiavi. Xamarin.iOS, per convenzione, `NSString` denomina tali proprietà statiche aggiungendo il nome "Key".

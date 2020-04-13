@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: ae9b5eb5b768b50ddcbc199040074de855f220de
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68649452"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di scorrimento rapido
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_Il movimento di scorrimento rapido si verifica quando si muove un dito sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione nel contenuto. Gli esempi di codice in questo articolo sono tratti da [SwipeGesture](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)._
+_Un gesto di scorrimento rapido si verifica quando un dito viene spostato sullo schermo in direzione orizzontale o verticale e viene spesso utilizzato per avviare la navigazione nel contenuto. Gli esempi di codice in questo articolo sono tratti dall'esempio [di gesti di scorrimento](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) rapido._
 
-Per fare in modo che un elemento [`View`](xref:Xamarin.Forms.View) riconosca un movimento di scorrimento rapido, creare un'istanza di [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer), impostare la proprietà [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) su un valore di enumerazione [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) (`Left`, `Right`, `Up` o `Down`), se necessario impostare la proprietà [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), gestire l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) e aggiungere il nuovo sistema di riconoscimento del movimento alla raccolta [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) per la vista. L'esempio di codice seguente visualizza un `SwipeGestureRecognizer` associato a un elemento [`BoxView`](xref:Xamarin.Forms.BoxView):
+Per rendere [`View`](xref:Xamarin.Forms.View) riconosciuto un movimento di scorrimento rapido, creare un'istanza, [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) impostare la [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) proprietà su un [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) valore di enumerazione (`Left`, `Right`, `Up`, o `Down`), impostare facoltativamente la [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) proprietà , gestire l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) e aggiungere il nuovo riconoscitore di movimento alla [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) raccolta nella visualizzazione. Nell'esempio di `SwipeGestureRecognizer` codice riportato [`BoxView`](xref:Xamarin.Forms.BoxView)di seguito viene illustrato un elemento associato a :
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -40,23 +40,23 @@ leftSwipeGesture.Swiped += OnSwiped;
 boxView.GestureRecognizers.Add(leftSwipeGesture);
 ```
 
-La classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) include anche una proprietà [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), che si può impostare su un valore `uint` che rappresenta la distanza di scorrimento minima che si deve raggiungere affinché lo scorrimento rapido venga riconosciuto, in unità indipendenti dal dispositivo. Il valore predefinito di questa proprietà è 100, ovvero tutti gli scorrimenti rapidi inferiori a 100 unità indipendenti dal dispositivo verranno ignorati.
+La [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) classe include [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) anche una proprietà, che `uint` può essere facoltativamente impostata su un valore che rappresenta la distanza minima di scorrimento che deve essere raggiunta affinché venga riconosciuto uno scorrimento rapido, in unità indipendenti dal dispositivo. Il valore predefinito di questa proprietà è 100, ovvero tutti gli scorrimenti rapidi inferiori a 100 unità indipendenti dal dispositivo verranno ignorati.
 
 ## <a name="recognizing-the-swipe-direction"></a>Riconoscimento della direzione di scorrimento
 
-Negli esempi precedenti la proprietà [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) viene impostata un singolo valore dell'enumerazione [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection). Tuttavia, è anche possibile impostare questa proprietà su più valori dell'enumerazione `SwipeDirection`, in modo che l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) venga attivato in risposta a uno scorrimento rapido in più di una direzione. Esiste comunque un vincolo per cui un singolo elemento [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) è in grado di riconoscere solo gli scorrimenti che avvengono sullo stesso asse. Di conseguenza, gli scorrimenti rapidi che si verificano sull'asse orizzontale possono essere riconosciuti impostando la proprietà `Direction` su `Left` e `Right`:
+Negli esempi precedenti, [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) la proprietà è impostata [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) su un singolo valore dell'enumerazione. Tuttavia, è anche possibile impostare questa proprietà `SwipeDirection` su più [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) valori dall'enumerazione, in modo che l'evento viene generato in risposta a uno scorrimento rapido in più direzioni. Tuttavia, il vincolo [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) è che un singolo può riconoscere solo le scorrimenti che si verificano sullo stesso asse. Di conseguenza, gli scorrimenti rapidi che si verificano sull'asse orizzontale possono essere riconosciuti impostando la proprietà `Direction` su `Left` e `Right`:
 
 ```xaml
 <SwipeGestureRecognizer Direction="Left,Right" Swiped="OnSwiped"/>
 ```
 
-Analogamente, gli scorrimenti rapidi che si verificano sull'asse verticale possono essere riconosciuti impostando la proprietà [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) su `Up` e `Down`:
+Analogamente, i colpi di scorrimento che si [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) verificano `Up` `Down`sull'asse verticale possono essere riconosciuti impostando la proprietà su e :
 
 ```csharp
 var swipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Up | SwipeDirection.Down };
 ```
 
-In alternativa, è possibile creare un elemento [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) per ogni direzione di scorrimento in modo da riconoscere gli scorrimenti in ogni direzione:
+In alternativa, [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) è possibile creare un per ogni direzione di scorrimento per riconoscere i colpi in ogni direzione:
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -89,11 +89,11 @@ boxView.GestureRecognizers.Add(downSwipeGesture);
 ```
 
 > [!NOTE]
-> Negli esempi precedenti lo stesso gestore eventi risponde all'attivazione dell'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped). Tuttavia, ogni istanza di [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) può usare un diverso gestore eventi se necessario.
+> Negli esempi precedenti, lo stesso gestore [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) eventi risponde alla generazione dell'evento. Tuttavia, [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) ogni istanza può usare un gestore eventi diverso, se necessario.
 
 ## <a name="responding-to-the-swipe"></a>Risposta allo scorrimento rapido
 
-Nell'esempio che segue è illustrato un gestore eventi per l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped):
+Nell'esempio seguente [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) viene illustrato un gestore eventi per l'evento:An event handler for the event is shown in the following example:
 
 ```csharp
 void OnSwiped(object sender, SwipedEventArgs e)
@@ -116,11 +116,11 @@ void OnSwiped(object sender, SwipedEventArgs e)
 }
 ```
 
-L'elemento [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) può essere esaminato per determinare la direzione di scorrimento, con la logica personalizzata che risponde allo scorrimento rapido come richiesto. La direzione dello scorrimento rapido può essere ottenuta dalla proprietà [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) degli argomenti dell'evento, che sarà impostata su uno dei valori dell'enumerazione [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection). Inoltre, gli argomenti dell'evento usano anche una proprietà [`Parameter`](xref:Xamarin.Forms.SwipedEventArgs.Parameter) che verrà impostata sul valore della proprietà [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter), se definito.
+Il [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) può essere esaminato per determinare la direzione dello scorrimento, con logica personalizzata che risponde allo scorrimento come richiesto. La direzione dello scorrimento può [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) essere ottenuta dalla proprietà degli argomenti dell'evento, che verrà impostata su uno dei valori dell'enumerazione. [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) Inoltre, gli argomenti dell'evento hanno anche una [`Parameter`](xref:Xamarin.Forms.SwipedEventArgs.Parameter) proprietà [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) che verrà impostata sul valore della proprietà, se definita.
 
 ## <a name="using-commands"></a>Uso dei comandi
 
-La classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) include anche le proprietà [`Command`](xref:Xamarin.Forms.SwipeGestureRecognizer.Command) e [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter). Queste proprietà in genere vengono usate nelle applicazioni che usano il modello Model-View-ViewModel (MVVM). La proprietà `Command` definisce l'elemento `ICommand` da richiamare quando viene riconosciuto un movimento di scorrimento rapido, con la proprietà `CommandParameter` che definisce un oggetto da passare a `ICommand.`. L'esempio di codice seguente illustra come associare la proprietà `Command` a un elemento `ICommand` definito nel modello di visualizzazione la cui istanza è impostata come pagina [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext):
+La [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) classe [`Command`](xref:Xamarin.Forms.SwipeGestureRecognizer.Command) include [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) anche le proprietà e . Queste proprietà in genere vengono usate nelle applicazioni che usano il modello Model-View-ViewModel (MVVM). La `Command` proprietà definisce l'oggetto `ICommand` da richiamare quando `CommandParameter` viene riconosciuto un movimento `ICommand.` di scorrimento rapido, con `Command` la `ICommand` proprietà che definisce un oggetto da [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)passare all'esempio di codice seguente viene illustrato come associare la proprietà a un definito nel modello di visualizzazione la cui istanza è impostata come pagina :
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -139,11 +139,11 @@ Il codice XAML equivalente è:
 </BoxView>
 ```
 
-`SwipeCommand` è una proprietà di tipo `ICommand` definita nell'istanza del modello di visualizzazione impostato come pagina [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). Quando viene riconosciuto un movimento di scorrimento rapido, viene eseguito il metodo `Execute` dell'oggetto `SwipeCommand`. L'argomento per il metodo `Execute` è il valore della proprietà [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter). Per altre informazioni sui comandi, vedere l'articolo sull'[interfaccia di comando](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+`SwipeCommand`è una proprietà `ICommand` di tipo definita nell'istanza del [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)modello di visualizzazione impostata come pagina . Quando viene riconosciuto un movimento di scorrimento rapido, viene eseguito il metodo `Execute` dell'oggetto `SwipeCommand`. L'argomento `Execute` del metodo è [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) il valore della proprietà. Per altre informazioni sui comandi, vedere l'articolo sull'[interfaccia di comando](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="creating-a-swipe-container"></a>Creazione di un contenitore dello scorrimento rapido
 
-La classe `SwipeContainer`, illustrata nell'esempio di codice seguente, è una classe di riconoscimento dello scorrimento rapido generalizzata di cui viene eseguito il wrapping intorno a un oggetto [`View`](xref:Xamarin.Forms.View) ai fini del riconoscimento del movimento di scorrimento rapido:
+La `SwipeContainer` classe, illustrata nell'esempio di codice seguente, è una classe [`View`](xref:Xamarin.Forms.View) di riconoscimento scorrimento rapido generalizzata di cui viene eseguito il wrapping intorno a una classe per eseguire il riconoscimento tramite tocco:
 
 ```csharp
 public class SwipeContainer : ContentView
@@ -167,9 +167,9 @@ public class SwipeContainer : ContentView
 }
 ```
 
-La classe `SwipeContainer` crea oggetti [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) per tutte e quattro le direzioni di scorrimento e associa gestori eventi `Swipe`. Questi gestori eventi richiamano l'evento `Swipe` definito da `SwipeContainer`.
+La `SwipeContainer` classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) crea oggetti per tutte e `Swipe` quattro le direzioni di scorrimento e associa i gestori eventi. Questi gestori eventi richiamano l'evento `Swipe` definito da `SwipeContainer`.
 
-L'esempio di codice XAML seguente illustra il wrapping della classe `SwipeContainer` intorno a un oggetto [`BoxView`](xref:Xamarin.Forms.BoxView):
+Nell'esempio di codice `SwipeContainer` XAML [`BoxView`](xref:Xamarin.Forms.BoxView)seguente viene illustrata la classe che esegue il wrapping di un:
 
 ```xaml
 <ContentPage ...>
@@ -181,7 +181,7 @@ L'esempio di codice XAML seguente illustra il wrapping della classe `SwipeContai
 </ContentPage>
 ```
 
-L'esempio di codice seguente illustra come `SwipeContainer` esegue il wrapping di un oggetto [`BoxView`](xref:Xamarin.Forms.BoxView) in una pagina C#:
+Nell'esempio di codice `SwipeContainer` seguente [`BoxView`](xref:Xamarin.Forms.BoxView) viene illustrato come eseguire il wrapping di un in una pagina di C :The following code example shows how the wraps a in a c'è page:
 
 ```csharp
 public class SwipeContainerPageCS : ContentPage
@@ -203,7 +203,7 @@ public class SwipeContainerPageCS : ContentPage
 }
 ```
 
-Quando [`BoxView`](xref:Xamarin.Forms.BoxView) riceve un movimento di scorrimento rapido, l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) viene attivato in [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer). Questa operazione è gestita dalla classe `SwipeContainer` che attiva il proprio evento `Swipe`. L'evento `Swipe` viene gestito nella pagina. L'elemento [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) può quindi essere esaminato per determinare la direzione di scorrimento, con la logica personalizzata che risponde allo scorrimento rapido come richiesto.
+Quando [`BoxView`](xref:Xamarin.Forms.BoxView) l'oggetto riceve un [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) gesto [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) di scorrimento rapido, viene generato l'evento nel . Questa operazione è gestita dalla classe `SwipeContainer` che attiva il proprio evento `Swipe`. L'evento `Swipe` viene gestito nella pagina. Il [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) può quindi essere esaminato per determinare la direzione dello scorrimento, con logica personalizzata che risponde allo scorrimento come richiesto.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

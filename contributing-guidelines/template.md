@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
 ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77553568"
 ---
 # <a name="metadata-and-markdown-template"></a>Modello Markdown e metadati
@@ -47,7 +47,7 @@ Alcune note importanti:
 - La presenza dei due punti in un valore (ad esempio, un titolo) causa l'interruzione del parser dei metadati. In questo caso, racchiudere il titolo tra virgolette doppie (ad esempio, `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
 - **title**: questo titolo verrà visualizzato nei risultati dei motori di ricerca. Il titolo non deve essere identico al titolo nell'intestazione H1 e può contenere al massimo 60 caratteri.
 - **author**, **manager**, **ms.reviewer**: il campo dell'autore deve contenere il **nome utente GitHub** dell'autore, non il relativo alias.  I campi "manager" e "ms.reviewer", invece, devono contenere gli alias Microsoft. ms.reviewer specifica il nome del project manager/sviluppatore associato all'articolo o alla funzionalità.
-- **ms.assetid**: si tratta del GUID dell'articolo che viene usato per scopi di registrazione interna, ad esempio attività di Business Intelligence (BI). Quando si crea un nuovo file markdown, ottenere un GUID da [https://www.guidgenerator.com](https://www.guidgenerator.com).
+- **ms.assetid**: si tratta del GUID dell'articolo che viene usato per scopi di registrazione interna, ad esempio attività di Business Intelligence (BI). Quando si crea un nuovo file [https://www.guidgenerator.com](https://www.guidgenerator.com)Markdown, ottenere un GUID da .
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Markdown di base, GFM e caratteri speciali
 
@@ -66,11 +66,11 @@ Markdown usa caratteri speciali, ad esempio \*, \` e \#, per la formattazione. S
 
 Per i nomi di file vengono usate le regole seguenti:
 
-- Devono contenere solo lettere minuscole, numeri e trattini.
-- Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
-- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Evitare i sostantivi.
-- Non includere parole brevi, come un, e, il, in, o e così via.
-- Usare il formato Markdown e l'estensione di file md.
+- Contengono solo lettere minuscole, numeri e segni meno.
+- Non usare spazi o segni di punteggiatura. Usare il segno meno per separare le parole e i numeri nel nome del file.
+- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere. Non usare parole al gerundio.
+- Non usare parole estremamente brevi, ad esempio "un", "e", "il", "in", "o" e così via.
+- Usare il formato markdown e l'estensione file md.
 - Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
 
 ## <a name="headings"></a>Intestazioni
@@ -84,7 +84,7 @@ Usare l'iniziale maiuscola solo per la prima parola. Scrivere sempre in maiuscol
 
 Nell'argomento **deve** essere presente una sola intestazione di primo livello (H1), che verrà visualizzata come titolo della pagina.
 
-Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio `# Async Programming in F# #`.
+Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio: `# Async Programming in F# #`.
 
 Le intestazioni di secondo livello verranno usate per generare il sommario della pagina, visualizzato nella sezione "Contenuto dell'articolo" sotto il titolo della pagina.
 
@@ -99,7 +99,7 @@ _Corsivo_: da usare per file, cartelle, percorsi (posizionare gli elementi lungh
 
 **Grassetto**: da usare per gli elementi dell'interfaccia utente.
 
-## <a name="links"></a>collegamenti
+## <a name="links"></a>Collegamenti
 
 ### <a name="internal-links"></a>Collegamenti interni
 
@@ -154,10 +154,10 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 ### <a name="ordered-lists"></a>Elenchi ordinati
 
-1. This
-1. È
+1. Questa
+1. Is
 1. Un
-1. Ordered
+1. Ordinato
 1. Elenco
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Elenco ordinato con un elenco incorporato
@@ -173,7 +173,7 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 ### <a name="unordered-lists"></a>Elenchi non ordinati
 
-- This
+- Questa
 - is
 - a
 - puntato
@@ -181,16 +181,16 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 #### <a name="unordered-list-with-an-embedded-list"></a>Elenco non ordinato con un elenco incorporato
 
-- This
+- Questa
 - puntato
 - list
   - Signora Pavone
   - Dottor Verde
-- contiene
-- altro
+- contains
+- Altre
     1. Colonnello Mustard
     1. Signora Bianchi
-- elenchi
+- lists
 
 ## <a name="horizontal-rule"></a>Righello orizzontale
 
@@ -198,10 +198,10 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 ## <a name="tables"></a>Tabelle
 
-| Tabelle        | Sono           | Comode  |
+| Tabelle        | Sono           | Accesso sporadico  |
 | ------------- |:-------------:| -----:|
 | col 3 è      | allineata a destra | $1600 |
-| col 2 è      | centrata      |   $12 |
+| col 2 è      | centrata      |   $ 12 |
 | col 1 è predefinita | allineata a sinistra     |    $1 |
 
 Per creare le tabelle più facilmente, è possibile usare uno [strumento generatore di tabelle Markdown](http://www.tablesgenerator.com/markdown_tables).
@@ -230,7 +230,7 @@ namespace HelloWorld
 }
 ```
 
-#### <a name="xml"></a>xml
+#### <a name="xml"></a>Xml
 
 ```xml
 <dict>
@@ -326,7 +326,7 @@ docs.microsoft fornisce alcune estensioni aggiuntive a GitHub Flavored Markdown 
 
 È importante usare gli stili di avviso seguenti, in modo che ne venga eseguito il rendering con lo stile appropriato nel sito della documentazione. Tuttavia, il motore di rendering in GitHub non li differenzia.
 
-#### <a name="note"></a>Nota
+#### <a name="note"></a>Note
 
 ```
 > [!NOTE]

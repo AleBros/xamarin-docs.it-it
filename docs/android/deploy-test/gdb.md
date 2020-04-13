@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 51ebb8932f4b1ef8f10ba699e59ce53c98a38a50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021480"
 ---
 # <a name="gdb"></a>GDB
@@ -57,7 +57,7 @@ La destinazione `_Gdb` avvierà un'attività dell'utilità di avvio arbitraria d
 La destinazione `_Gdb` creerà una directory `gdb-symbols` in cui copierà i contenuti delle directory `/system/lib` e `$APPDIR/lib` della destinazione.
 
 > [!NOTE]
-> I contenuti della directory `gdb-symbols` sono collegati alla destinazione Android in cui si esegue la distribuzione e non verranno sostituiti automaticamente qualora si cambiasse la destinazione. (Si consideri questo bug). Se si modificano i dispositivi di destinazione Android, sarà necessario eliminare manualmente questa directory.
+> I contenuti della directory `gdb-symbols` sono collegati alla destinazione Android in cui si esegue la distribuzione e non verranno sostituiti automaticamente qualora si cambiasse la destinazione. (Consideralo un bug.) Se si modificano i dispositivi di destinazione Android, sarà necessario eliminare manualmente questa directory.
 
 Copiare infine il comando `gdb` generato ed eseguirlo nella shell:
 
@@ -114,7 +114,7 @@ Per includere `gdbserver` nell'app:
 
 2. Rinominare `gdbserver` in **libs/armeabi-v7a/libgdbserver.so**.
 
-3. Aggiungere **libs/armeabi-v7a/libgdbserver.so** al progetto con l'**azione di compilazione** `AndroidNativeLibrary`.
+3. Aggiungere **libs/armeabi-v7a/libgdbserver.so** al progetto con l'**azione di compilazione**`AndroidNativeLibrary`.
 
 4. Ricompilare e reinstallare l'applicazione.
 
@@ -156,7 +156,7 @@ Tenere tuttavia presente che la destinazione MSBuild `_Gdb` terminerà le istanz
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 ### <a name="mono_pmip-doesnt-work"></a>`mono_pmip` non funziona
 

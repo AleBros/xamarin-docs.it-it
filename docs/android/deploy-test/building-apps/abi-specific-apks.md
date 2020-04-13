@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940632"
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
@@ -42,25 +42,25 @@ Alla fine di questa guida è disponibile una procedura dettagliata che illustra 
 Google consiglia un particolare algoritmo che usa un codice versione a sette cifre. Vedere la sezione *Using a version code scheme* (Uso di uno schema di codice versione) nel documento [Multiple APK support](https://developer.android.com/google/play/publishing/multiple-apks.html) (Supporto di più APK).
 Espandendo a otto cifre questo schema del codice versione, è possibile includere nel codice versione alcune informazioni sull'ABI che garantiranno che Google Play distribuisca il file APK corretto in un dispositivo. L'elenco seguente illustra questo formato del codice versione a otto cifre (indicizzato da sinistra a destra):
 
-- **Indice 0** (in rosso nel diagramma sotto): intero per l'ABI:
-  - 1 &ndash; `armeabi`
-  - 2 &ndash; `armeabi-v7a`
-  - 6 &ndash; `x86`
+- **** Indice 0&ndash; (in rosso nel diagramma sotto): intero per l'ABI:
+  - 1 &ndash; : il nome del`armeabi`
+  - 2 &ndash; Il nome del sistema`armeabi-v7a`
+  - 6 &ndash; È possibile:`x86`
 
-- **Indice 1-2** (in arancione nel diagramma sotto): livello API minimo supportato dall'applicazione.
+- **** Indice 1-2&ndash; (in arancione nel diagramma sotto): livello API minimo supportato dall'applicazione.
 
-- **Indice 3-4** (in blu nel diagramma sotto): dimensioni della schermata supportate:
+- **** Indice 3-4&ndash; (in blu nel diagramma sotto): dimensioni della schermata supportate:
   - 1: piccole
   - 2: normali
   - 3: grandi
   - 4: molto grandi
 
-- **Indice 5-7** (in verde nel diagramma sotto): numero univoco per il codice versione. 
+- **** Indice 5-7&ndash; (in verde nel diagramma sotto): numero univoco per il codice versione. 
     È impostato dallo sviluppatore. Deve aumentare per ogni versione pubblica dell'applicazione.
 
 Il diagramma seguente illustra la posizione di ogni codice descritto nell'elenco precedente:
 
-[![Diagramma del formato del codice versione a otto cifre, codificato in base al colore](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
+[![Diagramma del formato del codice di versione a otto cifre, codificato per colore](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 Google Play verificherà che al dispositivo venga distribuito l'APK corretto in base a `versionCode` e alla configurazione dell'APK. Il file APK con il codice versione più alto verrà distribuito al dispositivo. Ad esempio, un'applicazione può includere tre APK con i codici versione seguenti:
 
@@ -95,19 +95,19 @@ Il modo migliore per compilare l'APK per ogni ABI consiste nell'usare `xbuild` o
 
 L'elenco seguente descrive ogni parametro della riga di comando:
 
-- `/t:Package` &ndash; crea un APK Android che viene firmato usando l'archivio chiavi di debug
+- `/t:Package`&ndash; Crea un APK Android firmato utilizzando l'archivio chiavi di debug
 
-- `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; ABI da specificare come destinazione. Deve essere `armeabi`, `armeabi-v7a` o `x86`
+- `/p:AndroidSupportedAbis=<TARGET_ABI>`&ndash; Questa è l'ABI a cui rivolgersi. Deve essere `armeabi`, `armeabi-v7a` o `x86`
 
-- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; directory che conterrà i file intermedi creati durante la compilazione. Se necessario, Xamarin.Android creerà una directory denominata in base all'ABI, ad esempio `obj.armeabi-v7a`. È consigliabile usare una cartella per ogni ABI, per evitare problemi che causano il passaggio dei file da una compilazione a un'altra. Si noti che questo valore termina con un separatore di directory (`/` nel caso di OS X).
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/`&ndash; Questa è la directory che conterrà i file intermedi che vengono creati come parte della compilazione. Se necessario, Xamarin.Android creerà una directory denominata in base all'ABI, ad esempio `obj.armeabi-v7a`. È consigliabile usare una cartella per ogni ABI, per evitare problemi che causano il passaggio dei file da una compilazione a un'altra. Si noti che questo valore termina con un separatore di directory (`/` nel caso di OS X).
 
 - `/p:AndroidManifest` &ndash; questa proprietà specifica il percorso del file **AndroidManifest.XML** che verrà usato durante la compilazione.
 
-- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; directory che ospiterà l'APK finale. Xamarin.Android creerà una directory denominata in base all'ABI, ad esempio `bin.armeabi-v7a`.
+- `/p:OutputPath=bin.<TARGET_ABI>`&ndash; Questa è la directory che ospiterà l'APK finale. Xamarin.Android creerà una directory denominata in base all'ABI, ad esempio `bin.armeabi-v7a`.
 
-- `/p:Configuration=Release` &ndash; esegue una build di rilascio dell'APK. Le build Debug potrebbero non essere caricate in Google Play.
+- `/p:Configuration=Release`&ndash; Eseguire una build di rilascio dell'APK. Le build Debug potrebbero non essere caricate in Google Play.
 
-- `<CS_PROJ FILE>` &ndash; percorso del file `.csproj` per il progetto Xamarin.Android.
+- `<CS_PROJ FILE>`&ndash; Questo è il `.csproj` percorso del file per il progetto Xamarin.Android.
 
 ### <a name="sign-and-zipalign-the-apk"></a>Firmare ed eseguire Zipalign per il file APK
 
@@ -141,7 +141,7 @@ Il [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPer
 
 1. [Firmare l'APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) con un archivio chiavi di produzione.
 
-1. [Eseguire Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) per il file APK.
+1. [Perlinel'](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) zip.
 
 Per compilare tutti gli APK per l'applicazione, eseguire l'attività di Rake `build` dalla riga di comando:
 
@@ -154,10 +154,10 @@ $ rake build
 
 Al termine dell'attività di Rake, saranno disponibili tre cartelle `bin` con il file `xamarin.helloworld.apk`. Lo screenshot seguente illustra ognuna di queste cartelle con il relativo contenuto:
 
-[![Posizioni delle cartelle specifiche della piattaforma contenenti xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
+[![Percorsi di cartelle specifiche della piattaforma contenenti xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](https://fsharp.github.io/FAKE/).
+> Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non abbiamo un esempio pre-scritto, dovrebbe essere possibile anche con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](https://fsharp.github.io/FAKE/).
 
 ## <a name="summary"></a>Riepilogo
 

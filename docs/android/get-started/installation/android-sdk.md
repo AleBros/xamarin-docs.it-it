@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
 ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940907"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurazione di Android SDK per Xamarin.Android
@@ -27,7 +27,7 @@ Questa guida illustra come usare Xamarin Android SDK Manager in Visual Studio e 
 
 Xamarin Android SDK Manager viene installato come componente del carico di lavoro**Sviluppo di app per dispositivi mobili con .NET** e consente di scaricare i componenti Android più recenti necessari per lo sviluppo dell'app Xamarin.Android. Sostituisce lo strumento autonomo SDK Manager di Google, che è stato deprecato.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>Requisiti
 
@@ -54,7 +54,7 @@ In Xamarin Android SDK Manager è anche necessario Java Development Kit, che vie
 
 Per avviare SDK Manager in Visual Studio, selezionare **Strumenti -> Android -> Android SDK Manager**:
 
-[![Percorso della voce di menu Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
+[![Posizione della voce di menu di Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 Android SDK Manager si apre nella schermata **Android SDK e strumenti Android**, in cui sono disponibili due schede &ndash; **Piattaforme** e **Strumenti**:
 
@@ -93,18 +93,18 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. L'indicatore 
 
 ### <a name="platforms-tab"></a>Scheda Piattaforme
 
-Nella scheda **Piattaforme** viene visualizzato un elenco delle versioni SDK della piattaforma insieme ad altre risorse (ad esempio, le immagini del sistema) per ogni piattaforma:
+La scheda **Piattaforme** visualizza un elenco di versioni di Platform SDK insieme ad altre risorse (ad esempio immagini di sistema) per ogni piattaforma:The Platforms tab displays a list of platform SDK versions along with other resources (like system images) for each platform:
 
-[![Schermata del riquadro Piattaforme](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
+[![Screenshot del riquadro Piattaforme](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 In questa schermata vengono elencati la versione Android (ad esempio **Android 8.0**), il nome in codice (**Oreo**), il livello API (ad esempio **26**) e le dimensioni dei componenti per la piattaforma (ad esempio **1 GB**). La scheda **Piattaforme** consente di installare componenti per il livello API Android previsto come destinazione. Per altre informazioni sulle versioni di Android e i livelli API, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API Android).
 
-Quando tutti i componenti di una piattaforma sono installati, il nome della piattaforma viene affiancato da un segno di spunta. Se non tutti i componenti di una piattaforma sono installati, la casella per la piattaforma è compilata. Fare clic sulla casella **+** a sinistra della piattaforma per espandere una piattaforma e visualizzare i relativi componenti e i componenti installati.
-Fare clic su **-** per comprimere l'elenco dei componenti di una piattaforma.
+Quando tutti i componenti di una piattaforma sono installati, il nome della piattaforma viene affiancato da un segno di spunta. Se non tutti i componenti di una piattaforma sono installati, la casella per la piattaforma è compilata. È possibile espandere una piattaforma per visualizzarne i componenti **+** (e i componenti installati) facendo clic sulla casella a sinistra della piattaforma.
+Fare **-** clic per annullare l'espansione dell'elenco dei componenti per una piattaforma.
 
 Per aggiungere un'altra piattaforma a SDK, selezionare la casella accanto alla piattaforma finché viene visualizzato il segno di spunta per installare tutti i relativi componenti, quindi fare clic su **Applica modifiche**:
 
-[![Esempio di aggiunta dei componenti di Android Nougat 7.1 ad Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
+[![Esempio di aggiunta di componenti Android 7.1 Nougat a Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 Per installare solo componenti specifici, fare clic una sola volta sulla casella accanto alla piattaforma. È possibile selezionare i singoli componenti necessari:
 
@@ -115,15 +115,15 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. È possibile 
 
 ### <a name="repository-selection"></a>Selezione del repository
 
-Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)** :
+Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)**:
 
 [![Selezione del repository di Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. (Nella schermata precedente, **Android SDK Platform 28** è stato aggiunto passando al repository di Google.) Tieni presente che l'uso del repository di Google non è supportato e pertanto non è raccomandato per lo sviluppo quotidiano.
 
-Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
+Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)**. L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="requirements"></a>Requisiti
 
@@ -146,7 +146,7 @@ In Xamarin Android SDK Manager è anche necessario Java Development Kit, che vie
 
 Per avviare SDK Manager in Visual Studio per Mac, selezionare **Strumenti -> SDK Manager**:
 
-[![Percorso della voce di menu Android SDK Manager](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
+[![Posizione della voce di menu di Android SDK Manager](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 **Android SDK Manager** si apre nel **finestra Preferenze**, che contiene tre schede **Piattaforme**, **Strumenti** e **Percorsi**:
 
@@ -177,15 +177,15 @@ Ad esempio, per scaricare il pacchetto relativo all'emulatore Android di Google,
 
 È possibile che venga visualizzato il messaggio _Prima di installare il pacchetto seguente è necessario accettarne le condizioni di licenza_:
 
-[![Schermata Accettazione della licenza](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
+[![Schermata di accettazione della licenza](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
 
 Selezionare **Accetto** se si accettano i termini e le condizioni. L'indicatore di stato nella parte inferiore della finestra indica lo stato del download e dell'installazione. Al termine dell'installazione, nella scheda **Strumenti** saranno visualizzati gli strumenti e le funzionalità aggiuntive installati.
 
 ### <a name="platforms-tab"></a>Scheda Piattaforme
 
-Nella scheda **Piattaforme** viene visualizzato un elenco delle versioni SDK della piattaforma insieme ad altre risorse (ad esempio, le immagini del sistema) per ogni piattaforma:
+La scheda **Piattaforme** visualizza un elenco di versioni di Platform SDK insieme ad altre risorse (ad esempio immagini di sistema) per ogni piattaforma:The Platforms tab displays a list of platform SDK versions along with other resources (like system images) for each platform:
 
-[![Schermata del riquadro Piattaforme](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
+[![Screenshot del riquadro Piattaforme](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
 
 In questa schermata vengono elencati la versione Android (ad esempio **Android 8.1**), il nome in codice (**Oreo**), il livello API (ad esempio **27**) e le dimensioni dei componenti per la piattaforma (ad esempio **1 GB**). La scheda **Piattaforme** consente di installare componenti per il livello API Android previsto come destinazione. Per altre informazioni sulle versioni di Android e i livelli API, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API Android).
 
@@ -205,13 +205,13 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. È possibile 
 
 ### <a name="repository-selection"></a>Selezione del repository
 
-Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)** :
+Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)**:
 
 [![Selezione del repository di Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. (Nella schermata precedente, **Android SDK Platform 28** è stato aggiunto passando al repository di Google.) Tieni presente che l'uso del repository di Google non è supportato e pertanto non è raccomandato per lo sviluppo quotidiano.
 
-Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
+Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)**. L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 
 -----
 

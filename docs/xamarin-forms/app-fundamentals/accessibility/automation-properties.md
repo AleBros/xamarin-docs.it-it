@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77131133"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
-_Xamarin.Forms consente di impostare i valori di accessibilità su elementi dell'interfaccia utente tramite le proprietà associate della classe AutomationProperties, che, a sua volta, imposta valori di accessibilità nativi. Questo articolo illustra come usare la classe AutomationProperties, in modo che un'utilità per la lettura dello schermo possa annunciare gli elementi della pagina._
+_Xamarin.Forms consente di impostare i valori di accessibilità sugli elementi dell'interfaccia utente utilizzando le proprietà associate dalla classe AutomationProperties, che a sua volta impostano valori di accessibilità nativi. In questo articolo viene illustrato come utilizzare il AutomationProperties classe, in modo che un'utilità per la lettura dello schermo può parlare degli elementi nella pagina._
 
 Xamarin.Forms consente di impostare le proprietà di automazione su elementi dell'interfaccia utente tramite le proprietà associate seguenti:
 
@@ -30,7 +30,7 @@ Xamarin.Forms consente di impostare le proprietà di automazione su elementi del
 Queste proprietà associate impostano valori di accessibilità nativi in modo che l'utilità per la lettura dello schermo possa presentare l'elemento. Per altre informazioni sulle proprietà associate, vedere [Proprietà associate](~/xamarin-forms/xaml/attached-properties.md).
 
 > [!IMPORTANT]
-> L'uso delle proprietà associate `AutomationProperties` può rallentare l'esecuzione del test dell'interfaccia utente in Android. Le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` di [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) imposteranno entrambe la proprietà `ContentDescription` nativa, in cui i valori `AutomationProperties.Name` e `AutomationProperties.HelpText` hanno la precedenza sul valore `AutomationId`. Se `AutomationProperties.Name` e `AutomationProperties.HelpText` sono entrambe impostate, i valori saranno concatenati. Ciò significa che i test che cercano `AutomationId` avranno esito negativo se anche `AutomationProperties.Name` o `AutomationProperties.HelpText` è impostato per l'elemento. In questo scenario, i test dell'interfaccia utente dovrebbero essere modificati per cercare il valore `AutomationProperties.Name` o `AutomationProperties.HelpText`, o una concatenazione dei due.
+> L'uso delle proprietà associate `AutomationProperties` può rallentare l'esecuzione del test dell'interfaccia utente in Android. Le [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) `AutomationProperties.Name` proprietà `AutomationProperties.HelpText` , e imposteranno entrambe la `ContentDescription` proprietà nativa, `AutomationId` con i `AutomationProperties.Name` valori `AutomationProperties.HelpText` delle `AutomationProperties.Name` proprietà e `AutomationProperties.HelpText` che hanno la precedenza sul valore (se entrambi e sono impostati, i valori verranno concatenati). Ciò significa che i test che cercano `AutomationId` avranno esito negativo se anche `AutomationProperties.Name` o `AutomationProperties.HelpText` è impostato per l'elemento. In questo scenario, i test dell'interfaccia utente dovrebbero essere modificati per cercare il valore `AutomationProperties.Name` o `AutomationProperties.HelpText`, o una concatenazione dei due.
 
 In ogni piattaforma è presente un'utilità per la lettura dello schermo diversa tramite la quale enunciare i valori di accessibilità:
 
@@ -66,7 +66,7 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 ```
 
 > [!NOTE]
-> Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.IsInAccessibleTree` – `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
+> Si noti che il [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) metodo `AutomationProperties.IsInAccessibleTree` può essere utilizzato anche per impostare la proprietà associata –`entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
 
 <a name="name" />
 
@@ -88,7 +88,7 @@ AutomationProperties.SetName(activityIndicator, "Progress indicator");
 ```
 
 > [!NOTE]
-> Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.Name` – `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
+> Si noti che il [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) metodo `AutomationProperties.Name` può essere utilizzato anche per impostare la proprietà associata –`activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
 
 <a name="helptext" />
 
@@ -111,15 +111,15 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 ```
 
 > [!NOTE]
-> Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.HelpText` – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
+> Si noti che il [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) metodo `AutomationProperties.HelpText` può essere utilizzato anche per impostare la proprietà associata –`button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-In alcune piattaforme, per i controlli di modifica come [`Entry`](xref:Xamarin.Forms.Entry), la proprietà `HelpText` può essere talvolta omessa e sostituita con testo segnaposto. Ad esempio, "Inserisci qui il tuo nome" è un buon candidato per la proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) che inserisce il testo nel controllo prima dell'effettivo input dell'utente.
+In alcune piattaforme, per [`Entry`](xref:Xamarin.Forms.Entry)i `HelpText` controlli di modifica, ad esempio un oggetto , la proprietà può talvolta essere omessa e sostituita con testo segnaposto. Ad esempio, "Immettere il proprio nome [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) qui" è un buon candidato per la proprietà che inserisce il testo nel controllo prima dell'input effettivo dell'utente.
 
 <a name="labeledby" />
 
 ## <a name="automationpropertieslabeledby"></a>AutomationProperties.LabeledBy
 
-La proprietà associata `AutomationProperties.LabeledBy` consente a un altro elemento di definire le informazioni di accessibilità per l'elemento corrente. Ad esempio, un elemento [`Label`](xref:Xamarin.Forms.Label) accanto a un controllo [`Entry`](xref:Xamarin.Forms.Entry) può essere utilizzato per descrivere che cosa rappresenta `Entry`. Per ottenere questo risultato, è possibile procedere come segue in XAML:
+La proprietà associata `AutomationProperties.LabeledBy` consente a un altro elemento di definire le informazioni di accessibilità per l'elemento corrente. Ad esempio, [`Label`](xref:Xamarin.Forms.Label) un [`Entry`](xref:Xamarin.Forms.Entry) accanto a un può `Entry` essere utilizzato per descrivere ciò che rappresenta il. Per ottenere questo risultato, è possibile procedere come segue in XAML:
 
 ```xaml
 <Label x:Name="label" Text="Enter your name: " />
@@ -137,7 +137,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
 
 > [!NOTE]
-> Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.IsInAccessibleTree` – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+> Si noti che il [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) metodo `AutomationProperties.IsInAccessibleTree` può essere utilizzato anche per impostare la proprietà associata –`entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
 
 ## <a name="accessibility-intricacies"></a>Aspetti complessi dell'accessibilità
 
@@ -145,13 +145,13 @@ Le sezioni seguenti descrivono aspetti complessi dell'impostazione dei valori di
 
 ### <a name="navigationpage"></a>NavigationPage
 
-In Android, per impostare il testo dello schermo che viene letto per la freccia Indietro nella barra delle azioni in un elemento [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su [`Page`](xref:Xamarin.Forms.Page). Tenere tuttavia presente che questo non ha nessun effetto sui pulsanti Indietro del sistema operativo.
+In Android, per impostare il testo che le utilità per [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)la lettura `AutomationProperties.Name` `AutomationProperties.HelpText` dello schermo [`Page`](xref:Xamarin.Forms.Page)leggeranno per la freccia indietro nella barra delle azioni in un , impostare le proprietà e su un oggetto . Tenere tuttavia presente che questo non ha nessun effetto sui pulsanti Indietro del sistema operativo.
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-In iOS e nella piattaforma UWP (Universal Windows Platform), per impostare il testo letto dalle utilità per la lettura dello schermo per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su `MasterDetailPage`, oppure sulla proprietà `IconImageSource` della pagina `Master`.
+In iOS e la piattaforma UWP (Universal Windows Platform), per impostare [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)il testo `AutomationProperties.Name`che `AutomationProperties.HelpText` le utilità `MasterDetailPage`per la `IconImageSource` lettura `Master` dello schermo leggeranno per il pulsante di attivazione/disattivazione in un' , impostare le proprietà e sulla proprietà della pagina .
 
-In Android, per impostare il testo che le utilità per la lettura dello schermo leggono per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), aggiungere risorse stringa al progetto Android:
+In Android, per impostare il testo che le [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)utilità per la lettura dello schermo leggeranno per il pulsante di attivazione/disattivazione in un , aggiungere risorse stringa al progetto Android:
 
 ```xml
 <resources>
@@ -170,7 +170,7 @@ master.IconImageSource.AutomationId = "btnMDPAutomationID";
 
 ### <a name="toolbaritem"></a>ToolbarItem
 
-In iOS, Android e nella piattaforma UWP (Universal Windows Platform) le utilità per la lettura dello schermo leggono il valore della proprietà `Text` delle istanze [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), a condizione che i valori `AutomationProperties.Name` o `AutomationProperties.HelpText` non siano definiti.
+In iOS, Android e UWP, le `Text` utilità [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) per la `AutomationProperties.Name` lettura `AutomationProperties.HelpText` dello schermo leggeranno il valore della proprietà delle istanze, a condizione che o i valori non siano definiti.
 
 In iOS e nella piattaforma UWP il valore della proprietà `AutomationProperties.Name` sostituisce il valore della proprietà `Text` che viene letto dall'utilità per la lettura dello schermo.
 
@@ -179,4 +179,4 @@ In Android i valori delle proprietà `AutomationProperties.Name` e/o `Automation
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Proprietà associate](~/xamarin-forms/xaml/attached-properties.md)
-- [Esempio di accessibilità](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility) (Esempio di accessibilità)

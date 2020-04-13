@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898784"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61356877"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
 
@@ -28,7 +28,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Compass opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi della bussola. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Ecco un esempio:
+La funzionalità Compass opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi della bussola. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Esempio:
 
 ```csharp
 public class CompassTest
@@ -74,7 +74,7 @@ public class CompassTest
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Android non fornisce un'API per recuperare la direzione della bussola. Vengono utilizzati l'accelerometro e il magnetometro per calcolare la direzione del nord magnetico, come consigliato da Google.
 

@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940336"
 ---
 # <a name="xamarinforms-binding-path"></a>Percorso di binding di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-In tutti gli esempi di data binding precedenti, la proprietà [`Path`](xref:Xamarin.Forms.Binding.Path) della classe `Binding` (o la proprietà [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) dell'estensione di markup `Binding`) è stata impostata su una singola proprietà. È in effetti possibile impostare `Path` su una *proprietà secondaria* (una proprietà di una proprietà) o su un membro di una raccolta.
+In tutti gli esempi di [`Path`](xref:Xamarin.Forms.Binding.Path) associazione `Binding` dati precedenti, [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) la `Binding` proprietà della classe (o la proprietà dell'estensione di markup) è stata impostata su una singola proprietà. È in effetti possibile impostare `Path` su una *proprietà secondaria* (una proprietà di una proprietà) o su un membro di una raccolta.
 
 Ad esempio, si supponga che la pagina contenga un controllo `TimePicker`:
 
@@ -103,7 +103,7 @@ Il binding nella terza `Label` nella pagina **Path Variations** fa riferimento a
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-L'origine è impostata sulla proprietà statica `CultureInfo.CurrentCulture`, ovvero un oggetto di tipo `CultureInfo`. Tale classe definisce una proprietà denominata `DateTimeFormat` di tipo [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) che contiene una raccolta `DayNames`. L'indice seleziona il quarto elemento.
+L'origine è impostata sulla proprietà statica `CultureInfo.CurrentCulture`, ovvero un oggetto di tipo `CultureInfo`. Tale classe definisce `DateTimeFormat` una [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) proprietà denominata di tipo che contiene una `DayNames` raccolta. L'indice seleziona il quarto elemento.
 
 La quarta `Label` esegue un'operazione simile ma per le impostazioni cultura associato alla Francia. La proprietà `Source` del binding viene impostata sull'oggetto `CultureInfo` con un costruttore:
 
@@ -142,7 +142,7 @@ Ecco il programma in esecuzione:
 
 ## <a name="debugging-complex-paths"></a>Debug di percorsi complessi
 
-Le definizioni di percorso complesse possono essere difficili da costruire. È necessario conoscere il tipo di ogni proprietà secondaria o il tipo di elementi nella raccolta per aggiungere correttamente la proprietà secondaria successiva, ma i tipi stessi non compaiono nel percorso. Una buona tecnica consiste nel costruire il percorso in modo incrementale ed esaminare i risultati intermedi. Per l'ultimo esempio si potrebbe iniziare senza alcuna definizione di `Path`:
+Le definizioni di percorso complesse possono essere difficili da costruire. È necessario conoscere il tipo di ogni proprietà secondaria o il tipo di elementi nella raccolta per aggiungere correttamente la proprietà secondaria successiva, ma i tipi stesso non compaiono nel percorso. Una buona tecnica consiste nel costruire il percorso in modo incrementale ed esaminare i risultati intermedi. Per l'ultimo esempio si potrebbe iniziare senza alcuna definizione di `Path`:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},

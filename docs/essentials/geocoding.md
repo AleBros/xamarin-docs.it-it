@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Geocodifica'
+title: 'Xamarin.Essentials: Geocoding'
 description: La classe Geocoding in Xamarin.Essentials fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: 157eb3116f09268790036f8983543114e7a58276
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66354104"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocoding
 
 La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 
@@ -23,15 +23,15 @@ La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica 
 
 Per accedere alla funzionalità **Geocoding**, è necessaria la configurazione seguente specifica della piattaforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Una chiave API di Mappe di Bing è necessaria per usare la funzionalità di codifica geografica. Iscriversi per un account [Mappe di Bing](https://www.bingmapsportal.com/) gratuito. In **Account personale > My keys** (Chiavi personali) creare una nuova chiave e immettere le informazioni in base al tipo di applicazione, che dovrebbe essere un'**app di Windows pubblica (UWP, 8.x e versioni successive)** per le app UWP.
 
@@ -119,7 +119,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi per calcolare la distanza tra due località. Per un esempio, vedere l'articolo [**Xamarin.Essentials: Georilevazione**](geolocation.md#calculate-distance).
+Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi e definiscono i metodi per calcolare la distanza tra due posizioni. Per un esempio, vedere l'articolo [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance).
 
 ## <a name="api"></a>API
 

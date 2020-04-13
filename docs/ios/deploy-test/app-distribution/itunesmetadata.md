@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724620"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>File iTunesMetadata.plist nelle app Xamarin.iOS
@@ -108,7 +108,7 @@ I valori delle singole chiavi sono illustrati sotto in dettaglio.
 
 ### <a name="uirequireddevicecapabilities"></a>UIRequiredDeviceCapabilities
 
-La chiave `UIRequiredDeviceCapabilities` consente a iTunes di conoscere le funzionalità specifiche di un dispositivo iOS, necessarie per installare un'applicazione iOS in tale dispositivo. Viene fornita come dizionario (`<dict>...</dict>`) di funzionalità (`<key>...</key>`) a ognuna delle quali corrisponde un valore booleano. Se il valore di una funzionalità è `true`, tale funzionalità deve essere presente. Se è `false`, la funzionalità non deve essere presente nel dispositivo. Esempio:
+La chiave `UIRequiredDeviceCapabilities` consente a iTunes di conoscere le funzionalità specifiche di un dispositivo iOS, necessarie per installare un'applicazione iOS in tale dispositivo. Viene fornita come dizionario (`<dict>...</dict>`) di funzionalità (`<key>...</key>`) a ognuna delle quali corrisponde un valore booleano. Se il valore di una funzionalità è `true`, tale funzionalità deve essere presente. Se è `false`, la funzionalità non deve essere presente nel dispositivo. Ad esempio:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -284,7 +284,7 @@ Le chiavi seguenti sono incluse in tutti i file `iTunesMetadata.plist` per le ap
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>Creazione di un file iTunesMetadata.plist
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
  Quando si usa un file `iTunesMetadata.plist` in Visual Studio per Mac, sono disponibili due opzioni:
 
@@ -295,17 +295,17 @@ Le chiavi seguenti sono incluse in tutti i file `iTunesMetadata.plist` per le ap
 
 ### <a name="using-the-visual-plist-editor"></a>Uso dell'editor di file plist visivo
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file di progetto Xamarin.iOS e scegliere **Aggiungi** > **Nuovo file**.
-2. Nella finestra di dialogo Nuovo file selezionare **iOS** > **Elenco proprietà**:
+2. Nella finestra di dialogo Nuovo file, selezionare**Elenco proprietà** **iOS:** > 
 
     ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Immettere `iTunesMetadata` in **Nome** e fare clic sul pulsante **Nuovo**.
 4. Fare doppio clic sul file `iTunesMetadata.plist` in **Esplora soluzioni** per aprirlo e modificarlo:
 
     ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
-5. Fare clic sul segno **+** verde per creare una nuova voce e immettere `UIRequiredDeviceCapabilities` come nome della chiave:
+5. Fare clic **+** sul verde per `UIRequiredDeviceCapabilities` creare una nuova voce e immettere come nome della chiave:
 
     ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Fare clic sul tipo valore **Stringa** e selezionare **Dizionario** nell'elenco popup:
@@ -326,7 +326,7 @@ Seguire questa procedura:
 
 ### <a name="using-a-plain-text-editor"></a>Uso di un editor di testo normale
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. In un editor di testo normale creare un nuovo file di testo e denominarlo `iTunesMetadata.plist`.
 2. Copiare il contenuto di esempio dalla sezione [Contenuto di iTunesMetadata.plist](#iTunesMetadata_contents) sopra.
@@ -336,11 +336,11 @@ Seguire questa procedura:
 6. Nella finestra di dialogo Apri file selezionare il file `iTunesMetadata.plist` creato sopra e fare clic sul pulsante **OK**.
 7. Lasciare l'opzione **Azione di compilazione** di questo file impostata su **Nessuna**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Il plug-in Xamarin per Visual Studio supporta solo un editor visivo per i file `Info.plist` e `Entitlement.plist`, quindi è necessario creare il file `iTunesMetadata.plist` in un editor di testo standard e includerlo manualmente nel progetto Xamarin.iOS.
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. In un editor di testo normale creare un nuovo file di testo e denominarlo `iTunesMetadata.plist`.
 2. Copiare il contenuto di esempio dalla sezione [Contenuto di iTunesMetadata.plist](#iTunesMetadata_contents) sopra.
@@ -360,7 +360,7 @@ Questo articolo ha illustrato il file `iTunesMetadata.plist` che può essere usa
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Distribuzione tramite l'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Distribuzione dell'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Configurazione di un'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Pubblicazione nell'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Distribuzione interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)

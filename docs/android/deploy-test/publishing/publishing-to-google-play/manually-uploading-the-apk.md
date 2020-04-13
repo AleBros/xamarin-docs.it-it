@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: b54296da3f1253b77b63363583c34e1548cd6abc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724084"
 ---
 # <a name="manually-uploading-the-apk"></a>Caricamento manuale dell'APK
@@ -26,28 +26,28 @@ Dopo aver compilato il pacchetto APK e preparato gli asset promozionali, l'appli
 
 Se si usa già un'app registrata con Google Play, fare clic sul pulsante **Aggiungi nuova applicazione**:
 
-[![Pulsante di aggiunta di una nuova applicazione](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png#lightbox)
+[![Pulsante Aggiungi nuova applicazione](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png#lightbox)
 
 Quando viene visualizzata la finestra di dialogo **AGGIUNGI NUOVA APPLICAZIONE**, immettere il nome dell'app e fare clic su **Upload APK** (Carica APK):
 
-[![Pulsante di caricamento APK](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png#lightbox)
+[![Pulsante Carica APK](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png#lightbox)
 
 La schermata successiva consente la pubblicazione dell'app per eseguire test della versione alfa o della versione o per la produzione. Nell'esempio seguente è selezionata la scheda **ALPHA TESTING**. Poiché **MyApp** non usa i servizi di gestione delle licenze, il pulsante **Get license key** (Codice di licenza) non deve essere usato per questo esempio. Qui viene scelto il pulsante **Upload your first APK to Alpha** (Carica il primo APK su alfa) per pubblicare sul canale alfa:
 
-[![Pulsante di caricamento del primo APK su alfa](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
+[![Carica il tuo primo APK sul pulsante Alpha](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
 
 Viene visualizzata la finestra di dialogo **UPLOAD NEW APK TO ALPHA** (Carica nuovo APK su alpha). Il file APK può essere caricato facendo clic sul pulsante **Browse files** (Sfoglia file) o trascinando e rilasciando l'APK:
 
-[![Finestra di dialogo di caricamento del nuovo APK su alpha](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
+[![Finestra di dialogo Carica nuovo APK in Alpha](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
 
 Assicurarsi di caricare il file APK pronto per la versione che deve essere distribuito.
 La finestra di dialogo successiva indica l'avanzamento del caricamento dell'APK:
 
-[![Indicazione dell'avanzamento del caricamento](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png#lightbox)
+[![Indicazione di avanzamento del caricamento](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png#lightbox)
 
 Dopo aver caricato l'APK, è possibile selezionare un metodo di test:
 
-[![Finestra di dialogo di selezione del metodo di test](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png#lightbox)
+[![Scegliere una finestra di dialogo Metodo di test](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png#lightbox)
 
 Per altre informazioni sui test dell'app, vedere la guida alla [configurazione dei test alfa/beta](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en) di Google.
 
@@ -57,7 +57,7 @@ Al termine del caricamento l'APK viene salvato come bozza. Non può essere pubbl
 
 Fare clic su **Scheda dello store** in **Google Play Developer Console** per immettere le informazioni che verranno visualizzate da Google Play ai potenziali utenti dell'applicazione:
 
-[![Finestra di dialogo Scheda dello store](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
+[![Finestra di dialogo Elenco negozio](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
 
 ### <a name="graphics-assets"></a>Risorse grafiche
 
@@ -71,7 +71,7 @@ Tutti gli asset promozionali preparati in precedenza vengono caricati in questa 
 
 Dopo la sezione **RISORSE GRAFICHE** appare la sezione **CLASSIFICAZIONE** in cui si possono selezionare il tipo e la categoria dell'applicazione:
 
-[![Sezione di classificazione](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png#lightbox)
+[![Sezione Categorizzazione](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png#lightbox)
 
 La classificazione del contenuto viene illustrata dopo la sezione successiva.
 
@@ -79,15 +79,15 @@ La classificazione del contenuto viene illustrata dopo la sezione successiva.
 
 La sezione finale di questa pagina è **INFORMAZIONI DI CONTATTO**. Questa sezione viene usata per raccogliere informazioni di contatto sullo sviluppatore dell'applicazione:
 
-[![Sezione dei dati di contatto](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
+[![Sezione Dettagli contatto](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 È possibile specificare un URL per l'informativa sulla privacy dell'app nella sezione **NORME SULLA PRIVACY**, come indicato in precedenza.
 
 ## <a name="content-rating"></a>Classificazione dei contenuti
 
-Fare clic su **Classificazione dei contenuti**  in **Google Play Developer Console**. Specificare in questa pagina la classificazione del contenuto per l'app. Google Play richiede che per tutte le applicazioni venga specificata una classificazione del contenuto. Fare clic sul pulsante **Continua** per completare il questionario sulla classificazione del contenuto:
+Fare clic su **Classificazione dei contenuti ** in **Google Play Developer Console**. Specificare in questa pagina la classificazione del contenuto per l'app. Google Play richiede che per tutte le applicazioni venga specificata una classificazione del contenuto. Fare clic sul pulsante **Continua** per completare il questionario sulla classificazione del contenuto:
 
-[![Sezione di classificazione del contenuto](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
+[![Sezione Classificazione dei contenuti](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
 Tutte le applicazioni in Google Play devono essere classificate in base al sistema di classificazione di Google Play. Oltre alla classificazione del contenuto, tutte le applicazioni devono essere conformi alle [norme relative al contenuto per gli sviluppatori](https://www.android.com/us/developer-content-policy.html) di Google.
 
@@ -119,13 +119,13 @@ Per pubblicare un'app a pagamento è necessario un account commerciante. A tale 
 
 La sezione successiva consente di **gestire i paesi**, ovvero stabilire in quali paesi si può distribuire un'app:
 
-[![Finestra di dialogo di gestione dei paesi](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
+[![Finestra di dialogo Gestisci paesi](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
 ### <a name="other-information"></a>Altre informazioni
 
 Scorrere ancora verso il basso per specificare se l'app contiene annunci. Inoltre, la sezione delle **categorie di dispositivi** contiene opzioni per distribuire facoltativamente l'app per Android Wear, Android TV o Android Auto:
 
-[![Contiene una sezione di annunci](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
+[![Contiene la sezione Annunci](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 Dopo questa sezione è possibile selezionare opzioni aggiuntive, ad esempio scegliere **Per la famiglia** e distribuire l'app in Google Play for Education.
 
@@ -134,7 +134,7 @@ Dopo questa sezione è possibile selezionare opzioni aggiuntive, ad esempio sceg
 Nella parte inferiore della pagina di **prezzi &amp; distribuzione** è visualizzata la sezione **CONSENSO**.
 La sezione è obbligatoria e viene usata per dichiarare che l'applicazione soddisfa le [linee guida di Android per i contenuti](https://play.google.com/about/restricted-content/) e riconoscere che l'applicazione è soggetta alle leggi sull'esportazione degli Stati Uniti:
 
-[![Sezione Consenso](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
+[![Sezione consenso](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
 Esistono molti altri argomenti relativi alla pubblicazione di un'app Xamarin.Android che non sono trattati in questa guida.
 Per altre informazioni sulla pubblicazione dell'app in Google Play, vedere [Benvenuto nel Centro assistenza di Google Play Console](https://support.google.com/googleplay/android-developer#topic=3450769).
@@ -153,17 +153,17 @@ Quando gli utenti cercano le applicazioni sul sito Web di Google Play sono in gr
 - [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play usa gli attributi per determinare se un'applicazione può essere distribuita in un dispositivo in base alle dimensioni dello schermo.
     Google Play presuppone che Android sia in grado di adattare un layout più piccolo a schermi più grandi, ma non viceversa. Quindi, un'applicazione che dichiara il supporto per gli schermi normali apparirà nelle ricerche di schermi grandi ma non di schermi piccoli. Se un'applicazione Xamarin.Android non specifica un elemento `<supports-screen>` nel file manifesto, Google Play presuppone che tutti gli attributi abbiano un valore true e che l'applicazione supporti tutte le dimensioni dello schermo. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente.
 
-- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; Questo elemento del manifesto viene usato per richiedere determinate funzionalità hardware, ad esempio il tipo di tastiera, i dispositivi di navigazione, un touchscreen e così via. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente.
+- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; Questo elemento del manifesto viene utilizzato per richiedere determinate funzionalità hardware, ad esempio il tipo di tastiera, dispositivi di navigazione, un touchscreen e così via. Questo elemento deve essere aggiunto manualmente a **AndroidManifest.xml.This** element must be added to AndroidManifest.xml manually.
 
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; Questo elemento del manifesto dichiara le funzionalità hardware o software che un dispositivo deve avere affinché l'applicazione funzioni. Questo attributo è solo informativo. Google Play non visualizzerà l'applicazione nei dispositivi che non soddisfano questo filtro. È comunque possibile scaricare l'applicazione o installarla manualmente. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente.
 
-- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibraryAttribute`. Esempio:
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibraryAttribute`. Ad esempio:
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
-- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Questo elemento viene usato per dedurre determinate funzionalità hardware necessarie per l'esecuzione dell'applicazione che non sono state dichiarate correttamente con un elemento `<uses-feature>`. Ad esempio, se un'applicazione richiede l'autorizzazione per usare la fotocamera, Google Play presuppone che i dispositivi devono avere una fotocamera, anche se non è presente un elemento `<uses-feature>` che dichiara la fotocamera. Questo elemento può essere impostato con `Android.App.UsesPermissionsAttribute`. Esempio:
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Questo elemento viene usato per dedurre determinate funzionalità hardware necessarie per l'esecuzione dell'applicazione che non sono state dichiarate correttamente con un elemento `<uses-feature>`. Ad esempio, se un'applicazione richiede l'autorizzazione per usare la fotocamera, Google Play presuppone che i dispositivi devono avere una fotocamera, anche se non è presente un elemento `<uses-feature>` che dichiara la fotocamera. Questo elemento può essere impostato con `Android.App.UsesPermissionsAttribute`. Ad esempio:
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]

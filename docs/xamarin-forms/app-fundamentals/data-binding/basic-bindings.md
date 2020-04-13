@@ -9,15 +9,15 @@ ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79305038"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Binding di base di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Un data binding di Xamarin.Forms collega una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto di interfaccia utente. Questi due oggetti vengono chiamati *destinazione* e *origine*:
 
@@ -53,14 +53,14 @@ L'elemento `Slider` è impostato per un intervallo compreso tra 0 e 360. La fina
 
 Senza i data binding sarebbe necessario impostare l'evento `ValueChanged` di `Slider` su un gestore eventi che accede alla proprietà `Value` di `Slider` e imposta tale valore sulla proprietà `Rotation` di `Label`. Il data binding consente di automatizzare questo processo: il gestore eventi e il codice al suo interno non sono più necessari.
 
-È possibile impostare un binding su un'istanza di qualsiasi classe derivata da [`BindableObject`](xref:Xamarin.Forms.BindableObject), che include i derivati `Element`, `VisualElement`, `View` e `View`.  Il binding è sempre impostato sull'oggetto di destinazione. Il binding fa riferimento all'oggetto di origine. Per impostare il data binding usare i due membri seguenti della classe di destinazione:
+È possibile impostare un'associazione su un'istanza di `VisualElement` `View`qualsiasi `View` classe che deriva da [`BindableObject`](xref:Xamarin.Forms.BindableObject), che include `Element`, , e derivati .  Il binding è sempre impostato sull'oggetto di destinazione. Il binding fa riferimento all'oggetto di origine. Per impostare il data binding usare i due membri seguenti della classe di destinazione:
 
-- La proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) specifica l'oggetto di origine.
-- Il metodo [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) specifica la proprietà di destinazione e la proprietà di origine.
+- La [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) proprietà specifica l'oggetto di origine.
+- Il [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) metodo specifica la proprietà di destinazione e la proprietà di origine.
 
 In questo esempio, `Label` è la destinazione del binding e `Slider` è l'origine del binding. Le modifiche nell'origine `Slider` hanno effetto sulla rotazione della destinazione `Label`. I dati passano dall'origine alla destinazione.
 
-Il metodo `SetBinding` definito da `BindableObject` ha un argomento di tipo [`BindingBase`](xref:Xamarin.Forms.BindingBase) da cui deriva la classe [`Binding`](xref:Xamarin.Forms.Binding), ma sono presenti altri metodi `SetBinding` definiti dalla classe [`BindableObjectExtensions`](xref:Xamarin.Forms.BindableObjectExtensions). Il file code-behind nell'esempio **Basic Code Binding** (Binding di codice di base) usa un metodo di estensione [`SetBinding`](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) più semplice di questa classe.
+Il `SetBinding` metodo `BindableObject` definito da dispone [`BindingBase`](xref:Xamarin.Forms.BindingBase) di [`Binding`](xref:Xamarin.Forms.Binding) un argomento di tipo `SetBinding` da cui [`BindableObjectExtensions`](xref:Xamarin.Forms.BindableObjectExtensions) deriva la classe , ma esistono altri metodi definiti dalla classe . Il file code-behind nell'esempio **Basic Code Binding** (Binding di codice di base) usa un metodo di estensione [`SetBinding`](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) più semplice di questa classe.
 
 ```csharp
 public partial class BasicCodeBindingPage : ContentPage
@@ -97,7 +97,7 @@ Tuttavia l'inclusione del nome della classe è un buon promemoria dell'oggetto d
 
 Quando si aziona l'elemento `Slider`, l'elemento `Label` ruota di conseguenza:
 
-[![Associazione di codice di base](basic-bindings-images/basiccodebinding-small.png "Associazione di codice di base")](basic-bindings-images/basiccodebinding-large.png#lightbox "Associazione di codice di base")
+[![Associazione di codice di baseBasic Code Binding](basic-bindings-images/basiccodebinding-small.png "Associazione di codice di baseBasic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Associazione di codice di baseBasic Code Binding")
 
 La pagina **Basic Xaml Binding** (Binding XAML di base) è identica alla pagina **Basic Code Binding** (Binding di codice di base) salvo per il fatto che definisce l'intero data binding in XAML:
 
@@ -126,7 +126,7 @@ Come nel codice, il data binding è impostato sull'oggetto di destinazione, ovve
 - L'estensione di markup `x:Reference` è obbligatoria per il riferimento all'oggetto di origine, ovvero l'elemento `Slider` con nome `slider`.
 - L'estensione di markup `Binding` collega la proprietà `Rotation` di `Label` alla proprietà `Value` di `Slider`.
 
-Per altre informazioni sulle estensioni di markup XAML, vedere l'articolo [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md). L'estensione di markup `x:Reference` è supportata dalla classe [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension); `Binding` è supportata dalla classe [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension). Come indicano i prefissi dello spazio dei nomi XML, `x:Reference` fa parte della specifica XAML 2009, mentre `Binding` fa parte di Xamarin.Forms. Si noti che all'interno delle parentesi graffe non appaiono virgolette.
+Per altre informazioni sulle estensioni di markup XAML, vedere l'articolo [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md). L'estensione `x:Reference` di markup [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) è supportata dalla classe ; `Binding` è supportato [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) dalla classe. Come indicano i prefissi dello spazio dei nomi XML, `x:Reference` fa parte della specifica XAML 2009, mentre `Binding` fa parte di Xamarin.Forms. Si noti che all'interno delle parentesi graffe non appaiono virgolette.
 
 È facile dimenticare l'estensione di markup `x:Reference` durante l'impostazione di `BindingContext`. Inoltre spesso si imposta erroneamente la proprietà sul nome dell'origine di binding, come visualizzato di seguito:
 
@@ -136,7 +136,7 @@ BindingContext="slider"
 
 Questa prassi non è corretta. Questo markup imposta la proprietà `BindingContext` su un oggetto `string` i cui caratteri visualizzano "slider".
 
-Si noti che la proprietà di origine è specificata con la proprietà [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) di `BindingExtension`, che corrisponde alla proprietà [`Path`](xref:Xamarin.Forms.Binding.Path) della classe [`Binding`](xref:Xamarin.Forms.Binding).
+Si noti che la [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) proprietà `BindingExtension`di origine viene [`Path`](xref:Xamarin.Forms.Binding.Path) specificata [`Binding`](xref:Xamarin.Forms.Binding) con la proprietà di , che corrisponde alla proprietà della classe .
 
 Il markup visualizzato nella pagina **Basic XAML Binding** (Binding XAML di base) può essere semplificato: le estensioni di markup XAML come `x:Reference` e `Binding` possono avere attributi *content property* definiti. Per le estensioni di markup XAML ciò significa che non è necessario che sia visualizzato il nome della proprietà. La proprietà `Name` è la proprietà di contenuto di `x:Reference`, mentre la proprietà `Path` è la proprietà di contenuto di `Binding`. Questo significa che entrambe possono essere eliminate delle espressioni:
 
@@ -175,7 +175,7 @@ Questo è dimostrato nell'esempio **Alternative Code Binding** (Binding di codic
 </ContentPage>
 ```
 
-Il file code-behind imposta il binding con il metodo [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) definito da `BindableObject`. L'argomento è un [costruttore](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) per la classe [`Binding`](xref:Xamarin.Forms.Binding):
+Il file code-behind imposta [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) l'associazione con il metodo definito da `BindableObject`. L'argomento è un [costruttore](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) per la classe [`Binding`](xref:Xamarin.Forms.Binding):
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage
@@ -193,16 +193,16 @@ Il costruttore `Binding` ha 6 parametri, pertanto il parametro `source` è speci
 
 L'esecuzione del programma può dare risultati inattesi:
 
-[![Associazione di codice alternativa](basic-bindings-images/alternativecodebinding-small.png "Associazione di codice alternativa")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Associazione di codice alternativa")
+[![Associazione di codice alternativaAlternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Associazione di codice alternativaAlternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Associazione di codice alternativaAlternative Code Binding")
 
 La schermata iOS a sinistra visualizza l'aspetto della schermata quando la pagina viene visualizzata per la prima volta. Dove si trova `Label`?
 
-Il problema è che `Slider` ha un valore iniziale pari a 0. Di conseguenza anche la proprietà `Scale` di `Label` è impostata su 0, e questo sovrascrive il valore predefinito 1. Di conseguenza, inizialmente `Label` non è visibile. Come dimostra lo screenshot di Android, è possibile modificare il `Slider` per riportare il `Label`, ma la sua scomparsa iniziale è la disconcerting.
+Il problema è che `Slider` ha un valore iniziale pari a 0. Di conseguenza anche la proprietà `Scale` di `Label` è impostata su 0, e questo sovrascrive il valore predefinito 1. Di conseguenza, inizialmente `Label` non è visibile. Come dimostra la schermata di `Slider` Android, `Label` è possibile manipolare il per rendere il appaiono di nuovo, ma la sua scomparsa iniziale è sconcertante.
 
 L'[articolo successivo](binding-mode.md) illustra come evitare questo problema inizializzando `Slider` in base al valore predefinito della proprietà `Scale`.
 
 > [!NOTE]
-> La classe [`VisualElement`](xref:Xamarin.Forms.VisualElement) definisce anche le proprietà [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) e [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY), che possono modificare in scala `VisualElement` in modi diversi in direzione orizzontale e verticale.
+> La [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) definisce [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) e proprietà, `VisualElement` che possono scalare le dimensioni in modo diverso nelle direzioni orizzontale e verticale.
 
 La pagina **Alternative XAML Binding** (Binding XAML alternativo) illustra il binding equivalente interamente in XAML:
 
@@ -325,13 +325,13 @@ L'esempio **Binding Context Inheritance** (Ereditarietà del contesto di binding
 
 La proprietà `BindingContext` di `StackLayout` è impostata sull'oggetto `slider`. Questo contesto di binding viene ereditato sia da `Label` che da `BoxView` e le proprietà `Rotation` di entrambi sono impostate sulla proprietà `Value` di `Slider`:
 
-[![Ereditarietà del contesto di associazione](basic-bindings-images/bindingcontextinheritance-small.png "Ereditarietà del contesto di binding")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Ereditarietà del contesto di binding")
+[![Ereditarietà del contesto di binding](basic-bindings-images/bindingcontextinheritance-small.png "Ereditarietà del contesto di binding")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Ereditarietà del contesto di binding")
 
 Nell'[articolo seguente](binding-mode.md) si vedrà come la *modalità di binding* può modificare il flusso di dati tra gli oggetti di origine e destinazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
 - [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Video correlato

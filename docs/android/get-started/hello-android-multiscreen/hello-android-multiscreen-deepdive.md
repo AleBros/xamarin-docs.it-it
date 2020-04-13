@@ -9,15 +9,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020973"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android Multiscreen: approfondimenti
 
-_In questa guida in due parti, l'applicazione Phoneword di base (creata nella Guida Hello, Android) viene espansa per gestire una seconda schermata. Verranno introdotti i blocchi predefiniti di base dell'applicazione Android. Un approfondimento dell'architettura Android è incluso per aiutare a sviluppare una migliore comprensione della struttura e delle funzionalità delle applicazioni Android._
+_In questa guida in due parti, l'applicazione Phoneword di base (creata nella guida Hello, Android) viene espansa per gestire una seconda schermata. Lungo la strada, vengono introdotti i blocchi predefiniti dell'applicazione Android di base. Un'immersione più approfondita nell'architettura Android è inclusa per aiutarti a sviluppare una migliore comprensione della struttura e delle funzionalità delle applicazioni Android._
 
 In [Hello, Android Multiscreen: guida introduttiva](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) è stata compilata ed eseguita la prima applicazione Xamarin.Android multi-schermata.
 
@@ -29,7 +29,7 @@ In [Hello, Android: approfondimenti](~/android/get-started/hello-android/hello-a
 
 ### <a name="android-application-building-blocks"></a>Blocchi di compilazione dell'applicazione Android
 
-Un'applicazione Android è costituita da una raccolta di classi Android speciali denominate *blocchi applicazione*. I blocchi, forniti in bundle con un numero qualsiasi di risorse app (immagini, temi, classi helper e così via) vengono coordinati da un file XML denominato *manifesto Android*.
+Un'applicazione Android è costituita da una raccolta di classi speciali Android chiamate *Application Blocks* in &ndash; bundle con qualsiasi numero di risorse dell'applicazione - immagini, temi, classi helper, ecc. questi sono coordinati da un file XML chiamato *manifesto Android*.
 
 I blocchi applicazione costituiscono la colonna portante delle applicazioni Android, perché consentono di eseguire operazioni che in genere non è possibile eseguire con le classi normali. I due blocchi più importanti sono _Attività_ e _Servizi_:
 
@@ -39,10 +39,10 @@ I blocchi applicazione costituiscono la colonna portante delle applicazioni Andr
 
 Un'applicazione Android non può usare tutti i tipi di blocchi e spesso contiene diversi blocchi di un unico tipo. Ad esempio, l'applicazione Phoneword in [Hello, Android: guida introduttiva](~/android/get-started/hello-android/hello-android-quickstart.md) è composta da una sola attività (schermata) e da alcuni file di risorse. Un'app lettore musicale semplice può avere diverse attività e un servizio per la riproduzione di musica quando l'app è in background.
 
-### <a name="intents"></a>Intent
+### <a name="intents"></a>Finalità
 
 Un altro concetto fondamentale nelle applicazioni Android è quello di *Intent*.
-Android si basa sul *principio dei privilegi minimi*: le applicazioni hanno accesso solo ai blocchi necessari per il proprio funzionamento e hanno accesso limitato ai blocchi che costituiscono il sistema operativo o altre applicazioni. Analogamente, i blocchi sono *poco accoppiati*: sono progettati in modo da avere scarsa conoscenza di altri blocchi e accesso limitato a questi, anche per quanto riguarda i blocchi che fanno parte della stessa applicazione.
+Android si basa sul ** principio dei privilegi minimi&ndash;: le applicazioni hanno accesso solo ai blocchi necessari per il proprio funzionamento e hanno accesso limitato ai blocchi che costituiscono il sistema operativo o altre applicazioni. Analogamente, i blocchi sono ** poco accoppiati&ndash;: sono progettati in modo da avere scarsa conoscenza di altri blocchi e accesso limitato a questi, anche per quanto riguarda i blocchi che fanno parte della stessa applicazione.
 
 Per comunicare, i blocchi applicazione inviano e ricevono messaggi asincroni detti *Intent*. Gli Intent contengono informazioni sul blocco di destinazione. A volte contengono anche alcuni dati. Un Intent inviato da un componente di un'app attiva un evento in un altro componente dell'app, associando i due componenti e consentendo a questi di comunicare. Inviando e ricevendo Intent, è possibile consentire ai blocchi di coordinare operazioni complesse, ad esempio l'avvio dell'app della fotocamera per eseguire foto e salvarle, la raccolta di informazioni sulla posizione o il passaggio da una schermata alla successiva.
 
@@ -58,7 +58,7 @@ Per passare da una schermata all'altra sono stati usati Intent. È ora il moment
 
 ### <a name="launching-a-second-activity-with-an-intent"></a>Avviare una seconda attività con un Intent
 
-Nell'applicazione Phoneword è stato usato un Intent per avviare una seconda schermata (attività). Iniziare creando un Intent, passando l'oggetto *Context* corrente (`this`che fa riferimento all'oggetto **Context**) e il tipo del blocco applicazione che si sta cercando (`TranslationHistoryActivity`):
+Nell'applicazione Phoneword è stato usato un Intent per avviare una seconda schermata (attività). Iniziare creando un intento, passando`this`il *contesto* corrente ( , facendo riferimento al **contesto**`TranslationHistoryActivity`corrente ) e il tipo di blocco dell'applicazione che si sta cercando ( ):
 
 ```csharp
 Intent intent = new Intent(this, typeof(TranslationHistoryActivity));

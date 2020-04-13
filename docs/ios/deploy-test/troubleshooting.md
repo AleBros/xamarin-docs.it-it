@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 1c8eddcf16c8513852c21babf34d81c9a3290406
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028428"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Test e distribuzione di Xamarin.iOS - Risoluzione dei problemi
@@ -28,7 +28,7 @@ Le operazioni di firma del codice e provisioning con iOS possono essere compless
 
 - Mantenere organizzato l'accesso keychain ed eliminare i certificati e i profili scaduti. I certificati Enterprise hanno una validità di tre anni, mentre gli altri di un anno. I certificati non possono essere rinnovati, quindi è necessario crearne di nuovi prima che quelli vecchi scadano. Assicurarsi di revocare ed eliminare i vecchi certificati e di firmare di nuovo le app con i nuovi certificati.
 
-- Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. A tale scopo, assicurarsi prima di tutto di eliminare il profilo in Apple Developer Center, quindi passare a *preferenze > l'Account > visualizzare i dettagli...*. Selezionare il profilo di provisioning e fare clic su **Mostra in Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
+- Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. A tale scopo, assicurarsi innanzitutto di eliminare il profilo nel centro per sviluppatori Apple, quindi passare a *Preferenze > il proprio account > Visualizzare i dettagli...*. Selezionare il profilo di provisioning e fare clic su **Mostra nel Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
 
 - Assicurarsi che siano disponibili tutti i certificati necessari e le corrispondenti chiavi private. Per ogni team sarà necessario un certificato dello sviluppatore (per installare le app in un dispositivo personale) e un certificato di distribuzione (per installarle in altri dispositivi).
 
@@ -62,6 +62,6 @@ A volte il testing non procede senza intoppi come si era pianificato.  Le indica
 
 <a name="Automatically_copy_app_bundles_back_to_Windows" />
 
-## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle dell'app nuovamente in Windows
+## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle delle app nuovamente in Windows
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 712322435614966348fc5c10cabf724870c307e4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021287"
 ---
 # <a name="apk-expansion-files"></a>File di espansione APK
@@ -26,18 +26,18 @@ Nella maggior parte dei dispositivi, al momento dell'installazione di un'applica
 
 I file di espansione sono considerati come *BLOB binari opachi (OBB, Opaque Binary Blob)* e possono avere dimensioni fino a 2 GB. Android non esegue alcuna elaborazione speciale su questi file dopo il download, quindi i file possono essere in qualsiasi formato appropriato per l'applicazione. L'approccio consigliato per i file di espansione è concettualmente il seguente:
 
-- **Espansione principale**: questo è il file di espansione principale per le risorse e gli asset che non rientrano nei limiti di dimensioni dell'APK. Il file di espansione principale deve contenere gli asset principali richiesti da un'applicazione e dovrebbe essere aggiornato raramente.
-- **Espansione patch**: questo file è destinato a piccoli aggiornamenti del file di espansione principale. Questo file non può essere aggiornato. È responsabilità dell'applicazione eseguire eventuali patch o aggiornamenti necessari da questo file.
+- **** Espansione principale&ndash;: questo è il file di espansione principale per le risorse e gli asset che non rientrano nei limiti di dimensioni dell'APK. Il file di espansione principale deve contenere gli asset principali richiesti da un'applicazione e dovrebbe essere aggiornato raramente.
+- **** Espansione patch&ndash;: questo file è destinato a piccoli aggiornamenti del file di espansione principale. Questo file non può essere aggiornato. È responsabilità dell'applicazione eseguire eventuali patch o aggiornamenti necessari da questo file.
 
 I file di espansione devono essere caricati insieme all'APK.
 Google Play non consente il caricamento di un file di espansione in un APK esistente o per APK esistenti da aggiornare. Se è necessario aggiornare un file di espansione, è necessario caricare un nuovo APK con il valore `versionCode` aggiornato.
 
 ## <a name="expansion-file-storage"></a>Archiviazione dei file di espansione
 
-Quando i file vengono scaricati in un dispositivo, verranno archiviati in **_archivio-condiviso_/Android/obb/_nome-pacchetto_** :
+Quando i file vengono scaricati in un dispositivo, verranno archiviati in **_archivio-condiviso_/Android/obb/_nome-pacchetto_**:
 
-- **_archivio-condiviso_** : questa è la directory specificata da `Android.OS.Environment.ExternalStorageDirectory`.
-- **_nome-pacchetto_** : questo è il nome del pacchetto in stile Java dell'applicazione.
+- **_shared-store_** &ndash; Questa è la `Android.OS.Environment.ExternalStorageDirectory` directory specificata da .
+- **_package-name_** &ndash; Nome del pacchetto Java dell'applicazione.
 
 Dopo il download, i file di espansione non devono essere spostati, modificati, rinominati o eliminati dal relativo percorso nel dispositivo. In caso contrario, i file di espansione verranno scaricati di nuovo e i file precedenti eliminati. La directory dei file di espansione, inoltre, deve contenere solo i file del pacchetto di espansione.
 
@@ -57,9 +57,9 @@ Al momento del download dei file di espansione, Google Play userà lo schema seg
 
 I tre componenti di questo schema sono:
 
-- `main` o `patch`: specifica se questo è il file di espansione principale o patch. È possibile usare uno solo di questi componenti.
-- `<expansion-version>`: intero corrispondente al valore `versionCode` dell'APK a cui è stato inizialmente associato il file.
-- `<package-name>`: questo è il nome del pacchetto in stile Java dell'applicazione.
+- `main`o `patch` &ndash; Specifica se si tratta del file di espansione principale o della patch. È possibile usare uno solo di questi componenti.
+- `<expansion-version>`&ndash; Si tratta di un `versionCode` numero intero che corrisponde all'APK a cui è stato associato per la prima volta il file.
+- `<package-name>`&ndash; Questo è il nome del pacchetto in stile Java dell'applicazione.
 
 Ad esempio, se la versione dell'APK è 21 e il nome del pacchetto è `mono.samples.helloworld`, il file di espansione principale sarà denominato **main.21.mono.samples.helloworld**.
 
@@ -67,13 +67,13 @@ Ad esempio, se la versione dell'APK è 21 e il nome del pacchetto è `mono.sampl
 
 Quando un'applicazione viene installata da Google Play, i file di espansione devono essere scaricati e salvati insieme all'APK. In alcuni casi ciò potrebbe non verificarsi o può succedere che i file di espansione vengano eliminati. Per gestire questa condizione, un'app deve verificare se i file di espansione esistono e quindi eseguirne il download, se necessario. Il diagramma di flusso seguente mostra il flusso di lavoro consigliato per questo processo:
 
-[![Diagramma di flusso dell'espansione dell'APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
+[![Diagramma di flusso dell'espansione APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 All'avvio, un'applicazione deve controllare se i file di espansione appropriati esistono nel dispositivo corrente. Se non sono disponibili, l'applicazione deve effettuare una richiesta dal [servizio di licenza per le applicazioni](https://developer.android.com/google/play/licensing/index.html) di Google Play. Questo controllo viene eseguito tramite la *libreria LVL (License Verification Library)* e deve essere eseguito sia per le applicazioni gratuite che per quelle con licenza. La libreria LVL viene usata principalmente dalle applicazioni a pagamento per applicare restrizioni di licenza. Tuttavia, Google ha esteso la libreria LVL in modo che possa essere usata anche con le librerie di espansione. Anche le applicazioni gratuite devono eseguire il controllo LVL, ma possono ignorare le restrizioni di licenza. La richiesta LVL deve fornire le informazioni seguenti relative ai file di espansione richieste dall'applicazione: 
 
-- **Dimensioni del file**: le dimensioni dei file di espansione vengono usate nell'ambito del controllo che determina se sono già stati scaricati i file di espansione corretti.
-- **Nomi di file**: si tratta del nome di file (nel dispositivo corrente) in cui devono essere salvati i pacchetti di espansione.
-- **URL per il download**: URL che deve essere usato per scaricare i pacchetti di espansione. Questo URL è univoco per ogni download e ha scadenza a breve.
+- **** Dimensioni del file&ndash;: le dimensioni dei file di espansione vengono usate nell'ambito del controllo che determina se sono già stati scaricati i file di espansione corretti.
+- **** Nomi di file&ndash;: si tratta del nome di file (nel dispositivo corrente) in cui devono essere salvati i pacchetti di espansione.
+- **** URL per il download&ndash;: URL che deve essere usato per scaricare i pacchetti di espansione. Questo URL è univoco per ogni download e ha scadenza a breve.
 
 Dopo aver eseguito il controllo LVL, l'applicazione deve scaricare i file di espansione, prendendo in considerazione i punti seguenti come parte del download:
 
@@ -91,8 +91,8 @@ Se i file di espansione non sono stati scaricati o se i file correnti non sono v
 
 Per semplificare le operazioni richieste per l'integrazione dei file di espansione in un'applicazione, Google ha creato varie librerie in Java. Le librerie in questione sono:
 
-- **Downloader Library**: si tratta di una libreria che riduce l'impegno necessario per integrare i file di espansione in un'applicazione. La libreria scarica i file di espansione in un servizio in background, visualizza le notifiche utente, gestisce i problemi di connettività di rete, riprende i download e così via.
-- **License Verification Library (LVL)** : libreria per effettuare ed elaborare le chiamate ai servizi di licenza per le applicazioni. Può anche essere usata per eseguire controlli delle licenze, per determinare se l'uso dell'applicazione nel dispositivo è autorizzato.
-- **APK Expansion Zip Library (facoltativa)** : se i file di espansione sono inclusi in un file ZIP, questa libreria funge da provider di contenuto e consente a un'applicazione di leggere risorse e asset direttamente dal file ZIP senza doverlo espandere.
+- **** Downloader Library&ndash;: si tratta di una libreria che riduce l'impegno necessario per integrare i file di espansione in un'applicazione. La libreria scarica i file di espansione in un servizio in background, visualizza le notifiche utente, gestisce i problemi di connettività di rete, riprende i download e così via.
+- **** License Verification Library (LVL)&ndash;: libreria per effettuare ed elaborare le chiamate ai servizi di licenza per le applicazioni. Può anche essere usata per eseguire controlli delle licenze, per determinare se l'uso dell'applicazione nel dispositivo è autorizzato.
+- **** APK Expansion Zip Library (facoltativa)&ndash;: se i file di espansione sono inclusi in un file ZIP, questa libreria funge da provider di contenuto e consente a un'applicazione di leggere risorse e asset direttamente dal file ZIP senza doverlo espandere.
 
 Queste librerie sono state convertite per C# e sono disponibili con la licenza di Apache 2.0. Per integrare rapidamente i file di espansione in un'applicazione esistente, è possibile aggiungere queste librerie a un'applicazione Xamarin.Android esistente. Il codice è disponibile in [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) su GitHub.

@@ -1,5 +1,5 @@
 ---
-title: Procedura dettagliata per i frammenti di Novell. Android-parte 1
+title: Xamarin.Android Frammenti Walkthrough - Parte 1
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
@@ -8,50 +8,50 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 043ad02f9ca9148910364ac82917551ee58d72ba
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027408"
 ---
-# <a name="fragments-walkthrough-ndash-phone"></a>Procedura dettagliata per i frammenti &ndash; telefono
+# <a name="fragments-walkthrough-ndash-phone"></a>Frammenti &ndash; walkthrough telefono
 
-Questa è la prima parte di una procedura dettagliata che creerà un'app Novell. Android destinata a un dispositivo Android con orientamento verticale. In questa procedura dettagliata viene illustrato come creare frammenti in Novell. Android e come aggiungerli a un esempio.
+Questa è la prima parte di una procedura dettagliata che creerà un'app Xamarin.Android destinata a un dispositivo Android con orientamento verticale. Questa procedura dettagliata verrà illustrato come creare frammenti in Xamarin.Android e come aggiungerli a un esempio.
 
 [![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
-Per questa app verranno create le classi seguenti:
+Le seguenti classi verranno create per questa applicazione:
 
-1. `PlayQuoteFragment` &nbsp; questo frammento visualizzerà una citazione di William Shakespeare. Verrà ospitato da `PlayQuoteActivity`.
-1. `Shakespeare` &nbsp; questa classe conterrà due matrici hardcoded come proprietà.
-1. `TitlesFragment` &nbsp; in questo frammento verrà visualizzato un elenco di titoli di riproduzione scritti da William Shakespeare. Verrà ospitato da `MainActivity`.
-1. `PlayQuoteActivity` &nbsp; `TitlesFragment` avvierà il `PlayQuoteActivity` in risposta all'utente che seleziona una riproduzione in `TitlesFragment`.
+1. `PlayQuoteFragment`&nbsp; Questo frammento mostrerà una citazione da un'opera di William Shakespeare. Sarà ospitato da `PlayQuoteActivity`.
+1. `Shakespeare`&nbsp; Questa classe conterrà due matrici hardcoded come proprietà.
+1. `TitlesFragment`&nbsp; Questo frammento mostrerà un elenco di titoli di opere che sono stati scritti da William Shakespeare. Sarà ospitato da `MainActivity`.
+1. `PlayQuoteActivity`si avvierà `PlayQuoteActivity` il in risposta all'utente selezionando una riproduzione in `TitlesFragment`. &nbsp; `TitlesFragment`
 
-## <a name="1-create-the-android-project"></a>1. creare il progetto Android
+## <a name="1-create-the-android-project"></a>1. Creare il progetto Android
 
-Creare un nuovo progetto Novell. Android denominato **FragmentSample**.
+Creare un nuovo progetto Xamarin.Android denominato **FragmentSample**.
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![creare un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[![Creare un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![la creazione di un nuovo progetto Novell. Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[![Creazione di un nuovo progetto Xamarin.Android](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
-Si consiglia di selezionare **lo sviluppo moderno** per questa procedura dettagliata.
+Si consiglia di selezionare **Sviluppo moderno** per questa procedura dettagliata.
 
-Dopo aver creato il progetto, rinominare il file **layout/Main. aXML** in **layout/activity_main. aXML**.
+Dopo aver creato il progetto, rinominare il **file layout/Main.axml** in **layout/activity_main.axml**.
 
 -----
 
-## <a name="2-add-the-data"></a>2. aggiungere i dati
+## <a name="2-add-the-data"></a>2. Aggiungere i dati
 
-I dati per questa applicazione verranno archiviati in due matrici di stringhe hardcoded che sono proprietà di un nome di classe `Shakespeare`:
+I dati per questa applicazione verranno archiviati in due matrici di `Shakespeare`stringhe hardcoded che sono proprietà di un nome di classe :
 
-* `Shakespeare.Titles` &nbsp; questa matrice conterrà un elenco di riproduzioni di William Shakespeare. Si tratta dell'origine dati per il `TitlesFragment`.
-* `Shakespeare.Dialogue` &nbsp; questa matrice conterrà un elenco di virgolette da uno dei giochi contenuti in `Shakespeare.Titles`. Si tratta dell'origine dati per il `PlayQuoteFragment`.
+* `Shakespeare.Titles`&nbsp; Questo array conterrà un elenco di opere di William Shakespeare. Questa è l'origine `TitlesFragment`dati per il file .
+* `Shakespeare.Dialogue`&nbsp; Questa matrice conterrà un elenco di citazioni `Shakespeare.Titles`da una delle opere contenute in . Questa è l'origine `PlayQuoteFragment`dati per il file .
 
-Aggiungere una nuova C# classe al progetto **FragmentSample** e denominarla **Shakespeare.cs**. All'interno di questo file creare una C# nuova classe denominata `Shakespeare` con il contenuto seguente
+Aggiungere una nuova classe di C, al progetto **FragmentSample** e denominarla **Shakespeare.cs**. All'interno di questo file, `Shakespeare` creare una nuova classe di C , denominata con il contenuto seguente
 
 ```csharp
 class Shakespeare
@@ -80,21 +80,21 @@ class Shakespeare
 }
 ```
 
-## <a name="3-create-the-playquotefragment"></a>3. creare il PlayQuoteFragment
+## <a name="3-create-the-playquotefragment"></a>3. Creare il PlayQuoteFragment
 
-Il `PlayQuoteFragment` è un frammento Android che visualizzerà un'offerta per una riproduzione Shakespeare selezionata dall'utente in precedenza nell'applicazione. questo frammento non userà un file di layout Android; al contrario, creerà dinamicamente l'interfaccia utente. Aggiungere una nuova classe di `Fragment` denominata `PlayQuoteFragment` al progetto:
+Il `PlayQuoteFragment` è un frammento Android che visualizzerà una citazione per un gioco di Shakespeare che è stato selezionato dall'utente in precedenza nell'applicazione, Questo frammento non utilizzerà un file di layout Android; al contrario, creerà dinamicamente la propria interfaccia utente. Aggiungere una `Fragment` nuova `PlayQuoteFragment` classe denominata al progetto:Add a new class named to the project:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![aggiungere una nuova C# classe](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
+[![Aggiungere una nuova classe di C](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![aggiungere una nuova C# classe](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
+[![Aggiungere una nuova classe di C](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
 
 -----
 
-Modificare quindi il codice per il frammento in modo simile al frammento di codice seguente:
+Quindi, modificare il codice per il frammento in modo che sia simile a questo frammento:Then, change the code for the fragment to resemble this snippet:
 
 ```csharp
 public class PlayQuoteFragment : Fragment
@@ -129,28 +129,28 @@ public class PlayQuoteFragment : Fragment
 }
 ```
 
-Si tratta di un modello comune nelle app Android per fornire un metodo factory che creerà un'istanza di un frammento. In questo modo si garantisce che il frammento venga creato con i parametri necessari per un corretto funzionamento. In questa procedura dettagliata, l'app dovrebbe usare il metodo `PlayQuoteFragment.NewInstance` per creare un nuovo frammento ogni volta che viene selezionata un'offerta. Il metodo `NewInstance` accetta un solo parametro &ndash; l'indice dell'offerta da visualizzare.
+È un modello comune nelle app Android per fornire un metodo factory che creerà un'istanza di un frammento. In questo modo il frammento verrà creato con i parametri necessari per il corretto funzionamento. In questa procedura dettagliata, l'app deve usare il `PlayQuoteFragment.NewInstance` metodo per creare un nuovo frammento ogni volta che viene selezionata un'offerta. Il `NewInstance` metodo accetta un &ndash; singolo parametro l'indice dell'offerta da visualizzare.
 
-Il metodo `OnCreateView` verrà richiamato da Android quando è il momento di eseguire il rendering del frammento sullo schermo. Verrà restituito un oggetto `View` Android che è il frammento. Questo frammento non utilizza un file di layout per creare una vista. Al contrario, creerà a livello di codice la vista creando un'istanza di un oggetto **TextView** per conservare l'offerta e visualizzerà tale widget in un **ScrollView**.
+Il `OnCreateView` metodo verrà richiamato da Android quando è il momento di eseguire il rendering del frammento sullo schermo. Verrà restituito un `View` oggetto Android che è il frammento. Questo frammento non utilizza un file di layout per creare una vista. Al contrario, verrà creata a livello di codice la visualizzazione un'istanza di un **TextView** per contenere la citazione e verrà visualizzato tale widget in un **ScrollView**.
 
 > [!NOTE]
-> Le sottoclassi del frammento devono avere un costruttore predefinito pubblico senza parametri.
+> Le sottoclassi di frammenti devono avere un costruttore predefinito pubblico che non dispone di parametri.
 
-## <a name="4-create-the-playquoteactivity"></a>4. creare il PlayQuoteActivity
+## <a name="4-create-the-playquoteactivity"></a>4. Creare PlayQuoteActivity
 
-I frammenti devono essere ospitati all'interno di un'attività, quindi questa app richiede un'attività che ospiterà il `PlayQuoteFragment`. L'attività aggiungerà in modo dinamico il frammento al relativo layout in fase di esecuzione. Aggiungere una nuova attività all'applicazione e denominarla `PlayQuoteActivity`:
+I frammenti devono essere ospitati all'interno di un'attività, pertanto questa app richiede un'attività che ospiterà il file `PlayQuoteFragment`. L'attività aggiungerà dinamicamente il frammento al layout in fase di esecuzione. Aggiungere una nuova attività all'applicazione e denominarla: `PlayQuoteActivity`
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![aggiungere attività Android al progetto](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
+[![Aggiungi attività Android al progetto](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![aggiungere attività Android al progetto](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
+[![Aggiungi attività Android al progetto](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
 
 -----
 
-Modificare il codice in `PlayQuoteActivity`:
+Modificare il `PlayQuoteActivity`codice in :
 
 ```csharp
 [Activity(Label = "PlayQuoteActivity")]
@@ -170,21 +170,21 @@ public class PlayQuoteActivity : Activity
 }
 ```
 
-Quando viene creato `PlayQuoteActivity`, creerà un'istanza di una nuova `PlayQuoteFragment` e caricherà il frammento nella visualizzazione radice nel contesto di un `FragmentTransaction`. Si noti che questa attività non carica un file di layout Android per la relativa interfaccia utente. Al contrario, viene aggiunta una nuova `PlayQuoteFragment` alla visualizzazione radice dell'applicazione. L'identificatore di risorsa `Android.Resource.Id.Content` viene usato per fare riferimento alla visualizzazione radice di un'attività senza conoscere l'identificatore specifico.
+Quando `PlayQuoteActivity` viene creato, verrà `PlayQuoteFragment` creata un'istanza di un nuovo frammento e verrà caricato il frammento nella relativa visualizzazione radice nel contesto di un `FragmentTransaction`oggetto . Si noti che questa attività non carica un file di layout Android per l'interfaccia utente. Al contrario, un nuovo `PlayQuoteFragment` viene aggiunto alla visualizzazione radice dell'applicazione. L'identificatore `Android.Resource.Id.Content` di risorsa viene utilizzato per fare riferimento alla visualizzazione radice di un'attività senza conoscerne l'identificatore specifico.
 
-## <a name="5-create-titlesfragment"></a>5. creare TitlesFragment
+## <a name="5-create-titlesfragment"></a>5. Creare TitlesFragment
 
-Il `TitlesFragment` creerà una sottoclasse di un frammento specializzato noto come `ListFragment` che incapsula la logica per la visualizzazione di un `ListView` in un frammento. Un `ListFragment` espone una proprietà `ListAdapter` (utilizzata dal `ListView` per visualizzarne il contenuto) e un gestore eventi denominato `OnListItemClick` che consente al frammento di rispondere ai clic su una riga visualizzata dal `ListView`.
+Verrà `TitlesFragment` sottoclasse un frammento `ListFragment` specializzato noto come un `ListView` che incapsula la logica per la visualizzazione di un in un frammento. Un `ListFragment` espone `ListAdapter` una proprietà (utilizzata dall'oggetto `ListView` per visualizzarne `OnListItemClick` il contenuto) e un gestore eventi denominato che `ListView`consente al frammento di rispondere ai clic su una riga visualizzata da .
 
 Per iniziare, aggiungere un nuovo frammento al progetto e denominarlo **TitlesFragment**:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![aggiungere il frammento Android al progetto](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
+[![Aggiungere frammento Android al progettoAdd Android fragment to project](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![aggiungere il frammento Android al progetto](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
+[![Aggiungere frammento Android al progettoAdd Android fragment to project](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
 
 -----
 
@@ -231,13 +231,13 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-Quando viene creata l'attività, Android richiama il metodo `OnActivityCreated` del frammento; Questo è il punto in cui viene creata la scheda elenco per la `ListView`.  Il metodo `ShowQuoteFromPlay` avvierà un'istanza del `PlayQuoteActivity` per visualizzare le virgolette per la riproduzione selezionata.
+Quando il Activity viene creato `OnActivityCreated` Android richiamerà il metodo del frammento; è qui che viene `ListView` creato l'adattatore di elenco per l'oggetto.  Il `ShowQuoteFromPlay` metodo avvierà un'istanza di `PlayQuoteActivity` per visualizzare il preventivo per la riproduzione selezionata.
 
-## <a name="display-titlesfragment-in-mainactivity"></a>Visualizzare TitlesFragment in MainActivity
+## <a name="display-titlesfragment-in-mainactivity"></a>Visualizzare TitlesFragment in MainActivityDisplay TitlesFragment in MainActivity
 
-Il passaggio finale consiste nel visualizzare `TitlesFragment` all'interno `MainActivity`. L'attività non carica dinamicamente il frammento. Al contrario, il frammento verrà caricato staticamente dichiarando il frammento nel file di layout dell'attività usando un elemento `fragment`. Il frammento da caricare viene identificato impostando l'attributo `android:name` sulla classe fragment (incluso lo spazio dei nomi del tipo). Ad esempio, per usare la `TitlesFragment`, `android:name` verrebbe impostato su `FragmentSample.TitlesFragment`.
+Il passaggio finale `TitlesFragment` `MainActivity`consiste nel visualizzare all'interno di . L'attività non carica dinamicamente il frammento. Al contrario, il frammento verrà caricato in modo statico `fragment` dichiarandolo nel file di layout dell'attività utilizzando un elemento. Il frammento da caricare `android:name` viene identificato impostando l'attributo sulla classe di frammenti (incluso lo spazio dei nomi del tipo). Ad esempio, per `TitlesFragment`utilizzare `android:name` l'opzione `FragmentSample.TitlesFragment`, sarebbe necessario impostare su .
 
-Modificare il file di layout **activity_main. aXML**, sostituendo il codice XML esistente con quanto segue:
+Modificare il file di layout **activity_main.axml**, sostituendo il codice XML esistente con quanto segue:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -256,9 +256,9 @@ Modificare il file di layout **activity_main. aXML**, sostituendo il codice XML 
 ```
 
 > [!NOTE]
-> L'attributo `class` è un sostituto valido per `android:name`. Non sono disponibili linee guida formali per il modulo preferito. esistono molti esempi di codebase che utilizzeranno `class` interscambiabili con `android:name`.
+> L'attributo `class` è `android:name`un sostituto valido per . Non ci sono indicazioni formali su quale forma è preferito, `class` ci sono `android:name`molti esempi di basi di codice che utilizzeranno in modo intercambiabile con .
 
-Non sono necessarie modifiche al codice per MainActivity. Il codice in tale classe dovrebbe essere molto simile al frammento di codice seguente:
+Non sono necessarie modifiche al codice per MainActivity.There are no code changes required for MainActivity. Il codice in tale classe deve essere molto simile a questo frammento di codice:The code in that class should be very simile to this snippet:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
@@ -274,8 +274,8 @@ public class MainActivity : Activity
 
 ## <a name="run-the-app"></a>Eseguire l'app
 
-Ora che il codice è completo, eseguire l'app in un dispositivo per verificarne l'azione.
+Ora che il codice è completo, esegui l'app in un dispositivo per visualizzarla in azione.
 
-[![screenshot dell'applicazione in esecuzione su un telefono.](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
+[![Screenshot dell'applicazione in esecuzione su un telefono.](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
 
-La [parte 2 di questa procedura dettagliata](./walkthrough-landscape.md) optimtize questa applicazione per i dispositivi in esecuzione in modalità orizzontale.
+[La parte 2 di questa procedura dettagliata](./walkthrough-landscape.md) otimerà questa applicazione per i dispositivi in esecuzione in modalità orizzontale.

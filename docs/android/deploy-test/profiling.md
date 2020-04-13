@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027998"
 ---
 # <a name="profiling-android-apps"></a>Profilatura delle app Android
@@ -48,7 +48,7 @@ I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nell
 
 3. Aprire la cartella di progetto e passare a **bin/Debug**. In questa cartella individuare la versione **Signed.apk** dell'app e copiarla in una posizione facilmente accessibile (come il desktop). Nello screenshot seguente il file **com.companyname.XamagonXuzzle-Signed.apk** del pacchetto APK viene individuato e copiato sul desktop:
 
-    [![Percorso del file del pacchetto APK firmato per il debug](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
+    [![Percorso del file APK firmato di debug](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
 4. Avviare Android Studio e selezionare **Profile or debug APK** (Profila o esegui il debug del pacchetto APK):
 
@@ -64,11 +64,11 @@ I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nell
 
 7. Al termine del caricamento del pacchetto APK, Android Studio visualizza la schermata di progetto seguente per il pacchetto APK. Fare clic con il pulsante destro del mouse sul nome dell'app nella visualizzazione struttura ad albero a sinistra e selezionare **Open Module Settings** (Apri impostazioni modulo):
 
-    [![Voce di menu Open Module Settings (Apri impostazioni modulo)](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
+    [![Posizione della voce di menu Apri impostazioni modulo](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
 8. Passare a **Project Settings > Modules** (Impostazioni progetto > Moduli), selezionare il nodo **-Signed** dell'app e quindi fare clic su **&lt;No SDK&gt;** (Nessun SDK):
 
-    [![Spostamento alla configurazione dell'SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
+    [![Passaggio all'impostazione SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
 9. Nel menu a discesa **Module SDK** (SDK modulo) selezionare il livello di Android SDK usato per compilare l'app (in questo esempio è stato usato il livello API 26 per compilare **XamagonXuzzle**):
 
@@ -86,19 +86,19 @@ I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nell
 
 12. Dopo l'avvio del profiler, saranno necessari alcuni secondi per la connessione al dispositivo di distribuzione e al processo dell'app. Durante l'installazione del pacchetto APK, Android Profiler segnalerà **No connected devices** (Nessun dispositivo connesso) e **No debuggable processes** (Nessun processo sottoponibile a debug).
 
-    [![Il profiler installa il pacchetto APK](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
+    [![Il profiler installa l'APK](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
 
-13. Dopo alcuni secondi, Android Profiler completerà l'installazione del pacchetto APK e lo avvierà, segnalando il nome del dispositivo e il nome del processo dell'app sottoposto a profilatura (in questo esempio, rispettivamente **LGE Nexus 5X** e  **com.companyname.XamagonXuzzle**):
+13. Dopo alcuni secondi, Android Profiler completerà l'installazione del pacchetto APK e lo avvierà, segnalando il nome del dispositivo e il nome del processo dell'app sottoposto a profilatura (in questo esempio, rispettivamente **LGE Nexus 5X** e ** com.companyname.XamagonXuzzle**):
 
     [![Finestra del profiler dopo l'avvio](profiling-images/vswin/12-profiler-starts-sml.png)](profiling-images/vswin/12-profiler-starts.png#lightbox)
 
 14. Dopo avere identificato il dispositivo e il processo sottoponibile a debug, Android Profiler avvia la profilatura dell'app:
 
-    [![Visualizzazione del profiler per l'app in esecuzione](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
+    [![Viene visualizzato il profiler per l'app in esecuzione](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
 
 15. Se si tocca il pulsante per la **scelta in modo casuale** in **XamagonXuzzle** (che determina la scelta casuale dei riquadri), verrà visualizzato l'aumento dell'utilizzo della CPU durante l'intervallo di scelta casuale dell'app:
 
-    [![Utilizzo della CPU quando si tocca il pulsante per la scelta in modo casuale](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
+    [![Utilizzo della CPU quando viene toccato il pulsante RANDOMIE](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
 
 ### <a name="using-the-android-profiler"></a>Uso di Android Profiler
 

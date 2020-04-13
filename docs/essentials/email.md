@@ -6,17 +6,17 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
 ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
-ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70060090"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
 La classe **Email** consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, inclusi oggetto, corpo e destinatari (A, Cc, Ccn).
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -86,15 +86,15 @@ await Email.ComposeAsync(message);
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Non tutti i client di posta elettronica per Android supportano `Html`. Dato che non è possibile rilevare questa condizione, è consigliabile usare `PlainText` durante l'invio di messaggi di posta elettronica.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Non esistono differenze per questa piattaforma.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Supporta solo `PlainText` poiché il tentativo di `BodyFormat` di inviare `Html` genera un'eccezione `FeatureNotSupportedException`.
 

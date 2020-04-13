@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870027"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61354575"
 ---
-# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Mappa
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Map
 
 La classe **Map** consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
 
@@ -103,15 +103,15 @@ public class MapTest
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - `NavigationMode` supporta Bicycling, Driving e Walking.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - `NavigationMode` supporta Driving, Transit e Walking.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - `NavigationMode` supporta Driving, Transit e Walking.
 
@@ -119,15 +119,15 @@ public class MapTest
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Android usa lo schema URI `geo:` per avviare l'applicazione per le mappe nel dispositivo. Ciò potrebbe richiedere all'utente di effettuare una selezione da un'app esistente che supporta questo schema URI.  Xamarin.Essentials è stato testato con Google Maps, che supporta questo schema.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Nessun dettaglio di implementazione specifico della piattaforma.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Nessun dettaglio di implementazione specifico della piattaforma.
 

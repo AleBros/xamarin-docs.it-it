@@ -9,46 +9,46 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022773"
 ---
 # <a name="get-started-with-xamarinios"></a>Introduzione a Xamarin.iOS
 
 Xamarin.iOS consente agli sviluppatori di creare applicazioni iOS native usando gli stessi controlli dell'interfaccia utente disponibili in Objective-C e Xcode, ma con la flessibilità e l'eleganza tipiche di un linguaggio moderno (C#), la potenza della libreria di classi base .NET e due IDE di prim'ordine, Visual Studio per Mac e Visual Studio. Questa serie di documenti illustra le modalità di installazione e configurazione nonché le nozioni di base dello sviluppo di Xamarin.iOS.
 
-## <a name="required-components"></a>Componenti obbligatori
+## <a name="required-components"></a>Componenti richiesti
 
 Per compilare per Xamarin.iOS, sono necessari i componenti seguenti:
 
-- la versione più recente di Visual Studio
+- l'ultima versione di Visual Studio
 - l'SDK di iOS più recente
 - l'ultima versione di Xcode
 - la versione minima di macOS richiesta da Xcode
 
-Per i requisiti di versione specifici, vedere le note sulla versione [più recenti di Xamarin.iOS](/xamarin/ios/release-notes/).
+Per requisiti di versione specifici, fare riferimento alle note più recenti sulla versione di [Xamarin.iOS](/xamarin/ios/release-notes/).
 
 La versione più recente di Xcode può essere scaricata da [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (accesso richiesto) o tramite Mac App Store:
 
-![Screenshot della pagina di elenco di Xcode in Mac App Store](installation/images/xcode.png "Xcode in Mac App Store")
+![Screenshot della pagina di presentazione di Xcode in Mac App Store](installation/images/xcode.png "Xcode nel Mac App Store")
 
 ## <a name="getting-started-series"></a>Documentazione introduttiva
 
-### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[Installazione e configurazione](~/ios/get-started/installation/index.md)
+### <a name="setup-and-installation"></a>[Installazione e installazione](~/ios/get-started/installation/index.md)
 
 Xamarin.iOS configurato e in esecuzione in Visual Studio per Mac o Visual Studio. Questa sezione descrive il download, l'installazione mediante il programma di installazione di Xamarin, l'accesso con l'account Microsoft, gli elementi di risoluzione dei problemi comuni, il provisioning dei dispositivi e altro ancora.
 
-### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
+### <a name="hello-ios"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
 
 Questa guida divisa in due parti illustra come compilare un'applicazione Xamarin.iOS per la prima volta usando Visual Studio o Visual Studio per Mac e presenta le nozioni di base dello sviluppo di applicazioni iOS con Xamarin. Questa guida illustra anche strumenti, concetti e passaggi necessari per compilare e distribuire un'applicazione Xamarin.iOS.
 
-### <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md)
+### <a name="hello-ios-multiscreen"></a>[Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md)
 
 In questa guida divisa in due parti l'applicazione creata nella guida Hello, iOS viene espansa per gestire una seconda schermata. Vengono presentati anche concetti come lo schema progettuale MVC (Model-View-Controller), viene implementata la navigazione iOS e viene sviluppata una comprensione più approfondita della struttura e della funzionalità delle applicazioni iOS.
 
-## <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Xamarin per sviluppatori Objective-C](objective-c-developers/index.md)
+## <a name="xamarin-for-objective-c-developers"></a>[Xamarin per sviluppatori Objective-C](objective-c-developers/index.md)
 
 Fornisce informazioni agli sviluppatori Objective-C che passano alla piattaforma Xamarin.
 

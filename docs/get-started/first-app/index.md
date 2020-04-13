@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
 ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75502800"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Creare la prima app Xamarin.Forms
@@ -26,7 +26,7 @@ _Guardare questo video e seguire la procedura per creare la prima app per dispos
 
 ## <a name="step-by-step-instructions-for-windows"></a>Istruzioni dettagliate per Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Seguire questi passaggi e il video precedente:
 
@@ -34,9 +34,9 @@ Seguire questi passaggi e il video precedente:
 
     [![Creare un nuovo progetto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
-2. Cercare "Xamarin" o scegliere **Mobile** dal menu **Tipo di progetto**. Selezionare il tipo di progetto **App per dispositivi mobili (Xamarin.Forms)** :
+2. Cercare "Xamarin" o scegliere **Mobile** dal menu **Tipo di progetto**. Selezionare il tipo di progetto **App per dispositivi mobili (Xamarin.Forms)**:
 
-    [![Filtrare per progetti Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [![Filtro per progetti Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
 3. Scegliere un nome di progetto. Nell'esempio viene usato "AwesomeApp":
 
@@ -111,11 +111,11 @@ Questo video descrive il processo di compilazione e test di un'app iOS con Visua
 
 ## <a name="step-by-step-instructions-for-windows"></a>Istruzioni dettagliate per Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Seguire questi passaggi e il video precedente:
 
-1. Scegliere **File > Nuovo > Progetto** oppure premere il pulsante **Crea nuovo progetto...**  e quindi selezionare **Visual C# > Multipiattaforma > App per dispositivi mobili (Xamarin.Forms)** :
+1. Scegliere **File > Nuovo > Progetto** oppure premere il pulsante **Crea nuovo progetto... ** e quindi selezionare **Visual C# > Multipiattaforma > App per dispositivi mobili (Xamarin.Forms)**:
 
     [![App per dispositivi mobili (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
@@ -158,13 +158,13 @@ Seguire questi passaggi e il video precedente:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Istruzioni dettagliate per Mac
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Seguire questi passaggi e il video precedente:
 
-1. Scegliere **File > Nuova soluzione...** oppure premere il pulsante **Nuovo progetto...**  e quindi selezionare **Multipiattaforma > App > App Forms vuota**:
+1. Scegliere **File > Nuova soluzione...** oppure premere il pulsante **Nuovo progetto... ** e quindi selezionare **Multipiattaforma > App > App Forms vuota**:
 
-    [![App Forms vuota](images/01-sml.png)](images/01.png#lightbox)
+    [![App Moduli vuoti](images/01-sml.png)](images/01.png#lightbox)
 
 2. Assicurarsi che le opzioni **Android** e **iOS** siano selezionate, con la condivisione codice **.NET Standard**:
 
@@ -199,7 +199,7 @@ Seguire questi passaggi e il video precedente:
 
 8. Fare clic con il pulsante destro del mouse per impostare iOS su **Progetto di avvio**:
 
-    [![Impostare il progetto di avvio su iOS](images/08-sml.png)](images/08.png#lightbox)
+    [![Impostare il progetto di avvio su iOSSet the startup project to iOS](images/08-sml.png)](images/08.png#lightbox)
 
 9. Debug dell'app su iOS:
 

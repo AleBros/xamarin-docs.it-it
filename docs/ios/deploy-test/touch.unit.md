@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028450"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Unit test di app Xamarin.iOS
@@ -112,7 +112,7 @@ Il test runner consente di vedere quali test sono registrati e di selezionare si
 
 È possibile eseguire singole fixture di test selezionandone una dalle visualizzazioni annidate oppure eseguire tutti i test scegliendo "Run Everything" (Esegui tutto). Se si esegue il test predefinito, che dovrebbe includere un test superato, un test non superato e un test ignorato, il report ha un aspetto simile al seguente ed è possibile eseguire il drill-down direttamente al test non superato e trovare maggiori informazioni sull'errore:
 
-[![](touch.unit-images/05-sml.png "Un report di esempio")](touch.unit-images/05.png#lightbox)[![](touch.unit-images/06-sml.png "Un report di esempio")](touch.unit-images/06.png#lightbox)[![](touch.unit-images/07-sml.png "Un report di esempio")](touch.unit-images/07.png#lightbox)
+[![](touch.unit-images/05-sml.png "Un report di esempio")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Un report di esempio")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Un report di esempio")](touch.unit-images/07.png#lightbox)
 
 Si può anche consultare la finestra Output applicazione nell'IDE per verificare quali test sono in esecuzione e qual è il loro stato corrente.
 

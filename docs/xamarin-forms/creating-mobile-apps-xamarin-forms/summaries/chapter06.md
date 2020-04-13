@@ -1,6 +1,6 @@
 ---
-title: Riepilogo del capitolo 6. Clic sui pulsanti
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 6. Clic sui pulsanti'
+title: Riassunto del capitolo 6. Clic sui pulsanti
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: riepilogo del capitolo 6. Clic sui pulsanti'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "61334715"
 ---
-# <a name="summary-of-chapter-6-button-clicks"></a>Riepilogo del capitolo 6. Clic sui pulsanti
+# <a name="summary-of-chapter-6-button-clicks"></a>Riassunto del capitolo 6. Clic sui pulsanti
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 
-Il [`Button`](xref:Xamarin.Forms.Button) è la visualizzazione che consente all'utente di avviare un comando. Un `Button` viene identificato dal testo (e, facoltativamente, da un'immagine, come illustrato nel [capitolo 13, bitmap](chapter13.md)). Di conseguenza, `Button` definisce molte delle stesse proprietà di `Label`:
+La [`Button`](xref:Xamarin.Forms.Button) è la visualizzazione che consente all'utente di avviare un comando. A `Button` è identificato dal testo (e facoltativamente da un'immagine come illustrato nel [capitolo 13, Bitmap](chapter13.md)). Di conseguenza, `Button` definisce molte `Label`delle stesse proprietà di :
 
 - [`Text`](xref:Xamarin.Forms.Button.Text)
 - [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily)
@@ -26,68 +26,68 @@ Il [`Button`](xref:Xamarin.Forms.Button) è la visualizzazione che consente all'
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)
 - [`TextColor`](xref:Xamarin.Forms.Button.TextColor)
 
-`Button` definisce anche tre proprietà che regolano l'aspetto del bordo, ma il supporto di queste proprietà e la loro indipendenza reciproca è specifico della piattaforma:
+`Button`definisce anche tre proprietà che regolano l'aspetto del suo confine, ma il supporto di queste proprietà e la loro indipendenza reciproca è specifico della piattaforma:
 
-- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor) di tipo `Color`
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) di tipo `Double`
-- [`BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) di tipo `Double`
+- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor)di tipo`Color`
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)di tipo`Double`
+- [`BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius)di tipo`Double`
 
-`Button` eredita anche tutte le proprietà di `VisualElement` e `View`, inclusi `BackgroundColor`, `HorizontalOptions`e `VerticalOptions`.
+`Button`eredita inoltre tutte le `VisualElement` `View`proprietà `BackgroundColor`di `HorizontalOptions`e `VerticalOptions`, tra cui , e .
 
-## <a name="processing-the-click"></a>L'elaborazione di fare clic su
+## <a name="processing-the-click"></a>Elaborazione del clic
 
-La classe `Button` definisce un evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) che viene generato quando l'utente tocca il `Button`. Il gestore `Click` è di tipo `EventHandler`. Il primo argomento è la `Button` oggetto che genera l'evento; il secondo argomento è un oggetto `EventArgs` che non fornisce informazioni aggiuntive.
+La `Button` classe definisce un [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento che viene `Button`generato quando l'utente tocca il file . Il `Click` gestore `EventHandler`è di tipo . Il primo argomento `Button` è l'oggetto che genera l'evento; il secondo argomento `EventArgs` è un oggetto che non fornisce informazioni aggiuntive.
 
-L'esempio [**ButtonLogger**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLogger) illustra la gestione di `Clicked` semplici.
+[**Nell'esempio ButtonLogger**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLogger) viene illustrata una gestione semplice. `Clicked`
 
-## <a name="sharing-button-clicks"></a>Pulsante di condivisione fa clic su
+## <a name="sharing-button-clicks"></a>Clic sul pulsante Condivisione
 
-Più visualizzazioni `Button` possono condividere lo stesso gestore `Clicked`, ma in genere è necessario che il gestore determini quale `Button` è responsabile di un determinato evento. Un approccio consiste nell'archiviare i vari oggetti `Button` come campi e verificare quale sia la generazione dell'evento nel gestore.
+Più `Button` visualizzazioni possono `Clicked` condividere lo stesso gestore, `Button` ma il gestore in genere deve determinare quale è responsabile di un determinato evento. Un approccio consiste `Button` nell'archiviare i vari oggetti come campi e verificare quale sta generando l'evento nel gestore.
 
-Questa tecnica è illustrata nell'esempio [**TwoButtons**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/TwoButtons) . Il programma illustra anche come impostare la proprietà [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) di un `Button` su `false` quando si preme il `Button` non è più valido. Un `Button` disabilitato non genera un evento di `Clicked`.
+Il [**TwoButtons**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/TwoButtons) esempio viene illustrata questa tecnica. Il programma dimostra inoltre [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) come impostare `false` la `Button` proprietà di a `Button` quando si preme il non è più valido. Un `Button` disabilitato non `Clicked` genera un evento.
 
-## <a name="anonymous-event-handlers"></a>Gestori eventi anonimo
+## <a name="anonymous-event-handlers"></a>Gestori eventi anonimi
 
-È possibile definire `Clicked` gestori come funzioni lambda anonime, come illustrato nell'esempio [**ButtonLambdas**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLambdas) . Tuttavia, non condivisibile gestori anonimi senza un codice di reflection complessa.
+È possibile definire `Clicked` i gestori come funzioni lambda anonime, come illustrato nell'esempio [**ButtonLambdas.**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/ButtonLambdas) Tuttavia, i gestori anonimi non possono essere condivisi senza codice di reflection disordinato.
 
-## <a name="distinguishing-views-with-ids"></a>Viste distintive con ID
+## <a name="distinguishing-views-with-ids"></a>Distinguere le visualizzazioni con gli ID
 
-È anche possibile distinguere più oggetti `Button` impostando la proprietà [`StyleId`](xref:Xamarin.Forms.Element.StyleId) o [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) proprietà su un `string`. Questa proprietà è definita da `Element` ma non viene usata all'interno di Novell. Forms. Si dovrà essere utilizzato esclusivamente da parte delle applicazioni.
+È `Button` inoltre possibile distinguere più [`StyleId`](xref:Xamarin.Forms.Element.StyleId) oggetti [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) impostando `string`la proprietà o la proprietà su un oggetto . Questa proprietà è `Element` definita da ma non viene utilizzata all'interno di Xamarin.Forms.This property is defined by but it is not used within Xamarin.Forms. È destinato ad essere utilizzato esclusivamente dai programmi applicativi.
 
-L'esempio [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) usa lo stesso gestore eventi per tutte le 10 chiavi numeriche su un tastierino numerico e le distingue con la proprietà `StyleId`:
+L'esempio [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) usa lo stesso gestore eventi per tutti i 10 tasti `StyleId` numerici in un tastierino numerico e ne distingue con la proprietà:
 
-[![Schermata tripla del tastierino più semplice](images/ch06fg04-small.png "Calcolatrice")](images/ch06fg04-large.png#lightbox "Calcolatrice")
+[![Tripla schermata della tastiera più semplice](images/ch06fg04-small.png "Calcolatrice")](images/ch06fg04-large.png#lightbox "Calcolatrice")
 
 ## <a name="saving-transient-data"></a>Salvataggio dei dati temporanei
 
-Molte applicazioni devono salvare i dati quando un programma viene terminato e ricaricare i dati quando il programma viene avviato nuovamente. La classe [`Application`](xref:Xamarin.Forms.Application) definisce diversi membri che consentono al programma di salvare e ripristinare i dati temporanei:
+Molte applicazioni devono salvare i dati quando un programma viene terminato e ricaricare i dati quando il programma viene riavviato. La [`Application`](xref:Xamarin.Forms.Application) classe definisce diversi membri che consentono al programma di salvare e ripristinare i dati temporanei:The class defines several members that help your program save and restore transient data:
 
-- La proprietà [`Properties`](xref:Xamarin.Forms.Application.Properties) è un dizionario con `string` chiavi e elementi di `object`. Il contenuto del dizionario venga automaticamente salvato nell'archivio locale dell'applicazione prima della chiusura del programma e ricaricato quando il programma di avvio.
-- La classe `Application` definisce tre metodi virtuali protetti che vengono sostituiti dalla classe `App` standard del programma: [`OnStart`](xref:Xamarin.Forms.Application.OnStart), [`OnSleep`](xref:Xamarin.Forms.Application.OnSleep)e [`OnResume`](xref:Xamarin.Forms.Application.OnResume). Che fanno riferimento agli eventi del ciclo di vita *dell'applicazione* .
-- Il metodo [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) Salva il contenuto del dizionario.
+- La [`Properties`](xref:Xamarin.Forms.Application.Properties) proprietà è `string` un `object` dizionario con chiavi ed elementi. Il contenuto del dizionario viene salvato automaticamente nella memoria locale dell'applicazione prima della chiusura del programma e ricaricato all'avvio del programma.
+- La `Application` classe definisce tre metodi virtuali protetti `App` di cui [`OnStart`](xref:Xamarin.Forms.Application.OnStart) [`OnSleep`](xref:Xamarin.Forms.Application.OnSleep)la [`OnResume`](xref:Xamarin.Forms.Application.OnResume)classe standard del programma esegue l'override: , e . Questi si riferiscono agli eventi *del ciclo di vita dell'applicazione.*
+- Il [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) metodo salva il contenuto del dizionario.
 
-Non è necessario chiamare `SavePropertiesAsync`. Il contenuto del dizionario viene automaticamente salvato prima della chiusura del programma e recuperato prima dell'avvio del programma. È utile durante il programma di test per salvare i dati se il programma si blocca.
+Non è necessario `SavePropertiesAsync`chiamare . Il contenuto del dizionario viene salvato automaticamente prima della chiusura del programma e recuperato prima dell'avvio del programma. È utile durante il test del programma per salvare i dati se il programma si blocca.
 
-Anche utile è:
+Utile anche:
 
-- [`Application.Current`](xref:Xamarin.Forms.Application.Current), una proprietà statica che restituisce l'oggetto `Application` corrente che è possibile utilizzare per ottenere il dizionario `Properties`.
+- [`Application.Current`](xref:Xamarin.Forms.Application.Current), una proprietà statica `Application` che restituisce l'oggetto `Properties` corrente che è quindi possibile utilizzare per ottenere il dizionario.
 
-Il primo passaggio consiste nell'identificare tutte le variabili nella pagina in cui si vuole rendere persistente quando il programma termina. Se si conoscono tutte le posizioni in cui tali variabili cambiano, è possibile aggiungerle semplicemente al dizionario `Properties` in quel momento. Nel costruttore della pagina è possibile impostare le variabili dal dizionario `Properties` se la chiave esiste.
+Il primo passaggio consiste nell'identificare tutte le variabili nella pagina che si desidera mantenere quando il programma termina. Se si conoscono tutti i luoghi in cui tali `Properties` variabili cambiano, è sufficiente aggiungerle al dizionario in quel punto. Nel costruttore della pagina, è possibile `Properties` impostare le variabili dal dizionario se la chiave esiste.
 
-Un programma più vasto probabilmente sarà necessario gestire gli eventi del ciclo di vita dell'applicazione. Il più importante è il metodo `OnSleep`. Una chiamata a questo metodo indica che il programma ha lasciato il primo piano. È probabile che l'utente abbia premuto il pulsante **Home** sul dispositivo o abbia visualizzato tutte le applicazioni o stia arrestando il telefono. Una chiamata a `OnSleep` è l'unica notifica ricevuta da un programma prima che venga terminata. Il programma deve avere la possibilità di assicurarsi che il dizionario `Properties` sia aggiornato.
+Un programma più grande sarà probabilmente necessario gestire gli eventi del ciclo di vita dell'applicazione. Il più importante `OnSleep` è il metodo. Una chiamata a questo metodo indica che il programma ha lasciato il primo piano. Forse l'utente ha premuto il pulsante **Home** sul dispositivo, o visualizzato tutte le applicazioni, o sta spegnendo il telefono. Una chiamata `OnSleep` a è l'unica notifica che un programma riceve prima di essere terminata. Il programma dovrebbe cogliere l'occasione per garantire che il `Properties` dizionario sia aggiornato.
 
-Una chiamata a `OnResume` indica che il programma non è stato terminato dopo l'ultima chiamata a `OnSleep` ma è ora in esecuzione di nuovo in primo piano. Il programma potrebbe usare questa opportunità per aggiornare le connessioni internet (ad esempio).
+Una chiamata `OnResume` per indicare che il programma non `OnSleep` è stato terminato dopo l'ultima chiamata a ma è ora in esecuzione nuovamente in primo piano. Il programma potrebbe sfruttare questa opportunità per aggiornare le connessioni Internet (ad esempio).
 
-Una chiamata a `OnStart` si verifica durante l'avvio del programma. Non è necessario attendere il completamento della chiamata al metodo per accedere al dizionario `Properties` perché il contenuto è già stato ripristinato quando viene chiamato il costruttore di `App`.
+Una chiamata `OnStart` a si verifica durante l'avvio del programma. Non è necessario attendere fino a quando `Properties` questa chiamata al metodo per `App` accedere al dizionario perché il contenuto è già stato ripristinato quando viene chiamato il costruttore.
 
-L'esempio [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) è molto simile a **SimplestKeypad** , ad eccezione del fatto che il programma usa il `OnSleep` override per salvare la voce del tastierino corrente e il costruttore della pagina per ripristinare i dati.
+L'esempio [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) è molto simile a **SimplestKeypad,** ad eccezione del fatto che il programma utilizza l'override `OnSleep` per salvare la voce della tastiera corrente e il costruttore della pagina per ripristinare i dati.
 
 > [!NOTE]
-> Un altro approccio al salvataggio delle impostazioni del programma è fornito dalla classe di [Preferenze](~/essentials/preferences.md) Novell. Essentials.
+> Un altro approccio al salvataggio delle impostazioni del programma è fornito dalla classe Xamarin.Essentials [Preferences.](~/essentials/preferences.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Testo completo del capitolo 6 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
+- [Capitolo 6 testo completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Esempi del capitolo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
-- [Esempi del F# capitolo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
-- [Pulsante Novell. Forms](~/xamarin-forms/user-interface/button.md)
+- [Capitolo 6 Esempi di F](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Pulsante Xamarin.Forms](~/xamarin-forms/user-interface/button.md)

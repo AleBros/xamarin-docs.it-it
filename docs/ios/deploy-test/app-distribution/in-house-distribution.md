@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026542"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
@@ -53,7 +53,7 @@ I certificati del programma Apple Developer Enterprise saranno validi per tre an
 
 1. Passare alla sezione *Certificates, Identifiers & Profiles* (Certificati, identificatori e profili) di Apple Developer Member Center.
 2. In *Certificates* (Certificati) selezionare **Production** (Produzione).
-3. Fare clic sul pulsante **+** per creare un nuovo certificato.
+3. Fare **+** clic sul pulsante per creare un nuovo certificato.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (Interna e ad hoc):
 
    [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
@@ -70,7 +70,7 @@ I certificati del programma Apple Developer Enterprise saranno validi per tre an
 8. Scaricare il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario aggiornare i profili per assicurarsi che siano visibili in Xcode.
 
-In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, attenersi alla seguente procedura:
+In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A questo scopo, eseguire la procedura seguente.
 
 1. Selezionare il proprio team e fare clic su *View Details...* (Visualizza dettagli):
 
@@ -95,18 +95,18 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID app per identificare l'app che si distribuirà nel dispositivo dell'utente. Se non è già stato creato, seguire questa procedura per crearne uno:
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
-2. Fare clic sul pulsante **+** e specificare un **nome** lo identificherà nel portale.
+2. Fare **+** clic sul pulsante e fornire un **Nome** che lo identificherà nel portale.
 3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **Con caratteri jolly**: com.[NomeDominio].*
 4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) richiesto dall'app.
 5. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
 Quando i componenti necessari per la creazione di un profilo di distribuzione sono disponibili, seguire questi passaggi per crearne uno:
 
-1. Tornare al portale di provisioning Apple e selezionare **Provisioning** > **Distribution** (Distribuzione):
+1. Torna al portale di provisioning Apple e seleziona**Distribuzione** **provisioning** > :
 
    [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
-2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **In-House** (Interna):
+2. Fare **+** clic sul pulsante e selezionare il tipo di profilo di distribuzione che si desidera creare come **In-House**:
 
    [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
@@ -124,11 +124,11 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 6. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
  Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio per Mac, potrebbe essere necessario uscire da Visual Studio per Mac e aggiornare in Xcode l'elenco di identità di firma e di profili di provisioning disponibili, seguendo le istruzioni della sezione [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) (Richiesta di identità di firma).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio, potrebbe essere necessario uscire da Visual Studio e aggiornare in Xcode (nel Mac dell'host di compilazione) l'elenco di identità di firma e di profili di provisioning disponibili, seguendo le istruzioni della sezione [Requesting Signing Identities](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) (Richiesta di identità di firma).
 
@@ -161,7 +161,7 @@ Questo articolo ha offerto una breve panoramica della distribuzione di applicazi
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Distribuzione tramite l'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Distribuzione dell'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Distribuzione ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [File iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
+- [Il file iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Supporto IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

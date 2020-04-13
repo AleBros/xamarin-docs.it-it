@@ -8,21 +8,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304205"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
-_TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Novell. iOS. In questo articolo vengono illustrati tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
+_TestFlight è ora di proprietà di Apple ed è il modo principale per testare beta le app Xamarin.iOS. Questo articolo ti guiderà attraverso tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect._
 
 Il test della versione beta è parte integrante del ciclo di sviluppo software. Esistono numerose applicazioni multipiattaforma che è possibile usare per semplificare questo processo, ad esempio [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing) e ovviamente il test della versione beta dell'app nativa di Google Play per le app Android. Questo documento descrive lo strumento TestFlight di Apple.
 
 TestFlight è il servizio offerto da Apple per testare la versione beta di app iOS ed è accessibile solo tramite [iTunes Connect](https://itunesconnect.apple.com/). È attualmente disponibile per le app iOS 8.0 e versioni successive. TestFlight consente di testare la versione beta con utenti interni ed esterni e, potendo questi ultimi rivedere poi la versione beta dell'app, semplifica considerevolmente il processo di revisione finale al momento della pubblicazione nell'App Store.
 
-In passato, il file binario veniva generato in Visual Studio per Mac e caricato nel sito Web di TestFlightApp per la distribuzione ai tester. Al nuovo processo sono stati aggiunti numerosi miglioramenti che consentono di avere nell'App Store app ben testate e di qualità elevata. Ad esempio,
+In passato, il file binario veniva generato in Visual Studio per Mac e caricato nel sito Web di TestFlightApp per la distribuzione ai tester. Al nuovo processo sono stati aggiunti numerosi miglioramenti che consentono di avere nell'App Store app ben testate e di qualità elevata. Ad esempio:
 
 - La revisione della versione beta dell'app richiesta per il test esterno aumenta le probabilità di accettazione della revisione finale nell'App Store, in quanto in entrambi i casi è necessaria la conformità alle linee guida di Apple.
 - Prima di caricare l'app, è necessario registrarla in iTunes Connect. In questo modo si garantisce che non vi siano discordanze tra profili di provisioning, nomi e certificati.
@@ -37,7 +37,7 @@ Tutti i tester devono testare l'app almeno in un dispositivo iOS 8. È tuttavia 
 
 ## <a name="provisioning"></a>Provisioning
 
-Per testare le compilazioni con TestFlight, è necessario creare un *profilo di distribuzione dell'App Store*  con il nuovo entitlement beta. Questo entitlement consente di testare la versione beta tramite TestFlight ed è contenuto nel **nuovo** profilo di distribuzione dell'App Store. È possibile seguire le istruzioni dettagliate della guida [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Creazione di un profilo di distribuzione) per generare un nuovo profilo.
+Per testare le compilazioni con TestFlight, è necessario creare un *profilo di distribuzione dell'App Store * con il nuovo entitlement beta. Questo entitlement consente di testare la versione beta tramite TestFlight ed è contenuto nel **nuovo** profilo di distribuzione dell'App Store. È possibile seguire le istruzioni dettagliate della guida [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Creazione di un profilo di distribuzione) per generare un nuovo profilo.
 
 È possibile confermare che nel profilo di distribuzione è contenuto l'entitlement beta durante la [convalida della compilazione di Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), come illustrato di seguito:
 
@@ -61,7 +61,7 @@ Il flusso di lavoro seguente illustra i passaggi necessari per iniziare a usare 
 ## <a name="create-an-itunes-connect-record"></a>Creare un record iTunes Connect
 
 1. Accedere al [portale di iTunes Connect](https://itunesconnect.apple.com/) usando le credenziali per sviluppatore Apple.
-2. Selezionare **My Apps** (App personali):
+2. Selezionare **Le mie app**:
 
     [![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
@@ -105,7 +105,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
 ### <a name="sign-and-distribute-your-app"></a>Firmare e distribuire l'app
 
- Dopo aver creato un archivio, si aprirà automaticamente la visualizzazione **Archivi**, in cui vengono visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per firmare l'app e prepararla per la distribuzione, selezionare **Firma e distribuisci...** , come illustrato di seguito:
+ Dopo aver creato un archivio, si aprirà automaticamente la visualizzazione **Archivi**, in cui vengono visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per firmare l'app e prepararla per la distribuzione, selezionare **Firma e distribuisci...**, come illustrato di seguito:
 
 [![](testflight-images/archive-view.png "Creating an archive will automatically open the Archives View")](testflight-images/archive-view.png#lightbox)
 
@@ -123,7 +123,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
- Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. ovvero:
+ Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Si tratta di:
 
 1. Caricare un pacchetto IPA creato con il comando di compilazione del pacchetto ad-hoc.
 1. Caricare un bundle `.app` compresso.
@@ -197,7 +197,7 @@ Gli utenti di iTunes Connect esistenti vengono visualizzati nell'elenco. Per sel
 
 [![](testflight-images/internal-tester.png "Turn on the Internal Tester switch")](testflight-images/internal-tester.png#lightbox)
 
-Per aggiungere un utente che non è presente nell'elenco, selezionare il pulsante **+** accanto a *User* (Utenti) e specificare nome, cognome e indirizzo di posta elettronica per creare un account. L'utente dovrà confermare l'indirizzo di elettronica per attivare l'account:
+Per aggiungere un utente non presente nell'elenco, selezionare il **+** pulsante accanto a *Utenti*e specificare Nome, Cognome e indirizzo di posta elettronica per creare un account. L'utente dovrà confermare l'indirizzo di elettronica per attivare l'account:
 
 [![](testflight-images/add-new-user.png "Adding a user")](testflight-images/add-new-user.png#lightbox)
 

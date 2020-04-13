@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77636016"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I controlli di trasporto di un lettore video includono i pulsanti che eseguono le funzioni di **riproduzione**, **pausa** e **arresto**. Questi pulsanti sono identificati in genere con icone note anziché testo e le funzioni di **riproduzione** e **pausa** sono in genere unite in un unico pulsante.
 
@@ -278,9 +278,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Questo comportamento è simile alla modalità in cui il controllo [`WebView`](xref:Xamarin.Forms.WebView) usa l'interfaccia [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) per implementare le proprietà `CanGoBack` e `CanGoForward`. (Per informazioni dettagliate, vedere il codice sorgente di [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) e i relativi renderer).
+È simile a [`WebView`](xref:Xamarin.Forms.WebView) come il [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) controllo utilizza `CanGoBack` `CanGoForward` l'interfaccia per implementare le proprietà e . Per informazioni dettagliate, vedere il codice sorgente e [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) i relativi renderer.
 
-Ciò consente a una classe esterna a `VideoPlayer` di impostare la proprietà `Status` facendo riferimento all'interfaccia `IVideoPlayerController`. (Il codice verrà visualizzato a breve). La proprietà può essere impostata anche da altre classi, ma è improbabile che venga impostata inavvertitamente. In particolare, la proprietà `Status` non può essere impostata tramite un'associazione di dati.
+Ciò consente a una classe esterna a `VideoPlayer` di impostare la proprietà `Status` facendo riferimento all'interfaccia `IVideoPlayerController`. (Vedrete il codice a breve.) La proprietà può essere impostata anche da altre classi, ma è improbabile che venga impostata inavvertitamente. In particolare, la proprietà `Status` non può essere impostata tramite un'associazione di dati.
 
 Per fare in modo che i renderer mantengano questa proprietà `Status` aggiornata, la classe `VideoPlayer` definisce un evento `UpdateStatus` che viene attivato ogni decimo di secondo:
 
@@ -360,11 +360,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-È richiesto l'accesso a due proprietà di `AVPlayer`: la proprietà [`Status`](xref:AVFoundation.AVPlayer.Status*) di tipo `AVPlayerStatus` e la proprietà [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) di tipo `AVPlayerTimeControlStatus`. Si noti che è necessario che venga eseguito il cast della proprietà `Element` (ovvero `VideoPlayer`) in `IVideoPlayerController` per impostare la proprietà `Status`.
+È necessario `AVPlayer` accedere a [`Status`](xref:AVFoundation.AVPlayer.Status*) due proprietà: [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) la proprietà `AVPlayerTimeControlStatus`di tipo `AVPlayerStatus` e la proprietà di tipo . Si noti che è necessario che venga eseguito il cast della proprietà `Element` (ovvero `VideoPlayer`) in `IVideoPlayerController` per impostare la proprietà `Status`.
 
 ### <a name="the-android-status-setting"></a>Impostazione di stato Android
 
-La proprietà [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) di `VideoView` Android è un valore booleano che indica solo se il video è in riproduzione o in pausa. Per determinare se `VideoView` non può ancora riprodurre né mettere in pausa il video, è necessario che venga gestito l'evento `Prepared` di `VideoView`. Questi due gestori sono impostati nel metodo `OnElementChanged` e disconnessi durante l'override di `Dispose`:
+La [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) proprietà di `VideoView` Android è un valore booleano che indica solo se il video è in riproduzione o in pausa. Per determinare se `VideoView` non può ancora riprodurre né mettere in pausa il video, è necessario che venga gestito l'evento `Prepared` di `VideoView`. Questi due gestori sono impostati nel metodo `OnElementChanged` e disconnessi durante l'override di `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -451,7 +451,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-status-setting"></a>Impostazione di stato UWP
 
-`VideoPlayerRenderer` UWP usa l'evento `UpdateStatus`, ma l'evento non è necessario per l'impostazione della proprietà `Status`. `MediaElement` definisce un evento [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) che permette al renderer di ricevere una notifica quando viene modificata la proprietà [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*). La proprietà viene scollegata nell'override `Dispose`:
+`VideoPlayerRenderer` UWP usa l'evento `UpdateStatus`, ma l'evento non è necessario per l'impostazione della proprietà `Status`. L'oggetto `MediaElement` [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) definisce un evento che consente al [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*) renderer di ricevere una notifica quando la proprietà viene modificata. La proprietà viene scollegata nell'override `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -489,7 +489,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-La proprietà `CurrentState` è di tipo [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate) e ne viene facilmente eseguito il mapping in `VideoStatus`:
+La `CurrentState` proprietà è [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate)di tipo `VideoStatus`, e le mappe facilmente in :
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -522,7 +522,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Pulsanti Play, Pause e Stop
 
-L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Questi sono:
+L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Si tratta di:
 
 - 0x23F5 (triangolo nero medio rivolto verso destra) oppure &#x23F5; per **Play**
 - 0x23F8 (due barre verticali) oppure &#x23F8; per **Pause**
@@ -540,7 +540,7 @@ Questo elemento è supportato da ogni piattaforma ma è costituito da un triango
 
 Questa è la soluzione usata nel markup illustrato di seguito. In iOS viene applicata al simbolo **Play** la stessa rappresentazione 3D dei pulsanti **Pause** e **Stop**, ma il codice variante non può essere usato in Android e UWP.
 
-La pagina **Custom Transport** (Trasporto personalizzato) imposta la proprietà **AreTransportControlsEnabled** su **false** e include `ActivityIndicator` visualizzato durante il caricamento del video e due pulsanti. Gli oggetti `DataTrigger` sono usati per abilitare e disabilitare `ActivityIndicator` e i pulsanti e per cambiare il primo pulsante in **Play** e **Pause**:
+La pagina **Custom Transport** (Trasporto personalizzato) imposta la proprietà **AreTransportControlsEnabled** su **false** e include `ActivityIndicator` visualizzato durante il caricamento del video e due pulsanti. `DataTrigger`gli oggetti vengono utilizzati `ActivityIndicator` per abilitare e disabilitare i pulsanti e per passare dal primo pulsante tra **Riproduci** e **Pausa:**
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -649,11 +649,11 @@ namespace VideoPlayerDemos
 
 Poiché `AutoPlay` è impostato su `false` nel file **CustomTransport.xaml**, sarà necessario premere il pulsante **Play** quando viene abilitato per avviare il video. I pulsanti sono definiti in modo che i caratteri Unicode descritti in precedenza siano accompagnati dagli equivalenti di testo. I pulsanti hanno un aspetto coerente in ogni piattaforma durante la riproduzione del video:
 
-[![Trasporto personalizzato in riproduzione](custom-transport-images/customtransportplaying-small.png "Trasporto personalizzato in riproduzione")](custom-transport-images/customtransportplaying-large.png#lightbox "Trasporto personalizzato in riproduzione")
+[![Riproduzione trasporto personalizzato](custom-transport-images/customtransportplaying-small.png "Riproduzione trasporto personalizzato")](custom-transport-images/customtransportplaying-large.png#lightbox "Riproduzione trasporto personalizzato")
 
 Tuttavia, in Android e UWP il pulsante **Play** ha un aspetto molto diverso quando il video è in pausa:
 
-[![Trasporto personalizzato in pausa](custom-transport-images/customtransportpaused-small.png "Trasporto personalizzato in pausa")](custom-transport-images/customtransportpaused-large.png#lightbox "Trasporto personalizzato in pausa")
+[![Trasporto personalizzato sospeso](custom-transport-images/customtransportpaused-small.png "Trasporto personalizzato sospeso")](custom-transport-images/customtransportpaused-large.png#lightbox "Trasporto personalizzato sospeso")
 
 In un'applicazione di produzione è probabile che si desideri usare le proprie immagini bitmap per i pulsanti per ottenere uniformità visiva.
 

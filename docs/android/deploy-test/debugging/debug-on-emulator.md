@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556522"
 ---
-# <a name="debug-on-the-android-emulator"></a>Eseguire il debug nel emulatore Android
+# <a name="debug-on-the-android-emulator"></a>Debug on the Android Emulator
 
 _Questa guida contiene informazioni su come avviare un dispositivo virtuale nell'emulatore Android per eseguire il debug e il test dell'app._
 
@@ -22,7 +22,7 @@ L'emulatore Android (installato con il carico di lavoro **Sviluppo di applicazio
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso di un dispositivo virtuale preconfigurato
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio include dispositivi virtuali preconfigurati che vengono visualizzati nel menu a discesa dei dispositivi. Nello screenshot di Visual Studio 2017 seguente, ad esempio, sono disponibili diversi dispositivi virtuali preconfigurati:
 
@@ -38,14 +38,14 @@ Visual Studio include dispositivi virtuali preconfigurati che vengono visualizza
 
 In genere, per le attività di test e debug di un'app per il telefono si seleziona il dispositivo virtuale **VisualStudio\_android 23\_x86\_phone**. Se uno di questi dispositivi virtuali preconfigurati soddisfa i requisiti (ad esempio, corrisponde al livello API di destinazione dell'app), passare ad [Avvio dell'emulatore](#launching) per iniziare l'esecuzione dell'app nell'emulatore. Se non si ha ancora familiarità con i livelli API di Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API di Android).
 
-Se il progetto Xamarin.Android usa un livello di framework di destinazione non compatibile con i dispositivi virtuali disponibili, nel menu a discesa vengono elencati i dispositivi virtuali inutilizzabili in **Dispositivi non supportati**. Ad esempio, per il progetto seguente è impostato il framework di destinazione **Android 7.1 Nougat (API 25)** , non compatibile con i dispositivi virtuali **Android 6.0** elencati in questo esempio:
+Se il progetto Xamarin.Android usa un livello di framework di destinazione non compatibile con i dispositivi virtuali disponibili, nel menu a discesa vengono elencati i dispositivi virtuali inutilizzabili in **Dispositivi non supportati**. Ad esempio, per il progetto seguente è impostato il framework di destinazione **Android 7.1 Nougat (API 25)**, non compatibile con i dispositivi virtuali **Android 6.0** elencati in questo esempio:
 
-[![Dispositivo virtuale non compatibile](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
+[![Dispositivo virtuale incompatibile](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
 
 È possibile fare clic su **Cambia destinazione minima di Android** per modificare la versione minima di Android del progetto in modo che corrisponda al livello API dei dispositivi virtuali disponibili. In alternativa, è possibile usare [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) per creare nuovi dispositivi virtuali che supportano il livello API di destinazione.
 Prima di poter configurare i dispositivi virtuali per un nuovo livello API, è necessario installare le immagini di sistema corrispondenti per tale livello API (vedere [Configurazione di Android SDK per Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Visual Studio per Mac include dispositivi virtuali preconfigurati visualizzati nel menu a discesa dei dispositivi. Nello screenshot seguente, ad esempio, sono disponibili due dispositivi virtuali preconfigurati:
 
@@ -69,13 +69,13 @@ Per modificare i dispositivi virtuali (o crearne di nuovi), occorre usare [Andro
 
 Nella parte superiore di Visual Studio è disponibile un menu a discesa che consente di selezionare la modalità **Debug** o **Versione**. Se si sceglie la modalità **Debug**, il debugger viene collegato al processo dell'applicazione in esecuzione all'interno dell'emulatore dopo l'avvio dell'app. Se si sceglie la modalità **Versione**, il debugger viene disabilitato (tuttavia, è comunque possibile eseguire l'app e usare le istruzioni di registrazione per il debug). Dopo aver scelto un dispositivo virtuale dal menu a discesa dei dispositivi, selezionare la modalità **Debug** o **Versione** e quindi fare clic sul pulsante Esegui per eseguire l'applicazione:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Modalità Debug e Versione, pulsante Esegui](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
+[![Modalità debug e di rilascio, pulsante Riproduci](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Modalità Debug e Versione, pulsante Esegui](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
+[![Modalità debug e di rilascio, pulsante Riproduci](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 
@@ -119,10 +119,10 @@ In questa guida è stato descritto il processo di configurazione dell'emulatore 
 
 Per altre informazioni sull'uso dell'emulatore Android, vedere gli argomenti seguenti per sviluppatori Android:
 
-- [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate) (Spostamenti nello schermo)
+- [Navigating on the Screen (Navigazione nella schermata)](https://developer.android.com/studio/run/emulator.html#navigate)
 
-- [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks) (Esecuzione di attività di base nell'emulatore)
+- [Performing Basic Tasks in the Emulator (Esecuzione di attività di base nell'emulatore)](https://developer.android.com/studio/run/emulator.html#tasks)
 
-- [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended) (Utilizzo di controlli estesi, impostazioni e Guida)
+- [Working with Extended Controls, Settings, and Help (Uso di controlli estesi, impostazioni e Guida)](https://developer.android.com/studio/run/emulator.html#extended)
 
 - [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot) (Eseguire l'emulatore con l'avvio rapido)

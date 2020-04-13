@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724696"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
@@ -31,11 +31,11 @@ Il debugger Xamarin.iOS usa il [debugger Mono Soft](https://www.mono-project.com
 
 Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio da eseguire è l'[impostazione di punti di interruzione per l'applicazione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). A questo scopo, fare clic nell'area del margine dell'editor, accanto al numero di riga del codice in corrispondenza del quale si vuole impostare il punto di interruzione:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
@@ -43,13 +43,13 @@ Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio d
 
 È possibile visualizzare tutti i punti di interruzione impostati nel codice passando al **riquadro Punti di interruzione**:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  Se il riquadro Punti di interruzione non viene visualizzato automaticamente, è possibile renderlo visibile selezionando _Visualizza > Debug Windows (Finestre di debug) > Punti di interruzione_
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
@@ -59,12 +59,12 @@ Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio d
 
 Prima di iniziare il debug di un'applicazione, assicurarsi sempre che la configurazione sia impostata su **Debug**, perché contiene un utile set di strumenti per supportare il debug, ad esempio i punti di interruzione, l'uso dei visualizzatori di dati e la visualizzazione dello stack di chiamate:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
 [![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
 [![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
@@ -74,11 +74,11 @@ Prima di iniziare il debug di un'applicazione, assicurarsi sempre che la configu
 ## <a name="start-debugging"></a>Avvia debug
 Per avviare il debug, selezionare il dispositivo di destinazione o un altro strumento simile nell'IDE:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
@@ -98,7 +98,7 @@ A questo punto, è possibile usare strumenti di debug, ad esempio per esaminare 
 
 È anche possibile impostare regole che determinano i casi in cui deve essere presente un punto di interruzione, ovvero aggiungendo un *punto di interruzione condizionale*.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per impostare un punto di interruzione condizionale, accedere alla **finestra Proprietà punto di interruzione** in uno dei due modi seguenti:
 
@@ -114,7 +114,7 @@ Per impostare un punto di interruzione condizionale, accedere alla **finestra Pr
 
 [![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per impostare un punto di interruzione condizionale in Visual Studio, prima [impostare un normale punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Fare clic con il pulsante destro del mouse sul punto di interruzione per visualizzare il menu di scelta rapida:
 
@@ -134,31 +134,31 @@ Per altre informazioni sull'uso delle condizioni per il punto di interruzione ne
 
 Quando viene raggiunto un punto di interruzione, lo strumento di debug permette di ottenere il controllo sull'esecuzione del programma. L'IDE visualizza quattro pulsanti, per eseguire e scorrere il codice.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 I pulsanti avranno l'aspetto seguente in Visual Studio per Mac:
 
  [![](debugging-in-xamarin-ios-images/image7.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
-Questi sono:
+Si tratta di:
 
 - **Esegui/Arresta**: avvia/arresta l'esecuzione del codice, fino al punto di interruzione successivo.
 - **Esegui istruzione/routine**: esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
 - **Esegui istruzione**: anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
 - **Esci da istruzione/routine**: torna alla riga in cui è stata chiamata la funzione corrente.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 I pulsanti avranno l'aspetto seguente in Visual Studio:
 
 [![](debugging-in-xamarin-ios-images/image7vs.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
-Questi sono:
+Si tratta di:
 
 - **Esegui/Arresta**: avvia/arresta l'esecuzione del codice, fino al punto di interruzione successivo.
-- **Esegui istruzione/routine (F11)** : esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
-- **Esegui istruzione (F10)** : anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
-- **Esci da istruzione/routine (MAIUSC+F11)** : torna alla riga in cui è stata chiamata la funzione corrente.
+- **Esegui istruzione/routine (F11)**: esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
+- **Esegui istruzione (F10)**: anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
+- **Esci da istruzione/routine (MAIUSC+F11)**: torna alla riga in cui è stata chiamata la funzione corrente.
 
 Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice con il debugger di Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -210,7 +210,7 @@ Per gli utenti di Visual Studio, sono disponibili alcuni log nella finestra Outp
 
 Xamarin.iOS viene fornito con il codice sorgente per le librerie di classi di Mono, che può essere usato per eseguire istruzioni passo a passo dal debugger e visualizzare il funzionamento sottostante.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Poiché questa funzionalità usa più memoria durante il debug, è disattivata per impostazione predefinita.
 
@@ -218,7 +218,7 @@ Per abilitare questa funzionalità, verificare che l'opzione **Esegui solo il de
 
 [![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per eseguire il debug delle librerie di classi in Visual Studio, è necessario disabilitare **Just My Code** nel menu _Debug > Opzioni_. Nel nodo _Debug > Generale_ selezionare la casella di controllo **Abilita Just My Code**:
 
@@ -232,6 +232,6 @@ Dopo avere eseguito questa operazione, è possibile avviare l'applicazione ed es
 
 - [Debug con Xamarin](/visualstudio/mac/debugging/)
 - [Visualizzazioni dei dati](/visualstudio/mac/data-visualizations/)
-- [Impostare un punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Impostare un punto di interruzioneSet A Breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
 - [Esecuzione del codice un'istruzione alla volta](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
 - [Visualizzare le informazioni nella finestra del log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)

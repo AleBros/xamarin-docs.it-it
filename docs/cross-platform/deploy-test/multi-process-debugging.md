@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: fb96dab2d9979a365964d4993d9c7fc7fee299f5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73016552"
 ---
 # <a name="multi-process-debugging"></a>Debug a più processori
@@ -80,7 +80,7 @@ In questa schermata, ogni soluzione ha il proprio punto di interruzione. All'avv
 
 L'avanzamento nel codice è limitato al thread attivo, di conseguenza Visual Studio per Mac avanzerà, una riga di codice alla volta, mentre l'altro processo è ancora in pausa.
 
-Utilizzando la schermata precedente come esempio, quando il ciclo `for` è terminato, Visual Studio per Mac consentirà l'esecuzione di **FirstProject** fino a incontrare il punto di interruzione nella **riga 11** in `MainClass`. Per ogni comando **Esegui istruzione/routine**, il debugger avanzerà riga per riga in **FirstProject**, fino a quando gli algoritmi euristici interni di Visual Studio per Mac commutano nuovamente il thread attivo su  **SecondProject**.
+Utilizzando la schermata precedente come esempio, quando il ciclo `for` è terminato, Visual Studio per Mac consentirà l'esecuzione di **FirstProject** fino a incontrare il punto di interruzione nella **riga 11** in `MainClass`. Per ogni comando **Esegui istruzione/routine**, il debugger avanzerà riga per riga in **FirstProject**, fino a quando gli algoritmi euristici interni di Visual Studio per Mac commutano nuovamente il thread attivo su ** SecondProject**.
 
 Se solo uno dei progetti avesse un punto di interruzione impostato, potrebbe essere messo in pausa soltanto quel processo. L'altro progetto continuerà a funzionare fino a quando non sarà messo in pausa dallo sviluppatore o sarà stato aggiunto un punto di interruzione.
 

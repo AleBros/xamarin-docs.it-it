@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
 ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725260"
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
-_Un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del tocco nel multitouch di basso livello e come generare eventi che segnalino attività tocco._
+_Un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento delle dita multitocco di basso livello e come generare eventi che segnalano l'attività di tocco._
 
 L'effetto descritto in questo articolo consente l'accesso agli eventi di tocco di basso livello. Questi eventi di basso livello non sono disponibili tramite le classi `GestureRecognizer` esistenti, ma sono fondamentali per alcuni tipi di applicazioni. Un'applicazione di disegno con le dita, ad esempio, deve tenere traccia di ognuna delle dita man mano che queste si spostano sullo schermo. Una tastiera musicale deve rilevare il tocco e il rilascio dei singoli tasti, nonché lo scorrimento di un dito da un tasto all'altro in un glissando.
 

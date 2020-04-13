@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 49d67db46416584248a9b15db606538f5ebfba79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021013"
 ---
 # <a name="finding-your-keystores-signature"></a>Individuazione della firma dell'archivio chiavi
@@ -21,7 +21,7 @@ La firma MD5 o SHA1 di un'app Xamarin.Android dipende dal file con estensione **
 
 Xamarin.Android consente di firmare tutte le build di debug con lo stesso file **debug.keystore**. Questo file viene generato alla prima installazione di Xamarin.Android. I passaggi seguenti illustrano il processo per trovare la firma MD5 o SHA1 del file **debug.keystore** Xamarin.Android predefinito.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Individuare il file **debug.keystore** Xamarin usato per firmare l'app. Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android è reperibile nella posizione seguente:
 
@@ -59,7 +59,7 @@ Certificate fingerprints:
          Version: 3
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Individuare il file **debug.keystore** Xamarin usato per firmare l'app. Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android è reperibile nella posizione seguente:
 
@@ -112,7 +112,7 @@ KeyIdentifier [
 
 Il processo per le build di versione firmate con un file con estensione **keystore** personalizzato è identico a quello illustrato in precedenza, con il file con estensione **keystore** di versione che va a sostituire il file **debug.keystore** usato da Xamarin.Android. Sostituire con i valori personali le password dell'archivio chiavi e il nome di alias ottenuti quando è stato creato il file keystore della versione.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Quando viene usata la procedura guidata **Distribuisci** di Visual Studio per firmare un'app Xamarin.Android, l'archivio chiavi risultante si trova nel percorso seguente:
 
@@ -124,11 +124,11 @@ Se, ad esempio, è stata seguita la procedura descritta in [Create a New Certifi
 
 Per altre informazioni sulla firma di un'app Xamarin.Android, vedere [Signing the Android Application Package](~/android/deploy-test/signing/index.md) (Firma del pacchetto dell'applicazione Android).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Quando viene usata la procedura guidata **Firma e distribuisci** di Visual Studio per Mac per firmare l'app, l'archivio chiavi risultante si trova nel percorso seguente:
 
-**~/Library/Developer/Xamarin/Keystore/*alias*/*alias*.keystore**
+**/Libreria/Sviluppo/Xamarin/Keystore/*alias*/*alias*.keystore**
 
 Se, ad esempio, è stata seguita la procedura descritta in [Create a New Certificate](~/android/deploy-test/signing/index.md#newcertxs) (Creare un nuovo certificato) per creare una nuova chiave di firma, l'archivio chiavi di esempio risultante si trova nel percorso seguente:
 

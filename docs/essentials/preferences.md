@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
 ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
-ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79497043"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferences
@@ -41,7 +41,7 @@ Per recuperare un valore dalle preferenze o un'impostazione predefinita se non i
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-Per verificare se una determinata _chiave_ esiste in Preferenze:
+Per verificare se una determinata _chiave_ esiste nelle preferenze:
 
 ```csharp
 bool hasKey = Preferences.ContainsKey("my_key");
@@ -67,24 +67,24 @@ In **Preferences** sono supportati i tipi di dati seguenti:
 
 - **bool**
 - **double**
-- **int**
-- **float**
-- **long**
+- **Int**
+- **Galleggiante**
+- **Lungo**
 - **string**
-- **DateTime**
+- **Datetime**
 
 ## <a name="integrate-with-system-settings"></a>Integrazione con le impostazioni di sistema
 
-Le preferenze sono archiviate in modo nativo, che consentono di integrare le impostazioni nelle impostazioni di sistema native. Segui gli esempi e le documetnation della piattaforma per l'integrazione con la piattaforma:
+Le preferenze sono memorizzate in modo nativo, che consente di integrare le impostazioni nelle impostazioni di sistema nativo. Seguire la docutolazione della piattaforma e gli esempi per l'integrazione con la piattaforma:
 
-* Apple: [implementazione di un bundle di impostazioni iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Esempio di preferenze Applicaton iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
-* [Impostazioni watchos](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
-* Android: [Introduzione con le schermate delle impostazioni](https://developer.android.com/guide/topics/ui/settings.html)
+* Apple: Implementazione di un pacchetto di [impostazioni iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Esempio di preferenze di applicazione iOSIOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Impostazioni watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Introduzione alle schermate Impostazioni](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Dettagli dell'implementazione
 
-I valori di `DateTime` vengono archiviati in un formato binario a 64 bit (long integer) usando due metodi definiti dalla classe `DateTime`: il metodo [`ToBinary`](xref:System.DateTime.ToBinary) viene usato per codificare il valore `DateTime` e il metodo [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
+I `DateTime` valori di vengono archiviati in un formato binario a `DateTime` 64 [`ToBinary`](xref:System.DateTime.ToBinary) bit (long integer) `DateTime` utilizzando due [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) metodi definiti dalla classe: il metodo viene utilizzato per codificare il valore e il metodo decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
@@ -100,7 +100,7 @@ Tutti i dati vengono archiviati nelle [preferenze condivise](https://developer.a
 
 [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`. 
 
-`LocalSettings` presenta inoltre la restrizione seguente che il nome di ogni impostazione può avere una lunghezza massima di 255 caratteri. Ogni impostazione può avere dimensioni fino a 8 KB e ogni impostazione composita può avere dimensioni massime di 64K byte.
+`LocalSettings`ha anche la seguente restrizione che il nome di ogni impostazione può essere 255 caratteri di lunghezza al massimo. Ogni impostazione può avere una dimensione massima di 8K byte e ogni impostazione composita può avere una dimensione massima di 64K byte.
 
 --------------
 

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028065"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente Xamarin.Android
@@ -30,7 +30,7 @@ adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
 Le proprietà di sistema di Android vengono impostate per tutti i processi nel dispositivo di destinazione.
 
-A partire da Xamarin.Android 4.6, sia le proprietà di sistema che le variabili di ambiente possono essere impostate o sostituite in base alle singole app aggiungendo un *file di ambiente* al progetto. Un file di ambiente è un file di testo normale in formato Unix con l'[**azione di compilazione** `AndroidEnvironment`](~/android/deploy-test/building-apps/build-process.md).
+A partire da Xamarin.Android 4.6, sia le proprietà di sistema che le variabili di ambiente possono essere impostate o sostituite in base alle singole app aggiungendo un *file di ambiente* al progetto. Un file di ambiente è un file di testo normale in formato Unix con l'[**azione di compilazione**`AndroidEnvironment`](~/android/deploy-test/building-apps/build-process.md).
 Il file dell'ambiente contiene righe nel formato *chiave=valore*.
 I commenti sono righe che iniziano con `#`. Le righe vuote vengono ignorate.
 
@@ -48,7 +48,7 @@ Tipo qualificato dall'assembly che deve ereditare da [HttpMessageHandler](https:
 
 Per impostazione predefinita, in Xamarin.Android 6.1 questa variabile di ambiente non è impostata e verrà usata la classe [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
 
-In alternativa, è possibile specificare il valore `Xamarin.Android.Net.AndroidClientHandler` per utilizzare [`java.net.URLConnection`](xref:Java.Net.URLConnection)
+In alternativa, `Xamarin.Android.Net.AndroidClientHandler` è possibile specificare il valore[`java.net.URLConnection`](xref:Java.Net.URLConnection)
 per l'accesso di rete, che *può* consentire l'uso di TLS 1.2 se supportato da Android.
 
 Aggiunto in Xamarin.Android 6.1.
@@ -95,7 +95,7 @@ Si tratta di una stringa delimitata da virgole (`,`), contenente uno dei valori 
 - `gref`: visualizza i messaggi di riferimento globale JNI.
 - `lref`: visualizza i messaggi di riferimento locale JNI.
   > [!NOTE]
-  > Si tratta di un *vero e proprio* indesiderato `adb logcat`.
+  > si tratta *effettivamente* di `adb logcat` di posta indesiderata.
   > In Xamarin.Android 5.1 verrà anche creato un file `.__override__/lrefs.txt`, che può assumere dimensioni *enormi*.
   > Da evitare.
 - `timing`: visualizza alcune informazioni sugli intervalli dei metodi. Verranno anche creati i file `.__override__/methods.txt` e `.__override__/counters.txt`.
@@ -131,9 +131,9 @@ Tuttavia *a volte* consente di eseguire ulteriori indagini.
 La proprietà di sistema `debug.mono.wref` consente l'override del meccanismo di riferimento debole JNI rilevato predefinito. I valori supportati sono due:
 
 - `jni`: usa i riferimenti deboli JNI, creati da `JNIEnv::NewWeakGlobalRef()` ed eliminati definitivamente da `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: usare i riferimenti globali JNI che fanno riferimento a `java.lang.WeakReference` istanze.
+- `java`: utilizza riferimenti globali `java.lang.WeakReference` JNI che fanno riferimento alle istanze.
 
-Per impostazione predefinita, `java` viene usato fino all'API 7 e nell'API 19 (Kit Kat) con ART abilitato. Nell'API 8 sono stati aggiunti i riferimenti `jni` e in ART sono stati *interrotti* i riferimenti `jni`.
+Per impostazione predefinita, `java` viene usato fino all'API 7 e nell'API 19 (Kit Kat) con ART abilitato. Nell'API 8 sono stati aggiunti i riferimenti `jni` e in ART sono stati *interrotti i riferimenti * `jni`.
 
 Questa proprietà di sistema è utile per i test e per alcune forme di analisi.
 *In generale* non deve essere modificata.

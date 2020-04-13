@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771616"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Convertitori dei valori di binding di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In genere i data binding trasferiscono i dati da una proprietà di origine a una proprietà di destinazione e in alcuni casi dalla proprietà di destinazione alla proprietà di origine. Si tratta di un semplice trasferimento quando la proprietà di origine e quella di destinazione sono dello stesso tipo o quando un tipo può essere convertito nell'altro tipo tramite una conversione implicita. Se non è questo il caso, è necessaria una conversione del tipo.
 
-Nell'articolo [**Formattazione delle stringhe**](string-formatting.md) è stato illustrato come usare la proprietà `StringFormat` di un data binding per convertire un tipo qualsiasi in una stringa. Per altri tipi di conversioni, è necessario scrivere codice specializzato in una classe che implementa l'interfaccia [`IValueConverter`](xref:Xamarin.Forms.IValueConverter). La piattaforma UWP (Universal Windows Platform) contiene una classe simile denominata [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) nello spazio dei nomi `Windows.UI.Xaml.Data`. In questo caso `IValueConverter` si trova nello spazio dei nomi `Xamarin.Forms`. Le classi che implementano `IValueConverter` vengono chiamate *convertitori di valori*, ma vengono anche definite *convertitori di data binding* oppure *convertitori di valori di binding*.
+Nell'articolo [**Formattazione delle stringhe**](string-formatting.md) è stato illustrato come usare la proprietà `StringFormat` di un data binding per convertire un tipo qualsiasi in una stringa. Per altri tipi di conversioni, è necessario scrivere codice [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) specializzato in una classe che implementa l'interfaccia. La piattaforma Windows universale contiene [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) una `Windows.UI.Xaml.Data` classe simile `IValueConverter` denominata `Xamarin.Forms` nello spazio dei nomi, ma si trova nello spazio dei nomi. Le classi `IValueConverter` che implementano sono *denominate convertitori*di valori , ma sono anche spesso definite *convertitori* di associazioni o convertitori di valori di *associazione*.
 
 ## <a name="the-ivalueconverter-interface"></a>Interfaccia di IValueConverter
 
@@ -43,7 +43,7 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-Impostare un'istanza di questa classe per la proprietà [`Converter`](xref:Xamarin.Forms.Binding.Converter) della classe `Binding` o per la proprietà [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) dell'estensione di markup `Binding`. Questa classe diventa parte dal data binding.
+Impostare un'istanza di [`Converter`](xref:Xamarin.Forms.Binding.Converter) questa classe `Binding` per la [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) proprietà `Binding` della classe o per la proprietà dell'estensione di markup. Questa classe diventa parte dal data binding.
 
 Il metodo `Convert` viene chiamato quando i dati vengono trasferiti dall'origine alla destinazione in binding `OneWay` o `TwoWay`. Il parametro `value` rappresenta l'oggetto o il valore ricevuto dall'origine del data binding. Il metodo deve restituire un valore del tipo della destinazione del data binding. Il metodo illustrato di seguito esegue il cast del parametro `value` per un valore `int` e lo confronta con 0 per un valore restituito `bool`.
 
@@ -97,7 +97,7 @@ Se un convertitore di valori viene usato in più pagine dell'applicazione, è po
 
 La pagina **Enable Buttons** (Abilita pulsanti) illustra un'esigenza comune che si verifica quando `Button` esegue un'operazione sulla base del teso digitato dall'utente nella visualizzazione `Entry`. Se in `Entry` non viene digitato nulla, `Button` sarà disabilitato. Ogni oggetto `Button` contiene un data binding nella relativa proprietà `IsEnabled`. L'origine del data binding è la proprietà `Length` della proprietà `Text` dell'oggetto `Entry` corrispondente. Se la proprietà `Length` non è 0, il convertitore di valori restituisce `true` e `Button` viene abilitato:
 
-[![Enable Buttons](converters-images/enablebuttons-small.png "Enable Buttons")](converters-images/enablebuttons-large.png#lightbox "Enable Buttons")
+[![Pulsanti di abilitazione](converters-images/enablebuttons-small.png "Pulsanti di abilitazione")](converters-images/enablebuttons-large.png#lightbox "Pulsanti di abilitazione")
 
 Si noti che la proprietà `Text` in ogni oggetto `Entry` viene inizializzata per una stringa vuota. La proprietà `Text` è `null` per impostazione predefinita. In questo caso, il data binding non funzionerà.
 
@@ -238,13 +238,13 @@ La pagina **Switch Indicators** (Cambia indicatori) illustra come può essere us
 
 Nell'ultima delle tre coppie `Switch` e `Label` l'argomento generico è impostato su `Style`, mentre gli oggetti `Style` interi vengono specificati per i valori di `TrueObject` e `FalseObject`. Questi eseguono l'override dello stile implicito per `Label` impostato nel dizionario risorse. Le proprietà in tale stile vengono quindi assegnate in modo esplicito all'oggetto `Label`. L'attivazione/disattivazione di `Switch` determina la modifica dell'oggetto `Label` corrispondente:
 
-[![Switch Indicators](converters-images/switchindicators-small.png "Switch Indicators")](converters-images/switchindicators-large.png#lightbox "Switch Indicators")
+[![Indicatori di commutazione](converters-images/switchindicators-small.png "Indicatori di commutazione")](converters-images/switchindicators-large.png#lightbox "Indicatori di commutazione")
 
-È anche possibile usare [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) per implementare modifiche simili nell'interfaccia utente basata su altre visualizzazioni.
+È anche possibile utilizzare [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) per implementare modifiche simili nell'interfaccia utente in base ad altre visualizzazioni.
 
 ## <a name="binding-converter-parameters"></a>Parametri del convertitore di data binding
 
-La classe `Binding` definisce una proprietà [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter). Anche l'estensione di markup `Binding` definisce una proprietà [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter). Se si imposta questa proprietà, il valore viene passato ai metodi `Convert` e `ConvertBack` come argomento `parameter`. Sebbene l'istanza del convertitore di valori sia condivisa tra diversi data binding, la proprietà `ConverterParameter` può essere diversa in modo da eseguire conversioni leggermente diverse.
+La `Binding` classe definisce una [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) `Binding` proprietà e l'estensione di markup definisce anche una [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) proprietà. Se si imposta questa proprietà, il valore viene passato ai metodi `Convert` e `ConvertBack` come argomento `parameter`. Sebbene l'istanza del convertitore di valori sia condivisa tra diversi data binding, la proprietà `ConverterParameter` può essere diversa in modo da eseguire conversioni leggermente diverse.
 
 L'uso di `ConverterParameter` viene illustrato con un programma di selezione a colori. In questo caso `RgbColorViewModel` contiene tre proprietà di tipo `double` denominate `Red`, `Green`, e `Blue` che vengono usate per costruire un valore `Color`:
 
@@ -462,7 +462,7 @@ I valori delle proprietà `Red` e `Green` vengono visualizzati con un'estensione
 
 Il risultato è il seguente:
 
-[![RGB Color Selector](converters-images/rgbcolorselector-small.png "RGB Color Selector")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
+[![Selettore colore RGB](converters-images/rgbcolorselector-small.png "Selettore colore RGB")](converters-images/rgbcolorselector-large.png#lightbox "Selettore colore RGB")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

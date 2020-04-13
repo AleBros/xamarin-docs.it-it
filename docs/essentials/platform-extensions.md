@@ -6,13 +6,13 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545156"
 ---
-# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Estensioni di piattaforma
+# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Estensioni della piattaforma
 
 Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici. 
 
@@ -32,11 +32,11 @@ Tutte le estensioni di piattaforma possono essere chiamate solo dal progetto iOS
 
 ## <a name="android-extensions"></a>Estensioni Android
 
-È possibile accedere a queste estensioni solo da un progetto Android.
+Queste estensioni sono accessibili solo da un progetto Android.These extensions can only be accessed from an Android project.
 
-### <a name="application-context--activity"></a>Contesto e attività dell'applicazione
+### <a name="application-context--activity"></a>Contesto applicazione & attivitàApplication Context & Activity
 
-Usando le estensioni della piattaforma nella classe `Platform` è possibile ottenere l'accesso all'elemento `Context` o `Activity` corrente dell'app in esecuzione.
+Usando le estensioni `Platform` della piattaforma nella classe `Context` `Activity` puoi ottenere l'accesso all'app corrente o per l'app in esecuzione.
 
 ```csharp
 
@@ -46,7 +46,7 @@ var context = Platform.AppContext;
 var activity = Platform.CurrentActivity;
 ```
 
-Se si verifica una situazione in cui è necessario l'elemento `Activity`, ma l'applicazione non è stata avviata completamente, sarà necessario usare il metodo `WaitForActivityAsync`.
+Se c'è una `Activity` situazione in cui è necessario il, `WaitForActivityAsync` ma l'applicazione non è stata completamente avviata, il metodo deve essere utilizzato.
 
 ```csharp
 var activity = await Platform.WaitForActivityAsync();
@@ -76,37 +76,37 @@ void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivitySta
     Toast.MakeText(this, e.State.ToString(), ToastLength.Short).Show();
 ```
 
-Gli stati dell'attività sono i seguenti:
+Gli stati di attività sono i seguenti:
 
-* Creato
+* Data di creazione
 * Resumed
-* In pausa
+* Paused
 * Eliminata
-* SaveInstanceState
-* Avviata
+* SaveInstanceState (Stato di salvataggio)
+* Started
 * Arrestato
 
-Altre informazioni sono disponibili nella documentazione [Ciclo di vita dell'attività](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/).
+Per ulteriori informazioni, leggere la documentazione relativa al [ciclo di vita](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) delle attività.
 
 ## <a name="ios-extensions"></a>Estensioni iOS
 
-È possibile accedere a queste estensioni solo da un progetto iOS.
+Queste estensioni sono accessibili solo da un progetto iOS.These extensions can only be accessed from an iOS project.
 
 ### <a name="current-uiviewcontroller"></a>UIViewController corrente
 
-Ottenere l'accesso a `UIViewController` attualmente visibile:
+Ottenere l'accesso `UIViewController`al visibile:
 
 ```csharp
 var vc = Platform.GetCurrentUIViewController();
 ```
 
-Questo metodo restituisce `null` se non è possibile rilevare `UIViewController`.
+Questo metodo `null` restituirà se `UIViewController`non è possibile rilevare un oggetto .
 
 ## <a name="cross-platform-extensions"></a>Estensioni multipiattaforma
 
-Queste estensioni sono presenti in tutte le piattaforme.
+Queste estensioni esistono in ogni piattaforma.
 
-### <a name="point"></a>Punto
+### <a name="point"></a>Point
 
 ```csharp
 var system = new System.Drawing.Point(x, y);
@@ -130,7 +130,7 @@ var platform = system.ToPlatformSize();
 var system2 = platform.ToSystemSize();
 ```
 
-### <a name="rectangle"></a>Rettangolo
+### <a name="rectangle"></a>Rectangle
 
 ```csharp
 var system = new System.Drawing.Rectangle(x, y, width, height);

@@ -8,20 +8,20 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
-ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75886567"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
 _Questa guida presenta una procedura di risoluzione dei problemi che possono verificarsi durante l'uso del nuovo strumento di gestione connessione, inclusi i problemi di connettività e di SSH._
 
-## <a name="log-file-location"></a>Percorso del file di log
+## <a name="log-file-location"></a>Posizione dei file di log
 
-- **Mac** -`~/Library/Logs/Xamarin-[MAJOR.MINOR]`
-- **Windows** : `%LOCALAPPDATA%\Xamarin\Logs`
+- **Mac** –`~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** –`%LOCALAPPDATA%\Xamarin\Logs`
 
 È possibile individuare i file di log passando a **? &gt; Xamarin &gt; Comprimi log** in Visual Studio.
 
@@ -35,7 +35,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 > Questa procedura di risoluzione dei problemi è destinata principalmente ai problemi che si verificano durante la configurazione iniziale in un nuovo sistema.  Se una connessione che in precedenza funzionava correttamente in un ambiente specifico smette di funzionare improvvisamente o funziona in modo intermittente, è possibile nella maggior parte dei casi passare direttamente al controllo se una delle seguenti procedure è utile: 
 >
 > - Terminare i processi rimanenti come descritto di seguito in [Errori dovuti a processi host di compilazione esistenti nel Mac](#errors). 
-> - Cancellare gli agenti come descritto in [cancellazione degli agenti broker, IDB, Build e designer](#clearing), quindi utilizzare una connessione internet cablata e connettersi direttamente tramite l'indirizzo IP come descritto in non è stato possibile [connettersi a MacBuildHost. local. Riprovare.](#tryagain)..  
+> - Cancellare gli agenti come descritto in [Cancellazione del broker, IDB, compilazione e agenti](#clearing)di progettazione , quindi utilizzare una connessione Internet cablata e connettersi direttamente tramite l'indirizzo IP come descritto in [Impossibile connettersi a MacBuildHost.local. Riprovare.](#tryagain).  
 > Se nessuna di queste opzioni consente di risolvere il problema, seguire le istruzioni al [passaggio 9](#stepnine) per inviare un nuovo report sui bug.
 
 1. Controllare che le versioni di Xamarin.iOS installate nel Mac siano compatibili. Per eseguire questa operazione con Visual Studio 2017, assicurarsi di trovarsi nel canale di distribuzione **Stabile** in Visual Studio per Mac. In Visual Studio 2015 e versioni precedenti assicurarsi di trovarsi nello stesso canale di distribuzione in entrambi gli ambienti IDE.
@@ -102,7 +102,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
     - Le impostazioni del firewall di OS X non consentono la connessione. Ricontrollare il passaggio 3.
 
-        In alcuni casi può anche succedere che lo stato della configurazione per app del firewall di OS X non sia valido e che le impostazioni di Preferenze di Sistema non riflettano il comportamento effettivo. Per ripristinare il comportamento predefinito può essere utile eliminare il file di configurazione ( **/Library/Preferences/com.apple.alf.plist**) e riavviare il computer. Un modo per eliminare il file è immettere **/Library/Preferences** in **Vai &gt; Vai alla cartella** in Finder e quindi spostare il file **com.apple.alf.plist** nel Cestino.
+        In alcuni casi può anche succedere che lo stato della configurazione per app del firewall di OS X non sia valido e che le impostazioni di Preferenze di Sistema non riflettano il comportamento effettivo. Per ripristinare il comportamento predefinito può essere utile eliminare il file di configurazione (**/Library/Preferences/com.apple.alf.plist**) e riavviare il computer. Un modo per eliminare il file è immettere **/Library/Preferences** in **Vai &gt; Vai alla cartella** in Finder e quindi spostare il file **com.apple.alf.plist** nel Cestino.
 
     - Le impostazioni del firewall di uno dei router tra il Mac e il computer Windows bloccano la connessione.
 
@@ -110,16 +110,16 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
     - L'host di compilazione del Mac non consente l'accesso alla porta 22 da tutti gli host esterni tramite una regola `pfctl`. Questo è improbabile, a meno di non avere la sicurezza di aver configurato `pfctl` in passato.
 
-12. Se il passaggio 8 ha esito negativo e  **anche il passaggio 10 ha esito negativo**, è probabile che il problema risieda nel fatto che il processo del server SSH nel Mac non è in esecuzione o non è configurato per consentire l'accesso all'utente corrente. In questo caso, ricontrollare le impostazioni di Login remoto dal passaggio 2 prima di prendere in esame possibilità più complesse.
+12. Se il passaggio 8 ha esito negativo e ** anche il passaggio 10 ha esito negativo**, è probabile che il problema risieda nel fatto che il processo del server SSH nel Mac non è in esecuzione o non è configurato per consentire l'accesso all'utente corrente. In questo caso, ricontrollare le impostazioni di Login remoto dal passaggio 2 prima di prendere in esame possibilità più complesse.
 
 <a name="knownissues" />
 
-### <a name="known-issues-and-limitations"></a>Limitazioni e problemi noti
+### <a name="known-issues-and-limitations"></a>Problemi noti e limitazioni
 
 > [!NOTE]
 > Il contenuto di questa sezione è valido solo se è già stata effettuata la connessione all'host di compilazione Mac con il nome utente Mac e la password tramite il client SSH OpenSSH, come descritto nei passaggi 8 e 9 precedenti.
 
-#### <a name="invalid-credentials-please-try-again"></a>"Credenziali non valide. Riprovare."
+#### <a name="invalid-credentials-please-try-again"></a>"Credenziali non valide. Riprovare".
 
 Cause note:
 
@@ -133,23 +133,23 @@ Causa nota:
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentativo di connessione..." non giunge mai a completamento
 
-- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. (A partire da Xamarin 4,2, questo scenario porta invece il messaggio di errore "Impossibile connettersi"). **Soluzione alternativa**: ripristinare la **Shell di accesso** con il valore predefinito originale di **/bin/bash**.
+- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. (A partire da Xamarin 4.2, questo scenario invece porta al messaggio di errore "Impossibile connettersi".) **Soluzione alternativa**: Modificare la **shell di** accesso al valore predefinito originale di **/bin/bash**.
 
 <a name="tryagain" />
 
-#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Non è stato possibile connettersi a MacBuildHost.local. Riprovare."
+#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Non è stato possibile connettersi a MacBuildHost.local. Riprovare".
 
 Cause segnalate:
 
-- **Bug** : alcuni utenti hanno visualizzato questo messaggio di errore insieme a un errore più dettagliato nei file di log "si è verificato un errore imprevisto durante la configurazione di SSH per l'utente... Si è verificato il timeout dell'operazione di sessione "durante il tentativo di accesso all'host di compilazione utilizzando un Active Directory o un altro account utente di dominio del servizio directory. **Soluzione alternativa:** accedere all'host di compilazione tramite un account utente locale.
+- **Bug** – Alcuni utenti hanno visto questo messaggio di errore insieme a un errore più dettagliato nei file di registro "Si è verificato un errore imprevisto durante la configurazione di SSH per l'utente ... Timeout dell'operazione di sessione" quando si tenta di accedere all'host di compilazione utilizzando un account utente di dominio di Active Directory o di un altro servizio directory. **Soluzione alternativa:** accedere all'host di compilazione tramite un account utente locale.
 
 - **Bug**: questo errore è stato visualizzato in alcuni casi quando l'utente tenta di connettersi all'host di compilazione facendo doppio clic sul nome del Mac nella finestra di dialogo di connessione. **Soluzione alternativa possibile**: [aggiungere manualmente il Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando l'indirizzo IP.
 
-- **Bug [n. 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : questo errore si verifica in alcuni casi quando l'utente usa una connessione di rete wireless tra l'host di compilazione Mac e Windows. **Soluzione alternativa possibile**: spostare entrambi i computer in una connessione di rete cablata.
+- **Bug [n. 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**: questo errore si verifica in alcuni casi quando l'utente usa una connessione di rete wireless tra l'host di compilazione Mac e Windows. **Soluzione alternativa possibile**: spostare entrambi i computer in una connessione di rete cablata.
 
-- **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. (A partire da Xamarin 4,1, gli errori nel file con **estensione bashrc** non avranno più effetto sul processo di connessione). **Soluzione alternativa**: spostare il file con **estensione bashrc** in un percorso di backup oppure eliminarlo se si è certi che non è necessario.
+- **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**: questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. (A partire da Xamarin 4.1, gli errori nel file **.bashrc** non influenzeranno più il processo di connessione.) **Soluzione alternativa:** spostare il file **.bashrc** in un percorso di backup (o eliminarlo se si è a conoscenza di un'operazione non necessaria).
 
-- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione alternativa**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
+- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione alternativa**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 
 - **Limitazione**: l'errore può verificarsi se l'host di compilazione Mac è connesso a un router che non ha accesso a Internet o se il Mac usa un server DNS nel quale si verifica un timeout a seguito di una ricerca di DNS inverso del computer Windows. Visual Studio impiega circa 30 secondi per recuperare l'impronta digitale SSH e infine non riesce a connettersi.
 
@@ -225,7 +225,7 @@ Si può notare questo messaggio esaminando il file **sshd.log**. Questi messaggi
 
 Se Visual Studio rileva un errore durante la connessione all'host di compilazione, è possibile controllare la presenza di altri messaggi in due posizioni: la finestra di output e i file di log.
 
-#### <a name="output-window"></a>Output (finestra)
+#### <a name="output-window"></a>Finestra di output
 
 La finestra di output è il punto di partenza migliore. Questa finestra visualizza i messaggi relativi ai passaggi principali e agli errori di connessione. Per visualizzare i messaggi di Xamarin nella finestra di output:
 
@@ -235,7 +235,7 @@ La finestra di output è il punto di partenza migliore. Questa finestra visualiz
 
 [![](troubleshooting-images/troubleshooting-image11.png "Select Xamarin in the Output tab")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-#### <a name="log-files"></a>File di registro
+#### <a name="log-files"></a>File di log
 
 Se la finestra di output non include informazioni sufficienti per diagnosticare il problema, i file di log rappresentano gli elementi successivi da esaminare. I file di log contengono messaggi di diagnostica aggiuntivi che non vengono visualizzati nella finestra di output. Per visualizzare i file di log:
 
@@ -246,11 +246,11 @@ Se la finestra di output non include informazioni sufficienti per diagnosticare 
 
 2. Tentare di connettersi all'host di compilazione.
 
-3. Dopo che Visual Studio ha rilevato l'errore di connessione, raccogliere i log da **? > Xamarin > Comprimi log**:
+3. Dopo che Visual Studio ha riscontrato l'errore di connessione, raccogliere i log dalla **Guida > i registri zip di Xamarin >**:
 
     [![](troubleshooting-images/troubleshooting-image12.png "Collect the logs from Help > Xamarin > Zip Logs")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
-4. Quando si apre il file con estensione zip, viene visualizzato un elenco di file simile all'esempio seguente. Per gli errori di connessione, i file più importanti sono **\*Ide.log** e **\*Ide.svclog**. Questi file contengono gli stessi messaggi in due formati leggermente diversi. Il file con estensione **svclog**, in formato XML, è utile se si vogliono esaminare i messaggi. Il file con estensione **log**, in testo normale, è utile se si vogliono filtrare i messaggi tramite strumenti da riga di comando.
+4. Quando si apre il file con estensione zip, viene visualizzato un elenco di file simile all'esempio seguente. Per gli errori di connessione, i file più importanti sono i ** \*file Ide.log** e ** \*Ide.svclog.** Questi file contengono gli stessi messaggi in due formati leggermente diversi. Il file con estensione **svclog**, in formato XML, è utile se si vogliono esaminare i messaggi. Il file con estensione **log**, in testo normale, è utile se si vogliono filtrare i messaggi tramite strumenti da riga di comando.
 
     Per esaminare tutti i messaggi, selezionare e aprire il file con estensione **svclog**:
 
@@ -292,7 +292,7 @@ Se questi file di log dettagliati non forniscono indicazioni sufficienti per ris
 
 ### <a name="ide-log-files"></a>File di log dell'IDE
 
-Se si verificano problemi con il [provisioning automatico del Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning), esaminare i log dell'IDE di Visual Studio 2017, archiviati in **%LOCALAPPDATA%\Xamarin\Logs\15.0**.
+In caso di problemi durante l'utilizzo del provisioning automatico del [Mac,](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning)esaminare i log dell'IDE di Visual Studio 2017, archiviati in **%LOCALAPPDATA%**
 
 ## <a name="troubleshooting-build-and-deployment-errors"></a>Risoluzione degli errori di compilazione e distribuzione
 
@@ -330,13 +330,13 @@ Avviare Xcode nel Mac e verificare che l'account sviluppatore Apple personale si
 
 Cause segnalate:
 
-- **Miglioramento [n. 36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)** : questo errore può impedire la riuscita della compilazione se Visual Studio si connette all'host di compilazione tramite un indirizzo IPv6. Per la connessione all'host di compilazione gli indirizzi IPv6 non sono ancora supportati.
+- **Miglioramento [n. 36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)**: questo errore può impedire la riuscita della compilazione se Visual Studio si connette all'host di compilazione tramite un indirizzo IPv6. Per la connessione all'host di compilazione gli indirizzi IPv6 non sono ancora supportati.
 
 ### <a name="xamarinios-visual-studio-plugin-fails-to-load-after-reinstallation-of-betaalpha-channel"></a>Non è possibile caricare il plug-in per Xamarin.iOS di Visual Studio dopo la reinstallazione del canale beta/alfa
 
 Bug pertinente [n. 40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781).
 
-Questo problema può presentarsi quando Visual Studio non riesce ad aggiornare la cache del componente MEF. In tal caso, può essere utile installare questa estensione di Visual Studio: [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
+Questo problema può presentarsi quando Visual Studio non riesce ad aggiornare la cache del componente MEF. In questo caso, l'installazione di questa estensione di Visual Studio può essere utile:If this is the case, installing this Visual Studio extension may help:[https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 
 Questa operazione cancellerà la cache del componente MEF di Visual Studio, risolvendo i problemi dovuti al danneggiamento della cache.
 

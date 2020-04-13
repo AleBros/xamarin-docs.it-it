@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: f4d38bb66a34257c1e0a27c5fbbfe16f59743e83
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725506"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Creazione di bundle per Mac App Store
@@ -31,7 +31,7 @@ Verificare che l'opzione per creare un pacchetto di installazione sia stata sele
 
 [![Modifica delle opzioni di compilazione](bundling-images/build.png "Modifica delle opzioni di compilazione")](bundling-images/build-large.png#lightbox)
 
-## <a name="build"></a>Compilazione
+## <a name="build"></a>Compilare
 
 Prima della compilazione, assicurarsi che sia stata selezionata la configurazione **Release** (Rilascio). Quando lo sviluppatore compila l'app, verranno visualizzate _due_ richieste di conferma (per usare sia il certificato dell'applicazione che il certificato del programma di installazione):
 

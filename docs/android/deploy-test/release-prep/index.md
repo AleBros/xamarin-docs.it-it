@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
 ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
-ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80261310"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
@@ -19,19 +19,19 @@ Dopo aver scritto il codice di un'applicazione e averla testata, è necessario p
 
 Usare la procedura seguente per compilare l'app per il rilascio:
 
-- **[Specificare l'icona dell'applicazione](#Specify_the_Application_Icon)** &ndash; ogni applicazione Novell. Android deve avere un'icona dell'applicazione specificata. Anche se tecnicamente non è necessaria, alcuni mercati, ad esempio Google Play, la richiedono.
+- **[Specificare l'icona dell'applicazione](#Specify_the_Application_Icon)** &ndash; Per ogni applicazione Xamarin.Android deve essere specificata un'icona di applicazione. Anche se tecnicamente non è necessaria, alcuni mercati, ad esempio Google Play, la richiedono.
 
-- **[Versione l'applicazione](#Versioning)** &ndash; questo passaggio comporta l'inizializzazione o l'aggiornamento delle informazioni sul controllo delle versioni. Questo è importante per gli aggiornamenti futuri dell'applicazione e per verificare che gli utenti siano informati riguardo alla versione dell'applicazione installata.
+- **[Specificare la versione dell'applicazione](#Versioning)** &ndash; Questo passaggio prevede l'inizializzazione o l'aggiornamento delle informazioni di controllo della versione. Questo è importante per gli aggiornamenti futuri dell'applicazione e per verificare che gli utenti siano informati riguardo alla versione dell'applicazione installata.
 
-- **[Compattare l'apk](#shrink_apk)** &ndash; la dimensione dell'APK finale può essere notevolmente ridotta tramite il linker Novell. Android sul codice gestito e Proguard sul bytecode Java.
+- **[Compattare il file APK](#shrink_apk)** &ndash; La dimensione dell'APK finale può essere notevolmente ridotta usando il linker di Xamarin.Android per il codice gestito e ProGuard per il bytecode Java.
 
-- **[Proteggere l'applicazione](#protect_app)** &ndash; impedire a utenti o utenti malintenzionati di eseguire il debug, la manomissione o la Reverse Engineering dell'applicazione disabilitando il debug, offuscando il codice gestito, aggiungendo anti-debug e anti-manomissione e usando la compilazione nativa.
+- **[Proteggere l'applicazione](#protect_app)** &ndash; Impedire a utenti o malintenzionati di eseguire operazioni di debug, reverse engineering o manomissione dell'applicazione disabilitando il debug, nascondendo il codice gestito, aggiungendo funzionalità anti-debug e anti-manomissione e usando la compilazione nativa.
 
-- **[Impostare le proprietà](#Set_Packaging_Properties)** per la creazione di pacchetti &ndash; proprietà dei pacchetti controllano la creazione del pacchetto dell'applicazione Android (apk). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze. Inoltre, è possibile fornire agli utenti un bundle di app Android ottimizzato per i dispositivi.
+- **[Impostare proprietà per la creazione di pacchetti](#Set_Packaging_Properties)** &ndash; Le proprietà per la creazione di pacchetti controllano la creazione del pacchetto dell'applicazione Android (APK). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze. Inoltre, puoi fornire agli utenti un pacchetto di app Android ottimizzato per i loro dispositivi.
 
-- **[Compila](#Compile)** &ndash; questo passaggio compila il codice e gli asset per verificare che venga compilato in modalità di rilascio.
+- **[Compilare](#Compile)** &ndash; Questo passaggio consente di compilare il codice e gli asset per verificare che la compilazione avvenga in modalità di rilascio.
 
-- **[Archivia per la pubblicazione](#archive)** &ndash; questo passaggio compila l'app e la inserisce in un archivio per la firma e la pubblicazione.
+- **[Archiviare per la pubblicazione](#archive)** &ndash; Questo passaggio consente di compilare l'app e di inserirla in un archivio per la firma e la pubblicazione.
 
 Ognuno di questi passaggi è descritto in dettaglio di seguito.
 
@@ -71,9 +71,9 @@ In genere, `using Android.App` viene dichiarato all'inizio di **AssemblyInfo.cs*
 
 Il controllo delle versioni è importante per la distribuzione e la manutenzione delle applicazioni Android. Senza una qualche forma di controllo delle versioni, è difficile determinare se e come un'applicazione debba essere aggiornata. Per facilitare il controllo delle versioni, Android riconosce due tipi diversi di informazioni: 
 
-- Il **numero di versione** &ndash; un valore integer (usato internamente da Android e dall'applicazione) che rappresenta la versione dell'applicazione. La maggior parte delle applicazioni all'inizio hanno questo valore impostato su 1, che si incrementa a ogni compilazione. Tale valore non ha alcuna relazione o affinità con l'attributo del nome di versione (vedere sotto). Applicazioni e servizi di pubblicazione non devono rendere visualizzabile il valore agli utenti. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionCode`. 
+- **** Numero di versione&ndash;: un valore intero, usato internamente da Android e dall'applicazione, che rappresenta la versione dell'applicazione. La maggior parte delle applicazioni all'inizio hanno questo valore impostato su 1, che si incrementa a ogni compilazione. Tale valore non ha alcuna relazione o affinità con l'attributo del nome di versione (vedere sotto). Applicazioni e servizi di pubblicazione non devono rendere visualizzabile il valore agli utenti. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionCode`. 
 
-- **Nome versione** &ndash; una stringa utilizzata solo per la comunicazione di informazioni all'utente sulla versione dell'applicazione (come installato in un dispositivo specifico). Il nome della versione deve essere visualizzato agli utenti o in Google Play. Questa stringa non viene usata internamente da Android. Il nome della versione può essere qualsiasi valore stringa che consenta a un utente di identificare la build installata nel dispositivo. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionName`. 
+- **** Nome della versione&ndash;: una stringa che viene usata solo per comunicare all'utente informazioni sulla versione dell'applicazione installata in un dispositivo specifico. Il nome della versione deve essere visualizzato agli utenti o in Google Play. Questa stringa non viene usata internamente da Android. Il nome della versione può essere qualsiasi valore stringa che consenta a un utente di identificare la build installata nel dispositivo. Questo valore viene archiviato nel file **AndroidManifest.xml** come `android:versionName`. 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -111,12 +111,12 @@ Impostare le opzioni del linker nella sezione **Opzioni Android** delle **propri
 
 Il menu a discesa **Collegamento** include le seguenti opzioni per il controllo del linker:
 
-- **None** &ndash; disattiva il linker; non verrà eseguito alcun collegamento.
+- **Nessuno** &ndash; Disattiva il linker. Non viene eseguito alcun collegamento.
 
-- **Solo gli assembly SDK** &ndash; verranno collegati solo gli assembly [richiesti da Novell. Android](~/cross-platform/internals/available-assemblies.md). 
+- **Solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
     Gli altri assembly non verranno collegati.
 
-- **Assembly SDK e utente** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
+- **Assembly SDK e utente** &ndash; Verranno collegati tutti gli assembly richiesti dall'applicazione, non solo quelli richiesti da Xamarin.Android.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -126,11 +126,11 @@ Impostare le opzioni del linker nella scheda **Linker** della sezione **Compilaz
 
 Di seguito sono riportate le opzioni di controllo del linker:
 
-- **Non collegare** &ndash; questo disattiva il linker; non verrà eseguito alcun collegamento.
+- **Non collegare** &ndash; Disattiva il linker. Non viene eseguito alcun collegamento.
 
-- **Collega solo assembly SDK** &ndash; verranno collegati solo gli assembly [richiesti da Novell. Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
+- **Collega solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
 
-- **Collegare tutti gli assembly** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
+- **Collega tutti gli assembly** &ndash; Collega tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Xamarin.Android.
 
 -----
 
@@ -146,11 +146,11 @@ Quando l'opzione **Abilita ProGuard** è selezionata, Xamarin.Android esegue lo 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Azione di compilazione di ProGuard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
+[![Azione di costruzione di Proguard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Azione di compilazione di ProGuard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
+[![Azione di costruzione di Proguard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -228,7 +228,7 @@ L'opzione **Compilazione AOT** richiede una licenza Enterprise o superiore. L'op
 
 #### <a name="llvm-optimizing-compiler"></a>Compilatore ottimizzatore LLVM
 
-Il _Compilatore ottimizzatore LLVM_  crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per usare il compilatore LLVM, è necessario per prima cosa abilitare l'opzione **Compilazione AOT** nella pagina [Proprietà per creazione pacchetto](#Set_Packaging_Properties).
+Il _Compilatore ottimizzatore LLVM _ crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per utilizzare il compilatore LLVM, è necessario prima attivare l'opzione **Compilazione AOT** (nella pagina [Proprietà pacchetto).](#Set_Packaging_Properties)
 
 > [!NOTE]
 > L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Enterprise.  
@@ -263,21 +263,21 @@ Quando questa opzione è abilitata, viene creato un APK per ogni ABI supportato,
 
 ### <a name="multi-dex"></a>Multidex
 
-Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite a 65.000 metodi si basa sul numero di metodi di Java cui un'app _fa riferimento_, compresi quelli nelle eventuali raccolte da cui l'applicazione dipende. Non si basa sul numero di metodi &ndash;scritti nel codice sorgente _. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
+Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. La limitazione dei metodi 65K si basa sul numero di metodi Java a cui &ndash; fa _riferimento_ un'app (inclusi quelli in tutte le librerie da cui dipende l'app) non è basata sul numero di metodi _scritti nel codice sorgente._ Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
 
 È possibile che un'app non usi tutti i metodi in tutte le raccolte cui fa riferimento, quindi è possibile che uno strumento come ProGuard (vedere sopra) possa rimuovere i metodi non usati dal codice. La procedura consigliata consiste nell'abilitare **Abilita multidex** solo se assolutamente necessario, ovvero se l'app fa riferimento a più di 65.000 metodi Java anche dopo l'uso di ProGuard.
 
 Per altre informazioni su multidex, vedere [Configurare le app con più di 64.000 metodi](https://developer.android.com/tools/building/multidex.html).
 
-### <a name="android-app-bundles"></a>Bundle di app Android
+### <a name="android-app-bundles"></a>Pacchetti di app Android
 
-I bundle di app sono diversi da apk perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, si tratta di un formato destinato a essere caricato con tutte le risorse e il codice compilato. Al termine del caricamento del bundle dell'app firmata, Google Play avrà tutti gli elementi necessari per compilare e firmare i apk dell'applicazione e per fornirli agli utenti usando il recapito dinamico.
+I bundle di app differiscono dagli APK perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, è un formato che deve essere caricato con tutto il codice compilato e le risorse. Dopo aver caricato il bundle dell'app firmato, Google Play avrà tutto il necessario per compilare e firmare gli APK dell'applicazione e servirli agli utenti tramite la consegna dinamica.
 
-Per abilitare il supporto per bundle di app Android, è necessario acconsentire esplicitamente al valore `bundle` della proprietà **formato pacchetto Android** nelle opzioni del progetto Android. Prima di eseguire questa operazione, assicurarsi di modificare il progetto in una configurazione `Release` perché i bundle di app sono destinati solo ai pacchetti di versione.
+Per abilitare il supporto per i pacchetti di app `bundle` Android, è necessario acconsentire esplicitamente al valore della proprietà Formato pacchetto Android all'interno delle opzioni del progetto Android.To enable support for Android App Bundles, you'll need to opt-in to the value of the **Android Package Format** property within your Android project options. Prima di eseguire questa operazione, assicurati `Release` di modificare il progetto in una configurazione poiché i bundle dell'app sono destinati solo ai pacchetti di rilascio.
 
-È ora possibile generare un bundle dell'app seguendo il [flusso di archiviazione](#archive). Verrà generato un bundle dell'app per l'applicazione.
+È ora possibile generare un bundle dell'app seguendo il [flusso](#archive)di archiviazione . Verrà generato un bundle dell'app per l'applicazione.
 
-Per altre informazioni sui bundle di app Android, vedere [bundle di app Android](https://developer.android.com/guide/app-bundle/).
+Per ulteriori informazioni sui pacchetti di app Android, vedere [Pacchetti di app Android](https://developer.android.com/guide/app-bundle/).
 
 <a name="Compile" />
 
@@ -301,21 +301,21 @@ Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionand
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Per iniziare il processo di pubblicazione, fare clic con il pulsante destro del mouse sul progetto nel **riquadro della soluzione** e selezionare **Archivio...**  dal menu di scelta rapida:
+Per iniziare il processo di pubblicazione, fare clic con il pulsante destro del mouse sul progetto nel **riquadro della soluzione** e selezionare **Archivio... ** dal menu di scelta rapida:
 
-[![Archiviare l'app](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
+[![App archivio](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 **Archivio...** avvia **Gestione archivi** e inizia il processo di archiviazione del bundle dell'app, come illustrato in questo screenshot:
 
-[![Gestione archivi](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
+[![Gestore archivi](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
-Un altro modo per creare un archivio è fare clic con il pulsante destro del mouse sulla soluzione nel **riquadro della soluzione** e selezionare **Archivia tutti...**  per compilare la soluzione e archiviare tutti i progetti Xamarin in grado di generare un archivio:
+Un altro modo per creare un archivio è fare clic con il pulsante destro del mouse sulla soluzione nel **riquadro della soluzione** e selezionare **Archivia tutti... ** per compilare la soluzione e archiviare tutti i progetti Xamarin in grado di generare un archivio:
 
-[![Archivia tutti](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
+[![Archivia tutto](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
-Sia **Archivio** che **Archivia tutti** avviano automaticamente **Gestione archivi**. Per avviare direttamente **Gestione archivi**, fare clic sulla voce di menu **Strumenti > Gestione archivi...** :
+Sia **Archivio** che **Archivia tutti** avviano automaticamente **Gestione archivi**. Per avviare direttamente **Gestione archivi**, fare clic sulla voce di menu **Strumenti > Gestione archivi... **:
 
-[![Avviare Gestione archivi](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
+[![Avviare Archive Manager](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 Per visualizzare gli archivi della soluzione, fare clic con il pulsante destro del mouse sul nodo **Soluzione** e selezionare **Visualizza archivi**:
 
@@ -325,37 +325,37 @@ Per visualizzare gli archivi della soluzione, fare clic con il pulsante destro d
 
 La funzionalità **Gestione archivi** è costituita da un **elenco di soluzioni**, un **elenco di archivi** e un **riquadro dei dettagli**:
 
-[![Riquadri di Gestione archivi](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
+[![Riquadri di Archive Manager](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 L'**elenco di soluzioni** visualizza tutte le soluzioni con almeno un progetto archiviato. L'**elenco di soluzioni** comprende le seguenti sezioni:
 
 - **Soluzione corrente** &ndash; Visualizza la soluzione corrente. Si noti che quest'area può essere vuota se per la soluzione corrente non esiste un archivio.
-- **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni che dispongono di un archivio.
+- **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni con un archivio.
 - Casella di testo **Ricerca** (in alto) &ndash; Filtra le soluzioni elencate nell'elenco **Tutti gli archivi** in base alla stringa di ricerca immessa nella casella di testo.
 
 L'**elenco di archivi** visualizza l'elenco di tutti gli archivi per la soluzione selezionata. L'**elenco di archivi** comprende le seguenti sezioni:
 
-- **Nome della soluzione selezionata** &ndash; Visualizza il nome della soluzione selezionata nell' **elenco della soluzione**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
-- **Filtro piattaforme** &ndash; questo campo rende possibile filtrare gli archivi per tipo di piattaforma (ad esempio iOS o Android).
-- **Archivia gli elementi** &ndash; elenco di archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
+- **Nome della soluzione selezionata** &ndash; Nome della soluzione selezionata nell'**elenco di soluzioni**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
+- **Filtro Piattaforme** &ndash; Campo che consente di filtrare gli archivi in base al tipo di piattaforma (ad esempio iOS o Android).
+- **Archivi** &ndash; Elenco degli archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
 
 Il **riquadro dei dettagli** visualizza informazioni aggiuntive su ogni archivio. Consente inoltre all'utente di avviare il flusso di lavoro di distribuzione o aprire la cartella in cui è stata creata la distribuzione. La sezione **Commenti per la build** consente di includere commenti sulla compilazione nell'archivio.
 
 ### <a name="distribution"></a>Distribuzione
 
-Quando una versione archiviata dell'applicazione è pronta per la pubblicazione, selezionare l'archivio in **Gestione archivi** e fare clic sul pulsante **Distribuisci...** :
+Quando una versione archiviata dell'applicazione è pronta per la pubblicazione, selezionare l'archivio in **Gestione archivi** e fare clic sul pulsante **Distribuisci...**:
 
 [![Pulsante Distribuisci](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
 La finestra di dialogo **Canale di distribuzione** visualizza informazioni sull'app, un'indicazione dell'avanzamento del flusso di lavoro di distribuzione e una selezione di canali di distribuzione. Alla prima esecuzione vengono visualizzate due opzioni:
 
-[![Selezionare il canale di distribuzione](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
+[![Seleziona canale di distribuzione](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
 
 È possibile scegliere uno dei seguenti canali di distribuzione:
 
-- &ndash; **ad hoc** salva un file apk firmato su disco che può essere sideload ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
+- **Ad hoc** &ndash; Salva su disco un APK firmato che può essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
 
-- **Google Play** &ndash; pubblica un apk firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
+- **Google Play** &ndash; Pubblica un file APK firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -365,17 +365,17 @@ Per avviare il processo di pubblicazione, selezionare **Compila > Archivia per l
 
 **Archivia per la pubblicazione** consente di compilare il progetto e lo raggruppa in un file di archivio. L'opzione di menu **Archivia tutti** consente di archiviare tutti i progetti archiviabili nella soluzione. Entrambe le opzioni aprono automaticamente **Gestione archivi** al termine delle operazioni di compilazione e creazione di bundle:
 
-[![Visualizzazione degli archivi](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
+[![Visualizzazione Archivio](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, **MyApp**. Si noti che il campo del commento consente di salvare un breve commento con l'archivio. Per pubblicare una versione archiviata di un'applicazione Xamarin.Android, selezionare l'app in **Gestione archivi** e fare clic su **Firma e distribuisci...**  come illustrato in precedenza. Viene aperta la finestra di dialogo **Firma e distribuisci** che presenta due opzioni:
+In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, **MyApp**. Si noti che il campo del commento consente di salvare un breve commento con l'archivio. Per pubblicare una versione archiviata di un'applicazione Xamarin.Android, selezionare l'app in **Gestione archivi** e fare clic su **Firma e distribuisci... ** come illustrato in precedenza. Viene aperta la finestra di dialogo **Firma e distribuisci** che presenta due opzioni:
 
 [![Firma e distribuisci](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 Da qui è possibile selezionare il canale di distribuzione:
 
-- &ndash; **ad hoc** Salva su disco un apk firmato, in modo che possa essere sideload ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
+- **** Ad hoc&ndash;: salva su disco un pacchetto dell'applicazione Android firmato in modo che possa essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
 
-- **Google Play** &ndash; pubblica un apk firmato in Google Play.
+- **Google Play** &ndash; Pubblica un file APK firmato in Google Play.
     Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
 -----

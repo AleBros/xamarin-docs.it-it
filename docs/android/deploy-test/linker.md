@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
 ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021448"
 ---
 # <a name="linking-on-android"></a>Collegamento in Android
@@ -26,7 +26,7 @@ Considerando l'esempio [Hello, Android](https://docs.microsoft.com/samples/xamar
 
 Il collegamento restituisce un pacchetto con dimensioni inferiori del 30% rispetto al pacchetto (non collegato) originale nella versione 1.2.0 e con dimensioni inferiori del 18% rispetto al pacchetto non collegato nella versione 4.0.1.
 
-## <a name="control"></a>Control
+## <a name="control"></a>Controllo
 
 Il collegamento è basato sull'*analisi statica*. Di conseguenza, tutto quello che dipende dall'ambiente di runtime non viene rilevato:
 
@@ -129,7 +129,7 @@ A volte è necessario mantenere determinati membri, ma solo se è stato mantenut
 [Android.Runtime.Preserve (Conditional = true)]
 ```
 
-Se non si vuole definire una dipendenze dalle librerie Xamarin, ad esempio quando si compila una libreria di classi portabile (PCL) multipiattaforma, è comunque possibile usare l'attributo &ndash;. A questo scopo, dichiarare una classe `PreserveAttribute` all'interno dello spazio dei nomi `Android.Runtime` in questo modo:
+Se non si vuole definire una dipendenze dalle librerie Xamarin, ad esempio quando si compila una libreria di classi portabile (PCL) multipiattaforma, è comunque possibile usare l'attributo `Android.Runtime.Preserve`. A questo scopo, dichiarare una classe `PreserveAttribute` all'interno dello spazio dei nomi `Android.Runtime` in questo modo:
 
 ```csharp
 namespace Android.Runtime
@@ -178,8 +178,8 @@ class MyActivity {
 
 ### <a name="linkdescription"></a>LinkDescription
 
-L'[azione di compilazione`@(LinkDescription)` ](~/android/deploy-test/building-apps/build-process.md)
- può essere usata nei file che possono contenere un [file di configurazione personalizzato del linker](~/cross-platform/deploy-test/linker.md).
+[`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md) 
+ **L'azione di compilazione** può essere utilizzata su file che possono contenere un file di [configurazione del linker personalizzato.](~/cross-platform/deploy-test/linker.md)
 edmx. I file di configurazione personalizzati del linker possono essere necessari per mantenere membri `internal` o `private` che devono essere conservati.
 
 ### <a name="custom-attributes"></a>Attributi personalizzati
@@ -209,5 +209,5 @@ Quando un assembly viene collegato, vengono rimossi i tipi di attributo personal
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Configurazione personalizzata del linker](~/cross-platform/deploy-test/linker.md)
-- [Collegamenti in iOS](~/ios/deploy-test/linker.md)
+- [Configurazione del linker personalizzata](~/cross-platform/deploy-test/linker.md)
+- [Collegamento in iOS](~/ios/deploy-test/linker.md)

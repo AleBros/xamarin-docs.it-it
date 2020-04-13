@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
 ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724834"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
@@ -19,7 +19,7 @@ La compilazione di applicazioni per dispositivi mobili può essere un'operazione
 
 In questo documento vengono fornite informazioni introduttive dettagliate sulla creazione di applicazioni per dispositivi mobili che includono:
 
-1. **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui concepimento, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
+1. **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Esamineremo tutte le fasi del sDLC per quanto riguarda lo sviluppo di applicazioni per dispositivi mobili, tra cui: Inception, Design, Development, Stabilization, Deployment e Maintenance.
 1. **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
 Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
@@ -40,7 +40,7 @@ Inoltre, queste fasi possono essere usate in altre metodologie del ciclo di vita
 
 Le singole fasi sono descritte dettagliatamente nelle sezioni seguenti.
 
-### <a name="inception"></a>Concepimento
+### <a name="inception"></a>Inception
 
 La diffusione e il livello di interazione degli utenti con i dispositivi mobili indica che quasi tutti hanno un'idea per un'app per dispositivi mobili. I dispositivi mobili hanno reso disponibile un modo completamente nuovo di interagire con i computer, il Web e persino con l'infrastruttura aziendale.
 
@@ -76,7 +76,7 @@ L'esperienza utente viene in genere creata con wireframe o mockup usando uno dei
 
 Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è destinata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
 
-1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
+1. **Apple** -  Linee guida per[l'interfaccia umana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/) Apple
 1. **Android** -  [Design Guidelines](https://developer.android.com/design/index.html)
 1. **UWP** - [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/) (Nozioni di base sulla progettazione per la piattaforma UWP)
 
@@ -108,7 +108,7 @@ La maggior parte delle esercitazioni che seguono è incentrata sulla fase di svi
 
 ### <a name="stabilization"></a>Stabilizzazione
 
-La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. Non soltanto da un punto di vista funzionale (ad esempio, l'arresto anomalo dell'applicazione quando si fa clic su un pulsante), ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
+La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. La stabilizzazione non viene eseguita solo da un punto di vista funzionale (ad esempio un arresto dell'applicazione quando si fa clic su un pulsante) ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
 
 1. **Prototipo**: l'app è ancora nella fase di modello di verifica e solo la funzionalità principale e parti specifiche dell'applicazione sono funzionanti. Sono presenti i bug maggiori.
 1. **Alfa**: il codice delle funzionalità principali è stato completato (le funzionalità sono state compilate ma non testate completamente). I bug maggiori sono ancora presenti e le funzionalità periferiche potrebbero non essere ancora presenti.
@@ -117,7 +117,7 @@ La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazi
 
 Non è mai troppo presto per iniziare a testare un'applicazione. Ad esempio, se viene rilevato un problema importante nella fase di prototipo, l'esperienza utente dell'app può essere ancora modificata per risolverlo. Se viene rilevato un problema di prestazioni nella fase alfa, è ancora possibile modificare l'architettura prima che venga compilata una grande quantità di codice basato su assunzioni false.
 
-In genere procedendo nelle fasi del ciclo di vita, l'applicazione viene aperta a un maggior numero di persone che la provano, la testano, inviano commenti e così via. Le applicazioni prototipo, ad esempio, possono essere mostrate o rese disponibili solo ai principali stakeholder, mentre la versione finale candidata delle applicazioni può essere distribuita ai clienti che effettuano la registrazione per l'accesso in anteprima.
+In genere, quando un'applicazione si sposta più avanti nel ciclo di vita, viene aperta a più persone per provarla, testarla, fornire commenti e suggerimenti e così via. Ad esempio, le applicazioni prototipo possono essere mostrate o rese disponibili solo alle principali parti interessate, mentre le applicazioni candidate al rilascio possono essere distribuite ai clienti che si iscrivono per l'accesso anticipato.
 
 Per un test preliminare e la distribuzione in un numero relativamente basso di dispositivi, è solitamente sufficiente la distribuzione diretta dal computer di sviluppo. Tuttavia, quando il pubblico diventa più vasto, questa operazione può diventare complessa. Per questa ragione, sono disponibili diverse opzioni di distribuzione dei test che rendono più semplice questo processo consentendo di invitare persone in un pool di test, rilasciare build sul Web e offrire strumenti per l'invio di commenti da parte degli utenti.
 
@@ -224,7 +224,7 @@ Google non impone alcun limite ai dispositivi che possono eseguire il sistema op
 
 A causa di questa frammentazione estrema dei dispositivi Android, nella maggior parte dei casi vengono scelti i 5 o 6 dispositivi più diffusi per la progettazione e i test, a cui viene data priorità.
 
-#### <a name="security-considerations"></a>Considerazioni sulla sicurezza
+#### <a name="security-considerations"></a>Considerazioni relative alla sicurezza
 
 Tutte le applicazioni nel sistema operativo Android vengono eseguite in un'identità distinta isolata con autorizzazioni limitate. Per impostazione predefinita, le applicazioni possono eseguire un numero molto limitato di operazioni. Ad esempio, senza autorizzazioni speciali, un'applicazione non può inviare un messaggio di testo, determinare lo stato del telefono o accedere a Internet. Per accedere a queste funzioni, è necessario che nel file manifesto dell'applicazione siano specificate le autorizzazioni richieste dall'applicazione al momento dell'installazione; il sistema operativo legge le autorizzazioni, notifica all'utente che l'applicazione richiede le autorizzazioni e consente all'utente di scegliere se continuare o annullare l'installazione.
 A causa del modello di Store delle applicazioni aperto, questo è un passaggio essenziale nel modello di distribuzione Android poiché ad esempio le applicazioni non sono controllate come in iOS. Per un elenco delle autorizzazioni delle applicazioni, vedere l'articolo di riferimento [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) (Autorizzazioni del manifesto) nella documentazione di Android.
@@ -241,7 +241,7 @@ La seconda parte consiste nella specifica di agenti in background per l'elaboraz
 
 Sebbene l'hardware UWP sia abbastanza omogeneo, esistono ancora componenti facoltativi che è necessario tenere presente durante la creazione del codice. Le funzionalità hardware facoltative includono la fotocamera, la bussola e il giroscopio. Esiste anche una classe speciale a memoria limitata (256 MB) che richiede un'attenzione particolare oppure gli sviluppatori possono escludere il supporto dei dispositivi a memoria limitata.
 
-#### <a name="security-considerations"></a>Considerazioni sulla sicurezza
+#### <a name="security-considerations"></a>Considerazioni relative alla sicurezza
 
 Per informazioni su importanti considerazioni di sicurezza per la piattaforma UWP, vedere la documentazione sulla [sicurezza](https://docs.microsoft.com/windows/uwp/security/).
 

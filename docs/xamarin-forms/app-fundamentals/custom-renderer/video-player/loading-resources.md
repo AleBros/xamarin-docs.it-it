@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771843"
 ---
 # <a name="loading-application-resource-videos"></a>Caricamento delle risorse dell'applicazione video
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I renderer personalizzati per la visualizzazione `VideoPlayer` sono in grado di riprodurre file video incorporati nei singoli progetti di piattaforma come risorse dell'applicazione. Tuttavia, la versione corrente di `VideoPlayer` non può accedere alle risorse incorporate in una libreria .NET Standard.
 
@@ -177,7 +177,7 @@ Se la risorsa di iOS è archiviata nella cartella **Risorse** e se la risorsa UW
 
 Ecco la pagina in esecuzione:
 
-[![Play Video Resource](loading-resources-images/playvideoresource-small.png "Play Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "Play Video Resource")
+[![Riproduci risorsa video](loading-resources-images/playvideoresource-small.png "Riproduci risorsa video")](loading-resources-images/playvideoresource-large.png#lightbox "Riproduci risorsa video")
 
 Si è visto come [caricare video da un URI Web](web-videos.md) e come riprodurre risorse incorporate. È anche possibile [caricare i video dalla raccolta video del dispositivo](accessing-library.md).
 

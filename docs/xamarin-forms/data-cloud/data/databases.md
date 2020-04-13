@@ -7,37 +7,37 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 52b227b0244a83ec4a7466cca7591c6b712f1c76
-ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.openlocfilehash: 2369afc693940d83971a43877da363e2c66b31b2
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "78292300"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80992405"
 ---
 # <a name="xamarinforms-local-databases"></a>Database locali Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-Il motore di database SQLite consente alle applicazioni Novell. Forms di caricare e salvare oggetti dati nel codice condiviso. Nell'applicazione di esempio viene utilizzata una tabella di database SQLite per archiviare gli elementi todo. Questo articolo descrive come usare SQLite.Net nel codice condiviso per archiviare e recuperare le informazioni in un database locale.
+Il motore di database SQLite consente alle applicazioni Xamarin.Forms di caricare e salvare oggetti dati nel codice condiviso. L'applicazione di esempio usa una tabella di database SQLite per archiviare gli elementi todo. In questo articolo viene descritto come utilizzare SQLite.Net nel codice condiviso per archiviare e recuperare informazioni in un database locale.
 
-[![screenshot dell'app Todo in iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "App Todo in iOS e Android")
+[![Screenshot dell'app Todolist su iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "App Todolist su iOS e Android")
 
-Integrare SQLite.NET nelle app per dispositivi mobili attenendosi alla procedura seguente:
+Integrazione di SQLite.NET nelle app per dispositivi mobili attenendosi alla procedura seguente:
 
 1. [Installare il pacchetto NuGet](#install-the-sqlite-nuget-package).
 1. [Configurare le costanti](#configure-app-constants).
 1. [Creare una classe di accesso al database](#create-a-database-access-class).
-1. [Accedere ai dati in Novell. Forms](#access-data-in-xamarinforms).
+1. [Accedere ai dati in Xamarin.Forms](#access-data-in-xamarinforms).
 1. [Configurazione avanzata](#advanced-configuration).
 
-## <a name="install-the-sqlite-nuget-package"></a>Installare il pacchetto NuGet SQLite
+## <a name="install-the-sqlite-nuget-package"></a>Installare il pacchetto SQLite NuGet
 
-Usare Gestione pacchetti NuGet per cercare **sqlite-net-PCL** e aggiungere la versione più recente al progetto di codice condiviso.
+Utilizzare Gestione pacchetti NuGet per cercare **sqlite-net-pcl** e aggiungere la versione più recente al progetto di codice condiviso.
 
 Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
 
 - **Creato da:** Frank A. Krueger
-- **ID:** sqlite-net-PCL
+- **ID:** sqlite-net-pcl
 - **Collegamento a NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -45,7 +45,7 @@ Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha qu
 
 ## <a name="configure-app-constants"></a>Configurare le costanti dell'app
 
-Il progetto di esempio include un file **Constants.cs** che fornisce i dati di configurazione comuni:
+Il progetto di esempio include un file **di Constants.cs** che fornisce dati di configurazione comuni:The sample project includes a data that provides common configuration data:
 
 ```csharp
 public static class Constants
@@ -71,28 +71,28 @@ public static class Constants
 }
 ```
 
-Il file Constants specifica i valori predefiniti `SQLiteOpenFlag` enum utilizzati per inizializzare la connessione al database. Il `SQLiteOpenFlag` enum supporta questi valori:
+Il file delle costanti `SQLiteOpenFlag` specifica i valori di enumerazione predefiniti utilizzati per inizializzare la connessione al database. L'enum supporta questi valori:The `SQLiteOpenFlag` enum supports these values:
 
-- `Create`: la connessione creerà automaticamente il file di database, se non esiste.
-- `FullMutex`: la connessione viene aperta in modalità di threading serializzato.
-- `NoMutex`: la connessione viene aperta in modalità multithread.
-- `PrivateCache`: la connessione non verrà inclusa nella cache condivisa, anche se è abilitata.
-- `ReadWrite`: la connessione può leggere e scrivere i dati.
+- `Create`: la connessione creerà automaticamente il file di database se non esiste.
+- `FullMutex`: la connessione viene aperta in modalità threading serializzato.
+- `NoMutex`: la connessione viene aperta in modalità multithreading.
+- `PrivateCache`: la connessione non parteciperà alla cache condivisa, anche se è abilitata.
+- `ReadWrite`: la connessione può leggere e scrivere dati.
 - `SharedCache`: la connessione parteciperà alla cache condivisa, se abilitata.
-- `ProtectionComplete`: il file è crittografato e non è accessibile quando il dispositivo è bloccato.
-- `ProtectionCompleteUnlessOpen`: il file è crittografato fino a quando non viene aperto, ma è quindi accessibile anche se l'utente blocca il dispositivo.
+- `ProtectionComplete`: il file è crittografato e inaccessibile mentre il dispositivo è bloccato.
+- `ProtectionCompleteUnlessOpen`: il file viene crittografato fino all'apertura, ma è quindi accessibile anche se l'utente blocca il dispositivo.
 - `ProtectionCompleteUntilFirstUserAuthentication`: il file viene crittografato fino a quando l'utente non ha avviato e sbloccato il dispositivo.
 - `ProtectionNone`: il file di database non è crittografato.
 
-Potrebbe essere necessario specificare flag diversi a seconda del modo in cui verrà utilizzato il database. Per ulteriori informazioni su `SQLiteOpenFlags`, vedere [apertura di una nuova connessione al database](https://www.sqlite.org/c3ref/open.html) in SQLite.org.
+Potrebbe essere necessario specificare flag diversi a seconda di come verrà utilizzato il database. Per ulteriori `SQLiteOpenFlags`informazioni su , vedere [Apertura di una nuova connessione al database](https://www.sqlite.org/c3ref/open.html) in sqlite.org.
 
-## <a name="create-a-database-access-class"></a>Creare una classe di accesso al database
+## <a name="create-a-database-access-class"></a>Creare una classe di accesso al databaseCreate a database access class
 
-Una classe wrapper di database astrae il livello di accesso ai dati dal resto dell'app. Questa classe centralizza la logica di query e semplifica la gestione dell'inizializzazione del database, rendendo più semplice effettuare il refactoring o espandere le operazioni sui dati man mano che aumenta l'app. L'app Todo definisce una classe `TodoItemDatabase` a questo scopo.
+Una classe wrapper di database astrae il livello di accesso ai dati dal resto dell'app. Questa classe centralizza la logica di query e semplifica la gestione dell'inizializzazione del database, semplificando il refactoring o l'espansione delle operazioni sui dati man mano che l'app cresce. L'app Todo `TodoItemDatabase` definisce una classe a questo scopo.
 
 ### <a name="lazy-initialization"></a>Inizializzazione differita
 
-Il `TodoItemDatabase` utilizza la classe .NET `Lazy` per ritardare l'inizializzazione del database fino a quando non viene eseguito per la prima volta. L'uso dell'inizializzazione differita impedisce al processo di caricamento del database di ritardare l'avvio dell'app. Per ulteriori informazioni, vedere [Lazy&lt;t&gt; Class](xref:System.Lazy`1).
+Utilizza `TodoItemDatabase` la classe `Lazy` .NET per ritardare l'inizializzazione del database fino al primo accesso. L'uso dell'inizializzazione differita impedisce al processo di caricamento del database di ritardare l'avvio dell'app. Per ulteriori informazioni, vedere [Classe&lt;T&gt; pigro](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -126,19 +126,19 @@ public class TodoItemDatabase
 }
 ```
 
-La connessione al database è un campo statico che garantisce l'uso di una singola connessione di database per tutta la durata dell'app. L'uso di una connessione statica persistente offre prestazioni migliori rispetto all'apertura e alla chiusura di connessioni più volte durante una singola sessione dell'app.
+La connessione al database è un campo statico che assicura che venga utilizzata una singola connessione al database per tutta la durata dell'app. L'uso di una connessione statica persistente offre prestazioni migliori rispetto all'apertura e alla chiusura delle connessioni più volte durante una singola sessione dell'app.
 
-Il metodo `InitializeAsync` è responsabile di verificare se una tabella esiste già per l'archiviazione di oggetti `TodoItem`. Questo metodo crea automaticamente la tabella se non esiste.
+Il `InitializeAsync` metodo è responsabile del controllo `TodoItem` se esiste già una tabella per l'archiviazione degli oggetti. Questo metodo crea automaticamente la tabella se non esiste.
 
-### <a name="the-safefireandforget-extension-method"></a>Metodo di estensione SafeFireAndForget
+### <a name="the-safefireandforget-extension-method"></a>Il metodo di estensione SafeFireAndForgetThe The SafeFireAndForget extension method
 
-Quando viene creata un'istanza della classe `TodoItemDatabase`, è necessario inizializzare la connessione al database, che è un processo asincrono. Tuttavia:
+Quando `TodoItemDatabase` viene creata un'istanza della classe, è necessario inizializzare la connessione al database, ovvero un processo asincrono. Tuttavia:
 
-- I costruttori di classi non possono essere asincroni.
+- I costruttori di classe non possono essere asincroni.
 - Un metodo asincrono che non è atteso non genererà eccezioni.
-- L'utilizzo del metodo `Wait` blocca il thread _e_ ingoia le eccezioni.
+- L'utilizzo del `Wait` metodo blocca il thread _e_ ingoia le eccezioni.
 
-Per avviare l'inizializzazione asincrona, evitare di bloccare l'esecuzione e avere la possibilità di intercettare le eccezioni, l'applicazione di esempio usa un metodo di estensione denominato `SafeFireAndForget`. Il metodo di estensione `SafeFireAndForget` fornisce funzionalità aggiuntive alla classe `Task`:
+Per avviare l'inizializzazione asincrona, evitare di bloccare l'esecuzione e avere `SafeFireAndForget`la possibilità di intercettare le eccezioni, l'applicazione di esempio utilizza un metodo di estensione denominato . Il `SafeFireAndForget` metodo di estensione `Task` fornisce funzionalità aggiuntive alla classe:The extension method provides additional functionality to the class:
 
 ```csharp
 public static class TaskExtensions
@@ -166,13 +166,13 @@ public static class TaskExtensions
 }
 ```
 
-Il metodo `SafeFireAndForget` attende l'esecuzione asincrona dell'oggetto `Task` fornito e consente di alleghi una `Action` chiamata se viene generata un'eccezione.
+Il `SafeFireAndForget` metodo attende l'esecuzione `Task` asincrona dell'oggetto fornito `Action` e consente di collegare un oggetto che viene chiamato se viene generata un'eccezione.
 
-Per altre informazioni, vedere [modello asincrono basato su attività (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+Per ulteriori informazioni, consultate [Modello asincrono basato su attività (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### <a name="data-manipulation-methods"></a>Metodi di manipolazione dei dati
 
-La classe `TodoItemDatabase` include metodi per i quattro tipi di manipolazione dei dati: create, Read, Edit e DELETE. La libreria SQLite.NET fornisce una semplice mappa relazionale a oggetti (ORM) che consente di archiviare e recuperare oggetti senza scrivere istruzioni SQL.
+La `TodoItemDatabase` classe include metodi per i quattro tipi di modifica dei dati: creazione, lettura, modifica ed eliminazione. La libreria SQLite.NET fornisce una semplice mappa orM (Object Relational Map) che consente di archiviare e recuperare oggetti senza scrivere istruzioni SQL.
 
 ```csharp
 public class TodoItemDatabase {
@@ -214,11 +214,12 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Novell. Forms
+## <a name="access-data-in-xamarinforms"></a>Accedere ai dati in Xamarin.Forms
 
-La classe `App` Novell. Forms espone un'istanza della classe `TodoItemDatabase`:
+La classe Xamarin.Forms `App` espone un'istanza della `TodoItemDatabase` classe:
 
 ```csharp
+static TodoItemDatabase database;
 public static TodoItemDatabase Database
 {
     get
@@ -232,7 +233,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-Questa proprietà consente ai componenti Novell. Forms di chiamare i metodi per il recupero e la manipolazione dei dati nell'istanza di `Database` in risposta all'interazione dell'utente. Ad esempio,
+Questa proprietà consente ai componenti Xamarin.Forms di `Database` chiamare il recupero dei dati e i metodi di modifica sull'istanza in risposta all'interazione dell'utente. Ad esempio:
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -246,47 +247,47 @@ saveButton.Clicked += async (sender, e) =>
 
 ## <a name="advanced-configuration"></a>Configurazione avanzata
 
-SQLite fornisce un'API affidabile con più funzionalità di quelle descritte in questo articolo e nell'app di esempio. Le sezioni seguenti illustrano le funzionalità importanti per la scalabilità.
+SQLite fornisce un'API affidabile con più funzionalità di quelle trattate in questo articolo e nell'app di esempio. Nelle sezioni seguenti vengono illustrate le funzionalità importanti per la scalabilità.
 
-Per ulteriori informazioni, vedere la [documentazione di SQLite](https://www.sqlite.org/docs.html) in SQLite.org.
+Per altre informazioni, vedere [Documentazione di SQLite](https://www.sqlite.org/docs.html) sui sqlite.org.
 
-### <a name="write-ahead-logging"></a>Registrazione write-ahead
+### <a name="write-ahead-logging"></a>Registrazione Write-Ahead
 
-Per impostazione predefinita, SQLite usa un journal di rollback tradizionale. Una copia del contenuto del database non modificato viene scritta in un file di rollback separato, quindi le modifiche vengono scritte direttamente nel file di database. Il COMMIT si verifica quando viene eliminato il Journal di rollback.
+Per impostazione predefinita, SQLite utilizza un journal di rollback tradizionale. Una copia del contenuto del database non modificato viene scritta in un file di rollback separato, quindi le modifiche vengono scritte direttamente nel file di database. COMMIT si verifica quando viene eliminato il journal di rollback.
 
-La registrazione write-ahead (WAL) scrive prima le modifiche in un file WAL separato. In modalità WAL, un COMMIT è un record speciale, aggiunto al file WAL, che consente l'esecuzione di più transazioni in un unico file WAL. Un file WAL viene unito di nuovo nel file di database in un'operazione speciale denominata _Checkpoint_.
+Write-Ahead Logging (WAL) scrive prima le modifiche in un file WAL separato. In modalità WAL, un COMMIT è un record speciale, aggiunto al file WAL, che consente più transazioni in un singolo file WAL. Un file WAL viene unito nuovamente al file di database in un'operazione speciale denominata _checkpoint_.
 
-WAL può essere più veloce per i database locali perché i lettori e i writer non si bloccano reciprocamente, consentendo l'esecuzione simultanea delle operazioni di lettura e scrittura. La modalità WAL, tuttavia, non consente modifiche alle _dimensioni della pagina_, aggiunge ulteriori associazioni di file al database e aggiunge l'operazione di _Checkpoint_ aggiuntiva.
+WAL può essere più veloce per i database locali perché lettori e writer non si bloccano a vicenda, consentendo la concomizione delle operazioni di lettura e scrittura. Tuttavia, la modalità WAL non consente modifiche alle dimensioni della _pagina,_ aggiunge ulteriori associazioni di file al database e aggiunge l'operazione di _checkpoint_ aggiuntiva.
 
-Per abilitare WAL in SQLite.NET, chiamare il metodo `EnableWriteAheadLoggingAsync` sull'istanza `SQLiteAsyncConnection`:
+Per abilitare WAL in `EnableWriteAheadLoggingAsync` SQLite.NET, `SQLiteAsyncConnection` chiamare il metodo sull'istanza:To enable WAL in SQLite.NET, call the method on the instance:
 
 ```csharp
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-Per altre informazioni, vedere [registrazione write-ahead di SQLite](https://www.sqlite.org/wal.html) in SQLite.org.
+Per altre informazioni, vedere [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) su sqlite.org.
 
 ### <a name="copying-a-database"></a>Copia di un database
 
-Esistono diversi casi in cui potrebbe essere necessario copiare un database SQLite:
+Esistono diversi casi in cui potrebbe essere necessario copiare un database SQLite:There are several cases where it may be necessary to copy a SQLite database:
 
-- Un database è stato fornito con l'applicazione, ma deve essere copiato o spostato nell'archiviazione scrivibile del dispositivo mobile.
+- Un database è stato fornito con l'applicazione, ma deve essere copiato o spostato in un archivio scrivibile sul dispositivo mobile.
 - È necessario eseguire un backup o una copia del database.
 - È necessario eseguire la versione, spostare o rinominare il file di database.
 
-In generale, lo stesso processo di trasferimento, ridenominazione o copia di un file di database è lo stesso di qualsiasi altro tipo di file con alcune considerazioni aggiuntive:
+In generale, lo spostamento, la ridenominazione o la copia di un file di database è lo stesso processo di qualsiasi altro tipo di file con alcune considerazioni aggiuntive:In general, moving, renaming, or copying a database file is the same process as any other file type with a few additional considerations:
 
-- È necessario chiudere tutte le connessioni al database prima di tentare di spostare il file di database.
-- Se si usa la [registrazione write-ahead](#write-ahead-logging), SQLite creerà un file di accesso alla memoria condivisa (con estensione SHM) e un file (log write-ahead) (con estensione Wal). Assicurarsi di applicare anche le modifiche apportate a questi file.
+- Tutte le connessioni al database devono essere chiuse prima di tentare di spostare il file di database.
+- Se si utilizza [la registrazione Write-Ahead](#write-ahead-logging), SQLite creerà un file di accesso alla memoria condivisa (shm) e un file (Write Ahead Log) (con estensione wal). Assicurarsi di applicare le modifiche anche a questi file.
 
-Per altre informazioni, vedere [gestione dei file in Novell. Forms](~/xamarin-forms/data-cloud/data/files.md).
+Per ulteriori informazioni, vedere [Gestione dei file in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Applicazione di esempio TODO](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [Pacchetto NuGet SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [Applicazione di esempio TodoTodo sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [SQLite.NET pacchetto NuGet](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [Documentazione di SQLite](https://www.sqlite.org/docs.html)
-- [Uso di SQLite con Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
-- [Uso di SQLite con iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Modello asincrono basato su attività (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy&lt;T&gt; classe](xref:System.Lazy`1)
+- [Uso di SQLite con AndroidUsing SQLite with Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
+- [Uso di SQLite con iOSUsing SQLite with iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
+- [Modello asincrono basato su attività (TAP)Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Classe&lt;T&gt; pigro](xref:System.Lazy`1)

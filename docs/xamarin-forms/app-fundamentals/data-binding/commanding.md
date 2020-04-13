@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75545597"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Interfaccia di comando di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Nell'architettura Model-View-ViewModel (MVVM), vengono definiti data binding tra le proprietà in ViewModel, che in genere è una classe che deriva da `INotifyPropertyChanged`, e le proprietà in View, che in genere è il file XAML. In alcuni casi un'applicazione ha esigenze che vanno oltre queste associazioni di proprietà, richiedendo che l'utente avvii comandi che hanno un effetto all'interno di ViewModel. Questi comandi vengono in genere segnalati dal clic su un pulsante o dal tocco con un dito e in genere vengono elaborati nel file code-behind in un gestore per l'evento `Clicked` dell'elemento `Button` o per l'evento `Tapped` di un elemento `TapGestureRecognizer`.
 
@@ -24,18 +24,18 @@ L'interfaccia di esecuzione dei comandi consente un approccio alternativo all'im
 
 Per consentire un data binding tra un elemento `Button` e un elemento ViewModel, l'elemento `Button` definisce due proprietà:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) di tipo [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
-- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) di tipo `Object`
+- [`Command`](xref:Xamarin.Forms.Button.Command)di tipo[`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)di tipo`Object`
 
 Per usare l'interfaccia di comando, si definisce un data binding che ha come destinazione la proprietà `Command` dell'elemento `Button` in cui l'origine è una proprietà nell'elemento ViewModel di tipo `ICommand`. L'elemento ViewModel contiene codice associato con tale proprietà `ICommand` che viene eseguito quando si fa clic sul pulsante. È possibile impostare `CommandParameter` su dati arbitrari per distinguere tra più pulsanti, se questi sono tutti associati alla stessa proprietà `ICommand` nell'elemento ViewModel.
 
 Vengono anche definite le proprietà `Command` e `CommandParameter` dalle classi seguenti:
 
-- [`MenuItem`](xref:Xamarin.Forms.MenuItem) e, di conseguenza, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), che deriva da `MenuItem`
-- [`TextCell`](xref:Xamarin.Forms.TextCell) e, di conseguenza, [`ImageCell`](xref:Xamarin.Forms.ImageCell), che deriva da `TextCell`
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem)e quindi, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), che deriva da`MenuItem`
+- [`TextCell`](xref:Xamarin.Forms.TextCell)e quindi, [`ImageCell`](xref:Xamarin.Forms.ImageCell), che deriva da`TextCell`
 - [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](xref:Xamarin.Forms.SearchBar) definisce una proprietà [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) di tipo `ICommand` e una proprietà [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter). Anche la proprietà [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) di [`ListView`](xref:Xamarin.Forms.ListView) è di tipo `ICommand`.
+[`SearchBar`](xref:Xamarin.Forms.SearchBar)definisce [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) una proprietà `ICommand` di [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) tipo e una proprietà. La [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) proprietà [`ListView`](xref:Xamarin.Forms.ListView) di è `ICommand`anche di tipo .
 
 Tutti questi comandi possono essere gestiti all'interno di un elemento ViewModel in modo che non dipenda dall'oggetto interfaccia utente specifico nell'elemento View.
 
@@ -82,7 +82,7 @@ Quando l'elemento ViewModel definisce una proprietà di tipo `ICommand`, deve an
 
 È possibile scrivere una classe di questo tipo manualmente oppure è possibile usare una classe scritta da altri. Poiché l'interfaccia `ICommand` fa parte di Microsoft Windows, è stata usata per anni per applicazioni MVVM Windows. L'uso di una classe Windows che implementa l'interfaccia `ICommand` consente di condividere gli elementi ViewModel tra applicazioni Windows e applicazioni Xamarin.Forms.
 
-Se la condivisione di ViewModel tra Windows e Xamarin.Forms non rappresenta un problema, è possibile usare la classe [`Command`](xref:Xamarin.Forms.Command) o [`Command<T>`](xref:Xamarin.Forms.Command`1) inclusa in Xamarin.Forms per implementare l'interfaccia `ICommand`. Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
+Se la condivisione di ViewModels tra Windows e Xamarin.Forms [`Command<T>`](xref:Xamarin.Forms.Command`1) non costituisce un problema, è `ICommand` possibile utilizzare la [`Command`](xref:Xamarin.Forms.Command) classe o inclusa in Xamarin.Forms per implementare l'interfaccia . Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
 
 ## <a name="basic-commanding"></a>Esecuzione di comandi di base
 
@@ -279,9 +279,9 @@ Prima di esaminare il costruttore della classe `PersonCollectionViewModel`, è n
 
 Ecco come funziona: l'utente preme prima il pulsante **New** (Nuovo). Questa operazione abilita il modulo di immissione ma disabilita il pulsante **New** (Nuovo). L'utente immette quindi un nome, l'età e le competenze. In qualsiasi momento durante il processo di modifica, l'utente può selezionare il pulsante **Cancel** (Annulla) per ricominciare da capo. Il pulsante **Submit** (Invia) viene abilitato solo dopo l'immissione di un nome e di un'età validi. La selezione del pulsante **Submit** (Invia) trasferisce la persona nella raccolta visualizzata dall'elemento `ListView`. Quando si seleziona **Cancel** (Annulla) o **Submit** (Invia), il modulo di immissione viene cancellato e il pulsante **New** (Nuovo) viene abilitato di nuovo.
 
-La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. La schermata Android Mostra il pulsante **Invia** abilitato dopo l'impostazione di Age:
+La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. La schermata Android mostra il pulsante Invia abilitato dopo l'impostazione di un'età:The Android screen shows the **Submit** button enabled after an age has been set:
 
-[![Voce person](commanding-images/personentry-small.png "Voce person")](commanding-images/personentry-large.png#lightbox "Voce person")
+[![Voce persona](commanding-images/personentry-small.png "Voce persona")](commanding-images/personentry-large.png#lightbox "Voce persona")
 
 Il programma non ha una funzionalità per la modifica di voci esistenti e non consente di salvare le voci quando si esce dalla pagina.
 
@@ -423,7 +423,7 @@ Non è necessario definire i metodi `execute` e `canExecute` come funzioni lambd
 
 È possibile continuare a usare la classe `Command` per queste proprietà `ICommand` condivise. La classe definisce un [costruttore alternativo](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})) che accetta i metodi `execute` e `canExecute` con parametri di tipo `Object`. Questo è il modo in cui `CommandParameter` viene passato a questi metodi.
 
-Quando si usa `CommandParameter`, tuttavia, è più facile specificare il tipo dell'oggetto impostato su `CommandParameter` tramite la classe [`Command<T>`](xref:Xamarin.Forms.Command`1) generica. I metodi `execute` e `canExecute` specificati hanno parametri di quel tipo.
+Tuttavia, `CommandParameter`quando si utilizza , è [`Command<T>`](xref:Xamarin.Forms.Command`1) più semplice utilizzare la classe `CommandParameter`generica per specificare il tipo dell'oggetto impostato su . I metodi `execute` e `canExecute` specificati hanno parametri di quel tipo.
 
 La pagina **Decimal Keyboard** (Tastiera decimale) descrive questa tecnica illustrando come implementare un tastierino per l'immissione di numeri decimali. La proprietà `BindingContext` per l'elemento `Grid` è un oggetto `DecimalKeypadViewModel`. La proprietà `Entry` di questo elemento ViewModel è associata alla proprietà `Text` di un elemento `Label`. Tutti gli oggetti `Button` sono associati a vari comandi nel ViewModel: `ClearCommand`, `BackspaceCommand` e `DigitCommand`:
 
@@ -758,7 +758,7 @@ Il costruttore imposta la proprietà `NavigateCommand` su un metodo `execute` ch
 
 Il costruttore imposta anche la proprietà `BindingContext` della pagina su se stessa, in modo che i binding facciano riferimento alla proprietà `NavigateCommand` in questa classe.
 
-L'ordine del codice in questo costruttore è importante: la chiamata a `InitializeComponent` attiva l'analisi del codice XAML, ma in quel momento il binding a una proprietà `NavigateCommand` non può essere risolto perché `BindingContext` è impostata su `null`. Se il `BindingContext` viene impostato nel costruttore *prima* dell'impostazione di `NavigateCommand`, l'associazione può essere risolta quando viene impostato `BindingContext`, ma in quel momento `NavigateCommand` è ancora `null`. L'impostazione di `NavigateCommand` dopo `BindingContext` non ha alcun effetto sul binding, perché una modifica a `NavigateCommand` non genera un evento `PropertyChanged` e il binding non sa che la proprietà `NavigateCommand` è ora valida.
+L'ordine del codice in questo costruttore è importante: la chiamata a `InitializeComponent` attiva l'analisi del codice XAML, ma in quel momento il binding a una proprietà `NavigateCommand` non può essere risolto perché `BindingContext` è impostata su `null`. Se la proprietà `BindingContext` viene impostata nel costruttore *prima che venga impostata * `NavigateCommand`, il binding può essere risolto quando viene impostata la proprietà `BindingContext`, ma in quel momento `NavigateCommand` è ancora `null`. L'impostazione di `NavigateCommand` dopo `BindingContext` non ha alcun effetto sul binding, perché una modifica a `NavigateCommand` non genera un evento `PropertyChanged` e il binding non sa che la proprietà `NavigateCommand` è ora valida.
 
 L'impostazione di entrambe le proprietà `NavigateCommand` e `BindingContext` (in qualsiasi ordine) prima della chiamata a `InitializeComponent` funzionerà, poiché quando il parser del codice XAML rileva la definizione del binding entrambi i componenti del binding sono stati impostati.
 

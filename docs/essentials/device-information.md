@@ -6,17 +6,17 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78295417"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Device Information
 
 La classe **DeviceInfo** fornisce informazioni sul dispositivo in cui viene eseguita l'applicazione.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -55,7 +55,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platforms"></a>Piattaforme
 
-[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) correla a una stringa costante mappata al sistema operativo. I valori possono essere controllati con lo struct `DevicePlatform`:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform)è correlata a una stringa costante che esegue il mapping al sistema operativo. I valori possono essere controllati con lo struct `DevicePlatform`:
 
 - **DevicePlatform.iOS** - iOS
 - **DevicePlatform.Android** - Android
@@ -64,7 +64,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="idioms"></a>Idiomi
 
-[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) correla a una stringa costante mappata al tipo di dispositivo in cui viene eseguita l'applicazione. I valori possono essere controllati con lo struct `DeviceIdiom`:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom)correla una stringa costante mappata al tipo di dispositivo su cui è in esecuzione l'applicazione. I valori possono essere controllati con lo struct `DeviceIdiom`:
 
 - **DeviceIdiom.Phone** - Telefono
 - **DeviceIdiom.Tablet** - Tablet
@@ -81,7 +81,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-iOS non espone un'API che consente agli sviluppatori di ottenere il modello del dispositivo iOS specifico. Viene invece restituito un identificatore hardware, ad esempio _iPhone10, 6_ che fa riferimento a iPhone X. Un mapping di questi identificatori non viene fornito da Apple, ma si trova in queste fonti (non ufficiali) [il wiki di iPhone](https://www.theiphonewiki.com/wiki/Models) e [ottiene il modello iOS](https://github.com/dannycabrera/Get-iOS-Model).
+iOS non espone un'API per gli sviluppatori per ottenere il modello del dispositivo iOS specifico.iOS does not expose an API for developers to get the model of the specific iOS device. Viene invece restituito un identificatore hardware come _iPhone10,6_ che fa riferimento all'iPhone X. Una mappatura di questi identificatori non sono forniti da Apple, ma possono essere trovati su queste (fonti non ufficiali) [Il Wiki iPhone](https://www.theiphonewiki.com/wiki/Models) e [Get iOS Model](https://github.com/dannycabrera/Get-iOS-Model).
 
 --------------
 

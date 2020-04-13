@@ -8,21 +8,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 99571e0b62592597bb1fffdc8d3ed8336fe050b2
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026933"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?
 
-## <a name="example-steps-for-xamarinandroidsupportv4"></a>Passaggi di esempio per Novell. Android. support. v4 
+## <a name="example-steps-for-xamarinandroidsupportv4"></a>Passaggi di esempio per Xamarin.Android.Support.v4 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Scaricare il pacchetto NuGet Novell. Android. support desiderato, ad esempio installarlo con gestione pacchetti NuGet.
+Scaricare il pacchetto Xamarin.Android.Support NuGet desiderato (ad esempio installandolo con il gestore di pacchetti NuGet).
 
-Usare `ildasm` per verificare la versione di **android_m2repository. zip** necessaria per il pacchetto NuGet:
+Utilizzare `ildasm` per verificare la versione di android_m2repository.zip necessaria per il pacchetto NuGet:Use to check which version of **android_m2repository.zip** the NuGet package needs:
 
 ```cmd
 ildasm /caverbal /text /item:Xamarin.Android.Support.v4 packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll | findstr SourceUrl
@@ -36,13 +36,13 @@ property string 'SourceUrl' = string('https://dl-ssl.google.com/android/reposito
 property string 'SourceUrl' = string('https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip')
 ```
 
-Scaricare **android\_m2repository. zip** da Google usando l'URL restituito da **Ildasm**. In alternativa, è possibile verificare la versione del _repository del supporto Android_ attualmente installata nell'Android SDK Manager:
+Scarica **\_android m2repository.zip** da Google utilizzando l'URL restituito da **ildasm**. In alternativa, è possibile verificare quale versione del repository di _supporto Android_ attualmente è stato installato in Gestione SDK di Android:
 
-!["Android SDK Manager che mostra il repository del supporto Android versione 32 installata"](install-android-support-library-images/sdk-extras.png)
+!["Android SDK Manager che mostra Android Support Repository versione 32 installata"](install-android-support-library-images/sdk-extras.png)
 
-Se la versione corrisponde a quella necessaria per il pacchetto NuGet, non è necessario scaricare nulla di nuovo. È invece possibile eseguire nuovamente il zip della directory **m2repository** esistente che si trova in **extra\\Android** nel _percorso SDK_ (come illustrato nella parte superiore della finestra di Android SDK Manager).
+Se la versione corrisponde a quella necessaria per il pacchetto NuGet, non è necessario scaricare nulla di nuovo. È invece possibile comprimere nuovamente la directory **m2repository** esistente che si trova in **extra\\android** nel _percorso SDK_ (come illustrato nella parte superiore della finestra di Gestione SDK di Android).
 
-Calcolare l'hash MD5 dell'URL restituito da **Ildasm**. Formattare la stringa risultante per utilizzare tutte le lettere maiuscole e nessun spazio. Modificare ad esempio la variabile `$url` in base alle esigenze e quindi eseguire le due righe seguenti (in base [al C# codice originale di Novell. Android](https://github.com/xamarin/xamarin-android/blob/8e8a4dd90f26eb39172876cc52181b6639e20524/src/Xamarin.Android.Build.Tasks/Tasks/GetAdditionalResourcesFromAssemblies.cs#L208)) in PowerShell:
+Calcolare l'hash MD5 dell'URL restituito da **ildasm**. Formattare la stringa risultante per utilizzare tutte le lettere maiuscole e senza spazi. Ad esempio, `$url` regolare la variabile in base alle esigenze e quindi eseguire le due righe seguenti (in base al codice originale di [C, da Xamarin.Android](https://github.com/xamarin/xamarin-android/blob/8e8a4dd90f26eb39172876cc52181b6639e20524/src/Xamarin.Android.Build.Tasks/Tasks/GetAdditionalResourcesFromAssemblies.cs#L208)) in PowerShell:
 
 ```powershell
 $url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip"
@@ -55,12 +55,12 @@ Output di esempio:
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-Copiare **android\_m2repository. zip** nella cartella **% LocalAppData%\\novell\\zip\\** . Rinominare il file in modo da usare l'hash MD5 dal passaggio di calcolo hash MD5 precedente. Ad esempio,
+Copiare **android\_m2repository.zip** nella cartella **\\cerprimice\\\\ %LOCALAPPDATA% Xamarin.** Rinominare il file per utilizzare l'hash MD5 del passaggio di calcolo dell'hash MD5 precedente. Ad esempio:
 
-**% LOCALAPPDATA%\\Novell\\zip\\F16A3455987DBAE5783F058F19F7FCDF. zip**
+**%LOCALAPPDATA%\\Xamarin\\\\zip F16A3455987DBAE5783F058F19F7FCDF.zip**
 
-Opzionale Decomprimere il file in **% LocalAppData%\\novell\\Novell. Android. support. v4\\23.4.0.0\\content\\** (creando un **contenuto\\** sottodirectory m2repository). Se si ignora questo passaggio, la prima compilazione che usa la libreria richiederà un po' più tempo perché sarà necessario completare questo passaggio.
-Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non corrisponde alla versione del pacchetto NuGet. È possibile usare `ildasm` per trovare il numero di versione corretto:
+(Facoltativo) Decomprimere il file nel **contenuto\\\\\\ %LOCALAPPDATA% Xamarin Xamarin.Android.Support.v4\\\\23.4.0.0** (creazione di una sottodirectory del contenuto **\\m2repository).** Se si ignora questo passaggio, la prima compilazione che utilizza la libreria richiederà più tempo perché sarà necessario completare questo passaggio.
+Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non è esattamente lo stesso della versione del pacchetto NuGet. È possibile `ildasm` utilizzare per trovare il numero di versione corretto:You can use to find the correct version number:
 
 ```cmd
 ildasm /caverbal /text /item:Xamarin.Android.Support.v4 packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll | findstr /C:"string 'Version'"
@@ -76,28 +76,28 @@ property string 'Version' = string('23.4.0.0')}
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Scaricare il pacchetto NuGet Novell. Android. support desiderato, ad esempio installarlo con gestione pacchetti NuGet.
+Scaricare il pacchetto Xamarin.Android.Support NuGet desiderato (ad esempio installandolo con il gestore di pacchetti NuGet).
 
-Fare doppio clic sull'assembly _Novell. Android. support. v4_ nella sezione _riferimenti_ del progetto Android in Visual Studio per Mac per aprire l'assembly nel browser assembly. Verificare che l'elenco a discesa _lingua_ sia impostato su _C#_ e selezionare l'assembly _Novell. Android. support. v4_ di primo livello dall'albero di navigazione del browser assembly. Individuare la proprietà `SourceUrl` sotto uno degli attributi `IncludeAndroidResourcesFrom` o `JavaLibraryReference`:
+Fare doppio clic sull'assembly _Xamarin.Android.Support.v4_ nella sezione _Riferimenti_ del progetto Android in Visual Studio per Mac per aprire l'assembly nel Browser assembly. Assicurarsi che l'elenco a discesa _Lingua_ sia impostato su _C,_ quindi selezionare l'assembly _Xamarin.Android.Support.v4_ di primo livello dall'albero di navigazione di Assembly Browser. Individuare `SourceUrl` la proprietà sotto `IncludeAndroidResourcesFrom` `JavaLibraryReference` uno degli attributi or:
 
 ```csharp
 [assembly: IncludeAndroidResourcesFrom ("./", PackageName = "Xamarin.Android.Support.v4", SourceUrl = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip", EmbeddedArchive = "m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar", Version = "23.4.0.0")]
 ```
 
-Scaricare **android\_m2repository. zip** da Google usando i `SourceUrl` restituiti da **Ildasm**. In alternativa, è possibile verificare la versione del _repository del supporto Android_ attualmente installata nell'Android SDK Manager:
+Scarica **\_android m2repository.zip** da `SourceUrl` Google utilizzando il restituito da **ildasm**. In alternativa, è possibile verificare quale versione del repository di _supporto Android_ attualmente è stato installato in Gestione SDK di Android:
 
-!["Android SDK Manager che mostra il repository del supporto Android versione 32 installata"](install-android-support-library-images/sdk-extras.png)
+!["Android SDK Manager che mostra Android Support Repository versione 32 installata"](install-android-support-library-images/sdk-extras.png)
 
-Se la versione corrisponde a quella necessaria per il pacchetto NuGet, non è necessario scaricare nulla di nuovo. È invece possibile eseguire nuovamente il zip della directory **m2repository** esistente che si trova in **Extras/Android** nel _percorso SDK_ (come illustrato nella parte superiore della finestra di Android SDK Manager).
+Se la versione corrisponde a quella necessaria per il pacchetto NuGet, non è necessario scaricare nulla di nuovo. È invece possibile comprimere nuovamente la directory **m2repository** esistente che si trova in **extra/android** nel _percorso SDK_ (come illustrato nella parte superiore della finestra di Gestione SDK di Android).
 
-Calcolare l'hash MD5 dell'URL restituito da **Ildasm**. Formattare la stringa risultante per utilizzare tutte le lettere maiuscole e nessun spazio. Ad esempio, modificare la stringa dell'URL in base alle esigenze e quindi eseguire il comando seguente in un prompt dei comandi di **Terminal. app** :
+Calcolare l'hash MD5 dell'URL restituito da **ildasm**. Formattare la stringa risultante per utilizzare tutte le lettere maiuscole e senza spazi. Ad esempio, modificare la stringa URL in base alle esigenze e quindi eseguire il comando seguente in un prompt dei comandi **di Terminal.app:**
 
 ```bash
 echo -n "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip" | md5 | tr '[:lower:]' '[:upper:]'
 ```
 
-Un'altra opzione consiste nell'usare l'interprete `csharp` per eseguire [lo C# stesso codice usato da Novell. Android](https://github.com/xamarin/xamarin-android/blob/8e8a4dd90f26eb39172876cc52181b6639e20524/src/Xamarin.Android.Build.Tasks/Tasks/GetAdditionalResourcesFromAssemblies.cs#L208).
-A tale scopo, modificare la variabile `url` in base alle esigenze, quindi eseguire il comando seguente in un prompt dei comandi di **Terminal. app** :
+Un'altra opzione `csharp` consiste nell'utilizzare l'interprete per eseguire [lo stesso codice C , che Xamarin.Android stesso utilizza](https://github.com/xamarin/xamarin-android/blob/8e8a4dd90f26eb39172876cc52181b6639e20524/src/Xamarin.Android.Build.Tasks/Tasks/GetAdditionalResourcesFromAssemblies.cs#L208).
+A tale scopo, `url` regolare la variabile in base alle esigenze e quindi eseguire il comando seguente in un prompt dei comandi **di Terminal.app:**
 
 ```bash
 csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip"; string.Concat((System.Security.Cryptography.MD5.Create().ComputeHash(System.Text.Encoding.UTF8.GetBytes(url))).Select(b => b.ToString("X02")))'
@@ -109,17 +109,17 @@ Output di esempio:
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-Copiare **android\_m2repository. zip** nella cartella **$Home/.local/share/Xamarin/Zips/** . Rinominare il file in modo da usare l'hash MD5 dal passaggio di calcolo hash MD5 precedente. Ad esempio,
+Copia **\_android m2repository.zip** nella cartella **$HOME/.local/share/Xamarin/zips/.** Rinominare il file per utilizzare l'hash MD5 del passaggio di calcolo dell'hash MD5 precedente. Ad esempio:
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 
-Opzionale Decomprimere il file in: 
+(Facoltativo) Decomprimere il file in: 
 
 **$HOME/.local/share/Xamarin/Xamarin.Android.Support.v4/23.4.0.0/content/**
 
-(creazione di una sottodirectory **Content/m2repository** ). Se si ignora questo passaggio, la prima compilazione che usa la libreria richiederà un po' più tempo perché sarà necessario completare questo passaggio.
+(creazione di una sottodirectory **content/m2repository).** Se si ignora questo passaggio, la prima compilazione che utilizza la libreria richiederà più tempo perché sarà necessario completare questo passaggio.
 
-Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non corrisponde alla versione del pacchetto NuGet. Come nel passaggio precedente di **Ildasm** , è possibile usare il browser Assembly in Visual Studio per Mac per trovare il numero di versione corretto. Cercare la proprietà `Version` sotto uno degli attributi `IncludeAndroidResourcesFrom` o `JavaLibraryReference`:
+Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non è esattamente lo stesso della versione del pacchetto NuGet. Come nel passaggio **ildasm** precedente, è possibile utilizzare il Browser assembly in Visual Studio per Mac per trovare il numero di versione corretto. Cercare la `Version` proprietà in `IncludeAndroidResourcesFrom` uno `JavaLibraryReference` degli attributi or:
 
 ```csharp
 [assembly: IncludeAndroidResourcesFrom ("./", PackageName = "Xamarin.Android.Support.v4", SourceUrl = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip", EmbeddedArchive = "m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar", Version = "23.4.0.0")]
@@ -129,10 +129,10 @@ Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non
 
 ## <a name="additional-references"></a>Riferimenti aggiuntivi
 
-- [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) – non accurato "download non riuscito. Scaricare {0} e inserirlo nella directory {1} ". e "installare il pacchetto:'{0}' disponibile nel programma di installazione dell'SDK" messaggi di errore correlati a Novell. Android. Support Packages
+- [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) – Impreciso "Download non riuscito. Si {0} prega di scaricare {1} e metterlo nella directory." e messaggi di errore{0}"Installare il pacchetto: ' ' disponibile nel programma di installazione SDK" relativi ai pacchetti Xamarin.Android.Support
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-In questo documento viene illustrato il comportamento corrente a partire dal 2016 agosto. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Novell, quindi potrebbe interrompersi in futuro.
+Questo documento illustra il comportamento corrente a partire da agosto 2016. La tecnica descritta in questo documento non fa parte della suite di test stabile per Xamarin, quindi potrebbe rompersi in futuro.
 
-Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario.
+Per ulteriore assistenza, per contattarci, o se questo problema rimane anche dopo aver utilizzato le informazioni di cui sopra, si prega di vedere Quali opzioni di [supporto sono disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché come presentare un nuovo bug, se necessario.

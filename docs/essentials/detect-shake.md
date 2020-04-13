@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Rileva scuotimento'
+title: 'Xamarin.Essentials: Rilevare Shake'
 description: La classe Accelerometer di Xamarin.Essentials consente di rilevare uno scuotimento del dispositivo.
 ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
 author: jamesmontemagno
@@ -7,15 +7,15 @@ ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67832588"
 ---
-# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rileva scuotimento
+# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rilevare Shake
 
-La classe **[Accelerometer](accelerometer.md)** consente di monitorare il sensore dell'accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale. Inoltre, consente di registrare gli eventi quando l'utente scuote il dispositivo.
+La classe **[Accelerometro](accelerometer.md)** consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale. Inoltre, consente di registrare gli eventi quando l'utente scuote il dispositivo.
 
 ## <a name="get-started"></a>Introduzione
 
@@ -72,7 +72,7 @@ public class DetectShakeTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="implementation-details"></a>Dettagli sull'implementazione
+## <a name="implementation-details"></a>Dettagli dell'implementazione
 
 L'API di rilevamento scuotimento calcola l'accelerazione usando letture non elaborate dell'accelerometro. Usa un semplice meccanismo di inserimento in coda per rilevare se i 3/4 dei recenti eventi dell'accelerometro si sono verificati nell'ultimo mezzo secondo. L'accelerazione viene calcolata aggiungendo il quadrato delle letture X, Y e Z eseguite dall'accelerometro e confrontando i valori con una soglia specifica.
 

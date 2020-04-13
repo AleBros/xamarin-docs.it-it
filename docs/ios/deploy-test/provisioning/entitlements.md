@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
 ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
-ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75655354"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
@@ -20,7 +20,7 @@ _Gli entitlement sono funzionalità speciali delle app e autorizzazioni di sicur
 
 In iOS le app vengono eseguite in una _sandbox_, che fornisce un set di regole che limitano l'accesso tra l'applicazione e determinate risorse di sistema o dati utente. Gli _entitlement_ vengono usati per richiedere al sistema di espandere la sandbox per fornire all'app funzionalità aggiuntive.
 
-Per estendere le funzionalità dell'app, è necessario specificare un entitlement nel file Entitlements.plist dell'app. Possono essere estese solo determinate funzionalità, elencate nella guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md) e descritte [sotto](#entitlement-key-reference). Gli entitlement vengono passati al sistema come coppia di chiave/valore e in genere ne è necessario solo uno per ogni funzionalità. Le chiavi e i valori specifici sono descritti nella sezione [Informazioni di riferimento sulle chiavi degli entitlement](#entitlement-key-reference) più avanti in questa guida.
+Per estendere le funzionalità dell'app, è necessario specificare un entitlement nel file Entitlements.plist dell'app. Possono essere estese solo determinate funzionalità, elencate nella guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md) e descritte [sotto](#entitlement-key-reference). Gli entitlement vengono passati al sistema come coppia di chiave/valore e in genere ne è necessario solo uno per ogni funzionalità. Le chiavi e i valori specifici sono descritti nella sezione Riferimento [chiave autorizzazione](#entitlement-key-reference) più avanti in questa guida.
 Visual Studio per Mac e Visual Studio offrono un'interfaccia chiara per l'aggiunta di entitlement in un'app Xamarin.iOS tramite l'editor Entitlements.plist.
 Questa guida illustra l'editor Entitlements.plist e come usarlo. Fornisce anche informazioni di riferimento su tutti gli entitlement che possono essere aggiunti a un progetto iOS per ogni funzionalità.
 
@@ -37,38 +37,38 @@ Il file Entitlements.plist viene usato per specificare gli entitlement e per fir
 
 Durante la definizione dell'ID app, oltre a selezionare e configurare i servizi dell'applicazione richiesti, è anche necessario configurare gli entitlement nel progetto Xamarin.iOS modificando i file **Info.plist** e **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedura:
 
-1. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo.
-2. Nella sezione **Identity (identità** ) immettere un nome per l'applicazione e immettere l' **identificatore del bundle** creato quando è stato definito l'ID app:
+1. Nel **riquadro Soluzione**fare doppio clic sul file **Info.plist** per aprirlo.
+2. Nella sezione **Identity** immettere un nome per l'applicazione e immettere **l'identificatore del pacchetto** creato al momento della definizione dell'ID app:
 
     ![Immettere un identificatore del bundle](entitlements-images/servicexs01-sml.png)
 
 3. Salvare le modifiche apportate al file **Info.plist**.
-4. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica:
+4. Nel **riquadro Soluzione**fare doppio clic sul file **Entitlements.plist** per aprirlo e modificarlo:
 
-    ![Modifica dei diritti](entitlements-images/servicexs02-sml.png)
+    ![Modifica degli entitlement](entitlements-images/servicexs02-sml.png)
 
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 
-1. Nella **Esplora soluzioni**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
+1. In **Esplora soluzioni**fare doppio clic sul file **Info.plist** per aprirlo e modificarlo.
 2. Nella sezione **Destinazione applicazione iOS** immettere un nome per l'applicazione e l'**Identificatore del bundle** creato in fase di definizione dell'ID app:
 
     ![Impostazione dell'identificatore del bundle](entitlements-images/servicevs01-sml.png)
 
 3. Salvare le modifiche apportate al file **Info.plist**.
-4. Nel **Esplora soluzioni**fare doppio clic sul file **titles. plist** per aprirlo:
+4. In **Esplora soluzioni**fare doppio clic sul file **Entitlements.plist** per aprirlo:
 
-    ![Modifica dei diritti](entitlements-images/servicevs02-sml.png)
+    ![Modifica degli entitlement](entitlements-images/servicevs02-sml.png)
 
-    È anche possibile fare clic con il pulsante destro del mouse sul file **titles. plist** e scegliere **Apri con...** Editor origine XML, che consente di impostare la proprietà dei diritti e il valore della chiave, come descritto in dettaglio nella sezione di riferimento per la [chiave del diritto di riferimento](#entitlement-key-reference) riportata di seguito.
+    È anche possibile fare clic con il pulsante destro del mouse sul file **Entitlements.plist** e scegliere **Apri con...** l'editor Origine XML che consente di impostare la proprietà Entitlement e il valore della chiave come descritto nella sezione Riferimento sulla [chiave](#entitlement-key-reference) di autorizzazione riportata di seguito.
 
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
@@ -98,7 +98,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
   - **Identificatore tipo di pass**
     - **Chiavi**: com.apple.developer.pass-type-identifiers
-    - **Stringa**: `$(TeamIdentifierPrefix)*`
+    - **Stringa**:`$(TeamIdentifierPrefix)*`
 
 - **Note**:
   - Permetterà all'app di consentire tutti i tipi di pass. Per limitare l'app e consentire solo un subset di tipi di pass per il team, impostare il valore della stringa su: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
@@ -111,10 +111,10 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
   - **Documenti iCloud e CloudKit**
     - **Chiavi**: com.apple.developer.ubiquity-container-identifiers
-    - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+    - **Stringa**:`$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
   - **Archiviazione chiave-valore iCloud**
     - **Chiave**: com.apple.developer.ubiquity-kvstore-identifier
-    - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+    - **Stringa**:`$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
 - **Note**:
   - Per individuare la stringa `$(TeamIdentifierPrefix)`, accedere a developer.apple.com e visitare **Member Center > Account utente > Developer Account Summary (Riepilogo account per sviluppatore)** per ottenere l'ID del team (o l'ID individuale per i singoli sviluppatori). Sarà una stringa di 10 caratteri (ad esempio, A93A5CM278).
@@ -140,7 +140,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 ### <a name="push-notifications"></a>Notifiche push
 
 - **Chiave**: aps-environment
-- **Stringa**: `development` oppure `production`
+- **Stringa** `development` : o`production`
 
 ### <a name="siri"></a>Siri
 
@@ -152,7 +152,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 - **Chiave**: com.apple.developer.networking.vpn.api
 - **Stringa**: allow-vpn
 
-### <a name="keychain-sharing"></a>Condivisione di portachiavi
+### <a name="keychain-sharing"></a>Condivisione del keychain
 
 - **Descrizione**: la condivisione del keychain consente agli sviluppatori di app di condividere le password archiviate nel keychain di un dispositivo con le altre app sviluppate dallo stesso team. L'accesso può essere limitato passando un identificatore di gruppo di accesso keychain nella stringa.
   - **Chiave**: keychain-access-groups
@@ -170,7 +170,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
   - **Chiave**: com.apple.developer.associated-domains
   - **Stringa**: webcredentials:example.com
 
-### <a name="data-protection"></a>Protezione dati
+### <a name="data-protection"></a>Protezione dei dati
 
 - **Descrizione**: l'abilitazione della protezione dati usa l'hardware di crittografia predefinito per archiviare i dati sensibili usati nell'app in un formato crittografato. Per impostazione predefinita, il livello di protezione viene impostato sulla protezione completa, in cui i file sono accessibili solo quando il dispositivo è sbloccato.
   - **Chiave**: com.apple.developer.default-data-protection
@@ -188,7 +188,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
   - **Chiave**: com.apple.developer.healthkit
   - **Valore booleano**: YES
 
-### <a name="wireless-accessory-configuration"></a>Configurazione degli accessori wireless
+### <a name="wireless-accessory-configuration"></a>Configurazione accessori wireless
 
 - **Descrizione**: l'uso di Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
   - **Chiave**: com.apple.external-accessory.wireless-configuration
@@ -198,7 +198,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 - **Descrizione**: ClassKit consente ai docenti di visualizzare l'avanzamento degli studenti nelle attività assegnate nell'app.
   - **Key**: com.apple.developer.ClassKit-environment
-  - **Stringa**: `development` oppure `production`
+  - **Stringa** `development` : o`production`
 
 ## <a name="summary"></a>Riepilogo
 

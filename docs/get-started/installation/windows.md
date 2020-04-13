@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 970985e419c5710699b6bdda49da8b59ef3c6cb6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71119252"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Installazione di Xamarin in Visual Studio 2019
@@ -23,7 +23,7 @@ Verificare i [requisiti di sistema](~/cross-platform/get-started/requirements.md
 
 [!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
 
-In Visual Studio 2019 verificare che Xamarin sia installato facendo clic sul menu **?** . Se Xamarin è installato, verrà visualizzata una voce di menu **Xamarin**, come in questo screenshot:
+In Visual Studio 2019 verificare che Xamarin sia installato facendo clic sul menu **?**. Se Xamarin è installato, verrà visualizzata una voce di menu **Xamarin**, come in questo screenshot:
 
 ![Voce di menu Xamarin nel menu ?](windows-images/12-xamarin-menu-item.png "Voce di menu Xamarin nel menu ?")
 
@@ -52,6 +52,6 @@ Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.iOS
 Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.Android in Windows](~/android/get-started/installation/windows.md).
 
 1. [Configurazione di Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
-2. [Using the Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md?ide=vs) (Uso di Xamarin Android SDK Manager)
-3. [Android SDK Emulator](~/android/get-started/installation/android-emulator/index.md) (Emulatore di Android SDK)
-4. [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md) (Configurare il dispositivo per lo sviluppo)
+2. [Using the Xamarin Android SDK Manager (Uso di Xamarin Android SDK Manager)](~/android/get-started/installation/android-sdk.md?ide=vs)
+3. [Emulatore di Android SDK](~/android/get-started/installation/android-emulator/index.md)
+4. [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md)

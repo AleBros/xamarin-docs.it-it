@@ -9,10 +9,10 @@ ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: 2aaa61400d3775c4d622b805d24ff0b338017de5
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66354039"
 ---
 # <a name="xamarinforms-accessibility"></a>Accessibilità di Xamarin.Forms
@@ -35,13 +35,13 @@ Le applicazioni Xamarin.Forms in genere sono destinate a più piattaforme. Di co
 
 - [**Test in iOS**](~/ios/app-fundamentals/accessibility.md)
 - [**Test in Android**](~/android/app-fundamentals/accessibility.md)
-- [**Visualizzatore ambito accessibilità di Windows (MSDN)** ](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Visualizzatore ambito accessibilità di Windows (MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Accessibilità multipiattaforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)
-- [Accessibilità tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
+- [Accessibilità tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
 
 ## <a name="related-video"></a>Video correlato
 

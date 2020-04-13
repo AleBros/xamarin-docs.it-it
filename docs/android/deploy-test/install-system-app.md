@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76723900"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 
-_Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida è rivolta agli autori di immagini ROM Android personalizzate. Non illustra come creare una ROM personalizzata._
+_Questa guida illustra le differenze tra un'app di sistema e un'app utente e come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida si applica agli autori di immagini personalizzate di Android ROM. Non spiegherà come creare una ROM personalizzata._
 
 ## <a name="system-app"></a>App di sistema
 
@@ -26,9 +26,9 @@ Le app di sistema vengono installate nella cartella **/system/app/** (una direct
 
 Le app di sistema si comportano esattamente come le app utente, ma con le importanti eccezioni seguenti:
 
-- Le app di sistema possono essere aggiornate come una normale _app utente_, ma, poiché esiste sempre una copia dell'app in **/system/app/** , è sempre possibile eseguire il rollback dell'applicazione alla versione originale.
+- Le app di sistema possono essere aggiornate come una normale _app utente_, ma, poiché esiste sempre una copia dell'app in **/system/app/**, è sempre possibile eseguire il rollback dell'applicazione alla versione originale.
 
-- Alle app di sistema possono essere concesse alcune autorizzazioni solo di sistema non disponibili per un'app utente. Un esempio di autorizzazione solo di sistema è [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED), che consente di associare le applicazioni ai dispositivi Bluetooth senza interazione dell'utente.
+- Alle app di sistema possono essere concesse alcune autorizzazioni solo di sistema non disponibili per un'app utente. Un esempio di autorizzazione solo [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)di sistema è , che consente alle applicazioni di eseguire l'associazione a dispositivi Bluetooth senza alcuna interazione da parte dell'utente.
 
 È possibile distribuire un'app Xamarin.Android come applicazione di sistema. Oltre a fornire un APK alla ROM personalizzata, è necessario copiare manualmente due librerie condivise, **libmonodroid.so** e **libmonosgen-2.0.so**, dall'APK al file system dell'immagine ROM. Questa guida illustra i passaggi necessari.
 
@@ -44,7 +44,7 @@ I passaggi seguenti illustrano come installare un'app Xamarin.Android come app d
 
 1. **Creare un pacchetto della versione finale di un APK dell'app Xamarin.Android** &ndash; Questo passaggio è illustrato più dettagliatamente nella guida [Pubblicazione di un'applicazione](~/android/deploy-test/publishing/index.md).
 
-2. **Estrarre le librerie condivise dall'APK** &ndash; Usando un'utilità ZIP, aprire il file APK ed esaminare il contenuto della cartella **/lib/** . Questa cartella avrà una sottodirectory per ogni _interfaccia binaria dell'applicazione_ (ABI) supportata dall'applicazione. Il contenuto di questa cartella includerà tutte le librerie condivise richieste dall'app in una particolare ABI:
+2. **Estrarre le librerie condivise dall'APK** &ndash; Usando un'utilità ZIP, aprire il file APK ed esaminare il contenuto della cartella **/lib/**. Questa cartella avrà una sottodirectory per ogni _interfaccia binaria dell'applicazione_ (ABI) supportata dall'applicazione. Il contenuto di questa cartella includerà tutte le librerie condivise richieste dall'app in una particolare ABI:
 
     ![Screenshot dei file SO nella cartella armeabi-v7a di taskypro.zip](install-system-app-images/install-system-app-01.png)
 

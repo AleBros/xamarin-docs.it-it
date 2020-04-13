@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79305136"
 ---
 # <a name="xamarinforms-control-templates"></a>Modelli di controllo Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
-I modelli di controllo Xamarin.Forms consentono di definire la struttura visiva di controlli personalizzati derivati da [`ContentView`](xref:Xamarin.Forms.ContentView) e di pagine derivate da [`ContentPage`](xref:Xamarin.Forms.ContentPage). I modelli di controllo separano l'interfaccia utente (UI) per un controllo personalizzato o una pagina dalla logica che implementa il controllo o la pagina. Il contenuto aggiuntivo può anche essere inserito nel controllo personalizzato basato su modelli, o nella pagina basata su modelli, in una posizione predefinita.
+I modelli di controllo Xamarin.Forms consentono [`ContentView`](xref:Xamarin.Forms.ContentView) di definire [`ContentPage`](xref:Xamarin.Forms.ContentPage) la struttura visiva dei controlli personalizzati derivati e delle pagine derivate. I modelli di controllo separano l'interfaccia utente (UI) per un controllo personalizzato o una pagina dalla logica che implementa il controllo o la pagina. Il contenuto aggiuntivo può anche essere inserito nel controllo personalizzato basato su modelli, o nella pagina basata su modelli, in una posizione predefinita.
 
 È ad esempio possibile creare un modello di controllo per ridefinire l'interfaccia utente fornita da un controllo personalizzato. Il modello di controllo può quindi essere utilizzato dall'istanza del controllo personalizzato richiesta. In alternativa, è possibile creare un modello di controllo che definisce qualsiasi interfaccia utente comune che verrà usata da più pagine in un'applicazione. Il modello di controllo può quindi essere utilizzato da più pagine, anche se ogni pagina visualizza comunque contenuto univoco.
 
@@ -48,13 +48,13 @@ public class CardView : ContentView
 }
 ```
 
-La classe `CardView`, che deriva dalla classe [`ContentView`](xref:Xamarin.Forms.ContentView), rappresenta un controllo personalizzato che visualizza i dati in un layout simile a una scheda. La classe contiene proprietà, supportate da proprietà associabili, per i dati visualizzati. Tuttavia, la classe `CardView` non definisce alcuna interfaccia utente. L'interfaccia utente verrà invece definita con un modello di controllo. Per altre informazioni sulla creazione di controlli personalizzati derivati da `ContentView`, vedere [Xamarin.Forms ContentView](~/xamarin-forms/user-interface/layouts/contentview.md).
+La `CardView` classe , che [`ContentView`](xref:Xamarin.Forms.ContentView) deriva dalla classe , rappresenta un controllo personalizzato che visualizza i dati in un layout simile a una scheda. La classe contiene proprietà, supportate da proprietà associabili, per i dati visualizzati. Tuttavia, la classe `CardView` non definisce alcuna interfaccia utente. L'interfaccia utente verrà invece definita con un modello di controllo. Per altre informazioni sulla creazione di controlli personalizzati derivati da `ContentView`, vedere [Xamarin.Forms ContentView](~/xamarin-forms/user-interface/layouts/contentview.md).
 
-Viene creato un modello di controllo con il tipo [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Quando si crea un `ControlTemplate`, si combinano oggetti [`View`](xref:Xamarin.Forms.View) per creare l'interfaccia utente per un controllo personalizzato o una pagina. Un `ControlTemplate` deve avere un solo oggetto `View` come elemento radice. Tuttavia, l'elemento radice contiene in genere altri oggetti `View`. La combinazione degli oggetti costituisce la struttura visiva del controllo.
+Viene creato un modello [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) di controllo con il tipo. Quando si `ControlTemplate`crea un [`View`](xref:Xamarin.Forms.View) oggetto , si combinano gli oggetti per compilare l'interfaccia utente per un controllo personalizzato o una pagina. Un `ControlTemplate` deve avere un solo oggetto `View` come elemento radice. Tuttavia, l'elemento radice contiene in genere altri oggetti `View`. La combinazione degli oggetti costituisce la struttura visiva del controllo.
 
-Mentre un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) può essere definito inline, l'approccio tipico prevede la dichiarazione di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) come risorsa in un dizionario risorse. Poiché i modelli di controllo sono risorse, rispettano le stesse regole di ambito che si applicano a tutte le risorse. Ad esempio, se si dichiara un modello di controllo nell'elemento radice del file XAML di definizione dell'applicazione, il modello può essere usato ovunque nell'applicazione. Se si definisce il modello in una pagina, solo tale pagina può usare il modello di controllo. Per altre informazioni sulle risorse, vedere [Dizionari risorse di Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
+Mentre [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) un oggetto può essere definito inline, [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) l'approccio tipico per dichiarare un è come risorsa in un dizionario risorse. Poiché i modelli di controllo sono risorse, rispettano le stesse regole di ambito che si applicano a tutte le risorse. Ad esempio, se si dichiara un modello di controllo nell'elemento radice del file XAML di definizione dell'applicazione, il modello può essere usato ovunque nell'applicazione. Se si definisce il modello in una pagina, solo tale pagina può usare il modello di controllo. Per altre informazioni sulle risorse, vedere [Dizionari risorse di Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
-Nell'esempio di codice XAML seguente viene illustrato un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) per oggetti `CardView`:
+L'esempio XAML [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) seguente `CardView` mostra un per gli oggetti:The following XAML example shows a for objects:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -119,13 +119,13 @@ Nell'esempio di codice XAML seguente viene illustrato un [`ControlTemplate`](xre
 </ContentPage>
 ```
 
-Quando un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) viene dichiarato come risorsa, è necessario specificare una chiave con l'attributo `x:Key` in modo che possa essere identificata nel dizionario risorse. In questo esempio, l'elemento radice del `CardViewControlTemplate` è un oggetto [`Frame`](xref:Xamarin.Forms.Frame). L'oggetto `Frame` usa l'estensione di markup `RelativeSource` per impostare il relativo `BindingContext` sull'istanza dell'oggetto di runtime a cui verrà applicato il modello, noto come *oggetto padre basato su modelli*. L'oggetto `Frame` usa una combinazione di oggetti [`Grid`](xref:Xamarin.Forms.Grid), `Frame`, [`Image`](xref:Xamarin.Forms.Image), [`Label`](xref:Xamarin.Forms.Label) e [`BoxView`](xref:Xamarin.Forms.BoxView) per definire la struttura visiva di un oggetto `CardView`. Le espressioni di associazione di questi oggetti vengono risolte in base alle proprietà di `CardView`, dato che `BindingContext` viene ereditato dall'elemento `Frame` radice. Per altre informazioni sull'estensione di markup `RelativeSource`, vedere [Associazioni relative di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
+Quando [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) un oggetto viene dichiarato come risorsa, deve `x:Key` avere una chiave specificata con l'attributo in modo che possa essere identificata nel dizionario risorse. In questo esempio, l'elemento radice del `CardViewControlTemplate` è un oggetto [`Frame`](xref:Xamarin.Forms.Frame). L'oggetto `Frame` usa l'estensione di markup `RelativeSource` per impostare il relativo `BindingContext` sull'istanza dell'oggetto di runtime a cui verrà applicato il modello, noto come *oggetto padre basato su modelli*. `Frame` L'oggetto utilizza [`Grid`](xref:Xamarin.Forms.Grid)una `Frame` [`Image`](xref:Xamarin.Forms.Image)combinazione [`Label`](xref:Xamarin.Forms.Label)di [`BoxView`](xref:Xamarin.Forms.BoxView) oggetti , , , `CardView` e per definire la struttura visiva di un oggetto. Le espressioni di associazione di questi oggetti vengono risolte in base alle proprietà di `CardView`, dato che `BindingContext` viene ereditato dall'elemento `Frame` radice. Per altre informazioni sull'estensione di markup `RelativeSource`, vedere [Associazioni relative di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## <a name="consume-a-controltemplate"></a>Utilizzare un ControlTemplate
 
-Un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) può essere applicato a un controllo personalizzato derivato da [`ContentView`](xref:Xamarin.Forms.ContentView) impostando la relativa proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) sull'oggetto modello di controllo. Analogamente, è possibile applicare un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) a una pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage) impostando la relativa proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedPage.ControlTemplate) sull'oggetto modello di controllo. In fase di esecuzione, quando viene applicato un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), tutti i controlli definiti nel `ControlTemplate` vengono aggiunti alla struttura ad albero visuale del controllo personalizzato basato su modelli o della pagina basata su modelli.
+Un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) oggetto può [`ContentView`](xref:Xamarin.Forms.ContentView) essere applicato a [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) un controllo personalizzato derivato impostandone la proprietà sull'oggetto modello del controllo. Analogamente, [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) un oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) può essere applicato [`ControlTemplate`](xref:Xamarin.Forms.TemplatedPage.ControlTemplate) a una pagina derivata impostandone la proprietà sull'oggetto modello di controllo. In fase di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) esecuzione, quando viene applicato un `ControlTemplate` oggetto, tutti i controlli definiti in vengono aggiunti alla struttura ad albero visuale del controllo personalizzato basato su modelli o della pagina basata su modelli.
 
-Nell'esempio seguente viene illustrato il `CardViewControlTemplate` assegnato alla proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) di ogni oggetto `CardView`:
+L'esempio seguente `CardViewControlTemplate` mostra l'assegnazione alla [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) proprietà di ogni `CardView` oggetto:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -155,21 +155,21 @@ Nell'esempio seguente viene illustrato il `CardViewControlTemplate` assegnato al
 </ContentPage>
 ```
 
-In questo esempio, i controlli nel `CardViewControlTemplate` diventano parte della struttura ad albero visuale per ogni oggetto `CardView`. Poiché l'oggetto [`Frame`](xref:Xamarin.Forms.Frame) radice per il modello di controllo imposta il relativo `BindingContext` sull'elemento padre basato su modelli, l'elemento `Frame` e i relativi elementi figlio risolvono le espressioni di associazione in base alle proprietà di ogni oggetto `CardView`.
+In questo esempio, i controlli nel `CardViewControlTemplate` diventano parte della struttura ad albero visuale per ogni oggetto `CardView`. Poiché [`Frame`](xref:Xamarin.Forms.Frame) l'oggetto radice per `BindingContext` il modello di `Frame` controllo imposta its per l'elemento `CardView` padre basato su modelli, il e i relativi elementi figlio risolvere le espressioni di associazione rispetto alle proprietà di ogni oggetto.
 
 Gli screenshot seguenti mostrano il `CardViewControlTemplate` applicato ai tre oggetti `CardView`:
 
 [![Screenshot degli oggetti CardView basati su modelli, in iOS e Android](control-template-images/relativesource-controltemplate.png "Oggetti CardView basati su modelli")](control-template-images/relativesource-controltemplate-large.png#lightbox "Oggetti CardView basati su modelli")
 
 > [!IMPORTANT]
-> Il momento in cui un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) viene applicato a un'istanza del controllo può essere rilevato eseguendo l'override del metodo `OnApplyTemplate` nel controllo personalizzato basato su modelli o nella pagina basata su modelli. Per altre informazioni, vedere [Ottenere un elemento denominato da un modello](#get-a-named-element-from-a-template).
+> Il momento in [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) cui un oggetto viene applicato a un'istanza del controllo può essere rilevato eseguendo l'override del `OnApplyTemplate` metodo nel controllo personalizzato basato su modelli o nella pagina basata su modelli. Per altre informazioni, vedere [Ottenere un elemento denominato da un modello](#get-a-named-element-from-a-template).
 
 ## <a name="pass-parameters-with-templatebinding"></a>Passare parametri con TemplateBinding
 
-L'estensione di markup `TemplateBinding` associa una proprietà di un elemento che si trova in un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) a una proprietà pubblica definita dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. Quando si usa `TemplateBinding`, si consente alle proprietà del controllo di fungere da parametri per il modello. Pertanto, quando viene impostata una proprietà per un controllo personalizzato basato su modelli o una pagina basata su modelli, tale valore viene passato all'elemento per cui è stato definito il `TemplateBinding`.
+L'estensione `TemplateBinding` di markup associa una proprietà [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) di un elemento che si trova in un oggetto a una proprietà pubblica definita dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. Quando si usa `TemplateBinding`, si consente alle proprietà del controllo di fungere da parametri per il modello. Pertanto, quando viene impostata una proprietà per un controllo personalizzato basato su modelli o una pagina basata su modelli, tale valore viene passato all'elemento per cui è stato definito il `TemplateBinding`.
 
 > [!IMPORTANT]
-> L'estensione di markup `TemplateBinding` rappresenta un'alternativa alla creazione di un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) che usa l'estensione di markup `RelativeSource` per impostare il `BindingContext` dell'elemento radice nel modello sul relativo elemento padre basato su modelli. L'estensione di markup `TemplateBinding` elimina l'associazione `RelativeSource` e sostituisce le espressioni `Binding` con espressioni `TemplateBinding`.
+> L'estensione `TemplateBinding` di markup è [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) un'alternativa alla creazione di un che utilizza l'estensione `RelativeSource` di markup per impostare l'elemento `BindingContext` radice nel modello sul relativo elemento padre basato su modelli. L'estensione di markup `TemplateBinding` elimina l'associazione `RelativeSource` e sostituisce le espressioni `Binding` con espressioni `TemplateBinding`.
 
 L'estensione di markup `TemplateBinding` definisce le proprietà seguenti:
 
@@ -182,9 +182,9 @@ L'estensione di markup `TemplateBinding` definisce le proprietà seguenti:
 `ContentProperty` per l'estensione di markup `TemplateBinding` è `Path`. È pertanto possibile omettere la parte "Path=" dell'estensione di markup se il percorso è il primo elemento nell'espressione `TemplateBinding`. Per altre informazioni sull'uso di queste proprietà in un'espressione di associazione, vedere [Associazione di dati di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 > [!WARNING]
-> L'estensione di markup `TemplateBinding` deve essere usata solo in un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Tuttavia, se si tenta di usare un'espressione `TemplateBinding` al di fuori di un `ControlTemplate` non verrà generato un errore di compilazione o un'eccezione.
+> L'estensione `TemplateBinding` di markup deve [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)essere utilizzata solo all'interno di un oggetto . Tuttavia, se si tenta di usare un'espressione `TemplateBinding` al di fuori di un `ControlTemplate` non verrà generato un errore di compilazione o un'eccezione.
 
-Nell'esempio di codice XAML seguente viene illustrato un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) per gli oggetti `CardView`, che usa l'estensione di markup `TemplateBinding`:
+L'esempio XAML [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) seguente `CardView` mostra un `TemplateBinding` per gli oggetti, che usa l'estensione di markup:The following XAML example shows a for objects, that uses the markup extension:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -253,7 +253,7 @@ In questo esempio, l'estensione di markup `TemplateBinding` risolve le espressio
 [![Screenshot degli oggetti CardView basati su modelli, in iOS e Android](control-template-images/templatebinding-controltemplate.png "Oggetti CardView basati su modelli")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Oggetti CardView basati su modelli")
 
 > [!IMPORTANT]
-> L'uso dell'estensione di markup `TemplateBinding` equivale a impostare il `BindingContext` dell'elemento radice nel modello sul relativo elemento padre basato su modelli con l'estensione di markup `RelativeSource` e quindi a risolvere le associazioni degli oggetti figlio con l'estensione di markup `Binding`. L'estensione di markup `TemplateBinding` crea infatti un `Binding` con `Source` come `RelativeBindingSource.TemplatedParent`.
+> L'uso dell'estensione di markup `TemplateBinding` equivale a impostare il `BindingContext` dell'elemento radice nel modello sul relativo elemento padre basato su modelli con l'estensione di markup `RelativeSource` e quindi a risolvere le associazioni degli oggetti figlio con l'estensione di markup `Binding`. L'estensione di markup `TemplateBinding` crea infatti un `Binding` con `RelativeBindingSource.TemplatedParent` come `Source`.
 
 ## <a name="apply-a-controltemplate-with-a-style"></a>Applicare un ControlTemplate con uno stile
 
@@ -296,13 +296,13 @@ Nell'esempio di codice XAML seguente viene illustrato uno stile *implicito* che 
 </ContentPage>
 ```
 
-In questo esempio, il[ `Style`implicito](xref:Xamarin.Forms.Style) viene applicato automaticamente a ogni oggetto `CardView` e imposta la proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) di ogni `CardView` su `CardViewControlTemplate`.
+In questo esempio, [`Style`](xref:Xamarin.Forms.Style) l'implicita `CardView` viene applicata [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) automaticamente `CardView` a `CardViewControlTemplate`ogni oggetto e imposta la proprietà di ciascuno su . *implicit*
 
 Per altre informazioni sugli stili, vedere [Stili di Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 
 ## <a name="redefine-a-controls-ui"></a>Ridefinire l'interfaccia utente di un controllo
 
-Quando viene creata un'istanza di un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) e tale istanza viene assegnata alla proprietà `ControlTemplate` di un controllo personalizzato derivato da [`ContentView`](xref:Xamarin.Forms.ContentView) oppure di una pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage), la struttura visiva definita per il controllo personalizzato o la pagina viene sostituita con la struttura visiva definita nel `ControlTemplate`.
+Quando [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) viene creata un'istanza `ControlTemplate` di [`ContentView`](xref:Xamarin.Forms.ContentView) un oggetto e [`ContentPage`](xref:Xamarin.Forms.ContentPage) assegnato alla proprietà di un controllo personalizzato derivato o di una `ControlTemplate`pagina derivata, la struttura visiva definita per il controllo o la pagina personalizzata viene sostituita con la struttura visiva definita nell'oggetto .
 
 Ad esempio, il controllo personalizzato `CardViewUI` definisce la relativa interfaccia utente usando il codice XAML seguente:
 
@@ -365,7 +365,7 @@ Ad esempio, il controllo personalizzato `CardViewUI` definisce la relativa inter
 </ContentView>
 ```
 
-Tuttavia, i controlli che comprendono questa interfaccia utente possono essere sostituiti definendo una nuova struttura visiva in un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) e assegnandolo alla proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) di un oggetto `CardViewUI`:
+Tuttavia, i controlli che costituiscono questa interfaccia utente [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)possono essere sostituiti [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) definendo `CardViewUI` una nuova struttura visiva in un oggetto e assegnandola alla proprietà di un oggetto:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -419,17 +419,17 @@ Tuttavia, i controlli che comprendono questa interfaccia utente possono essere s
 </ContentPage>
 ```
 
-In questo esempio, la struttura visiva dell'oggetto `CardViewUI` viene ridefinita in un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) che fornisce una struttura visiva più compatta adatta a un elenco ridotto:
+In questo esempio, la `CardViewUI` struttura visiva dell'oggetto viene ridefinita in un che fornisce una struttura visiva più compatta adatta per un elenco condensato:In this example, the visual structure of the object is redefined in a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) that provides a more compact visual structure that's suitable for a condensed list:
 
 [![Screenshot degli oggetti CardViewUI basati su modelli, in iOS e Android](control-template-images/redefine-controltemplate.png "Oggetti CardViewUI basati su modelli")](control-template-images/redefine-controltemplate-large.png#lightbox "Oggetti CardViewUI basati su modelli")
 
 ## <a name="substitute-content-into-a-contentpresenter"></a>Sostituire il contenuto in un ContentPresenter
 
-Un [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) può essere inserito in un modello di controllo per contrassegnare il punto in cui dovrà comparire il contenuto visualizzato dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. Il controllo personalizzato o la pagina che utilizza il modello di controllo definirà quindi il contenuto che verrà visualizzato dal `ContentPresenter`. Il diagramma seguente illustra un `ControlTemplate` per una pagina che contiene alcuni controlli, tra cui un `ContentPresenter` contrassegnato da un rettangolo blu:
+Un [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) può essere inserito in un modello di controllo per contrassegnare la posizione in cui il contenuto deve essere visualizzato dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. Il controllo personalizzato o la pagina che utilizza il modello di controllo definirà quindi il contenuto che verrà visualizzato dal `ContentPresenter`. Il diagramma seguente illustra un `ControlTemplate` per una pagina che contiene alcuni controlli, tra cui un `ContentPresenter` contrassegnato da un rettangolo blu:
 
 ![Modello di controllo per ContentPage](control-template-images/control-template.png "Modello di controllo per ContentPage")
 
-Il codice XAML seguente mostra un modello di controllo denominato `TealTemplate` che contiene un [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) nella struttura visiva:
+Il codice XAML seguente `TealTemplate` mostra un [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) modello di controllo denominato che contiene un nella relativa struttura visiva:The following XAML shows a control template named that contains a in its visual structure:
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -470,7 +470,7 @@ Il codice XAML seguente mostra un modello di controllo denominato `TealTemplate`
 </ControlTemplate>
 ```
 
-Nell'esempio seguente viene illustrato `TealTemplate` assegnato alla proprietà [`ControlTemplate`](xref:Xamarin.Forms.TemplatedPage.ControlTemplate) di una pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Nell'esempio `TealTemplate` seguente viene [`ControlTemplate`](xref:Xamarin.Forms.TemplatedPage.ControlTemplate) illustrato [`ContentPage`](xref:Xamarin.Forms.ContentPage) assegnato alla proprietà di una pagina derivata:The following example shows assigned to the property of a derived page:
 
 ```xaml
 <controls:HeaderFooterPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -488,20 +488,20 @@ Nell'esempio seguente viene illustrato `TealTemplate` assegnato alla proprietà 
 </controls:HeaderFooterPage>
 ```
 
-In fase di esecuzione, quando `TealTemplate` viene applicato alla pagina, il contenuto della pagina viene sostituito nel [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) definito nel modello di controllo:
+In fase `TealTemplate` di esecuzione, quando viene applicato alla pagina, il contenuto della pagina viene sostituito nel [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) modello di controllo definito:
 
 [![Screenshot dell'oggetto pagina basata su modelli, in iOS e Android](control-template-images/tealtemplate-contentpage.png "ContentPage basata su modelli")](control-template-images/tealtemplate-contentpage-large.png#lightbox "ContentPage basata su modelli")
 
 ## <a name="get-a-named-element-from-a-template"></a>Ottenere un elemento denominato da un modello
 
-Gli elementi denominati in un modello di controllo possono essere recuperati dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. È possibile ottenere questo risultato con il metodo `GetTemplateChild`, che restituisce l'elemento denominato nella struttura ad albero visuale di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) di cui viene creata un'istanza, se trovato. In caso contrario, viene restituito `null`.
+Gli elementi denominati in un modello di controllo possono essere recuperati dal controllo personalizzato basato su modelli o dalla pagina basata su modelli. Ciò può essere `GetTemplateChild` ottenuto con il metodo , [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) che restituisce l'elemento denominato nella struttura ad albero visuale di cui è stata creata un'istanza, se trovata. In caso contrario, viene restituito `null`.
 
 Dopo la creazione di un'istanza di un modello di controllo, viene chiamato il metodo `OnApplyTemplate` del modello. Il metodo `GetTemplateChild` deve pertanto essere chiamato da un override di `OnApplyTemplate` nel controllo basato su modelli o nella pagina basata su modelli.
 
 > [!IMPORTANT]
 > Il metodo `GetTemplateChild` deve essere chiamato solo dopo la chiamata del metodo `OnApplyTemplate`.
 
-Il codice XAML seguente mostra un modello di controllo denominato `TealTemplate` che può essere applicato alle pagine derivate da [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Il codice XAML seguente `TealTemplate` mostra un modello [`ContentPage`](xref:Xamarin.Forms.ContentPage) di controllo denominato che può essere applicato alle pagine derivate:The following XAML shows a control template named that can be applied to derived pages:
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -544,13 +544,13 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 }
 ```
 
-In questo esempio, l'oggetto [`Label`](xref:Xamarin.Forms.Label) denominato `changeThemeLabel` viene recuperato dopo la creazione dell'istanza del `ControlTemplate`. La classe `changeThemeLabel` può quindi accedere e modificare `AccessTemplateElementPage`. Gli screenshot seguenti mostrano che il testo visualizzato da `Label` è stato modificato:
+In questo esempio, [`Label`](xref:Xamarin.Forms.Label) `changeThemeLabel` l'oggetto `ControlTemplate` denominato viene recuperato dopo la creazione di un'istanza dell'oggetto. La classe `AccessTemplateElementPage` può quindi accedere e modificare `changeThemeLabel`. Gli screenshot seguenti mostrano che il testo visualizzato da `Label` è stato modificato:
 
 [![Screenshot dell'oggetto pagina basata su modelli, in iOS e Android](control-template-images/get-named-element.png "ContentPage basata su modelli")](control-template-images/get-named-element-large.png#lightbox "ContentPage basata su modelli")
 
 ## <a name="bind-to-a-viewmodel"></a>Associare a un ViewModel
 
-Un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) può eseguire l'associazione dati a un ViewModel, anche quando il `ControlTemplate` viene associato all'elemento padre basato su modelli (l'istanza dell'oggetto di runtime a cui è applicato il modello).
+Un'associazione [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) dati può essere associata a un viewmodel, anche quando l'associazione `ControlTemplate` all'elemento padre basato su modelli (l'istanza dell'oggetto runtime a cui viene applicato il modello).
 
 Nell'esempio di codice XAML riportato di seguito viene illustrata una pagina che utilizza un elemento ViewModel denominato `PeopleViewModel`:
 
@@ -579,7 +579,7 @@ Nell'esempio di codice XAML riportato di seguito viene illustrata una pagina che
 </ContentPage>
 ```
 
-In questo esempio, il `BindingContext` della pagina è impostato su un'istanza di `PeopleViewModel`. Questo ViewModel espone una raccolta di `People` e un `ICommand` denominato `DeletePersonCommand`. Il [`StackLayout`](xref:Xamarin.Forms.StackLayout) nella pagina usa un layout associabile per l'associazione ai dati alla raccolta `People` e l'`ItemTemplate` del layout associabile viene impostato sulla risorsa `PersonTemplate`. Questo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) specifica che ogni elemento nella raccolta `People` verrà visualizzato usando un oggetto `CardView`. La struttura visiva dell'oggetto `CardView` viene definita usando un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) denominato `CardViewControlTemplate`:
+In questo esempio, il `BindingContext` della pagina è impostato su un'istanza di `PeopleViewModel`. Questo ViewModel espone una raccolta di `People` e un `ICommand` denominato `DeletePersonCommand`. Il [`StackLayout`](xref:Xamarin.Forms.StackLayout) nella pagina utilizza un layout associabile `People` per l'associazione dati alla raccolta e il `ItemTemplate` layout associabile è impostato sulla `PersonTemplate` risorsa. Specifica [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che ogni elemento `People` della raccolta verrà visualizzato `CardView` utilizzando un oggetto . La struttura visiva `CardView` dell'oggetto [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) viene `CardViewControlTemplate`definita utilizzando un oggetto denominato :
 
 ```xaml
 <ControlTemplate x:Key="CardViewControlTemplate">
@@ -620,13 +620,13 @@ In questo esempio, il `BindingContext` della pagina è impostato su un'istanza d
 </ControlTemplate>
 ```
 
-In questo esempio, l'elemento radice del [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) è un oggetto [`Frame`](xref:Xamarin.Forms.Frame). L'oggetto `Frame` usa l'estensione di markup `RelativeSource` per impostare il relativo `BindingContext` sull'elemento padre basato su modelli. Le espressioni di associazione dell'oggetto `Frame` e dei relativi figli vengono risolte in base alle proprietà di `CardView`, dato che `BindingContext` viene ereditato dall'elemento `Frame` radice. Gli screenshot seguenti mostrano la pagina che visualizza la raccolta `People`, costituita da tre elementi:
+In questo esempio, l'elemento radice di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) è un [`Frame`](xref:Xamarin.Forms.Frame) oggetto. L'oggetto `Frame` usa l'estensione di markup `RelativeSource` per impostare il relativo `BindingContext` sull'elemento padre basato su modelli. Le espressioni di associazione dell'oggetto `Frame` e dei relativi figli vengono risolte in base alle proprietà di `CardView`, dato che `BindingContext` viene ereditato dall'elemento `Frame` radice. Gli screenshot seguenti mostrano la pagina che visualizza la raccolta `People`, costituita da tre elementi:
 
 [![Screenshot degli oggetti CardView basati su modelli, in iOS e Android](control-template-images/viewmodel-controltemplate.png "Oggetti CardView basati su modelli")](control-template-images/viewmodel-controltemplate-large.png#lightbox "Oggetti CardView basati su modelli")
 
-Mentre gli oggetti nl [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) sono associati alle proprietà nel relativo elemento padre basato su modelli, il [`Button`](xref:Xamarin.Forms.Button) all'interno del modello di controllo è associato sia al relativo elemento padre basato su modelli sia al `DeletePersonCommand` nell'elemento ViewModel. Ciò è dovuto al fatto che la proprietà `Button.Command` ridefinisce l'origine di associazione come contesto di associazione del predecessore il cui tipo di contesto di associazione è `PeopleViewModel`, ovvero [`StackLayout`](xref:Xamarin.Forms.StackLayout). La parte `Path` delle espressioni di associazione può quindi risolvere la proprietà `DeletePersonCommand`. Tuttavia, la proprietà `Button.CommandParameter` non modifica l'origine di associazione, ma eredita dal relativo elemento padre nel [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Pertanto, la proprietà `CommandParameter` viene associata alla proprietà `CardTitle` di `CardView`.
+Mentre gli oggetti [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) nel associare alle proprietà [`Button`](xref:Xamarin.Forms.Button) nel relativo elemento padre basato su modelli, `DeletePersonCommand` l'interno del modello di controllo viene associato sia al relativo elemento padre basato su modelli e a nel viewmodel. Ciò è `Button.Command` dovuto al fatto che la proprietà ridefinisce l'origine `PeopleViewModel`dell'associazione in modo che sia il contesto di associazione del predecessore il cui tipo di contesto di associazione è , ovvero . [`StackLayout`](xref:Xamarin.Forms.StackLayout) La parte `Path` delle espressioni di associazione può quindi risolvere la proprietà `DeletePersonCommand`. Tuttavia, `Button.CommandParameter` la proprietà non modifica l'origine dell'associazione, [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)ereditandola invece dal relativo elemento padre nell'oggetto . Pertanto, la proprietà `CommandParameter` viene associata alla proprietà `CardTitle` di `CardView`.
 
-L'effetto complessivo delle associazioni di [`Button`](xref:Xamarin.Forms.Button) è che, quando viene toccato il controllo `Button`, viene eseguito il `DeletePersonCommand` nella classe `PeopleViewModel` e il valore della proprietà `CardName` viene passato a `DeletePersonCommand`. Ciò comporta la rimozione dell'oggetto `CardView` specificato dal layout associabile:
+[`Button`](xref:Xamarin.Forms.Button) L'effetto complessivo delle associazioni `Button` è che quando `DeletePersonCommand` viene `PeopleViewModel` toccato, viene eseguito `CardName` il nella classe, con il valore della proprietà passata a . `DeletePersonCommand` Ciò comporta la rimozione dell'oggetto `CardView` specificato dal layout associabile:
 
 [![Screenshot degli oggetti CardView basati su modelli, in iOS e Android](control-template-images/viewmodel-itemdeleted.png "Oggetti CardView basati su modelli")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "Oggetti CardView basati su modelli")
 

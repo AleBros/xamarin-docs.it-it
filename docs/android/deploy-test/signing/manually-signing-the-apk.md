@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 2d84d149b2eb4194de35fabc69cf44af99c04d25
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724126"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
@@ -82,7 +82,7 @@ Re-enter new password:
 [Storing xample.keystore]
 ```
 
-Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l'opzione &ndash;`list`:
+Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l'opzione &ndash; `list`:
 
 ```shell
 $ keytool -list -keystore xample.keystore
@@ -118,14 +118,14 @@ Quando si esegue questo comando, **apksigner** chiede la password dell'archivio 
 Vedere la [documentazione di Google](https://developer.android.com/studio/command-line/apksigner.html) per altre informazioni sull'uso di **apksigner**.
 
 > [!NOTE]
-> In base al [problema Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** risulta "mancante" da Android SDK. La soluzione alternativa per questo problema consiste nell'installare gli strumenti di compilazione di Android SDK versione 25.0.3 e usare la versione di **apksigner** corrispondente.  
+>  In base al [problema Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** "manca" da Android SDK. La soluzione alternativa per questo problema consiste nell'installare gli strumenti di compilazione di Android SDK versione 25.0.3 e usare la versione di **apksigner** corrispondente.  
 
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>Firmare il file APK con jarsigner
 
 > [!WARNING]
-> Questa sezione si applica solo se è necessario firmare il file APK con l'utilità **jarsigner**. Per gli sviluppatori è consigliabile firmare il file APK con **apksigner**.
+>  Questa sezione si applica solo se è necessario firmare il file APK con l'utilità **jarsigner**. Per gli sviluppatori è consigliabile firmare il file APK con **apksigner**.
 
 Questa tecnica comporta la firma del file APK tramite il comando **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** di Java SDK.  Lo strumento **jarsigner** è in dotazione con Java SDK.
 
@@ -136,7 +136,7 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 ```
 
 > [!NOTE]
-> Quando si usa **jarsigner**, è importante _prima di tutto_ firmare il file APK e quindi usare **zipalign**.  
+>  Quando si usa **jarsigner**, è importante _prima_ firmare il file APK e quindi usare **zipalign**.  
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -144,4 +144,4 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 - [jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 - [zipalign](https://developer.android.com/studio/command-line/zipalign.html)
-- [Build Tools 26.0.0 - where did apksigner go?](https://issuetracker.google.com/issues/62696222) (Build Tools 26.0.0: dov'è apksigner?)
+- [Build Tools 26.0.0: dov'è apksigner?](https://issuetracker.google.com/issues/62696222)

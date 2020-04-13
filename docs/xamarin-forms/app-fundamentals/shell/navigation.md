@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71674572"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navigazione nella shell Xamarin.Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 La shell Xamarin.Forms include un'esperienza di navigazione basata su URI che usa le route per il passaggio a qualsiasi pagina nell'applicazione, senza dover seguire una gerarchia di navigazione specifica. Offre inoltre la possibilità di navigare all'indietro senza dover visitare tutte le pagine dello stack di navigazione.
 
@@ -27,7 +27,7 @@ La shell Xamarin.Forms include un'esperienza di navigazione basata su URI che us
 - `CurrentState`, di tipo `ShellNavigationState`, lo stato di navigazione corrente di `Shell`.
 - `Current`, di tipo `Shell`, un alias con casting del tipo per `Application.Current.MainPage`.
 
-Le proprietà `BackButtonBehavior`, `CurrentItem` e `CurrentState` sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che tali proprietà possono essere destinazioni di data binding.
+Le `BackButtonBehavior` `CurrentItem`proprietà `CurrentState` , e [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) sono supportate da oggetti, il che significa che queste proprietà possono essere destinazioni delle associazioni dati.
 
 La navigazione viene eseguita richiamando il metodo `GoToAsync` dalla classe `Shell`. Quando la navigazione sta per essere eseguita viene generato un evento `Navigating` e al completamento della navigazione viene generato un evento `Navigated`.
 
@@ -156,10 +156,10 @@ Questo esempio consente di passare alla pagina per la route `monkeydetails`.
 
 Sono inoltre supportati i seguenti formati di route relative:
 
-| Formato | Descrizione |
+| Format | Descrizione |
 | --- | --- |
-| //*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso l'alto a partire dalla route attualmente visualizzata. |
-| ///*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso il basso a partire dalla route attualmente visualizzata. |
+| //*Percorso* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso l'alto a partire dalla route attualmente visualizzata. |
+| ///*Percorso* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso il basso a partire dalla route attualmente visualizzata. |
 
 #### <a name="contextual-navigation"></a>Navigazione contestuale
 
@@ -178,7 +178,7 @@ Quando è visualizzata la pagina registrata per la route `monkeys`, se si passa 
 
 I formati di route seguenti non sono validi:
 
-| Formato | Spiegazione |
+| Format | Spiegazione |
 | --- | --- |
 | *route* o /*route* | Non è possibile eseguire il push delle route nella gerarchia visiva nello stack di navigazione. |
 | //*page* o ///*page* | Le route globali attualmente non possono essere l'unica pagina nello stack di navigazione. Il routing assoluto per le route globali non è quindi supportato. |
@@ -272,9 +272,9 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-Questo esempio di codice recupera l'elefante attualmente selezionato in [`CollectionView`](xref:Xamarin.Forms.CollectionView) e passa alla route `elephantdetails`, passando `elephantName` come parametro di query. Si noti che i parametri di query vengono codificati in URL per la navigazione, quindi "Indian Elephant" diventa "Indian%20Elephant".
+Questo esempio di codice recupera l'elefante attualmente selezionato in [`CollectionView`](xref:Xamarin.Forms.CollectionView), e passa alla `elephantdetails` route, passando `elephantName` come parametro di query. Si noti che i parametri di query vengono codificati in URL per la navigazione, quindi "Indian Elephant" diventa "Indian%20Elephant".
 
-Per ricevere i dati, la classe che rappresenta la pagina a cui si passa, oppure la classe per l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina, deve essere decorata con un attributo `QueryPropertyAttribute` per ogni parametro di query:
+Per ricevere i dati, la classe che rappresenta la pagina a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)cui ci si `QueryPropertyAttribute` sposta o la classe per la pagina , deve essere decorata con un parametro di query per ogni:
 
 ```csharp
 [QueryProperty("Name", "name")]
@@ -291,7 +291,7 @@ public partial class ElephantDetailPage : ContentPage
 }
 ```
 
-Il primo argomento di `QueryPropertyAttribute` specifica il nome della proprietà che riceverà i dati, mentre il secondo argomento specifica l'ID del parametro di query. L'attributo `QueryPropertyAttribute` nell'esempio precedente specifica quindi che la proprietà `Name` riceverà i dati passati nel parametro di query `name` dall'URI nella chiamata al metodo `GoToAsync`. La proprietà `Name` esegue quindi la decodifica URL per il valore del parametro di query e lo usa per impostare l'elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina sull'oggetto che verrà visualizzato.
+Il primo argomento `QueryPropertyAttribute` per l'oggetto specifica il nome della proprietà che riceverà i dati, con il secondo argomento che specifica l'id del parametro di query. Pertanto, `QueryPropertyAttribute` nell'esempio precedente specifica `Name` che la proprietà riceverà i dati passati nel parametro `name` di query dall'URI nella chiamata al `GoToAsync` metodo. La `Name` proprietà decodifica quindi il valore del parametro [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di query e lo utilizza per impostare la pagina sull'oggetto che verrà visualizzato.
 
 > [!NOTE]
 > Una classe può essere decorata con più oggetti `QueryPropertyAttribute`.
@@ -302,11 +302,11 @@ La classe `BackButtonBehavior` definisce le proprietà seguenti che controllano 
 
 - `Command`, di tipo `ICommand`. Questo oggetto viene eseguito quando si preme sul pulsante Indietro.
 - `CommandParameter`, di tipo `object`, ovvero il parametro passato a `Command`.
-- `IconOverride`, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), ovvero l'icona usata per il pulsante Indietro.
+- `IconOverride`, di [`ImageSource`](xref:Xamarin.Forms.ImageSource)tipo , l'icona utilizzata per il pulsante Indietro.
 - `IsEnabled`, di tipo `boolean`, che indica se il pulsante Indietro è abilitato. Il valore predefinito è `true`.
 - `TextOverride`, di tipo `string`, ovvero il testo usato per il pulsante Indietro.
 
-Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che tali proprietà possono essere destinazioni di data binding.
+Tutte queste proprietà sono [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) supportate da oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
 La classe `BackButtonBehavior` può essere utilizzata impostando la proprietà associata `Shell.BackButtonBehavior` su un oggetto `BackButtonBehavior`:
 
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 La proprietà `Command` è impostata su un oggetto `ICommand` da eseguire quando si preme il pulsante Indietro, mentre la proprietà `IconOverride` è impostata sull'icona usata per il pulsante Indietro:
 
-[![Screenshot dell'icona del pulsante indietro della shell override, sull'](navigation-images/back-button.png "icona del pulsante indietro della shell") iOS e Android](navigation-images/back-button-large.png#lightbox "Icona del pulsante indietro della shell override")
+[![Screenshot dell'override dell'icona dell'icona del pulsante Indietro di una shell, su iOS e Android](navigation-images/back-button.png "Sostituzione dell'icona del pulsante Indietro della shell")](navigation-images/back-button-large.png#lightbox "Sostituzione dell'icona del pulsante Indietro della shell")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

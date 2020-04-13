@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: d94a647583539ac6af603a9074e1966c1c41d587
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028457"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Riferimenti Info.plist per Xamarin.iOS
 
 Per altre informazioni sull'uso delle chiavi Info.plist, vedere la guida [Working with Security and Privacy](~/ios/app-fundamentals/security-privacy.md) (Sicurezza e privacy). 
 
-## <a name="location"></a>Percorso 
+## <a name="location"></a>Location 
 
 Anche l'accesso al percorso dell'utente richiede modifiche a Info.plist. È necessario impostare le chiavi seguenti relative ai dati del percorso: 
 
@@ -33,7 +33,7 @@ NSPhotoLibraryUsageDescription
 
 NSContactsUsageDescription 
 
-## <a name="calendar-data"></a>Giorni di calendario 
+## <a name="calendar-data"></a>Dati di calendario 
     
 NSCalendarsUsageDescription 
 
@@ -45,11 +45,11 @@ NSRemindersUsageDescription
     
 NSBluetoothPeripheralUsageDescription 
 
-## <a name="microphone"></a>Microfono 
+## <a name="microphone"></a>Microphone 
 
 NSMicrophoneUsageDescription 
 
-## <a name="camera"></a>Fotocamera 
+## <a name="camera"></a>Camera 
     
 NSCameraUsageDescription 
 
@@ -69,4 +69,4 @@ NSHomeKitUsageDescription
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Apple Reference guide](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW10) (Guida di riferimento Apple).
+- [Apple Reference guide (Guida di riferimento Apple).](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW10)

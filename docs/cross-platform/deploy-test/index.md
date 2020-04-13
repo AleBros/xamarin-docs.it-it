@@ -7,22 +7,22 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/22/2018
 ms.openlocfilehash: e323f0c7454cb595d8debb0e2fb227605c77c400
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73016566"
 ---
 # <a name="deployment--debugging"></a>Distribuzione e debug
 
-## <a name="connect-to-local-web-servicesconnect-to-local-web-servicesmd"></a>[Connettersi ai servizi Web locali](connect-to-local-web-services.md)
+## <a name="connect-to-local-web-services"></a>[Connettersi aservizi Web locali](connect-to-local-web-services.md)
 
 Le applicazioni in esecuzione nel simulatore iOS o nell'emulatore Android possono utilizzare servizi Web locali esposti tramite HTTP o HTTPS.
 
-## <a name="custom-linker-configurationlinkermd"></a>[Configurazione personalizzata del linker](linker.md)
+## <a name="custom-linker-configuration"></a>[Configurazione del linker personalizzata](linker.md)
 
 Se il set predefinito di opzioni non è sufficiente, è possibile gestire il processo di collegamento con un file XML che descrive la configurazione desiderata per il linker.
 
-## <a name="multi-process-debuggingmulti-process-debuggingmd"></a>[Multi-Process Debugging](multi-process-debugging.md) (Debug di più processi)
+## <a name="multi-process-debugging"></a>[Debug multiprocesso](multi-process-debugging.md)
 
 Questa guida descrive come eseguire il debug di più processi.

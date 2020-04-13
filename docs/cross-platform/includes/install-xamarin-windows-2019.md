@@ -1,10 +1,10 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 9cee898775fd10a924f14abfe913fe4dfff940f5
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70206229"
 ---
 Xamarin può essere installato durante una _nuova_ installazione di Visual Studio 2019 seguendo questa procedura:
@@ -15,7 +15,7 @@ Xamarin può essere installato durante una _nuova_ installazione di Visual Studi
 
 3. Selezionare il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET** dalla schermata di installazione:
 
-    [![Selezione di Sviluppo di applicazioni per dispositivi mobili con .NET](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
+    [![Sviluppo per dispositivi mobili con selezione .NET](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
 
 4. Quando si è pronti a iniziare l'installazione di Visual Studio 2019, fare clic sul pulsante **Installa** nell'angolo in basso a destra:
 

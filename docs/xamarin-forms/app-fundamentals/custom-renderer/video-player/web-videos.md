@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771753"
 ---
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 La classe `VideoPlayer` definisce una proprietà `Source`, che viene usata per specificare l'origine del file video, e una proprietà `AutoPlay`. Il valore predefinito della proprietà `AutoPlay` è `true`, vale a dire il video verrà riprodotto automaticamente dopo aver impostato la proprietà `Source`:
 
@@ -54,7 +54,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-La proprietà `Source` è di tipo `VideoSource`, che si basa sulla classe astratta [`ImageSource`](xref:Xamarin.Forms.ImageSource) di Xamarin.Forms e le sue tre derivate [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). Non sono tuttavia disponibili opzioni di flusso per la classe `VideoPlayer`. iOS e Android non supportano infatti la riproduzione di un video da un flusso.
+La `Source` proprietà è `VideoSource`di tipo , che è modellata [`ImageSource`](xref:Xamarin.Forms.ImageSource) sulla classe astratta Xamarin.Forms e sui relativi tre derivati, [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource)e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). Non sono tuttavia disponibili opzioni di flusso per la classe `VideoPlayer`. iOS e Android non supportano infatti la riproduzione di un video da un flusso.
 
 ## <a name="video-sources"></a>Origini video
 
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.iOS
 
 In un secondo momento, quando la proprietà `Source` viene cambiata, il metodo `OnElementPropertyChanged` viene chiamato con una proprietà `PropertyName` di "Source" e viene nuovamente chiamato il metodo `SetSource`.
 
-Per riprodurre un file video in iOS, viene prima creato un oggetto di tipo [`AVAsset`](xref:AVFoundation.AVAsset) per incapsulare il file video, il quale viene usato per creare un oggetto [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), che sarà poi passato all'oggetto `AVPlayer`. Di seguito è riportato come il metodo `SetSource` gestisce la proprietà `Source` quando è di tipo `UriVideoSource`:
+Per riprodurre un file video in iOS, viene innanzitutto creato un oggetto di tipo [`AVAsset`](xref:AVFoundation.AVAsset) per incapsulare il file video e che viene utilizzato per creare un [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem)oggetto , che viene quindi passato all'oggetto. `AVPlayer` Di seguito è riportato come il metodo `SetSource` gestisce la proprietà `Source` quando è di tipo `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -465,7 +465,7 @@ Dopo aver implementato queste proprietà nei tre renderer, è possibile riprodur
 
 La classe `VideoSourceConverter` converte la stringa in un oggetto `UriVideoSource`. Quando si passa alla pagina **Play Web Video** (Riproduci video Web), il video viene caricato e inizia a essere riprodotto non appena viene scaricato e memorizzato nel buffer un numero sufficiente di dati. Il video ha una lunghezza di circa 10 minuti:
 
-[![Play Web Video](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png#lightbox "Play Web Video")
+[![Riproduci video Web](web-videos-images/playwebvideo-small.png "Riproduci video Web")](web-videos-images/playwebvideo-large.png#lightbox "Riproduci video Web")
 
 In ogni piattaforma i controlli di trasporto si dissolvono se non vengono usati. Possono essere tuttavia ripristinati e visualizzati toccando il video.
 

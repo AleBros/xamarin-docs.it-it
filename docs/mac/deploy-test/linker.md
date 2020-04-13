@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
 ms.openlocfilehash: f4ab94c4eede4a122ac834e075270a375bca0807
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030004"
 ---
 # <a name="xamarinmac-linker-options"></a>Opzioni del linker Xamarin.Mac
@@ -27,7 +27,7 @@ Sono disponibili quattro opzioni:
 - **Nessuno**: disabilita del tutto il collegamento. Opzione predefinita nella configurazione di debug nel framework moderno e in tutte le configurazioni nel framework completo.
 - **SDK**: collega tutti gli assembly SDK, esclusi gli assembly utente. Opzione predefinita nella configurazione di rilascio nel framework moderno. Non è disponibile nel framework completo.
 - **Completo**: collega tutti gli assembly. Questa opzione richiede che il codice utente sia indipendente dal linker. Per altre informazioni, vedere le [note](~/ios/deploy-test/linker.md). Non è disponibile nel framework completo.
-- **Piattaforma**: collega solo Xamarin.Mac.dll. Di seguito sono riportate informazioni dettagliate.
+- **Piattaforma**: collega solo Xamarin.Mac.dll. Vedere di seguito per altri dettagli.
 
 ## <a name="platform-linking"></a>Collegamento della piattaforma
 
@@ -49,11 +49,11 @@ Per passare alla configurazione del linker per un progetto Xamarin.Mac, eseguire
 2. In **Esplora soluzioni** fare doppio clic sul file di progetto per aprire la finestra di dialogo **Opzioni progetto**.
 3. Nella scheda **Compilazione Mac** selezionare il tipo di comportamento più adatto per le esigenze dell'applicazione in **Comportamento del linker**:
 
-    ![Scegliere il comportamento del linker da usare](linker-images/link-behavior.png "Scegliere il comportamento del linker da usare")
+    ![Scegliere il comportamento del linker da utilizzare](linker-images/link-behavior.png "Scegliere il comportamento del linker da utilizzare")
 
 4. Il collegamento della piattaforma per framework di destinazione completi non viene visualizzato nell'IDE fino a un aggiornamento successivo. Fino a quel momento, aggiungere invece `--linkplatform` in **Argomenti aggiuntivi di mmp**.
 5. Fare clic sul pulsante **OK** per salvare le modifiche.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Collegamenti in iOS](~/ios/deploy-test/linker.md)
+- [Collegamento in iOS](~/ios/deploy-test/linker.md)

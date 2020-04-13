@@ -9,17 +9,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
 ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940331"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
-_L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi. Il deep linking consente alle applicazioni di rispondere a un risultato di ricerca che contiene dati dell'applicazione, in genere passando a una pagina a cui fa riferimento un collegamento diretto. Questo articolo illustra come usare indicizzazione e deep linking delle applicazioni per rendere disponibile per la ricerca il contenuto di applicazioni Xamarin.Forms in dispositivi iOS e Android._
+_L'indicizzazione delle applicazioni consente alle applicazioni che altrimenti verrebbero dimenticate dopo alcuni utilizzi di rimanere pertinenti visualizzando nei risultati di ricerca. Il collegamento diretto consente alle applicazioni di rispondere a un risultato di ricerca che contiene i dati dell'applicazione, in genere passando a una pagina a cui viene fatto riferimento da un collegamento diretto. In questo articolo viene illustrato come utilizzare l'indicizzazione delle applicazioni e il collegamento diretto per rendere il contenuto dell'applicazione Xamarin.Forms ricercabile nei dispositivi iOS e Android.This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
@@ -89,10 +89,10 @@ Per altre informazioni, vedere [Deep Link Content with Xamarin.Forms URL Navigat
 
 Il processo per l'indicizzazione di una pagina e la relativa esposizione per la ricerca Google e Spotlight è il seguente:
 
-1. Creare un elemento [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) che contiene i metadati necessari per indicizzare la pagina, oltre a un collegamento diretto per tornare alla pagina quando l'utente seleziona il contenuto indicizzato nei risultati della ricerca.
-1. Registrare l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) per indicizzarla per la ricerca.
+1. Creare [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) un che contiene i metadati necessari per indicizzare la pagina, insieme a un collegamento diretto per tornare alla pagina quando l'utente seleziona il contenuto indicizzato nei risultati della ricerca.
+1. Registrare [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) l'istanza per indicizzarla per la ricerca.
 
-L'esempio di codice seguente illustra come creare un'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry):
+Esempio di codice seguente viene [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) illustrato come creare un'istanza:The following code example demonstrates how to create an instance:
 
 ```csharp
 AppLinkEntry GetAppLink(TodoItem item)
@@ -115,7 +115,7 @@ AppLinkEntry GetAppLink(TodoItem item)
 }
 ```
 
-L'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) contiene varie di proprietà i cui valori sono necessari per indicizzare la pagina e creare un collegamento diretto. Le proprietà [`Title`](xref:Xamarin.Forms.IAppLinkEntry.Title), [`Description`](xref:Xamarin.Forms.IAppLinkEntry.Description) e [`Thumbnail`](xref:Xamarin.Forms.IAppLinkEntry.Thumbnail) vengono usate per identificare il contenuto indicizzato quando viene visualizzato nei risultati della ricerca. La proprietà [`IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) viene impostata su `true` per indicare che il contenuto indicizzato è attualmente visualizzato. La proprietà [`AppLinkUri`](xref:Xamarin.Forms.IAppLinkEntry.AppLinkUri) è un `Uri` che contiene le informazioni necessarie per tornare alla pagina corrente e visualizzare l'elemento `TodoItem` corrente. L'esempio seguente mostra un `Uri` di esempio per l'applicazione di esempio:
+L'istanza [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) contiene una serie di proprietà i cui valori sono necessari per indicizzare la pagina e creare un collegamento diretto. Le [`Title`](xref:Xamarin.Forms.IAppLinkEntry.Title) [`Description`](xref:Xamarin.Forms.IAppLinkEntry.Description)proprietà [`Thumbnail`](xref:Xamarin.Forms.IAppLinkEntry.Thumbnail) , e vengono utilizzate per identificare il contenuto indicizzato quando viene visualizzato nei risultati della ricerca. La [`IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) proprietà è `true` impostata su per indicare che il contenuto indicizzato è attualmente visualizzato. La [`AppLinkUri`](xref:Xamarin.Forms.IAppLinkEntry.AppLinkUri) proprietà `Uri` è un che contiene le informazioni necessarie per `TodoItem`tornare alla pagina corrente e visualizzare l'oggetto corrente . L'esempio seguente mostra un `Uri` di esempio per l'applicazione di esempio:
 
 ```csharp
 http://deeplinking/DeepLinking.TodoItemPage?id=2
@@ -125,30 +125,30 @@ Questo `Uri` contiene tutte le informazioni necessarie per avviare l'app `deepli
 
 ## <a name="registering-content-for-indexing"></a>Registrazione del contenuto per l'indicizzazione
 
-Dopo aver creato un'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry), è necessario registrarla per l'indicizzazione per fare in modo che compaia nei risultati della ricerca. Questa operazione viene eseguita con il metodo [`RegisterLink`](xref:Xamarin.Forms.IAppLinks.RegisterLink(Xamarin.Forms.IAppLinkEntry)), come illustrato nell'esempio di codice seguente:
+Una [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) volta creata, un'istanza deve essere registrata affinché l'indicizzazione venga visualizzata nei risultati della ricerca. Questa operazione viene [`RegisterLink`](xref:Xamarin.Forms.IAppLinks.RegisterLink(Xamarin.Forms.IAppLinkEntry)) eseguita con il metodo , come illustrato nell'esempio di codice seguente:This is accomplished with the method, as demonstrated in the following code example:
 
 ```csharp
 Application.Current.AppLinks.RegisterLink (appLink);
 ```
 
-Questo codice aggiunge l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) alla raccolta [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks) dell'applicazione.
+In questo [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) modo l'istanza [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks) viene aggiunta alla raccolta dell'applicazione.
 
 > [!NOTE]
 > Il metodo `RegisterLink` può essere usato anche per aggiornare il contenuto che è stato indicizzato per una pagina.
 
-Dopo la registrazione per l'indicizzazione, un'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) può essere visualizzata nei risultati della ricerca. Lo screenshot seguente mostra il contenuto indicizzato visualizzato nei risultati della ricerca nella piattaforma iOS:
+Una [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) volta registrata, un'istanza può essere visualizzata nei risultati della ricerca. Lo screenshot seguente mostra il contenuto indicizzato visualizzato nei risultati della ricerca nella piattaforma iOS:
 
 ![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## <a name="de-registering-indexed-content"></a>Annullamento della registrazione di contenuto indicizzato
 
-Il metodo [`DeregisterLink`](xref:Xamarin.Forms.IAppLinks.DeregisterLink(Xamarin.Forms.IAppLinkEntry)) viene usato per rimuovere il contenuto indicizzato dai risultati della ricerca, come illustrato nell'esempio di codice seguente:
+Il [`DeregisterLink`](xref:Xamarin.Forms.IAppLinks.DeregisterLink(Xamarin.Forms.IAppLinkEntry)) metodo viene utilizzato per rimuovere il contenuto indicizzato dai risultati della ricerca, come illustrato nell'esempio di codice seguente:The method is used to remove indexed content from search results, as demonstrated in the following code example:
 
 ```csharp
 Application.Current.AppLinks.DeregisterLink (appLink);
 ```
 
-Questo codice rimuove l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) dalla raccolta [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks) dell'applicazione.
+In questo [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) modo viene rimossa l'istanza dalla raccolta dell'applicazione. [`AppLinks`](xref:Xamarin.Forms.Application.AppLinks)
 
 > [!NOTE]
 > In Android non è possibile rimuovere contenuto indicizzato dai risultati della ricerca.
@@ -157,7 +157,7 @@ Questo codice rimuove l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEn
 
 ## <a name="responding-to-a-deep-link"></a>Risposta a un collegamento diretto
 
-Quando il contenuto indicizzato viene visualizzato nei risultati della ricerca e viene selezionato da un utente, la classe `App` per l'applicazione riceverà una richiesta per gestire l'`Uri` contenuto nel contenuto indicizzato. Questa richiesta può essere elaborata nell'override [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)), come illustrato nell'esempio di codice seguente:
+Quando il contenuto indicizzato viene visualizzato nei risultati della ricerca e viene selezionato da un utente, la classe `App` per l'applicazione riceverà una richiesta per gestire l'`Uri` contenuto nel contenuto indicizzato. Questa richiesta può essere [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) elaborata nell'override, come illustrato nell'esempio di codice seguente:This request can be processed in the override, as demonstrated in the following code example:
 
 ```csharp
 public class App : Application
@@ -187,13 +187,13 @@ public class App : Application
 }
 ```
 
-Il metodo [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) controlla che l'`Uri` ricevuto sia destinato all'applicazione, prima di analizzare l'`Uri` nella pagina di destinazione dello spostamento e il parametro da passare alla pagina. Viene creata un'istanza della pagina di destinazione e viene recuperato l'elemento `TodoItem` rappresentato dal parametro della pagina. Il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina di destinazione viene quindi impostato sull'elemento `TodoItem`. Ciò garantisce che, quando la `TodoItemPage` viene visualizzata dal metodo [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page)), visualizzi l'elemento `TodoItem` il cui `ID` è contenuto nel collegamento diretto.
+Il [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) metodo verifica `Uri` che l'oggetto ricevuto sia destinato `Uri` all'applicazione, prima di analizzare l'oggetto nella pagina a cui passare e il parametro da passare alla pagina. Viene creata un'istanza della pagina di destinazione e viene recuperato l'elemento `TodoItem` rappresentato dal parametro della pagina. L'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina su cui passare `TodoItem`viene quindi impostato sul . Ciò garantisce `TodoItemPage` che quando l'oggetto viene visualizzato dal [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page)) metodo , mostrerà il `TodoItem` cui `ID` è contenuto nel collegamento profondo.
 
 ## <a name="making-content-available-for-search-indexing"></a>Rendere il contenuto disponibile per l'indicizzazione per la ricerca
 
-Ogni volta che la pagina rappresentata da un collegamento diretto viene visualizzata, la proprietà [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) può essere impostata su `true`. In iOS e Android, in questo modo l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) viene resa disponibile per l'indicizzazione per ricerca e, solo in iOS, l'istanza di `AppLinkEntry` diventa anche disponibile per Handoff. Per altre informazioni su Handoff, vedere [Introduction to Handoff](~/ios/platform/handoff.md) (Introduzione a Handoff).
+Ogni volta che viene visualizzata la pagina [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) rappresentata da `true`un collegamento diretto, la proprietà può essere impostata su . Su iOS e Android [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) questo rende l'istanza disponibile per l'indicizzazione di `AppLinkEntry` ricerca, e su iOS solo, rende anche l'istanza disponibile per Handoff. Per altre informazioni su Handoff, vedere [Introduction to Handoff](~/ios/platform/handoff.md) (Introduzione a Handoff).
 
-L'esempio di codice seguente illustra l'impostazione della proprietà [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) su `true` nell'override [`Page.OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing):
+Esempio di codice seguente [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) viene `true` illustrata l'impostazione della proprietà su nell'override:The following code example demonstrates setting the property to in the [`Page.OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override:
 
 ```csharp
 protected override void OnAppearing()
@@ -206,7 +206,7 @@ protected override void OnAppearing()
 }
 ```
 
-In modo analogo, quando si esce dalla pagina rappresentata da un collegamento diretto, la proprietà [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) può essere impostata su `false`. In iOS e Android, in questo modo l'istanza di [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) non viene più annunciata per l'indicizzazione per la ricerca e, solo in iOS, l'istanza di `AppLinkEntry` non viene inoltre più annunciata per Handoff. Questa operazione può essere eseguita nell'override [`Page.OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing), come illustrato nell'esempio di codice seguente:
+Analogamente, quando si esce dalla pagina rappresentata [`AppLinkEntry.IsLinkActive`](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) da un collegamento `false`diretto, la proprietà può essere impostata su . Su iOS e Android, [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) questo interrompe l'istanza pubblicizzata per l'indicizzazione della `AppLinkEntry` ricerca e solo su iOS, smette anche di pubblicizzare l'istanza per Handoff. Questa operazione può essere [`Page.OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) eseguita nell'override, come illustrato nell'esempio di codice seguente:This can be accomplished in the override, as demonstrated in the following code example:
 
 ```csharp
 protected override void OnDisappearing()
@@ -220,7 +220,7 @@ protected override void OnDisappearing()
 
 ## <a name="providing-data-to-handoff"></a>Trasferimento di dati a Handoff
 
-In iOS, i dati specifici dell'applicazione possono essere archiviati durante l'indicizzazione della pagina. Questo risultato viene ottenuto aggiungendo i dati alla raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues), ovvero un `Dictionary<string, string>` per l'archiviazione di coppie chiave-valore usate in Handoff. Handoff è una funzionalità che consente all'utente di avviare un'attività in uno dei propri dispositivi e continuare tale attività in un'altra dei dispositivi (identificato dall'account iCloud dell'utente). Il codice seguente mostra un esempio di archiviazione di coppie chiave-valore specifiche dell'applicazione:
+In iOS, i dati specifici dell'applicazione possono essere archiviati durante l'indicizzazione della pagina. Ciò si ottiene aggiungendo [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) dati alla `Dictionary<string, string>` raccolta, che è un per l'archiviazione di coppie chiave-valore utilizzate in Handoff. Handoff è una funzionalità che consente all'utente di avviare un'attività in uno dei propri dispositivi e continuare tale attività in un'altra dei dispositivi (identificato dall'account iCloud dell'utente). Il codice seguente mostra un esempio di archiviazione di coppie chiave-valore specifiche dell'applicazione:
 
 ```csharp
 var pageLink = new AppLinkEntry
@@ -231,13 +231,13 @@ pageLink.KeyValues.Add("appName", App.AppName);
 pageLink.KeyValues.Add("companyName", "Xamarin");
 ```
 
-I valori archiviati nella raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) verranno archiviati nei metadati per la pagina indicizzata e verranno ripristinati quando l'utente tocca un risultato della ricerca che contiene un collegamento diretto (o quando si usa Handoff per visualizzare il contenuto in un dispositivo connesso).
+I valori [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) archiviati nella raccolta verranno archiviati nei metadati per la pagina indicizzata e verranno ripristinati quando l'utente tocca un risultato di ricerca che contiene un collegamento diretto (o quando Handoff viene utilizzato per visualizzare il contenuto in un altro dispositivo connesso).
 
 È anche possibile specificare valori per le chiavi seguenti:
 
 - `contentType` - Valore `string` che specifica l'identificatore di tipo uniforme del contenuto indicizzato. La convenzione consigliata da usare per questo valore è il nome di tipo della pagina contenente il contenuto indicizzato.
 - `associatedWebPage` - Valore `string` che rappresenta la pagina Web da visitare se anche il contenuto indicizzato può essere visualizzato nel Web o se l'applicazione supporta i collegamenti diretti di Safari.
-- `shouldAddToPublicIndex` - Valore `string``true` o `false` che determina se aggiungere o meno il contenuto indicizzato all'indice del cloud pubblico di Apple, che può quindi essere presentato agli utenti che non hanno installato l'applicazione nel proprio dispositivo iOS. La semplice impostazione del contenuto per l'indicizzazione pubblica, tuttavia, non significa che verrà aggiunto automaticamente all'indice del cloud pubblico di Apple. Per altre informazioni, vedere [Public Search Indexing](~/ios/platform/search/nsuseractivity.md) (Indicizzazione per la ricerca pubblica). Si noti che questa chiave deve essere impostata su `false` quando si aggiungono dati personali alla raccolta [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues).
+- `shouldAddToPublicIndex` - Valore `string``true` o `false` che determina se aggiungere o meno il contenuto indicizzato all'indice del cloud pubblico di Apple, che può quindi essere presentato agli utenti che non hanno installato l'applicazione nel proprio dispositivo iOS. La semplice impostazione del contenuto per l'indicizzazione pubblica, tuttavia, non significa che verrà aggiunto automaticamente all'indice del cloud pubblico di Apple. Per altre informazioni, vedere [Public Search Indexing](~/ios/platform/search/nsuseractivity.md) (Indicizzazione per la ricerca pubblica). Si noti che questa `false` chiave deve essere [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) impostata su quando si aggiungono dati personali alla raccolta.
 
 > [!NOTE]
 > La raccolta `KeyValues` non viene usata nella piattaforma Android.

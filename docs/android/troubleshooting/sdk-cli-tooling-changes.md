@@ -1,6 +1,6 @@
 ---
 title: Modifiche agli strumenti di Android SDK
-description: Modifiche al modo in cui il Android SDK gestisce i livelli di API e AVD installati.
+description: Modifiche al modo in cui Android SDK gestisce i livelli API installati e gli AVD.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
@@ -9,19 +9,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
 ms.openlocfilehash: 4c559a76d7354fd957d065717ef14d91591d1be0
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73019505"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
 
-_Modifiche al modo in cui il Android SDK gestisce i livelli di API e AVD installati._
+_Modifiche al modo in cui Android SDK gestisce i livelli API installati e gli AVD._
 
-## <a name="changes-to-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
+## <a name="changes-to-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDKChanges to Android SDK Tooling
 
-Nelle versioni recenti del SDK Tools per Android, Google ha rimosso i gestori di AVD e SDK esistenti a favore dei nuovi strumenti CLI (interfaccia della riga di comando). Il programma **Android** è stato rimosso e i manager di Google GUI (interfaccia utente grafica) in Visual Studio per Mac e le versioni precedenti di strumenti di Visual Studio per Novell non funzioneranno più oltre la versione 25.2.5 di Android SDK Tools. Ad esempio, se si tenta di usare il programma **Android** tramite la riga di comando, verrà visualizzato un messaggio di errore simile al seguente:
+Nelle versioni recenti di SDK Tools per Android, Google ha rimosso i gestori AVD e SDK esistenti a favore dei nuovi strumenti CLI (Command Line Interface). Il programma **Android** è stato rimosso e i gestori di Google GUI (Graphical User Interface) in Visual Studio per Mac e le versioni precedenti di Visual Studio Tools per Xamarin non funzioneranno più oltre la versione 25.2.5 di Android SDK Tools. Ad esempio, il tentativo di utilizzare il programma **Android** tramite la riga di comando genererà un messaggio di errore simile al seguente:
 
 ```shell
 The "android" command is deprecated.
@@ -30,46 +30,46 @@ For command-line tools, use tools\bin\sdkmanager.bat
 and tools\bin\avdmanager.bat
 ```
 
-Le sezioni seguenti illustrano come gestire i dispositivi virtuali Android SDK e Android usando Android SDK 25.3.0 e versioni successive.
+Le sezioni seguenti illustrano come gestire Android SDK e Android Virtual Devices usando Android SDK 25.3.0 e versioni successive.
 
 ### <a name="ui-tools"></a>Strumenti dell'interfaccia utente
 
-Visual Studio e Visual Studio per Mac ora forniscono sostituzioni Novell per i manager basati su GUI di Google obsoleti:
+Visual Studio e Visual Studio per Mac ora forniscono sostituzioni Xamarin per i gestori basati su Google GUI non più disponibili:
 
-- Per scaricare Android SDK strumenti, le piattaforme e gli altri componenti necessari per lo sviluppo di app Novell. Android, usare [novell Android SDK Manager](~/android/get-started/installation/android-sdk.md) invece di Google SDK Manager legacy.
+- Per scaricare gli strumenti, le piattaforme e altri componenti di Android SDK necessari per lo sviluppo di app Xamarin.Android, usa [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) anziché Google SDK Manager legacy.
 
-- Per creare e configurare i dispositivi virtuali Android, usare il [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) invece di Gestione emulatori Google legacy.
+- Per creare e configurare dispositivi virtuali Android, utilizzare [Gestione dispositivi Android](~/android/get-started/installation/android-emulator/device-manager.md) anziché Gestione emulatori Google legacy.
 
-Questi strumenti sono equivalenti dal punto di vista funzionale ai manager basati su Google GUI che sostituiscono.
+Questi strumenti sono funzionalmente equivalenti ai gestori basati su GUI di Google che sostituiscono.
 
-### <a name="cli-tools"></a>Strumenti dell'interfaccia della riga di comando
+### <a name="cli-tools"></a>Strumenti CLI
 
-In alternativa, è possibile usare gli strumenti dell'interfaccia della riga di comando per gestire e aggiornare gli emulatori e Android SDK. I programmi seguenti costituiscono ora l'interfaccia della riga di comando per gli strumenti di Android SDK:
+In alternativa, è possibile utilizzare gli strumenti CLI per gestire e aggiornare gli emulatori e Android SDK. I seguenti programmi ora costituiscono l'interfaccia della riga di comando per gli strumenti di Android SDK:
 
 #### <a name="sdkmanager"></a>sdkmanager
 
 **Aggiunto in:** Android SDK Tools 25.2.3 (novembre, 2016) e versioni successive.
 
-È disponibile un nuovo programma denominato **sdkmanager** nella cartella **Tools/bin** del Android SDK. Questo strumento viene utilizzato per mantenere il Android SDK dalla riga di comando. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
+C'è un nuovo programma chiamato **sdkmanager** nella cartella **tools/bin** del tuo Android SDK. Questo strumento viene utilizzato per gestire l'SDK di Android dalla riga di comando. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
 
 #### <a name="avdmanager"></a>avdmanager
 
-**Aggiunto in:** Android SDK Tools 25.3.0 (marzo, 2017) e versioni successive.
+**Aggiunto in:** Android SDK Tools 25.3.0 (marzo 2017) e versioni successive.
 
-È disponibile un nuovo programma denominato **avdmanager** nella cartella **Tools/bin** del Android SDK. Questo strumento viene usato per gestire AVD per la emulatore Android. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+C'è un nuovo programma chiamato **avdmanager** nella cartella **tools/bin** del tuo Android SDK. Questo strumento viene utilizzato per mantenere gli AVD per l'emulatore Android. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### <a name="downgrading"></a>Declassamento
 
-È possibile effettuare il downgrade della versione **Android SDK Tools** installando una versione precedente del Android SDK dal [sito Web per sviluppatori Android](https://developer.android.com/studio/index.html).
+Puoi effettuare il downgrade della versione di **Android SDK Tools** installando una versione precedente dell'SDK di Android dal sito Web di Android [Developer.](https://developer.android.com/studio/index.html)
 
-### <a name="using-the-old-gui"></a>Uso della GUI precedente
+### <a name="using-the-old-gui"></a>Utilizzo della vecchia GUI
 
-È comunque possibile usare l'interfaccia utente grafica originale eseguendo il programma **Android** all'interno della cartella **degli strumenti** , purché si sia **Android SDK Tools** versione **25.2.5** o precedente.
+È comunque possibile utilizzare la GUI originale eseguendo il programma **Android** all'interno della cartella **degli strumenti,** purché si è su **Android SDK Tools** versione **25.2.5** o inferiore.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
+- [Gestione dispositivi Android](~/android/get-started/installation/android-emulator/device-manager.md)
 - [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API Android)
 - [Note sulla versione di SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

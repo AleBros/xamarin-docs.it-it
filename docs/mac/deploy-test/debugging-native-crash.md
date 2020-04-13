@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
 ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725493"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Debug di un arresto anomalo nativo in un app Xamarin.Mac
@@ -179,7 +179,7 @@ new System.Threading.Thread (() =>
 
 Questo codice forzerà l'applicazione a eseguire il Garbage Collector ogni secondo. Eseguire nuovamente l'applicazione e provare a riprodurre il bug. Se l'arresto anomalo si verifica immediatamente o sistematicamente invece che in modo casuale, si è sulla strada giusta.
 
-### <a name="reporting"></a>Reporting
+### <a name="reporting"></a>Report
 
 Il passaggio successivo consiste nel segnalare il problema a Xamarin in modo che il binding possa essere corretto nelle versioni future. I titolari di una licenza Business o Enterprise possono aprire un ticket all'indirizzo
 

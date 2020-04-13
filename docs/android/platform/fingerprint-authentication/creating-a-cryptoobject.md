@@ -1,5 +1,5 @@
 ---
-title: Creazione di un CryptoObject
+title: Creazione di un oggetto CryptoObjectCreating a CryptoObject
 ms.prod: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
 ms.technology: xamarin-android
@@ -7,19 +7,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 871058d1c128b37a0f2e77b43587139efb433de1
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75487776"
 ---
-# <a name="creating-a-cryptoobject"></a>Creazione di un CryptoObject
+# <a name="creating-a-cryptoobject"></a>Creazione di un oggetto CryptoObjectCreating a CryptoObject
 
-L'integrità dei risultati dell'autenticazione con impronta digitale è importante per un'applicazione &ndash; è il modo in cui l'applicazione conosce l'identità dell'utente. È teoricamente possibile che malware di terze parti possa intercettare e manomettere i risultati restituiti dallo scanner di impronte digitali. In questa sezione verrà illustrata una tecnica per mantenere la validità dei risultati delle impronte digitali. 
+L'integrità dei risultati dell'autenticazione &ndash; delle impronte digitali è importante per un'applicazione, ma il modo in cui l'applicazione conosce l'identità dell'utente. È teoricamente possibile per il malware di terze parti per intercettare e manomettere i risultati restituiti dallo scanner di impronte digitali. In questa sezione verrà illustrata una tecnica per preservare la validità dei risultati delle impronte digitali. 
 
-Il `FingerprintManager.CryptoObject` è un wrapper per le API di crittografia Java ed è usato dall'`FingerprintManager` per proteggere l'integrità della richiesta di autenticazione. In genere, un oggetto `Javax.Crypto.Cipher` è il meccanismo per la crittografia dei risultati dello scanner di impronte digitali. L'oggetto `Cipher` stesso userà una chiave creata dall'applicazione usando le API dell'archivio chiavi Android.
+Il `FingerprintManager.CryptoObject` è un wrapper per le API di crittografia `FingerprintManager` Java e viene utilizzato da per proteggere l'integrità della richiesta di autenticazione. In genere, un `Javax.Crypto.Cipher` oggetto è il meccanismo per crittografare i risultati dello scanner di impronte digitali. L'oggetto stesso utilizzerà una chiave creata dall'applicazione utilizzando le API keystore Android.The `Cipher` object itself will use a key that is created by the application using the Android keystore APIs.
 
-Per comprendere il funzionamento di queste classi, esaminiamo prima di tutto il codice seguente che illustra come creare un `CryptoObject`e quindi spiegarlo in modo più dettagliato:
+Per comprendere il modo in cui queste classi funzionano tutte insieme, `CryptoObject`esaminiamo innanzitutto il codice seguente che illustra come creare un oggetto , quindi spiegare in modo più dettagliato:
 
 ```csharp
 public class CryptoObjectHelper
@@ -99,40 +99,40 @@ public class CryptoObjectHelper
 }
 ```
 
-Il codice di esempio creerà un nuovo `Cipher` per ogni `CryptoObject`, usando una chiave creata dall'applicazione. La chiave viene identificata dalla variabile `KEY_NAME` impostata all'inizio della classe `CryptoObjectHelper`. Il metodo `GetKey` proverà a recuperare la chiave usando le API dell'archivio chiavi Android. Se la chiave non esiste, il metodo `CreateKey` creerà una nuova chiave per l'applicazione.
+Il codice di esempio `Cipher` creerà un nuovo per ogni `CryptoObject`, utilizzando una chiave creata dall'applicazione. La chiave è `KEY_NAME` identificata dalla variabile impostata `CryptoObjectHelper` all'inizio della classe. Il `GetKey` metodo tenterà di recuperare la chiave utilizzando le API di Android Keystore.The method will try to retrieve the key using the Android Keystore APIs. Se la chiave non esiste, `CreateKey` il metodo creerà una nuova chiave per l'applicazione.
 
-Viene creata un'istanza della crittografia con una chiamata a `Cipher.GetInstance`, accettando una _trasformazione_ , ovvero un valore stringa che indica alla crittografia come crittografare e decrittografare i dati. La chiamata a `Cipher.Init` completerà l'inizializzazione della crittografia fornendo una chiave dell'applicazione. 
+Viene creata un'istanza della `Cipher.GetInstance`crittografia con una chiamata a , che richiede una _trasformazione_ (un valore stringa che indica alla crittografia come crittografare e decrittografare i dati). La chiamata `Cipher.Init` a completerà l'inizializzazione della crittografia fornendo una chiave dall'applicazione. 
 
-È importante tenere presente che in alcuni casi Android può invalidare la chiave: 
+È importante rendersi conto che ci sono alcune situazioni in cui Android può invalidare la chiave: 
 
 - Una nuova impronta digitale è stata registrata con il dispositivo.
-- Non sono presenti impronte digitali registrate con il dispositivo.
-- L'utente ha disabilitato il blocco dello schermo.
-- L'utente ha modificato il blocco dello schermo, ovvero il tipo di ScreenLock o il PIN o il modello usato.
+- Non ci sono impronte digitali registrate con il dispositivo.
+- L'utente ha disattivato il blocco schermo.
+- L'utente ha modificato il blocco schermo (il tipo di screenlock o il PIN/modello utilizzato).
 
-In tal caso, `Cipher.Init` genererà una [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). Il codice di esempio precedente intercetta l'eccezione, Elimina la chiave e quindi ne crea una nuova.
+Quando questo `Cipher.Init` accade, [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)lancerà un . Il codice di esempio precedente trappingrà tale eccezione, eliminerà la chiave e ne creerà una nuova.
 
 Nella sezione successiva verrà illustrato come creare la chiave e archiviarla nel dispositivo.
 
-## <a name="creating-a-secret-key"></a>Creazione di una chiave privata
+## <a name="creating-a-secret-key"></a>Creazione di una chiave segretaCreating a Secret Key
 
-La classe `CryptoObjectHelper` USA Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) per creare una chiave e archiviarla nel dispositivo. La classe `KeyGenerator` può creare la chiave, ma richiede alcuni metadati relativi al tipo di chiave da creare. Queste informazioni vengono fornite da un'istanza della classe [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) . 
+La `CryptoObjectHelper` classe utilizza [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) Android per creare una chiave e archiviarla nel dispositivo. La `KeyGenerator` classe può creare la chiave, ma richiede alcuni metadati sul tipo di chiave da creare. Queste informazioni vengono fornite da [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) un'istanza della classe. 
 
-Viene creata un'istanza di `KeyGenerator` usando il metodo factory `GetInstance`. Il codice di esempio usa il [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) come algoritmo di crittografia. AES suddivide i dati in blocchi di dimensioni fisse e crittografa ognuno di questi blocchi.
+Viene `KeyGenerator` creata un'istanza di Un oggetto utilizzando il `GetInstance` metodo factory. Il codice di esempio utilizza [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) come algoritmo di crittografia. AES suddividerà i dati in blocchi di dimensioni fisse e crittograferà ciascuno di questi blocchi.
 
-Viene quindi creata una `KeyGenParameterSpec` usando il `KeyGenParameterSpec.Builder`. Il `KeyGenParameterSpec.Builder` include le informazioni seguenti relative alla chiave da creare:
+Successivamente, `KeyGenParameterSpec` viene creato `KeyGenParameterSpec.Builder`un oggetto utilizzando il file . Il `KeyGenParameterSpec.Builder` esegue il wrapping delle seguenti informazioni sulla chiave che deve essere creata:
 
 - Nome della chiave.
 - La chiave deve essere valida sia per la crittografia che per la decrittografia.
-- Nel codice di esempio, il `BLOCK_MODE` è impostato sul _concatenamento dei blocchi crittografici_ (`KeyProperties.BlockModeCbc`), vale a dire che ogni blocco è XORed con il blocco precedente (creando dipendenze tra ogni blocco). 
-- Il `CryptoObjectHelper` utilizza [_Public Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) per generare i byte che comporteranno il riempimento dei blocchi per garantire la stessa dimensione.
-- `SetUserAuthenticationRequired(true)` significa che è necessaria l'autenticazione dell'utente prima di poter usare la chiave.
+- Nel codice di `BLOCK_MODE` esempio l'oggetto è`KeyProperties.BlockModeCbc`impostato su Cipher Block _Chaining_ ( ), il che significa che ogni blocco è XORed con il blocco precedente (creando dipendenze tra ogni blocco). 
+- Utilizza `CryptoObjectHelper` [_Public Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) per generare i byte che riempiranno i blocchi per garantire che siano tutti della stessa dimensione.
+- `SetUserAuthenticationRequired(true)`significa che è necessaria l'autenticazione utente prima di poter utilizzare la chiave.
 
-Una volta creato, l'`KeyGenParameterSpec` viene usato per inizializzare il `KeyGenerator`, che genera una chiave e la archivia in modo sicuro nel dispositivo. 
+`KeyGenParameterSpec` Una volta creato, viene utilizzato `KeyGenerator`per inizializzare il , che genererà una chiave e archivierà in modo sicuro sul dispositivo. 
 
-## <a name="using-the-cryptoobjecthelper"></a>Uso di CryptoObjectHelper
+## <a name="using-the-cryptoobjecthelper"></a>Utilizzo di CryptoObjectHelperUsing the CryptoObjectHelper
 
-Ora che il codice di esempio ha incapsulato gran parte della logica per la creazione di un `CryptoWrapper` nella classe `CryptoObjectHelper`, è possibile riesaminare il codice dall'inizio di questa guida e usare il `CryptoObjectHelper` per creare la crittografia e avviare uno scanner di impronta digitale: 
+Ora che il codice di esempio ha incapsulato `CryptoObjectHelper` gran parte della logica per la creazione di un `CryptoObjectHelper` `CryptoWrapper` nella classe, è possibile rivedere il codice dall'inizio di questa guida e utilizzare il per creare il Cipher e avviare uno scanner di impronte digitali: 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -153,17 +153,17 @@ protected void FingerPrintAuthenticationExample()
 }
 ```
 
-Ora che è stato illustrato come creare una `CryptoObject`, è possibile passare a vedere come vengono usati i `FingerprintManager.AuthenticationCallbacks` per trasferire i risultati del servizio scanner di impronte digitali a un'applicazione Android.
+Ora che abbiamo visto come `CryptoObject`creare un , consente `FingerprintManager.AuthenticationCallbacks` di passare a vedere come vengono utilizzati per trasferire i risultati del servizio di scanner di impronte digitali a un'applicazione Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Crittografia](xref:Javax.Crypto.Cipher)
+- [Cifrario](xref:Javax.Crypto.Cipher)
 - [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
 - [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
+- [Generatore di tasti](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec. Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
-- [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
-- [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyPermanentlyInvalidatedException (eccezione)KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
+- [Proprietà chiave](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [RFC 2315-PCKS #7](https://tools.ietf.org/html/rfc2315)
+- [RFC 2315 - #7 PCKS](https://tools.ietf.org/html/rfc2315)

@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Helper di file system'
+title: 'Xamarin.Essentials: File System Helpers'
 description: La classe FileSystem in Xamarin.Essentials contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68738860"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Helper di file system
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: File System Helpers
 
 La classe **FileSystem** contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
 
@@ -54,21 +54,21 @@ Per aprire un file in bundle nel pacchetto dell'applicazione:
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - **CacheDirectory**: restituisce l'elemento [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) del contesto corrente.
 - **AppDataDirectory**: restituisce l'elemento [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) del contesto corrente e il backup viene eseguito usando il [backup automatico](https://developer.android.com/guide/topics/data/autobackup.html) a partire dall'API 23 e versioni successive.
 
 Aggiungere i file nella cartella **Assets** del progetto Android e contrassegnare l'azione di compilazione come **AndroidAsset** per usarla con `OpenAppPackageFileAsync`.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - **CacheDirectory**: restituisce la directory [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html).
 - **AppDataDirectory**: restituisce la directory [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) di cui viene eseguito un backup da iTunes e iCloud.
 
 Aggiungere i file nella cartella **Resources** del progetto iOS e contrassegnare l'azione di compilazione come **BundledResource** per usarla con `OpenAppPackageFileAsync`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - **CacheDirectory**: restituisce la directory [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder).
 - **AppDataDirectory**: restituisce la directory [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) di cui viene eseguito un backup nel cloud.

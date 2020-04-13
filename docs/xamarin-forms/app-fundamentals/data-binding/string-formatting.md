@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940386"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formattazione delle stringhe di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In alcuni casi è utile usare i data binding per visualizzare la rappresentazione di un oggetto o di un valore sotto forma di stringa. Ad esempio, si può usare `Label` per visualizzare il valore corrente di un elemento `Slider`. In questo data binding, `Slider` rappresenta l'origine, mentre la destinazione è la proprietà `Text` di `Label`.
 
-Lo strumento più efficace per visualizzare le stringhe nel codice è il metodo statico [`String.Format`](xref:System.String.Format(System.String,System.Object)). La stringa di formattazione include codici di formattazione specifici per i vari tipi di oggetti e ai valori da formattare è possibile aggiungere altro testo. Per altre informazioni sulla formattazione delle stringhe, vedere [Formattazione di tipi in .NET](/dotnet/standard/base-types/formatting-types/).
+Quando si visualizzano stringhe nel codice, [`String.Format`](xref:System.String.Format(System.String,System.Object)) lo strumento più potente è il metodo statico. La stringa di formattazione include codici di formattazione specifici per i vari tipi di oggetti e ai valori da formattare è possibile aggiungere altro testo. Per altre informazioni sulla formattazione delle stringhe, vedere [Formattazione di tipi in .NET](/dotnet/standard/base-types/formatting-types/).
 
 ## <a name="the-stringformat-property"></a>La proprietà StringFormat
 
-Questa funzionalità è replicata nei data binding, in cui si imposta la proprietà [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) di `Binding`, o la proprietà [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) dell'estensione di markup `Binding`, su una stringa di formattazione .NET standard con un segnaposto:
+Questa funzionalità viene incorporata nelle associazioni [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) dati: `Binding` la [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) proprietà (o la proprietà dell'estensione `Binding` di markup) viene impostata su una stringa di formattazione .NET standard con un segnaposto:
 
 ```xaml
 <Slider x:Name="slider" />

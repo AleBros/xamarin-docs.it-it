@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2020
 ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79305052"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Configurazione delle pagine per Xamarin.Forms Shell
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 La classe `Shell` definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle applicazioni shell Xamarin.Forms. Ciò include l'impostazione dei colori della pagina, l'impostazione della modalità di presentazione della pagina, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle visualizzazioni nella barra di spostamento.
 
@@ -30,7 +30,7 @@ La classe `Shell` definisce le proprietà associate seguenti, che possono essere
 - `TitleColor`, di tipo `Color`, che definisce il colore usato per il titolo della pagina corrente.
 - `UnselectedColor`, di tipo `Color`, che definisce il colore per le icone e il testo non selezionati nel riquadro della shell.
 
-Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di data binding e con stili XAML. Queste proprietà possono essere impostate anche usando fogli di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms).
+Tutte queste proprietà sono [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) supportate da oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati e stili utilizzando gli stili XAML. Queste proprietà possono essere impostate anche usando fogli di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms).
 
 > [!NOTE]
 > Esistono anche proprietà che consentono di definire i colori delle schede. Per altre informazioni, vedere [Aspetto delle schede](tabs.md#tab-appearance).
@@ -86,20 +86,20 @@ In alternativa, è possibile impostare le proprietà per i colori con uno stile 
 
 Per altre informazioni sugli stili XAML, vedere [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-## <a name="set-page-presentation-mode"></a>Imposta modalità presentazione pagina
+## <a name="set-page-presentation-mode"></a>Impostare la modalità di presentazione della pagina
 
-Per impostazione predefinita, si verifica un'animazione di spostamento ridotta quando si passa a una pagina con il metodo `GoToAsync`. Tuttavia, questo comportamento può essere modificato impostando la proprietà associata `Shell.PresentationMode` su una [`ContentPage`](xref:Xamarin.Forms.ContentPage) su uno dei membri dell'enumerazione `PresentationMode`:
+Per impostazione predefinita, una piccola animazione di `GoToAsync` spostamento si verifica quando si passa a una pagina con il metodo . Tuttavia, questo comportamento può `Shell.PresentationMode` essere modificato impostando [`ContentPage`](xref:Xamarin.Forms.ContentPage) la proprietà `PresentationMode` associata su un su uno dei membri dell'enumerazione:However, this behavior can be changed by setting the attached property on a to a of the enumeration members:
 
-- `NotAnimated` indica che la pagina verrà visualizzata senza un'animazione di navigazione.
-- `Animated` indica che la pagina verrà visualizzata con un'animazione di navigazione. Si tratta del valore predefinito del `Shell.PresentationMode` proprietà associata.
-- `Modal` indica che la pagina verrà visualizzata come pagina modale.
-- `ModalAnimated` indica che la pagina verrà visualizzata come pagina modale con un'animazione di navigazione.
-- `ModalNotAnimated` indica che la pagina verrà visualizzata come pagina modale, senza un'animazione di navigazione.
+- `NotAnimated`indica che la pagina verrà visualizzata senza un'animazione di navigazione.
+- `Animated`indica che la pagina verrà visualizzata con un'animazione di navigazione. Questo è il valore `Shell.PresentationMode` predefinito della proprietà associata.
+- `Modal`indica che la pagina verrà visualizzata come pagina modale.
+- `ModalAnimated`indica che la pagina verrà visualizzata come pagina modale, con un'animazione di navigazione.
+- `ModalNotAnimated`indica che la pagina verrà visualizzata come pagina modale, senza un'animazione di navigazione.
 
 > [!IMPORTANT]
-> Il tipo di `PresentationMode` è un'enumerazione Flags. Ciò significa che è possibile applicare una combinazione di membri di enumerazione nel codice. Tuttavia, per semplificare l'utilizzo in XAML, il `ModalAnimated` membro è una combinazione dei membri `Animated` e `Modal` e il membro `ModalNotAnimated` è una combinazione dei membri `NotAnimated` e `Modal`. Per altre informazioni sulle enumerazioni dei flag, vedere [tipi di enumerazione come flag di bit](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags).
+> Il `PresentationMode` tipo è un'enumerazione di flag. Ciò significa che una combinazione di membri di enumerazione può essere applicata nel codice. Tuttavia, per facilità d'uso in XAML, `ModalAnimated` il membro è una combinazione di `Animated` e `Modal` membri e il `ModalNotAnimated` membro è una combinazione di `NotAnimated` e `Modal` membri. Per ulteriori informazioni sulle enumerazioni dei flag, vedere [Tipi di enumerazione come flag](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags)di bit .
 
-Nell'esempio di codice XAML riportato di seguito viene impostata la proprietà associata `Shell.PresentationMode` in un [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+L'esempio XAML `Shell.PresentationMode` seguente imposta la [`ContentPage`](xref:Xamarin.Forms.ContentPage)proprietà associata in un oggetto :
 
 ```xaml
 <ContentPage ...
@@ -108,13 +108,13 @@ Nell'esempio di codice XAML riportato di seguito viene impostata la proprietà a
 </ContentPage>
 ```
 
-In questo esempio, la [`ContentPage`](xref:Xamarin.Forms.ContentPage) è impostata per essere visualizzata come pagina modale, quando la pagina viene spostata con il metodo `GoToAsync`.
+In questo esempio, l'oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) è impostato per essere visualizzato come pagina `GoToAsync` modale, quando si passa alla pagina con il metodo .
 
-## <a name="enable-navigation-bar-shadow"></a>Abilita ombreggiatura barra di navigazione
+## <a name="enable-navigation-bar-shadow"></a>Abilitare l'ombreggiatura della barra di navigazione
 
-La classe `Shell` definisce la proprietà associata `NavBarHasShadow`, di tipo `bool`, che controlla se la barra di spostamento presenta un'ombreggiatura. Per impostazione predefinita, il valore della proprietà è `false` in iOS e `true` su Android.
+La `Shell` classe definisce la `NavBarHasShadow` proprietà `bool`associata, di tipo , che controlla se la barra di spostamento dispone di un'ombreggiatura. Per impostazione predefinita, `false` il valore della `true` proprietà è in iOS e in Android.By default the value of the property is on iOS, and on Android.
 
-Sebbene questa proprietà possa essere impostata su un oggetto `Shell` sottoclassato, può essere impostata anche in tutte le pagine che desiderano abilitare l'ombreggiatura della barra di navigazione. Ad esempio, il codice XAML seguente mostra come abilitare l'ombreggiatura della barra di navigazione da un [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Mentre questa proprietà può essere impostata su un oggetto sottoclassed, può anche essere impostata `Shell` su tutte le pagine che desiderano abilitare l'ombreggiatura della barra di spostamento. Ad esempio, il codice XAML seguente mostra [`ContentPage`](xref:Xamarin.Forms.ContentPage)l'abilitazione dell'ombreggiatura della barra di spostamento da un oggetto :
 
 ```xaml
 <ContentPage ...
@@ -123,13 +123,13 @@ Sebbene questa proprietà possa essere impostata su un oggetto `Shell` sottoclas
 </ContentPage>
 ```
 
-Ciò comporta l'abilitazione dell'ombreggiatura della barra di navigazione.
+In questo modo l'ombreggiatura della barra di navigazione viene abilitata.
 
 ## <a name="disable-the-navigation-bar"></a>Disabilitare la barra di spostamento
 
 La classe `Shell` definisce la proprietà associata `NavBarIsVisible`, di tipo `bool`, che controlla se la barra di spostamento è visibile quando viene visualizzata una pagina. Il valore predefinito della proprietà è `true`.
 
-Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, viene in genere impostata per qualsiasi pagina in cui si vuole rendere invisibile la barra di spostamento. Ad esempio, il codice XAML illustra la disabilitazione della barra di spostamento da [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, viene in genere impostata per qualsiasi pagina in cui si vuole rendere invisibile la barra di spostamento. Ad esempio, il codice XAML seguente mostra [`ContentPage`](xref:Xamarin.Forms.ContentPage)la disabilitazione della barra di spostamento da un oggetto :
 
 ```xaml
 <ContentPage ...
@@ -140,13 +140,13 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 La barra di spostamento diventa così invisibile quando viene visualizzata la pagina:
 
-![Screenshot della pagina della shell con una barra di spostamento invisibile, in iOS e Android](configuration-images/navigationbar-invisible.png "Pagina della shell con barra di navigazione invisibile")
+![Screenshot della pagina Shell con una barra di spostamento invisibile, su iOS e Android](configuration-images/navigationbar-invisible.png "Pagina della shell con barra di spostamento invisibile")
 
 ## <a name="disable-the-tab-bar"></a>Disabilitare la barra di schede
 
 La classe `Shell` definisce la proprietà associata `TabBarIsVisible`, di tipo `bool`, che controlla se la barra delle schede è visibile quando viene visualizzata una pagina. Il valore predefinito della proprietà è `true`.
 
-Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, viene in genere impostata per qualsiasi pagina in cui si vuole rendere invisibile la barra delle schede. Ad esempio, il codice XAML seguente illustra la disabilitazione della barra delle schede da [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, viene in genere impostata per qualsiasi pagina in cui si vuole rendere invisibile la barra delle schede. Ad esempio, il codice XAML seguente mostra [`ContentPage`](xref:Xamarin.Forms.ContentPage)di disabilitare la barra delle schede da un oggetto :
 
 ```xaml
 <ContentPage ...
@@ -157,13 +157,13 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 La barra delle schede diventa così invisibile quando viene visualizzata la pagina:
 
-![Screenshot della pagina della shell con una barra scheda invisibile, in iOS e Android](configuration-images/tabbar-invisible.png "Pagina della shell con barra scheda invisibile")
+![Screenshot della pagina Shell con una barra delle schede invisibile, in iOS e Android](configuration-images/tabbar-invisible.png "Pagina della shell con barra delle schede invisibile")
 
 ## <a name="display-views-in-the-navigation-bar"></a>Visualizzare viste nella barra di spostamento
 
-La classe `Shell` definisce la proprietà associata `TitleView`, di tipo `View`, che consente la visualizzazione di qualsiasi elemento [`View`](xref:Xamarin.Forms.View) Xamarin.Forms nella barra di spostamento.
+La `Shell` classe definisce la `TitleView` proprietà `View`associata , di tipo , [`View`](xref:Xamarin.Forms.View) che consente la visualizzazione di qualsiasi xamarin.Forms nella barra di spostamento.
 
-Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, è possibile impostarla anche per qualsiasi pagina in cui si vuole visualizzare una vista nella barra di spostamento. Ad esempio, il codice XAML seguente illustra la visualizzazione di un elemento [`Image`](xref:Xamarin.Forms.Image) nella barra di spostamento di [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+Anche se questa proprietà può essere impostata per un oggetto `Shell` sottoclassato, è possibile impostarla anche per qualsiasi pagina in cui si vuole visualizzare una vista nella barra di spostamento. Ad esempio, il codice XAML [`Image`](xref:Xamarin.Forms.Image) seguente mostra la [`ContentPage`](xref:Xamarin.Forms.ContentPage)visualizzazione di un nella barra di spostamento di un oggetto :
 
 ```xaml
 <ContentPage ...>
@@ -178,18 +178,18 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 Il risultato è la visualizzazione di un'immagine nella barra di spostamento nella pagina:
 
-![Screenshot della pagina della shell con una visualizzazione del titolo, in iOS e Android](configuration-images/titleview.png "Pagina della shell con una visualizzazione del titolo")
+![Screenshot della pagina Shell con una visualizzazione titolo, in iOS e Android](configuration-images/titleview.png "Pagina Shell con una visualizzazione titolo")
 
 > [!IMPORTANT]
 > Se la barra di spostamento è stata resa invisibile, con la proprietà associata `NavBarIsVisible`, la vista del titolo non verrà visualizzata.
 
-Molte viste non saranno più visualizzate nella barra di spostamento, a meno che non vengano specificate le dimensioni della vista con le proprietà [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) oppure a meno che non venga specificata la posizione della vista con le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
+Molte visualizzazioni non verranno visualizzate nella barra di spostamento [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) a [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) meno che le dimensioni della visualizzazione [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) non siano specificate con le proprietà e o la posizione della visualizzazione con le proprietà e .
 
-Dato che la classe [`Layout`](xref:Xamarin.Forms.Layout) deriva dalla classe [`View`](xref:Xamarin.Forms.View), la proprietà associata `TitleView` può essere impostata per visualizzare una classe di layout contenente più viste. In modo analogo, dato che la classe [`ContentView`](xref:Xamarin.Forms.ContentView) deriva in fondo dalla classe [`View`](xref:Xamarin.Forms.View), la proprietà associata `TitleView` può essere impostata per visualizzare un elemento `ContentView` contenente una singola vista.
+Poiché [`Layout`](xref:Xamarin.Forms.Layout) la classe [`View`](xref:Xamarin.Forms.View) deriva dalla `TitleView` classe , la proprietà associata può essere impostata per visualizzare una classe di layout che contiene più visualizzazioni. Analogamente, [`ContentView`](xref:Xamarin.Forms.ContentView) poiché la classe [`View`](xref:Xamarin.Forms.View) deriva in `TitleView` ultima analisi dalla classe, `ContentView` la proprietà associata può essere impostata per visualizzare un che contiene una singola visualizzazione.
 
 ## <a name="page-visibility"></a>Visibilità della pagina
 
-Shell rispetta la visibilità della pagina, impostata con la proprietà [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) . Pertanto, quando la proprietà `IsVisible` della pagina è impostata su `false` non sarà visibile nell'applicazione shell e non sarà possibile accedervi.
+Shell rispetta la visibilità [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) della pagina, impostata con la proprietà . Pertanto, quando la `IsVisible` proprietà di `false` una pagina è impostata su di essa non sarà visibile nell'applicazione Shell e non sarà possibile accedervi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

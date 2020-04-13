@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940685"
 ---
 # <a name="proguard"></a>ProGuard
 
-_ProGuard di Xamarin.Android è uno strumento di classe Java che consente di compattare, ottimizzare ed eseguire una verifica preliminare dei file. ProGuard rileva e rimuove eventuale codice non usato e analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di ProGuard e spiega come abilitare questo strumento nel progetto e come configurarlo, presentando anche alcuni esempi di configurazione._
+_Xamarin.Android ProGuard è un sistema di compattazione di file di classe Java, ottimizzatore e pre-verifier. Rileva e rimuove il codice inutilizzato, analizza e ottimizza il bytecode. Questa guida spiega come funziona ProGuard, come abilitarlo nel progetto e come configurarlo. Fornisce anche diversi esempi di configurazioni ProGuard._
 
 ## <a name="overview"></a>Panoramica
 
@@ -39,7 +39,7 @@ Ognuno di questi passaggi è *facoltativo*. Come verrà spiegato nella prossima 
 
 La configurazione di ProGuard per Xamarin.Android non esegue l'offuscamento dei file APK. Non è in effetti possibile abilitare l'offuscamento con ProGuard, neanche usando file di configurazione personalizzati. In Xamarin.Android, quindi, ProGuard esegue solo i passaggi di **compattazione** e **ottimizzazione**: 
 
-[![Passaggi di compattazione e ottimizzazione](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
+[![Passaggi di riduzione e ottimizzazione](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
 
 Un elemento importante da conoscere in anticipo prima di usare ProGuard è il funzionamento di questo strumento all'interno del processo di compilazione di `Xamarin.Android`. Questo processo si svolge in due passaggi distinti: 
 
@@ -73,13 +73,13 @@ Per usare ProGuard nel progetto dell'app, è prima necessario abilitare ProGuard
 
 Per abilitare ProGuard nel progetto dell'app, usare la procedura seguente:
 
-1. Assicurarsi che per il progetto sia impostata la configurazione **Release**. Questo passaggio è importante perché è necessario che il linker sia in esecuzione per rendere possibile l'esecuzione di ProGuard: 
+1. Assicurarsi che il progetto sia impostato sulla configurazione **di rilascio** (questo è importante perché il linker deve essere eseguito per consentire l'esecuzione di ProGuard): 
 
-    [![Selezionare la configurazione Release](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
+    [![Selezionare Configurazione versione](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
 2. Scegliere **ProGuard** dall'elenco a discesa  **Code shrinker** nella finestra **Proprietà > Opzioni Android**: 
 
-    [![Code shrinker di ProGuard selezionato](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
+    [![Shrinker del codice Proguard selezionato](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 Per la maggior parte delle app Xamarin.Android, il file di configurazione ProGuard predefinito fornito da Xamarin.Android è sufficiente per rimuovere tutto (e solo) il codice inutilizzato. Per visualizzare la configurazione di ProGuard predefinita, aprire il file **obj\\Release\\proguard\\proguard_xamarin.cfg**.
 
@@ -155,7 +155,7 @@ Xamarin supporta le opzioni di ProGuard seguenti:
 
 - [Percorsi delle classi](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classpath)
 
-- [Nomi di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
+- [Nomi dei file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
 
 - [Filtri di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
 
@@ -316,11 +316,11 @@ Questo problema in genere si verifica in Windows a causa della codifica non corr
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per evitare questo problema, modificare il file di configurazione personalizzato con un editor di testo che consenta il salvataggio del file senza un carattere BOM. Per risolvere questo problema, assicurarsi che per l'editor di testo la codifica sia impostata su `UTF-8`. Con l'editor di testo [Notepad++](https://notepad-plus-plus.org/), ad esempio, è possibile salvare i file senza carattere BOM selezionando **Encoding (Codifica) &gt; Encode in UTF-8 Without BOM** (Codifica UTF-8 senza BOM) quando si salva il file. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per evitare questo problema, salvare il file di configurazione personalizzato da un editor di testo che consente di omettere il carattere BOM. 
 

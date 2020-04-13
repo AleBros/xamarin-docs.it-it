@@ -9,10 +9,10 @@ ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023414"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
@@ -27,14 +27,14 @@ La distribuzione wireless è disponibile come funzionalità sia in Visual Studio
 
 Per usare la distribuzione wireless, è necessario quanto segue:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 - macOS 10.12.4
 - Ultima versione di Visual Studio per Mac
 - Xcode 9.0 o versione successiva
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 - Ultima versione di Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
@@ -71,7 +71,7 @@ Il processo di associazione seguente deve essere eseguito una sola volta per ogn
 
 4. Selezionare Apple TV nell'area **Discovered** (Individuati) in Xcode e immettere il codice di verifica visualizzato sull'Apple TV.
 
-5. Fare clic sul pulsante **Connect** (Connetti). Una volta eseguita l'associazione, accanto all'Apple TV viene visualizzata un'icona della connessione di rete.
+5. Fare clic sul pulsante **Connetti**. Una volta eseguita l'associazione, accanto all'Apple TV viene visualizzata un'icona della connessione di rete.
 
 ## <a name="deploy-to-a-device"></a>Eseguire la distribuzione in un dispositivo
 
@@ -89,7 +89,7 @@ Per eseguire la distribuzione in un dispositivo iOS o tvOS, attenersi alla proce
 
 Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless, pertanto è possibile usare i punti di interruzione impostati precedentemente e continuare il flusso di lavoro di debug come di consueto.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 1. Verificare sempre che il dispositivo iOS o Apple TV sia connesso alla stessa rete del Mac.
 
@@ -105,7 +105,7 @@ Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Pair a wireless device with Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad) (Associare un dispositivo wireless con Xcode)
+- [Pair a wireless device with Xcode (Associare un dispositivo wireless con Xcode)](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
 
 ## <a name="related-video"></a>Video correlato
 

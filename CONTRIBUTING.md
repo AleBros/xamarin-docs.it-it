@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
-ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78261618"
 ---
 # <a name="contributing"></a>Contributo
@@ -14,7 +14,7 @@ Questa pagina illustra il processo di base per l'aggiornamento del contenuto nel
 
 - [Contratto di licenza con il collaboratore](LICENSE)
 
-## <a name="process-for-contributing"></a>Processo per fornire il contributo
+## <a name="process-for-contributing"></a>Processo per apportare il contributo
 
 ### <a name="small-changes--edits"></a>Piccole modifiche e modifiche
 
@@ -41,9 +41,9 @@ Per i contributi con modifiche importanti e i nuovi contenuti, [aprire un proble
 
 **Prima di iniziare a scrivere il contenuto, ottenere un feedback per la proposta attraverso il problema.**
 
-Se si tratta di un nuovo argomento, è possibile usare il [file modello](../contributing-guidelines/template.md) come punto di partenza. Contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
+Se si tratta di un nuovo argomento, è possibile usare il [file modello](../contributing-guidelines/template.md) come punto di partenza. Il file contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
 
-Aggiungere eventuali immagini e altre risorse statiche alla sottocartella denominata **\<nomepagina>-images**. Se si sta creando una nuova cartella per il contenuto, aggiungere una cartella images alla nuova cartella.
+Per le immagini e altre risorse statiche, aggiungerle alla sottocartella ** \<mypage>-images**. Se si sta creando una nuova cartella per il contenuto, aggiungere una cartella images alla nuova cartella.
 
 #### <a name="example-structure"></a>Struttura di esempio
 
@@ -65,9 +65,9 @@ Dopo aver applicato il feedback e se le modifiche sono corrette, i responsabili 
 
 A intervalli stabiliti viene eseguito il push di tutti i commit dal ramo master al sito attivo e l'utente può visualizzare i propri contributi in https://docs.microsoft.com/xamarin/.
 
-### <a name="contributing-to-international-content"></a>Aggiunta di contributi ai contenuti internazionali
+### <a name="contributing-to-international-content"></a>Contribuire ai contenuti internazionali
 
-I contributi per il contenuto del computer tradotto (MT) non sono attualmente accettati per il momento. Per migliorare la qualità del contenuto MT, è stato effettuato il passaggio a un motore MT neurale. Accettiamo e incoraggiamo i contributi per il contenuto della traduzione umana (HT), usato per il training del motore Neural MT. Nel tempo, i contributi ai contenuti HT miglioreranno la qualità di HT e MT. Gli argomenti MT avranno una dichiarazione di non responsabilità che informa che parte dell'argomento può essere MT e il pulsante **modifica** non viene visualizzato perché è disabilitato.
+I contributi per i contenuti tradotti automaticamente (MT) non sono attualmente accettati per il momento. Nel tentativo di migliorare la qualità del contenuto MT, abbiamo passato a un motore MT neurale. Accettiamo e incoraggiamo i contributi per i contenuti tradotti umani (HT), che vengono utilizzati per addestrare il motore Neural MT. Così nel tempo, i contributi ai contenuti HT miglioreranno la qualità sia di HT che di MT. Gli argomenti di MT avranno una dichiarazione di non responsabilità che indica che parte dell'argomento può essere MT e il pulsante **Modifica** non verrà visualizzato quando è disabilitato.
 
 ## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
 

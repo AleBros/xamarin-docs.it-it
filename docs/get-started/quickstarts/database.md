@@ -10,22 +10,22 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71249674"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Archiviare i dati in un database SQLite.NET locale
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 In questo argomento di avvio rapido si apprenderà come:
 
 - Usare Gestione pacchetti NuGet per aggiungere un pacchetto NuGet a un progetto.
 - Archiviare i dati in locale in un database SQLite.NET.
 
-Questo argomento di avvio rapido illustra come archiviare i dati in un database SQLite.NET locale. Il risultato è riportato di seguito:
+Questo argomento di avvio rapido illustra come archiviare i dati in un database SQLite.NET locale. L'applicazione finale è riportata di seguito:
 
 [![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
 [![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
@@ -214,7 +214,7 @@ Questo argomento di avvio rapido illustra come archiviare i dati in un database 
     }
     ```    
 
-    Questo codice popola [`ListView`](xref:Xamarin.Forms.ListView) con tutte le note archiviate nel database.
+    Questo codice popola l'oggetto [`ListView`](xref:Xamarin.Forms.ListView) con tutte le note archiviate nel database.
 
     Salvare le modifiche apportate a **NotesPage.xaml.cs** premendo **CTRL+S** e chiudere il file.
 
@@ -240,7 +240,7 @@ Questo argomento di avvio rapido illustra come archiviare i dati in un database 
       }
       ```    
 
-      `NoteEntryPage` archivia un'istanza di `Note`, che rappresenta una singola nota, nella proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina. Quando viene eseguito il gestore dell'evento `OnSaveButtonClicked`, l'istanza di `Note` viene salvata nel database e l'applicazione torna alla pagina precedente. Quando viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, l'istanza di `Note` viene eliminata dal database e l'applicazione torna alla pagina precedente.
+      `NoteEntryPage` L'oggetto `Note` archivia un'istanza, che [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) rappresenta una singola nota, nella pagina. Quando viene eseguito il gestore dell'evento `OnSaveButtonClicked`, l'istanza di `Note` viene salvata nel database e l'applicazione torna alla pagina precedente. Quando viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, l'istanza di `Note` viene eliminata dal database e l'applicazione torna alla pagina precedente.
 
       Salvare le modifiche apportate a **NoteEntryPage.xaml.cs** premendo **CTRL+S** e chiudere il file.
 
@@ -431,7 +431,7 @@ Questo argomento di avvio rapido illustra come archiviare i dati in un database 
     }
     ```    
 
-    Questo codice popola [`ListView`](xref:Xamarin.Forms.ListView) con tutte le note archiviate nel database.
+    Questo codice popola l'oggetto [`ListView`](xref:Xamarin.Forms.ListView) con tutte le note archiviate nel database.
 
     Salvare le modifiche apportate a **NotesPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -457,7 +457,7 @@ Questo argomento di avvio rapido illustra come archiviare i dati in un database 
       }
       ```    
 
-      `NoteEntryPage` archivia un'istanza di `Note`, che rappresenta una singola nota, nella proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina. Quando viene eseguito il gestore dell'evento `OnSaveButtonClicked`, l'istanza di `Note` viene salvata nel database e l'applicazione torna alla pagina precedente. Quando viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, l'istanza di `Note` viene eliminata dal database e l'applicazione torna alla pagina precedente.
+      `NoteEntryPage` L'oggetto `Note` archivia un'istanza, che [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) rappresenta una singola nota, nella pagina. Quando viene eseguito il gestore dell'evento `OnSaveButtonClicked`, l'istanza di `Note` viene salvata nel database e l'applicazione torna alla pagina precedente. Quando viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, l'istanza di `Note` viene eliminata dal database e l'applicazione torna alla pagina precedente.
 
       Salvare le modifiche apportate a **NoteEntryPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -471,7 +471,7 @@ Questo argomento di avvio rapido illustra come archiviare i dati in un database 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questo argomento di avvio rapido si è appreso come:
+In questa guida introduttiva si è appreso come:
 
 - Usare Gestione pacchetti NuGet per aggiungere un pacchetto NuGet a un progetto.
 - Archiviare i dati in locale in un database SQLite.NET.
@@ -479,7 +479,7 @@ In questo argomento di avvio rapido si è appreso come:
 Per definire lo stile dell'applicazione con gli stili XAML, passare all'argomento di avvio rapido successivo.
 
 > [!div class="nextstepaction"]
-> [avanti](styling.md)
+> [Avanti](styling.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

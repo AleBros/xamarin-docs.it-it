@@ -8,15 +8,15 @@ author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
 ms.openlocfilehash: a24edbc10d529878092b474df7f186d14049d5e0
-ms.sourcegitcommit: f8e22a3b0642179bf44a312e9a2fac0fbad8683c
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239113"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "60955082"
 ---
 # <a name="microsofts-mobile-openjdk-distribution"></a>Distribuzione di Microsoft Mobile OpenJDK
 
-_Questa guida descrive la procedura per il passaggio a una distribuzione interna di OpenJDK. La distribuzione è concepita per lo sviluppo per dispositivi mobili._
+_In questa guida vengono descritti i passaggi per passare a una distribuzione interna di OpenJDK. Questa distribuzione è destinata allo sviluppo mobile._
 
 ## <a name="overview"></a>Panoramica
 

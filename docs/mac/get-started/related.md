@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
 ms.openlocfilehash: 10450bbb87ed974475001102920ec6fb90cf7976
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73029986"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac - Documentazione correlata
@@ -31,10 +31,10 @@ Quando si lavora in C# e .NET in un'applicazione Xamarin.Mac, lo sviluppatore ha
 Le guide elencate di seguito offrono informazioni dettagliate sull'uso di elementi macOS in un'applicazione Xamarin.Mac:
 
 - [Windows](~/mac/user-interface/window.md)
-- [Dialogs](~/mac/user-interface/dialog.md) (Finestre di dialogo)
-- [Alerts](~/mac/user-interface/alert.md) (Avvisi)
+- [Finestre di dialogo](~/mac/user-interface/dialog.md)
+- [Avvisi](~/mac/user-interface/alert.md)
 - [Menu](~/mac/user-interface/menu.md)
 - [Barre degli strumenti](~/mac/user-interface/toolbar.md)
 - [Table Views](~/mac/user-interface/table-view.md) (Visualizzazioni tabelle)
-- [Outline Views](~/mac/user-interface/outline-view.md) (Visualizzazioni struttura)
+- [Visualizzazioni struttura](~/mac/user-interface/outline-view.md)
 - [Source Lists](~/mac/user-interface/source-list.md) (Elenchi di risorse)

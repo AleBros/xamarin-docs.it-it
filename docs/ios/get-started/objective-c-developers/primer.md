@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 56ee74e7a276edc960d2251bd33ccb90c1fa3cb4
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80070370"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
-_Novell. iOS consente di condividere tra diverse piattaforme il C# codice indipendente dalla piattaforma scritto in. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da nozioni di fondo per gli sviluppatori Objective-C che vogliono passare a Novell e C# al linguaggio._
+_Xamarin.iOS consente la condivisione di codice indipendente dalla piattaforma scritto in C. Tuttavia, le applicazioni iOS esistenti potrebbero voler sfruttare il codice Objective-C che è già stato creato. Questo articolo funge da breve primer per gli sviluppatori Objective-C che cercano di passare a Xamarin e il linguaggio C ._
 
-le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Novell C# sfruttando in posizioni in cui il codice specifico della piattaforma non è necessario, consentendo l'uso di tale codice su dispositivi non Apple. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
+Le applicazioni iOS e macOS sviluppate in Objective-C possono trarre vantaggio da Xamarin sfruttando il linguaggio C, in posizioni in cui non è necessario codice specifico della piattaforma, consentendo l'utilizzo di tale codice su dispositivi non Apple.iOS and macOS applications developed in Objective-C can benefit from Xamarin by leveraging C ' in places where platform-specific code is not required, allowing such code to be used on non-Apple devices. Elementi come servizi Web, analisi JSON e XML e algoritmi personalizzati possono quindi essere usati indipendentemente dalla piattaforma.
 
 Per sfruttare i vantaggi di Xamarin mantenendo al tempo stesso gli asset Objective-C esistenti, Xamarin può essere esposto in C# tramite la tecnologia dei binding, che rende disponibile il codice Objective-C nell'ambiente gestito di C#. Inoltre, se necessario, è anche possibile eseguire il porting del codice in C# riga per riga. In ogni caso, indipendentemente dall'approccio adottato (binding o porting), è necessaria una certa conoscenza di Objective-C e C# per sfruttare in modo efficace il codice Objective-C esistente con Xamarin.iOS.
 
@@ -32,7 +32,7 @@ Per informazioni sulla creazione di binding, vedere gli altri documenti in [Bind
 
 ## <a name="language-comparison"></a>Confronto dei linguaggi
 
-Objective-C e C# sono linguaggi molto diversi, sia sintatticamente che dal punto di vista del runtime. Objective-C è un linguaggio dinamico e usa uno schema di passaggio dei messaggi, mentre C# è tipizzato in modo statico. Per quanto riguarda la sintassi, Objective-C è come Smalltalk C# , mentre deriva gran parte della sintassi fondamentale da Java, anche se è maturata in modo da includere molte funzionalità oltre a Java negli ultimi anni.
+Objective-C e C# sono linguaggi molto diversi, sia sintatticamente che dal punto di vista del runtime. Objective-C è un linguaggio dinamico e usa uno schema di passaggio dei messaggi, mentre C# è tipizzato in modo statico. Dal punto di vista della sintassi, Objective-C è simile a Smalltalk, mentre in Cè deriva gran parte della sua sintassi fondamentale da Java, anche se è stata maturata per includere molte funzionalità oltre a Java negli ultimi anni.
 
 Detto ciò, esistono diverse funzionalità dei linguaggi Objective-C e C# che hanno una funzione simile. Quando si crea un binding a codice Objective-C da C# o durante il porting di Objective-C in C#, è utile comprendere queste analogie.
 
@@ -64,7 +64,7 @@ Quando viene chiamato il metodo di estensione, l'istanza viene passata all'argom
 
 ### <a name="frameworks-vs-assemblies"></a>Framework e assembly
 
-In Objective-C vengono creati pacchetti di classi correlate in speciali directory denominate framework. In C# e .NET, invece, vengono usati gli assembly per fornire bit riutilizzabili di codice precompilato. Negli ambienti all'esterno di iOS, gli assembly contengono codice Intermediate Language (IL) compilato in modalità JIT (Just In Time) in fase di esecuzione. Tuttavia, Apple non consente l'esecuzione di codice compilato JIT nelle applicazioni iOS rilasciate nell'App Store. Pertanto, il codice C# per iOS con Xamarin è compilato in modalità AOT (Ahead Of Time), che produce un singolo file eseguibile Unix insieme ai file di metadati inclusi nel pacchetto dell'applicazione.
+In Objective-C vengono creati pacchetti di classi correlate in speciali directory denominate framework. In C# e .NET, invece, vengono usati gli assembly per fornire bit riutilizzabili di codice precompilato. Negli ambienti all'esterno di iOS, gli assembly contengono codice Intermediate Language (IL) compilato in modalità JIT (Just In Time) in fase di esecuzione. Tuttavia, Apple non consente l'esecuzione di codice compilato JIT nelle applicazioni iOS rilasciate sull'App Store. Pertanto, il codice C# per iOS con Xamarin è compilato in modalità AOT (Ahead Of Time), che produce un singolo file eseguibile Unix insieme ai file di metadati inclusi nel pacchetto dell'applicazione.
 
 ### <a name="selectors-vs-named-parameters"></a>Selettori e parametri denominati
 
@@ -123,7 +123,7 @@ Quando la parola chiave static viene applicata a una variabile in Objective-C, l
 
 Anche C# dispone di una parola chiave static. Quando viene applicata a un metodo, svolge in modo efficace la stessa funzione del modificatore `+` in Objective-C. In particolare, crea un metodo di classe. Analogamente, se applicato ad altri costrutti come campi, proprietà ed eventi, rende tali elementi parte del tipo in cui vengono dichiarati, anziché di qualsiasi istanza del tipo. È inoltre possibile creare una classe statica, in cui anche tutti i metodi definiti nella classe devono essere statici.
 
-### <a name="nsarray-vs-list-initialization"></a>Inizializzazione di NSArray e di elenco
+### <a name="nsarray-vs-list-initialization"></a>Confronto tra NSArray e l'inizializzazione dell'elenco
 
 Objective-C include ora la sintassi dei valori letterali per l'uso con `NSArray`, che rende più semplice l'inizializzazione. C# tuttavia dispone di un tipo più completo denominato `List`, che è *generic*, vale a dire che il tipo contenuto nell'elenco può essere fornito dal codice che crea l'elenco, ad esempio i modelli in C++. Inoltre, gli elenchi supportano la sintassi di inizializzazione automatica, come illustrato di seguito:
 
@@ -133,7 +133,7 @@ MyClass object2 = new MyClass ();
 List<MyClass> myList = new List<MyClass>{ object1, object2 };
 ```
 
-### <a name="blocks-vs-lambda-expressions"></a>Blocchi e espressioni lambda
+### <a name="blocks-vs-lambda-expressions"></a>Blocchi e espressioni lambdaBlocks vs.
 
 Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare una funzione inline che è in grado di usare lo stato in cui è inclusa. In C# è presente un concetto simile tramite l'uso delle espressioni lambda. In C# le espressioni lambda vengono create con l'operatore `=>`, come illustrato di seguito:
 
@@ -145,6 +145,6 @@ Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare u
 
 Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) di Microsoft.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questo articolo sono state messe a confronto diverse funzionalità dei linguaggi Objective-C e C#. In alcuni casi, sono state descritte le caratteristiche simili in entrambi i linguaggi, come i blocchi e le espressioni lambda o le categorie e i metodi di estensione. Sono state inoltre illustrate le differenze tra i linguaggi, ad esempio per quanto riguarda gli spazi dei nomi in C# e il significato della parola chiave static.

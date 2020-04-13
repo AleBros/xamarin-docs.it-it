@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
 ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304835"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisioning di dispositivi per Xamarin.iOS
@@ -47,7 +47,7 @@ Questi passaggi servono a garantire che tutto ciò che viene creato o usato dura
 
 Esistono due modi per effettuare il provisioning del dispositivo iOS:
 
-- **Automaticamente (scelta consigliata)** : selezionare l'opzione **Automatically manage signing** (Gestire la firma automaticamente) nel file Info.plist in modo che Visual Studio per Mac crei e gestisca automaticamente le identità di firma, gli ID app e i profili di provisioning. Per informazioni su come gestire automaticamente il provisioning, vedere la guida [Automatic Provisioning](automatic-provisioning.md) (Provisioning automatico). Questo è il modo consigliato per effettuare il provisioning di un dispositivo iOS.
+- **Automaticamente (scelta consigliata)**: selezionare l'opzione **Automatically manage signing** (Gestire la firma automaticamente) nel file Info.plist in modo che Visual Studio per Mac crei e gestisca automaticamente le identità di firma, gli ID app e i profili di provisioning. Per informazioni su come gestire automaticamente il provisioning, vedere la guida [Automatic Provisioning](automatic-provisioning.md) (Provisioning automatico). Questo è il modo consigliato per effettuare il provisioning di un dispositivo iOS.
 
 - **Manualmente**: è possibile creare e gestire le identità di firma, gli ID app e i profili di provisioning tramite il portale Apple Developer, come descritto nella guida [Provisioning manuale](manual-provisioning.md). Questi elementi possono quindi essere gestiti come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple).
 
@@ -62,6 +62,6 @@ Apple offre una selezione di servizi speciali per le applicazioni, denominati an
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [Distribuzione di app](~/ios/deploy-test/app-distribution/index.md)
+- [Distribuzione app](~/ios/deploy-test/app-distribution/index.md)
 - [Risoluzione dei problemi](~/ios/deploy-test/troubleshooting.md)
 - [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) (Apple - Guida alla distribuzione dell'app)

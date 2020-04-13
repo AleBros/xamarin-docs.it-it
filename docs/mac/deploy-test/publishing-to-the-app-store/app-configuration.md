@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
 ms.openlocfilehash: f008ac42bfffeda2a47ca30aa2991d91f990732f
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725038"
 ---
 # <a name="mac-app-configuration"></a>Configurazione di app Mac
@@ -36,7 +36,7 @@ Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisi
 
 ### <a name="signing-settings"></a>Impostazioni della firma
 
-La sezione **Firma Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di firmare un'app Xamarin.Mac per il test, il rilascio o il rilascio automatico tramite l'App Store Apple:
+La sezione **Firma Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di firmare un'app Xamarin.Mac per il test, per l'autorilascio o per il rilascio tramite l'App Store di Apple:
 
 [![Editor della firma Mac](app-configuration-images/config02.png "Editor della firma Mac")](app-configuration-images/config02-large.png#lightbox)
 
@@ -44,7 +44,7 @@ Da qui selezionare Identità, Profilo di provisioning e tutti i diritti personal
 
 ### <a name="build-settings"></a>Impostazioni di compilazione
 
-La sezione **Compilazione Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di selezionare l'architettura per un'app Xamarin.Mac, di controllare quale versione di macOS verrà supportata dall'app e, facoltativamente, di creare un pacchetto di installazione quando l'app è stata compilata correttamente:
+La sezione **Build di Mac** della finestra di dialogo Opzioni **progetto** consente allo sviluppatore di selezionare l'architettura per un'app Xamarin.Mac, di controllare quale versione di macOS supporterà l'app e di creare facoltativamente un pacchetto di installazione quando l'app viene compilata correttamente:
 
  [![Modifica delle impostazioni di compilazione](app-configuration-images/config03.png "Modifica delle impostazioni di compilazione")](app-configuration-images/config03-large.png#lightbox)
 

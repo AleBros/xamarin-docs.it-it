@@ -1,6 +1,6 @@
 ---
-title: Sottoclassi generiche di NSObject in Novell. iOS
-description: Questo documento descrive come creare sottoclassi generiche di NSObject. Esamina le operazioni che possono e non possono essere eseguite, illustra il registrar statico e osserva le prestazioni.
+title: Sottoclassi generiche di NSObject in Xamarin.iOS
+description: In questo documento viene descritto come creare creare sottoclassi generiche di NSObject.This document describes how to create generic subclasses of NSObject. Esamina cosa può e non può essere fatto, discute il registrar statico e prende un'occhiata alle prestazioni.
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 279fcac1611038613bf442e1b766fda45dd5a429
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022370"
 ---
-# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in Novell. iOS
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in Xamarin.iOS
 
-## <a name="using-generics-with-nsobjects"></a>Uso dei generics con NSObjects
+## <a name="using-generics-with-nsobjects"></a>Utilizzo di generics con NSObjectsUsing generics with NSObjects
 
-È possibile usare i generics nelle sottoclassi di `NSObject`, ad esempio [UIView](xref:UIKit.UIView):
+È possibile utilizzare i generics nelle `NSObject`sottoclassi di , ad esempio [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
@@ -30,17 +30,17 @@ class Foo<T> : UIView {
 }
 ```
 
-Poiché gli oggetti sottoclass `NSObject` vengono registrati con il runtime di Objective-C, esistono alcune limitazioni per quanto possibile con le sottoclassi generiche di `NSObject` tipi.
+Poiché gli `NSObject` oggetti che fanno parte della sottoclasse sono registrati con il runtime `NSObject` Objective-C, esistono alcune limitazioni su ciò che è possibile con le sottoclassi generiche dei tipi.
 
-## <a name="considerations-for-generic-subclasses-of-nsobject"></a>Considerazioni sulle sottoclassi generiche di NSObject
+## <a name="considerations-for-generic-subclasses-of-nsobject"></a>Considerazioni per le sottoclassi generiche di NSObjectConsiderations for generic subclasses of NSObject
 
-Questo documento illustra in dettaglio le limitazioni del supporto limitato per le sottoclassi generiche di `NSObjects`.
+Questo documento descrive in dettaglio le limitazioni `NSObjects`del supporto limitato per le sottoclassi generiche di .
 
-### <a name="generic-type-arguments-in-member-signatures"></a>Argomenti di tipo generico nelle firme di membro
+### <a name="generic-type-arguments-in-member-signatures"></a>Argomenti di tipo generico nelle firme dei membriGeneric Type Arguments in Member Signatures
 
-Tutti gli argomenti di tipo generico in una firma del membro esposta a Objective-C devono avere un vincolo `NSObject`.
+Tutti gli argomenti di tipo generico in una `NSObject` firma del membro esposta a Objective-C devono avere un vincolo.
 
-**Valido**:
+**Buono**:
 
 ```csharp
 class Generic<T> : NSObject where T: NSObject
@@ -52,9 +52,9 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: il parametro di tipo generico è un `NSObject`, quindi la firma del selettore per `myMethod:` può essere esposta in modo sicuro a Objective-C (sarà sempre `NSObject` o una sottoclasse).
+**Motivo**: Il parametro di tipo generico è un `NSObject`oggetto , pertanto la firma del selettore per `myMethod:` può essere esposta in modo sicuro a Objective-C (sarà sempre `NSObject` o una sottoclasse di esso).
 
-Non **valido**:
+**Non valido**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -66,9 +66,9 @@ class Generic<T> : NSObject
 }
 ```
 
-**Motivo**: non è possibile creare una firma Objective-c per i membri esportati che il codice Objective-c può chiamare, perché la firma differisce a seconda del tipo esatto del tipo generico `T`.
+**Motivo**: non è possibile creare una firma Objective-C per i membri esportati che il codice Objective-C `T`può chiamare, poiché la firma sarebbe diversa a seconda del tipo esatto del tipo generico.
 
-**Valido**:
+**Buono**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -84,7 +84,7 @@ class Generic<T> : NSObject
 
 **Motivo**: è possibile avere argomenti di tipo generico non vincolati, purché non facciano parte della firma del membro esportato.
 
-**Valido**:
+**Buono**:
 
 ```csharp
 class Generic<T, U> : NSObject where T: NSObject
@@ -97,13 +97,13 @@ class Generic<T, U> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: il `T` parametro nel `MyMethod` esportato Objective-C è vincolato a essere un `NSObject`, il tipo non vincolato `U` non fa parte della firma.
+**Motivo** `T` : il parametro nell'esportazione Objective-C `MyMethod` è vincolato a essere un `NSObject`, il tipo `U` non vincolato non fa parte della firma.
 
-### <a name="instantiations-of-generic-types-from-objective-c"></a>Creazioni di istanze di tipi generici da Objective-C
+### <a name="instantiations-of-generic-types-from-objective-c"></a>Creazione di istanze di tipi generici da Objective-C
 
-La creazione di istanze di tipi generici da Objective-C non è consentita. Questo si verifica in genere quando un tipo gestito viene usato in un XIB o in uno storyboard.
+La creazione di istanze di tipi generici da Objective-C non è consentita. Ciò si verifica in genere quando un tipo gestito viene utilizzato in uno xib o uno storyboard.
 
-Si consideri questa definizione di classe, che espone un costruttore che accetta un `IntPtr` (il metodo Novell. iOS C# per costruire un oggetto da un'istanza di Objective-C nativa):
+Si consideri questa definizione di classe, che espone un costruttore che accetta un (il modo Xamarin.iOS di costruire un oggetto c'è da un'istanza di Objective-C nativo):Consider this class definition, which exposes a constructor that takes an `IntPtr` (the Xamarin.iOS way of constructing a C' object from a native Objective-C instance):
 
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -113,11 +113,11 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-Mentre il costrutto precedente è corretto, in fase di esecuzione verrà generata un'eccezione in caso in cui Objective-C tenti di crearne un'istanza.
+Mentre il costrutto precedente va bene, in fase di esecuzione, questo genererà un'eccezione se Objective-C tenta di creare un'istanza di esso.
 
-Questa situazione si verifica perché Objective-C non ha alcun concetto di tipi generici e non può specificare il tipo generico esatto da creare.
+Ciò accade perché Objective-C non ha alcun concetto di tipi generici e non può specificare il tipo generico esatto da creare.
 
-Questo problema può essere risolto creando una sottoclasse specializzata del tipo generico. Ad esempio,
+Questo problema può essere risolto creando una sottoclasse specializzata del tipo generico. Ad esempio:
 
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -131,13 +131,13 @@ class GenericUIView : Generic<UIView>
 }
 ```
 
-Ora non esiste più alcuna ambiguità, la classe `GenericUIView` può essere usata in XIB o Storyboard.
+Ora non c'è più ambiguità, la classe `GenericUIView` può essere utilizzata in xibs o storyboard.
 
 ## <a name="no-support-for-generic-methods"></a>Nessun supporto per i metodi generici
 
 ### <a name="generic-methods-are-not-allowed"></a>I metodi generici non sono consentiti.
 
-Il codice seguente non verrà compilato:
+Il codice seguente non verrà compilato:The following code will not compile:
 
 ```csharp
 class MyClass : NSObject
@@ -149,9 +149,9 @@ class MyClass : NSObject
 }
 ```
 
-**Motivo**: questa operazione non è consentita perché Novell. iOS non conosce il tipo da usare per l'argomento di tipo `T` quando il metodo viene richiamato da Objective-C.
+**Motivo**: questa operazione non è consentita perché Xamarin.iOS `T` non conosce il tipo da utilizzare per l'argomento di tipo quando il metodo viene richiamato da Objective-C .
 
-In alternativa, è possibile creare un metodo specializzato ed esportare il metodo:
+Un'alternativa consiste nel creare un metodo specializzato ed esportare che invece:An alternative is to create a specialized method and export that instead:
 
 ```csharp
 class MyClass : NSObject
@@ -169,7 +169,7 @@ class MyClass : NSObject
 
 ### <a name="no-exported-static-members-allowed"></a>Non sono consentiti membri statici esportati
 
-Non è possibile esporre membri statici a Objective-C se sono ospitati all'interno di una sottoclasse generica di `NSObject`.
+Non è possibile esporre un membro statico a Objective-C se `NSObject`è ospitato all'interno di una sottoclasse generica di .
 
 Esempio di scenario non supportato:
 
@@ -186,13 +186,13 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** Proprio come per i metodi generici, il runtime di Novell. iOS deve essere in grado di conoscere il tipo da usare per l'argomento di tipo generico `T`.
+**Motivo:** Analogamente ai metodi generici, il runtime di Xamarin.iOS deve `T`essere in grado di sapere quale tipo utilizzare per l'argomento di tipo generico.
 
-Per i membri di istanza viene utilizzata l'istanza stessa (poiché non ci sarà mai un'istanza `Generic<T>`, sarà sempre `Generic<SomeSpecificClass>`), ma per i membri statici queste informazioni non sono presenti.
+Per i membri di istanza viene utilizzata l'istanza stessa (poiché non sarà mai un'istanza `Generic<T>`, sarà `Generic<SomeSpecificClass>`sempre ), ma per i membri statici queste informazioni non sono presenti.
 
-Si noti che questo vale anche se il membro in questione non usa l'argomento tipo `T` in alcun modo.
+Si noti che ciò vale anche se `T` il membro in questione non utilizza in alcun modo l'argomento type.
 
-L'alternativa in questo caso consiste nel creare una sottoclasse specializzata:
+L'alternativa in questo caso consiste nel creare una sottoclasse specializzata:The alternative in this case is to create a specialized subclass:
 
 ```csharp
 class GenericUIView : Generic<UIView>
@@ -219,4 +219,4 @@ class Generic<T> : NSObject where T : NSObject
 
 ## <a name="performance"></a>Prestazioni
 
-Il registrar statico non riesce a risolvere un membro esportato in un tipo generico in fase di compilazione, come in genere, deve essere ricercato in fase di esecuzione. Ciò significa che richiamare un metodo di questo tipo da Objective-C è leggermente più lento rispetto alla chiamata di membri da classi non generiche.
+Il registrar statico non è in grado di risolvere un membro esportato in un tipo generico in fase di compilazione come in genere, deve essere esaminato in fase di esecuzione. Ciò significa che la chiamata di tale metodo da Objective-C è leggermente più lenta rispetto alla chiamata di membri da classi non generiche.

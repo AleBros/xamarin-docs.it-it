@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771874"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduzione ai renderer personalizzati
 
-_I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei controlli Xamarin.Forms. Possono essere usati per le modifiche di stile piccolo o per una personalizzazione sofisticata del layout e del comportamento specifici della piattaforma. Questo articolo fornisce un'introduzione ai renderer personalizzati e descrive il processo di creazione di un renderer personalizzato._
+_I renderer personalizzati forniscono un approccio efficace per personalizzare l'aspetto e il comportamento dei controlli Xamarin.Forms.Custom renderers provide a powerful approach for customizing the appearance and behavior of Xamarin.Forms controls. Possono essere utilizzati per piccole modifiche di stile o per la personalizzazione del layout e del comportamento specifici della piattaforma. In questo articolo viene fornita un'introduzione ai renderer personalizzati e viene descritto il processo di creazione di un renderer personalizzato._
 
 Le [pagine, i layout e i controlli](~/xamarin-forms/user-interface/controls/index.md) Xamarin.Forms presentano un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Il rendering di ogni pagina, layout e controllo viene eseguito in modo diverso su ogni piattaforma usando una classe `Renderer`, che a sua volta crea un controllo nativo (corrispondente alla rappresentazione Xamarin.Forms), lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso.
 
@@ -66,14 +66,14 @@ Di seguito è illustrato il processo di creazione di una classe di renderer pers
 
 1. Creare una sottoclasse della classe di renderer che esegue il rendering del controllo nativo.
 1. Eseguire l'override del metodo che esegue il rendering del controllo nativo e scrivere la logica per personalizzare il controllo. Il metodo `OnElementChanged` viene spesso usato per eseguire il rendering del controllo nativo, che viene chiamato quando si crea il controllo Xamarin.Forms corrispondente.
-1. Aggiungere un attributo `ExportRenderer` alla classe renderer personalizzato per specificare che verrà usata per eseguire il rendering del controllo Xamarin.Forms. L'attributo viene usato per registrare il renderer personalizzato in Xamarin.Forms.
+1. Aggiungere un attributo `ExportRenderer` alla classe di renderer personalizzata per specificare che verrà usata per eseguire il rendering del controllo Xamarin.Forms. L'attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms.
 
 > [!NOTE]
 > Per la maggior parte degli elementi di Xamarin.Forms, l'indicazione di un renderer personalizzato in ogni progetto della piattaforma è facoltativa. Se un renderer personalizzato non è registrato, verrà usato il renderer predefinito per la classe di base del controllo. I renderer personalizzati sono tuttavia necessari in ogni progetto della piattaforma quando si esegue il rendering di un elemento [View](xref:Xamarin.Forms.View) o [ ViewCell](xref:Xamarin.Forms.ViewCell).
 
 Negli argomenti di questa sezione vengono presentate dimostrazioni e spiegazioni di questo processo per diversi elementi di Xamarin.Forms.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Se un controllo personalizzato è contenuto in un progetto di libreria .NET Standard che è stato aggiunto alla soluzione (vale a dire non la libreria .NET Standard creata dal modello di progetto Visual Studio per Mac/app Xamarin.Forms in Visual Studio), può verificarsi un'eccezione in iOS quando si tenta di accedere al controllo personalizzato. Se si verifica questo problema, può essere risolto tramite la creazione di un riferimento al controllo personalizzato dalla classe `AppDelegate`:
 

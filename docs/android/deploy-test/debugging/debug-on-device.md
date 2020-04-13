@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3ca524e451a7a4eb838805c839b33c4b9dd6bddd
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556535"
 ---
-# <a name="debug-on-an-android-device"></a>Eseguire il debug in un dispositivo Android
+# <a name="debug-on-an-android-device"></a>Eseguire il debug su un dispositivo AndroidDebug on an Android device
 
 _In questo articolo viene illustrato come eseguire il debug di un'applicazione Xamarin.Android su un dispositivo Android fisico._
 
@@ -24,7 +24,7 @@ _In questo articolo viene illustrato come eseguire il debug di un'applicazione X
 
 Una volta che il dispositivo è connesso al computer, il debug di un'applicazione Xamarin.Android viene eseguito esattamente come per qualsiasi altro prodotto Xamarin o applicazione .NET. Verificare che nell'IDE siano selezionati la configurazione **Debug** e il dispositivo esterno. In questo modo i simboli di debug necessari sono disponibili e l'IDE può connettersi all'applicazione in esecuzione: 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Configurazione per il debug selezionata](debug-on-device-images/image1-vs.png)
 
@@ -36,7 +36,7 @@ Quando il dispositivo è stato selezionato, Xamarin.Android si connette al dispo
 
 ![Punto di interruzione raggiunto](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ![Configurazione per il debug selezionata](debug-on-device-images/image1-xs.png)
 
@@ -56,5 +56,5 @@ In questo documento è stato illustrato come eseguire il debug di un'applicazion
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md) (Configurare il dispositivo per lo sviluppo)
-- [Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
+- [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md)
+- [Setting the Debuggable Attribute (Impostazione dell'attributo Debuggable)](~/android/deploy-test/debuggable-attribute.md)

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: ecb68d662c64b65346ffd04f0d3d3cd525533151
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66178041"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Renderer personalizzati della shell Xamarin.Forms
@@ -32,7 +32,7 @@ Di seguito è illustrato il processo di creazione di una classe renderer persona
 
 1. Creare una sottoclasse della classe `ShellRenderer`.
 1. Eseguire l'override dei metodi necessari per la personalizzazione richiesta.
-1. Aggiungere un oggetto `ExportRendererAttribute` alla sottoclasse `ShellRenderer` per specificare che verrà usata per eseguire il rendering dell'applicazione shell. L'attributo viene usato per registrare il renderer personalizzato in Xamarin.Forms.
+1. Aggiungere un oggetto `ExportRendererAttribute` alla sottoclasse `ShellRenderer` per specificare che verrà usata per eseguire il rendering dell'applicazione shell. L'attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms.
 
 > [!NOTE]
 > È facoltativo fornire un renderer personalizzato della shell nel progetto di ogni piattaforma. Se non viene registrato un renderer personalizzato, verrà usata la classe `ShellRenderer` predefinita.

@@ -1,6 +1,6 @@
 ---
 title: Funzionalità Portafoglio in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Portafoglio.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Portafoglio.
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 658184203c81079af9b4946c4da18dfb98381b0f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028546"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità del portafoglio._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione di provisioning. Questa guida illustra la configurazione necessaria per le funzionalità di Wallet._
 
 Portafoglio è un'app che consente di archiviare e visualizzare codici a barre e altro contenuto consentendo agli utenti di visualizzare biglietti, carte d'imbarco e buoni sconto direttamente dal dispositivo. Queste informazioni vengono archiviate in un _pass_. Una carta d'imbarco o un singolo biglietto, ad esempio, costituiscono un singolo pass. 
 
@@ -28,7 +28,7 @@ Gli sviluppatori possono operare con Portafoglio in diversi modi:
 
 * Le app Conduit sono app che non modificano direttamente i pass. A parte la possibilità di ricevere il pass e offrire all'utente l'opzione di aggiungerlo all'app Portafoglio, l'interazione di queste app con il pass è minima. Non necessitano di provisioning o entitlement speciali, ma usano alcuni metodi del framework di PassKit.
 
-## <a name="developer-center"></a>Centro sviluppatori
+## <a name="developer-center"></a>Centro per sviluppatori
 
 Per creare un nuovo profilo di provisioning per l'uso con Portafoglio, seguire questa procedura:
 
@@ -37,7 +37,7 @@ Per creare un nuovo profilo di provisioning per l'uso con Portafoglio, seguire q
     
     ![Selezione di un ID app](wallet-capabilities-images/image17.png)
 
-3. Fare clic sull'icona **+** nell'angolo superiore destro della pagina.
+3. Fai **+** clic sull'icona in alto a destra nella pagina.
 4. Registrare un nuovo ID app assegnandogli un valore nel campo **Name** (Nome) e un identificatore del bundle. Si noti che questo identificatore del bundle deve corrispondere all'ID bundle presente nel progetto:
    
     ![Aggiungere i dettagli dell'ID app](wallet-capabilities-images/image18.png)

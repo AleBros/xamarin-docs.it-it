@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771815"
 ---
 # <a name="implementing-a-video-player"></a>Implementazione di un lettore video
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Talvolta è utile riprodurre file video in un'applicazione Xamarin.Forms. Questa serie di articoli illustra come scrivere un renderer personalizzato per iOS, Android e la piattaforma UWP (Universal Windows Platform) per una classe di Xamarin.Forms denominata `VideoPlayer`.
 
@@ -38,31 +38,31 @@ Un lettore video più sofisticato può avere funzionalità aggiuntive, ad esempi
 
 La serie di articoli seguente illustra in modo progressivo le modalità di compilazione dei renderer di piattaforma e delle classi di supporto:
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Creazione di lettori video per le piattaforme](player-creation.md)
+## <a name="creating-the-platform-video-players"></a>[Creazione di lettori video per le piattaforme](player-creation.md)
 
 Ogni piattaforma richiede una classe `VideoPlayerRenderer` che crea e gestisce un controllo lettore video supportato dalla piattaforma. Questo articolo illustra la struttura delle classi renderer e le modalità per la creazione dei lettori.
 
-## <a name="playing-a-web-videoweb-videosmd"></a>[Riproduzione di un video Web](web-videos.md)
+## <a name="playing-a-web-video"></a>[Riproduzione di un video Web](web-videos.md)
 
 L'origine più comune di video per un lettore video è probabilmente Internet. Questo articolo descrive come creare un riferimento a un video Web e usarlo come origine per il lettore video.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Associazione di origini video al lettore](source-bindings.md)
+## <a name="binding-video-sources-to-the-player"></a>[Associazione di sorgenti video al lettore](source-bindings.md)
 
 Questo articolo usa un elemento `ListView` per presentare una raccolta di video da riprodurre. Un programma illustra come il file code-behind può impostare l'origine video del lettore video, mentre un altro programma indica come usare il data binding tra `ListView` e il lettore video.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Caricamento delle risorse dell'applicazione video](loading-resources.md)
+## <a name="loading-application-resource-videos"></a>[Caricamento di video sulle risorse dell'applicazione](loading-resources.md)
 
 I video possono essere incorporati come risorse nei progetti della piattaforma. Questo articolo illustra come archiviare le risorse e come caricarle in un secondo momento nel programma per la riproduzione nel lettore video.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[Accesso alla raccolta di video del dispositivo](accessing-library.md)
+## <a name="accessing-the-devices-video-library"></a>[Accesso alla libreria video del dispositivo](accessing-library.md)
 
 Quando un video viene creato usando la fotocamera del dispositivo, il file video viene archiviato nella libreria immagini del dispositivo. Questo articolo illustra come accedere al selettore immagini del dispositivo, per selezionare il video e quindi riprodurlo usando il lettore video.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[Controlli di trasporto video personalizzati](custom-transport.md)
+## <a name="custom-video-transport-controls"></a>[Controlli di trasporto video personalizzati](custom-transport.md)
 
-Anche se i lettori video in ogni piattaforma includono i propri controlli del trasporto, sotto forma di pulsanti **Riproduci** e **Sospendi**, è possibile eliminare la visualizzazione di questi pulsanti e aggiungere pulsanti personalizzati. Questo articolo spiega come fare.
+Anche se i lettori video in ogni piattaforma includono i propri controlli del trasporto, sotto forma di pulsanti **Riproduci** e **Sospendi**, è possibile eliminare la visualizzazione di questi pulsanti e aggiungere pulsanti personalizzati. Questo articolo illustra i passaggi da eseguire.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[Posizionamento del video personalizzato](custom-positioning.md)
+## <a name="custom-video-positioning"></a>[Posizionamento video personalizzato](custom-positioning.md)
 
 I lettori video per le diverse piattaforme dispongono di una barra di posizionamento, che visualizza l'avanzamento del video e consente di spostarsi avanti e indietro in una posizione specifica. Questo articolo illustra come sostituire la barra di posizionamento con un controllo personalizzato.
 

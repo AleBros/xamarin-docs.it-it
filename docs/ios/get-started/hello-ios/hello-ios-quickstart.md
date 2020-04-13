@@ -10,10 +10,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5dcc37730008e6e39b96128bc1368f022daa2d06
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023002"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - Guida introduttiva
@@ -27,7 +27,7 @@ Questa guida descrive come creare un'applicazione che converte un numero di tele
 Lo sviluppo di app iOS con Xamarin richiede:
 
 - Mac che esegue macOS High Sierra (10.13) o versione successiva.
-- La versione più recenti di Xcode e di iOS SDK installata da [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+- Ultima versione di Xcode e iOS SDK installati [dall'App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) .
 
 ::: zone pivot="macos"
 
@@ -99,7 +99,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/image10.png "Set the label to Enter a Phoneword")
 
-10. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
+10. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza fino a quando il **campo di testo** ha la stessa larghezza dell'etichetta : **Label**
 
     ![](hello-ios-quickstart-images/image12new.png "Make the Text Field the same width as the Label")
 
@@ -107,7 +107,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/image13new.png "Change the Title property to 1-855-XAMARIN")
 
-12. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
+12. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **pulsante** sia largo come il **campo di testo** e **l'etichetta**:
 
     ![](hello-ios-quickstart-images/image14new.png "Adjust the width so the Button is as wide as the Text Field and Label")
 
@@ -125,7 +125,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Salvare le modifiche passando a **File > Salva** o premendo **⌘ + s**.
 
-16. È necessario aggiungere della logica all'app per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword_iOS** nel **riquadro della soluzione** e scegliendo **Aggiungi > Nuovo file...**  o premendo **⌘ + n**:
+16. È necessario aggiungere della logica all'app per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword_iOS** nel **riquadro della soluzione** e scegliendo **Aggiungi > Nuovo file... ** o premendo **⌘ + n**:
 
     ![](hello-ios-quickstart-images/image18.png "Add a new file to the Project")
 
@@ -246,11 +246,11 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
         };
     ```
 
-22. Salvare le modifiche e quindi compilare l'applicazione scegliendo **compila > compila tutto** o premendo **⌘ + B**.  Se l'applicazione viene compilata, nella parte superiore dell'IDE verrà visualizzato un messaggio di operazione completata:
+22. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila tutto** o premendo il tasto **cancelletto B**.  Se l'applicazione viene compilata, verrà visualizzato un messaggio di operazione riuscita nella parte superiore dell'IDE:
 
     ![](hello-ios-quickstart-images/image21.png "A success message will appear at the top of the IDE")
 
-    Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente.
+    Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente.
 
 23. Testare infine l'applicazione nel **simulatore iOS**. Nella parte superiore sinistra dell'IDE scegliere **Debug** dal primo elenco a discesa e **iPhone XR iOS 12.0** (o un altro simulatore disponibile) dal secondo elenco a discesa e premere **Avvia** (il pulsante triangolare simile al pulsante Riproduci):
 
@@ -284,13 +284,13 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/image001-.png "The Start screen")
 
-    Creare una nuova soluzione Xamarin.iOS selezionando **File > Nuovo > Progetto > Visual C# > iPhone e iPad > App iOS (Xamarin)** :
+    Creare una nuova soluzione Xamarin.iOS selezionando **File > Nuovo > Progetto > Visual C# > iPhone e iPad > App iOS (Xamarin)**:
 
-    ![Selezionare il tipo di progetto app iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selezionare il tipo di progetto app iOS (Xamarin)")
+    ![Selezionare il tipo di progetto App iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selezionare il tipo di progetto App iOS (Xamarin)")
 
     Nella finestra di dialogo successiva selezionare il modello **App visualizzazione singola** e premere **OK** per creare il progetto:
 
-    ![Selezionare il modello di progetto visualizzazione singola](hello-ios-quickstart-images/image002-2.w157.png "Selezionare il modello di progetto visualizzazione singola")
+    ![Modello di progetto Seleziona vista singola](hello-ios-quickstart-images/image002-2.w157.png "Modello di progetto Seleziona vista singola")
 
 1. Verificare che l'icona Xamarin Mac Agent sulla barra degli strumenti sia verde.
 
@@ -317,7 +317,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
     > [!NOTE]
     > È possibile visualizzare le **proprietà** o la **casella degli strumenti** in qualsiasi momento passando al menu **Visualizza**.
 
-1. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
+1. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza fino a quando il **campo di testo** ha la stessa larghezza dell'etichetta : **Label**
 
     ![](hello-ios-quickstart-images/vs-image12.png "Adjust the width until the Text Field is the same width as the Label")
 
@@ -325,7 +325,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/vs-image13.png "Change the Text property to 1-855-XAMARIN")
 
-1. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
+1. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **pulsante** sia largo come il **campo di testo** e **l'etichetta**:
 
     ![](hello-ios-quickstart-images/vs-image14.png "Adjust the width so the Button is as wide as the Text Field and Label")
 
@@ -343,7 +343,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Salvare le modifiche passando a **File > Salva tutto** o premendo **Ctrl + s**.
 
-1. Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. A tale scopo, aggiungere prima un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** in **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento...**  o premendo **Ctrl + Maiusc + A**:
+1. Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. A tale scopo, aggiungere prima un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** in **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento... ** o premendo **Ctrl + Maiusc + A**:
 
     ![](hello-ios-quickstart-images/vs-image18.png "Add some code to translate phone numbers from alphanumeric to numeric")
 
@@ -468,11 +468,11 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
     };
     ```
 
-1. Salvare le modifiche e quindi compilare l'applicazione scegliendo **compila > Compila soluzione** o premendo **CTRL + MAIUSC + B**.  Se l'applicazione viene compilata, nella parte inferiore dell'IDE verrà visualizzato un messaggio di operazione completata:
+1. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila soluzione** o premendo CTRL , MAIUSC e **B**.  Se l'applicazione viene compilata, verrà visualizzato un messaggio di operazione riuscita nella parte inferiore dell'IDE:
 
     ![](hello-ios-quickstart-images/vs-image21.png "A success message will appear at the bottom of the IDE")
 
-    Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente.
+    Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente.
 
 1. Testare infine l'applicazione nel **simulatore iOS remoto**. Sulla barra degli strumenti dell'IDE scegliere **Debug** e **iPhone 8 Plus iOS x.x** dai menu a discesa e premere **Avvia** (il triangolo verde simile al pulsante Riproduci):
 
@@ -495,6 +495,6 @@ La prima applicazione Xamarin.iOS è stata completata.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Icone e immagini di avvio e dell'app Xamarin (esempio)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
+- [Hello, iOS (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Portale di provisioning di iOS](https://developer.apple.com/ios/manage/overview/index.action)

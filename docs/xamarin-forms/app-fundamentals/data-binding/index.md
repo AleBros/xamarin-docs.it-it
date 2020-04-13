@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2020
 ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
-ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80247600"
 ---
 # <a name="xamarinforms-data-binding"></a>Data binding di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_Il data binding è la tecnica di collegamento delle proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano riflesse automaticamente nell'altra proprietà. Il data binding è parte integrante dell'architettura delle applicazioni MVC (Model-View-ViewModel)._
+_L'associazione dati è la tecnica di collegamento delle proprietà di due oggetti in modo che le modifiche in una proprietà vengano riflesse automaticamente nell'altra proprietà. L'associazione dati è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM)._
 
 ## <a name="the-data-linking-problem"></a>Il problema del collegamento dei dati
 
@@ -35,7 +35,7 @@ Uno dei due oggetti coinvolti in un data binding è quasi sempre un elemento che
 - Un altro oggetto `View` derivato, in genere nella stessa pagina.
 - Un oggetto in un file di codice.
 
-Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), i data binding tra due `View` derivati vengono spesso visualizzati per motivi di semplicità e chiarezza. Tuttavia, gli stessi principi possono essere applicati ai data binding tra un oggetto `View` e altri oggetti. Quando un'applicazione viene compilata usando l'architettura MVC (Model-View-ViewModel), la classe con i dati sottostanti viene spesso definita ViewModel.
+Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), i data binding tra due `View` derivati vengono spesso visualizzati per motivi di semplicità e chiarezza. Tuttavia, gli stessi principi possono essere applicati ai data binding tra un oggetto `View` e altri oggetti. Quando un'applicazione viene compilata utilizzando l'architettura Model-View-ViewModel (MVVM), la classe con i dati sottostanti viene spesso definita un modello di visualizzazione.
 
 I data binding sono illustrati nelle seguenti serie di articoli:
 
@@ -61,7 +61,7 @@ Usare i convertitori di valori dei binding per modificare i valori all'interno d
 
 ## <a name="relative-bindings"></a>[Binding relativi](relative-bindings.md)
 
-Utilizzare le associazioni relative per impostare l'origine dell'associazione in relazione alla posizione della destinazione del binding.
+Usare associazioni relative per impostare l'origine di associazione rispetto alla posizione della destinazione di associazione.
 
 ## <a name="binding-fallbacks"></a>[Fallback di binding](binding-fallbacks.md)
 
@@ -77,6 +77,6 @@ Usare binding compilati per migliorare le prestazioni del data binding.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
 - [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
-- [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [Estensioni di markup XAMLXAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)

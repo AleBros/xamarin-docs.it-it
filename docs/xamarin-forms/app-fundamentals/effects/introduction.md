@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771457"
 ---
 # <a name="introduction-to-effects"></a>Introduzione agli effetti
 
-_Gli effetti consentono la personalizzazione dei controlli nativi in ogni piattaforma e vengono in genere utilizzati per piccole modifiche dello stile. Questo articolo fornisce un'introduzione agli effetti, delinea il confine tra gli effetti e i renderer personalizzati e descrive la classe PlatformEffect._
+_Gli effetti consentono di personalizzare i controlli nativi in ogni piattaforma e vengono in genere utilizzati per piccole modifiche di stile. In questo articolo viene fornita un'introduzione agli effetti, viene descritto il limite tra effetti e renderer personalizzati e viene descritta la classe PlatformEffect._
 
 Le [pagine, i layout e i controlli](~/xamarin-forms/user-interface/controls/index.md) Xamarin.Forms presentano un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Il rendering di ogni pagina, layout e controllo viene eseguito in modo diverso su ogni piattaforma usando una classe `Renderer`, che a sua volta crea un controllo nativo (corrispondente alla rappresentazione Xamarin.Forms), lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso.
 
@@ -38,7 +38,7 @@ Tutto ciò che si può ottenere con un effetto può essere ottenuto anche con un
 
 La tabella seguente elenca lo spazio dei nomi per la classe `PlatformEffect` su ogni piattaforma e i tipi delle relative proprietà:
 
-|Piattaforma|Spazio dei nomi|Contenitore|Control|
+|Piattaforma|Spazio dei nomi|Contenitore|Controllo|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|Visualizzazione|
@@ -54,10 +54,10 @@ Gli effetti non contengono informazioni sul tipo del contenitore, controllo o el
 
 Ogni classe `PlatformEffect` specifica della piattaforma espone i metodi seguenti, che devono essere sottoposti a override per implementare un effetto:
 
-- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached): viene chiamato quando un effetto è collegato a un controllo Xamarin.Forms. La personalizzazione del controllo avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma, unitamente alla gestione delle eccezioni nel caso in cui non sia possibile applicare l'effetto al controllo Xamarin.Forms specificato.
-- [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached): viene chiamato quando un effetto è scollegato da un controllo Xamarin.Forms. La pulizia dell'effetto, ad esempio l'annullamento della registrazione di un gestore eventi, avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma.
+- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached)– chiamato quando un effetto è collegato a un Xamarin.Forms controllo. La personalizzazione del controllo avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma, unitamente alla gestione delle eccezioni nel caso in cui non sia possibile applicare l'effetto al controllo Xamarin.Forms specificato.
+- [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached)– chiamato quando un effetto viene staccato da un Xamarin.Forms controllo. La pulizia dell'effetto, ad esempio l'annullamento della registrazione di un gestore eventi, avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma.
 
-`PlatformEffect` espone anche il metodo [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), che può essere anch'esso sottoposto a override. Questo metodo viene chiamato quando una proprietà dell'elemento è stata modificata. La risposta alle modifiche delle proprietà associabili nel controllo Xamarin.Forms avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma. Deve sempre essere eseguito un controllo della proprietà modificata, dal momento che l'override può essere chiamato più volte.
+Inoltre, espone `PlatformEffect` il [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)) metodo , che può anche essere sottoposto a override. Questo metodo viene chiamato quando una proprietà dell'elemento è stata modificata. La risposta alle modifiche delle proprietà associabili nel controllo Xamarin.Forms avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma. Deve sempre essere eseguito un controllo della proprietà modificata, dal momento che l'override può essere chiamato più volte.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

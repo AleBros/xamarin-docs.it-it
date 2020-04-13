@@ -9,42 +9,42 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72678833"
 ---
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _La localizzazione da destra a sinistra aggiunge il supporto per la direzione del flusso da destra a sinistra nelle applicazioni Xamarin.Forms._
 
 > [!NOTE]
 > La localizzazione da destra a sinistra richiede l'uso di iOS 9 o versione successiva e l'API 17 o versione successiva in Android.
 
-La direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente della pagina vengono analizzati dall'occhio del lettore. Alcuni lingue, come l'arabo e l'ebraico, richiedono che gli elementi dell'interfaccia utente vengano disposti da destra a sinistra. A questo scopo, è possibile impostare la proprietà [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection). Questa proprietà ottiene o imposta la direzione nella quale disporre gli elementi dell'interfaccia utente all'interno di qualsiasi elemento padre che ne controlla il layout e deve essere impostata su uno dei valori di enumerazione [`FlowDirection`](xref:Xamarin.Forms.FlowDirection):
+La direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente della pagina vengono analizzati dall'occhio del lettore. Alcuni lingue, come l'arabo e l'ebraico, richiedono che gli elementi dell'interfaccia utente vengano disposti da destra a sinistra. Ciò può essere [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) ottenuto impostando la proprietà. Questa proprietà ottiene o imposta la direzione in cui gli elementi dell'interfaccia utente [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) scorrono all'interno di qualsiasi elemento padre che controlla il layout e deve essere impostata su uno dei valori di enumerazione:This property gets or sets the direction in which UI elements flow within any parent element that controls their layout, and should be set to one of the enumeration values:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-L'impostazione della proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) per un elemento su [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) determina, da un punto di vista generale, l'allineamento a destra, l'ordine di lettura da destra a sinistra e il layout del controllo da destra a sinistra:
+L'impostazione della [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) proprietà [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) su un elemento in genere imposta l'allineamento a destra, l'ordine di lettura da destra a sinistra e il layout del controllo in modo che scorra da destra a sinistra:
 
-[![TodoItemPage in arabo con direzione di flusso da destra a sinistra](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in arabo con direzione di flusso da destra a sinistra")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in arabo con direzione di flusso da destra a sinistra")
-
-> [!TIP]
-> Si consiglia di impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) solo nel layout iniziale. La modifica di questo valore in fase di esecuzione genera un laborioso processo di elaborazione del layout che influirà sulle prestazioni.
-
-Il valore predefinito della proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) di un elemento senza elemento padre è [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight), mentre il valore predefinito `FlowDirection` di un elemento con un elemento padre è [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Pertanto, un elemento eredita il valore della proprietà `FlowDirection` dal relativo elemento padre nella struttura ad albero visuale e qualsiasi elemento può sostituire il valore ereditato dal relativo elemento padre.
+[![TodoItemPage in arabo con una direzione di flusso da destra a sinistraTodoItemPage in Arabic with a right-to-left flow direction](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in arabo con una direzione di flusso da destra a sinistraTodoItemPage in Arabic with a right-to-left flow direction")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in arabo con una direzione di flusso da destra a sinistraTodoItemPage in Arabic with a right-to-left flow direction")
 
 > [!TIP]
-> Durante la localizzazione di un'app per le lingue con flusso da destra a sinistra, impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) in un layout di pagina o radice. In questo modo, tutti gli elementi contenuti all'interno del layout di pagina o radice risponderanno in modo appropriato alla direzione del flusso.
+> È necessario impostare la proprietà solo nel [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) layout iniziale. La modifica di questo valore in fase di esecuzione genera un laborioso processo di elaborazione del layout che influirà sulle prestazioni.
+
+Il [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) valore predefinito della proprietà per [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)un elemento `FlowDirection` senza padre è [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent), mentre il valore predefinito per un elemento con un elemento padre è . Pertanto, un elemento eredita il valore della proprietà `FlowDirection` dal relativo elemento padre nella struttura ad albero visuale e qualsiasi elemento può sostituire il valore ereditato dal relativo elemento padre.
+
+> [!TIP]
+> Quando localizzi un'app per le lingue [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) da destra a sinistra, imposta la proprietà in una pagina o in un layout radice. In questo modo, tutti gli elementi contenuti all'interno del layout di pagina o radice risponderanno in modo appropriato alla direzione del flusso.
 
 ## <a name="respecting-device-flow-direction"></a>Rispetto della direzione del flusso di un dispositivo
 
-Il rispetto della direzione del flusso del dispositivo in funzione della lingua e dell'area geografica selezionata è una scelta esplicita che deve operare lo sviluppatore e, pertanto, non avviene automaticamente. Può essere ottenuto impostando la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) in un layout di pagina o radice sul valore `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection):
+Il rispetto della direzione del flusso del dispositivo in funzione della lingua e dell'area geografica selezionata è una scelta esplicita che deve operare lo sviluppatore e, pertanto, non avviene automaticamente. Può essere ottenuto [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) impostando la proprietà in una pagina, o layout radice, sul `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) valore:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -54,7 +54,7 @@ Il rispetto della direzione del flusso del dispositivo in funzione della lingua 
 this.FlowDirection = Device.FlowDirection;
 ```
 
-Tutti gli elementi figlio del layout di pagina o radice erediteranno quindi, per impostazione predefinita, il valore [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection).
+Per impostazione predefinita, tutti gli elementi figlio della [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) pagina, o layout radice, erediteranno il valore.
 
 ## <a name="platform-setup"></a>Impostazione della piattaforma
 
@@ -72,14 +72,14 @@ Le impostazioni locali necessarie per la direzione da destra a sinistra devono e
 </array>
 ```
 
-![Lingue supportate di info. plist](rtl-images/ios-locales.png "Lingue supportate di info. plist")
+![Info.plist lingue supportate](rtl-images/ios-locales.png "Info.plist lingue supportate")
 
 Per altre informazioni, vedere [Nozioni fondamentali di localizzazione in iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
 La localizzazione da destra a sinistra può essere testata cambiando la lingua e l'area geografica nel dispositivo o simulatore e scegliendo le impostazioni locali per la direzione da destra a sinistra specificate in **Info.plist**.
 
 > [!WARNING]
-> Si noti che quando si cambia la lingua e l'area geografica scegliendo delle impostazioni locali per la direzione da destra a sinistra su iOS, qualsiasi visualizzazione [`DatePicker`](xref:Xamarin.Forms.DatePicker) genererà un'eccezione se le risorse necessarie per le impostazioni locali non sono state incluse. Ad esempio, durante il test di un'app in arabo con un `DatePicker`, verificare che **mideast** sia selezionato nella sezione **Internazionalizzazione** del riquadro **Compilazione iOS**.
+> Si noti che quando si modifica la lingua e l'area [`DatePicker`](xref:Xamarin.Forms.DatePicker) geografica in un'impostazione locale da destra a sinistra in iOS, tutte le visualizzazioni genereranno un'eccezione se non si includono le risorse necessarie per le impostazioni locali. Ad esempio, durante il test di un'app in arabo con un `DatePicker`, verificare che **mideast** sia selezionato nella sezione **Internazionalizzazione** del riquadro **Compilazione iOS**.
 
 ### <a name="android"></a>Android
 
@@ -122,46 +122,46 @@ La localizzazione da destra a sinistra può essere testata cambiando la lingua e
 
 La localizzazione da destra a sinistra di Xamarin.Forms presenta attualmente alcune limitazioni:
 
-- La posizione del pulsante [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), la posizione degli elementi della barra degli strumenti e l'animazione della transizione sono controllate dalle impostazioni locali del dispositivo anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- La direzione di scorrimento rapido di [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) non si inverte.
-- Il contenuto visivo di [`Image`](xref:Xamarin.Forms.Image) non si capovolge.
-- L'orientamento di [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) e [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- Il contenuto di [`WebView`](xref:Xamarin.Forms.WebView) non rispetta la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)posizione del pulsante, posizione dell'elemento della barra degli [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) strumenti e animazione di transizione è controllata dalle impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)direzione di scorrimento non si capovolge.
+- [`Image`](xref:Xamarin.Forms.Image)contenuto visivo non si capovolge.
+- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String))e [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) l'orientamento è controllato dalle [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`WebView`](xref:Xamarin.Forms.WebView)contenuto non rispetta [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) la proprietà.
 - È necessario aggiungere una proprietà `TextDirection` per controllare l'allineamento del testo.
 
 ### <a name="ios"></a>iOS
 
-- L'orientamento di [`Stepper`](xref:Xamarin.Forms.Stepper) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- L'allineamento del testo di [`EntryCell`](xref:Xamarin.Forms.EntryCell) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- I movimenti e l'allineamento di [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) non vengono invertiti.
+- [`Stepper`](xref:Xamarin.Forms.Stepper)l'orientamento è controllato dalle [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`EntryCell`](xref:Xamarin.Forms.EntryCell)l'allineamento del testo è controllato [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) dalle impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)i gesti e l'allineamento non vengono invertiti.
 
 ### <a name="android"></a>Android
 
-- L'orientamento di [`SearchBar`](xref:Xamarin.Forms.SearchBar) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- Il posizionamento di [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- [`SearchBar`](xref:Xamarin.Forms.SearchBar)l'orientamento è controllato dalle [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)il posizionamento è controllato dalle [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) impostazioni locali del dispositivo, anziché dalla proprietà .
 
 ### <a name="uwp"></a>UWP
 
-- L'allineamento del testo di [`Editor`](xref:Xamarin.Forms.Editor) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- La proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) non viene ereditata dagli elementi figlio di [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage).
-- L'allineamento del testo di [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- [`Editor`](xref:Xamarin.Forms.Editor)l'allineamento del testo è controllato [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) dalle impostazioni locali del dispositivo, anziché dalla proprietà .
+- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)proprietà non viene [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) ereditata da elementi figlio.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)l'allineamento del testo è controllato [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) dalle impostazioni locali del dispositivo, anziché dalla proprietà .
 
-## <a name="force-right-to-left-layout"></a>Forza layout da destra a sinistra
+## <a name="force-right-to-left-layout"></a>Forzare il layout da destra a sinistra
 
-Le applicazioni Xamarin.iOS e Xamarin.Android possono essere forzate a usare sempre un layout da destra a sinistra, indipendentemente dalle impostazioni del dispositivo, modificando i rispettivi progetti di piattaforma.
+Le applicazioni Xamarin.iOS e Xamarin.Android possono essere forzate a utilizzare sempre un layout da destra a sinistra, indipendentemente dalle impostazioni del dispositivo, modificando i rispettivi progetti di piattaforma.
 
 ### <a name="ios"></a>iOS
 
-Le applicazioni Xamarin.iOS possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **AppDelegate** come indicato di seguito:
+Le applicazioni Xamarin.iOS possono essere forzate per utilizzare sempre un layout da destra a sinistra modificando la classe **AppDelegate** come segue:
 
-1. Dichiarare la funzione `IntPtr_objc_msgSend` come prima riga nella classe `AppDelegate`:
+1. Dichiarare `IntPtr_objc_msgSend` la funzione come prima `AppDelegate` riga della classe:
 
    ```csharp
    [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
    internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
    ```
 
-1. Chiamare la funzione `IntPtr_objc_msgSend` dal metodo `FinishedLaunching`, prima di restituire dal metodo `FinshedLaunching`:
+1. Chiamare `IntPtr_objc_msgSend` la funzione `FinishedLaunching` dal metodo, prima `FinshedLaunching` di restituire dal metodo :
 
    ```csharp
    bool result = base.FinishedLaunching(app, options);
@@ -172,19 +172,19 @@ Le applicazioni Xamarin.iOS possono essere forzate a usare sempre un layout da d
    return result;
    ```
 
-Questo approccio è utile per le applicazioni che richiedono sempre un layout da destra a sinistra e rimuove il requisito per impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) .
+Questo approccio è utile per le applicazioni che richiedono sempre un layout [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) da destra a sinistra e rimuove il requisito per impostare la proprietà.
 
-Per ulteriori informazioni sul metodo `IntrPtr_objc_msgSend`, vedere [selettori Objective-C in Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
+Per ulteriori informazioni `IntrPtr_objc_msgSend` sul metodo, vedere [Selettori Objective-C in Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
 
 ### <a name="android"></a>Android
 
-Le applicazioni Xamarin.Android possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **MainActivity** in modo da includere la riga seguente:
+Xamarin.Android applicazioni possono essere costretti a utilizzare sempre un layout da destra a sinistra modificando il MainActivity classe per includere la riga seguente:Xamarin.Android applications can be forced to always use a right-to-left layout by modifying the **MainActivity** class to include the following line:
 
 ```csharp
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 ```
 
-Questo approccio è utile per le applicazioni che richiedono sempre un layout da destra a sinistra e rimuove il requisito per impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) .
+Questo approccio è utile per le applicazioni che richiedono sempre un layout [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) da destra a sinistra e rimuove il requisito per impostare la proprietà.
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Supporto delle lingue da destra a sinistra con Xamarin.University
 

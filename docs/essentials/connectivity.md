@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/08/2019
 ms.custom: video
 ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67855763"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connettività
@@ -23,7 +23,7 @@ La classe **Connectivity** consente di monitorare le variazioni nelle condizioni
 
 Per accedere alla funzionalità **Connectivity**, è necessaria la configurazione seguente specifica della piattaforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 L'autorizzazione `AccessNetworkState` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla nei modi seguenti:
 
@@ -35,7 +35,7 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifest**.
+Aprire il file **AndroidManifest.xml** nella cartella **Properties** e aggiungere quanto segue all'interno del nodo del **manifesto.**
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -43,11 +43,11 @@ Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiunger
 
 Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare l'autorizzazione **Access Network State** (Accesso stato di rete). Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 

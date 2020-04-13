@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030229"
 ---
 # <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
@@ -26,17 +26,17 @@ Poiché il linker è uno strumento statico, non può contrassegnare per l'inclus
 
 ## <a name="linker-behavior"></a>Comportamento del linker
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Opzioni progetto**. Per accedere a questo elenco, fare doppio clic sul progetto iOS e passare a **Compilazione iOS > Opzioni linker**, come mostrato di seguito:
 
 [![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Proprietà progetto** in Visual Studio.
 
-Procedere come descritto di seguito:
+Eseguire le operazioni seguenti:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto in **Nome progetto** e quindi scegliere **Proprietà**:
 
@@ -146,7 +146,7 @@ Gli utenti possono scegliere di collegare solo gli assembly SDK, senza eseguire 
 
 Questo avviene in genere quando non si vuole aggiungere manualmente attributi `[Preserve]` al codice.  L'effetto collaterale di questa scelta è che le librerie di terze parti non vengono collegate, che corrisponde in genere a un'impostazione predefinita corretta, in quanto non è possibile determinare se una libreria di terze parti supporti o meno il linker.
 
-Se nel progetto è presente una libreria o se si sviluppano librerie riutilizzabili e si vuole che il linker consideri l'assembly come collegabile, è sufficiente aggiungere l'attributo a livello di assembly [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute), in questo modo:
+Se nel progetto è presente una libreria o se si è uno sviluppatore di librerie riutilizzabili e si desidera che [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute)l'assembly consideri l'assembly collegabile, è necessario aggiungere l'attributo a livello di assembly, in questo modo:
 
 ```csharp
 [assembly:LinkerSafe]
@@ -167,6 +167,6 @@ Seguire le [istruzioni per la creazione di un file di configurazione del linker]
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Configurazione personalizzata del linker](~/cross-platform/deploy-test/linker.md)
+- [Configurazione del linker personalizzata](~/cross-platform/deploy-test/linker.md)
 - [Collegamento in Mac](~/mac/deploy-test/linker.md)
 - [Collegamento in Android](~/android/deploy-test/linker.md)

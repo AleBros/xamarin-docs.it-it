@@ -1,6 +1,6 @@
 ---
 title: Autenticazione con impronta digitale
-description: Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Novell. Android.
+description: Questa guida illustra come aggiungere l'autenticazione delle impronte digitali, introdotta in Android 6.0, a un'applicazione Xamarin.Android.This guide discusses how to add fingerprint authentication, introduced in Android 6.0, to a Xamarin.Android application.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
@@ -8,29 +8,29 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 4a4b6ee7a123683a9d5a140c46c0b3542767ffa3
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027516"
 ---
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
-_Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Novell. Android._
+_Questa guida illustra come aggiungere l'autenticazione delle impronte digitali, introdotta in Android 6.0, a un'applicazione Xamarin.Android.This guide discusses how to add fingerprint authentication, introduced in Android 6.0, to a Xamarin.Android application._
 
-## <a name="fingerprint-authentication-overview"></a>Panoramica dell'autenticazione con impronta digitale
+## <a name="fingerprint-authentication-overview"></a>Cenni preliminari sull'autenticazione delle impronte
 
-L'arrivo di scanner di impronte digitali nei dispositivi Android fornisce le applicazioni con un'alternativa al tradizionale metodo di nome utente/password dell'autenticazione utente. L'uso delle impronte digitali per autenticare un utente consente a un'applicazione di incorporare la sicurezza meno intrusiva rispetto a un nome utente e una password.
+L'arrivo di scanner di impronte digitali su dispositivi Android fornisce alle applicazioni un'alternativa al metodo tradizionale di autenticazione utente nome utente/password. L'uso delle impronte digitali per autenticare un utente consente a un'applicazione di incorporare una sicurezza meno intrusiva di un nome utente e di una password.
 
-Le API FingerprintManager sono destinate a dispositivi con scanner di impronte digitali ed eseguono il livello API 23 (Android 6,0) o versione successiva. Le API si trovano nello spazio dei nomi `Android.Hardware.Fingerprints`. La libreria di supporto Android V4 fornisce le versioni delle API per le impronte digitali destinate alle versioni precedenti di Android. Le API di compatibilità si trovano nello spazio dei nomi `Android.Support.v4.Hardware.Fingerprint` e vengono distribuite tramite il [pacchetto NuGet Novell. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+Le API FingerprintManager sono destinate ai dispositivi con uno scanner di impronte digitali e eseguono il livello API 23 (Android 6.0) o versione successiva. Le API si trovano `Android.Hardware.Fingerprints` nello spazio dei nomi. The Android Support Library v4 provides versions of the fingerprint APIs meant for older versions of Android. Le API di compatibilità `Android.Support.v4.Hardware.Fingerprint` si trovano nello spazio dei nomi, vengono distribuite tramite il [pacchetto Xamarin.Android.Support.v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-[FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e la relativa controparte della libreria di supporto, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) è la classe principale per l'uso dell'hardware di analisi delle impronte digitali. Questa classe è un wrapper Android SDK intorno al servizio a livello di sistema che gestisce le interazioni con l'hardware stesso. È responsabile dell'avvio dello scanner per le impronte digitali e della risposta ai commenti e suggerimenti dello scanner. Questa classe dispone di un'interfaccia piuttosto semplice con solo tre membri:
+[FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e la relativa controparte della libreria di supporto, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) è la classe principale per l'utilizzo dell'hardware di scansione delle impronte digitali. Questa classe è un wrapper di Android SDK intorno al servizio a livello di sistema che gestisce le interazioni con l'hardware stesso. È responsabile dell'avvio dello scanner di impronte digitali e della risposta al feedback proveniente dallo scanner. Questa classe ha un'interfaccia abbastanza semplice con solo tre membri:This class has a fairly straightforward interface with only three members:
 
-- **`Authenticate`** &ndash; questo metodo inizializza lo scanner hardware e avvia il servizio in background, in attesa che l'utente analizzi l'impronta digitale.
-- **`EnrolledFingerprints`** &ndash; questa proprietà restituirà `true` se l'utente ha registrato una o più impronte digitali con il dispositivo.
-- **`HardwareDetected`** &ndash; questa proprietà viene usata per determinare se il dispositivo supporta l'analisi delle impronte digitali.
+- **`Authenticate`**&ndash; Questo metodo inizializzerà lo scanner hardware e avvierà il servizio in background, in attesa che l'utente eserirà l'impronta digitale.
+- **`EnrolledFingerprints`**&ndash; Questa proprietà `true` restituirà un valore se l'utente ha registrato una o più impronte digitali con il dispositivo.
+- **`HardwareDetected`**&ndash; Questa proprietà viene utilizzata per determinare se il dispositivo supporta la scansione delle impronte digitali.
 
-Il metodo `FingerprintManager.Authenticate` viene usato da un'applicazione Android per avviare lo scanner di impronta digitale. Il frammento di codice seguente è un esempio di come richiamarlo usando le API di compatibilità della libreria di supporto:
+Il `FingerprintManager.Authenticate` metodo viene utilizzato da un'applicazione Android per avviare lo scanner di impronte digitali. The following snippet is an example of how to invoke it using the Support Library compatibility APIs:
 
 ```csharp
 // context is any Android.Content.Context instance, typically the Activity 
@@ -43,20 +43,20 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
                                );
 ```
 
-Questa guida illustra come usare le API `FingerprintManager` per migliorare un'applicazione Android con l'autenticazione con impronta digitale. Verrà illustrato come creare un'istanza di e creare un `CryptoObject` per proteggere i risultati dallo scanner di impronte digitali. Si esaminerà il modo in cui un'applicazione deve sottoporre a sottoclasse `FingerprintManager.AuthenticationCallback` e rispondere ai commenti e suggerimenti dello scanner. Infine, si vedrà come registrare un'impronta digitale in un dispositivo o un emulatore Android e come usare **ADB** per simulare un'analisi delle impronte digitali.
+Questa guida verrà illustrato `FingerprintManager` come utilizzare le API per migliorare un'applicazione Android con l'autenticazione delle impronte digitali. Verrà illustrato come creare un'istanza e creare un `CryptoObject` per proteggere i risultati dallo scanner di impronte digitali. Esamineremo il modo in cui `FingerprintManager.AuthenticationCallback` un'applicazione deve sottoclasse e rispondere al feedback dallo scanner di impronte digitali. Infine, vedremo come registrare un'impronta digitale su un dispositivo Android o un emulatore e come utilizzare **adb** per simulare una scansione delle impronte digitali.
 
 ## <a name="requirements"></a>Requisiti
 
-Per l'autenticazione con impronta digitale è necessario Android 6,0 (livello API 23) o superiore e un dispositivo con scanner di impronta digitale. 
+L'autenticazione delle impronte digitali richiede Android 6.0 (livello API 23) o superiore e un dispositivo con uno scanner di impronte digitali. 
 
-È necessario che un'impronta digitale sia già registrata con il dispositivo per ogni utente che deve essere autenticato. Questa operazione comporta l'impostazione di un blocco dello schermo che usa una password, un PIN, un modello di scorrimento o un riconoscimento facciale. È possibile simulare alcune funzionalità di autenticazione con impronta digitale in un emulatore Android.  Per altre informazioni su questi due argomenti, vedere la sezione [registrazione di un'impronta digitale](enrolling-fingerprint.md) . 
+Un'impronta digitale deve essere già registrata con il dispositivo per ogni utente da autenticare. Ciò comporta l'impostazione di un blocco schermo che utilizza una password, PIN, modello di scorrimento rapido o riconoscimento facciale. È possibile simulare alcune delle funzionalità di autenticazione delle impronte digitali in un emulatore Android.It is possible to simulate some of the fingerprint authentication functionality in an Android Emulator.  Per ulteriori informazioni su questi due argomenti, vedere la sezione [Registrazione di un'impronta digitale.](enrolling-fingerprint.md) 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [App di esempio per la Guida all'impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
+- [App di esempio della guida alle impronte digitali](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
 - [Esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
-- [Richiesta di autorizzazioni in fase di esecuzione](https://developer.android.com/training/permissions/requesting.html)
-- [Android. hardware. Fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
-- [Android. support. v4. hardware. impronta digitale](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
-- [Android. Content. Context](xref:Android.Content.Context)
+- [Richiesta di autorizzazioni in fase di esecuzioneRequesting Permissions at Runtime](https://developer.android.com/training/permissions/requesting.html)
+- [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
+- [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
+- [Android.Content.Context](xref:Android.Content.Context)
 - [API per le impronte digitali e i pagamenti (video)](https://youtu.be/VOn7VrTRlA4)

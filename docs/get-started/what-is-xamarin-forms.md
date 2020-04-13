@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/18/2019
 ms.openlocfilehash: aaceb6089a5b7e5f0551dafe9ef1fe50d01433d9
-ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77374023"
 ---
 # <a name="what-is-xamarinforms"></a>Cos'è Xamarin.Forms?
@@ -49,7 +49,7 @@ Xamarin.Forms include un ampio ecosistema di pacchetti NuGet che aggiungono funz
 
 Xamarin.Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin.Essentials è un'astrazione che semplifica il processo di accesso alle utilità native. Di seguito sono riportati alcuni esempi di utilità disponibili in Xamarin.Essentials:
 
-- Informazioni sul dispositivo
+- Informazioni dispositivo
 - File system
 - Accelerometro
 - Dialer telefono

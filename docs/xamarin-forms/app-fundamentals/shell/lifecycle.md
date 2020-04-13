@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/25/2019
 ms.openlocfilehash: 2ed51763b5866c15e91d88a6a1a58c7285fb5973
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72749761"
 ---
 # <a name="xamarinforms-shell-lifecycle"></a>Layout della shell Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-Le applicazioni shell rispettano il ciclo di vita di Xamarin.Forms. Quando una pagina sta per essere visualizzata sullo schermo, viene generato un evento `Appearing`. Quando invece una pagina sta per scomparire dallo schermo, viene generato un evento `Disappearing`. Questi eventi vengono propagati alle pagine e possono essere gestiti tramite l'override del metodo [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) o [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) nella pagina.
+Le applicazioni shell rispettano il ciclo di vita di Xamarin.Forms. Quando una pagina sta per essere visualizzata sullo schermo, viene generato un evento `Appearing`. Quando invece una pagina sta per scomparire dallo schermo, viene generato un evento `Disappearing`. Questi eventi vengono propagati alle pagine e possono essere [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) gestiti eseguendo l'override dei metodi o nella pagina.
 
 > [!NOTE]
 > In un'applicazione shell, gli eventi `Appearing` e `Disappearing` vengono generati dal codice multipiattaforma, prima che il codice della piattaforma renda visibile una pagina o rimuova una pagina dalla schermata.

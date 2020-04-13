@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023452"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Procedura dettagliata: Uso di Apple Instruments
 
-_Questo articolo illustra in dettaglio l'uso di Apple Instruments per diagnosticare problemi di memoria in un'applicazione iOS compilata con Xamarin. Illustra come avviare Instruments, come creare snapshot dell'heap e come analizzare la crescita della memoria. Descrive anche come usare Instruments per visualizzare ed evidenziare le righe di codice specifiche che causano il problema di memoria._
+_Questo articolo illustra come usare lo strumento Strumenti di Apple per diagnosticare problemi di memoria in un'applicazione iOS creata con Xamarin.This article walks through how to use Apple's Instruments tool to diagnose memory issues in an iOS application built with Xamarin. Viene illustrato come avviare strumenti, creare snapshot dell'heap e analizzare la crescita della memoria. Viene inoltre illustrato come utilizzare Strumenti per visualizzare e individuare le righe esatte di codice che causano il problema di memoria._
 
 Questo articolo spiega come usare lo strumento **Xcode Instruments** per diagnosticare un problema di memoria in un'applicazione iOS.
 Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) e aprire la soluzione **before** in Visual Studio per Mac.
@@ -37,7 +37,7 @@ Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/sample
 
 6. Scegliere il pulsante **Record** (Registra) (il cerchio rosso in alto a sinistra) in Instruments per avviare l'applicazione.
 
-7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore. Ora che l'app è in esecuzione, conterrà due sezioni: Dirty (Modificato) e Resident Size (Dimensioni residenti). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
+7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore (ora che l'app è in esecuzione, conterrà due sezioni: Dirty [Modificato] e Resident Size [Dimensioni residenti]). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
 
@@ -48,7 +48,7 @@ Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/sample
 12. Espandere il nodo **Generation** (Generazione) con il valore più alto di **Growth** (Crescita) e ordinare per **Growth** (ordine decrescente).
 13. Impostare il riquadro **Inspector** (Finestra di ispezione) su **Show Extended Detail** (Mostra dettagli estesi) (la "E"), che mostra l'analisi dello stack (**Stack Trace**).
 
-14. Come si può notare, il nodo **&lt;non-object>** mostra una crescita eccessiva della memoria. Fare clic sulla freccia accanto a questo nodo per visualizzare maggiori dettagli. Fare clic con il pulsante destro del mouse sull'analisi dello stack per aggiungere **Source Location** (Posizione di origine) al riquadro:
+14. Si ** &lt;** noti che il nodo non di>oggetto mostra una crescita eccessiva della memoria. Fare clic sulla freccia accanto a questo nodo per visualizzare maggiori dettagli. Fare clic con il pulsante destro del mouse sull'analisi dello stack per aggiungere **Source Location** (Posizione di origine) al riquadro:
 
     ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
 

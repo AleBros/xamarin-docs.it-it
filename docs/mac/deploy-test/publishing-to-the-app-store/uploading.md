@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 5569e10c059dec26137aadb814101992ed7e9f7e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725051"
 ---
 # <a name="upload-to-mac-app-store"></a>Caricamento in Mac App Store
@@ -87,5 +87,5 @@ Dopo l'approvazione, l'applicazione sarà disponibile per il download o l'acquis
 - [Installazione](~//mac/get-started/installation.md)
 - [Esempio Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guida agli strumenti: Firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID sviluppatore e GateKeeper](https://developer.apple.com/developer-id/)

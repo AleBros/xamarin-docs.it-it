@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: d8a57ac8688a0113ef267ea25fb54cbaaf562957
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.openlocfilehash: ab83869a4e865d1ce3b1fee83e84ce4e2fd913c6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070388"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628325"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Modelli di progettazione per doppio schermo di Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 Questa guida presenta i modelli di progettazione consigliati per i dispositivi con doppio schermo con codice ed esempi utili per la creazione di interfacce in grado di offrire esperienze utente accattivanti e utili.
 
@@ -117,7 +117,7 @@ Il modello a due pagine è ideale per contenuti che si prestano a un layout con 
 </Grid>
 ```
 
-Il controllo [`CollectionView`](xref:Xamarin.Forms.CollectionView), con un layout griglia che si divide in corrispondenza della cerniera, rappresenta un approccio ideale per fornire questa esperienza su doppio schermo.
+La [`CollectionView`](xref:Xamarin.Forms.CollectionView), con un layout a griglia che si divide sulla larghezza della cerniera, rende un approccio ideale per offrire questa esperienza a doppio schermo.
 
 ## <a name="dual-view-pattern"></a>Modello di visualizzazione doppia
 
@@ -270,5 +270,5 @@ Il modello per contenuto complementare dimostra come è possibile usare il secon
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di doppio schermo (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+- [DualScreen (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 - [Creare app per dispositivi con doppio schermo](index.md)

@@ -8,21 +8,21 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2019
 ms.openlocfilehash: e27e73ac2c5164fa3431c8892b21a71c32fcd8ef
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724015"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivi multi-core e Xamarin.Android
 
-_Android può essere eseguito su diverse architetture di computer. In questo documento vengono illustrate le diverse architetture della CPU che possono essere impiegate per un'applicazione Xamarin.Android. Verrà inoltre descritto come creare pacchetti di applicazioni Android per supportare diverse architetture della CPU. Verrà presentata l'interfaccia ABI (Application Binary Interface) e saranno fornite indicazioni sulle ABI da usare in un'applicazione Xamarin.Android._
+_Android può essere eseguito su diverse architetture di computer diverse. In questo documento vengono illustrate le diverse architetture della CPU che possono essere utilizzate per un'applicazione Xamarin.Android.This document discusses the different CPU architectures that may be employed for a Xamarin.Android application. Questo documento spiegherà anche come le applicazioni Android vengono inserite nel pacchetto per supportare diverse architetture della CPU. Verrà introdotta l'interfaccia ABI (Application Binary Interface) e verranno fornite indicazioni sulle adiche da utilizzare in un'applicazione Xamarin.Android._
 
 ## <a name="overview"></a>Panoramica
 
-Android consente la creazione di "file binari FAT", singoli file `.apk` che contengono codice macchina in grado di supportare più architetture della CPU. Questa operazione viene eseguita associando ogni frammento di codice macchina a un'interfaccia *ABI (Application Binary Interface)* . L'interfaccia ABI viene usata per definire quale codice macchina deve essere eseguito in un determinato dispositivo hardware. Ad esempio, per consentire l'esecuzione di un'applicazione Android su un dispositivo x86, è necessario includere il supporto dell'ABI x86 durante la compilazione dell'applicazione.
+Android consente la creazione di "file binari FAT", singoli file `.apk` che contengono codice macchina in grado di supportare più architetture della CPU. Questa operazione viene eseguita associando ogni frammento di codice macchina a un'interfaccia *ABI (Application Binary Interface)*. L'interfaccia ABI viene usata per definire quale codice macchina deve essere eseguito in un determinato dispositivo hardware. Ad esempio, per consentire l'esecuzione di un'applicazione Android su un dispositivo x86, è necessario includere il supporto dell'ABI x86 durante la compilazione dell'applicazione.
 
-In particolare, ogni applicazione Android supporterà almeno un'interfaccia *EABI (Embedded-Application Binary Interface)* . Le interfacce EABI sono convenzioni specifiche dei programmi software incorporati. Una tipica interfaccia EABI descrive elementi quali:
+In particolare, ogni applicazione Android supporterà almeno un'interfaccia *EABI (Embedded-Application Binary Interface)*. Le interfacce EABI sono convenzioni specifiche dei programmi software incorporati. Una tipica interfaccia EABI descrive elementi quali:
 
 - Il set di istruzioni per la CPU.
 
@@ -87,7 +87,7 @@ Questo è il nome di un'interfaccia ABI per le CPU che supportano il set di istr
 
 Il pacchetto dell'applicazione Android è il formato di file che contiene tutto il codice, gli asset, le risorse e i certificati necessari per un'applicazione Android. Si tratta di un file `.zip`, ma usa l'estensione di file `.apk`. Se viene espanso, il contenuto di un file `.apk` creato da Xamarin.Android può essere visualizzato nella schermata seguente:
 
-[![Contenuto del file con estensione apk](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
+[![Contenuto del file .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
 
 Una breve descrizione del contenuto del file `.apk`:
 
@@ -151,7 +151,7 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installazione delle librerie native: Android 4.0 - Android 4.0.3
+#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installazione delle librerie native: Android 4.0 e Android 4.0.3
 
 In Android 4.0 Ice Cream Sandwich è stata cambiata la logica di estrazione. Vengono enumerate tutte le librerie native, viene verificato se il nome base del file è già stato estratto e, se sono soddisfatte entrambe le condizioni seguenti, viene estratta la libreria:
 
@@ -174,7 +174,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-Sfortunatamente, questo comportamento è dipendente dall'ordine, come descritto nel documento [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk).
+Sfortunatamente, questo comportamento è dipendente dall'ordine, come descritto nel documento seguente: [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk).
 
 Le librerie native vengono elaborate "in ordine" (come sono elencate, ad esempio, da unzip) e viene estratta la *prima corrispondenza*. Poiché il file `.apk` contiene le versioni `armeabi` e `armeabi-v7a` di `libtwo.so` e `armeabi` è elencato per primo, viene estratta la versione `armeabi`, *non* la versione `armeabi-v7a`:
 
@@ -190,7 +190,7 @@ Inoltre, anche se vengono specificate entrambe le interfacce ABI `armeabi` e `ar
 <AndroidSupportedAbis>armeabi,armeabi-v7a</AndroidSupportedAbis>
 ```
 
-Di conseguenza, verrà innanzitutto trovato il `libmonodroid.so` `armeabi` all'interno del file `.apk` e il `libmonodroid.so` `armeabi` sarà quello che viene estratto, anche se il `libmonodroid.so` `armeabi-v7a` è presente e ottimizzato per la destinazione. Questo può inoltre determinare la generazione errori di runtime, che indicano ad esempio che `armeabi` non è sicuro per SMP.
+`armeabi` `libmonodroid.so` Di conseguenza, il sarà `.apk`trovato prima `armeabi` `libmonodroid.so` all'interno di , e il `armeabi-v7a` `libmonodroid.so` sarà quello che viene estratto, anche se il è presente e ottimizzato per il target. Questo può inoltre determinare la generazione errori di runtime, che indicano ad esempio che `armeabi` non è sicuro per SMP.
 
 ##### <a name="installing-native-libraries-android-404-and-later"></a>Installazione delle librerie native: Android 4.0.4 e versioni successive
 
@@ -238,7 +238,7 @@ Per impostazione predefinita, Xamarin.Android userà `armeabi-v7a` per le compil
 
 In Visual Studio per Mac, è possibile selezionare le architetture supportate nella pagina **Compilazione Android** di **Opzioni progetto**, nella scheda **Avanzate**, come illustrato nello screenshot seguente:
 
-[![Interfacce ABI supportate della compilazione Android](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
+[![ACHE supportate per la compilazione Android](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
 
 Esistono alcune situazioni in cui potrebbe essere necessario dichiarare il supporto per altre interfacce ABI, ad esempio nei seguenti casi:
 
@@ -254,5 +254,5 @@ In questo documento sono state illustrate le diverse architetture della CPU in c
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
-- [Problema 9089:Nexus One non carica alcuna libreria nativa da armeabi se è presente almeno una libreria in armeabi v7a](https://code.google.com/p/android/issues/detail?id=9089)
+- [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089) (Problema 9089:Nexus One non carica alcuna libreria nativa da armeabi se è presente almeno una libreria in armeabi v7a)
 - [Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk](https://code.google.com/p/android/issues/detail?id=25321)

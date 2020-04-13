@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
 ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725519"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
@@ -27,7 +27,7 @@ Un profilo di provisioning di sviluppo consente a un'app pensata per Mac App Sto
 > [!NOTE]
 > Lo sviluppatore deve avere già creato un certificato di sviluppo Mac prima di potere creare un profilo di provisioning di sviluppo. Specificare le informazioni richieste come illustrato in questa schermata per generare un **profilo di provisioning di sviluppo** che può essere usato per creare le build. Devono essere disponibili un certificato di sviluppo Mac valido per la selezione nella casella **Certificate** (Certificato) e almeno un sistema registrato per il test.
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. Selezionare il tipo di profilo di provisioning che occorre creare e fare clic sul pulsante **Continue** (Continua):
 
@@ -63,7 +63,7 @@ Sarà necessario creare un nuovo profilo di provisioning di sviluppo per ogni nu
 
 I profili di provisioning di produzione sono necessari per creare un pacchetto da inviare a Mac App Store.
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. Selezionare il tipo di profilo da creare e fare clic sul pulsante **Continue** (Continua):
 
@@ -94,5 +94,5 @@ Se lo sviluppatore decide di cambiare le funzionalità usate da un ID app (ad es
 - [Installazione](~//mac/get-started/installation.md)
 - [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guida agli strumenti: Firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID sviluppatore e GateKeeper](https://developer.apple.com/developer-id/)

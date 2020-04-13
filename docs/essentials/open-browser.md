@@ -7,17 +7,17 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: fe8730ba6bc664269d79c550fb4e0abef7767fe0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70765004"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Apertura browser
 
 La classe **Browser** consente a un'applicazione di aprire un collegamento Web nel browser preferito del sistema ottimizzato o in un browser esterno.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 La modalità di avvio determina il modo in cui viene avviato il browser:
 
@@ -72,21 +72,21 @@ La modalità di avvio determina il modo in cui viene avviato il browser:
 
 Verrà tentato l'uso delle [schede personalizzate di Chrome](https://developer.chrome.com/multidevice/android/customtabs) per caricare l'URI e per mantenere la consapevolezza di navigazione.
 
-## <a name="external"></a>Altre informazioni
+## <a name="external"></a>Esterno
 
 Verrà usato un `Intent` per richiedere l'apertura dell'URI tramite il browser normale del sistema.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Preferita dal sistema
 
 Viene usato [SFSafariViewController](xref:SafariServices.SFSafariViewController) per caricare l'URI e mantenere la consapevolezza di navigazione.
 
-## <a name="external"></a>Altre informazioni
+## <a name="external"></a>Esterno
 
 Viene usato il metodo `OpenUrl` standard sull'applicazione principale per avviare il browser predefinito all'esterno dell'applicazione.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Verrà sempre avviato il browser predefinito dell'utente indipendentemente da `BrowserLaunchMode`.
 

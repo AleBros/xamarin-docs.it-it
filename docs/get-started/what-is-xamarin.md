@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/16/2019
 ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75607880"
 ---
 # <a name="what-is-xamarin"></a>Che cos'è Xamarin?
@@ -49,7 +49,7 @@ Per altre informazioni sull'architettura specifica di una piattaforma, vedere [X
 Xamarin offre le capacità delle piattaforme native a cui vanno ad aggiungersi svariate funzionalità, tra cui:
 
 1. **Binding completo per l'SDK sottostante**: Xamarin include binding per quasi tutti gli SDK della piattaforma sottostante in iOS e in Android. Inoltre, questi binding sono fortemente tipizzati, il che significa che sono semplici da esplorare e usare e forniscono un solido controllo del tipo in fase di compilazione e durante lo sviluppo. I binding fortemente tipizzati comportano un minor numero di errori di runtime e applicazioni di qualità superiore.
-1. **Interoperabilità con Objective-C, Java, C e C++** : Xamarin offre funzionalità per richiamare direttamente librerie Objective-C, Java, C e C++, assicurando la possibilità di usare un'ampia gamma di codice di terze parti. Queste funzionalità consentono di usare le librerie iOS e Android esistenti scritte in Objective-C, Java o C/C++. Xamarin offre inoltre progetti di binding che consentono di associare librerie native di Objective-C e Java usando la sintassi dichiarativa.
+1. **Interoperabilità con Objective-C, Java, C e C++**: Xamarin offre funzionalità per richiamare direttamente librerie Objective-C, Java, C e C++, assicurando la possibilità di usare un'ampia gamma di codice di terze parti. Queste funzionalità consentono di usare le librerie iOS e Android esistenti scritte in Objective-C, Java o C/C++. Xamarin offre inoltre progetti di binding che consentono di associare librerie native di Objective-C e Java usando la sintassi dichiarativa.
 1. **Costrutti di linguaggio moderni**: le applicazioni Xamarin sono scritte in C#, un linguaggio moderno che include miglioramenti significativi rispetto a Objective-C e Java, ad esempio funzionalità del linguaggio dinamiche, costrutti funzionali come espressioni lambda, LINQ, programmazione parallela e altro ancora.
 1. **Libreria di classi base solida**: le applicazioni Xamarin usano la libreria di classi base .NET, una vasta raccolta di classi con funzionalità complete e ottimizzate quali il supporto avanzato per XML, database, serializzazione, I/O, stringhe, reti e altro ancora. Il codice C# esistente può essere compilato per l'uso nelle app, garantendo l'accesso a migliaia di librerie che offrono altre funzionalità oltre a quelle della libreria di classi base.
 1. **IDE (Integrated Development Environment) moderno**: Xamarin usa Visual Studio, un IDE moderno che include funzionalità come completamento automatico del codice, sistema avanzato di gestione di progetti e soluzioni, libreria di modelli di progetto completa, controllo del codice sorgente integrato e altro ancora.
@@ -57,9 +57,9 @@ Xamarin offre le capacità delle piattaforme native a cui vanno ad aggiungersi s
 
 ### <a name="xamarinandroid"></a>Xamarin.Android
 
-[![Diagramma dell'architettura di Xamarin.Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
+[![Diagramma dell'architettura Xamarin.Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
-Le applicazioni Xamarin.Android vengono compilate da C# nel **linguaggio intermedio (IL)** , che viene quindi compilato in modalità **JIT (Just-In-Time)** in un assembly nativo all'avvio dell'applicazione. Le applicazioni Xamarin.Android vengono eseguite all'interno dell'ambiente di esecuzione di Mono, side-by-side con la macchina virtuale Android Runtime (ART). Xamarin fornisce i binding .NET agli spazi dei nomi Android.* e Java.*. L'ambiente di esecuzione di Mono chiama questi spazi dei nomi tramite **MCW (Managed Callable Wrapper)** e fornisce **ACW (Android Callable Wrapper)** ad ART, consentendo a entrambi gli ambienti di richiamare il codice reciprocamente.
+Le applicazioni Xamarin.Android vengono compilate da C# nel **linguaggio intermedio (IL)**, che viene quindi compilato in modalità **JIT (Just-In-Time)** in un assembly nativo all'avvio dell'applicazione. Le applicazioni Xamarin.Android vengono eseguite all'interno dell'ambiente di esecuzione di Mono, side-by-side con la macchina virtuale Android Runtime (ART). Xamarin fornisce i binding .NET agli spazi dei nomi Android.* e Java.*. L'ambiente di esecuzione di Mono chiama questi spazi dei nomi tramite **MCW (Managed Callable Wrapper)** e fornisce **ACW (Android Callable Wrapper)** ad ART, consentendo a entrambi gli ambienti di richiamare il codice reciprocamente.
 
 Per altre informazioni, vedere [Architettura di Xamarin.Android](~/android/internals/architecture.md).
 
@@ -75,7 +75,7 @@ Per altre informazioni, vedere [Architettura di Xamarin.iOS](~/ios/internals/arc
 
 Xamarin.Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin.Essentials è un'astrazione che semplifica il processo di accesso alle funzionalità native. Di seguito sono riportati alcuni esempi di funzionalità disponibili in Xamarin.Essentials:
 
-- Informazioni sul dispositivo
+- Informazioni dispositivo
 - File system
 - Accelerometro
 - Dialer telefono

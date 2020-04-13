@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650651"
 ---
 # <a name="custom-video-positioning"></a>Posizionamento del video personalizzato
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I controlli di trasporto implementati da ogni piattaforma includono un indicatore di posizione. L'indicatore è simile a un dispositivo di scorrimento o una barra di scorrimento e mostra la posizione corrente del video all'interno della durata totale. Inoltre, l'utente può modificare l'indicatore di posizione per spostarsi avanti o indietro in una nuova posizione nel video.
 
@@ -399,7 +399,7 @@ namespace FormsVideoLibrary
 
 Il gestore di proprietà modificata per la proprietà `Duration` imposta la proprietà `Maximum` di `Slider` sottostante sulla proprietà `TotalSeconds` del valore `TimeSpan`. Allo stesso modo, il gestore di proprietà modificata per `Position` imposta la proprietà `Value` di `Slider`. In questo modo, `Slider` sottostante rileva la posizione di `PositionSlider`.
 
-`PositionSlider` viene aggiornato dall'elemento `Slider` sottostante in una sola istanza: quando l'utente modifica `Slider` per indicare che il video deve avanzare o tornare indietro in una nuova posizione. Ciò viene rilevato nel gestore `PropertyChanged` nel costruttore di `PositionSlider`. Il gestore cerca una modifica nella proprietà `Value` e se la proprietà è diversa dalla proprietà `Position`, la proprietà `Position` viene impostata dalla proprietà `Value`.
+`PositionSlider` viene aggiornato da `Slider` sottostante in una sola istanza: quando l'utente modifica `Slider` per indicare che il video deve avanzare o tornare indietro in una nuova posizione. Ciò viene rilevato nel gestore `PropertyChanged` nel costruttore di `PositionSlider`. Il gestore cerca una modifica nella proprietà `Value` e se la proprietà è diversa dalla proprietà `Position`, la proprietà `Position` viene impostata dalla proprietà `Value`.
 
 In teoria, l'istruzione `if` interna può essere scritta come segue:
 
@@ -414,7 +414,7 @@ Tuttavia, l'implementazione Android di `Slider` ha solo 1.000 passaggi discreti 
 
 ## <a name="using-the-positionslider"></a>Uso di PositionSlider
 
-La documentazione di [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) UWP consiglia di fare attenzione all'associazione alla proprietà `Position` poiché la proprietà viene aggiornata di frequente. Nella documentazione viene consigliato di usare un timer per eseguire una query della proprietà `Position`.
+La documentazione [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) per la piattaforma `Position` UWP segnala l'associazione alla proprietà perché la proprietà viene aggiornata frequentemente. Nella documentazione viene consigliato di usare un timer per eseguire una query della proprietà `Position`.
 
 Sebbene sia un ottimo consiglio, le tre classi `VideoPlayerRenderer` usano già indirettamente un timer per aggiornare la proprietà `Position`. La proprietà `Position` viene modificata in un gestore per l'evento `UpdateStatus` che viene attivato solo 10 volte al secondo.
 

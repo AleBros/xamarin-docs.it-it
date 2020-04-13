@@ -10,21 +10,21 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
 ms.openlocfilehash: fbd957c68d7a9aa2f8e44c91fab6174d8ed72014
-ms.sourcegitcommit: 5bcb6158693478ca1b3f6881dc912d3e7a8d1868
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77068745"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Definire lo stile di un'applicazione Xamarin.Forms multipiattaforma
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 In questo argomento di avvio rapido si apprenderà come:
 
 - Definire lo stile di un'applicazione Xamarin.Forms usando gli stili XAML.
 
-Questo argomento di avvio rapido illustra come definire lo stile di un'applicazione Xamarin.Forms multipiattaforma con gli stili XAML. Il risultato è riportato di seguito:
+Questo argomento di avvio rapido illustra come definire lo stile di un'applicazione Xamarin.Forms multipiattaforma con gli stili XAML. L'applicazione finale è riportata di seguito:
 
 [![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
 [![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
@@ -73,7 +73,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </Application>
     ```
 
-    Questo codice definisce un valore [`Thickness`](xref:Xamarin.Forms.Thickness), una serie di valori [`Color`](xref:Xamarin.Forms.Color) e stili impliciti per [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage). Si noti che questi stili, disponibili nella classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di applicazione, possono essere utilizzati in tutta l'applicazione. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice definisce un [`Thickness`](xref:Xamarin.Forms.Thickness) valore, una serie di [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`Color`](xref:Xamarin.Forms.Color) valori e stili impliciti per e . Si noti che questi stili, [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)che si trovano a livello di applicazione , possono essere utilizzati in tutta l'applicazione. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate ad **App.xaml** premendo **CTRL+S** e chiudere il file.
 
@@ -113,7 +113,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </ContentPage>
     ```
 
-    Questo codice aggiunge uno stile implicito per la classe [`ListView`](xref:Xamarin.Forms.ListView) alla classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di pagina e imposta la proprietà `ListView.Margin` su un valore definito nella classe `ResourceDictionary` a livello di applicazione. Si noti che lo stile `ListView` implicito è stato aggiunto alla classe `ResourceDictionary` a livello di pagina, perché viene utilizzato solo da `NotesPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice aggiunge uno [`ListView`](xref:Xamarin.Forms.ListView) stile implicito [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)per l'oggetto a livello di pagina e imposta la proprietà su `ListView.Margin` un valore definito in application-level `ResourceDictionary`. Si noti che lo stile `ListView` implicito è stato aggiunto alla classe `ResourceDictionary` a livello di pagina, perché viene utilizzato solo da `NotesPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage.xaml** premendo **CTRL+S** e chiudere il file.
 
@@ -162,7 +162,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </ContentPage>
     ```
 
-    Questo codice aggiunge stili impliciti per le visualizzazioni [`Editor`](xref:Xamarin.Forms.Editor) e [`Button`](xref:Xamarin.Forms.Button) alla classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di pagina e imposta la proprietà `StackLayout.Margin` su un valore definito nella classe `ResourceDictionary` a livello di applicazione. Si noti che gli stili `Editor` e`Button` impliciti sono stati aggiunti alla classe `ResourceDictionary` a livello di pagina, perché vengono utilizzati solo da `NoteEntryPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice aggiunge stili [`Editor`](xref:Xamarin.Forms.Editor) [`Button`](xref:Xamarin.Forms.Button) impliciti per le [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)visualizzazioni `StackLayout.Margin` e a livello di pagina `ResourceDictionary`e imposta la proprietà su un valore definito in application-level . Si noti che gli stili `Editor` e`Button` impliciti sono stati aggiunti alla classe `ResourceDictionary` a livello di pagina, perché vengono utilizzati solo da `NoteEntryPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NoteEntryPage.xaml** premendo **CTRL+S** e chiudere il file.
 
@@ -211,7 +211,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </Application>
     ```
 
-    Questo codice definisce un valore [`Thickness`](xref:Xamarin.Forms.Thickness), una serie di valori [`Color`](xref:Xamarin.Forms.Color) e stili impliciti per [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage). Si noti che questi stili, disponibili nella classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di applicazione, possono essere utilizzati in tutta l'applicazione. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice definisce un [`Thickness`](xref:Xamarin.Forms.Thickness) valore, una serie di [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`Color`](xref:Xamarin.Forms.Color) valori e stili impliciti per e . Si noti che questi stili, [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)che si trovano a livello di applicazione , possono essere utilizzati in tutta l'applicazione. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate ad **App.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -251,7 +251,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </ContentPage>
     ```
 
-    Questo codice aggiunge uno stile implicito per la classe [`ListView`](xref:Xamarin.Forms.ListView) alla classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di pagina e imposta la proprietà `ListView.Margin` su un valore definito nella classe `ResourceDictionary` a livello di applicazione. Si noti che lo stile `ListView` implicito è stato aggiunto alla classe `ResourceDictionary` a livello di pagina, perché viene utilizzato solo da `NotesPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice aggiunge uno [`ListView`](xref:Xamarin.Forms.ListView) stile implicito [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)per l'oggetto a livello di pagina e imposta la proprietà su `ListView.Margin` un valore definito in application-level `ResourceDictionary`. Si noti che lo stile `ListView` implicito è stato aggiunto alla classe `ResourceDictionary` a livello di pagina, perché viene utilizzato solo da `NotesPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -300,7 +300,7 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
     </ContentPage>
     ```
 
-    Questo codice aggiunge stili impliciti per le visualizzazioni [`Editor`](xref:Xamarin.Forms.Editor) e [`Button`](xref:Xamarin.Forms.Button) alla classe [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di pagina e imposta la proprietà `StackLayout.Margin` su un valore definito nella classe `ResourceDictionary` a livello di applicazione. Si noti che gli stili `Editor` e`Button` impliciti sono stati aggiunti alla classe `ResourceDictionary` a livello di pagina, perché vengono utilizzati solo da `NoteEntryPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
+    Questo codice aggiunge stili [`Editor`](xref:Xamarin.Forms.Editor) [`Button`](xref:Xamarin.Forms.Button) impliciti per le [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)visualizzazioni `StackLayout.Margin` e a livello di pagina `ResourceDictionary`e imposta la proprietà su un valore definito in application-level . Si noti che gli stili `Editor` e`Button` impliciti sono stati aggiunti alla classe `ResourceDictionary` a livello di pagina, perché vengono utilizzati solo da `NoteEntryPage`. Per altre informazioni sulla definizione di stili XAML, vedere [Stile](deepdive.md#styling) in [Approfondimenti per la guida di avvio rapido di Xamarin.Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NoteEntryPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -312,14 +312,14 @@ Questo argomento di avvio rapido illustra come definire lo stile di un'applicazi
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questo argomento di avvio rapido si è appreso come:
+In questa guida introduttiva si è appreso come:
 
 - Definire lo stile di un'applicazione Xamarin.Forms usando gli stili XAML.
 
 Per altre informazioni sui concetti fondamentali dello sviluppo di applicazioni con Xamarin.Forms, passare agli approfondimenti per la guida di avvio rapido.
 
 > [!div class="nextstepaction"]
-> [avanti](deepdive.md)
+> [Avanti](deepdive.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

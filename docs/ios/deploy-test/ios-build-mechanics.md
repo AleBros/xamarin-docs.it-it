@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026360"
 ---
 # <a name="ios-build-mechanics"></a>Meccanismi di compilazione per iOS
@@ -26,26 +26,26 @@ Le velocità di compilazione di Xamarin possono anche dipendere dalle diverse ca
 
 ## <a name="timing-apps"></a>Temporizzazione delle app
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 Per abilitare l'output di MSBuild di diagnostica in Visual Studio per Mac:
 
 1. Fare clic su **Visual Studio per Mac > Preferenze...**
 2. Nella visualizzazione albero a sinistra selezionare **Progetti > Compila**
-3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su **diagnostica**:[![](ios-build-mechanics-images/image2.png "Impostazione del livello di dettaglio del log")](ios-build-mechanics-images/image2.png#lightbox)
-4. Fare clic su **OK**
+3. Nel riquadro di destra, impostare il menu a discesa Livello di dettaglio Log su **Diagnostica**:[![](ios-build-mechanics-images/image2.png "Impostazione del livello di dettaglio del log")](ios-build-mechanics-images/image2.png#lightbox)
+4. Fare clic su **OK**.
 5. Riavviare Visual Studio per Mac
 6. Pulire e ricompilare il pacchetto
 7. Visualizzare l'output di diagnostica nel riquadro degli errori (Visualizza > Riquadri > Errori) facendo clic sul pulsante Output di compilazione
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 
 1. Fare clic su **Strumenti > Opzioni...**
 2. Nella visualizzazione albero a sinistra selezionare **Progetti e soluzioni > Compila ed esegui**
-3. Nel pannello a destra impostare l'elenco a discesa del livello di *dettaglio dell'output di compilazione di MSBuild* su **diagnostica**:[![](ios-build-mechanics-images/image2-vs.png "Impostazione del livello di dettaglio dell'output di compilazione di MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
-4. Fare clic su **OK**
+3. Nel riquadro di destra impostare l'elenco a discesa livello di *dettaglio dell'output di compilazione MSBuild* su **Diagnostica:In**the right-hand panel, set the MSBuild build output dropdown a dropdown to Diagnostic :[![](ios-build-mechanics-images/image2-vs.png "Impostazione del livello di dettaglio dell'output di compilazione di MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
+4. Fare clic su **OK**.
 5. Pulire e ricompilare il pacchetto.
 6. L'output di diagnostica viene visualizzato nel pannello Output.
 
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 Gli strumenti di Xamarin funzionano tecnicamente su qualsiasi Mac che esegue OS X 10.10 Yosemite o versioni successive. Tuttavia, le prestazioni del Mac possono influire negativamente sulle esperienze di sviluppo e sui tempi di compilazione.
 
-Nello stato disconnesso Visual Studio in Windows esegue solo la fase di compilazione in C# e non tenta di eseguire il collegamento o la compilazione AOT, di creare un pacchetto dell'app in un bundle con estensione  _app_  o di firmare il bundle dell'app. La C# fase di compilazione rappresenta raramente un collo di bottiglia delle prestazioni. Tentare di individuare il punto in cui si sta rallentando la compilazione compilando direttamente nell'host di compilazione Mac in Visual Studio per Mac.
+Nello stato disconnesso, Visual Studio in Windows esegue solo la fase di compilazione in C, non tenta di eseguire il collegamento o la compilazione AOT, creare un pacchetto dell'app in un bundle _con estensione app_ o firmare il bundle dell'app. (La fase di compilazione di C, raramente è un collo di bottiglia delle prestazioni.) Tentare di individuare la posizione nella pipeline in cui la compilazione sta rallentando compilando direttamente nell'host di compilazione Mac in Visual Studio per Mac.
 
 Inoltre, uno dei motivi di rallentamento più comuni è la connessione di rete tra il computer Windows e l'host di compilazione Mac. Questo problema può essere dovuto a un impedimento fisico nella rete, all'uso di una connessione wireless o alla necessità di eseguire la connessione tramite un computer già troppo carico, ad esempio un servizio Mac nel cloud.
 
@@ -165,7 +165,7 @@ Quando si usa il linker, prendere in considerazione le opzioni seguenti:
   - Tuttavia, se si sceglie **Collega tutto**, l'applicazione può arrestarsi in modo anomalo, in particolare se si usano componenti esterni. Questo problema è dovuto ad alcuni componenti che usano la reflection in certi tipi.
   - L'analisi statica e la reflection non possono essere usate insieme. 
 
-È possibile indicare agli strumenti di mantenere tutto il codice all'interno dell'applicazione usando l'attributo [`[Preserve]`](~/ios/deploy-test/linker.md). 
+Gli strumenti possono essere istruiti per mantenere le cose all'interno dell'applicazione utilizzando [ `[Preserve]` l'attributo](~/ios/deploy-test/linker.md). 
 
 Se non si ha accesso al codice sorgente o se questo è generato da uno strumento e non si vuole modificarlo, è comunque possibile collegarlo creando un file XML che descrive tutti i tipi e i membri che devono essere mantenuti. È quindi possibile aggiungere il flag `--xml={file.name}.xml` alle opzioni del progetto, per elaborare il codice esattamente come quando si usano attributi.
 
@@ -278,6 +278,6 @@ L3 Cache: 4 MB
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Post di blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
-- [Collegamenti in iOS](~/ios/deploy-test/linker.md)
-- [Configurazione personalizzata del linker](~/cross-platform/deploy-test/linker.md)
+- [Blog Post](https://blog.xamarin.com/xamarin-ios-build-improvements/)
+- [Collegamento in iOS](~/ios/deploy-test/linker.md)
+- [Configurazione del linker personalizzata](~/cross-platform/deploy-test/linker.md)

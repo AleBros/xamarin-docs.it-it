@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 4b7d3d19ce8766ccdbfc41163fcad44074e832b8
-ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80159763"
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
@@ -22,9 +22,9 @@ Questa sezione include guide che illustrano come testare un'applicazione, ottimi
 
 Questo articolo esamina le parti costituenti di un pacchetto dell'applicazione Xamarin.Android e le strategie associate che possono essere usate per una distribuzione efficiente del pacchetto durante le fasi di debug e rilascio dello sviluppo.
 
-## <a name="apply-changes"></a>[Applica modifiche](apply-changes.md)
+## <a name="apply-changes"></a>[Applicazione di modifiche](apply-changes.md)
 
-Questa guida illustra la funzionalità applica modifiche che consente di effettuare il push delle modifiche alle risorse nell'app in esecuzione senza riavviare l'app.
+Questa guida illustra la funzionalità Applica modifiche che consente di eseguire il push delle modifiche delle risorse nell'app in esecuzione senza riavviare l'app.
 
 ## <a name="building-apps"></a>[Creazione di app](building-apps/index.md)
 
@@ -38,7 +38,7 @@ Questo articolo illustra brevemente l'avvio dell'emulatore tramite la riga di co
 
 Le guide nella sezione consentono di eseguire il debug di un'applicazione con emulatori Android, dispositivi Android reali e il registro di debug.
 
-## <a name="setting-the-debuggable-attribute"></a>[Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
+## <a name="setting-the-debuggable-attribute"></a>[Setting the Debuggable Attribute (Impostazione dell'attributo Debuggable)](~/android/deploy-test/debuggable-attribute.md)
 
 Questo articolo illustra come impostare l'attributo debuggable in modo che strumenti come `adb` possano comunicare con JVM.
 
@@ -58,7 +58,7 @@ Questa guida illustra come installare un'app Xamarin.Android come applicazione d
 
 Questo articolo illustra il processo di collegamento usato da Xamarin.Android per ridurre le dimensioni finali di un'applicazione. Descrive i diversi livelli di collegamento che possono essere eseguiti e fornisce indicazioni e suggerimenti per la risoluzione dei problemi per poter limitare gli errori che potrebbero derivare dall'uso del linker.
 
-## <a name="xamarinandroid-performance"></a>[Xamarin.Android Performance](~/android/deploy-test/performance.md) (Prestazioni di Xamarin.Android)
+## <a name="xamarinandroid-performance"></a>[Prestazioni di Xamarin.Android](~/android/deploy-test/performance.md)
 
 Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 

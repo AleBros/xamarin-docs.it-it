@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70775861"
 ---
 |ID genere|Nome genere|
 |---|---|
-|6000|Ufficio|
-|6001|Meteo|
-|6002|Utilità|
+|6000|Business|
+|6001|Weather|
+|6002|Servizi pubblici|
 |6003|Viaggi|
 |6004|Sport|
 |6005|Social networking|
-|6006|Riferimenti|
+|6006|Informazioni di riferimento|
 |6007|Produttività|
 |6008|Foto e video|
 |6009|Novità|
@@ -24,9 +24,9 @@ ms.locfileid: "70775861"
 |6013|Salute e benessere|
 |6014|Giochi|
 |6015|Finanza|
-|6016|Intrattenimento|
+|6016|Entertainment|
 |6017|Formazione|
-|6018|Libri|
+|6018|Pubblicazioni|
 |6020|Medicina|
 |6021|Newsstand|
 |6022|Cataloghi|
@@ -36,10 +36,10 @@ Sottogeneri giochi (6014):
 |ID genere|Nome genere|
 |---|---|
 |7001|Azione|
-|7002|Avventura|
+|7002|modelli|
 |7003|Arcade|
-|7004|Lavagna|
-|7005|Carte|
+|7004|Board|
+|7005|Card|
 |7006|Casinò|
 |7007|Dadi|
 |7008|Didattici|
@@ -64,7 +64,7 @@ Sottogeneri Newstand (6021):
 |13003|Casa e giardino|
 |13004|Natura e vita all'aria aperta|
 |13005|Sport e svago|
-|13006|Automobili|
+|13006|Automobilistico|
 |13007|Arte e fotografia|
 |13008|Matrimoni|
 |13009|Affari e investimenti|
@@ -73,7 +73,7 @@ Sottogeneri Newstand (6021):
 |13012|Cucina, cibo e bevande|
 |13013|Hobby e artigianato|
 |13014|Elettronica e audio|
-|13015|Intrattenimento|
+|13015|Entertainment|
 |13017|Salute del corpo e della mente|
 |13018|Cronologia|
 |13019|Giornali e riviste letterari|

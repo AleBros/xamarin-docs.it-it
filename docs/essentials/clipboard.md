@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Appunti'
+title: 'Xamarin.Essentials: Clipboard'
 description: Questo documento descrive la classe Clipboard in Xamarin.Essentials, che consente di copiare e incollare testo negli Appunti di sistema tra un'applicazione e l'altra.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 01/06/2020
 ms.custom: video
 ms.openlocfilehash: 0b5eaf3feb608a352f8f9c97bdddac55c89d4f94
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545174"
 ---
-# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Appunti
+# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Clipboard
 
 La classe **Clipboard** consente di copiare e incollare testo negli Appunti del sistema tra un'applicazione e l'altra.
 
@@ -47,7 +47,7 @@ Per leggere il testo dagli **Appunti**:
 var text = await Clipboard.GetTextAsync();
 ```
 
-Ogni volta che viene modificato il contenuto degli Appunti, viene attivato un evento:
+Ogni volta che uno dei contenuti degli Appunti ha modificato un evento viene attivato:
 
 ```csharp
 public class ClipboardTest

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
 ms.openlocfilehash: 344b6293090ffa4281ea6351f7f176a5be37e5bd
-ms.sourcegitcommit: 0e35d3eafad833d3f19768b001bd804ddda8b69b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78165560"
 ---
 # <a name="xamarinforms-dual-screen"></a>Doppio schermo Xamarin.Forms
@@ -28,14 +28,14 @@ Quando si valuta come usare al meglio più schermi in un dispositivo con doppio 
 
 La classe `TwoPaneView` Xamarin.Forms, ispirata dal controllo UWP con lo stesso nome, è un layout multipiattaforma ottimizzato per i dispositivi con doppio schermo.
 
-## <a name="dual-screen-device-capabilities"></a>[Funzionalità del dispositivo dual screen](dual-screen-info.md)
+## <a name="dual-screen-device-capabilities"></a>[Funzionalità dei dispositivi a doppio schermo](dual-screen-info.md)
 
 La classe `DualScreenInfo` consente di determinare il riquadro in cui si trova la visualizzazione, le dimensioni del riquadro, l'orientamento del dispositivo, l'angolo della cerniera e altro ancora.
 
-## <a name="dual-screen-platform-helpers"></a>[Helper della piattaforma dual screen](dual-screen-helper.md)
+## <a name="dual-screen-platform-helpers"></a>[Helper per la piattaforma a doppio schermo](dual-screen-helper.md)
 
 La classe `DualScreenHelper` consente di controllare se la piattaforma supporta l'apertura di una nuova finestra in modalità PIP (Picture-in-Picture). Per Neo questo consente di aprire una finestra che verrà visualizzata nella Wonder Bar quando il dispositivo è in modalità composizione.
 
 ## <a name="dual-screen-triggers"></a>[Trigger a doppio schermo](triggers.md)
 
-Lo spazio dei nomi [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) include due trigger di stato che attivano una modifica [`VisualState`](xref:Xamarin.Forms.VisualState) quando viene modificata la modalità di visualizzazione del layout collegato o della finestra.
+Lo [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) spazio dei nomi include [`VisualState`](xref:Xamarin.Forms.VisualState) due trigger di stato che attivano una modifica quando cambia la modalità di visualizzazione del layout associato o della finestra.

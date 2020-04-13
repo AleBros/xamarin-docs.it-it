@@ -1,5 +1,5 @@
 ---
-title: Compatibilità con le versioni precedenti del pacchetto del supporto Android
+title: Garantire la compatibilità con le versioni precedenti del pacchetto di supporto Android
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
@@ -7,36 +7,36 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/12/2017
 ms.openlocfilehash: c32d666da1347b947c55209ed7c7ec31a97a70e0
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027294"
 ---
-# <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Compatibilità con le versioni precedenti del pacchetto del supporto Android
+# <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Garantire la compatibilità con le versioni precedenti del pacchetto di supporto Android
 
-L'utilità dei frammenti sarà limitata senza la compatibilità con le versioni precedenti di dispositivi Android 3,0 (livello API 11). Per fornire questa funzionalità, Google ha introdotto la [libreria di supporto](https://developer.android.com/sdk/compatibility-library.html) (originariamente denominata libreria di *compatibilità Android* quando è stata rilasciata), che esegue il backporting di alcune API dalle versioni più recenti di Android alle versioni precedenti di Android. Si tratta del pacchetto di supporto Android che consente ai dispositivi che eseguono Android 1,6 (livello API 4) ad Android 2.3.3. (Livello API 10).
+L'utilità dei frammenti sarebbe limitata senza compatibilità con le versioni precedenti di compatibilità con i dispositivi pre-Android 3.0 (livello API 11). Per fornire questa funzionalità, Google ha introdotto la [libreria](https://developer.android.com/sdk/compatibility-library.html) di supporto (originariamente chiamata la libreria di *compatibilità Android* quando è stato rilasciato) che esegue il backport di alcune delle API dalle versioni più recenti di Android alle versioni precedenti di Android. È il pacchetto di supporto Android che consente ai dispositivi che eseguono Android 1.6 (livello API 4) per Android 2.3.3. (livello API 10).
 
 > [!NOTE]
-> Solo i `ListFragment` e i `DialogFragment` sono disponibili tramite il pacchetto del supporto Android. Nessuna delle altre sottoclassi di frammenti, ad esempio `PreferenceFragment,` sono supportate nel pacchetto del supporto Android. Non funzioneranno nelle applicazioni pre-Android 3,0. 
+> Solo `ListFragment` il `DialogFragment` e il sono disponibili tramite il pacchetto di supporto Android. Nessuna delle altre sottoclassi Fragment, `PreferenceFragment,` ad esempio l'oggetto sono supportate nel pacchetto di supporto Android. Non funzioneranno nelle applicazioni pre-Android 3.0. 
 
-## <a name="adding-the-support-package"></a>Aggiunta del pacchetto per il supporto
+## <a name="adding-the-support-package"></a>Aggiunta del pacchetto di supporto
 
-Il pacchetto per il supporto Android non viene aggiunto automaticamente a un'applicazione Novell. Android. Novell fornisce il [pacchetto NuGet della libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta delle librerie di supporto a un'applicazione Novell. Android. Per includere i pacchetti di supporto nell'applicazione Novell. Android, includere il componente della [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) nel progetto Novell. Android, come illustrato nello screenshot seguente: 
+Il pacchetto di supporto Android non viene aggiunto automaticamente a un'applicazione Xamarin.Android.The Android Support Package is not automatically added to a Xamarin.Android application. Xamarin fornisce il [pacchetto Android Support Library v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta delle librerie di supporto a un'applicazione Xamarin.Android.Xamarin provides the Android Support Library v4 NuGet package to simplify adding the support libraries to a Xamarin.Android application. Per includere i pacchetti di supporto nell'applicazione Xamarin.Android, includere il componente Android Support Library v4 nel progetto Xamarin.Android, come illustrato nella schermata seguente:To include the support packages in your Xamarin.Android application include the [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) component in your Xamarin.Android project, as illustrated in the following screenshot: 
 
-[![screenshot del pacchetto della libreria di supporto Android V4 aggiunto al progetto](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
+[![Screenshot del pacchetto della libreria di supporto Android v4 aggiunto al progetto](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
-Dopo aver eseguito questi passaggi, è possibile usare i frammenti nelle versioni precedenti di Android. Le API dei frammenti funzioneranno nello stesso momento nelle versioni precedenti, con le eccezioni seguenti: 
+Dopo aver eseguito questi passaggi, diventa possibile usare frammenti nelle versioni precedenti di Android.After these steps have been performed, it becomes possible to use Fragments in earlier versions of Android. Le API Frammento funzioneranno allo stesso modo ora in queste versioni precedenti, con le seguenti eccezioni: 
 
-- **Modificare la versione minima di android** &ndash; l'applicazione non deve più essere destinata a Android 3,0 o versione successiva, come illustrato di seguito: 
+- **Modificare la versione minima** &ndash; di Android L'applicazione non ha più bisogno di destinazione Android 3.0 o versione successiva, come mostrato di seguito:Change the minimum Android Version The application no longer needs to target Android 3.0 or higher, as shown below: 
 
-    [![screenshot della destinazione minima di Android da impostare nel manifesto Android](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
+    [![Screenshot della destinazione Android minima impostata in Manifesto Android](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
-- **Estendere FragmentActivity** &ndash; le attività che ospitano i frammenti devono ora ereditare da `Android.Support.V4.App.FragmentActivity` e non da `Android.App.Activity`. 
+- **Estendere FragmentActivity** &ndash; Le attività che ospitano `Android.Support.V4.App.FragmentActivity` i frammenti `Android.App.Activity` devono ora ereditare da e non da . 
 
-- Gli **spazi dei nomi di aggiornamento** &ndash; le classi che ereditano da `Android.App.Fragment` ora devono ereditare da `Android.Support.V4.App.Fragment`. Rimuovere l'istruzione using "`using Android.App;`" all'inizio del file di codice sorgente e sostituirla con "`using Android.Support.V4.App`". 
+- Le classi degli spazi `Android.App.Fragment` dei nomi `Android.Support.V4.App.Fragment` di aggiornamento che **ereditano** &ndash; da devono ora ereditare da . Rimuovere l'istruzione `using Android.App;` using " " all'inizio del file `using Android.Support.V4.App` di codice sorgente e sostituirla con " ". 
 
-- **Utilizzare SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity` espone una proprietà `SupportingFragmentManager` che deve essere utilizzata per ottenere un riferimento al `FragmentManager`. Ad esempio, 
+- **Use SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity` espone `SupportingFragmentManager` una proprietà che deve essere `FragmentManager` utilizzata per ottenere un riferimento all'oggetto . Ad esempio: 
 
 ```csharp
 FragmentTransaction fragmentTx = this.SupportingFragmentManager.BeginTransaction();
@@ -45,8 +45,8 @@ fragmentTx.Add(Resource.Id.fragment_container, detailsFrag);
 fragmentTx.Commit();
 ```
 
-Con queste modifiche, sarà possibile eseguire un'applicazione basata su frammenti in Android 1,6 o 2. x, oltre che in Honeycomb e Ice Cream Sandwich. 
+Con questi cambiamenti in atto, sarà possibile eseguire un'applicazione basata su frammenti su Android 1.6 o 2.x così come su Honeycomb e Ice Cream Sandwich. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Libreria di supporto Android V4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
+- [Libreria di supporto Android v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)

@@ -9,15 +9,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304051"
 ---
 # <a name="android-emulator-troubleshooting"></a>Risoluzione dei problemi dell'emulatore Android
 
-_Questo articolo descrive i messaggi di avviso e i problemi più comuni che si verificano durante la configurazione e l'esecuzione del emulatore Android. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori, oltre a vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
+_In questo articolo vengono descritti i messaggi di avviso più comuni e i problemi che si verificano durante la configurazione e l'esecuzione dell'emulatore Android.This article describes the most common warning messages and issues that occur while configuring and running the Android Emulator. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori e vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
 
 ::: zone pivot="windows"
 
@@ -31,7 +31,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 1. Avviare l'emulatore da **Android Device Manager**, selezionando il dispositivo virtuale e facendo clic su **Start** (Avvia).
 
-2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb**. Se Android SDK è installato nel percorso predefinito, **adb** si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
+2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb.** Se Android SDK è installato nel percorso predefinito, **adb** si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
 
 3. Digitare il comando seguente:
 
@@ -39,7 +39,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio,
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
 
    ```shell
    List of devices attached
@@ -63,14 +63,14 @@ Se nel dispositivo virtuale in esecuzione nell'emulatore non è installato Googl
 
 Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google Play Store:
 
-[![Dispositivo virtuale Android di esempio con Google Play Services e Google Play Store abilitati](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
+[![Esempio di AVD con Google Play Services e Google Play Store abilitato](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
 > Le immagini Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
 <a name="perf-win" />
 
-## <a name="performance-issues"></a>Prestazioni
+## <a name="performance-issues"></a>Problemi di prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 
@@ -90,7 +90,7 @@ Se viene visualizzato questo messaggio di errore, vedere [Problemi di accelerazi
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>L'accelerazione è abilitata ma l'esecuzione dell'emulatore è troppo lenta 
 
-Una causa comune all'origine di questo problema è il mancato utilizzo di un'immagine basata su x86 nel dispositivo virtuale (AVD). Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine del sistema basata su x86:
+Una causa comune all'origine di questo problema è il mancato utilizzo di un'immagine basata su x86 nel dispositivo virtuale (AVD). Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Gestione dispositivi Android](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine di sistema basata su x86:
 
 [![Selezione di un'immagine di sistema x86 per un dispositivo virtuale](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
@@ -139,7 +139,7 @@ VT feature disabled in BIOS/UEFI
 Per risolvere questo problema, eseguire il riavvio del computer in modalità BIOS e abilitare le opzioni seguenti:
 
 - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
-- Protezione esecuzione programmi imposta dall'hardware.
+- Protezione esecuzione programmi basata su hardware.
 
 Se l'accelerazione hardware è abilitata e il BIOS è configurato correttamente, l'emulatore dovrebbe essere in esecuzione con l'accelerazione hardware.
 Si potrebbero comunque riscontrare problemi specifici di Hyper-V e HAXM, come descritto di seguito.
@@ -258,7 +258,7 @@ Se si usa una versione di Windows precedente all'**Aggiornamento di Windows 10 -
 
     ![Disabilitazione di Hyper-V nella finestra di dialogo Funzionalità Windows](troubleshooting-images/win/03-uncheck-hyper-v.png)
 
-3. Riavvia il computer.
+3. Riavviare il computer.
 
 In alternativa, è possibile usare il cmdlet PowerShell seguente per disabilitare l'hypervisor Hyper-V:
 
@@ -288,7 +288,7 @@ Se Device Guard è abilitato, usare la procedura seguente per disabilitarlo:
 
 3. Nell'**Editor Criteri di gruppo locali** passare a **Configurazione computer > Modelli amministrativi > Sistema > Device Guard**:
 
-   [![Device Guard nell'Editor Criteri di gruppo locali](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
+   [![Gestione dispositivi nell'Editor Criteri di gruppo locali](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Modificare **Attiva sicurezza basata su virtualizzazione** in **Disabilitato** (come illustrato in precedenza) e chiudere l'**Editor Criteri di gruppo locali**.
 
@@ -367,7 +367,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 1. Avviare l'emulatore da **Android Device Manager**, selezionando il dispositivo virtuale e facendo clic su **Start** (Avvia).
 
-2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb**. Se Android SDK è installato nel percorso predefinito, **adb** si trova in **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
+2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb.** Se Android SDK è installato nel percorso predefinito, **adb** si trova in **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
 
 3. Digitare il comando seguente:
 
@@ -375,7 +375,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
    adb devices
    ```
 
-4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio,
+4. Se l'emulatore è accessibile da Android SDK, l'emulatore verrà visualizzato nell'elenco dei dispositivi collegati. Ad esempio:
 
    ```shell
    List of devices attached
@@ -399,14 +399,14 @@ Se nel dispositivo virtuale in esecuzione nell'emulatore non è installato Googl
 
 Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google Play Store:
 
-[![Dispositivo virtuale Android di esempio con Google Play Services e Google Play Store abilitati](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+[![Esempio di AVD con Google Play Services e Google Play Store abilitato](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
 > Le immagini Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
 <a name="perf-mac" />
 
-## <a name="performance-issues"></a>Prestazioni
+## <a name="performance-issues"></a>Problemi di prestazioni
 
 I problemi relativi alle prestazioni sono in genere riconducibili ai problemi seguenti:
 

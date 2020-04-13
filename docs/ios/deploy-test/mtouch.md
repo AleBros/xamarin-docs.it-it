@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026290"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
@@ -39,7 +39,7 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 ```
 
 > [!WARNING]
-> Per usare `mtouch`, non fare affidamento sull'esistenza di **/Developer/MonoTouch/usr/bin**, un collegamento simbolico che punta a **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. Questo collegamento simbolico esiste solo per mantenere la compatibilità con versioni precedenti di MonoTouch non installate in **/Library/Frameworks/...**  e potrebbe non essere più disponibile in una versione futura.
+> Per usare `mtouch`, non fare affidamento sull'esistenza di **/Developer/MonoTouch/usr/bin**, un collegamento simbolico che punta a **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. Questo collegamento simbolico esiste solo per mantenere la compatibilità con versioni precedenti di MonoTouch non installate in **/Library/Frameworks/... ** e potrebbe non essere più disponibile in una versione futura.
 
 ## <a name="building"></a>Compilazione
 
@@ -116,7 +116,7 @@ Se il flag `--sdkroot` non è impostato, per impostazione predefinita viene usat
 
 Questi passaggi vengono in genere eseguiti da Visual Studio per Mac.
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Informazioni di riferimento
 
 Per informazioni dettagliate su altre opzioni della riga di comando, vedere la pagina del manuale di [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)).
 
