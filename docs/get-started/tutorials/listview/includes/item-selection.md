@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "74062895"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`ListView`](xref:Xamarin.Forms.ListView) in modo che imposti gestori per gli eventi [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) e [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped):
 
@@ -45,7 +45,7 @@ ms.locfileid: "74062895"
 
     Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) (Selezione e tocco) nella guida [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) (Interattività di ListView).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`ListView`](xref:Xamarin.Forms.ListView) in modo che imposti gestori per gli eventi [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) e [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped):
 

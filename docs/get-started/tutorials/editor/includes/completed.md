@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5c3d829038692635284c447e11ab08ad2afe6885
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059695"
 ---
 L'esercitazione è stata completata. Si è appreso come:
@@ -12,7 +12,7 @@ L'esercitazione è stata completata. Si è appreso come:
 >
 > - Creare un elemento [`Editor`](xref:Xamarin.Forms.Editor) di Xamarin.Forms in XAML.
 > - Rispondere al cambiamento del testo dell'elemento `Editor`.
-> - Personalizzare il comportamento di `Editor`.
+> - Personalizzare il comportamento dell'elemento `Editor`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

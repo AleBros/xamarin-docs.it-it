@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 12/23/2019
   ms.openlocfilehash: fa5fb1d6747650520864371ceacf665a50dc0973
-  ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/23/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "75718740"
 landingContent:
 - title: Layout
@@ -23,15 +23,15 @@ landingContent:
     links:
     - text: StackLayout
       url: stacklayout/index.yml
-    - text: Grid
+    - text: Griglia
       url: grid/index.yml
 - title: Controlli
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Label
+    - text: Etichetta
       url: label/index.yml
-    - text: Button
+    - text: Pulsante
       url: button/index.yml
     - text: Voce
       url: entry/index.yml
@@ -47,9 +47,9 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Ciclo di vita dell'app
+    - text: Ciclo di vita delle app
       url: app-lifecycle/index.yml
     - text: Database locale
       url: local-database/index.yml
-    - text: Servizi Web
+    - text: SERVIZI WEB
       url: web-service/index.yml

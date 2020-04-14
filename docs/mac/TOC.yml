@@ -33,7 +33,7 @@
           href: app-fundamentals/databinding.md
         - name: Database
           href: app-fundamentals/databases.md
-        - name: Copia e incollare
+        - name: Copiare e incollare
           href: app-fundamentals/copy-paste.md
         - name: Sandbox di un'app Xamarin.Mac
           href: app-fundamentals/sandboxing.md
@@ -42,7 +42,7 @@
     - name: Interfaccia utente
       href: user-interface/index.md
       items:
-        - name: WINDOWS
+        - name: Windows
           href: user-interface/window.md
         - name: Finestre di dialogo
           href: user-interface/dialog.md
@@ -62,7 +62,7 @@
           href: user-interface/source-list.md
         - name: Visualizzazioni di raccolte
           href: user-interface/collection-view.md
-        - name: Creazione di controlli personalizzati
+        - name: Creazione dei controlli personalizzati
           href: user-interface/custom-controls.md
     - name: Funzionalità della piattaforma
       href: platform/index.md
@@ -81,7 +81,7 @@
               href: platform/introduction-to-macos-sierra/modern-cocoa-apps.md
             - name: Modifiche aggiuntive al framework macOS Sierra
               href: platform/introduction-to-macos-sierra/additional-framework-changes.md
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: platform/introduction-to-macos-sierra/troubleshooting.md
         - name: Associazione di librerie Mac
           href: platform/binding.md
@@ -109,7 +109,7 @@
           href: deploy-test/linker.md
         - name: Prestazioni
           href: deploy-test/performance.md
-        - name: Pubblicazione nell'App Store
+        - name: Pubblicazione in App Store
           href: deploy-test/publishing-to-the-app-store/index.md
           items:
             - name: Certificati e identificatori
@@ -182,7 +182,7 @@
                       href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/mac
                 - name: Cronologia dei rilasci
                   href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/mac
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/mac
         - name: Riferimenti nativi
           href: ~/cross-platform/macios/native-references.md?context=xamarin/mac
@@ -214,7 +214,7 @@
           href: internals/frameworks.md
         - name: Registrar
           href: internals/registrar.md
-    - name: Risoluzione dei problemi
+    - name: risoluzione dei problemi
       href: troubleshooting/index.md
       items:
         - name: Suggerimenti per la risoluzione dei problemi

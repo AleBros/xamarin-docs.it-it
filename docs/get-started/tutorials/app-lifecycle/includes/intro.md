@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: cae1ec70880fe694584e14b732608725bcbb1d91
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059696"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
 - Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
 - Esercitazione su [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Esercitazione su [Entry](~/get-started/tutorials/entry/index.yml).
+- L'esercitazione su [Entry](~/get-started/tutorials/entry/index.yml).
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 >

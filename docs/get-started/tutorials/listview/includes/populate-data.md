@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "69541486"
 ---
 Un elemento [`ListView`](xref:Xamarin.Forms.ListView) viene popolato con dati mediante la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) che è di tipo `IEnumerable`. Il passaggio precedente ha popolato l'elemento `ListView` in XAML con una matrice di stringhe. Tuttavia, in genere un elemento `ListView` verrà popolato con dati di una raccolta, definita nel code-behind, che implementa `IEnumerable`.
 
 In questo esercizio si modificherà il progetto **ListViewTutorial** per popolare l'elemento [`ListView`](xref:Xamarin.Forms.ListView) con i dati di una raccolta di oggetti archiviati in un elemento `List`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **Esplora soluzioni**, nel progetto **ListViewTutorial**, aggiungere una classe denominata `Monkey` che contiene il codice seguente:
 
@@ -30,7 +30,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
     Questo codice definisce un oggetto `Monkey` che archivia un nome, una posizione e un URL di un'immagine che rappresenta la scimmia. Inoltre la classe esegue l'override del metodo `ToString` per restituire la proprietà `Name`.
 
-1. In **Esplora soluzioni**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;
@@ -191,7 +191,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
     L'elemento [`ListView`](xref:Xamarin.Forms.ListView) mostra la proprietà `Name` per ogni `Monkey` della raccolta `Monkeys`. Questo avviene perché, per impostazione predefinita, l'elemento `ListView` chiama il metodo `ToString` quando mostra gli oggetti di una raccolta, di cui è stato eseguito l'override nella classe `Monkey` per restituire il valore della proprietà `Name`.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Nel **riquadro della soluzione**, nel progetto **ListViewTutorial**, aggiungere una classe denominata `Monkey` che contiene il codice seguente:
 
@@ -211,7 +211,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
     Questo codice definisce un oggetto `Monkey` che archivia un nome, una posizione e un URL di un'immagine che rappresenta la scimmia. Inoltre la classe esegue l'override del metodo `ToString` per restituire la proprietà `Name`.
 
-1. Nel **riquadro della soluzione**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;

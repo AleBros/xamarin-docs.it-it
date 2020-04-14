@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "60896675"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Label`](xref:Xamarin.Forms.Label) per visualizzare testo in più formati in una singola classe `Label`.
 
@@ -36,7 +36,7 @@ ms.locfileid: "60896675"
 
     Per altre informazioni sull'impostazione dell'aspetto di [`Span`](xref:Xamarin.Forms.Span), vedere [Testo formattato](~/xamarin-forms/user-interface/text/label.md#formatted-text) nella guida [Etichetta Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Label`](xref:Xamarin.Forms.Label) per visualizzare testo in più formati in una singola classe `Label`.
 

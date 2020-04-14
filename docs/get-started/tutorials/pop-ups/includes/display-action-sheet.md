@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "66193800"
 ---
 
 Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere usato per guidare gli utenti per l'esecuzione di un'attività. In questo esercizio si userà il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un foglio delle azioni che guida gli utenti per l'esecuzione di un'attività.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** aggiungere una nuova dichiarazione [`Button`](xref:Xamarin.Forms.Button) che visualizzerà un foglio delle azioni:
 
@@ -20,7 +20,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
      La proprietà [`Button.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato nel `Button`. Inoltre, l'evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) viene impostato su un gestore eventi denominato `OnDisplayActionSheetButtonClicked`, che verrà creato nel passaggio successivo.
 
-1. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **PopupsTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere quindi il gestore eventi `OnDisplayActionSheetButtonClicked` alla classe:
+1. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **PopupsTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere il gestore eventi `OnDisplayActionSheetButtonClicked` alla classe:
 
     ```csharp
     async void OnDisplayActionSheetButtonClicked(object sender, EventArgs e)
@@ -30,7 +30,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
     }
     ```
 
-    Con il tocco su [`Button`](xref:Xamarin.Forms.Button) viene eseguito il metodo `OnDisplayActionSheetButtonClicked`. Questo metodo chiama il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) per presentare all'utente un set di alternative su come procedere per eseguire un'attività. Dopo che l'utente ha selezionato una delle alternative, la selezione viene restituita come `string`.
+    Quando si tocca [`Button`](xref:Xamarin.Forms.Button) viene eseguito il metodo `OnDisplayActionSheetButtonClicked`. Questo metodo chiama il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) per presentare all'utente un set di alternative su come procedere per eseguire un'attività. Dopo che l'utente ha selezionato una delle alternative, la selezione viene restituita come `string`.
 
     > [!IMPORTANT]
     > Il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) è asincrono e deve sempre includere l'attesa con la parola chiave `await`.
@@ -43,7 +43,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
     Per altre informazioni sulla visualizzazione dei fogli delle azioni, vedere [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) (Supporto degli utenti nelle attività) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare popup).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** aggiungere una nuova dichiarazione [`Button`](xref:Xamarin.Forms.Button) che visualizzerà un foglio delle azioni:
 
@@ -64,7 +64,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
     }
     ```
 
-    Con il tocco su [`Button`](xref:Xamarin.Forms.Button) viene eseguito il metodo `OnDisplayActionSheetButtonClicked`. Questo metodo chiama il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) per presentare all'utente un set di alternative su come procedere per eseguire un'attività. Dopo che l'utente ha selezionato una delle alternative, la selezione viene restituita come `string`.
+    Quando si tocca [`Button`](xref:Xamarin.Forms.Button) viene eseguito il metodo `OnDisplayActionSheetButtonClicked`. Questo metodo chiama il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) per presentare all'utente un set di alternative su come procedere per eseguire un'attività. Dopo che l'utente ha selezionato una delle alternative, la selezione viene restituita come `string`.
 
     > [!IMPORTANT]
     > Il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) è asincrono e deve sempre includere l'attesa con la parola chiave `await`.

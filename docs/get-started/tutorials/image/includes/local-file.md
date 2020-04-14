@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61384489"
 ---
 È possibile aggiungere file di immagine ai progetti della piattaforma e si può farvi riferimento dal codice Xamarin.Forms condiviso. Questo metodo di distribuzione delle immagini è necessario quando le immagini sono specifiche della piattaforma, ad esempio quando si usano risoluzioni diverse su piattaforme diverse o progettazioni leggermente differenti.
@@ -16,7 +16,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 > [!IMPORTANT]
 > Per usare la stessa immagine su tutte le piattaforme *si deve usare il medesimo nome di file in tutte le piattaforme* e deve trattarsi di un nome di risorsa di Android valido, ad esempio sono ammesse solo lettere minuscole, numeri, il carattere di sottolineatura e il punto.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **Esplora soluzioni**, nel progetto **ImageTutorial.iOS**, espandere **Cataloghi asset** e fare doppio clic su **Asset** per aprirlo. Nella scheda **Assets.xcassets** fare clic sul pulsante **Più** e selezionare **Aggiungi set di immagini**:
 
@@ -62,7 +62,7 @@ In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizz
 
     Per altre informazioni sulle immagini locali, vedere [Immagini locali](~/xamarin-forms/user-interface/images.md#local-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Nel **riquadro della soluzione**, nel progetto **ImageTutorial.iOS**, fare doppio clic su **Assets.xcassets** per aprirlo. Quindi, nell'**elenco Asset** fare doppio clic e selezionare **New Image Set** (Nuovo set di immagini):
 

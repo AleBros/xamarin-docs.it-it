@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67560003"
 ---
 Le dimensioni e la posizione delle viste figlio all'interno di un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dipende dai valori delle proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) delle viste figlio e dai valori delle proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
@@ -13,7 +13,7 @@ Le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e
 - **Allineamento**: l'allineamento preferito della vista figlio che determina la sua posizione e dimensioni nel layout padre.
 - **Espansione**: indica se la vista figlio deve usare spazio aggiuntivo quando è disponibile ed è utilizzata solo da un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`StackLayout`](xref:Xamarin.Forms.StackLayout) per impostare le opzioni di allineamento ed espansione per ogni elemento [`Label`](xref:Xamarin.Forms.Label):
 
@@ -69,7 +69,7 @@ Le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e
 
     Per altre informazioni sull'allineamento e l'espansione, vedere [Layout Options in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md) (Opzioni di Layout in Xamarin.Forms).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`StackLayout`](xref:Xamarin.Forms.StackLayout) per impostare le opzioni di allineamento ed espansione per ogni elemento [`Label`](xref:Xamarin.Forms.Label):
 
@@ -124,8 +124,3 @@ Le proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e
     > Quando tutto lo spazio in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) è utilizzato, le preferenze di espansione non hanno alcun effetto.
 
     Per altre informazioni sull'allineamento e l'espansione, vedere [Layout Options in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md) (Opzioni di Layout in Xamarin.Forms).
-
------
-
-> [!div class="nextstepaction"]
-> [Si è verificato un problema](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 95067df17424d5b9367578e675d747317a827de9
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059691"
 ---
 L'esercitazione è stata completata. Si è appreso come:
@@ -12,7 +12,7 @@ L'esercitazione è stata completata. Si è appreso come:
 >
 > - Creare un elemento [`Button`](xref:Xamarin.Forms.Button) di Xamarin.Forms in XAML.
 > - Rispondere alla selezione dell'elemento `Button`.
-> - Modificare l'aspetto dell'elemento `Button`.
+> - Modificare l'aspetto di `Button`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

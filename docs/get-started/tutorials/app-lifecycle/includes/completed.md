@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9f22de73ded5bce1a257ba22c288d58b09a18003
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059697"
 ---
 L'esercitazione è stata completata. Si è appreso come:
@@ -11,7 +11,7 @@ L'esercitazione è stata completata. Si è appreso come:
 > [!div class="checklist"]
 >
 > - Rispondere a un'applicazione in fase di avvio, sospensione o ripristino.
-> - Rendere persistenti i dati nelle modifiche di stato del ciclo di vita.
+> - Rendere permanenti i dati fra le modifiche di stato del ciclo di vita.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

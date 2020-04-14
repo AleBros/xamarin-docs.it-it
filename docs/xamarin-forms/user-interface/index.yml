@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 12/30/2019
   ms.openlocfilehash: bbe7fd52581cd77ed7e7d910dd16264641c15abf
-  ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77480603"
 landingContent:
 - title: Informazioni di riferimento sui controlli
@@ -23,11 +23,11 @@ landingContent:
     links:
     - text: Panoramica
       url: controls/index.md
-    - text: Pages
+    - text: Pagine
       url: controls/pages.md
     - text: Layout
       url: controls/layouts.md
-    - text: Visualizzazioni
+    - text: Viste
       url: controls/views.md
     - text: Celle
       url: controls/cells.md
@@ -43,7 +43,7 @@ landingContent:
       url: boxview.md
     - text: Image
       url: images.md
-    - text: Label
+    - text: Etichetta
       url: text/label.md
     - text: Mappa
       url: map/index.md
@@ -55,7 +55,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Button
+    - text: Pulsante
       url: button.md
     - text: ImageButton
       url: imagebutton.md
@@ -73,7 +73,7 @@ landingContent:
       url: checkbox.md
     - text: DatePicker
       url: datepicker.md
-    - text: Slider
+    - text: Dispositivo di scorrimento
       url: slider.md
     - text: Gestore di istruzioni
       url: stepper.md
@@ -159,7 +159,7 @@ landingContent:
       url: layouts/flex-layout.md
     - text: Frame
       url: layouts/frame.md
-    - text: Grid
+    - text: Griglia
       url: layouts/grid.md
     - text: RelativeLayout
       url: layouts/relative-layout.md

@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135150"
 ---
 In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `RestService`, che a sua volta recupera i dati dall'API Web [OpenWeatherMap](https://openweathermap.org/).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -128,9 +128,9 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
     > [!IMPORTANT]
     > La chiave API OpenWeatherMap personale deve essere impostata come valore della costante `OpenWeatherMapAPIKey` nella classe `Constants`.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **WebServiceTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -193,7 +193,7 @@ In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `R
 
     Per altre informazioni sull'uso dei servizi Web basati su REST in Xamarin.Forms, vedere [Uso di un servizio Web RESTful (guida)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
-1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **WebServiceTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **WebServiceTutorial** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;

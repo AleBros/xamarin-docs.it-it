@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61375388"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Grid`](xref:Xamarin.Forms.Grid) per definire le colonne e le righe, quindi posizionare il contenuto nelle colonne e nelle righe:
 
@@ -48,7 +48,7 @@ ms.locfileid: "61375388"
 
     [![Screenshot di una griglia con contenuto disposto in colonne e righe, in iOS e Android](../images/columns-rows.png "Griglia con contenuto in colonne e righe")](../images/columns-rows-large.png#lightbox "Griglia con contenuto in colonne e righe")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Grid`](xref:Xamarin.Forms.Grid) per definire le colonne e le righe, quindi posizionare il contenuto nelle colonne e nelle righe:
 

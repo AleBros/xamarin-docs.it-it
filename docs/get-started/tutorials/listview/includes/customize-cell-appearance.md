@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61037624"
 ---
 In precedenza [`ListView`](xref:Xamarin.Forms.ListView) veniva popolata con i dati tramite data binding. Tuttavia, nonostante il data binding in una raccolta in cui ogni oggetto definiva più elementi di dati, veniva visualizzato solo un singolo elemento di dati per ogni oggetto (proprietà `Name` dell'oggetto `Monkey`).
 
 In questo esercizio il progetto **ListViewTutorial** verrà modificato in modo che [`ListView`](xref:Xamarin.Forms.ListView) visualizzi più elementi di dati in ogni riga.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`ListView`](xref:Xamarin.Forms.Image) per personalizzare l'aspetto di ogni riga:
 
@@ -60,7 +60,7 @@ In questo esercizio il progetto **ListViewTutorial** verrà modificato in modo c
 
     [![Screenshot di un controllo ListView i cui elementi sono basati su un modello di dati](../images/customize-cell-appearance.png "ListView che visualizza i dati basati su modello")](../images/customize-cell-appearance-large.png#lightbox "ListView che visualizza i dati basati su modello")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`ListView`](xref:Xamarin.Forms.Image) per personalizzare l'aspetto di ogni riga:
 

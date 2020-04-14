@@ -10,14 +10,14 @@ metadata:
   ms.author: crdun
   ms.date: 09/26/2019
   ms.openlocfilehash: c28f849f772bb496b526552745a0aea1c2e08e62
-  ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/01/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "76940713"
 highlightedContent:
   items:
-  - title: Installazione e configurazione
+  - title: Configurazione e installazione
     itemType: download
     url: ~/get-started/installation/index.md
   - title: Che cos'è Xamarin?
@@ -79,7 +79,7 @@ conceptualContent:
     - text: Aggiungere le funzionalità di spostamento
       url: ~/get-started/quickstarts/multi-page.md
       itemType: get-started
-    - text: Aggiungere un database
+    - text: Aggiungi un database
       url: ~/get-started/quickstarts/database.md
       itemType: get-started
     - text: Definire lo stile dell'app
@@ -104,7 +104,7 @@ conceptualContent:
       itemType: tutorial
     footerLink:
       url: ~/get-started/tutorials/index.yml
-      text: Altro
+      text: Altre informazioni
   - title: Sfruttare le conoscenze esistenti
     links:
     - text: Desktop .NET (UWP, WPF, WinForms)

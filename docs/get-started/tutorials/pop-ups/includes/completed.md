@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e01d661d5481c59175b5a9f747b2a11cb4a6301a
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71059699"
 ---
 L'esercitazione è stata completata. Si è appreso come:
@@ -11,7 +11,7 @@ L'esercitazione è stata completata. Si è appreso come:
 > [!div class="checklist"]
 >
 > - Visualizzare un avviso per chiedere all'utente di effettuare una scelta.
-> - Visualizzare le azioni per guidare l'utente in un'attività.
+> - Visualizzare una finestra delle azioni per guidare l'utente in un'attività.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

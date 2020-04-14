@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: d8f9445a0fc45c2700e8d9a901cfce9bd6307d2b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "75490650"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Image`](xref:Xamarin.Forms.Image) per personalizzarne l'aspetto:
 
@@ -20,7 +20,7 @@ ms.locfileid: "75490650"
 
     Questo codice imposta la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) che definisce la modalità di ridimensionamento dell'immagine su [`Fill`](xref:Xamarin.Forms.Aspect.Fill). Il membro `Fill` è definito nell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) e adatta l'immagine alla vista, indipendentemente dalla distorsione dell'immagine. Per altre informazioni sul ridimensionamento delle immagini, vedere [Visualizzazione di immagini](~/xamarin-forms/user-interface/images.md#display-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-    L'estensione di markup `OnPlatform` consente di personalizzare l'aspetto dell'interfaccia utente per ogni piattaforma. In questo esempio l'estensione di markup è usata per impostare le proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) su 300 unità indipendenti dal dispositivo in iOS e su 250 unità indipendenti dal dispositivo in Android. Per altre informazioni sull'estensione di markup `OnPlatform`, vedere [Estensione di markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) nella guida [Uso di estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+    L'estensione di markup `OnPlatform` consente di personalizzare l'aspetto dell'interfaccia utente per ogni piattaforma. In questo esempio l'estensione di markup è usata per impostare le proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) su 300 unità indipendenti dal dispositivo in iOS e su 250 unità indipendenti dal dispositivo in Android. Per altre informazioni sull'estensione di markup `OnPlatform`, vedere [Estensione di markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) nella guida [Utilizzo di estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
     Inoltre, la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) specifica che l'immagine verrà centrata orizzontalmente.
 
@@ -28,7 +28,7 @@ ms.locfileid: "75490650"
 
     [![Screenshot di un'immagine ridimensionata in modo diverso in iOS e Android](../images/customize-appearance.png "Immagine ridimensionata in base alla piattaforma")](../images/customize-appearance-large.png#lightbox "Immagine ridimensionata in base alla piattaforma")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Image`](xref:Xamarin.Forms.Image) per personalizzarne l'aspetto:
 

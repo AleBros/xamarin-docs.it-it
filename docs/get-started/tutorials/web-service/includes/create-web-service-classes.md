@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3b1603b6af5ebb5558c3cd764f41fdbe24351b9b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "68669696"
 ---
 Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP usati dai Web browser per recuperare le pagine e per inviare dati ai server. In questo esercizio si creerà una classe che usa il verbo GET per recuperare i dati dall'API Web [OpenWeatherMap](https://openweathermap.org/). Questa API Web può essere usata per recuperare i dati delle previsioni meteo per una località specificata. Per usare l'API Web, è necessario iscriversi per ottenere una chiave API.
@@ -11,9 +11,9 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
 > [!div class="nextstepaction"]
 > [Iscriversi per ottenere la chiave API](https://home.openweathermap.org/users/sign_up)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata `Constants` al progetto **WebServiceTutorial**. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`Constants`. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     namespace WebServiceTutorial
@@ -31,7 +31,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!IMPORTANT]
     > È necessario impostare la chiave API OpenWeatherMap personale come valore della costante `OpenWeatherMapAPIKey`.
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata `WeatherData` al progetto **WebServicesTutorial**. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServicesTutorial`WeatherData`. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using Newtonsoft.Json;
@@ -84,7 +84,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!NOTE]
     > Le definizioni di classe precedenti sono state semplificate e non modellano completamente i dati JSON recuperati dal servizio Web. Per un esempio di modello di dati completo, vedere l'esempio [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/).
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata `RestService` al progetto **WebServiceTutorial**. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`RestService`. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;
@@ -131,9 +131,9 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
 
 1. Compilare la soluzione per assicurarsi che non siano presenti errori.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `Constants` al progetto **WebServiceTutorial**. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`Constants`. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     namespace WebServiceTutorial
@@ -151,7 +151,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!IMPORTANT]
     > È necessario impostare la chiave API OpenWeatherMap personale come valore della costante `OpenWeatherMapAPIKey`.
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `WeatherData` al progetto **WebServicesTutorial**. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServicesTutorial`WeatherData`. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using Newtonsoft.Json;
@@ -204,7 +204,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!NOTE]
     > Le definizioni di classe precedenti sono state semplificate e non modellano completamente i dati JSON recuperati dal servizio Web. Per un esempio di modello di dati completo, vedere l'esempio [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/).
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `RestService` al progetto **WebServiceTutorial**. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`RestService`. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;

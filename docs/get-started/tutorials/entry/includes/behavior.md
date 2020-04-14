@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61343464"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Entry`](xref:Xamarin.Forms.Entry) per personalizzarne il comportamento:
 
@@ -29,7 +29,7 @@ ms.locfileid: "61343464"
 
     Per altre informazioni sulla personalizzazione del comportamento [`Entry`](xref:Xamarin.Forms.Entry), vedere la guida [Voce Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Entry`](xref:Xamarin.Forms.Entry) per personalizzarne il comportamento:
 

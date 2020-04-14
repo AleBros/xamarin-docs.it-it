@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: ae5962de05190ad914c86ceb0a9b52edb72232dc
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107268"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 >
-> - Creare una classe [`StackLayout`](xref:Xamarin.Forms.StackLayout) Xamarin.Forms in XAML.
+> - Creare un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) di Xamarin.Forms in XAML.
 > - Specificare l'orientamento dell'elemento `StackLayout`.
-> - Controllare l'allineamento e l'espansione della visualizzazione figlio all'interno di `StackLayout`.
+> - Controllare l'allineamento e l'espansione della vista figlio all'interno dell'elemento `StackLayout`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

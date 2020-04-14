@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 01/24/2020
   ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
-  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/17/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77374110"
 landingContent:
 - title: Introduzione
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Introduzione a Xamarin.iOS
       url: ~/ios/get-started/index.md
-    - text: Installazione e configurazione
+    - text: Configurazione e installazione
       url: ~/ios/get-started/installation/index.md
     - text: Creare la prima app
       url: ~/ios/get-started/hello-ios/index.md
@@ -85,7 +85,7 @@ landingContent:
       url: ~/ios/platform/passkit.md
     - text: PhotoKit
       url: ~/ios/platform/photokit.md
-    - text: Cerca
+    - text: Ricerca
       url: ~/ios/platform/search/index.md
     - text: SiriKit
       url: ~/ios/platform/sirikit/index.md
@@ -99,13 +99,13 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Informazioni su
+    - text: Informazioni
       url: ~/essentials/index.md?context=xamarin/ios
     - text: Introduzione
       url: ~/essentials/get-started.md?context=xamarin/ios
     - text: Piattaforma e supporto delle funzionalità
       url: ~/essentials/platform-feature-support.md?context=xamarin/ios
-    - text: Risoluzione dei problemi
+    - text: risoluzione dei problemi
       url: ~/essentials/troubleshooting.md?context=xamarin/ios
     - text: Note sulla versione
       url: https://docs.microsoft.com/xamarin/essentials/release-notes/
@@ -145,7 +145,7 @@ landingContent:
       url: ~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
     - text: Prestazioni
       url: ~/ios/deploy-test/performance.md
-    - text: Unit test
+    - text: Testing unità
       url: ~/ios/deploy-test/touch.unit.md
     - text: Distribuzione wireless
       url: ~/ios/deploy-test/wireless-deployment.md
@@ -161,7 +161,7 @@ landingContent:
       url: ~/ios/internals/api-design/index.md
     - text: Assembly disponibili
       url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/ios
-    - text: Virgola mobile
+    - text: A virgola mobile
       url: ~/ios/internals/floating-point.md
     - text: Generazione di codice XIB
       url: ~/ios/internals/xib-code-generation.md
@@ -191,7 +191,7 @@ landingContent:
       url: ~/essentials/index.md?context=xamarin/watchos
     - text: Distribuzione e test
       url: ~/ios/watchos/deploy-test/index.md
-    - text: Risoluzione dei problemi
+    - text: risoluzione dei problemi
       url: ~/ios/watchos/troubleshooting.md
 - title: tvOS
   linkLists:
@@ -211,5 +211,5 @@ landingContent:
       url: ~/ios/tvos/deploy-test/index.md
     - text: Meccanismi interni
       url: ~/ios/tvos/internals/index.md
-    - text: Risoluzione dei problemi
+    - text: risoluzione dei problemi
       url: ~/ios/tvos/troubleshooting.md

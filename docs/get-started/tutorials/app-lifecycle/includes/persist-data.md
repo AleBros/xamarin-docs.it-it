@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135047"
 ---
 La sottoclasse [`Application`](xref:Xamarin.Forms.Application) ha un dizionario statico [`Properties`](xref:Xamarin.Forms.Application.Properties) che può essere usato per archiviare dati fra le modifiche di stato del ciclo di vita. Il dizionario usa una chiave `string` e archivia un valore `object`. Il dizionario viene salvato automaticamente sul dispositivo e non è ripopolato quando l'applicazione viene riavviata.
@@ -13,7 +13,7 @@ La sottoclasse [`Application`](xref:Xamarin.Forms.Application) ha un dizionario 
 
 In questo esercizio si modificherà l'applicazione in modo da rendere permanente il testo da un elemento [`Entry`](xref:Xamarin.Forms.Entry) durante l'elaborazione in background e ripristinare il testo nell'elemento `Entry` quando l'applicazione viene riavviata.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. In **Esplora soluzioni**, nel progetto **AppLifecycleTutorial**, espandere **App.xaml** e fare doppio clic su **App.xaml.cs** per aprirlo. In **App.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -67,7 +67,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
 
     Non è necessario ripristinare i dati dal dizionario [`Properties`](xref:Xamarin.Forms.Application.Properties) nell'overload del metodo `OnResume`. Questo perché, quando un'applicazione è messa in background, l'applicazione stessa e il suo stato sono ancora in memoria.
 
-1. In **Esplora soluzioni**, nel progetto **AppLifecycleTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni**, nel progetto **AppLifecycleTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -82,7 +82,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in uno [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
 
 1. In **Esplora soluzioni**, nel progetto **AppLifecycleTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere un override per il metodo `OnAppearing` e il gestore eventi `OnEntryCompleted` alla classe:
 
@@ -117,7 +117,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
 
     Per altre informazioni su come rendere permanenti i dati nel dizionario delle proprietà, vedere [Dizionario delle proprietà](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) nella guida [Classe App di Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Nel **riquadro della soluzione**, nel progetto **AppLifecycleTutorial**, espandere **App.xaml** e fare doppio clic su **App.xaml.cs** per aprirlo. In **App.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -171,7 +171,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
 
     Non è necessario ripristinare i dati dal dizionario [`Properties`](xref:Xamarin.Forms.Application.Properties) nell'overload del metodo `OnResume`. Questo perché, quando un'applicazione è messa in background, l'applicazione stessa e il suo stato sono ancora in memoria.
 
-1. Nel **riquadro della soluzione**, nel progetto **AppLifecycleTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione**, nel progetto **AppLifecycleTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -186,7 +186,7 @@ In questo esercizio si modificherà l'applicazione in modo da rendere permanente
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in uno [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione dell'elemento `Entry` e un gestore eventi denominato `OnEntryCompleted` viene registrato con l'evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Inoltre, per `Entry` viene specificato un nome con l'attributo `x:Name`. Ciò consente al file code-behind di accedere all'oggetto `Entry` usando il nome assegnato a esso.
 
 1. Nel **riquadro della soluzione**, nel progetto **AppLifecycleTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** aggiungere un override per il metodo `OnAppearing` e il gestore eventi `OnEntryCompleted` alla classe:
 

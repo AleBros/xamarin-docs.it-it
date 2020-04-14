@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107269"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
 - Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 >

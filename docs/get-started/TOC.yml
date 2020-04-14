@@ -27,7 +27,7 @@
       href: supported-platforms.md
     - name: Prima app
       href: first-app/index.md
-    - name: Guide rapide introduttive
+    - name: Avvi rapidi
       href: quickstarts/index.md
       expanded: true
       items:
@@ -47,9 +47,9 @@
       items:
         - name: Layout pila
           href: tutorials/stacklayout/index.yml
-        - name: Label
+        - name: Etichetta
           href: tutorials/label/index.yml
-        - name: Button
+        - name: Pulsante
           href: tutorials/button/index.yml
         - name: Voce di testo
           href: tutorials/entry/index.yml
@@ -63,11 +63,11 @@
           href: tutorials/listview/index.yml
         - name: Popup
           href: tutorials/pop-ups/index.yml
-        - name: Ciclo di vita dell'app
+        - name: Ciclo di vita delle app
           href: tutorials/app-lifecycle/index.yml
         - name: Database locale
           href: tutorials/local-database/index.yml
-        - name: Servizi Web
+        - name: SERVIZI WEB
           href: tutorials/web-service/index.yml
     - name: Informazioni su Xamarin
       expanded: true
