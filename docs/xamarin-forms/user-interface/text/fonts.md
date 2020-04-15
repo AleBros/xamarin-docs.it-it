@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2020
-ms.openlocfilehash: 4f14d66e5321a0fb19078be4d97ae4df69f688c9
-ms.sourcegitcommit: 6f3281a32017cfcebadde8a2d6e10651a277828f
+ms.openlocfilehash: ca4d3b242fcc73bb73e8d6ab1f817eefcc2ade4d
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587449"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388810"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in Xamarin.Forms
 
 [![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-In questo articolo viene descritto come Xamarin.Forms consente di specificare gli attributi del tipo di carattere (inclusi spessore e dimensione) nei controlli che visualizzano testo. Le informazioni sui tipi di carattere possono essere [specificate nel codice](#Setting_Font_in_Code) o [in XAML.](#Setting_Font_in_Xaml) È anche possibile utilizzare un tipo di [carattere personalizzato](#Using_a_Custom_Font)e [visualizzare le icone](#display-font-icons)dei caratteri .
+In questo articolo viene descritto come Xamarin.Forms consente di specificare gli attributi del tipo di carattere (inclusi spessore e dimensione) nei controlli che visualizzano testo. Le informazioni sui tipi di carattere possono essere [specificate nel codice](#Setting_Font_in_Code) o [in XAML.](#Setting_Font_in_Xaml) È anche possibile utilizzare un tipo di [carattere personalizzato](#use-a-custom-font)e [visualizzare le icone](#display-font-icons)dei caratteri .
 
 <a name="Setting_Font_in_Code" />
 
@@ -145,84 +145,14 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 > [!NOTE]
 > In iOS e Android, le dimensioni dei caratteri denominati verranno ridimensionate automaticamente in base alle opzioni di accessibilità del sistema operativo. Questo comportamento può essere disabilitato in iOS con una piattaforma specifica. Per ulteriori informazioni, consultate [Ridimensionamento dell'accessibilità per dimensioni dei caratteri denominati in iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
-<a name="Using_a_Custom_Font" />
-
 ## <a name="use-a-custom-font"></a>Usare un tipo di carattere personalizzato
-
-L'utilizzo di un tipo di carattere diverso dai caratteri tipografici incorporati richiede una codifica specifica della piattaforma. Questa schermata mostra il font personalizzato **Lobster** dai [font open source di Google](https://www.google.com/fonts) sottoposti a rendering con Xamarin.Forms.
-
- [![Carattere personalizzato su iOS e Android](fonts-images/custom-sml.png "Esempio di tipi di carattere personalizzati")](fonts-images/custom.png#lightbox "Esempio di tipi di carattere personalizzati")
-
-I passaggi necessari per ogni piattaforma sono descritti di seguito. Quando si includono file di font personalizzati con un'applicazione, assicurarsi di verificare che la licenza del tipo di carattere consenta la distribuzione.
-
-### <a name="ios"></a>iOS
-
-È possibile visualizzare un tipo di carattere personalizzato assicurandosi innanzitutto che venga caricato, `Font` quindi facendo riferimento ad esso per nome utilizzando i metodi Xamarin.Forms.
-Seguire le istruzioni in [questo post](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/)di blog :
-
-1. Aggiungere il file del tipo di carattere con **Azione di compilazione: BundleResource**e
-2. Aggiornare il file **Info.plist** **(Font forniti dall'applicazione**, o `UIAppFonts`, chiave), quindi
-3. Fare riferimento ad esso per nome ovunque si definisca un tipo di carattere in Xamarin.Forms!
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" : null // set only for iOS
-}
-```
-
-### <a name="android"></a>Android
-
-Xamarin.Forms per Android può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Aggiungere innanzitutto il file del tipo di carattere alla cartella **Assets** nel progetto dell'applicazione e impostare *Build Action: AndroidAsset*. Utilizzare quindi il percorso completo e il *nome del* tipo di carattere separati da un hash (-) come nome del tipo di carattere in Xamarin.Forms, come illustrato nel frammento di codice riportato di seguito:
-
-```csharp
-new Label
-{
-  Text = "Hello, Forms!",
-  FontFamily = Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : null // set only for Android
-}
-```
-
-### <a name="windows"></a>Windows
-
-Xamarin.Forms per le piattaforme Windows può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Aggiungere innanzitutto il file del tipo di carattere alla cartella **/Assets/Fonts/** nel progetto dell'applicazione e impostare **l'azione di compilazione:Content**. Utilizzare quindi il percorso completo e il nome del file del tipo di carattere, seguiti da un hash e dal **nome**del tipo di carattere , come illustrato nel frammento di codice riportato di seguito:
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.UWP ? "Assets/Fonts/Lobster-Regular.ttf#Lobster" : null // set only for UWP apps
-}
-```
-
-> [!NOTE]
-> Si noti che il nome del file del tipo di carattere e il nome del tipo di carattere potrebbero essere diversi. Per individuare il nome del tipo di carattere in Windows, fare clic con il pulsante destro del mouse sul file .ttf e selezionare **Anteprima**. Il nome del carattere può quindi essere determinato dalla finestra di anteprima.
-
-### <a name="xaml"></a>XAML
-
-Puoi anche [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) usare XAML per eseguire il rendering di un tipo di carattere personalizzato:You can also use in XAML to render a custom font:
-
-```xaml
-<Label Text="Hello Forms with XAML">
-    <Label.FontFamily>
-        <OnPlatform x:TypeArguments="x:String">
-                <On Platform="iOS" Value="Lobster-Regular" />
-                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
-        </OnPlatform>
-    </Label.FontFamily>
-</Label>
-```
-
-## <a name="use-a-custom-font-preview"></a>Usare un tipo di carattere personalizzato (PREVIEW)
 
 I font personalizzati possono essere aggiunti al progetto condiviso Xamarin.Forms e utilizzati dai progetti di piattaforma senza alcun lavoro aggiuntivo. A tale scopo, seguire questa procedura:
 
 1. Aggiungere il tipo di carattere al progetto condiviso Xamarin.Forms come risorsa incorporata (**Operazione di compilazione: EmbeddedResource**).
 1. Registrare il file del tipo di **AssemblyInfo.cs**carattere con `ExportFont` l'assembly, in un file come AssemblyInfo.cs , utilizzando l'attributo . È inoltre possibile specificare un alias facoltativo.
 
-> [!NOTE]
+> [!IMPORTANT]
 > I font incorporati richiedono l'uso di Xamarin.Forms 4.5.0.530 o superiore.
 
 L'esempio seguente mostra il tipo di carattere Lobster-Regular registrato con l'assembly, insieme a un alias:
@@ -273,6 +203,9 @@ Label label2 = new Label
 Le schermate seguenti mostrano il tipo di carattere personalizzato:The following screenshots show the custom font:
 
 [![Carattere personalizzato su iOS e Android](fonts-images/custom-sml.png "Esempio di tipi di carattere personalizzati")](fonts-images/custom.png#lightbox "Esempio di tipi di carattere personalizzati")
+
+> [!IMPORTANT]
+> In Windows, il nome del file del tipo di carattere e il nome del tipo di carattere potrebbero essere diversi. Per individuare il nome del tipo di carattere in Windows, fare clic con il pulsante destro del mouse sul file .ttf e selezionare **Anteprima**. Il nome del carattere può quindi essere determinato dalla finestra di anteprima.
 
 ## <a name="display-font-icons"></a>Visualizzare le icone dei tipi di carattere
 
