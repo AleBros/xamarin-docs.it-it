@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1bcd808221ee319fa2818563418d2362b146e354
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "72678722"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389979"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -15,9 +15,9 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML di questa esercitazione richiedono che la soluzione sia denominata **LabelTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/first-app/index.md) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/first-app/index.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. In **Esplora soluzioni**, nel progetto **LabelTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni**, nel progetto **LabelTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -31,7 +31,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il controllo `Label` verrà centrato in senso orizzontale.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il controllo `Label` verrà centrato in senso orizzontale.
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
@@ -46,9 +46,9 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML di questa esercitazione richiedono che la soluzione sia denominata **LabelTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/first-app/index.md) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/first-app/index.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. Nel **riquadro della soluzione**, nel progetto **LabelTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione**, nel progetto **LabelTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -62,7 +62,7 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il testo verrà centrato in senso orizzontale.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il testo verrà centrato in senso orizzontale.
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 

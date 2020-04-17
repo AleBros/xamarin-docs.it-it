@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4fc6c50b5aa2ce502b4157ca2b15f0d33a68ecd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2b524c657a95035773d18fb17bb86308a78ce37c
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "60896683"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389947"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -19,7 +19,7 @@ ms.locfileid: "60896683"
            HorizontalOptions="Center" />
     ```
 
-    Questo codice imposta le proprietà che modificano l'aspetto visivo di [`Label`](xref:Xamarin.Forms.Label). La proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor) imposta il colore del testo di `Button`. La proprietà [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) imposta il carattere dell'etichetta su corsivo e la proprietà [`FontSize`](xref:Xamarin.Forms.Label.FontSize) imposta le dimensioni del carattere. Viene anche applicata una decorazione di sottolineatura del testo a `Label` impostando la relativa proprietà [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e il testo viene centrato orizzontalmente tramite l'impostazione della proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
+    Questo codice imposta le proprietà che modificano l'aspetto visivo di [`Label`](xref:Xamarin.Forms.Label). La proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor) imposta il colore del testo di `Label`. La proprietà [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) imposta il carattere dell'etichetta su corsivo e la proprietà [`FontSize`](xref:Xamarin.Forms.Label.FontSize) imposta le dimensioni del carattere. Viene anche applicata una decorazione di sottolineatura del testo a `Label` impostando la relativa proprietà [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e il testo viene centrato orizzontalmente tramite l'impostazione della proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
@@ -40,7 +40,7 @@ ms.locfileid: "60896683"
            HorizontalOptions="Center" />
     ```
 
-    Questo codice imposta le proprietà che modificano l'aspetto visivo di [`Label`](xref:Xamarin.Forms.Label). La proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor) imposta il colore del testo di `Button`. La proprietà [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) imposta il carattere dell'etichetta su corsivo e la proprietà [`FontSize`](xref:Xamarin.Forms.Label.FontSize) imposta le dimensioni del carattere. Viene anche applicata una decorazione di sottolineatura del testo a `Label` impostando la relativa proprietà [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e il testo viene centrato orizzontalmente tramite l'impostazione della proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
+    Questo codice imposta le proprietà che modificano l'aspetto visivo di [`Label`](xref:Xamarin.Forms.Label). La proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor) imposta il colore del testo di `Label`. La proprietà [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) imposta il carattere dell'etichetta su corsivo e la proprietà [`FontSize`](xref:Xamarin.Forms.Label.FontSize) imposta le dimensioni del carattere. Viene anche applicata una decorazione di sottolineatura del testo a `Label` impostando la relativa proprietà [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e il testo viene centrato orizzontalmente tramite l'impostazione della proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) su [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto. Si noti che l'aspetto di [`Label`](xref:Xamarin.Forms.Label) è stato modificato:
 
