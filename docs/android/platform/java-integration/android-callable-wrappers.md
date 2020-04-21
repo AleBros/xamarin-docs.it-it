@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 7278fd624bb3147c2e1a1a1a79adde68813a9888
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ef2f8e0375786ba7b627fdf75545cbb48318c1aa
+ms.sourcegitcommit: 854798de42566750d9c70b6d0539b7ee73ff6ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020159"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646595"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Wrapper callable Android per Xamarin.Android
 
@@ -74,7 +74,7 @@ La denominazione ACW basata su MD5SUM è stata introdotta in Xamarin.Android 5.0
 
 In alcuni casi potrebbe essere necessario implementare un'interfaccia Android, ad esempio [Android.Content.IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Poiché tutte le classi e l'interfaccia Android estendono l'interfaccia [Android.Runtime.IJavaObject,](xref:Android.Runtime.IJavaObject) sorge la domanda: come implementiamo `IJavaObject`? 
 
-La domanda è stata risolta sopra: `IJavaObject` il motivo per cui tutti i tipi Android devono implementare è in modo che Xamarin.Android ha un wrapper richiamabile Android per fornire ad Android, vale a dire un proxy Java per il tipo specificato. Dal momento che **monodroid.exe** cerca solo `Java.Lang.Object` le sottoclassi e `Java.Lang.Object` implementa `IJavaObject,` la risposta è ovvia: sottoclasse `Java.Lang.Object`: 
+La domanda è stata risolta sopra: `IJavaObject` il motivo per cui tutti i tipi Android devono implementare è in modo che Xamarin.Android ha un wrapper richiamabile Android per fornire ad Android, vale a dire un proxy Java per il tipo specificato. Poiché **monodroid.exe** `Java.Lang.Object` cerca solo `Java.Lang.Object` le `IJavaObject`sottoclassi e implementa `Java.Lang.Object`, la risposta è ovvia: sottoclasse : 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {

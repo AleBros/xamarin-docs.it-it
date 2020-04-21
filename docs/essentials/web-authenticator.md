@@ -5,12 +5,12 @@ ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1
 author: redth
 ms.author: jodick
 ms.date: 03/26/2020
-ms.openlocfilehash: 82c136e1de7d2aa7f2d7f132b8ee1639ee44aba4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b090ea8491afccb7078de8333a44a4888819a46a
+ms.sourcegitcommit: ddd2cb3a102df339bb269380cb2c0617dbb1acb7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80638160"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81688276"
 ---
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Web Authenticator
 
@@ -163,7 +163,7 @@ if (scheme.Equals("Apple")
     && DeviceInfo.Version.Major >= 13)
 {
     // Use Native Apple Sign In API's
-    r = await AppleSignInAuthenticator AuthenticateAsync();
+    r = await AppleSignInAuthenticator.AuthenticateAsync();
 }
 else
 {
@@ -179,6 +179,7 @@ var accessToken = r?.AccessToken;
 
 > [!TIP]
 > Per i dispositivi non iOS 13 questo avvierà il flusso di autenticazione web, che può essere utilizzato anche per abilitare l'accesso Apple sui dispositivi Android e UWP.
+> Puoi accedere al tuo account iCloud sul tuo simulatore iOS per testare apple Sign In.
 
 -----
 
