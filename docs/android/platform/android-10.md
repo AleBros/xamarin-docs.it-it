@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b26d99c131e9759da3077a767476de38712bcb18
+ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73612275"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82047573"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -78,7 +78,7 @@ Quando crei un progetto Android, devi configurare le impostazioni della versione
 
 ### <a name="configure-a-device-or-emulator"></a>Configurare un dispositivo o un emulatore
 
-Se si utilizza un dispositivo fisico come un Pixel, è possibile scaricare `System`  >  `System update`  >  `Check for update` l'aggiornamento Android 10 andando alle impostazioni del telefono. Se preferisci lampeggiare il dispositivo, consulta le istruzioni su come lampeggiare [un'immagine](https://developers.google.com/android/images) di fabbrica o [un'immagine OTA](https://developers.google.com/android/ota) sul dispositivo.
+Se si utilizza un dispositivo fisico come un Pixel, è possibile scaricare l'aggiornamento Android 10 accedendo al sistema > aggiornamento del sistema > verificare l'aggiornamento nelle impostazioni del telefono. Se preferisci lampeggiare il dispositivo, consulta le istruzioni su come lampeggiare [un'immagine](https://developers.google.com/android/images) di fabbrica o [un'immagine OTA](https://developers.google.com/android/ota) sul dispositivo.
 
 Se si usa un emulatore, creare un dispositivo virtuale per il livello API 29 e selezionare un'immagine basata su x86. Per informazioni sull'utilizzo di Gestione dispositivi Android per creare e gestire dispositivi virtuali, vedere [Gestione di dispositivi virtuali con Gestione dispositivi Android.For](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) information about using the Android Device Manager to create and manage virtual devices, see Managing Virtual Devices with the Android Device Manager. Per informazioni sull'uso dell'emulatore Android per il test e il debug, vedere [Debug nell'emulatore Android.For](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator) information about using the Android Emulator for testing and debugging, see Debugging on the Android Emulator.
 
@@ -124,7 +124,7 @@ Quando la versione di Android di destinazione è impostata sul livello API 29, s
 - [Le autorizzazioni per le `USE_FULL_SCREEN_INTENT`finalità a schermo intero devono richiedere ](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
 - [Supporto per pieghevoli](https://developer.android.com/about/versions/10/behavior-changes-10#foldables).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha introdotto Android 10 e ha spiegato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Xamarin.Android con Android 10. Ha fornito una panoramica delle funzionalità chiave disponibili in Android 10. Sono inclusi collegamenti alla documentazione dell'API e agli argomenti di Android Developer per aiutarti a iniziare a creare app per Android 10. Ha anche evidenziato le più importanti modifiche di comportamento di Android 10 che potrebbero influire sulle app esistenti.
 
