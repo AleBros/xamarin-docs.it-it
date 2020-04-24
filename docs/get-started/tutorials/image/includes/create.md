@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a51a00c8cfcd0b12787ecd3cd1eb986bb8f596c0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 855ca4a56915578fdd2560110bc3231f122d0dc9
+ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "75490684"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82109725"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -15,9 +15,9 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa esercitazione richiedono che la soluzione sia denominata **ImageTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/first-app/index.md) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/first-app/index.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **ImageTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **ImageTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -25,7 +25,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>
@@ -54,9 +54,9 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa esercitazione richiedono che la soluzione sia denominata **ImageTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/first-app/index.md) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/first-app/index.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. Fare doppio clic su **MainPage.xaml** nel progetto **ImageTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Fare doppio clic su **MainPage.xaml** nel progetto **ImageTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -64,7 +64,7 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>
