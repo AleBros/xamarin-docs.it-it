@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
+ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80261310"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166339"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -27,7 +27,7 @@ Usare la procedura seguente per compilare l'app per il rilascio:
 
 - **[Proteggere l'applicazione](#protect_app)** &ndash; Impedire a utenti o malintenzionati di eseguire operazioni di debug, reverse engineering o manomissione dell'applicazione disabilitando il debug, nascondendo il codice gestito, aggiungendo funzionalità anti-debug e anti-manomissione e usando la compilazione nativa.
 
-- **[Impostare proprietà per la creazione di pacchetti](#Set_Packaging_Properties)** &ndash; Le proprietà per la creazione di pacchetti controllano la creazione del pacchetto dell'applicazione Android (APK). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze. Inoltre, puoi fornire agli utenti un pacchetto di app Android ottimizzato per i loro dispositivi.
+- **[Impostare proprietà per la creazione di pacchetti](#Set_Packaging_Properties)** &ndash; Le proprietà per la creazione di pacchetti controllano la creazione del pacchetto dell'applicazione Android (APK). Questo passaggio consente di ottimizzare l'APK, di proteggerne gli asset e personalizzare il pacchetto in base alle esigenze. Inoltre, è possibile fornire agli utenti un bundle di app Android ottimizzato per i dispositivi.
 
 - **[Compilare](#Compile)** &ndash; Questo passaggio consente di compilare il codice e gli asset per verificare che la compilazione avvenga in modalità di rilascio.
 
@@ -130,7 +130,7 @@ Di seguito sono riportate le opzioni di controllo del linker:
 
 - **Collega solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
 
-- **Collega tutti gli assembly** &ndash; Collega tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Xamarin.Android.
+- **Collega tutti gli assembly** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
 
 -----
 
@@ -146,11 +146,11 @@ Quando l'opzione **Abilita ProGuard** è selezionata, Xamarin.Android esegue lo 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Azione di costruzione di Proguard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
+[![Azione di compilazione Proguard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Azione di costruzione di Proguard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
+[![Azione di compilazione Proguard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -212,11 +212,11 @@ Dopo la configurazione, Dotfuscator CE proteggerà automaticamente ogni build cr
 
 ### <a name="bundle-assemblies-into-native-code"></a>Crea un bundle di assembly nel codice nativo
 
-Quando questa opzione è abilitata, gli assembly vengono aggregati in una raccolta condivisa nativa. Questa opzione mantiene il codice sicuro in quanto protegge gli assembly incorporandoli in file binari nativi.
+Quando questa opzione è abilitata, gli assembly vengono aggregati in una raccolta condivisa nativa. In questo modo gli assembly possono essere compressi, consentendo file più piccoli `.apk` . La compressione degli assembly conferisce anche una forma *minima* di offuscamento; Questa offuscamento non deve basarsi su.
 
 Questa opzione richiede una licenza Enterprise ed è disponibile solo quando l'opzione **Usa Fast Deployment** è disabilitata. L'opzione **Crea un bundle di assembly nel codice nativo** è disabilitata per impostazione predefinita.
 
-Si noti che l'opzione **Crea un bundle di assembly nel codice nativo***non* significa che gli assembly vengono compilati in codice nativo. Non è possibile usare [**Compilazione AOT**](#aot) per compilare gli assembly in codice nativo in quanto attualmente si tratta solo di una funzionalità sperimentale che non viene usata in produzione.
+Si noti che l'opzione **Crea un bundle di assembly nel codice nativo***non* significa che gli assembly vengono compilati in codice nativo. Non è possibile utilizzare la [**compilazione AOT**](#aot) per compilare gli assembly in codice nativo.
 
 <a name="aot" />
 
@@ -228,7 +228,7 @@ L'opzione **Compilazione AOT** richiede una licenza Enterprise o superiore. L'op
 
 #### <a name="llvm-optimizing-compiler"></a>Compilatore ottimizzatore LLVM
 
-Il _Compilatore ottimizzatore LLVM _ crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per utilizzare il compilatore LLVM, è necessario prima attivare l'opzione **Compilazione AOT** (nella pagina [Proprietà pacchetto).](#Set_Packaging_Properties)
+Il _Compilatore ottimizzatore LLVM _ crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per usare il compilatore LLVM, è innanzitutto necessario abilitare l'opzione di **compilazione AOT** (nella pagina delle [proprietà del pacchetto](#Set_Packaging_Properties) ).
 
 > [!NOTE]
 > L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Enterprise.  
@@ -263,21 +263,21 @@ Quando questa opzione è abilitata, viene creato un APK per ogni ABI supportato,
 
 ### <a name="multi-dex"></a>Multidex
 
-Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. La limitazione dei metodi 65K si basa sul numero di metodi Java a cui &ndash; fa _riferimento_ un'app (inclusi quelli in tutte le librerie da cui dipende l'app) non è basata sul numero di metodi _scritti nel codice sorgente._ Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
+Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite del metodo 65K si basa sul numero di metodi Java a cui un'app _fa riferimento_ (inclusi quelli presenti in tutte le librerie da cui dipende &ndash; l'app) e non si basa sul numero di metodi _scritti nel codice sorgente_. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
 
 È possibile che un'app non usi tutti i metodi in tutte le raccolte cui fa riferimento, quindi è possibile che uno strumento come ProGuard (vedere sopra) possa rimuovere i metodi non usati dal codice. La procedura consigliata consiste nell'abilitare **Abilita multidex** solo se assolutamente necessario, ovvero se l'app fa riferimento a più di 65.000 metodi Java anche dopo l'uso di ProGuard.
 
 Per altre informazioni su multidex, vedere [Configurare le app con più di 64.000 metodi](https://developer.android.com/tools/building/multidex.html).
 
-### <a name="android-app-bundles"></a>Pacchetti di app Android
+### <a name="android-app-bundles"></a>Bundle di app Android
 
-I bundle di app differiscono dagli APK perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, è un formato che deve essere caricato con tutto il codice compilato e le risorse. Dopo aver caricato il bundle dell'app firmato, Google Play avrà tutto il necessario per compilare e firmare gli APK dell'applicazione e servirli agli utenti tramite la consegna dinamica.
+I bundle di app sono diversi da apk perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, si tratta di un formato destinato a essere caricato con tutte le risorse e il codice compilato. Al termine del caricamento del bundle dell'app firmata, Google Play avrà tutti gli elementi necessari per compilare e firmare i apk dell'applicazione e per fornirli agli utenti usando il recapito dinamico.
 
-Per abilitare il supporto per i pacchetti di app `bundle` Android, è necessario acconsentire esplicitamente al valore della proprietà Formato pacchetto Android all'interno delle opzioni del progetto Android.To enable support for Android App Bundles, you'll need to opt-in to the value of the **Android Package Format** property within your Android project options. Prima di eseguire questa operazione, assicurati `Release` di modificare il progetto in una configurazione poiché i bundle dell'app sono destinati solo ai pacchetti di rilascio.
+Per abilitare il supporto per bundle di app Android, è necessario acconsentire esplicitamente al `bundle` valore della proprietà **formato pacchetto Android** nelle opzioni del progetto Android. Prima di eseguire questa operazione, assicurarsi di modificare il progetto in `Release` una configurazione perché i bundle di app sono destinati solo ai pacchetti di versione.
 
-È ora possibile generare un bundle dell'app seguendo il [flusso](#archive)di archiviazione . Verrà generato un bundle dell'app per l'applicazione.
+È ora possibile generare un bundle dell'app seguendo il [flusso di archiviazione](#archive). Verrà generato un bundle dell'app per l'applicazione.
 
-Per ulteriori informazioni sui pacchetti di app Android, vedere [Pacchetti di app Android](https://developer.android.com/guide/app-bundle/).
+Per altre informazioni sui bundle di app Android, vedere [bundle di app Android](https://developer.android.com/guide/app-bundle/).
 
 <a name="Compile" />
 
@@ -303,11 +303,11 @@ Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionand
 
 Per iniziare il processo di pubblicazione, fare clic con il pulsante destro del mouse sul progetto nel **riquadro della soluzione** e selezionare **Archivio... ** dal menu di scelta rapida:
 
-[![App archivio](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
+[![App di archiviazione](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 **Archivio...** avvia **Gestione archivi** e inizia il processo di archiviazione del bundle dell'app, come illustrato in questo screenshot:
 
-[![Gestore archivi](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
+[![Gestione archivi](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 Un altro modo per creare un archivio è fare clic con il pulsante destro del mouse sulla soluzione nel **riquadro della soluzione** e selezionare **Archivia tutti... ** per compilare la soluzione e archiviare tutti i progetti Xamarin in grado di generare un archivio:
 
@@ -315,7 +315,7 @@ Un altro modo per creare un archivio è fare clic con il pulsante destro del mou
 
 Sia **Archivio** che **Archivia tutti** avviano automaticamente **Gestione archivi**. Per avviare direttamente **Gestione archivi**, fare clic sulla voce di menu **Strumenti > Gestione archivi... **:
 
-[![Avviare Archive Manager](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
+[![Avvia Gestione archivi](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 Per visualizzare gli archivi della soluzione, fare clic con il pulsante destro del mouse sul nodo **Soluzione** e selezionare **Visualizza archivi**:
 
@@ -325,7 +325,7 @@ Per visualizzare gli archivi della soluzione, fare clic con il pulsante destro d
 
 La funzionalità **Gestione archivi** è costituita da un **elenco di soluzioni**, un **elenco di archivi** e un **riquadro dei dettagli**:
 
-[![Riquadri di Archive Manager](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
+[![Riquadri di gestione archivi](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 L'**elenco di soluzioni** visualizza tutte le soluzioni con almeno un progetto archiviato. L'**elenco di soluzioni** comprende le seguenti sezioni:
 
@@ -369,7 +369,7 @@ Per avviare il processo di pubblicazione, selezionare **Compila > Archivia per l
 
 In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, **MyApp**. Si noti che il campo del commento consente di salvare un breve commento con l'archivio. Per pubblicare una versione archiviata di un'applicazione Xamarin.Android, selezionare l'app in **Gestione archivi** e fare clic su **Firma e distribuisci... ** come illustrato in precedenza. Viene aperta la finestra di dialogo **Firma e distribuisci** che presenta due opzioni:
 
-[![Firma e distribuisci](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
+[![Firma e Distribuisci](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 Da qui è possibile selezionare il canale di distribuzione:
 
