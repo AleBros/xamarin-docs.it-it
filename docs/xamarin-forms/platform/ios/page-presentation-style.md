@@ -1,24 +1,24 @@
 ---
 title: Stile di presentazione pagina modale in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS imposta lo stile di presentazione di una pagina modale.
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS imposta lo stile di presentazione di una pagina modale.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 3b1a88968334bed42be53119c26de43ef9cd1419
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
-ms.translationtype: HT
+ms.date: 04/02/2020
+ms.openlocfilehash: 5078b280499929e0e2e3691539cf1927b4c79fe7
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72171053"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517530"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Stile di presentazione pagina modale in iOS
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma iOS viene utilizzata per impostare lo stile di presentazione di una pagina modale. Vengono utilizzati in XAML, impostando il `Page.ModalPresentationStyle` la proprietà associabile per un `UIModalPresentationStyle` valore di enumerazione:
+Questa specifica della piattaforma iOS viene utilizzata per impostare lo stile di presentazione di una pagina modale. Viene utilizzato in XAML impostando la `Page.ModalPresentationStyle` proprietà associabile su un `UIModalPresentationStyle` valore di enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -28,7 +28,7 @@ Questa specifica della piattaforma iOS viene utilizzata per impostare lo stile d
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -45,21 +45,24 @@ public class iOSModalFormSheetPageCS : ContentPage
 }
 ```
 
-Il `Page.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Page.SetModalPresentationStyle` metodo, nel [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usato per impostare lo stile di presentazione modale in un [ `Page` ](xref:Xamarin.Forms.Page) specificando uno dei seguenti `UIModalPresentationStyle` enumerazione valori:
+Il `Page.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il `Page.SetModalPresentationStyle` metodo, nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene usato per impostare lo stile di presentazione modale [`Page`](xref:Xamarin.Forms.Page) su un oggetto specificando uno `UIModalPresentationStyle` dei seguenti valori di enumerazione:
 
-- `FullScreen`, che imposta lo stile di presentazione modale per includere l'intero schermo. Per impostazione predefinita, vengono visualizzate pagine modali utilizza questo stile di presentazione.
-- `FormSheet`, che imposta lo stile di presentazione modale da essere centrati sul e inferiori rispetto allo schermo.
+- `FullScreen`, che imposta lo stile di presentazione modale per includere l'intero schermo. Per impostazione predefinita, le pagine modali vengono visualizzate utilizzando questo stile di presentazione.
+- `FormSheet`, che imposta lo stile di presentazione modale in modo che sia centrato su una dimensione inferiore a quella dello schermo.
+- `Automatic`, che imposta lo stile di presentazione modale sul valore predefinito scelto dal sistema. Per la maggior parte dei `UIKit` controller di visualizzazione `UIModalPresentationStyle.PageSheet`, ne esegue il mapping a, ma alcuni controller di visualizzazione di sistema possono eseguirne il mapping a uno stile diverso.
+- `OverFullScreen`, che imposta lo stile di presentazione modale per coprire lo schermo.
+- `PageSheet`, che imposta lo stile di presentazione modale per coprire il contenuto sottostante.
 
-Inoltre, il `GetModalPresentationStyle` metodo può essere utilizzato per recuperare il valore corrente del `UIModalPresentationStyle` enumerazione che viene applicato al [ `Page` ](xref:Xamarin.Forms.Page).
+Inoltre, il `GetModalPresentationStyle` metodo può essere utilizzato per recuperare il valore corrente dell' `UIModalPresentationStyle` enumerazione applicata a. [`Page`](xref:Xamarin.Forms.Page)
 
-Il risultato è che lo stile di presentazione modali in un' [ `Page` ](xref:Xamarin.Forms.Page) può essere impostato:
+Il risultato è che lo stile di presentazione modale su [`Page`](xref:Xamarin.Forms.Page) un oggetto può essere impostato:
 
-[![](page-presentation-style-images/modal-presentation-style-small.png "Stili di presentazione modale in un iPad")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Stili di presentazione modale in un iPad")
+[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
-> Le pagine che utilizzano questo specifico della piattaforma per impostare lo stile di presentazione modale è necessario usare navigazione modale. Per altre informazioni, vedere [Xamarin.Forms pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+> Le pagine che usano questo specifico della piattaforma per impostare lo stile di presentazione modale devono usare la navigazione modale. Per altre informazioni, vedere [Novell. Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
-## <a name="related-links"></a>Collegamenti correlati
+## <a name="related-links"></a>Link correlati
 
 - [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)

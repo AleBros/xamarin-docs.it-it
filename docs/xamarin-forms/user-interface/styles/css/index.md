@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/04/2019
-ms.openlocfilehash: 6813b29718d26b592631dd43b8fbd03fe479101e
-ms.sourcegitcommit: 1fb87ff74560d4d7c89f80018cc010c07646461c
+ms.date: 04/17/2020
+ms.openlocfilehash: 182bd088ba169dad6bdbbb4315a033925964f64e
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82139057"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517557"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Applicazione di stili alle app Novell. Forms con Cascading Style Sheets (CSS)
 
@@ -92,6 +92,9 @@ Il processo per l'aggiunta di un foglio di stile a una soluzione è il seguente:
 ### <a name="loading-a-style-sheet"></a>Caricamento di un foglio di stile
 
 Sono disponibili diversi approcci che è possibile utilizzare per caricare un foglio di stile.
+
+> [!NOTE]
+> Attualmente non è possibile modificare un foglio di stile in fase di esecuzione e fare in modo che il nuovo foglio di stile venga applicato.
 
 ### <a name="xaml"></a>XAML
 
@@ -358,50 +361,50 @@ Le proprietà CSS seguenti sono supportate da Novell. Forms (nella colonna **val
 |`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
-|`background-color`|`VisualElement`|_color_ \| `initial` |`background-color: springgreen;`|
-|`background-image`|`Page`|_stringa_ \| `initial` |`background-image: bg.png;`|
-|`border-color`|`Button`, `Frame`, `ImageButton`|_color_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_valore Double_ \|`initial` |`border-radius: 10;`|
-|`border-width`|`Button`, `ImageButton`|_valore Double_ \|`initial` |`border-width: .5;`|
-|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`column-gap`|`Grid`|_valore Double_ \|`initial`|`column-gap: 9;`|
+|`background-color`|`VisualElement`|_colore_ \|`initial` |`background-color: springgreen;`|
+|`background-image`|`Page`|_stringa_ \| di`initial` |`background-image: bg.png;`|
+|`border-color`|`Button`, `Frame`, `ImageButton`|_colore_ \|`initial`|`border-color: #9acd32;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_double_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_double_ \| `initial` |`border-width: .5;`|
+|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_colore_ \|`initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
 |`flex-basis`|`VisualElement`|_float_ \| float `auto` . \| `initial` Inoltre, è possibile specificare una percentuale nell'intervallo compreso tra 0% e 100% e il `%` segno.|`flex-basis: 25%;`|
 |`flex-grow`|`VisualElement`|_float_ \| `initial`|`flex-grow: 1.5;`|
 |`flex-shrink`|`VisualElement`|_float_ \| `initial`|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
-|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_stringa_ \| `initial` |`font-family: Consolas;`|
+|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_stringa_ \| di`initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_doppio_ \| _namedsize_ namedsize \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
-|`height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 250;`|
+|`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
-|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_valore Double_ \|`initial`|`letter-spacing: 2.5;`|
-|`line-height`|`Label`, `Span`|_valore Double_ \|`initial` |`line-height: 1.8;`|
+|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \| `initial`|`letter-spacing: 2.5;`|
+|`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_spessore_ \|`initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_spessore_ \|`initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_spessore_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_spessore_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_spessore_ \|`initial` |`margin-bottom: 6;`|
 |`max-lines`|`Label`|_INT_ \| `initial`|`max-lines: 2;`|
-|`min-height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 50;`|
-|`min-width`|`VisualElement`|_valore Double_ \|`initial` |`min-width: 112;`|
-|`opacity`|`VisualElement`|_valore Double_ \|`initial` |`opacity: .3;`|
+|`min-height`|`VisualElement`|_double_ \| `initial` |`min-height: 50;`|
+|`min-width`|`VisualElement`|_double_ \| `initial` |`min-width: 112;`|
+|`opacity`|`VisualElement`|_double_ \| `initial` |`opacity: .3;`|
 |`order`|`VisualElement`|_INT_ \| `initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_spessore_ \|`initial` |`padding: 6 12 12;`|
-|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_valore Double_ \|`initial`|`padding-left: 3;`|
-|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-top: 4;`|
-|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-right: 2;`|
-|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-bottom: 6;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_double_ \| `initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
-|`row-gap`|`Grid`| _valore Double_ \|`initial`|`row-gap: 12;`|
+|`row-gap`|`Grid`| _double_ \| `initial`|`row-gap: 12;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left`e `right` devono essere evitati negli ambienti da destra a sinistra.| `text-align: right;`|
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
 |`transform-origin`|`VisualElement`| _Double_, _Double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
-|`width`|`VisualElement`|_valore Double_ \|`initial`|`min-width: 320;`|
+|`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]
 > `initial`è un valore valido per tutte le proprietà. Cancella il valore (Reimposta impostazione predefinita) impostato da un altro stile.
@@ -422,20 +425,20 @@ Sono supportate anche le seguenti proprietà CSS specifiche di Novell. Forms (ne
 
 |Proprietà|Si applica a|Valori|Esempio|
 |---|---|---|---|
-|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-background-color: teal;`|
-|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-text-color: gray`|
+|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-background-color: teal;`|
+|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`|_INT_ \| `initial` |`-xf-max-length: 20;`|
-|`-xf-max-track-color`|`Slider`|_color_ \| `initial` |`-xf-max-track-color: red;`|
-|`-xf-min-track-color`|`Slider`|_color_ \| `initial` |`-xf-min-track-color: yellow;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_INT_ \| `initial` |`-xf-max-length: 20;`|
+|`-xf-max-track-color`|`Slider`|_colore_ \|`initial` |`-xf-max-track-color: red;`|
+|`-xf-min-track-color`|`Slider`|_colore_ \|`initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both`è supportato solo in un `ScrollView`oggetto. |`-xf-orientation: horizontal;`|
 |`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|\| _testo racchiuso tra virgolette_`initial` |`-xf-placeholder: Enter name;`|
-|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_color_ \| `initial` |`-xf-placeholder-color: green;`|
-|`-xf-spacing`|`StackLayout`|_valore Double_ \|`initial` |`-xf-spacing: 8;`|
-|`-xf-thumb-color`|`Slider`, `Switch`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
+|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_colore_ \|`initial` |`-xf-placeholder-color: green;`|
+|`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
+|`-xf-thumb-color`|`Slider`, `Switch`|_colore_ \|`initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
-|`-xf-visual`|`VisualElement`|_stringa_ \| `initial` |`-xf-visual: material;`|
+|`-xf-visual`|`VisualElement`|_stringa_ \| di`initial` |`-xf-visual: material;`|
 
 ### <a name="xamarinforms-shell-specific-properties"></a>Xamarin.Forms Shell specific properties (Proprietà specifiche della shell Xamarin.Forms)
 
@@ -443,17 +446,17 @@ Sono supportate anche le proprietà CSS specifiche della shell Novell. Forms (ne
 
 |Proprietà|Si applica a|Valori|Esempio|
 |---|---|---|---|
-|`-xf-flyout-background`|`Shell`|_color_ \| `initial` |`-xf-flyout-background: red;`|
-|`-xf-shell-background`|`Element`|_color_ \| `initial` |`-xf-shell-background: green;`|
-|`-xf-shell-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-disabled: blue;`|
-|`-xf-shell-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-foreground: yellow;`|
-|`-xf-shell-tabbar-background`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-background: white;`|
-|`-xf-shell-tabbar-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
-|`-xf-shell-tabbar-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
-|`-xf-shell-tabbar-title`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
-|`-xf-shell-tabbar-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
-|`-xf-shell-title`|`Element`|_color_ \| `initial` |`-xf-shell-title: teal;`|
-|`-xf-shell-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-unselected: limegreen;`|
+|`-xf-flyout-background`|`Shell`|_colore_ \|`initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_colore_ \|`initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_colore_ \|`initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_colore_ \|`initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_colore_ \|`initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_colore_ \|`initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_colore_ \|`initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_colore_ \|`initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_colore_ \|`initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_colore_ \|`initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_colore_ \|`initial` |`-xf-shell-unselected: limegreen;`|
 
 ### <a name="color"></a>Colore
 

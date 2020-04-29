@@ -6,19 +6,19 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/14/2018
-ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 03/10/2020
+ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79305115"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517271"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
-_Il NavigationPage classe fornisce un'esperienza di spostamento gerarchico in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, come desiderato. La classe implementa la navigazione come stack LIFO (Last-In, First-Out) di oggetti Page. In questo articolo viene illustrato come utilizzare il NavigationPage classe per eseguire la navigazione in uno stack di pagine._
+_La classe NavigationPage fornisce un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. La classe implementa lo spostamento come uno stack LIFO (Last-in, First-out) di oggetti Page. Questo articolo illustra come usare la classe NavigationPage per eseguire la navigazione in uno stack di pagine._
 
 Per passare da una pagina all'altra, un'applicazione esegue il push di una nuova pagina nello stack di navigazione, in cui diventa la pagina attiva, come illustrato nel diagramma seguente:
 
@@ -28,23 +28,23 @@ Per tornare alla pagina precedente, l'applicazione preleva la pagina corrente da
 
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
-I metodi di [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) navigazione vengono [`Page`](xref:Xamarin.Forms.Page) esposti dalla proprietà in qualsiasi tipo derivato. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
+I [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) metodi di navigazione sono esposti dalla proprietà su [`Page`](xref:Xamarin.Forms.Page) tutti i tipi derivati. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
 
 <a name="Performing_Navigation" />
 
 ## <a name="performing-navigation"></a>Esecuzione degli spostamenti
 
-Nella navigazione gerarchica, la [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe viene [`ContentPage`](xref:Xamarin.Forms.ContentPage) utilizzata per spostarsi all'interno di uno stack di oggetti. Gli screenshot seguenti illustrano i componenti principali della `NavigationPage` in ogni piattaforma:
+Nell'esplorazione gerarchica, la [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe viene utilizzata per spostarsi tra uno stack di [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetti. Gli screenshot seguenti illustrano i componenti principali della `NavigationPage` in ogni piattaforma:
 
 ![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
 
-Il layout [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) di un dipende dalla piattaforma:
+Il layout di un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) oggetto dipende dalla piattaforma:
 
 - In iOS è presente una barra di spostamento nella parte superiore della pagina che include un titolo e un pulsante *Indietro* che consente di tornare alla pagina precedente.
 - In Android è presente una barra di spostamento nella parte superiore della pagina che include un titolo, un'icona e un pulsante *Indietro* che consente di tornare alla pagina precedente. L'icona è definita nell'attributo `[Activity]` che decora la classe `MainActivity` nel progetto specifico della piattaforma Android.
 - Nella piattaforma UWP (Universal Windows Platform) è presente una barra di spostamento nella parte superiore della pagina che visualizza un titolo.
 
-Su tutte le piattaforme, [`Page.Title`](xref:Xamarin.Forms.Page.Title) il valore della proprietà verrà visualizzato come titolo della pagina.
+In tutte le piattaforme, il valore della [`Page.Title`](xref:Xamarin.Forms.Page.Title) proprietà verrà visualizzato come titolo della pagina. Inoltre, la `IconColor` proprietà può essere impostata su un oggetto [`Color`](xref:Xamarin.Forms.Color) applicato all'icona nella barra di spostamento.
 
 > [!NOTE]
 > È consigliabile popolare una `NavigationPage` solo con istanze di `ContentPage`.
@@ -65,11 +65,11 @@ Di conseguenza l'istanza `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentP
 ![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
 > [!NOTE]
-> La [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) proprietà [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) di un'istanza fornisce l'accesso alla prima pagina nello stack di navigazione.
+> La [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) proprietà di un' [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) istanza di consente di accedere alla prima pagina nello stack di navigazione.
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>Eseguire il push delle pagine nello stack di navigazione
 
-Per passare `Page2Xaml`a , è [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) necessario richiamare il metodo sulla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà della pagina corrente, come illustrato nell'esempio di codice seguente:
+Per passare a `Page2Xaml`, è necessario richiamare il [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) metodo sulla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà della pagina corrente, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -82,22 +82,22 @@ Di conseguenza l'istanza `Page2Xaml` viene inserita tramite push nello stack di 
 
 ![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
 
-Quando [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) viene richiamato il metodo, si verificano i seguenti eventi:
+Quando viene [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) richiamato il metodo, si verificano gli eventi seguenti:
 
-- Il relativo `PushAsync` [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override richiamato nella chiamata di pagina viene richiamato.
-- Il relativo [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override della pagina a cui ci si sposta viene richiamato.
+- Per la chiamata `PushAsync` della pagina [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) è stato richiamato il relativo override.
+- Viene richiamata la [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sostituzione della pagina a cui è stato eseguito lo spostamento.
 - L'attività `PushAsync` viene completata.
 
-Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro Xamarin.Forms di Charles Petzold.
+Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro Novell. Forms di Charles Petzold.
 
 > [!NOTE]
-> Le chiamate [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) alle sostituzioni e non possono essere considerate come indicazioni garantite di navigazione tra le pagine. Ad esempio, in iOS l'override di `OnDisappearing` viene chiamato per la pagina attiva quando l'applicazione viene terminata.
+> Le chiamate a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) e [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) le sostituzioni non possono essere considerate come indicazioni garantite della navigazione tra le pagine. Ad esempio, in iOS l'override di `OnDisappearing` viene chiamato per la pagina attiva quando l'applicazione viene terminata.
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>Prelievo di pagine dallo stack di navigazione
 
 La pagina attiva può essere prelevata dallo stack di navigazione premendo il pulsante *Indietro* (fisico o su schermo) del dispositivo.
 
-Per tornare a livello di `Page2Xaml` codice alla [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) pagina originale, l'istanza deve richiamare il metodo, come illustrato nell'esempio di codice seguente:To programmatically return to the original page, the instance must invoke the method, as demonstrated in the following code example:
+Per tornare a livello di codice alla pagina originale, `Page2Xaml` l'istanza deve richiamare [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) il metodo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnPreviousPageButtonClicked (object sender, EventArgs e)
@@ -106,15 +106,15 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Di conseguenza l'istanza `Page2Xaml` viene rimossa dallo stack di navigazione e la nuova pagina in primo piano diventa la pagina attiva. Quando [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) viene richiamato il metodo, si verificano i seguenti eventi:
+Di conseguenza l'istanza `Page2Xaml` viene rimossa dallo stack di navigazione e la nuova pagina in primo piano diventa la pagina attiva. Quando viene [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) richiamato il metodo, si verificano gli eventi seguenti:
 
-- Il relativo `PopAsync` [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override richiamato nella chiamata di pagina viene richiamato.
-- Il relativo [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override della pagina restituita viene richiamato.
+- Per la chiamata `PopAsync` della pagina [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) è stato richiamato il relativo override.
+- Viene richiamata la [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sostituzione della pagina a cui viene restituito.
 - L'attività `PopAsync` viene completata.
 
 Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per altre informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del manuale di Xamarin.Forms redatto da Charles Petzold.
 
-Oltre [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) ai [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) metodi [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) e , la proprietà [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) di ogni pagina fornisce anche un metodo, illustrato nell'esempio di codice seguente:As as well as and methods, the property of each page also provides a method, which is shown in the following code example:
+Oltre ai metodi [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) e [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) , la [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di ogni pagina fornisce anche un [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) metodo, illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -123,11 +123,11 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Questo metodo estrae [`Page`](xref:Xamarin.Forms.Page) tutto tranne la radice dallo stack di navigazione, rendendo quindi la pagina radice dell'applicazione la pagina attiva.
+Questo metodo estrae tutto tranne la [`Page`](xref:Xamarin.Forms.Page) radice dallo stack di navigazione, rendendo quindi la pagina radice dell'applicazione la pagina attiva.
 
 ### <a name="animating-page-transitions"></a>Animazione delle transizioni di pagina
 
-La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di ogni pagina fornisce anche metodi `boolean` push e pop sottoposti a override che includono un parametro che controlla se visualizzare un'animazione di pagina durante la navigazione, come illustrato nell'esempio di codice seguente:The property of each page also provides overridden push and pop methods that include a parameter that controls whether to display a page animation during navigation, as shown in the following code example:
+La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di ogni pagina fornisce anche metodi push e pop sottoposti a override che `boolean` includono un parametro che controlla se visualizzare un'animazione di pagina durante la navigazione, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -155,7 +155,7 @@ L'impostazione del parametro `boolean` su `false` disabilita l'animazione per la
 
 ## <a name="passing-data-when-navigating"></a>Passaggio di dati durante gli spostamenti
 
-In alcuni casi, una pagina deve passare dati a un'altra pagina durante gli spostamenti. Due tecniche per eseguire questa operazione sono il passaggio di dati [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) tramite un costruttore di pagina e impostando la nuova pagina per i dati. Di seguito verranno descritti entrambi.
+In alcuni casi, una pagina deve passare dati a un'altra pagina durante gli spostamenti. Due tecniche per eseguire questa operazione comportano il passaggio dei dati tramite un costruttore di pagina e l'impostazione [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della nuova pagina sui dati. Di seguito verranno descritti entrambi.
 
 ### <a name="passing-data-through-a-page-constructor"></a>Passaggio dei dati tramite un costruttore di pagina
 
@@ -168,7 +168,7 @@ public App ()
 }
 ```
 
-Questo codice `MainPage` crea un'istanza, passando la data e l'ora correnti in [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) formato ISO8601, di cui viene eseguito il wrapping in un'istanza.
+Questo codice crea un' `MainPage` istanza di, passando la data e l'ora correnti nel formato ISO8601, che viene racchiuso [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) in un'istanza.
 
 L'istanza di `MainPage` riceve i dati tramite un parametro del costruttore, come illustrato nell'esempio di codice seguente:
 
@@ -180,13 +180,13 @@ public MainPage (string date)
 }
 ```
 
-I dati vengono quindi visualizzati nella [`Label.Text`](xref:Xamarin.Forms.Label.Text) pagina impostando la proprietà, come illustrato nelle schermate seguenti:
+I dati vengono quindi visualizzati nella pagina impostando la [`Label.Text`](xref:Xamarin.Forms.Label.Text) proprietà, come illustrato nelle schermate seguenti:
 
 ![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Passaggio dei dati tramite BindingContext
 
-Un approccio alternativo per il passaggio di dati a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) un'altra pagina durante la navigazione consiste nell'impostare la nuova pagina sui dati, come illustrato nell'esempio di codice seguente:An alternative approach for passing data to another page during navigation is by setting the new page's to the data, as shown in the following code example:
+Un approccio alternativo per passare i dati a un'altra pagina durante la navigazione consiste nell'impostare la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) nuova pagina sui dati, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNavigateButtonClicked (object sender, EventArgs e)
@@ -204,7 +204,7 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Questo codice [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) imposta `SecondPage` l'istanza `Contact` sull'istanza, quindi `SecondPage`passa all'oggetto .
+Questo codice imposta l' [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) oggetto dell' `SecondPage` istanza sull' `Contact` istanza di, quindi passa a `SecondPage`.
 
 `SecondPage` usa quindi il data binding per visualizzare i dati dell'istanza di `Contact`, come illustrato nell'esempio di codice XAML seguente:
 
@@ -266,7 +266,7 @@ public class SecondPageCS : ContentPage
 }
 ```
 
-I dati vengono quindi visualizzati nella [`Label`](xref:Xamarin.Forms.Label) pagina da una serie di controlli, come illustrato nelle schermate seguenti:
+I dati vengono quindi visualizzati nella pagina da una serie di [`Label`](xref:Xamarin.Forms.Label) controlli, come illustrato nelle schermate seguenti:
 
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
@@ -276,9 +276,9 @@ Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-
 
 ## <a name="manipulating-the-navigation-stack"></a>Modifica dello stack di navigazione
 
-La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà espone [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) una proprietà da cui è possibile ottenere le pagine nello stack di navigazione. Mentre Xamarin.Forms mantiene l'accesso allo `Navigation` stack [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) di [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) spostamento, la proprietà fornisce i metodi e per modificare lo stack inserendo pagine o rimuovendole.
+La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà espone una [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) proprietà dalla quale è possibile ottenere le pagine nello stack di navigazione. Mentre Novell. Forms mantiene l'accesso allo stack di navigazione `Navigation` , la proprietà [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) fornisce [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) i metodi e per la modifica dello stack inserendo le pagine o rimuovendo le pagine.
 
-Il [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) metodo inserisce una pagina specificata nello stack di navigazione prima di una pagina specificata esistente, come illustrato nel diagramma seguente:The method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
+Il [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) metodo inserisce una pagina specificata nello stack di navigazione prima di una pagina specificata esistente, come illustrato nel diagramma seguente:
 
 ![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
 
@@ -304,11 +304,11 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 ```
 
-A condizione che le credenziali dell'utente siano corrette, l'istanza di `MainPage` viene inserita nello stack di navigazione prima della pagina corrente. Il [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) metodo rimuove quindi la pagina corrente `MainPage` dallo stack di navigazione, con l'istanza che diventa la pagina attiva.
+A condizione che le credenziali dell'utente siano corrette, l'istanza di `MainPage` viene inserita nello stack di navigazione prima della pagina corrente. Il [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) metodo rimuove quindi la pagina corrente dallo stack di navigazione, con l' `MainPage` istanza che diventa la pagina attiva.
 
 ## <a name="displaying-views-in-the-navigation-bar"></a>Visualizzazione delle viste nella barra di spostamento
 
-Qualsiasi Xamarin.Forms [`View`](xref:Xamarin.Forms.View) può essere visualizzato nella [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)barra di navigazione di un oggetto . Questa operazione viene eseguita impostando [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) la `View`proprietà associata su un oggetto . Questa proprietà associata può [`Page`](xref:Xamarin.Forms.Page)essere impostata `Page` su qualsiasi `NavigationPage`, `NavigationPage` e quando l'oggetto viene inserito in un oggetto , il testamento rispetterà il valore della proprietà .
+Qualsiasi Novell. Forms [`View`](xref:Xamarin.Forms.View) può essere visualizzato nella barra di navigazione di [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)un oggetto. Questa operazione viene eseguita impostando [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) la proprietà associata su `View`un oggetto. Questa proprietà associata può essere impostata su qualsiasi [`Page`](xref:Xamarin.Forms.Page)oggetto e, quando `Page` viene eseguito il push `NavigationPage`su un `NavigationPage` oggetto, il valore della proprietà verrà rispettato da.
 
 L'esempio seguente, tratto dall'[esempio di visualizzazione del titolo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), mostra come impostare la proprietà associata [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) da XAML:
 
@@ -337,31 +337,31 @@ public class TitleViewPage : ContentPage
 }
 ```
 
-In questo [`Slider`](xref:Xamarin.Forms.Slider) modo viene visualizzata la [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)barra di navigazione della scheda :
+Ciò comporta la visualizzazione [`Slider`](xref:Xamarin.Forms.Slider) di un oggetto nella barra di spostamento in [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
 
 [![Dispositivo di scorrimento TitleView](hierarchical-images/titleview-small.png "Dispositivo di scorrimento TitleView")](hierarchical-images/titleview-large.png#lightbox "Dispositivo di scorrimento TitleView")
 
 > [!IMPORTANT]
-> Molte visualizzazioni non verranno visualizzate nella barra di spostamento [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) a [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) meno che le dimensioni della visualizzazione non siano specificate con le proprietà e . In alternativa, è possibile eseguire [`StackLayout`](xref:Xamarin.Forms.StackLayout) il [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) wrapping della vista in a con le proprietà e impostate sui valori appropriati.
+> Molte visualizzazioni non verranno visualizzate nella barra di spostamento, a meno che le dimensioni della vista non siano [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) specificate [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) con le proprietà e. In alternativa, è possibile eseguire il wrapper della vista [`StackLayout`](xref:Xamarin.Forms.StackLayout) in un [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) oggetto [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) con le proprietà e impostate sui valori appropriati.
 
-Si noti [`Layout`](xref:Xamarin.Forms.Layout) che, poiché [`View`](xref:Xamarin.Forms.View) la [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) classe deriva dalla classe , la proprietà associata può essere impostata per visualizzare una classe di layout che contiene più visualizzazioni. In iOS e nella piattaforma UWP (Universal Windows Platform) non è possibile modificare l'altezza della barra di navigazione, pertanto verrà effettuato il ritaglio se la vista visualizzata nella barra di spostamento sarà superiore alle dimensioni predefinite della barra di spostamento. Tuttavia, in Android, l'altezza della barra [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) di navigazione `double` può essere modificata impostando la proprietà associabile su un che rappresenta la nuova altezza. Per altre informazioni, vedere [Setting the Navigation Bar Height on a NavigationPage](~/xamarin-forms/platform/android/navigationpage-bar-height.md) (Impostazione dell'altezza della barra di spostamento su una NavigationPage).
+Si noti che, poiché [`Layout`](xref:Xamarin.Forms.Layout) la classe deriva dalla [`View`](xref:Xamarin.Forms.View) classe, la [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) proprietà associata può essere impostata in modo da visualizzare una classe layout contenente più viste. In iOS e nella piattaforma UWP (Universal Windows Platform) non è possibile modificare l'altezza della barra di navigazione, pertanto verrà effettuato il ritaglio se la vista visualizzata nella barra di spostamento sarà superiore alle dimensioni predefinite della barra di spostamento. Tuttavia, in Android, l'altezza della barra di spostamento può essere modificata impostando la [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) proprietà associabile su `double` un oggetto che rappresenta la nuova altezza. Per altre informazioni, vedere [Setting the Navigation Bar Height on a NavigationPage](~/xamarin-forms/platform/android/navigationpage-bar-height.md) (Impostazione dell'altezza della barra di spostamento su una NavigationPage).
 
-In alternativa, può essere suggerita una barra di spostamento estesa inserendo alcuni contenuti nella barra di spostamento e altri in una vista nella parte superiore del contenuto della pagina, da associare ai colori della barra di navigazione. Inoltre, in iOS la linea di separazione e l'ombreggiatura che si [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) trovare `true`nella parte inferiore della barra di spostamento possono essere rimosse impostando la proprietà associabile su . Per altre informazioni, vedere [Hiding the Navigation Bar Separator on a NavigationPage](~/xamarin-forms/platform/ios/navigation-bar-separator.md) (Nascondere il separatore della barra di spostamento su una NavigationPage).
+In alternativa, può essere suggerita una barra di spostamento estesa inserendo alcuni contenuti nella barra di spostamento e altri in una vista nella parte superiore del contenuto della pagina, da associare ai colori della barra di navigazione. Inoltre, in iOS la linea di separazione e l'ombreggiatura che si trova nella parte inferiore della barra di spostamento possono essere rimossi [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) impostando la `true`proprietà associabile su. Per altre informazioni, vedere [Hiding the Navigation Bar Separator on a NavigationPage](~/xamarin-forms/platform/ios/navigation-bar-separator.md) (Nascondere il separatore della barra di spostamento su una NavigationPage).
 
 > [!NOTE]
-> Le [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty) [`Title`](xref:Xamarin.Forms.Page.Title)proprietà [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) , e possono definire tutti i valori che occupano spazio sulla barra di spostamento. Mentre le dimensioni della barra di spostamento variano a seconda della piattaforma e delle dimensioni dello schermo, l'impostazione di tutte queste proprietà provocherà conflitti a causa dello spazio limitato disponibile. Invece di tentare di usare una combinazione di queste proprietà, è possibile ottenere un design migliore della barra di spostamento desiderata impostando solo la proprietà `TitleView`.
+> Le [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty)proprietà [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), e [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) possono definire valori che occupano spazio sulla barra di spostamento. Mentre le dimensioni della barra di spostamento variano a seconda della piattaforma e delle dimensioni dello schermo, l'impostazione di tutte queste proprietà provocherà conflitti a causa dello spazio limitato disponibile. Invece di tentare di usare una combinazione di queste proprietà, è possibile ottenere un design migliore della barra di spostamento desiderata impostando solo la proprietà `TitleView`.
 
 ### <a name="limitations"></a>Limitazioni
 
-Ci sono una serie di limitazioni da [`View`](xref:Xamarin.Forms.View) tenere presente quando [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)si visualizza un nella barra di navigazione di un :
+Quando si visualizza un oggetto [`View`](xref:Xamarin.Forms.View) nella barra di navigazione di un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), è necessario tenere presenti alcune limitazioni:
 
 - In iOS, le viste poste nella barra di spostamento di una `NavigationPage` vengono visualizzate in una posizione diversa a seconda se sono abilitati i titoli di grandi dimensioni. Per altre informazioni sull'abilitazione di titoli di grandi dimensioni, vedere [Displaying Large Titles](~/xamarin-forms/platform/ios/page-large-title.md) (Visualizzazione di titoli di grandi dimensioni).
 - In Android, il posizionamento delle viste nella barra di spostamento di una `NavigationPage` può essere eseguito solo nelle app che usano la compatibilità delle app.
-- Non è consigliabile posizionare viste grandi [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView)complesse, ad esempio `NavigationPage`e , nella barra di navigazione di un oggetto .
+- Non è consigliabile inserire visualizzazioni grandi e complesse, ad esempio [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView), nella barra di navigazione di un oggetto. `NavigationPage`
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Navigazione tra le pagine](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
+- [Navigazione tra pagine](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Hierarchical (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical) (Esempio gerarchico)
 - [Passing Data (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (Esempio di passaggio dei dati)
 - [LoginFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow) (Esempio di LoginFlow)

@@ -6,25 +6,25 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
-ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.date: 03/26/2020
+ms.openlocfilehash: da6dbe63b7151ef0f9a1defca66fbb3abb25ad1d
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292756"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517544"
 ---
 # <a name="xamarinforms-swipeview"></a>Novell. Forms SwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
-Il `SwipeView` è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida rivelate da un gesto di scorrimento:
+È `SwipeView` un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida rivelate da un gesto di scorrimento:
 
 [![Screenshot di SwipeView swipe items in a CollectionView, in iOS e Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe elementi")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe elementi")
 
-`SwipeView` è disponibile in Novell. Forms 4,4. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente alla classe `AppDelegate` in iOS, alla classe `MainActivity` in Android o alla classe di `App` in UWP, prima di chiamare `Forms.Init`:
+`SwipeView`è disponibile in Novell. Forms 4,4. Tuttavia, `AppDelegate` è attualmente sperimentale e può essere usata solo aggiungendo la seguente riga di codice alla classe in iOS, alla `MainActivity` classe in Android o alla `App` classe in UWP, prima di chiamare: `Forms.Init`
 
 ```csharp
 Forms.SetFlags("SwipeView_Experimental");
@@ -37,27 +37,27 @@ Forms.SetFlags("SwipeView_Experimental");
 - `TopItems`, di tipo `SwipeItems`, che rappresenta gli elementi swipe che possono essere richiamati quando il controllo viene sottoposto a scorrimento dall'alto verso il basso.
 - `BottomItems`, di tipo `SwipeItems`, che rappresenta gli elementi swipe che possono essere richiamati quando il controllo viene sottoposto a scorrimento dal basso verso l'alto.
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che possono essere destinazioni di data binding e con stile.
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
 
-Inoltre, il `SwipeView` eredita la proprietà [`Content`](xref:Xamarin.Forms.ContentView.Content) dalla classe [`ContentView`](xref:Xamarin.Forms.ContentView) . La proprietà `Content` è la proprietà Content della classe `SwipeView` e pertanto non è necessario impostarla in modo esplicito.
+`SwipeView` Eredita inoltre la [`Content`](xref:Xamarin.Forms.ContentView.Content) proprietà dalla [`ContentView`](xref:Xamarin.Forms.ContentView) classe. La `Content` proprietà è la proprietà di contenuto della `SwipeView` classe e pertanto non deve essere impostata in modo esplicito.
 
-La classe `SwipeView` definisce anche quattro eventi:
+La `SwipeView` classe definisce anche quattro eventi:
 
-- `SwipeStarted` viene generato all'avvio di un swipe. L'oggetto `SwipeStartedEventArgs` che accompagna questo evento dispone di una proprietà `SwipeDirection`, di tipo `SwipeDirection`.
-- `SwipeChanging` viene attivato quando si sposta il dito. L'oggetto `SwipeChangingEventArgs` che accompagna questo evento dispone di una proprietà `SwipeDirection`, di tipo `SwipeDirection`e di una proprietà `Offset` di tipo `double`.
-- `SwipeEnded` viene generato al termine di un swipe. L'oggetto `SwipeEndedEventArgs` che accompagna questo evento dispone di una proprietà `SwipeDirection`, di tipo `SwipeDirection`.
-- `CloseRequested` viene generato quando gli elementi di scorrimento vengono chiusi.
+- `SwipeStarted`viene generato all'avvio di un scorrimento rapido. L' `SwipeStartedEventArgs` oggetto che accompagna questo evento ha una `SwipeDirection` proprietà di tipo. `SwipeDirection`
+- `SwipeChanging`viene generato quando si sposta il dito. L' `SwipeChangingEventArgs` oggetto che accompagna questo evento ha `SwipeDirection` una proprietà, di tipo `SwipeDirection`e una `Offset` proprietà di tipo. `double`
+- `SwipeEnded`viene generato al termine di un swipe. L' `SwipeEndedEventArgs` oggetto che accompagna questo evento ha una `SwipeDirection` proprietà di tipo. `SwipeDirection`
+- `CloseRequested`viene generato quando gli elementi di scorrimento vengono chiusi.
 
-Inoltre, `SwipeView` definisce un metodo `Close`, che chiude gli elementi di scorrimento.
+`SwipeView` Include `Open` inoltre i metodi e `Close` , che aprono e chiudono a livello di codice gli elementi di scorrimento, rispettivamente.
 
 > [!NOTE]
-> `SwipeView` dispone di una piattaforma specifica in iOS e Android, che controlla la transizione utilizzata per l'apertura di un `SwipeView`. Per altre informazioni, vedere [modalità di transizione SwipeView swipe in iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) e la [modalità di transizione SwipeView swipe in Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
+> `SwipeView`dispone di una piattaforma specifica in iOS e Android, che controlla la transizione utilizzata durante l'apertura di un `SwipeView`oggetto. Per altre informazioni, vedere [modalità di transizione SwipeView swipe in iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) e la [modalità di transizione SwipeView swipe in Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
 
 ## <a name="create-a-swipeview"></a>Creare un SwipeView
 
-Un `SwipeView` deve definire il contenuto a cui il `SwipeView` esegue il wrapping e gli elementi di scorrimento che vengono rivelati dal gesto di scorrimento. Gli elementi swipe sono uno o più oggetti `SwipeItem` posizionati in una delle quattro raccolte `SwipeView` direzionali: `LeftItems`, `RightItems`, `TopItems`o `BottomItems`.
+Un `SwipeView` oggetto deve definire il contenuto che `SwipeView` esegue il wrapping e gli elementi di scorrimento che vengono rivelati dal gesto di scorrimento. Gli elementi swipe sono uno o più `SwipeItem` oggetti `SwipeView` posizionati in una delle quattro raccolte direzionali `LeftItems`, ovvero, `RightItems` `TopItems`, o. `BottomItems`
 
-Nell'esempio seguente viene illustrato come creare un'istanza di un `SwipeView` in XAML:
+Nell'esempio seguente viene illustrato come creare un'istanza `SwipeView` di in XAML:
 
 ```xaml
 <SwipeView>
@@ -127,39 +127,39 @@ SwipeView swipeView = new SwipeView
 };
 ```
 
-In questo esempio, il contenuto del `SwipeView` è un [`Grid`](xref:Xamarin.Forms.Grid) che contiene un [`Label`](xref:Xamarin.Forms.Label):
+In questo esempio, il `SwipeView` contenuto è un [`Grid`](xref:Xamarin.Forms.Grid) oggetto che contiene [`Label`](xref:Xamarin.Forms.Label)un oggetto:
 
 [![Screenshot del contenuto di SwipeView, in iOS e Android](swipeview-images/swipeview-content.png "Contenuto di SwipeView")](swipeview-images/swipeview-content-large.png#lightbox "Contenuto di SwipeView")
 
-Gli elementi swipe vengono usati per eseguire azioni sul contenuto `SwipeView` e vengono rivelati quando il controllo viene sottoposto a scorrimento dal lato sinistro:
+Gli elementi swipe vengono usati per eseguire azioni sul `SwipeView` contenuto e vengono rivelati quando il controllo viene sottoposto a scorrimento dal lato sinistro:
 
 [![Screenshot di SwipeView swipe Items, in iOS e Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe elementi")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe elementi")
 
 Per impostazione predefinita, un elemento swipe viene eseguito quando viene toccato dall'utente. Tuttavia, è possibile modificare questo comportamento. Per altre informazioni, vedere [modalità di scorrimento](#swipe-mode).
 
-Dopo l'esecuzione di un elemento swipe, gli elementi swipe sono nascosti e il contenuto del `SwipeView` viene nuovamente visualizzato. Tuttavia, è possibile modificare questo comportamento. Per altre informazioni, vedere [comportamento di scorrimento rapido](#swipe-behavior).
+Dopo l'esecuzione di un elemento swipe, gli elementi swipe sono nascosti e `SwipeView` il contenuto viene nuovamente visualizzato. Tuttavia, è possibile modificare questo comportamento. Per altre informazioni, vedere [comportamento di scorrimento rapido](#swipe-behavior).
 
 > [!NOTE]
 > Il contenuto e gli elementi di scorrimento possono essere inseriti in linea o definiti come risorse.
 
 ## <a name="swipe-items"></a>Scorri elementi
 
-Le raccolte `LeftItems`, `RightItems`, `TopItems`e `BottomItems` sono di tipo `SwipeItems`. La classe `SwipeItems` definisce le proprietà seguenti:
+Le `LeftItems`raccolte `RightItems`, `TopItems`, e `BottomItems` sono di tipo `SwipeItems`. La `SwipeItems` classe definisce le proprietà seguenti:
 
 - `Mode`, di tipo `SwipeMode`, che indica l'effetto di un'interazione con scorrimento rapido. Per altre informazioni sulla modalità di scorrimento, vedere [modalità di scorrimento](#swipe-mode).
-- `SwipeBehaviorOnInvoked`, di tipo `SwipeBehaviorOnInvoked`, che indica il comportamento di un `SwipeView` dopo la chiamata di un elemento swipe. Per ulteriori informazioni sul comportamento di scorrimento, vedere [scorrimento del comportamento](#swipe-behavior).
+- `SwipeBehaviorOnInvoked`, di tipo `SwipeBehaviorOnInvoked`, che indica il comportamento `SwipeView` di un oggetto dopo la chiamata di un elemento swipe. Per ulteriori informazioni sul comportamento di scorrimento, vedere [scorrimento del comportamento](#swipe-behavior).
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che possono essere destinazioni di data binding e con stile.
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
 
-Ogni elemento swipe viene definito come oggetto `SwipeItem` inserito in una delle quattro raccolte `SwipeItems` direzionali. La classe `SwipeItem` deriva dalla classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) e aggiunge i membri seguenti:
+Ogni elemento swipe viene definito come `SwipeItem` oggetto che viene inserito in una delle quattro `SwipeItems` raccolte direzionali. La `SwipeItem` classe deriva dalla [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe e aggiunge i membri seguenti:
 
-- Proprietà `BackgroundColor`, di tipo `Color`, che definisce il colore di sfondo dell'elemento swipe. Questa proprietà è supportata da una proprietà associabile.
-- Evento `Invoked`, che viene generato quando viene eseguito l'elemento swipe.
+- `BackgroundColor` Proprietà, di tipo `Color`, che definisce il colore di sfondo dell'elemento swipe. Questa proprietà è supportata da una proprietà associabile.
+- Un `Invoked` evento, che viene generato quando viene eseguito l'elemento swipe.
 
 > [!IMPORTANT]
-> La classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) definisce diverse proprietà, tra cui `Command`, `CommandParameter`, `IconImageSource`e `Text`. Queste proprietà possono essere impostate su un oggetto `SwipeItem` per definirne l'aspetto e per definire un `ICommand` eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md).
+> La [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe definisce diverse proprietà, tra `Command`cui `CommandParameter`, `IconImageSource`, e `Text`. Queste proprietà possono essere impostate su un `SwipeItem` oggetto per definirne l'aspetto e per definire `ICommand` un oggetto che viene eseguito quando viene richiamato l'elemento swipe. Per ulteriori informazioni, vedere [MenuItem Novell. Forms](~/xamarin-forms/user-interface/menuitem.md).
 
-Nell'esempio seguente vengono illustrati due oggetti `SwipeItem` nella raccolta `LeftItems` di un `SwipeView`:
+Nell'esempio seguente vengono illustrati due `SwipeItem` oggetti `LeftItems` nella raccolta di `SwipeView`un oggetto:
 
 ```xaml
 <SwipeView>
@@ -179,20 +179,20 @@ Nell'esempio seguente vengono illustrati due oggetti `SwipeItem` nella raccolta 
 </SwipeView>
 ```
 
-L'aspetto di ogni `SwipeItem` è definito da una combinazione delle proprietà `Text`, `IconImageSource`e `BackgroundColor`:
+L'aspetto di ogni `SwipeItem` è definito da una combinazione delle proprietà `Text`, `IconImageSource`e `BackgroundColor` :
 
 [![Screenshot di SwipeView swipe Items, in iOS e Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe elementi")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe elementi")
 
-Quando viene toccato un `SwipeItem`, il relativo evento `Invoked` viene generato e gestito dal relativo gestore eventi registrato. In alternativa, la proprietà `Command` può essere impostata su un'implementazione di `ICommand` che verrà eseguita quando viene richiamato il `SwipeItem`.
+Quando viene `SwipeItem` toccato un oggetto, il `Invoked` relativo evento viene generato e gestito dal relativo gestore eventi registrato. In alternativa, la `Command` proprietà può essere impostata su un' `ICommand` implementazione di che verrà eseguita quando `SwipeItem` viene richiamato.
 
 > [!NOTE]
-> Quando l'aspetto di un `SwipeItem` viene definito solo usando le proprietà `Text` o `IconImageSource`, il contenuto viene sempre centrato.
+> Quando l'aspetto di un `SwipeItem` oggetto viene definito solo usando `Text` le `IconImageSource` proprietà o, il contenuto viene sempre centrato.
 
-Oltre a definire gli elementi di scorrimento come `SwipeItem` oggetti, è anche possibile definire visualizzazioni di elementi con scorrimento personalizzato. Per altre informazioni, vedere [elementi swipe personalizzati](#custom-swipe-items).
+Oltre a definire gli elementi swipe come `SwipeItem` oggetti, è anche possibile definire visualizzazioni di elementi con scorrimento personalizzato. Per altre informazioni, vedere [elementi swipe personalizzati](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Direzione scorrimento
 
-`SwipeView` supporta quattro direzioni di scorrimento diverse, con la direzione di scorrimento definita dalla raccolta di `SwipeItems` direzionali a cui vengono aggiunti gli oggetti di `SwipeItem`. Ogni direzione di scorrimento può mantenere i propri elementi di scorrimento. Ad esempio, nell'esempio seguente viene illustrato un `SwipeView` i cui elementi swipe dipendono dalla direzione di scorrimento:
+`SwipeView`supporta quattro direzioni di scorrimento diverse, con la direzione di scorrimento definita dalla raccolta direzionale `SwipeItems` a cui vengono `SwipeItem` aggiunti gli oggetti. Ogni direzione di scorrimento può mantenere i propri elementi di scorrimento. Ad esempio, nell'esempio seguente viene illustrato `SwipeView` un oggetto i cui elementi swipe dipendono dalla direzione di scorrimento:
 
 ```xaml
 <SwipeView>
@@ -220,28 +220,28 @@ Oltre a definire gli elementi di scorrimento come `SwipeItem` oggetti, è anche 
 </SwipeView>
 ```
 
-In questo esempio, è possibile scorrere il contenuto del `SwipeView` a destra o a sinistra. Se si scorre a destra, viene visualizzato l'elemento **Delete** swipe, mentre l'operazione di scorrimento a sinistra Mostra gli elementi **Preferiti** e **Condividi** swipe.
+In questo esempio, il `SwipeView` contenuto può essere strisciato a destra o a sinistra. Se si scorre a destra, viene visualizzato l'elemento **Delete** swipe, mentre l'operazione di scorrimento a sinistra Mostra gli elementi **Preferiti** e **Condividi** swipe.
 
 > [!WARNING]
-> È possibile impostare una sola istanza di una raccolta di `SwipeItems` direzionali alla volta in un `SwipeView`. Non è pertanto possibile avere due definizioni di `LeftItems` in un `SwipeView`.
+> È possibile impostare una sola istanza `SwipeItems` di una raccolta direzionale alla volta in un oggetto `SwipeView`. Non è pertanto possibile avere due `LeftItems` definizioni in un `SwipeView`oggetto.
 
-Gli eventi `SwipeStarted`, `SwipeChanging`e `SwipeEnded` segnalano la direzione di scorrimento tramite la proprietà `SwipeDirection` negli argomenti dell'evento. Questa proprietà è di tipo `SwipeDirection`, ovvero un'enumerazione costituita da quattro membri:
+Gli `SwipeStarted`eventi `SwipeChanging`, e `SwipeEnded` segnalano la direzione di scorrimento tramite la `SwipeDirection` proprietà negli argomenti dell'evento. Questa proprietà è di tipo `SwipeDirection`, che è un'enumerazione costituita da quattro membri:
 
-- `Right` indica che si è verificato un scorrimento a destra.
-- `Left` indica che si è verificato un scorrimento a sinistra.
-- `Up` indica che si è verificata una striscia verso l'alto.
-- `Down` indica che si è verificata una striscia verso il basso.
+- `Right`indica che si è verificato un scorrimento a destra.
+- `Left`indica che si è verificato un scorrimento a sinistra.
+- `Up`indica che si è verificata una striscia verso l'alto.
+- `Down`indica che si è verificato un scorrimento verso il basso.
 
 ## <a name="swipe-mode"></a>Modalità di scorrimento
 
-La classe `SwipeItems` dispone di una proprietà `Mode`, che indica l'effetto di un'interazione con scorrimento rapido. Questa proprietà deve essere impostata su uno dei membri dell'enumerazione `SwipeMode`:
+La `SwipeItems` classe dispone di `Mode` una proprietà, che indica l'effetto di un'interazione con scorrimento rapido. Questa proprietà deve essere impostata su uno dei membri `SwipeMode` dell'enumerazione:
 
-- `Reveal` indica che un swipe rivela gli elementi di scorrimento. Questo è il valore predefinito per la proprietà `SwipeItems.Mode`.
-- `Execute` indica che un swipe esegue gli elementi di scorrimento.
+- `Reveal`indica che un swipe rivela gli elementi di scorrimento. Questo è il valore predefinito per la proprietà `SwipeItems.Mode`.
+- `Execute`indica che un swipe esegue gli elementi di scorrimento.
 
-In modalità Reveal, l'utente scorre un `SwipeView` per aprire un menu costituito da uno o più elementi swipe e deve toccare in modo esplicito un elemento swipe per eseguirlo. Dopo l'esecuzione dell'elemento swipe, gli elementi swipe vengono chiusi e il contenuto del `SwipeView` viene nuovamente visualizzato. In modalità di esecuzione, l'utente scorre un `SwipeView` per aprire un menu costituito da uno o più elementi swipe, che vengono quindi eseguiti automaticamente. Dopo l'esecuzione, gli elementi swipe vengono chiusi e il contenuto del `SwipeView` viene nuovamente visualizzato.
+In modalità Reveal, l'utente scorre un `SwipeView` oggetto per aprire un menu costituito da uno o più elementi swipe e deve toccare in modo esplicito un elemento swipe per eseguirlo. Dopo l'esecuzione dell'elemento swipe, gli elementi swipe vengono chiusi e il `SwipeView` contenuto viene nuovamente visualizzato. In modalità di esecuzione, l'utente scorre un `SwipeView` oggetto per aprire un menu costituito da uno o più elementi di scorrimento, che vengono quindi eseguiti automaticamente. Dopo l'esecuzione, gli elementi swipe vengono chiusi e `SwipeView` il contenuto viene nuovamente visualizzato.
 
-Nell'esempio seguente viene illustrato un `SwipeView` configurato per utilizzare la modalità di esecuzione:
+Nell'esempio seguente viene illustrato `SwipeView` un oggetto configurato per l'utilizzo della modalità di esecuzione:
 
 ```xaml
 <SwipeView>
@@ -257,17 +257,17 @@ Nell'esempio seguente viene illustrato un `SwipeView` configurato per utilizzare
 </SwipeView>
 ```
 
-In questo esempio, il contenuto del `SwipeView` può essere sottoposto a scorrimento rapido per rivelare l'elemento swipe, che viene eseguito immediatamente. Dopo l'esecuzione, il contenuto del `SwipeView` viene nuovamente visualizzato.
+In questo esempio, il `SwipeView` contenuto può essere sottoposto a scorrimento rapido per rivelare l'elemento swipe, che viene eseguito immediatamente. Dopo l'esecuzione, `SwipeView` il contenuto viene nuovamente visualizzato.
 
 ## <a name="swipe-behavior"></a>Comportamento di scorrimento rapido
 
-La classe `SwipeItems` dispone di una proprietà `SwipeBehaviorOnInvoked`, che indica il comportamento di un `SwipeView` dopo la chiamata di un elemento swipe. Questa proprietà deve essere impostata su uno dei membri dell'enumerazione `SwipeBehaviorOnInvoked`:
+La `SwipeItems` classe dispone di `SwipeBehaviorOnInvoked` una proprietà, che indica il `SwipeView` comportamento di un oggetto dopo la chiamata di un elemento swipe. Questa proprietà deve essere impostata su uno dei membri `SwipeBehaviorOnInvoked` dell'enumerazione:
 
-- `Auto` indica che in modalità di rivelazione l'`SwipeView` si chiude dopo che è stato richiamato un elemento swipe e in modalità di esecuzione il `SwipeView` rimane aperto dopo la chiamata di un elemento swipe. Questo è il valore predefinito per la proprietà `SwipeItems.SwipeBehaviorOnInvoked`.
-- `Close` indica che il `SwipeView` viene chiuso dopo la chiamata di un elemento swipe.
-- `RemainOpen` indica che il `SwipeView` rimane aperto dopo la chiamata di un elemento swipe.
+- `Auto`indica che in modalità Reveal il `SwipeView` viene chiuso dopo che è stato richiamato un elemento swipe e in `SwipeView` modalità di esecuzione rimane aperto dopo la chiamata di un elemento swipe. Questo è il valore predefinito per la proprietà `SwipeItems.SwipeBehaviorOnInvoked`.
+- `Close`indica che il `SwipeView` metodo viene chiuso dopo la chiamata di un elemento swipe.
+- `RemainOpen`indica che rimane `SwipeView` aperto dopo la chiamata di un elemento swipe.
 
-Nell'esempio seguente viene illustrato un `SwipeView` configurato per rimanere aperto dopo che è stato richiamato un elemento swipe:
+Nell'esempio seguente viene illustrato `SwipeView` un oggetto configurato per rimanere aperto dopo che è stato richiamato un elemento swipe:
 
 ```xaml
 <SwipeView>
@@ -289,16 +289,16 @@ Nell'esempio seguente viene illustrato un `SwipeView` configurato per rimanere a
 
 ## <a name="custom-swipe-items"></a>Elementi di scorrimento personalizzati
 
-Gli elementi swipe personalizzati possono essere definiti con il tipo di `SwipeItemView`. La classe `SwipeItemView` deriva dalla classe [`ContentView`](xref:Xamarin.Forms.ContentView) e aggiunge le proprietà seguenti:
+Gli elementi swipe personalizzati possono essere definiti con `SwipeItemView` il tipo. La `SwipeItemView` classe deriva dalla [`ContentView`](xref:Xamarin.Forms.ContentView) classe e aggiunge le proprietà seguenti:
 
 - `Command`, di tipo `ICommand`, che viene eseguito quando viene toccato un elemento swipe.
 - `CommandParameter`, di tipo `object`, ovvero il parametro passato a `Command`.
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che possono essere destinazioni di data binding e con stile.
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
 
-La classe `SwipeItemView` definisce anche un evento `Invoked` generato quando l'elemento viene toccato, dopo l'esecuzione del `Command`.
+La `SwipeItemView` classe definisce anche un `Invoked` evento che viene generato quando l'elemento viene toccato, dopo l' `Command` esecuzione di.
 
-Nell'esempio seguente viene illustrato un oggetto `SwipeItemView` nella raccolta `LeftItems` di un `SwipeView`:
+Nell'esempio seguente viene illustrato `SwipeItemView` un oggetto nella `LeftItems` raccolta di un `SwipeView`oggetto:
 
 ```xaml
 <SwipeView>
@@ -322,15 +322,41 @@ Nell'esempio seguente viene illustrato un oggetto `SwipeItemView` nella raccolta
 </SwipeView>
 ```
 
-In questo esempio, il `SwipeItemView` è costituito da un [`StackLayout`](xref:Xamarin.Forms.StackLayout) contenente un [`Entry`](xref:Xamarin.Forms.Entry) e un [`Label`](xref:Xamarin.Forms.Label). Dopo che l'utente immette l'input nella `Entry`, è possibile toccare il resto del `SwipeViewItem` che esegue il `ICommand` definito dalla proprietà `SwipeItemView.Command`.
+In questo esempio, è `SwipeItemView` costituito [`StackLayout`](xref:Xamarin.Forms.StackLayout) da un [`Entry`](xref:Xamarin.Forms.Entry) oggetto contenente [`Label`](xref:Xamarin.Forms.Label)un oggetto e un oggetto. Dopo che l'utente immette input in `Entry`, è `SwipeViewItem` possibile toccare il resto di, che esegue l'oggetto `ICommand` definito dalla `SwipeItemView.Command` proprietà.
+
+## <a name="open-and-close-a-swipeview-programmatically"></a>Aprire e chiudere un SwipeView a livello di codice
+
+`SwipeView`include `Open` i `Close` metodi e, che aprono e chiudono a livello di codice gli elementi di scorrimento, rispettivamente.
+
+Il `Open` metodo richiede un `OpenSwipeItem` argomento per specificare la direzione da cui `SwipeView` verrà aperto. L' `OpenSwipeItem` enumerazione ha quattro membri:
+
+- `LeftItems`, che indica che l' `SwipeView` oggetto verrà aperto da sinistra per rivelare gli elementi di scorrimento della `LeftItems` raccolta.
+- `TopItems`, che indica che l' `SwipeView` oggetto verrà aperto dalla parte superiore, per rivelare gli elementi di scorrimento della `TopItems` raccolta.
+- `RightItems`, che indica che l' `SwipeView` oggetto verrà aperto dalla destra, per rivelare gli elementi di scorrimento della `RightItems` raccolta.
+- `BottomItems`, che indica che l' `SwipeView` oggetto verrà aperto dalla parte inferiore, per rivelare gli elementi di scorrimento della `BottomItems` raccolta.
+
+Dato un `SwipeView` oggetto `swipeView`denominato, nell'esempio seguente viene illustrato come aprire `SwipeView` un oggetto per rivelare gli elementi di scorrimento `LeftItems` nella raccolta:
+
+```csharp
+swipeView.Open(OpenSwipeItem.LeftItems);
+```
+
+`swipeView` Può quindi essere chiuso con il `Close` metodo:
+
+```csharp
+swipeView.Close();
+```
+
+> [!NOTE]
+> Quando viene `Close` richiamato il metodo, `CloseRequested` viene generato l'evento.
 
 ## <a name="disable-a-swipeview"></a>Disabilitare un SwipeView
 
-Un'applicazione può entrare in uno stato in cui il scorrimento di un elemento di contenuto non è un'operazione valida. In questi casi, è possibile disabilitare il `SwipeView` impostando la relativa proprietà `IsEnabled` su `false`. In questo modo gli utenti non potranno scorrere rapidamente il contenuto per rivelare gli elementi del dito.
+Un'applicazione può entrare in uno stato in cui il scorrimento di un elemento di contenuto non è un'operazione valida. In questi casi, `SwipeView` può essere disabilitato impostando la `IsEnabled` relativa proprietà `false`su. In questo modo gli utenti non potranno scorrere rapidamente il contenuto per rivelare gli elementi del dito.
 
-Inoltre, quando si definisce la proprietà `Command` di un `SwipeItem` o `SwipeItemView`, è possibile specificare il delegato `CanExecute` del `ICommand` per abilitare o disabilitare l'elemento swipe.
+Inoltre `Command` , quando `SwipeItem` `SwipeItemView` `ICommand` si definisce la proprietà di un oggetto o, `CanExecute` è possibile specificare il delegato di per abilitare o disabilitare l'elemento swipe.
 
-## <a name="related-links"></a>Collegamenti correlati
+## <a name="related-links"></a>Link correlati
 
 - [SwipeView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 - [MenuItem di Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

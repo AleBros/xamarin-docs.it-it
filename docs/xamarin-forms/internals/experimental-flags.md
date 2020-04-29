@@ -6,13 +6,13 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/20/2020
-ms.openlocfilehash: cebb996da992058616f9cf96ef3212c9ce27022a
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.date: 04/14/2020
+ms.openlocfilehash: cca377a7a88599bc34fd66695ad303162e6be200
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112589"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516542"
 ---
 # <a name="xamarinforms-experimental-flags"></a>Flag sperimentali Novell. Forms
 
@@ -20,10 +20,13 @@ Quando viene implementata una nuova funzionalità di Novell. Forms, a volte si t
 
 Novell. Forms include i flag sperimentali seguenti:
 
+- `AppTheme_Experimental`
 - `CarouselView_Experimental`
+- `Expander_Experimental`
 - `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
+- `RadioButton_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -31,46 +34,46 @@ Novell. Forms include i flag sperimentali seguenti:
 L'uso di funzionalità dietro un flag sperimentale richiede l'abilitazione del flag, o dei flag, nell'applicazione. Sono disponibili due approcci per l'abilitazione dei flag sperimentali:
 
 - Abilitare il flag o i flag sperimentali nei progetti della piattaforma.
-- Abilitare il flag sperimentale o i flag nella classe `App`.
+- Abilitare il flag o i flag sperimentali nella `App` classe.
 
 > [!WARNING]
 > Se si utilizza una funzionalità che si trova dietro un flag sperimentale, senza abilitare il flag, l'applicazione genera un'eccezione che indica quale flag deve essere abilitato.
 
 ## <a name="enable-flags-in-platform-projects"></a>Abilita flag nei progetti di piattaforma
 
-Il metodo `Xamarin.Forms.Forms.SetFlags` può essere usato per abilitare un flag sperimentale nei progetti della piattaforma:
+Il `Xamarin.Forms.Forms.SetFlags` metodo può essere usato per abilitare un flag sperimentale nei progetti della piattaforma:
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 ```
 
-Il metodo di `SetFlags` deve essere richiamato nella classe `AppDelegate` in iOS, nella classe di `MainActivity` in Android e nella classe `App` in UWP.
+Il `SetFlags` metodo deve essere richiamato nella `AppDelegate` classe in iOS, nella `MainActivity` classe in Android e nella `App` classe in UWP.
 
 > [!IMPORTANT]
-> L'abilitazione di un flag sperimentale nei progetti della piattaforma deve essere eseguita prima che venga richiamato il metodo `Forms.Init`.
+> L'abilitazione di un flag sperimentale nei progetti della piattaforma `Forms.Init` deve verificarsi prima che il metodo venga richiamato.
 
-Il metodo `Xamarin.Forms.Forms.SetFlags` accetta un argomento di matrice `string`, che rende possibile l'abilitazione di più flag sperimentali in una singola chiamata al metodo:
+Il `Xamarin.Forms.Forms.SetFlags` metodo accetta un `string` argomento di matrice, che rende possibile l'abilitazione di più flag sperimentali in una singola chiamata al metodo:
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> Non chiamare mai il metodo `SetFlags` più di una volta, in quanto le chiamate successive sovrascriveranno il risultato delle chiamate precedenti.
+> Non chiamare mai `SetFlags` il metodo più di una volta, in quanto le chiamate successive sovrascriveranno il risultato delle chiamate precedenti.
 
 ## <a name="enable-flags-in-your-app-class"></a>Abilitare i flag nella classe dell'app
 
-Il metodo `Device.SetFlags` può essere usato per abilitare un flag sperimentale nella classe `App` nel progetto di codice condiviso:
+Il `Device.SetFlags` metodo può essere usato per abilitare un flag sperimentale nella `App` classe nel progetto di codice condiviso:
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
-Il metodo `Device.SetFlags` accetta un argomento `IReadOnlyList<string>`, che rende possibile l'abilitazione di più flag sperimentali in una singola chiamata al metodo:
+Il `Device.SetFlags` metodo accetta un `IReadOnlyList<string>` argomento, che rende possibile l'abilitazione di più flag sperimentali in una singola chiamata al metodo:
 
 ```csharp
 Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> Non chiamare mai il metodo `SetFlags` più di una volta, in quanto le chiamate successive sovrascriveranno il risultato delle chiamate precedenti.
+> Non chiamare mai `SetFlags` il metodo più di una volta, in quanto le chiamate successive sovrascriveranno il risultato delle chiamate precedenti.

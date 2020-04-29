@@ -7,41 +7,41 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 86714c2041edcd98c2bdd7b740a897dab8069752
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70772008"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516471"
 ---
 # <a name="customizing-an-entry"></a>Personalizzazione di una voce
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
-_Il Xamarin.Forms Entry controllo consente di modificare una singola riga di testo. In questo articolo viene illustrato come creare un renderer personalizzato per il Entry controllo, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con la propria personalizzazione specifica della piattaforma._
+_Il controllo voce Novell. Forms consente di modificare una singola riga di testo. Questo articolo illustra come creare un renderer personalizzato per il controllo voce, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con una personalizzazione specifica della piattaforma._
 
-A ogni controllo di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando [`Entry`](xref:Xamarin.Forms.Entry) un controllo viene eseguito il rendering da un'applicazione `EntryRenderer` Xamarin.Forms, in iOS viene creata un'istanza della classe, che a sua volta crea un'istanza di un controllo nativo. `UITextField` Nella piattaforma Android la classe `EntryRenderer` crea un'istanza di un controllo `EditText`. Nella piattaforma UWP (Universal Windows Platform) la classe `EntryRenderer` crea un'istanza di un controllo `TextBox`. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+A ogni controllo di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando viene [`Entry`](xref:Xamarin.Forms.Entry) eseguito il rendering di un controllo da parte di un'applicazione Novell. `EntryRenderer` Forms, in iOS viene creata un'istanza della classe, `UITextField` che a sua volta crea un'istanza di un controllo nativo. Nella piattaforma Android la classe `EntryRenderer` crea un'istanza di un controllo `EditText`. Nella piattaforma UWP (Universal Windows Platform) la classe `EntryRenderer` crea un'istanza di un controllo `TextBox`. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-Nel diagramma seguente viene illustrata la relazione tra il [`Entry`](xref:Xamarin.Forms.Entry) controllo e i controlli nativi corrispondenti che lo implementano:
+Il diagramma seguente illustra la relazione tra il [`Entry`](xref:Xamarin.Forms.Entry) controllo e i controlli nativi corrispondenti che lo implementano:
 
 ![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
 
-Il processo di rendering può essere sfruttato per implementare le personalizzazioni specifiche della piattaforma creando un renderer personalizzato per il [`Entry`](xref:Xamarin.Forms.Entry) controllo in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
+Il processo di rendering può trarre vantaggio da per implementare personalizzazioni specifiche della piattaforma creando un renderer personalizzato per il [`Entry`](xref:Xamarin.Forms.Entry) controllo su ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
 1. [Creare](#Creating_the_Custom_Entry_Control) un controllo personalizzato Xamarin.Forms.
 1. [Utilizzare](#Consuming_the_Custom_Control) il controllo personalizzato da Xamarin.Forms.
 1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per il controllo in ogni piattaforma.
 
-Ogni elemento verrà ora discusso a [`Entry`](xref:Xamarin.Forms.Entry) sua volta, per implementare un controllo che ha un colore di sfondo diverso in ogni piattaforma.
+Ogni elemento verrà ora discusso a sua volta per implementare un [`Entry`](xref:Xamarin.Forms.Entry) controllo con un colore di sfondo diverso in ogni piattaforma.
 
 > [!IMPORTANT]
-> Questo articolo illustra come creare un semplice renderer personalizzato. Non è tuttavia necessario creare un renderer personalizzato per implementare un controllo `Entry` con un colore di sfondo diverso in ogni piattaforma. Questa operazione può essere eseguita [`Device`](xref:Xamarin.Forms.Device) più facilmente `OnPlatform` usando la classe o l'estensione di markup per fornire valori specifici della piattaforma. Per altre informazioni, vedere [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#providing-platform-specific-values) (Specificare valori specifici della piattaforma) e [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension) (Estensione di markup OnPlatform).
+> Questo articolo illustra come creare un semplice renderer personalizzato. Non è tuttavia necessario creare un renderer personalizzato per implementare un controllo `Entry` con un colore di sfondo diverso in ogni piattaforma. Questa operazione può essere eseguita più facilmente usando la [`Device`](xref:Xamarin.Forms.Device) classe, o l' `OnPlatform` estensione di markup, per fornire valori specifici della piattaforma. Per altre informazioni, vedere [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) (Specificare valori specifici della piattaforma) e [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension) (Estensione di markup OnPlatform).
 
 <a name="Creating_the_Custom_Entry_Control" />
 
 ## <a name="creating-the-custom-entry-control"></a>Creazione di un controllo Entry personalizzato
 
-È [`Entry`](xref:Xamarin.Forms.Entry) possibile creare un controllo personalizzato `Entry` creando una sottoclasse del controllo, come illustrato nell'esempio di codice seguente:A custom control can be created by subclassing the control, as shown in the following code example:
+È possibile [`Entry`](xref:Xamarin.Forms.Entry) creare un controllo personalizzato creando una sottoclasse del `Entry` controllo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class MyEntry : Entry
@@ -49,7 +49,7 @@ public class MyEntry : Entry
 }
 ```
 
-Il `MyEntry` controllo viene creato nel progetto di libreria [`Entry`](xref:Xamarin.Forms.Entry) .NET Standard ed è semplicemente un controllo. La personalizzazione del controllo avviene nel renderer personalizzato. Non è pertanto necessaria alcuna implementazione aggiuntiva nel controllo `MyEntry`.
+Il `MyEntry` controllo viene creato nel progetto di libreria .NET standard ed è semplicemente un [`Entry`](xref:Xamarin.Forms.Entry) controllo. La personalizzazione del controllo avviene nel renderer personalizzato. Non è pertanto necessaria alcuna implementazione aggiuntiva nel controllo `MyEntry`.
 
 <a name="Consuming_the_Custom_Control" />
 
@@ -92,7 +92,7 @@ public class MainPage : ContentPage
 }
 ```
 
-Questo codice crea [`ContentPage`](xref:Xamarin.Forms.ContentPage) un'istanza di [`Label`](xref:Xamarin.Forms.Label) `MyEntry` un nuovo oggetto che visualizzerà un e controllo centrato sia verticalmente che orizzontalmente nella pagina.
+Questo codice crea un'istanza di [`ContentPage`](xref:Xamarin.Forms.ContentPage) un nuovo oggetto che [`Label`](xref:Xamarin.Forms.Label) visualizzerà `MyEntry` un controllo e centrato verticalmente e orizzontalmente nella pagina.
 
 Un renderer personalizzato può essere ora aggiunto a ogni progetto di applicazione per personalizzare l'aspetto del controllo in ogni piattaforma.
 
@@ -211,7 +211,7 @@ La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza de
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato come creare un renderer [`Entry`](xref:Xamarin.Forms.Entry) di controllo personalizzato per il Xamarin.Forms controllo, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con il proprio rendering specifico della piattaforma. I renderer personalizzati rappresentano una strategia efficace per la personalizzazione dell'aspetto dei controlli di Xamarin.Forms. Possono essere usati per apportare piccole modifiche allo stile o per la personalizzazione di layout e comportamenti sofisticati specifici di una piattaforma.
+Questo articolo ha illustrato come creare un renderer di controllo personalizzato per il controllo Novell. [`Entry`](xref:Xamarin.Forms.Entry) Forms, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con il proprio rendering specifico della piattaforma. I renderer personalizzati rappresentano una strategia efficace per la personalizzazione dell'aspetto dei controlli di Xamarin.Forms. Possono essere usati per apportare piccole modifiche allo stile o per la personalizzazione di layout e comportamenti sofisticati specifici di una piattaforma.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
