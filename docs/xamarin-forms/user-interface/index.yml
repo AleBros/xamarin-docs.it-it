@@ -9,13 +9,13 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/30/2019
-  ms.openlocfilehash: bbe7fd52581cd77ed7e7d910dd16264641c15abf
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.date: 03/19/2020
+  ms.openlocfilehash: 334c6afaffdec3ccc99d251bfc021edaa0cd9d2a
+  ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77480603"
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "82517427"
 landingContent:
 - title: Informazioni di riferimento sui controlli
   linkLists:
@@ -23,11 +23,11 @@ landingContent:
     links:
     - text: Panoramica
       url: controls/index.md
-    - text: Pagine
+    - text: Pages
       url: controls/pages.md
     - text: Layout
       url: controls/layouts.md
-    - text: Viste
+    - text: Visualizzazioni
       url: controls/views.md
     - text: Celle
       url: controls/cells.md
@@ -35,15 +35,23 @@ landingContent:
       url: controls/common-properties.md
     - text: Controlli di terze parti
       url: controls/thirdparty.md
+- title: Interfaccia utente dichiarativa in C#
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Markup C#
+      url: csharp-markup.md
 - title: Visualizzazioni per la presentazione
   linkLists:
   - linkListType: concept
     links:
     - text: BoxView
       url: boxview.md
+    - text: Expander
+      url: expander.md
     - text: Image
       url: images.md
-    - text: Etichetta
+    - text: Label
       url: text/label.md
     - text: Mappa
       url: map/index.md
@@ -55,10 +63,12 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Pulsante
+    - text: Button
       url: button.md
     - text: ImageButton
       url: imagebutton.md
+    - text: RadioButton
+      url: radiobutton.md
     - text: RefreshView
       url: refreshview.md
     - text: SearchBar
@@ -73,7 +83,7 @@ landingContent:
       url: checkbox.md
     - text: DatePicker
       url: datepicker.md
-    - text: Dispositivo di scorrimento
+    - text: Slider
       url: slider.md
     - text: Gestore di istruzioni
       url: stepper.md
@@ -159,7 +169,7 @@ landingContent:
       url: layouts/flex-layout.md
     - text: Frame
       url: layouts/frame.md
-    - text: Griglia
+    - text: Grid
       url: layouts/grid.md
     - text: RelativeLayout
       url: layouts/relative-layout.md
