@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e31a45a060356b372b9da62a667f5d68e06c73c9
-ms.sourcegitcommit: 1b3ef8178370dac377519c16de8a2ec7a26cda3d
+ms.openlocfilehash: 3d61267ae78a4b84907a2bcf6e944eb286b113dd
+ms.sourcegitcommit: 8b94b2af2ac69e4a60e210ddc764f4d276c8d88d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82127111"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605446"
 ---
 # <a name="xamarinessentials-permissions"></a>Novell. Essentials: autorizzazioni
 
@@ -37,6 +37,8 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 ```
 
 Viene `PermissionException` generata un'eccezione se l'autorizzazione necessaria non è dichiarata.
+
+È consigliabile controllare lo stato dell'autorizzazione prima di richiederlo. Ogni sistema operativo restituisce uno stato predefinito diverso se l'utente non è mai stato richiesto. iOS restituisce `Unknown`, mentre altri restituiscono `Denied`.
 
 ## <a name="requesting-permissions"></a>Richiesta di autorizzazioni
 
