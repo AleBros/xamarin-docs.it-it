@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
+ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016520"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82738800"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -265,6 +265,8 @@ Per allocare spazio per gli oggetti, SGen utilizza uno dei tre heap seguenti:
 
 Uno dei vantaggi offerti da SGen è che il tempo necessario per eseguire una Garbage Collection secondaria è proporzionale al numero di nuovi oggetti attivi creati dopo l'ultima Garbage Collection secondaria. Ciò riduce l'impatto dell'operazione di Garbage Collection sulle prestazioni di un'applicazione, dato che le operazioni di Garbage Collection secondaria richiedono meno tempo rispetto a quelle di Garbage Collection principale. La Garbage Collection principale continuerà ad essere eseguita, ma con frequenza minore.
 
+Il Garbage Collector SGen è il valore predefinito in Novell. iOS 9.2.1 e versioni successive e pertanto verrà usato automaticamente. Si noti che la possibilità di modificare Garbage Collector è stata rimossa dalle versioni più recenti di Visual Studio. Per ulteriori informazioni, vedere [nuovo sistema di conteggio dei riferimenti](~/ios/internals/newrefcount.md).
+
 ### <a name="reducing-pressure-on-the-garbage-collector"></a>Riduzione della pressione sul Garbage Collector
 
 Quando SGen avvia un'operazione di Garbage Collection, interrompe i thread dell'applicazione e recupera la memoria. Durante il recupero della memoria, potrebbe verificarsi una breve pausa o stuttering dell'applicazione nell'interfaccia utente. La percettibilità di questa pausa dipende da due fattori:
@@ -365,7 +367,7 @@ Per trasferire dati tra un'applicazione e un servizio Web, è consigliabile usar
 
 È consigliabile memorizzare nella cache locale i dati recuperati dal servizio Web e usare i dati memorizzati nella cache anziché recuperarli ripetutamente dal servizio Web. Se si adotta questo approccio, tuttavia, è necessario implementare anche una strategia appropriata per l'aggiornamento dei dati memorizzati nella cache locale, che devono riflettere le modifiche apportate ai dati nel servizio Web.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
@@ -374,6 +376,6 @@ Questo articolo ha descritto e illustrato le tecniche per incrementare le presta
 - [Prestazioni di Xamarin.iOS](~/ios/deploy-test/performance.md)
 - [Prestazioni di Xamarin.Android](~/android/deploy-test/performance.md)
 - [Introduzione a Xamarin Profiler](~/tools/profiler/index.md)
-- [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
-- [Panoramica del supporto asincronoAsync Support Overview](~/cross-platform/platform/async.md)
+- [Prestazioni di Novell. Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
