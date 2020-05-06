@@ -20,14 +20,14 @@ ms.locfileid: "70770243"
 
 _Stile del testo in Xamarin.Forms_
 
-Stili sono utilizzabile per regolare l'aspetto di etichette, le voci e gli editor. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
-Stili possono essere assegnati un `Key` e applicate in modo selettivo usando un controllo specifico `Style` proprietà.
+Gli Stili sono utilizzabili per regolare l'aspetto di etichette, di voci e degli editor. Gli Stili possono essere definiti una sola volta e utilizzati in numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
+Agli Stili può essere assegnata una `Key` e applicati in modo selettivo usando la proprietà `Style` nel controllo.
 
 <a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Stili predefiniti
 
-Xamarin.Forms include numerose [incorporati](xref:Xamarin.Forms.Device.Styles) stili per scenari comuni:
+Xamarin.Forms include numerosi stili [incorporati](xref:Xamarin.Forms.Device.Styles) per scenari comuni:
 
 - `BodyStyle`
 - `CaptionStyle`
