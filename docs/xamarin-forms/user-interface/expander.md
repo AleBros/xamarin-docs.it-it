@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2020
-ms.openlocfilehash: f47dc08d11a97598966ba7af620cfc81e5fe284f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: b1e573a6070a637ef2fdfa65bb0fc1375522fc3c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532625"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852502"
 ---
 # <a name="xamarinforms-expander"></a>Espansore Novell. Forms
 
@@ -26,6 +26,8 @@ Gli screenshot seguenti mostrano un `Expander` negli Stati compresso ed espanso,
 
 > [!IMPORTANT]
 > `Expander`è attualmente sperimentale e può essere usato solo impostando `Expander_Experimental` il flag. Per ulteriori informazioni, vedere [flag sperimentali](~/xamarin-forms/internals/experimental-flags.md).
+>
+> Inoltre, il `Expander` controllo è completamente implementato nello `Xamarin.Forms` spazio dei nomi. Pertanto, è disponibile su tutte le piattaforme supportate da Novell. Forms.
 
 Il `Expander` controllo definisce le proprietà seguenti:
 

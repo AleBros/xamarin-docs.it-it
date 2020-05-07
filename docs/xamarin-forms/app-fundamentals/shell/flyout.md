@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2020
-ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517077"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852476"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
 
@@ -480,7 +480,13 @@ La classe `Shell` ha una proprietà associabile denominata `CurrentItem`, di tip
 
 Questo codice imposta l'oggetto `ShellContent` denominato `aboutItem` come proprietà `CurrentItem` e, di conseguenza, l'oggetto viene visualizzato. In questo esempio viene usata una conversione implicita per eseguire il wrapping dell'oggetto `ShellContent` in un oggetto `Tab`, di cui viene eseguito il wrapping in un oggetto `FlyoutItem`.
 
-Il codice C# equivalente è il seguente:
+Il codice C# equivalente, dato un `ShellContent` oggetto denominato `aboutItem`, è:
+
+```csharp
+CurrentItem = aboutItem;
+```
+
+In questo esempio la `CurrentItem` proprietà viene impostata nella `Shell` classe sottoclasse. In alternativa, è `CurrentItem` possibile impostare la proprietà in qualsiasi classe tramite la `Shell.Current` proprietà statica:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

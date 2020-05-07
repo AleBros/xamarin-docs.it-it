@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/11/2020
-ms.openlocfilehash: 7a2671c47a6d2fceaf2b444cfa8988b4bb8c249c
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.date: 05/06/2020
+ms.openlocfilehash: 31b705a51e405285cc5eaae391dd0794bfacfd9c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517268"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852485"
 ---
 # <a name="xamarinforms-webview"></a>WebView Novell. Forms
 
@@ -554,11 +554,13 @@ Per risolvere il problema, è disponibile una versione di anteprima del linker. 
 
 I prerequisiti per questo lavoro sono i seguenti:
 
-- È possibile usare **Novell. Forms 4,5 o** &ndash; versioni non definitive successive di Novell. Forms 4,5.
-- **Novell. iOS 13.10.0.17 o versione successiva** &ndash; controllare la versione di Novell. iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Novell. iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
-- **Rimuovere i riferimenti `UIWebView` al** &ndash; codice non devono contenere riferimenti a né `UIWebView` a classi che usano `UIWebView`.
+- **Novell. forms 4,5 o versione successiva**. Novell. Forms 4,6, o versione successiva, è obbligatorio se l'app usa oggetti visivi materiali.
+- **Novell. iOS 13.10.0.17 o versione successiva**. Verificare la versione di Novell. iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Novell. iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
+- **Rimuovere i riferimenti `UIWebView`a **. Il codice non deve contenere riferimenti a né `UIWebView` a classi che usano `UIWebView`.
 
-### <a name="configure-the-linker-preview"></a>Configurare l'anteprima del linker
+Per ulteriori informazioni sul rilevamento e la rimozione `UIWebView` dei riferimenti, vedere [deprecazione di UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
+
+### <a name="configure-the-linker"></a>Configurare il linker
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -575,7 +577,7 @@ Per rimuovere `UIWebView` i riferimenti, attenersi alla procedura seguente:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Seguire questa procedura per il linker per rimuovere `UIWebView` i riferimenti
+Per rimuovere `UIWebView` i riferimenti, attenersi alla procedura seguente:
 
 1. **Aprire il progetto iOS opzioni** &ndash; fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Opzioni**.
 1. **Passare alla sezione** &ndash; compilazione iOS selezionare la sezione **compilazione iOS** .
@@ -594,3 +596,4 @@ A questo punto, quando si crea una nuova compilazione (versione) e la si invia a
 
 - [Uso di WebView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Deprecazione UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)
