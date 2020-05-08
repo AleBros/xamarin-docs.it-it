@@ -6,18 +6,18 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 26c4c2487bf2ec32ade3ceef9db73b4809053fec
-ms.sourcegitcommit: 154a3e7aec775327565bb54eda1a610976af1d6f
+ms.openlocfilehash: 715b9872642dfa8d5426c2967c62e82643def34d
+ms.sourcegitcommit: 9ca07644710e5919c7bc684c1ce144471611d5df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624722"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82974471"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Apertura browser
 
 La classe **Browser** consente a un'applicazione di aprire un collegamento Web nel browser preferito del sistema ottimizzato o in un browser esterno.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Operazioni preliminari
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -70,7 +70,7 @@ La modalità di avvio determina il modo in cui viene avviato il browser:
 
 ## <a name="system-preferred"></a>Preferita dal sistema
 
-Verrà tentato l'uso delle [schede personalizzate di Chrome](https://developer.chrome.com/multidevice/android/customtabs) per caricare l'URI e per mantenere la consapevolezza di navigazione.
+Le [schede personalizzate](https://developer.chrome.com/multidevice/android/customtabs) verranno utilizzate per caricare l'URI e per tenere traccia della navigazione.
 
 ## <a name="external"></a>Esterno
 
