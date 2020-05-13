@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b2e1f11579e8647593e20e7d56936e8e75661e78
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 45a387690792074af6a18fe3c639692863cdf4be
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80634717"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343406"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -15,9 +15,9 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML di questa esercitazione richiedono che la soluzione sia denominata **StackLayoutTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/quickstarts/deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/quickstarts/deepdive.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/quickstarts/deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/quickstarts/deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. In **Esplora soluzioni**, nel progetto **StackLayoutTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni**, nel progetto **StackLayoutTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -41,7 +41,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
     [![Screenshot delle viste figlio in un controllo StackLayout, in iOS e Android](../images/create-stacklayout.png "StackLayout contenente istanze di etichette")](../images/create-stacklayout-large.png#lightbox "StackLayout contenente istanze di etichette")
 
-    Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
+    Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md) (StackLayout di Xamarin.Forms).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -52,9 +52,9 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML di questa esercitazione richiedono che la soluzione sia denominata **StackLayoutTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](~/get-started/first-app/index.md) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](~/get-started/first-app/index.md).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
-1. Nel **riquadro della soluzione**, nel progetto **StackLayoutTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione**, nel progetto **StackLayoutTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -78,4 +78,4 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
     [![Screenshot delle viste figlio in un controllo StackLayout, in iOS e Android](../images/create-stacklayout.png "StackLayout contenente istanze di etichette")](../images/create-stacklayout-large.png#lightbox "StackLayout contenente istanze di etichette")
 
-    Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
+    Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md) (StackLayout di Xamarin.Forms).

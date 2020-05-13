@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: ae5962de05190ad914c86ceb0a9b52edb72232dc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: cb03ad89c4fa7a8bed876a7210add68be06cf4a3
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107268"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343393"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 >
-> - Creare un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) di Xamarin.Forms in XAML.
+> - Creare una classe [`StackLayout`](xref:Xamarin.Forms.StackLayout) Xamarin.Forms in XAML.
 > - Specificare l'orientamento dell'elemento `StackLayout`.
-> - Controllare l'allineamento e l'espansione della vista figlio all'interno dell'elemento `StackLayout`.
+> - Controllare l'allineamento e l'espansione della visualizzazione figlio all'interno di `StackLayout`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -24,7 +24,7 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [StackLayoutTutorial (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
-- [StackLayout Xamarin.Forms (guida)](~/xamarin-forms/user-interface/layouts/stack-layout.md)
+- [StackLayout Xamarin.Forms (guida)](~/xamarin-forms/user-interface/layouts/stacklayout.md)
 - [Margine e spaziatura interna (guida)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Opzioni di layout in Xamarin.Forms (guida)](~/xamarin-forms/user-interface/layouts/layout-options.md)
 - [API StackLayout](xref:Xamarin.Forms.StackLayout)
