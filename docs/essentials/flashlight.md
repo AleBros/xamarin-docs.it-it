@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Flashlight'
 description: Questo documento descrive la classe Flashlight in Xamarin.Essentials, che può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1a8601860afaf033c9bdb62c187fe228d2e83435
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61075579"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149951"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Flashlight
 
@@ -35,7 +36,7 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **AndroidManifest.xml** nella cartella **Properties** e aggiungere quanto segue all'interno del nodo del **manifesto.**
+Aprire il file **file AndroidManifest. XML** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
@@ -50,6 +51,8 @@ Aggiungendo queste autorizzazioni, [Google Play filtrerà automaticamente i disp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -122,3 +125,9 @@ Viene usata la classe [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.
 
 - [Codice sorgente di Flashlight](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
 - [Documentazione dell'API Flashlight](xref:Xamarin.Essentials.Flashlight)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Flashlight-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

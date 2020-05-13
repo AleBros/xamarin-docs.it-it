@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Utilità di avvio'
 description: La classe Launcher in Xamarin.Essentials consente a un'applicazione di aprire un URI dal sistema.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f84d3bf379562c8ddd96a32dfb9f15b03b0a6827
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488517"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149793"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
@@ -62,7 +63,7 @@ Nessuna configurazione aggiuntiva.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-In iOS 9 e versione successiva, Apple applica gli schemi per cui un'applicazione può eseguire query. Per specificare gli schemi che si `LSApplicationQueriesSchemes` desidera `Info.plist` utilizzare, è necessario specificare nel file.
+In iOS 9 e versioni successive Apple applica gli schemi per cui un'applicazione può eseguire query. Per specificare quali schemi si desidera utilizzare, è necessario specificare `LSApplicationQueriesSchemes` nel `Info.plist` file.
 
 ```
 <key>LSApplicationQueriesSchemes</key>
@@ -82,7 +83,7 @@ Nessuna configurazione aggiuntiva.
 
 Questa funzionalità consente a un'app di richiedere l'apertura e la visualizzazione di un file ad altre app. Xamarin.Essentials rileverà automaticamente il tipo di file (MIME) e richiederà l'apertura del file.
 
-Ecco un esempio di scrittura di testo su disco e richiedendo che venga aperto:
+Di seguito è riportato un esempio di scrittura di testo su disco e richiesta di apertura:
 
 ```csharp
 var fn = "File.txt";
@@ -119,3 +120,9 @@ Non esistono differenze per questa piattaforma.
 
 - [Codice sorgente di Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
 - [Documentazione dell'API Launcher](xref:Xamarin.Essentials.Launcher)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Launcher-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

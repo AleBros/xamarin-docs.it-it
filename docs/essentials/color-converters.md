@@ -5,14 +5,15 @@ ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 5d64967dfaa6ce7ef746a97f739cac67f5102fc2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.custom: video
+ms.openlocfilehash: 159add7ee83f3c65d791fc49ee3a85ddaaabae1d
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545158"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150134"
 ---
-# <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: Convertitori di colori
+# <a name="xamarinessentials-color-converters"></a>Novell. Essentials: convertitori di colori
 
 La classe **ColorConverters** di Xamarin.Essentials offre diversi metodi helper per System.Drawing.Color.
 
@@ -49,7 +50,7 @@ var blueWithAlpha = blue.MultiplyAlpha(.5f);
 
 Esistono diversi altri metodi di estensione tra cui:
 
-- GetComplementary
+- Getcomplementari
 - MultiplyAlpha
 - ToUInt
 - WithAlpha
@@ -83,3 +84,9 @@ Il metodo `ToSystemColor` si applica a Android.Graphics.Color, UIKit.UIColor e W
 - [Documentazione delle API dei convertitori di colore](xref:Xamarin.Essentials.ColorConverters)
 - [Codice sorgente delle estensioni di colore](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentazione delle API delle estensioni di colore](xref:Xamarin.Essentials.ColorExtensions)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Color-Converters-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

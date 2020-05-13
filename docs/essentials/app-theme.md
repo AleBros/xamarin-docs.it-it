@@ -3,14 +3,15 @@ title: "Novell. Essentials: tema dell'app"
 description: Questo documento descrive l'API del tema app richiesta in Novell. Essentials, che fornisce informazioni sullo stile del tema richiesto per l'app in esecuzione.
 ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e27f43ae17fcdaf7bb40b75907a7595c5c20988b
-ms.sourcegitcommit: 9c517f2c5af21aab0775f91286f42e919ff52292
+ms.openlocfilehash: 84c246eb60f4ee561bbf2bcfee6eb587ce601a4a
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619866"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150156"
 ---
 # <a name="xamarinessentials-app-theme"></a>Novell. Essentials: tema dell'app
 
@@ -40,8 +41,8 @@ AppTheme appTheme = AppInfo.RequestedTheme;
 Questo fornirà il tema corrente richiesto dal sistema per l'applicazione. Il valore restituito sarà uno dei seguenti:
 
 * Non specificata
-* Chiaro
-* Dark (Scuro)
+* Leggero
+* Dark
 
 Il valore non specificato verrà restituito quando il sistema operativo non dispone di uno stile di interfaccia utente specifico da richiedere. Un esempio è nei dispositivi che eseguono versioni di iOS precedenti a 13,0.
 
@@ -62,7 +63,7 @@ Non specificato verrà sempre restituito nelle versioni di iOS precedenti alla 1
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-La `RequestedTheme` chiamata a deve essere chiamata sul thread dell'interfaccia utente o verrà generata un'eccezione.
+`RequestedTheme`La chiamata a deve essere chiamata sul thread dell'interfaccia utente o verrà generata un'eccezione.
 
 Le applicazioni UWP rispettano l'impostazione in UWP app. XAML in **RequestedTheme**. Se è impostato su un tema specifico, Novell. Essentials restituirà sempre questa impostazione. Per usare il tema dinamico del sistema operativo, rimuovere questo nodo dall'applicazione e quindi, quando l'app viene eseguita, restituirà il tema impostato dall'utente nelle impostazioni di Windows (**impostazioni > personalizzazione > colori > scegliere la modalità predefinita**per le app).
 
@@ -74,3 +75,9 @@ Per altre informazioni, vedere la [documentazione del tema richiesta da UWP](htt
 
 - [Codice sorgente di AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [Documentazione dell'API AppInfo](xref:Xamarin.Essentials.AppInfo)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

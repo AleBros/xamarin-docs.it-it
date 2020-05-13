@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Geolocation'
 description: Questo documento descrive la classe Geolocation in Xamarin.Essentials, che fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 99b439e70038d27ed8bffcf20b908c52a10ede82
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80070350"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149750"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
 
@@ -49,6 +50,8 @@ Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiunger
 ```
 
 Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare le autorizzazioni **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -152,7 +155,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| UWP | 1000 - 5000 |
+| Piattaforma UWP | 1000 - 5000 |
 
 ### <a name="low"></a>Basso
 
@@ -160,7 +163,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
-| UWP | 300 - 3000 |
+| Piattaforma UWP | 300 - 3000 |
 
 ### <a name="medium-default"></a>Media (impostazione predefinita)
 
@@ -168,15 +171,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 100 - 500 |
 | iOS | 100 |
-| UWP | 30 - 500 |
+| Piattaforma UWP | 30 - 500 |
 
-### <a name="high"></a>Alto
+### <a name="high"></a>Alta
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | 10 |
-| UWP | <= 10 |
+| Piattaforma UWP | <= 10 |
 
 ### <a name="best"></a>Ottimale
 
@@ -184,12 +187,12 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | ~0 |
-| UWP | <= 10 |
+| Piattaforma UWP | <= 10 |
 
 <a name="calculate-distance" />
 
 ## <a name="detecting-mock-locations"></a>Rilevamento di località fittizie
-Alcuni dispositivi possono restituire una località fittizia proposta dal provider o da un'applicazione che fornisce località fittizie. È possibile rilevare `IsFromMockProvider` questo [`Location`](xref:Xamarin.Essentials.Location)utilizzando il su qualsiasi file .
+Alcuni dispositivi possono restituire una località fittizia proposta dal provider o da un'applicazione che fornisce località fittizie. È possibile rilevarlo utilizzando `IsFromMockProvider` in qualsiasi [`Location`](xref:Xamarin.Essentials.Location) .
 
 ```csharp
 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
@@ -206,7 +209,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi `CalculateDistance` e definiscono metodi che consentono di calcolare la distanza tra due posizioni geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
+Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi e definiscono `CalculateDistance` metodi che consentono di calcolare la distanza tra due posizioni geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
 
 Ad esempio:
 
@@ -220,19 +223,19 @@ Il costruttore `Location` ha gli argomenti di latitudine e longitudine in quest'
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-L'altitudine viene calcolata in modo diverso su ogni piattaforma.
+L'altitudine viene calcolata in modo diverso in ogni piattaforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
-Su Android, [l'altitudine,](https://developer.android.com/reference/android/location/Location#getAltitude())se disponibile, viene restituita in metri sopra l'ellissoide di riferimento WGS 84. Se questa posizione non ha un'altitudine, viene restituito 0,0.
+In Android, [Altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponibile, viene restituito in metri sopra l'ellissoide di riferimento WGS 84. Se il percorso non ha un'altitudine, viene restituito 0,0.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Su iOS, [l'altitudine](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) viene misurata in metri. I valori positivi indicano altitudini sopra il livello del mare, mentre i valori negativi indicano altitudini sotto il livello del mare.
+In iOS, l' [altitudine](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) viene misurata in metri. I valori positivi indicano le Altitude sopra il livello del mare, mentre i valori negativi indicano le Altitude al di sotto del livello Sea.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-Su UWP, l'altitudine viene restituita in metri. Per altre informazioni, vedere la documentazione di [AltitudeReferenceSystem.See the AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
+In UWP, l'altitudine viene restituita in metri. Per ulteriori informazioni, vedere la documentazione di [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) .
 
 -----
 
@@ -240,3 +243,9 @@ Su UWP, l'altitudine viene restituita in metri. Per altre informazioni, vedere l
 
 - [Codice sorgente di Geolocation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
 - [Documentazione dell'API Geolocation](xref:Xamarin.Essentials.Geolocation)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Geolocation-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

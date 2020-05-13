@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Email'
 description: La classe Email in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, inclusi oggetto, corpo e destinatari (A, Cc, Ccn).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 77fcadf3ec58a38acac5eca14b43d937414a4a60
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70060090"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150102"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -64,7 +65,7 @@ public class EmailTest
 
 ## <a name="file-attachments"></a>File allegati
 
-Questa funzionalità consente a un'app di inviare file in messaggi di posta elettronica nei client di posta elettronica del dispositivo. Xamarin.Essentials rileva automaticamente il tipo di file (MIME) e richiede l'aggiunta del file come allegato. Ogni client di posta elettronica è diverso: un client potrebbe supportare solo estensioni di file specifica o nessuna estensione.
+Questa funzionalità consente a un'app di inviare tramite posta elettronica i file nei client di posta elettronica nel dispositivo. Xamarin.Essentials rileva automaticamente il tipo di file (MIME) e richiede l'aggiunta del file come allegato. Ogni client di posta elettronica è diverso e può supportare solo estensioni di file specifiche o nessuno.
 
 Il seguente esempio mostra la scrittura di testo su disco e l'aggiunta del testo come allegato di posta elettronica:
 
@@ -106,3 +107,9 @@ Non tutti i client di posta elettronica supportano l'invio di allegati. Per altr
 
 - [Codice sorgente di Email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
 - [Documentazione dell'API Email](xref:Xamarin.Essentials.Email)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Email-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
