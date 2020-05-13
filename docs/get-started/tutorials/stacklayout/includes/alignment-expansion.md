@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 97e52d593e2b59d127da324d8ad74ad7b2096cdd
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67560003"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343419"
 ---
 Le dimensioni e la posizione delle viste figlio all'interno di un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dipende dai valori delle proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) delle viste figlio e dai valori delle proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
