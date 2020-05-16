@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e1705e9311d4875a5b866ac5acb7d20aa107a2bb
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61375388"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83435385"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -42,7 +42,7 @@ ms.locfileid: "61375388"
     La posizione di ogni [`Label`](xref:Xamarin.Forms.Label) in [`Grid`](xref:Xamarin.Forms.Grid) viene specificata con le proprietà associate [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) e [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) tramite un indice in base zero. Pertanto, la prima colonna è la colonna 0 e la prima riga è la riga 0. Per il primo elemento `Label` queste proprietà associate non sono disponibili, perché il rendering di qualsiasi visualizzazione figlio che non le imposta verrà eseguito automaticamente nella colonna 0, riga 0.
 
     > [!NOTE]
-    > La spaziatura tra le colonne e le righe in un elemento [`Grid`](xref:Xamarin.Forms.Grid) può essere impostata con le proprietà [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Per altre informazioni, vedere [Spaziatura](~/xamarin-forms/user-interface/layouts/grid.md#spacing) nella guida [Grid di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    > La spaziatura tra le colonne e le righe in un elemento [`Grid`](xref:Xamarin.Forms.Grid) può essere impostata con le proprietà [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Per altre informazioni, vedere [Spaziatura](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) nella guida [Grid di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
@@ -84,7 +84,7 @@ ms.locfileid: "61375388"
     La posizione di ogni [`Label`](xref:Xamarin.Forms.Label) in [`Grid`](xref:Xamarin.Forms.Grid) viene specificata con le proprietà associate [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) e [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) tramite un indice in base zero. Pertanto, la prima colonna è la colonna 0 e la prima riga è la riga 0. Per il primo elemento `Label` queste proprietà associate non sono disponibili, perché il rendering di qualsiasi visualizzazione figlio che non le imposta verrà eseguito automaticamente nella colonna 0, riga 0.
 
     > [!NOTE]
-    > La spaziatura tra le colonne e le righe in un elemento [`Grid`](xref:Xamarin.Forms.Grid) può essere impostata con le proprietà [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Per altre informazioni, vedere [Spaziatura](~/xamarin-forms/user-interface/layouts/grid.md#spacing) nella guida [Grid di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    > La spaziatura tra le colonne e le righe in un elemento [`Grid`](xref:Xamarin.Forms.Grid) può essere impostata con le proprietà [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Per altre informazioni, vedere [Spaziatura](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) nella guida [Grid di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
