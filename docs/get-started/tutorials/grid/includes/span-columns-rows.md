@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fa88f6e7844899926a194e9d0cdd455a497c2b31
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61375359"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83435458"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -35,7 +35,7 @@ ms.locfileid: "61375359"
 
     [![Screenshot di una griglia con contenuto che si estende su più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Griglia con contenuto che si estende in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Griglia con contenuto che si estende in colonne e righe")
 
-    Per altre informazioni sull'espansione su più righe e colonne, vedere [Estensione](~/xamarin-forms/user-interface/layouts/grid.md#spans) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    Per altre informazioni sull'espansione su più righe e colonne, vedere [Righe e colonne](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -66,4 +66,4 @@ ms.locfileid: "61375359"
 
     [![Screenshot di una griglia con contenuto che si estende su più colonne e righe, in iOS e Android](../images/span-columns-rows.png "Griglia con contenuto che si estende in colonne e righe")](../images/span-columns-rows-large.png#lightbox "Griglia con contenuto che si estende in colonne e righe")
 
-    Per altre informazioni sull'espansione su più righe e colonne, vedere [Estensione](~/xamarin-forms/user-interface/layouts/grid.md#spans) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+    Per altre informazioni sull'espansione su più righe e colonne, vedere [Righe e colonne](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) nella guida [Griglia Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

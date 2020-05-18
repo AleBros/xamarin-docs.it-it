@@ -346,7 +346,11 @@
         - name: EventKit
           href: platform/eventkit.md
         - name: Estensioni iOS
-          href: platform/extensions.md
+          items:
+            - name: Estensioni iOS in Xamarin.iOS
+              href: platform/extensions.md
+            - name: Xamarin.Forms nelle estensioni iOS
+              href: platform/extensions-with-xamarinforms.md
         - name: Framework incorporati
           href: platform/embedded-frameworks.md
         - name: Compressione di file
