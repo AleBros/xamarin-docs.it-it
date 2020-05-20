@@ -10,7 +10,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**LocalDatabaseTutorial`Person`. In **Person.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata `Person` al progetto **LocalDatabaseTutorial**. In **Person.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using SQLite;
@@ -29,7 +29,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
     Questo codice definisce una classe `Person` che archivierà i dati relativi a ogni persona nell'applicazione. La proprietà `ID` è contrassegnata con gli attributi `PrimaryKey` e `AutoIncrement` per garantire che ogni istanza di `Person` nel database abbia un ID univoco fornito da SQLite.NET.
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**LocalDatabaseTutorial`Database`. In **Database.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata `Database` al progetto **LocalDatabaseTutorial**. In **Database.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;
@@ -122,7 +122,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**LocalDatabaseTutorial`Person`. In **Person.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `Person` al progetto **LocalDatabaseTutorial**. In **Person.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using SQLite;
@@ -141,7 +141,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
     Questo codice definisce una classe `Person` che archivierà i dati relativi a ogni persona nell'applicazione. La proprietà `ID` è contrassegnata con gli attributi `PrimaryKey` e `AutoIncrement` per garantire che ogni istanza di `Person` nel database abbia un ID univoco fornito da SQLite.NET.
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**LocalDatabaseTutorial`Database`. In **Database.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `Database` al progetto **LocalDatabaseTutorial**. In **Database.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;

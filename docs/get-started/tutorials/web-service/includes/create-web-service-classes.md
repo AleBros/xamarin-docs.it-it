@@ -13,7 +13,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`Constants`. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata `Constants` al progetto **WebServiceTutorial**. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     namespace WebServiceTutorial
@@ -31,7 +31,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!IMPORTANT]
     > È necessario impostare la chiave API OpenWeatherMap personale come valore della costante `OpenWeatherMapAPIKey`.
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServicesTutorial`WeatherData`. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata `WeatherData` al progetto **WebServicesTutorial**. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using Newtonsoft.Json;
@@ -84,7 +84,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!NOTE]
     > Le definizioni di classe precedenti sono state semplificate e non modellano completamente i dati JSON recuperati dal servizio Web. Per un esempio di modello di dati completo, vedere l'esempio [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/).
 
-1. In **Esplora soluzioni** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`RestService`. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni** aggiungere una nuova classe denominata `RestService` al progetto **WebServiceTutorial**. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;
@@ -133,7 +133,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`Constants`. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `Constants` al progetto **WebServiceTutorial**. In **Constants.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     namespace WebServiceTutorial
@@ -151,7 +151,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!IMPORTANT]
     > È necessario impostare la chiave API OpenWeatherMap personale come valore della costante `OpenWeatherMapAPIKey`.
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServicesTutorial`WeatherData`. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `WeatherData` al progetto **WebServicesTutorial**. In **WeatherData.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using Newtonsoft.Json;
@@ -204,7 +204,7 @@ Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP u
     > [!NOTE]
     > Le definizioni di classe precedenti sono state semplificate e non modellano completamente i dati JSON recuperati dal servizio Web. Per un esempio di modello di dati completo, vedere l'esempio [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/).
 
-1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata **al progetto**WebServiceTutorial`RestService`. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione** aggiungere una nuova classe denominata `RestService` al progetto **WebServiceTutorial**. In **RestService.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System;
