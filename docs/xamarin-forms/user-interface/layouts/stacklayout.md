@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/11/2020
-ms.openlocfilehash: 56da2b137475ef258d780fba0a7cdec3c91323b8
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: 2535a92814181c5039256ea1e42b06419ed427aa
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83152222"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426026"
 ---
 # <a name="xamarinforms-stacklayout"></a>Novell. Forms StackLayout
 
@@ -398,7 +398,7 @@ In questo esempio, l'elemento padre [`StackLayout`](xref:Xamarin.Forms.StackLayo
 [![Screenshot degli oggetti StackLayout annidati](stacklayout-images/combined.png "StackLayouts annidato")](stacklayout-images/combined-large.png#lightbox "StackLayouts annidato")
 
 > [!IMPORTANT]
-> La nidificazione di un numero eccessivo di oggetti può comportare `StackLayout` una pagina non efficiente, a causa della quantità di calcoli di layout richiesti. Per ulteriori informazioni, vedere [scegliere il layout corretto](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
+> Più a fondo nidificano [`StackLayout`](xref:Xamarin.Forms.StackLayout) gli oggetti e altri layout, più il layout annidato avrà un effetto sulle prestazioni. Per ulteriori informazioni, vedere [scegliere il layout corretto](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
 
 Il codice C# equivalente è il seguente:
 

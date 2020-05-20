@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
+ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488491"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550900"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione sicura
 
@@ -133,11 +133,11 @@ SecureStorage.RemoveAll();
 
 L'[archivio chiavi Android](https://developer.android.com/training/articles/keystore.html) viene usato per archiviare la chiave di crittografia usata per crittografare il valore prima di salvarlo nelle [preferenze condivise](https://developer.android.com/training/data-storage/shared-preferences.html) con il nome di file **[ID-PACCHETTO-APP].xamarinessentials**.  La chiave (non una chiave crittografica, ma la _chiave_ per il _valore_) usata nel file delle preferenze condivise è un _hash MD5_ della chiave passata nelle API `SecureStorage`.
 
-## <a name="api-level-23-and-higher"></a>API livello 23 e successivi
+**API livello 23 e successivi**
 
 Nei livelli API più recenti, una chiave **AES** viene ottenuta dall'archivio chiavi Android e usata con la crittografia **AES/GCM/NoPadding** per crittografare il valore prima dell'archiviazione nel file delle preferenze condivise.
 
-## <a name="api-level-22-and-lower"></a>API livello 22 e precedenti
+**API livello 22 e precedenti**
 
 Nei livelli API precedenti, l'archivio chiavi Android supporta solo l'archiviazione di chiavi **RSA**, usate con la crittografia **RSA/ECB/PKCS1Padding** per crittografare una chiave **AES** (generata in modo casuale in fase di esecuzione) e archiviarla nel file delle preferenze condivise nella chiave _SecureStorageKey_, se non ne è già stata generata una.
 
@@ -155,7 +155,7 @@ Per crittografare i valori in modo sicuro nei dispositivi UWP, si usa [DataProte
 
 I valori crittografati sono archiviati in `ApplicationData.Current.LocalSettings`, all'interno di un contenitore con il nome **[ID-APP].xamarinessentials**.
 
-**SecureStorage** usa l'API [Preferences](preferences.md) e segue gli stessi criteri di persistenza dei dati descritti nella documentazione per [Preferences](preferences.md#persistence). Utilizza anche `LocalSettings` che ha una restrizione che il nome di ogni impostazione può essere 255 caratteri di lunghezza al massimo. Ogni impostazione può avere una dimensione massima di 8K byte e ogni impostazione composita può avere una dimensione massima di 64K byte.
+**SecureStorage** usa l'API [Preferences](preferences.md) e segue gli stessi criteri di persistenza dei dati descritti nella documentazione per [Preferences](preferences.md#persistence). USA inoltre `LocalSettings` la restrizione che il nome di ogni impostazione può avere una lunghezza massima di 255 caratteri. Ogni impostazione può avere dimensioni fino a 8 KB e ogni impostazione composita può avere dimensioni massime di 64K byte.
 
 -----
 
