@@ -1,24 +1,27 @@
 ---
-title: Separatore della barra NavigationPage in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che nasconde la linea di separazione e l'ombreggiatura che si trova nella parte inferiore della barra di spostamento in un NavigationPage.
-ms.prod: xamarin
-ms.assetid: 5A45748A-6779-4441-82F2-415BD68473B9
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: e33b25a9eb97009ca0a260662d492560114fd692
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 39d203cf0fb7fff026106d98cfb512aad42f83d2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655475"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128245"
 ---
 # <a name="navigationpage-bar-separator-on-ios"></a>Separatore della barra NavigationPage in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma iOS nasconde la linea di separazione e l'ombreggiatura che si trova nella parte inferiore della barra di [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)spostamento in un. Vengono utilizzati in XAML, impostando il [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) la proprietà associabile per `false`:
+Questa specifica della piattaforma iOS nasconde la linea di separazione e l'ombreggiatura che si trova nella parte inferiore della barra di spostamento in un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Viene utilizzato in XAML impostando la [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) proprietà associabile su `false` :
 
 ```xaml
 <NavigationPage ...
@@ -28,7 +31,7 @@ Questa specifica della piattaforma iOS nasconde la linea di separazione e l'ombr
 </NavigationPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -43,11 +46,11 @@ public class iOSTitleViewNavigationPageCS : Xamarin.Forms.NavigationPage
 }
 ```
 
-Il `NavigationPage.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [`NavigationPage.SetHideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetHideNavigationBarSeparator(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage},System.Boolean)) metodo, nelle [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se il separatore barra di navigazione è nascosto. Inoltre, il [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparator(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) metodo può essere utilizzato da restituire se il separatore barra di navigazione è nascosto.
+Il `NavigationPage.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. [ `NavigationPage.SetHideNavigationBarSeparator` ] (Xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. NavigationPage. SetHideNavigationBarSeparator ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Il metodo NavigationPage}, System. Boolean)), nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene usato per controllare se il separatore della barra di navigazione è nascosto. Inoltre, [ `NavigationPage.HideNavigationBarSeparator` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. NavigationPage. HideNavigationBarSeparator ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . NavigationPage})) il metodo può essere usato per restituire se il separatore della barra di navigazione è nascosto.
 
-Il risultato è che il separatore barra di navigazione in una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) possono essere nascosti:
+Il risultato è che il separatore della barra di navigazione in un oggetto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) può essere nascosto:
 
-![](navigation-bar-separator-images/navigationpage-hideseparatorbar.png "Barra di spostamento NavigationPage nascosta")
+![](navigation-bar-separator-images/navigationpage-hideseparatorbar.png "NavigationPage navigation bar hidden")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

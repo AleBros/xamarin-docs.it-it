@@ -1,25 +1,28 @@
 ---
-title: Oggetto visivo Xamarin.Forms
-description: Oggetto visivo Xamarin.Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di visualizzazioni di Xamarin.Forms sottoclasse.
-ms.prod: xamarin
-ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/05/2019
-ms.openlocfilehash: d440c6e95788fc876d6b0aa094f5bc2fce84bfb0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+title: Xamarin.FormsVisual
+description: Xamarin.FormsL'oggetto visivo consente di applicare in modo selettivo i renderer agli oggetti visivi, senza dover sottoclassare le Xamarin.Forms visualizzazioni.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c0afcaa75029288d527fac2a2b21bcd614fd4dc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023450"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127127"
 ---
-# <a name="xamarinforms-visual"></a>Oggetto visivo Xamarin.Forms
+# <a name="xamarinforms-visual"></a>Xamarin.FormsVisual
 
-## <a name="xamarinforms-material-visualmaterial-visualmd"></a>[Oggetto visivo materiali di Xamarin.Forms](material-visual.md)
+## <a name="xamarinforms-material-visualmaterial-visualmd"></a>[Xamarin.FormsMateriale visivo](material-visual.md)
 
-Oggetto visivo materiali di Xamarin.Forms è utilizzabile per creare applicazioni Xamarin.Forms identica, o in gran parte identici, in iOS e Android.
+Xamarin.FormsIl materiale visivo può essere usato per creare applicazioni con un Xamarin.Forms aspetto identico o in gran parte identico in iOS e Android.
 
-## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Creare un renderer oggetti visivi di Xamarin.Forms](create.md)
+## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Creare un Xamarin.Forms renderer visivo](create.md)
 
-Oggetto visivo Xamarin.Forms consente renderer essere applicate selettivamente alle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) oggetti, senza la necessità di visualizzazioni di Xamarin.Forms sottoclasse.
+Xamarin.FormsL'oggetto visivo consente di applicare in modo selettivo i renderer agli [`VisualElement`](xref:Xamarin.Forms.VisualElement) oggetti, senza dover sottoclassare le Xamarin.Forms visualizzazioni.

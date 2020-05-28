@@ -1,71 +1,74 @@
 ---
-title: Spazi dei nomi XAML in Xamarin.Forms
-description: XAML Usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso.
-ms.prod: xamarin
-ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/21/2018
-ms.openlocfilehash: d307c128826775e6d4f7129c79e17522e7e05d6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+title: Spazi dei nomi XAML inXamarin.Forms
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61176521"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130377"
 ---
-# <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in Xamarin.Forms
+# <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML inXamarin.Forms
 
-_XAML Usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso._
+_XAML usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. In questo articolo viene introdotta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per accedere a un tipo._
 
 ## <a name="overview"></a>Panoramica
 
-Esistono due dichiarazioni dello spazio dei nomi XAML che sono sempre all'interno dell'elemento radice di un file XAML. Il primo definisce lo spazio dei nomi predefinito, come illustrato nell'esempio di codice XAML seguente:
+Sono presenti due dichiarazioni dello spazio dei nomi XAML che sono sempre all'interno dell'elemento radice di un file XAML. Il primo definisce lo spazio dei nomi predefinito, come illustrato nell'esempio di codice XAML seguente:
 
-```csharp
+```xaml
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
-Spazio dei nomi predefinito specifica che gli elementi definiti all'interno del file XAML senza il prefisso fa riferimento alle classi di Xamarin.Forms, ad esempio [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
+Lo spazio dei nomi predefinito specifica che gli elementi definiti all'interno del file XAML senza prefisso fanno riferimento alle Xamarin.Forms classi, ad esempio [`ContentPage`](xref:Xamarin.Forms.ContentPage) .
 
-La seconda dichiarazione dello spazio dei nomi viene utilizzato il `x` prefisso, come illustrato nell'esempio di codice XAML seguente:
+La seconda dichiarazione dello spazio dei nomi usa il `x` prefisso, come illustrato nell'esempio di codice XAML seguente:
 
-```csharp
+```xaml
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-XAML vengono utilizzati prefissi per dichiarare spazi dei nomi non predefinito, con il prefisso viene usato quando si fa riferimento ai tipi nello spazio dei nomi. Il `x` dichiarazione dello spazio dei nomi specifica che gli elementi definiti all'interno di XAML con il prefisso `x` vengono utilizzati per gli elementi e attributi intrinseci XAML (in particolare la specifica di XAML 2009).
+XAML usa i prefissi per dichiarare gli spazi dei nomi non predefiniti, con il prefisso usato per fare riferimento ai tipi all'interno dello spazio dei nomi. La `x` dichiarazione dello spazio dei nomi specifica che gli elementi definiti all'interno del codice XAML con prefisso `x` vengono usati per gli elementi e gli attributi intrinseci a XAML (in particolare la specifica XAML 2009).
 
-La tabella seguente descrive il `x` attributi dello spazio dei nomi supportati da Xamarin.Forms:
+Nella tabella seguente vengono descritti gli `x` attributi dello spazio dei nomi supportati da Xamarin.Forms :
 
 |Costrutto|Descrizione|
 |--- |--- |
-|`x:Arguments`|Specifica gli argomenti del costruttore per un costruttore non predefinito o per una dichiarazione dell'oggetto metodo factory.|
-|`x:Class`|Specifica il nome dello spazio dei nomi e classe per una classe definita in XAML. Il nome della classe deve corrispondere al nome di classe del file code-behind. Si noti che questo costrutto può essere visualizzato solo nell'elemento radice di un file XAML.|
-|`x:DataType`|Specifica il tipo dell'oggetto che verranno associato l'elemento XAML e relativi elementi figlio, a.|
+|`x:Arguments`|Specifica gli argomenti del costruttore per un costruttore non predefinito o per una dichiarazione dell'oggetto Metodo Factory.|
+|`x:Class`|Specifica lo spazio dei nomi e il nome della classe per una classe definita in XAML. Il nome della classe deve corrispondere al nome della classe del file code-behind. Si noti che questo costrutto può essere visualizzato solo nell'elemento radice di un file XAML.|
+|`x:DataType`|Specifica il tipo dell'oggetto a cui verrà associato l'elemento XAML e gli elementi figlio.|
 |`x:FactoryMethod`|Specifica un metodo factory che può essere utilizzato per inizializzare un oggetto.|
-|`x:FieldModifier`|Specifica il livello di accesso per i campi generati per gli elementi denominati XAML.|
-|`x:Key`|Specifica una chiave univoca definito dall'utente per ogni risorsa in un `ResourceDictionary`. Il valore della chiave viene usato per recuperare la risorsa XAML e viene in genere utilizzato come argomento per il `StaticResource` estensione di markup.|
-|`x:Name`|Specifica un nome di oggetto di runtime per l'elemento XAML. Impostazione `x:Name` è simile alla dichiarazione di una variabile nel codice.|
+|`x:FieldModifier`|Specifica il livello di accesso per i campi generati per gli elementi XAML denominati.|
+|`x:Key`|Specifica una chiave univoca definita dall'utente per ogni risorsa in un oggetto `ResourceDictionary` . Il valore della chiave viene usato per recuperare la risorsa XAML e viene in genere usato come argomento per l' `StaticResource` estensione di markup.|
+|`x:Name`|Specifica il nome di un oggetto di runtime per l'elemento XAML. `x:Name`L'impostazione è simile alla dichiarazione di una variabile nel codice.|
 |`x:TypeArguments`|Specifica gli argomenti di tipo generico per il costruttore di un tipo generico.|
 
-Per altre informazioni sul `x:DataType` dell'attributo, vedere [associazioni compilate](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). Per altre informazioni sul `x:FieldModifier` dell'attributo, vedere [modificatori di campo](~/xamarin-forms/xaml/field-modifiers.md). Per altre informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` attributi, vedere [passando gli argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Per ulteriori informazioni sull' `x:DataType` attributo, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). Per ulteriori informazioni sull' `x:FieldModifier` attributo, vedere [modificatori di campo](~/xamarin-forms/xaml/field-modifiers.md). Per ulteriori informazioni sugli `x:Arguments` attributi e `x:FactoryMethod` , vedere [passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md). Per ulteriori informazioni sull' `x:TypeArguments` attributo, vedere [generics in XAML con Xamarin.Forms ](generics.md).
 
 > [!NOTE]
-> Oltre agli attributi dello spazio dei nomi sopra elencati, Xamarin.Forms include anche le estensioni di markup che possono essere utilizzate tramite il `x` prefisso dello spazio dei nomi. Per altre informazioni, vedere [utilizzano le estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+> Oltre agli attributi dello spazio dei nomi elencati sopra, Xamarin.Forms include anche le estensioni di markup che possono essere utilizzate tramite il `x` prefisso dello spazio dei nomi. Per ulteriori informazioni, vedere [utilizzo delle estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
-In XAML, le dichiarazioni dello spazio dei nomi ereditano da elemento padre all'elemento figlio. Pertanto, quando si definisce uno spazio dei nomi nell'elemento radice di un file XAML, tutti gli elementi all'interno del file ereditano la dichiarazione dello spazio dei nomi.
+In XAML, le dichiarazioni dello spazio dei nomi ereditano dall'elemento padre all'elemento figlio. Pertanto, quando si definisce uno spazio dei nomi nell'elemento radice di un file XAML, tutti gli elementi all'interno del file ereditano la dichiarazione dello spazio dei nomi.
 
-## <a name="declaring-namespaces-for-types"></a>Dichiarazione di spazi dei nomi per tipi
+## <a name="declaring-namespaces-for-types"></a>Dichiarazione di spazi dei nomi per i tipi
 
-I tipi sono reperibile in XAML con la dichiarazione di uno spazio dei nomi XAML con un prefisso con la dichiarazione dello spazio dei nomi specificando lo spazio dei nomi Common Language Runtime (CLR) e, facoltativamente, un nome di assembly. Questo risultato viene ottenuto definendo i valori per le parole chiave seguenti all'interno della dichiarazione dello spazio dei nomi:
+È possibile fare riferimento ai tipi in XAML dichiarando uno spazio dei nomi XAML con un prefisso, con la dichiarazione dello spazio dei nomi che specifica il nome dello spazio dei nomi CLR (Common Language Runtime) e, facoltativamente, un nome di assembly. Questa operazione viene eseguita definendo i valori per le parole chiave seguenti all'interno della dichiarazione dello spazio dei nomi:
 
-- **CLR-namespace:** oppure **uso:** : lo spazio dei nomi CLR dichiarato nell'assembly che contiene i tipi da esporre come elementi XAML. Questa parola chiave è obbligatoria.
-- **assembly =** : l'assembly contenente lo spazio dei nomi CLR cui viene fatto riferimento. Questo valore è il nome dell'assembly, senza l'estensione di file. Il percorso dell'assembly deve essere stabilito come riferimento nel file di progetto che contiene il file XAML che fa riferimento all'assembly. Questa parola chiave può essere omessa se la **clr-namespace** valore è all'interno dell'assembly stesso come il codice dell'applicazione che fa riferimento ai tipi.
+- **clr-namespace:** o **using:** -lo spazio dei nomi CLR dichiarato all'interno dell'assembly che contiene i tipi da esporre come elementi XAML. Questa parola chiave è obbligatoria.
+- **assembly =** : assembly contenente lo spazio dei nomi CLR a cui si fa riferimento. Questo valore è il nome dell'assembly, senza l'estensione di file. Il percorso dell'assembly deve essere definito come un riferimento nel file di progetto che contiene il file XAML che fa riferimento all'assembly. Questa parola chiave può essere omessa se il valore **clr-namespace** si trova nello stesso assembly del codice dell'applicazione che fa riferimento ai tipi.
 
-Si noti che il carattere che separa le `clr-namespace` oppure `using` token dal suo valore sono un carattere due punti, mentre il carattere che separa il `assembly` token dal suo valore è un segno di uguale. Il carattere da utilizzare tra i due token è un punto e virgola.
+Si noti che il carattere che separa `clr-namespace` il `using` token o dal relativo valore è costituito da due punti, mentre il carattere che separa il `assembly` token dal relativo valore è un segno di uguale. Il carattere da utilizzare tra i due token è un punto e virgola.
 
-Esempio di codice seguente mostra una dichiarazione dello spazio dei nomi XAML:
+Nell'esempio di codice seguente viene illustrata una dichiarazione dello spazio dei nomi XAML:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:HelloWorld" ...>
@@ -73,7 +76,7 @@ Esempio di codice seguente mostra una dichiarazione dello spazio dei nomi XAML:
 </ContentPage>
 ```
 
-In alternativa, questo può essere scritto come:
+In alternativa, può essere scritto come segue:
 
 ```xaml
 <ContentPage ... xmlns:local="using:HelloWorld" ...>
@@ -81,7 +84,7 @@ In alternativa, questo può essere scritto come:
 </ContentPage>
 ```
 
-Il `local` prefisso è una convenzione utilizzata per indicare che i tipi nello spazio dei nomi sono locali dell'applicazione. In alternativa, se i tipi sono in un assembly diverso, il nome dell'assembly deve anche essere definito nella dichiarazione dello spazio dei nomi, come illustrato nell'esempio di codice XAML seguente:
+Il `local` prefisso è una convenzione utilizzata per indicare che i tipi nello spazio dei nomi sono locali per l'applicazione. In alternativa, se i tipi si trovano in un assembly diverso, il nome dell'assembly deve essere definito anche nella dichiarazione dello spazio dei nomi, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage ... xmlns:behaviors="clr-namespace:Behaviors;assembly=BehaviorsLibrary" ...>
@@ -89,7 +92,7 @@ Il `local` prefisso è una convenzione utilizzata per indicare che i tipi nello 
 </ContentPage>
 ```
 
-Il prefisso dello spazio dei nomi viene specificato quando si dichiara un'istanza di un tipo da uno spazio dei nomi importato, come illustrato nell'esempio di codice XAML seguente:
+Il prefisso dello spazio dei nomi viene quindi specificato quando si dichiara un'istanza di un tipo da uno spazio dei nomi importato, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ListView ...>
@@ -99,12 +102,13 @@ Il prefisso dello spazio dei nomi viene specificato quando si dichiara un'istanz
 </ListView>
 ```
 
-Per informazioni sulla definizione di uno schema spazio dei nomi personalizzato, vedere [XAML personalizzato Namespace schemi](custom-namespace-schemas.md).
+Per informazioni sulla definizione di uno schema dello spazio dei nomi personalizzato, vedere [schemi dello spazio dei nomi XAML personalizzato](custom-namespace-schemas.md).
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo introdotto la sintassi dello spazio dei nomi XAML e illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso. XAML Usa le `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi e tipi è reperibile in XAML con la dichiarazione di uno spazio dei nomi XAML con un prefisso.
+In questo articolo è stata introdotta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per accedere a un tipo. XAML usa l' `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi e i tipi a cui è possibile fare riferimento in XAML dichiarando uno spazio dei nomi XAML con un prefisso.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)
+- [Generics in XAML conXamarin.Forms](generics.md)

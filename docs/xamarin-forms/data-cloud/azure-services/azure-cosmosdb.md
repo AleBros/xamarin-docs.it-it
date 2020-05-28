@@ -1,71 +1,74 @@
 ---
-title: Utilizzare un Azure Cosmos DB database di documenti in Xamarin.Forms
-description: Questo articolo illustra come usare la libreria client .NET Standard di Azure Cosmos DB per l'integrazione di un database di documenti di Azure Cosmos DB in un'applicazione Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/16/2017
-ms.openlocfilehash: 13abfa9789cee32ed2c7cd2401c1402d9c7c3886
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+title: Utilizzare un database di documenti Azure Cosmos DB inXamarin.Forms
+description: Questo articolo illustra come usare la libreria client di .NET Standard Azure Cosmos DB per integrare un database di documenti Azure Cosmos DB in un' Xamarin.Forms applicazione.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 47b35d394eab339a8e9a1f81880e6de4233f29b6
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489778"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127086"
 ---
-# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Utilizzare un Azure Cosmos DB database di documenti in Xamarin.Forms
+# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Utilizzare un database di documenti Azure Cosmos DB inXamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
-_Un database di documenti Azure Cosmos DB è un database NoSQL che offre accesso a bassa latenza ai documenti JSON, che offre un servizio di database rapido, a disponibilità elevata e scalabile per le applicazioni che richiedono scalabilità e replica globale senza problemi. Questo articolo illustra come usare la libreria client di .NET Standard Azure Cosmos DB per integrare un database di documenti Azure Cosmos DB in un'applicazione Xamarin.Forms._
+_Un database di documenti Azure Cosmos DB è un database NoSQL che offre accesso a bassa latenza ai documenti JSON, che offre un servizio di database rapido, a disponibilità elevata e scalabile per le applicazioni che richiedono scalabilità e replica globale senza problemi. Questo articolo illustra come usare la libreria client di .NET Standard Azure Cosmos DB per integrare un database di documenti Azure Cosmos DB in un' Xamarin.Forms applicazione._
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
 **Video Microsoft Azure Cosmos DB**
 
-Essere eseguito il provisioning di un account di database di documenti di Azure Cosmos DB usando una sottoscrizione di Azure. Ogni account di database può avere zero o più database. Un database di documenti in Azure Cosmos DB è un contenitore logico per le raccolte documenti e gli utenti.
+È possibile eseguire il provisioning di un account del database di documenti Azure Cosmos DB usando una sottoscrizione di Azure. Ogni account di database può avere zero o più database. Un database di documenti in Azure Cosmos DB è un contenitore logico per raccolte di documenti e utenti.
 
-Un database di documenti di Azure Cosmos DB può contenere zero o più raccolte di documenti. Ogni raccolta di documenti può avere un livello di prestazioni diverso, che consente una velocità effettiva maggiore per specificare per le raccolte a cui si accede di frequente e una velocità effettiva minore per le raccolte ad accesso sporadico.
+Un database di documenti Azure Cosmos DB può contenere zero o più raccolte di documenti. Ogni raccolta di documenti può avere un livello di prestazioni diverso, consentendo di specificare una velocità effettiva maggiore per le raccolte a cui si accede di frequente e meno velocità effettiva per le raccolte a cui si accede raramente.
 
-Ogni raccolta di documenti è costituito da zero o più documenti JSON. I documenti in una raccolta sono privi di schema e pertanto non sono necessario condividere la stessa struttura o i campi. Man mano che i documenti vengono aggiunti a una raccolta di documenti, Cosmos DB indicizza automaticamente e diventano disponibili per eseguire una query.
+Ogni raccolta di documenti è costituita da zero o più documenti JSON. I documenti in una raccolta sono privi di schema e pertanto non è necessario condividere la stessa struttura o i campi. Man mano che i documenti vengono aggiunti a una raccolta di documenti, Cosmos DB li indicizza automaticamente e diventano disponibili per essere sottoposti a query.
 
-Per scopi di sviluppo, un database di documenti può essere utilizzato anche tramite un emulatore. Usa l'emulatore, le applicazioni possono essere sviluppate e testate localmente, senza creare una sottoscrizione di Azure né sostenere costi. Per altre informazioni sull'emulatore, vedere [sviluppa in locale con l'emulatore Azure Cosmos DB](/azure/cosmos-db/local-emulator/).
+A scopo di sviluppo, un database di documenti può essere utilizzato anche tramite un emulatore. Usando l'emulatore, le applicazioni possono essere sviluppate e testate localmente, senza creare una sottoscrizione di Azure né sostenere costi. Per ulteriori informazioni sull'emulatore, vedere [sviluppo locale con l'emulatore Azure Cosmos DB](/azure/cosmos-db/local-emulator/).
 
-Questo articolo e applicazione di esempio di accompagnamento illustra un'applicazione elenco attività in cui le attività vengono memorizzate in un database di documenti di Azure Cosmos DB. Per altre informazioni sull'applicazione di esempio, vedere [informazioni sull'esempio](~/xamarin-forms/data-cloud/web-services/introduction.md).
+Questo articolo e l'applicazione di esempio associata illustrano un'applicazione elenco attività in cui le attività vengono archiviate in un database di documenti Azure Cosmos DB. Per ulteriori informazioni sull'applicazione di esempio, vedere [Understanding the sample](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-Per altre informazioni su Azure Cosmos DB, vedere la [documentazione di Azure Cosmos DB](/azure/cosmos-db/).
+Per ulteriori informazioni su Azure Cosmos DB, vedere la [documentazione di Azure Cosmos DB](/azure/cosmos-db/).
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
 
-## <a name="setup"></a>Programma di installazione
+## <a name="setup"></a>Configurazione
 
-Il processo per l'integrazione di un database di documenti di Azure Cosmos DB in un'applicazione Xamarin.Forms è come segue:
+Il processo per l'integrazione di un database di documenti Azure Cosmos DB in un' Xamarin.Forms applicazione è il seguente:
 
-1. Creare un account Cosmos DB. Per altre informazioni, vedere [creare un account Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account).
-1. Aggiungere il [libreria client .NET Standard di Azure Cosmos DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) pacchetto NuGet per i progetti di piattaforma della soluzione Xamarin.Forms.
-1. Aggiungere `using` direttive per il `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, e `Microsoft.Azure.Documents.Linq` spazi dei nomi per le classi che avrà accesso all'account Cosmos DB.
+1. Creare un account Cosmos DB. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un account Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account).
+1. Aggiungere il pacchetto NuGet della [libreria client .NET Standard Azure Cosmos DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) ai progetti della piattaforma nella Xamarin.Forms soluzione.
+1. Aggiungere `using` direttive per gli `Microsoft.Azure.Documents` `Microsoft.Azure.Documents.Client` `Microsoft.Azure.Documents.Linq` spazi dei nomi, e alle classi che accedono all'account Cosmos DB.
 
-Dopo aver eseguito questi passaggi, la libreria client di Azure Cosmos DB .NET Standard è utilizzabile per configurare ed eseguire le richieste del database di documenti.
+Dopo aver eseguito questi passaggi, è possibile usare la libreria client .NET Standard Azure Cosmos DB per configurare ed eseguire le richieste nel database del documento.
 
 > [!NOTE]
-> La libreria client .NET Standard di Azure Cosmos DB può essere installata solo nei progetti di piattaforma e non in un progetto libreria di classi portabile (PCL). Pertanto, l'applicazione di esempio è un Shared Access progetto (SAP) per evitare la duplicazione del codice. Tuttavia, il `DependencyService` classe può essere utilizzata in un progetto libreria di classi Portabile per richiamare il codice di libreria client .NET Standard di Azure Cosmos DB contenuta nei progetti specifici della piattaforma.
+> È possibile installare la libreria client di Azure Cosmos DB .NET Standard solo in progetti di piattaforma e non in un progetto libreria di classi portabile (PCL). Pertanto, l'applicazione di esempio è un progetto di accesso condiviso (SAP) per evitare la duplicazione del codice. Tuttavia, la `DependencyService` classe può essere utilizzata in un progetto PCL per richiamare Azure Cosmos DB .NET standard codice della libreria client contenuto in progetti specifici della piattaforma.
 
-## <a name="consuming-the-azure-cosmos-db-account"></a>Utilizzo di account Azure Cosmos DB
+## <a name="consuming-the-azure-cosmos-db-account"></a>Utilizzo dell'account di Azure Cosmos DB
 
-Il `DocumentClient` tipo incapsula l'endpoint, credenziali e i criteri di connessione utilizzata per accedere all'account Azure Cosmos DB e viene utilizzato per configurare ed eseguire le richieste in base all'account. Esempio di codice seguente viene illustrato come creare un'istanza di questa classe:
+Il `DocumentClient` tipo incapsula l'endpoint, le credenziali e i criteri di connessione usati per accedere all'account Azure Cosmos DB e viene usato per configurare ed eseguire le richieste per l'account. Nell'esempio di codice riportato di seguito viene illustrato come creare un'istanza di questa classe:
 
 ```csharp
 DocumentClient client = new DocumentClient(new Uri(Constants.EndpointUri), Constants.PrimaryKey);
 ```
 
-È necessario specificare l'Uri di Cosmos DB e la chiave primaria per la `DocumentClient` costruttore. Possono essere ottenuti dal portale di Azure. Per altre informazioni, vedere [connettersi a un account Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect).
+È necessario fornire al costruttore l'URI Cosmos DB e la chiave primaria `DocumentClient` . Questi possono essere ottenuti dal portale di Azure. Per altre informazioni, vedere [connettersi a un account Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect).
 
 ### <a name="creating-a-database"></a>Creazione di un database
 
-Un database di documenti è un contenitore logico per le raccolte documenti e gli utenti e può essere creata nel portale di Azure o a livello di codice usando il `DocumentClient.CreateDatabaseIfNotExistsAsync` metodo:
+Un database di documenti è un contenitore logico per raccolte di documenti e utenti e può essere creato nel portale di Azure o a livello di codice usando il `DocumentClient.CreateDatabaseIfNotExistsAsync` Metodo:
 
 ```csharp
 public async Task CreateDatabase(string databaseName)
@@ -79,14 +82,14 @@ public async Task CreateDatabase(string databaseName)
 }
 ```
 
-Il `CreateDatabaseIfNotExistsAsync` metodo consente di specificare un `Database` dell'oggetto come argomento, con la `Database` oggetto che specifica il nome del database come relativo `Id` proprietà. Il `CreateDatabaseIfNotExistsAsync` metodo crea il database, se non esiste, o restituisce il database se esiste già. Tuttavia, l'applicazione di esempio ignora tutti i dati restituiti dai `CreateDatabaseIfNotExistsAsync` (metodo).
+Il `CreateDatabaseIfNotExistsAsync` metodo specifica un `Database` oggetto come argomento, con l' `Database` oggetto che specifica il nome del database come `Id` Proprietà. Il `CreateDatabaseIfNotExistsAsync` metodo crea il database se non esiste oppure restituisce il database se esiste già. Tuttavia, l'applicazione di esempio Ignora tutti i dati restituiti dal `CreateDatabaseIfNotExistsAsync` metodo.
 
 > [!NOTE]
-> Il `CreateDatabaseIfNotExistsAsync` metodo restituisce un `Task<ResourceResponse<Database>>` oggetto e il codice di stato della risposta può essere controllato per determinare se è stato creato un database o un database esistente è stato restituito.
+> Il `CreateDatabaseIfNotExistsAsync` metodo restituisce un `Task<ResourceResponse<Database>>` oggetto e il codice di stato della risposta può essere controllato per determinare se è stato creato un database o se è stato restituito un database esistente.
 
 ### <a name="creating-a-document-collection"></a>Creazione di una raccolta di documenti
 
-Una raccolta di documenti è un contenitore per i documenti JSON e può essere creata nel portale di Azure o a livello di codice usando il `DocumentClient.CreateDocumentCollectionIfNotExistsAsync` metodo:
+Una raccolta di documenti è un contenitore per i documenti JSON, che può essere creata nel portale di Azure o a livello di codice usando il `DocumentClient.CreateDocumentCollectionIfNotExistsAsync` Metodo:
 
 ```csharp
 public async Task CreateDocumentCollection(string databaseName, string collectionName)
@@ -107,21 +110,21 @@ public async Task CreateDocumentCollection(string databaseName, string collectio
 }
 ```
 
-Il `CreateDocumentCollectionIfNotExistsAsync` metodo richiede due argomenti obbligatori: un nome di database specificato come un `Uri`e un `DocumentCollection` oggetto. Il `DocumentCollection` oggetto rappresenta una raccolta di documenti il cui nome è specificato con il `Id` proprietà. Il `CreateDocumentCollectionIfNotExistsAsync` metodo crea la raccolta di documenti, se non esiste, o restituisce la raccolta di documenti, se esiste già. Tuttavia, l'applicazione di esempio ignora tutti i dati restituiti dai `CreateDocumentCollectionIfNotExistsAsync` (metodo).
+Il `CreateDocumentCollectionIfNotExistsAsync` metodo richiede due argomenti obbligatori, ovvero un nome di database specificato come `Uri` e un `DocumentCollection` oggetto. L' `DocumentCollection` oggetto rappresenta una raccolta di documenti il cui nome è specificato con la `Id` Proprietà. Il `CreateDocumentCollectionIfNotExistsAsync` metodo crea la raccolta di documenti, se non esiste, o restituisce la raccolta di documenti, se già esistente. Tuttavia, l'applicazione di esempio Ignora tutti i dati restituiti dal `CreateDocumentCollectionIfNotExistsAsync` metodo.
 
 > [!NOTE]
-> Il `CreateDocumentCollectionIfNotExistsAsync` metodo restituisce un `Task<ResourceResponse<DocumentCollection>>` oggetto e il codice di stato della risposta può essere controllato per determinare se è stata creata una raccolta di documenti o se è stata restituita una raccolta di documenti esistenti.
+> Il `CreateDocumentCollectionIfNotExistsAsync` metodo restituisce un `Task<ResourceResponse<DocumentCollection>>` oggetto e il codice di stato della risposta può essere controllato per determinare se è stata creata una raccolta di documenti o se è stata restituita una raccolta di documenti esistente.
 
-Facoltativamente, il `CreateDocumentCollectionIfNotExistsAsync` metodo inoltre è possibile specificare un `RequestOptions` oggetto che incapsula le opzioni che possono essere specificate per richieste inviate all'account Cosmos DB. Il `RequestOptions.OfferThroughput` proprietà viene utilizzata per definire il livello di prestazioni della raccolta di documenti e nell'esempio di applicazione, è impostato a 400 unità richiesta al secondo. Questo valore deve essere aumentato o ridotto a seconda del fatto che sarà possibile accedere alla raccolta di frequente o sporadico.
+Facoltativamente, il `CreateDocumentCollectionIfNotExistsAsync` metodo può anche specificare un `RequestOptions` oggetto che incapsula le opzioni che possono essere specificate per le richieste inviate all'account Cosmos DB. La `RequestOptions.OfferThroughput` proprietà viene utilizzata per definire il livello di prestazioni della raccolta di documenti e nell'applicazione di esempio è impostata su 400 unità richiesta al secondo. Questo valore deve essere aumentato o diminuito a seconda che la raccolta venga utilizzata di frequente o meno.
 
 > [!IMPORTANT]
-> Si noti che il `CreateDocumentCollectionIfNotExistsAsync` metodo creerà una nuova raccolta con una velocità effettiva riservata, che presenta implicazioni in termini di prezzi.
+> Si noti che il `CreateDocumentCollectionIfNotExistsAsync` metodo creerà una nuova raccolta con una velocità effettiva riservata, che ha implicazioni relative ai prezzi.
 
 <a name="document_query" />
 
-### <a name="retrieving-document-collection-documents"></a>Recupero di documenti di una raccolta documenti
+### <a name="retrieving-document-collection-documents"></a>Recupero dei documenti della raccolta documenti
 
-Il contenuto di una raccolta di documenti può essere recuperato creando ed eseguendo una query del documento. Viene creata una query di documenti con la `DocumentClient.CreateDocumentQuery` metodo:
+Il contenuto di una raccolta di documenti può essere recuperato tramite la creazione e l'esecuzione di una query del documento. Viene creata una query di documento con il `DocumentClient.CreateDocumentQuery` Metodo:
 
 ```csharp
 public async Task<List<TodoItem>> GetTodoItemsAsync()
@@ -137,17 +140,17 @@ public async Task<List<TodoItem>> GetTodoItemsAsync()
 }
 ```
 
-Questa query in modo asincrono recupera tutti i documenti dalla raccolta specificata e inserisce i documenti in un `List<TodoItem>` raccolta per la visualizzazione.
+Questa query recupera in modo asincrono tutti i documenti dalla raccolta specificata e inserisce i documenti in una `List<TodoItem>` raccolta per la visualizzazione.
 
-Il `CreateDocumentQuery<T>` metodo specifica un `Uri` argomento che rappresenta la raccolta da sottoporre a query per i documenti. In questo esempio, il `collectionLink` variabile è un campo a livello di classe che specifica il `Uri` che rappresenta la raccolta di documenti per recuperare i documenti da:
+Il `CreateDocumentQuery<T>` metodo specifica un `Uri` argomento che rappresenta la raccolta di cui è necessario eseguire una query per i documenti. In questo esempio, la `collectionLink` variabile è un campo a livello di classe che specifica l'oggetto `Uri` che rappresenta la raccolta di documenti da cui recuperare i documenti:
 
 ```csharp
 Uri collectionLink = UriFactory.CreateDocumentCollectionUri(Constants.DatabaseName, Constants.CollectionName);
 ```
 
-Il `CreateDocumentQuery<T>` metodo crea una query che viene eseguita in modo sincrono e restituisce un `IQueryable<T>` oggetto. Tuttavia, il `AsDocumentQuery` metodo converte il `IQueryable<T>` dell'oggetto a un `IDocumentQuery<T>` oggetto che può essere eseguito in modo asincrono. La query asincrona viene eseguita con il `IDocumentQuery<T>.ExecuteNextAsync` metodo, che consente di recuperare la pagina successiva di risultati dal database di documenti, con la `IDocumentQuery<T>.HasMoreResults` proprietà che indica se sono presenti altri risultati da restituire dalla query.
+Il `CreateDocumentQuery<T>` metodo crea una query che viene eseguita in modo sincrono e restituisce un `IQueryable<T>` oggetto. Tuttavia, il `AsDocumentQuery` metodo converte l' `IQueryable<T>` oggetto in un `IDocumentQuery<T>` oggetto che può essere eseguito in modo asincrono. La query asincrona viene eseguita con il `IDocumentQuery<T>.ExecuteNextAsync` metodo, che recupera la pagina di risultati successiva dal database del documento, con la `IDocumentQuery<T>.HasMoreResults` proprietà che indica se sono presenti altri risultati che devono essere restituiti dalla query.
 
-I documenti possono essere filtrati sul lato server includendo un `Where` clausola della query, che viene applicato un predicato del filtro alla query sulla raccolta di documenti:
+È possibile filtrare i documenti lato server includendo una `Where` clausola nella query, che applica un predicato di filtro alla query sulla raccolta di documenti:
 
 ```csharp
 var query = client.CreateDocumentQuery<TodoItem>(collectionLink)
@@ -155,13 +158,13 @@ var query = client.CreateDocumentQuery<TodoItem>(collectionLink)
           .AsDocumentQuery();
 ```
 
-Questa query recupera tutti i documenti dalla raccolta la cui `Done` è uguale alla proprietà `false`.
+Questa query recupera tutti i documenti dalla raccolta la cui `Done` proprietà è uguale a `false` .
 
 <a name="inserting_document" />
 
 ### <a name="inserting-a-document-into-a-document-collection"></a>Inserimento di un documento in una raccolta di documenti
 
-I documenti sono contenuto JSON definito dall'utente e possono essere inseriti in una raccolta di documenti con la `DocumentClient.CreateDocumentAsync` metodo:
+I documenti sono contenuti JSON definiti dall'utente e possono essere inseriti in una raccolta di documenti con il `DocumentClient.CreateDocumentAsync` Metodo:
 
 ```csharp
 public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
@@ -172,11 +175,11 @@ public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
 }
 ```
 
-Il `CreateDocumentAsync` metodo consente di specificare un `Uri` argomento che rappresenta la raccolta di documenti devono essere inseriti in, e un `object` argomento che rappresenta il documento da inserire.
+Il `CreateDocumentAsync` metodo specifica un `Uri` argomento che rappresenta la raccolta in cui inserire il documento e un `object` argomento che rappresenta il documento da inserire.
 
 ### <a name="replacing-a-document-in-a-document-collection"></a>Sostituzione di un documento in una raccolta di documenti
 
-I documenti possono essere sostituiti in una raccolta di documenti con la `DocumentClient.ReplaceDocumentAsync` metodo:
+I documenti possono essere sostituiti in una raccolta di documenti con il `DocumentClient.ReplaceDocumentAsync` Metodo:
 
 ```csharp
 public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
@@ -187,13 +190,13 @@ public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
 }
 ```
 
-Il `ReplaceDocumentAsync` metodo consente di specificare un `Uri` argomento che rappresenta il documento nella raccolta che deve essere sostituito, e un `object` argomento che rappresenta i dati del documento aggiornato.
+Il `ReplaceDocumentAsync` metodo specifica un `Uri` argomento che rappresenta il documento nella raccolta che deve essere sostituito e un `object` argomento che rappresenta i dati del documento aggiornati.
 
 <a name="deleting_document" />
 
 ### <a name="deleting-a-document-from-a-document-collection"></a>Eliminazione di un documento da una raccolta di documenti
 
-Un documento può essere eliminato da una raccolta di documenti con la `DocumentClient.DeleteDocumentAsync` metodo:
+Un documento può essere eliminato da una raccolta di documenti con il `DocumentClient.DeleteDocumentAsync` Metodo:
 
 ```csharp
 public async Task DeleteTodoItemAsync(string id)
@@ -206,33 +209,33 @@ public async Task DeleteTodoItemAsync(string id)
 
 Il `DeleteDocumentAsync` metodo specifica un `Uri` argomento che rappresenta il documento nella raccolta da eliminare.
 
-### <a name="deleting-a-document-collection"></a>L'eliminazione di una raccolta di documenti
+### <a name="deleting-a-document-collection"></a>Eliminazione di una raccolta di documenti
 
-Una raccolta di documenti può essere eliminata da un database con il `DocumentClient.DeleteDocumentCollectionAsync` metodo:
+Una raccolta di documenti può essere eliminata da un database con il `DocumentClient.DeleteDocumentCollectionAsync` Metodo:
 
 ```csharp
 await client.DeleteDocumentCollectionAsync(collectionLink);
 ```
 
-Il `DeleteDocumentCollectionAsync` metodo specifica un `Uri` argomento che rappresenta la raccolta di documenti da eliminare. Si noti che questo metodo di richiamo eliminerà anche i documenti archiviati nella raccolta.
+Il `DeleteDocumentCollectionAsync` metodo specifica un `Uri` argomento che rappresenta la raccolta di documenti da eliminare. Si noti che la chiamata a questo metodo eliminerà anche i documenti archiviati nella raccolta.
 
 ### <a name="deleting-a-database"></a>Eliminazione di un database
 
-Un database può essere eliminato da un account di database Cosmos DB con il `DocumentClient.DeleteDatabaesAsync` metodo:
+È possibile eliminare un database da un account di database Cosmos DB con il `DocumentClient.DeleteDatabaesAsync` Metodo:
 
 ```csharp
 await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.DatabaseName));
 ```
 
-Il `DeleteDatabaseAsync` metodo specifica un `Uri` argomento che rappresenta il database da eliminare. Si noti che questo metodo di richiamo eliminerà anche le raccolte di documenti archiviate nel database e che i documenti archiviati nelle raccolte documenti.
+Il `DeleteDatabaseAsync` metodo specifica un `Uri` argomento che rappresenta il database da eliminare. Si noti che la chiamata a questo metodo eliminerà anche le raccolte di documenti archiviate nel database e i documenti archiviati nelle raccolte di documenti.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare la libreria client .NET Standard di Azure Cosmos DB per l'integrazione di un database di documenti di Azure Cosmos DB in un'applicazione Xamarin.Forms. Un database di documenti di Azure Cosmos DB è un database NoSQL che fornisce l'accesso a bassa latenza per i documenti JSON, che offre un servizio di database veloce, a disponibilità elevata e scalabile per le applicazioni che richiedono scalabilità e semplicità e la replica globale.
+Questo articolo ha illustrato come usare la libreria client di .NET Standard Azure Cosmos DB per integrare un database di documenti Azure Cosmos DB in un' Xamarin.Forms applicazione. Un database di documenti Azure Cosmos DB è un database NoSQL che offre accesso a bassa latenza ai documenti JSON, che offre un servizio di database rapido, a disponibilità elevata e scalabile per le applicazioni che richiedono scalabilità e replica globale senza problemi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [TODO Azure Cosmos DB (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
+- [Todo Azure Cosmos DB (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Documentazione di Azure Cosmos DB](/azure/cosmos-db/)
-- [Azure Cosmos DB .NET Standard library di client](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Azure Cosmos DB libreria client .NET Standard](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [API di Azure Cosmos DB](https://docs.microsoft.com/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

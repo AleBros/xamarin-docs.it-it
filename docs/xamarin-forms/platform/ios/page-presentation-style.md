@@ -1,18 +1,21 @@
 ---
-title: Stile di presentazione pagina modale in iOS
-description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che imposta lo stile di presentazione di una pagina modale.
-ms.prod: xamarin
-ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/02/2020
-ms.openlocfilehash: 19175a6d97afb9d2d985d8a1bf8e1ce4c0179242
-ms.sourcegitcommit: 87035b654434c22ca1b0d70ee8d2496dcb63b365
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546506"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128011"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Stile di presentazione pagina modale in iOS
 
@@ -60,7 +63,7 @@ Il risultato è che lo stile di presentazione modale su un oggetto [`Page`](xref
 [![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
-> Le pagine che usano questo specifico della piattaforma per impostare lo stile di presentazione modale devono usare la navigazione modale. Per altre informazioni, vedere [Novell. Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+> Le pagine che usano questo specifico della piattaforma per impostare lo stile di presentazione modale devono usare la navigazione modale. Per ulteriori informazioni, vedere le [ Xamarin.Forms pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

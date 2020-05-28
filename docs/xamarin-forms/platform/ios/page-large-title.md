@@ -1,24 +1,27 @@
 ---
-title: Titoli di pagine di grandi dimensioni in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che Visualizza il titolo della pagina come titolo grande nella barra di spostamento di un NavigationPage.
-ms.prod: xamarin
-ms.assetid: 45FD9145-8319-452C-9AE6-624431A4D43C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: ab9becf2f7363674346abf004c1748cb06eb0d31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0db20620870340386ccd0cedf7f98cb2975527ba
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655417"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128043"
 ---
 # <a name="large-page-titles-on-ios"></a>Titoli di pagine di grandi dimensioni in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma iOS viene usato per visualizzare il titolo della pagina come titolo grande nella barra di navigazione di un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), per i dispositivi che usano iOS 11 o versione successiva. Un grande titolo è allineato a sinistra Usa un carattere di dimensioni maggiori e passa a un titolo standard come l'utente inizia a scorrimento di contenuto, in modo che l'area dello schermo viene usato in modo efficiente. Tuttavia, con orientamento orizzontale, il titolo verrà restituito al centro della barra di spostamento per ottimizzare il layout del contenuto. Vengono utilizzati in XAML, impostando il `NavigationPage.PrefersLargeTitles` proprietà associata una `boolean` valore:
+Questo specifico della piattaforma iOS viene usato per visualizzare il titolo della pagina come titolo grande nella barra di navigazione di un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , per i dispositivi che usano iOS 11 o versione successiva. Un titolo di grandi dimensioni viene allineato a sinistra e utilizza un tipo di carattere più grande e passa a un titolo standard quando l'utente inizia a scorrere il contenuto, in modo che l'area dello schermo venga utilizzata in modo efficiente. Tuttavia, nell'orientamento orizzontale, il titolo tornerà al centro della barra di spostamento per ottimizzare il layout del contenuto. Viene utilizzato in XAML impostando la `NavigationPage.PrefersLargeTitles` proprietà associata su un `boolean` valore:
 
 ```xaml
 <NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -30,7 +33,7 @@ Questo specifico della piattaforma iOS viene usato per visualizzare il titolo de
 </NavigationPage>
 ```
 
-In alternativa può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# tramite l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -41,9 +44,9 @@ var navigationPage = new Xamarin.Forms.NavigationPage(new iOSLargeTitlePageCS())
 navigationPage.On<iOS>().SetPrefersLargeTitles(true);
 ```
 
-Il `NavigationPage.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `NavigationPage.SetPrefersLargeTitle` metodo, nelle [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, controlla se sono abilitati i titoli di grandi dimensioni.
+Il `NavigationPage.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il `NavigationPage.SetPrefersLargeTitle` metodo, nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, controlla se i titoli di grandi dimensioni sono abilitati.
 
-Condizione che i titoli di grandi dimensioni sono abilitati nel [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), tutte le pagine nello stack di navigazione verranno visualizzate titoli di grandi dimensioni. Questo comportamento può essere sottoposto a override nelle pagine impostando il `Page.LargeTitleDisplay` proprietà associata a un valore di `LargeTitleDisplayMode` enumerazione:
+A condizione che i titoli di grandi dimensioni siano abilitati in [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , tutte le pagine dello stack di navigazione visualizzeranno titoli di grandi dimensioni. Questo comportamento può essere sostituito sulle pagine impostando la `Page.LargeTitleDisplay` proprietà associata su un valore dell' `LargeTitleDisplayMode` enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -54,7 +57,7 @@ Condizione che i titoli di grandi dimensioni sono abilitati nel [`NavigationPage
 </ContentPage>
 ```
 
-In alternativa, il comportamento di pagina può essere sottoposto a override dal codice C# che utilizza l'API fluent:
+In alternativa, è possibile eseguire l'override del comportamento della pagina da C# usando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -72,13 +75,13 @@ public class iOSLargeTitlePageCS : ContentPage
 }
 ```
 
-Il `Page.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Page.SetLargeTitleDisplay` metodo, nel [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, controlla il comportamento di titolo di grandi dimensioni nel [`Page`](xref:Xamarin.Forms.Page), con il `LargeTitleDisplayMode` enumerazione fornendo tre possibili valori:
+Il `Page.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il `Page.SetLargeTitleDisplay` metodo, nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, controlla il comportamento del titolo di grandi dimensioni su [`Page`](xref:Xamarin.Forms.Page) , con l' `LargeTitleDisplayMode` enumerazione che fornisce tre valori possibili:
 
-- `Always` : forza la barra di spostamento e il tipo di carattere per utilizzare il formato di grande dimensioni.
-- `Automatic` -usare lo stesso stile (grande o piccolo) come l'elemento precedente nello stack di navigazione.
-- `Never` : forzare l'utilizzo della barra di spostamento formato regolare di piccole dimensioni.
+- `Always`: forza la barra di navigazione e la dimensione del carattere per usare il formato grande.
+- `Automatic`: usare lo stesso stile (grande o piccolo) dell'elemento precedente nello stack di navigazione.
+- `Never`: forza l'uso della barra di spostamento normale in formato piccolo.
 
-Inoltre, il `SetLargeTitleDisplay` metodo può essere utilizzato per attivare o disattivare i valori di enumerazione chiamando il `LargeTitleDisplay` metodo, che restituisce l'attuale `LargeTitleDisplayMode`:
+Inoltre, il `SetLargeTitleDisplay` metodo può essere utilizzato per abilitare o disabilitare i valori di enumerazione chiamando il `LargeTitleDisplay` metodo, che restituisce l'oggetto corrente `LargeTitleDisplayMode` :
 
 ```csharp
 switch (On<iOS>().LargeTitleDisplay())
@@ -95,9 +98,9 @@ switch (On<iOS>().LargeTitleDisplay())
 }
 ```
 
-Il risultato è che un oggetto specificato `LargeTitleDisplayMode` viene applicato per il [`Page`](xref:Xamarin.Forms.Page), che controlla il comportamento di titolo di grandi dimensioni:
+Il risultato è che un oggetto specificato `LargeTitleDisplayMode` viene applicato a [`Page`](xref:Xamarin.Forms.Page) , che controlla il comportamento del titolo di grandi dimensioni:
 
-![](page-large-title-images/large-title.png "Specifiche della piattaforma effetto di sfocatura")
+![](page-large-title-images/large-title.png "Blur Effect Platform-Specific")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

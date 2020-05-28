@@ -1,46 +1,49 @@
 ---
-title: Xamarin.Forms RelativeLayout
-description: Questo articolo illustra come usare la classe RelativeLayout Xamarin.Forms per creare interfacce utente che si adattano per adattarsi a schermi di qualsiasi dimensione.
-ms.prod: xamarin
-ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/25/2015
-ms.openlocfilehash: d8c2cc4f31b148ee3181629e5b3b5faf01016617
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: Xamarin.FormsSul relativelayout
+description: Questo articolo illustra come usare la Xamarin.Forms classe sul relativelayout per creare interfacce utente che vengono ridimensionate in base alle dimensioni dello schermo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772531"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127192"
 ---
-# <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
+# <a name="xamarinforms-relativelayout"></a>Xamarin.FormsSul relativelayout
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-`RelativeLayout` Consente di posizione e le viste di dimensioni rispetto alla proprietà delle viste layout o di pari livello. A differenza `AbsoluteLayout`, `RelativeLayout` non è il concetto di ancoraggio in movimento e non ha funzionalità per il posizionamento di elementi rispetto ai bordi inferiore o destro del layout. `RelativeLayout` supporta il posizionamento di elementi di fuori dei propri limiti.
+`RelativeLayout`viene utilizzato per posizionare e ridimensionare le visualizzazioni relative alle proprietà del layout o delle visualizzazioni di pari livello. Diversamente `AbsoluteLayout` da, non `RelativeLayout` ha il concetto di ancoraggio in movimento e non dispone di strutture per posizionare elementi relativi ai bordi inferiore o destro del layout. `RelativeLayout`supporta il posizionamento di elementi all'esterno dei propri limiti.
 
 [![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>Scopo
 
-`RelativeLayout` può essere utilizzato per posizionare le viste sullo schermo rispetto al layout complessivo o ad altre viste.
+`RelativeLayout`può essere usato per posizionare le visualizzazioni sullo schermo rispetto al layout complessivo o ad altre visualizzazioni.
 
-![](relative-layout-images/flag.png "Esplorazione RelativeLayout")
+![](relative-layout-images/flag.png "RelativeLayout Exploration")
 
 ## <a name="usage"></a>Utilizzo
 
 ### <a name="understanding-constraints"></a>Informazioni sui vincoli
 
-Posizionamento e ridimensionamento di una visualizzazione all'interno di un `RelativeLayout` avviene con vincoli. Un'espressione di vincolo può includere le informazioni seguenti:
+Il posizionamento e il ridimensionamento di una visualizzazione in un oggetto `RelativeLayout` vengono eseguiti con vincoli. Un'espressione di vincolo può includere le informazioni seguenti:
 
-- **Tipo di** &ndash; se il vincolo è relativamente all'elemento padre o a un'altra visualizzazione.
-- **Proprietà** &ndash; la proprietà da utilizzare come base per il vincolo.
-- **Fattore** &ndash; fattore da applicare al valore della proprietà.
-- **Costante** &ndash; il valore da usare come offset del valore.
-- **ElementName** &ndash; il nome della vista che il vincolo è relativo alla.
+- **Tipo** &ndash; di indica se il vincolo è relativo all'elemento padre o a un'altra visualizzazione.
+- **Proprietà** &ndash; di Proprietà da utilizzare come base per il vincolo.
+- **Fattore** &ndash; di fattore da applicare al valore della proprietà.
+- **Costante** &ndash; valore da utilizzare come offset del valore.
+- **ElementName** &ndash; nome della visualizzazione a cui è correlato il vincolo.
 
-In XAML, i vincoli sono espressi come `ConstraintExpression`s. Si consideri l'esempio seguente:
+In XAML i vincoli vengono espressi come `ConstraintExpression` . Prendere in considerazione gli esempi seguenti:
 
 ```xaml
 <BoxView Color="Green" WidthRequest="50" HeightRequest="50"
@@ -56,7 +59,7 @@ In XAML, i vincoli sono espressi come `ConstraintExpression`s. Si consideri l'es
                              Constant=-100}" />
 ```
 
-In C#, i vincoli vengono espressi in modo leggermente diverso, utilizzando funzioni anziché le espressioni nella vista. I vincoli vengono specificati come argomenti per il layout `Add` metodo:
+In C# i vincoli sono espressi in modo leggermente diverso, usando le funzioni anziché le espressioni nella vista. I vincoli vengono specificati come argomenti per il metodo del layout `Add` :
 
 ```csharp
 layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
@@ -70,19 +73,19 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
     Constraint.Constant(50), Constraint.Constant(50));
 ```
 
-Tenere presente i seguenti aspetti di layout precedente:
+Tenere presenti gli aspetti seguenti del layout precedente:
 
-- Il `x` e `y` i vincoli vengono specificati con le proprie vincoli.
-- In C#, i relativi vincoli vengono definiti come funzioni. Concetti quali `Factor` non sono presenti, ma può essere implementata manualmente.
-- La casella `x` coordinata è definita come metà della larghezza dell'elemento padre, -100.
-- La casella `y` coordinata è definita come metà dell'altezza dell'elemento padre, -100.
+- I `x` `y` vincoli e vengono specificati con i rispettivi vincoli.
+- In C# i vincoli relativi sono definiti come funzioni. I concetti come `Factor` non sono disponibili, ma possono essere implementati manualmente.
+- La `x` coordinata della casella è definita come metà della larghezza dell'elemento padre,-100.
+- La `y` coordinata della casella viene definita come metà dell'altezza dell'elemento padre,-100.
 
 > [!NOTE]
-> A causa della modalità sono definiti vincoli, è possibile rendere i layout più complessi in C# rispetto a quanto può essere specificato con XAML.
+> A causa del modo in cui vengono definiti i vincoli, è possibile creare layout più complessi in C# rispetto a quelli che possono essere specificati con XAML.
 
-Entrambi gli esempi precedenti definire vincoli come appartenenti `RelativeToParent` &ndash; significa che i relativi valori sono relativa all'elemento padre. È anche possibile definire vincoli come relativi a un'altra visualizzazione. Questo consente i layout più intuitivi (per gli sviluppatori) e possa rendere più immediatamente evidente lo scopo del codice layout.
+Entrambi gli esempi precedenti definiscono vincoli, i `RelativeToParent` &ndash; cui valori sono relativi all'elemento padre. È anche possibile definire vincoli in relazione a un'altra visualizzazione. In questo modo è possibile creare layout più intuitivi (per lo sviluppatore) e rendere più evidente lo scopo del codice di layout.
 
-Prendere in considerazione un layout in cui un elemento deve essere inferiore rispetto a un altro 20 pixel. Se entrambi gli elementi sono definiti con valori costanti, più bassa può essere relativi `Y` vincolo definito come una costante che sia superiore a 20 pixel di `Y` vincolo dell'elemento superiore. Questo approccio è sufficiente se l'elemento superiore è posizionato usando una proporzione, in modo che non si conosce la dimensione in pixel. In tal caso, è più affidabile vincolare l'elemento in base alla posizione dell'elemento:
+Si consideri un layout in cui un elemento deve avere una posizione di 20 pixel inferiore a un altro. Se entrambi gli elementi sono definiti con valori costanti, il vincolo minore potrebbe essere `Y` definito come una costante di 20 pixel maggiore del `Y` vincolo dell'elemento superiore. Questo approccio è breve se l'elemento superiore viene posizionato usando una proporzione, in modo che le dimensioni del pixel non siano note. In tal caso, la limitazione dell'elemento in base alla posizione di un altro elemento è più affidabile:
 
 ```xaml
 <RelativeLayout>
@@ -105,7 +108,7 @@ Prendere in considerazione un layout in cui un elemento deve essere inferiore ri
 </RelativeLayout>
 ```
 
-Per eseguire lo stesso layout in C#:
+Per ottenere lo stesso layout in C#:
 
 ```csharp
 layout.Children.Add (redBox, Constraint.RelativeToParent ((parent) => {
@@ -128,23 +131,23 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
     }));
 ```
 
-Questa operazione produce il seguente output, alla posizione della casella blu determinata _relativo_ alla posizione della casella rossa:
+Viene generato l'output seguente, in cui la posizione della casella blu è determinata _rispetto_ alla posizione della casella rossa:
 
-![](relative-layout-images/red-blue-box.png "RelativeLayout con BoxViews rosso e blu")
+![](relative-layout-images/red-blue-box.png "RelativeLayout with Red and Blue BoxViews")
 
 ### <a name="sizing"></a>Ridimensionamento
 
-Viste disposti in base `RelativeLayout` sono disponibili due opzioni per specificare le dimensioni:
+Le visualizzazioni definite da `RelativeLayout` includono due opzioni per specificarne le dimensioni:
 
 - `HeightRequest & WidthRequest`
 - `RelativeLayout.WidthConstraint` & `RelativeLayout.HeightConstraint`
 
-`HeightRequest` e `WidthRequest` specificare l'altezza desiderata e la larghezza della visualizzazione, ma può essere sovrascritto dal layout in base alle esigenze. `WidthConstraint` e `HeightConstraint` supporta l'impostazione di altezza e larghezza come un valore relativo alla proprietà del layout o un'altra visualizzazione, o come un valore costante.
+`HeightRequest`e `WidthRequest` specificano l'altezza e la larghezza previste per la visualizzazione, ma possono essere sostituite dai layout in base alle esigenze. `WidthConstraint`e `HeightConstraint` supportano l'impostazione dell'altezza e della larghezza come valore relativo alle proprietà del layout o di un'altra visualizzazione oppure come valore costante.
 
-## <a name="exploring-a-complex-layout"></a>Esplorazione di un Layout complesso
-Ognuno dei layout presentano vantaggi e svantaggi per la creazione di layout specifico. In questa serie di articoli di layout, un'app di esempio è stata creata con lo stesso layout di pagina implementato usando tre layout diversi.
+## <a name="exploring-a-complex-layout"></a>Esplorazione di un layout complesso
+Ogni layout presenta punti di forza e debolezze per la creazione di layout specifici. In questa serie di articoli di layout è stata creata un'app di esempio con lo stesso layout di pagina implementato con tre layout diversi.
 
-Si consideri il seguente XAML:
+Si consideri il codice XAML seguente:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -223,11 +226,11 @@ Title="RelativeLayout">
 
 Il codice precedente genera il layout seguente:
 
-![](relative-layout-images/relative.png "RelativeLayout complessi")
+![](relative-layout-images/relative.png "Complex RelativeLayout")
 
-Si noti che `RelativeLayouts`s sono annidate, in quanto in alcuni casi i layout di annidamento può risultare più semplice rispetto a presentare tutti gli elementi all'interno del layout stesso. Si noti anche che alcuni elementi sono `RelativeToView`, perché in questo modo per il layout semplice e intuitivo quando le relazioni tra le visualizzazioni guidano il posizionamento.
+Si noti che `RelativeLayouts` i sono annidati, perché in alcuni casi i layout di annidamento possono essere più semplici rispetto alla presentazione di tutti gli elementi all'interno dello stesso layout. Si noti inoltre che alcuni elementi sono `RelativeToView` , perché questo consente un layout più semplice e intuitivo quando le relazioni tra le visualizzazioni guidano il posizionamento.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Esempio di BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

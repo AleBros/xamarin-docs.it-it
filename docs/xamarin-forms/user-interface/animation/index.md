@@ -1,33 +1,25 @@
 ---
-title: Animazione in Xamarin.Forms
-description: Xamarin.Forms include la propria infrastruttura di animazione semplice per la creazione di semplici animazioni, garantendo tuttavia sono sufficientemente versatili per creare animazioni complesse.
-ms.prod: xamarin
-ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/14/2016
-ms.openlocfilehash: bebb3e32f298a2079069787dba3453e1817cf64f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158602"
+title: "Animation in Xamarin.Forms " Description: " Xamarin.Forms include un'infrastruttura di animazione semplice per la creazione di animazioni semplici, pur essendo sufficientemente versatile da creare animazioni complesse".
+ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="animation-in-xamarinforms"></a>Animazione in Xamarin.Forms
 
-_Xamarin.Forms include la propria infrastruttura di animazione semplice per la creazione di semplici animazioni, garantendo tuttavia sono sufficientemente versatili per creare animazioni complesse._
+# <a name="animation-in-xamarinforms"></a>Animazione inXamarin.Forms
 
-Le classi di animazione di Xamarin.Forms di destinazione diverse proprietà di elementi visivi, con un'animazione tipica progressivamente si modifica una proprietà da un valore a un altro in un periodo di tempo. Si noti che non vi sia alcuna interfaccia XAML per le classi di animazione di Xamarin.Forms. Tuttavia, è possibile incapsulare le animazioni [comportamenti](~/xamarin-forms/app-fundamentals/behaviors/index.md) cui viene fatto riferimento da XAML.
+_Novell. Forms include una propria infrastruttura di animazione semplice per la creazione di animazioni semplici, pur essendo sufficientemente versatile per la creazione di animazioni complesse._
 
-## <a name="simple-animationssimplemd"></a>[Animazioni semplici](simple.md)
+Le Xamarin.Forms classi di animazione sono destinate a proprietà diverse di elementi visivi, con un'animazione tipica che modifica progressivamente una proprietà da un valore a un altro in un determinato periodo di tempo. Si noti che non è presente alcuna interfaccia XAML per le Xamarin.Forms classi di animazione. Tuttavia, le animazioni possono essere incapsulate in [comportamenti](~/xamarin-forms/app-fundamentals/behaviors/index.md) e quindi a cui viene fatto riferimento da XAML.
 
-Il [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe fornisce metodi di estensione che possono essere utilizzati per costruire semplici animazioni per ruotano, ridimensionano, traducono e dissolvenza [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) istanze. Questo articolo illustra la creazione e l'annullamento di animazioni tramite le `ViewExtensions` classe.
+## <a name="simple-animations"></a>[Animazioni semplici](simple.md)
 
-## <a name="easing-functionseasingmd"></a>[Funzioni di interpolazione](easing.md)
+La [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe fornisce metodi di estensione che possono essere usati per costruire animazioni semplici che ruotano, ridimensionano, traducono e sfumano le [`VisualElement`](xref:Xamarin.Forms.VisualElement) istanze. Questo articolo illustra la creazione e l'annullamento di animazioni con la `ViewExtensions` classe.
 
-Xamarin.Forms include un' [ `Easing` ](xref:Xamarin.Forms.Easing) classe che consente di specificare una funzione di trasferimento che consente di controllare come le animazioni velocizzare o rallentare poiché sono in esecuzione. Questo articolo illustra come usare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate.
+## <a name="easing-functions"></a>[Funzioni di interpolazione](easing.md)
 
-## <a name="custom-animationscustommd"></a>[Animazioni personalizzate](custom.md)
+Xamarin.Formsinclude una [`Easing`](xref:Xamarin.Forms.Easing) classe che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate.
 
-Il [ `Animation` ](xref:Xamarin.Forms.Animation) classe è il blocco predefinito di tutte le animazioni di Xamarin.Forms, con i metodi di estensione nel [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe di creazione di uno o più `Animation` oggetti. Questo articolo illustra come usare il `Animation` classe per creare e annullare le animazioni e sincronizzare le animazioni più creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti.
+## <a name="custom-animations"></a>[Animazioni personalizzate](custom.md)
+
+La [`Animation`](xref:Xamarin.Forms.Animation) classe è il blocco predefinito di tutte le Xamarin.Forms animazioni, con i metodi di estensione nella [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe che crea uno o più `Animation` oggetti. Questo articolo illustra come usare la `Animation` classe per creare e annullare animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animano le proprietà che non sono animate dai metodi di animazione esistenti.
