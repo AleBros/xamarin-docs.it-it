@@ -1,49 +1,52 @@
 ---
-title: Filtri di maschera di SkiaSharp
-description: Informazioni su come usare il filtro per creare le sfumature e altri effetti alfa.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/27/2018
-ms.openlocfilehash: 36a8b5c32261d4f508c82feea1e6127574db6a20
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198253"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136409"
 ---
-# <a name="skiasharp-mask-filters"></a>Filtri di maschera di SkiaSharp
+# <a name="skiasharp-mask-filters"></a>Filtri maschera SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Maschera i filtri sono gli effetti che consentono di modificare la geometria e il canale alfa di oggetti grafici. Per usare un filtro, impostare il [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) proprietà della `SKPaint` a un oggetto di tipo [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) che è stato creato chiamando uno del `SKMaskFilter` metodi statici.
+I filtri maschera sono effetti che consentono di modificare la geometria e il canale alfa degli oggetti grafici. Per usare un filtro mask, impostare la [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) proprietà di `SKPaint` su un oggetto di tipo [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) creato chiamando uno dei `SKMaskFilter` metodi statici.
 
-Il modo migliore per acquisire familiarità con i filtri di mask è eseguendo più esperimenti con questi metodi statici. Il filtro più utile di maschera crea un' sfocatura:
+Il modo migliore per acquisire familiarità con i filtri maschera consiste nel provare questi metodi statici. Il filtro mask più utile crea una sfocatura:
 
-![Esempio Blur](mask-filters-images/MaskFilterExample.png "Blur esempio")
+![Esempio di sfocatura](mask-filters-images/MaskFilterExample.png "Esempio di sfocatura")
 
-Che è l'unica funzionalità di filtro maschera descritte in questo articolo. Nel prossimo articolo sul [ **filtri immagini di SkiaSharp** ](image-filters.md) descrive anche un effetto di sfocatura che è preferibile alla seguente. 
+Questa è l'unica funzionalità di filtro maschera descritta in questo articolo. Il prossimo articolo sui [**filtri immagini di SkiaSharp**](image-filters.md) descrive anche un effetto sfocato che potrebbe essere preferibile a questo. 
 
-Il metodo statico [ `SKMaskFilter.CreateBlur` ](xref:SkiaSharp.SKMaskFilter.CreateBlur(SkiaSharp.SKBlurStyle,System.Single)) metodo ha la sintassi seguente:
+Il [`SKMaskFilter.CreateBlur`](xref:SkiaSharp.SKMaskFilter.CreateBlur(SkiaSharp.SKBlurStyle,System.Single)) metodo statico presenta la sintassi seguente:
 
 ```csharp
 public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 ```
 
-Gli overload consentono che specifica i flag per l'algoritmo utilizzato per creare la sfocatura e un rettangolo per evitare di sfocatura nelle aree che saranno coperte da altri oggetti grafici.
+Gli overload consentono di specificare i flag per l'algoritmo utilizzato per creare la sfocatura e un rettangolo per evitare la sfocatura nelle aree che verranno analizzate con altri oggetti grafici.
 
-[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle) è un'enumerazione con i membri seguenti:
+[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle)è un'enumerazione con i membri seguenti:
 
 - `Normal`
 - `Solid`
 - `Outer`
 - `Inner`
 
-Negli esempi seguenti vengono visualizzati gli effetti di questi stili. Il `sigma` parametro specifica l'extent della sfocatura. Nelle versioni precedenti di Skia, l'extent della sfocatura indicato con il valore del raggio. Se il valore del raggio è preferibile per l'applicazione, è un valore statico [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) metodo che può convertire da uno a altro. Il metodo Moltiplica il raggio 0.57735 e aggiunge 0,5.
+Gli effetti di questi stili sono illustrati negli esempi seguenti. Il `sigma` parametro specifica l'extent della sfocatura. Nelle versioni precedenti di Skia, l'entità della sfocatura è stata indicata con un valore RADIUS. Se è preferibile un valore RADIUS per l'applicazione, è disponibile un [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) metodo statico che può essere convertito da uno all'altro. Il metodo moltiplica il raggio per 0,57735 e aggiunge 0,5.
 
-Il **maschera Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio consente di sperimentare con i valori di sigma e gli stili di sfocatura. Il file XAML crea un'istanza di un `Picker` con i quattro `SKBlurStyle` membri dell'enumerazione e un `Slider` per specificare il valore di sigma:
+La pagina dell' **esperimento di offuscamento della maschera** nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) consente di sperimentare gli stili di sfocatura e i valori Sigma. Il file XAML crea un'istanza di `Picker` con i quattro `SKBlurStyle` membri di enumerazione e un oggetto `Slider` per specificare il valore Sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,7 +92,7 @@ Il **maschera Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](ht
 </ContentPage>
 ```
 
-Il file code-behind Usa tali valori per creare un `SKMaskFilter` dell'oggetto e impostarlo sul `MaskFilter` proprietà di un `SKPaint` oggetto. Ciò `SKPaint` oggetto viene usato per disegnare sia una stringa di testo e una mappa di bit:
+Il file code-behind utilizza tali valori per creare un `SKMaskFilter` oggetto e impostarlo sulla `MaskFilter` proprietà di un `SKPaint` oggetto. Questo `SKPaint` oggetto viene usato per creare una stringa di testo e una bitmap:
 
 ```csharp
 public partial class MaskBlurExperimentPage : ContentPage
@@ -157,40 +160,40 @@ public partial class MaskBlurExperimentPage : ContentPage
 }
 ```
 
-Ecco il programma in esecuzione in iOS, Android e Universal Windows Platform (UWP) con i `Normal` blur stile e aumentando `sigma` livelli:
+Ecco il programma in esecuzione in iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP) con lo `Normal` stile di sfocatura e i livelli crescenti `sigma` :
 
-[![Mascherare sfocatura esperimento: Normal](mask-filters-images/MaskBlurExperiment-Normal.png "maschera Blur esperimento - normale")](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
+[![Esperimento di sfocatura maschera-normale](mask-filters-images/MaskBlurExperiment-Normal.png "Esperimento di sfocatura maschera-normale")](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
 
-Si noterà che sono interessati solo i bordi della bitmap dalla sfocatura. Il `SKMaskFilter` classe non è l'effetto corretto da usare se si desidera un'immagine intera bitmap di sfocatura. Per cui è opportuno usare la [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) classe come descritto nell'articolo successivo nella [ **filtri immagini di SkiaSharp**](image-filters.md).
+Si noterà che solo i bordi della bitmap sono interessati dalla sfocatura. La `SKMaskFilter` classe non è l'effetto corretto da usare se si vuole sfocare un'intera immagine bitmap. A tale proposito, è necessario usare la [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) classe come descritto nel prossimo articolo sui [**filtri immagine di SkiaSharp**](image-filters.md).
 
-Il testo è sfocato più con l'aumentare i valori del `sigma` argomento. Sperimentazione con questo programma, si noterà che per un particolare `sigma` valore, l'effetto è più estremo sul desktop di Windows 10. Questa differenza si verifica perché la densità di pixel è inferiore su un monitor da tavolo rispetto a sui dispositivi mobili e di conseguenza l'altezza del testo in pixel è inferiore. Il `sigma` valore è proporzionale un' sfocatura nella misura in pixel, in tal caso per un determinato `sigma` valore, l'effetto è più estremo su schermi a risoluzione inferiore. In un'applicazione di produzione, è opportuno calcolare un `sigma` valore proporzionale alle dimensioni dell'immagine. 
+Il testo è più sfocato con l'aumento dei valori dell' `sigma` argomento. Nella sperimentazione di questo programma si noterà che per un determinato `sigma` valore, la sfocatura è più estrema sul desktop di Windows 10. Questa differenza si verifica perché la densità in pixel è inferiore su un monitor desktop rispetto ai dispositivi mobili e, di conseguenza, l'altezza del testo in pixel è inferiore. Il `sigma` valore è proporzionale a un extent di sfocatura in pixel, quindi, per un determinato `sigma` valore, l'effetto è più estremo sulle visualizzazioni di risoluzione inferiore. In un'applicazione di produzione, è probabile che si desideri calcolare un `sigma` valore proporzionale alle dimensioni dell'elemento grafico. 
 
-Provare diversi valori prima di stabilire un livello di sfocatura Cerca il meglio per l'applicazione. Ad esempio, nelle **maschera Blur esperimento** pagina, provare a impostare `sigma` simile al seguente:
+Provare diversi valori prima di stabilirsi a un livello di sfocatura che risulti più adatto per l'applicazione. Ad esempio, nella pagina dell' **esperimento maschera di sfocatura** , provare a impostare `sigma` come segue:
 
 ```csharp
 sigma = paint.TextSize / 18;
 paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 ```
 
-A questo punto il `Slider` non ha alcun effetto, ma il grado di sfocatura sia coerenza tra le piattaforme:
+Ora `Slider` non ha alcun effetto, ma il grado di sfocatura è coerente tra le piattaforme:
 
-[![Mascherare esperimento sfocatura - coerente](mask-filters-images/MaskBlurExperiment-Consistent.png "mascherare sfocatura esperimento: coerente")](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
+[![Maschera dell'esperimento di sfocatura-coerente](mask-filters-images/MaskBlurExperiment-Consistent.png "Maschera dell'esperimento di sfocatura-coerente")](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
 
-Tutte le schermate hanno illustrato finora sfocatura creato con il `SKBlurStyle.Normal` membro di enumerazione. Le schermate seguenti illustrano gli effetti del `Solid`, `Outer`, e `Inner` blur stili:
+Tutte le schermate fino ad ora hanno mostrato la sfocatura creata con il `SKBlurStyle.Normal` membro di enumerazione. Gli screenshot seguenti mostrano gli effetti degli stili di `Solid` `Outer` `Inner` sfocatura, e:
 
-[![Mascherare esperimento sfocatura](mask-filters-images/MaskBlurExperiment.png "mascherare sfocatura esperimento")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
+[![Esperimento di sfocatura maschera](mask-filters-images/MaskBlurExperiment.png "Esperimento di sfocatura maschera")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-Lo screenshot iOS Mostra lo `Solid` stile: I caratteri di testo sono ancora presenti come tratti neri solidi e la sfocatura viene aggiunta all'esterno di questi caratteri di testo. 
+Lo screenshot iOS Mostra lo `Solid` stile: i caratteri di testo sono ancora presenti come tratti neri solidi e la sfocatura viene aggiunta all'esterno di questi caratteri di testo. 
 
-Lo screenshot Android nel mezzo Mostra lo `Outer` stile: I tratti di carattere stessi vengono eliminati (così come la bitmap) e la sfocatura racchiude lo spazio vuoto dove i caratteri di testo vengono visualizzati una volta. 
+Lo screenshot Android nel mezzo Mostra lo `Outer` stile: i tratti di carattere stessi vengono eliminati (così come la bitmap) e la sfocatura racchiude lo spazio vuoto in cui i caratteri di testo sono apparsi. 
 
-Nella schermata UWP destra il `Inner` stile. La sfocatura è limitata all'area normalmente occupata dai caratteri di testo.
+Lo screenshot UWP a destra mostra lo `Inner` stile. La sfocatura è limitata all'area normalmente occupata dai caratteri di testo.
 
-Il [ **sfumatura lineare SkiaSharp** ](shaders/linear-gradient.md#transparency-and-gradients) articolo descritto un **Reflection sfumatura** programma che utilizzata una sfumatura lineare e una trasformazione per simulare un riflesso di una stringa di testo:
+L'articolo relativo alla sfumatura [**lineare SkiaSharp**](shaders/linear-gradient.md#transparency-and-gradients) descrive un programma di **sfumatura della reflection** che ha usato una sfumatura lineare e una trasformazione per simulare una reflection di una stringa di testo:
 
-[![Reflection sfumatura](shaders/linear-gradient-images/ReflectionGradient.png "Reflection sfumatura")](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
+[![Sfumatura Reflection](shaders/linear-gradient-images/ReflectionGradient.png "Sfumatura Reflection")](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
 
-Il **Reflection sfocati** pagina aggiunge una singola istruzione per tale codice:
+La pagina **Reflection sfocata** aggiunge un'unica istruzione a tale codice:
 
 ```csharp
 public class BlurryReflectionPage : ContentPage
@@ -261,17 +264,17 @@ public class BlurryReflectionPage : ContentPage
 }
 ```
 
-La nuova istruzione aggiunge un filtro sfocatura del testo riflesso si basa sulle dimensioni testo:
+La nuova istruzione aggiunge un filtro di sfocatura per il testo riflesso basato sulle dimensioni del testo:
 
 ```csharp
 paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 36);
 ```
 
-Questo filtro sfocatura fa in modo che la reflection per sembrano molto più realistici:
+Questo filtro di sfocatura fa sì che la reflection sembri molto più realistica:
 
-[![Reflection sfocate](mask-filters-images/BlurryReflection.png "sfocate Reflection")](mask-filters-images/BlurryReflection-Large.png#lightbox)
+[![Reflection sfocata](mask-filters-images/BlurryReflection.png "Reflection sfocata")](mask-filters-images/BlurryReflection-Large.png#lightbox)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

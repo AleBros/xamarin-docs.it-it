@@ -1,28 +1,31 @@
 ---
-title: Layout di Xamarin.Forms
-description: I layout di Novell. Forms vengono usati per comporre controlli dell'interfaccia utente in strutture visive. Questo articolo elenca i layout inclusi in Novell. Forms.
-ms.prod: xamarin
-ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/21/2018
-ms.openlocfilehash: fa08c5012adf74a17852a72b8faf2c0311d16cfa
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.FormsLayout
+description: Xamarin.FormsI layout vengono usati per comporre controlli dell'interfaccia utente in strutture visive. Questo articolo elenca i layout inclusi in Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83150029"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137306"
 ---
-# <a name="xamarinforms-layouts"></a>Layout di Xamarin.Forms
+# <a name="xamarinforms-layouts"></a>Xamarin.FormsLayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _I layout di Novell. Forms vengono usati per comporre controlli dell'interfaccia utente in strutture visive._
 
-Le [`Layout`](xref:Xamarin.Forms.Layout) [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classi e in Novell. Forms sono sottotipi specializzati di viste che fungono da contenitori per le visualizzazioni e altri layout. La `Layout` classe stessa deriva da [`View`](views.md) . Un `Layout` derivato contiene in genere la logica per impostare la posizione e le dimensioni degli elementi figlio nelle applicazioni Novell. Forms.
+Le [`Layout`](xref:Xamarin.Forms.Layout) [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classi e in Xamarin.Forms sono sottotipi specializzati di viste che fungono da contenitori per le visualizzazioni e altri layout. La `Layout` classe stessa deriva da [`View`](views.md) . Un `Layout` derivato contiene in genere la logica per impostare la posizione e le dimensioni degli elementi figlio nelle Xamarin.Forms applicazioni.
 
-[![Tipi di layout Novell. Forms](layouts-images/layouts-sml.png "Tipi di layout Novell. Forms")](layouts-images/layouts.png#lightbox "Tipi di layout Novell. Forms")
+[![Xamarin.FormsTipi di layout](layouts-images/layouts-sml.png "[! OP. Tipi di layout NO-LOC (Novell. Forms)]")](layouts-images/layouts.png#lightbox "[! OP. Tipi di layout NO-LOC (Novell. Forms)]")
 
 Le classi che derivano da `Layout` possono essere divise in due categorie:
 
@@ -86,7 +89,7 @@ Queste classi derivano da [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
 <a name="grid" />
 
-### <a name="grid"></a>Grid
+### <a name="grid"></a>Pannello Grid
 
 |     |     |
 | --- | --- |
@@ -116,6 +119,6 @@ Queste classi derivano da [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di Novell. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.FormsEsempio FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.FormsCampioni](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.FormsDocumentazione API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

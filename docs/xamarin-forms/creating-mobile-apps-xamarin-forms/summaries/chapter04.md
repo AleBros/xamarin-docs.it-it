@@ -1,29 +1,33 @@
 ---
-title: Riepilogo del capitolo 4. Scorrimento dello stack
-description: 'Creazione di app per dispositivi mobili con Novell. Forms: riepilogo del capitolo 4. Scorrimento dello stack'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5313dd34839d6a5d21432161b9fd3a0ffce6e816
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9890ecdf286ee33d7af28fd20847788b063df8f5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149947"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136890"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
-Questo capitolo è destinato principalmente all'introduzione del concetto di *layout*, che rappresenta il termine generale per le classi e le tecniche utilizzate da Novell. Forms per organizzare la visualizzazione visiva di più visualizzazioni nella pagina.
+Questo capitolo è destinato principalmente all'introduzione del concetto di *layout*, che rappresenta il termine generale per le classi e le tecniche Xamarin.Forms utilizzate da per organizzare la visualizzazione visiva di più visualizzazioni nella pagina.
 
 Il layout include diverse classi che derivano da [`Layout`](xref:Xamarin.Forms.Layout) e [`Layout<T>`](xref:Xamarin.Forms.Layout`1) . Questo capitolo è incentrato su [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
 > [!NOTE]
-> La [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introdotta in Novell. forms 3,0 può essere usata in modi simili a `StackLayout` , ma con maggiore flessibilità.
+> La [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introdotta in Xamarin.Forms 3,0 può essere usata in modi simili a `StackLayout` , ma con maggiore flessibilità.
 
 Sono stati introdotti anche in questo capitolo le [`ScrollView`](xref:Xamarin.Forms.ScrollView) [`Frame`](xref:Xamarin.Forms.Frame) classi, e [`BoxView`](xref:Xamarin.Forms.BoxView) .
 

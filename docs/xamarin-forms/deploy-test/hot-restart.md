@@ -1,18 +1,21 @@
 ---
-title: Riavvio rapido Xamarin
-description: Questo documento descrive come configurare e usare il riavvio rapido Xamarin per eseguire il debug di un'app iOS.
-ms.prod: xamarin
-ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
-ms.technology: xamarin-forms
-author: maddyleger1
-ms.author: maleger
-ms.date: 03/16/2020
-ms.openlocfilehash: cc5efffd4c3646fbff9cdb1ad1a30ec614cb4921
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79429567"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139139"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Riavvio rapido Xamarin (anteprima)
 
@@ -21,21 +24,21 @@ ms.locfileid: "79429567"
 Il riavvio rapido Xamarin consente di testare rapidamente le modifiche apportate all'app durante lo sviluppo, incluse le modifiche al codice composto da più file, le risorse e i riferimenti. Esegue il push delle nuove modifiche apportate al bundle dell'app esistente nella destinazione di debug velocizzando notevolmente il ciclo di compilazione e distribuzione.
 
 > [!IMPORTANT]
-> Xamarin Hot Restart è attualmente disponibile in Visual Studio 2019 versione 16.5 stabile e supporta le app iOS tramite Xamarin.Forms. Il supporto per Visual Studio per Mac e le app non Xamarin.Forms è in programma.
+> Novell Hot restart è attualmente disponibile in Visual Studio 2019 versione 16,5 stabile e supporta le app iOS usando Xamarin.Forms . Il supporto per Visual Studio per Mac e non per Xamarin.Forms le app è basato sulla roadmap.
 
 ## <a name="requirements"></a>Requisiti
 
-- Visual Studio 2019 versione 16.5
+- Visual Studio 2019 versione 16,5
 - iTunes (64 bit)
-- Account Apple Developer e iscrizione [a Apple Developer Program](https://developer.apple.com/programs) a pagamento
+- Registrazione di Apple Developer [Program e Apple Developer Program](https://developer.apple.com/programs)
 
 
 ## <a name="initial-setup"></a>Configurazione iniziale
 
 > [!NOTE]
-> Xamarin Hot Restart è disabilitato per impostazione predefinita mentre è in anteprima. È possibile attivarlo in Opzioni > Strumenti > Funzionalità di **anteprima > ambiente > Abilita riavvio a caldo Xamarin**.
+> Novell Hot restart è disabilitato per impostazione predefinita mentre è in anteprima. È possibile abilitarlo in **strumenti > opzioni > ambiente > funzionalità di anteprima > abilitare il riavvio a caldo Novell**.
 
-1. Assicurarsi che il progetto iOS sia impostato come progetto di avvio e che la configurazione di compilazione sia impostata su **Debug , iPhone**.
+1. Verificare che il progetto iOS sia impostato come progetto di avvio e che la configurazione di compilazione sia impostata su **debug | iPhone**.
 
    1. Se si tratta di un progetto esistente, passare a **Compilazione > Configuration Manager** e assicurarsi che l'opzione **Distribuisci** sia abilitata per il progetto iOS.
 
@@ -45,7 +48,7 @@ Il riavvio rapido Xamarin consente di testare rapidamente le modifiche apportate
 
 3. Se iTunes non è installato, fare clic su **Download iTunes** (Scarica iTunes) per scaricare il programma di installazione. Al termine dell'installazione di iTunes, fare clic su **Avanti**.
 
-4. Connettere un dispositivo iOS al computer. Se un dispositivo è già stato collegato, scollegalo e ricollegalo. Il nome del dispositivo verrà visualizzato nella procedura guidata non appena rilevato. Fare clic su **Avanti**.
+4. Connettere un dispositivo iOS al computer. Se un dispositivo è già collegato, scollegarlo e riconnetterlo. Il nome del dispositivo verrà visualizzato nella procedura guidata non appena rilevato. Fare clic su **Avanti**.
 
 5. Immettere le credenziali dell'account per sviluppatore Apple e fare clic su **Avanti**.
 
@@ -61,14 +64,14 @@ Dopo la configurazione iniziale, il dispositivo connesso verrà visualizzato nel
 
 [![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
 
-È inoltre possibile `HOTRESTART` utilizzare il simbolo del preprocessore per impedire l'esecuzione di determinati codici durante il debug con Xamarin Hot Restart.
+È anche possibile usare il `HOTRESTART` simbolo del preprocessore per impedire l'esecuzione di un determinato codice durante il debug con Novell Hot restart.
 
 ## <a name="limitations"></a>Limitazioni
 
-- Attualmente sono supportate solo le app iOS compilate con dispositivi Xamarin.Forms e iOS.
-- Sono supportati solo i dispositivi iOS a 64 bit. A partire da iOS 11, Apple non consente più l'esecuzione di app iOS sull'architettura a 32 bit (dispositivi precedenti a iPhone 5s).
-- I file storyboard e XIB non sono supportati e l'app potrebbe arrestarsi in modo anomalo se prova a caricarli in fase di esecuzione. Utilizzare `HOTRESTART` il simbolo del preprocessore per impedire l'esecuzione di questo codice.
-- Le librerie e i framework iOS statici non sono supportati e potresti vedere errori di runtime o arresti anomali se l'app tenta di caricarli. Utilizzare `HOTRESTART` il simbolo del preprocessore per impedire l'esecuzione di questo codice. Sono supportate le librerie iOS dinamiche.
+- Attualmente sono supportate solo le app iOS compilate con Xamarin.Forms i dispositivi iOS.
+- Sono supportati solo i dispositivi iOS a 64 bit. A partire da iOS 11, Apple non consente più di eseguire app iOS sull'architettura a 32 bit (dispositivi precedenti a iPhone 5s).
+- I file storyboard e XIB non sono supportati e l'app potrebbe arrestarsi in modo anomalo se prova a caricarli in fase di esecuzione. Usare il `HOTRESTART` simbolo del preprocessore per impedire l'esecuzione del codice.
+- Le librerie e i Framework iOS statici non sono supportati ed è possibile che vengano visualizzati errori o arresti anomali del runtime se l'app tenta di caricarli. Usare il `HOTRESTART` simbolo del preprocessore per impedire l'esecuzione del codice. Sono supportate le librerie iOS dinamiche.
 - Non è possibile usare il riavvio rapido Xamarin per creare bundle dell'app per la pubblicazione. Sarà comunque necessario un computer Mac per eseguire una compilazione completa, la firma e la distribuzione per l'applicazione nell'ambiente di produzione.
 
 ## <a name="troubleshoot"></a>Risolvere problemi
@@ -76,6 +79,6 @@ Dopo la configurazione iniziale, il dispositivo connesso verrà visualizzato nel
 - La configurazione guidata non rileverà iTunes se è stato installato tramite Microsoft Store. Sarà necessario disinstallare prima tale versione, quindi scaricare il [programma di installazione da Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - È presente un problema noto a causa del quale l'abilitazione di compilazioni specifiche del dispositivo impedisce all'app di accedere alla modalità di debug. Per risolvere il problema, è necessario disabilitare questa opzione in **Proprietà > Compilazione iOS** e ritentare il debug. Questo problema verrà risolto in una versione futura.
 - Se l'app è già presente nel dispositivo, il tentativo di distribuzione con il riavvio rapido potrebbe non riuscire con un errore `AMDeviceStartHouseArrestService`. Per ovviare al problema, disinstallare l'app nel dispositivo, quindi distribuirla di nuovo.
-- L'immissione di un ID Apple che non fa parte `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`del programma per sviluppatori Apple potrebbe generare il seguente errore: . Devi disporre di un account Apple Developer valido per utilizzare Xamarin Hot Restart sui dispositivi iOS. 
+- L'immissione di un ID Apple che non fa parte del programma Apple Developer potrebbe causare l'errore seguente: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID` . È necessario avere un account Apple Developer valido per usare il riavvio a caldo di Novell nei dispositivi iOS. 
 
 Per segnalare problemi aggiuntivi, usare lo strumento di feedback in [Guida > Invia commenti e suggerimenti > Segnala un problema](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem).

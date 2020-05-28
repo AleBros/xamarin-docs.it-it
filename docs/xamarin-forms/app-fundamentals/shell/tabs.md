@@ -1,22 +1,25 @@
 ---
-title: Layout della shell Xamarin.Forms
-description: Dopo il riquadro a comparsa, il livello di navigazione successivo in un'applicazione shell è la barra delle schede inferiore. In alternativa, il modello di spostamento per un'applicazione può iniziare con le schede nella parte inferiore e non usare un riquadro a comparsa. In entrambi i casi, quando una scheda inferiore contiene più di una pagina, è possibile spostarsi tra le pagine tramite le schede superiori.
-ms.prod: xamarin
-ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsLayout della shell
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79305143"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139958"
 ---
-# <a name="xamarinforms-shell-tabs"></a>Schede della shell Xamarin.Forms
+# <a name="xamarinforms-shell-tabs"></a>Xamarin.FormsSchede della shell
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Quando il modello di spostamento per un'applicazione include un riquadro a comparsa, il livello successivo di spostamento nell'applicazione è la barra delle schede inferiore. Inoltre, quando il riquadro a comparsa è chiuso, la barra delle schede inferiore può essere considerato il livello di spostamento principale.
 
@@ -25,13 +28,13 @@ In alternativa, il modello di spostamento per un'applicazione può iniziare con 
 > [!NOTE]
 > Il tipo `TabBar` disabilita il riquadro a comparsa.
 
-Ogni oggetto `FlyoutItem` o `TabBar` può contenere uno o più oggetti `Tab`, con ogni oggetto `Tab` che rappresenta una scheda nella barra delle schede inferiore. Ogni `Tab` oggetto può contenere uno o più `ShellContent` oggetti e ogni `ShellContent` oggetto visualizzerà un singolo [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto. Quando è presente più di un oggetto `ShellContent` in `Tab`, è possibile spostarsi tra gli oggetti `ContentPage` tramite le schede superiori.
+Ogni oggetto `FlyoutItem` o `TabBar` può contenere uno o più oggetti `Tab`, con ogni oggetto `Tab` che rappresenta una scheda nella barra delle schede inferiore. Ogni `Tab` oggetto può contenere uno o più `ShellContent` oggetti e ogni oggetto visualizzerà `ShellContent` un unico [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto. Quando è presente più di un oggetto `ShellContent` in `Tab`, è possibile spostarsi tra gli oggetti `ContentPage` tramite le schede superiori.
 
-All'interno di ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto, è possibile navigare a oggetti aggiuntivi. `ContentPage` Per altre informazioni sulla navigazione, vedere [Navigazione nella shell Xamarin.Forms](navigation.md).
+All'interno [`ContentPage`](xref:Xamarin.Forms.ContentPage) di ogni oggetto `ContentPage` è possibile passare a oggetti aggiuntivi. Per altre informazioni sulla navigazione, vedere [ Xamarin.Forms navigazione della shell](navigation.md).
 
 ## <a name="single-page-application"></a>Applicazione a singola pagina
 
-L'applicazione shell più semplice è un'applicazione a singola pagina, che può essere creata aggiungendo un singolo oggetto `Tab` in un oggetto `TabBar`. All'interno dell'oggetto, `Tab` un `ShellContent` [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto deve essere impostato su un oggetto:
+L'applicazione shell più semplice è un'applicazione a singola pagina, che può essere creata aggiungendo un singolo oggetto `Tab` in un oggetto `TabBar`. All'interno dell' `Tab` oggetto, `ShellContent` è necessario impostare un oggetto su un [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -50,10 +53,10 @@ L'applicazione shell più semplice è un'applicazione a singola pagina, che può
 
 L'esempio di codice crea l'applicazione a singola pagina seguente:
 
-[![Screenshot di un'app Shell a pagina singola, su iOS e Android](tabs-images/single-page-app.png "App Shell a pagina singola")](tabs-images/single-page-app-large.png#lightbox "App Shell a pagina singola")
+[![Screenshot di un'app a singola pagina Shell, in iOS e Android](tabs-images/single-page-app.png "App a pagina singola shell")](tabs-images/single-page-app-large.png#lightbox "App a pagina singola shell")
 
 > [!NOTE]
-> La barra di spostamento può essere nascosta, se necessario, impostando la `Shell.NavBarIsVisible` proprietà associata su `false` sull'oggetto. [`ContentPage`](xref:Xamarin.Forms.ContentPage)
+> Se necessario, la barra di spostamento può essere nascosta impostando la `Shell.NavBarIsVisible` proprietà associata `false` su sull' [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto.
 
 La shell include operatori di conversione implicita che consentono di semplificare la gerarchia visiva della shell, senza introdurre visualizzazioni aggiuntive nella struttura ad albero visuale. Ciò è possibile perché un oggetto `Shell` sottoclassato può contenere solo oggetti `FlyoutItem` o un oggetto `TabBar`, che possono contenere solo oggetti `Tab`, che possono contenere solo oggetti `ShellContent`. Questi operatori di conversione implicita possono essere usati per rimuovere gli oggetti `TabBar`, `Tab` e `ShellContent` nell'esempio precedente:
 
@@ -67,10 +70,10 @@ La shell include operatori di conversione implicita che consentono di semplifica
 </Shell>
 ```
 
-Questa conversione implicita [`ContentPage`](xref:Xamarin.Forms.ContentPage) esegue `ShellContent` automaticamente il wrapping dell'oggetto in un oggetto, di cui viene eseguito il wrapping in un `Tab` oggetto, di cui viene eseguito il wrapping in un `FlyoutItem` oggetto. In un'applicazione a singola pagina non è necessario un riquadro a comparsa e quindi la proprietà `Shell.FlyoutBehavior` è impostata su `Disabled`.
+Questa conversione implicita esegue automaticamente il wrapping dell' [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto in un oggetto, incapsulato `ShellContent` in un `Tab` oggetto, di cui viene eseguito il wrapping in un `FlyoutItem` oggetto. In un'applicazione a singola pagina non è necessario un riquadro a comparsa e quindi la proprietà `Shell.FlyoutBehavior` è impostata su `Disabled`.
 
 > [!IMPORTANT]
-> In un'applicazione [`ContentPage`](xref:Xamarin.Forms.ContentPage) Shell, ogni elemento `ShellContent` figlio di un oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading).
+> In un'applicazione shell ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) elemento figlio di un `ShellContent` oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading).
 
 ## <a name="bottom-tabs"></a>Schede inferiori
 
@@ -100,11 +103,11 @@ Per gli oggetti `Tab` viene eseguito il rendering come schede inferiori, a condi
 
 I titoli e le icone delle schede vengono impostati in ogni oggetto `Tab` e visualizzati nelle schede inferiori:
 
-[![Screenshot di un'app Shell a due pagine con schede inferiore, su iOS e Android](tabs-images/two-page-app-bottom-tabs.png "App Shell a due pagine con schede inferiori")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "App Shell a due pagine con schede inferiori")
+[![Screenshot di un'app shell a due pagine con le schede in basso, in iOS e Android](tabs-images/two-page-app-bottom-tabs.png "App shell a due pagine con le schede in basso")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "App shell a due pagine con le schede in basso")
 
-Quando sono presenti più di cinque schede, viene visualizzata una scheda **Altro,** che può essere utilizzata per accedere alle schede aggiuntive:
+Quando sono presenti più di cinque schede, viene visualizzata una scheda **più** , che può essere usata per accedere alle schede aggiuntive:
 
-[![Screenshot di un'app Shell con una scheda Altro, su iOS e Android](tabs-images/more-tabs.png "App Shell con scheda Altro")](tabs-images/more-tabs-large.png#lightbox "Shellapp con altre schede")
+[![Screenshot di un'app shell con una scheda più, in iOS e Android](tabs-images/more-tabs.png "App shell con più schede")](tabs-images/more-tabs-large.png#lightbox "Shellapp con più schede")
 
 In alternativa, è possibile usare gli operatori di conversione implicita della shell per rimuovere gli oggetti `ShellContent` e `Tab` nell'esempio precedente:
 
@@ -120,10 +123,10 @@ In alternativa, è possibile usare gli operatori di conversione implicita della 
 </Shell>
 ```
 
-Questa conversione implicita [`ContentPage`](xref:Xamarin.Forms.ContentPage) esegue `ShellContent` automaticamente il wrapping di ogni `Tab` oggetto in un oggetto, che vengono quindi entrambi racchiusi in un oggetto.
+Questa conversione implicita esegue automaticamente il wrapping di ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto in un `ShellContent` oggetto, che viene quindi eseguito il wrapping in un `Tab` oggetto.
 
 > [!IMPORTANT]
-> In un'applicazione [`ContentPage`](xref:Xamarin.Forms.ContentPage) Shell, ogni elemento `ShellContent` figlio di un oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading).
+> In un'applicazione shell ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) elemento figlio di un `ShellContent` oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading).
 
 ### <a name="tab-class"></a>Classe Tab
 
@@ -142,7 +145,7 @@ La classe `Tab` include le proprietà seguenti che controllano l'aspetto e il co
 
 ## <a name="shell-content"></a>Contenuto della shell
 
-L'elemento `Tab` figlio di `ShellContent` ogni `Content` oggetto è un [`ContentPage`](xref:Xamarin.Forms.ContentPage)oggetto, la cui proprietà è impostata su :
+Il figlio di ogni `Tab` oggetto è un `ShellContent` oggetto la cui `Content` proprietà è impostata su [`ContentPage`](xref:Xamarin.Forms.ContentPage) :
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -166,10 +169,10 @@ L'elemento `Tab` figlio di `ShellContent` ogni `Content` oggetto è un [`Content
 </Shell>
 ```
 
-All'interno di ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto, è possibile navigare a oggetti aggiuntivi. `ContentPage` Per altre informazioni sulla navigazione, vedere [Navigazione nella shell Xamarin.Forms](navigation.md).
+All'interno [`ContentPage`](xref:Xamarin.Forms.ContentPage) di ogni oggetto `ContentPage` è possibile passare a oggetti aggiuntivi. Per altre informazioni sulla navigazione, vedere [ Xamarin.Forms navigazione della shell](navigation.md).
 
 > [!NOTE]
-> L'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) viene ereditato dall'oggetto padre. `Tab` `ShellContent`
+> Il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni `ShellContent` oggetto viene ereditato dall'oggetto padre `Tab` .
 
 ### <a name="shellcontent-class"></a>Classe ShellContent
 
@@ -184,11 +187,11 @@ La classe `ShellContent` include le proprietà seguenti che controllano l'aspett
 - `MenuItems`, di tipo `MenuItemCollection`, ovvero le voci di menu da visualizzare nel riquadro a comparsa quando questo oggetto `ShellContent` è la pagina visualizzata.
 - `Title`, di tipo `string`, ovvero il titolo da visualizzare nell'interfaccia utente.
 
-Tutte queste proprietà sono [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) supportate da oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
+Tutte queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
 ## <a name="bottom-and-top-tabs"></a>Schede inferiori e superiori
 
-Quando in `ShellContent` un `Tab` oggetto sono presenti più oggetti, viene aggiunta una barra [`ContentPage`](xref:Xamarin.Forms.ContentPage) delle schede superiore alla scheda inferiore, tramite la quale gli oggetti sono navigabili:
+Quando `ShellContent` in un oggetto è presente più di un oggetto `Tab` , viene aggiunta una barra delle schede superiore alla scheda inferiore, tramite la quale gli [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetti sono navigabili:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -217,7 +220,7 @@ Quando in `ShellContent` un `Tab` oggetto sono presenti più oggetti, viene aggi
 
 Il risultato è il layout illustrato negli screenshot seguenti:
 
-[![Screenshot di un'app Shell a due pagine con schede superiore e inferiore, su iOS e Android](tabs-images/two-page-app-top-tabs.png "App Shell a due pagine con schede superiore e inferiore")](tabs-images/two-page-app-top-tabs-large.png#lightbox "App Shell a due pagine con schede superiore e inferiore")
+[![Screenshot di un'app shell a due pagine con le schede superiore e inferiore, in iOS e Android](tabs-images/two-page-app-top-tabs.png "App shell a due pagine con le schede superiore e inferiore")](tabs-images/two-page-app-top-tabs-large.png#lightbox "App shell a due pagine con le schede superiore e inferiore")
 
 In alternativa, è possibile usare gli operatori di conversione implicita della shell per rimuovere gli oggetti `ShellContent` e il secondo oggetto `Tab` nell'esempio precedente:
 
@@ -241,7 +244,7 @@ Questa conversione implicita esegue automaticamente il wrapping di `MonkeysPage`
 
 ## <a name="efficient-page-loading"></a>Caricamento efficiente delle pagine
 
-In un'applicazione [`ContentPage`](xref:Xamarin.Forms.ContentPage) Shell, `ShellContent` ogni oggetto in un oggetto viene creato durante l'avvio dell'applicazione, con conseguente esperienza di avvio non corretta. La shell, tuttavia, consente anche la creazione di pagine su richiesta, in risposta alla navigazione. Questa operazione può essere `DataTemplate` eseguita utilizzando `ContentPage` l'estensione di markup per convertire ciascuno in un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)oggetto , quindi impostando il risultato come valore della `ShellContent.ContentTemplate` proprietà:
+In un'applicazione shell ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto in un `ShellContent` oggetto viene creato durante l'avvio dell'applicazione, operazione che può comportare un'esperienza di avvio insufficiente. La shell, tuttavia, consente anche la creazione di pagine su richiesta, in risposta alla navigazione. Questa operazione può essere eseguita usando l' `DataTemplate` estensione di markup per convertire ognuno `ContentPage` in un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) e quindi impostando il risultato come `ShellContent.ContentTemplate` valore della proprietà:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -277,7 +280,7 @@ La classe `Shell` definisce le proprietà associate seguenti che controllano l'a
 - `TabBarTitleColor`, di tipo `Color`, che definisce il colore del titolo per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `TitleColor`.
 - `TabBarUnselectedColor`, di tipo `Color`, che definisce il colore non selezionato per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `UnselectedColor`.
 
-Tutte queste proprietà sono [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) supportate da oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati e stili.
+Tutte queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati e con stile.
 
 L'esempio seguente illustra uno stile XAML che imposta proprietà diverse per i colori delle schede:
 
@@ -293,10 +296,10 @@ L'esempio seguente illustra uno stile XAML che imposta proprietà diverse per i 
 </Style>
 ```
 
-È anche possibile definire lo stile delle schede usando fogli di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms).
+È anche possibile definire lo stile delle schede usando fogli di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [ Xamarin.Forms proprietà specifiche della shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Xaminals (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Navigazione nella shell Xamarin.Forms](navigation.md)
-- [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell CSS Xamarin.Forms)
+- [Xamarin.FormsNavigazione della shell](navigation.md)
+- [Xamarin.FormsProprietà specifiche della shell CSS](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

@@ -1,22 +1,25 @@
 ---
-title: Interfaccia di comando di Xamarin.Forms
-description: Questo articolo illustra come implementare la proprietà Command con i data binding di Xamarin.Forms. L'interfaccia di esecuzione dei comandi consente un approccio alternativo all'implementazione di comandi decisamente più adatto all'architettura MVVM.
-ms.prod: xamarin
-ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsInterfaccia del comando
+description: Questo articolo illustra come implementare la proprietà Command con i Xamarin.Forms Data Binding. L'interfaccia di esecuzione dei comandi consente un approccio alternativo all'implementazione di comandi decisamente più adatto all'architettura MVVM.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75545597"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139724"
 ---
-# <a name="the-xamarinforms-command-interface"></a>Interfaccia di comando di Xamarin.Forms
+# <a name="the-xamarinforms-command-interface"></a>Xamarin.FormsInterfaccia del comando
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Nell'architettura Model-View-ViewModel (MVVM), vengono definiti data binding tra le proprietà in ViewModel, che in genere è una classe che deriva da `INotifyPropertyChanged`, e le proprietà in View, che in genere è il file XAML. In alcuni casi un'applicazione ha esigenze che vanno oltre queste associazioni di proprietà, richiedendo che l'utente avvii comandi che hanno un effetto all'interno di ViewModel. Questi comandi vengono in genere segnalati dal clic su un pulsante o dal tocco con un dito e in genere vengono elaborati nel file code-behind in un gestore per l'evento `Clicked` dell'elemento `Button` o per l'evento `Tapped` di un elemento `TapGestureRecognizer`.
 
@@ -31,17 +34,17 @@ Per usare l'interfaccia di comando, si definisce un data binding che ha come des
 
 Vengono anche definite le proprietà `Command` e `CommandParameter` dalle classi seguenti:
 
-- [`MenuItem`](xref:Xamarin.Forms.MenuItem)e quindi, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), che deriva da`MenuItem`
-- [`TextCell`](xref:Xamarin.Forms.TextCell)e quindi, [`ImageCell`](xref:Xamarin.Forms.ImageCell), che deriva da`TextCell`
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem)e, di conseguenza, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) , che deriva da`MenuItem`
+- [`TextCell`](xref:Xamarin.Forms.TextCell)e, di conseguenza, [`ImageCell`](xref:Xamarin.Forms.ImageCell) , che deriva da`TextCell`
 - [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](xref:Xamarin.Forms.SearchBar)definisce [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) una proprietà `ICommand` di [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) tipo e una proprietà. La [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) proprietà [`ListView`](xref:Xamarin.Forms.ListView) di è `ICommand`anche di tipo .
+[`SearchBar`](xref:Xamarin.Forms.SearchBar)definisce una [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) proprietà di tipo `ICommand` e una [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) Proprietà. [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand)Anche la proprietà di [`ListView`](xref:Xamarin.Forms.ListView) è di tipo `ICommand` .
 
 Tutti questi comandi possono essere gestiti all'interno di un elemento ViewModel in modo che non dipenda dall'oggetto interfaccia utente specifico nell'elemento View.
 
 ## <a name="the-icommand-interface"></a>Interfaccia ICommand
 
-L'interfaccia [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand) non fa parte di Xamarin.Forms. È invece definita nello spazio dei nomi [System.Windows.Input](xref:System.Windows.Input) ed è costituita da due metodi e da un evento:
+L' [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand) interfaccia non fa parte di Xamarin.Forms . È invece definita nello spazio dei nomi [System.Windows.Input](xref:System.Windows.Input) ed è costituita da due metodi e da un evento:
 
 ```csharp
 public interface ICommand
@@ -80,9 +83,9 @@ L'elemento `Button`, poi, associa un gestore all'evento `CanExecuteChanged` di `
 
 Quando l'elemento ViewModel definisce una proprietà di tipo `ICommand`, deve anche contenere o fare riferimento a una classe che implementi l'interfaccia `ICommand`. Questa classe deve contenere o fare riferimento ai metodi `Execute` e `CanExecute` e generare l'evento `CanExecuteChanged` ogni volta che il metodo `CanExecute` può restituire un valore diverso.
 
-È possibile scrivere una classe di questo tipo manualmente oppure è possibile usare una classe scritta da altri. Poiché l'interfaccia `ICommand` fa parte di Microsoft Windows, è stata usata per anni per applicazioni MVVM Windows. L'uso di una classe Windows che implementa l'interfaccia `ICommand` consente di condividere gli elementi ViewModel tra applicazioni Windows e applicazioni Xamarin.Forms.
+È possibile scrivere una classe di questo tipo manualmente oppure è possibile usare una classe scritta da altri. Poiché l'interfaccia `ICommand` fa parte di Microsoft Windows, è stata usata per anni per applicazioni MVVM Windows. L'uso di una classe Windows che implementa `ICommand` consente di condividere i ViewModel tra applicazioni e applicazioni di Windows Xamarin.Forms .
 
-Se la condivisione di ViewModels tra Windows e Xamarin.Forms [`Command<T>`](xref:Xamarin.Forms.Command`1) non costituisce un problema, è `ICommand` possibile utilizzare la [`Command`](xref:Xamarin.Forms.Command) classe o inclusa in Xamarin.Forms per implementare l'interfaccia . Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
+Se si condividono ViewModel tra le finestre e Xamarin.Forms non è un problema, è possibile usare la [`Command`](xref:Xamarin.Forms.Command) [`Command<T>`](xref:Xamarin.Forms.Command`1) classe o inclusa in Xamarin.Forms per implementare l' `ICommand` interfaccia. Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
 
 ## <a name="basic-commanding"></a>Esecuzione di comandi di base
 
@@ -279,9 +282,9 @@ Prima di esaminare il costruttore della classe `PersonCollectionViewModel`, è n
 
 Ecco come funziona: l'utente preme prima il pulsante **New** (Nuovo). Questa operazione abilita il modulo di immissione ma disabilita il pulsante **New** (Nuovo). L'utente immette quindi un nome, l'età e le competenze. In qualsiasi momento durante il processo di modifica, l'utente può selezionare il pulsante **Cancel** (Annulla) per ricominciare da capo. Il pulsante **Submit** (Invia) viene abilitato solo dopo l'immissione di un nome e di un'età validi. La selezione del pulsante **Submit** (Invia) trasferisce la persona nella raccolta visualizzata dall'elemento `ListView`. Quando si seleziona **Cancel** (Annulla) o **Submit** (Invia), il modulo di immissione viene cancellato e il pulsante **New** (Nuovo) viene abilitato di nuovo.
 
-La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. La schermata Android mostra il pulsante Invia abilitato dopo l'impostazione di un'età:The Android screen shows the **Submit** button enabled after an age has been set:
+La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. La schermata Android Mostra il pulsante **Invia** abilitato dopo l'impostazione di Age:
 
-[![Voce persona](commanding-images/personentry-small.png "Voce persona")](commanding-images/personentry-large.png#lightbox "Voce persona")
+[![Voce person](commanding-images/personentry-small.png "Voce person")](commanding-images/personentry-large.png#lightbox "Voce person")
 
 Il programma non ha una funzionalità per la modifica di voci esistenti e non consente di salvare le voci quando si esce dalla pagina.
 
@@ -423,7 +426,7 @@ Non è necessario definire i metodi `execute` e `canExecute` come funzioni lambd
 
 È possibile continuare a usare la classe `Command` per queste proprietà `ICommand` condivise. La classe definisce un [costruttore alternativo](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})) che accetta i metodi `execute` e `canExecute` con parametri di tipo `Object`. Questo è il modo in cui `CommandParameter` viene passato a questi metodi.
 
-Tuttavia, `CommandParameter`quando si utilizza , è [`Command<T>`](xref:Xamarin.Forms.Command`1) più semplice utilizzare la classe `CommandParameter`generica per specificare il tipo dell'oggetto impostato su . I metodi `execute` e `canExecute` specificati hanno parametri di quel tipo.
+Tuttavia, quando `CommandParameter` si usa, è più semplice usare la classe generica [`Command<T>`](xref:Xamarin.Forms.Command`1) per specificare il tipo di oggetto impostato su `CommandParameter` . I metodi `execute` e `canExecute` specificati hanno parametri di quel tipo.
 
 La pagina **Decimal Keyboard** (Tastiera decimale) descrive questa tecnica illustrando come implementare un tastierino per l'immissione di numeri decimali. La proprietà `BindingContext` per l'elemento `Grid` è un oggetto `DecimalKeypadViewModel`. La proprietà `Entry` di questo elemento ViewModel è associata alla proprietà `Text` di un elemento `Label`. Tutti gli oggetti `Button` sono associati a vari comandi nel ViewModel: `ClearCommand`, `BackspaceCommand` e `DigitCommand`:
 
@@ -688,7 +691,7 @@ Tutti i metodi `execute` chiamano `RefreshCanExecutes`, che a sua volta chiama `
 
 ## <a name="adding-commands-to-existing-views"></a>Aggiunta di comandi a visualizzazioni esistenti
 
-Se si vuole usare l'interfaccia di esecuzione dei comandi con visualizzazioni che non la supportano, è possibile usare il comportamento di Xamarin.Forms che converte un evento in un comando. Questo è descritto nell'articolo [**EventToCommandBehavior riutilizzabile**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
+Se si vuole usare l'interfaccia di comando con le visualizzazioni che non lo supportano, è possibile usare un Xamarin.Forms comportamento che converte un evento in un comando. Questo è descritto nell'articolo [**EventToCommandBehavior riutilizzabile**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Esecuzione dei comandi asincrona per i menu di spostamento
 
@@ -767,4 +770,4 @@ I data binding possono essere complessi in alcuni casi, ma, come si è visto in 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
-- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
+- [Capitolo di data binding da Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

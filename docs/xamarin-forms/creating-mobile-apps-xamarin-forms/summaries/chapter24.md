@@ -1,179 +1,183 @@
 ---
-title: Riassunto del capitolo 24. Navigazione tra le pagine
-description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: riepilogo del capitolo 24. Navigazione tra le pagine'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: fd8e4fc77917fcba9bc61e59ced714ac1cd6fbe9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 24. Page navigation''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78292010"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136643"
 ---
-# <a name="summary-of-chapter-24-page-navigation"></a>Riassunto del capitolo 24. Navigazione tra le pagine
+# <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
-Molte applicazioni sono costituite da più pagine tra cui l'utente si sposta. L'applicazione ha sempre una pagina *principale* o *home* page, e da lì l'utente passa ad altre pagine, che vengono mantenute in uno stack per la navigazione indietro. Ulteriori opzioni di navigazione sono trattate nel [**capitolo 25. Varietà di pagine**](chapter25.md).
+Molte applicazioni sono costituite da più pagine tra cui l'utente si sposta. L'applicazione ha sempre una pagina *principale* o una *Home* page e da qui l'utente passa ad altre pagine, che vengono mantenute in uno stack per lo spostamento indietro. Le opzioni di navigazione aggiuntive sono descritte nel [**capitolo 25. Tipi di pagine**](chapter25.md).
 
 ## <a name="modal-pages-and-modeless-pages"></a>Pagine modali e pagine non modali
 
-`VisualElement`definisce [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) una proprietà [`INavigation`](xref:Xamarin.Forms.INavigation)di tipo , che include i due metodi seguenti per passare a una nuova pagina:
+`VisualElement`definisce una [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di tipo [`INavigation`](xref:Xamarin.Forms.INavigation) , che include i due metodi seguenti per passare a una nuova pagina:
 
-- [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
-- [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))
+- [ `PushAsync` ] (xrif: Xamarin.Forms . INavigation. PushAsync ( Xamarin.Forms . Pagina)
+- [ `PushModalAsync` ] (xrif: Xamarin.Forms . INavigation. PushModalAsync ( Xamarin.Forms . Pagina)
 
-Entrambi i `Page` metodi accettano un'istanza come argomento e restituiscono un `Task` oggetto. I due metodi seguenti consentono di tornare alla pagina precedente:
+Entrambi i metodi accettano un' `Page` istanza come argomento e restituiscono un `Task` oggetto. I due metodi seguenti consentono di tornare alla pagina precedente:
 
 - [`PopAsync`](xref:Xamarin.Forms.INavigation.PopAsync)
 - [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync)
 
-Se l'interfaccia utente ha il proprio pulsante **Indietro** (come fanno i telefoni Android e Windows) allora non è necessario che l'applicazione chiami questi metodi.
+Se l'interfaccia utente ha il proprio pulsante **indietro** (come i telefoni Android e Windows), non è necessario che l'applicazione chiami questi metodi.
 
-Sebbene questi metodi `VisualElement`siano disponibili da qualsiasi `Navigation` oggetto , `Page` in genere vengono chiamati dalla proprietà dell'istanza corrente.
+Sebbene questi metodi siano disponibili da qualsiasi `VisualElement` , in genere vengono chiamati dalla `Navigation` proprietà dell' `Page` istanza corrente.
 
-Le applicazioni in genere utilizzano pagine modali quando all'utente viene richiesto di fornire alcune informazioni nella pagina prima di tornare alla pagina precedente. Le pagine non modali sono talvolta denominate non modali o *gerarchiche.* Nulla nella pagina stessa lo distingue come modale o non modale; è regolato invece dal metodo utilizzato per navigare ad esso. Per funzionare su tutte le piattaforme, una pagina modale deve fornire la propria interfaccia utente per tornare alla pagina precedente.
+Le applicazioni utilizzano in genere pagine modali quando l'utente deve fornire alcune informazioni nella pagina prima di tornare alla pagina precedente. Le pagine che non sono modali sono talvolta denominate non modali o *gerarchiche*. Nessun elemento della pagina lo distingue come modale o non modale; viene invece governato dal metodo usato per passare a tale oggetto. Per lavorare su tutte le piattaforme, una pagina modale deve fornire la propria interfaccia utente per tornare alla pagina precedente.
 
-L'esempio [**ModelessAndModal**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModelessAndModal) consente di esplorare la differenza tra pagine non modali e pagine modali. Qualsiasi applicazione che utilizza lo spostamento tra [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) le pagine deve passare `App` la propria home page al costruttore, in genere nella classe del programma. Un bonus è che non è `Padding` più necessario impostare un sulla pagina per iOS.
+L'esempio [**ModelessAndModal**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModelessAndModal) consente di esplorare la differenza tra le pagine modali e non modali. Qualsiasi applicazione che usa la navigazione tra le pagine deve passare il home page al [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) costruttore, in genere nella `App` classe del programma. Un vantaggio è che non è più necessario impostare un `Padding` nella pagina per iOS.
 
-Si scoprirà che per le pagine [`Title`](xref:Xamarin.Forms.Page.Title) non modali, viene visualizzata la proprietà della pagina. I dispositivi iOS, Android e le piattaforme desktop e tablet Windows forniscono tutti un elemento dell'interfaccia utente per tornare alla pagina precedente. Naturalmente, i dispositivi Android e Windows Phone hanno un pulsante **Indietro** standard per tornare indietro.
+Si noterà che, per le pagine non modali, [`Title`](xref:Xamarin.Forms.Page.Title) viene visualizzata la proprietà della pagina. IOS, Android e le piattaforme Tablet PC e desktop di Windows forniscono un elemento dell'interfaccia utente per tornare alla pagina precedente. Naturalmente, i dispositivi Android e Windows Phone hanno un pulsante **indietro** standard per tornare indietro.
 
-Per le pagine `Title` modali, la pagina non viene visualizzata e non viene fornito alcun elemento dell'interfaccia utente per tornare alla pagina precedente. Anche se è possibile utilizzare il pulsante **Indietro** standard di Android e Windows Phone per tornare alla pagina precedente, la pagina modale sulle altre piattaforme deve fornire il proprio meccanismo per tornare indietro.
+Per le pagine modali, la pagina `Title` non viene visualizzata e non viene fornito alcun elemento dell'interfaccia utente per tornare alla pagina precedente. Sebbene sia possibile usare il pulsante **indietro** per Android e Windows Phone standard per tornare alla pagina precedente, la pagina modale sulle altre piattaforme deve fornire un meccanismo personalizzato per tornare indietro.
 
-### <a name="animated-page-transitions"></a>Transizioni di pagina animate
+### <a name="animated-page-transitions"></a>Transizioni di pagine animate
 
-Le versioni alternative dei vari metodi di navigazione vengono `true` fornite con un secondo argomento booleano impostato su se si desidera che la transizione di pagina includa un'animazione:
+Le versioni alternative dei diversi metodi di navigazione sono fornite con un secondo argomento booleano impostato su `true` se si desidera che la transizione della pagina includa un'animazione:
 
-- [PushAsync](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page,System.Boolean))
-- [PushModalAsync](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page,System.Boolean))
-- [PopAsyncPopAsync](xref:Xamarin.Forms.INavigation.PopAsync(System.Boolean))
+- PushAsync (xrif: Xamarin.Forms . INavigation. PushAsync ( Xamarin.Forms . Pagina, System. Boolean)
+- [PushModalAsync] (xrif: Xamarin.Forms . INavigation. PushModalAsync ( Xamarin.Forms . Pagina, System. Boolean)
+- [PopAsync](xref:Xamarin.Forms.INavigation.PopAsync(System.Boolean))
 - [PopModalAsync](xref:Xamarin.Forms.INavigation.PopModalAsync(System.Boolean))
 
-Tuttavia, i metodi standard di spostamento tra le pagine includono l'animazione per impostazione predefinita, pertanto sono validi solo per passare a una determinata pagina all'avvio (come descritto verso la fine di questo capitolo) o quando si fornisce la propria animazione di ingresso (come illustrato nel [**Capitolo22. Animazione**](chapter22.md)).
+Tuttavia, i metodi di navigazione della pagina standard includono l'animazione per impostazione predefinita, quindi sono utili solo per passare a una pagina specifica all'avvio (come illustrato alla fine di questo capitolo) o quando si fornisce un'animazione di ingresso personalizzata, come descritto in [**Chapter22. Animazione**](chapter22.md)).
 
 ### <a name="visual-and-functional-variations"></a>Variazioni visive e funzionali
 
-`NavigationPage`include due proprietà che è possibile impostare `App` quando si crea un'istanza della classe nel metodo:
+`NavigationPage`include due proprietà che è possibile impostare quando si crea un'istanza della classe nel `App` Metodo:
 
 - [`BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor)
 - [`BarTextColor`](xref:Xamarin.Forms.NavigationPage.BarTextColor)
 
-`NavigationPage`include inoltre quattro proprietà associabili associate che influiscono sulla pagina specifica in cui sono impostate:
+`NavigationPage`include anche quattro proprietà associabili associate che interessano la pagina specifica in cui sono impostate:
 
-- [`SetHasBackButton`](xref:Xamarin.Forms.NavigationPage.SetHasBackButton(Xamarin.Forms.Page,System.Boolean))E[`GetHasBackButton`](xref:Xamarin.Forms.NavigationPage.GetHasBackButton(Xamarin.Forms.Page))
-- [`SetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.SetHasNavigationBar(Xamarin.Forms.BindableObject,System.Boolean))E[`GetHasNavigationBar`](xref:Xamarin.Forms.NavigationPage.GetHasNavigationBar(Xamarin.Forms.BindableObject))
-- [`SetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.SetBackButtonTitle(Xamarin.Forms.BindableObject,System.String))e [`GetBackButtonTitle`](xref:Xamarin.Forms.NavigationPage.GetBackButtonTitle(Xamarin.Forms.BindableObject)) lavorare solo su iOS
-- [`SetTitleIcon`](xref:Xamarin.Forms.NavigationPage.SetTitleIcon(Xamarin.Forms.BindableObject,Xamarin.Forms.FileImageSource))e [`GetTitleIcon`](xref:Xamarin.Forms.NavigationPage.GetTitleIcon(Xamarin.Forms.BindableObject)) lavorare solo su iOS e Android
+- [ `SetHasBackButton` ] (xrif: Xamarin.Forms . NavigationPage. SetHasBackButton ( Xamarin.Forms . Page, System. Boolean) e [ `GetHasBackButton` ] (xrif: Xamarin.Forms . NavigationPage. GetHasBackButton ( Xamarin.Forms . Pagina)
+- [ `SetHasNavigationBar` ] (xrif: Xamarin.Forms . NavigationPage. SetHasNavigationBar ( Xamarin.Forms . BindableObject, System. Boolean) e [ `GetHasNavigationBar` ] (xrif: Xamarin.Forms . NavigationPage. GetHasNavigationBar ( Xamarin.Forms . BindableObject))
+- [ `SetBackButtonTitle` ] (xrif: Xamarin.Forms . NavigationPage. SetBackButtonTitle ( Xamarin.Forms . BindableObject, System. String) e [ `GetBackButtonTitle` ] (xrif: Xamarin.Forms . NavigationPage. GetBackButtonTitle ( Xamarin.Forms . BindableObject)) lavorare solo su iOS
+- [ `SetTitleIcon` ] (xrif: Xamarin.Forms . NavigationPage. SetTitleIcon ( Xamarin.Forms . BindableObject, Xamarin.Forms . Fileimagesource)) e [ `GetTitleIcon` ] (xrif: Xamarin.Forms . NavigationPage. GetTitleIcon ( Xamarin.Forms . BindableObject)) funzionano solo su iOS e Android
 
-### <a name="exploring-the-mechanics"></a>Esplorare la meccanica
+### <a name="exploring-the-mechanics"></a>Esplorazione dei meccanismi
 
-I metodi di spostamento tra le `await`pagine sono tutti asincroni e devono essere utilizzati con . Il completamento non indica che lo spostamento tra le pagine è stato completato, ma solo che è sicuro esaminare lo stack di spostamento tra le pagine.
+I metodi di navigazione della pagina sono tutti asincroni e devono essere usati con `await` . Il completamento non indica che la navigazione delle pagine è stata completata, ma solo che è sicuro esaminare lo stack di navigazione della pagina.
 
-Quando una pagina passa a un'altra, la [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) prima pagina riceve in genere una [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) chiamata al relativo metodo e la seconda pagina ottiene una chiamata al relativo metodo. Analogamente, quando una pagina torna a un'altra, la prima pagina ottiene una chiamata al relativo `OnDisappearing` metodo e la seconda pagina riceve in genere una chiamata al relativo `OnAppearing` metodo. L'ordine di queste chiamate (e il completamento dei metodi asincroni che richiama la navigazione) dipende dalla piattaforma. L'uso della parola "generalmente" nelle due istruzioni precedenti è dovuto alla navigazione tra pagine modali Android, in cui queste chiamate al metodo non si verificano.
+Quando una pagina passa a un'altra, la prima pagina in genere riceve una chiamata al [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) metodo e la seconda pagina riceve una chiamata al relativo [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) metodo. Analogamente, quando una pagina viene restituita a un'altra, la prima pagina riceve una chiamata al `OnDisappearing` metodo e la seconda pagina in genere riceve una chiamata al relativo `OnAppearing` metodo. L'ordine di queste chiamate (e il completamento dei metodi asincroni che richiama lo spostamento) è dipendente dalla piattaforma. L'uso della parola "in genere" nelle due istruzioni precedenti è dovuto all'esplorazione delle pagine modali di Android, in cui queste chiamate al metodo non vengono eseguite.
 
-Inoltre, le `OnAppearing` chiamate `OnDisappearing` ai metodi e non indicano necessariamente lo spostamento tra le pagine.
+Inoltre, le chiamate ai `OnAppearing` `OnDisappearing` metodi e non indicano necessariamente la navigazione delle pagine.
 
-L'interfaccia `INavigation` include due proprietà della raccolta che consentono di esaminare lo stack di navigazione:The interface includes two collection properties that allow you to examine the navigation stack:
+L' `INavigation` interfaccia include due proprietà della raccolta che consentono di esaminare lo stack di navigazione:
 
-- [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack)di `IReadOnlyList<Page>` tipo per lo stack non modale
-- [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack)di `IReadOnlyList<Page>` tipo per lo stack modale
+- [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack)di tipo `IReadOnlyList<Page>` per lo stack non modale
+- [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack)di tipo `IReadOnlyList<Page>` per lo stack modale
 
-È più sicuro accedere a questi `Navigation` stack `NavigationPage` dalla proprietà del `App` (che [`MainPage`](xref:Xamarin.Forms.Application.MainPage) dovrebbe essere la proprietà della classe). È sicuro esaminare questi stack solo dopo il completamento dei metodi asincroni di spostamento tra le pagine. La [`CurrentPage`](xref:Xamarin.Forms.NavigationPage.CurrentPage) proprietà `NavigationPage` di indica la pagina corrente se la pagina corrente è una pagina modale, ma indica invece l'ultima pagina non modale.
+È più sicuro accedere a questi stack dalla `Navigation` proprietà di `NavigationPage` (che deve essere la `App` proprietà della classe [`MainPage`](xref:Xamarin.Forms.Application.MainPage) ). È possibile esaminare questi stack solo in modo sicuro dopo il completamento dei metodi di navigazione di pagina asincroni. La [`CurrentPage`](xref:Xamarin.Forms.NavigationPage.CurrentPage) proprietà di `NavigationPage` non indica la pagina corrente se la pagina corrente è una pagina modale, ma indica invece l'ultima pagina non modale.
 
-L'esempio [**SinglePageNavigation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/SinglePageNavigation) consente di esplorare lo spostamento tra le pagine e gli stack e i tipi legali di spostamento tra le pagine:
+L'esempio [**SinglePageNavigation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/SinglePageNavigation) consente di esplorare la navigazione tra le pagine e gli stack e i tipi validi di navigazione tra le pagine:
 
 - Una pagina non modale può passare a un'altra pagina non modale o a una pagina modale
-- Una pagina modale può passare solo a un'altra pagina modale
+- Una pagina modale può spostarsi solo in un'altra pagina modale
 
 ### <a name="enforcing-modality"></a>Applicazione della modalità
 
-Un'applicazione utilizza una pagina modale quando è necessario ottenere alcune informazioni dall'utente. L'utente dovrebbe essere vietato di tornare alla pagina precedente fino a quando non vengono fornite tali informazioni. In iOS, è facile fornire un pulsante **Indietro** e abilitarlo solo quando l'utente ha terminato con la pagina. Ma per i dispositivi Android e Windows [`OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) Phone, `true` l'applicazione deve eseguire l'override del metodo e restituire se il programma ha gestito il pulsante Indietro stesso, come illustrato nell'esempio [**ModalEnforcement.But**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModalEnforcement) for Android and Windows phone devices, the application should override the method and return if program has handled the **Back** button itself, as demonstrated in the ModalEnforcement sample.
+Un'applicazione usa una pagina modale quando è necessario ottenere alcune informazioni dall'utente. L'utente non deve essere autorizzato a tornare alla pagina precedente finché non vengono fornite le informazioni. In iOS è facile fornire un pulsante **indietro** e abilitarlo solo quando l'utente ha terminato la pagina. Tuttavia, per i dispositivi Android e Windows Phone, l'applicazione deve eseguire l'override del [`OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) metodo e restituire `true` se il programma ha gestito il pulsante **indietro** , come illustrato nell'esempio [**ModalEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModalEnforcement) .
 
-[**Nell'esempio MvvmEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/MvvmEnforcement) viene illustrato il funzionamento in uno scenario MVVM.
+Nell'esempio [**MvvmEnforcement**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/MvvmEnforcement) viene illustrato come funziona in uno scenario MVVM.
 
 ## <a name="navigation-variations"></a>Variazioni di navigazione
 
-Se è possibile passare a più volte a una determinata pagina modale, è necessario conservare le informazioni in modo che l'utente possa modificare le informazioni anziché digitarle di nuovo. È possibile gestire questo mantenendo la particolare istanza della pagina modale, ma un approccio migliore (in particolare su iOS) è mantenere le informazioni in un modello di visualizzazione.
+Se una particolare pagina modale può essere spostata più volte, deve conservare le informazioni in modo che l'utente possa modificare le informazioni anziché digitarle nuovamente. Per gestire questo problema, è possibile mantenere l'istanza specifica della pagina modale, ma un approccio migliore (in particolare in iOS) è preservare le informazioni in un modello di visualizzazione.
 
 ### <a name="making-a-navigation-menu"></a>Creazione di un menu di navigazione
 
-[**Nell'esempio ViewGalleryType**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) `TableView` viene illustrato l'utilizzo di un oggetto per elencare le voci di menu. Ogni elemento è `Type` associato a un oggetto per una pagina specifica. Quando tale elemento è selezionato, il programma crea un'istanza della pagina e si sposta su di essa.
+Nell'esempio [**ViewGalleryType**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) viene illustrato l'utilizzo di un oggetto `TableView` per elencare le voci di menu. Ogni elemento è associato a un `Type` oggetto per una pagina specifica. Quando tale elemento è selezionato, il programma crea un'istanza della pagina e vi passa.
 
-[![Tripla schermata di Visualizza tipo di raccolta](images/ch24fg21-small.png "TableView Voci del menu Elenco")](images/ch24fg21-large.png#lightbox "TableView Voci del menu Elenco")
+[![Schermata tripla del tipo di raccolta viste](images/ch24fg21-small.png "Voci di menu elenco TableView")](images/ch24fg21-large.png#lightbox "Voci di menu elenco TableView")
 
-Il [**ViewGalleryInst**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) esempio è leggermente diverso in quanto il menu contiene istanze di ogni pagina anziché tipi. Ciò consente di mantenere le informazioni da ogni pagina, ma è necessario creare un'istanza di tutte le pagine all'avvio del programma.
+L'esempio [**ViewGalleryInst**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) è leggermente diverso perché il menu contiene istanze di ogni pagina anziché di tipi. Questo consente di conservare le informazioni da ogni pagina, ma è necessario creare un'istanza di tutte le pagine all'avvio del programma.
 
-### <a name="manipulating-the-navigation-stack"></a>Manipolazione dello stack di navigazione
+### <a name="manipulating-the-navigation-stack"></a>Modifica dello stack di navigazione
 
-[**StackManipulation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/StackManipulation) illustra diverse `INavigation` funzioni definite da che consentono di modificare lo stack di navigazione in modo strutturato:StackManipulation demonstrates several functions defined by that let you manipulate the navigation stack in a structured manner:
+[**StackManipulation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/StackManipulation) illustra diverse funzioni definite da `INavigation` che consentono di modificare lo stack di navigazione in modo strutturato:
 
-- [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage(Xamarin.Forms.Page))
-- [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore(Xamarin.Forms.Page,Xamarin.Forms.Page))
-- [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync)e [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync(System.Boolean)) con animazione opzionale
+- [ `RemovePage` ] (xrif: Xamarin.Forms . INavigation. RemovePage ( Xamarin.Forms . Pagina)
+- [ `InsertPageBefore` ] (xrif: Xamarin.Forms . INavigation. InsertPageBefore ( Xamarin.Forms . Xamarin.Forms, Pagina)
+- [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync)e [`PopToRootAsync`](xref:Xamarin.Forms.INavigation.PopToRootAsync(System.Boolean)) con animazione facoltativa
 
-### <a name="dynamic-page-generation"></a>Generazione dinamica delle pagine
+### <a name="dynamic-page-generation"></a>Generazione dinamica di pagine
 
-[**Nell'esempio BuildAPage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/BuildAPage) viene illustrata la costruzione di una pagina in fase di esecuzione in base all'input dell'utente.
+L'esempio [**BuildAPage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/BuildAPage) illustra la creazione di una pagina in fase di esecuzione in base all'input dell'utente.
 
 ## <a name="patterns-of-data-transfer"></a>Modelli di trasferimento dei dati
 
-Spesso è necessario condividere i &mdash; dati tra le pagine per trasferire i dati in una pagina visitata e per una pagina restituire i dati alla pagina che li ha richiamati. Ci sono diverse tecniche per fare questo.
+Spesso è necessario condividere i dati tra le pagine &mdash; per trasferire i dati a una pagina navigata e per una pagina per restituire dati alla pagina che lo ha richiamato. Per eseguire questa operazione, sono disponibili diverse tecniche.
 
 ### <a name="constructor-arguments"></a>Argomenti del costruttore
 
-Quando si passa a una nuova pagina, è possibile creare un'istanza della classe della pagina con un argomento del costruttore che consente alla pagina di inizializzarsi. Il [**SchoolAndStudents**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/SchoolAndStudents) esempio viene illustrato questo. È anche possibile che la pagina esplorata abbia il proprio `BindingContext` set dalla pagina che vi si sposta.
+Quando si passa a una nuova pagina, è possibile creare un'istanza della classe di pagina con un argomento del costruttore che consente l'inizializzazione della pagina. Questa operazione è illustrata nell'esempio [**SchoolAndStudents**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/SchoolAndStudents) . È anche possibile che la pagina navigata sia `BindingContext` impostata dalla pagina che lo sposta.
 
-### <a name="properties-and-method-calls"></a>Proprietà e chiamate ai metodi
+### <a name="properties-and-method-calls"></a>Proprietà e chiamate al metodo
 
-Gli esempi di trasferimento dati rimanenti esplorano il problema del passaggio di informazioni tra le pagine quando una pagina passa a un'altra pagina e viceversa. In queste discussioni, la *home* page passa alla pagina delle *informazioni* e deve trasferire le informazioni inizializzate alla pagina *delle informazioni.* La pagina *delle informazioni* ottiene informazioni aggiuntive dall'utente e le trasferisce alla *home* page.
+Gli esempi di trasferimento dei dati rimanenti esplorano il problema del passaggio di informazioni tra le pagine quando una pagina passa a un'altra pagina e viceversa. In queste discussioni la *Home* Page passa alla pagina *info* e deve trasferire le informazioni inizializzate nella pagina *info* . La pagina *informazioni* ottiene informazioni aggiuntive dall'utente e trasferisce le informazioni alla *Home* page.
 
-La *home* page può accedere facilmente ai metodi e alle proprietà pubbliche nella pagina *delle informazioni* non appena crea un'istanza di tale pagina. La pagina *delle informazioni* può anche accedere a i metodi e le proprietà pubbliche nella *home* page, ma scegliere un buon momento per questo può essere difficile. [**L'esempio DateTransfer1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer1) esegue `OnDisappearing` questa operazione nell'override. Uno svantaggio è che la pagina *delle informazioni* deve conoscere il tipo di *home* page.
+La *Home* page può accedere facilmente a proprietà e metodi pubblici nella pagina *informazioni* non appena viene creata un'istanza di tale pagina. La pagina di *informazioni* può accedere anche a metodi e proprietà pubblici nella *Home* page, ma la scelta di un periodo di tempo ideale può risultare complessa. L'esempio [**DateTransfer1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer1) esegue questa operazione nella relativa `OnDisappearing` sostituzione. Uno svantaggio è che la pagina di *informazioni* deve essere in grado di individuare il tipo della *Home* page.
 
 ### <a name="messagingcenter"></a>MessagingCenter
 
-La classe Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) fornisce un altro modo per comunicare tra loro due pagine. I messaggi sono identificati da una stringa di testo e possono essere accompagnati da qualsiasi oggetto.
+La Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe fornisce un altro modo per due pagine per comunicare tra loro. I messaggi sono identificati da una stringa di testo e possono essere accompagnati da qualsiasi oggetto.
 
-Un programma che desidera ricevere messaggi da un determinato [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) tipo deve sottoscrivere utilizzarli utilizzando e specificare una funzione di callback. In seguito può annullare la sottoscrizione chiamando [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*). La funzione di callback riceve qualsiasi messaggio inviato dal tipo [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) specificato con il nome specificato inviato tramite il metodo .
+Un programma che desidera ricevere messaggi da un particolare tipo deve sottoscriverli usando [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) e specificare una funzione di callback. Successivamente, è possibile annullare la sottoscrizione chiamando [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) . La funzione di callback riceve tutti i messaggi inviati dal tipo specificato con il nome specificato inviato tramite il [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) metodo.
 
-Il programma [**DateTransfer2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer2) illustra come trasferire i dati utilizzando il centro messaggistica, ma anche in questo caso ciò richiede che la pagina delle *informazioni* conosca il tipo di *home* page.
+Il programma [**DateTransfer2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer2) illustra come trasferire i dati tramite il centro di messaggistica, ma anche in questo caso è necessario che la pagina *info* conosca il tipo della *Home* page.
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventi
 
-L'evento è un approccio rispettato nel tempo per una classe per inviare informazioni a un'altra classe senza conoscere il tipo di tale classe. Nell'esempio [**DateTransfer3**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer3) la classe *info* definisce un evento che viene generato quando le informazioni sono pronte. Tuttavia, non esiste una posizione comoda per la *home* page per scollegare il gestore eventi.
+L'evento è un approccio basato sul tempo per l'invio di informazioni a un'altra classe da parte di una classe senza conoscere il tipo di tale classe. Nell'esempio [**DateTransfer3**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer3) la classe *info* definisce un evento che viene attivato quando le informazioni sono pronte. Tuttavia, non esiste una posizione comoda per la rimozione del gestore eventi da parte della *Home* page.
 
-### <a name="the-app-class-intermediary"></a>L'intermediario della classe App
+### <a name="the-app-class-intermediary"></a>Intermediario della classe App
 
-Nell'esempio [**DateTransfer4**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer4) viene illustrato come `App` accedere alle proprietà definite nella classe sia dalla *home* page che dalla pagina *delle informazioni.* Questa è una buona soluzione, ma la sezione successiva descrive qualcosa di meglio.
+Nell'esempio [**DateTransfer4**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer4) viene illustrato come accedere alle proprietà definite nella `App` classe sia dalla *Home* page che dalla pagina *info* . Si tratta di una soluzione ottimale, ma nella sezione successiva viene descritto qualcosa di meglio.
 
-### <a name="switching-to-a-viewmodel"></a>Passaggio a un ViewModel
+### <a name="switching-to-a-viewmodel"></a>Passare a un ViewModel
 
-L'utilizzo di un ViewModel per le informazioni consente alla *home* page e alla pagina *delle informazioni* di condividere l'istanza della classe di informazioni. Ciò è illustrato nell'esempio [**DateTransfer5.This**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer5) is demonstrated in the DateTransfer5 sample.
+L'uso di un ViewModel per le informazioni consente alla *Home* page e alla pagina *info* di condividere l'istanza della classe Information. Questa operazione è illustrata nell'esempio [**DateTransfer5**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer5) .
 
 ### <a name="saving-and-restoring-page-state"></a>Salvataggio e ripristino dello stato della pagina
 
-L'intermediario `App` di classe o l'approccio ViewModel è ideale quando l'applicazione deve salvare le informazioni se il programma passa alla modalità di sospensione mentre la pagina *delle informazioni* è attiva. Nell'esempio [**DateTransfer6**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer6) viene illustrato questo.
+L' `App` intermediario della classe o l'approccio ViewModel è ideale quando l'applicazione deve salvare le informazioni se il programma passa alla modalità di sospensione mentre la pagina *informazioni* è attiva. Questa operazione è illustrata nell'esempio [**DateTransfer6**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer6) .
 
 ## <a name="saving-and-restoring-the-navigation-stack"></a>Salvataggio e ripristino dello stack di navigazione
 
-Nel caso generale, un programma a più pagine che va a dormire dovrebbe passare alla stessa pagina quando viene ripristinato. Ciò significa che un programma di questo tipo deve salvare il contenuto dello stack di navigazione. In questa sezione viene illustrato come automatizzare questo processo in una classe progettata per questo scopo. Questa classe chiama anche le singole pagine per consentire loro di salvare e ripristinare lo stato della pagina.
+Nel caso generale, un programma a più pagine che passa alla modalità di sospensione deve passare alla stessa pagina quando viene ripristinato. Questo significa che un programma di questo tipo deve salvare il contenuto dello stack di navigazione. In questa sezione viene illustrato come automatizzare questo processo in una classe progettata a questo scopo. Questa classe chiama anche le singole pagine per consentire il salvataggio e il ripristino dello stato della relativa pagina.
 
-La libreria [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) definisce [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs) un'interfaccia denominata che le `Properties` classi possono implementare per salvare e ripristinare gli elementi nel dizionario.
+La libreria [**Novell. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) definisce un'interfaccia denominata [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs) che le classi possono implementare per salvare e ripristinare gli elementi nel `Properties` dizionario.
 
-La [`MultiPageRestorableApp`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/MultiPageRestorableApp.cs) classe nella libreria **Xamarin.FormsBook.Toolkit** deriva da `Application`. È quindi possibile `App` derivare la classe da `MultiPageRestorableApp` ed eseguire alcune pulidi.
+La [`MultiPageRestorableApp`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/MultiPageRestorableApp.cs) classe nella libreria **Novell. FormsBook. Toolkit** deriva da `Application` . È quindi possibile derivare la `App` classe da `MultiPageRestorableApp` ed eseguire alcune operazioni di manutenzione.
 
-[**StackRestoreDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/StackRestoreDemo) viene illustrato `MultiPageRestorableApp`l'utilizzo di .
+[**StackRestoreDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/StackRestoreDemo) illustra l'uso di `MultiPageRestorableApp` .
 
 ### <a name="something-like-a-real-life-app"></a>Qualcosa di simile a un'app reale
 
-L'esempio [**NoteTaker**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) utilizza `MultiPageRestorableApp` e consente l'immissione e la `Properties` modifica delle note salvate nel dizionario.
+L'esempio [**NoteTaker**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) utilizza inoltre `MultiPageRestorableApp` e consente l'immissione e la modifica di note salvate nel `Properties` dizionario.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Capitolo 24 testo completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf)
-- [Esempi del capitolo 24](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
+- [Capitolo 24 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf)
+- [Capitolo 24 esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 - [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md)

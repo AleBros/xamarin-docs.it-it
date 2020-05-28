@@ -1,74 +1,77 @@
 ---
-title: Salvataggio di bitmap di SkiaSharp ai file
-description: Esplorare i vari formati di file supportati da SkiaSharp per il salvataggio di bitmap nella libreria di foto dell'utente.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 2431c19ceac08db8cb9fef3834695514e714f68f
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228036"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138658"
 ---
-# <a name="saving-skiasharp-bitmaps-to-files"></a>Salvataggio di bitmap di SkiaSharp ai file
+# <a name="saving-skiasharp-bitmaps-to-files"></a>Salvataggio di bitmap SkiaSharp nei file
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Dopo che un'applicazione di SkiaSharp ha creato o modificato una bitmap, l'applicazione potrebbe essere necessario salvare la mappa di bit alla raccolta di foto dell'utente:
+Dopo che un'applicazione SkiaSharp ha creato o modificato una bitmap, l'applicazione potrebbe voler salvare la bitmap nella raccolta foto dell'utente:
 
-![Salvataggio di bitmap](saving-images/SavingSample.png "salvataggio di bitmap")
+![Salvataggio di bitmap](saving-images/SavingSample.png "Salvataggio di bitmap")
 
-Questa attività include due passaggi:
+Questa attività comprende due passaggi:
 
-- Conversione di bitmap SkiaSharp in dati in un formato di file specifico, ad esempio JPEG o PNG.
-- Salvare il risultato nella raccolta di foto usando codice specifico della piattaforma.
+- Conversione della bitmap SkiaSharp in dati in un formato di file specifico, ad esempio JPEG o PNG.
+- Salvataggio del risultato nella raccolta foto mediante codice specifico della piattaforma.
 
-## <a name="file-formats-and-codecs"></a>Codec e formati di file
+## <a name="file-formats-and-codecs"></a>Formati di file e codec
 
-La maggior parte dei file di bitmap più diffusi di oggi formatta utilizzano la compressione per ridurre lo spazio di archiviazione. Vengono chiamate due ampie categorie di tecniche di compressione _perdita di dati_ e _senza perdita di dati_. Le presenti condizioni di indicano se l'algoritmo di compressione comporta la perdita di dati.
+La maggior parte dei formati di file bitmap più diffusi attualmente usa la compressione per ridurre lo spazio di archiviazione. Le due grandi categorie di tecniche di compressione sono denominate _lossal_ e _Lossless_. Questi termini indicano se l'algoritmo di compressione comporta la perdita di dati.
 
-Il formato più comune con perdita di dati è stato sviluppato da Joint Photographic Experts Group e viene chiamato JPEG. L'algoritmo di compressione JPEG analizza l'immagine utilizzando uno strumento matematico denominato il _discreta del coseno_e tenta di rimuovere i dati che non sono fondamentali per mantenere lo stesso aspetto dell'immagine. Il livello di compressione può essere controllato con un'impostazione a livello generale detta _qualità_. Impostazioni di qualità superiore hanno come risultato in file più grandi.
+Il formato con i Lossi più diffusi è stato sviluppato dal Joint Photographic Experts Group ed è denominato JPEG. L'algoritmo di compressione JPEG analizza l'immagine usando uno strumento matematico denominato _trasformazione del coseno discreto_e tenta di rimuovere i dati non cruciali per preservare la fedeltà visiva dell'immagine. Il grado di compressione può essere controllato con un'impostazione generalmente definita _qualità_. Le impostazioni di qualità superiore generano file di dimensioni maggiori.
 
-Al contrario, un algoritmo di compressione senza perdita di dati consente di analizzare l'immagine per la ripetizione e i modelli di pixel che possono essere codificati in modo che la riduzione dei dati, ma non comporta la perdita di tutte le informazioni. I dati bitmap originale possono essere ripristinati interamente dal file compresso. Il formato di file compressi senza perdita di dati primario in uso è oggi grafica PNG (Portable Network).
+Al contrario, un algoritmo di compressione senza perdita di dati analizza l'immagine per la ripetizione e i modelli di pixel che possono essere codificati in modo da ridurre i dati, ma non comporta la perdita di informazioni. I dati bitmap originali possono essere ripristinati interamente dal file compresso. Il formato di file compresso con perdita di perdite principale attualmente in uso è Portable Network Graphics (PNG).
 
-In generale, JPEG viene usato per le foto, mentre PNG viene usato per le immagini che sono state generate in modo algoritmico o manualmente. Qualsiasi algoritmo di compressione senza perdita di dati che riduce le dimensioni di alcuni file necessariamente deve aumentare le dimensioni di altri utenti. Fortunatamente, questo aumento delle dimensioni in genere si verifica solo per i dati che contiene numerose informazioni casuale (o apparentemente casuali).
+In genere, il formato JPEG viene usato per le fotografie, mentre PNG viene usato per le immagini che sono state generate manualmente o algoritmicamente. Qualsiasi algoritmo di compressione senza perdita di dati che riduce le dimensioni di alcuni file deve necessariamente aumentare le dimensioni degli altri. Fortunatamente, questo aumento delle dimensioni in genere si verifica solo per i dati che contengono numerose informazioni casuali (o apparentemente casuali).
 
-La compressione algoritmi sono sufficientemente complessi da richiedere due termini che descrivono i processi di compressione e decompressione:
+Gli algoritmi di compressione sono sufficientemente complessi da giustificare due termini che descrivono i processi di compressione e decompressione:
 
-- _decodificare_ &mdash; leggere un file di formato di bitmap e decomprimerlo
-- _codificare_ &mdash; comprimere la bitmap e scrivere in un formato di file bitmap
+- _decodifica_ &mdash; leggere un formato di file bitmap e decomprimerlo
+- _codifica_ &mdash; comprimere la bitmap e scrivere in un formato di file bitmap
 
-Il [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) classe contiene più metodi denominati `Decode` che creano un `SKBitmap` da un'origine compressa. È necessario consiste nel fornire un nome file, flusso o matrice di byte. Il decodificatore può determinare il formato di file e trasferirlo a funzione interna corretta decodifica.
+La [`SKBitmap`](xref:SkiaSharp.SKBitmap) classe contiene diversi metodi denominati `Decode` che creano un `SKBitmap` da un'origine compressa. È necessario fornire un nome file, un flusso o una matrice di byte. Il decodificatore può determinare il formato del file e passarlo alla funzione di decodifica interna appropriata.
 
-Inoltre, il [ `SKCodec` ](xref:SkiaSharp.SKCodec) classe ha due metodi denominati `Create` che consente di creare un `SKCodec` dell'oggetto da un'origine compressa e consentono a un'applicazione ottenere più coinvolti nel processo di decodifica. (Il `SKCodec` classe è illustrata nell'articolo [ **animazione bitmap SkiaSharp** ](animating.md#gif-animation) in relazione alla decodifica un GIF animato.)
+Inoltre, la [`SKCodec`](xref:SkiaSharp.SKCodec) classe dispone di due metodi denominati `Create` che possono creare un `SKCodec` oggetto da un'origine compressa e consentire a un'applicazione di essere più impegnati nel processo di decodifica. La `SKCodec` classe è illustrata nell'articolo [**animazione di bitmap SkiaSharp**](animating.md#gif-animation) in connessione alla decodifica di un file GIF animato.
 
-Quando si codifica una bitmap, sono necessarie altre informazioni: Il codificatore deve conoscere il formato di file specifico che l'applicazione vuole usare (JPEG o PNG o altri elementi). Se si desidera usare un formato con perdita di dati, la codifica deve inoltre sapere il livello di qualità desiderato.
+Quando si codifica una bitmap, sono necessarie altre informazioni: il codificatore deve conoscere il formato di file specifico che l'applicazione vuole usare (JPEG o PNG o qualcos'altro). Se si desidera un formato con perdita di informazioni, è necessario che la codifica conosca anche il livello di qualità desiderato.
 
-Il `SKBitmap` classe definisce uno [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) metodo con la sintassi seguente:
+La `SKBitmap` classe definisce un [`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) metodo con la sintassi seguente:
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-Questo metodo viene descritto in dettaglio tra breve. La bitmap codificata è scritta in un flusso scrivibile. (il 'W' in `SKWStream` è l'acronimo di "scrittura".) Il secondo e terzo argomento specifica il formato di file e i formati con perdita di dati) (di qualità desiderata compreso tra 0 e 100.
+Questo metodo viene descritto più in dettaglio a breve. La bitmap codificata viene scritta in un flusso scrivibile. ("W" in `SKWStream` sta per "scrivibile"). Il secondo e il terzo argomento specificano il formato del file e (per i formati con perdita di perdite) la qualità desiderata compreso tra 0 e 100.
 
-Inoltre, il [ `SKImage` ](xref:SkiaSharp.SKImage) e [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) classi definiscono inoltre `Encode` metodi che fanno un po' più versatile e quale potrebbe essere preferibile. È possibile creare facilmente un' `SKImage` dell'oggetto da un `SKBitmap` usando il metodo statico dell'oggetto [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) (metodo). È possibile ottenere un' `SKPixmap` dell'oggetto da un `SKBitmap` dell'oggetto usando la [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) (metodo).
+Inoltre, le [`SKImage`](xref:SkiaSharp.SKImage) classi e [`SKPixmap`](xref:SkiaSharp.SKPixmap) definiscono anche `Encode` metodi che sono un po' più versatili e che potrebbero essere preferibili. È possibile creare facilmente un `SKImage` oggetto da un `SKBitmap` oggetto usando il [`SKImage.FromBitmap`](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) metodo statico. È possibile ottenere un `SKPixmap` oggetto da un `SKBitmap` oggetto usando il [`PeekPixels`](xref:SkiaSharp.SKBitmap.PeekPixels) metodo.
 
-Uno dei [ `Encode` ](xref:SkiaSharp.SKImage.Encode) metodi definiti da `SKImage` non presenta parametri e Salva automaticamente in formato PNG. Tale metodo senza parametri è molto facile da usare.
+Uno dei [`Encode`](xref:SkiaSharp.SKImage.Encode) metodi definiti da `SKImage` non dispone di parametri e viene salvato automaticamente in un formato png. Questo metodo senza parametri è molto semplice da usare.
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>Codice specifico della piattaforma per il salvataggio dei file bitmap
 
-Quando si codifica un `SKBitmap` oggetto in un determinato file di formato, in genere sarà rimossa con un oggetto di flusso di qualche tipo, o una matrice di dati. Alcune delle `Encode` metodi (incluso quello con nessun parametro definito dal `SKImage`) restituiscono un [ `SKData` ](xref:SkiaSharp.SKData) oggetto, che può essere convertito in una matrice di byte usando il [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) metodo. Questi dati devono essere quindi salvati in un file.
+Quando si codifica un `SKBitmap` oggetto in un formato di file specifico, in genere si rimane con un oggetto flusso di qualche tipo o una matrice di dati. Alcuni dei `Encode` metodi (incluso quello senza parametri definiti da `SKImage` ) restituiscono un [`SKData`](xref:SkiaSharp.SKData) oggetto, che può essere convertito in una matrice di byte usando il [`ToArray`](xref:SkiaSharp.SKData.ToArray) metodo. Questi dati devono quindi essere salvati in un file.
 
-Salvataggio in un file nell'archiviazione locale dell'applicazione è piuttosto semplice, poiché è possibile utilizzare standard `System.IO` classi e metodi per questa attività. Questa tecnica è dimostrata nell'articolo [ **animazione bitmap SkiaSharp** ](animating.md#bitmap-animation) in relazione a una serie di bitmap del set di Mandelbrot l'animazione.
+Il salvataggio in un file nella risorsa di archiviazione locale dell'applicazione è piuttosto semplice perché è possibile usare `System.IO` classi e metodi standard per questa attività. Questa tecnica è illustrata nell'articolo [**animazione di bitmap SkiaSharp**](animating.md#bitmap-animation) in relazione all'animazione di una serie di bitmap del set di Mandelbrot.
 
-Se si desidera che il file deve essere condiviso da altre applicazioni, deve essere salvato alla raccolta di foto dell'utente. Questa attività richiede codice specifico della piattaforma e l'uso di Xamarin.Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService).
+Se si desidera che il file sia condiviso da altre applicazioni, è necessario salvarlo nella raccolta foto dell'utente. Questa attività richiede codice specifico della piattaforma e l'utilizzo di Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-Il **SkiaSharpFormsDemo** del progetto nel [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione definisce un `IPhotoLibrary` interfaccia utilizzata con il `DependencyService` classe. Definisce la sintassi di un `SavePhotoAsync` metodo:
+Il progetto **SkiaSharpFormsDemo** nell'applicazione [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) definisce un' `IPhotoLibrary` interfaccia usata con la `DependencyService` classe. Definisce la sintassi di un `SavePhotoAsync` Metodo:
 
 ```csharp
 public interface IPhotoLibrary
@@ -79,15 +82,15 @@ public interface IPhotoLibrary
 }
 ```
 
-Questa interfaccia definisce anche il `PickPhotoAsync` metodo, che consente di aprire il selettore di file specifiche della piattaforma per la libreria foto del dispositivo.
+Questa interfaccia definisce anche il `PickPhotoAsync` metodo, che viene usato per aprire il selettore di file specifico della piattaforma per la raccolta foto del dispositivo.
 
-Per `SavePhotoAsync`, il primo argomento è una matrice di byte che contiene la mappa di bit già codificato in un formato di file specifico, ad esempio JPEG o PNG. È possibile che un'applicazione potrebbe voler isolare tutte le bitmap che viene creato in una particolare cartella, viene specificata nel parametro successivo, seguito dal nome del file. Il metodo restituisce un valore booleano che indica la riuscita o No.
+Per `SavePhotoAsync` , il primo argomento è una matrice di byte che contiene la bitmap già codificata in un formato di file specifico, ad esempio JPEG o png. È possibile che un'applicazione voglia isolare tutte le bitmap create in una cartella specifica, specificata nel parametro successivo, seguito dal nome del file. Il metodo restituisce un valore booleano che indica l'esito positivo o negativo.
 
-Le sezioni seguenti illustrano come `SavePhotoAsync` viene implementata su ogni piattaforma.
+Le sezioni seguenti illustrano come `SavePhotoAsync` viene implementato in ogni piattaforma.
 
-### <a name="the-ios-implementation"></a>L'implementazione di iOS
+### <a name="the-ios-implementation"></a>Implementazione di iOS
 
-L'implementazione di iOS del `SavePhotoAsync` utilizza le [ `SaveToPhotosAlbum` ](xref:UIKit.UIImage.SaveToPhotosAlbum*) metodo `UIImage`:
+L'implementazione di iOS di `SavePhotoAsync` Usa il [`SaveToPhotosAlbum`](xref:UIKit.UIImage.SaveToPhotosAlbum*) metodo di `UIImage` :
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -111,23 +114,23 @@ public class PhotoLibrary : IPhotoLibrary
 
 Sfortunatamente, non è possibile specificare un nome file o una cartella per l'immagine.
 
-Il **Info. plist** file nel progetto iOS richiede una chiave che indica che le immagini aggiunge alla raccolta foto:
+Il file **info. plist** nel progetto iOS richiede una chiave che indica che aggiunge immagini alla raccolta foto:
 
 ```xml
 <key>NSPhotoLibraryAddUsageDescription</key>
 <string>SkiaSharp Forms Demos adds images to your photo library</string>
 ```
 
-Attento! La chiave di autorizzazione per semplicemente l'accesso a raccolta foto è molto simile ma non lo stesso:
+Attento! La chiave di autorizzazione per accedere semplicemente alla raccolta foto è molto simile, ma non identica:
 
 ```xml
 <key>NSPhotoLibraryUsageDescription</key>
 <string>SkiaSharp Forms Demos accesses your photo library</string>
 ```
 
-### <a name="the-android-implementation"></a>L'implementazione di Android
+### <a name="the-android-implementation"></a>Implementazione di Android
 
-L'implementazione di Android `SavePhotoAsync` controlla innanzitutto se il `folder` l'argomento è `null` o una stringa vuota. In questo caso, la bitmap viene salvata nella directory radice della libreria di foto. In caso contrario, si ottiene la cartella e se non esiste, crearla:
+L'implementazione Android di `SavePhotoAsync` controlla prima di tutto se l' `folder` argomento è `null` o una stringa vuota. In tal caso, la bitmap viene salvata nella directory radice della raccolta foto. In caso contrario, la cartella viene ottenuta e, se non esiste, viene creata:
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -171,17 +174,17 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-La chiamata a `MediaScannerConnection.ScanFile` non è strettamente necessaria, ma se si sta testando il programma controllando immediatamente la raccolta di foto, risulta utile molto aggiornando la visualizzazione della raccolta della raccolta.
+La chiamata a `MediaScannerConnection.ScanFile` non è strettamente necessaria, ma se si sta testando il programma controllando immediatamente la raccolta foto, è molto utile aggiornare la visualizzazione raccolta libreria.
 
-Il **androidmanifest. XML** file richiede il seguente tag di autorizzazione:
+Il file **file AndroidManifest. XML** richiede il seguente tag di autorizzazione:
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
-### <a name="the-uwp-implementation"></a>L'implementazione di UWP
+### <a name="the-uwp-implementation"></a>Implementazione di UWP
 
-L'implementazione di UWP di `SavePhotoAsync` è molto simile nella struttura per l'implementazione di Android:
+L'implementazione di UWP di `SavePhotoAsync` è molto simile alla struttura per l'implementazione di Android:
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -235,33 +238,33 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-Il **funzionalità** sezione il **package. appxmanifest** file richiede **raccolta immagini**.
+La sezione delle **funzionalità** del file **Package. appxmanifest** richiede la **libreria di immagini**.
 
-## <a name="exploring-the-image-formats"></a>Esplorare i formati di immagine
+## <a name="exploring-the-image-formats"></a>Esplorazione dei formati di immagine
 
-Di seguito è riportato il [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) metodo `SKImage` nuovamente:
+Ecco il [`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) metodo di `SKImage` nuovo:
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) è un'enumerazione con membri che fanno riferimento ai formati di file bitmap undici, alcune delle quali sono piuttosto poco chiari:
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat)è un'enumerazione con membri che fanno riferimento a undici formati di file bitmap, alcuni dei quali sono piuttosto nascosti:
 
-- `Astc` &mdash; Compressione di trama scalabile adattivo
-- `Bmp` &mdash; Bitmap di Windows
-- `Dng` &mdash; Negativo digitale di Adobe
-- `Gif` &mdash; Graphics Interchange Format
-- `Ico` &mdash; Immagini icona di Windows
-- `Jpeg` &mdash; Joint Photographic Experts Group
-- `Ktx` &mdash; Formato della trama Khronos per OpenGL
-- `Pkm` &mdash; Pokémon salvataggio file
-- `Png` &mdash; Immagine PNG
-- `Wbmp` &mdash; Formato di Bitmap di Wireless Application Protocol (1 bit per pixel)
-- `Webp` &mdash; Formato Google WebP
+- `Astc`&mdash;Compressione della trama scalabile adattiva
+- `Bmp`&mdash;Bitmap di Windows
+- `Dng`&mdash;Adobe Digital negative
+- `Gif`&mdash;Graphics Interchange Format
+- `Ico`&mdash;Immagini icona di Windows
+- `Jpeg`&mdash;Joint Photographic Experts Group
+- `Ktx`&mdash;Formato trama Khronos per OpenGL
+- `Pkm`&mdash;File di salvataggio Pokémon
+- `Png`&mdash;Portable Network Graphics
+- `Wbmp`&mdash;Formato Bitmap wireless Application Protocol (1 bit per pixel)
+- `Webp`&mdash;Formato Google WebP
 
-Come si vedrà a breve, solo tre di questi formati di file (`Jpeg`, `Png`, e `Webp`) sono effettivamente supportati da SkiaSharp.
+Come si vedrà a breve, solo tre di questi formati di file ( `Jpeg` , `Png` e `Webp` ) sono effettivamente supportati da SkiaSharp.
 
-Per salvare un' `SKBitmap` oggetto denominato `bitmap` alla raccolta di foto dell'utente, è necessario anche un membro del `SKEncodedImageFormat` enumerazione denominata `imageFormat` e i formati con perdita di dati) (di un numero intero `quality` variabile. È possibile usare il codice seguente per salvare la mappa di bit in un file con il nome `filename` nella `folder` cartella:
+Per salvare un `SKBitmap` oggetto denominato nella `bitmap` raccolta foto dell'utente, è necessario anche un membro dell' `SKEncodedImageFormat` enumerazione denominata `imageFormat` e (per i formati con perdite) una variabile di tipo integer `quality` . È possibile usare il codice seguente per salvare la bitmap in un file con il nome `filename` nella `folder` cartella:
 
 ```csharp
 using (MemoryStream memStream = new MemoryStream())
@@ -278,11 +281,11 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-Il `SKManagedWStream` deriva dalla classe `SKWStream` (che è l'acronimo di "flusso accessibile in scrittura"). Il `Encode` metodo scrive il file con codifica bitmap in tale flusso. Per alcuni errori che potrebbe essere necessario eseguire, vedere i commenti nel codice.
+La `SKManagedWStream` classe deriva da `SKWStream` (che corrisponde a "flusso scrivibile"). Il `Encode` metodo scrive il file bitmap codificato nel flusso. I commenti nel codice fanno riferimento a un controllo degli errori che potrebbe essere necessario eseguire.
 
-Il **salvare formati di File** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione usa un codice simile per consentire di sperimentare il salvataggio di una bitmap in vari formati.
+La pagina **Salva formati file** nell'applicazione [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) usa codice simile per consentire di sperimentare il salvataggio di una bitmap nei vari formati.
 
-Il file XAML contiene un' `SKCanvasView` che consente di visualizzare una bitmap, mentre il resto della pagina contiene tutto ciò che l'applicazione deve chiamare il `Encode` metodo `SKBitmap`. Ha un `Picker` per un membro del `SKEncodedImageFormat` enumerazione, un `Slider` per l'argomento di qualità per i formati bitmap con perdita di dati, due `Entry` visualizzazioni per un nome di nome file e cartelle e un `Button` per il salvataggio del file.
+Il file XAML contiene un oggetto `SKCanvasView` che visualizza una bitmap, mentre il resto della pagina contiene tutti gli elementi necessari all'applicazione per chiamare il `Encode` metodo di `SKBitmap` . Dispone di un oggetto `Picker` per un membro dell' `SKEncodedImageFormat` enumerazione, un oggetto `Slider` per l'argomento Quality per i formati di bitmap con perdita di bit, due `Entry` visualizzazioni per un nome di file e una cartella e un `Button` per salvare il file.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -369,7 +372,7 @@ Il file XAML contiene un' `SKCanvasView` che consente di visualizzare una bitmap
 </ContentPage>
 ```
 
-Il file code-behind carica una risorsa della bitmap e utilizza il `SKCanvasView` per visualizzarlo. Che bitmap mai le modifiche. Il `SelectedIndexChanged` gestore per il `Picker` modifica il nome del file con un'estensione che corrisponde al membro dell'enumerazione:
+Il file code-behind carica una risorsa bitmap e USA `SKCanvasView` per visualizzarla. Questa bitmap non cambia mai. Il `SelectedIndexChanged` gestore per `Picker` modifica il nome file con un'estensione uguale al membro di enumerazione:
 
 ```csharp
 public partial class SaveFileFormatsPage : ContentPage
@@ -435,45 +438,47 @@ public partial class SaveFileFormatsPage : ContentPage
 }
 ```
 
-Il `Clicked` gestore per il `Button` funziona tutto il reale. Ottiene due argomenti per `Encode` dal `Picker` e `Slider`e quindi Usa il codice illustrato in precedenza per creare un' `SKManagedWStream` per il `Encode` (metodo). I due `Entry` viste forniscono i nomi di file e cartelle per il `SavePhotoAsync` (metodo).
+Il `Clicked` gestore per l'oggetto `Button` esegue tutte le operazioni effettive. Ottiene due argomenti per `Encode` da `Picker` e `Slider` , quindi usa il codice illustrato in precedenza per creare un oggetto `SKManagedWStream` per il `Encode` metodo. Le due `Entry` visualizzazioni forniscono i nomi di file e cartelle per il `SavePhotoAsync` metodo.
 
-La maggior parte di questo metodo è dedicato alla gestione degli errori o problemi. Se `Encode` crea una matrice vuota, significa che non è supportato il formato di file specifico. Se `SavePhotoAsync` restituisce `false`, quindi non è stato salvato il file.
+La maggior parte di questo metodo è dedicata alla gestione di problemi o errori. Se `Encode` Crea una matrice vuota, significa che il formato di file specifico non è supportato. Se `SavePhotoAsync` restituisce `false` , il file non è stato salvato correttamente.
 
-Ecco il programma in esecuzione:
+Ecco il programma che esegue:
 
-[![Salvare i formati di File](saving-images/SaveFileFormats.png "salvare formati di File")](saving-images/SaveFileFormats-Large.png#lightbox)
+[![Salva formati di file](saving-images/SaveFileFormats.png "Salva formati di file")](saving-images/SaveFileFormats-Large.png#lightbox)
 
-Questo screenshot Mostra solo tre formati supportati su queste piattaforme:
+Questo screenshot Mostra gli unici tre formati supportati su queste piattaforme:
 
 - JPEG
 - PNG
-- E WebP
+- WebP
 
-Per tutte le altri formati, il `Encode` metodo scrive niente nel flusso e la matrice di byte risultante è vuota.
+Per tutti gli altri formati, il `Encode` metodo non scrive nulla nel flusso e la matrice di byte risultante è vuota.
 
-La mappa di bit che la **salvare formati di File** pagina Salva è 600 pixel quadrati. Con 4 byte per pixel, che equivale a un totale di byte 1,440,000 in memoria. Nella tabella seguente mostra le dimensioni del file delle varie combinazioni di formato di file e la qualità:
+La bitmap che la pagina **Salva formati file** salva è 600 pixel. Con 4 byte per pixel, questo è un totale di 1.440.000 byte in memoria. Nella tabella seguente vengono illustrate le dimensioni del file per diverse combinazioni di formato e qualità del file:
 
 |Formato|Qualità|Dimensione|
-|------|------:|---:|
-| PNG | N/D | 492K |
-| JPEG | 0 | 2,95 K |
-|      | 50 | 22.1 K |
-|      | 100 | K 206 |
-| E WebP | 0 | 2.71K |
-|      | 50 | 11,9 K |
-|      | 100 | K 101 |
+|---
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+---|---title: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+---:|---:| | PNG | N/A | 492K | | JPEG | 0 | 2.95 k | |      | 50 | 22.1 k | |      | 100 | 206K | | WebP | 0 | 2.71 k | |      | 50 | 11,9 k | |      | 100 | 101K |
 
 È possibile sperimentare diverse impostazioni di qualità ed esaminare i risultati.
 
-## <a name="saving-finger-paint-art"></a>Salvataggio finger-paint art
+## <a name="saving-finger-paint-art"></a>Salvataggio dell'arte del disegno Finger
 
-Viene in genere utilizzato di una bitmap nella creazione di programmi, in cui funziona come un elemento denominato una _bitmap shadow_. Tutti il disegno viene mantenuto su una bitmap, che viene quindi visualizzata dal programma. La bitmap anche molto utile per il salvataggio del disegno.
+Un uso comune di una bitmap è nei programmi di disegno, dove funziona come una _bitmap ombreggiata_. Tutto il disegno viene mantenuto sulla bitmap, che viene quindi visualizzata dal programma. La bitmap è utile anche per salvare il disegno.
 
-Il [ **disegno a mano libera in SkiaSharp** ](../paths/finger-paint.md) articolo è stato illustrato come usare le funzionalità touch di rilevamento per implementare un programma dipingere primitivo. Il programma è supportato un solo colore e spessore del unico tratto, ma conservato l'intero disegno in una raccolta di `SKPath` oggetti.
+Il [**disegno del dito nell'articolo SkiaSharp**](../paths/finger-paint.md) ha illustrato come usare il rilevamento del tocco per implementare un programma di disegno di fingere primitive. Il programma supporta un solo colore e una sola larghezza del tratto, ma conserva l'intero disegno in una raccolta di `SKPath` oggetti.
 
-Il **Paint dito con salvare** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio mantiene anche l'intero disegno in una raccolta di `SKPath` oggetti, ma anche esegue il rendering del disegno su una bitmap, che consente di risparmiare alla raccolta di foto.
+La pagina di disegno **con il dito con Save** nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) mantiene anche l'intero disegno in una raccolta di `SKPath` oggetti, ma esegue anche il rendering del disegno su una bitmap, che può essere salvata nella raccolta foto.
 
-Gran parte di questo programma è simile all'istanza originale **dito Paint** programma. Un miglioramento è che il file XAML ora creata un'istanza di pulsanti contrassegnati **chiaro** e **salvare**:
+Gran parte di questo programma è simile al programma originale per il **Finger Paint** . Un miglioramento è che il file XAML ora crea un'istanza dei pulsanti con etichetta **Clear** e **Save**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -516,7 +521,7 @@ Gran parte di questo programma è simile all'istanza originale **dito Paint** pr
 </ContentPage>
 ```
 
-Il file code-behind gestisce un campo di tipo `SKBitmap` denominato `saveBitmap`. Questa bitmap viene creata o ricreata nel `PaintSurface` gestore ogni volta che le dimensioni dello schermo della superficie di attacco delle modifiche. Se la mappa di bit deve essere ricreato, il contenuto della mappa di bit esistente viene copiato nella nuova bitmap in modo che tutto ciò che viene mantenuto indipendentemente da come area di visualizzazione Cambia dimensioni:
+Il file code-behind mantiene un campo di tipo `SKBitmap` denominato `saveBitmap` . Questa bitmap viene creata o ricreata nel `PaintSurface` gestore ogni volta che viene modificata la dimensione della superficie di visualizzazione. Se è necessario ricreare la bitmap, il contenuto della bitmap esistente viene copiato nella nuova bitmap, in modo che tutti gli elementi vengano conservati indipendentemente dalla dimensione della superficie di visualizzazione.
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -563,9 +568,9 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-Il disegno scopo il `PaintSurface` gestore si verifica alla fine ed è costituito esclusivamente per il rendering della bitmap.
+Il disegno eseguito dal `PaintSurface` gestore si verifica alla fine ed è costituito esclusivamente dal rendering della bitmap.
 
-L'elaborazione di tocco è simile al programma precedente. Il programma gestisce due raccolte, `inProgressPaths` e `completedPaths`, che contengono tutto quello che l'utente è disegnato dall'ultima volta che la visualizzazione è stata cancellata. Per ogni evento di tocco, il `OnTouchEffectAction` chiamate del gestore `UpdateBitmap`:
+L'elaborazione del tocco è simile al programma precedente. Il programma gestisce due raccolte, `inProgressPaths` e `completedPaths` , che contengono tutti gli elementi che l'utente ha disegnato dall'ultima volta in cui lo schermo è stato cancellato. Per ogni evento Touch, il `OnTouchEffectAction` gestore chiama `UpdateBitmap` :
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -653,9 +658,9 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-Il `UpdateBitmap` metodo ridisegna `saveBitmap` creando un nuovo `SKCanvas`deselezionandolo e quindi il rendering di tutti i percorsi nella mappa di bit. Si conclude invalidando `canvasView` in modo che la bitmap può essere disegnata sullo schermo.
+Il `UpdateBitmap` metodo viene ridisegnato creando `saveBitmap` un nuovo oggetto `SKCanvas` , deselezionando e quindi eseguendo il rendering di tutti i percorsi sulla bitmap. Si conclude con l'invalidamento `canvasView` in modo che la bitmap possa essere disegnata sullo schermo.
 
-Ecco i gestori per i due pulsanti. Il **chiaro** pulsante Cancella entrambe le raccolte di percorso, gli aggiornamenti `saveBitmap` (che comporta la cancellazione della bitmap) e invalida il `SKCanvasView`:
+Ecco i gestori per i due pulsanti. Il pulsante **Cancella** cancella sia le raccolte di percorsi, gli aggiornamenti (che comportano `saveBitmap` la cancellazione della bitmap) che invalida `SKCanvasView` :
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -690,22 +695,22 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-Il **salvare** gestore del pulsante Usa la semplificata [ `Encode` ](xref:SkiaSharp.SKImage.Encode) metodo `SKImage`. Questo metodo codifica nel formato PNG. Il `SKImage` oggetto viene creato in base `saveBitmap`e il `SKData` oggetto contiene i file PNG con codifica.
+Il gestore del pulsante **Salva** usa il [`Encode`](xref:SkiaSharp.SKImage.Encode) metodo semplificato da `SKImage` . Questo metodo codifica usando il formato PNG. L' `SKImage` oggetto viene creato in base a `saveBitmap` e l' `SKData` oggetto contiene il file png codificato.
 
-Il `ToArray` metodo di `SKData` Ottiene una matrice di byte. Questo è ciò che viene passato per il `SavePhotoAsync` (metodo), insieme a un nome di cartella predefinito e un nome file univoco creato dalla data e ora correnti.
+Il `ToArray` metodo di `SKData` ottiene una matrice di byte. Questo è ciò che viene passato al `SavePhotoAsync` metodo, insieme a un nome di cartella fisso e a un nome file univoco costruito dalla data e dall'ora correnti.
 
 Ecco il programma in azione:
 
-[![Finger Paint salvataggio](saving-images/FingerPaintSave.png "Finger Paint di salvataggio")](saving-images/FingerPaintSave-Large.png#lightbox)
+[![Disegno del dito Salva](saving-images/FingerPaintSave.png "Disegno del dito Salva")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-Viene utilizzata una tecnica molto simile nel [ **SpinPaint** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) esempio. Questo è anche un programma dipingere ad eccezione del fatto che l'utente disegna su un disco rotante quindi riproduce le progettazioni nel relativo altri quattro quadranti. Il colore delle modifiche con un dito paint come disco di rotazione:
+Nell'esempio [**SpinPaint**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) viene usata una tecnica molto simile. Si tratta anche di un programma di disegno con un dito, ad eccezione del fatto che l'utente dipinge su un disco rotante che riproduce quindi le progettazioni negli altri quattro quadranti. Colore delle modifiche apportate al disegno del dito durante la rotazione del disco:
 
-[![Rotazione Paint](saving-images/SpinPaint.png "Spin Paint")](saving-images/SpinPaint-Large.png#lightbox)
+[![Disegno di spin](saving-images/SpinPaint.png "Disegno di spin")](saving-images/SpinPaint-Large.png#lightbox)
 
-Il **salvare** pulsante del `SpinPaint` classe è simile al **Paint dito** che salva l'immagine a un nome di cartella predefinito (**SpainPaint**) e un nome file creato da Data e ora.
+Il pulsante **Salva** della `SpinPaint` classe è simile al **disegno del dito** in quanto salva l'immagine in un nome di cartella fissa (**SpainPaint**) e un nome file creato dalla data e dall'ora.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [SpinPaint (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

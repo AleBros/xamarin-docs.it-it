@@ -1,52 +1,55 @@
 ---
-title: Scorrimento CarouselView Novell. Forms
-description: Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CarouselView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione.
-ms.prod: xamarin
-ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/28/2020
-ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: Xamarin.FormsScorrimento CarouselView
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 462948905f40679e2b931d4aa0039308c64a0a8f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304072"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136496"
 ---
-# <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Novell. Forms
+# <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.FormsScorrimento CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce le seguenti proprietà correlate allo scorrimento:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce le seguenti proprietà correlate allo scorrimento:
 
-- `HorizontalScrollBarVisibility`, di tipo `ScrollBarVisibility`, che specifica quando la barra di scorrimento orizzontale è visibile.
-- `IsDragging`, di tipo `bool`, che indica se la `CarouselView` è a scorrimento. Si tratta di una proprietà di sola lettura il cui valore predefinito è `false`.
-- `IsScrollAnimated`, di tipo `bool`, che specifica se si verificherà un'animazione durante lo scorrimento della `CarouselView`. Il valore predefinito è `true`.
-- `ItemsUpdatingScrollMode`, di tipo `ItemsUpdatingScrollMode`, che rappresenta il comportamento di scorrimento del `CarouselView` quando vengono aggiunti nuovi elementi.
-- `VerticalScrollBarVisibility`, di tipo `ScrollBarVisibility`, che specifica quando la barra di scorrimento verticale è visibile.
+- `HorizontalScrollBarVisibility`, di tipo `ScrollBarVisibility` , che specifica quando la barra di scorrimento orizzontale è visibile.
+- `IsDragging`, di tipo `bool` , che indica se l'oggetto `CarouselView` è a scorrimento. Si tratta di una proprietà di sola lettura il cui valore predefinito è `false` .
+- `IsScrollAnimated`, di tipo `bool` , che specifica se si verificherà un'animazione durante lo scorrimento dell'oggetto `CarouselView` . Il valore predefinito è `true`.
+- `ItemsUpdatingScrollMode`, di tipo `ItemsUpdatingScrollMode` , che rappresenta il comportamento di scorrimento di `CarouselView` quando vengono aggiunti nuovi elementi.
+- `VerticalScrollBarVisibility`, di tipo `ScrollBarVisibility` , che specifica quando la barra di scorrimento verticale è visibile.
 
-Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che possono essere destinazioni di associazioni dati.
+Tutte queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di associazioni dati.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce inoltre due metodi [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , che scorrono gli elementi nella visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione, mentre l'altro scorre l'elemento specificato nella visualizzazione. Entrambi gli overload hanno argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo il completamento dello scorrimento e l'eventuale animazione dello scorrimento.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce inoltre due [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) metodi, che scorrono gli elementi nella visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione, mentre l'altro scorre l'elemento specificato nella visualizzazione. Entrambi gli overload hanno argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo il completamento dello scorrimento e l'eventuale animazione dello scorrimento.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) generato quando viene richiamato uno dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Il [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l'evento `ScrollToRequested` dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item`e `ScrollToPosition`. Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al metodo `ScrollTo`.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce un [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento che viene generato quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) viene richiamato uno dei metodi. L' [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l' `ScrollToRequested` evento dispone di molte proprietà, tra cui `IsAnimated` , `Index` , `Item` e `ScrollToPosition` . Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al `ScrollTo` metodo.
 
-Inoltre, [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento `Scrolled` generato per indicare che si è verificato lo scorrimento. Il `ItemsViewScrolledEventArgs` oggetto che accompagna l'evento `Scrolled` dispone di molte proprietà. Per ulteriori informazioni, vedere [rilevamento dello scorrimento](#detect-scrolling).
+Inoltre, [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un `Scrolled` evento generato per indicare che si è verificato lo scorrimento. Il `ItemsViewScrolledEventArgs` numero di proprietà dell'oggetto che accompagna l' `Scrolled` evento è elevato. Per ulteriori informazioni, vedere [rilevamento dello scorrimento](#detect-scrolling).
 
 Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto. Per altre informazioni, vedere [punti di aggancio](#snap-points).
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) inoltre possibile caricare i dati in modo incrementale mentre l'utente scorre. Per altre informazioni, vedere [caricare dati in modo incrementale](populate-data.md#load-data-incrementally).
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)consente inoltre di caricare i dati in modo incrementale quando l'utente scorre. Per altre informazioni, vedere [caricare dati in modo incrementale](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Rileva scorrimento
 
-È possibile esaminare la proprietà `IsDragging` per determinare se il [`CarouselView`](xref:Xamarin.Forms.CarouselView) sta attualmente scorrendo gli elementi.
+`IsDragging`È possibile esaminare la proprietà per determinare se l'oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) sta attualmente scorrendo gli elementi.
 
-Inoltre, [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento `Scrolled` che viene generato per indicare che si è verificato lo scorrimento. Questo evento deve essere utilizzato quando sono necessari dati sullo scorrimento.
+Inoltre, [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un `Scrolled` evento generato per indicare che si è verificato lo scorrimento. Questo evento deve essere utilizzato quando sono necessari dati sullo scorrimento.
 
-Nell'esempio di codice XAML riportato di seguito viene illustrato un `CarouselView` che imposta un gestore eventi per l'evento `Scrolled`:
+Nell'esempio di codice XAML riportato di seguito viene illustrato un oggetto `CarouselView` che imposta un gestore eventi per l' `Scrolled` evento:
 
 ```xaml
 <CarouselView Scrolled="OnCollectionViewScrolled">
@@ -61,7 +64,7 @@ CarouselView carouselView = new CarouselView();
 carouselView.Scrolled += OnCarouselViewScrolled;
 ```
 
-In questo esempio di codice, il gestore dell'evento `OnCarouselViewScrolled` viene eseguito quando viene generato l'evento `Scrolled`:
+In questo esempio di codice, il `OnCarouselViewScrolled` gestore eventi viene eseguito quando viene `Scrolled` generato l'evento:
 
 ```csharp
 void OnCarouselViewScrolled(object sender, ItemsViewScrolledEventArgs e)
@@ -76,25 +79,25 @@ void OnCarouselViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 }
 ```
 
-In questo esempio, il gestore dell'evento `OnCarouselViewScrolled` restituisce i valori dell'oggetto `ItemsViewScrolledEventArgs` che accompagna l'evento.
+In questo esempio, il `OnCarouselViewScrolled` gestore eventi restituisce i valori dell' `ItemsViewScrolledEventArgs` oggetto che accompagna l'evento.
 
 > [!IMPORTANT]
-> L'evento `Scrolled` viene generato per gli scorrimenti avviati dall'utente e per gli scorrimenti a livello di codice.
+> L' `Scrolled` evento viene generato per gli scorrimenti avviati dall'utente e per gli scorrimenti a livello di codice.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Scorrere un elemento in corrispondenza di un indice nella visualizzazione
 
-Il primo overload del metodo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione. Dato un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) denominato `carouselView`, nell'esempio seguente viene illustrato come scorrere l'elemento in corrispondenza dell'indice 6 nella visualizzazione:
+Il primo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Overload del metodo scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione. Dato un [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto denominato `carouselView` , nell'esempio seguente viene illustrato come scorrere l'elemento in corrispondenza dell'indice 6 nella visualizzazione:
 
 ```csharp
 carouselView.ScrollTo(6);
 ```
 
 > [!NOTE]
-> L'evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) viene generato quando viene richiamato il metodo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) .
+> L' [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento viene generato quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) viene richiamato il metodo.
 
 ## <a name="scroll-an-item-into-view"></a>Scorrere un elemento nella visualizzazione
 
-Il secondo overload del metodo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) scorre l'elemento specificato nella visualizzazione. Dato un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) denominato `carouselView`, nell'esempio seguente viene illustrato come scorrere l'elemento della scimmia proboscide nella visualizzazione:
+Il secondo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) Overload del metodo scorre l'elemento specificato nella visualizzazione. Dato un [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto denominato `carouselView` , l'esempio seguente mostra come scorrere l'elemento della scimmia proboscide nella visualizzazione:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -103,13 +106,13 @@ carouselView.ScrollTo(monkey);
 ```
 
 > [!NOTE]
-> L'evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) viene generato quando viene richiamato il metodo [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) .
+> L' [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento viene generato quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) viene richiamato il metodo.
 
 ## <a name="disable-scroll-animation"></a>Disabilita animazione Scroll
 
-Quando si sposta tra gli elementi di un [`CarouselView`](xref:Xamarin.Forms.CarouselView), viene visualizzata un'animazione di scorrimento. Questa animazione si verifica sia per gli scorrimenti avviati dall'utente sia per gli scorrimenti a livello di codice. Se si imposta la proprietà `IsScrollAnimated` su `false`, l'animazione viene disabilitata per entrambe le categorie di scorrimento.
+Quando si sposta tra gli elementi di un oggetto, viene visualizzata un'animazione di scorrimento [`CarouselView`](xref:Xamarin.Forms.CarouselView) . Questa animazione si verifica sia per gli scorrimenti avviati dall'utente sia per gli scorrimenti a livello di codice. Se si imposta la `IsScrollAnimated` proprietà su `false` , l'animazione viene disabilitata per entrambe le categorie di scorrimento.
 
-In alternativa, è possibile impostare l'argomento `animate` del metodo `ScrollTo` su `false` per disabilitare l'animazione di scorrimento negli scorrimenti a livello di codice:
+In alternativa, l' `animate` argomento del `ScrollTo` metodo può essere impostato su `false` per disabilitare l'animazione di scorrimento negli scorrimenti a livello di codice:
 
 ```csharp
 carouselView.ScrollTo(monkey, animate: false);
@@ -117,11 +120,11 @@ carouselView.ScrollTo(monkey, animate: false);
 
 ## <a name="control-scroll-position"></a>Posizione di scorrimento del controllo
 
-Quando si scorre un elemento nella visualizzazione, è possibile specificare la posizione esatta dell'elemento dopo il completamento dello scorrimento con l'argomento `position` dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Questo argomento accetta un membro di enumerazione [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) .
+Quando si scorre un elemento nella visualizzazione, è possibile specificare la posizione esatta dell'elemento dopo il completamento dello scorrimento con l' `position` argomento dei [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) metodi. Questo argomento accetta un [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) membro di enumerazione.
 
 ### <a name="makevisible"></a>MakeVisible
 
-Il membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato fino a quando non è visibile nella visualizzazione:
+Il [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro indica che l'elemento deve essere spostato fino a quando non è visibile nella visualizzazione:
 
 ```csharp
 carouselView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
@@ -130,11 +133,11 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 Questo codice di esempio genera lo scorrimento minimo necessario per scorrere l'elemento nella visualizzazione.
 
 > [!NOTE]
-> Il membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) viene usato per impostazione predefinita, se non viene specificato l'argomento `position` quando si chiama il metodo di `ScrollTo`.
+> Il [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro viene usato per impostazione predefinita, se l' `position` argomento non viene specificato quando si chiama il `ScrollTo` metodo.
 
-### <a name="start"></a>Inizia
+### <a name="start"></a>Avvio
 
-Il membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato all'inizio della visualizzazione:
+Il [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) membro indica che l'elemento deve essere spostato all'inizio della visualizzazione:
 
 ```csharp
 carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
@@ -144,7 +147,7 @@ Questo esempio di codice comporta lo scorrimento dell'elemento all'inizio della 
 
 ### <a name="center"></a>Center
 
-Il membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato al centro della visualizzazione:
+Il [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) membro indica che l'elemento deve essere spostato al centro della visualizzazione:
 
 ```csharp
 carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
@@ -154,7 +157,7 @@ Questo esempio di codice comporta lo scorrimento dell'elemento al centro della v
 
 ### <a name="end"></a>Fine
 
-Il membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica che l'elemento deve essere spostato alla fine della visualizzazione:
+Il [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) membro indica che l'elemento deve essere spostato alla fine della visualizzazione:
 
 ```csharp
 carouselViewView.ScrollTo(monkey, position: ScrollToPosition.End);
@@ -164,13 +167,13 @@ Questo esempio di codice comporta lo scorrimento dell'elemento alla fine della v
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Posizione di scorrimento del controllo quando vengono aggiunti nuovi elementi
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce una proprietà `ItemsUpdatingScrollMode`, supportata da una proprietà associabile. Questa proprietà Ottiene o imposta un valore di enumerazione `ItemsUpdatingScrollMode` che rappresenta il comportamento di scorrimento della `CarouselView` quando vengono aggiunti nuovi elementi. L'enumerazione `ItemsUpdatingScrollMode` definisce i membri seguenti:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce una `ItemsUpdatingScrollMode` proprietà, supportata da una proprietà associabile. Questa proprietà Ottiene o imposta un `ItemsUpdatingScrollMode` valore di enumerazione che rappresenta il comportamento di scorrimento di `CarouselView` quando vengono aggiunti nuovi elementi. L'enumerazione `ItemsUpdatingScrollMode` definisce i membri seguenti:
 
-- `KeepItemsInView` regola l'offset di scorrimento per tenere visualizzato il primo elemento visibile quando vengono aggiunti nuovi elementi.
-- `KeepScrollOffset` gestisce l'offset di scorrimento relativo all'inizio dell'elenco quando vengono aggiunti nuovi elementi.
-- `KeepLastItemInView` regola l'offset di scorrimento per rendere visibile l'ultimo elemento quando vengono aggiunti nuovi elementi.
+- `KeepItemsInView`regola l'offset di scorrimento per tenere visualizzato il primo elemento visibile quando vengono aggiunti nuovi elementi.
+- `KeepScrollOffset`mantiene l'offset di scorrimento relativo all'inizio dell'elenco quando vengono aggiunti nuovi elementi.
+- `KeepLastItemInView`regola l'offset di scorrimento per tenere visibile l'ultimo elemento quando vengono aggiunti nuovi elementi.
 
-Il valore predefinito della proprietà `ItemsUpdatingScrollMode` è `KeepItemsInView`. Pertanto, quando vengono aggiunti nuovi elementi a una [`CarouselView`](xref:Xamarin.Forms.CarouselView) il primo elemento visibile nell'elenco rimarrà visualizzato. Per assicurarsi che gli elementi appena aggiunti siano sempre visibili nella parte inferiore dell'elenco, è necessario impostare la proprietà `ItemsUpdatingScrollMode` su `KeepLastItemInView`:
+Il valore predefinito della `ItemsUpdatingScrollMode` proprietà è `KeepItemsInView` . Pertanto, quando vengono aggiunti nuovi elementi a un oggetto, [`CarouselView`](xref:Xamarin.Forms.CarouselView) il primo elemento visibile nell'elenco rimarrà visualizzato. Per assicurarsi che gli elementi appena aggiunti siano sempre visibili nella parte inferiore dell'elenco, la `ItemsUpdatingScrollMode` proprietà deve essere impostata su `KeepLastItemInView` :
 
 ```xaml
 <CarouselView ItemsUpdatingScrollMode="KeepLastItemInView">
@@ -189,48 +192,48 @@ CarouselView carouselView = new CarouselView
 
 ## <a name="scroll-bar-visibility"></a>Visibilità della barra di scorrimento
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` proprietà, supportate da proprietà associabili. Queste proprietà ottengono o impostano un valore di enumerazione [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) che rappresenta quando la barra di scorrimento orizzontale o verticale è visibile. L'enumerazione `ScrollBarVisibility` definisce i membri seguenti:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce `HorizontalScrollBarVisibility` le `VerticalScrollBarVisibility` proprietà e, supportate da proprietà associabili. Queste proprietà ottengono o impostano un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valore di enumerazione che rappresenta quando la barra di scorrimento orizzontale o verticale è visibile. L'enumerazione `ScrollBarVisibility` definisce i membri seguenti:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica il comportamento predefinito della barra di scorrimento per la piattaforma ed è il valore predefinito per le proprietà `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility`.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento saranno visibili, anche quando il contenuto si adatterà alla visualizzazione.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non saranno visibili, anche se il contenuto non rientra nella visualizzazione.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica il comportamento predefinito della barra di scorrimento per la piattaforma e è il valore predefinito per `HorizontalScrollBarVisibility` le `VerticalScrollBarVisibility` proprietà e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica che le barre di scorrimento saranno visibili, anche quando il contenuto si adatterà alla visualizzazione.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica che le barre di scorrimento non saranno visibili, anche se il contenuto non rientra nella visualizzazione.
 
-## <a name="snap-points"></a>Punti di aggancio
+## <a name="snap-points"></a>Punti di ancoraggio
 
-Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto ed è controllato dalle proprietà seguenti della classe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
+Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto ed è controllato dalle proprietà seguenti della [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) classe:
 
-- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType), specifica il comportamento dei punti di blocco durante lo scorrimento.
-- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), specifica il modo in cui i punti di allineamento sono allineati con gli elementi.
+- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) , specifica il comportamento dei punti di blocco durante lo scorrimento.
+- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) , specifica il modo in cui i punti di allineamento sono allineati con gli elementi.
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati.
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
 > [!NOTE]
 > Quando si verifica il blocco, si verificherà nella direzione che produce il minor numero di movimento.
 
 ### <a name="snap-points-type"></a>Tipo di punti di aggancio
 
-L'enumerazione [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) definisce i membri seguenti:
+L' [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumerazione definisce i membri seguenti:
 
-- `None` indica che lo scorrimento non si blocca sugli elementi.
-- `Mandatory` indica che il contenuto viene sempre agganciato al punto di blocco più vicino alla posizione in cui lo scorrimento viene naturalmente interrotto, lungo la direzione di inerzia.
-- `MandatorySingle` indica lo stesso comportamento `Mandatory`, ma scorre un solo elemento alla volta.
+- `None`indica che lo scorrimento non si blocca sugli elementi.
+- `Mandatory`indica che il contenuto viene sempre agganciato al punto di aggancio più vicino alla posizione in cui lo scorrimento viene naturalmente interrotto, lungo la direzione di inerzia.
+- `MandatorySingle`indica lo stesso comportamento di `Mandatory` , ma scorre un solo elemento alla volta.
 
-Per impostazione predefinita, in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `SnapPointsType.MandatorySingle`, in modo da garantire che lo scorrimento scorra un solo elemento alla volta.
+Per impostazione predefinita [`CarouselView`](xref:Xamarin.Forms.CarouselView) , la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) proprietà è impostata su, in modo da `SnapPointsType.MandatorySingle` garantire che lo scorrimento scorra un solo elemento alla volta.
 
-Gli screenshot seguenti mostrano un [`CarouselView`](xref:Xamarin.Forms.CarouselView) con l'allineamento disattivato:
+Gli screenshot seguenti mostrano un [`CarouselView`](xref:Xamarin.Forms.CarouselView) con blocco disattivato:
 
 [![Screenshot di un CarouselView senza punti di aggancio, in iOS e Android](scrolling-images/snappoints-none.png "CarouselView senza punti di aggancio")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView senza punti di aggancio")
 
 ### <a name="snap-points-alignment"></a>Allineamento punti di aggancio
 
-L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center`e `End`.
+L' [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumerazione definisce `Start` `Center` `End` i membri, e.
 
 > [!IMPORTANT]
-> Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory`o `MandatorySingle`.
+> Il valore della [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) proprietà viene rispettato solo quando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) proprietà è impostata su `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Inizia
+#### <a name="start"></a>Avvio
 
-Il membro `SnapPointsAlignment.Start` indica che i punti di allineamento sono allineati al bordo di elementi iniziali. Nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
+Il `SnapPointsAlignment.Start` membro indica che i punti di allineamento sono allineati al bordo di elementi iniziali. Nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
@@ -258,15 +261,15 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento a sinistra verrà allineato a sinistra della visualizzazione:
+Quando un utente scorre per avviare uno scorrimento in uno scorrimento orizzontale [`CarouselView`](xref:Xamarin.Forms.CarouselView) , l'elemento a sinistra verrà allineato a sinistra della visualizzazione:
 
 [![Screenshot di un CarouselView con punti di aggancio iniziali, in iOS e Android](scrolling-images/snappoints-start.png "CarouselView con punti di aggancio iniziali")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView con punti di aggancio iniziali")
 
 #### <a name="center"></a>Center
 
-Il membro `SnapPointsAlignment.Center` indica che i punti di allineamento sono allineati al centro di elementi.
+Il `SnapPointsAlignment.Center` membro indica che i punti di allineamento sono allineati al centro di elementi.
 
-Per impostazione predefinita, in un [`CarouselView`](xref:Xamarin.Forms.CarouselView)la proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) è impostata su `Center`. Per completezza, tuttavia, nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
+Per impostazione predefinita [`CarouselView`](xref:Xamarin.Forms.CarouselView) , la [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) proprietà viene impostata su `Center` . Per completezza, tuttavia, nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
@@ -294,13 +297,13 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento centrale verrà allineato al centro della visualizzazione:
+Quando un utente scorre per avviare uno scorrimento in uno scorrimento orizzontale [`CarouselView`](xref:Xamarin.Forms.CarouselView) , l'elemento centrale verrà allineato al centro della visualizzazione:
 
 [![Screenshot di un CarouselView con punti di allineamento al centro, in iOS e Android](scrolling-images/snappoints-center.png "CarouselView con punti di allineamento centrali")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView con punti di allineamento centrali")
 
 #### <a name="end"></a>Fine
 
-Il membro `SnapPointsAlignment.End` indica che i punti di allineamento sono allineati al bordo finale degli elementi. Nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
+Il `SnapPointsAlignment.End` membro indica che i punti di allineamento sono allineati al bordo finale degli elementi. Nell'esempio di codice XAML riportato di seguito viene illustrato come impostare questo membro di enumerazione:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
@@ -328,7 +331,7 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando un utente scorre un dito per avviare uno scorrimento in una [`CarouselView`](xref:Xamarin.Forms.CarouselView)a scorrimento orizzontale, l'elemento a destra verrà allineato a destra della visualizzazione.
+Quando un utente scorre per avviare uno scorrimento in uno scorrimento orizzontale [`CarouselView`](xref:Xamarin.Forms.CarouselView) , l'elemento a destra verrà allineato a destra della visualizzazione.
 
 [![Screenshot di un CarouselView con punti di blocco finali, in iOS e Android](scrolling-images/snappoints-end.png "CarouselView con punti di allineamento finali")](scrolling-images/snappoints-end-large.png#lightbox "CarouselView con punti di allineamento finali")
 

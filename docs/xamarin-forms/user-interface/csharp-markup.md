@@ -1,37 +1,40 @@
 ---
-title: Markup C# di Novell. Forms
-description: Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di compilazione di interfacce utente Novell. Forms dichiarative in C#.
-ms.prod: xamarin
-ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4fa8397dafbbdd836f88193081720b4960f1ce5d
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsMarkup C#
+description: Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di creazione di interfacce utente dichiarative Xamarin.Forms in c#.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425816"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137748"
 ---
-# <a name="xamarinforms-c-markup"></a>Markup C# di Novell. Forms
+# <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarkup C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
-Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di compilazione di interfacce utente Novell. Forms dichiarative in C#. L'API Fluent fornita dal markup C# è disponibile nello `Xamarin.Forms.Markup` spazio dei nomi.
+Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di creazione di interfacce utente dichiarative Xamarin.Forms in c#. L'API Fluent fornita dal markup C# è disponibile nello `Xamarin.Forms.Markup` spazio dei nomi.
 
 Analogamente a XAML, il markup C# consente una netta separazione tra il markup dell'interfaccia utente e la logica dell'interfaccia utente. Questa operazione può essere eseguita separando il markup dell'interfaccia utente e la logica dell'interfaccia utente in file di classe parziali distinti. Per una pagina di accesso, ad esempio, il markup dell'interfaccia utente si trova in un file denominato *LoginPage.cs*, mentre la logica dell'interfaccia utente si trova in un file denominato *LoginPage.Logic.cs*.
 
-Il markup C# è disponibile da Novell. Forms 4,6. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente al file *app.cs* :
+Il markup C# è disponibile da Xamarin.Forms 4,6. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la riga di codice seguente al file *app.cs* :
 
 ```csharp
 Device.SetFlags(new string[]{ "Markup_Experimental" });
 ```
 
 > [!NOTE]
-> Il markup C# è disponibile in tutte le piattaforme supportate da Novell. Forms.
+> Il markup C# è disponibile in tutte le piattaforme supportate da Xamarin.Forms .
 
 ## <a name="basic-example"></a>Esempio di base
 
@@ -89,7 +92,7 @@ Questo esempio è identico all'esempio precedente, ma l'API di markup Fluent C# 
 
 ## <a name="data-binding"></a>Data binding
 
-Il markup C# include un `Bind` metodo di estensione, insieme agli overload, che crea un data binding tra una proprietà View associable e una proprietà specificata. Il `Bind` Metodo conosce la proprietà associabile predefinita per la maggior parte dei controlli inclusi in Novell. Forms. Pertanto, in genere non è necessario specificare la proprietà di destinazione quando si usa questo metodo. Tuttavia, è anche possibile registrare la proprietà associabile predefinita per altri controlli:
+Il markup C# include un `Bind` metodo di estensione, insieme agli overload, che crea un data binding tra una proprietà View associable e una proprietà specificata. Il `Bind` Metodo conosce la proprietà associabile predefinita per la maggior parte dei controlli inclusi in Xamarin.Forms . Pertanto, in genere non è necessario specificare la proprietà di destinazione quando si usa questo metodo. Tuttavia, è anche possibile registrare la proprietà associabile predefinita per altri controlli:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -354,7 +357,7 @@ new Grid
 }
 ```
 
-## <a name="fonts"></a>Tipi di carattere
+## <a name="fonts"></a>Fonts
 
 I controlli nell'elenco seguente possono chiamare i `FontSize` metodi di `Bold` estensione,, `Italic` e `Font` per impostare l'aspetto del testo visualizzato dal controllo:
 

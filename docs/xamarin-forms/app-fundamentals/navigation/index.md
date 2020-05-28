@@ -1,43 +1,46 @@
 ---
-title: Navigazione in Xamarin.Forms
-description: Questa guida illustra come spostarsi nelle applicazioni Xamarin.Forms. Xamarin.Forms offre diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina in uso.
-ms.prod: xamarin
-ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 682e3bd0ac4cdd651203496dd28586db2cef3165
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsNavigazione
+description: Questa guida illustra come eseguire la navigazione nelle Xamarin.Forms app. Xamarin.Formsin sono disponibili diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina utilizzato.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66835258"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137839"
 ---
-# <a name="xamarinforms-navigation"></a>Navigazione in Xamarin.Forms
+# <a name="xamarinforms-navigation"></a>Xamarin.FormsNavigazione
 
-_In Xamarin.Forms sono disponibili diverse esperienze di spostamento tra le pagine, a seconda del tipo di Pagina in uso._
+_Novell. Forms fornisce una serie di diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina usato._
 
 ![](images/page-types.png "Xamarin.Forms Page Types")
 
-In alternativa, le applicazioni Xamarin.Forms Shell usano un'esperienza di navigazione basata su URI che non impone una gerarchia di navigazione preimpostata. Per altre informazioni, vedere [Navigazione nella shell Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/navigation.md).
+In alternativa, Xamarin.Forms le applicazioni shell utilizzano un'esperienza di navigazione basata su URI che non impone una gerarchia di navigazione set. Per altre informazioni, vedere [ Xamarin.Forms navigazione della shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 
 ## <a name="hierarchical-navigation"></a>[Navigazione gerarchica](hierarchical.md)
 
-La [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe offre un'esperienza di spostamento gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, come desiderato. La classe implementa la navigazione come stack di [`Page`](xref:Xamarin.Forms.Page) oggetti LIFO (Last-In, First-Out).
+La [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe fornisce un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. La classe implementa la navigazione come stack LIFO (Last-in, First-out) di [`Page`](xref:Xamarin.Forms.Page) oggetti.
 
 ## <a name="tabbedpage"></a>[TabbedPage](tabbed-page.md)
 
-Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) è costituito da un elenco di schede e un'area di dettaglio più grande, con ogni scheda che carica il contenuto nell'area di dettaglio.
+Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) È costituito da un elenco di schede e da un'area di dettaglio più ampia, in cui ogni scheda carica contenuto nell'area dei dettagli.
 
 ## <a name="carouselpage"></a>[CarouselPage](carousel-page.md)
 
-Xamarin.Forms [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) è una pagina che gli utenti possono scorrere da un lato all'altro per spostarsi tra le pagine di contenuto, ad esempio una galleria.
+Xamarin.Forms [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) È una pagina che gli utenti possono scorrere da un lato all'altro per spostarsi tra le pagine di contenuto, ad esempio una raccolta.
 
 ## <a name="masterdetailpage"></a>[MasterDetailPage](master-detail-page.md)
 
-Il Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) è una pagina che gestisce due pagine di informazioni correlate , una pagina master che presenta gli elementi e una pagina di dettaglio che presenta i dettagli sugli elementi nella pagina master.
+Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) È una pagina che gestisce due pagine di informazioni correlate, ovvero una pagina master che presenta elementi, e una pagina di dettaglio che presenta informazioni dettagliate sugli elementi della pagina master.
 
 ## <a name="modal-pages"></a>[Pagine modali](modal.md)
 
-Xamarin.Forms offre anche il supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata.
+Xamarin.Formsfornisce inoltre il supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata.

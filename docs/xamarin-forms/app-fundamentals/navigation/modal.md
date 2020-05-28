@@ -1,24 +1,27 @@
 ---
-title: Pagine modali Xamarin.Forms
-description: Xamarin.Forms dispone di supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata. Questo articolo illustra come spostarsi tra pagine modali.
-ms.prod: xamarin
-ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 7a4c67f067b73873c3d1de4499abda2703217ddf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsPagine modali
+description: Xamarin.Formsfornisce supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata. Questo articolo illustra come spostarsi tra pagine modali.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760830"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137826"
 ---
-# <a name="xamarinforms-modal-pages"></a>Pagine modali Xamarin.Forms
+# <a name="xamarinforms-modal-pages"></a>Xamarin.FormsPagine modali
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
-_Xamarin.Forms fornisce il supporto per le pagine modali. Una pagina modale incoraggia gli utenti a completare un'attività indipendente da cui non è possibile spostarsi fino a quando l'attività non viene completata o annullata. In questo articolo viene illustrato come passare alle pagine modali._
+_Novell. Forms fornisce il supporto per le pagine modali. Una pagina modale consiglia agli utenti di completare un'attività autonoma che non può essere spostata da finché l'attività non viene completata o annullata. Questo articolo illustra come passare alle pagine modali._
 
 Questo articolo tratta gli argomenti seguenti:
 
@@ -27,7 +30,7 @@ Questo articolo tratta gli argomenti seguenti:
 
 ## <a name="overview"></a>Panoramica
 
-Una pagina modale può essere di uno qualsiasi dei tipi [Page](~/xamarin-forms/user-interface/controls/pages.md) supportati da Xamarin.Forms. Per visualizzare una pagina modale, l'applicazione ne eseguirà il push nello stack modale, in cui diventerà la pagina attiva, come illustrato nel diagramma seguente:
+Una pagina modale può essere qualsiasi tipo di [pagina](~/xamarin-forms/user-interface/controls/pages.md) supportata da Xamarin.Forms . Per visualizzare una pagina modale, l'applicazione ne eseguirà il push nello stack modale, in cui diventerà la pagina attiva, come illustrato nel diagramma seguente:
 
 ![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
 
@@ -39,18 +42,18 @@ Per tornare alla pagina precedente, l'applicazione preleverà la pagina corrente
 
 ## <a name="performing-navigation"></a>Esecuzione degli spostamenti
 
-I metodi di navigazione [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) modali [`Page`](xref:Xamarin.Forms.Page) vengono esposti dalla proprietà in qualsiasi tipo derivato. Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#Pushing_Pages_to_the_Modal_Stack) nello stack modale e di [prelevare le pagine modali](#Popping_Pages_from_the_Modal_Stack) dallo stack modale.
+I metodi di navigazione modale sono esposti dalla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà su tutti i [`Page`](xref:Xamarin.Forms.Page) tipi derivati. Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#Pushing_Pages_to_the_Modal_Stack) nello stack modale e di [prelevare le pagine modali](#Popping_Pages_from_the_Modal_Stack) dallo stack modale.
 
-La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà espone [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) anche una proprietà da cui è possibile ottenere le pagine modali nello stack modale. Tuttavia non esiste nessun concetto di gestione modale dello stack o di prelievo e attivazione della pagina radice nella navigazione modale. Queste operazioni non sono supportate in tutti i casi sulle piattaforme sottostanti.
+La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà espone anche una [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) proprietà dalla quale è possibile ottenere le pagine modali nello stack modale. Tuttavia non esiste nessun concetto di gestione modale dello stack o di prelievo e attivazione della pagina radice nella navigazione modale. Queste operazioni non sono supportate in tutti i casi sulle piattaforme sottostanti.
 
 > [!NOTE]
-> Un'istanza [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) non è necessaria per l'esecuzione dello spostamento tra le pagine modale.
+> Un' [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) istanza non è necessaria per eseguire la navigazione modale della pagina.
 
 <a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Push delle pagine nello stack modale
 
-Per passare `ModalPage` all'oggetto è [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) necessario richiamare il metodo sulla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà della pagina corrente, come illustrato nell'esempio di codice seguente:
+Per passare a, `ModalPage` è necessario richiamare il [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) Metodo sulla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà della pagina corrente, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -63,20 +66,20 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 }
 ```
 
-In questo `ModalPage` modo l'istanza da inserire nello stack modale, dove diventa la pagina [`ListView`](xref:Xamarin.Forms.ListView) attiva, a condizione che sia stato selezionato un elemento nella nell'istanza. `MainPage` L'istanza di `ModalPage` è illustrata negli screenshot seguenti:
+In questo modo l' `ModalPage` istanza viene inserita nello stack modale, in cui diventa la pagina attiva, purché sia stato selezionato un elemento in nell' [`ListView`](xref:Xamarin.Forms.ListView) `MainPage` istanza. L'istanza di `ModalPage` è illustrata negli screenshot seguenti:
 
 ![](modal-images/modalpage.png "Modal Page Example")
 
-Quando [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) viene richiamato, si verificano i seguenti eventi:
+Quando [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) viene richiamato, si verificano gli eventi seguenti:
 
-- La chiamata `PushModalAsync` di [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) pagina ha il proprio override richiamato, purché la piattaforma sottostante non è Android.The page calling has its override invoked, provided that the underlying platform isn't Android.
-- Il relativo [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override della pagina a cui ci si sposta viene richiamato.
+- Per la chiamata della pagina `PushModalAsync` è stato [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) richiamato il relativo override, purché la piattaforma sottostante non sia Android.
+- Viene richiamata la sostituzione della pagina a cui è stato eseguito lo spostamento [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) .
 - L'attività `PushAsync` viene completata.
 
-Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro Xamarin.Forms di Charles Petzold.
+Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro di Charles Petzold Xamarin.Forms .
 
 > [!NOTE]
-> Le chiamate [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) alle sostituzioni e non possono essere considerate come indicazioni garantite di navigazione tra le pagine. Ad esempio, in iOS l'override di `OnDisappearing` viene chiamato per la pagina attiva quando l'applicazione viene terminata.
+> Le chiamate a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) e le [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sostituzioni non possono essere considerate come indicazioni garantite della navigazione tra le pagine. Ad esempio, in iOS l'override di `OnDisappearing` viene chiamato per la pagina attiva quando l'applicazione viene terminata.
 
 <a name="Popping_Pages_from_the_Modal_Stack" />
 
@@ -84,7 +87,7 @@ Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dall
 
 La pagina attiva può essere prelevata dallo stack modale premendo il pulsante *Indietro* del dispositivo, indipendentemente dal fatto che sia un pulsante fisico del dispositivo o un pulsante su schermo.
 
-Per tornare a livello di `ModalPage` codice alla [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) pagina originale, l'istanza deve richiamare il metodo, come illustrato nell'esempio di codice seguente:To programmatically return to the original page, the instance must invoke the method, as demonstrated in the following code example:
+Per tornare a livello di codice alla pagina originale, l' `ModalPage` istanza deve richiamare il [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) metodo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnDismissButtonClicked (object sender, EventArgs args)
@@ -93,21 +96,21 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 }
 ```
 
-Di conseguenza, l'istanza di `ModalPage` viene rimossa dallo stack modale e la nuova pagina in primo piano diventa la pagina attiva. Quando [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) viene richiamato, si verificano i seguenti eventi:
+Di conseguenza, l'istanza di `ModalPage` viene rimossa dallo stack modale e la nuova pagina in primo piano diventa la pagina attiva. Quando [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) viene richiamato, si verificano gli eventi seguenti:
 
-- Il relativo `PopModalAsync` [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override richiamato nella chiamata di pagina viene richiamato.
-- La pagina restituita a [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) ha il suo override richiamato, purché la piattaforma sottostante non è Android.The page being returned to has its override invoked, provided that the underlying platform isn't Android.
+- Per la chiamata della pagina `PopModalAsync` è stato [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) richiamato il relativo override.
+- Viene richiamata la sostituzione della pagina a cui è stato [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) richiamato, purché la piattaforma sottostante non sia Android.
 - L'attività `PopModalAsync` viene completata.
 
-Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro Xamarin.Forms di Charles Petzold.
+Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro di Charles Petzold Xamarin.Forms .
 
 ### <a name="disabling-the-back-button"></a>Disabilitazione del pulsante Indietro
 
-In Android, l'utente può sempre tornare alla pagina precedente premendo il pulsante *Indietro* standard sul dispositivo. Se la pagina modale richiede all'utente di completare un'attività indipendente prima di lasciare la pagina, l'applicazione deve disabilitare il pulsante *Indietro*. Questa operazione può essere eseguita eseguendo l'override del [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) metodo nella pagina modale. Per altre informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del manuale di Xamarin.Forms redatto da Charles Petzold.
+In Android, l'utente può sempre tornare alla pagina precedente premendo il pulsante *Indietro* standard sul dispositivo. Se la pagina modale richiede all'utente di completare un'attività indipendente prima di lasciare la pagina, l'applicazione deve disabilitare il pulsante *Indietro*. Questa operazione può essere eseguita eseguendo l'override del [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) metodo nella pagina modale. Per ulteriori informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro di Charles Petzold Xamarin.Forms .
 
 ### <a name="animating-page-transitions"></a>Animazione delle transizioni di pagina
 
-La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di ogni pagina fornisce anche metodi `boolean` push e pop sottoposti a override che includono un parametro che controlla se visualizzare un'animazione di pagina durante la navigazione, come illustrato nell'esempio di codice seguente:The property of each page also provides overridden push and pop methods that include a parameter that controls whether to display a page animation during navigation, as shown in the following code example:
+La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà di ogni pagina fornisce anche metodi push e pop sottoposti a override che includono un `boolean` parametro che controlla se visualizzare un'animazione di pagina durante la navigazione, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -129,7 +132,7 @@ L'impostazione del parametro `boolean` su `false` disabilita l'animazione per la
 
 ## <a name="passing-data-when-navigating"></a>Passaggio di dati durante gli spostamenti
 
-In alcuni casi, una pagina deve passare dati a un'altra pagina durante gli spostamenti. Due tecniche per eseguire questa operazione sono passando i dati attraverso un [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) costruttore di pagina e impostando la nuova pagina per i dati. Di seguito verranno descritti entrambi.
+In alcuni casi, una pagina deve passare dati a un'altra pagina durante gli spostamenti. Due tecniche per eseguire questa operazione sono il passaggio dei dati tramite un costruttore di pagina e l'impostazione della nuova pagina sui [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dati. Di seguito verranno descritti entrambi.
 
 ### <a name="passing-data-through-a-page-constructor"></a>Passaggio dei dati tramite un costruttore di pagina
 
@@ -154,11 +157,11 @@ public MainPage (string date)
 }
 ```
 
-I dati vengono quindi visualizzati nella [`Label.Text`](xref:Xamarin.Forms.Label.Text) pagina impostando la proprietà .
+I dati vengono quindi visualizzati nella pagina impostando la [`Label.Text`](xref:Xamarin.Forms.Label.Text) Proprietà.
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Passaggio dei dati tramite BindingContext
 
-Un approccio alternativo per il passaggio di dati a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) un'altra pagina durante la navigazione consiste nell'impostare la nuova pagina sui dati, come illustrato nell'esempio di codice seguente:An alternative approach for passing data to another page during navigation is by setting the new page's to the data, as shown in the following code example:
+Un approccio alternativo per passare i dati a un'altra pagina durante la navigazione consiste nell'impostare la nuova pagina sui [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dati, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -172,7 +175,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 }
 ```
 
-Questo codice [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) imposta `DetailPage` l'istanza `Contact` sull'istanza, quindi `DetailPage`passa all'oggetto .
+Questo codice imposta l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dell' `DetailPage` istanza sull' `Contact` istanza di, quindi passa a `DetailPage` .
 
 `DetailPage` usa quindi il data binding per visualizzare i dati dell'istanza di `Contact`, come illustrato nell'esempio di codice XAML seguente:
 
@@ -250,7 +253,7 @@ public class DetailPageCS : ContentPage
 }
 ```
 
-I dati vengono quindi visualizzati nella [`Label`](xref:Xamarin.Forms.Label) pagina da una serie di controlli.
+I dati vengono quindi visualizzati nella pagina da una serie di [`Label`](xref:Xamarin.Forms.Label) controlli.
 
 Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/index.md) (Nozioni di base sul data binding).
 
@@ -260,6 +263,6 @@ In questo articolo è stato illustrato come spostarsi tra pagine modali. Una pag
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Navigazione tra le pagine](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
+- [Navigazione tra pagine](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal) (Esempio di pagina modale)
 - [Passing Data (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (Esempio di passaggio dei dati)

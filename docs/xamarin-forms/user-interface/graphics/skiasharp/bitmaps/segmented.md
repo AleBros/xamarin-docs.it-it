@@ -1,50 +1,53 @@
 ---
-title: Visualizzazione segmentata del bitmap di SkiaSharp
-description: Visualizzare una bitmap di SkiaSharp in modo che alcuni area viene allungato e non sono alcune aree.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: ca6c8fafe4352bac83e5ae60b43627d4c7fdc10f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648675"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138671"
 ---
-# <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualizzazione segmentata del bitmap di SkiaSharp
+# <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualizzazione segmentata delle bitmap SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Di SkiaSharp `SKCanvas` oggetto definisce un metodo denominato `DrawBitmapNinePatch` e due metodi denominati `DrawBitmapLattice` che sono molto simili. Entrambi questi metodi eseguire il rendering di una bitmap per le dimensioni di un rettangolo di destinazione, ma invece di adattamento della bitmap in modo uniforme, visualizzare parti della bitmap in relative dimensioni in pixel e stretch altre parti della bitmap in modo che quest'ultima rientri il rettangolo:
+L' `SKCanvas` oggetto SkiaSharp definisce un metodo denominato `DrawBitmapNinePatch` e due metodi denominati `DrawBitmapLattice` molto simili. Entrambi questi metodi eseguono il rendering di una bitmap sulle dimensioni di un rettangolo di destinazione, ma invece di allungare la bitmap in modo uniforme, visualizzano parti della bitmap nelle dimensioni dei pixel ed estendono altre parti della bitmap in modo che corrispondano al rettangolo:
 
-![Segmentato campioni](segmented-images/SegmentedSample.png "segmentata di esempio")
+![Esempi segmentati](segmented-images/SegmentedSample.png "Esempio segmentato")
 
-Questi metodi vengono in genere usati per il rendering di bitmap che fanno parte di oggetti dell'interfaccia utente, ad esempio i pulsanti. Quando si progetta un pulsante, in generale è consigliabile la dimensione di un pulsante deve essere basato sul contenuto del pulsante, ma è preferibile il bordo del pulsante per la stessa larghezza indipendentemente dal contenuto del pulsante. Che è un'applicazione ideale di `DrawBitmapNinePatch`.
+Questi metodi vengono in genere utilizzati per il rendering di bitmap che fanno parte di oggetti dell'interfaccia utente, ad esempio i pulsanti. Quando si progetta un pulsante, in genere si vuole che le dimensioni di un pulsante siano basate sul contenuto del pulsante, ma è probabile che il bordo del pulsante sia la stessa larghezza indipendentemente dal contenuto del pulsante. Si tratta di un'applicazione ideale di `DrawBitmapNinePatch` .
 
-`DrawBitmapNinePatch` è un caso speciale di `DrawBitmapLattice` ma è il modo più semplice dei due metodi da utilizzare e comprendere.
+`DrawBitmapNinePatch`è un caso speciale di, `DrawBitmapLattice` ma è più semplice dei due metodi da usare e comprendere.
 
-## <a name="the-nine-patch-display"></a>La visualizzazione di nove-patch 
+## <a name="the-nine-patch-display"></a>Visualizzazione di nove patch 
 
-Concettualmente [ `DrawBitmapNinePatch` ](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divide una bitmap in nove rettangoli:
+Concettualmente, [`DrawBitmapNinePatch`](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divide una bitmap in nove rettangoli:
 
-![Patch di nove](segmented-images/NinePatch.png "nove Patch")
+![Nove patch](segmented-images/NinePatch.png "Nove patch")
 
-I rettangoli nei quattro angoli vengono visualizzati nelle relative dimensioni in pixel. Come le frecce indicano, le altre aree sui bordi della bitmap vengono allungate orizzontalmente o verticalmente all'area del rettangolo di destinazione. Il rettangolo al centro è esteso sia orizzontalmente che verticalmente. 
+I rettangoli ai quattro angoli vengono visualizzati nelle dimensioni dei pixel. Come indicato dalle frecce, le altre aree sui bordi della bitmap sono allungate orizzontalmente o verticalmente all'area del rettangolo di destinazione. Il rettangolo al centro è allungato orizzontalmente e verticalmente. 
 
-Se non vi è spazio sufficiente nel rettangolo di destinazione per visualizzare anche i quattro angoli nelle dimensioni in pixel, sono stati ridotti per le dimensioni disponibili e nothing ma vengono visualizzati i quattro angoli.
+Se lo spazio nel rettangolo di destinazione non è sufficiente per visualizzare anche i quattro angoli nelle dimensioni dei pixel, vengono ridimensionati fino alla dimensione disponibile e non vengono visualizzati i quattro angoli.
 
-Per dividere una bitmap in questi nove rettangoli, è necessario solo specificare il rettangolo al centro. Questa è la sintassi del `DrawBitmapNinePatch` metodo:
+Per dividere una bitmap in questi nove rettangoli, è sufficiente specificare il rettangolo al centro. Questa è la sintassi del `DrawBitmapNinePatch` Metodo:
 
 ```csharp
 canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 ```
 
-Il rettangolo centrale è relativo alla bitmap. Si tratta di un' `SKRectI` valore (la versione di numero intero di `SKRect`) e tutte le coordinate e le dimensioni sono espressi in unità di pixel. Il rettangolo di destinazione è relativo alla superficie di visualizzazione. L'argomento `paint` è facoltativo.
+Il rettangolo centrale è relativo alla bitmap. Si tratta di un `SKRectI` valore (la versione Integer di `SKRect` ) e tutte le coordinate e le dimensioni sono espresse in unità di pixel. Il rettangolo di destinazione è relativo alla superficie di visualizzazione. L'argomento `paint` è facoltativo.
 
-Il **nove Patch Display** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio Usa prima di tutto un costruttore statico per creare una proprietà statica pubblica di tipo `SKBitmap`:
+La pagina di **visualizzazione di nove patch** nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) USA innanzitutto un costruttore statico per creare una proprietà statica pubblica di tipo `SKBitmap` :
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -72,11 +75,11 @@ public partial class NinePatchDisplayPage : ContentPage
 }
 ```
 
-Due altre pagine in questo articolo usano la stessa bitmap. La bitmap è 500 pixel quadrati ed è costituito da una matrice di 25 cerchi, le stesse dimensioni, ogni che occupa un'area di quadrati di 100 pixel:
+Altre due pagine in questo articolo usano la stessa bitmap. La bitmap è 500 pixel al quadrato ed è costituita da una matrice di 25 cerchi, tutte le stesse dimensioni, ognuno dei quali occupa un'area quadrata di 100 pixel:
 
-![Cerchio griglia](segmented-images/CircleGrid.png "Circle griglia")
+![Griglia cerchio](segmented-images/CircleGrid.png "Griglia cerchio")
 
-Costruttore di istanza del programma crea un' `SKCanvasView` con un `PaintSurface` gestore che usa `DrawBitmapNinePatch` per visualizzare la bitmap allungata sulla sua superficie schermo intero:
+Il costruttore di istanze del programma crea un oggetto `SKCanvasView` con un `PaintSurface` gestore che utilizza `DrawBitmapNinePatch` per visualizzare la bitmap estesa all'intera superficie di visualizzazione:
 
 ```csharp
 public class NinePatchDisplayPage : ContentPage
@@ -105,45 +108,45 @@ public class NinePatchDisplayPage : ContentPage
 }
 ```
 
-Il `centerRect` rettangolo comprende la matrice centrale dei 16 cerchi. I cerchi negli angoli vengono visualizzati nelle dimensioni in pixel e tutto il resto viene adattata conseguenza:
+Il `centerRect` rettangolo comprende la matrice centrale di 16 cerchi. I cerchi negli angoli vengono visualizzati nelle dimensioni in pixel e tutti gli altri elementi vengono allungati di conseguenza:
 
-[![Visualizzazione di nove-Patch](segmented-images/NinePatchDisplay.png "Display nove-Patch")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![Visualizzazione a nove patch](segmented-images/NinePatchDisplay.png "Visualizzazione a nove patch")](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
-La pagina UWP è 500 pixel di larghezza e pertanto vengono visualizzate le righe superiore e inferiore come una serie di cerchi le stesse dimensioni. In caso contrario, tutti i cerchi che non sono presenti negli angoli vengono adattati in ellissi form.
+La pagina UWP ha una larghezza di 500 pixel, quindi Visualizza le righe superiore e inferiore come una serie di cerchi delle stesse dimensioni. In caso contrario, tutti i cerchi che non sono negli angoli vengono allungati per formare ellissi.
 
-Per una visualizzazione strano di oggetti costituiti da una combinazione di cerchi e sui puntini di sospensione, provare a eseguire che definisce il rettangolo di center in modo che si sovrappone a righe e colonne di cerchi:
+Per una visualizzazione sconosciuta di oggetti costituiti da una combinazione di cerchi e ellissi, provare a definire il rettangolo centrale in modo che si sovrappongano a righe e colonne di cerchi:
 
 ```csharp
 SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 ```
 
-## <a name="the-lattice-display"></a>La visualizzazione reticolo
+## <a name="the-lattice-display"></a>Visualizzazione Reticolo
 
-I due `DrawBitmapLattice` metodi sono simili a `DrawBitmapNinePatch`, ma sono generalizzati per qualsiasi numero di divisioni orizzontali o verticali. Queste divisioni sono definite da matrici di interi corrispondenti a pixel. 
+I due `DrawBitmapLattice` metodi sono simili a `DrawBitmapNinePatch` , ma sono generalizzati per un numero qualsiasi di divisioni orizzontali o verticali. Queste divisioni sono definite da matrici di numeri interi corrispondenti ai pixel. 
 
-Il [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con parametri per le matrici di interi non sembra funzionare. Il [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con un parametro di tipo `SKLattice` funziona, e che corrisponde a quella usata negli esempi illustrati di seguito.
+Il [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con parametri per queste matrici di integer non sembra funzionare. Il [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con un parametro di tipo funziona `SKLattice` e questo è quello usato negli esempi riportati di seguito.
 
-Il [ `SKLattice` ](xref:SkiaSharp.SKLattice) struttura definisce quattro proprietà:
+La [`SKLattice`](xref:SkiaSharp.SKLattice) struttura definisce quattro proprietà:
 
-- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), una matrice di interi
-- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), una matrice di interi
-- [`Flags`](xref:SkiaSharp.SKLattice.Flags), una matrice di `SKLatticeFlags`, un tipo di enumerazione
-- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) di tipo `Nullable<SKRectI>` per specificare un rettangolo di origine facoltativa della bitmap
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), una matrice di numeri interi
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), una matrice di numeri interi
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags), una matrice di `SKLatticeFlags` , un tipo di enumerazione
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds)di tipo `Nullable<SKRectI>` per specificare un rettangolo di origine facoltativo nella bitmap
 
-Il `XDivs` matrice divide la larghezza della bitmap in strisce verticali. La prima striscia si estende dal pixel da 0 a sinistra per `XDivs[0]`. Questo elenco viene visualizzato in larghezza in pixel. Elenco di secondo compreso tra `XDivs[0]` a `XDivs[1]`e viene ridimensionato. Il terzo elenco compreso tra `XDivs[1]` a `XDivs[2]` e viene eseguito il rendering nella relativa larghezza in pixel. Striscia di ultima compreso tra l'ultimo elemento della matrice e il bordo destro della bitmap. Se la matrice ha un numero pari di elementi, viene visualizzato nel relativo larghezza in pixel. In caso contrario, viene estesa. Il numero totale di Sfoglia verticale è una maggiore del numero di elementi nella matrice.
+La `XDivs` matrice divide la larghezza della bitmap in strisce verticali. La prima striscia si estende dal pixel 0 a sinistra a `XDivs[0]` . Il rendering di questa striscia viene eseguito con la larghezza in pixel. La seconda striscia si estende da `XDivs[0]` a `XDivs[1]` e viene allungata. La terza striscia si estende da `XDivs[1]` a e viene sottoposta `XDivs[2]` a rendering con la larghezza in pixel. L'ultima striscia si estende dall'ultimo elemento della matrice al bordo destro della bitmap. Se la matrice ha un numero pari di elementi, viene visualizzata con la larghezza in pixel. In caso contrario, viene esteso. Il numero totale di strisce verticali è maggiore di uno rispetto al numero di elementi nella matrice.
 
-Il `YDivs` matrice è simile. Divide l'altezza della matrice in strisce orizzontali.
+La `YDivs` matrice è simile. Divide l'altezza della matrice in strisce orizzontali.
 
-Insieme, il `XDivs` e `YDivs` matrice consentono di dividere la bitmap in rettangoli. Il numero di rettangoli è uguale al prodotto del numero di strisce orizzontali e il numero di strisce verticali.
+Insieme, la `XDivs` `YDivs` matrice e divide la bitmap in rettangoli. Il numero di rettangoli equivale al prodotto del numero di strisce orizzontali e al numero di strisce verticali.
 
-In base alla documentazione, Skia il `Flags` matrice contiene un elemento per ogni rettangolo, prima di tutto la riga superiore dei rettangoli, quindi la seconda riga e così via. Il `Flags` matrice è di tipo [ `SKLatticeFlags` ](xref:SkiaSharp.SKLatticeFlags), un'enumerazione con i membri seguenti:
+Secondo la documentazione di Skia, la `Flags` matrice contiene un elemento per ogni rettangolo, prima la riga superiore dei rettangoli, la seconda riga e così via. La `Flags` matrice è di tipo [`SKLatticeFlags`](xref:SkiaSharp.SKLatticeFlags) , un'enumerazione con i membri seguenti:
 
-- `Default` con il valore 0
-- `Transparent` con valore 1
+- `Default`con valore 0
+- `Transparent`con valore 1
 
-Tuttavia, questi flag non sembrano funzionare come che sono autorizzati a e si consiglia di ignorarli. Ma non vengono impostate le `Flags` proprietà `null`. Impostarla su una matrice di `SKLatticeFlags` valori sufficientemente ampio da contenere il numero totale di rettangoli.
+Tuttavia, questi flag non sembrano funzionare come previsto ed è preferibile ignorarli. Ma non impostare la `Flags` proprietà su `null` . Impostarla su una matrice di `SKLatticeFlags` valori sufficientemente grande da includere il numero totale di rettangoli.
 
-Il **reticolo nove Patch** pagina Usa `DrawBitmapLattice` simulare `DrawBitmapNinePatch`. Usa la stessa bitmap creata in `NinePatchDisplayPage`:
+La pagina del **reticolo Nine (patch Nine** ) USA `DrawBitmapLattice` per simulare `DrawBitmapNinePatch` . Usa la stessa bitmap creata in `NinePatchDisplayPage` :
 
 ```csharp
 public class LatticeNinePatchPage : ContentPage
@@ -175,13 +178,13 @@ public class LatticeNinePatchPage : ContentPage
 }
 ```
 
-Sia la `XDivs` e `YDivs` proprietà vengono impostate su matrici di due numeri interi, dividere la bitmap in tre strisce sia orizzontalmente che verticalmente: dal pixel 0 a 100 (con rendering le dimensioni in pixel), in pixel dal pixel 100 a 400 pixel (esteso), e dal pixel 400 e 500 (le dimensioni in pixel). Insieme, `XDivs` e `YDivs` definiscono un totale di 9 rettangoli, ovvero le dimensioni del `Flags` matrice. È sufficiente creare la matrice è sufficiente per creare una matrice di `SKLatticeFlags.Default` valori.
+Entrambe le `XDivs` `YDivs` proprietà e sono impostate su matrici costituite solo da due numeri interi, dividendo la bitmap in tre strisce sia orizzontalmente che verticalmente: dal pixel 0 al pixel 100 (sottoposto a rendering in pixel), dal pixel 100 al pixel 400 (con estensione) e dal pixel 400 al pixel 500 (dimensioni pixel). Insieme, `XDivs` e `YDivs` definiscono un totale di 9 rettangoli, ovvero la dimensione della `Flags` matrice. La semplice creazione della matrice è sufficiente per creare una matrice di `SKLatticeFlags.Default` valori.
 
-La visualizzazione è identica al precedente programma:
+La visualizzazione è identica a quella del programma precedente:
 
-[![Reticolo nove-Patch](segmented-images/LatticeNinePatch.png "reticolo nove-Patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![Reticolo nove patch](segmented-images/LatticeNinePatch.png "Reticolo nove patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
-Il **reticolo visualizzazione** pagina divide la bitmap in 16 rettangoli:
+La pagina di **visualizzazione del reticolo** divide la bitmap in 16 rettangoli:
 
 ```csharp
 public class LatticeDisplayPage : ContentPage
@@ -217,15 +220,15 @@ public class LatticeDisplayPage : ContentPage
 }
 ```
 
-Il `XDivs` e `YDivs` le matrici sono piuttosto diverse, causando la visualizzazione a non essere abbastanza come simmetrico come negli esempi precedenti:
+Le `XDivs` `YDivs` matrici e sono leggermente diverse, causando la visualizzazione non simmetrica degli esempi precedenti:
 
-[![Visualizzazione reticolo](segmented-images/LatticeDisplay.png "reticolo visualizzazione")](segmented-images/LatticeDisplay-Large.png#lightbox)
+[![Visualizzazione Reticolo](segmented-images/LatticeDisplay.png "Visualizzazione Reticolo")](segmented-images/LatticeDisplay-Large.png#lightbox)
 
-In iOS e Android immagini a sinistra, vengono visualizzati solo i più piccoli cerchi nelle relative dimensioni in pixel. Tutto il resto viene adattata.
+Nelle immagini iOS e Android a sinistra vengono visualizzati solo i cerchi più piccoli nelle dimensioni dei pixel. Tutto il resto è allungato.
 
-Il **reticolo Display** pagina generalizza la creazione delle `Flags` matrice, che consente di sperimentare `XDivs` e `YDivs` più facilmente. In particolare, è opportuno vedere cosa accade quando si imposta il primo elemento della `XDivs` o `YDivs` array su 0. 
+La pagina di **visualizzazione del reticolo** generalizza la creazione della `Flags` matrice, consentendo di sperimentare `XDivs` e `YDivs` più facilmente. In particolare, è opportuno vedere cosa accade quando si imposta il primo elemento della `XDivs` `YDivs` matrice o su 0. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

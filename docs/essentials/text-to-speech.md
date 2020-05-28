@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: Sintesi vocale'
-description: La classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale predefiniti per pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
-ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: abe591d67ea749de4ae9a2f8dadf4df07712691a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149718"
+title:'' Xamarin.Essentials : testo da sintesi vocale '' Descrizione:' la classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale incorporati per riprodurre testo dal dispositivo e anche per eseguire query sulle lingue disponibili che il motore è in grado di supportare.
+ms. AssetID: autore: ms. Custom: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Sintesi vocale
 
 La classe **TextToSpeech** consente a un'applicazione di usare i motori di sintesi vocale predefiniti pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
@@ -121,7 +114,7 @@ Di seguito sono riportati i valori supportati per questi parametri:
 
 ### <a name="speech-locales"></a>Impostazioni locali per la voce
 
-Ogni piattaforma supporta impostazioni locali diverse, per pronunciare il testo in lingue e con accenti diversi. Le piattaforme usano codici e modalità diversi per specificare le impostazioni locali e per questo motivo Xamarin.Essentials offre una classe `Locale` multipiattaforma e un modo per recuperarle con `GetLocalesAsync`.
+Ogni piattaforma supporta impostazioni locali diverse, per pronunciare il testo in lingue e con accenti diversi. Le piattaforme hanno diversi codici e modi per specificare le impostazioni locali, motivo Xamarin.Essentials per cui fornisce una classe multipiattaforma `Locale` e un modo per eseguire query su di essi `GetLocalesAsync` .
 
 ```csharp
 public async Task SpeakNow()

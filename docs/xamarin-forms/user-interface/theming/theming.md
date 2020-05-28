@@ -1,26 +1,29 @@
 ---
-title: Tema di un'applicazione Novell. Forms
-description: Il tema può essere implementato nelle applicazioni Novell. Forms creando un oggetto ResourceDictionary per ogni tema e quindi caricando le risorse con l'estensione di markup DynamicResource.
-ms.prod: xamarin
-ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2019
-ms.openlocfilehash: 2f751549bdbd54b920a99b04d0068ab726600336
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Applicare un tema a un' Xamarin.Forms applicazione
+description: Il tema può essere implementato nelle Xamarin.Forms applicazioni creando un oggetto ResourceDictionary per ogni tema e quindi caricando le risorse con l'estensione di markup DynamicResource.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425801"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138203"
 ---
-# <a name="theme-a-xamarinforms-application"></a>Tema di un'applicazione Novell. Forms
+# <a name="theme-a-xamarinforms-application"></a>Applicare un tema a un' Xamarin.Forms applicazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Le applicazioni Novell. Forms possono rispondere dinamicamente alle modifiche di stile in fase di esecuzione usando l' `DynamicResource` estensione di markup. Questa estensione di markup è simile all' `StaticResource` estensione di markup, in quanto entrambi usano una chiave del dizionario per recuperare un valore da un oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Tuttavia, mentre l' `StaticResource` estensione di markup esegue una singola ricerca nel dizionario, l' `DynamicResource` estensione di markup mantiene un collegamento alla chiave del dizionario. Se pertanto il valore associato alla chiave viene sostituito, la modifica viene applicata a [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Ciò consente di implementare i temi di runtime nelle applicazioni Novell. Forms.
+Xamarin.Formsle applicazioni possono rispondere dinamicamente alle modifiche di stile in fase di esecuzione tramite l' `DynamicResource` estensione di markup. Questa estensione di markup è simile all' `StaticResource` estensione di markup, in quanto entrambi usano una chiave del dizionario per recuperare un valore da un oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Tuttavia, mentre l' `StaticResource` estensione di markup esegue una singola ricerca nel dizionario, l' `DynamicResource` estensione di markup mantiene un collegamento alla chiave del dizionario. Se pertanto il valore associato alla chiave viene sostituito, la modifica viene applicata a [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Ciò consente di implementare i temi di runtime nelle Xamarin.Forms applicazioni.
 
-Il processo di implementazione dei temi di runtime in un'applicazione Novell. Forms è il seguente:
+Il processo di implementazione dei temi di runtime in un' Xamarin.Forms applicazione è il seguente:
 
 1. Definire le risorse per ogni tema in un oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) .
 1. Utilizzare le risorse del tema nell'applicazione, utilizzando l' `DynamicResource` estensione di markup.
@@ -182,7 +185,7 @@ Questi stili vengono quindi utilizzati dalle pagine:
 
 Quando una risorsa del tema viene utilizzata direttamente, deve essere utilizzata con l' `DynamicResource` estensione di markup. Tuttavia, quando viene utilizzato uno stile che usa l' `DynamicResource` estensione di markup, deve essere utilizzato con l' `StaticResource` estensione di markup.
 
-Per altre informazioni sullo stile, vedere [applicazione di stili a Novell. Forms usando gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md). Per altre informazioni sull' `DynamicResource` estensione di markup, vedere [stili dinamici in Novell. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md).
+Per altre informazioni sullo stile, vedere [ Xamarin.Forms applicazione di stili usando gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md). Per ulteriori informazioni sull' `DynamicResource` estensione di markup, vedere [stili dinamici in Xamarin.Forms ](~/xamarin-forms/user-interface/styles/xaml/dynamic.md).
 
 ## <a name="load-a-theme-at-runtime"></a>Caricare un tema in fase di esecuzione
 
@@ -225,5 +228,5 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 - [Temi (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Rispondi alle modifiche del tema di sistema](system-theme-changes.md)
 - [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Stili dinamici in Novell. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Stili dinamici inXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Xamarin.FormsApplicazione di stili alle app usando gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

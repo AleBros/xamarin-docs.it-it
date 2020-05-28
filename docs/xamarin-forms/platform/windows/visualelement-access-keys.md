@@ -1,28 +1,31 @@
 ---
-title: Chiavi di accesso di visualElement per Windows
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. In questo articolo viene illustrato come utilizzare l'oggetto specifico della piattaforma Windows che specifica una chiave di accesso per un oggetto visivo.
-ms.prod: xamarin
-ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: ce1d682678c17bb24e7a4fd528c84554465c4fa6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1bfd61e79a2b4697e884afb45e4b9080ee939b87
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656831"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136526"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Chiavi di accesso di visualElement per Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Le chiavi di accesso sono scelte rapide da tastiera che consentono di migliorare l'usabilità e l'accessibilità delle app nel piattaforma UWP (Universal Windows Platform) (UWP), offrendo agli utenti un modo intuitivo per esplorare rapidamente e interagire con l'interfaccia utente visibile dell'app tramite una tastiera anziché tramite tocco o un mouse. Sono combinazioni di uno o più tasti alfanumerici, in genere premuti in sequenza e il tasto Alt. Tasti di scelta rapida sono automaticamente supportati per le chiavi di accesso che utilizzano un singolo carattere alfanumerico.
+Le chiavi di accesso sono scelte rapide da tastiera che migliorano l'usabilità e l'accessibilità delle app nel piattaforma UWP (Universal Windows Platform) (UWP), offrendo agli utenti un modo intuitivo per esplorare rapidamente e interagire con l'interfaccia utente visibile dell'app tramite una tastiera anziché tramite tocco o mouse. Sono combinazioni del tasto ALT e di una o più chiavi alfanumeriche, in genere premuti in sequenza. Le scelte rapide da tastiera sono supportate automaticamente per le chiavi di accesso che utilizzano un singolo carattere alfanumerico.
 
-Suggerimenti tasto di accesso sono variabili badge visualizzati accanto ai controlli che includono chiavi di accesso. Ogni suggerimento di chiavi di accesso contiene le chiavi di caratteri alfanumeriche che attiva il controllo associato. Quando un utente preme il tasto Alt, vengono visualizzati i suggerimenti tasto di accesso.
+I suggerimenti per la chiave di accesso sono notifiche mobili visualizzate accanto ai controlli che includono chiavi di accesso. Ogni suggerimento chiave di accesso contiene i tasti alfanumerici che attivano il controllo associato. Quando un utente preme il tasto ALT, vengono visualizzati i suggerimenti per la chiave di accesso.
 
-Questo specifico della piattaforma UWP viene usato per specificare una chiave di accesso per [`VisualElement`](xref:Xamarin.Forms.VisualElement)un. Vengono utilizzati in XAML, impostando il [`VisualElement.AccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) proprietà associata a un valore alfanumerico e, facoltativamente impostando il [`VisualElement.AccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) proprietà associata a un valore di [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione, il [`VisualElement.AccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) proprietà associata una `double`e i [`VisualElement.AccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) proprietà associata a un `double`:
+Questo specifico della piattaforma UWP viene usato per specificare una chiave di accesso per un [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Viene utilizzato in XAML impostando la [`VisualElement.AccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) proprietà associata su un valore alfanumerico e, facoltativamente, impostando la [`VisualElement.AccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) proprietà associata su un valore dell' [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione, la [`VisualElement.AccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) proprietà associata a un oggetto `double` e la [`VisualElement.AccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) proprietà associata a un oggetto `double` :
 
 ```xaml
 <TabbedPage ...
@@ -49,7 +52,7 @@ Questo specifico della piattaforma UWP viene usato per specificare una chiave di
 </TabbedPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -75,32 +78,32 @@ button4.On<Windows>()
 ...
 ```
 
-Il `VisualElement.On<Windows>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo nella piattaforma Windows universale. Il [`VisualElement.SetAccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.String)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene utilizzato per impostare il valore di chiave di accesso per il `VisualElement`. Il [`VisualElement.SetAccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},Xamarin.Forms.AccessKeyPlacement)) metodo, facoltativamente, specifica la posizione da utilizzare per visualizzare il suggerimento di chiavi di accesso, con il [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione che fornisce i valori possibili seguenti:
+Il `VisualElement.On<Windows>` metodo specifica che questa specifica della piattaforma verrà eseguita solo sul piattaforma UWP (Universal Windows Platform). [ `VisualElement.SetAccessKey` ] (Xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. SetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Il metodo visualElement}, System. String)), nello [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) spazio dei nomi, viene usato per impostare il valore della chiave di accesso per `VisualElement` . [ `VisualElement.SetAccessKeyPlacement` ] (Xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. SetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Oggetti visivi}, Xamarin.Forms . AccessKeyPlacement)), consente di specificare la posizione da utilizzare per la visualizzazione del suggerimento della chiave di accesso, con l' [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione che fornisce i valori possibili seguenti:
 
-- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) : indica che il posizionamento di base al suggerimento tasto di accesso verrà determinato dal sistema operativo.
-- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) : indica che il suggerimento di chiavi di accesso verrà visualizzato sopra il bordo superiore del `VisualElement`.
-- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) : indica che il suggerimento di chiavi di accesso verrà visualizzato sotto il bordo inferiore del `VisualElement`.
-- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) : indica che il suggerimento di chiavi di accesso verrà visualizzato a destra del bordo destro del `VisualElement`.
-- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) : indica che il suggerimento di chiavi di accesso verrà visualizzato a sinistra del bordo sinistro del `VisualElement`.
-- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) : indica che il suggerimento di chiavi di accesso verrà visualizzato sovrapposta al centro del `VisualElement`.
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto): indica che il posizionamento del suggerimento per la chiave di accesso sarà determinato dal sistema operativo.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top): indica che il suggerimento chiave di accesso verrà visualizzato sopra il bordo superiore del `VisualElement` .
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom): indica che il suggerimento chiave di accesso verrà visualizzato sotto il bordo inferiore di `VisualElement` .
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right): indica che il suggerimento chiave di accesso verrà visualizzato a destra del bordo destro di `VisualElement` .
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left): indica che il suggerimento chiave di accesso verrà visualizzato a sinistra del bordo sinistro dell'oggetto `VisualElement` .
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center): indica che il suggerimento chiave di accesso verrà visualizzato sovrapposto al centro di `VisualElement` .
 
 > [!NOTE]
-> In genere, il [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) selezione host di base al suggerimento tasto è sufficiente, che include il supporto per interfacce utente adattiva.
+> In genere, il [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) posizionamento del suggerimento chiave è sufficiente, che include il supporto per le interfacce utente adattive.
 
-Il [`VisualElement.SetAccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) e [`VisualElement.SetAccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) metodi possono essere utilizzati per un controllo più granulare del percorso di base al suggerimento tasto di accesso. L'argomento per il `SetAccessKeyHorizontalOffset` metodo indica come distanza di spostamento a sinistra il suggerimento di chiavi di accesso o a destra e l'argomento di `SetAccessKeyVerticalOffset` metodo indica la distanza di spostamento il suggerimento di chiavi di accesso verso l'alto o verso il basso.
+[ `VisualElement.SetAccessKeyHorizontalOffset` ] (Xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. SetAccessKeyHorizontalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Oggetti visivi}, System. Double) e [ `VisualElement.SetAccessKeyVerticalOffset` ] (xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. SetAccessKeyVerticalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Metodi visivi}, System. Double)) possono essere utilizzati per un controllo più granulare del percorso del suggerimento chiave di accesso. L'argomento del `SetAccessKeyHorizontalOffset` metodo indica la distanza di spostamento della mancia del tasto di scelta a sinistra o a destra e l'argomento al `SetAccessKeyVerticalOffset` metodo indica la distanza di spostamento del suggerimento per la chiave di accesso verso l'alto o verso il basso.
 
 >[!NOTE]
-> Offset di base al suggerimento tasto di accesso non può essere impostato quando è impostato il posizionamento di chiavi di accesso `Auto`.
+> Non è possibile impostare gli offset del suggerimento chiave di accesso quando è impostato il posizionamento della chiave di accesso `Auto` .
 
-Inoltre, il [`GetAccessKey`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [`GetAccessKeyPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [`GetAccessKeyHorizontalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), e [`GetAccessKeyVerticalOffset`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})) metodi possono essere usati per recuperare un accesso valore e il percorso della chiave.
+Inoltre, [ `GetAccessKey` ] (xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. GetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})), [ `GetAccessKeyPlacement` ] (xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. GetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})), [ `GetAccessKeyHorizontalOffset` ] (xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. GetAccessKeyHorizontalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})) e [ `GetAccessKeyVerticalOffset` ] (xrif: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. visualElement. GetAccessKeyVerticalOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement})) i metodi possono essere usati per recuperare un valore della chiave di accesso e la relativa posizione.
 
-Il risultato è che i suggerimenti tasto di accesso possono essere visualizzati accanto alle [`VisualElement`](xref:Xamarin.Forms.VisualElement) accessibile a istanze che definiscono le chiavi, premendo il tasto Alt:
+Il risultato è che i suggerimenti per la chiave di accesso possono essere visualizzati accanto a qualsiasi [`VisualElement`](xref:Xamarin.Forms.VisualElement) istanza che definisce le chiavi di accesso, premendo il tasto Alt:
 
-![Specifica della piattaforma di chiavi di accesso di VisualElement](visualelement-access-keys-images/visualelement-accesskeys.png "VisualElement accesso chiavi specifiche della piattaforma")
+![Chiavi di accesso di visualElement specifiche della piattaforma](visualelement-access-keys-images/visualelement-accesskeys.png "Chiavi di accesso di visualElement specifiche della piattaforma")
 
-Quando un utente attiva di una chiave di accesso, premendo il tasto Alt seguito dall'accesso della chiave, l'azione predefinita per il `VisualElement` verrà eseguito. Ad esempio, quando un utente attiva il tasto di scelta rapida in una [`Switch`](xref:Xamarin.Forms.Switch), il `Switch` è attivata o disattivata. Quando un utente attiva la chiave di accesso in un' [`Entry`](xref:Xamarin.Forms.Entry), il `Entry` Ottiene lo stato attivo. Quando un utente attiva il tasto di scelta rapida in una [`Button`](xref:Xamarin.Forms.Button), il gestore eventi per il [`Clicked`](xref:Xamarin.Forms.Button.Clicked) viene eseguito l'evento.
+Quando un utente attiva una chiave di accesso, premendo il tasto Alt seguito dal tasto di opzione, viene eseguita l'azione predefinita per il `VisualElement` . Ad esempio, quando un utente attiva il tasto di accesso su un oggetto [`Switch`](xref:Xamarin.Forms.Switch) , `Switch` viene attivato o disattivato. Quando un utente attiva il tasto di accesso su un oggetto [`Entry`](xref:Xamarin.Forms.Entry) , `Entry` ottiene lo stato attivo. Quando un utente attiva il tasto di accesso su [`Button`](xref:Xamarin.Forms.Button) , viene eseguito il gestore eventi per l' [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento.
 
-Per altre informazioni sulle chiavi di accesso, vedere [chiavi di accesso](/windows/uwp/design/input/access-keys#key-tip-positioning).
+Per ulteriori informazioni sulle chiavi di accesso, vedere [chiavi di accesso](/windows/uwp/design/input/access-keys#key-tip-positioning).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

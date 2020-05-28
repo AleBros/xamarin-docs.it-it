@@ -1,22 +1,25 @@
 ---
-title: Migrazione di AndroidX in Novell. Forms
-description: Questo articolo spiega perché AndroidX esiste e come eseguire la migrazione a AndroidX nell'app Novell. Forms.
-ms.prod: xamarin
-ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 01/22/2020
-ms.openlocfilehash: 13fb802dec326cdb82bac8825ca84343ef85b13e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+title: Migrazione di AndroidX inXamarin.Forms
+description: Questo articolo spiega perché AndroidX esiste e come eseguire la migrazione a AndroidX nell' Xamarin.Forms app.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c2df309a8a12a05a4b492bb66977aa2411142850
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292919"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138268"
 ---
-# <a name="androidx-migration-in-xamarinforms"></a>Migrazione di AndroidX in Novell. Forms
+# <a name="androidx-migration-in-xamarinforms"></a>Migrazione di AndroidX inXamarin.Forms
 
-AndroidX sostituisce la libreria di supporto Android. Questo articolo spiega perché AndroidX esiste, come influisca su Novell. Forms e come eseguire la migrazione dell'applicazione per l'uso delle librerie AndroidX.
+AndroidX sostituisce la libreria di supporto Android. Questo articolo illustra il motivo per cui AndroidX esiste, il modo in cui ha effetto Xamarin.Forms e come eseguire la migrazione dell'applicazione per l'uso delle librerie AndroidX.
 
 ## <a name="history-of-androidx"></a>Cronologia di AndroidX
 
@@ -24,8 +27,8 @@ La libreria di supporto Android è stata creata per fornire funzionalità più r
 
 Sebbene la libreria di supporto fosse originariamente un singolo file binario, è cresciuta e sviluppata in una suite di librerie, che sono quasi essenziali per lo sviluppo di app moderne. Di seguito sono riportate alcune funzionalità di uso comune della libreria di supporto:
 
-- Classe di supporto `Fragment`.
-- `RecyclerView`, utilizzato per la gestione di elenchi lunghi.
+- `Fragment`Classe di supporto.
+- Oggetto `RecyclerView` utilizzato per la gestione di elenchi lunghi.
 - Supporto di Multidex per le app con più di 65.536 metodi.
 - Classe `ActivityCompat`.
 
@@ -33,16 +36,16 @@ AndroidX è una sostituzione per la libreria di supporto, che non viene più ges
 
 Google ha creato un processo di migrazione denominato Jetifier con AndroidX. Il Jetifier controlla il bytecode jar durante il processo di compilazione e Rimappa i riferimenti alla libreria di supporto, sia nel codice dell'app che nelle dipendenze, al rispettivo equivalente di AndroidX.
 
-In un'app Novell. Forms, così come in un'app Java Android, è necessario eseguire la migrazione delle dipendenze jar in AndroidX. Tuttavia, è necessario eseguire la migrazione anche delle associazioni Novell per puntare ai file jar sottostanti corretti. Novell. Forms ha aggiunto il supporto per la migrazione automatica di AndroidX nella versione 4,5.
+In un' Xamarin.Forms app, così come in un'app Java Android, è necessario eseguire la migrazione delle dipendenze jar a AndroidX. Tuttavia, è necessario eseguire la migrazione anche delle associazioni Novell per puntare ai file jar sottostanti corretti. Xamarin.FormsAggiunta del supporto per la migrazione automatica di AndroidX nella versione 4,5.
 
 Per altre informazioni su AndroidX, vedere [Panoramica di AndroidX](https://developer.android.com/jetpack/androidx) in Developer.Android.com.
 
-## <a name="automatic-migration-in-xamarinforms"></a>Migrazione automatica in Novell. Forms
+## <a name="automatic-migration-in-xamarinforms"></a>Migrazione automatica inXamarin.Forms
 
-Per eseguire automaticamente la migrazione a AndroidX, un progetto Novell. Forms deve:
+Per eseguire automaticamente la migrazione a AndroidX, un Xamarin.Forms progetto deve:
 
 - Destinazione API Android versione 29 o successiva.
-- Usare Novell. Forms versione 4,5 o successiva.
+- Usare la Xamarin.Forms versione 4,5 o successiva.
 
 Dopo aver confermato queste impostazioni nel progetto, compilare l'app Android in Visual Studio 2019. Durante il processo di compilazione, il linguaggio intermedio (IL) viene controllato e le dipendenze della libreria di supporto e le associazioni vengono scambiate con le dipendenze AndroidX. Se l'applicazione dispone di tutte le dipendenze di AndroidX necessarie per la compilazione, non si noterà alcuna differenza nel processo di compilazione.
 
@@ -64,7 +67,7 @@ You can also copy and paste the following snippit into your .csproj file:
  <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-rc1" />
 ```
 
-I pacchetti NuGet mancanti possono essere installati tramite Gestione pacchetti NuGet in Visual Studio o installati modificando il file Android. csproj per includere gli elementi `PackageReference` XML elencati nell'errore.
+I pacchetti NuGet mancanti possono essere installati tramite Gestione pacchetti NuGet in Visual Studio o installati modificando il file Android. csproj per includere gli `PackageReference` elementi XML elencati nell'errore.
 
 Una volta risolti i pacchetti mancanti, la ricompilazione del progetto carica i pacchetti mancanti e il progetto viene compilato usando le dipendenze AndroidX anziché le dipendenze della libreria di supporto.
 

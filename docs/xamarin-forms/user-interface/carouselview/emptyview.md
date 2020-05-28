@@ -1,42 +1,45 @@
 ---
-title: Novell. Forms CarouselView EmptyView
-description: In CarouselView è possibile specificare una vista vuota che fornisce feedback all'utente quando non sono disponibili dati per la visualizzazione. La vista vuota può essere una stringa, una vista o più visualizzazioni.
-ms.prod: xamarin
-ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/03/2019
-ms.openlocfilehash: 8359e5f5008205237d602d7d364ebea376b57cf0
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+title: Xamarin.FormsCarouselView EmptyView
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a9f952da75e68e9ad39e0a15f57fbd0379233d7e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "78292754"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137397"
 ---
-# <a name="xamarinforms-carouselview-emptyview"></a>Novell. Forms CarouselView EmptyView
+# <a name="xamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce le proprietà seguenti che possono essere usate per fornire commenti e suggerimenti degli utenti quando non sono presenti dati da visualizzare:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce le proprietà seguenti che possono essere usate per fornire commenti e suggerimenti degli utenti quando non sono presenti dati da visualizzare:
 
-- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), di tipo `object`, la stringa, l'associazione o la vista che verrà visualizzata quando si `null`la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) o quando la raccolta specificata dalla proprietà `ItemsSource` è `null` o vuota. Il valore predefinito è `null`.
-- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), il modello da utilizzare per formattare la `EmptyView`specificata. Il valore predefinito è `null`.
+- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), di tipo `object` , la stringa, l'associazione o la vista che verrà visualizzata quando la [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è o `null` quando la raccolta specificata dalla `ItemsSource` proprietà è `null` o vuota. Il valore predefinito è `null`.
+- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , il modello da utilizzare per formattare l'oggetto specificato `EmptyView` . Il valore predefinito è `null`.
 
-Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati.
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
-Gli scenari di utilizzo principali per l'impostazione della proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) sono la visualizzazione di commenti e suggerimenti degli utenti quando un'operazione di filtro su un [`CarouselView`](xref:Xamarin.Forms.CarouselView) non produce dati e visualizza il feedback dell'utente durante il recupero dei dati da un servizio Web.
+Gli scenari di utilizzo principali per l'impostazione della [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà sono la visualizzazione di commenti e suggerimenti degli utenti quando un'operazione di filtro in un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) non produce dati e visualizza il feedback dell'utente mentre i dati vengono recuperati da un servizio Web.
 
 > [!NOTE]
-> Se necessario, la proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su una vista che include contenuto interattivo.
+> [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)Se necessario, la proprietà può essere impostata su una vista che include contenuto interattivo.
 
-Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Per ulteriori informazioni sui modelli di dati, vedere [ Xamarin.Forms modelli di dati](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>Visualizza una stringa quando i dati non sono disponibili
 
-La proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su una stringa che verrà visualizzata quando viene `null`la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) o quando la raccolta specificata dalla proprietà `ItemsSource` è `null` o vuota. Il codice XAML seguente mostra un esempio di questo scenario:
+La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà può essere impostata su una stringa che verrà visualizzata quando la [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è o `null` quando la raccolta specificata dalla `ItemsSource` proprietà è `null` o vuota. Il codice XAML seguente mostra un esempio di questo scenario:
 
 ```xaml
 <CarouselView ItemsSource="{Binding EmptyMonkeys}"
@@ -53,11 +56,11 @@ CarouselView carouselView = new CarouselView
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 ```
 
-Il risultato è che, poiché la raccolta associata ai dati è `null`, viene visualizzata la stringa impostata come valore della proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) .
+Il risultato è che, poiché la raccolta associata ai dati è `null` , viene visualizzata la stringa impostata come [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) valore della proprietà.
 
 ## <a name="display-views-when-data-is-unavailable"></a>Visualizzazione delle visualizzazioni quando i dati non sono disponibili
 
-La proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su una vista, che verrà visualizzata quando si `null`la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) o quando la raccolta specificata dalla proprietà `ItemsSource` è `null` o vuota. Può trattarsi di una vista singola o di una vista che contiene più visualizzazioni figlio. Nell'esempio di codice XAML riportato di seguito viene illustrata la proprietà `EmptyView` impostata su una vista che contiene più visualizzazioni figlio:
+La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà può essere impostata su una visualizzazione, che verrà visualizzata quando la [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è o `null` quando la raccolta specificata dalla `ItemsSource` proprietà è `null` o vuota. Può trattarsi di una vista singola o di una vista che contiene più visualizzazioni figlio. Nell'esempio di codice XAML riportato di seguito viene illustrata la `EmptyView` proprietà impostata su una vista che contiene più visualizzazioni figlio:
 
 ```xaml
 <StackLayout Margin="20">
@@ -105,11 +108,11 @@ CarouselView carouselView = new CarouselView
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Quando il [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata dal [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata per il termine di ricerca archiviato nella proprietà [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Se l'operazione di filtro non restituisce alcun dato, viene visualizzato il [`StackLayout`](xref:Xamarin.Forms.StackLayout) impostato come valore della proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) .
+Quando [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue l'oggetto `FilterCommand` , la raccolta visualizzata da [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata in base al termine di ricerca archiviato nella [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) Proprietà. Se l'operazione di filtro non produce dati, [`StackLayout`](xref:Xamarin.Forms.StackLayout) viene visualizzato il set come [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) valore della proprietà.
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Visualizza un tipo personalizzato basato su modelli quando i dati non sono disponibili
 
-La proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su un tipo personalizzato, il cui modello viene visualizzato quando la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) è `null`o quando la raccolta specificata dalla proprietà `ItemsSource` è `null` o vuota. La proprietà [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) può essere impostata su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto della `EmptyView`. Il codice XAML seguente mostra un esempio di questo scenario:
+La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà può essere impostata su un tipo personalizzato, il cui modello viene visualizzato quando la [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è o `null` quando la raccolta specificata dalla `ItemsSource` proprietà è `null` o vuota. La [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà può essere impostata su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto dell'oggetto `EmptyView` . Il codice XAML seguente mostra un esempio di questo scenario:
 
 ```xaml
 <StackLayout Margin="20">
@@ -152,7 +155,7 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Il tipo di `FilterData` definisce una proprietà `Filter` e un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)corrispondente:
+Il `FilterData` tipo definisce una `Filter` proprietà e un oggetto corrispondente [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) :
 
 ```csharp
 public class FilterData : BindableObject
@@ -167,14 +170,14 @@ public class FilterData : BindableObject
 }
 ```
 
-La proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) è impostata su un oggetto `FilterData` e i dati della proprietà `Filter` vengono associati alla proprietà [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Quando il [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata dal [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata per il termine di ricerca archiviato nella proprietà `Filter`. Se l'operazione di filtro non restituisce alcun dato, viene visualizzato il [`Label`](xref:Xamarin.Forms.Label) definito nel [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), impostato come valore della proprietà [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) .
+La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà è impostata su un `FilterData` oggetto e i `Filter` dati della proprietà vengono associati alla [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) Proprietà. Quando [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue l'oggetto `FilterCommand` , la raccolta visualizzata da [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata in base al termine di ricerca archiviato nella `Filter` Proprietà. Se l'operazione di filtro non produce dati, [`Label`](xref:Xamarin.Forms.Label) viene visualizzato il definito in [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , impostato come valore della [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) Proprietà.
 
 > [!NOTE]
-> Quando si visualizza un tipo personalizzato basato su modelli quando i dati non sono disponibili, è possibile impostare la proprietà [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) su una vista che contiene più visualizzazioni figlio.
+> Quando si visualizza un tipo personalizzato basato su modelli quando i dati non sono disponibili, la [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà può essere impostata su una vista che contiene più visualizzazioni figlio.
 
 ## <a name="choose-an-emptyview-at-runtime"></a>Scegliere un EmptyView in fase di esecuzione
 
-Le visualizzazioni che verranno visualizzate come [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) quando i dati non sono disponibili possono essere definiti come [`ContentView`](xref:Xamarin.Forms.ContentView) oggetti in un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). La proprietà `EmptyView` può quindi essere impostata su un `ContentView`specifico, in base a una logica di business, in fase di esecuzione. Nell'esempio di codice XAML riportato di seguito viene illustrato un esempio di questo scenario:
+Le visualizzazioni che verranno visualizzate come [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) dati quando non sono disponibili, possono essere definite come [`ContentView`](xref:Xamarin.Forms.ContentView) oggetti in un oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . La `EmptyView` proprietà può quindi essere impostata su un oggetto specifico `ContentView` , in base a una logica di business, in fase di esecuzione. Nell'esempio di codice XAML riportato di seguito viene illustrato un esempio di questo scenario:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -230,7 +233,7 @@ Le visualizzazioni che verranno visualizzate come [`EmptyView`](xref:Xamarin.For
 </ContentPage>
 ```
 
-Questo codice XAML definisce due oggetti [`ContentView`](xref:Xamarin.Forms.ContentView) nel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)a livello di pagina, con l'oggetto [`Switch`](xref:Xamarin.Forms.Switch) che controlla quale oggetto `ContentView` verrà impostato come valore della proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . Quando il [`Switch`](xref:Xamarin.Forms.Switch) viene attivato o disattivato, il gestore dell'evento `OnEmptyViewSwitchToggled` esegue il metodo `ToggleEmptyView`:
+Questo codice XAML definisce due [`ContentView`](xref:Xamarin.Forms.ContentView) oggetti a livello di pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , con l' [`Switch`](xref:Xamarin.Forms.Switch) oggetto che controlla quale `ContentView` oggetto verrà impostato come [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) valore della proprietà. Quando l'oggetto [`Switch`](xref:Xamarin.Forms.Switch) viene attivato o disattivato, il `OnEmptyViewSwitchToggled` gestore dell'evento esegue il `ToggleEmptyView` Metodo:
 
 ```csharp
 void ToggleEmptyView(bool isToggled)
@@ -239,13 +242,13 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-Il metodo `ToggleEmptyView` imposta la proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) dell'oggetto `carouselView` su uno dei due oggetti [`ContentView`](xref:Xamarin.Forms.ContentView) archiviati nell' [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), in base al valore della proprietà [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Quando il [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata dal [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata per il termine di ricerca archiviato nella proprietà [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Se l'operazione di filtro non restituisce alcun dato, viene visualizzato il `ContentView` oggetto impostato come `EmptyView` proprietà.
+Il `ToggleEmptyView` metodo imposta la [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà dell' `carouselView` oggetto su uno dei due [`ContentView`](xref:Xamarin.Forms.ContentView) oggetti archiviati in [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , in base al valore della [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) Proprietà. Quando [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue l'oggetto `FilterCommand` , la raccolta visualizzata da [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata in base al termine di ricerca archiviato nella [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) Proprietà. Se l'operazione di filtro non restituisce alcun dato, `ContentView` viene visualizzato l'oggetto impostato come `EmptyView` Proprietà.
 
-Per altre informazioni sui dizionari risorse, vedere [dizionari risorse Novell. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
+Per altre informazioni sui dizionari risorse, vedere [ Xamarin.Forms dizionari risorse](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Scegliere un EmptyViewTemplate in fase di esecuzione
 
-È possibile scegliere l'aspetto dell' [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) in fase di esecuzione, in base al relativo valore, impostando la proprietà [`CarouselView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) su un oggetto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) :
+L'aspetto di [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) può essere scelto in fase di esecuzione, in base al relativo valore, impostando la [`CarouselView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà su un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) oggetto:
 
 ```xaml
 <ContentPage ...
@@ -292,11 +295,11 @@ CarouselView carouselView = new CarouselView()
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-La proprietà [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) è impostata sulla proprietà [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) e la proprietà [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) è impostata su un oggetto `SearchTermDataTemplateSelector`.
+La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà viene impostata sulla [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) proprietà e la [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà viene impostata su un `SearchTermDataTemplateSelector` oggetto.
 
-Quando il [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata dal [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata per il termine di ricerca archiviato nella proprietà [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) . Se l'operazione di filtro non produce dati, il [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) scelto dall'oggetto `SearchTermDataTemplateSelector` viene impostato come proprietà [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) e visualizzato.
+Quando [`SearchBar`](xref:Xamarin.Forms.SearchBar) esegue l'oggetto `FilterCommand` , la raccolta visualizzata da [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene filtrata in base al termine di ricerca archiviato nella [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) Proprietà. Se l'operazione di filtro non produce dati, il [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) scelto dall' `SearchTermDataTemplateSelector` oggetto viene impostato come [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà e visualizzato.
 
-Nell'esempio seguente viene illustrata la classe `SearchTermDataTemplateSelector`:
+Nell'esempio seguente viene illustrata la `SearchTermDataTemplateSelector` classe:
 
 ```csharp
 public class SearchTermDataTemplateSelector : DataTemplateSelector
@@ -312,13 +315,13 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La classe `SearchTermTemplateSelector` definisce `DefaultTemplate` e `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. L'override del `OnSelectTemplate` restituisce `DefaultTemplate`, che visualizza un messaggio all'utente, quando la query di ricerca non è uguale a "Novell". Quando la query di ricerca è uguale a "Novell", l'override del `OnSelectTemplate` restituisce `OtherTemplate`, che visualizza un messaggio di base per l'utente.
+La `SearchTermTemplateSelector` classe definisce `DefaultTemplate` le `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà e impostate su modelli di dati diversi. L' `OnSelectTemplate` override restituisce `DefaultTemplate` , che visualizza un messaggio all'utente, quando la query di ricerca non è uguale a "Novell". Quando la query di ricerca è uguale a "Novell", l' `OnSelectTemplate` override restituisce `OtherTemplate` , che visualizza un messaggio di base per l'utente.
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Dizionari risorse di Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Xamarin.FormsModelli di dati](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.FormsDizionari risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Creare un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

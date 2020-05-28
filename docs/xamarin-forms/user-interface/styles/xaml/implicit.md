@@ -1,30 +1,33 @@
 ---
-title: Stili impliciti in xamarin. Forms
-description: Uno stile implicito è quello usato da tutti i controlli di TargetType stesso, senza richiedere ogni controllo per fare riferimento allo stile.
-ms.prod: xamarin
-ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/30/2019
-ms.openlocfilehash: d58ba81596cccf470b7246514d71f35968599880
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: Stili impliciti inXamarin.Forms
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3fb6ea40ced93103ec9cc92fa707f68c674d7826
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305276"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139009"
 ---
-# <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti in xamarin. Forms
+# <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti inXamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Uno stile implicito è quello usato da tutti i controlli dello stesso TargetType, senza richiedere a ogni controllo di fare riferimento allo stile._
 
 ## <a name="create-an-implicit-style-in-xaml"></a>Creare uno stile implicito in XAML
 
-Per dichiarare un [`Style`](xref:Xamarin.Forms.Style) a livello di pagina, è necessario aggiungere una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) alla pagina e quindi includere una o più dichiarazioni di `Style` nel `ResourceDictionary`. Un `Style` viene reso *implicito* non specificando un attributo `x:Key`. Lo stile verrà quindi applicato agli elementi visivi che corrispondono esattamente `TargetType`, ma non agli elementi derivati dal valore `TargetType`.
+Per dichiarare un oggetto [`Style`](xref:Xamarin.Forms.Style) a livello di pagina, [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) è necessario aggiungere un oggetto alla pagina, quindi una o più `Style` dichiarazioni possono essere incluse in `ResourceDictionary` . Un `Style` viene reso *implicito* non specificando un `x:Key` attributo. Lo stile verrà quindi applicato agli elementi visivi che corrispondono `TargetType` esattamente a elementi che derivano dal `TargetType` valore.
 
-Nell'esempio di codice riportato di seguito viene illustrato uno stile *implicito* dichiarato in XAML in un `ResourceDictionary`della pagina e applicato alle istanze [`Entry`](xref:Xamarin.Forms.Entry) della pagina:
+Nell'esempio di codice seguente viene illustrato uno stile *implicito* dichiarato in XAML in una pagina `ResourceDictionary` e applicato alle istanze della pagina [`Entry`](xref:Xamarin.Forms.Entry) :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
@@ -51,11 +54,11 @@ Nell'esempio di codice riportato di seguito viene illustrato uno stile *implicit
 </ContentPage>
 ```
 
-Il [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) definisce un unico stile *implicito* che viene applicato alle istanze [`Entry`](xref:Xamarin.Forms.Entry) della pagina. Il `Style` viene usato per visualizzare il testo blu su uno sfondo giallo, impostando anche altre opzioni relative all'aspetto. Il `Style` viene aggiunto al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) della pagina senza specificare un attributo di `x:Key`. Pertanto, l'`Style` viene applicata a tutte le istanze di `Entry` in modo implicito in quanto corrispondono alla proprietà [`TargetType`](xref:Xamarin.Forms.Style.TargetType) del `Style` esattamente. Tuttavia, il `Style` non viene applicato all'istanza `CustomEntry`, che è un `Entry`sottoclassato. Il risultato è l'aspetto illustrato negli screenshot seguenti:
+[`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)Definisce un singolo stile *implicito* che viene applicato alle istanze della pagina [`Entry`](xref:Xamarin.Forms.Entry) . `Style`Viene usato per visualizzare il testo blu su uno sfondo giallo, impostando anche altre opzioni relative all'aspetto. L'oggetto `Style` viene aggiunto all'oggetto della pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) senza specificare un `x:Key` attributo. Pertanto, `Style` viene applicato a tutte le `Entry` istanze in modo implicito in quanto corrispondono alla [`TargetType`](xref:Xamarin.Forms.Style.TargetType) proprietà dell'oggetto `Style` esattamente. Tuttavia, l'oggetto `Style` non viene applicato all' `CustomEntry` istanza di, che è una sottoclasse `Entry` . Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[Esempio ![stili impliciti](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
+[![Esempio di stili impliciti](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
-Inoltre, il quarto [`Entry`](xref:Xamarin.Forms.Entry) esegue l'override delle proprietà [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) e [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) dello stile implicito in valori di `Color` diversi.
+Il quarto, inoltre, [`Entry`](xref:Xamarin.Forms.Entry) esegue l'override delle [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) proprietà e dello stile implicito in `Color` valori diversi.
 
 ### <a name="create-an-implicit-style-at-the-control-level"></a>Creare uno stile implicito a livello di controllo
 
@@ -80,13 +83,13 @@ Oltre a creare stili *impliciti* a livello di pagina, possono anche essere creat
 </ContentPage>
 ```
 
-In questo esempio, il [`Style`](xref:Xamarin.Forms.Style) *implicito* viene assegnato alla raccolta [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) del controllo [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Lo stile *implicito* può quindi essere applicato al controllo e ai relativi elementi figlio.
+In questo esempio, l'oggetto *implicito* [`Style`](xref:Xamarin.Forms.Style) viene assegnato alla [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) raccolta del [`StackLayout`](xref:Xamarin.Forms.StackLayout) controllo. Lo stile *implicito* può quindi essere applicato al controllo e ai relativi elementi figlio.
 
-Per informazioni sulla creazione di stili nel [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)di un'applicazione, vedere [stili globali](~/xamarin-forms/user-interface/styles/application.md).
+Per informazioni sulla creazione di stili in un'applicazione [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , vedere [stili globali](~/xamarin-forms/user-interface/styles/application.md).
 
 ## <a name="create-an-implicit-style-in-c35"></a>Creare uno stile implicito in C&#35;
 
-è possibile aggiungere istanze di [`Style`](xref:Xamarin.Forms.Style) alla raccolta [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) di una pagina C# in creando un nuovo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), quindi aggiungendo le istanze di `Style` al `ResourceDictionary`, come illustrato nell'esempio di codice seguente:
+[`Style`](xref:Xamarin.Forms.Style)le istanze possono essere aggiunte alla raccolta di una pagina [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) in C# creando un nuovo oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e quindi aggiungendo le `Style` istanze a `ResourceDictionary` , come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
@@ -117,13 +120,13 @@ public class ImplicitStylesPageCS : ContentPage
 }
 ```
 
-Il costruttore definisce un unico stile *implicito* che viene applicato alle istanze [`Entry`](xref:Xamarin.Forms.Entry) della pagina. Il `Style` viene usato per visualizzare il testo blu su uno sfondo giallo, impostando anche altre opzioni relative all'aspetto. Il `Style` viene aggiunto al [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) della pagina senza specificare una stringa di `key`. Pertanto, l'`Style` viene applicata a tutte le istanze di `Entry` in modo implicito in quanto corrispondono alla proprietà [`TargetType`](xref:Xamarin.Forms.Style.TargetType) del `Style` esattamente. Tuttavia, il `Style` non viene applicato all'istanza `CustomEntry`, che è un `Entry`sottoclassato.
+Il costruttore definisce un unico stile *implicito* che viene applicato alle istanze della pagina [`Entry`](xref:Xamarin.Forms.Entry) . `Style`Viene usato per visualizzare il testo blu su uno sfondo giallo, impostando anche altre opzioni relative all'aspetto. L'oggetto `Style` viene aggiunto all'oggetto della pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) senza specificare una `key` stringa. Pertanto, `Style` viene applicato a tutte le `Entry` istanze in modo implicito in quanto corrispondono alla [`TargetType`](xref:Xamarin.Forms.Style.TargetType) proprietà dell'oggetto `Style` esattamente. Tuttavia, l'oggetto `Style` non viene applicato all' `CustomEntry` istanza di, che è una sottoclasse `Entry` .
 
 ## <a name="apply-a-style-to-derived-types"></a>Applicare uno stile ai tipi derivati
 
-La proprietà [`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) consente di applicare uno stile ai controlli derivati dal tipo di base a cui fa riferimento la proprietà [`TargetType`](xref:Xamarin.Forms.Style.TargetType) . L'impostazione di questa proprietà su `true` consente pertanto a un singolo stile di avere come destinazione più tipi, purché i tipi derivano dal tipo di base specificato nella proprietà `TargetType`.
+La [`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) proprietà consente di applicare uno stile ai controlli derivati dal tipo di base a cui fa riferimento la [`TargetType`](xref:Xamarin.Forms.Style.TargetType) Proprietà. L'impostazione di questa proprietà su `true` consente pertanto a un singolo stile di avere come destinazione più tipi, purché i tipi derivano dal tipo di base specificato nella `TargetType` Proprietà.
 
-Nell'esempio seguente viene illustrato uno stile implicito che imposta il colore di sfondo delle istanze di [`Button`](xref:Xamarin.Forms.Button) su rosso:
+Nell'esempio seguente viene illustrato uno stile implicito che imposta il colore di sfondo delle [`Button`](xref:Xamarin.Forms.Button) istanze su rosso:
 
 ```xaml
 <Style TargetType="Button"
@@ -133,7 +136,7 @@ Nell'esempio seguente viene illustrato uno stile implicito che imposta il colore
 </Style>
 ```
 
-Inserendo questo stile in una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a livello di pagina, questo verrà applicato a tutte le istanze di [`Button`](xref:Xamarin.Forms.Button) nella pagina e anche a tutti i controlli che derivano da `Button`. Tuttavia, se la proprietà [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) è rimasta non impostata, lo stile verrebbe applicato solo alle istanze di `Button`.
+Se si posiziona questo stile in un livello di pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , questo verrà applicato a tutte le [`Button`](xref:Xamarin.Forms.Button) istanze nella pagina e anche a tutti i controlli che derivano da `Button` . Tuttavia, se la [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) proprietà non è stata impostata, lo stile verrebbe applicato solo alle `Button` istanze.
 
 Il codice C# equivalente è il seguente:
 
@@ -160,5 +163,5 @@ Resources = new ResourceDictionary { buttonStyle };
 - [Stili di base (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [Utilizzo degli stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Style](xref:Xamarin.Forms.Style)
+- [Stile](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

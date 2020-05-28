@@ -1,56 +1,59 @@
 ---
-title: Xamarin.Forms Fast Renderers
-description: Questo articolo presenta renderer veloci, la riduzione di inflazione e i costi per il rendering di un controllo di Xamarin.Forms in Android appiattendo la gerarchia dei controllo nativi risultante.
-ms.prod: xamarin
-ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/09/2019
-ms.openlocfilehash: 861d9e3f898dcd61015d9aca27ae66c3fe72d1a9
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
-ms.translationtype: HT
+title: Xamarin.FormsRenderer veloci
+description: In questo articolo vengono introdotti i renderer veloci, che riducono i costi di inflazione e di rendering di un Xamarin.Forms controllo in Android, rendendo flat la gerarchia dei controlli nativi risultante.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3f25f4c2da5b2a426673b49045b5d2d05b0c6ac4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970714"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139074"
 ---
-# <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms Fast Renderers
+# <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRenderer veloci
 
-In genere, la maggior parte dei renderer controllo originale in Android sono costituita da due visualizzazioni:
+Tradizionalmente, la maggior parte dei renderer di controllo originali in Android è costituita da due visualizzazioni:
 
-- Controllo nativo, ad esempio un `Button` o `TextView`.
-- Un contenitore `ViewGroup` che gestisce alcuni delle operazioni di layout, la gestione di movimenti e altre attività.
+- Controllo nativo, ad esempio `Button` o `TextView` .
+- Contenitore `ViewGroup` che gestisce alcune attività di layout, gestione dei movimenti e altre attività.
 
-Tuttavia, questo approccio presenta un'implicazione di prestazioni in quanto le due visualizzazioni vengono create per ogni controllo logico, che comporta una struttura visiva più complessa che richiede più memoria e un'ulteriore elaborazione per eseguire il rendering sullo schermo.
+Tuttavia, questo approccio presenta una implicazione delle prestazioni in quanto vengono create due visualizzazioni per ogni controllo logico, il che comporta una struttura ad albero visuale più complessa che richiede una maggiore quantità di memoria e una maggiore elaborazione per il rendering sullo schermo.
 
-I renderer veloci riducono l'ingrandimento e i costi per il rendering di un controllo di Xamarin.Forms in una singola visualizzazione. Di conseguenza, invece di creare due visualizzazioni e ad aggiungerle alla struttura della visualizzazione, viene creata solo una. Ciò migliora le prestazioni creando un minor numero di oggetti, che significa che a sua volta una struttura ad albero Visualizza meno complesso, e minore consumo di memoria (che comporta un minor numero pause di garbage collection).
+I renderer veloci riducono l'inflazione e i costi di rendering di un Xamarin.Forms controllo in un'unica visualizzazione. Pertanto, anziché creare due visualizzazioni e aggiungerle alla struttura di visualizzazione, ne viene creata solo una. Ciò consente di migliorare le prestazioni creando un minor numero di oggetti, che a sua volta indica una struttura di visualizzazione meno complessa e un minor utilizzo di memoria (che comporta un minor numero di Garbage Collection pause).
 
-Renderer veloci sono disponibili per i controlli seguenti in Xamarin.Forms in Android:
+I renderer veloci sono disponibili per i seguenti controlli in Xamarin.Forms in Android:
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 
-Tali renderer veloci sono a livello funzionale, non è diverso per il renderer legacy. Da Xamarin.Forms 4.0 e versioni successive, tutte le applicazioni destinate a `FormsAppCompatActivity` useranno questi renderer veloci per impostazione predefinita. I renderer per tutti i nuovi controlli, tra cui [ `ImageButton` ](xref:Xamarin.Forms.ImageButton) e [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), usare l'approccio renderer veloci.
+Dal punto di vista funzionale, questi renderer veloci non sono diversi per i renderer legacy. Da Xamarin.Forms 4,0 in poi, per impostazione predefinita tutte le applicazioni destinate a useranno `FormsAppCompatActivity` questi renderer veloci. I renderer per tutti i nuovi controlli, tra cui [`ImageButton`](xref:Xamarin.Forms.ImageButton) e [`CollectionView`](xref:Xamarin.Forms.CollectionView) , usano l'approccio renderer rapido.
 
-Miglioramenti delle prestazioni quando si Usa renderer veloci variano per ogni applicazione, a seconda della complessità del layout. Ad esempio, sono possibili miglioramenti delle prestazioni di x2 durante lo scorrimento di un [ `ListView` ](xref:Xamarin.Forms.ListView) che contengono migliaia di righe di dati, in cui le celle in ogni riga sono costituite da controlli che usano renderer veloci, in modo da visibilmente lo scorrimento più uniforme.
+I miglioramenti delle prestazioni quando si utilizzano renderer veloci variano per ogni applicazione, a seconda della complessità del layout. Ad esempio, i miglioramenti delle prestazioni di X2 sono possibili quando si scorre un oggetto [`ListView`](xref:Xamarin.Forms.ListView) che contiene migliaia di righe di dati, in cui le celle di ogni riga sono costituite da controlli che utilizzano renderer veloci, il che comporta lo scorrimento invisibile.
 
 > [!NOTE]
-> Renderer personalizzati possono essere create per renderer veloci usando lo stesso approccio usato per il renderer legacy. Per altre informazioni, vedere [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) (Renderer personalizzati).
+> È possibile creare renderer personalizzati per renderer veloci usando lo stesso approccio usato per i renderer legacy. Per altre informazioni, vedere [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) (Renderer personalizzati).
 
 ## <a name="backwards-compatibility"></a>Compatibilità con le versioni precedenti
 
-Renderer veloci possono eseguire l'override con gli approcci seguenti:
+I renderer veloci possono essere sostituiti con gli approcci seguenti:
 
-1. Abilitare i renderer legacy aggiungendo la riga seguente di codice per il `MainActivity` classe prima di chiamare `Forms.Init`:
+1. Per abilitare i renderer legacy, aggiungere la seguente riga di codice alla `MainActivity` classe prima di chiamare `Forms.Init` :
 
     ```csharp
     Forms.SetFlags("UseLegacyRenderers");
     ```
 
-1. Usa renderer personalizzati che il renderer legacy come destinazione. Qualsiasi renderer personalizzati esistenti continueranno a funzionare con i renderer legacy.
-1. Specificare un diverso `View.Visual`, ad esempio `Material`, che Usa renderer diversi. Per altre informazioni su Visual materiale, vedere [Xamarin.Forms materiale Visual](~/xamarin-forms/user-interface/visual/material-visual.md).
+1. Uso dei renderer personalizzati destinati ai renderer legacy. Qualsiasi renderer personalizzato esistente continuerà a funzionare con i renderer legacy.
+1. Specificando un diverso `View.Visual` , ad esempio `Material` , che usa renderer diversi. Per altre informazioni sull'oggetti visivi Material, vedere [ Xamarin.Forms Material Visual](~/xamarin-forms/user-interface/visual/material-visual.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

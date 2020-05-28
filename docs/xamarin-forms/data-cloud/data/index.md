@@ -1,25 +1,28 @@
 ---
-title: Archiviazione locale dei dati di Xamarin.Forms
-description: Informazioni su come eseguire file di gestione da codice condiviso di Xamarin.Forms e come leggere e scrivere dati in un database SQLite locale usando SQLite.Net.
-ms.prod: xamarin
-ms.assetid: A324C247-7DA8-4B14-A813-25F85525E32B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/27/2019
-ms.openlocfilehash: 585b55b79046af07e466fb25b33f4c22c2ec5e5b
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
-ms.translationtype: HT
+title: Xamarin.Formsarchiviazione dati locale
+description: Informazioni su come eseguire la gestione dei file dal Xamarin.Forms codice condiviso e su come leggere e scrivere dati in un database SQLite locale usando SQLite.NET.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 997a659dd01e410f791af28d1b657055296081c8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659068"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127114"
 ---
-# <a name="xamarinforms-local-data-storage"></a>Archiviazione locale dei dati di Xamarin.Forms
+# <a name="xamarinforms-local-data-storage"></a>Xamarin.Formsarchiviazione dati locale
 
-## <a name="filesfilesmd"></a>[File](files.md)
+## <a name="files"></a>[File](files.md)
 
-In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate. Questo articolo illustra come eseguire file di gestione da codice condiviso in un'applicazione Xamarin.Forms.
+La gestione dei file con Xamarin.Forms può essere eseguita usando il codice in una libreria di .NET standard o usando risorse incorporate. Questo articolo illustra come eseguire la gestione dei file dal codice condiviso in un' Xamarin.Forms applicazione.
 
-## <a name="local-databasesdatabasesmd"></a>[Database locali](databases.md)
+## <a name="local-databases"></a>[Database locali](databases.md)
 
-Xamarin.Forms supporta applicazioni basate su database con il motore di database SQLite, che consente di caricare e salvare gli oggetti nel codice condiviso. Questo articolo descrive come le applicazioni Xamarin.Forms possono leggere e scrivere dati in un database SQLite locale usando SQLite.Net.
+Xamarin.Formssupporta applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive in che modo Xamarin.Forms le applicazioni possono leggere e scrivere dati in un database SQLite locale usando SQLite.NET.

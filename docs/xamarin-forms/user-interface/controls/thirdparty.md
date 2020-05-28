@@ -1,22 +1,25 @@
 ---
-title: Controlli di terze parti Xamarin.Forms
-description: Sono disponibili controlli aggiuntivi per lo sviluppo di Xamarin.Forms da società quali Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne e Steema.
-ms.prod: xamarin
-ms.assetid: C33A4848-3FC8-4A20-8275-387039F541AD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/08/2019
-ms.openlocfilehash: 2054fb8dbd3f0c2ebacc771eeb11c6805224d453
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
-ms.translationtype: HT
+title: Xamarin.FormsControlli di terze parti
+description: I controlli aggiuntivi per Xamarin.Forms lo sviluppo sono disponibili per le aziende, ad esempio Telerik, Syncfusion, DevExpress, Infragistics, ComponentOne e Steema.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e0881296664ec20eeefe02c9db57a2fd76cd999b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68876240"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132418"
 ---
-# <a name="xamarinforms-third-party-controls"></a>Controlli di terze parti Xamarin.Forms
+# <a name="xamarinforms-third-party-controls"></a>Xamarin.FormsControlli di terze parti
 
-Oltre ai controlli forniti con Xamarin.Forms, i controlli di terze parti sono disponibili nelle società seguenti:
+Oltre ai controlli forniti con Xamarin.Forms , i controlli di terze parti sono disponibili nelle società seguenti:
 
 - [Telerik](https://www.telerik.com/xamarin-ui)
 - [SyncFusion](https://www.syncfusion.com/xamarin-ui-controls)
@@ -25,4 +28,4 @@ Oltre ai controlli forniti con Xamarin.Forms, i controlli di terze parti sono di
 - [ComponentOne](https://www.grapecity.com/componentone-xamarin/)
 - [Steema](https://www.steema.com/product/forms)
 
-Questi controlli offrono supporto aggiuntivo per gli sviluppatori di Xamarin.Forms grazie all'aumento dei controlli standard con controlli e servizi personalizzati.
+Questi controlli offrono supporto aggiuntivo per Xamarin.Forms gli sviluppatori grazie all'aumento dei controlli standard con controlli e servizi personalizzati.

@@ -1,18 +1,21 @@
 ---
-title: Passaggio dei parametri di un effetto come proprietà Common Language Runtime
-description: Le proprietà CLR (Common Language Runtime) possono essere usate per definire parametri per gli effetti che non rispondono alle modifiche delle proprietà in fase di esecuzione. Questo articolo illustra l'uso delle proprietà CLR per il passaggio di parametri a un effetto.
-ms.prod: xamarin
-ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/05/2016
-ms.openlocfilehash: 63c7eb799b92871d7e00b7302bbe86f8b959ec23
-ms.sourcegitcommit: 05ba8ffb8b34ec881b89e442323f3edd8de18f2e
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 37d870509e034f4c23afba60fa055965ed9df4de
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546037"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138866"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio dei parametri di un effetto come proprietà Common Language Runtime
 
@@ -234,7 +237,7 @@ namespace EffectsDemo.UWP
 
 Il piattaforma UWP (Universal Windows Platform) non fornisce un effetto di ombreggiatura, pertanto l' `LabelShadowEffect` implementazione su entrambe le piattaforme ne simula una aggiungendo un secondo offset [`Label`](xref:Xamarin.Forms.Label) dietro il database primario `Label` . Il metodo `OnAttached` recupera l'istanza di `ShadowEffect`, crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Viene quindi creata l'ombreggiatura impostando [`TextColor`](xref:Xamarin.Forms.Label.TextColor) le [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) proprietà, e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) per controllare il colore e la posizione dell'oggetto `Label` . `shadowLabel` viene quindi inserito sfalsato dietro all'elemento `Label` primario. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato l'uso delle proprietà CLR per passare parametri a un effetto. Le proprietà CLR possono essere usate per definire i parametri dell'effetto che non rispondono a modifiche delle proprietà in fase di esecuzione.
 

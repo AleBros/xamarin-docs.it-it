@@ -1,22 +1,25 @@
 ---
-title: Passaggio dei parametri a un effetto
-description: I parametri dell'effetto possono essere definiti dalle proprietà, consentendo il riutilizzo dell'effetto. I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto.
-ms.prod: xamarin
-ms.assetid: F6429859-6EF7-48BE-A0CB-8F42B8A75215
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: f7d8c8f7d3a3778afdae64039a9614c02c261156
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 42d3943b00fc2ae5385343f946d9d96743e955cd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771432"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138840"
 ---
 # <a name="passing-parameters-to-an-effect"></a>Passaggio dei parametri a un effetto
 
-_I parametri dell'effetto possono essere definiti dalle proprietà, consentendo il riutilizzo dell'effetto. I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto._
+_I parametri degli effetti possono essere definiti dalle proprietà, consentendo l'effetto da riutilizzare. I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto._
 
 ## <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>[Passaggio dei parametri di un effetto come proprietà Common Language Runtime](clr-properties.md)
 

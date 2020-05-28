@@ -1,37 +1,40 @@
 ---
-title: Filtri di colore in SkiaSharp
-description: Usare i filtri di colore per convertire i colori con trasformazioni o le tabelle.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/28/2018
-ms.openlocfilehash: 5aa8b2e85d5a7d547af5333dcaf350025b86cc26
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647702"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136383"
 ---
-# <a name="skiasharp-color-filters"></a>Filtri di colore in SkiaSharp
+# <a name="skiasharp-color-filters"></a>Filtri colori SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Filtri del colore può convertire i colori in una mappa di bit (o altra immagine) per gli altri colori per gli effetti, ad esempio posterizzazione:
+I filtri colori possono convertire i colori in una bitmap (o un'altra immagine) in altri colori per gli effetti, ad esempio la posterzzazione:
 
-![Esempio di filtri di colore](color-filters-images/ColorFiltersExample.png "esempio filtri di colore")
+![Esempio di filtri colori](color-filters-images/ColorFiltersExample.png "Esempio di filtri colori")
 
-Per usare un filtro di colore, impostare il [ `ColorFilter` ](xref:SkiaSharp.SKPaint.ColorFilter) proprietà della `SKPaint` a un oggetto di tipo [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) creati mediante uno dei metodi statici nella classe. Questo articolo illustra: 
+Per usare un filtro colori, impostare la [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) proprietà di `SKPaint` su un oggetto di tipo [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) creato da uno dei metodi statici in tale classe. Questo articolo illustra: 
 
-- creare una trasformazione di colore con il [ `CreateColorMatrix` ](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) (metodo).
-- una tabella creata con il [ `CreateTable` ](xref:SkiaSharp.SKColorFilter.CreateTable*) (metodo).
+- trasformazione colore creata con il [`CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) metodo.
+- tabella dei colori creata con il [`CreateTable`](xref:SkiaSharp.SKColorFilter.CreateTable*) metodo.
 
-## <a name="the-color-transform"></a>La trasformazione di colore
+## <a name="the-color-transform"></a>Trasformazione colore
 
-La trasformazione di colore prevede l'uso di una matrice per modificare i colori. Come la maggior parte dei sistemi di grafica 2D, SkiaSharp matrici viene utilizzato principalmente per la trasformazione dei punti delle coordinate come iscussed nell'articolo [ **trasformazioni di matrice in SkiaSharp**](../transforms/matrix.md). Il [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) supporta anche le trasformazioni di matrice, ma le trasformazioni con matrice dei colori RGB. Familiarità con i concetti di matrice è necessario comprendere queste trasformazioni di colore. 
+La trasformazione colore prevede l'utilizzo di una matrice per modificare i colori. Come per la maggior parte dei sistemi grafici 2D, SkiaSharp USA matrici per la trasformazione di punti di coordinate come imprecate nelle [**trasformazioni di matrici di articoli in SkiaSharp**](../transforms/matrix.md). [`SKColorFilter`](xref:SkiaSharp.SKColorFilter)Supporta inoltre le trasformazioni di matrice, ma la matrice trasforma i colori RGB. Una certa familiarità con i concetti di matrice è necessaria per comprendere le trasformazioni dei colori. 
 
-Colore-trasformazione matrice ha una dimensione di quattro righe e cinque colonne:
+La matrice di trasformazione dei colori ha una dimensione di quattro righe e cinque colonne:
 
 <pre>
 | M11 M12 M13 M14 M15 |
@@ -40,7 +43,7 @@ Colore-trasformazione matrice ha una dimensione di quattro righe e cinque colonn
 | M41 M42 M43 M44 M45 |
 </pre>
 
-Trasforma un colore di origine RGB (rosso, verde e B, A) per il colore di destinazione (R', G', B ','). 
+Trasforma un colore di origine RGB (R, G, B, A) nel colore di destinazione (R ', G ', B ', A '). 
 
 In preparazione per la moltiplicazione di matrici, il colore di origine viene convertito in una matrice di 5 × 1:
 
@@ -52,11 +55,11 @@ In preparazione per la moltiplicazione di matrici, il colore di origine viene co
 | 1 |
 </pre>
 
-Questi valori R, G, B e oggetto sono i byte originali compreso tra 0 e 255. Si trovano _non_ normalizzati in base a valori a virgola mobile compreso nell'intervallo da 0 a 1.
+Questi valori R, G, B e sono i byte originali compresi tra 0 e 255. _Non_ vengono normalizzati in valori a virgola mobile nell'intervallo compreso tra 0 e 1.
 
-La cella aggiuntiva è necessaria per un fattore di conversione. Questo comportamento è analogo all'utilizzo di una matrice 3x3 trasformare punti delle coordinate bidimensionali, come descritto nella sezione [ **il motivo per la matrice 3 per 3** ](../transforms/matrix.md#the-reason-for-the-3-by-3-matrix) nell'articolo sull'uso di matrici per la trasformazione i punti delle coordinate.
+La cella aggiuntiva è necessaria per un fattore di conversione. Questo è analogo all'uso di una matrice 3 × 3 per trasformare punti di coordinate bidimensionali, come descritto nella sezione [**motivo della matrice 3 per 3**](../transforms/matrix.md#the-reason-for-the-3-by-3-matrix) nell'articolo sull'utilizzo di matrici per la trasformazione di punti di coordinate.
 
-Matrice 4 × 5 viene moltiplicata per la matrice di 5 × 1 e il prodotto è una matrice 4 × 1 con il colore trasformato:
+La matrice 4 × 5 viene moltiplicata per la matrice 5 × 1 e il prodotto è una matrice di 4 × 1 con il colore trasformato:
 
 <pre>
 | M11 M12 M13 M14 M15 |    | R |   | R' |
@@ -66,7 +69,7 @@ Matrice 4 × 5 viene moltiplicata per la matrice di 5 × 1 e il prodotto è una 
                            | 1 |
 </pre>
 
-Di seguito sono le formule separate per R', G', 'B e A':
+Di seguito sono riportate le formule separate per R ', G ', B ' è:
 
 `R' = M11·R + M12·G + M13·B + M14·A + M15` 
 
@@ -76,9 +79,9 @@ Di seguito sono le formule separate per R', G', 'B e A':
 
 `A' = M41·R + M42·G + M43·B + M44·A + M45` 
 
-La maggior parte della matrice è costituita da moltiplicazione fattori che sono in genere compreso nell'intervallo compreso tra 0 e 2. Tuttavia, l'ultima colonna (M15 tramite M45) contiene valori che vengono aggiunti nelle formule. Questi valori in genere compresa tra 0 e 255. I risultati sono compresi tra i valori 0 e 255.
+La maggior parte della matrice è costituita da fattori moltiplicativi generalmente compresi tra 0 e 2. L'ultima colonna (M15 tramite M45), tuttavia, contiene valori aggiunti nelle formule. Questi valori sono generalmente compresi tra 0 e 255. I risultati vengono fissati tra i valori 0 e 255.
 
-Matrice di identità è:
+La matrice di identità è:
 
 <pre>
 | 1 0 0 0 0 |
@@ -87,7 +90,7 @@ Matrice di identità è:
 | 0 0 0 1 0 |
 </pre>
 
-Ciò non comporta alcuna modifica ai colori. Le formule di trasformazione sono:
+Questa operazione non comporta alcuna modifica ai colori. Le formule di trasformazione sono:
 
 `R' = R` 
 
@@ -97,13 +100,13 @@ Ciò non comporta alcuna modifica ai colori. Le formule di trasformazione sono:
 
 `A' = A`
 
-La cella M44 è molto importante perché mantiene opacità. È in genere il caso che M41 M42 e M43 sono tutti pari a zero perché non è opportuno opacità deve essere basato sui valori rossi, verdi e blu. Tuttavia, se M44 è zero, l'oggetto ' sarà zero e non sarà visibile.
+La cella M44 è molto importante perché preserva l'opacità. Si tratta in genere del caso in cui M41, M42 e M43 sono tutti zero, perché probabilmente non si vuole che l'opacità sia basata sui valori rosso, verde e blu. Ma se M44 è zero,' sarà zero e non sarà visibile alcun elemento.
 
-Uno degli usi più comuni della matrice di colori consiste nel convertire una bitmap a colori per una bitmap gradazioni di grigio. Ciò comporta una formula per una media ponderata dei valori di colore rosso, verde e blu. Per gli schermi video con spazio dei colori sRGB ("standard rosso verde blu"), questa formula è:
+Uno degli usi più comuni della matrice di colori è la conversione di una mappa di bit di colore in una bitmap con scala in grigio. Si tratta di una formula per una media ponderata dei valori rosso, verde e blu. Per le visualizzazioni video che usano lo spazio colore sRGB ("Red Red Green Blue"), questa formula è:
 
-gradazione di grigio = 0.2126· R + 0.7152· G + 0.0722· B
+grigio-ombreggiatura = 0,2126 · R + 0,7152 · G + 0,0722 · B
 
-Per convertire una bitmap a colori una bitmap gradazioni di grigio, l'oggetto R', G', e tutti i risultati di B' deve essere uguale quello stesso valore. La matrice è:
+Per convertire una mappa di bit di colore in una bitmap con scala di grigia, i risultati di R ', G ' e B ' devono essere tutti uguali allo stesso valore. La matrice è:
 
 <pre>
 | 0.21 0.72 0.07 0 0 |
@@ -112,15 +115,15 @@ Per convertire una bitmap a colori una bitmap gradazioni di grigio, l'oggetto R'
 | 0    0    0    1 0 |
 </pre>
 
-Non vi è alcun tipo di dati di SkiaSharp che corrisponde a questa matrice. È invece necessario rappresentare la matrice come matrice di 20 `float` valori in ordine di riga: prima riga, quindi seconda riga e così via.
+Nessun tipo di dati SkiaSharp corrispondente a questa matrice. È invece necessario rappresentare la matrice come matrice di 20 `float` valori nell'ordine delle righe: prima riga, poi seconda riga e così via.
 
-Il metodo statico [ `SKColorFilter.CreateColorMatrix` ](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) metodo ha la sintassi seguente:
+Il [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) metodo statico presenta la sintassi seguente:
 
 ```csharp
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-in cui `matrix` è una matrice di 20 `float` valori. Quando si crea la matrice in C#, è facile formattare i numeri in modo assomigliano matrice 4 × 5. Come illustrato nel **matrice gradazioni di grigio** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio:
+dove `matrix` è una matrice di 20 `float` valori. Quando si crea la matrice in C#, è facile formattare i numeri in modo che siano simili alla matrice 4 × 5. Questa operazione viene illustrata nella pagina **matrice della scala di grigi** nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -163,19 +166,19 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-Il `DrawBitmap` metodo usato in questo codice è dal **BitmapExtension.cs** file incluso con il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. 
+Il `DrawBitmap` metodo usato in questo codice è dal file **BitmapExtension.cs** incluso nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . 
 
-Ecco il risultato in esecuzione in iOS, Android e Universal Windows Platform:
+Ecco il risultato eseguito in iOS, Android e piattaforma UWP (Universal Windows Platform):
 
-[![Matrice di scala di grigi](color-filters-images/GrayScaleMatrix.png "matrice di scala di grigi")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
+[![Matrice con scalabilità grigia](color-filters-images/GrayScaleMatrix.png "Matrice con scalabilità grigia")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
 
-Il valore nella quarta riga e della quarta colonna, prestare attenzione. Questo è il fattore fondamentale che viene moltiplicato il valore del colore originale per l'oggetto "valore del colore trasformato. Se questa cella è zero, verrà visualizzato nulla e il problema potrebbe essere difficile da individuare.
+Osservare il valore della quarta riga e della quarta colonna. Questo è il fattore cruciale moltiplicato per il valore del colore originale per il valore di A del colore trasformato. Se la cella è zero, non verrà visualizzato nulla e il problema potrebbe essere difficile da individuare.
 
-Durante la sperimentazione con matrici di colore, è possibile considerare la trasformazione dal punto di vista dell'origine o la prospettiva della destinazione. Come il colore rosso pixel dell'origine incoraggiati a contribuire al pixel rosso, verde e blu di destinazione? Che è determinata dai valori nel primo _colonna_ della matrice. In alternativa, come il pixel di destinazione rossi saranno interessato dai pixel rossi, verdi e blu dell'origine? Che viene determinato dal primo _riga_ della matrice.
+Quando si sperimentano matrici di colore, è possibile considerare la trasformazione dal punto di vista dell'origine o dalla prospettiva della destinazione. In che modo il pixel rosso dell'origine contribuisce ai pixel rosso, verde e blu della destinazione? Determinato dai valori nella prima _colonna_ della matrice. In alternativa, in che modo deve essere influenzato il pixel rosso di destinazione dai pixel rosso, verde e blu dell'origine? Determinato dalla prima _riga_ della matrice.
 
-Per alcune idee su come usare le trasformazioni di colore, vedere la [ **ricolorazione di immagini** ](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) pagine. La descrizione riguarda Windows Form e la matrice è un formato diverso, ma i concetti sono uguali.
+Per alcune idee su come usare le trasformazioni dei colori, vedere le pagine relative alle [**Immagini di ricoloring**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) . La discussione riguarda Windows Forms e la matrice ha un formato diverso, ma i concetti sono gli stessi.
 
-Il **Pastello matrice** calcola il pixel di destinazione rossi attenuazione pixel origine rosso e leggermente che mettono in evidenza i pixel rossi e verdi. Questo processo si verifica in modo analogo per i pixel verdi e blu:
+La **matrice pastella** calcola il pixel rosso di destinazione attenuando il pixel rosso di origine e evidenziando leggermente i pixel rossi e verdi. Questo processo si verifica in modo analogo per i pixel verde e blu:
 
 ```csharp
 public class PastelMatrixPage : ContentPage
@@ -218,13 +221,13 @@ public class PastelMatrixPage : ContentPage
 }
 ```
 
-Il risultato è di disattivare l'intensità dei colori, come illustrato di seguito:
+Il risultato è quello di disattivare l'intensità dei colori come è possibile vedere qui:
 
-[![Matrice Pastello](color-filters-images/PastelMatrix.png "Pastello matrice")](color-filters-images/PastelMatrix-Large.png#lightbox)
+[![Matrice pastello](color-filters-images/PastelMatrix.png "Matrice pastello")](color-filters-images/PastelMatrix-Large.png#lightbox)
 
-## <a name="color-tables"></a>Tabelle di colore
+## <a name="color-tables"></a>Tabelle colori
 
-Il metodo statico [ `SKColorFilter.CreateTable` ](xref:SkiaSharp.SKColorFilter.CreateTable*) metodo disponibile in due versioni:
+Il metodo statico è costituito [`SKColorFilter.CreateTable`](xref:SkiaSharp.SKColorFilter.CreateTable*) da due versioni:
 
 ```csharp
 public static SKColorFilter CreateTable (byte[] table);
@@ -232,7 +235,7 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-Le matrici sempre contengono le voci di 256. Nel `CreateTable` metodo con una tabella, la stessa tabella viene utilizzato per i componenti rossi, verdi e blu. Si tratta di una semplice tabella di ricerca: Se il colore di origine è (r, G, b) e il colore di destinazione è (r ', b ', G '), i componenti di destinazione vengono ottenuti tramite `table` l'indicizzazione con i componenti di origine:
+Le matrici contengono sempre 256 voci. Nel `CreateTable` metodo con una tabella, viene utilizzata la stessa tabella per i componenti rosso, verde e blu. Si tratta di una tabella di ricerca semplice: se il colore di origine è (R, G, B) e il colore di destinazione è (R ', B ', G '), i componenti di destinazione vengono ottenuti tramite l'indicizzazione `table` con i componenti di origine:
 
 `R' = table[R]`
 
@@ -240,13 +243,13 @@ Le matrici sempre contengono le voci di 256. Nel `CreateTable` metodo con una ta
 
 `B' = table[B]`
 
-Il secondo metodo, ognuno dei quattro componenti di colore può avere una tabella separata o le tabelle dei colori stesso potrebbero essere condivisa tra due o più componenti.
+Nel secondo metodo, ognuno dei quattro componenti colore può avere una tabella dei colori separata oppure le stesse tabelle dei colori possono essere condivise tra due o più componenti.
 
-Se si desidera impostare uno degli argomenti al secondo `CreateTable` metodo di una tabella dei colori che contiene i valori 0 e 255 in sequenza, è possibile usare `null` invece. Molto spesso i `CreateTable` chiamata ha un `null` primo argomento per il canale alfa.
+Se si vuole impostare uno degli argomenti sul secondo `CreateTable` metodo su una tabella dei colori che contiene i valori da 0 a 255 in sequenza, è possibile usare `null` invece. Molto spesso la `CreateTable` chiamata ha un `null` primo argomento per il canale alfa.
 
-Nella sezione **posterizzazione** nell'articolo sulla [SkiaSharp l'accesso ai bit di pixel bitmap](../bitmaps/pixel-bits.md#posterization), è stato illustrato come modificare i bit dei singoli pixel della bitmap a ridurne la risoluzione di colore. Si tratta di una tecnica detta _posterizzazione_. 
+Nella sezione relativa alla **poster** nell'articolo relativo all' [accesso a SkiaSharp bitmap pixel bits](../bitmaps/pixel-bits.md#posterization)è stato illustrato come modificare i singoli bit di pixel di una bitmap per ridurne la risoluzione dei colori. Si tratta di una tecnica denominata _posterzzazione_. 
 
-È anche possibile posterizzazione una bitmap con una tabella dei colori. Il costruttore del **posterizzazione tabella** pagina consente di creare una tabella dei colori che esegue il mapping di indice corrispondente a un byte con la parte inferiore 6 bit impostati su zero:
+È anche possibile posterizzazione una bitmap con una tabella dei colori. Il costruttore della pagina della **tabella posterizzazione** crea una tabella dei colori che esegue il mapping dell'indice a un byte con i 6 bit inferiori impostati su zero:
 
 ```csharp
 public class PosterizeTablePage : ContentPage
@@ -291,13 +294,13 @@ public class PosterizeTablePage : ContentPage
 }
 ```
 
-Il programma sceglie di usare questa tabella colori solo per i canali di colore verde e blu. Il canale di colore rosso continua ad avere risoluzione completa:
+Il programma sceglie di usare questa tabella dei colori solo per i canali verde e blu. Il canale rosso continua a avere la risoluzione completa:
 
-[![Tabella posterizzazione](color-filters-images/PosterizeTable.png "posterizzazione tabella")](color-filters-images/PosterizeTable-Large.png#lightbox)
+[![Tabella Posterizzazione](color-filters-images/PosterizeTable.png "Tabella Posterizzazione")](color-filters-images/PosterizeTable-Large.png#lightbox)
 
-È possibile usare le diverse tabelle di colore per i canali di colore diverso per vari effetti. 
+È possibile utilizzare varie tabelle dei colori per i diversi canali di colore per diversi effetti. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

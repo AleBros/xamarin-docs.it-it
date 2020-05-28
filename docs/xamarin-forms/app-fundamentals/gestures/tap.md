@@ -1,26 +1,29 @@
 ---
-title: Aggiunta di un sistema di riconoscimento del gesto tocco
-description: Questo articolo illustra come usare il gesto tocco per il rilevamento del tocco in un'applicazione Xamarin.Forms. Il rilevamento del tocco viene implementato con la classe TapGestureRecognizer.
-ms.prod: xamarin
-ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/21/2016
-ms.openlocfilehash: 95f25dbce55e2b960f604b6e304ffb6e8ed775e0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Questo articolo illustra come usare il gesto Tap per il rilevamento tap in un' Xamarin.Forms applicazione. Il rilevamento del tocco viene implementato con la classe TapGestureRecognizer.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0470419dd5070424c362dec8d4b1978507985783
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771342"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137618"
 ---
 # <a name="adding-a-tap-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del gesto tocco
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 
 _Il gesto tocco viene usato per il rilevamento del tocco e viene implementato con la classe TapGestureRecognizer._
 
-Per rendere selezionabile un elemento dell'interfaccia [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) utente con [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) il gesto tocco, creare [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) un'istanza, gestire l'evento e aggiungere il nuovo riconoscitore di movimento alla raccolta nell'elemento dell'interfaccia utente. Nell'esempio di `TapGestureRecognizer` codice riportato [`Image`](xref:Xamarin.Forms.Image) di seguito viene illustrato un elemento associato a un elemento:The following code example shows a attached to an element:
+Per rendere un elemento dell'interfaccia utente selezionabile con il gesto Tap, creare un' [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) istanza, gestire l' [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) evento e aggiungere il nuovo riconoscimento di movimento alla [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) raccolta nell'elemento dell'interfaccia utente. Nell'esempio di codice riportato di seguito viene illustrato un oggetto `TapGestureRecognizer` associato a un [`Image`](xref:Xamarin.Forms.Image) elemento:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -30,19 +33,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-Per impostazione predefinita, l'immagine risponde ai singoli tocchi. Imposta [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) la proprietà in modo che attenda un doppio tocco (o più tocchi, se necessario).
+Per impostazione predefinita, l'immagine risponde ai singoli tocchi. Impostare la [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) Proprietà in modo che attenda un doppio tocco o più rubinetti, se necessario.
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-Quando [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) è impostato sopra di uno, il gestore eventi verrà eseguito solo se i tocchi si verificano entro un determinato periodo di tempo (questo periodo non è configurabile). Se non vengono effettuati entro il periodo di tempo, il secondo tocco o i tocchi successivi vengono ignorati e il 'conteggio dei tocchi' viene azzerato.
+Quando [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) viene impostato sopra uno, il gestore eventi viene eseguito solo se i colpetti si verificano entro un determinato periodo di tempo (questo periodo non è configurabile). Se non vengono effettuati entro il periodo di tempo, il secondo tocco o i tocchi successivi vengono ignorati e il 'conteggio dei tocchi' viene azzerato.
 
 <a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>Uso di Xaml
 
-È possibile aggiungere un sistema di riconoscimento del gesto tocco a un controllo in Xaml usando le proprietà associate. La sintassi [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) per aggiungere un a a un'immagine è illustrata di seguito (in questo caso definendo un evento *doppio tocco):*
+È possibile aggiungere un sistema di riconoscimento del gesto tocco a un controllo in Xaml usando le proprietà associate. Di seguito è illustrata la sintassi per aggiungere un oggetto [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a un'immagine, in questo caso la definizione di un evento di *doppio tocco* :
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -72,7 +75,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>Uso di ICommand
 
-Le applicazioni che usano il criterio Model-View-ViewModel (MVVM) usano in genere `ICommand` anziché collegare direttamente i gestori degli eventi. Il [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) può `ICommand` facilmente supportare impostando l'associazione nel codice:The can easily support either by setting the binding in code:
+Le applicazioni che usano il criterio Model-View-ViewModel (MVVM) usano in genere `ICommand` anziché collegare direttamente i gestori degli eventi. Il [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) può supportare facilmente impostando `ICommand` l'associazione nel codice:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();

@@ -1,24 +1,27 @@
 ---
-title: Pin mappa di Novell. Forms
-description: Questo articolo illustra come creare pin in una mappa Novell. Forms.
-ms.prod: xamarin
-ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/23/2019
-ms.openlocfilehash: 3df78a7c8eaf12306ade182f134f8d294d203af5
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.FormsPin mappa
+description: Questo articolo illustra come creare pin su una Xamarin.Forms mappa.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517591"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138437"
 ---
-# <a name="xamarinforms-map-pins"></a>Pin mappa di Novell. Forms
+# <a name="xamarinforms-map-pins"></a>Xamarin.FormsPin mappa
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-Il controllo Novell. [`Map`](xref:Xamarin.Forms.Maps.Map) Forms consente di contrassegnare le [`Pin`](xref:Xamarin.Forms.Maps.Pin) posizioni con gli oggetti. Un `Pin` è un marcatore di mappa che apre una finestra informazioni quando viene toccato:
+Il Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) controllo consente di contrassegnare le posizioni con [`Pin`](xref:Xamarin.Forms.Maps.Pin) gli oggetti. Un `Pin` è un marcatore di mappa che apre una finestra informazioni quando viene toccato:
 
 [![Screenshot di un PIN della mappa e della relativa finestra informazioni, in iOS e Android](pins-images/pin-and-information-window.png "Pin mappa con finestra informazioni")](pins-images/pin-and-information-window-large.png#lightbox "Pin mappa con finestra informazioni")
 
@@ -26,18 +29,18 @@ Quando un [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto viene aggiunto alla [`Map
 
 La [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe presenta le proprietà seguenti:
 
-- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address), di tipo `string`, che in genere rappresenta l'indirizzo per il percorso del PIN. Tuttavia, può trattarsi di `string` qualsiasi contenuto, non solo di un indirizzo.
-- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label), di tipo `string`, che in genere rappresenta il titolo del PIN.
-- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position), di tipo [`Position`](xref:Xamarin.Forms.Maps.Position), che rappresenta la latitudine e la longitudine del PIN.
-- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type), di tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType), che rappresenta il tipo di pin.
+- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address), di tipo `string` , che in genere rappresenta l'indirizzo per il percorso del PIN. Tuttavia, può trattarsi di qualsiasi `string` contenuto, non solo di un indirizzo.
+- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label), di tipo `string` , che in genere rappresenta il titolo del PIN.
+- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position), di tipo [`Position`](xref:Xamarin.Forms.Maps.Position) , che rappresenta la latitudine e la longitudine del PIN.
+- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type), di tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , che rappresenta il tipo di pin.
 
-Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che `Pin` può essere la destinazione di associazioni dati. Per ulteriori informazioni sugli oggetti `Pin` Data Binding, vedere la pagina relativa alla [visualizzazione di una raccolta di pin](#display-a-pin-collection).
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che `Pin` può essere la destinazione di associazioni dati. Per ulteriori informazioni sugli `Pin` oggetti Data Binding, vedere la pagina relativa alla visualizzazione di [una raccolta di pin](#display-a-pin-collection).
 
-Inoltre, la [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce `MarkerClicked` gli eventi `InfoWindowClicked` e. L' `MarkerClicked` evento viene generato quando viene toccato un PIN e l' `InfoWindowClicked` evento viene generato quando la finestra informazioni viene toccata. L' `PinClickedEventArgs` oggetto che accompagna entrambi gli eventi ha una singola `HideInfoWindow` proprietà di tipo `bool`.
+Inoltre, la [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce `MarkerClicked` `InfoWindowClicked` gli eventi e. L' `MarkerClicked` evento viene generato quando viene toccato un PIN e l' `InfoWindowClicked` evento viene generato quando la finestra informazioni viene toccata. L' `PinClickedEventArgs` oggetto che accompagna entrambi gli eventi ha una singola `HideInfoWindow` proprietà di tipo `bool` .
 
 ## <a name="display-a-pin"></a>Visualizzare un pin
 
-È [`Pin`](xref:Xamarin.Forms.Maps.Pin) possibile aggiungere un oggetto a [`Map`](xref:Xamarin.Forms.Maps.Map) un oggetto in XAML:
+[`Pin`](xref:Xamarin.Forms.Maps.Pin)È possibile aggiungere un oggetto a un oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) in XAML:
 
 ```xaml
 <ContentPage ...
@@ -77,7 +80,7 @@ Inoltre, la [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce `MarkerClicked
 </ContentPage>
 ```
 
-Questo codice XAML crea [`Map`](xref:Xamarin.Forms.Maps.Map) un oggetto che mostra l'area specificata dall' [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) oggetto. L' `MapSpan` oggetto viene centrato sulla latitudine e la Longitudine rappresentate da [`Position`](xref:Xamarin.Forms.Maps.Position) un oggetto, che estende 0,01 di latitudine e longitudine. Un [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto viene aggiunto alla [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) raccolta e disegnato in `Map` corrispondenza della posizione specificata dalla relativa [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) proprietà. Per informazioni sullo struct [`Position`](xref:Xamarin.Forms.Maps.Position) , vedere [posizione e distanza della mappa](position-distance.md). Per informazioni sul passaggio di argomenti in XAML a oggetti che non dispongono di costruttori predefiniti, vedere [passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Questo codice XAML crea un [`Map`](xref:Xamarin.Forms.Maps.Map) oggetto che mostra l'area specificata dall' [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) oggetto. L' `MapSpan` oggetto viene centrato sulla latitudine e la Longitudine rappresentate da un [`Position`](xref:Xamarin.Forms.Maps.Position) oggetto, che estende 0,01 di latitudine e longitudine. Un [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto viene aggiunto alla [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) raccolta e disegnato in `Map` corrispondenza della posizione specificata dalla relativa [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) Proprietà. Per informazioni sullo [`Position`](xref:Xamarin.Forms.Maps.Position) struct, vedere [posizione e distanza della mappa](position-distance.md). Per informazioni sul passaggio di argomenti in XAML a oggetti che non dispongono di costruttori predefiniti, vedere [passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 Il codice C# equivalente è il seguente:
 
@@ -99,7 +102,7 @@ map.Pins.Add(pin);
 ```
 
 > [!WARNING]
-> Se non si imposta [`Pin.Label`](xref:Xamarin.Forms.Maps.Pin.Label) la proprietà, viene generata `ArgumentException` un'eccezione quando l' [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto viene aggiunto a [`Map`](xref:Xamarin.Forms.Maps.Map)un oggetto.
+> Se non si imposta la [`Pin.Label`](xref:Xamarin.Forms.Maps.Pin.Label) proprietà `ArgumentException` , viene generata un'eccezione quando l'oggetto [`Pin`](xref:Xamarin.Forms.Maps.Pin) viene aggiunto a un oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) .
 
 Questo esempio di codice comporta il rendering di un singolo pin su una mappa:
 
@@ -107,13 +110,13 @@ Questo esempio di codice comporta il rendering di un singolo pin su una mappa:
 
 ## <a name="interact-with-a-pin"></a>Interagire con un pin
 
-Per impostazione predefinita, quando [`Pin`](xref:Xamarin.Forms.Maps.Pin) si tocca la finestra di informazioni visualizzata:
+Per impostazione predefinita, quando si [`Pin`](xref:Xamarin.Forms.Maps.Pin) tocca la finestra di informazioni visualizzata:
 
 [![Screenshot di un PIN della mappa e della relativa finestra informazioni, in iOS e Android](pins-images/pin-and-information-window.png "Pin mappa con finestra informazioni")](pins-images/pin-and-information-window-large.png#lightbox "Pin mappa con finestra informazioni")
 
 Se si tocca altrove sulla mappa, la finestra informazioni verrà chiusa.
 
-La [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce un `MarkerClicked` evento, che viene generato quando viene `Pin` toccato un oggetto. Non è necessario gestire questo evento per visualizzare la finestra informazioni. Questo evento deve essere invece gestito quando è necessario ricevere una notifica che indica che è stato toccato un PIN specifico.
+La [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce un `MarkerClicked` evento, che viene generato quando `Pin` viene toccato un oggetto. Non è necessario gestire questo evento per visualizzare la finestra informazioni. Questo evento deve essere invece gestito quando è necessario ricevere una notifica che indica che è stato toccato un PIN specifico.
 
 La [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe definisce anche un `InfoWindowClicked` evento che viene generato quando una finestra informazioni viene toccata. Questo evento deve essere gestito quando è necessario ricevere una notifica per informare che è stata toccata una finestra di informazioni specifica.
 
@@ -150,31 +153,31 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 };
 ```
 
-L' `PinClickedEventArgs` oggetto che accompagna entrambi gli eventi ha una singola `HideInfoWindow` proprietà di tipo `bool`. Quando questa proprietà è impostata su `true` all'interno di un gestore eventi, la finestra informazioni sarà nascosta.
+L' `PinClickedEventArgs` oggetto che accompagna entrambi gli eventi ha una singola `HideInfoWindow` proprietà di tipo `bool` . Quando questa proprietà è impostata su `true` all'interno di un gestore eventi, la finestra informazioni sarà nascosta.
 
 ## <a name="pin-types"></a>Tipi di pin
 
-[`Pin`](xref:Xamarin.Forms.Maps.Pin)gli oggetti includono [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) una proprietà, di [`PinType`](xref:Xamarin.Forms.Maps.PinType)tipo, che rappresenta il tipo di pin. L'enumerazione `PinType` definisce i membri seguenti:
+[`Pin`](xref:Xamarin.Forms.Maps.Pin)gli oggetti includono una [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) proprietà, di tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , che rappresenta il tipo di pin. L'enumerazione `PinType` definisce i membri seguenti:
 
 - `Generic`, rappresenta un pin generico.
 - `Place`, rappresenta un PIN per una posizione.
 - `SavedPin`, rappresenta un PIN per un percorso salvato.
 - `SearchResult`, rappresenta un PIN per un risultato della ricerca.
 
-Tuttavia, l' [`Pin.Type`](xref:Xamarin.Forms.Maps.Pin.Type) impostazione della proprietà su [`PinType`](xref:Xamarin.Forms.Maps.PinType) qualsiasi membro non modifica l'aspetto del pin sottoposto a rendering. Al contrario, è necessario creare un renderer personalizzato per personalizzare l'aspetto del PIN. Per altre informazioni, vedere [personalizzazione di un PIN della mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
+Tuttavia, l'impostazione della [`Pin.Type`](xref:Xamarin.Forms.Maps.Pin.Type) proprietà su qualsiasi [`PinType`](xref:Xamarin.Forms.Maps.PinType) membro non modifica l'aspetto del pin sottoposto a rendering. Al contrario, è necessario creare un renderer personalizzato per personalizzare l'aspetto del PIN. Per altre informazioni, vedere [personalizzazione di un PIN della mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
 
 ## <a name="display-a-pin-collection"></a>Visualizzare una raccolta di segnaposto
 
 La [`Map`](xref:Xamarin.Forms.Maps.Map) classe definisce le proprietà seguenti:
 
-- [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource), di tipo `IEnumerable`, che specifica la raccolta di `IEnumerable` elementi da visualizzare.
-- [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate), di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), che specifica l' [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto da applicare a ogni elemento nella raccolta di elementi visualizzati.
-- `ItemTemplateSelector`, di tipo [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector), che specifica l' [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) oggetto che verrà usato per scegliere un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto per un elemento in fase di esecuzione.
+- [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource), di tipo `IEnumerable` , che specifica la raccolta di `IEnumerable` elementi da visualizzare.
+- [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate), di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , che specifica l'oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) da applicare a ogni elemento nella raccolta di elementi visualizzati.
+- `ItemTemplateSelector`, di tipo [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) , che specifica l'oggetto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) che verrà usato per scegliere un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto per un elemento in fase di esecuzione.
 
 > [!IMPORTANT]
-> La [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) proprietà ha la precedenza quando vengono `ItemTemplate` impostate `ItemTemplateSelector` entrambe le proprietà e.
+> La [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) proprietà ha la precedenza quando `ItemTemplate` vengono impostate entrambe le `ItemTemplateSelector` proprietà e.
 
-Un [`Map`](xref:Xamarin.Forms.Maps.Map) oggetto può essere popolato con i pin usando data binding per [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) associare la relativa `IEnumerable` proprietà a una raccolta:
+Un oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) può essere popolato con i pin usando data binding per associare la relativa [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) proprietà a una `IEnumerable` raccolta:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -198,9 +201,9 @@ Un [`Map`](xref:Xamarin.Forms.Maps.Map) oggetto può essere popolato con i pin u
 </ContentPage>
 ```
 
-I [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) dati della proprietà vengono associati alla `Locations` proprietà dell'elemento ViewModel connesso, che restituisce un `ObservableCollection` oggetto `Location` di oggetti, che è un tipo personalizzato. Ogni `Location` oggetto definisce `Address` le `Description` proprietà e, di `string`tipo e una `Position` proprietà di tipo [`Position`](xref:Xamarin.Forms.Maps.Position).
+I [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) dati della proprietà vengono associati alla `Locations` proprietà dell'elemento ViewModel connesso, che restituisce un oggetto `ObservableCollection` di `Location` oggetti, che è un tipo personalizzato. Ogni `Location` oggetto definisce `Address` le `Description` proprietà e, di tipo e `string` una `Position` proprietà di tipo [`Position`](xref:Xamarin.Forms.Maps.Position) .
 
-L'aspetto `IEnumerable` di ogni elemento della raccolta viene definito impostando la [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) proprietà su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che contiene un [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto che i dati vengono associati alle proprietà appropriate.
+L'aspetto di ogni elemento della `IEnumerable` raccolta viene definito impostando la [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) proprietà su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che contiene un [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetto che i dati vengono associati alle proprietà appropriate.
 
 Gli screenshot seguenti mostrano una [`Map`](xref:Xamarin.Forms.Maps.Map) visualizzazione di una [`Pin`](xref:Xamarin.Forms.Maps.Pin) raccolta usando Data Binding:
 
@@ -208,7 +211,7 @@ Gli screenshot seguenti mostrano una [`Map`](xref:Xamarin.Forms.Maps.Map) visual
 
 ### <a name="choose-item-appearance-at-runtime"></a>Scegli aspetto elemento in fase di esecuzione
 
-È possibile scegliere l'aspetto di ogni `IEnumerable` elemento della raccolta in fase di esecuzione, in base al valore dell'elemento, impostando la `ItemTemplateSelector` proprietà [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)su:
+È possibile scegliere l'aspetto di ogni elemento della `IEnumerable` raccolta in fase di esecuzione, in base al valore dell'elemento, impostando la `ItemTemplateSelector` proprietà su [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) :
 
 ```xaml
 <ContentPage ...
@@ -259,16 +262,16 @@ public class MapItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-La `MapItemTemplateSelector` classe definisce `DefaultTemplate` le `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà e impostate su modelli di dati diversi. Il `OnSelectTemplate` metodo restituisce `XamarinTemplate`, che Visualizza "Novell" come etichetta quando viene toccato un `Pin` oggetto, quando l'elemento dispone di un indirizzo che contiene "San Francisco". Quando l'elemento non dispone di un indirizzo che contiene "San Francisco", `OnSelectTemplate` il metodo restituisce `DefaultTemplate`.
+La `MapItemTemplateSelector` classe definisce `DefaultTemplate` le `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà e impostate su modelli di dati diversi. Il `OnSelectTemplate` metodo restituisce `XamarinTemplate` , che Visualizza "Novell" come etichetta quando `Pin` viene toccato un oggetto, quando l'elemento dispone di un indirizzo che contiene "San Francisco". Quando l'elemento non dispone di un indirizzo che contiene "San Francisco", il `OnSelectTemplate` metodo restituisce `DefaultTemplate` .
 
 > [!NOTE]
-> Un caso di utilizzo per questa funzionalità è l'associazione di proprietà di [`Pin`](xref:Xamarin.Forms.Maps.Pin) oggetti sottoclass a proprietà diverse, in base `Pin` al sottotipo.
+> Un caso di utilizzo per questa funzionalità è l'associazione di proprietà di oggetti sottoclass [`Pin`](xref:Xamarin.Forms.Maps.Pin) a proprietà diverse, in base al `Pin` sottotipo.
 
-Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [creazione di un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
-## <a name="related-links"></a>Link correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Renderer personalizzato mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md)
-- [Creazione di un DataTemplateSelector Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Creazione di un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

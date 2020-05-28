@@ -1,23 +1,15 @@
 ---
-title: 'Xamarin.Essentials: Sensore di orientamento'
-description: La classe OrientationSensor consente di monitorare l'orientamento di un dispositivo in uno spazio tridimensionale.
-ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 5423872da7966bc7e4bb88e278d76b709f114158
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70120708"
+Titolo:'' Xamarin.Essentials : OrientationSensor '' Descrizione: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: Sensore di orientamento
+# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
 La classe **OrientationSensor** consente di monitorare l'orientamento di un dispositivo in uno spazio tridimensionale.
 
 > [!NOTE]
-> Questa classe è progettata per determinare l'orientamento di un dispositivo nello spazio 3D. Se è necessario determinare se lo schermo video del dispositivo è `Orientation` in `ScreenMetrics` modalità verticale o orizzontale, utilizzare la proprietà dell'oggetto disponibile dalla [`DeviceDisplay`](device-display.md) classe.
+> Questa classe è progettata per determinare l'orientamento di un dispositivo nello spazio 3D. Se è necessario determinare se la visualizzazione video del dispositivo è in modalità verticale o orizzontale, utilizzare la `Orientation` proprietà dell' `ScreenMetrics` oggetto disponibile dalla [`DeviceDisplay`](device-display.md) classe.
 
 ## <a name="get-started"></a>Introduzione
 
@@ -74,7 +66,7 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor`le letture sono riportate [`Quaternion`](xref:System.Numerics.Quaternion) sotto forma di un che descrive l'orientamento del dispositivo in base a due sistemi di coordinate 3D:
+`OrientationSensor`le letture vengono restituite sotto forma di un oggetto [`Quaternion`](xref:System.Numerics.Quaternion) che descrive l'orientamento del dispositivo in base a due sistemi di coordinate 3D:
 
 Il dispositivo (in genere un telefono o tablet) usa un sistema di coordinate 3D con gli assi seguenti:
 

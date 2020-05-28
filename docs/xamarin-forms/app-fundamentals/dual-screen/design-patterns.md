@@ -1,24 +1,27 @@
 ---
-title: Modelli di progettazione per doppio schermo di Xamarin.Forms
-description: Questa guida illustra il supporto di Xamarin.Forms di vari modelli di progettazione diversi ottimizzati per i dispositivi con doppio schermo.
-ms.prod: xamarin
-ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 02/08/2020
-ms.openlocfilehash: ab83869a4e865d1ce3b1fee83e84ce4e2fd913c6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsModelli di progettazione a doppio schermo
+description: Questa guida illustra come Xamarin.Forms supporta un'ampia gamma di modelli di progettazione ottimizzati per i dispositivi a doppio schermo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80628325"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138788"
 ---
-# <a name="xamarinforms-dual-screen-design-patterns"></a>Modelli di progettazione per doppio schermo di Xamarin.Forms
+# <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Formsmodelli di progettazione a doppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 Questa guida presenta i modelli di progettazione consigliati per i dispositivi con doppio schermo con codice ed esempi utili per la creazione di interfacce in grado di offrire esperienze utente accattivanti e utili.
 
@@ -117,7 +120,7 @@ Il modello a due pagine è ideale per contenuti che si prestano a un layout con 
 </Grid>
 ```
 
-La [`CollectionView`](xref:Xamarin.Forms.CollectionView), con un layout a griglia che si divide sulla larghezza della cerniera, rende un approccio ideale per offrire questa esperienza a doppio schermo.
+L'oggetto [`CollectionView`](xref:Xamarin.Forms.CollectionView) , con un layout di griglia diviso sulla larghezza della cerniera, costituisce un approccio ideale per fornire questa esperienza a doppio schermo.
 
 ## <a name="dual-view-pattern"></a>Modello di visualizzazione doppia
 

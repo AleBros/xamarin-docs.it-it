@@ -1,59 +1,63 @@
 ---
-title: Riassunto del capitolo 9. Chiamate di API specifiche della piattaforma
-description: 'Creazione di app per dispositivi mobili con Xamarin.Forms: riepilogo del capitolo 9. Chiamate di API specifiche della piattaforma'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 9. Platform-specific API calls''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334561"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136857"
 ---
-# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Riassunto del capitolo 9. Chiamate di API specifiche della piattaforma
+# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Riepilogo del capitolo 9. Chiamate di API specifiche della piattaforma
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
-> Le note in questa pagina indicano le aree in cui Xamarin.Forms si è discostata dal materiale presentato nel libro.
+> Le note in questa pagina indicano Xamarin.Forms le aree in cui è stato divergente rispetto al materiale presentato nel libro.
 
-A volte è necessario eseguire codice che varia in base alla piattaforma. Questo capitolo esplora le tecniche.
+Talvolta è necessario eseguire codice che varia in base alla piattaforma. In questo capitolo vengono esaminate le tecniche.
 
-## <a name="preprocessing-in-the-shared-asset-project"></a>Pre-elaborazione nel progetto di asset condiviso
+## <a name="preprocessing-in-the-shared-asset-project"></a>Pre-elaborazione nel progetto asset condiviso
 
-Un progetto di asset condiviso Xamarin.Forms può eseguire codice diverso `#if`per `#elif`ogni `endif`piattaforma utilizzando le direttive per il preprocessore di C, e . Questo è dimostrato in [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
+Un Xamarin.Forms progetto asset condiviso può eseguire codice diverso per ogni piattaforma usando le direttive per il preprocessore C# `#if` , `#elif` e `endif` . Questa operazione è illustrata in [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![Tripla schermata del paragrafo in formato variabile](images/ch09fg01-small.png "Modello di dispositivo e sistema operativo")](images/ch09fg01-large.png#lightbox "Modello di dispositivo e sistema operativo")
+[![Schermata tripla del paragrafo formattato variabile](images/ch09fg01-small.png "Modello di dispositivo e sistema operativo")](images/ch09fg01-large.png#lightbox "Modello di dispositivo e sistema operativo")
 
 Tuttavia, il codice risultante può essere brutto e difficile da leggere.
 
-## <a name="parallel-classes-in-the-shared-asset-project"></a>Classi parallele nel progetto di risorse condiviseParallel classes in the Shared Asset Project
+## <a name="parallel-classes-in-the-shared-asset-project"></a>Classi parallele nel progetto asset condiviso
 
-Un approccio più strutturato all'esecuzione di codice specifico della piattaforma in SAP è illustrato nell'esempio [**PlatInfoSap2.A**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2) more structured approach to executing platform-specific code in the SAP is demonstrated in the PlatInfoSap2 sample. Ognuno dei progetti di piattaforma contiene una classe e metodi con nome identico, ma implementato per quella particolare piattaforma. Il SAP crea quindi semplicemente un'istanza della classe e chiama il metodo.
+Un approccio più strutturato all'esecuzione di codice specifico della piattaforma in SAP è illustrato nell'esempio [**PlatInfoSap2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2) . Ogni progetto di piattaforma contiene una classe e metodi con nome identico, ma implementata per la piattaforma specifica. SAP crea quindi semplicemente un'istanza della classe e chiama il metodo.
 
-## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService and the Portable Class Library
+## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService e la libreria di classi portabile
 
 > [!NOTE] 
-> Librerie di classi portabili sono state sostituite da librerie .NET Standard.Portable Class Libraries have been replaced by .NET Standard libraries. Tutto il codice di esempio del libro è stato convertito per utilizzare librerie standard .NET.
+> Le librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio del libro è stato convertito in modo da usare le librerie .NET standard.
 
-Una libreria in genere non può accedere alle classi nei progetti di applicazione. Questa restrizione sembra impedire l'utilizzo della tecnica illustrata in **PlatInfoSap2** in una libreria. Tuttavia, Xamarin.Forms contiene [`DependencyService`](xref:Xamarin.Forms.DependencyService) una classe denominata che utilizza la reflection .NET per accedere alle classi pubbliche nel progetto di applicazione dalla libreria.
+Una libreria non è in genere in grado di accedere alle classi nei progetti di applicazione. Questa restrizione sembra impedire l'uso della tecnica illustrata in **PlatInfoSap2** in una libreria. Contiene tuttavia Xamarin.Forms una classe denominata [`DependencyService`](xref:Xamarin.Forms.DependencyService) che usa la reflection .NET per accedere alle classi pubbliche nel progetto di applicazione dalla libreria.
 
-La libreria deve `interface` definire un con i membri che deve utilizzare in ogni piattaforma. Quindi, ognuna delle piattaforme contiene un'implementazione di tale interfaccia. La classe che implementa l'interfaccia deve essere identificata con un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) a livello di assembly.
+La libreria deve definire un `interface` con i membri che deve usare in ogni piattaforma. Ognuna delle piattaforme contiene quindi un'implementazione di tale interfaccia. La classe che implementa l'interfaccia deve essere identificata con un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) a livello di assembly.
 
-La libreria utilizza [`Get`](xref:Xamarin.Forms.DependencyService.Get*) quindi `DependencyService` il metodo generico di per ottenere un'istanza della classe della piattaforma che implementa l'interfaccia.
+La libreria usa quindi il [`Get`](xref:Xamarin.Forms.DependencyService.Get*) metodo generico di `DependencyService` per ottenere un'istanza della classe Platform che implementa l'interfaccia.
 
-Ciò è illustrato nell'esempio [**DisplayPlatformInfo.This**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) is demonstrated in the DisplayPlatformInfo sample.
+Questa operazione è illustrata nell'esempio [**DisplayPlatformInfo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) .
 
 ## <a name="platform-specific-sound-generation"></a>Generazione di suoni specifici della piattaforma
 
-L'esempio [**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) aggiunge segnali acustici al programma **MonkeyTap** accedendo alle strutture di generazione del suono in ogni piattaforma.
+L'esempio [**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) aggiunge segnali acustici al programma **MonkeyTap** accedendo alle funzionalità di generazione di suoni in ogni piattaforma.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Capitolo 9 testo completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
+- [Testo completo del capitolo 9 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
 - [Esempi del capitolo 9](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 - [Servizio di dipendenza](~/xamarin-forms/app-fundamentals/dependency-service/index.md)
