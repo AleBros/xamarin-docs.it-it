@@ -1,22 +1,14 @@
 ---
-title: Accesso alla raccolta video del dispositivo
-description: Questo articolo illustra come accedere alla raccolta video del dispositivo in un'applicazione lettore video con Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 2f9de881621b6634b95bdca56a0aa9e7b9f2bb98
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771859"
+title: Description:' questo articolo illustra come accedere alla raccolta video del dispositivo in un'applicazione lettore video usando Xamarin.Forms .'
+ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="accessing-the-devices-video-library"></a>Accesso alla raccolta video del dispositivo
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I dispositivi mobili e i computer desktop più moderni hanno la possibilità di registrare video usando la fotocamera del dispositivo. I video creati dall'utente vengono poi archiviati come file nel dispositivo. Questi file possono essere recuperati dalla raccolta immagini e riprodotti dalla classe `VideoPlayer`, come qualsiasi altro video.
 
@@ -40,7 +32,7 @@ Ognuna delle piattaforme contiene una classe denominata `VideoPicker` che implem
 
 ### <a name="the-ios-video-picker"></a>Selezione video iOS
 
-iOS `VideoPicker` usa iOS [`UIImagePickerController`](xref:UIKit.UIImagePickerController) per accedere alla libreria di immagini, specificando che deve essere limitato ai `MediaType` video (denominati "film") nella proprietà iOS.The iOS uses the iOS to access the image library, specifying that it should be restricted to videos (referred to as "movies") in the iOS property. Si noti che `VideoPicker` implementa in modo esplicito l'interfaccia `IVideoPicker`. Si noti anche l'attributo `Dependency` che identifica la classe come un servizio di dipendenza. Esistono due requisiti che consentono a Xamarin.Forms di trovare il servizio di dipendenza nel progetto della piattaforma:
+IOS `VideoPicker` USA iOS [`UIImagePickerController`](xref:UIKit.UIImagePickerController) per accedere alla libreria di immagini, specificando che deve essere limitato ai video (detti "film") nella `MediaType` Proprietà iOS. Si noti che `VideoPicker` implementa in modo esplicito l'interfaccia `IVideoPicker`. Si noti anche l'attributo `Dependency` che identifica la classe come un servizio di dipendenza. Questi sono i due requisiti che consentono Xamarin.Forms a di trovare il servizio di dipendenza nel progetto piattaforma:
 
 ```csharp
 using System;
@@ -192,7 +184,7 @@ Le aggiunte all'oggetto `MainActivity` sono l'unico codice nella soluzione [**Vi
 
 ### <a name="the-uwp-video-picker"></a>Selezione video UWP
 
-L'implementazione UWP `IVideoPicker` dell'interfaccia [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/)utilizza la piattaforma UWP . Inizia la ricerca di file dalla raccolta immagini limitando i tipi di file a MP4 e WMV (Windows Media Video):
+L'implementazione di UWP dell' `IVideoPicker` interfaccia utilizza UWP [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) . Inizia la ricerca di file dalla raccolta immagini limitando i tipi di file a MP4 e WMV (Windows Media Video):
 
 ```csharp
 using System;

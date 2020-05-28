@@ -1,40 +1,43 @@
 ---
-title: Il ritaglio di immagini bitmap in SkiaSharp
-description: Informazioni su come usare SkiaSharp per progettare un'interfaccia utente per desribing in modo interattivo un rettangolo di ritaglio.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: e9ba34dfcbdf041cb9bce7f277da3987acf9fec8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6c5e340818b702d79a1157f29c1ecec19bf1db76
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228228"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139945"
 ---
-# <a name="cropping-skiasharp-bitmaps"></a>Il ritaglio di immagini bitmap in SkiaSharp
+# <a name="cropping-skiasharp-bitmaps"></a>Ritaglio di bitmap SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Il [ **creazione e disegno in SkiaSharp bitmap** ](drawing.md) articolo descritta come un `SKBitmap` oggetto può essere passato a un `SKCanvas` costruttore. Qualsiasi metodo di disegno chiamato sull'oggetto grafico cause tale area di disegno deve essere sottoposto a rendering nella bitmap. Questi metodi di disegno includono `DrawBitmap`, il che significa che questa tecnica permette di trasferimento o parte di una singola bitmap a un'altra mappa di bit, probabilmente con trasformazioni applicate.
+L'articolo [**creazione e disegno di bitmap SkiaSharp**](drawing.md) descrive come un `SKBitmap` oggetto può essere passato a un `SKCanvas` costruttore. Qualsiasi metodo di disegno chiamato sul Canvas causa il rendering della grafica sulla bitmap. Questi metodi di disegno includono `DrawBitmap` , il che significa che questa tecnica consente di trasferire parte o tutte le bitmap in un'altra bitmap, probabilmente con le trasformazioni applicate.
 
-È possibile usare tale tecnica per ritagliare un'immagine bitmap chiamando il [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con i rettangoli di origine e di destinazione:
+È possibile utilizzare questa tecnica per ritagliare una bitmap chiamando il [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con rettangoli di origine e di destinazione:
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
 ```
 
-Tuttavia, le applicazioni che implementano il ritaglio spesso offrono un'interfaccia per l'utente di selezionare in modo interattivo il rettangolo di ritaglio:
+Tuttavia, le applicazioni che implementano il ritaglio spesso forniscono un'interfaccia per consentire all'utente di selezionare in modo interattivo il rettangolo di ritaglio:
 
-![Esempio di ritaglio](cropping-images/CroppingSample.png "il ritaglio di esempio")
+![Esempio di ritaglio](cropping-images/CroppingSample.png "Esempio di ritaglio")
 
 Questo articolo è incentrato su tale interfaccia.
 
-## <a name="encapsulating-the-cropping-rectangle"></a>Che incapsula il rettangolo di ritaglio
+## <a name="encapsulating-the-cropping-rectangle"></a>Incapsulamento del rettangolo di ritaglio
 
-È utile isolare parte della logica di ritaglio in una classe denominata `CroppingRectangle`. I parametri del costruttore includono un rettangolo di massimo, che corrisponde in genere le dimensioni della bitmap viene ritagliata, e le proporzioni facoltativa. Il costruttore prima di tutto definisce un rettangolo di ritaglio iniziale, che rende pubblico nel `Rect` vlastnosti typu `SKRect`. Questo rettangolo di ritaglio iniziale è l'80% della larghezza e altezza del rettangolo di bitmap, ma e quindi adeguato se viene specificato un rapporto di aspetto:
+È utile isolare parte della logica di ritaglio in una classe denominata `CroppingRectangle` . I parametri del costruttore includono un rettangolo massimo, che corrisponde in genere alla dimensione della bitmap da ritagliare e a proporzioni facoltative. Il costruttore innanzitutto definisce un rettangolo di ritaglio iniziale, che rende pubblico nella `Rect` proprietà di tipo `SKRect` . Il rettangolo di ritaglio iniziale è il 80% della larghezza e dell'altezza del rettangolo bitmap, ma viene quindi regolato se viene specificata una proporzioni:
 
 ```csharp
 class CroppingRectangle
@@ -82,7 +85,7 @@ class CroppingRectangle
 }
 ```
 
-Un'informazione utile che `CroppingRectangle` inoltre rende disponibile è una matrice di `SKPoint` i valori corrispondenti ai quattro angoli del rettangolo di ritaglio nell'ordine in alto a sinistra, alto a destra, in basso a destra e in basso a sinistra:
+Una delle informazioni utili che `CroppingRectangle` rende anche disponibile è una matrice di `SKPoint` valori corrispondenti ai quattro angoli del rettangolo di ritaglio nell'ordine superiore sinistro, in alto a destra, in basso a destra e in basso a sinistra:
 
 ```csharp
 class CroppingRectangle
@@ -105,7 +108,7 @@ class CroppingRectangle
 }
 ```
 
-Questa matrice viene usata nel metodo seguente, che viene chiamato `HitTest`. Il `SKPoint` parametro è un punto corrisponde a un tocco con un dito o un clic del mouse. Il metodo restituisce un indice (0, 1, 2 o 3) corrispondente all'angolo che il puntatore del mouse o del dito manipolato, entro una distanza specificata dal `radius` parametro: 
+Questa matrice viene usata nel metodo seguente, che viene chiamato `HitTest` . Il `SKPoint` parametro è un punto corrispondente al tocco di un dito o a un clic del mouse. Il metodo restituisce un indice (0, 1, 2 o 3) corrispondente all'angolo con cui è stato toccato il dito o il puntatore del mouse, all'interno di una distanza specificata dal `radius` parametro: 
 
 ```csharp
 class CroppingRectangle
@@ -131,9 +134,9 @@ class CroppingRectangle
 }
 ```
 
-Se il punto di tocco o mouse non è stato interno `radius` unità di un angolo, il metodo restituisce &ndash;1.
+Se il punto di tocco o del mouse non si trovava in `radius` unità di un angolo, il metodo restituirà &ndash; 1.
 
-Il metodo finale in `CroppingRectangle` viene chiamato `MoveCorner`, che viene chiamato in risposta a tocco o mouse lo spostamento. I due parametri indicano l'indice dell'angolo lo spostamento e la nuova posizione dell'angolo corrispondente. Nella prima metà del metodo consente di regolare il rettangolo di ritaglio basato nella nuova posizione dell'angolo, ma sempre all'interno di `maxRect`, che rappresentano le dimensioni della bitmap. Questa logica inoltre prende in considerazione il `MINIMUM` campo per evitare di comprimere il rettangolo di ritaglio in nulla:
+Il metodo finale in `CroppingRectangle` viene chiamato `MoveCorner` , che viene chiamato in risposta al tocco o al movimento del mouse. I due parametri indicano l'indice dell'angolo spostato e la nuova posizione dell'angolo. La prima metà del metodo regola il rettangolo di ritaglio in base alla nuova posizione dell'angolo, ma sempre all'interno dei limiti di `maxRect` , che corrisponde alla dimensione della bitmap. Questa logica prende anche in considerazione il `MINIMUM` campo per evitare di comprimere il rettangolo di ritaglio in nulla:
 
 ```csharp
 class CroppingRectangle
@@ -203,15 +206,15 @@ class CroppingRectangle
 }
 ```
 
-La seconda metà del metodo regola per le proporzioni facoltativa.
+La seconda metà del metodo viene regolata per le proporzioni facoltative.
 
-Tenere presente che tutti gli elementi di questa classe è espressa in unità di pixel.
+Tenere presente che tutto ciò che si trova in questa classe è in unità di pixel.
 
-## <a name="a-canvas-view-just-for-cropping"></a>Una vista di canvas solo per il ritaglio
+## <a name="a-canvas-view-just-for-cropping"></a>Visualizzazione canvas solo per il ritaglio
 
-Il `CroppingRectangle` classe riportato in precedenza viene usata per il `PhotoCropperCanvasView` classe che deriva da `SKCanvasView`. Questa classe è responsabile della visualizzazione di bitmap e il rettangolo di ritaglio, nonché la gestione degli eventi di tocco o mouse per modificare il rettangolo di ritaglio.
+La `CroppingRectangle` classe appena visualizzata viene utilizzata dalla `PhotoCropperCanvasView` classe, che deriva da `SKCanvasView` . Questa classe è responsabile della visualizzazione della bitmap e del rettangolo di ritaglio, nonché della gestione degli eventi di tocco o del mouse per la modifica del rettangolo di ritaglio.
 
-Il `PhotoCropperCanvasView` costruttore richiede una bitmap. Le proporzioni è facoltativa. Costruttore crea un'istanza di un oggetto di tipo `CroppingRectangle` basato su questa mappa di bit e le proporzioni e lo salva come un campo:
+Il `PhotoCropperCanvasView` costruttore richiede una bitmap. Una proporzioni è facoltativa. Il costruttore crea un'istanza di un oggetto di tipo `CroppingRectangle` in base a questa bitmap e alle proporzioni e lo salva come campo:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -232,7 +235,7 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-Poiché questa classe deriva da `SKCanvasView`, non è necessario installare un gestore per il `PaintSurface` evento. Invece possibile eseguire l'override relativo `OnPaintSurface` (metodo). Il metodo consente di visualizzare la mappa di bit e Usa un paio di `SKPaint` salvati come campi per disegnare il rettangolo di ritaglio corrente:
+Poiché questa classe deriva da `SKCanvasView` , non è necessario installare un gestore per l' `PaintSurface` evento. Può invece eseguire l'override del relativo `OnPaintSurface` metodo. Il metodo Visualizza la bitmap e usa un paio di `SKPaint` oggetti salvati come campi per creare il rettangolo di ritaglio corrente:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -312,11 +315,11 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-Il codice nel `CroppingRectangle` classe rettangolo di ritaglio si basa sulle dimensioni in pixel della bitmap. Tuttavia, la visualizzazione della bitmap dal `PhotoCropperCanvasView` classe viene ridimensionata in base alle dimensioni dell'area di visualizzazione. Il `bitmapScaleMatrix` calcolato nel `OnPaintSurface` eseguire l'override delle mappe dei pixel della bitmap per le dimensioni e la posizione della bitmap che viene visualizzato. Questa matrice viene quindi utilizzata per trasformare il rettangolo di ritaglio in modo che possa essere visualizzato rispetto alla bitmap.
+Il codice nella `CroppingRectangle` classe basa il rettangolo di ritaglio sulle dimensioni in pixel della bitmap. Tuttavia, la visualizzazione della bitmap da parte della `PhotoCropperCanvasView` classe viene ridimensionata in base alle dimensioni dell'area di visualizzazione. L'oggetto `bitmapScaleMatrix` calcolato nell' `OnPaintSurface` override esegue il mapping tra i pixel bitmap e le dimensioni e la posizione della bitmap mentre viene visualizzata. Questa matrice viene quindi utilizzata per trasformare il rettangolo di ritaglio in modo che possa essere visualizzato rispetto alla bitmap.
 
-L'ultima riga del `OnPaintSurface` override preleva l'inverso del `bitmapScaleMatrix` e lo salva come il `inverseBitmapMatrix` campo. Viene utilizzato per l'elaborazione di tocco.
+L'ultima riga dell' `OnPaintSurface` override accetta l'inverso di e la `bitmapScaleMatrix` Salva come `inverseBitmapMatrix` campo. Viene usato per l'elaborazione del tocco.
 
-A `TouchEffect` viene creata un'istanza di oggetto come un campo e il costruttore ne allega un gestore per il `TouchAction` evento, ma il `TouchEffect` deve essere aggiunto al `Effects` raccolta del _padre_ del `SKCanvasView`derivativo, in modo che del richiede solo pochi i `OnParentSet` eseguire l'override:
+`TouchEffect`Viene creata un'istanza di un oggetto come campo e il costruttore connette un gestore all' `TouchAction` evento, ma `TouchEffect` deve essere aggiunto alla `Effects` raccolta dell' _elemento padre_ del `SKCanvasView` derivato, in modo che venga eseguito nell' `OnParentSet` override:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -405,13 +408,13 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-Gli eventi di tocco elaborato dal `TouchAction` gestore sono espressi in unità indipendenti dal dispositivo. Questi innanzitutto elementi dovranno essere convertite in pixel usando il `ConvertToPixel` metodo nella parte inferiore della classe e quindi convertito in `CroppingRectangle` unità utilizzando `inverseBitmapMatrix`.
+Gli eventi di tocco elaborati dal `TouchAction` gestore si trovano in unità indipendenti dal dispositivo. Questi primi devono essere convertiti in pixel usando il `ConvertToPixel` metodo nella parte inferiore della classe e quindi convertiti in `CroppingRectangle` unità usando `inverseBitmapMatrix` .
 
-Per `Pressed` gli eventi, il `TouchAction` chiamate del gestore di `HitTest` metodo `CroppingRectangle`. Se il risultato è diverso da un indice &ndash;1, quindi uno degli angoli del rettangolo di ritaglio è in corso la modifica. Che l'indice e un offset del punto di tocco effettivo nell'angolo viene archiviata in una `TouchPoint` dell'oggetto e quindi aggiungervi il `touchPoints` dizionario.
+Per `Pressed` gli eventi, il `TouchAction` gestore chiama il `HitTest` metodo di `CroppingRectangle` . Se restituisce un indice diverso da &ndash; 1, viene modificato uno degli angoli del rettangolo di ritaglio. Tale indice e un offset del punto di tocco effettivo dall'angolo vengono archiviati in un `TouchPoint` oggetto e aggiunti al `touchPoints` dizionario.
 
-Per il `Moved` evento, il `MoveCorner` metodo `CroppingRectangle` viene chiamato per spostare l'angolo, con possibili modifiche per le proporzioni.
+Per l' `Moved` evento, `MoveCorner` viene chiamato il metodo di `CroppingRectangle` per spostare l'angolo, con possibili regolazioni per le proporzioni.
 
-In qualsiasi momento, un programma tramite `PhotoCropperCanvasView` può accedere il `CroppedBitmap` proprietà. Questa proprietà Usa il `Rect` proprietà del `CroppingRectangle` per creare una nuova bitmap della dimensione ritagliata. La versione di `DrawBitmap` con origine e destinazione rettangoli estrae quindi un subset della bitmap originale:
+In qualsiasi momento, un programma che utilizza `PhotoCropperCanvasView` può accedere alla `CroppedBitmap` Proprietà. Questa proprietà utilizza la `Rect` proprietà di `CroppingRectangle` per creare una nuova bitmap della dimensione ritagliata. La versione di `DrawBitmap` con i rettangoli di origine e di destinazione estrae un subset della bitmap originale:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -443,9 +446,9 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-## <a name="hosting-the-photo-cropper-canvas-view"></a>La visualizzazione di canvas Ritaglia foto di hosting
+## <a name="hosting-the-photo-cropper-canvas-view"></a>Hosting della visualizzazione Canvas di Photo Cropper
 
-Con queste due classi che gestiscono la logica di ritaglio, il **foto ritaglio** pagina il **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** applicazione dispone di un impegno minimo per eseguire. Il file XAML crea un'istanza di un `Grid` all'host la `PhotoCropperCanvasView` e un **eseguita** pulsante:
+Con queste due classi che gestiscono la logica di ritaglio, la pagina di **ritaglio delle foto** nell'applicazione **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** ha un lavoro molto ridotto. Il file XAML crea un'istanza `Grid` di per ospitare `PhotoCropperCanvasView` e un pulsante **done** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -472,9 +475,9 @@ Con queste due classi che gestiscono la logica di ritaglio, il **foto ritaglio**
 </ContentPage>
 ```
 
-Il `PhotoCropperCanvasView` non è possibile creare istanze nel file XAML perché richiede un parametro di tipo `SKBitmap`.
+`PhotoCropperCanvasView`Non è possibile creare un'istanza di nel file XAML perché richiede un parametro di tipo `SKBitmap` .
 
-Al contrario, il `PhotoCropperCanvasView` viene creata un'istanza nel costruttore del file code-behind usando una delle bitmap di risorsa:
+Al contrario, `PhotoCropperCanvasView` viene creata un'istanza di nel costruttore del file code-behind utilizzando una delle bitmap della risorsa:
 
 ```csharp
 public partial class PhotoCroppingPage : ContentPage
@@ -514,31 +517,31 @@ public partial class PhotoCroppingPage : ContentPage
 }
 ```
 
-È possibile quindi manipolare il rettangolo di ritaglio:
+L'utente può quindi modificare il rettangolo di ritaglio:
 
-[![Ritaglia 1 di foto](cropping-images/PhotoCropping1.png "foto Ritaglia 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
+[![Foto Cropper 1](cropping-images/PhotoCropping1.png "Foto Cropper 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
 
-Quando è stato definito un rettangolo di ritaglio ottimo, scegliere il pulsante **.** Il `Clicked` gestore ottiene bitmap ritagliata dal `CroppedBitmap` proprietà di `PhotoCropperCanvasView`e sostituisce tutto il contenuto della pagina con un nuovo `SKCanvasView` oggetto che consente di visualizzare questa bitmap ritagliata:
+Quando è stato definito un rettangolo di ritaglio valido, fare clic sul pulsante **fine** . Il `Clicked` gestore ottiene la bitmap ritagliata dalla `CroppedBitmap` proprietà di `PhotoCropperCanvasView` e sostituisce tutto il contenuto della pagina con un nuovo `SKCanvasView` oggetto che visualizza questa bitmap ritagliata:
 
-[![Ritaglia 2 di foto](cropping-images/PhotoCropping2.png "foto Ritaglia 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
+[![Foto Cropper 2](cropping-images/PhotoCropping2.png "Foto Cropper 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
 
-Provare a impostare il secondo argomento della `PhotoCropperCanvasView` a 1.78f (ad esempio):
+Provare a impostare il secondo argomento di `PhotoCropperCanvasView` su 1,78 f (ad esempio):
 
 ```csharp
 photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 ```
 
-Si noterà il rettangolo di ritaglio limitato a un rapporto di aspetto 16-a-9 caratteristiche di HD.
+Verrà visualizzato il rettangolo di ritaglio limitato a una caratteristica di proporzioni da 16 a 9 della televisione ad alta definizione.
 
 <a name="tile-division" />
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>Suddivisione di una bitmap in riquadri
 
-Una versione di Xamarin.Forms del famoso puzzle di 14 o 15 è presente in 22 capitolo del libro [ _creazione di App per dispositivi mobili con Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) e possono essere scaricati come [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Tuttavia, il puzzle diventa più divertente (e spesso più complesso) se si basa su un'immagine dalla propria libreria di foto.
+Xamarin.FormsNel capitolo 22 del libro [_creazione di app per dispositivi mobili con Novell. Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) è stata rilevata una versione del famoso puzzle 14-15, che può essere scaricata come [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Tuttavia, il puzzle diventa più divertente (e spesso più complesso) quando si basa su un'immagine della propria raccolta foto.
 
-Questa versione del puzzle 14 o 15 fa parte del **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** dell'applicazione ed è costituito da una serie di pagine intitolata **foto rompicapo**.
+Questa versione di 14-15 puzzle fa parte dell'applicazione **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** ed è costituita da una serie di pagine intitolate **Photo puzzle**.
 
-Il **PhotoPuzzlePage1.xaml** file costituito da un `Button`:
+Il file **PhotoPuzzlePage1. XAML** è costituito da un `Button` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -554,7 +557,7 @@ Il **PhotoPuzzlePage1.xaml** file costituito da un `Button`:
 </ContentPage>
 ```
 
-Il file code-behind implementa una `Clicked` gestore che utilizza il `IPhotoLibrary` servizio di dipendenza per consentire all'utente di scegliere una foto dalla raccolta foto:
+Il file code-behind implementa un `Clicked` gestore che usa il `IPhotoLibrary` servizio di dipendenza per consentire all'utente di scegliere una foto dalla raccolta foto:
 
 ```csharp
 public partial class PhotoPuzzlePage1 : ContentPage
@@ -580,11 +583,11 @@ public partial class PhotoPuzzlePage1 : ContentPage
 }
 ```
 
-Il metodo passa quindi al `PhotoPuzzlePage2`, passando al costruttore la mappa di bit selezionato.
+Il metodo passa quindi a `PhotoPuzzlePage2` , passando alla bitmap selezionata costruttore.
 
-È possibile che la foto selezionata dalla libreria non è orientata come veniva visualizzato nella raccolta foto, ma viene ruotato o capovolto. (Si tratta in particolare un problema con i dispositivi iOS). Per questo motivo, `PhotoPuzzlePage2` consente di ruotare l'immagine da un orientamento desiderato. Il file XAML contiene tre pulsanti contrassegnati **90&#x00B0; a destra** (vale a dire in senso orario), **90&#x00B0; sinistra** (in senso antiorario), e **eseguita**.
+È possibile che la foto selezionata dalla libreria non sia orientata come appare nella raccolta foto, ma è ruotata o capovolta. Si tratta in particolare di un problema relativo ai dispositivi iOS. Per questo motivo, `PhotoPuzzlePage2` consente di ruotare l'immagine in un orientamento desiderato. Il file XAML contiene tre pulsanti con etichetta **90&#x00B0; destra** (senso orario), **90&#x00B0; Left** (in senso antiorario) e **done**.
 
-Il file code-behind implementa la logica di bitmap-rotazione illustrata nell'articolo  **[creazione e la creazione su SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)** . L'utente può ruotare l'immagine di 90 gradi in senso orario o antiorario un numero qualsiasi di volte in cui: 
+Il file code-behind implementa la logica di rotazione bitmap illustrata nell'articolo **[creazione e disegno di bitmap SkiaSharp](drawing.md#rotating-bitmaps)**. L'utente può ruotare l'immagine di 90 gradi in senso orario o antiorario per un numero qualsiasi di volte: 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -647,11 +650,11 @@ public partial class PhotoPuzzlePage2 : ContentPage
 }
 ```
 
-Quando l'utente fa clic il **eseguite** pulsante, il `Clicked` gestore passa a `PhotoPuzzlePage3`, passando la bitmap ruotata finale nel costruttore della pagina.
+Quando l'utente fa clic sul pulsante **fine** , il `Clicked` gestore passa a `PhotoPuzzlePage3` , passando la bitmap finale ruotata nel costruttore della pagina.
 
-`PhotoPuzzlePage3` consente la foto da ritagliare. Il programma richiede una bitmap per dividere in una griglia 4 per 4 riquadri quadrata.
+`PhotoPuzzlePage3`consente di ritagliare la foto. Il programma richiede la suddivisione di una bitmap quadrata in una griglia di riquadri 4 per 4.
 
-Il **PhotoPuzzlePage3.xaml** file contiene una `Label`, una `Grid` all'host il `PhotoCropperCanvasView`e un altro **eseguita** pulsante:
+Il file **PhotoPuzzlePage3. XAML** contiene un `Label` , un `Grid` per ospitare `PhotoCropperCanvasView` e un altro pulsante **done** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -685,7 +688,7 @@ Il **PhotoPuzzlePage3.xaml** file contiene una `Label`, una `Grid` all'host il `
 </ContentPage>
 ```
 
-Il file code-behind creare un'istanza di `PhotoCropperCanvasView` con la bitmap passata al costruttore. Si noti che un valore 1 viene passato come secondo argomento per `PhotoCropperCanvasView`. Questo rapporto di 1 forza il rettangolo di ritaglio da un quadrato:
+Il file code-behind crea un'istanza di `PhotoCropperCanvasView` con la bitmap passata al relativo costruttore. Si noti che 1 viene passato come secondo argomento a `PhotoCropperCanvasView` . Questa proporzioni di 1 impone al rettangolo di ritaglio di essere un quadrato:
 
 ```csharp
 public partial class PhotoPuzzlePage3 : ContentPage
@@ -736,33 +739,33 @@ public partial class PhotoPuzzlePage3 : ContentPage
 }
 ```
 
-Il gestore del pulsante Ottiene la larghezza e altezza della bitmap ritagliata (questi due valori devono essere lo stesso) e quindi si divide in 15 bitmap separate, ognuno dei quali è 1 e 4 la larghezza e altezza dell'originale **.** (L'ultima delle bitmap di 16 possibili non viene creato). Il `DrawBitmap` metodo con rettangolo di origine e di destinazione consente a una bitmap essere creata in base a subset di una bitmap di dimensioni maggiori.
+Il gestore del pulsante **done** ottiene la larghezza e l'altezza della bitmap ritagliata (questi due valori devono essere uguali), quindi li divide in 15 bitmap separate, ognuna delle quali è 1/4 la larghezza e l'altezza dell'originale. Non viene creata l'ultima delle 16 bitmap possibili. Il `DrawBitmap` metodo con rettangolo di origine e di destinazione consente di creare una bitmap in base al subset di una bitmap più grande.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>Conversione di bitmap di Xamarin.Forms
+## <a name="converting-to-xamarinforms-bitmaps"></a>Conversione in Xamarin.Forms bitmap
 
-Nel `OnDoneButtonClicked` metodo, la matrice creata per le 15 bitmap JE typu [ `ImageSource` ](xref:Xamarin.Forms.ImageSource):
+Nel `OnDoneButtonClicked` Metodo la matrice creata per le 15 bitmap è di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) :
 
 ```csharp
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` è il tipo di base di Xamarin.Forms che incapsula una bitmap. Fortunatamente, SkiaSharp consente la conversione dalle bitmap di SkiaSharp in Xamarin.Forms bitmap. Il **SkiaSharp.Views.Forms** assembly definisce un' [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) classe che deriva da `ImageSource` ma possono essere creati come base un SkiaSharp `SKBitmap` oggetto. `SKBitmapImageSource` definisce anche le conversioni tra `SKBitmapImageSource` e `SKBitmap`e di come `SKBitmap` gli oggetti vengono archiviati in una matrice come le bitmap di Xamarin.Forms:
+`ImageSource`è il Xamarin.Forms tipo di base che incapsula una bitmap. Fortunatamente, SkiaSharp consente la conversione da bitmap SkiaSharp a Xamarin.Forms bitmap. L'assembly **SkiaSharp. views. Forms** definisce una [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) classe che deriva da `ImageSource` ma può essere creata in base a un `SKBitmap` oggetto SkiaSharp. `SKBitmapImageSource`definisce anche le conversioni tra `SKBitmapImageSource` e e `SKBitmap` questo è il modo `SKBitmap` in cui gli oggetti vengono archiviati in una matrice come Xamarin.Forms bitmap:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ```
 
-Questa matrice delle bitmap viene passata come un costruttore `PhotoPuzzlePage4`. Tale pagina è completamente Xamarin.Forms e non usa alcun SkiaSharp. È molto simile a [ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), pertanto non verrà descritta di seguito, ma visualizza la foto selezionata suddivisa in riquadri quadrati 15:
+Questa matrice di bitmap viene passata come costruttore a `PhotoPuzzlePage4` . Questa pagina è interamente Xamarin.Forms e non usa alcun SkiaSharp. È molto simile a [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), quindi non verrà descritta qui, ma visualizzerà la foto selezionata divisa in 15 riquadri:
 
-[![Foto 1 Puzzle](cropping-images/PhotoPuzzle1.png "foto Puzzle 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
+[![Puzzle foto 1](cropping-images/PhotoPuzzle1.png "Puzzle foto 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
 
-Premere il **Randomize** una combinazione di pulsante backup di tutti i riquadri:
+Premendo il pulsante **casuale** tutti i riquadri vengono combinati:
 
-[![Foto di 2 Puzzle](cropping-images/PhotoPuzzle2.png "foto Puzzle 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
+[![Foto rompicapo 2](cropping-images/PhotoPuzzle2.png "Foto rompicapo 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-A questo punto è possibile inserirli nuovamente nell'ordine corretto. Tutte le sezioni nella stessa riga o colonna sotto forma di quadrato vuoto possono essere toccate trasferendoli poi nel quadrato vuoto. 
+A questo punto è possibile riportarle nell'ordine corretto. È possibile toccare tutti i riquadri nella stessa riga o colonna del quadrato vuoto per spostarli nel quadrato vuoto. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

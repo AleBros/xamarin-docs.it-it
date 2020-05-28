@@ -1,26 +1,29 @@
 ---
-title: Ricaricamento in tempo reale di Novell (anteprima)
-description: Vedere le modifiche apportate al codice XAML riflesse in tempo reale, senza richiedere un'altra compilazione e distribuzione.
-ms.prod: xamarin
-ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
-ms.technology: xamarin-forms
-author: pierceboggan
-ms.author: piboggan
-robots: noindex
-ms.date: 10/26/2018
-ms.openlocfilehash: e6c8e7b84ba8e3d0f6e6247798bb9164a3bc994d
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+robots: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423902"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134212"
 ---
 # <a name="xamarin-live-reload-preview"></a>Ricaricamento in tempo reale di Novell (anteprima)
 
 > [!NOTE]
 > L'anteprima del ricaricamento in tempo reale di Novell è terminata e vogliamo ringraziare tutti i commenti e i commenti. 
 >
-> Per modificare il codice XAML mentre l'app è in esecuzione, usare il [ricaricamento a caldo di XAML per Novell. Forms](~/xamarin-forms/xaml/hot-reload.md).
+> Per modificare il codice XAML mentre l'app è in esecuzione, usare il [ricaricamento a caldo di XAML per Xamarin.Forms ](~/xamarin-forms/xaml/hot-reload.md).
 >
 
 Il ricaricamento in tempo reale di Novell consente di **apportare modifiche al codice XAML e visualizzarne il riflesso in tempo reale, senza richiedere un'altra compilazione e distribuzione**. Tutte le modifiche apportate al codice XAML verranno ridistribuite al salvataggio e riflesse nella destinazione di distribuzione.
@@ -28,7 +31,7 @@ Il ricaricamento in tempo reale di Novell consente di **apportare modifiche al c
 ## <a name="requirements"></a>Requisiti
 
 * [Visual Studio 2017 versione 15,7 o successiva](https://visualstudio.microsoft.com/vs/) con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
-* [Novell. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/).
+* [ Xamarin.Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Introduzione
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. installare il ricaricamento in tempo reale di Novell dalla Visual Studio Marketplace
@@ -45,7 +48,7 @@ In alternativa, è possibile cercarlo nella scheda **online** della finestra di 
 
 L'aggiunta del ricaricamento in tempo reale alle app per dispositivi mobili esistenti può essere eseguita in tre passaggi:
 
-1. Assicurarsi che tutti i progetti siano aggiornati per l'uso di [Novell. Forms 3.0.0 o superiore](https://www.nuget.org/packages/Xamarin.Forms/) o superiore.
+1. Assicurarsi che tutti i progetti siano aggiornati per l'uso di [ Xamarin.Forms 3.0.0 o superiore](https://www.nuget.org/packages/Xamarin.Forms/) o superiore.
 
 2. Aggiungere il pacchetto NuGet **Novell. LiveReload** :
 
@@ -53,9 +56,9 @@ L'aggiunta del ricaricamento in tempo reale alle app per dispositivi mobili esis
     
     b. **Progetti condivisi** : installare **Novell. LiveReload** NuGet in tutti i progetti di piattaforma, ad esempio Android, iOS, UWP e così via. Verificare che l' **origine del pacchetto** sia impostata su **tutti**.
 
-    [![aggiungere Novell Live ricarica NuGet con gestione pacchetti NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
+    [![Aggiungere Novell Live ricarica NuGet con gestione pacchetti NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
-3. Aggiungere `LiveReload.Init();` al costruttore nella classe `Application`, come illustrato nel frammento di codice seguente:
+3. Aggiungere `LiveReload.Init();` al costruttore nella `Application` classe, come illustrato nel frammento di codice seguente:
 
 ```csharp
 public partial class App : Application
@@ -79,7 +82,7 @@ Compilare e distribuire l'applicazione. Una volta distribuita l'app, aprire un f
 
 > [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
 
-Il ricaricamento attivo funziona con le modifiche apportate a qualsiasi file XAML. Per rendere C# effettive le modifiche o l'aggiunta o la rimozione di pacchetti NuGet, è necessario eseguire una nuova compilazione e distribuzione.
+Il ricaricamento attivo funziona con le modifiche apportate a qualsiasi file XAML. Per rendere effettive le modifiche a C# o l'aggiunta o la rimozione di pacchetti NuGet, è necessario eseguire una nuova compilazione e distribuzione.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>Il ricaricamento in tempo reale di Novell è disponibile in Visual Studio per Mac? 
@@ -92,11 +95,11 @@ Poiché l'app viene compilata, il ricaricamento in tempo reale funziona con tutt
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>Quali modifiche vengono ridistribuite in tempo reale? 
 
-Il ricaricamento in tempo reale applica solo le modifiche apportate a XAML o CSS. Se si apportano modifiche C# a un file, sarà necessario eseguire una ricompilazione. 
+Il ricaricamento in tempo reale applica solo le modifiche apportate a XAML o CSS. Se si apportano modifiche a un file C#, sarà necessario eseguire una ricompilazione. 
 
 ### <a name="what-platforms-are-supported"></a>Quali piattaforme sono supportate? 
 
-Il ricaricamento in tempo reale funziona su qualsiasi piattaforma supportata da Novell. Forms, inclusi Android, iOS e UWP.
+Il ricaricamento in tempo reale funziona su qualsiasi piattaforma supportata da Xamarin.Forms , inclusi Android, iOS e UWP.
 
 ### <a name="does-this-work-on-emulators-simulators-and-physical-devices"></a>Funziona su emulatori, simulatori e dispositivi fisici? 
 
@@ -122,9 +125,9 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 * Ricaricando le risorse a livello di app (ad esempio, **app. XAML** o i dizionari risorse condivise), la navigazione delle app viene reimpostata. 
 * Il ricaricamento di ContentView richiede attualmente il ricaricamento della pagina che lo contiene.
 * Gli elementi contenenti AutomationId possono causare un errore di ricaricamento.
-* La modifica di XAML durante il debug di UWP può causare un arresto anomalo del runtime. Soluzione alternativa: usare **Avvia senza eseguire debug (CTRL + F5)** anziché **avviare il debug (F5)** .
+* La modifica di XAML durante il debug di UWP può causare un arresto anomalo del runtime. Soluzione alternativa: usare **Avvia senza eseguire debug (CTRL + F5)** anziché **avviare il debug (F5)**.
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 ### <a name="error-codes"></a>Codici di errore
 
@@ -142,11 +145,11 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 
 * *Eccezione durante il caricamento degli assembly: System. IO. FileNotFoundException: non è stato possibile caricare l'assembly ' Novell. Live. reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
 
-  Il progetto host deve usare `PackageReference` anziché `packages.config`
+  Il progetto host deve usare `PackageReference` anziché`packages.config`
 
 ### <a name="app-doesnt-connect"></a>L'app non si connette
 
-Quando l'applicazione viene compilata, le informazioni degli **strumenti > opzioni > novell > il ricaricamento in tempo reale** (nome host, porta e chiavi di crittografia) sono incorporati nell'app, in modo che quando viene eseguito `LiveReload.Init()`, non è necessaria l'associazione o la configurazione affinché la connessione abbia esito positivo.
+Quando l'applicazione viene compilata, le informazioni degli **strumenti > opzioni > novell > il ricaricamento in tempo reale** (nome host, porta e chiavi di crittografia) sono incorporati nell'app, in modo che, quando `LiveReload.Init()` viene eseguito, non sia necessaria l'associazione o la configurazione affinché la connessione abbia esito positivo.
 
 A parte i normali problemi di rete (firewall, dispositivo in una rete diversa), il motivo principale per cui l'app non riesce a connettere l'IDE è perché la relativa configurazione è diversa da quella in Visual Studio. Questo problema può verificarsi se:
 
@@ -161,7 +164,7 @@ Questi casi sono tutti risolti compilando e distribuendo di nuovo l'app.
 Se si dispone di un'anteprima precedente e si verificano problemi di disinstallazione, attenersi alla seguente procedura:
 
 1. Eliminare la cartella **c:\Programmi (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Nota: sostituire "Enterprise" con l'edizione installata e "Preview" con "2017" se è stato installato in uno stabile rispetto a)
-2. Aprire un **prompt dei comandi** per gli sviluppatori per Visual Studio ed eseguire `devenv /updateconfiguration`. 
+2. Aprire un **prompt dei comandi** per gli sviluppatori per Visual Studio ed eseguire `devenv /updateconfiguration` . 
 
 ## <a name="tips--tricks"></a>Suggerimenti & trucchi
 
@@ -173,9 +176,9 @@ Se si dispone di un'anteprima precedente e si verificano problemi di disinstalla
 
 ## <a name="live-reload-server"></a>Ricarica in tempo reale del server
 
-Negli scenari in cui una connessione dall'app in esecuzione al computer (come indicato con `localhost` o `127.0.0.1` in **strumenti > opzioni > novell > ricaricamento in tempo reale**) non è possibile (ad esempio, firewall, reti diverse), è possibile configurare un server remoto, a cui si conect l'IDE e l'app.
+Negli scenari in cui una connessione dall'app in esecuzione al computer (come indicato tramite `localhost` o `127.0.0.1` in **strumenti > opzioni > Novell > ricaricamento in tempo reale**) non è possibile (ad esempio, firewall, reti diverse), è possibile configurare un server remoto, a cui si conect l'IDE e l'app.
 
-Il ricaricamento in tempo reale usa il [protocollo MQTT](https://mqtt.org/) standard per scambiare messaggi e pertanto può comunicare con [server di terze parti](https://github.com/mqtt/mqtt.github.io/wiki/servers). Sono disponibili anche [server pubblici](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (noti anche come *broker*) disponibili che è possibile usare. Il ricaricamento in tempo reale è stato testato con `broker.hivemq.com` e `iot.eclipse.org` nomi host, oltre ai servizi forniti da [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). È anche possibile distribuire il proprio server MQTT nel cloud, ad esempio [HiveMQ in Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
+Il ricaricamento in tempo reale usa il [protocollo MQTT](https://mqtt.org/) standard per scambiare messaggi e pertanto può comunicare con [server di terze parti](https://github.com/mqtt/mqtt.github.io/wiki/servers). Sono disponibili anche [server pubblici](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (noti anche come *broker*) disponibili che è possibile usare. Il ricaricamento in tempo reale è stato testato con i `broker.hivemq.com` `iot.eclipse.org` nomi host e e i servizi forniti da [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). È anche possibile distribuire il proprio server MQTT nel cloud, ad esempio [HiveMQ in Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 È possibile configurare qualsiasi porta, ma è comune usare la porta 1883 predefinita per i server remoti. I messaggi di ricaricamento in tempo reale utilizzano la crittografia simmetrica end-to-end avanzata, quindi è sicuro connettersi ai server remoti. Per impostazione predefinita, la chiave di crittografia e il vettore di inizializzazione (IV) vengono rigenerati in ogni sessione di Visual Studio.
 
@@ -185,6 +188,6 @@ Probabilmente il modo più semplice consiste nell'installare il server [mosquitt
 2. Aggiungere una nuova regola di porta in ingresso per 1883 (porta MQTT predefinita) nella scheda rete
 3. Aprire il [cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (modalità bash)
 4. Digitare `ssh [USERNAME]@[PUBLIC_IP]` usando il nome utente scelto in 1) e l'indirizzo IP pubblico visualizzato nella pagina di panoramica della macchina virtuale
-5. Eseguire `sudo apt-get install mosquitto`, immettendo la password scelta in 1)
+5. Esegui `sudo apt-get install mosquitto` , immettendo la password scelta in 1)
 
 A questo punto è possibile usare tale indirizzo IP per connettersi al server MQTT.

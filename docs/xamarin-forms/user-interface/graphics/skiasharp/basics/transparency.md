@@ -1,42 +1,45 @@
 ---
-title: Trasparenza di SkiaSharp
-description: Usare la trasparenza per combinare più oggetti in un'unica scena.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 74335de66e74f6adc7c9488a1b78c31d36d03f14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759410"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134719"
 ---
-# <a name="skiasharp-transparency"></a>Trasparenza di SkiaSharp
+# <a name="skiasharp-transparency"></a>Trasparenza SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Come si è visto, la [ `SKPaint` ](xref:SkiaSharp.SKPaint) classe include una [ `Color` ](xref:SkiaSharp.SKPaint.Color) vlastnosti typu [ `SKColor` ](xref:SkiaSharp.SKColor). `SKColor` include un canale alfa, pertanto, qualsiasi elemento che di colore con un `SKColor` valore può essere parzialmente trasparenti. 
+Come si è visto, la [`SKPaint`](xref:SkiaSharp.SKPaint) classe include una [`Color`](xref:SkiaSharp.SKPaint.Color) proprietà di tipo [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor`include un canale alfa, quindi tutto ciò che si colora con un `SKColor` valore può essere parzialmente trasparente. 
 
-Sono stata illustrata alcuni trasparenza nel [ **animazione di base in SkiaSharp** ](animation.md) articolo. Questo articolo illustra un po' più approfondito la trasparenza per combinare più oggetti in un'unica scena, una tecnica nota anche come _fusione_. Più avanzate con sfumatura tecniche vengono illustrate negli articoli nel [ **shader SkiaSharp** ](../effects/shaders/index.md) sezione.
+Una certa trasparenza è stata illustrata nell'articolo [**animazione di base in SkiaSharp**](animation.md) . Questo articolo illustra in modo più approfondito la trasparenza per combinare più oggetti in un'unica scena, una tecnica talvolta nota come _fusione_. Le tecniche di fusione più avanzate sono illustrate negli articoli della sezione [**shader SkiaSharp**](../effects/shaders/index.md) .
 
-È possibile impostare il livello di trasparenza al momento della creazione un colore specificando il parametro di quattro [ `SKColor` ](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) costruttore:
+È possibile impostare il livello di trasparenza quando si crea per la prima volta un colore usando il costruttore a quattro parametri [`SKColor`](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) :
 
 ```csharp
 SKColor (byte red, byte green, byte blue, byte alpha);
 ```
 
-Un valore alfa pari a 0 è completamente trasparente e un valore alfa pari a 0xFF è completamente opaco. I valori compresi tra questi due estremi creano colori parzialmente trasparenti.
+Un valore alfa pari a 0 è completamente trasparente e un valore alfa di 0xFF è completamente opaco. I valori tra questi due estremi creano colori parzialmente trasparenti.
 
-È inoltre `SKColor` definisce un comodo [ `WithAlpha` ](xref:SkiaSharp.SKColor.WithAlpha*) metodo che crea un nuovo colore da un colore esistente ma con il livello di alfa specificato:
+`SKColor`Definisce inoltre un metodo pratico per la [`WithAlpha`](xref:SkiaSharp.SKColor.WithAlpha*) creazione di un nuovo colore da un colore esistente ma con il livello alfa specificato:
 
 ```csharp
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-Viene illustrato l'utilizzo del testo parzialmente trasparente nel **codice più codice** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. Questa pagina viene applicata la dissolvenza due stringhe di testo e disconnettersi, incorporando trasparenza nel `SKColor` valori:
+L'uso del testo parzialmente trasparente viene illustrato nella tabella **Codici altro** nell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . Questa pagina consente di dissolvere due stringhe di testo in entrata e in uscita incorporando la trasparenza nei `SKColor` valori:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -124,27 +127,27 @@ public class CodeMoreCodePage : ContentPage
 }
 ```
 
-Il `transparency` campo viene animato per variare da 0 a 1 e poi di nuovo in un ritmo sinusoidale. Prima stringa di testo viene visualizzata con un valore alfa calcolato sottraendo il `transparency` valore compreso tra 1:
+Il `transparency` campo viene animato per variare da 0 a 1 e viceversa in un ritmo sinusoidale. La prima stringa di testo viene visualizzata con un valore alfa calcolato sottraendo il `transparency` valore da 1:
 
 ```csharp
 paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * (1 - transparency)));
 ```
 
-Il [ `WithAlpha` ](xref:SkiaSharp.SKColor.WithAlpha*) metodo imposta il componente alfa su un colore esistente, che qui è `SKColors.Blue`. Seconda stringa di testo viene utilizzato un valore alfa calcolato dal `transparency` valore stesso:
+Il [`WithAlpha`](xref:SkiaSharp.SKColor.WithAlpha*) metodo imposta il componente alfa su un colore esistente, che in questo caso è `SKColors.Blue` . La seconda stringa di testo usa un valore alfa calcolato dal `transparency` valore stesso:
 
 ```csharp
 paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 ```
 
-L'animazione si alterna tra le due parole, lettera "code" informazioni all'utente (o forse la richiesta "ulteriori code"):
+L'animazione alterna le due parole, esortando l'utente a "Code more" (o forse richiedendo "altro codice"):
 
-[![Altro codice di codice](transparency-images/CodeMoreCode.png "maggiore quantità di codice del codice")](transparency-images/CodeMoreCode-Large.png#lightbox)
+[![Codice altro codice](transparency-images/CodeMoreCode.png "Codice altro codice")](transparency-images/CodeMoreCode-Large.png#lightbox)
 
-Nell'articolo precedente sulla [ **nozioni di base di Bitmap in SkiaSharp**](bitmaps.md), è stato illustrato come visualizzare le bitmap con uno dei [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap*) metodi di `SKCanvas`. Tutti i `DrawBitmap` metodi includono un `SKPaint` oggetto come ultimo parametro. Per impostazione predefinita, questo parametro è impostato su `null` ed è possibile ignorarlo. 
+Nell'articolo precedente sui [**concetti di base di bitmap in SkiaSharp**](bitmaps.md)è stato illustrato come visualizzare le bitmap usando uno dei [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap*) metodi di `SKCanvas` . Tutti i `DrawBitmap` metodi includono un `SKPaint` oggetto come ultimo parametro. Per impostazione predefinita, questo parametro è impostato su `null` ed è possibile ignorarlo. 
 
-In alternativa, è possibile impostare il `Color` proprietà di questo oggetto `SKPaint` dell'oggetto per visualizzare una bitmap con un certo livello di trasparenza. Impostazione di un livello di trasparenza nel `Color` proprietà di `SKPaint` consente la dissolvenza in entrata e in uscita bitmap, o di sciogliere una bitmap in un altro. 
+In alternativa, è possibile impostare la `Color` proprietà di questo `SKPaint` oggetto per visualizzare una bitmap con un certo livello di trasparenza. Impostando un livello di trasparenza nella `Color` proprietà di `SKPaint` è possibile dissolvere bitmap in entrata e in uscita o dissolverne una bitmap in un'altra. 
 
-Viene illustrata la trasparenza di bitmap il **Bitmap sciogliere** pagina. Il file XAML crea un' `SKCanvasView` e un `Slider`:
+La trasparenza bitmap è illustrata nella pagina **dissolvenza bitmap** . Il file XAML crea un'istanza di `SKCanvasView` e `Slider` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -164,7 +167,7 @@ Viene illustrata la trasparenza di bitmap il **Bitmap sciogliere** pagina. Il fi
 </ContentPage>
 ```
 
-Il file code-behind carica due risorse bitmap. Tali bitmap non hanno le stesse dimensioni, ma sono le stesse proporzioni:
+Il file code-behind carica due risorse bitmap. Queste bitmap non hanno le stesse dimensioni, ma hanno le stesse proporzioni:
 
 ```csharp
 public partial class BitmapDissolvePage : ContentPage
@@ -229,15 +232,15 @@ public partial class BitmapDissolvePage : ContentPage
 }
 ```
 
-Il `Color` proprietà del `SKPaint` oggetto è impostato su due livelli alfa complementari per bitmap di due. Quando si usa `SKPaint` delle bitmap, non è importante che il resto del `Color` è valore. Ciò che conta è il canale alfa. Qui il codice chiama semplicemente il `WithAlpha` sul valore predefinito del metodo di `Color` proprietà.
+La `Color` proprietà dell' `SKPaint` oggetto è impostata su due livelli Alpha complementari per le due bitmap. Quando `SKPaint` si usa con bitmap, non importa quale sia il resto del `Color` valore. Tutto ciò che conta è il canale alfa. Il codice qui chiama semplicemente il `WithAlpha` metodo sul valore predefinito della `Color` Proprietà.
 
-Lo spostamento di `Slider` dissolvenze tra una singola bitmap e l'altro:
+Lo stato di `Slider` dissolvenza tra una bitmap e l'altra:
 
-[![Bitmap dissolvenza](transparency-images/BitmapDissolve.png "Bitmap dissolvenza")](transparency-images/BitmapDissolve-Large.png#lightbox)
+[![Dissolvenza bitmap](transparency-images/BitmapDissolve.png "Dissolvenza bitmap")](transparency-images/BitmapDissolve-Large.png#lightbox)
 
-In diversi articoli precedenti, si è appreso come usare SkiaSharp per disegnare il testo, cerchi, ellissi, rettangoli con angoli arrotondati e bitmap. Il passaggio successivo consiste [SkiaSharp linee e tracciati](../paths/index.md) in cui si apprenderà come disegnare linee collegate in un percorso grafico.
+Negli ultimi articoli, è stato illustrato come usare SkiaSharp per creare testo, cerchi, ellissi, rettangoli arrotondati e bitmap. Il passaggio successivo è [SkiaSharp linee e percorsi](../paths/index.md) in cui si apprenderà come creare linee connesse in un percorso grafico.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

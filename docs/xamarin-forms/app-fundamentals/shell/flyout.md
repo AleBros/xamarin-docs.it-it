@@ -1,32 +1,35 @@
 ---
-title: Riquadro a comparsa della shell Xamarin.Forms
-description: Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative.
-ms.prod: xamarin
-ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/22/2020
-ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+title: Xamarin.FormsRiquadro a comparsa Shell
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b336a594fa7525000e119333b56284368a23cc03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852476"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134953"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
+# <a name="xamarinforms-shell-flyout"></a>Xamarin.FormsRiquadro a comparsa Shell
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative:
 
 ![Screenshot di un riquadro a comparsa con annotazioni della shell](flyout-images/flyout-annotated.png "Riquadro a comparsa con annotazioni")
 
-Se necessario, il colore di sfondo del riquadro a comparsa può essere impostato [`Color`](xref:Xamarin.Forms.Color) su un `Shell.FlyoutBackgroundColor` oggetto tramite la proprietà associabile. Questa proprietà può anche essere impostata da un foglio di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms).
+Se necessario, il colore di sfondo del riquadro a comparsa può essere impostato su un oggetto [`Color`](xref:Xamarin.Forms.Color) tramite la `Shell.FlyoutBackgroundColor` proprietà associabile. Questa proprietà può anche essere impostata da un foglio di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [ Xamarin.Forms proprietà specifiche della shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 ## <a name="flyout-icon"></a>Icona del riquadro a comparsa
 
-Per impostazione predefinita, le applicazioni shell hanno un'icona hamburger che è possibile premere per aprire il riquadro a comparsa. Questa icona può essere modificata impostando la `Shell.FlyoutIcon` proprietà associabile, di [`ImageSource`](xref:Xamarin.Forms.ImageSource)tipo, su un'icona appropriata:
+Per impostazione predefinita, le applicazioni shell hanno un'icona hamburger che è possibile premere per aprire il riquadro a comparsa. Questa icona può essere modificata impostando la `Shell.FlyoutIcon` proprietà associabile, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , su un'icona appropriata:
 
 ```xaml
 <Shell ...
@@ -95,7 +98,7 @@ Il risultato è l'intestazione del riquadro a comparsa seguente:
 
 ![Screenshot dell'intestazione del riquadro a comparsa](flyout-images/flyout-header.png "Intestazione del riquadro a comparsa")
 
-In alternativa, è possibile definire l'aspetto dell'intestazione del riquadro a `Shell.FlyoutHeaderTemplate` comparsa impostando [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)la proprietà su:
+In alternativa, è possibile definire l'aspetto dell'intestazione del riquadro a comparsa impostando la `Shell.FlyoutHeaderTemplate` proprietà su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell.FlyoutHeaderTemplate>
@@ -133,9 +136,9 @@ L'esempio seguente mostra come comprimere l'intestazione del riquadro a comparsa
 
 ## <a name="flyout-background-image"></a>Immagine di sfondo del riquadro a comparsa
 
-Il riquadro a comparsa può avere un'immagine di sfondo facoltativa, visualizzata sotto l'intestazione e dietro gli elementi e le voci di menu. È possibile specificare l'immagine di sfondo impostando `FlyoutBackgroundImage` la proprietà associabile, [`ImageSource`](xref:Xamarin.Forms.ImageSource)di tipo, su un file, una risorsa incorporata, un URI o un flusso.
+Il riquadro a comparsa può avere un'immagine di sfondo facoltativa, visualizzata sotto l'intestazione e dietro gli elementi e le voci di menu. È possibile specificare l'immagine di sfondo impostando la `FlyoutBackgroundImage` proprietà associabile, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , su un file, una risorsa incorporata, un URI o un flusso.
 
-È possibile configurare le proporzioni dell'immagine di sfondo impostando la `FlyoutBackgroundImageAspect` proprietà associabile, di [`Aspect`](xref:Xamarin.Forms.Aspect)tipo, su uno dei `Aspect` membri dell'enumerazione:
+È possibile configurare le proporzioni dell'immagine di sfondo impostando la `FlyoutBackgroundImageAspect` proprietà associabile, di tipo [`Aspect`](xref:Xamarin.Forms.Aspect) , su uno dei `Aspect` membri dell'enumerazione:
 
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): Ritaglia l'immagine in modo da riempire l'area di visualizzazione mantenendo le proporzioni.
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-Letterbox l'immagine, se necessario, in modo che l'immagine si trovi nell'area di visualizzazione, con uno spazio vuoto aggiunto alla parte superiore/inferiore o ai lati a seconda che l'immagine sia larga o alta.
@@ -191,7 +194,7 @@ L'esempio seguente crea un riquadro a comparsa contenente un'intestazione e due 
 </Shell>
 ```
 
-In questo esempio, è [`ContentPage`](xref:Xamarin.Forms.ContentPage) possibile accedere a ogni oggetto solo tramite elementi del riquadro a comparsa:
+In questo esempio, [`ContentPage`](xref:Xamarin.Forms.ContentPage) è possibile accedere a ogni oggetto solo tramite elementi del riquadro a comparsa:
 
 [![Screenshot di un'app shell a due pagine con elementi a comparsa in iOS e Android](flyout-images/two-page-app-flyout.png "App shell a due pagine con elementi del riquadro a comparsa")](flyout-images/two-page-app-flyout-large.png#lightbox "App shell a due pagine con elementi del riquadro a comparsa")
 
@@ -214,10 +217,10 @@ La shell include operatori di conversione implicita che consentono di semplifica
 </Shell>
 ```
 
-Questa conversione implicita esegue automaticamente il [`ContentPage`](xref:Xamarin.Forms.ContentPage) wrapping di `ShellContent` ogni oggetto negli oggetti, che `Tab` sono racchiusi tra oggetti, `FlyoutItem` che sono racchiusi tra oggetti.
+Questa conversione implicita esegue automaticamente il wrapping di ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto negli oggetti `ShellContent` , che sono racchiusi tra oggetti `Tab` , che sono racchiusi tra `FlyoutItem` oggetti.
 
 > [!IMPORTANT]
-> In un'applicazione shell ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) elemento figlio di un `ShellContent` oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per altre informazioni, vedere [Caricamento efficiente delle pagine](tabs.md#efficient-page-loading) nella guida [Schede della shell Xamarin.Forms](tabs.md).
+> In un'applicazione shell ogni [`ContentPage`](xref:Xamarin.Forms.ContentPage) elemento figlio di un `ShellContent` oggetto viene creato durante l'avvio dell'applicazione. L'aggiunta di ulteriori oggetti `ShellContent` usando questo approccio comporta la creazione di pagine aggiuntive durante l'avvio dell'applicazione e ciò può portare a un'esperienza di avvio insoddisfacente. La shell, tuttavia, è anche in grado di creare pagine su richiesta, in risposta alla navigazione. Per ulteriori informazioni, vedere [caricamento di pagine efficienti](tabs.md#efficient-page-loading) nella Guida alle [ Xamarin.Forms schede della shell](tabs.md) .
 
 ### <a name="flyoutitem-class"></a>Classe FlyoutItem
 
@@ -321,7 +324,7 @@ Il risultato sono gli elementi del riquadro a comparsa seguenti:
 
 ## <a name="define-flyoutitem-appearance"></a>Definire l'aspetto di un oggetto FlyoutItem
 
-L'aspetto di ogni `FlyoutItem` oggetto può essere personalizzato impostando `Shell.ItemTemplate` la proprietà associata su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)un oggetto:
+L'aspetto di ogni oggetto `FlyoutItem` può essere personalizzato impostando la `Shell.ItemTemplate` proprietà associata su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell ...>
@@ -350,16 +353,16 @@ Questo esempio visualizza il titolo di ogni oggetto `FlyoutItem` in corsivo:
 
 [![Screenshot degli oggetti FlyoutItem basati su modelli, in iOS e Android](flyout-images/flyoutitem-templated.png "Oggetti FlyoutItem basati su modelli della shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Oggetti FlyoutItem basati su modelli della shell")
 
-Poiché `Shell.ItemTemplate` è una proprietà associata, è possibile collegare modelli diversi a oggetti `FlyoutItem` specifici.
+Poiché `Shell.ItemTemplate` è una proprietà associata, è possibile collegare modelli diversi a `FlyoutItem` oggetti specifici.
 
 > [!NOTE]
-> Shell fornisce le `Title` proprietà `FlyoutIcon` e alla proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dell'oggetto `ItemTemplate`.
+> Shell fornisce le `Title` `FlyoutIcon` proprietà e alla proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dell'oggetto `ItemTemplate` .
 
-Inoltre, la shell include tre classi di stile, che vengono applicate automaticamente `FlyoutItem` agli oggetti. Per altre informazioni, vedere [FlyoutItem e le classi di stile MenuItem](#flyoutitem-and-menuitem-style-classes).
+Inoltre, la shell include tre classi di stile, che vengono applicate automaticamente agli `FlyoutItem` oggetti. Per altre informazioni, vedere [FlyoutItem e le classi di stile MenuItem](#flyoutitem-and-menuitem-style-classes).
 
 ### <a name="default-template-for-flyoutitems"></a>Modello predefinito per FlyoutItems
 
-Il valore [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) predefinito usato per `FlyoutItem` ogni è illustrato di seguito:
+Il valore predefinito [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usato per ogni `FlyoutItem` è illustrato di seguito:
 
 ```xaml
 <DataTemplate x:Key="FlyoutTemplate">
@@ -438,7 +441,7 @@ Il valore [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) predefinito usato pe
 
 Questo modello può essere utilizzato come base per apportare modifiche al layout del riquadro a comparsa esistente e Mostra anche gli Stati di visualizzazione implementati per gli elementi del riquadro a comparsa.
 
-Inoltre, gli [`Grid`](xref:Xamarin.Forms.Grid)elementi, [`Image`](xref:Xamarin.Forms.Image)e [`Label`](xref:Xamarin.Forms.Label) hanno `x:Name` tutti i valori e possono quindi essere assegnati al gestore dello stato di visualizzazione. Per altre informazioni, vedere [impostare lo stato su più elementi](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
+Inoltre, gli [`Grid`](xref:Xamarin.Forms.Grid) elementi, [`Image`](xref:Xamarin.Forms.Image) e [`Label`](xref:Xamarin.Forms.Label) hanno tutti i `x:Name` valori e possono quindi essere assegnati al gestore dello stato di visualizzazione. Per altre informazioni, vedere [impostare lo stato su più elementi](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
 
 > [!NOTE]
 > Lo stesso modello può essere utilizzato anche per `MenuItem` gli oggetti.
@@ -480,13 +483,13 @@ La classe `Shell` ha una proprietà associabile denominata `CurrentItem`, di tip
 
 Questo codice imposta l'oggetto `ShellContent` denominato `aboutItem` come proprietà `CurrentItem` e, di conseguenza, l'oggetto viene visualizzato. In questo esempio viene usata una conversione implicita per eseguire il wrapping dell'oggetto `ShellContent` in un oggetto `Tab`, di cui viene eseguito il wrapping in un oggetto `FlyoutItem`.
 
-Il codice C# equivalente, dato un `ShellContent` oggetto denominato `aboutItem`, è:
+Il codice C# equivalente, dato un `ShellContent` oggetto denominato `aboutItem` , è:
 
 ```csharp
 CurrentItem = aboutItem;
 ```
 
-In questo esempio la `CurrentItem` proprietà viene impostata nella `Shell` classe sottoclasse. In alternativa, è `CurrentItem` possibile impostare la proprietà in qualsiasi classe tramite la `Shell.Current` proprietà statica:
+In questo esempio la `CurrentItem` proprietà viene impostata nella classe sottoclasse `Shell` . In alternativa, `CurrentItem` è possibile impostare la proprietà in qualsiasi classe tramite la `Shell.Current` proprietà statica:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;
@@ -494,10 +497,10 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="menu-items"></a>Voci di menu
 
-Facoltativamente, le voci di menu possono essere aggiunte al riquadro a comparsa e ogni voce di menu [`MenuItem`](xref:Xamarin.Forms.MenuItem) è rappresentata da un oggetto. La posizione degli oggetti `MenuItem` nel riquadro a comparsa dipende dall'ordine di dichiarazione nella gerarchia visiva della shell. Pertanto, qualsiasi oggetto `MenuItem` dichiarato prima degli oggetti `FlyoutItem` verrà visualizzato nella parte superiore del riquadro a comparsa e gli eventuali oggetti `MenuItem` dichiarati dopo gli oggetti `FlyoutItem` verranno visualizzati nella parte inferiore del riquadro a comparsa.
+Facoltativamente, le voci di menu possono essere aggiunte al riquadro a comparsa e ogni voce di menu è rappresentata da un [`MenuItem`](xref:Xamarin.Forms.MenuItem) oggetto. La posizione degli oggetti `MenuItem` nel riquadro a comparsa dipende dall'ordine di dichiarazione nella gerarchia visiva della shell. Pertanto, qualsiasi oggetto `MenuItem` dichiarato prima degli oggetti `FlyoutItem` verrà visualizzato nella parte superiore del riquadro a comparsa e gli eventuali oggetti `MenuItem` dichiarati dopo gli oggetti `FlyoutItem` verranno visualizzati nella parte inferiore del riquadro a comparsa.
 
 > [!NOTE]
-> La `MenuItem` classe ha un [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) evento e una [`Command`](xref:Xamarin.Forms.MenuItem.Command) proprietà. Gli oggetti `MenuItem` consentono quindi scenari in cui viene eseguita un'azione in risposta al tocco di `MenuItem`. Questi scenari includono la navigazione e l'apertura di un Web browser in una pagina Web specifica.
+> La `MenuItem` classe ha un [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) evento e una [`Command`](xref:Xamarin.Forms.MenuItem.Command) Proprietà. Gli oggetti `MenuItem` consentono quindi scenari in cui viene eseguita un'azione in risposta al tocco di `MenuItem`. Questi scenari includono la navigazione e l'apertura di un Web browser in una pagina Web specifica.
 
 [`MenuItem`](xref:Xamarin.Forms.MenuItem)gli oggetti possono essere aggiunti al riquadro a comparsa come illustrato nell'esempio seguente:
 
@@ -518,14 +521,14 @@ Questo codice aggiunge due [`MenuItem`](xref:Xamarin.Forms.MenuItem) oggetti al 
 
 [![Screenshot del riquadro a comparsa contenente oggetti MenuItem in iOS e Android](flyout-images/flyout.png "Riquadro a comparsa shell contenente oggetti MenuItem")](flyout-images/flyout-large.png#lightbox "Riquadro a comparsa shell contenente oggetti MenuItem")
 
-Il primo [`MenuItem`](xref:Xamarin.Forms.MenuItem) oggetto esegue un `ICommand` oggetto denominato `RandomPageCommand`, che consente di passare a una pagina casuale nell'applicazione. Il secondo oggetto `MenuItem` esegue un comando `ICommand` denominato `HelpCommand`, che apre l'URL specificato dalla proprietà `CommandParameter` in un Web browser.
+Il primo [`MenuItem`](xref:Xamarin.Forms.MenuItem) oggetto esegue un oggetto `ICommand` denominato `RandomPageCommand` , che consente di passare a una pagina casuale nell'applicazione. Il secondo oggetto `MenuItem` esegue un comando `ICommand` denominato `HelpCommand`, che apre l'URL specificato dalla proprietà `CommandParameter` in un Web browser.
 
 > [!NOTE]
-> Il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni `MenuItem` viene ereditato dall' `Shell` oggetto sottoclassato.
+> Il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni `MenuItem` viene ereditato dall'oggetto sottoclassato `Shell` .
 
 ## <a name="define-menuitem-appearance"></a>Definire l'aspetto di un oggetto MenuItem
 
-L'aspetto di ogni `MenuItem` oggetto può essere personalizzato impostando `Shell.MenuItemTemplate` la proprietà associata su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)un oggetto:
+L'aspetto di ogni oggetto `MenuItem` può essere personalizzato impostando la `Shell.MenuItemTemplate` proprietà associata su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell ...>
@@ -562,7 +565,7 @@ Questo esempio associa la proprietà `MenuItemTemplate` a livello di shell a ogn
 [![Screenshot degli oggetti MenuItem basati su modelli, in iOS e Android](flyout-images/menuitem-templated.png "Oggetti MenuItem basati su modelli della shell")](flyout-images/menuitem-templated-large.png#lightbox "Oggetti MenuItem basati su modelli della shell")
 
 > [!NOTE]
-> Shell fornisce le [`Text`](xref:Xamarin.Forms.MenuItem.Text) proprietà [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) e alla proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dell'oggetto `MenuItemTemplate`. È anche possibile usare `Title` al posto di `Text` e `Icon` al posto di `IconImageSource` che consentirà di riutilizzare lo stesso modello per le voci di menu e gli elementi del riquadro a comparsa
+> Shell fornisce le [`Text`](xref:Xamarin.Forms.MenuItem.Text) [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) proprietà e alla proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dell'oggetto `MenuItemTemplate` . È anche possibile usare `Title` al posto di `Text` e `Icon` al posto di `IconImageSource` che consentirà di riutilizzare lo stesso modello per le voci di menu e gli elementi del riquadro a comparsa
 
 Dato che `Shell.MenuItemTemplate` è una proprietà associata, si possono associare modelli diversi a oggetti `MenuItem` specifici:
 
@@ -605,11 +608,11 @@ Dato che `Shell.MenuItemTemplate` è una proprietà associata, si possono associ
 Questo esempio associa la proprietà `MenuItemTemplate` a livello di shell al primo oggetto `MenuItem` e associa la proprietà `MenuItemTemplate` inline al secondo `MenuItem`.
 
 > [!NOTE]
-> Per `MenuItem` gli oggetti è `FlyoutItem` inoltre possibile utilizzare il modello predefinito per gli oggetti. Per ulteriori informazioni, vedere [modello predefinito per FlyoutItems](#default-template-for-flyoutitems).
+> `FlyoutItem`Per gli oggetti è inoltre possibile utilizzare il modello predefinito per gli oggetti `MenuItem` . Per ulteriori informazioni, vedere [modello predefinito per FlyoutItems](#default-template-for-flyoutitems).
 
 ## <a name="flyoutitem-and-menuitem-style-classes"></a>Classi di stile FlyoutItem e MenuItem
 
-La shell include tre classi di stile, che vengono applicate `FlyoutItem` automaticamente `MenuItem` agli oggetti e. I nomi delle classi di stile sono:
+La shell include tre classi di stile, che vengono applicate automaticamente agli `FlyoutItem` `MenuItem` oggetti e. I nomi delle classi di stile sono:
 
 - `FlyoutItemLabelStyle`
 - `FlyoutItemImageStyle`
@@ -640,12 +643,12 @@ Il codice XAML seguente mostra un esempio di definizione di stili per queste cla
 </Style>
 ```
 
-Questi stili verranno applicati automaticamente agli `FlyoutItem` oggetti e `MenuItem` , senza che sia necessario impostarne [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) le proprietà sui nomi delle classi di stile.
+Questi stili verranno applicati automaticamente agli `FlyoutItem` oggetti e `MenuItem` , senza che sia necessario impostarne le [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) proprietà sui nomi delle classi di stile.
 
-Inoltre, è possibile definire e applicare classi di stile personalizzate agli `FlyoutItem` oggetti `MenuItem` e. Per ulteriori informazioni sulle classi di stile, vedere [Novell. Forms Style Classes](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
+Inoltre, è possibile definire e applicare classi di stile personalizzate agli `FlyoutItem` `MenuItem` oggetti e. Per ulteriori informazioni sulle classi di stile, vedere [ Xamarin.Forms classi di stile](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
-## <a name="related-links"></a>Link correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [Xaminals (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Classi di stile Novell. Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
-- [Gestore dello stato di visualizzazione di Novell. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.FormsClassi di stile](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.FormsGestione stato di visualizzazione](~/xamarin-forms/user-interface/visual-state-manager.md)

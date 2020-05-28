@@ -1,22 +1,25 @@
 ---
-title: Caricamento delle risorse dell'applicazione video
-description: Questo articolo illustra come caricare video archiviati come risorse dell'applicazione in un'applicazione lettore video con Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Questo articolo illustra come caricare video archiviati come risorse dell'applicazione in un'applicazione lettore video usando Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771843"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133763"
 ---
 # <a name="loading-application-resource-videos"></a>Caricamento delle risorse dell'applicazione video
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I renderer personalizzati per la visualizzazione `VideoPlayer` sono in grado di riprodurre file video incorporati nei singoli progetti di piattaforma come risorse dell'applicazione. Tuttavia, la versione corrente di `VideoPlayer` non può accedere alle risorse incorporate in una libreria .NET Standard.
 

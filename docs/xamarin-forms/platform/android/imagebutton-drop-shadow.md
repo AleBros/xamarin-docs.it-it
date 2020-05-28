@@ -1,24 +1,27 @@
 ---
-title: Ombreggiatura di ImageButton in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la piattaforma Android specifica che Abilita un'ombreggiatura in un ImageButton.
-ms.prod: xamarin
-ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e2ad97eb5e7db3b832e8fb4340c86904b766b9a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653588"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139999"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Ombreggiatura di ImageButton in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma Android viene usato per abilitare un'ombreggiatura in un `ImageButton`. Vengono utilizzati in XAML, impostando il `ImageButton.IsShadowEnabled` la proprietà associabile per `true`, insieme a un numero di altre proprietà associabili facoltativi che controllano l'ombreggiatura:
+Questo specifico della piattaforma Android viene usato per abilitare un'ombreggiatura in un `ImageButton` . Viene utilizzato in XAML impostando la `ImageButton.IsShadowEnabled` proprietà associabile su `true` , insieme a una serie di proprietà associabili facoltative aggiuntive che controllano l'ombreggiatura:
 
 ```xaml
 <ContentPage ...
@@ -44,7 +47,7 @@ Questo specifico della piattaforma Android viene usato per abilitare un'ombreggi
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -60,20 +63,20 @@ imageButton.On<Android>()
 ```
 
 > [!IMPORTANT]
-> Viene disegnata un'ombreggiatura come parte del `ImageButton` in background e lo sfondo viene disegnato solo se il `BackgroundColor` è impostata. Pertanto, un'ombreggiatura non verrà creata se il `ImageButton.BackgroundColor` proprietà non è impostata.
+> Un'ombreggiatura viene disegnata come parte dello `ImageButton` sfondo e lo sfondo viene disegnato solo se la `BackgroundColor` proprietà è impostata. Non verrà quindi disegnata un'ombreggiatura se la `ImageButton.BackgroundColor` proprietà non è impostata.
 
-Il `ImageButton.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `ImageButton.SetIsShadowEnabled` metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usata per controllare se un'ombreggiatura è abilitata nel `ImageButton`. Inoltre, è possibile richiamare i metodi seguenti per controllare l'ombreggiatura:
+Il `ImageButton.On<Android>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in Android. Il `ImageButton.SetIsShadowEnabled` metodo, nello [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) spazio dei nomi, viene utilizzato per controllare se un'ombreggiatura è abilitata in `ImageButton` . Inoltre, è possibile richiamare i metodi seguenti per controllare l'ombreggiatura:
 
-- `SetShadowColor` : imposta il colore dell'ombreggiatura. Il colore predefinito è [`Color.Default`](xref:Xamarin.Forms.Color.Default*).
-- `SetShadowOffset` : imposta l'offset dell'ombreggiatura. L'offset viene modificato la direzione dell'ombreggiatura viene eseguito il cast e viene specificato come un [`Size`](xref:Xamarin.Forms.Size) valore. Il `Size` struttura valori sono espressi in unità indipendenti dal dispositivo, con il primo valore in corso la distanza a sinistra (valore negativo) o a destra (valore positivo) e il secondo valore da precedente distanza (negativo) o di sotto (positivo) . Il valore predefinito di questa proprietà è (0,0, 0,0), che comporta l'ombreggiatura viene eseguito il cast intorno a ogni lato del `ImageButton`.
-- `SetShadowRadius`: imposta il raggio sfocatura utilizzato per il rendering dell'ombreggiatura. Il valore del raggio predefinito è 10,0.
+- `SetShadowColor`: imposta il colore dell'ombreggiatura. Il colore predefinito è [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
+- `SetShadowOffset`: imposta l'offset dell'ombreggiatura. L'offset modifica la direzione in cui viene proiettata l'ombreggiatura e viene specificato come [`Size`](xref:Xamarin.Forms.Size) valore. I `Size` valori della struttura sono espressi in unità indipendenti dal dispositivo, il primo valore è la distanza verso sinistra (valore negativo) o destro (valore positivo) e il secondo valore è la distanza sopra (valore negativo) o sotto (valore positivo). Il valore predefinito di questa proprietà è (0,0, 0,0), che determina il cast dell'ombreggiatura intorno a ogni lato dell'oggetto `ImageButton` .
+- `SetShadowRadius`: imposta il raggio di sfocatura utilizzato per il rendering dell'ombreggiatura. Il valore RADIUS predefinito è 10,0.
 
 > [!NOTE]
-> Lo stato di un'ombreggiatura è possibile eseguire query chiamando il `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, e `GetShadowRadius` metodi.
+> È possibile eseguire una query sullo stato di un'ombreggiatura chiamando i `GetIsShadowEnabled` metodi,, `GetShadowColor` `GetShadowOffset` e `GetShadowRadius` .
 
-Il risultato è che è possibile abilitare un'ombreggiatura per un `ImageButton`:
+Il risultato è che un'ombreggiatura può essere abilitata in un `ImageButton` :
 
-![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "Elemento ImageButton con ombreggiatura")
+![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

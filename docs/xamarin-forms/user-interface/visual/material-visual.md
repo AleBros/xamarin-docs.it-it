@@ -1,34 +1,37 @@
 ---
-title: Oggetti visivi del materiale Novell. Forms
-description: Novell. Forms Visual Material può essere usato per creare applicazioni Novell. Forms che sembrano sostanzialmente identiche in iOS e Android.
-ms.prod: xamarin
-ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 11/25/2019
-ms.openlocfilehash: 81ef3c44d6eb8aaf4dd0ec467e11ef04adb02a76
-ms.sourcegitcommit: 5a6124271a679b8961fa9430bd738fcb18544e92
+title: Xamarin.FormsMateriale visivo
+description: Xamarin.FormsL'oggetti visivi Material può essere usato per creare Xamarin.Forms applicazioni che sembrano sostanzialmente identiche in iOS e Android.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bba7d77d8cf565b1b2db2c1324e171389c5d0280
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292913"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127179"
 ---
-# <a name="xamarinforms-material-visual"></a>Oggetti visivi del materiale Novell. Forms
+# <a name="xamarinforms-material-visual"></a>Xamarin.FormsMateriale visivo
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 Il [progetto di materiale](https://material.io) è un sistema di progettazione dogmatico creato da Google, che prevede la dimensione, il colore, la spaziatura e altri aspetti del modo in cui le visualizzazioni e i layout dovrebbero apparire e comportarsi.
 
-Novell. Forms Visual Material può essere usato per applicare le regole di progettazione del materiale alle applicazioni Novell. Forms, creando applicazioni che sembrano sostanzialmente identiche in iOS e Android. Quando l'oggetto visivo materiale è abilitato, le visualizzazioni supportate adottano la stessa progettazione multipiattaforma, creando un aspetto unificato.
+Xamarin.FormsIl materiale visivo può essere usato per applicare le regole di progettazione del materiale alle Xamarin.Forms applicazioni, creando applicazioni che sembrano sostanzialmente identiche in iOS e Android. Quando l'oggetto visivo materiale è abilitato, le visualizzazioni supportate adottano la stessa progettazione multipiattaforma, creando un aspetto unificato.
 
-[schermate visive materiali ![](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
+[![Schermate visive materiali](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
-Il processo per l'abilitazione dell'oggetto visivo del materiale Novell. Forms nell'applicazione è:
+Il processo di abilitazione dell'oggetto Xamarin.Forms visivo materiale nell'applicazione è:
 
-1. Aggiungere il pacchetto NuGet [Novell. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) ai progetti della piattaforma iOS e Android. Questo pacchetto NuGet fornisce renderer di progettazione di materiali ottimizzati in iOS e Android. In iOS il pacchetto fornisce la dipendenza transitiva a [Novell. iOS. MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), che è un C# binding ai componenti materiali di Google [per iOS](https://material.io/develop/ios/). In Android, il pacchetto fornisce destinazioni di compilazione per garantire che il TargetFramework sia configurato correttamente.
+1. Aggiungere il [ Xamarin.Forms . Pacchetto NuGet Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) per i progetti della piattaforma iOS e Android. Questo pacchetto NuGet fornisce renderer di progettazione di materiali ottimizzati in iOS e Android. In iOS il pacchetto fornisce la dipendenza transitiva a [Novell. iOS. MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), che è un'associazione C# ai [componenti materiali di Google per iOS](https://material.io/develop/ios/). In Android, il pacchetto fornisce destinazioni di compilazione per garantire che il TargetFramework sia configurato correttamente.
 1. Inizializzare l'oggetti visivi materiali in ogni progetto di piattaforma. Per altre informazioni, vedere [Initialize Material Visual](#initialize-material-visual).
-1. Creare controlli visivi materiali impostando la proprietà [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) su `Material` in qualsiasi pagina che debba adottare le regole di progettazione del materiale. Per altre informazioni, vedere [utilizzare renderer di materiali](#apply-material-visual).
+1. Creare controlli visivi materiali impostando la [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) proprietà `Material` su in tutte le pagine che devono adottare le regole di progettazione del materiale. Per altre informazioni, vedere [utilizzare renderer di materiali](#apply-material-visual).
 1. opzionale Personalizzare i controlli del materiale. Per altre informazioni, vedere [Customize Material Controls](#customize-material-visual).
 
 > [!IMPORTANT]
@@ -53,16 +56,16 @@ I controlli Material sono realizzati dai renderer di materiali che applicano le 
 
 ## <a name="initialize-material-visual"></a>Inizializza oggetti visivi materiali
 
-Dopo l'installazione del pacchetto NuGet [Novell. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , i renderer di materiali devono essere inizializzati in ogni progetto di piattaforma.
+Dopo l'installazione di [ Xamarin.Forms . Pacchetto NuGet di Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , i renderer di materiali devono essere inizializzati in ogni progetto di piattaforma.
 
-In iOS questo dovrebbe verificarsi in **AppDelegate.cs** richiamando il metodo `Xamarin.Forms.FormsMaterial.Init` *dopo* il metodo `Xamarin.Forms.Forms.Init`:
+In iOS questo dovrebbe verificarsi in **AppDelegate.cs** richiamando il `Xamarin.Forms.FormsMaterial.Init` metodo *dopo* il `Xamarin.Forms.Forms.Init` Metodo:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
 global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-In Android questa operazione dovrebbe essere eseguita in **MainActivity.cs** richiamando il metodo `Xamarin.Forms.FormsMaterial.Init` *dopo* il metodo `Xamarin.Forms.Forms.Init`:
+In Android questa operazione dovrebbe essere eseguita in **MainActivity.cs** richiamando il `Xamarin.Forms.FormsMaterial.Init` metodo *dopo* il `Xamarin.Forms.Forms.Init` Metodo:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -71,7 +74,7 @@ global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
 ## <a name="apply-material-visual"></a>Applica oggetti visivi materiali
 
-Le applicazioni possono abilitare l'oggetto visivo materiale impostando la proprietà [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) in una pagina, un layout o una vista per `Material`:
+Le applicazioni possono abilitare l'oggetto visivo materiale impostando la [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) proprietà su una pagina, un layout o una vista per `Material` :
 
 ```xaml
 <ContentPage Visual="Material"
@@ -87,14 +90,14 @@ ContentPage contentPage = new ContentPage();
 contentPage.Visual = VisualMarker.Material;
 ```
 
-Impostando la proprietà `VisualElement.Visual` su `Material` si indica all'applicazione di usare i renderer visivi materiali anziché i renderer predefiniti. La proprietà [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) può essere impostata su qualsiasi tipo che implementa `IVisual`, con la classe [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) che fornisce le proprietà `IVisual` seguenti:
+Se si imposta la `VisualElement.Visual` proprietà su `Material` , l'applicazione utilizzerà i renderer visivi materiali anziché i renderer predefiniti. La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) proprietà può essere impostata su qualsiasi tipo che implementa `IVisual` , con la [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) classe che fornisce le `IVisual` proprietà seguenti:
 
 - `Default`: indica che è necessario eseguire il rendering della visualizzazione utilizzando il renderer predefinito.
-- `MatchParent`: indica che la visualizzazione deve usare lo stesso renderer dell'elemento padre diretto.
-- `Material`: indica che è necessario eseguire il rendering della visualizzazione utilizzando un renderer di materiali.
+- `MatchParent`: indica che la visualizzazione deve usare lo stesso renderer del padre diretto.
+- `Material`: indica che la visualizzazione deve essere sottoposta a rendering utilizzando un renderer di materiali.
 
 > [!IMPORTANT]
-> La proprietà [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) è definita nella classe [`VisualElement`](xref:Xamarin.Forms.VisualElement) , con le visualizzazioni che ereditano il valore della proprietà `Visual` dagli elementi padre. Pertanto, l'impostazione della proprietà `Visual` in un [`ContentPage`](xref:Xamarin.Forms.ContentPage) garantisce che tutte le visualizzazioni supportate nella pagina utilizzeranno tale oggetto visivo. Inoltre, la proprietà `Visual` può essere sottoposta a override in una vista.
+> La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) proprietà è definita nella [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe, con le visualizzazioni che ereditano il `Visual` valore della proprietà dagli elementi padre. Pertanto, impostando la `Visual` proprietà su un oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) si garantisce che tutte le visualizzazioni supportate nella pagina utilizzeranno tale oggetto visivo. Inoltre, la `Visual` proprietà può essere sottoposta a override in una vista.
 
 Gli screenshot seguenti mostrano un'interfaccia utente di cui viene eseguito il rendering usando i renderer predefiniti:
 
@@ -104,16 +107,16 @@ Gli screenshot seguenti mostrano la stessa interfaccia utente di cui è stato es
 
 [![Screenshot dei renderer di materiali, in iOS e Android](material-visual-images/material-renderers.png "Visualizzazioni con renderer di materiali")](material-visual-images/material-renderers-large.png#lightbox)
 
-Le principali differenze visibili tra i renderer predefiniti e i renderer di materiali, illustrati di seguito, sono che i renderer di materiali capitalizzano [`Button`](xref:Xamarin.Forms.Button) testo e arrotondano gli angoli dei bordi [`Frame`](xref:Xamarin.Forms.Frame) . Tuttavia, i renderer di materiali utilizzano controlli nativi e, di conseguenza, potrebbero essere presenti differenze nell'interfaccia utente tra le piattaforme per aree quali tipi di carattere, ombreggiature, colori ed elevazione.
+Le principali differenze visibili tra i renderer predefiniti e i renderer di materiali, illustrati di seguito, sono che i renderer del materiale capitalizzano [`Button`](xref:Xamarin.Forms.Button) il testo e arrotondano gli angoli dei [`Frame`](xref:Xamarin.Forms.Frame) bordi. Tuttavia, i renderer di materiali utilizzano controlli nativi e, di conseguenza, potrebbero essere presenti differenze nell'interfaccia utente tra le piattaforme per aree quali tipi di carattere, ombreggiature, colori ed elevazione.
 
 > [!NOTE]
 > I componenti di progettazione del materiale si attengono strettamente alle linee guida di Google. Di conseguenza, i renderer di progettazione materiali sono distorti rispetto al dimensionamento e al comportamento. Quando è necessario un maggiore controllo degli stili o del comportamento, è comunque possibile creare un proprio [effetto](~/xamarin-forms/app-fundamentals/effects/index.md), un [comportamento](~/xamarin-forms/app-fundamentals/behaviors/index.md)o un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) per ottenere i dettagli necessari.
 
 ## <a name="customize-material-visual"></a>Personalizza oggetti visivi materiali
 
-Il pacchetto Visual NuGet Material è una raccolta di renderer che realizzano i controlli Novell. Forms. La personalizzazione dei controlli visivi materiali è identica alla personalizzazione dei controlli predefiniti.
+Il pacchetto Visual NuGet Material è una raccolta di renderer che realizzano i Xamarin.Forms controlli. La personalizzazione dei controlli visivi materiali è identica alla personalizzazione dei controlli predefiniti.
 
-Gli effetti sono la tecnica consigliata quando l'obiettivo è personalizzare un controllo esistente. Se è presente un renderer visuale Material, è meno lavoro personalizzare il controllo con un effetto rispetto a quello della sottoclasse del renderer. Per ulteriori informazioni sugli effetti, vedere [Novell. Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
+Gli effetti sono la tecnica consigliata quando l'obiettivo è personalizzare un controllo esistente. Se è presente un renderer visuale Material, è meno lavoro personalizzare il controllo con un effetto rispetto a quello della sottoclasse del renderer. Per ulteriori informazioni sugli effetti, vedere [ Xamarin.Forms effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 I renderer personalizzati sono la tecnica consigliata quando un renderer di materiali non esiste. Con l'oggetto visivo Material sono incluse le classi renderer seguenti:
 
@@ -130,7 +133,7 @@ I renderer personalizzati sono la tecnica consigliata quando un renderer di mate
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-La sottoclasse di un renderer di materiali è quasi identica ai renderer non di materiale. Tuttavia, quando si esporta un renderer che esegue una sottoclasse di un renderer di materiali, è necessario fornire un terzo argomento all'attributo `ExportRenderer` che specifica il tipo di `VisualMarker.MaterialVisual`:
+La sottoclasse di un renderer di materiali è quasi identica ai renderer non di materiale. Tuttavia, quando si esporta un renderer che esegue una sottoclasse di un renderer di materiali, è necessario fornire un terzo argomento all' `ExportRenderer` attributo che specifica il `VisualMarker.MaterialVisual` tipo:
 
 ```csharp
 using Xamarin.Forms.Material.Android;
@@ -145,16 +148,16 @@ namespace MyApp.Android
 }
 ```
 
-In questo esempio, il `ExportRendererAttribute` specifica che la classe `CustomMaterialProgressBarRenderer` verrà utilizzata per eseguire il rendering della visualizzazione [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) , con il tipo di `IVisual` registrato come terzo argomento.
+In questo esempio, `ExportRendererAttribute` specifica che la `CustomMaterialProgressBarRenderer` classe verrà utilizzata per eseguire il rendering della [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) visualizzazione, con il `IVisual` tipo registrato come terzo argomento.
 
 > [!NOTE]
-> Un renderer che specifica un tipo di `IVisual`, come parte del relativo `ExportRendererAttribute`, verrà utilizzato per il rendering delle visualizzazioni di cui è stato scelto il rendering, anziché il renderer predefinito. Al momento della selezione del renderer, la proprietà `Visual` della vista viene controllata e inclusa nel processo di selezione del renderer.
+> Un renderer che specifica un `IVisual` tipo, come parte del relativo `ExportRendererAttribute` , verrà usato per il rendering delle visualizzazioni di cui è stato scelto il rendering, anziché il renderer predefinito. Al momento della selezione del renderer, la `Visual` proprietà della vista viene controllata e inclusa nel processo di selezione del renderer.
 
 Per ulteriori informazioni sui renderer personalizzati, vedere [renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Materiale visivo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Creare un renderer Visual Novell. Forms](create.md)
-- [Effetti Novell. Forms](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Creare un Xamarin.Forms renderer visivo](create.md)
+- [Xamarin.FormsEffetti](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

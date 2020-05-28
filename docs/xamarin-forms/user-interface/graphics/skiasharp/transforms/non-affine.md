@@ -1,34 +1,37 @@
 ---
-title: Trasformazioni non affini
-description: Questo articolo illustra come creare prospettive e gli effetti di rastremazione con la terza colonna della matrice di trasformazione e questo concetto è illustrato con esempio di codice.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2017
-ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772771"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131755"
 ---
 # <a name="non-affine-transforms"></a>Trasformazioni non affini
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Creare prospettive e gli effetti di rastremazione con la terza colonna della matrice di trasformazione_
+_Crea effetti della prospettiva e della rastremazione con la terza colonna della matrice di trasformazione_
 
-Traslazione, ridimensionamento, rotazione e inclinazione sono classificati come *affini* Trasforma. Le trasformazioni affini mantengono linee parallele. Se le due righe sono parallele prima della trasformazione, rimangono parallele dopo la trasformazione. I rettangoli vengono sempre trasformati in parallelogrammi.
+La conversione, la scalabilità, la rotazione e la distorsione sono tutte classificate come trasformazioni *affini* . Le trasformazioni affini mantengono le linee parallele. Se due righe sono parallele prima della trasformazione, rimangono parallele dopo la trasformazione. I rettangoli vengono sempre trasformati in parallelogrammi.
 
-Tuttavia, è inoltre in grado di trasformazioni non affini, che hanno la possibilità di trasformare un rettangolo in qualsiasi quadrilatero convesso SkiaSharp:
+Tuttavia, SkiaSharp è anche in grado di eseguire trasformazioni non affini, che hanno la possibilità di trasformare un rettangolo in qualsiasi quadrilatero convesso:
 
-![](non-affine-images/nonaffinetransformexample.png "Una bitmap trasformata in un quadrilatero convesso")
+![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
 
-Un quadrilatero convesso è una figura i quattro lati con gli angoli interni sempre un valore minore di 180 gradi e le parti che non superano tra loro.
+Un quadrilatero convesso è una figura su quattro lati con angoli interni sempre minori di 180 gradi e lati che non si intersecano tra loro.
 
-Non affini Trasforma risultato quando la terza riga della matrice di trasformazione è impostata su valori diversi da 0, 0 e 1. La versione completa `SKMatrix` moltiplicazione è:
+Le trasformazioni non affini vengono generate quando la terza riga della matrice di trasformazione è impostata su valori diversi da 0, 0 e 1. La `SKMatrix` moltiplicazione completa è:
 
 <pre>
               │ ScaleX  SkewY   Persp0 │
@@ -38,39 +41,39 @@ Non affini Trasforma risultato quando la terza riga della matrice di trasformazi
 
 Le formule di trasformazione risultanti sono:
 
-x' = ScaleX·x SkewX·y + TransX
+x ' = ScaleX · x + SkewX · y + TransX
 
-y' = SkewY·x ScaleY·y + TransY
+y ' = asimmetria · x + scalabilità · y + transy
 
-z' = Persp0·x Persp1·y + Persp2
+z ' = Persp0 · x + Persp1 · y + Persp2
 
-La regola fondamentale dell'uso di una matrice 3 per 3 per le trasformazioni bidimensionali è che tutto ciò che rimane nel piano in cui Z è uguale a 1. A meno che `Persp0` e `Persp1` sono pari a 0, e `Persp2` è uguale a 1, la trasformazione ha spostato le coordinate Z tale piano.
+La regola fondamentale dell'uso di una matrice 3 per 3 per le trasformazioni bidimensionali è che tutto rimane sul piano dove Z è uguale a 1. A meno `Persp0` `Persp1` che e siano 0 e `Persp2` uguale a 1, la trasformazione ha spostato le coordinate Z rispetto a tale piano.
 
-Per ripristinare questo una trasformazione bidimensionale, le coordinate devono essere spostate nuovamente in tale piano. Un altro passaggio è obbligatorio. La x', y', e z 'valori devono essere diviso per z':
+Per ripristinare questo oggetto in una trasformazione bidimensionale, è necessario spostare le coordinate di nuovo su tale piano. È necessario un altro passaggio. I valori x ', y ' e z ' devono essere divisi per z ':
 
-x" = x' / z'
+x "= x '/z '
 
-'y = y' / z'
+y "= y"/z "
 
-z" = z' / z' = 1
+z "= z '/z ' = 1
 
-Si parla *coordinate omogenee* e sono state sviluppate da Ferdinand Möbius agosto, molto più noti per il suo stranezza topologico, si ipotizza la striscia Möbius.
+Queste sono note come *coordinate omogenee* e sono state sviluppate dal matematico August Ferdinand Möbius, molto più noto per la sua stranezza topologica, il Möbius strip.
 
-Se z' è 0, i risultati di divisione in base alle coordinate infiniti. In effetti, una delle motivazioni del Möbius per lo sviluppo di coordinate omogenee era la possibilità di rappresentare i valori infiniti con numeri finiti.
+Se z ' è 0, la divisione restituisce le coordinate infinite. Infatti, una delle motivazioni Möbius's per lo sviluppo di coordinate omogenee è la possibilità di rappresentare valori infiniti con numeri finiti.
 
-La visualizzazione grafica, tuttavia, si desidera evitare il rendering di un elemento con coordinate che consentono di trasformare i valori infinito. Queste coordinate non verranno eseguito il rendering. Tutti gli elementi in prossimità di tali coordinate saranno molto grandi e probabilmente non visivamente coerente.
+Quando si visualizzano elementi grafici, tuttavia, si desidera evitare di eseguire il rendering di elementi con coordinate che trasformano in valori infiniti. Non verrà eseguito il rendering di queste coordinate. Tutti gli elementi che si trovano in prossimità di queste coordinate saranno molto grandi e probabilmente non coerenti visivamente.
 
-L'equazione, non si desidera il valore di z' che diventa zero:
+In questa equazione non si desidera che il valore di z ' diventi zero:
 
-z' = Persp0·x Persp1·y + Persp2
+z ' = Persp0 · x + Persp1 · y + Persp2
 
-Di conseguenza, questi valori hanno alcune limitazioni pratiche: 
+Di conseguenza, questi valori presentano alcune restrizioni pratiche: 
 
-Il `Persp2` cella può essere zero o non zero. Se `Persp2` è zero, z' è pari a zero per il punto (0, 0) e che in genere non è consigliabile perché tale punto è molto comune nei grafici bidimensionali. Se `Persp2` non è uguale a zero, non vi è alcuna perdita di generalità se `Persp2` è fissato a 1. Ad esempio, se si determina che `Persp2` deve essere 5, quindi si possono dividere semplicemente tutte le celle della matrice da 5, che rende `Persp2` uguale a 1 e il risultato sarà lo stesso.
+La `Persp2` cella può essere zero o non zero. Se `Persp2` è zero, z ' è zero per il punto (0, 0) e non è in genere consigliabile perché tale punto è molto comune nelle immagini bidimensionali. Se `Persp2` non è uguale a zero, non vi è alcuna perdita di generalizzazione se `Persp2` è fissata su 1. Se, ad esempio, si determina che `Persp2` dovrebbe essere 5, è possibile dividere semplicemente tutte le celle nella matrice per 5, il che rende `Persp2` uguale a 1 e il risultato sarà lo stesso.
 
-Per questi motivi, `Persp2` spesso è fissato a 1, ovvero lo stesso valore della matrice di identità.
+Per questi motivi, `Persp2` viene spesso corretto a 1, ovvero lo stesso valore nella matrice di identità.
 
-In genere `Persp0` e `Persp1` sono un numero limitato. Ad esempio, si supponga di iniziare con una matrice di identità, ma con set `Persp0` pari a 0,01:
+In genere, `Persp0` e `Persp1` sono numeri ridotti. Si supponga, ad esempio, di iniziare con una matrice di identità, ma di impostarla `Persp0` su 0,01:
 
 <pre>
 | 1  0   0.01 |
@@ -80,27 +83,27 @@ In genere `Persp0` e `Persp1` sono un numero limitato. Ad esempio, si supponga d
 
 Le formule di trasformazione sono:
 
-x' = x / (0.01·x + 1)
+x ' = x/(0,01 · x + 1)
 
-y' = y / (0.01·x + 1)
+y ' = y/(0,01 · x + 1)
 
-Ora è possibile usare questa trasformazione per eseguire il rendering di una casella quadrata 100 pixel posizionata in corrispondenza dell'origine. Ecco come vengono trasformati gli angoli di quattro:
+Usare ora questa trasformazione per eseguire il rendering di una casella quadrata di 100 pixel posizionata all'origine. Ecco il modo in cui vengono trasformati i quattro angoli:
 
-(0, 0) → (0, 0)
+(0,0) → (0, 0)
 
 (0, 100) → (0, 100)
 
-(100, 0) → (50, 0)
+(100,0) → (50, 0)
 
 (100, 100) → (50, 50)
 
-Quando x è 100, quindi il valore z' denominatore è 2, in modo che le coordinate x e y sono effettivamente dimezzato. Il lato destro della casella diventa più breve rispetto a sinistra:
+Quando x è 100, il denominatore z è 2, quindi le coordinate x e y vengono effettivamente dimezzate. Il lato destro della casella diventa più breve del lato sinistro:
 
-![](non-affine-images/nonaffinetransform.png "Una casella soggetto a una trasformazione non affine")
+![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
 
-Il `Persp` parte di questi nomi cella fa riferimento a "Prospettiva" perché la prospettiva suggerisce che la casella è ora inclinata al lato destro del visualizzatore.
+La `Persp` parte di questi nomi di celle si riferisce alla "prospettiva" perché lo scorcio suggerisce che la casella è ora inclinata con il lato destro oltre il visualizzatore.
 
-Il **prospettiva Test** pagina consente di provare a usare i valori di `Persp0` e `Pers1` per avere un'idea di come funzionano. Valori accettabili di queste celle della matrice sono così ridotte che di `Slider` nella piattaforma Windows universale non può gestire correttamente tali. Per supportare il problema della piattaforma UWP, i due `Slider` elementi nel [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) devono essere inizializzati all'intervallo da -1 a 1:
+La pagina della **prospettiva test** consente di sperimentare i valori di `Persp0` e `Pers1` per ottenere un'idea del funzionamento. I valori ragionevoli di queste celle della matrice sono talmente piccoli che `Slider` nel piattaforma UWP (Universal Windows Platform) non possono gestirli correttamente. Per risolvere il problema UWP, `Slider` è necessario inizializzare i due elementi in [**TestPerspective. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) per un intervallo compreso tra-1 e 1:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -154,7 +157,7 @@ Il **prospettiva Test** pagina consente di provare a usare i valori di `Persp0` 
 </ContentPage>
 ```
 
-I gestori eventi per i dispositivi di scorrimento nel [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) file code-behind divida i valori da 100 in modo che è compreso tra 0,01 e –0.01. Inoltre, il costruttore carica in una mappa di bit:
+I gestori eventi per i dispositivi di scorrimento nel [`TestPerspectivePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) file code-behind dividono i valori di 100 in modo che siano compresi tra-0,01 e 0,01. Inoltre, il costruttore viene caricato in una bitmap:
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -191,7 +194,7 @@ public partial class TestPerspectivePage : ContentPage
 }
 ```
 
-Il `PaintSurface` gestore calcola un' `SKMatrix` valore denominato `perspectiveMatrix` in base ai valori di questi due cursori divisi per 100. Questo parametro viene combinato con due trasformazioni che inserire il centro di questa trasformazione al centro della bitmap di conversione:
+Il `PaintSurface` gestore calcola un `SKMatrix` valore denominato `perspectiveMatrix` in base ai valori di questi due dispositivi di scorrimento divisi per 100. Questo è combinato con due trasformazioni di conversione che collocano il centro della trasformazione al centro della bitmap:
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -228,28 +231,28 @@ public partial class TestPerspectivePage : ContentPage
 }
 ```
 
-Ecco alcune immagini di esempio:
+Di seguito sono riportate alcune immagini di esempio:
 
-[![](non-affine-images/testperspective-small.png "Tripla screenshot della pagina di Test prospettiva")](non-affine-images/testperspective-large.png#lightbox "tripla screenshot della pagina della prospettiva Test")
+[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
 
-Mentre si sperimentano i dispositivi di scorrimento, troverai che i valori di là 0.0066 o di sotto –0.0066 causano l'immagine da divengono improvvisamente fractured e incoerenti. La mappa di bit in corso di trasformazione è 300 pixel quadrati. Questo viene trasformato rispetto al relativo centro, in modo che le coordinate della mappa di bit compresi tra –150 a 150. Si tenga presente che il valore di z' è:
+Quando si sperimentano i dispositivi di scorrimento, si noterà che i valori superiori a 0,0066 o inferiori a 0,0066 fanno sì che l'immagine diventi improvvisamente fratturata e incoerente. La bitmap da trasformare è 300-pixel. Viene trasformato in relazione al relativo centro, quindi le coordinate della bitmap variano da – 150 a 150. Ricordare che il valore di z ' è:
 
-z' = Persp0·x Persp1·y + 1
+z ' = Persp0 · x + Persp1 · y + 1
 
-Se `Persp0` o `Persp1` è maggiore di quella 0.0066 o seguito –0.0066, quindi c'è sempre alcune coordinate della mappa di bit che comporta una z' valore pari a zero. Che fa sì che la divisione per zero e il rendering diventa urbano. Quando si utilizzano trasformazioni non affini, si desidera evitare il rendering di un'operazione con coordinate che causano la divisione per zero.
+Se `Persp0` o `Persp1` è maggiore di 0,0066 o inferiore a-0,0066, esiste sempre una coordinata della bitmap che restituisce un valore z ' pari a zero. Che causa la divisione per zero e il rendering diventa un pasticcio. Quando si utilizzano trasformazioni non affini, si desidera evitare il rendering di qualsiasi elemento con coordinate che causino la divisione per zero.
 
-In generale, che non verrà impostato `Persp0` e `Persp1` in isolamento. È inoltre spesso necessario impostare le altre celle della matrice per ottenere determinati tipi di trasformazioni non affini.
+In genere, non è possibile impostare `Persp0` e `Persp1` in isolamento. Spesso è anche necessario impostare altre celle nella matrice per ottenere determinati tipi di trasformazioni non affini.
 
-Una tale trasformazione non affine è un *trasformazione di rastremazione*. Questo tipo di trasformazione non affine mantiene le dimensioni complessive di un rettangolo, ma si assottiglia attacco lato "uno":
+Una trasformazione di questo tipo non affine è una *trasformazione conica*. Questo tipo di trasformazione non affine mantiene le dimensioni complessive di un rettangolo, ma i nastri sono un lato:
 
-![](non-affine-images/tapertransform.png "Una casella sottoposta a trasformazione di rastremazione")
+![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
 
-Il [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) classe esegue un calcolo generalizzato di una trasformazione non affine basato su questi parametri:
+La [`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) classe esegue un calcolo generalizzato di una trasformazione non affine in base a questi parametri:
 
-- le dimensioni dell'immagine in corso di trasformazione, rettangolare
-- enumerazione che indica il lato del rettangolo che si assottiglia attacco,
-- un'altra enumerazione che indica come lo si assottiglia attacco, e
-- estensione del rapporto di conicità.
+- dimensioni rettangolari dell'immagine da trasformare.
+- Enumerazione che indica il lato del rettangolo che i nastri,
+- un'altra enumerazione che indica il modo in cui i nastri e
+- extent della rastremazione.
 
 Ecco il codice:
 
@@ -353,7 +356,7 @@ static class TaperTransform
 }
 ```
 
-Questa classe viene utilizzata nel **trasformazione di rastremazione** pagina. Il file XAML crea un'istanza di due `Picker` elementi da selezionare i valori di enumerazione e un `Slider` per la scelta di rastremazione frazione. Il [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) gestore combina la trasformazione di rastremazione con due trasformazioni per rendere la trasformazione rispetto all'angolo superiore sinistro dell'immagine bitmap della conversione:
+Questa classe viene utilizzata nella pagina **trasformazione conica** . Il file XAML crea un'istanza `Picker` di due elementi per selezionare i valori di enumerazione e un oggetto `Slider` per scegliere la frazione conica. Il [`PaintSurface`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) gestore combina la trasformazione di rastremazione con due trasformazioni di conversione per trasformare la trasformazione rispetto all'angolo superiore sinistro della bitmap:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -394,15 +397,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ecco alcuni esempi:
 
-[![](non-affine-images/tapertransform-small.png "Tripla screenshot della pagina di trasformazione di rastremazione")](non-affine-images/tapertransform-large.png#lightbox "tripla screenshot della pagina di trasformazione di rastremazione")
+[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 
-Un altro tipo di trasformazioni non affini generalizzate è rotazione 3D, come illustrata nell'articolo successivo, [ **rotazioni 3D**](3d-rotation.md).
+Un altro tipo di trasformazioni non affini generalizzate è la rotazione 3D, illustrata nel prossimo articolo, le [**rotazioni 3D**](3d-rotation.md).
 
-La trasformazione non affine è possibile trasformare un rettangolo in qualsiasi quadrilatero convesso. Ciò viene dimostrata il **Mostra Non affini matrice** pagina. È molto simile al **mostrare matrice Affine** pagina dal [ **matrice trasforma** ](matrix.md) articolo ad eccezione del fatto che abbia una quarta `TouchPoint` oggetto per manipolare il quarto angolo della bitmap:
+La trasformazione non affine può trasformare un rettangolo in qualsiasi quadrilatero convesso. Questa operazione viene illustrata nella pagina **Mostra matrice non affine** . È molto simile alla pagina **Mostra matrice affine** dall'articolo [**trasformazioni matrice**](matrix.md) , ad eccezione del fatto che dispone di un quarto `TouchPoint` oggetto per modificare il quarto angolo della bitmap:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Tripla screenshot della pagina Mostra matrice Non affini")](non-affine-images/shownonaffinematrix-large.png#lightbox "tripla screenshot della pagina Mostra matrice Non affini")
+[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
 
-Purché si non tenta di creare maggiore di 180 gradi angolo interno di uno degli angoli della bitmap oppure creare due lati tra loro, viene calcolato correttamente la trasformazione usando questo metodo dal [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe:
+Fino a quando non si tenta di creare un angolo interno di uno degli angoli della bitmap maggiore di 180 gradi, o di far attraversare due lati, il programma calcola correttamente la trasformazione utilizzando questo metodo dalla [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe:
 
 ```csharp
 static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint ptLL, SKPoint ptLR)
@@ -451,25 +454,25 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 }
 ```
 
-Per la facilità di calcolo, questo metodo ottiene la trasformazione totale come prodotto di tre trasformazioni separate, che sono rappresentate in questo caso con frecce che indicano come queste trasformazioni modificano i quattro angoli dell'immagine bitmap:
+Per semplificare il calcolo, questo metodo ottiene la trasformazione totale come prodotto di tre trasformazioni separate, che sono simboleggiate qui con frecce che mostrano il modo in cui queste trasformazioni modificano i quattro angoli della bitmap:
 
-(0, 0) → (0, 0) → (0, 0) → (x 0, y0) (in alto a sinistra)
+(0,0) → (0,0) → (0, 0) → (x0, y0) (in alto a sinistra)
 
-(0, H) → (0, 1) → (0, 1) → (x1, y1) (in basso a sinistra)
+(0, H) → (0,1) → (0,1) → (x1, Y1) (in basso a sinistra)
 
-(P, 0) → → (1, 0) → (1, 0) (x2, y2) (angolo superiore destro)
+(W,0) → (1, 0) → (1, 0) → (X2, Y2) (in alto a destra)
 
-(L, H) → → (a, b) → (1, 1) (x3, y3) (in basso a destra)
+(W, H) → (1,1) → (a, b) → (X3, Y3) (in basso a destra)
 
-Le coordinate finali a destra sono i quattro punti associati i punti di quattro tocco. Queste sono le coordinate degli angoli della bitmap finale.
+Le coordinate finali a destra sono i quattro punti associati ai quattro punti di tocco. Queste sono le coordinate finali degli angoli della bitmap.
 
-L e rappresentano la larghezza e altezza della bitmap. La prima trasformazione `S` semplicemente ridimensiona la bitmap da un quadrato di 1 pixel. La seconda trasformazione è la trasformazione non affine `N`, e la terza etichetta è la trasformazione affine `A`. Tale trasformazione affine si basa sui tre punti, in modo che lo ha esattamente come le versioni precedenti affini [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) metodo e non prevede la quarta riga con il (punto a, b).
+W e H rappresentano la larghezza e l'altezza della bitmap. La prima trasformazione `S` Ridimensiona semplicemente la bitmap in un quadrato da 1 pixel. La seconda trasformazione è la trasformazione non affine `N` e la terza è la trasformazione affine `A` . Questa trasformazione affine si basa su tre punti, quindi è come il metodo affine precedente [`ComputeMatrix`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) e non implica la quarta riga con il punto (a, b).
 
-Il `a` e `b` valori vengono calcolati in modo che il terzo file di trasformazione è affine o meno. Il codice ottiene l'inverso di trasformazione affine e che quindi viene utilizzato per eseguire il mapping nell'angolo in basso a destra. Che rappresenta il punto (a, b).
+I `a` `b` valori e vengono calcolati in modo che la terza trasformazione sia affine. Il codice ottiene l'inverso della trasformazione affine e quindi lo utilizza per eseguire il mapping dell'angolo inferiore destro. Questo è il punto (a, b).
 
-Un altro utilizzo delle trasformazioni non affini consiste nel simulare grafica tridimensionale. Nell'articolo successivo [ **rotazioni 3D** ](3d-rotation.md) vedrai come ruotare un grafico bidimensionale nello spazio 3D.
+Un altro uso delle trasformazioni non affini consiste nel simulare immagini tridimensionali. Nell'articolo successivo, le [**rotazioni 3D**](3d-rotation.md) consentono di ruotare un grafico bidimensionale nello spazio 3D.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

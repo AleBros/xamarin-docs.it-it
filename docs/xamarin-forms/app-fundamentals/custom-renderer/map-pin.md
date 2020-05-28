@@ -1,26 +1,29 @@
 ---
-title: Personalizzazione di un segnaposto per la mappa
-description: Questo articolo illustra come creare un renderer personalizzato per il controllo Mappa che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma.
-ms.prod: xamarin
-ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 513ba16f0cb74e330cc3b681e0880b685f0c226c
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 30fcc8304d32d8ebdef38df8550bcd8c26514701
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532772"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135330"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un segnaposto per la mappa
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _Questo articolo illustra come creare un renderer personalizzato per il controllo mappa che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma._
 
-A ogni vista di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [`Map`](xref:Xamarin.Forms.Maps.Map) oggetto viene sottoposto a rendering da un'applicazione Novell. Forms in iOS, viene creata un'istanza della `MapRenderer` classe, che `MKMapView` a sua volta crea un'istanza di un controllo nativo. Nella piattaforma Android la classe `MapRenderer` crea un'istanza di un controllo `MapView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `MapRenderer` crea un'istanza di un controllo `MapControl` nativo. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Ogni Xamarin.Forms visualizzazione dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Quando un oggetto viene sottoposto a [`Map`](xref:Xamarin.Forms.Maps.Map) rendering da un' Xamarin.Forms applicazione in iOS, `MapRenderer` viene creata un'istanza della classe, che a sua volta crea un'istanza di un `MKMapView` controllo nativo. Nella piattaforma Android la classe `MapRenderer` crea un'istanza di un controllo `MapView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `MapRenderer` crea un'istanza di un controllo `MapControl` nativo. Per ulteriori informazioni sul renderer e sulle classi di controlli native che Xamarin.Forms controllano la mappa a, vedere [classi base renderer e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra [`Map`](xref:Xamarin.Forms.Maps.Map) e i controlli nativi corrispondenti che lo implementano:
 
@@ -28,14 +31,14 @@ Il diagramma seguente illustra la relazione tra [`Map`](xref:Xamarin.Forms.Maps.
 
 Il processo di rendering può essere utilizzato per implementare personalizzazioni specifiche della piattaforma creando un renderer personalizzato per un [`Map`](xref:Xamarin.Forms.Maps.Map) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Custom_Map) una mappa personalizzata Xamarin.Forms.
-1. [Utilizzare](#Consuming_the_Custom_Map) la mappa personalizzata da Xamarin.Forms.
+1. [Creare](#Creating_the_Custom_Map) una Xamarin.Forms mappa personalizzata.
+1. [Utilizzare](#Consuming_the_Custom_Map) la mappa personalizzata da Xamarin.Forms .
 1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per la mappa in ogni piattaforma.
 
 Verrà descritto ogni elemento per implementare un renderer `CustomMap` che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)deve essere inizializzata e configurata prima dell'utilizzo. Per ulteriori informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)deve essere inizializzata e configurata prima dell'utilizzo. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 <a name="Creating_the_Custom_Map" />
 
@@ -60,7 +63,7 @@ public class CustomPin : Pin
 }
 ```
 
-Questa classe definisce un `CustomPin` oggetto come che eredita le proprietà della [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe e aggiunge `Name` le proprietà `Url` e.
+Questa classe definisce un oggetto `CustomPin` come che eredita le proprietà della [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe e aggiunge le `Name` `Url` proprietà e.
 
 <a name="Consuming_the_Custom_Map" />
 
@@ -96,7 +99,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-L'istanza `CustomMap` verrà usata per visualizzare la mappa nativa in ogni piattaforma. La [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) proprietà imposta lo stile di visualizzazione dell'oggetto [`Map`](xref:Xamarin.Forms.Maps.Map), con i valori possibili definiti nell' [`MapType`](xref:Xamarin.Forms.Maps.MapType) enumerazione.
+L'istanza `CustomMap` verrà usata per visualizzare la mappa nativa in ogni piattaforma. [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType)La proprietà imposta lo stile di visualizzazione dell'oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) , con i valori possibili definiti nell' [`MapType`](xref:Xamarin.Forms.Maps.MapType) enumerazione.
 
 La posizione della mappa e i segnaposto contenuti nella mappa vengono inizializzati come illustrato nell'esempio di codice seguente:
 
@@ -119,7 +122,7 @@ public MapPage()
 }
 ```
 
-Questa inizializzazione aggiunge un PIN personalizzato e posiziona la visualizzazione della mappa con [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) il metodo, che modifica la posizione e il livello di zoom della mappa creando [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) un oggetto [`Position`](xref:Xamarin.Forms.Maps.Position) da un [`Distance`](xref:Xamarin.Forms.Maps.Distance)oggetto e un oggetto.
+Questa inizializzazione aggiunge un PIN personalizzato e posiziona la visualizzazione della mappa con il [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) metodo, che modifica la posizione e il livello di zoom della mappa creando un oggetto [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) da un oggetto [`Position`](xref:Xamarin.Forms.Maps.Position) e un oggetto [`Distance`](xref:Xamarin.Forms.Maps.Distance) .
 
 Un renderer personalizzato può essere ora aggiunto a ogni progetto di applicazione per personalizzare i controlli mappa nativa.
 
@@ -130,8 +133,8 @@ Un renderer personalizzato può essere ora aggiunto a ogni progetto di applicazi
 Il processo di creazione della classe di renderer personalizzato è il seguente:
 
 1. Creare una sottoclasse della classe `MapRenderer` che esegue il rendering della mappa personalizzata.
-1. Eseguire l'override del metodo `OnElementChanged` che esegue il rendering della mappa personalizzata e scrivere la logica per personalizzarlo. Questo metodo viene chiamato quando viene creata la mappa personalizzata Xamarin.Forms corrispondente.
-1. Aggiungere un attributo `ExportRenderer` alla classe di renderer personalizzato per specificare che verrà usata per eseguire il rendering della mappa Xamarin.Forms personalizzata. L'attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms.
+1. Eseguire l'override del metodo `OnElementChanged` che esegue il rendering della mappa personalizzata e scrivere la logica per personalizzarlo. Questo metodo viene chiamato quando Xamarin.Forms viene creata la mappa personalizzata corrispondente.
+1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzata per specificare che verrà usato per eseguire il rendering della Xamarin.Forms mappa personalizzata. Questo attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms .
 
 > [!NOTE]
 > La specifica di un renderer personalizzato nel progetto di ogni piattaforma è facoltativa. Se un renderer personalizzato non è registrato, verrà usato il renderer predefinito per la classe di base del controllo.
@@ -144,9 +147,9 @@ Il rendering del controllo `CustomMap` viene eseguito dalle classi di renderer s
 
 ![](map-pin-images/screenshots.png "CustomMap on each Platform")
 
-La classe `MapRenderer` espone il metodo `OnElementChanged` che viene chiamato quando si crea la mappa personalizzata Xamarin.Forms per eseguire il rendering del controllo nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento Xamarin.Forms a cui il renderer *era* collegato e l'elemento Xamarin.Forms a cui il renderer *è* collegato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `CustomMap`.
+La `MapRenderer` classe espone il `OnElementChanged` metodo, che viene chiamato quando Xamarin.Forms viene creata la mappa personalizzata per il rendering del controllo nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano l' Xamarin.Forms elemento a cui è *stato* collegato il renderer e l' Xamarin.Forms elemento a cui *è* collegato rispettivamente il renderer. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `CustomMap`.
 
-La personalizzazione del controllo nativo deve essere eseguita in una versione sostituita del metodo `OnElementChanged` in ogni classe di renderer specifica della piattaforma. Un riferimento tipizzato al controllo nativo usato nella piattaforma è accessibile attraverso la proprietà `Control`. È inoltre possibile ottenere un riferimento al controllo Xamarin.Forms di cui viene eseguito il rendering usando la proprietà `Element`.
+La personalizzazione del controllo nativo deve essere eseguita in una versione sostituita del metodo `OnElementChanged` in ogni classe di renderer specifica della piattaforma. Un riferimento tipizzato al controllo nativo usato nella piattaforma è accessibile attraverso la proprietà `Control`. Inoltre, è possibile ottenere un riferimento al Xamarin.Forms controllo di cui è in corso il rendering tramite la `Element` Proprietà.
 
 Prestare attenzione quando si sottoscrivono i gestori degli eventi nel metodo `OnElementChanged`, come illustrato nell'esempio di codice seguente:
 
@@ -167,9 +170,9 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-Configurare il controllo nativo e sottoscrivere i gestori degli eventi solo quando il renderer personalizzato è allegato a un nuovo elemento di Xamarin.Forms. Analogamente, per i gestori degli eventi sottoscritti l'iscrizione deve essere annullata solo in caso di modifica dell'elemento allegato al renderer. L'adozione di questo approccio consente di creare un renderer personalizzato che non subisce perdite di memoria.
+Il controllo nativo deve essere configurato e i gestori eventi hanno sottoscritto solo quando il renderer personalizzato è associato a un nuovo Xamarin.Forms elemento. Analogamente, per i gestori degli eventi sottoscritti l'iscrizione deve essere annullata solo in caso di modifica dell'elemento allegato al renderer. L'adozione di questo approccio consente di creare un renderer personalizzato che non subisce perdite di memoria.
 
-Ogni classe del renderer personalizzato è decorata con un attributo `ExportRenderer` che registra il renderer in Xamarin.Forms. L'attributo accetta due parametri: il nome del tipo di controllo personalizzato Xamarin.Forms di cui viene eseguito il rendering e il nome del tipo di renderer personalizzato. Il prefisso `assembly` dell'attributo specifica che l'attributo viene applicato all'intero assembly.
+Ogni classe renderer personalizzata è decorata con un `ExportRenderer` attributo che registra il renderer con Xamarin.Forms . L'attributo accetta due parametri: il nome del tipo del Xamarin.Forms controllo personalizzato di cui viene eseguito il rendering e il nome del tipo del renderer personalizzato. Il prefisso `assembly` dell'attributo specifica che l'attributo viene applicato all'intero assembly.
 
 Le sezioni seguenti illustrano l'implementazione della classe di renderer personalizzato specifica di ogni piattaforma.
 
@@ -226,7 +229,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-Il `OnElementChanged` metodo esegue la configurazione seguente dell' [`MKMapView`](xref:MapKit.MKMapView) istanza, purché il renderer personalizzato sia collegato a un nuovo elemento Novell. Forms:
+Il `OnElementChanged` metodo esegue la configurazione seguente dell' [`MKMapView`](xref:MapKit.MKMapView) istanza di, purché il renderer personalizzato sia collegato a un nuovo Xamarin.Forms elemento:
 
 - La [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) proprietà è impostata sul `GetViewForAnnotation` metodo. Questo metodo viene chiamato quando la [posizione dell'annotazione diventa visibile nella mappa](#Displaying_the_Annotation) e viene usato per personalizzare l'annotazione prima della visualizzazione.
 - I gestori per gli eventi `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` e `DidDeselectAnnotationView` sono registrati. Questi eventi vengono attivati quando l'utente [tocca l'accessorio destro nel callout](#Tapping_on_the_Right_Callout_Accessory_View) e quando l'utente [seleziona](#Selecting_the_Annotation) e [deseleziona](#Deselecting_the_Annotation) l'annotazione. Gli eventi sono annullati solo quando viene modificato l'elemento a cui il renderer è associato.
@@ -276,7 +279,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 Questo metodo assicura che l'annotazione venga visualizzata come immagine personalizzata anziché come segnaposto definito dal sistema e che quando viene toccata l'annotazione venga visualizzato un callout che contiene contenuti aggiuntivi a sinistra e a destra del titolo dell'annotazione e dell'indirizzo. Questo risultato viene ottenuto come segue:
 
 1. Il metodo `GetCustomPin` viene chiamato per restituire i dati del segnaposto personalizzato per l'annotazione.
-1. Per conservare la memoria, la visualizzazione dell'annotazione viene contenuta in un pool per [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*)riutilizzarla con la chiamata a.
+1. Per conservare la memoria, la visualizzazione dell'annotazione viene contenuta in un pool per riutilizzarla con la chiamata a [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*) .
 1. La classe `CustomMKAnnotationView` estende la classe `MKAnnotationView` con le proprietà `Name` e `Url` che corrispondono alle stesse proprietà nell'istanza `CustomPin`. Viene creata una nuova istanza di `CustomMKAnnotationView`, a condizione che l'annotazione sia `null`:
     - La proprietà `CustomMKAnnotationView.Image` viene impostata sull'immagine che rappresenterà l'annotazione nella mappa.
     - La proprietà `CustomMKAnnotationView.CalloutOffset` è impostata su `CGPoint` che specifica che il callout verrà centrato sopra l'annotazione.
@@ -284,7 +287,7 @@ Questo metodo assicura che l'annotazione venga visualizzata come immagine person
     - La proprietà `CustomMKAnnotationView.RightCalloutAccessoryView` è impostata su un pulsante *Informazioni* che verrà visualizzato a destra del titolo dell'annotazione e dell'indirizzo.
     - La proprietà `CustomMKAnnotationView.Name` è impostata sulla proprietà `CustomPin.Name` restituita dal metodo `GetCustomPin`. Ciò consente l'identificazione dell'annotazione in modo che sia possibile [personalizzare ulteriormente il relativo callout](#Selecting_the_Annotation), se necessario.
     - La proprietà `CustomMKAnnotationView.Url` è impostata sulla proprietà `CustomPin.Url` restituita dal metodo `GetCustomPin`. L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione accessorio callout destra](#Tapping_on_the_Right_Callout_Accessory_View).
-1. La [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) proprietà è impostata su `true` in modo che il callout venga visualizzato quando viene toccata l'annotazione.
+1. La [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) proprietà è impostata su in `true` modo che il callout venga visualizzato quando viene toccata l'annotazione.
 1. L'annotazione viene restituita per la visualizzazione nella mappa.
 
 <a name="Selecting_the_Annotation" />
@@ -404,7 +407,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Se il renderer personalizzato è associato a un nuovo elemento Novell. Forms, il `OnElementChanged` metodo recupera l'elenco dei pin personalizzati dal controllo. Quando l'istanza `GoogleMap` è disponibile, viene richiamato l'override `OnMapReady`. Questo metodo registra un gestore per l'evento `InfoWindowClick` che viene attivato quando [viene fatto clic sulla finestra informazioni](#Clicking_on_the_Info_Window) e viene annullato solo quando viene modificato l'elemento a cui è associato il renderer. L'override `OnMapReady` chiama anche il metodo `SetInfoWindowAdapter` per specificare che l'istanza della classe `CustomMapRenderer` offrirà i metodi per personalizzare la finestra informazioni.
+Se il renderer personalizzato è associato a un nuovo Xamarin.Forms elemento, il `OnElementChanged` metodo recupera l'elenco dei pin personalizzati dal controllo. Quando l'istanza `GoogleMap` è disponibile, viene richiamato l'override `OnMapReady`. Questo metodo registra un gestore per l'evento `InfoWindowClick` che viene attivato quando [viene fatto clic sulla finestra informazioni](#Clicking_on_the_Info_Window) e viene annullato solo quando viene modificato l'elemento a cui è associato il renderer. L'override `OnMapReady` chiama anche il metodo `SetInfoWindowAdapter` per specificare che l'istanza della classe `CustomMapRenderer` offrirà i metodi per personalizzare la finestra informazioni.
 
 La classe `CustomMapRenderer` implementa l'interfaccia `GoogleMap.IInfoWindowAdapter` per [personalizzare la finestra informazioni](#Customizing_the_Info_Window). Questa interfaccia consente di specificare l'implementazione dei metodi seguenti:
 
@@ -583,7 +586,7 @@ namespace CustomRenderer.UWP
 }
 ```
 
-Il metodo `OnElementChanged` esegue le operazioni seguenti, a condizione che il renderer personalizzato sia associato a un nuovo elemento di Xamarin.Forms:
+Il `OnElementChanged` metodo esegue le operazioni seguenti, purché il renderer personalizzato sia collegato a un nuovo Xamarin.Forms elemento:
 
 - Cancella la raccolta `MapControl.Children` per rimuovere tutti gli elementi dell'interfaccia utente esistenti dalla mappa prima di registrare un gestore dell'evento per l'evento `MapElementClick`. Questo evento viene attivato quando l'utente tocca o fa clic su `MapElement` in `MapControl` e viene annullato solo quando viene modificato l'elemento a cui è associato il renderer.
 - Ogni segnaposto della raccolta `customPins` viene visualizzato nella posizione geografica corretta nella mappa come indicato di seguito:

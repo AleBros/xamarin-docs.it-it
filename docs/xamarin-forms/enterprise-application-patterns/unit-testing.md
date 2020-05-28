@@ -1,18 +1,21 @@
 ---
-title: Unit test di app aziendali
-description: Questo capitolo illustra il modo in cui viene eseguito il testing unità nell'app per dispositivi mobili eShopOnContainers.
-ms.prod: xamarin
-ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770679"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134654"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Unit test di app aziendali
 
@@ -50,13 +53,13 @@ public class OrderDetailViewModel : ViewModelBase
 }
 ```
 
-La `OrderDetailViewModel` classe presenta una dipendenza `IOrderService` dal tipo che il contenitore risolve quando crea un'istanza di un `OrderDetailViewModel` oggetto. Tuttavia, invece di creare un `OrderService` oggetto per unit test la `OrderDetailViewModel` classe, sostituire l' `OrderService` oggetto con una simulazione per lo scopo dei test. La figura 10-1 illustra questa relazione.
+La `OrderDetailViewModel` classe presenta una dipendenza dal `IOrderService` tipo che il contenitore risolve quando crea un'istanza di un `OrderDetailViewModel` oggetto. Tuttavia, invece di creare un `OrderService` oggetto per unit test la `OrderDetailViewModel` classe, sostituire l' `OrderService` oggetto con una simulazione per lo scopo dei test. La figura 10-1 illustra questa relazione.
 
-![](unit-testing-images/unittesting.png "Classi che implementano l'interfaccia IOrderService")
+![](unit-testing-images/unittesting.png "Classes that implement the IOrderService interface")
 
 **Figura 10-1:** Classi che implementano l'interfaccia IOrderService
 
-Questo approccio consente di `OrderService` passare `OrderDetailViewModel` l'oggetto alla classe in fase di esecuzione e, per motivi di testabilità, consente di passare `OrderDetailViewModel` la `OrderMockService` classe alla classe in fase di test. Il vantaggio principale di questo approccio è che consente di eseguire gli unit test senza richiedere risorse non ingombranti, ad esempio servizi Web o database.
+Questo approccio consente di passare l'oggetto alla classe in fase di `OrderService` `OrderDetailViewModel` esecuzione e, per motivi di testabilità, consente di passare la classe alla classe in fase di `OrderMockService` `OrderDetailViewModel` test. Il vantaggio principale di questo approccio è che consente di eseguire gli unit test senza richiedere risorse non ingombranti, ad esempio servizi Web o database.
 
 ## <a name="testing-mvvm-applications"></a>Test delle applicazioni MVVM
 
@@ -93,13 +96,13 @@ public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()
 }
 ```
 
-Questo unit test verifica che la `Order` proprietà `OrderDetailViewModel` dell'istanza avrà un valore dopo che il `InitializeAsync` metodo è stato richiamato. Il `InitializeAsync` metodo viene richiamato quando si passa alla visualizzazione corrispondente del modello di visualizzazione. Per ulteriori informazioni sulla navigazione, vedere [navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
+Questo unit test verifica che la `Order` proprietà dell' `OrderDetailViewModel` istanza avrà un valore dopo che il `InitializeAsync` metodo è stato richiamato. Il `InitializeAsync` metodo viene richiamato quando si passa alla visualizzazione corrispondente del modello di visualizzazione. Per ulteriori informazioni sulla navigazione, vedere [navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 
-Quando viene `OrderDetailViewModel` creata l'istanza, prevede che un' `OrderService` istanza venga specificata come argomento. Tuttavia, recupera `OrderService` i dati da un servizio Web. Pertanto, un' `OrderMockService` istanza `OrderService` di, che è una versione fittizia della classe, viene specificata come argomento per il `OrderDetailViewModel` costruttore. Quindi, quando viene richiamato il `InitializeAsync` metodo del modello di visualizzazione, che `IOrderService` richiama le operazioni, vengono recuperati i dati fittizi anziché comunicare con un servizio Web.
+Quando `OrderDetailViewModel` viene creata l'istanza, prevede che un' `OrderService` istanza venga specificata come argomento. Tuttavia, `OrderService` Recupera i dati da un servizio Web. Pertanto, un' `OrderMockService` istanza di, che è una versione fittizia della `OrderService` classe, viene specificata come argomento per il `OrderDetailViewModel` costruttore. Quindi, quando viene richiamato il metodo del modello di visualizzazione `InitializeAsync` , che richiama `IOrderService` le operazioni, vengono recuperati i dati fittizi anziché comunicare con un servizio Web.
 
 ### <a name="testing-inotifypropertychanged-implementations"></a>Test delle implementazioni di INotifyPropertyChanged
 
-L'implementazione `INotifyPropertyChanged` dell'interfaccia consente alle viste di rispondere alle modifiche che hanno origine da modelli e modelli di visualizzazione. Queste modifiche non sono limitate ai dati visualizzati nei controlli, ma vengono usate anche per controllare la visualizzazione, ad esempio gli Stati di visualizzazione del modello che provocano l'avvio delle animazioni o la disabilitazione dei controlli.
+L'implementazione dell' `INotifyPropertyChanged` interfaccia consente alle viste di rispondere alle modifiche che hanno origine da modelli e modelli di visualizzazione. Queste modifiche non sono limitate ai dati visualizzati nei controlli, ma vengono usate anche per controllare la visualizzazione, ad esempio gli Stati di visualizzazione del modello che provocano l'avvio delle animazioni o la disabilitazione dei controlli.
 
 Le proprietà che possono essere aggiornate direttamente dalla unit test possono essere testate connettendo un gestore eventi all' `PropertyChanged` evento e controllando se l'evento viene generato dopo l'impostazione di un nuovo valore per la proprietà. Nell'esempio di codice seguente viene illustrato un test di questo tipo:
 
@@ -123,11 +126,11 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
 }
 ```
 
-Questo unit test richiama il metodo `InitializeAsync` `OrderViewModel` della classe, che determina l'aggiornamento della `Order` relativa proprietà. Il unit test passerà, a condizione che `PropertyChanged` l'evento venga generato per `Order` la proprietà.
+Questo unit test richiama il `InitializeAsync` metodo della `OrderViewModel` classe, che determina l'aggiornamento della relativa `Order` Proprietà. Il unit test passerà, a condizione che l' `PropertyChanged` evento venga generato per la `Order` Proprietà.
 
 ### <a name="testing-message-based-communication"></a>Test della comunicazione basata su messaggi
 
-I modelli di visualizzazione che [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) usano la classe per la comunicazione tra classi a regime di controllo libero possono essere unit test sottoscrivendo il messaggio inviato dal codice sottoposto a test, come illustrato nell'esempio di codice seguente:
+I modelli di visualizzazione che usano la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe per la comunicazione tra classi a regime di controllo libero possono essere unit test sottoscrivendo il messaggio inviato dal codice sottoposto a test, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 [Fact]  
@@ -148,7 +151,7 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-Questo unit test verifica che il `CatalogViewModel` pubblichi il `AddProduct` messaggio in risposta alla sua `AddCatalogItemCommand` esecuzione. Poiché la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe supporta le sottoscrizioni di messaggi multicast, il unit test può `AddProduct` sottoscrivere il messaggio ed eseguire un delegato di callback in risposta alla ricezione. Questo delegato di callback, specificato come espressione lambda, imposta un `boolean` campo usato `Assert` dall'istruzione per verificare il comportamento del test.
+Questo unit test verifica che il `CatalogViewModel` pubblichi il `AddProduct` messaggio in risposta alla sua `AddCatalogItemCommand` esecuzione. Poiché la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe supporta le sottoscrizioni di messaggi multicast, il unit test può sottoscrivere il `AddProduct` messaggio ed eseguire un delegato di callback in risposta alla ricezione. Questo delegato di callback, specificato come espressione lambda, imposta un `boolean` campo usato dall' `Assert` istruzione per verificare il comportamento del test.
 
 ### <a name="testing-exception-handling"></a>Test della gestione delle eccezioni
 
@@ -168,14 +171,14 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-Questa unit test genererà un'eccezione, perché il [`ListView`](xref:Xamarin.Forms.ListView) controllo non ha un evento denominato. `OnItemTapped` Il `Assert.Throws<T>` metodo è un metodo generico in `T` cui è il tipo dell'eccezione prevista. L'argomento passato al `Assert.Throws<T>` metodo è un'espressione lambda che genererà l'eccezione. Pertanto, il unit test passerà a condizione che l'espressione lambda generi `ArgumentException`un'eccezione.
+Questa unit test genererà un'eccezione, perché il [`ListView`](xref:Xamarin.Forms.ListView) controllo non ha un evento denominato `OnItemTapped` . Il `Assert.Throws<T>` metodo è un metodo generico in cui `T` è il tipo dell'eccezione prevista. L'argomento passato al `Assert.Throws<T>` metodo è un'espressione lambda che genererà l'eccezione. Pertanto, il unit test passerà a condizione che l'espressione lambda generi un'eccezione `ArgumentException` .
 
 > [!TIP]
 > Evitare di scrivere unit test che esaminano le stringhe di messaggio di eccezione. Le stringhe dei messaggi di eccezione potrebbero cambiare nel tempo, quindi gli unit test che si basano sulla loro presenza vengono considerati fragili.
 
 ### <a name="testing-validation"></a>Verifica della convalida
 
-Esistono due aspetti per testare l'implementazione della convalida: verificare che le regole di convalida siano implementate correttamente e verificare che `ValidatableObject<T>` la classe esegua come previsto.
+Esistono due aspetti per testare l'implementazione della convalida: verificare che le regole di convalida siano implementate correttamente e verificare che la `ValidatableObject<T>` classe esegua come previsto.
 
 La logica di convalida è in genere semplice da testare, perché si tratta in genere di un processo indipendente in cui l'output dipende dall'input. Devono essere testati i risultati della chiamata al `Validate` metodo su ogni proprietà con almeno una regola di convalida associata, come illustrato nell'esempio di codice seguente:
 
@@ -193,9 +196,9 @@ public void CheckValidationPassesWhenBothPropertiesHaveDataTest()
 }
 ```
 
-Questo unit test verifica che la convalida abbia esito positivo `ValidatableObject<T>` quando le due `MockViewModel` proprietà nell'istanza dispongono di dati.
+Questo unit test verifica che la convalida abbia esito positivo quando le due `ValidatableObject<T>` proprietà nell' `MockViewModel` istanza dispongono di dati.
 
-Oltre a verificare che la convalida abbia esito positivo, gli unit test di convalida devono anche controllare `Value`i `IsValid`valori della `Errors` proprietà, e `ValidatableObject<T>` di ogni istanza, per verificare che la classe venga eseguita come previsto. Nell'esempio di codice seguente viene illustrata una unit test che esegue questa operazione:
+Oltre a verificare che la convalida abbia esito positivo, gli unit test di convalida devono anche controllare i valori della `Value` `IsValid` proprietà, e `Errors` di ogni `ValidatableObject<T>` istanza, per verificare che la classe venga eseguita come previsto. Nell'esempio di codice seguente viene illustrata una unit test che esegue questa operazione:
 
 ```csharp
 [Fact]  
@@ -216,7 +219,7 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 }
 ```
 
-Questo unit test verifica che la convalida abbia esito negativo quando `MockViewModel` la `Surname` proprietà di non contiene dati e `Value`la `IsValid`proprietà, `Errors` e di ogni `ValidatableObject<T>` istanza sono impostate correttamente.
+Questo unit test verifica che la convalida abbia esito negativo quando la `Surname` proprietà di `MockViewModel` non contiene dati e `Value` la `IsValid` proprietà, e `Errors` di ogni `ValidatableObject<T>` istanza sono impostate correttamente.
 
 ## <a name="summary"></a>Riepilogo
 
@@ -229,4 +232,4 @@ Il testing di modelli e modelli di visualizzazione da applicazioni MVVM è ident
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (esempio)](https://github.com/dotnet-architecture/eShopOnContainers)

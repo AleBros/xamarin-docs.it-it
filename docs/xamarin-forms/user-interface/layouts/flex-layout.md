@@ -1,29 +1,32 @@
 ---
-title: Novell. Forms FlexLayout
-description: Usare FlexLayout per lo stack o il wrapping di una raccolta di visualizzazioni figlio.
-ms.prod: xamarin
-ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/07/2018
-ms.openlocfilehash: 507f78bf887d8d11e93a5a6a1f7d074c55e69360
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.FormsFlexLayout
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 031a846b7546c204d45c7437acd829d6cb49bfbb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149965"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137215"
 ---
-# <a name="the-xamarinforms-flexlayout"></a>Novell. Forms FlexLayout
+# <a name="the-xamarinforms-flexlayout"></a>Xamarin.FormsFlexLayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Usare FlexLayout per lo stack o il wrapping di una raccolta di visualizzazioni figlio._
 
-Novell. Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) è una novità di Novell. Forms versione 3,0. Si basa sul [modulo CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/), comunemente noto come _Flex layout_ o _Flex-box_, quindi chiamato perché include molte opzioni flessibili per disporre gli elementi figlio all'interno del layout.
+Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) È una novità della Xamarin.Forms versione 3,0. Si basa sul [modulo CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/), comunemente noto come _Flex layout_ o _Flex-box_, quindi chiamato perché include molte opzioni flessibili per disporre gli elementi figlio all'interno del layout.
 
-`FlexLayout`è simile a Novell. Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) in quanto può disporre gli elementi figlio orizzontalmente e verticalmente in uno stack. Tuttavia, `FlexLayout` è anche in grado di eseguire il wrapping dei relativi elementi figlio se sono presenti troppi per adattarsi a una singola riga o colonna, oltre a numerose opzioni per l'orientamento, l'allineamento e l'adattamento a diverse dimensioni dello schermo.
+`FlexLayout`è simile a Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) in quanto può disporre gli elementi figlio orizzontalmente e verticalmente in uno stack. Tuttavia, `FlexLayout` è anche in grado di eseguire il wrapping dei relativi elementi figlio se sono presenti troppi per adattarsi a una singola riga o colonna, oltre a numerose opzioni per l'orientamento, l'allineamento e l'adattamento a diverse dimensioni dello schermo.
 
 `FlexLayout`deriva da [`Layout<View>`](xref:Xamarin.Forms.Layout`1) ed eredita una [`Children`](xref:Xamarin.Forms.Layout`1.Children) proprietà di tipo `IList<View>` .
 
@@ -609,11 +612,11 @@ Nello screenshot Android, il `Shrink` valore per il secondo `Label` è impostato
 
 ## <a name="css-styling-with-flexlayout"></a>Stile CSS con FlexLayout
 
-È possibile usare la funzionalità di [stile CSS](~/xamarin-forms/user-interface/styles/css/index.md) introdotta con Novell. forms 3,0 in connessione a `FlexLayout` . La pagina **elementi del catalogo CSS** dell'esempio **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** Duplica il layout della pagina **elementi del catalogo** , ma con un foglio di stile CSS per molti stili:
+È possibile usare la funzionalità di [stile CSS](~/xamarin-forms/user-interface/styles/css/index.md) introdotta con Xamarin.Forms 3,0 in connessione a `FlexLayout` . La pagina **elementi del catalogo CSS** dell'esempio **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** Duplica il layout della pagina **elementi del catalogo** , ma con un foglio di stile CSS per molti stili:
 
 [![Pagina elementi del catalogo CSS](flex-layout-images/CssCatalogItems.png "Pagina elementi del catalogo CSS")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
-Il file **CatalogItemsPage. XAML** originale presenta cinque `Style` definizioni nella `Resources` sezione con 15 `Setter` oggetti. Nel file **CssCatalogItemsPage. XAML** , che è stato ridotto a due `Style` definizioni con soli quattro `Setter` oggetti. Questi stili integrano il foglio di stile CSS per le proprietà attualmente non supportate dalla funzionalità di stile CSS Novell. Forms:
+Il file **CatalogItemsPage. XAML** originale presenta cinque `Style` definizioni nella `Resources` sezione con 15 `Setter` oggetti. Nel file **CssCatalogItemsPage. XAML** , che è stato ridotto a due `Style` definizioni con soli quattro `Setter` oggetti. Questi stili integrano il foglio di stile CSS per le proprietà Xamarin.Forms attualmente non supportate dalla funzionalità di stile CSS:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -738,7 +741,7 @@ Si è visto che è possibile impostare le proprietà direttamente in `FlexLayout
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Video Novell. Forms 3,0 Flex layout**
+**Xamarin.Formsvideo di layout Flex 3,0**
 
 ## <a name="related-links"></a>Collegamenti correlati
 

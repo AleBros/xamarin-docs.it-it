@@ -1,29 +1,32 @@
 ---
-title: Eventi del ciclo di vita della pagina in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la piattaforma Android specifica che disabilita gli eventi della pagina di scomparsa e di visualizzazione per la sospensione e la ripresa dell'applicazione, rispettivamente.
-ms.prod: xamarin
-ms.assetid: F6E3759C-D347-407A-91A2-CF9B3B7D4CBD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 1745f137f2eeb04c0894c57bb0e45e5c43be7d0b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76724ff17613fcebe35cb68518a1c932eee8aad7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649939"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128726"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Eventi del ciclo di vita della pagina in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma Android viene usata per disabilitare rispettivamente [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) gli [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventi della pagina e in caso di sospensione e ripresa dell'applicazione, per le applicazioni che usano AppCompat. Inoltre, include la possibilità di controllare se viene visualizzata la tastiera al ripristino, se è stata visualizzata dopo la pausa, condizione che la modalità operativa della tastiera è impostata su [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+Questa specifica della piattaforma Android viene usata per disabilitare [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) rispettivamente gli eventi della pagina e in caso di [`Appearing`](xref:Xamarin.Forms.Page.Appearing) sospensione e ripresa dell'applicazione, per le applicazioni che usano AppCompat. Inoltre, include la possibilità di controllare se la tastiera soft viene visualizzata al riavvio, se è stata visualizzata durante la pausa, a condizione che la modalità operativa della tastiera soft sia impostata su [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) .
 
 > [!NOTE]
-> Si noti che questi eventi vengono abilitati per impostazione predefinita per mantenere il comportamento esistente per le applicazioni basate su eventi. La disabilitazione di questi eventi rende il ciclo degli eventi AppCompat corrispondere il ciclo di eventi di pre-AppCompat.
+> Si noti che questi eventi sono abilitati per impostazione predefinita per mantenere il comportamento esistente per le applicazioni che si basano sugli eventi. La disabilitazione di questi eventi rende il ciclo di eventi AppCompat corrispondente al ciclo di eventi pre-AppCompat.
 
-Questo specifico della piattaforma può essere usata in XAML, impostando il [`Application.SendDisappearingEventOnPause`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty), [`Application.SendAppearingEventOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty), e [`Application.ShouldPreserveKeyboardOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) proprietà associate a `boolean` valori:
+Questa specifica della piattaforma può essere utilizzata in XAML impostando le [`Application.SendDisappearingEventOnPause`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty) [`Application.SendAppearingEventOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty) proprietà associate, e sui [`Application.ShouldPreserveKeyboardOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) `boolean` valori:
 
 ```xaml
 <Application ...
@@ -36,7 +39,7 @@ Questo specifico della piattaforma può essere usata in XAML, impostando il [`Ap
 </Application>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -51,11 +54,11 @@ Xamarin.Forms.Application.Current.On<Android>()
      .ShouldPreserveKeyboardOnResume(true);
 ```
 
-Il `Application.Current.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il [`Application.SendDisappearingEventOnPause`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPause(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) dello spazio dei nomi, viene utilizzato per abilitare o disabilitare la generazione dell'evento il [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) evento della pagina, quando l'applicazione entra in background. Il [`Application.SendAppearingEventOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) metodo viene utilizzato per abilitare o disabilitare la generazione dell'evento il [`Appearing`](xref:Xamarin.Forms.Page.Appearing) evento pagina, se l'applicazione si riattiva dallo sfondo. Il [`Application.ShouldPreserveKeyboardOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) viene usato il metodo controllo se viene visualizzata la tastiera al ripristino, se è stata visualizzata dopo la pausa, fornite che la modalità operativa della tastiera temporanea è impostata su [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+Il `Application.Current.On<Android>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in Android. [ `Application.SendDisappearingEventOnPause` ] (Xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. Application. SendDisappearingEventOnPause ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Il metodo Application}, System. Boolean)), nello [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) spazio dei nomi, viene usato per abilitare o disabilitare la generazione dell' [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) evento di pagina quando l'applicazione entra in background. [ `Application.SendAppearingEventOnResume` ] (Xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. Application. SendAppearingEventOnResume ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Application}, System. Boolean)) il metodo viene usato per abilitare o disabilitare la generazione dell' [`Appearing`](xref:Xamarin.Forms.Page.Appearing) evento di pagina quando l'applicazione riprende dallo sfondo. [ `Application.ShouldPreserveKeyboardOnResume` ] (Xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. Application. ShouldPreserveKeyboardOnResume ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Il metodo Application}, System. Boolean)) viene usato per controllare se la tastiera soft viene visualizzata al riavvio, se è stata visualizzata durante la pausa, a condizione che la modalità operativa della tastiera soft sia impostata su [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) .
 
-Il risultato è che il [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) e [`Appearing`](xref:Xamarin.Forms.Page.Appearing) gli eventi della pagina non verranno generati dopo la pausa dell'applicazione e riprendere rispettivamente, e che, se la tastiera era visualizzato quando l'applicazione è stato sospeso, verrà inoltre visualizzato quando l'applicazione riprende a:
+Il risultato è che gli [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventi della pagina e non verranno attivati durante la sospensione e la ripresa dell'applicazione rispettivamente e che, se la tastiera soft è stata visualizzata quando l'applicazione è stata sospesa, verrà visualizzata anche quando l'applicazione riprende:
 
-[![](page-lifecycle-events-images/keyboard-on-resume.png "Specifica della piattaforma gli eventi del ciclo di vita")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "specifiche della piattaforma gli eventi del ciclo di vita")
+[![](page-lifecycle-events-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Lifecycle Events Platform-Specific")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

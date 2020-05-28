@@ -1,24 +1,27 @@
 ---
-title: Tocchi di contenuto ScrollView in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se un ScrollView gestisce un movimento tocco o lo passa al contenuto.
-ms.prod: xamarin
-ms.assetid: 99F823DB-B379-40F0-A343-A9783C341120
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 154666cce4ad6c53949952fa93f5ad7dc89824ab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9b8f743b2c3d7f4b38feb4cfc5015b1113620562
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651768"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137098"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>Tocchi di contenuto ScrollView in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Un timer implicito viene attivato quando un gesto tocco viene avviata in un [`ScrollView`](xref:Xamarin.Forms.ScrollView) in iOS e `ScrollView` decide, in base l'azione dell'utente all'interno dell'intervallo del timer, se deve gestire il movimento o passarlo al relativo contenuto. Per impostazione predefinita, iOS `ScrollView` tocchi contenuto ritardi, ma questo può causare problemi in alcuni casi con il `ScrollView` contenuto non vincere il movimento in un momento opportuno. Di conseguenza, questo controlli specifici della piattaforma se un `ScrollView` gestisce un gesto tocco o passarlo al relativo contenuto. Vengono utilizzati in XAML, impostando il `ScrollView.ShouldDelayContentTouches` proprietà associata una `boolean` valore:
+Un timer implicito viene attivato quando un movimento tocco inizia in un [`ScrollView`](xref:Xamarin.Forms.ScrollView) in iOS e `ScrollView` decide, in base all'azione dell'utente all'interno dell'intervallo del timer, se deve gestire il movimento o passarlo al relativo contenuto. Per impostazione predefinita, iOS `ScrollView` ritarda i ritardi del contenuto, ma ciò può causare problemi in alcune circostanze con il `ScrollView` contenuto che non vince il gesto quando necessario. Di conseguenza, questa specifica della piattaforma controlla se un oggetto `ScrollView` gestisce un movimento tocco o lo passa al relativo contenuto. Viene utilizzato in XAML impostando la `ScrollView.ShouldDelayContentTouches` proprietà associata su un `boolean` valore:
 
 ```xaml
 <MasterDetailPage ...
@@ -39,7 +42,7 @@ Un timer implicito viene attivato quando un gesto tocco viene avviata in un [`Sc
 </MasterDetailPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -49,15 +52,15 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 ```
 
-Il `ScrollView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `ScrollView.SetShouldDelayContentTouches` metodo, nel [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene utilizzato per controllare se un [`ScrollView`](xref:Xamarin.Forms.ScrollView) gestisce un gesto tocco o passarlo al relativo contenuto. Inoltre, il `SetShouldDelayContentTouches` metodo può essere utilizzato per attivare/disattivare ritardando tocchi contenuti chiamando il `ShouldDelayContentTouches` metodo restituisca se sono posticipati tocchi contenuti:
+Il `ScrollView.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il `ScrollView.SetShouldDelayContentTouches` metodo, nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene utilizzato per controllare se un oggetto [`ScrollView`](xref:Xamarin.Forms.ScrollView) gestisce un movimento tocco o lo passa al contenuto. Inoltre, il `SetShouldDelayContentTouches` metodo può essere usato per abilitare o disabilitare i ritocchi di contenuto ritardando chiamando il `ShouldDelayContentTouches` metodo per restituire se i ritocchi del contenuto vengono posticipati:
 
 ```csharp
 scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDelayContentTouches());
 ```
 
-Il risultato è che un [`ScrollView`](xref:Xamarin.Forms.ScrollView) possibile disabilitare ritardare la ricezione di contenuto computerizzati, pertanto, che in questo scenario il [`Slider`](xref:Xamarin.Forms.Slider) riceve il movimento anziché il [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) della pagina la [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
+Il risultato è che un [`ScrollView`](xref:Xamarin.Forms.ScrollView) può disabilitare la ricezione dei ritardi di contenuto, in modo che in questo scenario [`Slider`](xref:Xamarin.Forms.Slider) riceva il gesto anziché la [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) pagina di [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "Il contenuto di ritardo ScrollView tocca specifiche della piattaforma")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ritardo ScrollView contenuto tocca specifiche della piattaforma")
+[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

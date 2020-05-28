@@ -1,49 +1,52 @@
 ---
-title: Bitmap di SkiaSharp
-description: Informazioni su come caricare, salvare, visualizzare, creare, disegnare sul, aggiungere un'animazione e accedere i bit di SkiaSharp bitmap.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: 22e03038c28f1f202fbb713d472e2da9955404d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1d21fc199dd67471440ca0e3eeaf9a140e7a1967
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399913"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140231"
 ---
-# <a name="skiasharp-bitmaps"></a>Bitmap di SkiaSharp
+# <a name="skiasharp-bitmaps"></a>Bitmap SkiaSharp
 
-Una bitmap è una matrice rettangolare di dati corrispondenti ai pixel di un dispositivo di visualizzazione. Relativa alla programmazione grafica associata bitmap viene talvolta chiamato _grafica raster_ (denominato dopo le righe di analisi di schermi video anticipati) invece per il _grafica vettoriale_ di linee e curve . 
+Una bitmap è una matrice rettangolare di dati corrispondente ai pixel di un dispositivo di visualizzazione. L'area della programmazione grafica associata a bitmap è talvolta denominata _grafica raster_ (denominata dopo le linee di analisi dei primi video visualizzati), a differenza della _grafica vettoriale_ delle linee e delle curve. 
 
-L'articolo **[nozioni di base di Bitmap in SkiaSharp](../basics/bitmaps.md)** descritti alcuni concetti fondamentali di caricamento e visualizzazione di bitmap. Questi articoli espandono i concetti presentati in tale articolo introduttivo:
+L'articolo **[nozioni di base sulle bitmap in SkiaSharp](../basics/bitmaps.md)** descrive alcuni concetti fondamentali relativi al caricamento e alla visualizzazione delle bitmap. Questi articoli si espandono sui concetti di questo articolo introduttivo:
 
-## <a name="displaying-skiasharp-bitmapsdisplayingmd"></a>[Visualizzazione di bitmap di SkiaSharp](displaying.md)
+## <a name="displaying-skiasharp-bitmaps"></a>[Visualizzazione di bitmap SkiaSharp](displaying.md)
 
-Informazioni su come visualizzare SkiaSharp bitmap nella loro pixel native di dimensioni o espanso in modo da riempire ai rettangoli mantenendo le proporzioni.
+Informazioni su come visualizzare le bitmap SkiaSharp nelle dimensioni dei pixel nativi o espanse per riempire i rettangoli mantenendo le proporzioni.
 
-## <a name="creating-and-drawing-on-skiasharp-bitmapsdrawingmd"></a>[Creazione e disegno nella bitmap di SkiaSharp](drawing.md)
+## <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>[Creazione e disegno di bitmap SkiaSharp](drawing.md)
 
-Informazioni su come creare SkiaSharp bitmap e quindi disegnare su tali bitmap tramite la creazione di un'area di disegno usando la mappa di bit come una superficie di disegno.
+Informazioni su come creare bitmap SkiaSharp e quindi disegnare su tali bitmap creando un'area di disegno usando la bitmap come superficie di disegno.
 
-## <a name="cropping-skiasharp-bitmapscroppingmd"></a>[Il ritaglio di immagini bitmap in SkiaSharp](cropping.md)
+## <a name="cropping-skiasharp-bitmaps"></a>[Ritaglio di bitmap SkiaSharp](cropping.md)
 
-Informazioni su come usare SkiaSharp per progettare un'interfaccia utente per descrivere in modo interattivo un rettangolo di ritaglio.
+Informazioni su come usare SkiaSharp per progettare un'interfaccia utente per la descrizione interattiva di un rettangolo di ritaglio.
 
-## <a name="segmented-display-of-skiasharp-bitmapssegmentedmd"></a>[Visualizzazione segmentata del bitmap di SkiaSharp](segmented.md)
+## <a name="segmented-display-of-skiasharp-bitmaps"></a>[Visualizzazione segmentata delle bitmap SkiaSharp](segmented.md)
 
-Scopri le opzioni di reticolo per il rendering di bitmap e nove specializzata-patch.
+Scopri le opzioni specializzate a nove patch e lattice per il rendering delle bitmap.
 
-## <a name="saving-skiasharp-bitmaps-to-filessavingmd"></a>[Salvataggio di bitmap di SkiaSharp ai file](saving.md)
+## <a name="saving-skiasharp-bitmaps-to-files"></a>[Salvataggio di bitmap SkiaSharp nei file](saving.md)
 
-Salvare le bitmap nella libreria di foto dell'utente.
+Salvare le bitmap nella raccolta foto dell'utente.
 
-## <a name="accessing-skiasharp-bitmap-pixel-bitspixel-bitsmd"></a>[L'accesso ai bit di pixel bitmap SkiaSharp](pixel-bits.md)
+## <a name="accessing-skiasharp-bitmap-pixel-bits"></a>[Accesso a bit di pixel bitmap SkiaSharp](pixel-bits.md)
 
-Scopri le diverse tecniche per l'accesso e modifica i bit di pixel delle bitmap di SkiaSharp.
+Scopri le varie tecniche per l'accesso e la modifica dei bit di pixel delle bitmap SkiaSharp.
 
-## <a name="animating-skiasharp-bitmapsanimatingmd"></a>[Animazione di bitmap di SkiaSharp](animating.md)
+## <a name="animating-skiasharp-bitmaps"></a>[Animazione di bitmap SkiaSharp](animating.md)
 
-Informazioni su come eseguire l'animazione di bitmap in sequenza la visualizzazione di immagini bitmap diverse e il rendering di bitmap GIF animate.
+Informazioni su come eseguire animazioni bitmap visualizzando in modo sequenziale diverse bitmap ed eseguendo il rendering di bitmap GIF animate.

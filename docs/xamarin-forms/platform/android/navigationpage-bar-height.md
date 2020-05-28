@@ -1,24 +1,27 @@
 ---
-title: Altezza della barra NavigationPage in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma Android che imposta l'altezza della barra di spostamento in un NavigationPage.
-ms.prod: xamarin
-ms.assetid: C8A73B64-FE70-408A-A72E-8AF147F0C52C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 501ea85a12a6e9b8b4198e0391e7ec8a16605069
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2dcabe3c0067734250834c2927fd4cbb83906943
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650001"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128791"
 ---
 # <a name="navigationpage-bar-height-on-android"></a>Altezza della barra NavigationPage in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma Android imposta l'altezza della barra di spostamento su un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)oggetto. Vengono utilizzati in XAML, impostando il [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) proprietà associabili a un valore integer:
+Questa specifica della piattaforma Android imposta l'altezza della barra di spostamento su un oggetto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Viene utilizzato in XAML impostando la [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) proprietà associabile su un valore integer:
 
 ```xaml
 <NavigationPage ...
@@ -28,7 +31,7 @@ Questa specifica della piattaforma Android imposta l'altezza della barra di spos
 </NavigationPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -44,11 +47,11 @@ public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
 }
 ```
 
-Il `NavigationPage.On<Android>` metodo consente di specificare che questo specifico della piattaforma sarà eseguita solo su compatibilità delle applicazioni Android. Il [`NavigationPage.SetBarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.SetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage},System.Int32)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) dello spazio dei nomi, viene usato per impostare l'altezza della barra di spostamento in un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Inoltre, il [`NavigationPage.GetBarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.GetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage})) metodo può essere utilizzato per restituire l'altezza della barra di spostamento nel `NavigationPage`.
+Il `NavigationPage.On<Android>` metodo specifica che questa specifica della piattaforma verrà eseguita solo su app compatibili con Android. [ `NavigationPage.SetBarHeight` ] (Xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. NavigationPage. SetBarHeight ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Il metodo NavigationPage}, System. Int32)), nello [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) spazio dei nomi, viene usato per impostare l'altezza della barra di spostamento su un oggetto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Inoltre, [ `NavigationPage.GetBarHeight` ] (xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. AppCompat. NavigationPage. GetBarHeight ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . NavigationPage})) il metodo può essere usato per restituire l'altezza della barra di spostamento in `NavigationPage` .
 
-Il risultato è che l'altezza della barra di spostamento a un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) può essere impostato:
+Il risultato è che è possibile impostare l'altezza della barra di navigazione in un oggetto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) :
 
-![](navigationpage-bar-height-images/navigationpage-barheight.png "Altezza della barra di navigazione NavigationPage")
+![](navigationpage-bar-height-images/navigationpage-barheight.png "NavigationPage navigation bar height")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

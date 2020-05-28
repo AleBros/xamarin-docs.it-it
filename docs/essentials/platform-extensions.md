@@ -1,20 +1,23 @@
 ---
-title: Estensioni di piattaforma Xamarin.Essentials
-description: Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point.
-ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.EssentialsEstensioni della piattaforma
+description: Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3266d3870dc0d1ddef747168b2ac6b4d397a7c33
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545156"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135356"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Estensioni della piattaforma
 
-Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici. 
+Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici.
 
 ## <a name="get-started"></a>Introduzione
 
@@ -32,11 +35,11 @@ Tutte le estensioni di piattaforma possono essere chiamate solo dal progetto iOS
 
 ## <a name="android-extensions"></a>Estensioni Android
 
-Queste estensioni sono accessibili solo da un progetto Android.These extensions can only be accessed from an Android project.
+È possibile accedere a queste estensioni solo da un progetto Android.
 
-### <a name="application-context--activity"></a>Contesto applicazione & attivitàApplication Context & Activity
+### <a name="application-context--activity"></a>Attività & del contesto dell'applicazione
 
-Usando le estensioni `Platform` della piattaforma nella classe `Context` `Activity` puoi ottenere l'accesso all'app corrente o per l'app in esecuzione.
+Usando le estensioni della piattaforma nella `Platform` classe è possibile ottenere l'accesso al corrente `Context` o `Activity` per l'app in esecuzione.
 
 ```csharp
 
@@ -46,7 +49,7 @@ var context = Platform.AppContext;
 var activity = Platform.CurrentActivity;
 ```
 
-Se c'è una `Activity` situazione in cui è necessario il, `WaitForActivityAsync` ma l'applicazione non è stata completamente avviata, il metodo deve essere utilizzato.
+Se si verifica una situazione in cui `Activity` è necessario, ma l'applicazione non è stata avviata completamente, è `WaitForActivityAsync` necessario usare il metodo.
 
 ```csharp
 var activity = await Platform.WaitForActivityAsync();
@@ -76,35 +79,35 @@ void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivitySta
     Toast.MakeText(this, e.State.ToString(), ToastLength.Short).Show();
 ```
 
-Gli stati di attività sono i seguenti:
+Gli Stati dell'attività sono i seguenti:
 
 * Data di creazione
 * Resumed
 * Paused
 * Eliminata
-* SaveInstanceState (Stato di salvataggio)
-* Started
+* SaveInstanceState
+* Avviato
 * Arrestato
 
-Per ulteriori informazioni, leggere la documentazione relativa al [ciclo di vita](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) delle attività.
+Per altre informazioni, vedere la documentazione del ciclo di vita delle [attività](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) .
 
 ## <a name="ios-extensions"></a>Estensioni iOS
 
-Queste estensioni sono accessibili solo da un progetto iOS.These extensions can only be accessed from an iOS project.
+È possibile accedere a queste estensioni solo da un progetto iOS.
 
 ### <a name="current-uiviewcontroller"></a>UIViewController corrente
 
-Ottenere l'accesso `UIViewController`al visibile:
+Ottenere l'accesso al attualmente visibile `UIViewController` :
 
 ```csharp
 var vc = Platform.GetCurrentUIViewController();
 ```
 
-Questo metodo `null` restituirà se `UIViewController`non è possibile rilevare un oggetto .
+Questo metodo restituisce `null` se non è in grado di rilevare un oggetto `UIViewController` .
 
 ## <a name="cross-platform-extensions"></a>Estensioni multipiattaforma
 
-Queste estensioni esistono in ogni piattaforma.
+Queste estensioni sono disponibili in ogni piattaforma.
 
 ### <a name="point"></a>Point
 

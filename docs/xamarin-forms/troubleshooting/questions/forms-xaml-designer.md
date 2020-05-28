@@ -1,27 +1,19 @@
 ---
-title: Perché la finestra di progettazione XAML di Visual Studio non funziona per i file XAML di Xamarin.Forms?
-ms.topic: troubleshooting
-ms.prod: xamarin
-ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/25/2017
-ms.openlocfilehash: ce318faab1af07b95a7769d81a506979b37a34e4
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842993"
----
-# <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Perché la finestra di progettazione XAML di Visual Studio non funziona per i file XAML di Xamarin.Forms?
+title:' perché la finestra di progettazione XAML di Visual Studio non funziona per Xamarin.Forms i file XAML?'
+ms. Topic: ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Xamarin.Forms attualmente non supporta le finestre di progettazione visiva per i file XAML. Per questo motivo, quando si tenta di aprire un file XAML di form nella finestra di *progettazione* dell'interfaccia utente XAML di Visual Studio o nella *finestra di progettazione dell'interfaccia utente XAML con codifica*, viene generato il messaggio di errore seguente:
+---
+
+# <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Perché la finestra di progettazione XAML di Visual Studio non funziona per Xamarin.Forms i file XAML?
+
+Xamarin.FormsAttualmente non supporta le finestre di progettazione visiva per i file XAML. Per questo motivo, quando si tenta di aprire un file XAML di form nella finestra di *progettazione* dell'interfaccia utente XAML di Visual Studio o nella *finestra di progettazione dell'interfaccia utente XAML con codifica*, viene generato il messaggio di errore seguente:
 
 > "Impossibile aprire il file con l'editor selezionato. Scegliere un altro editor. "
 
-Questa limitazione è descritta nella Guida alle [nozioni di base XAML di Xamarin.Forms](~/xamarin-forms/xaml/xaml-basics/index.md) :
+Questa limitazione è descritta nella Guida alle [ Xamarin.Forms nozioni di base di XAML](~/xamarin-forms/xaml/xaml-basics/index.md) :
 
-> "Non esiste ancora una finestra di progettazione visiva per la generazione di XAML nelle applicazioni Xamarin.Forms, quindi tutto il codice XAML deve essere scritto manualmente".
+> "Non esiste ancora una finestra di progettazione visiva per la generazione di XAML nelle Xamarin.Forms applicazioni, quindi tutto il codice XAML deve essere scritto manualmente".
 
-È tuttavia possibile visualizzare il Visualizzatore anteprima Xamarin.Forms XAML selezionando l'opzione di menu **visualizza > altre finestre > Xamarin.Forms** del Visualizzatore anteprime.
+Tuttavia, il visualizzatore Xamarin.Forms Anteprima XAML può essere visualizzato selezionando la vista > altre opzioni di menu di **Windows > Xamarin.Forms ** Visualizzatore anteprima.

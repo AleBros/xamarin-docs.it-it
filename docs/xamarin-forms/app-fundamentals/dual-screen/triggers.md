@@ -1,40 +1,43 @@
 ---
-title: Xamarin.Forms trigger a doppio schermo
-description: In questo articolo viene illustrato come utilizzare i trigger a schermo doppio Xamarin.Forms per rispondere alle modifiche dell'interfaccia utente con XAML.
-ms.prod: xamarin
-ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/28/2020
-ms.openlocfilehash: 0cce23973c90c89ce90e40651a2646d5f1bdd2c0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Formstrigger a doppio schermo
+description: Questo articolo illustra come usare i Xamarin.Forms trigger a doppio schermo per rispondere alle modifiche dell'interfaccia utente con XAML.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78165532"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131196"
 ---
-# <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Forms trigger a doppio schermo
+# <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Formstrigger a doppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-Lo [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) spazio dei nomi include due trigger di stato:The namespace includes two state triggers:
+Lo [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) spazio dei nomi include due trigger di stato:
 
-- [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger)attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando cambia la modalità di visualizzazione del layout associato.
-- `WindowSpanModeStateTrigger`attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando cambia la modalità di visualizzazione della finestra.
+- [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger)attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando viene modificata la modalità di visualizzazione del layout associato.
+- `WindowSpanModeStateTrigger`attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando viene modificata la modalità di visualizzazione della finestra.
 
-Per ulteriori informazioni sui trigger di stato, vedere [Trigger di stato](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
+Per ulteriori informazioni sui trigger di stato, vedere [trigger di stato](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
-## <a name="span-mode-state-trigger"></a>Trigger di stato della modalità Span
+## <a name="span-mode-state-trigger"></a>Trigger stato modalità span
 
-Un [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) attiva [`VisualState`](xref:Xamarin.Forms.VisualState) una modifica quando cambia la modalità di estensione del layout associato. Questo trigger ha una singola proprietà associabile:This trigger has a single bindable property:
+Un oggetto [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando viene modificata la modalità di estensione del layout associato. Questo trigger ha una singola proprietà associabile:
 
-- [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), di [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode)tipo , che indica la [`VisualState`](xref:Xamarin.Forms.VisualState) modalità di intervallo a cui deve essere applicato l'oggetto .
+- [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), di tipo [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode) , che indica la modalità di estensione alla quale [`VisualState`](xref:Xamarin.Forms.VisualState) deve essere applicato l'oggetto.
 
 > [!NOTE]
-> Deriva [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) dalla [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e può pertanto associare [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) un gestore eventi all'evento.
+> [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger)Deriva dalla [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e quindi può alleghire un gestore eventi all' [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-L'esempio XAML [`Grid`](xref:Xamarin.Forms.Grid) seguente `SpanModeStateTrigger` mostra un che include oggetti:The following XAML example shows a that includes objects:
+Nell'esempio di codice XAML riportato di seguito viene illustrato un oggetto [`Grid`](xref:Xamarin.Forms.Grid) che include `SpanModeStateTrigger` oggetti:
 
 ```xaml
 <Grid>
@@ -70,18 +73,18 @@ L'esempio XAML [`Grid`](xref:Xamarin.Forms.Grid) seguente `SpanModeStateTrigger`
 </Grid>
 ```
 
-In questo esempio, gli stati [`Grid`](xref:Xamarin.Forms.Grid) di visualizzazione vengono impostati su un oggetto. Il colore di `Grid` sfondo dell'oggetto è verde quando viene visualizzato un solo riquadro, è rosso quando i riquadri vengono visualizzati affiancati ed è viola quando i riquadri vengono visualizzati dall'alto in basso.
+In questo esempio gli Stati di visualizzazione vengono impostati in un [`Grid`](xref:Xamarin.Forms.Grid) oggetto. Il colore di sfondo di `Grid` è verde quando viene visualizzato un solo riquadro, è rosso quando i riquadri vengono visualizzati affiancati e è viola quando i riquadri vengono visualizzati in alto a sinistra.
 
-## <a name="window-span-mode-state-trigger"></a>Trigger di stato della modalità di estensione della finestra
+## <a name="window-span-mode-state-trigger"></a>Trigger stato modalità span finestra
 
-Un `WindowSpanModeStateTrigger` trigger [`VisualState`](xref:Xamarin.Forms.VisualState) a una modifica quando cambia la modalità di estensione della finestra. Questo trigger ha una singola proprietà associabile:This trigger has a single bindable property:
+Un oggetto `WindowSpanModeStateTrigger` attiva una [`VisualState`](xref:Xamarin.Forms.VisualState) modifica quando viene modificata la modalità span della finestra. Questo trigger ha una singola proprietà associabile:
 
-- [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), di [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode)tipo , che indica la [`VisualState`](xref:Xamarin.Forms.VisualState) modalità di intervallo a cui deve essere applicato l'oggetto .
+- [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), di tipo [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode) , che indica la modalità di estensione alla quale [`VisualState`](xref:Xamarin.Forms.VisualState) deve essere applicato l'oggetto.
 
 > [!NOTE]
-> Deriva `WindowSpanModeStateTrigger` dalla [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e può pertanto associare [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) un gestore eventi all'evento.
+> `WindowSpanModeStateTrigger`Deriva dalla [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e quindi può alleghire un gestore eventi all' [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-L'esempio XAML [`Grid`](xref:Xamarin.Forms.Grid) seguente `WindowSpanModeStateTrigger` mostra un che include oggetti:The following XAML example shows a that includes objects:
+Nell'esempio di codice XAML riportato di seguito viene illustrato un oggetto [`Grid`](xref:Xamarin.Forms.Grid) che include `WindowSpanModeStateTrigger` oggetti:
 
 ```xaml
 <Grid>
@@ -117,9 +120,9 @@ L'esempio XAML [`Grid`](xref:Xamarin.Forms.Grid) seguente `WindowSpanModeStateTr
 </Grid>    
 ```
 
-In questo esempio, gli stati [`Grid`](xref:Xamarin.Forms.Grid) di visualizzazione vengono impostati su un oggetto. Il colore di `Grid` sfondo dell'oggetto è rosso quando viene visualizzato un solo riquadro, è verde quando i riquadri vengono visualizzati affiancati ed è giallo quando i riquadri vengono visualizzati dall'alto in basso.
+In questo esempio gli Stati di visualizzazione vengono impostati in un [`Grid`](xref:Xamarin.Forms.Grid) oggetto. Il colore di sfondo di `Grid` è rosso quando viene visualizzato un solo riquadro, è verde quando i riquadri vengono visualizzati affiancati e è giallo quando i riquadri vengono visualizzati in alto a sinistra.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Trigger Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.FormsTrigger](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.FormsGestione stato di visualizzazione](~/xamarin-forms/user-interface/visual-state-manager.md)

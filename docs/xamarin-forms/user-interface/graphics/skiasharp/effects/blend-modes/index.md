@@ -1,18 +1,21 @@
 ---
-title: Modalità di Blend SkiaSharp
-description: Utilizzare le modalità di Blend per definire cosa accade quando gli oggetti grafici sono sovrapposti tra loro.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 829d764f03dd77c6126c2f4bced750ae570a3bc6
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425689"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131703"
 ---
 # <a name="skiasharp-blend-modes"></a>Modalità di Blend SkiaSharp
 
@@ -29,20 +32,60 @@ Le modalità SkiaSharp Blend corrispondono a quelle descritte nella specifica W3
 I 29 membri dell' `SKBlendMode` enumerazione possono essere divisi in tre categorie:
 
 | Porter-Duff | Separabili    | Non separabile |
-| ----------- | ------------ | ------------- |
-| `Clear`     | `Modulate`   | `Hue`         |
-| `Src`       | `Screen`     | `Saturation`  |
-| `Dst`       | `Overlay`    | `Color`       |
-| `SrcOver`   | `Darken`     | `Luminosity`  |
-| `DstOver`   | `Lighten`    |               |
-| `SrcIn`     | `ColorDodge` |               |
-| `DstIn`     | `ColorBurn`  |               |
-| `SrcOut`    | `HardLight`  |               |
-| `DstOut`    | `SoftLight`  |               |
-| `SrcATop`   | `Difference` |               |
-| `DstATop`   | `Exclusion`  |               |
-| `Xor`       | `Multiply`   |               |
-| `Plus`      |              |               |
+| ---
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | Titolo---: Descrizione: ms. prod: ms. Technology: ms. AssetID: Author: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | Titolo---: Descrizione: ms. prod: ms. Technology: ms. AssetID: Author: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------- | | `Clear`     | `Modulate`   | `Hue`         | | `Src`       | `Screen`     | `Saturation`  | | `Dst`       | `Overlay`    | `Color`       | | `SrcOver`   | `Darken`     | `Luminosity`  | | `DstOver`   | `Lighten`    |               | | `SrcIn`     | `ColorDodge` |               | | `DstIn`     | `ColorBurn`  |               | | `SrcOut`    | `HardLight`  |               | | `DstOut`    | `SoftLight`  |               | | `SrcATop`   | `Difference` |               | | `DstATop`   | `Exclusion`  |               | | `Xor`       | `Multiply`   |               | | `Plus`      |              |               |
 
 I nomi di queste tre categorie verranno rilevati con maggiore significato nelle discussioni che seguono. L'ordine in cui sono elencati i membri corrisponde a quello della definizione dell' `SKBlendMode` enumerazione. Ai 13 membri dell'enumerazione nella prima colonna sono associati i valori integer da 0 a 12. La seconda colonna è costituita dai membri dell'enumerazione che corrispondono ai numeri interi da 13 a 24 e i membri della terza colonna hanno valori compresi tra 25 e 28.
 
@@ -62,7 +105,7 @@ canvas.Clear();
 
 Questo metodo sostituisce tutti i pixel dell'area di disegno con i pixel neri trasparenti, equivalenti a `new SKColor(0, 0, 0, 0)` o all'integer 0x00000000. Tutti i byte di tutti i pixel vengono inizializzati su zero.
 
-La superficie di disegno di un oggetto `SKCanvas` ottenuto in un `PaintSurface` gestore potrebbe avere uno sfondo bianco, ma è solo perché ha uno sfondo `SKCanvasView` trasparente e la pagina presenta uno sfondo bianco. È possibile dimostrare questo fatto impostando la proprietà Novell. Forms `BackgroundColor` di `SKCanvasView` su un colore Novell. Forms:
+La superficie di disegno di un oggetto `SKCanvas` ottenuto in un `PaintSurface` gestore potrebbe avere uno sfondo bianco, ma è solo perché ha uno sfondo `SKCanvasView` trasparente e la pagina presenta uno sfondo bianco. È possibile dimostrare questo fatto impostando la Xamarin.Forms `BackgroundColor` proprietà di `SKCanvasView` su un Xamarin.Forms colore:
 
 ```csharp
 canvasView.BackgroundColor = Color.Red;

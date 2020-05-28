@@ -1,24 +1,27 @@
 ---
-title: Percorso di binding di Xamarin.Forms
-description: Questo articolo illustra come usare i data binding di Xamarin.Forms per accedere alle proprietà secondarie e ai membri delle raccolte con la proprietà Path della classe Binding.
-ms.prod: xamarin
-ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsPercorso di associazione
+description: Questo articolo illustra come usare Xamarin.Forms le associazioni dati per accedere alle sottoproprietà e ai membri della raccolta con la proprietà Path della classe Binding.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940336"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139740"
 ---
-# <a name="xamarinforms-binding-path"></a>Percorso di binding di Xamarin.Forms
+# <a name="xamarinforms-binding-path"></a>Xamarin.FormsPercorso di associazione
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-In tutti gli esempi di [`Path`](xref:Xamarin.Forms.Binding.Path) associazione `Binding` dati precedenti, [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) la `Binding` proprietà della classe (o la proprietà dell'estensione di markup) è stata impostata su una singola proprietà. È in effetti possibile impostare `Path` su una *proprietà secondaria* (una proprietà di una proprietà) o su un membro di una raccolta.
+In tutti gli esempi di data binding precedenti, la [`Path`](xref:Xamarin.Forms.Binding.Path) proprietà della `Binding` classe (o la [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) proprietà dell'estensione di `Binding` Markup) è stata impostata su una singola proprietà. È in effetti possibile impostare `Path` su una *proprietà secondaria* (una proprietà di una proprietà) o su un membro di una raccolta.
 
 Ad esempio, si supponga che la pagina contenga un controllo `TimePicker`:
 
@@ -103,7 +106,7 @@ Il binding nella terza `Label` nella pagina **Path Variations** fa riferimento a
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-L'origine è impostata sulla proprietà statica `CultureInfo.CurrentCulture`, ovvero un oggetto di tipo `CultureInfo`. Tale classe definisce `DateTimeFormat` una [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) proprietà denominata di tipo che contiene una `DayNames` raccolta. L'indice seleziona il quarto elemento.
+L'origine è impostata sulla proprietà statica `CultureInfo.CurrentCulture`, ovvero un oggetto di tipo `CultureInfo`. Tale classe definisce una proprietà denominata `DateTimeFormat` di tipo [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) che contiene una `DayNames` raccolta. L'indice seleziona il quarto elemento.
 
 La quarta `Label` esegue un'operazione simile ma per le impostazioni cultura associato alla Francia. La proprietà `Source` del binding viene impostata sull'oggetto `CultureInfo` con un costruttore:
 
@@ -157,13 +160,13 @@ Questo codice visualizza il tipo di origine del binding, o `DataBindingDemos.Pat
                       StringFormat='{0}'}" />
 ```
 
-Il tipo della proprietà `Content` è ora noto ed è `Xamarin.Forms.StackLayout`. Aggiungere la proprietà `Children` a `Path` e il tipo è `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, ovvero una classe interna di Xamarin.Forms, ma ovviamente un tipo raccolta. Aggiungere un indice e il tipo è `Xamarin.Forms.Label`. Continuare in questo modo.
+Il tipo della proprietà `Content` è ora noto ed è `Xamarin.Forms.StackLayout`. Aggiungere la `Children` proprietà a `Path` e il tipo è `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]` , che è una classe interna a Xamarin.Forms , ma ovviamente un tipo di raccolta. Aggiungere un indice e il tipo è `Xamarin.Forms.Label`. Continuare in questo modo.
 
-Dato che Xamarin.Forms elabora il percorso di binding, installa un gestore `PropertyChanged` per qualsiasi oggetto nel percorso che implementa l'interfaccia `INotifyPropertyChanged`. Ad esempio, il binding finale reagisce a una modifica nella prima `Label` perché cambia la proprietà `Text`.
+Come Xamarin.Forms elabora il percorso di associazione, viene installato un `PropertyChanged` gestore per qualsiasi oggetto nel percorso che implementa l' `INotifyPropertyChanged` interfaccia. Ad esempio, il binding finale reagisce a una modifica nella prima `Label` perché cambia la proprietà `Text`.
 
 Se una proprietà nel percorso di binding non implementa `INotifyPropertyChanged`, eventuali modifiche a tale proprietà verranno ignorate. Alcune modifiche potrebbero invalidare del tutto il percorso di binding, quindi è consigliabile usare questa tecnica solo quando la stringa di proprietà e proprietà secondarie non diventa mai non valida.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
-- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capitolo di data binding da Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -1,25 +1,28 @@
 ---
-title: Servizio Azure SignalR con Xamarin.Forms
-description: Introduzione al servizio Azure SignalR e alle funzioni di Azure con Xamarin.Forms
-ms.prod: xamarin
-ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 06/07/2019
-ms.openlocfilehash: 7b5cb6a93e5dcb958fcb30f0469b8300b169ee86
-ms.sourcegitcommit: cead6f989860331777b0502a5e56269958046517
-ms.translationtype: HT
+title: Servizio Azure SignalR conXamarin.Forms
+description: Introduzione al servizio Azure SignalR e alle funzioni di Azure conXamarin.Forms
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75687427"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139438"
 ---
-# <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Xamarin.Forms
+# <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR conXamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core SignalR è un modello di applicazione che semplifica il processo di aggiunta della comunicazione in tempo reale alle applicazioni. Il servizio Azure SignalR consente uno sviluppo e una distribuzione rapidi di applicazioni SignalR scalabili. Funzioni di Azure è un metodo di codice senza server di breve durata che può essere combinato per formare applicazioni scalabili e guidate dagli eventi.
 
-Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e funzioni di Azure con Xamarin.Forms, per fornire messaggi in tempo reale ai client connessi.
+Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e funzioni di Azure con Xamarin.Forms , per fornire messaggi in tempo reale ai client connessi.
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
@@ -55,7 +58,7 @@ Questa stringa di connessione viene usata per [distribuire funzioni di Azure con
 
 Per testare l'applicazione di esempio, è necessario creare una nuova app funzioni di Azure nel portale di Azure. Prendere nota del nome dell' **app** perché questo URL viene usato nel file **Constants.cs** dell'applicazione di esempio. Lo screenshot seguente illustra la creazione di una nuova app funzioni di Azure denominata "xdocsfunctions":
 
-[![screenshot della creazione di app di funzioni di Azure](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[![Screenshot della creazione di app di funzioni di Azure](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 Funzioni di Azure può essere distribuito in un'istanza di app di funzioni di Azure da Visual Studio 2019. Le sezioni seguenti descrivono la distribuzione di due funzioni nell'applicazione di esempio in un'istanza di app di funzioni di Azure.
 
@@ -63,7 +66,7 @@ Funzioni di Azure può essere distribuito in un'istanza di app di funzioni di Az
 
 L'applicazione di esempio contiene una libreria di classi denominata **ChatServer**, che include due funzioni di Azure senza server nei file denominati **Negotiate.cs** e **Talk.cs**.
 
-La funzione `Negotiate` risponde alle richieste Web con un oggetto `SignalRConnectionInfo` contenente una proprietà `AccessToken` e una proprietà `Url`. L'applicazione per dispositivi mobili usa questi valori per registrarsi con l'hub SignalR. Il codice seguente illustra la funzione `Negotiate`:
+La `Negotiate` funzione risponde alle richieste Web con un `SignalRConnectionInfo` oggetto che contiene una `AccessToken` proprietà e una `Url` Proprietà. L'applicazione per dispositivi mobili usa questi valori per registrarsi con l'hub SignalR. Il codice seguente illustra la `Negotiate` funzione:
 
 ```csharp
 [FunctionName("Negotiate")]
@@ -77,7 +80,7 @@ public static SignalRConnectionInfo GetSignalRInfo(
 }
 ```
 
-La funzione `Talk` risponde alle richieste HTTP POST che forniscono un oggetto messaggio nel corpo del POST. Il corpo del POST viene trasformato in un `SignalRMessage` e inoltrato all'hub SignalR. Il codice seguente illustra la funzione `Talk`:
+La `Talk` funzione risponde alle richieste HTTP post che forniscono un oggetto messaggio nel corpo del post. Il corpo del POST viene trasformato in un oggetto `SignalRMessage` e inoltrato all'hub SignalR. Il codice seguente illustra la `Talk` funzione:
 
 ```csharp
 [FunctionName("Talk")]
@@ -139,11 +142,11 @@ Dopo aver immesso la stringa di connessione, è possibile fare clic su **pubblic
 
 ![Funzioni pubblicate nell'app funzioni di Azure](azure-signalr-images/azure-functions-deployed.png "Funzioni pubblicate nell'app funzioni di Azure")
 
-## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrare il servizio Azure SignalR con Xamarin.Forms
+## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrare il servizio Azure SignalR conXamarin.Forms
 
-L'integrazione tra il servizio Azure SignalR e l'applicazione Xamarin.Forms è una classe del servizio SignalR di cui viene creata un'istanza nella classe `MainPage` con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Xamarin.Forms](#use-the-signalr-service-class-in-xamarinforms).
+L'integrazione tra il servizio Azure SignalR e l' Xamarin.Forms applicazione è una classe del servizio SignalR di cui viene creata un'istanza nella `MainPage` classe con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Xamarin.Forms ](#use-the-signalr-service-class-in-xamarinforms).
 
-L'applicazione di esempio include una classe **Constants.cs** che deve essere personalizzata con l'endpoint URL dell'app funzioni di Azure. Impostare il valore della proprietà `HostName` sull'indirizzo dell'app funzioni di Azure. Nel codice seguente vengono illustrate le proprietà **Constants.cs** con un valore `HostName` di esempio:
+L'applicazione di esempio include una classe **Constants.cs** che deve essere personalizzata con l'endpoint URL dell'app funzioni di Azure. Impostare il valore della `HostName` proprietà sull'indirizzo dell'app funzioni di Azure. Il codice seguente mostra le proprietà **Constants.cs** con un valore di esempio `HostName` :
 
 ```csharp
 public static class Constants
@@ -165,13 +168,13 @@ public static class Constants
 ```
 
 > [!NOTE]
-> La proprietà `Username` nel file **Constants.cs** dell'applicazione di esempio usa il valore di `RuntimePlatform` del dispositivo come nome utente. Questo consente di testare facilmente i dispositivi multipiattaforma e identificare il dispositivo che invia il messaggio. In un'applicazione reale, questo valore sarebbe probabilmente un nome utente univoco, raccolto durante un processo di iscrizione o accesso.
+> La `Username` proprietà nel file **Constants.cs** dell'applicazione di esempio usa il valore del dispositivo `RuntimePlatform` come nome utente. Questo consente di testare facilmente i dispositivi multipiattaforma e identificare il dispositivo che invia il messaggio. In un'applicazione reale, questo valore sarebbe probabilmente un nome utente univoco, raccolto durante un processo di iscrizione o accesso.
 
 ### <a name="the-signalr-service-class"></a>Classe del servizio SignalR
 
-La classe `SignalRService` nel progetto **chatclient** nell'applicazione di esempio illustra un'implementazione che richiama le funzioni in un'app funzioni di Azure per connettersi a un servizio Azure SignalR.
+La `SignalRService` classe nel progetto **chatclient** nell'applicazione di esempio illustra un'implementazione che richiama le funzioni in un'app funzioni di Azure per connettersi a un servizio Azure SignalR.
 
-Il metodo `SendMessageAsync` nella classe `SignalRService` viene usato per inviare messaggi ai client connessi al servizio Azure SignalR. Questo metodo esegue una richiesta HTTP POST alla funzione **Talk** ospitata nell'app funzioni di Azure, incluso un oggetto `Message` serializzato in JSON come payload post. La funzione **Talk** passa il messaggio al servizio Azure SignalR per la trasmissione a tutti i client connessi. Nel codice seguente viene illustrato il metodo `SendMessageAsync`.
+Il `SendMessageAsync` metodo nella `SignalRService` classe viene usato per inviare messaggi ai client connessi al servizio Azure SignalR. Questo metodo esegue una richiesta HTTP POST alla funzione **Talk** ospitata nell'app funzioni di Azure, incluso un oggetto serializzato JSON `Message` come payload post. La funzione **Talk** passa il messaggio al servizio Azure SignalR per la trasmissione a tutti i client connessi. Nel codice seguente viene illustrato il metodo `SendMessageAsync`.
 
 ```csharp
 public async Task SendMessageAsync(string username, string message)
@@ -192,9 +195,9 @@ public async Task SendMessageAsync(string username, string message)
 }
 ```
 
-Il metodo `ConnectAsync` nella classe `SignalRService` esegue una richiesta HTTP GET alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione **Negotiate** restituisce JSON deserializzato in un'istanza della classe `NegotiateInfo`. Una volta recuperato l'oggetto `NegotiateInfo`, questo viene usato per la registrazione diretta con il servizio Azure SignalR usando un'istanza della classe `HubConnection`.
+Il `ConnectAsync` metodo nella `SignalRService` classe esegue una richiesta HTTP Get alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione **Negotiate** restituisce JSON che viene deserializzato in un'istanza della `NegotiateInfo` classe. Una volta `NegotiateInfo` recuperato, l'oggetto viene usato per eseguire la registrazione direttamente con il servizio Azure SignalR usando un'istanza della `HubConnection` classe.
 
-ASP.NET Core SignalR converte i dati in ingresso dalla connessione aperta ai messaggi e consente agli sviluppatori di definire i tipi di messaggio e di associare i gestori eventi ai messaggi in ingresso per tipo. Il metodo `ConnectAsync` registra un gestore eventi per il nome del messaggio definito nel file **Constants.cs** dell'applicazione di esempio, che per impostazione predefinita è "newMessage".
+ASP.NET Core SignalR converte i dati in ingresso dalla connessione aperta ai messaggi e consente agli sviluppatori di definire i tipi di messaggio e di associare i gestori eventi ai messaggi in ingresso per tipo. Il `ConnectAsync` metodo registra un gestore eventi per il nome del messaggio definito nel file **Constants.cs** dell'applicazione di esempio, che per impostazione predefinita è "newMessage".
 
 Nel codice seguente viene illustrato il metodo `ConnectAsync`.
 
@@ -231,9 +234,9 @@ public async Task ConnectAsync()
 ```
 
 > [!NOTE]
-> Il servizio SignalR USA `System.Text.Json` per serializzare e deserializzare JSON per impostazione predefinita. I dati serializzati con altre librerie, ad esempio Newtonsoft, potrebbero non essere deserializzati dal servizio SignalR. L'istanza `HubConnection` nel progetto di esempio include una chiamata a `AddNewtonsoftJsonProtocol` per specificare il serializzatore JSON. Questo metodo è definito in un pacchetto NuGet speciale denominato **Microsoft. AspNetCore. SignalR. Protocols. NewtonsoftJson** che deve essere incluso nel progetto. Se si usa `System.Text.Json` per serializzare/deserializzare i dati JSON, questo metodo e il pacchetto NuGet non devono essere usati.
+> Il servizio SignalR USA `System.Text.Json` per serializzare e deserializzare JSON per impostazione predefinita. I dati serializzati con altre librerie, ad esempio Newtonsoft, potrebbero non essere deserializzati dal servizio SignalR. L' `HubConnection` istanza nel progetto di esempio include una chiamata a `AddNewtonsoftJsonProtocol` per specificare il serializzatore JSON. Questo metodo è definito in un pacchetto NuGet speciale denominato **Microsoft. AspNetCore. SignalR. Protocols. NewtonsoftJson** che deve essere incluso nel progetto. Se si usa `System.Text.Json` per serializzare/deserializzare i dati JSON, questo metodo e il pacchetto NuGet non devono essere usati.
 
-Il metodo `AddNewMessage` viene associato come gestore eventi nel messaggio di `ConnectAsync`, come illustrato nel codice precedente. Quando viene ricevuto un messaggio, viene chiamato il metodo `AddNewMessage` con i dati del messaggio forniti come `JObject`. Il metodo `AddNewMessage` converte la `JObject` in un'istanza della classe `Message` e quindi richiama il gestore per `NewMessageReceived` se ne è stato associato uno. Nel codice seguente viene illustrato il metodo `AddNewMessage`.
+Il `AddNewMessage` metodo viene associato come gestore eventi nel `ConnectAsync` messaggio, come illustrato nel codice precedente. Quando viene ricevuto un messaggio, il `AddNewMessage` metodo viene chiamato con i dati del messaggio forniti come `JObject` . Il `AddNewMessage` metodo converte `JObject` in un'istanza della `Message` classe e quindi richiama il gestore per `NewMessageReceived` se ne è stato associato uno. Nel codice seguente viene illustrato il metodo `AddNewMessage`.
 
 ```csharp
 public void AddNewMessage(JObject message)
@@ -249,11 +252,11 @@ public void AddNewMessage(JObject message)
 }
 ```
 
-### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usare la classe del servizio SignalR in Xamarin.Forms
+### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usare la classe del servizio SignalR inXamarin.Forms
 
-L'uso della classe del servizio SignalR in Xamarin.Forms viene eseguito associando gli eventi della classe `SignalRService` nella classe code-behind `MainPage`.
+L'uso della classe del servizio SignalR in Xamarin.Forms viene eseguito associando gli `SignalRService` eventi della classe nella `MainPage` classe code-behind.
 
-L'evento `Connected` nella classe `SignalRService` viene generato quando una connessione SignalR viene completata correttamente. L'evento `ConnectionFailed` nella classe `SignalRService` viene generato in caso di errore di una connessione SignalR. Il metodo del gestore eventi `SignalR_ConnectionChanged` è associato a entrambi gli eventi nel costruttore di `MainPage`. Questo gestore eventi aggiorna gli Stati dei pulsanti Connetti e invia in base all'argomento `success` di connessione e aggiunge il messaggio fornito dall'evento alla coda della chat utilizzando il metodo `AddMessage`. Il codice seguente illustra il metodo del gestore dell'evento `SignalR_ConnectionChanged`:
+L' `Connected` evento nella `SignalRService` classe viene generato quando una connessione SignalR viene completata correttamente. L' `ConnectionFailed` evento nella `SignalRService` classe viene generato in caso di errore di una connessione SignalR. Il `SignalR_ConnectionChanged` metodo del gestore eventi è associato a entrambi gli eventi del `MainPage` costruttore. Questo gestore eventi aggiorna gli Stati dei pulsanti Connetti e invia in base all' `success` argomento di connessione e aggiunge il messaggio fornito dall'evento alla coda della chat usando il `AddMessage` metodo. Il codice seguente illustra il `SignalR_ConnectionChanged` metodo del gestore eventi:
 
 ```csharp
 void SignalR_ConnectionChanged(object sender, bool success, string message)
@@ -266,7 +269,7 @@ void SignalR_ConnectionChanged(object sender, bool success, string message)
 }
 ```
 
-L'evento `NewMessageReceived` nella classe `SignalRService` viene generato quando viene ricevuto un nuovo messaggio dal servizio Azure SignalR. Il metodo del gestore eventi `SignalR_NewMessageReceived` è associato all'evento `NewMessageReceived` nel costruttore `MainPage`. Questo gestore eventi converte l'oggetto `Message` in ingresso in una stringa e lo aggiunge alla coda della chat usando il metodo `AddMessage`. Il codice seguente illustra il metodo del gestore dell'evento `SignalR_NewMessageReceived`:
+L' `NewMessageReceived` evento nella `SignalRService` classe viene generato quando viene ricevuto un nuovo messaggio dal servizio Azure SignalR. Il `SignalR_NewMessageReceived` metodo del gestore eventi è associato all' `NewMessageReceived` evento nel `MainPage` costruttore. Questo gestore eventi converte l' `Message` oggetto in ingresso in una stringa e lo aggiunge alla coda di chat usando il `AddMessage` metodo. Il codice seguente illustra il `SignalR_NewMessageReceived` metodo del gestore eventi:
 
 ```csharp
 void SignalR_NewMessageReceived(object sender, Model.Message message)
@@ -276,7 +279,7 @@ void SignalR_NewMessageReceived(object sender, Model.Message message)
 }
 ```
 
-Il metodo `AddMessage` aggiunge un nuovo messaggio come oggetto `Label` alla coda della chat. Il metodo `AddMessage` viene spesso chiamato dai gestori eventi dall'esterno del thread principale dell'interfaccia utente, quindi forza gli aggiornamenti dell'interfaccia utente nel thread principale per impedire le eccezioni. Nel codice seguente viene illustrato il metodo `AddMessage`.
+Il `AddMessage` metodo aggiunge un nuovo messaggio come `Label` oggetto alla coda di chat. Il `AddMessage` metodo viene spesso chiamato dai gestori eventi dall'esterno del thread principale dell'interfaccia utente, quindi forza gli aggiornamenti dell'interfaccia utente nel thread principale per impedire le eccezioni. Nel codice seguente viene illustrato il metodo `AddMessage`.
 
 ```csharp
 void AddMessage(string message)
@@ -295,7 +298,7 @@ void AddMessage(string message)
 }
 ```
 
-## <a name="test-the-application"></a>Testare l'applicazione
+## <a name="test-the-application"></a>Test dell'applicazione
 
 L'applicazione di chat SignalR può essere testata in iOS, Android e UWP purché siano disponibili:
 
@@ -307,8 +310,8 @@ Dopo aver completato questi passaggi e aver eseguito l'applicazione, facendo cli
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Creazione di app per dispositivi mobili in tempo reale con Xamarin e SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Creazione di app per dispositivi mobili in tempo reale con Novell e SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
 * [Introduzione a SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
-* [Introduzione alle funzioni di Azure](/azure/azure-functions/functions-overview)
+* [Introduzione a Funzioni di Azure](/azure/azure-functions/functions-overview)
 * [Documentazione di Funzioni di Azure](/azure/azure-functions/)
 * [Esempio di chat SignalR MVVM](https://github.com/lbugnion/sample-xamarin-signalr)

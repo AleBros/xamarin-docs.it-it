@@ -1,17 +1,20 @@
 ---
-title: Istruzioni di configurazione del firewall di Xamarin
-description: Questo documento fornisce un elenco di host da consentire nel firewall per il corretto funzionamento di Xamarin in un ambiente aziendale.
-ms.prod: xamarin
-ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
-author: conceptdev
-ms.author: crdun
-ms.date: 07/17/2019
-ms.openlocfilehash: 2b52dfd55194ec076f28f8c33e758a39d14f5943
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 71b2754d19d00b7bf4860acd96bfb7ad8dec4ce5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70291324"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132991"
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Istruzioni di configurazione del firewall di Xamarin
 
@@ -35,13 +38,13 @@ Per la corretta installazione del software quando si usa la versione più recent
 
 Se si usa un Mac e si riscontrano problemi di installazione di Xamarin.Android, verificare che macOS sia in grado di scaricare Java.
 
-### <a name="nuget-including-xamarinforms"></a>NuGet (incluso Xamarin.Forms)
+### <a name="nuget-including-xamarinforms"></a>NuGet (incluso Xamarin.Forms )
 
-Per accedere a NuGet (Xamarin.Forms è disponibile come pacchetto NuGet) è necessario aggiungere gli indirizzi seguenti:
+È necessario aggiungere gli indirizzi seguenti per accedere a NuGet ( Xamarin.Forms è incluso in un pacchetto NuGet):
 
 - www.nuget.org (per accedere a NuGet)
 - globalcdn.nuget.org (download di NuGet)
-- dl-ssl.google.com (componenti Google per Android e Xamarin.Forms)
+- dl-ssl.google.com (Google Components per Android e Xamarin.Forms )
 
 ### <a name="software-updates"></a>Aggiornamenti software
 

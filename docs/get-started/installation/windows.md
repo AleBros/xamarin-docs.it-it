@@ -1,17 +1,20 @@
 ---
-title: Installazione di Xamarin in Visual Studio 2019
-description: Questo documento descrive come installare Xamarin in Visual Studio 2019. Illustra i requisiti, il processo di installazione e la verifica dell'installazione.
-ms.prod: xamarin
-ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
-author: conceptdev
-ms.author: crdun
-ms.date: 08/28/2018
-ms.openlocfilehash: 970985e419c5710699b6bdda49da8b59ef3c6cb6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 39cf115ad80dd8cdd3ddb298ce87c065663d6cb2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71119252"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132678"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Installazione di Xamarin in Visual Studio 2019
 
@@ -39,7 +42,7 @@ L'installazione di Xamarin in Visual Studio 2019 consente di iniziare a scrivere
 
 ### <a name="ios"></a>iOS
 
-Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.iOS in Windows](~/ios/get-started/installation/windows/index.md). 
+Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.iOS in Windows](~/ios/get-started/installation/windows/index.md).
 
 1. [Installare Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Connettere Visual Studio all'host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
@@ -54,4 +57,4 @@ Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.And
 1. [Configurazione di Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
 2. [Using the Xamarin Android SDK Manager (Uso di Xamarin Android SDK Manager)](~/android/get-started/installation/android-sdk.md?ide=vs)
 3. [Emulatore di Android SDK](~/android/get-started/installation/android-emulator/index.md)
-4. [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md)
+4. [Set Up Device for Development (Configurare il dispositivo per lo sviluppo)](~/android/get-started/installation/set-up-device-for-development.md)

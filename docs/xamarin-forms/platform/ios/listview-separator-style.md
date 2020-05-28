@@ -1,24 +1,27 @@
 ---
-title: Stile separatore ListView in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se il separatore tra le celle in un controllo ListView usa l'intera larghezza del controllo ListView.
-ms.prod: xamarin
-ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 921ef905eed17b6bfe5cb2ea401f7da92ff744af
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c8d660896684283ba9b40cde168adbfe30ca0c51
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648107"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135993"
 ---
 # <a name="listview-separator-style-on-ios"></a>Stile separatore ListView in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma iOS controlla se il separatore tra le celle [`ListView`](xref:Xamarin.Forms.ListView) in a USA la larghezza completa `ListView`di. Vengono utilizzati in XAML, impostando il [`ListView.SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) proprietà associata a un valore del [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumerazione:
+Questa specifica della piattaforma iOS controlla se il separatore tra le celle in a [`ListView`](xref:Xamarin.Forms.ListView) Usa la larghezza completa di `ListView` . Viene utilizzato in XAML impostando la [`ListView.SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) proprietà associata su un valore dell' [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -31,7 +34,7 @@ Questa specifica della piattaforma iOS controlla se il separatore tra le celle [
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -41,17 +44,17 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 ```
 
-Il `ListView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [`ListView.SetSeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SetSeparatorStyle(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.ListView},Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se il separatore tra le celle nel [`ListView`](xref:Xamarin.Forms.ListView) Usa la versione completa larghezza del `ListView`, con il [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumerazione che fornisce due valori possibili:
+Il `ListView.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. [ `ListView.SetSeparatorStyle` ] (Xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. ListView. SetSeparatorStyle ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . ListView}, Xamarin.Forms . Il metodo PlatformConfiguration. iOSSpecific. SeparatorStyle), nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene usato per controllare se il separatore tra celle in [`ListView`](xref:Xamarin.Forms.ListView) Usa la larghezza intera di `ListView` , con l' [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumerazione che fornisce due valori possibili:
 
-- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default) : indica il comportamento di separatore iOS predefinite. Questo è il comportamento predefinito in Xamarin.Forms.
-- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth) : indica che verranno disegnati un margine di separatori di `ListView` a altro.
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default): indica il comportamento predefinito del separatore iOS. Si tratta del comportamento predefinito in Xamarin.Forms .
+- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth): indica che i separatori verranno disegnati da un bordo dell'oggetto `ListView` all'altro.
 
-Il risultato è che un oggetto specificato [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) valore viene applicato per il [`ListView`](xref:Xamarin.Forms.ListView), che determina la larghezza del separatore tra le celle:
+Il risultato è che un [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) valore specificato viene applicato a [`ListView`](xref:Xamarin.Forms.ListView) , che controlla la larghezza del separatore tra celle:
 
-![](listview-separator-style-images/listview-separatorstyle.png "ListView SeparatorStyle specifiche della piattaforma")
+![](listview-separator-style-images/listview-separatorstyle.png "ListView SeparatorStyle Platform-Specific")
 
 > [!NOTE]
-> Dopo aver impostato lo stile dei separatori `FullWidth`, non può essere modificato a `Default` in fase di esecuzione.
+> Quando lo stile del separatore è stato impostato su `FullWidth` , non è possibile modificarlo di nuovo in in fase di `Default` esecuzione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

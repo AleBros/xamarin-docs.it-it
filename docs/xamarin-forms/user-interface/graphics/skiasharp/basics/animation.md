@@ -1,30 +1,33 @@
 ---
-title: Animazione di base in SkiaSharp
-description: Questo articolo illustra come animare la grafica di SkiaSharp in applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: 80de16a0cf9b601ac3795085b638b9d62812f4d9
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: In questo articolo viene illustrato come aggiungere un'animazione alla grafica di SkiaSharp nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a59f65655772768860ce29128f14a48641abc26
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292995"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134277"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animazione di base in SkiaSharp
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Scopri come animare la grafica di SkiaSharp_
 
-È possibile animare la grafica SkiaSharp in Novell. Forms, facendo in modo che il metodo di `PaintSurface` venga chiamato periodicamente, ogni volta che il disegno della grafica è leggermente diverso. Ecco un'animazione illustrata più avanti in questo articolo con cerchi concentrici che apparentemente espandere dal centro:
+È possibile animare la grafica SkiaSharp in, facendo in Xamarin.Forms modo che il `PaintSurface` metodo venga chiamato periodicamente, ogni volta che si disegnano i grafici in modo leggermente diverso. Ecco un'animazione illustrata più avanti in questo articolo con circoli concentrici che apparentemente si espandono dal centro:
 
 ![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
-La pagina di **ellisse pulsante** nel programma [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) anima i due assi di un'ellisse in modo che sembri palpitante ed è anche possibile controllare la frequenza di questa pulsazione. Il file [**PulsatingEllipsePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) crea un'istanza di un `Slider` Novell. Forms e di un `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Si tratta di un modo comune per integrare un `SKCanvasView` con altre viste Novell. Forms:
+La pagina di **ellisse pulsante** nel programma [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) anima i due assi di un'ellisse in modo che sembri palpitante ed è anche possibile controllare la frequenza di questa pulsazione. Il file [**PulsatingEllipsePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) crea un'istanza di Xamarin.Forms `Slider` e un oggetto `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Si tratta di un modo comune per integrare un `SKCanvasView` con altre Xamarin.Forms Visualizzazioni:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -59,7 +62,7 @@ La pagina di **ellisse pulsante** nel programma [**SkiaSharpFormsDemos**](https:
 </ContentPage>
 ```
 
-Il file code-behind crea un'istanza di un oggetto `Stopwatch` per fungere da clock a precisione elevata. L'override del `OnAppearing` imposta il campo `pageIsActive` su `true` e chiama un metodo denominato `AnimationLoop`. Il `OnDisappearing` esegue l'override imposta `pageIsActive` campo `false`:
+Il file code-behind crea un'istanza `Stopwatch` di un oggetto che funge da clock a precisione elevata. L' `OnAppearing` override imposta il `pageIsActive` campo su `true` e chiama un metodo denominato `AnimationLoop` . L' `OnDisappearing` override imposta il `pageIsActive` campo su `false` :
 
 ```csharp
 Stopwatch stopwatch = new Stopwatch();
@@ -85,7 +88,7 @@ protected override void OnDisappearing()
 }
 ```
 
-Il metodo `AnimationLoop` avvia l'`Stopwatch` e quindi esegue il ciclo mentre `pageIsActive` è `true`. Si tratta essenzialmente di un "ciclo infinito" mentre la pagina è attiva, ma non causa il blocco del programma perché il ciclo termina con una chiamata a `Task.Delay` con l'operatore `await`, che consente ad altre parti della funzione Program. L'argomento `Task.Delay` ne determina il completamento dopo 1/30 secondi. Definisce la frequenza dei fotogrammi di animazione.
+Il `AnimationLoop` metodo avvia l'oggetto `Stopwatch` e quindi esegue il ciclo mentre `pageIsActive` è `true` . Si tratta essenzialmente di un "ciclo infinito" mentre la pagina è attiva, ma non causa il blocco del programma perché il ciclo termina con una chiamata a `Task.Delay` con l' `await` operatore, che consente ad altre parti della funzione Program. L'argomento per `Task.Delay` ne determina il completamento dopo 1/30 secondi. Definisce la frequenza dei fotogrammi dell'animazione.
 
 ```csharp
 async Task AnimationLoop()
@@ -106,9 +109,9 @@ async Task AnimationLoop()
 
 ```
 
-Il ciclo `while` inizia ottenendo un'ora di ciclo dall'`Slider`. Si tratta di un tempo in secondi, ad esempio, 5. La seconda istruzione calcola un valore di `t` per il *tempo*. Per un `cycleTime` di 5, `t` aumenta da 0 a 1 ogni 5 secondi. L'argomento della funzione `Math.Sin` nella seconda istruzione è compreso tra 0 e 2 π ogni 5 secondi. La funzione `Math.Sin` restituisce un valore compreso tra 0 e 1 fino a 0 e quindi &ndash;1 e 0 ogni 5 secondi, ma con valori che cambiano più lentamente quando il valore è prossimo a 1 o-1. Il valore 1 viene aggiunto in modo che i valori sono sempre positivi, e quindi viene diviso per 2, in modo che i valori compresi tra ½ su 1 per ½ su 0 per ½, ma più lento quando il valore è di circa 1 e 0. Viene archiviato nel campo `scale` e il `SKCanvasView` è invalidato.
+Il `while` ciclo inizia ottenendo un'ora di ciclo da `Slider` . Si tratta di un intervallo di tempo in secondi, ad esempio 5. La seconda istruzione calcola un valore di `t` per *Time*. Per un valore `cycleTime` di 5, `t` aumenta da 0 a 1 ogni 5 secondi. L'argomento della `Math.Sin` funzione nella seconda istruzione è compreso tra 0 e 2 π ogni 5 secondi. La `Math.Sin` funzione restituisce un valore compreso tra 0 e 1 fino a 0 e quindi a &ndash; 1 e 0 ogni 5 secondi, ma con valori che cambiano più lentamente quando il valore è prossimo a 1 o-1. Il valore 1 viene aggiunto in modo che i valori siano sempre positivi, quindi è diviso per 2, quindi i valori sono compresi tra 1/2 e 1 e 1/2 da 0 a 1/2, ma più lenti quando il valore è di circa 1 e 0. Viene archiviato nel `scale` campo e l'oggetto `SKCanvasView` viene invalidato.
 
-Il metodo `PaintSurface` usa questo valore `scale` per calcolare i due assi dell'ellisse:
+Il `PaintSurface` metodo usa questo `scale` valore per calcolare i due assi dell'ellisse:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -139,17 +142,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il metodo calcola un raggio massimo in base alla dimensione dell'area di visualizzazione e un raggio minimo in base al raggio massimo. Il valore `scale` viene animato tra 0 e 1 e torna a 0, quindi il metodo lo utilizza per calcolare un `xRadius` e `yRadius` compreso tra `minRadius` e `maxRadius`. Questi valori vengono utilizzati per disegnare e compilare un'ellisse:
+Il metodo calcola un raggio massimo in base alle dimensioni dell'area di visualizzazione e un raggio minimo in base al raggio massimo. Il `scale` valore viene animato tra 0 e 1 e torna a 0, quindi il metodo lo usa per calcolare un oggetto `xRadius` e che è compreso `yRadius` tra `minRadius` e `maxRadius` . Questi valori vengono usati per creare e riempire un'ellisse:
 
 [![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
-Si noti che l'oggetto `SKPaint` viene creato in un blocco di `using`. Analogamente a molte classi SkiaSharp `SKPaint` deriva da `SKObject`, che deriva da `SKNativeObject`, che implementa l'interfaccia [`IDisposable`](xref:System.IDisposable) . `SKPaint` esegue l'override del metodo `Dispose` per rilasciare le risorse non gestite.
+Si noti che l' `SKPaint` oggetto viene creato in un `using` blocco. Analogamente a molte classi SkiaSharp `SKPaint` derivano da `SKObject` , che deriva da `SKNativeObject` , che implementa l' [`IDisposable`](xref:System.IDisposable) interfaccia. `SKPaint`esegue l'override del `Dispose` metodo per rilasciare le risorse non gestite.
 
- L'inserimento di `SKPaint` in un blocco di `using` garantisce che `Dispose` venga chiamato alla fine del blocco per liberare le risorse non gestite. Questo problema si verifica quando la memoria usata dall'oggetto `SKPaint` viene liberata dal Garbage Collector .NET, ma nel codice di animazione è preferibile essere proattiva per liberare memoria in modo più ordinato.
+ `SKPaint`L'inserimento di un `using` blocco garantisce che `Dispose` venga chiamato alla fine del blocco per liberare le risorse non gestite. Questo problema si verifica quando la memoria usata dall' `SKPaint` oggetto viene liberata dal Garbage Collector .NET, ma nel codice di animazione è preferibile essere proattiva per liberare memoria in modo più ordinato.
 
- Una soluzione migliore in questo caso particolare consiste nel creare due oggetti `SKPaint` una sola volta e salvarli come campi.
+ Una soluzione migliore in questo caso particolare consiste nel creare due `SKPaint` oggetti una volta e salvarli come campi.
 
-Questo è il risultato dell'animazione dei **cerchi in espansione** . La classe [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) inizia definendo diversi campi, incluso un oggetto `SKPaint`:
+Questo è il risultato dell'animazione dei **cerchi in espansione** . La [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) classe inizia definendo diversi campi, incluso un `SKPaint` oggetto:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -177,7 +180,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-Questo programma usa un approccio diverso per l'animazione basata sul metodo Novell. Forms `Device.StartTimer`. Il campo `t` viene animato da 0 a 1 ogni `cycleTime` millisecondi:
+Questo programma usa un approccio diverso per l'animazione in base al Xamarin.Forms `Device.StartTimer` metodo. Il `t` campo viene animato da 0 a 1 ogni `cycleTime` millisecondi:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -211,7 +214,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-Il gestore `PaintSurface` disegna cinque cerchi concentrici con raggi animati. Se la variabile `baseRadius` viene calcolata come 100, quando `t` viene animata da 0 a 1, i raggi dei cinque cerchi aumentano da 0 a 100, da 100 a 200, da 200 a 300, da 300 a 400 e da 400 a 500. Per la maggior parte dei cerchi il `strokeWidth` è 50 ma per il primo cerchio, il `strokeWidth` aggiunge un'animazione da 0 a 50. Per la maggior parte dei cerchi, il colore è blu, ma per il cerchio ultimo, il colore viene animato da blu a trasparente. Si noti il quarto argomento del costruttore `SKColor` che specifica l'opacità:
+Il `PaintSurface` gestore disegna cinque cerchi concentrici con raggi animati. Se la `baseRadius` variabile viene calcolata come 100, quando `t` viene animata da 0 a 1, i raggi dei cinque cerchi aumentano da 0 a 100, da 100 a 200, da 200 a 300, da 300 a 400 e da 400 a 500. Per la maggior parte dei cerchi `strokeWidth` è 50, ma per il primo cerchio, il `strokeWidth` aggiunge un'animazione da 0 a 50. Per la maggior parte dei cerchi, il colore è blu, ma per l'ultimo cerchio il colore viene animato da blu a trasparente. Si noti il quarto argomento del `SKColor` costruttore che specifica l'opacità:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

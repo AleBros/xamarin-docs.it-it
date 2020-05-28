@@ -1,28 +1,31 @@
 ---
-title: Origini dati ListView
-description: Questo articolo illustra come compilare il ListView di xamarin. Forms con i dati e come usare il data binding con un ListView.
-ms.prod: xamarin
-ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: e51f0bd011750b030c0a11b9b89a2c2473f2a9ed
-ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+title: ''
+description: Questo articolo illustra come popolare Xamarin.Forms ListView con i dati e come usare Data Binding con un controllo ListView.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80247587"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131508"
 ---
 # <a name="listview-data-sources"></a>Origini dati ListView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
-Un [`ListView`](xref:Xamarin.Forms.ListView) Novell. Forms viene usato per visualizzare gli elenchi di dati. In questo articolo viene illustrato come popolare un `ListView` con i dati e come associare dati all'elemento selezionato.
+Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) Viene utilizzato per visualizzare elenchi di dati. In questo articolo viene illustrato come popolare un oggetto `ListView` con i dati e come associare dati all'elemento selezionato.
 
 ## <a name="itemssource"></a>ItemsSource
 
-Una [`ListView`](xref:Xamarin.Forms.ListView) viene popolata con i dati usando la proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) , che può accettare qualsiasi raccolta che implementa `IEnumerable`. Il modo più semplice per popolare un `ListView` prevede l'uso di una matrice di stringhe:
+Un oggetto [`ListView`](xref:Xamarin.Forms.ListView) viene popolato con i dati utilizzando la [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) proprietà, che può accettare qualsiasi raccolta che implementa `IEnumerable` . Il modo più semplice per popolare un oggetto `ListView` prevede l'uso di una matrice di stringhe:
 
 ```xaml
 <ListView>
@@ -62,9 +65,9 @@ listView.ItemsSource = new string[]
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
 
-Con questo approccio il `ListView` verrà popolato con un elenco di stringhe. Per impostazione predefinita, `ListView` chiamerà `ToString` e visualizzerà il risultato in un `TextCell` per ogni riga. Per personalizzare la modalità di visualizzazione dei dati, vedere [aspetto delle celle](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
+Questo approccio compilerà l'oggetto `ListView` con un elenco di stringhe. Per impostazione predefinita, chiamerà `ListView` `ToString` e visualizzerà il risultato in un `TextCell` per ogni riga. Per personalizzare la modalità di visualizzazione dei dati, vedere [aspetto delle celle](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-Poiché `ItemsSource` è stato inviato a una matrice, il contenuto non viene aggiornato come l'elenco sottostante o le modifiche apportate alla matrice. Se si desidera che ListView venga aggiornato automaticamente durante l'aggiunta, la rimozione e la modifica degli elementi nell'elenco sottostante, sarà necessario utilizzare un `ObservableCollection`. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) viene definito in `System.Collections.ObjectModel` ed è analogo a `List`, ad eccezione del fatto che è in grado di notificare `ListView` di eventuali modifiche:
+Poiché `ItemsSource` è stato inviato a una matrice, il contenuto non viene aggiornato come l'elenco sottostante o la matrice viene modificata. Se si desidera che ListView venga aggiornato automaticamente durante l'aggiunta, la rimozione e la modifica di elementi nell'elenco sottostante, sarà necessario utilizzare `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1)è definito in `System.Collections.ObjectModel` e è analogo a `List` , ad eccezione del fatto che può notificare `ListView` eventuali modifiche:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -76,17 +79,17 @@ employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 
 ## <a name="data-binding"></a>Data binding
 
-Il data binding è la "collazione" che associa le proprietà di un oggetto dell'interfaccia utente alle proprietà di un oggetto CLR, ad esempio una classe nell'elemento ViewModel. Associazione dati è utile perché semplifica lo sviluppo di interfacce utente mediante la sostituzione di una grande quantità di noioso codice standard.
+Il data binding è la "collazione" che associa le proprietà di un oggetto dell'interfaccia utente alle proprietà di un oggetto CLR, ad esempio una classe nell'elemento ViewModel. Il data binding è utile perché semplifica lo sviluppo di interfacce utente sostituendo una grande quantità di codice standard noioso.
 
-Data binding dati funziona, mantenendo gli oggetti sincronizzati man mano che cambiano i relativi valori associati. Anziché dover scrivere i gestori eventi per ogni modifica del valore di un controllo, è necessario definire l'associazione e abilitare l'associazione nell'elemento ViewModel.
+Il data binding funziona mantenendo gli oggetti sincronizzati quando cambiano i valori associati. Anziché dover scrivere i gestori eventi per ogni modifica del valore di un controllo, è necessario definire l'associazione e abilitare l'associazione nell'elemento ViewModel.
 
-Per altre informazioni su data binding, vedere [nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) , che è la quarta parte della [serie di articoli di base XAML di Novell. Forms](~/xamarin-forms/xaml/xaml-basics/index.md).
+Per altre informazioni su data binding, vedere [nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) , che è la quarta delle [ Xamarin.Forms serie di articoli di base di XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Binding di celle
 
-È possibile associare le proprietà delle celle (e degli elementi figlio delle celle) alle proprietà degli oggetti nel `ItemsSource`. Ad esempio, è possibile usare un `ListView` per presentare un elenco di dipendenti.
+È possibile associare le proprietà delle celle (e degli elementi figlio delle celle) a proprietà di oggetti in `ItemsSource` . È ad esempio `ListView` possibile utilizzare un oggetto per presentare un elenco di dipendenti.
 
-La classe dipendente:
+Classe Employee:
 
 ```csharp
 public class Employee
@@ -95,7 +98,7 @@ public class Employee
 }
 ```
 
-Viene creata una `ObservableCollection<Employee>`, impostata come `ListView` `ItemsSource`e l'elenco viene popolato con i dati:
+`ObservableCollection<Employee>`Viene creato un oggetto, impostato come `ListView` `ItemsSource` e l'elenco viene popolato con i dati:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -117,9 +120,9 @@ public EmployeeListPage()
 ```
 
 > [!WARNING]
-> Mentre una `ListView` verrà aggiornata in risposta alle modifiche apportate nella `ObservableCollection`sottostante, una `ListView` non verrà aggiornata se un'istanza di `ObservableCollection` diversa viene assegnata al riferimento `ObservableCollection` originale (ad esempio, `employees = otherObservableCollection;`).
+> Mentre un oggetto `ListView` verrà aggiornato in risposta alle modifiche nell' `ObservableCollection` oggetto sottostante, un oggetto `ListView` non verrà aggiornato se un'istanza diversa `ObservableCollection` viene assegnata al `ObservableCollection` riferimento originale (ad esempio `employees = otherObservableCollection;` ).
 
-Il frammento di codice seguente illustra un `ListView` associato a un elenco di dipendenti:
+Il frammento di codice seguente illustra un oggetto `ListView` associato a un elenco di dipendenti:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -139,16 +142,16 @@ Il frammento di codice seguente illustra un `ListView` associato a un elenco di 
 </ContentPage>
 ```
 
-In questo esempio XAML viene definito un `ContentPage` contenente una `ListView`. L'origine dati del `ListView` viene impostata tramite l'attributo `ItemsSource`. Il layout di ogni riga nel `ItemsSource` viene definito all'interno dell'elemento `ListView.ItemTemplate`. Ciò comporta gli screenshot seguenti:
+Questo esempio XAML definisce un oggetto `ContentPage` che contiene un oggetto `ListView` . L'origine dati di `ListView` è impostata tramite l'attributo `ItemsSource`. Il layout di ogni riga in `ItemsSource` è definito all'interno dell'elemento `ListView.ItemTemplate`. Ciò comporta gli screenshot seguenti:
 
 ![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
 
 > [!WARNING]
-> `ObservableCollection` non è thread-safe. La modifica di un `ObservableCollection` comporta l'esecuzione degli aggiornamenti dell'interfaccia utente sullo stesso thread che ha eseguito le modifiche. Se il thread non è il thread principale dell'interfaccia utente, verrà generata un'eccezione.
+> `ObservableCollection` non è affidabile. La modifica di un oggetto `ObservableCollection` comporta l'esecuzione degli aggiornamenti dell'interfaccia utente sullo stesso thread che ha eseguito le modifiche. Se il thread non è il thread principale dell'interfaccia utente, verrà generata un'eccezione.
 
-### <a name="binding-selecteditem"></a>Associazione SelectedItem
+### <a name="binding-selecteditem"></a>Binding SelectedItem
 
-Spesso è necessario eseguire il binding all'elemento selezionato di una `ListView`, anziché usare un gestore eventi per rispondere alle modifiche. Per eseguire questa operazione in XAML, associare la proprietà `SelectedItem`:
+Spesso è necessario eseguire l'associazione all'elemento selezionato di un `ListView` , anziché usare un gestore eventi per rispondere alle modifiche. Per eseguire questa operazione in XAML, associare la `SelectedItem` proprietà:
 
 ```xaml
 <ListView x:Name="listView"
@@ -158,7 +161,7 @@ Spesso è necessario eseguire il binding all'elemento selezionato di una `ListVi
 </ListView>
 ```
 
-Supponendo che `ItemsSource` di `listView`sia un elenco di stringhe, `SomeLabel` avrà la relativa proprietà `Text` associata al `SelectedItem`.
+Supponendo `listView` `ItemsSource` che sia un elenco di stringhe, la `SomeLabel` relativa `Text` proprietà sarà associata a `SelectedItem` .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
