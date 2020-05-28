@@ -1,24 +1,27 @@
 ---
-title: Griglia Novell. Forms
-description: La griglia Novell. Forms è un layout che organizza gli elementi figlio in righe e colonne di celle.
-ms.prod: xamarin
-ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsGriglia
+description: La Xamarin.Forms griglia è un layout che organizza gli elementi figlio in righe e colonne di celle.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425993"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138073"
 ---
-# <a name="xamarinforms-grid"></a>Griglia Novell. Forms
+# <a name="xamarinforms-grid"></a>Xamarin.FormsGriglia
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Griglia Novell. Forms](grid-images/layouts.png "Griglia Novell. Forms")](grid-images/layouts-large.png#lightbox "Griglia Novell. Forms")
+[![Xamarin.FormsGriglia](grid-images/layouts.png "[! OP. Griglia NO-LOC (Novell. Forms)]")](grid-images/layouts-large.png#lightbox "[! OP. Griglia NO-LOC (Novell. Forms)]")
 
 [`Grid`](xref:Xamarin.Forms.Grid)È un layout che organizza gli elementi figlio in righe e colonne, che possono avere dimensioni proporzionali o assolute. Per impostazione predefinita, un oggetto `Grid` contiene una riga e una colonna. Inoltre, un oggetto `Grid` può essere utilizzato come layout padre che contiene altri layout figlio.
 
@@ -735,6 +738,6 @@ public class ColorSlidersGridPageCS : ContentPage
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo Grid (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Opzioni di layout in Novell. Forms](layout-options.md)
-- [Scegliere un layout di Novell. Forms](choose-layout.md)
-- [Migliorare le prestazioni delle app Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Opzioni di layout inXamarin.Forms](layout-options.md)
+- [Scegliere un Xamarin.Forms layout](choose-layout.md)
+- [Migliorare le Xamarin.Forms prestazioni dell'app](~/xamarin-forms/deploy-test/performance.md)

@@ -1,41 +1,44 @@
 ---
-title: Tipi di riempimento dei tracciati
-description: Questo articolo esamina i diversi effetti possibili con i tipi di riempimento di SkiaSharp percorso e questo concetto è illustrato con esempio di codice.
-ms.prod: xamarin
-ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: 98081ed1a9aef1260150671d4fd026dd64c20b62
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292996"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139048"
 ---
 # <a name="the-path-fill-types"></a>Tipi di riempimento dei tracciati
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Individuare i diversi effetti possibili con i tipi di riempimento del percorso SkiaSharp_
 
-Può essere sovrapposto due distribuzioni in un percorso e le righe che compongono una distribuzione del singolo possono sovrapporsi. Può quindi essere riempito potenzialmente qualsiasi area inclusa, ma è possibile evitare di riempire tutte le aree racchiusi. Ad esempio:
+Due contorni in un percorso possono sovrapporsi e le linee che compongono un singolo contorno possono sovrapporsi. Qualsiasi area racchiusa può essere compilata, ma potrebbe non essere necessario riempire tutte le aree racchiuse. Ad esempio:
 
 ![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
-È necessario un po' controllare. L'algoritmo di riempimento è regolato dalla proprietà [`SKFillType`](xref:SkiaSharp.SKPath.FillType) di `SKPath`, impostata su un membro dell'enumerazione [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) :
+Si ha un piccolo controllo su questo. L'algoritmo di riempimento è regolato dalla [`SKFillType`](xref:SkiaSharp.SKPath.FillType) proprietà di `SKPath` , impostata su un membro dell' [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumerazione:
 
 - `Winding`, il valore predefinito
 - `EvenOdd`
 - `InverseWinding`
 - `InverseEvenOdd`
 
-Entrambi gli algoritmi dei vertici e coppie determinano se qualsiasi area racchiusa viene compilata o non compilato in base a un'ipotetica linea tracciata da quell'area verso l'infinito. Tale riga attraversa uno o più righe di limiti che costituiscono il percorso. Con la modalità dei vertici, se non è il numero di linee dei bordi disegnata in equilibrio di una sola direzione il numero delle linee disegnate in altra direzione, l'area riempita. In caso contrario, l'area viene riempita. L'algoritmo coppie riempie un'area, se il numero di righe di limiti è dispari.
+Sia gli algoritmi di avvolgimento che quelli dispari determinano se un'area racchiusa viene riempita o non riempita in base a una linea ipotetica disegnata da tale area a infinito. Tale riga incrocia una o più linee di limite che costituiscono il percorso. Con la modalità di avvolgimento, se il numero di linee limite disegnate in una direzione bilancia il numero di linee disegnate nell'altra direzione, l'area non viene riempita. In caso contrario, viene riempita l'area. L'algoritmo Even-Odd riempie un'area se il numero di linee limite è dispari.
 
-Con tutti i percorsi di routine, l'algoritmo dei vertici riempie spesso tutte le aree racchiusa di un percorso. L'algoritmo coppie produce in genere risultati più interessanti.
+Con molti percorsi di routine, l'algoritmo di Winding riempie spesso tutte le aree racchiuse di un percorso. L'algoritmo Even-Odd produce in genere risultati più interessanti.
 
-L'esempio classico è una stella a cinque punte, come illustrato nella pagina a **cinque punte** . Il file [**FivePointedStarPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) crea un'istanza di due viste `Picker` per selezionare il tipo di riempimento del percorso e indica se il percorso è tracciato o riempito o se il percorso è in ordine:
+L'esempio classico è una stella a cinque punte, come illustrato nella pagina a **cinque punte** . Il file [**FivePointedStarPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) crea un'istanza `Picker` di due visualizzazioni per selezionare il tipo di riempimento del percorso e indica se il percorso è tracciato o riempito o se il percorso è in ordine:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -102,7 +105,7 @@ L'esempio classico è una stella a cinque punte, come illustrato nella pagina a 
 </ContentPage>
 ```
 
-Il file code-behind usa entrambi i valori `Picker` per creare una stella a cinque punte:
+Il file code-behind usa entrambi `Picker` i valori per creare una stella a cinque punte:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -168,18 +171,18 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-In genere, il tipo di riempimento del percorso deve influire solo sui riempimenti e non sui tratti, ma le due modalità `Inverse` influiscono sia sui riempimenti che sui tratti. Per Fill, i due `Inverse` tipi riempiono le aree opposte in modo che l'area esterna alla stella venga riempita. Per i tratti, i due tipi di `Inverse` colorano tutti gli elementi, ad eccezione del tratto. Utilizzo di questi tipi di riempimento inverso può produrre alcuni effetti dispari, come illustrato nella schermata di iOS:
+In genere, il tipo di riempimento del percorso deve influire solo sui riempimenti e non sui tratti, ma le due `Inverse` modalità influiscono su riempimenti e tratti. Per Fill, i due `Inverse` tipi riempiono le aree opposte in modo che l'area esterna alla stella venga riempita. Per i tratti, i due `Inverse` tipi colorano tutti gli elementi, ad eccezione del tratto. L'uso di questi tipi di riempimento inversi può produrre alcuni effetti anomali, come illustrato nella schermata iOS:
 
 [![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
 Lo screenshot Android Mostra gli effetti tipici anche dispari e di avvolgimento, ma anche l'ordine del tratto e del riempimento influisce sui risultati.
 
-La direzione che vengono visualizzate linee dipende l'algoritmo dei vertici. In genere quando si crea un percorso, è possibile controllare tale direzione come specificato da righe sono rappresentate da un punto a altro. Tuttavia, la classe `SKPath` definisce anche metodi come `AddRect` e `AddCircle` che delineano interi contorni. Per controllare il modo in cui vengono disegnati questi oggetti, i metodi includono un parametro di tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), che dispone di due membri:
+L'algoritmo di Winding dipende dalla direzione con cui vengono disegnate le linee. In genere, quando si crea un percorso, è possibile controllare tale direzione quando si specifica che le linee vengono disegnate da un punto a un altro. Tuttavia, la `SKPath` classe definisce anche metodi come `AddRect` e `AddCircle` che attingono interi Contour. Per controllare il modo in cui vengono disegnati questi oggetti, i metodi includono un parametro di tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection) , che dispone di due membri:
 
 - `Clockwise`
 - `CounterClockwise`
 
-I metodi in `SKPath` che includono un parametro di `SKPathDirection` forniscono un valore predefinito di `Clockwise`.
+I metodi in `SKPath` che includono un `SKPathDirection` parametro forniscono un valore predefinito di `Clockwise` .
 
 Nella pagina **cerchi sovrapposti** viene creato un tracciato con quattro cerchi sovrapposti con un tipo di riempimento percorso pari:
 
@@ -221,7 +224,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-È un'immagine interessa creata con poche righe di codice:
+Si tratta di un'immagine interessante creata con un minimo di codice:
 
 [![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 

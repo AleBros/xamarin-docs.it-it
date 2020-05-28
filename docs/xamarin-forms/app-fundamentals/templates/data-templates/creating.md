@@ -1,32 +1,35 @@
 ---
-title: Creazione di un DataTemplate in Xamarin.Forms
-description: I modelli di dati possono essere creati inline, in un oggetto ResourceDictionary oppure usando un tipo personalizzato o un tipo di cella Xamarin.Forms appropriato. Questo articolo esamina ogni tecnica.
-ms.prod: xamarin
-ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/11/2017
-ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Creazione di un oggetto Xamarin.Forms DataTemplate
+description: I modelli di dati possono essere creati inline, in un oggetto ResourceDictionary o da un tipo personalizzato o da un Xamarin.Forms tipo di cella appropriato. Questo articolo esamina ogni tecnica.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3e91d6f091870fe9203e67eda1454b8062383deb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771293"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139932"
 ---
-# <a name="creating-a-xamarinforms-datatemplate"></a>Creazione di un DataTemplate in Xamarin.Forms
+# <a name="creating-a-xamarinforms-datatemplate"></a>Creazione di un oggetto Xamarin.Forms DataTemplate
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
-_I modelli di dati possono essere creati inline, in un ResourceDictionary o da un tipo di cella Xamarin.Forms appropriato o appropriato. Questo articolo esplora ogni tecnica._
+_I modelli di dati possono essere creati inline, in un oggetto ResourceDictionary o da un tipo personalizzato o da un Xamarin.Forms tipo di cella appropriato. In questo articolo vengono esaminate le singole tecniche._
 
-Uno scenario di [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) utilizzo comune per un oggetto è [`ListView`](xref:Xamarin.Forms.ListView)la visualizzazione di dati da una raccolta di oggetti in un oggetto . L'aspetto dei dati per [`ListView`](xref:Xamarin.Forms.ListView) ogni cella dell'oggetto può essere gestito impostando la [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)oggetto . Esistono diverse tecniche utilizzabili per eseguire questa operazione:
+Uno scenario di utilizzo comune per un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) è la visualizzazione di dati da una raccolta di oggetti in un oggetto [`ListView`](xref:Xamarin.Forms.ListView) . L'aspetto dei dati per ogni cella in [`ListView`](xref:Xamarin.Forms.ListView) può essere gestito impostando la [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Esistono diverse tecniche utilizzabili per eseguire questa operazione:
 
 - [Creazione di un DataTemplate inline](#inline).
-- [Creazione di un DataTemplate con un tipo](#type).
-- [Creazione di un DataTemplate come risorsa](#resource).
+- [Creazione di un oggetto DataTemplate con un tipo](#type).
+- [Creazione di un oggetto DataTemplate come risorsa](#resource).
 
-Indipendentemente dalla tecnica utilizzata, il risultato è che [`ListView`](xref:Xamarin.Forms.ListView) l'aspetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)di ogni cella nell'oggetto è definito da un oggetto , come illustrato nelle schermate seguenti:
+Indipendentemente dalla tecnica usata, il risultato è che l'aspetto di ogni cella in [`ListView`](xref:Xamarin.Forms.ListView) è definito da un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , come illustrato nelle schermate seguenti:
 
 ![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
 
@@ -34,7 +37,7 @@ Indipendentemente dalla tecnica utilizzata, il risultato è che [`ListView`](xre
 
 ## <a name="creating-an-inline-datatemplate"></a>Creazione di un DataTemplate inline
 
-La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può essere impostata su un oggetto inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Usare un modello inline, ovvero un modello inserito come elemento figlio diretto di una proprietà di controllo appropriato, se non è necessario riutilizzare il modello di dati in un'altra posizione. Gli elementi specificati nel `DataTemplate` definiscono l'aspetto di ogni cella, come illustrato nell'esempio di codice XAML seguente:
+La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può essere impostata su un oggetto inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Usare un modello inline, ovvero un modello inserito come elemento figlio diretto di una proprietà di controllo appropriato, se non è necessario riutilizzare il modello di dati in un'altra posizione. Gli elementi specificati nel `DataTemplate` definiscono l'aspetto di ogni cella, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ListView Margin="0,20,0,0">
@@ -63,7 +66,7 @@ La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può ess
 </ListView>
 ```
 
-L'elemento figlio [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) di un oggetto inline [`Cell`](xref:Xamarin.Forms.Cell)deve essere o derivare dal tipo . In questo [`ViewCell`](xref:Xamarin.Forms.ViewCell)esempio viene utilizzato `Cell`un oggetto , che deriva da . Layout all'interno del `ViewCell` [`Grid`](xref:Xamarin.Forms.Grid)è gestito qui da un . `Grid` L'oggetto [`Label`](xref:Xamarin.Forms.Label) contiene tre [`Text`](xref:Xamarin.Forms.Label.Text) istanze che associano le relative proprietà alle proprietà appropriate di ogni `Person` oggetto nella raccolta.
+Il figlio di un elemento inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) deve essere di tipo o derivare da [`Cell`](xref:Xamarin.Forms.Cell) . In questo esempio viene usato un [`ViewCell`](xref:Xamarin.Forms.ViewCell) che deriva da `Cell` . Il layout all'interno `ViewCell` di è gestito da un oggetto [`Grid`](xref:Xamarin.Forms.Grid) . `Grid`Contiene tre [`Label`](xref:Xamarin.Forms.Label) istanze di che associano le [`Text`](xref:Xamarin.Forms.Label.Text) proprietà alle proprietà appropriate di ogni `Person` oggetto nella raccolta.
 
 Il codice C# equivalente è visualizzato nell'esempio seguente:
 
@@ -110,13 +113,13 @@ public class WithDataTemplatePageCS : ContentPage
 }
 ```
 
-Nel linguaggio C, [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) l'oggetto inline viene `Func` creato utilizzando un overload del costruttore che specifica un argomento.
+In C#, l'inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene creato usando un overload del costruttore che specifica un `Func` argomento.
 
 <a name="type" />
 
 ## <a name="creating-a-datatemplate-with-a-type"></a>Creazione di un DataTemplate con un tipo
 
-La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può anche [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) essere impostata su un creato da un tipo di cella. Il vantaggio di questo approccio è che l'aspetto definito dal tipo di cella può essere riutilizzato da più modelli di dati in tutta l'applicazione. Nel codice XAML seguente viene illustrato un esempio di questo approccio:
+La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può anche essere impostata su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) creato da un tipo di cella. Il vantaggio di questo approccio è che l'aspetto definito dal tipo di cella può essere riutilizzato da più modelli di dati in tutta l'applicazione. Nel codice XAML seguente viene illustrato un esempio di questo approccio:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -142,7 +145,7 @@ La [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà può anc
 </ContentPage>
 ```
 
-In questo [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) caso, la [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà viene impostata su un che viene creato da un tipo personalizzato che definisce l'aspetto della cella. Il tipo personalizzato deve [`ViewCell`](xref:Xamarin.Forms.ViewCell)derivare dal tipo , come illustrato nell'esempio di codice seguente:
+In questo caso, la [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà viene impostata su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) creato da un tipo personalizzato che definisce l'aspetto della cella. Il tipo personalizzato deve derivare dal tipo [`ViewCell`](xref:Xamarin.Forms.ViewCell) , come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -161,7 +164,7 @@ In questo [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) caso, la [`D
 </ViewCell>
 ```
 
-All'interno del , [`ViewCell`](xref:Xamarin.Forms.ViewCell)il [`Grid`](xref:Xamarin.Forms.Grid)layout è gestito qui da un . `Grid` L'oggetto [`Label`](xref:Xamarin.Forms.Label) contiene tre [`Text`](xref:Xamarin.Forms.Label.Text) istanze che associano le relative proprietà alle proprietà appropriate di ogni `Person` oggetto nella raccolta.
+All'interno [`ViewCell`](xref:Xamarin.Forms.ViewCell) di il layout è gestito da un oggetto [`Grid`](xref:Xamarin.Forms.Grid) . `Grid`Contiene tre [`Label`](xref:Xamarin.Forms.Label) istanze di che associano le [`Text`](xref:Xamarin.Forms.Label.Text) proprietà alle proprietà appropriate di ogni `Person` oggetto nella raccolta.
 
 Il codice C# equivalente è visualizzato nell'esempio seguente:
 
@@ -189,7 +192,7 @@ public class WithDataTemplatePageFromTypeCS : ContentPage
 }
 ```
 
-Nel linguaggio [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) C, l'oggetto viene creato utilizzando un overload del costruttore che specifica il tipo di cella come argomento. Il tipo di cella [`ViewCell`](xref:Xamarin.Forms.ViewCell)deve derivare dal tipo , come illustrato nell'esempio di codice seguente:
+In C#, [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene creato usando un overload del costruttore che specifica il tipo di cella come argomento. Il tipo di cella deve derivare dal tipo [`ViewCell`](xref:Xamarin.Forms.ViewCell) , come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class PersonCellCS : ViewCell
@@ -216,13 +219,13 @@ public class PersonCellCS : ViewCell
 ```
 
 > [!NOTE]
-> Si noti che Xamarin.Forms include anche i tipi [`ListView`](xref:Xamarin.Forms.ListView) di cella che possono essere utilizzati per visualizzare dati semplici nelle celle. Per altre informazioni, vedere [Customizing ListView Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) (Personalizzazione dell'aspetto delle celle ListView).
+> Si noti che Xamarin.Forms include anche i tipi di cella che possono essere utilizzati per visualizzare dati semplici nelle [`ListView`](xref:Xamarin.Forms.ListView) celle. Per altre informazioni, vedere [Customizing ListView Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) (Personalizzazione dell'aspetto delle celle ListView).
 
 <a name="resource" />
 
 ## <a name="creating-a-datatemplate-as-a-resource"></a>Creazione di un DataTemplate come risorsa
 
-I modelli di dati possono anche [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)essere creati come oggetti riutilizzabili in un file . Tale risultato si ottiene assegnando a ogni dichiarazione un valore univoco dell'attributo `x:Key`, che fornisce una chiave descrittiva nell'elemento `ResourceDictionary`, come illustrato nell'esempio di codice XAML seguente:
+È anche possibile creare modelli di dati come oggetti riutilizzabili in un oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Tale risultato si ottiene assegnando a ogni dichiarazione un valore univoco dell'attributo `x:Key`, che fornisce una chiave descrittiva nell'elemento `ResourceDictionary`, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -253,7 +256,7 @@ I modelli di dati possono anche [`ResourceDictionary`](xref:Xamarin.Forms.Resour
 </ContentPage>
 ```
 
-L'oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) assegnato alla `StaticResource` proprietà utilizzando l'estensione di markup. Si noti `DataTemplate` che mentre l'oggetto è definito nella pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), può anche essere definito a livello di controllo o a livello di applicazione.
+L'oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene assegnato alla [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) proprietà tramite l' `StaticResource` estensione di markup. Si noti che mentre `DataTemplate` è definito nella pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , può anche essere definito a livello di controllo o di applicazione.
 
 L'esempio di codice seguente illustra la pagina equivalente in C#:
 
@@ -283,11 +286,11 @@ public class WithDataTemplatePageCS : ContentPage
 }
 ```
 
-L'oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) aggiunto [`Add`](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) al metodo using `Key` , che specifica `DataTemplate` una stringa utilizzata per fare riferimento a quando viene recuperata.
+L'oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene aggiunto all'oggetto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) utilizzando il [`Add`](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) metodo, che specifica una `Key` stringa utilizzata per fare riferimento a `DataTemplate` quando viene recuperato.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene illustrato come creare modelli di dati, [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)inline, da un tipo personalizzato o in un oggetto . Usare un modello inline se non è necessario usare di nuovo il modello di dati altrove. In alternativa, è possibile riusare un modello di dati definendolo come tipo personalizzato o come risorsa a livello di controllo, a livello di pagina o a livello di applicazione.
+Questo articolo ha illustrato come creare modelli di dati, inline, da un tipo personalizzato o in un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Usare un modello inline se non è necessario usare di nuovo il modello di dati altrove. In alternativa, è possibile riusare un modello di dati definendolo come tipo personalizzato o come risorsa a livello di controllo, a livello di pagina o a livello di applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

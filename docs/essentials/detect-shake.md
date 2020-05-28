@@ -1,21 +1,14 @@
 ---
-title: 'Xamarin.Essentials: Rilevare Shake'
-description: La classe Accelerometer di Xamarin.Essentials consente di rilevare uno scuotimento del dispositivo.
-ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67832588"
----
-# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rilevare Shake
+title:'' Xamarin.Essentials : rileva l'agitazione '' Descrizione:' la classe accelerometra in Xamarin.Essentials consente di rilevare un movimento di agitazione del dispositivo '.
+ms. AssetID: autore: ms. Author: ms. Date: ms. Custom: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-La classe **[Accelerometro](accelerometer.md)** consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale. Inoltre, consente di registrare gli eventi quando l'utente scuote il dispositivo.
+---
+
+# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rileva Shake
+
+La classe **[accelerometro](accelerometer.md)** consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale. Inoltre, consente di registrare gli eventi quando l'utente scuote il dispositivo.
 
 ## <a name="get-started"></a>Introduzione
 

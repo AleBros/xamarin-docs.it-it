@@ -1,22 +1,25 @@
 ---
-title: Modello Model-View-ViewModel
-description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers usa il modello MVVM per separare chiaramente la logica aziendale e di presentazione dell'app dalla relativa interfaccia utente.
-ms.prod: xamarin
-ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: d6c9b74c9abc1a2c493c31699b52969a7d129429
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d2e335535b508a6cd5e2f497e2c681152a7e5cda
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305269"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130949"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Modello Model-View-ViewModel
 
-L'esperienza di sviluppo di Novell. Forms comporta in genere la creazione di un'interfaccia utente in XAML e quindi l'aggiunta del code-behind che opera sull'interfaccia utente. Quando le app vengono modificate e aumentano le dimensioni e l'ambito, possono verificarsi problemi di manutenzione complessi. Questi problemi includono il stretto accoppiamento tra i controlli dell'interfaccia utente e la logica di business, che aumenta il costo di apportare modifiche all'interfaccia utente e la difficoltà di eseguire unit test di tale codice.
+L' Xamarin.Forms esperienza dello sviluppatore comporta in genere la creazione di un'interfaccia utente in XAML e quindi l'aggiunta del code-behind che opera sull'interfaccia utente. Quando le app vengono modificate e aumentano le dimensioni e l'ambito, possono verificarsi problemi di manutenzione complessi. Questi problemi includono il stretto accoppiamento tra i controlli dell'interfaccia utente e la logica di business, che aumenta il costo di apportare modifiche all'interfaccia utente e la difficoltà di eseguire unit test di tale codice.
 
 Il modello MVC (Model-View-ViewModel) consente di separare nettamente la logica di business e di presentazione di un'applicazione dalla relativa interfaccia utente (UI). Il mantenimento di una netta separazione tra la logica dell'applicazione e l'interfaccia utente consente di risolvere numerosi problemi di sviluppo e può semplificare la verifica, la manutenzione e l'evoluzione di un'applicazione. Può anche migliorare significativamente le opportunità di riutilizzo del codice e consente agli sviluppatori e ai progettisti di interfaccia utente di collaborare più facilmente durante lo sviluppo delle rispettive parti di un'app.
 
@@ -43,12 +46,12 @@ La chiave per l'uso di MVVM è la comprensione del modo in cui il codice dell'ap
 
 La visualizzazione è responsabile della definizione della struttura, del layout e dell'aspetto degli elementi visualizzati dall'utente sullo schermo. Idealmente, ogni vista è definita in XAML, con un code-behind limitato che non contiene la logica di business. Tuttavia, in alcuni casi, il code-behind potrebbe contenere la logica dell'interfaccia utente che implementa il comportamento visivo difficile da esprimere in XAML, ad esempio le animazioni.
 
-In un'applicazione Novell. Forms una vista è in genere una classe derivata da [`Page`](xref:Xamarin.Forms.Page)o derivata da [`ContentView`](xref:Xamarin.Forms.ContentView). Tuttavia, le visualizzazioni possono essere rappresentate anche da un modello di dati, che specifica gli elementi dell'interfaccia utente da usare per rappresentare visivamente un oggetto quando viene visualizzato. Un modello di dati come vista non dispone di code-behind ed è progettato per l'associazione a un tipo di modello di visualizzazione specifico.
+In un' Xamarin.Forms applicazione, una vista è in genere una classe derivata da [`Page`](xref:Xamarin.Forms.Page) o [`ContentView`](xref:Xamarin.Forms.ContentView) derivata da. Tuttavia, le visualizzazioni possono essere rappresentate anche da un modello di dati, che specifica gli elementi dell'interfaccia utente da usare per rappresentare visivamente un oggetto quando viene visualizzato. Un modello di dati come vista non dispone di code-behind ed è progettato per l'associazione a un tipo di modello di visualizzazione specifico.
 
 > [!TIP]
 > Evitare di abilitare e disabilitare gli elementi dell'interfaccia utente nel code-behind. Verificare che i modelli di visualizzazione siano responsabili della definizione di modifiche di stato logiche che interessano alcuni aspetti della visualizzazione della vista, ad esempio se un comando è disponibile o se un'operazione è in sospeso. Quindi, abilitare e disabilitare gli elementi dell'interfaccia utente mediante associazione per visualizzare le proprietà del modello, anziché abilitarle e disabilitarle nel code-behind.
 
-Sono disponibili diverse opzioni per l'esecuzione di codice nel modello di visualizzazione in risposta alle interazioni sulla vista, ad esempio la selezione di un pulsante o di un elemento. Se un controllo supporta i comandi, la proprietà `Command` del controllo può essere associata a dati a una proprietà `ICommand` sul modello di visualizzazione. Quando viene richiamato il comando del controllo, il codice nel modello di visualizzazione verrà eseguito. Oltre ai comandi, i comportamenti possono essere collegati a un oggetto nella vista e possono restare in ascolto di un comando da richiamare o dell'evento da generare. In risposta, il comportamento può richiamare un `ICommand` sul modello di visualizzazione o su un metodo sul modello di visualizzazione.
+Sono disponibili diverse opzioni per l'esecuzione di codice nel modello di visualizzazione in risposta alle interazioni sulla vista, ad esempio la selezione di un pulsante o di un elemento. Se un controllo supporta i comandi, la proprietà del controllo `Command` può essere associata a dati a una `ICommand` proprietà nel modello di visualizzazione. Quando viene richiamato il comando del controllo, il codice nel modello di visualizzazione verrà eseguito. Oltre ai comandi, i comportamenti possono essere collegati a un oggetto nella vista e possono restare in ascolto di un comando da richiamare o dell'evento da generare. In risposta, il comportamento può quindi richiamare un oggetto `ICommand` nel modello di visualizzazione o un metodo nel modello di visualizzazione.
 
 ### <a name="viewmodel"></a>ViewModel
 
@@ -64,9 +67,9 @@ Ogni modello di visualizzazione fornisce i dati di un modello in un modulo che p
 > [!TIP]
 > Centralizzare le conversioni dei dati in un livello di conversione. È anche possibile usare i convertitori come un livello di conversione dati separato che si trova tra il modello di visualizzazione e la visualizzazione. Questa operazione può essere necessaria, ad esempio, quando i dati richiedono una formattazione speciale non fornita dal modello di visualizzazione.
 
-Affinché il modello di visualizzazione partecipi a data binding bidirezionali con la vista, le relative proprietà devono generare l'evento `PropertyChanged`. I modelli di visualizzazione soddisfano questo requisito implementando l'interfaccia `INotifyPropertyChanged` e generando l'evento `PropertyChanged` quando viene modificata una proprietà.
+Affinché il modello di visualizzazione partecipi a data binding bidirezionali con la vista, le relative proprietà devono generare l' `PropertyChanged` evento. I modelli di visualizzazione soddisfano questo requisito implementando l' `INotifyPropertyChanged` interfaccia e generando l' `PropertyChanged` evento quando viene modificata una proprietà.
 
-Per le raccolte, viene fornita la `ObservableCollection<T>` intuitiva per la visualizzazione. Questa raccolta implementa la notifica di modifica della raccolta, evitando allo sviluppatore di dover implementare l'interfaccia `INotifyCollectionChanged` nelle raccolte.
+Per le raccolte, è disponibile la visualizzazione intuitiva `ObservableCollection<T>` . Questa raccolta implementa la notifica modificata della raccolta, evitando allo sviluppatore di dover implementare l' `INotifyCollectionChanged` interfaccia nelle raccolte.
 
 ### <a name="model"></a>Modello
 
@@ -76,20 +79,20 @@ Le classi modello vengono in genere usate insieme ai servizi o ai repository che
 
 ## <a name="connecting-view-models-to-views"></a>Connessione di modelli di visualizzazione alle viste
 
-I modelli di visualizzazione possono essere connessi alle viste usando le funzionalità di data binding di Novell. Forms. Esistono molti approcci che possono essere usati per costruire viste e visualizzare modelli e associarli in fase di esecuzione. Questi approcci rientrano in due categorie, note come prima composizione della vista e visualizzano la prima composizione del modello. La scelta tra Visualizza prima composizione e visualizza prima composizione modello è un problema di preferenza e complessità. Tuttavia, tutti gli approcci condividono lo stesso obiettivo, ovvero la visualizzazione deve disporre di un modello di visualizzazione assegnato alla relativa proprietà BindingContext.
+I modelli di visualizzazione possono essere connessi alle viste usando le funzionalità di data binding di Xamarin.Forms . Esistono molti approcci che possono essere usati per costruire viste e visualizzare modelli e associarli in fase di esecuzione. Questi approcci rientrano in due categorie, note come prima composizione della vista e visualizzano la prima composizione del modello. La scelta tra Visualizza prima composizione e visualizza prima composizione modello è un problema di preferenza e complessità. Tuttavia, tutti gli approcci condividono lo stesso obiettivo, ovvero la visualizzazione deve disporre di un modello di visualizzazione assegnato alla relativa proprietà BindingContext.
 
-Con la prima composizione di visualizzazione l'app è costituita concettualmente da visualizzazioni che si connettono ai modelli di visualizzazione da cui dipendono. Il vantaggio principale di questo approccio è che semplifica la creazione di app Unite a regime di controllo libero, perché i modelli di visualizzazione non hanno alcuna dipendenza dalle visualizzazioni stesse. È anche facile comprendere la struttura dell'app seguendo la relativa struttura visiva, anziché dover tenere traccia dell'esecuzione del codice per comprendere come vengono create e associate le classi. Inoltre, la prima costruzione di visualizzazione è allineata con il sistema di navigazione Novell. Forms, responsabile della creazione di pagine quando si verifica la navigazione, rendendo complessa la prima composizione del modello di visualizzazione e non allineata alla piattaforma.
+Con la prima composizione di visualizzazione l'app è costituita concettualmente da visualizzazioni che si connettono ai modelli di visualizzazione da cui dipendono. Il vantaggio principale di questo approccio è che semplifica la creazione di app Unite a regime di controllo libero, perché i modelli di visualizzazione non hanno alcuna dipendenza dalle visualizzazioni stesse. È anche facile comprendere la struttura dell'app seguendo la relativa struttura visiva, anziché dover tenere traccia dell'esecuzione del codice per comprendere come vengono create e associate le classi. Inoltre, la prima costruzione di visualizzazione è allineata al Xamarin.Forms sistema di navigazione che è responsabile della creazione di pagine quando si verifica la navigazione, rendendo complessa la prima composizione del modello di visualizzazione e non allineata alla piattaforma.
 
 Con la prima composizione del modello di visualizzazione l'app è costituita concettualmente dai modelli di visualizzazione, con un servizio responsabile dell'individuazione della vista per un modello di visualizzazione. La prima composizione del modello di visualizzazione risulta più naturale per alcuni sviluppatori, perché la creazione della vista può essere ricavata, consentendo loro di concentrarsi sulla struttura logica non dell'interfaccia utente dell'app. Consente inoltre di creare modelli di visualizzazione da altri modelli di visualizzazione. Tuttavia, questo approccio è spesso complesso e può diventare difficile capire come vengono create e associate le varie parti dell'app.
 
 > [!TIP]
-> Mantieni i modelli di visualizzazione e le visualizzazioni indipendenti. Il binding di viste a una proprietà in un'origine dati deve essere la dipendenza principale della vista nel modello di visualizzazione corrispondente. In particolare, non fare riferimento ai tipi di vista, ad esempio [`Button`](xref:Xamarin.Forms.Button) e [`ListView`](xref:Xamarin.Forms.ListView), dai modelli di visualizzazione. Seguendo i principi descritti in questo articolo, i modelli di visualizzazione possono essere testati in isolamento, riducendo di conseguenza la probabilità di errori software limitando l'ambito.
+> Mantieni i modelli di visualizzazione e le visualizzazioni indipendenti. Il binding di viste a una proprietà in un'origine dati deve essere la dipendenza principale della vista nel modello di visualizzazione corrispondente. In particolare, non fare riferimento ai tipi di vista, ad esempio [`Button`](xref:Xamarin.Forms.Button) e [`ListView`](xref:Xamarin.Forms.ListView) , dai modelli di visualizzazione. Seguendo i principi descritti in questo articolo, i modelli di visualizzazione possono essere testati in isolamento, riducendo di conseguenza la probabilità di errori software limitando l'ambito.
 
 Nelle sezioni seguenti vengono illustrati gli approcci principali per la connessione di modelli di visualizzazione alle viste.
 
 ### <a name="creating-a-view-model-declaratively"></a>Creazione di un modello di visualizzazione in modo dichiarativo
 
-L'approccio più semplice consiste nel fare in modo che la visualizzazione dichiarata un'istanza del modello di visualizzazione corrispondente in XAML. Quando la vista viene costruita, viene creato anche l'oggetto modello di visualizzazione corrispondente. Questo metodo viene dimostrato nell'esempio di codice seguente:
+L'approccio più semplice consiste nel fare in modo che la visualizzazione dichiarata un'istanza del modello di visualizzazione corrispondente in XAML. Quando la vista viene costruita, viene creato anche l'oggetto modello di visualizzazione corrispondente. Questo approccio viene illustrato nell'esempio di codice seguente:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:eShop">  
@@ -100,13 +103,13 @@ L'approccio più semplice consiste nel fare in modo che la visualizzazione dichi
 </ContentPage>
 ```
 
-Quando viene creata la [`ContentPage`](xref:Xamarin.Forms.ContentPage) , un'istanza del `LoginViewModel` viene costruita e impostata automaticamente come [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)della visualizzazione.
+Quando [`ContentPage`](xref:Xamarin.Forms.ContentPage) viene creato, un'istanza di `LoginViewModel` viene automaticamente costruita e impostata come oggetto della visualizzazione [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) .
 
 Questa costruzione dichiarativa e l'assegnazione del modello di visualizzazione da parte della vista hanno il vantaggio di essere semplice, ma presenta lo svantaggio che richiede un costruttore predefinito (senza parametri) nel modello di visualizzazione.
 
 ### <a name="creating-a-view-model-programmatically"></a>Creazione di un modello di visualizzazione a livello di codice
 
-Una vista può includere codice nel file code-behind che determina l'assegnazione del modello di visualizzazione alla relativa proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . Questa operazione viene spesso eseguita nel costruttore della vista, come illustrato nell'esempio di codice seguente:
+Una vista può includere codice nel file code-behind che determina l'assegnazione del modello di visualizzazione alla relativa [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) Proprietà. Questa operazione viene spesso eseguita nel costruttore della vista, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public LoginView()  
@@ -126,13 +129,13 @@ Una vista può essere definita come modello di dati e associata a un tipo di mod
 
 ### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>Creazione automatica di un modello di visualizzazione con un localizzatore di modelli di visualizzazione
 
-Un localizzatore di modelli di visualizzazione è una classe personalizzata che gestisce la creazione di istanze dei modelli di visualizzazione e la relativa associazione alle viste. Nell'app per dispositivi mobili eShopOnContainers, la classe `ViewModelLocator` dispone di una proprietà associata, `AutoWireViewModel`, che viene usata per associare i modelli di visualizzazione alle viste. Nel codice XAML della visualizzazione questa proprietà associata è impostata su true per indicare che il modello di visualizzazione deve essere connesso automaticamente alla vista, come illustrato nell'esempio di codice seguente:
+Un localizzatore di modelli di visualizzazione è una classe personalizzata che gestisce la creazione di istanze dei modelli di visualizzazione e la relativa associazione alle viste. Nell'app per dispositivi mobili eShopOnContainers la `ViewModelLocator` classe dispone di una proprietà associata, `AutoWireViewModel` , che viene usata per associare i modelli di visualizzazione alle viste. Nel codice XAML della visualizzazione questa proprietà associata è impostata su true per indicare che il modello di visualizzazione deve essere connesso automaticamente alla vista, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 ```
 
-La proprietà `AutoWireViewModel` è una proprietà associabile inizializzata su false e quando il relativo valore cambia il gestore dell'evento `OnAutoWireViewModelChanged` viene chiamato. Questo metodo risolve il modello di visualizzazione per la visualizzazione. Nell'esempio di codice seguente viene illustrato come ottenere questo risultato:
+La `AutoWireViewModel` proprietà è una proprietà associabile inizializzata su false e quando il relativo valore viene modificato, `OnAutoWireViewModelChanged` viene chiamato il gestore eventi. Questo metodo risolve il modello di visualizzazione per la visualizzazione. Nell'esempio di codice seguente viene illustrato come ottenere questo risultato:
 
 ```csharp
 private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
@@ -159,14 +162,14 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, obj
 }
 ```
 
-Il metodo `OnAutoWireViewModelChanged` tenta di risolvere il modello di visualizzazione utilizzando un approccio basato sulle convenzioni. Questa convenzione presuppone che:
+Il `OnAutoWireViewModelChanged` metodo tenta di risolvere il modello di visualizzazione utilizzando un approccio basato sulle convenzioni. Questa convenzione presuppone che:
 
 - I modelli di visualizzazione si trovano nello stesso assembly dei tipi di visualizzazione.
 - Le visualizzazioni si trovano in un. Spazio dei nomi figlio views.
 - I modelli di visualizzazione si trovano in un. Spazio dei nomi figlio ViewModels.
 - I nomi dei modelli di visualizzazione corrispondono ai nomi delle visualizzazioni e terminano con "ViewModel".
 
-Infine, il metodo `OnAutoWireViewModelChanged` imposta la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del tipo di vista sul tipo di modello di visualizzazione risolto. Per ulteriori informazioni sulla risoluzione del tipo di modello di visualizzazione, vedere [risoluzione](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution).
+Infine, il `OnAutoWireViewModelChanged` metodo imposta l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del tipo di visualizzazione sul tipo di modello di visualizzazione risolto. Per ulteriori informazioni sulla risoluzione del tipo di modello di visualizzazione, vedere [risoluzione](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution).
 
 Questo approccio offre il vantaggio che un'app dispone di una singola classe responsabile della creazione di istanze dei modelli di visualizzazione e della relativa connessione alle viste.
 
@@ -175,18 +178,18 @@ Questo approccio offre il vantaggio che un'app dispone di una singola classe res
 
 ## <a name="updating-views-in-response-to-changes-in-the-underlying-view-model-or-model"></a>Aggiornamento di viste in risposta alle modifiche nel modello o modello di visualizzazione sottostante
 
-Tutte le classi del modello di visualizzazione e del modello accessibili a una vista devono implementare l'interfaccia `INotifyPropertyChanged`. L'implementazione di questa interfaccia in un modello di visualizzazione o in una classe modello consente alla classe di fornire notifiche di modifica a tutti i controlli associati a dati nella vista quando viene modificato il valore della proprietà sottostante.
+Tutte le classi del modello di visualizzazione e del modello accessibili a una vista devono implementare l' `INotifyPropertyChanged` interfaccia. L'implementazione di questa interfaccia in un modello di visualizzazione o in una classe modello consente alla classe di fornire notifiche di modifica a tutti i controlli associati a dati nella vista quando viene modificato il valore della proprietà sottostante.
 
 Le app devono essere progettate per l'uso corretto della notifica di modifica delle proprietà, rispettando i requisiti seguenti:
 
-- Generazione sempre di un evento `PropertyChanged` se il valore di una proprietà pubblica viene modificato. Non presupporre che la generazione dell'evento `PropertyChanged` possa essere ignorata a causa della conoscenza del modo in cui si verifica l'associazione XAML.
-- Generazione sempre di un evento `PropertyChanged` per qualsiasi proprietà calcolata i cui valori sono utilizzati da altre proprietà nel modello o nel modello di visualizzazione.
-- Generare sempre l'evento `PropertyChanged` alla fine del metodo che apporta una modifica alla proprietà o quando l'oggetto è in uno stato sicuro. La generazione dell'evento interrompe l'operazione richiamando in modo sincrono i gestori dell'evento. Se questa situazione si verifica durante un'operazione, è possibile che l'oggetto venga esposto alle funzioni di callback quando si trova in uno stato non sicuro, parzialmente aggiornato. Inoltre, è possibile che vengano attivate le modifiche a catena da eventi `PropertyChanged`. Le modifiche di propagazione in genere richiedono il completamento degli aggiornamenti prima che la modifica a catena possa essere eseguita in modo sicuro.
-- Non viene mai generato un evento `PropertyChanged` se la proprietà non viene modificata. Ciò significa che è necessario confrontare i valori vecchi e nuovi prima di generare l'evento `PropertyChanged`.
-- Non generare mai l'evento `PropertyChanged` durante l'inizializzazione di una proprietà da parte del costruttore di un modello di visualizzazione. I controlli con associazione a dati nella vista non hanno sottoscritto la ricezione delle notifiche di modifica a questo punto.
-- Non generare mai più di un evento `PropertyChanged` con lo stesso argomento del nome di proprietà all'interno di una singola chiamata sincrona di un metodo pubblico di una classe. Ad esempio, data una proprietà `NumberOfItems` il cui archivio di backup è il `_numberOfItems` campo, se un metodo incrementa `_numberOfItems` 50 volte durante l'esecuzione di un ciclo, deve generare solo una notifica di modifica della proprietà sulla proprietà `NumberOfItems` una sola volta, dopo il completamento di tutto il lavoro. Per i metodi asincroni, generare l'evento `PropertyChanged` per un nome di proprietà specificato in ogni segmento sincrono di una catena di continuazione asincrona.
+- Generazione sempre di un `PropertyChanged` evento se il valore di una proprietà pubblica viene modificato. Non presupporre che la generazione dell' `PropertyChanged` evento possa essere ignorata a causa della conoscenza del modo in cui si verifica l'associazione XAML.
+- Generazione sempre di un `PropertyChanged` evento per qualsiasi proprietà calcolata i cui valori sono utilizzati da altre proprietà nel modello o nel modello di visualizzazione.
+- Generare sempre l' `PropertyChanged` evento alla fine del metodo che apporta una modifica alla proprietà o quando l'oggetto è in uno stato sicuro. La generazione dell'evento interrompe l'operazione richiamando in modo sincrono i gestori dell'evento. Se questa situazione si verifica durante un'operazione, è possibile che l'oggetto venga esposto alle funzioni di callback quando si trova in uno stato non sicuro, parzialmente aggiornato. Inoltre, è possibile che le modifiche a catena vengano attivate dagli `PropertyChanged` eventi. Le modifiche di propagazione in genere richiedono il completamento degli aggiornamenti prima che la modifica a catena possa essere eseguita in modo sicuro.
+- Non viene mai generato un `PropertyChanged` evento se la proprietà non viene modificata. Ciò significa che è necessario confrontare i valori vecchi e nuovi prima di generare l' `PropertyChanged` evento.
+- Non generare mai l' `PropertyChanged` evento durante l'inizializzazione di una proprietà da parte del costruttore di un modello di visualizzazione. I controlli con associazione a dati nella vista non hanno sottoscritto la ricezione delle notifiche di modifica a questo punto.
+- Non generare mai più di un `PropertyChanged` evento con lo stesso argomento del nome di proprietà all'interno di una singola chiamata sincrona di un metodo pubblico di una classe. Ad esempio, data una `NumberOfItems` proprietà il cui archivio di backup è il `_numberOfItems` campo, se un metodo incrementa `_numberOfItems` 50 volte durante l'esecuzione di un ciclo, deve generare solo una notifica di modifica della proprietà sulla `NumberOfItems` proprietà una volta, dopo il completamento di tutto il lavoro. Per i metodi asincroni, generare l' `PropertyChanged` evento per un nome di proprietà specificato in ogni segmento sincrono di una catena di continuazione asincrona.
 
-L'app per dispositivi mobili eShopOnContainers usa la classe `ExtendedBindableObject` per fornire le notifiche di modifica, come illustrato nell'esempio di codice seguente:
+L'app per dispositivi mobili eShopOnContainers usa la `ExtendedBindableObject` classe per fornire le notifiche di modifica, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public abstract class ExtendedBindableObject : BindableObject  
@@ -204,9 +207,9 @@ public abstract class ExtendedBindableObject : BindableObject
 }
 ```
 
-La classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) di Novell. Form implementa l'interfaccia `INotifyPropertyChanged` e fornisce un metodo di [`OnPropertyChanged`](xref:Xamarin.Forms.BindableObject.OnPropertyChanged(System.String)) . La classe `ExtendedBindableObject` fornisce il metodo `RaisePropertyChanged` per richiamare la notifica delle modifiche alle proprietà e in questo modo utilizza la funzionalità fornita dalla classe `BindableObject`.
+La classe Novell. Form [`BindableObject`](xref:Xamarin.Forms.BindableObject) implementa l' `INotifyPropertyChanged` interfaccia e fornisce un [`OnPropertyChanged`](xref:Xamarin.Forms.BindableObject.OnPropertyChanged(System.String)) metodo. La `ExtendedBindableObject` classe fornisce il `RaisePropertyChanged` metodo per richiamare la notifica delle modifiche alle proprietà e, in questo caso, usa la funzionalità fornita dalla `BindableObject` classe.
 
-Ogni classe del modello di visualizzazione nell'app per dispositivi mobili eShopOnContainers deriva dalla classe `ViewModelBase`, che a sua volta deriva dalla classe `ExtendedBindableObject`. Pertanto, ogni classe del modello di visualizzazione usa il metodo `RaisePropertyChanged` nella classe `ExtendedBindableObject` per fornire la notifica delle modifiche alle proprietà. L'esempio di codice seguente illustra come l'app per dispositivi mobili eShopOnContainers richiama la notifica di modifica della proprietà usando un'espressione lambda:
+Ogni classe del modello di visualizzazione nell'app per dispositivi mobili eShopOnContainers deriva dalla `ViewModelBase` classe, che a sua volta deriva dalla `ExtendedBindableObject` classe. Pertanto, ogni classe del modello di visualizzazione usa il `RaisePropertyChanged` metodo nella `ExtendedBindableObject` classe per fornire la notifica delle modifiche alle proprietà. L'esempio di codice seguente illustra come l'app per dispositivi mobili eShopOnContainers richiama la notifica di modifica della proprietà usando un'espressione lambda:
 
 ```csharp
 public bool IsLogin  
@@ -229,41 +232,41 @@ Si noti che l'uso di un'espressione lambda in questo modo comporta un piccolo co
 
 Nelle app per dispositivi mobili, le azioni vengono in genere richiamate in risposta a un'azione dell'utente, ad esempio un clic su un pulsante, che può essere implementato creando un gestore eventi nel file code-behind. Tuttavia, nel modello MVVM, la responsabilità dell'implementazione dell'azione è il modello di visualizzazione e l'inserimento del codice nel code-behind deve essere evitato.
 
-I comandi costituiscono un modo pratico per rappresentare le azioni che possono essere associate ai controlli nell'interfaccia utente. Incapsulano il codice che implementa l'azione e consentono di mantenerlo separato dalla relativa rappresentazione visiva nella visualizzazione. Novell. Forms include controlli che possono essere connessi in modo dichiarativo a un comando e questi controlli richiameranno il comando quando l'utente interagisce con il controllo.
+I comandi costituiscono un modo pratico per rappresentare le azioni che possono essere associate ai controlli nell'interfaccia utente. Incapsulano il codice che implementa l'azione e consentono di mantenerlo separato dalla relativa rappresentazione visiva nella visualizzazione. Xamarin.Formsinclude controlli che possono essere connessi in modo dichiarativo a un comando. questi controlli richiameranno il comando quando l'utente interagisce con il controllo.
 
 I comportamenti consentono inoltre la connessione dichiarativa dei controlli a un comando. Tuttavia, i comportamenti possono essere usati per richiamare un'azione associata a un intervallo di eventi generati da un controllo. Pertanto, i comportamenti affrontano molti degli stessi scenari dei controlli abilitati per i comandi, garantendo al tempo stesso un maggiore livello di flessibilità e controllo. Inoltre, i comportamenti possono essere usati anche per associare oggetti comando o metodi con controlli non specificamente progettati per interagire con i comandi.
 
 ### <a name="implementing-commands"></a>Implementazione di comandi
 
-I modelli di visualizzazione in genere espongono le proprietà del comando per l'associazione dalla vista, ovvero istanze di oggetti che implementano l'interfaccia `ICommand`. Un numero di controlli Novell. Forms fornisce una proprietà `Command`, che può essere associata a un oggetto `ICommand` fornito dal modello di visualizzazione. L'interfaccia `ICommand` definisce un metodo `Execute`, che incapsula l'operazione stessa, un metodo `CanExecute`, che indica se il comando può essere richiamato e un evento `CanExecuteChanged` che si verifica quando si verificano modifiche che influiscono sull'esecuzione del comando. Le classi [`Command`](xref:Xamarin.Forms.Command) e [`Command<T>`](xref:Xamarin.Forms.Command) , fornite da Novell. Forms, implementano l'interfaccia `ICommand`, dove `T` è il tipo degli argomenti per `Execute` e `CanExecute`.
+I modelli di visualizzazione in genere espongono le proprietà del comando per l'associazione dalla vista, ovvero istanze di oggetti che implementano l' `ICommand` interfaccia. Una serie di Xamarin.Forms controlli fornisce una `Command` proprietà che può essere associata a un `ICommand` oggetto fornito dal modello di visualizzazione. L' `ICommand` interfaccia definisce un `Execute` metodo che incapsula l'operazione stessa, un `CanExecute` metodo che indica se il comando può essere richiamato e un `CanExecuteChanged` evento che si verifica quando si verificano modifiche che influiscono sull'esecuzione del comando. Le [`Command`](xref:Xamarin.Forms.Command) [`Command<T>`](xref:Xamarin.Forms.Command) classi e, fornite da Xamarin.Forms , implementano l' `ICommand` interfaccia, dove `T` è il tipo degli argomenti per `Execute` e `CanExecute` .
 
-All'interno di un modello di visualizzazione deve essere presente un oggetto di tipo [`Command`](xref:Xamarin.Forms.Command) o [`Command<T>`](xref:Xamarin.Forms.Command) per ogni proprietà pubblica nel modello di visualizzazione di tipo `ICommand`. Il costruttore `Command` o `Command<T>` richiede un oggetto di callback `Action` chiamato quando viene richiamato il metodo `ICommand.Execute`. Il `CanExecute` metodo è un parametro del costruttore facoltativo e è un `Func` che restituisce un `bool`.
+All'interno di un modello di visualizzazione deve essere presente un oggetto di tipo [`Command`](xref:Xamarin.Forms.Command) o [`Command<T>`](xref:Xamarin.Forms.Command) per ogni proprietà pubblica nel modello di visualizzazione di tipo `ICommand` . Il `Command` `Command<T>` costruttore o richiede un `Action` oggetto callback che viene chiamato quando `ICommand.Execute` viene richiamato il metodo. Il `CanExecute` metodo è un parametro del costruttore facoltativo e è un oggetto `Func` che restituisce un oggetto `bool` .
 
-Nel codice seguente viene illustrato il modo in cui un'istanza di [`Command`](xref:Xamarin.Forms.Command) , che rappresenta un comando Register, viene costruita specificando un delegato per il metodo del modello di visualizzazione `Register`:
+Il codice seguente mostra come un' [`Command`](xref:Xamarin.Forms.Command) istanza di, che rappresenta un comando Register, viene costruita specificando un delegato per il `Register` metodo del modello di visualizzazione:
 
 ```csharp
 public ICommand RegisterCommand => new Command(Register);
 ```
 
-Il comando viene esposto alla visualizzazione tramite una proprietà che restituisce un riferimento a un `ICommand`. Quando viene chiamato il metodo `Execute` sull'oggetto [`Command`](xref:Xamarin.Forms.Command) , viene semplicemente eseguita la chiamata al metodo nel modello di visualizzazione tramite il delegato specificato nel costruttore di `Command`.
+Il comando viene esposto alla visualizzazione tramite una proprietà che restituisce un riferimento a un oggetto `ICommand` . Quando il `Execute` metodo viene chiamato sull' [`Command`](xref:Xamarin.Forms.Command) oggetto, viene semplicemente trasmessa la chiamata al metodo nel modello di visualizzazione tramite il delegato specificato nel `Command` costruttore.
 
-Un metodo asincrono può essere richiamato da un comando usando le parole chiave `async` e `await` quando si specifica il delegato `Execute` del comando. Indica che il callback è un `Task` e deve essere atteso. Il codice seguente, ad esempio, Mostra come un'istanza di [`Command`](xref:Xamarin.Forms.Command) , che rappresenta un comando di accesso, viene costruita specificando un delegato per il metodo del modello di visualizzazione `SignInAsync`:
+Un metodo asincrono può essere richiamato da un comando usando le `async` `await` parole chiave e quando si specifica il `Execute` delegato del comando. Indica che il callback è un `Task` e deve essere atteso. Il codice seguente, ad esempio, Mostra come un' [`Command`](xref:Xamarin.Forms.Command) istanza di, che rappresenta un comando di accesso, viene costruita specificando un delegato al `SignInAsync` metodo di visualizzazione del modello:
 
 ```csharp
 public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
-I parametri possono essere passati all'`Execute` e `CanExecute` azioni utilizzando la classe [`Command<T>`](xref:Xamarin.Forms.Command) per creare un'istanza del comando. Il codice seguente, ad esempio, Mostra come viene usata un'istanza di `Command<T>` per indicare che il metodo di `NavigateAsync` richiederà un argomento di tipo `string`:
+I parametri possono essere passati alle `Execute` `CanExecute` azioni e usando la [`Command<T>`](xref:Xamarin.Forms.Command) classe per creare un'istanza del comando. Il codice seguente, ad esempio, Mostra come un' `Command<T>` istanza viene utilizzata per indicare che il `NavigateAsync` metodo richiederà un argomento di tipo `string` :
 
 ```csharp
 public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
-Nelle classi [`Command`](xref:Xamarin.Forms.Command) e [`Command<T>`](xref:Xamarin.Forms.Command) , il delegato al metodo `CanExecute` in ogni costruttore è facoltativo. Se non si specifica un delegato, il `Command` restituirà `true` per `CanExecute`. Tuttavia, il modello di visualizzazione può indicare una modifica nello stato di `CanExecute` del comando chiamando il metodo `ChangeCanExecute` sull'oggetto `Command`. In questo modo si genera l'evento `CanExecuteChanged`. Tutti i controlli nell'interfaccia utente associati al comando aggiorneranno lo stato abilitato in modo da riflettere la disponibilità del comando associato a dati.
+In entrambe le [`Command`](xref:Xamarin.Forms.Command) [`Command<T>`](xref:Xamarin.Forms.Command) classi e, il delegato al `CanExecute` metodo in ogni costruttore è facoltativo. Se un delegato non è specificato, `Command` restituirà `true` per `CanExecute` . Tuttavia, il modello di visualizzazione può indicare una modifica nello stato del comando chiamando `CanExecute` il `ChangeCanExecute` metodo sull' `Command` oggetto. `CanExecuteChanged`In questo modo viene generato l'evento. Tutti i controlli nell'interfaccia utente associati al comando aggiorneranno lo stato abilitato in modo da riflettere la disponibilità del comando associato a dati.
 
 #### <a name="invoking-commands-from-a-view"></a>Richiamo di comandi da una vista
 
-Nell'esempio di codice riportato di seguito viene illustrato il modo in cui un [`Grid`](xref:Xamarin.Forms.Grid) nel `LoginView` viene associato al `RegisterCommand` della classe `LoginViewModel` utilizzando un'istanza di [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) :
+Nell'esempio di codice seguente viene illustrato il modo [`Grid`](xref:Xamarin.Forms.Grid) in cui un oggetto nell'oggetto viene `LoginView` associato all'oggetto `RegisterCommand` nella `LoginViewModel` classe utilizzando un' [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) istanza:
 
 ```xaml
 <Grid Grid.Column="1" HorizontalOptions="Center">  
@@ -274,7 +277,7 @@ Nell'esempio di codice riportato di seguito viene illustrato il modo in cui un [
 </Grid>
 ```
 
-È inoltre possibile definire facoltativamente un parametro di comando utilizzando la proprietà [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) . Il tipo dell'argomento previsto è specificato nei metodi di `Execute` e `CanExecute` destinazione. Il [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) richiamerà automaticamente il comando di destinazione quando l'utente interagisce con il controllo associato. Il parametro del comando, se specificato, viene passato come argomento al delegato `Execute` del comando.
+È anche possibile definire facoltativamente un parametro di comando utilizzando la [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) Proprietà. Il tipo dell'argomento previsto è specificato nei metodi di `Execute` `CanExecute` destinazione e. [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)Richiama automaticamente il comando di destinazione quando l'utente interagisce con il controllo associato. Il parametro del comando, se specificato, viene passato come argomento al delegato del comando `Execute` .
 
 <a name="implementing_behaviors" />
 
@@ -282,15 +285,15 @@ Nell'esempio di codice riportato di seguito viene illustrato il modo in cui un [
 
 I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. La funzionalità viene invece implementata in una classe di comportamento e associata al controllo come se fosse parte del controllo stesso. I comportamenti consentono di implementare il codice che sarebbe normalmente necessario scrivere come code-behind, perché interagisce direttamente con l'API del controllo, in modo che possa essere collegato in modo conciso al controllo e incluso in un pacchetto per il riutilizzo in più di una vista o un'app. Nel contesto di MVVM, i comportamenti sono un approccio utile per connettere i controlli ai comandi.
 
-Un comportamento associato a un controllo tramite le proprietà associate è noto come *comportamento associato*. Il comportamento può quindi usare l'API esposta dell'elemento a cui è collegata per aggiungere funzionalità a tale controllo, o altri controlli, nella struttura ad albero visuale della visualizzazione. L'app per dispositivi mobili eShopOnContainers contiene la classe `LineColorBehavior`, che è un comportamento associato. Per ulteriori informazioni su questo comportamento, vedere [visualizzazione degli errori di convalida](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
+Un comportamento associato a un controllo tramite le proprietà associate è noto come *comportamento associato*. Il comportamento può quindi usare l'API esposta dell'elemento a cui è collegata per aggiungere funzionalità a tale controllo, o altri controlli, nella struttura ad albero visuale della visualizzazione. L'app per dispositivi mobili eShopOnContainers contiene la `LineColorBehavior` classe, che è un comportamento associato. Per ulteriori informazioni su questo comportamento, vedere [visualizzazione degli errori di convalida](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
 
-Un comportamento Novell. Forms è una classe che deriva dalla classe [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) , in cui `T` è il tipo del controllo a cui deve essere applicato il comportamento. Queste classi forniscono metodi `OnAttachedTo` e `OnDetachingFrom`, che devono essere sottoposti a override per fornire la logica che verrà eseguita quando il comportamento viene collegato e scollegato dai controlli.
+Un Xamarin.Forms comportamento è una classe che deriva dalla [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe o, dove `T` è il tipo del controllo a cui deve essere applicato il comportamento. Queste classi forniscono `OnAttachedTo` `OnDetachingFrom` i metodi e, che devono essere sottoposti a override per fornire la logica che verrà eseguita quando il comportamento viene collegato e scollegato dai controlli.
 
-Nell'app per dispositivi mobili eShopOnContainers la classe `BindableBehavior<T>` deriva dalla classe [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) . Lo scopo della classe `BindableBehavior<T>` è fornire una classe base per i comportamenti di Novell. Forms che richiedono l'impostazione [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamento sul controllo associato.
+Nell'app per dispositivi mobili eShopOnContainers la `BindableBehavior<T>` classe deriva dalla [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe. Lo scopo della `BindableBehavior<T>` classe è fornire una classe base per i Xamarin.Forms comportamenti che richiedono l'impostazione del [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) comportamento sul controllo associato.
 
-La classe `BindableBehavior<T>` fornisce un metodo di `OnAttachedTo` sottoponibile a override che imposta il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamento e un metodo `OnDetachingFrom` sottoponibile a override che pulisce il `BindingContext`. La classe archivia anche un riferimento al controllo associato nella proprietà `AssociatedObject`.
+La `BindableBehavior<T>` classe fornisce un metodo sottoponibile `OnAttachedTo` a override che imposta l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamento e un metodo sottoponibile a override `OnDetachingFrom` che pulisce l'oggetto `BindingContext` . La classe archivia anche un riferimento al controllo associato nella proprietà `AssociatedObject`.
 
-L'app per dispositivi mobili eShopOnContainers include una classe `EventToCommandBehavior`, che esegue un comando in risposta a un evento che si verifica. Questa classe deriva dalla classe `BindableBehavior<T>` in modo che il comportamento possa essere associato ed esegua una `ICommand` specificata da una proprietà `Command` quando viene utilizzato il comportamento. L'esempio di codice seguente visualizza la classe `EventToCommandBehavior`:
+L'app per dispositivi mobili eShopOnContainers include una `EventToCommandBehavior` classe, che esegue un comando in risposta a un evento che si verifica. Questa classe deriva dalla classe in `BindableBehavior<T>` modo che il comportamento possa essere associato a ed eseguire un oggetto `ICommand` specificato da una `Command` proprietà quando viene utilizzato il comportamento. L'esempio di codice seguente visualizza la classe `EventToCommandBehavior`:
 
 ```csharp
 public class EventToCommandBehavior : BindableBehavior<View>  
@@ -334,13 +337,13 @@ public class EventToCommandBehavior : BindableBehavior<View>
 }
 ```
 
-I metodi `OnAttachedTo` e `OnDetachingFrom` vengono utilizzati per registrare e annullare la registrazione di un gestore eventi per l'evento definito nella proprietà `EventName`. Quindi, quando viene generato l'evento, viene richiamato il metodo `OnFired`, che esegue il comando.
+I `OnAttachedTo` `OnDetachingFrom` metodi e vengono utilizzati per registrare e annullare la registrazione di un gestore eventi per l'evento definito nella `EventName` Proprietà. Quindi, quando viene generato l'evento, `OnFired` viene richiamato il metodo, che esegue il comando.
 
-Il vantaggio di usare la `EventToCommandBehavior` per eseguire un comando quando viene generato un evento è che i comandi possono essere associati a controlli che non sono stati progettati per interagire con i comandi. Inoltre, sposta il codice di gestione degli eventi per visualizzare i modelli, dove possono essere unit test.
+Il vantaggio di usare `EventToCommandBehavior` per eseguire un comando quando viene generato un evento è che i comandi possono essere associati a controlli che non sono stati progettati per interagire con i comandi. Inoltre, sposta il codice di gestione degli eventi per visualizzare i modelli, dove possono essere unit test.
 
 #### <a name="invoking-behaviors-from-a-view"></a>Richiamo di comportamenti da una vista
 
-Il `EventToCommandBehavior` è particolarmente utile per il fissaggio di un comando a un controllo che non supporta i comandi. Ad esempio, il `ProfileView` usa il `EventToCommandBehavior` per eseguire il `OrderDetailCommand` quando viene attivato l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) nell' [`ListView`](xref:Xamarin.Forms.ListView) in cui sono elencati gli ordini dell'utente, come illustrato nel codice seguente:
+`EventToCommandBehavior`È particolarmente utile per alleghiare un comando a un controllo che non supporta i comandi. Ad esempio, `ProfileView` USA per `EventToCommandBehavior` eseguire `OrderDetailCommand` quando l' [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) evento viene attivato nell'oggetto [`ListView`](xref:Xamarin.Forms.ListView) che elenca gli ordini dell'utente, come illustrato nel codice seguente:
 
 ```xaml
 <ListView>  
@@ -354,7 +357,7 @@ Il `EventToCommandBehavior` è particolarmente utile per il fissaggio di un coma
 </ListView>
 ```
 
-In fase di esecuzione, il `EventToCommandBehavior` risponderà all'interazione con l' [`ListView`](xref:Xamarin.Forms.ListView). Quando si seleziona un elemento nella `ListView`, viene attivato l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) , che eseguirà il `OrderDetailCommand` nel `ProfileViewModel`. Per impostazione predefinita, gli argomenti dell'evento per l'evento vengono passati al comando. Questi dati vengono convertiti come passati tra l'origine e la destinazione dal convertitore specificato nella proprietà `EventArgsConverter`, che restituisce l' [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) della `ListView` dal [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs). Pertanto, quando viene eseguita la `OrderDetailCommand`, il `Order` selezionato viene passato come parametro all'azione registrata.
+In fase di esecuzione, `EventToCommandBehavior` risponderà all'interazione con il [`ListView`](xref:Xamarin.Forms.ListView) . Quando si seleziona un elemento in `ListView` , l' [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) evento viene attivato, che eseguirà `OrderDetailCommand` in `ProfileViewModel` . Per impostazione predefinita, gli argomenti dell'evento per l'evento vengono passati al comando. Questi dati vengono convertiti come passati tra l'origine e la destinazione dal convertitore specificato nella `EventArgsConverter` proprietà, che restituisce l'oggetto [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) dell'oggetto `ListView` da [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) . Pertanto, quando `OrderDetailCommand` viene eseguito, l'oggetto selezionato `Order` viene passato come parametro all'azione registrata.
 
 Per ulteriori informazioni sui comportamenti, vedere [comportamenti](~/xamarin-forms/app-fundamentals/behaviors/index.md).
 

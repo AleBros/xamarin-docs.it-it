@@ -1,22 +1,25 @@
 ---
-title: Posizionamento del video personalizzato
-description: Questo articolo illustra come implementare un indicatore di posizione personalizzato in un'applicazione lettore video con Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Questo articolo illustra come implementare una barra di posizione personalizzata in un'applicazione lettore video usando Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97d32a03ee10e2f3b0a7442d1d70dab9236059b4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650651"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135083"
 ---
 # <a name="custom-video-positioning"></a>Posizionamento del video personalizzato
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I controlli di trasporto implementati da ogni piattaforma includono un indicatore di posizione. L'indicatore è simile a un dispositivo di scorrimento o una barra di scorrimento e mostra la posizione corrente del video all'interno della durata totale. Inoltre, l'utente può modificare l'indicatore di posizione per spostarsi avanti o indietro in una nuova posizione nel video.
 
@@ -342,7 +345,7 @@ Il metodo `SetTimeToEnd` viene chiamato dai gestori di proprietà modificata di 
 
 ## <a name="a-custom-slider-for-video"></a>Dispositivo di scorrimento personalizzato per i video
 
-È possibile scrivere un controllo personalizzato per un indicatore di posizione oppure usare `Slider` di Xamarin.Forms o una classe che deriva da `Slider`, ad esempio la classe `PositionSlider` seguente. La classe definisce due nuove proprietà denominate `Duration` e `Position` di tipo `TimeSpan` progettate per essere associate alle due proprietà con lo stesso nome in `VideoPlayer`. Si noti che la modalità di associazione predefinita della proprietà `Position` è bidirezionale:
+È possibile scrivere un controllo personalizzato per una barra di posizione o usare Xamarin.Forms `Slider` o una classe che deriva da `Slider` , ad esempio la `PositionSlider` classe seguente. La classe definisce due nuove proprietà denominate `Duration` e `Position` di tipo `TimeSpan` progettate per essere associate alle due proprietà con lo stesso nome in `VideoPlayer`. Si noti che la modalità di associazione predefinita della proprietà `Position` è bidirezionale:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -414,7 +417,7 @@ Tuttavia, l'implementazione Android di `Slider` ha solo 1.000 passaggi discreti 
 
 ## <a name="using-the-positionslider"></a>Uso di PositionSlider
 
-La documentazione [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) per la piattaforma `Position` UWP segnala l'associazione alla proprietà perché la proprietà viene aggiornata frequentemente. Nella documentazione viene consigliato di usare un timer per eseguire una query della proprietà `Position`.
+La documentazione relativa a UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) informa sull'associazione alla `Position` proprietà perché la proprietà viene aggiornata di frequente. Nella documentazione viene consigliato di usare un timer per eseguire una query della proprietà `Position`.
 
 Sebbene sia un ottimo consiglio, le tre classi `VideoPlayerRenderer` usano già indirettamente un timer per aggiornare la proprietà `Position`. La proprietà `Position` viene modificata in un gestore per l'evento `UpdateStatus` che viene attivato solo 10 volte al secondo.
 

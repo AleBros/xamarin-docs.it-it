@@ -1,39 +1,42 @@
 ---
-title: Concetti avanzati di Novell. Forms & elementi interni
-description: Informazioni sui concetti avanzati e i meccanismi interni di Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/20/2020
-ms.openlocfilehash: 98e488dbf8446ee151c342c73bf9b0a8d9ff7a56
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+title: Xamarin.Formsconcetti avanzati & elementi interni
+description: Informazioni sui concetti avanzati e sugli elementi interni di Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070252"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139035"
 ---
-# <a name="xamarinforms-advanced-concepts--internals"></a>Concetti avanzati di Novell. Forms & elementi interni
+# <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Formsconcetti avanzati & elementi interni
 
-_Informazioni sui concetti avanzati e gli elementi interni di Novell. Forms._
+_Informazioni sui concetti avanzati e sugli elementi interni di Xamarin.Forms ._
 
 ## <a name="controls-class-hierarchy"></a>[Gerarchia di classi di controlli](class-hierarchy.md)
 
-Informazioni sulla gerarchia dei tipi usati per creare l'interfaccia utente di un'applicazione in Xamarin.Forms.
+Informazioni sulla gerarchia dei tipi usati per creare l'interfaccia utente di un' Xamarin.Forms applicazione.
 
 ## <a name="dependency-resolution"></a>[Risoluzione delle dipendenze](dependency-resolution.md)
 
-Informazioni su come inserire un metodo di risoluzione delle dipendenze in Novell. Forms, in modo che un'applicazione abbia il controllo sulla creazione e sulla durata di renderer, effetti e implementazioni di `DependencyService` personalizzati.
+Viene illustrato come inserire un metodo di risoluzione delle dipendenze in Xamarin.Forms , in modo che un'applicazione abbia il controllo sulla creazione e sulla durata di renderer, effetti e `DependencyService` implementazioni personalizzati.
 
 ## <a name="experimental-flags"></a>[Flag sperimentali](experimental-flags.md)
 
-I flag sperimentali Novell. Forms consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile.
+Xamarin.Formsi flag sperimentali consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile.
 
 ## <a name="fast-renderers"></a>[Renderer veloci](fast-renderers.md)
 
-Informazioni sui renderer veloci che riducono i costi di ingrandimento e rendering dei controlli di Xamarin.Forms in Android appiattendo la gerarchia dei controlli nativi risultante.
+Informazioni sui renderer veloci, che riducono l'inflazione e i costi di rendering di un Xamarin.Forms controllo in Android, rendendo flat la gerarchia dei controlli nativi risultante.
 
-## <a name="source-link"></a>[Collegamento a un'origine](sourcelink.md)
+## <a name="source-link"></a>[Collegamento all'origine](sourcelink.md)
 
-Informazioni su come eseguire il debug dell'applicazione nel codice sorgente di Xamarin.Forms.
+Informazioni su come eseguire il debug dell'applicazione nel Xamarin.Forms codice sorgente.

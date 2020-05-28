@@ -1,71 +1,74 @@
 ---
-title: Eseguire ricerche nei dati con ricerca di Azure e Xamarin.Forms
-description: Questo articolo illustra come usare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/05/2016
-ms.openlocfilehash: cd5aaac0f41ee6e4afd79397a77635e66abad219
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+title: Cerca i dati con ricerca di Azure eXamarin.Forms
+description: Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 69962bbb51a493ba2bcaed5d3c9407c5aafe471c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489791"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133289"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Xamarin.Forms
+# <a name="search-data-with-azure-search-and-xamarinforms"></a>Cerca i dati con ricerca di Azure eXamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
-_Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms._
+_Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione._
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
-Come gli indici e documenti, i dati vengono archiviati in ricerca di Azure. Un' *indice* è un archivio di dati che possono essere cercati dal servizio di ricerca di Azure ed è concettualmente simile a una tabella di database. Oggetto *documento* è una singola unità di dati ricercabili nell'indice ed è concettualmente simile a una riga di database. Quando il caricamento di documenti e l'invio di query di ricerca in ricerca di Azure, le richieste vengono effettuate in un indice specifico nel servizio di ricerca.
+I dati vengono archiviati in ricerca di Azure come indici e documenti. Un *Indice* è un archivio di dati che possono essere cercati dal servizio ricerca di Azure ed è concettualmente simile a una tabella di database. Un *documento* è una singola unità di dati ricercabili in un indice ed è concettualmente simile a una riga di database. Quando si caricano documenti e si inviano query di ricerca in ricerca di Azure, le richieste vengono effettuate a un indice specifico nel servizio di ricerca.
 
 Ogni richiesta effettuata a ricerca di Azure deve includere il nome del servizio e una chiave API. Esistono due tipi di chiave API:
 
-- *Le chiavi amministratore* concedere diritti completi a tutte le operazioni. Ciò include la gestione del servizio, la creazione e l'eliminazione di indici e origini dati.
-- *Chiavi di query* concedere l'accesso in lettura a indici e documenti e deve essere utilizzato dalle applicazioni che inviano richieste di ricerca.
+- Le *chiavi amministratore* concedono diritti completi a tutte le operazioni. Ciò include la gestione del servizio, la creazione e l'eliminazione di indici e origini dati.
+- Le *chiavi di query* concedono l'accesso in sola lettura agli indici e ai documenti e devono essere usate dalle applicazioni che inviano richieste di ricerca.
 
-La richiesta più comune in ricerca di Azure consiste nell'eseguire una query. Esistono due tipi di query che può essere inviato:
+La richiesta più comune a ricerca di Azure consiste nell'eseguire una query. Esistono due tipi di query che è possibile inviare:
 
-- Oggetto *ricerca* query cerca uno o più elementi in tutti i campi ricercabili in un indice. Le query di ricerca vengono compilate usando la sintassi semplificata, o la sintassi di query Lucene. Per altre informazioni, vedere [semplice sintassi di query in ricerca di Azure](/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/), e [sintassi di query Lucene in ricerca di Azure](/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/).
-- Oggetto *filtro* query valuta un'espressione booleana su tutti i campi filtrabili in un indice. Filtrare le query vengono compilate usando un subset del linguaggio di filtro OData. Per altre informazioni, vedere [sintassi delle espressioni OData per ricerca di Azure](/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/).
+- Una query di *ricerca* cerca uno o più elementi in tutti i campi disponibili per la ricerca in un indice. Le query di ricerca vengono compilate usando la sintassi semplificata o la sintassi di query Lucene. Per altre informazioni, vedere [sintassi di query semplice in ricerca di Azure](/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/)e [sintassi di query Lucene in ricerca di Azure](/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/).
+- Una query di *filtro* valuta un'espressione booleana su tutti i campi filtrabili in un indice. Le query di filtro vengono compilate utilizzando un subset del linguaggio del filtro OData. Per altre informazioni, vedere [sintassi delle espressioni OData per ricerca di Azure](/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/).
 
-Query di ricerca e filtrare le query possono essere utilizzate insieme o separatamente. Se usati insieme, la query di filtro viene applicata per primo per l'intero indice e quindi la query di ricerca viene eseguita sui risultati della query di filtro.
+Le query di ricerca e di filtro possono essere usate separatamente o insieme. Quando vengono utilizzate insieme, la query del filtro viene applicata prima all'intero indice, quindi la query di ricerca viene eseguita sui risultati della query del filtro.
 
-Ricerca di Azure supporta anche il recupero dei suggerimenti in base a input di ricerca. Per altre informazioni, vedere [le query di suggerimento](#suggestions).
+Ricerca di Azure supporta anche il recupero di suggerimenti basati sull'input di ricerca. Per altre informazioni, vedere [query di suggerimento](#suggestions).
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
 
-## <a name="setup"></a>Programma di installazione
+## <a name="setup"></a>Configurazione
 
-Il processo per l'integrazione di ricerca di Azure in un'applicazione Xamarin.Forms è come segue:
+Il processo per l'integrazione di ricerca di Azure in un' Xamarin.Forms applicazione è il seguente:
 
-1. Creare un servizio di ricerca di Azure. Per altre informazioni, vedere [creare un servizio di ricerca di Azure usando il portale di Azure](/azure/search/search-create-service-portal/).
-1. Rimuovere Silverlight come framework di destinazione dalla soluzione Xamarin.Forms libreria di classi portabile (PCL). È possibile modificare il profilo di libreria di classi Portabile a qualsiasi profilo che supporta lo sviluppo multipiattaforma, ma non supporta Silverlight, ad esempio profilo 151 o 92.
-1. Aggiungere il [libreria di ricerca di Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search) pacchetto NuGet al progetto libreria di classi Portabile della soluzione Xamarin.Forms.
+1. Creare un servizio di ricerca di Azure. Per altre informazioni, vedere [creare un servizio di ricerca di Azure tramite il portale di Azure](/azure/search/search-create-service-portal/).
+1. Rimuovere Silverlight come Framework di destinazione dalla libreria di classi portabile Xamarin.Forms (PCL) della soluzione. Questa operazione può essere eseguita modificando il profilo PCL in qualsiasi profilo che supporta lo sviluppo multipiattaforma, ma non supporta Silverlight, ad esempio profile 151 o profile 92.
+1. Aggiungere il pacchetto NuGet della [libreria di ricerca Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search) al progetto PCL nella Xamarin.Forms soluzione.
 
-Dopo aver eseguito questi passaggi, l'API di libreria di ricerca di Microsoft è utilizzabile per gestire origini dati e gli indici di ricerca, caricare e gestire documenti ed eseguire query.
+Dopo aver eseguito questi passaggi, è possibile usare l'API di Microsoft Search Library per gestire gli indici di ricerca e le origini dati, caricare e gestire documenti ed eseguire query.
 
-## <a name="creating-the-azure-search-index"></a>Creazione dell'indice di ricerca di Azure
+## <a name="creating-the-azure-search-index"></a>Creazione di un indice di Ricerca di Azure
 
-È necessario definire uno schema di indice che viene eseguito il mapping alla struttura dei dati da cercare. Ciò può essere eseguita nel portale di Azure o a livello di codice mediante il `SearchServiceClient` classe. Questa classe gestisce le connessioni a ricerca di Azure e può essere utilizzata per creare un indice. Esempio di codice seguente viene illustrato come creare un'istanza di questa classe:
+È necessario definire uno schema dell'indice che esegue il mapping alla struttura dei dati in cui eseguire la ricerca. Questa operazione può essere eseguita nel portale di Azure o a livello di codice tramite la `SearchServiceClient` classe. Questa classe gestisce le connessioni a ricerca di Azure e può essere usata per creare un indice. Nell'esempio di codice riportato di seguito viene illustrato come creare un'istanza di questa classe:
 
 ```csharp
 var searchClient =
   new SearchServiceClient(Constants.SearchServiceName, new SearchCredentials(Constants.AdminApiKey));
 ```
 
-Il `SearchServiceClient` overload del costruttore accetta un nome di servizio di ricerca e una `SearchCredentials` dell'oggetto come argomenti, con la `SearchCredentials` ritorno a capo oggetto il *chiave amministratore* per il servizio di ricerca di Azure. Il *chiave di amministrazione* è necessaria per creare un indice.
+L' `SearchServiceClient` Overload del costruttore accetta un nome del servizio di ricerca e un `SearchCredentials` oggetto come argomenti, con l'oggetto che esegue `SearchCredentials` il wrapping della *chiave di amministrazione* per il servizio ricerca di Azure. Per creare un indice, è necessaria la *chiave amministratore* .
 
 > [!NOTE]
-> Un singolo `SearchServiceClient` istanza deve essere usata in un'applicazione per evitare l'apertura di un numero eccessivo di connessioni a ricerca di Azure.
+> `SearchServiceClient`È consigliabile usare una singola istanza in un'applicazione per evitare l'apertura di un numero eccessivo di connessioni a ricerca di Azure.
 
-Un indice è definito dal `Index` dell'oggetto, come illustrato nell'esempio di codice seguente:
+Un indice viene definito dall' `Index` oggetto, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 static void CreateSearchIndex()
@@ -91,43 +94,43 @@ static void CreateSearchIndex()
 }
 ```
 
-Il `Index.Name` proprietà deve essere impostata sul nome dell'indice e il `Index.Fields` deve essere impostata su una matrice di `Field` oggetti. Ogni `Field` istanza specifica un nome di un tipo e le proprietà, che specificano come viene usato il campo. Queste proprietà includono:
+La `Index.Name` proprietà deve essere impostata sul nome dell'indice e la `Index.Fields` proprietà deve essere impostata su una matrice di `Field` oggetti. Ogni `Field` istanza specifica un nome, un tipo e tutte le proprietà che specificano come viene usato il campo. Queste proprietà includono:
 
-- `IsKey` : indica se il campo è la chiave dell'indice. Un solo campo nell'indice, di tipo `DataType.String`, deve essere designato come campo di chiave.
-- `IsFacetable` : indica se è possibile eseguire l'esplorazione in base a facet su questo campo. Il valore predefinito è `false`.
-- `IsFilterable` : indica se il campo può essere usato nelle query di filtro. Il valore predefinito è `false`.
-- `IsRetrievable` : indica se il campo può essere recuperato nei risultati della ricerca. Il valore predefinito è `true`.
-- `IsSearchable` : indica se il campo è incluso nelle ricerche full-text. Il valore predefinito è `false`.
-- `IsSortable` : indica se il campo può essere utilizzato in `OrderBy` espressioni. Il valore predefinito è `false`.
-
-> [!NOTE]
-> La modifica di un indice dopo la distribuzione comporta la ricompilazione e ricaricare i dati.
-
-Un' `Index` oggetti è possono specificare facoltativamente un `Suggesters` proprietà, che definisce i campi dell'indice da utilizzare per supportare il completamento automatico o le query di suggerimento di ricerca. Il `Suggesters` proprietà deve essere impostata su una matrice di `Suggester` gli oggetti che definiscono i campi che vengono usati per compilare la ricerca dei risultati di suggerimento.
-
-Dopo aver creato il `Index` dell'oggetto, l'indice viene creato chiamando `Indexes.Create` nel `SearchServiceClient` istanza.
+- `IsKey`: indica se il campo è la chiave dell'indice. Solo un campo nell'indice, di tipo `DataType.String` , deve essere designato come campo chiave.
+- `IsFacetable`: indica se è possibile eseguire l'esplorazione in base a facet in questo campo. Il valore predefinito è `false`.
+- `IsFilterable`: indica se il campo può essere usato nelle query di filtro. Il valore predefinito è `false`.
+- `IsRetrievable`: indica se il campo può essere recuperato nei risultati della ricerca. Il valore predefinito è `true`.
+- `IsSearchable`: indica se il campo è incluso nelle ricerche full-text. Il valore predefinito è `false`.
+- `IsSortable`: indica se il campo può essere utilizzato nelle `OrderBy` espressioni. Il valore predefinito è `false`.
 
 > [!NOTE]
-> Quando si crea un indice da un'applicazione deve mantenere reattiva, usare il `Indexes.CreateAsync` (metodo).
+> La modifica di un indice dopo la distribuzione comporta la ricompilazione e il ricaricamento dei dati.
+
+Un `Index` oggetto può facoltativamente specificare una `Suggesters` proprietà, che definisce i campi dell'indice da utilizzare per supportare le query di ricerca o di completamento automatico. La `Suggesters` proprietà deve essere impostata su una matrice di `Suggester` oggetti che definiscono i campi utilizzati per compilare i risultati dei suggerimenti di ricerca.
+
+Dopo la creazione dell' `Index` oggetto, l'indice viene creato chiamando `Indexes.Create` sull' `SearchServiceClient` istanza.
+
+> [!NOTE]
+> Quando si crea un indice da un'applicazione che deve essere mantenuta reattiva, utilizzare il `Indexes.CreateAsync` metodo.
 
 Per altre informazioni, vedere [creare un indice di ricerca di Azure con .NET SDK](/azure/search/search-create-index-dotnet/).
 
-## <a name="deleting-the-azure-search-index"></a>L'eliminazione dell'indice di ricerca di Azure
+## <a name="deleting-the-azure-search-index"></a>Eliminazione dell'indice di ricerca di Azure
 
-Un indice può essere eliminato chiamando `Indexes.Delete` nella `SearchServiceClient` istanza:
+Un indice può essere eliminato chiamando `Indexes.Delete` sull' `SearchServiceClient` istanza:
 
 ```csharp
 searchClient.Indexes.Delete(Constants.Index);
 ```
 
-## <a name="uploading-data-to-the-azure-search-index"></a>Caricamento dei dati per l'indice di ricerca di Azure
+## <a name="uploading-data-to-the-azure-search-index"></a>Caricamento dei dati nell'indice di ricerca di Azure
 
-Dopo aver definito l'indice, i dati possono essere caricati usando uno dei due modelli:
+Dopo aver definito l'indice, è possibile caricarvi i dati usando uno dei due modelli seguenti:
 
-- **Modello pull** : i dati vengono periodicamente inseriti da Azure Cosmos DB, Database SQL di Azure, archiviazione Blob di Azure o SQL Server ospitato in una macchina virtuale di Azure.
-- **Modello push** : i dati vengono inviati a livello di codice per l'indice. Si tratta del modello adottato in questo articolo.
+- **Modello pull** : i dati vengono inseriti periodicamente da Azure Cosmos DB, dal database SQL di Azure, dall'archiviazione BLOB di Azure o da SQL Server ospitati in una macchina virtuale di Azure.
+- **Modello push** : i dati vengono inviati a livello di codice all'indice. Questo è il modello adottato in questo articolo.
 
-Oggetto `SearchIndexClient` istanza deve essere creata per importare dati in corrispondenza dell'indice. Questa operazione può essere eseguita chiamando il `SearchServiceClient.Indexes.GetClient` metodo, come illustrato nell'esempio di codice seguente:
+`SearchIndexClient`È necessario creare un'istanza di per importare dati nell'indice. Questa operazione può essere eseguita chiamando il `SearchServiceClient.Indexes.GetClient` metodo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 static void UploadDataToSearchIndex()
@@ -159,29 +162,29 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-I dati da importare in corrispondenza dell'indice vengano compresso come un `IndexBatch` oggetto che incapsula una raccolta di `IndexAction` oggetti. Ogni `IndexAction` istanza contiene un documento e una proprietà che indica l'azione da eseguire sul documento di ricerca di Azure. Nell'esempio di codice precedente, il `IndexAction.Upload` azione viene specificata, in base alla quale il documento viene inserito in corrispondenza dell'indice se è nuovo, o sostituita se esiste già. Il `IndexBatch` oggetto viene quindi inviato all'indice chiamando il `Documents.Index` metodo su di `SearchIndexClient` oggetto. Per informazioni sulle altre azioni di indicizzazione, vedere [decidere quale azione di indicizzazione usare](/azure/search/search-import-data-dotnet#decide-which-indexing-action-to-use).
+I dati da importare nell'indice vengono inclusi nel pacchetto come `IndexBatch` oggetto, che incapsula una raccolta di `IndexAction` oggetti. Ogni `IndexAction` istanza contiene un documento e una proprietà che indica a ricerca di Azure l'azione da eseguire sul documento. Nell'esempio di codice precedente `IndexAction.Upload` viene specificata l'azione, che consente di inserire il documento nell'indice se è nuovo o di sostituirlo se esiste già. L' `IndexBatch` oggetto viene quindi inviato all'indice chiamando il `Documents.Index` metodo sull' `SearchIndexClient` oggetto. Per informazioni sulle altre azioni di indicizzazione, vedere [decidere quale azione di indicizzazione usare](/azure/search/search-import-data-dotnet#decide-which-indexing-action-to-use).
 
 > [!NOTE]
-> Solo 1000 documenti possono essere inclusi in una singola richiesta di indicizzazione.
+> In una singola richiesta di indicizzazione è possibile includere solo 1000 documenti.
 
-Si noti che nell'esempio di codice precedente, il `monkeyList` raccolta viene creata come un'oggetto anonimo da una raccolta di `Monkey` oggetti. Ciò consente di creare i dati per il `id` campo che risolve il mapping di maiuscole minuscole Pascal `Monkey` i nomi dei campi di indice di ricerca di nomi di proprietà in notazione camel. In alternativa, questo mapping può essere eseguito anche aggiungendo il `[SerializePropertyNamesAsCamelCase]` dell'attributo di `Monkey` classe.
+Si noti che nell'esempio di codice precedente la `monkeyList` raccolta viene creata come oggetto anonimo da una raccolta di `Monkey` oggetti. In questo modo vengono creati i dati per il `id` campo e viene risolto il mapping dei nomi delle proprietà del case Pascal `Monkey` ai nomi dei campi dell'indice di ricerca Camel. In alternativa, questo mapping può essere eseguito anche aggiungendo l' `[SerializePropertyNamesAsCamelCase]` attributo alla `Monkey` classe.
 
-Per altre informazioni, vedere [caricare i dati in ricerca di Azure usando .NET SDK](/azure/search/search-import-data-dotnet/).
+Per altre informazioni, vedere [caricare dati in ricerca di Azure con .NET SDK](/azure/search/search-import-data-dotnet/).
 
-## <a name="querying-the-azure-search-index"></a>L'esecuzione di query dell'indice di ricerca di Azure
+## <a name="querying-the-azure-search-index"></a>Esecuzione di query sull'indice di ricerca di Azure
 
-Oggetto `SearchIndexClient` istanza deve essere creata per eseguire query su un indice. Quando un'applicazione esegue le query, è consigliabile seguire il principio del privilegio minimo e creare un `SearchIndexClient` direttamente, passando il *chiave di query* come argomento. Ciò garantisce che gli utenti abbiano accesso in lettura a indici e documenti. Questo metodo viene dimostrato nell'esempio di codice seguente:
+`SearchIndexClient`Per eseguire una query su un indice, è necessario creare un'istanza. Quando un'applicazione esegue query, è consigliabile seguire il principio dei privilegi minimi e creare direttamente un oggetto `SearchIndexClient` , passando la *chiave di query* come argomento. In questo modo si garantisce che gli utenti dispongano dell'accesso in sola lettura a indici e documenti. Questo approccio viene illustrato nell'esempio di codice seguente:
 
 ```csharp
 SearchIndexClient indexClient =
   new SearchIndexClient(Constants.SearchServiceName, Constants.Index, new SearchCredentials(Constants.QueryApiKey));
 ```
 
-Il `SearchIndexClient` overload del costruttore accetta un nome di servizio di ricerca, il nome dell'indice e una `SearchCredentials` dell'oggetto come argomenti, con la `SearchCredentials` ritorno a capo oggetto il *chiave di query* per il servizio di ricerca di Azure.
+L' `SearchIndexClient` Overload del costruttore accetta un nome del servizio di ricerca, un nome di indice e un `SearchCredentials` oggetto come argomenti, con l'oggetto che esegue il `SearchCredentials` wrapping della *chiave di query* per il servizio ricerca di Azure.
 
 ### <a name="search-queries"></a>Query di ricerca
 
-L'indice è possibile eseguire query chiamando il `Documents.SearchAsync` metodo sul `SearchIndexClient` istanze, come illustrato nell'esempio di codice seguente:
+È possibile eseguire una query sull'indice chiamando il `Documents.SearchAsync` metodo sull' `SearchIndexClient` istanza, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async Task AzureSearch(string text)
@@ -202,7 +205,7 @@ async Task AzureSearch(string text)
 }
 ```
 
-Il `SearchAsync` metodo accetta un argomento di testo di ricerca e facoltativa `SearchParameters` oggetto che può essere utilizzato per specificare ulteriormente la query. Una query di ricerca viene specificata come argomento di testo di ricerca, mentre una query di filtro può essere specificata impostando il `Filter` proprietà del `SearchParameters` argomento. L'esempio di codice seguente illustra che entrambi i tipi di query:
+Il `SearchAsync` metodo accetta un argomento di testo di ricerca e un `SearchParameters` oggetto facoltativo che può essere usato per perfezionare ulteriormente la query. Una query di ricerca viene specificata come argomento del testo di ricerca, mentre è possibile specificare una query di filtro impostando la `Filter` proprietà dell' `SearchParameters` argomento. Nell'esempio di codice seguente vengono illustrati entrambi i tipi di query:
 
 ```csharp
 var parameters = new SearchParameters
@@ -212,22 +215,22 @@ var parameters = new SearchParameters
 var searchResults = await indexClient.Documents.SearchAsync<Monkey>(text, parameters);
 ```
 
-Questa query di filtro viene applicata all'intero indice e rimuove i documenti nei risultati in cui il `location` campo non è uguale a Cina e non è uguale a Vietnam. Dopo aver filtrato, query di ricerca viene eseguita sui risultati della query di filtro.
+Questa query di filtro viene applicata all'intero indice e rimuove i documenti dai risultati in cui il `location` campo non è uguale a Cina e non è uguale a Vietnam. Dopo l'applicazione di filtri, la query di ricerca viene eseguita sui risultati della query del filtro.
 
 > [!NOTE]
-> Per filtrare senza eseguire ricerche, passare `*` come argomento di testo di ricerca.
+> Per filtrare senza eseguire ricerche, passare `*` come argomento del testo di ricerca.
 
-Il `SearchAsync` metodo restituisce un `DocumentSearchResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, con ogni `Document` dell'oggetto viene creato come un `Monkey` dell'oggetto e quindi aggiungervi le `Monkeys` `ObservableCollection` per la visualizzazione. I seguente screenshot Mostra query risultati della ricerca restituiti da ricerca di Azure:
+Il `SearchAsync` metodo restituisce un `DocumentSearchResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, in cui ogni `Document` oggetto viene creato come `Monkey` oggetto e aggiunto a `Monkeys` `ObservableCollection` per la visualizzazione. Gli screenshot seguenti mostrano i risultati della query di ricerca restituiti da ricerca di Azure:
 
 ![](azure-search-images/search.png "Search Results")
 
-Per altre informazioni sulla ricerca e filtro, vedere [eseguire Query nell'indice di ricerca di Azure usando .NET SDK](/azure/search/search-query-dotnet/).
+Per altre informazioni sulla ricerca e sul filtro, vedere [eseguire query nell'indice di ricerca di Azure con .NET SDK](/azure/search/search-query-dotnet/).
 
 <a name="suggestions" />
 
-### <a name="suggestion-queries"></a>Query di suggerimento
+### <a name="suggestion-queries"></a>Query sui suggerimenti
 
-Ricerca di Azure consente di suggerimenti richiesta basato su una query di ricerca, chiamando il `Documents.SuggestAsync` metodo su di `SearchIndexClient` istanza. Ciò è dimostrato nell'esempio di codice seguente:
+Ricerca di Azure consente di richiedere suggerimenti in base a una query di ricerca, chiamando il `Documents.SuggestAsync` metodo sull' `SearchIndexClient` istanza. Questa operazione è illustrata nell'esempio di codice seguente:
 
 ```csharp
 async Task AzureSuggestions(string text)
@@ -259,28 +262,28 @@ async Task AzureSuggestions(string text)
 }
 ```
 
-Il `SuggestAsync` metodo accetta un argomento di testo di ricerca, il nome del componente da usare (che è definito nell'indice), ed eventualmente `SuggestParameters` oggetto che può essere utilizzato per specificare ulteriormente la query. Il `SuggestParameters` istanza imposta le proprietà seguenti:
+Il `SuggestAsync` metodo accetta un argomento di testo di ricerca, il nome del suggeritore da usare (definito nell'indice) e un `SuggestParameters` oggetto facoltativo che può essere usato per perfezionare ulteriormente la query. L' `SuggestParameters` istanza di imposta le proprietà seguenti:
 
-- `UseFuzzyMatching` -Se impostato su `true`, ricerca di Azure trova i suggerimenti anche se è presente un carattere sostituto o manca nel testo di ricerca.
-- `HighlightPreTag` : il tag che viene anteposto ai riscontri suggerimento.
-- `HighlightPostTag` : il tag che viene aggiunto al suggerimento riscontri.
-- `MinimumCoverage` : rappresenta la percentuale di indice che deve essere inclusa da una query di suggerimento per la query viene segnalato un esito positivo. Il valore predefinito è 80.
-- `Top` -il numero di suggerimenti da recuperare. Deve essere un numero intero compreso tra 1 e 100, con valore predefinito è 5.
+- `UseFuzzyMatching`: se è impostato su `true` , ricerca di Azure troverà suggerimenti anche se nel testo di ricerca è presente un carattere sostituito o mancante.
+- `HighlightPreTag`: il tag che viene anteposto ai suggerimenti riscontri.
+- `HighlightPostTag`: il tag che viene aggiunto ai suggerimenti riscontri.
+- `MinimumCoverage`: rappresenta la percentuale di indice che deve essere coperta da una query di suggerimento affinché la query venga segnalata come completata. Il valore predefinito è 80.
+- `Top`: numero di suggerimenti da recuperare. Deve essere un numero intero compreso tra 1 e 100 e il valore predefinito è 5.
 
-Il risultato complessivo è che i primi 10 risultati tra l'indice verranno restituiti con evidenziazione dei risultati e i risultati includeranno i documenti che includono digitato in modo analogo i termini di ricerca.
+L'effetto complessivo è che i primi 10 risultati dall'indice verranno restituiti con l'evidenziazione dei risultati e i risultati includeranno documenti che includono termini di ricerca con ortografia.
 
-Il `SuggestAsync` metodo restituisce un `DocumentSuggestResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, con ogni `Document` dell'oggetto viene creato come un `Monkey` dell'oggetto e quindi aggiungervi le `Monkeys` `ObservableCollection` per la visualizzazione. Gli screenshot seguenti mostrano i risultati del suggerimento restituiti da ricerca di Azure:
+Il `SuggestAsync` metodo restituisce un `DocumentSuggestResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, in cui ogni `Document` oggetto viene creato come `Monkey` oggetto e aggiunto a `Monkeys` `ObservableCollection` per la visualizzazione. Gli screenshot seguenti mostrano i risultati dei suggerimenti restituiti da ricerca di Azure:
 
 ![](azure-search-images/suggest.png "Suggestion Results")
 
-Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiamato solo quando l'utente termina l'immissione di un termine di ricerca. Tuttavia, può anche essere utilizzato per supportare le query di ricerca con completamento automatico tramite l'esecuzione in ogni keypress.
+Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiamato solo quando l'utente completa l'inserimento di un termine di ricerca. Tuttavia, può anche essere usato per supportare le query di ricerca con completamento automatico eseguendo a ogni pressione del tasto.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione Xamarin.Forms. Ricerca di Azure è un servizio cloud che offre funzionalità per i dati caricati di query e indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca tradizionalmente associate all'implementazione di funzionalità di ricerca in un'applicazione.
+Questo articolo ha illustrato come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione. Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Ricerca di Azure (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Documentazione di ricerca di Azure](/azure/search/)
-- [Libreria di ricerca di Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search/)
+- [Libreria di ricerca Microsoft Azure](https://www.nuget.org/packages/Microsoft.Azure.Search/)

@@ -1,19 +1,12 @@
 ---
-title: 'Xamarin.Essentials: Version Tracking'
-description: La classe VersionTracking in Xamarin.Essentials consente di controllare la versione delle applicazioni e i numeri di build e di visualizzare informazioni aggiuntive, ad esempio se l'applicazione è stata avviata per la prima volta in assoluto o, per la versione corrente, di ottenere informazioni sulla build precedente e altro ancora.
-ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: 3728a209c99712fad6b3dbf9bc59a2c1a3c7bcd5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66354117"
+Titolo:'' Xamarin.Essentials : rilevamento della versione '' Descrizione:' la classe VersionTracking in Xamarin.Essentials consente di controllare la versione delle applicazioni e i numeri di build con la visualizzazione di informazioni aggiuntive, ad esempio se è la prima volta che l'applicazione viene avviata o per la versione corrente, ottenere le informazioni di compilazione precedenti e altro ancora.
+ms. AssetID: autore: ms. Author: ms. Date: ms. Custom: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Version Tracking
+
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Rilevamento della versione
 
 La classe **VersionTracking** consente di controllare la versione delle applicazioni e i numeri di build e di visualizzare informazioni aggiuntive, ad esempio se l'applicazione è stata avviata per la prima volta in assoluto o, per la versione corrente, di ottenere informazioni sulla build precedente e altro ancora.
 
@@ -75,7 +68,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-Tutte le informazioni sulla versione vengono archiviate usando l'API [Preferences](preferences.md) in Xamarin.Essentials e con il nome file **[YOUR-APP-PACKAGE-ID].xamarinessentials.versiontracking** e usano lo stesso salvataggio permanente dei dati illustrato nella documentazione di [Preferences](preferences.md#persistence).
+Tutte le informazioni sulla versione vengono archiviate usando l'API delle [Preferenze](preferences.md) in Xamarin.Essentials e vengono archiviate con un nome file di **[your-app-Package-ID]. xamarinessentials. versiontracking** e seguono la stessa persistenza dei dati descritta nella documentazione relativa alle [Preferenze](preferences.md#persistence) .
 
 ## <a name="api"></a>API
 

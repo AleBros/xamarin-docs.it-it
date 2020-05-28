@@ -1,36 +1,39 @@
 ---
-title: Modelli di dati Xamarin.Forms
-description: Un oggetto DataTemplate viene usato per specificare l'aspetto dei dati nei controlli supportati e in genere è associato ai dati da visualizzare.
-ms.prod: xamarin
-ms.assetid: 838F4BDB-B719-457F-8633-27E9B267A2A0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/11/2017
-ms.openlocfilehash: 5d130a6644af4e5831263c6de137513c021e0b6a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsModelli di dati
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e0961fad18ccd961a5b84b2a5535bca70781dd8d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760794"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136123"
 ---
-# <a name="xamarinforms-data-templates"></a>Modelli di dati Xamarin.Forms
+# <a name="xamarinforms-data-templates"></a>Xamarin.FormsModelli di dati
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Un oggetto DataTemplate viene usato per specificare l'aspetto dei dati nei controlli supportati e in genere è associato ai dati da visualizzare._
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)
 
-I modelli di dati Xamarin.Forms consentono di definire la presentazione dei dati nei controlli supportati. Questo articolo offre un'introduzione ai modelli di dati e spiega perché sono necessari.
+Xamarin.Formsi modelli di dati offrono la possibilità di definire la presentazione dei dati nei controlli supportati. Questo articolo offre un'introduzione ai modelli di dati e spiega perché sono necessari.
 
 ## <a name="creating-a-datatemplate"></a>[Creazione di un oggetto DataTemplate](creating.md)
 
-I modelli di dati possono [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)essere creati inline, in un oggetto o da un tipo di cella Xamarin.Forms appropriato o appropriato. Usare un modello inline se non è necessario usare di nuovo il modello di dati altrove. In alternativa, è possibile riusare un modello di dati definendolo come tipo personalizzato o come risorsa a livello di controllo, a livello di pagina o a livello di applicazione.
+I modelli di dati possono essere creati inline, in [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) o da un tipo personalizzato o da un Xamarin.Forms tipo di cella appropriato. Usare un modello inline se non è necessario usare di nuovo il modello di dati altrove. In alternativa, è possibile riusare un modello di dati definendolo come tipo personalizzato o come risorsa a livello di controllo, a livello di pagina o a livello di applicazione.
 
 ## <a name="creating-a-datatemplateselector"></a>[Creazione di un DataTemplateSelector](selector.md)
 
-Un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) oggetto può essere [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) utilizzato per scegliere un in fase di esecuzione in base al valore di una proprietà con associazione a dati. Questo consente di applicare più istanze di `DataTemplate` allo stesso tipo di oggetto, per personalizzare l'aspetto di oggetti specifici. Questo articolo illustra come creare e usare un oggetto `DataTemplateSelector`.
+Un oggetto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) può essere usato per scegliere un oggetto in fase di [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) esecuzione in base al valore di una proprietà con associazione a dati. Questo consente di applicare più istanze di `DataTemplate` allo stesso tipo di oggetto, per personalizzare l'aspetto di oggetti specifici. Questo articolo illustra come creare e usare un oggetto `DataTemplateSelector`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

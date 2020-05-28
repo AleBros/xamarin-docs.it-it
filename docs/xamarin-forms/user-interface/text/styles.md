@@ -1,33 +1,36 @@
 ---
-title: Stili del testo di Xamarin.Forms
-description: Questo articolo illustra come stile del testo nelle applicazioni Xamarin.Forms. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
-ms.prod: xamarin
-ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: Xamarin.FormsStili di testo
+description: Questo articolo illustra come applicare stili di testo nelle Xamarin.Forms applicazioni. Gli stili possono essere definiti una volta e usati da molte visualizzazioni, ma uno stile può essere usato solo con visualizzazioni di un solo tipo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770243"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136149"
 ---
-# <a name="xamarinforms-text-styles"></a>Stili del testo di Xamarin.Forms
+# <a name="xamarinforms-text-styles"></a>Xamarin.FormsStili di testo
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Stile del testo in Xamarin.Forms_
+_Stile del testo in Novell. Forms_
 
-Stili sono utilizzabile per regolare l'aspetto di etichette, le voci e gli editor. Stili possono essere definiti una sola volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le viste di un tipo.
-Stili possono essere assegnati un `Key` e applicate in modo selettivo usando un controllo specifico `Style` proprietà.
+Gli stili possono essere utilizzati per regolare l'aspetto di etichette, voci ed editor. Gli stili possono essere definiti una volta e usati da molte visualizzazioni, ma uno stile può essere usato solo con visualizzazioni di un solo tipo.
+Gli stili possono essere specificati `Key` e applicati in modo selettivo utilizzando la proprietà di un controllo specifico `Style` .
 
 <a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Stili predefiniti
 
-Xamarin.Forms include numerose [incorporati](xref:Xamarin.Forms.Device.Styles) stili per scenari comuni:
+Xamarin.Formsinclude diversi stili [predefiniti](xref:Xamarin.Forms.Device.Styles) per gli scenari comuni:
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -36,13 +39,13 @@ Xamarin.Forms include numerose [incorporati](xref:Xamarin.Forms.Device.Styles) s
 - `SubtitleStyle`
 - `TitleStyle`
 
-Per applicare uno degli stili predefiniti, usare il `DynamicResource` estensione di markup per specificare lo stile:
+Per applicare uno degli stili predefiniti, utilizzare l' `DynamicResource` estensione di markup per specificare lo stile:
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-In c#, gli stili predefiniti vengono selezionati dal `Device.Styles`:
+In C# gli stili predefiniti vengono selezionati da `Device.Styles` :
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
@@ -54,9 +57,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="custom-styles"></a>Stili personalizzati
 
-Gli stili di Setter e setter costituiti da proprietà e verrà automaticamente impostati i valori di proprietà.
+Gli stili sono costituiti da Setter e setter costituiti da proprietà e dai valori su cui verranno impostate le proprietà.
 
-In c#, uno stile personalizzato per un'etichetta con testo di colore rosso delle dimensioni 30 deve essere definito come segue:
+In C#, uno stile personalizzato per un'etichetta con testo rosso di dimensioni 30 verrebbe definito come segue:
 
 ```csharp
 var LabelStyle = new Style (typeof(Label)) {
@@ -88,7 +91,7 @@ In XAML:
 </ContentPage.Content>
 ```
 
-Si noti che le risorse (inclusi tutti gli stili) vengono definite all'interno `ContentPage.Resources`, che è un elemento di pari livello della più familiare `ContentPage.Content` elemento.
+Si noti che le risorse (inclusi tutti gli stili) vengono definite all'interno `ContentPage.Resources` di, che è un elemento di pari livello dell'elemento più familiare `ContentPage.Content` .
 
 ![Esempio di stili personalizzati](styles-images/customstyle.png)
 
@@ -96,34 +99,34 @@ Si noti che le risorse (inclusi tutti gli stili) vengono definite all'interno `C
 
 ## <a name="applying-styles"></a>Applicazione di stili
 
-Dopo aver creato uno stile, può essere applicato a qualsiasi corrispondenza della vista relativa `TargetType`.
+Una volta creato uno stile, può essere applicato a qualsiasi visualizzazione corrispondente `TargetType` .
 
-In XAML, gli stili personalizzati vengono applicati alle viste fornendo loro `Style` proprietà con un `StaticResource` estensione di markup che fa riferimento lo stile desiderato:
+In XAML gli stili personalizzati vengono applicati alle viste fornendo la relativa `Style` proprietà con un'estensione di markup che fa `StaticResource` riferimento allo stile desiderato:
 
 ```xaml
 <Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
 ```
 
-In c#, stili possono essere applicati direttamente a una vista o aggiunto a e recuperati da una pagina `ResourceDictionary`. Per aggiungere direttamente:
+In C# gli stili possono essere applicati direttamente a una vista o aggiunti a e recuperati da una pagina `ResourceDictionary` . Per aggiungere direttamente:
 
 ```csharp
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-Per aggiungere e recuperare la pagina `ResourceDictionary`:
+Per aggiungere e recuperare dall'oggetto della pagina `ResourceDictionary` :
 
 ```csharp
 this.Resources.Add ("LabelStyle", LabelStyle);
 label.Style = (Style)Resources["LabelStyle"];
 ```
 
-Gli stili predefiniti vengono applicati in modo diverso, perché sono necessarie per rispondere alle impostazioni di accessibilità. Per applicare gli stili predefiniti in XAML, il `DynamicResource` viene usata l'estensione di markup:
+Gli stili predefiniti vengono applicati in modo diverso, perché devono rispondere alle impostazioni di accessibilità. Per applicare gli stili predefiniti in XAML, `DynamicResource` viene utilizzata l'estensione di markup:
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-In c#, gli stili predefiniti vengono selezionati dal `Device.Styles`:
+In C# gli stili predefiniti vengono selezionati da `Device.Styles` :
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
@@ -131,9 +134,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="accessibility"></a>Accessibilità
 
-Gli stili predefiniti esistono per renderne più semplice rispettare le preferenze di accessibilità. Quando si usa uno degli stili predefiniti, le dimensioni dei caratteri aumenteranno automaticamente se un utente imposta le preferenze di accessibilità di conseguenza.
+Gli stili predefiniti sono disponibili per semplificare il rispetto delle preferenze di accessibilità. Quando si usa uno degli stili predefiniti, le dimensioni dei caratteri aumentano automaticamente se un utente imposta le preferenze di accessibilità di conseguenza.
 
-Si consideri l'esempio seguente della stessa pagina delle viste uno stile definito con gli stili predefiniti con le impostazioni di accessibilità abilitati e disabilitati:
+Si consideri l'esempio seguente della stessa pagina di viste con lo stile predefinito con le impostazioni di accessibilità abilitata e disabilitata:
 
 Disabilitato:
 
@@ -143,11 +146,11 @@ Abilitato:
 
 ![Stili del dispositivo con accessibilità abilitata](styles-images/post-access.png)
 
-Per garantire l'accessibilità, assicurarsi che gli stili predefiniti vengono utilizzati come base per tutti gli stili correlate al testo all'interno dell'app e che si siano utilizzando gli stili in modo coerente. Visualizzare [stili](~/xamarin-forms/user-interface/styles/index.md) per altri dettagli sull'estensione e lavorare con gli stili in generale.
+Per garantire l'accessibilità, assicurarsi che gli stili predefiniti vengano usati come base per qualsiasi stile correlato al testo all'interno dell'app e che si usi coerentemente gli stili. Per ulteriori informazioni sull'estensione e sull'utilizzo degli stili in generale, vedere [stili](~/xamarin-forms/user-interface/styles/index.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di App per dispositivi mobili con Xamarin.Forms, capitolo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
+- [Creazione di app per dispositivi mobili con Xamarin.Forms , capitolo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Stili](~/xamarin-forms/user-interface/styles/index.md)
 - [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Stile di visualizzazione](xref:Xamarin.Forms.Style)
+- [Stile](xref:Xamarin.Forms.Style)

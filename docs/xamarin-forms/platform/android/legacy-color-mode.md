@@ -1,26 +1,18 @@
 ---
-title: Modalità colore legacy di visualElement in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la modalità di colore legacy Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ad7b5b7bae131a58e16c77eca73e24834a57bf3a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655696"
+title: Description: le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la Xamarin.Forms modalità di colore legacy.
+ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="visualelement-legacy-color-mode-on-android"></a>Modalità colore legacy di visualElement in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Alcune delle viste di Xamarin.Forms offrono una modalità colore legacy. In questa modalità, quando la [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) della visualizzazione è impostata su `false`, la visualizzazione sostituiranno i colori impostati dall'utente con i colori nativo predefinito per lo stato disabilitato. Per garantire la compatibilità, questa modalità legacy colore rimane con le versioni precedenti il comportamento predefinito per le visualizzazioni supportate.
+Alcune delle Xamarin.Forms visualizzazioni presentano una modalità colore legacy. In questa modalità, quando la [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) proprietà della vista è impostata su `false` , la vista eseguirà l'override dei colori impostati dall'utente con i colori nativi predefiniti per lo stato disabilitato. Per la compatibilità con le versioni precedenti, questa modalità di colore Legacy rimane il comportamento predefinito per le visualizzazioni supportate.
 
-Questa modalità di colore legacy è disabilitata dalla piattaforma Android, in modo che i colori impostati per una visualizzazione da parte dell'utente rimangano anche quando la visualizzazione è disabilitata. Vengono utilizzati in XAML, impostando il [`VisualElement.IsLegacyColorModeEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) proprietà associata `false`:
+Questa modalità di colore legacy è disabilitata dalla piattaforma Android, in modo che i colori impostati per una visualizzazione da parte dell'utente rimangano anche quando la visualizzazione è disabilitata. Viene utilizzato in XAML impostando la [`VisualElement.IsLegacyColorModeEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) proprietà associata su `false` :
 
 ```xaml
 <ContentPage ...
@@ -36,7 +28,7 @@ Questa modalità di colore legacy è disabilitata dalla piattaforma Android, in 
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -46,14 +38,14 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 _legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
 ```
 
-Il `VisualElement.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il [`VisualElement.SetIsLegacyColorModeEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usata per controllare se la modalità legacy è disabilitata. Inoltre, il [`VisualElement.GetIsLegacyColorModeEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement})) metodo può essere utilizzato da restituire se la modalità legacy è disabilitata.
+Il `VisualElement.On<Android>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in Android. [ `VisualElement.SetIsLegacyColorModeEnabled` ] (Xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. visualElement. SetIsLegacyColorModeEnabled ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Il metodo visualElement}, System. Boolean)), nello [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) spazio dei nomi, viene usato per controllare se la modalità colore legacy è disabilitata. Inoltre, [ `VisualElement.GetIsLegacyColorModeEnabled` ] (xrif: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. visualElement. GetIsLegacyColorModeEnabled ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . VisualElement})) il metodo può essere utilizzato per restituire se la modalità di colore legacy è disabilitata.
 
-Il risultato è che può essere disabilitata la modalità legacy, in modo che rimangano anche i colori impostati su una vista dall'utente quando la visualizzazione è disabilitata:
+Il risultato è che la modalità di colore legacy può essere disabilitata, in modo che i colori impostati per una visualizzazione da parte dell'utente rimangano anche quando la visualizzazione è disabilitata:
 
-![](legacy-color-mode-images/legacy-color-mode-disabled.png "Modalità legacy colore disabilitata")
+![](legacy-color-mode-images/legacy-color-mode-disabled.png "Legacy color mode disabled")
 
 > [!NOTE]
-> Quando si imposta una [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) in una vista, la modalità legacy di colori viene completamente ignorata. Per altre informazioni sugli stati visual, vedere [di Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+> Quando si imposta un oggetto [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) in una vista, la modalità di colore legacy viene ignorata completamente. Per ulteriori informazioni sugli stati visivi, vedere la pagina relativa a [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

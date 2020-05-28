@@ -1,29 +1,32 @@
 ---
-title: Classe App di Xamarin.Forms
-description: Questo articolo illustra le funzionalità della classe App predefinita, che include una proprietà per l'impostazione della pagina iniziale per l'app e un dizionario persistente per l'archiviazione di valori semplici per tutte le modifiche di stato del ciclo di vita.
-ms.prod: xamarin
-ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
-ms.technology: xamarin-forms
-ms.custom: video
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/19/2016
-ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsClasse App
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79305024"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129688"
 ---
-# <a name="xamarinforms-app-class"></a>Classe App di Xamarin.Forms
+# <a name="xamarinforms-app-class"></a>Xamarin.FormsClasse App
 
 La classe di base `Application` offre le funzionalità seguenti, che vengono esposte nella sottoclasse predefinita `App` del progetto:
 
 * Una proprietà `MainPage`, dove deve essere impostata la pagina iniziale per l'app.
-* Dizionario [ `Properties` ](#Properties_Dictionary) persistente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
+* [ `Properties` Dizionario](#Properties_Dictionary) permanente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
 * Una proprietà `Current` statica che contiene un riferimento all'oggetto applicazione corrente.
 
-Espone inoltre [metodi del](~/xamarin-forms/app-fundamentals/app-lifecycle.md) `OnStart`ciclo `OnSleep`di `OnResume` vita quali , , e nonché eventi di spostamento modale.
+Espone inoltre i [metodi del ciclo](~/xamarin-forms/app-fundamentals/app-lifecycle.md) di vita, ad esempio `OnStart` , e, nonché `OnSleep` `OnResume` gli eventi di navigazione modale.
 
 A seconda del modello scelto, la classe `App` può essere definita in uno dei due modi seguenti:
 
@@ -78,7 +81,7 @@ public class App : Xamarin.Forms.Application
 
 ## <a name="properties-dictionary"></a>Dizionario delle proprietà
 
-La sottoclasse `Application` ha un dizionario `Properties` statico che può essere usato per archiviare i dati, in particolare per l'uso nei metodi `OnStart`, `OnSleep` e `OnResume`. L'accesso può essere eseguito da qualsiasi punto del codice Xamarin.Forms usando `Application.Current.Properties`.
+La sottoclasse `Application` ha un dizionario `Properties` statico che può essere usato per archiviare i dati, in particolare per l'uso nei metodi `OnStart`, `OnSleep` e `OnResume`. È possibile accedervi da qualsiasi punto del Xamarin.Forms codice usando `Application.Current.Properties` .
 
 Il dizionario `Properties` usa una chiave `string` e archivia un valore `object`.
 
@@ -110,9 +113,9 @@ Verificare sempre la presenza della chiave prima di accedervi in modo da evitare
 Il dizionario `Properties` viene salvato automaticamente nel dispositivo.
 I dati aggiunti al dizionario saranno disponibili quando l'applicazione torna dall'esecuzione in background o viene riavviata.
 
-Xamarin.Forms 1.4 ha introdotto un metodo aggiuntivo per la classe `Application`, `SavePropertiesAsync()`, che può essere chiamato per rendere permanente in modo proattivo il dizionario `Properties`. Questo consente di salvare le proprietà dopo gli aggiornamenti importanti senza rischiare che non vengano serializzate a causa di un arresto anomalo o terminate dal sistema operativo.
+Xamarin.Forms1,4 introduce un metodo aggiuntivo sulla `Application` classe, `SavePropertiesAsync()` che può essere chiamato per salvare in modo proattivo il `Properties` dizionario. Questo consente di salvare le proprietà dopo gli aggiornamenti importanti senza rischiare che non vengano serializzate a causa di un arresto anomalo o terminate dal sistema operativo.
 
-È possibile trovare riferimenti all'uso del dizionario `Properties` nel libro **Creazione di app per dispositivi mobili con Xamarin.Forms**, capitoli [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) e [20 ](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf), e negli [esempi](https://github.com/xamarin/xamarin-forms-book-preview-2) associati.
+È possibile trovare i riferimenti all'uso del `Properties` dizionario nella **creazione di app per Xamarin.Forms dispositivi mobili con** i capitoli [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf)e [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf)del libro e negli [esempi](https://github.com/xamarin/xamarin-forms-book-preview-2)associati.
 
 ## <a name="the-application-class"></a>Classe Application
 
@@ -147,7 +150,7 @@ public class App : Xamarin.Forms.Application
 ```
 
 Un'istanza di questa classe viene creata in ogni progetto specifico della piattaforma e passata al metodo `LoadApplication`, che rappresenta la posizione in cui l'elemento `MainPage` viene caricato e visualizzato all'utente.
-Nelle sezioni seguenti viene illustrato il codice per ogni piattaforma. I modelli più recenti di soluzioni Xamarin.Forms contengono già tutto questo codice, preconfigurato per l'app.
+Nelle sezioni seguenti viene illustrato il codice per ogni piattaforma. I Xamarin.Forms modelli di soluzione più recenti contengono già tutto questo codice, preconfigurato per l'app.
 
 ### <a name="ios-project"></a>Progetto iOS
 
@@ -205,7 +208,7 @@ La pagina principale nel progetto UWP deve ereditare da `WindowsPage`:
 </forms:WindowsPage>
 ```
 
-La costruzione del code-behind in C# deve chiamare `LoadApplication` per creare un'istanza dell'elemento `App` di Xamarin.Forms. Si noti che è opportuno usare in modo esplicito lo spazio dei nomi dell'applicazione per qualificare `App` poiché le applicazioni UWP usano anche una propria classe `App` non correlata a Xamarin.Forms.
+Il codice C# sottostante alla costruzione deve chiamare `LoadApplication` per creare un'istanza del Xamarin.Forms `App` . Si noti che è consigliabile usare in modo esplicito lo spazio dei nomi dell'applicazione per qualificare `App` perché le applicazioni UWP hanno anche una propria `App` classe non correlata a Xamarin.Forms .
 
 ```csharp
 public sealed partial class MainPage
@@ -221,7 +224,7 @@ public sealed partial class MainPage
 
 Si noti che `Forms.Init()` deve essere chiamato da **App.xaml.cs** nel progetto UWP.
 
-Per altre informazioni, vedere [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md) (Impostazione di progetti Windows), che include i passaggi per aggiungere un progetto UWP a una soluzione Xamarin.Forms esistente non destinata a UWP.
+Per altre informazioni, vedere [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), che include i passaggi per aggiungere un progetto UWP a una Xamarin.Forms soluzione esistente che non è destinata a UWP.
 
 ## <a name="related-video"></a>Video correlato
 

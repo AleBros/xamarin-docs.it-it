@@ -1,18 +1,21 @@
 ---
-title: Microservizi in contenitori
-description: Questo capitolo illustra come usare i microservizi e i contenitori per creare applicazioni cloud moderne agili, scalabili e affidabili.
-ms.prod: xamarin
-ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305192"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139256"
 ---
 # <a name="containerized-microservices"></a>Microservizi in contenitori
 
@@ -56,9 +59,9 @@ Tuttavia, una soluzione basata su microservizi presenta anche potenziali svantag
 - In produzione esiste una complessità operativa nella distribuzione e nella gestione di un sistema compromesso da molti servizi indipendenti.
 - La comunicazione diretta da client a microservizio può rendere difficile effettuare il refactoring dei contratti di microservizi. Nel tempo, ad esempio, potrebbe essere necessario modificare il partizionamento del sistema nei servizi. Un singolo servizio può essere suddiviso in due o più servizi e due servizi possono essere Uniti. Quando i client comunicano direttamente con i microservizi, questo lavoro di refactoring può interrompere la compatibilità con le app client.
 
-## <a name="containerization"></a>Containerizzazione
+## <a name="containerization"></a>Creazione di contenitori
 
-Il contenitore è un approccio allo sviluppo del software in cui un'applicazione e il set di dipendenze con versione, oltre alla configurazione dell'ambiente astratta come file manifesto di distribuzione, vengono assemblati insieme come un'immagine del contenitore, testati come un'unità e distribuito in un sistema operativo host.
+Il contenitore è un approccio allo sviluppo del software in cui un'applicazione e il set di dipendenze con versione, oltre alla configurazione dell'ambiente astratte come file manifesto di distribuzione, vengono assemblati insieme come un'immagine del contenitore, testati come un'unità e distribuiti in un sistema operativo host.
 
 Un contenitore è un ambiente operativo isolato, controllato dalle risorse e portabile, in cui un'applicazione può essere eseguita senza toccare le risorse di altri contenitori o l'host. Pertanto, un contenitore sembra e funge da computer fisico appena installato o da una macchina virtuale.
 
@@ -146,7 +149,7 @@ Per informazioni sull'implementazione del bus di eventi, vedere [microservizi .N
 
 ## <a name="summary"></a>Riepilogo
 
-I microservizi offrono un approccio per lo sviluppo e la distribuzione di applicazioni, adatti ai requisiti di agilità, scalabilità e affidabilità delle applicazioni cloud moderne. Uno dei vantaggi principali dei microservizi è che è possibile scalare orizzontalmente in modo indipendente, il che significa che è possibile ridimensionare un'area funzionale specifica che richiede una maggiore potenza di elaborazione o larghezza di banda di rete per supportare la richiesta, senza inutilmente ridimensionare le aree di applicazione che non sta riscontrando un aumento della domanda.
+I microservizi offrono un approccio per lo sviluppo e la distribuzione di applicazioni, adatti ai requisiti di agilità, scalabilità e affidabilità delle applicazioni cloud moderne. Uno dei vantaggi principali dei microservizi è che è possibile scalare orizzontalmente in modo indipendente, il che significa che è possibile ridimensionare un'area funzionale specifica che richiede una maggiore potenza di elaborazione o larghezza di banda di rete per supportare la richiesta, senza inutilmente ridimensionare le aree dell'applicazione che non riscontrano una maggiore richiesta.
 
 Un contenitore è un ambiente operativo isolato, controllato dalle risorse e portabile, in cui un'applicazione può essere eseguita senza toccare le risorse di altri contenitori o l'host. Le aziende stanno sempre adottando contenitori quando implementano applicazioni basate su microservizi e Docker è diventato l'implementazione standard del contenitore che è stata adottata dalla maggior parte delle piattaforme software e dai fornitori di cloud.
 

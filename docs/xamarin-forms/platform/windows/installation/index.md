@@ -1,30 +1,33 @@
 ---
-title: Imposta progetti Windows
-description: Le soluzioni Novell. Forms precedenti, o quelle create in macOS, non disporranno di progetti di piattaforma UWP (Universal Windows Platform), quindi in questo articolo viene illustrato come aggiungere un nuovo progetto UWP a una soluzione Novell. Forms esistente.
-ms.prod: xamarin
-ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/10/2018
-ms.openlocfilehash: 5d2d9c8c2104e96f16c3a3ff169f795068605f59
-ms.sourcegitcommit: 7011303ff1868f3dd3858415706f4b5732ee44f1
+title: ''
+description: Xamarin.FormsLe soluzioni precedenti, o quelle create in MacOS, non disporranno di progetti di piattaforma UWP (Universal Windows Platform), quindi in questo articolo viene illustrato come aggiungere un nuovo progetto UWP a una Xamarin.Forms soluzione esistente.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 87ad78e97046eef7fd6c2e062fa9f84d92c11b38
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83696095"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132210"
 ---
 # <a name="setup-windows-projects"></a>Imposta progetti Windows
 
-_Aggiunta di nuovi progetti Windows a una soluzione Novell. Forms esistente_
+_Aggiunta di nuovi progetti Windows a una Xamarin.Forms soluzione esistente_
 
-Le soluzioni Novell. Forms precedenti, o quelle create in macOS, non disporranno di progetti di app piattaforma UWP (Universal Windows Platform) (UWP). Sarà quindi necessario aggiungere manualmente un progetto UWP per compilare un'app di Windows 10 (UWP).
+Xamarin.FormsLe soluzioni precedenti, o quelle create in MacOS, non disporranno di progetti di app piattaforma UWP (Universal Windows Platform) (UWP). Sarà quindi necessario aggiungere manualmente un progetto UWP per compilare un'app di Windows 10 (UWP).
 
 ## <a name="add-a-universal-windows-platform-app"></a>Aggiungere un'app piattaforma UWP (Universal Windows Platform)
 
 È consigliabile usare **Visual Studio 2019** in **Windows 10** per creare app UWP. Per ulteriori informazioni sulla piattaforma UWP (Universal Windows Platform), vedere [Introduzione al piattaforma UWP (Universal Windows Platform)](/windows/uwp/get-started/universal-application-platform-guide/).
 
-UWP è disponibile in Novell. Forms 2,1 e versioni successive e Novell. Forms. Maps è supportato in Novell. Forms 2,2 e versioni successive.
+UWP è disponibile in Xamarin.Forms 2,1 e versioni successive, e Xamarin.Forms . Maps è supportato in Xamarin.Forms 2,2 e versioni successive.
 
 Per suggerimenti utili, vedere la sezione <a href="#troubleshooting">risoluzione dei problemi</a> .
 
@@ -38,13 +41,13 @@ Seguire queste istruzioni per aggiungere un'app UWP che viene eseguita su telefo
 
   ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
 
- 3. Fare clic con il pulsante destro del mouse sul progetto UWP e scegliere **Gestisci pacchetti NuGet** e aggiungere il pacchetto **Novell. Forms** . Assicurarsi che gli altri progetti della soluzione vengano aggiornati anche alla stessa versione del pacchetto Novell. Forms.
+ 3. Fare clic con il pulsante destro del mouse sul progetto UWP e scegliere **Gestisci pacchetti NuGet...** e aggiungere il **Xamarin.Forms** pacchetto. Assicurarsi che gli altri progetti della soluzione vengano aggiornati anche alla stessa versione del Xamarin.Forms pacchetto.
 
  4. Verificare che il nuovo progetto UWP venga compilato nella finestra di **> Configuration Manager di compilazione** . questa operazione probabilmente non è stata eseguita per impostazione predefinita. Seleziona le caselle **Compila** e **Distribuisci** per il progetto universale:
 
   [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
- 5. Fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi > riferimento** e creare un riferimento al progetto di applicazione Novell. Forms (.NET standard o progetto condiviso).
+ 5. Fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi > riferimento** e creare un riferimento al Xamarin.Forms progetto dell'applicazione (.NET standard o progetto condiviso).
 
   ![](universal-images/addref-sml.png "Reference Manager Dialog")
 
@@ -81,7 +84,7 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11. In **MainPage.XAML.cs**aggiungere la `LoadApplication` chiamata nel `MainPage` costruttore per avviare l'app Novell. Forms:
+ 11. In **MainPage.XAML.cs**aggiungere la `LoadApplication` chiamata nel `MainPage` costruttore per avviare l' Xamarin.Forms app:
 
 ```csharp
 // below this existing line
@@ -111,7 +114,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 ### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>"Eccezione di chiamata di destinazione" quando si usa la "compilazione con la catena di strumenti .NET Native"
 
-Se l'app UWP fa riferimento a più assembly, ad esempio librerie di controlli di terze parti o l'app stessa è suddivisa in più librerie, Novell. Forms potrebbe non essere in grado di caricare oggetti da tali assembly (ad esempio renderer personalizzati).
+Se l'app UWP fa riferimento a più assembly, ad esempio librerie di controlli di terze parti o se l'app stessa è suddivisa in più librerie, Xamarin.Forms potrebbe non essere in grado di caricare oggetti da tali assembly (ad esempio renderer personalizzati).
 
 Questo problema può verificarsi quando si usa la **catena di strumenti di compilazione con .NET native** , che è un'opzione per le app UWP nella finestra **proprietà > compila > generale** per il progetto.
 

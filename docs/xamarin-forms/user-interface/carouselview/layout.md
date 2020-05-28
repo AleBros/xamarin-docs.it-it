@@ -1,53 +1,56 @@
 ---
-title: Layout di Novell. Forms CarouselView
-description: Per impostazione predefinita, un CarouselView Visualizza i relativi elementi orizzontalmente. Tuttavia, è anche possibile un orientamento verticale.
-ms.prod: xamarin
-ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/28/2020
-ms.openlocfilehash: 3242148fa97e6b3795b57b2fed86f3643a5ecdf6
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.FormsLayout di CarouselView
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 44df710df0272afe3c6f6911381af1a88c8cf923
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517417"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140283"
 ---
-# <a name="xamarinforms-carouselview-layout"></a>Layout di Novell. Forms CarouselView
+# <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsLayout di CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)definisce le proprietà seguenti che controllano il layout:
 
-- [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), di tipo `LinearItemsLayout`, specifica il layout da utilizzare.
-- `PeekAreaInsets`, di tipo [`Thickness`](xref:Xamarin.Forms.Thickness), specifica il modo in cui gli elementi adiacenti devono essere parzialmente visibili da.
+- [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), di tipo `LinearItemsLayout` , specifica il layout da utilizzare.
+- `PeekAreaInsets`, di tipo [`Thickness`](xref:Xamarin.Forms.Thickness) , specifica il modo in cui gli elementi adiacenti devono essere parzialmente visibili da.
 
 Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
-Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) un oggetto visualizzerà gli elementi in un orientamento orizzontale. Sullo schermo verrà visualizzato un singolo elemento, con movimenti di scorrimento che comportano la navigazione in avanti e indietro nella raccolta di elementi. Tuttavia, è anche possibile un orientamento verticale. Questa condizione è dovuta al fatto [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) che `LinearItemsLayout`la proprietà è di tipo [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) , che eredita dalla classe. La `ItemsLayout` classe definisce le proprietà seguenti:
+Per impostazione predefinita, un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) visualizzerà gli elementi in un orientamento orizzontale. Sullo schermo verrà visualizzato un singolo elemento, con movimenti di scorrimento che comportano la navigazione in avanti e indietro nella raccolta di elementi. Tuttavia, è anche possibile un orientamento verticale. Questa condizione è dovuta al fatto [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) che la proprietà è di tipo `LinearItemsLayout` , che eredita dalla [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) classe. La `ItemsLayout` classe definisce le proprietà seguenti:
 
-- [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation), di tipo [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation), specifica la direzione in cui l' [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto viene espanso durante l'aggiunta di elementi.
-- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), specifica il modo in cui i punti di allineamento sono allineati con gli elementi.
-- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType), specifica il comportamento dei punti di blocco durante lo scorrimento.
+- [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation), di tipo [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) , specifica la direzione in cui l'oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) viene espanso durante l'aggiunta di elementi.
+- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) , specifica il modo in cui i punti di allineamento sono allineati con gli elementi.
+- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) , specifica il comportamento dei punti di blocco durante lo scorrimento.
 
-Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati. Per ulteriori informazioni sui punti di aggancio, vedere la pagina relativa ai [punti](scrolling.md#snap-points) di blocco nella Guida allo [scorrimento di Novell. Forms](scrolling.md) .
+Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati. Per ulteriori informazioni sui punti di aggancio, vedere la pagina relativa ai [punti](scrolling.md#snap-points) di blocco nella Guida allo [ Xamarin.Forms scorrimento di CollectionView](scrolling.md) .
 
 L' [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumerazione definisce i membri seguenti:
 
-- `Vertical`indica che l' [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto verrà espanso verticalmente quando vengono aggiunti elementi.
-- `Horizontal`indica che l' [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto si espande orizzontalmente quando vengono aggiunti elementi.
+- `Vertical`indica che l'oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) verrà espanso verticalmente quando vengono aggiunti elementi.
+- `Horizontal`indica che l'oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) si espande orizzontalmente quando vengono aggiunti elementi.
 
-La `LinearItemsLayout` classe eredita dalla [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) classe e definisce una `ItemSpacing` proprietà di tipo `double`, che rappresenta lo spazio vuoto intorno a ogni elemento. Il valore predefinito di questa proprietà è 0 e il relativo valore deve essere sempre maggiore o uguale a 0. La `LinearItemsLayout` classe definisce anche membri `Vertical` statici `Horizontal` e. Questi membri possono essere utilizzati rispettivamente per creare elenchi verticali o orizzontali. In alternativa, è `LinearItemsLayout` possibile creare un oggetto, specificando [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) un membro di enumerazione come argomento.
+La `LinearItemsLayout` classe eredita dalla [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) classe e definisce una `ItemSpacing` proprietà di tipo `double` , che rappresenta lo spazio vuoto intorno a ogni elemento. Il valore predefinito di questa proprietà è 0 e il relativo valore deve essere sempre maggiore o uguale a 0. La `LinearItemsLayout` classe definisce anche `Vertical` membri statici e `Horizontal` . Questi membri possono essere utilizzati rispettivamente per creare elenchi verticali o orizzontali. In alternativa, `LinearItemsLayout` è possibile creare un oggetto, specificando un [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di enumerazione come argomento.
 
 > [!NOTE]
 > [`CarouselView`](xref:Xamarin.Forms.CarouselView)USA i motori di layout nativi per eseguire il layout.
 
 ## <a name="horizontal-layout"></a>Layout orizzontale
 
-Per impostazione predefinita [`CarouselView`](xref:Xamarin.Forms.CarouselView) , gli elementi vengono visualizzati orizzontalmente. Pertanto, non è necessario impostare la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà per utilizzare questo layout:
+Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) gli elementi vengono visualizzati orizzontalmente. Pertanto, non è necessario impostare la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà per utilizzare questo layout:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -87,7 +90,7 @@ Per impostazione predefinita [`CarouselView`](xref:Xamarin.Forms.CarouselView) ,
 </CarouselView>
 ```
 
-In alternativa, questo layout può essere eseguito anche impostando la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà su un `LinearItemsLayout` oggetto, specificando `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) il membro di enumerazione `Orientation` come valore della proprietà:
+In alternativa, questo layout può essere eseguito anche impostando la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà su un `LinearItemsLayout` oggetto, specificando il `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di enumerazione come `Orientation` valore della proprietà:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -114,7 +117,7 @@ In questo modo si ottiene un layout che aumenta orizzontalmente Man mano che ven
 
 ## <a name="vertical-layout"></a>Layout verticale
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)consente di visualizzare verticalmente gli elementi impostando [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) la proprietà su `LinearItemsLayout` un oggetto, specificando il `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di `Orientation` enumerazione come valore della proprietà:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)consente di visualizzare verticalmente gli elementi impostando la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà su un `LinearItemsLayout` oggetto, specificando il `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di enumerazione come valore della `Orientation` proprietà:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -173,7 +176,7 @@ In questo modo si ottiene un layout che cresce verticalmente Man mano che vengon
 
 ## <a name="partially-visible-adjacent-items"></a>Elementi adiacenti parzialmente visibili
 
-Per impostazione predefinita [`CarouselView`](xref:Xamarin.Forms.CarouselView) , Visualizza gli elementi completi contemporaneamente. Tuttavia, questo comportamento può essere modificato impostando la `PeekAreaInsets` proprietà su un `Thickness` valore che specifica la quantità di elementi adiacenti parzialmente visibili da. Questa operazione può essere utile per indicare agli utenti che sono presenti altri elementi da visualizzare. Il codice XAML seguente mostra un esempio di impostazione di questa proprietà:
+Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) Visualizza gli elementi completi contemporaneamente. Tuttavia, questo comportamento può essere modificato impostando la `PeekAreaInsets` proprietà su un `Thickness` valore che specifica la quantità di elementi adiacenti parzialmente visibili da. Questa operazione può essere utile per indicare agli utenti che sono presenti altri elementi da visualizzare. Il codice XAML seguente mostra un esempio di impostazione di questa proprietà:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
@@ -198,9 +201,9 @@ Il risultato è che gli elementi adiacenti vengono esposti parzialmente sullo sc
 
 ## <a name="item-spacing"></a>Spaziatura elementi
 
-Per impostazione predefinita, non è presente alcuno spazio tra gli elementi [`CarouselView`](xref:Xamarin.Forms.CarouselView)di un oggetto. Questo comportamento può essere modificato impostando la `ItemSpacing` proprietà sul layout degli elementi utilizzato da `CarouselView`.
+Per impostazione predefinita, non è presente alcuno spazio tra gli elementi di un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) . Questo comportamento può essere modificato impostando la `ItemSpacing` proprietà sul layout degli elementi utilizzato da `CarouselView` .
 
-Quando un [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto imposta [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) la proprietà su `LinearItemsLayout` un oggetto, `LinearItemsLayout.ItemSpacing` la proprietà può essere impostata su `double` un valore che rappresenta lo spazio tra gli elementi:
+Quando un [`CarouselView`](xref:Xamarin.Forms.CarouselView) oggetto imposta la [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) proprietà su un `LinearItemsLayout` oggetto, la `LinearItemsLayout.ItemSpacing` proprietà può essere impostata su un `double` valore che rappresenta lo spazio tra gli elementi:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -232,7 +235,7 @@ Questo codice genera un layout verticale con una spaziatura di 20 elementi tra g
 
 ## <a name="dynamic-resizing-of-items"></a>Ridimensionamento dinamico di elementi
 
-Gli elementi in [`CarouselView`](xref:Xamarin.Forms.CarouselView) un oggetto possono essere ridimensionati dinamicamente in fase di esecuzione modificando le [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)proprietà correlate al layout degli elementi all'interno di. Nell'esempio di codice seguente, ad esempio, [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) vengono [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) modificate le proprietà [`Image`](xref:Xamarin.Forms.Image) e di un oggetto `HeightRequest` e la proprietà dell' [`Frame`](xref:Xamarin.Forms.Frame)elemento padre:
+Gli elementi in un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) possono essere ridimensionati dinamicamente in fase di esecuzione modificando le proprietà correlate al layout degli elementi all'interno di [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Nell'esempio di codice seguente, ad esempio, vengono modificate le [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) proprietà e di un [`Image`](xref:Xamarin.Forms.Image) oggetto e la `HeightRequest` proprietà dell'elemento padre [`Frame`](xref:Xamarin.Forms.Frame) :
 
 ```csharp
 void OnImageTapped(object sender, EventArgs e)
@@ -244,13 +247,13 @@ void OnImageTapped(object sender, EventArgs e)
 }
 ```
 
-Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [`Image`](xref:Xamarin.Forms.Image) oggetto da toccare e modifica le dimensioni dell'immagine (e del relativo elemento padre `Frame`), in modo che sia più semplice da visualizzare:
+Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [`Image`](xref:Xamarin.Forms.Image) oggetto da toccare e modifica le dimensioni dell'immagine (e del relativo elemento padre `Frame` ), in modo che sia più semplice da visualizzare:
 
 [![Screenshot di un CarouselView con ridimensionamento di elementi dinamici, in iOS e Android](layout-images/runtime-resizing.png "Ridimensionamento di elementi dinamici CarouselView")](layout-images/runtime-resizing-large.png#lightbox "Ridimensionamento di elementi dinamici CarouselView")
 
 ## <a name="right-to-left-layout"></a>Layout da destra a sinistra
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)può impostare il layout del contenuto in una direzione di flusso da destra a sinistra impostando [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) la [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)relativa proprietà su. Tuttavia, la `FlowDirection` proprietà deve essere impostata idealmente in una pagina o in un layout radice, che causa la risposta alla direzione del flusso di tutti gli elementi all'interno della pagina o del layout radice:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)può impostare il layout del contenuto in una direzione di flusso da destra a sinistra impostando la relativa [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) proprietà su [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) . Tuttavia, la `FlowDirection` proprietà deve essere impostata idealmente in una pagina o in un layout radice, che causa la risposta alla direzione del flusso di tutti gli elementi all'interno della pagina o del layout radice:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -264,12 +267,12 @@ Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [`Image`](xref
 </ContentPage>
 ```
 
-Il valore [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) predefinito per un elemento con un elemento [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)padre è. Quindi [`CarouselView`](xref:Xamarin.Forms.CarouselView) eredita il `FlowDirection` valore della proprietà da. [`ContentPage`](xref:Xamarin.Forms.ContentPage)
+Il valore predefinito [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) per un elemento con un elemento padre è [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent) . Quindi [`CarouselView`](xref:Xamarin.Forms.CarouselView) eredita il valore della `FlowDirection` proprietà da [`ContentPage`](xref:Xamarin.Forms.ContentPage) .
 
 Per altre informazioni sulla direzione del flusso, vedere [localizzazione da destra a sinistra](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-## <a name="related-links"></a>Link correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Localizzazione da destra a sinistra](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Scorrimento CarouselView Novell. Forms](scrolling.md)
+- [Xamarin.FormsScorrimento CarouselView](scrolling.md)

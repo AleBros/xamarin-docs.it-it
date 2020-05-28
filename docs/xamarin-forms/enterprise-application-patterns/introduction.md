@@ -1,18 +1,21 @@
 ---
-title: Introduzione allo sviluppo di app aziendali
-description: Questo capitolo fornisce un'introduzione allo sviluppo di app aziendali e introduce l'app per dispositivi mobili eShopOnContainers.
-ms.prod: xamarin
-ms.assetid: cbce0659-fa03-447a-86ec-140438143230
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760229"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139357"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
@@ -34,9 +37,9 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 - Promuove il riutilizzo e una netta separazione dei problemi tra le funzionalità orizzontali dell'app, ad esempio l'autenticazione e l'accesso ai dati, e le funzionalità verticali, ad esempio funzionalità aziendali specifiche dell'app. Ciò consente di gestire più facilmente le dipendenze e le interazioni tra i componenti dell'app.
 - Consente di mantenere la separazione dei ruoli consentendo a singoli utenti, o team, di concentrarsi su un'attività specifica o una parte delle funzionalità in base alle proprie competenze. In particolare, fornisce una separazione più pulita tra l'interfaccia utente e la logica di business dell'app.
 
-Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. tra cui:
+Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Tra queste sono incluse:
 
-- Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un'app aziendale Xamarin.Forms consiste nel decidere se inserire la logica di business nei file code-behind o se creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere più semplice l'app gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
+- Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un' Xamarin.Forms app aziendale è la possibilità di inserire la logica di business nei file code-behind o di creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere l'app più gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 - La scelta tra la piattaforma fornita dagli eventi e la comunicazione basata su messaggi a regime di controllo libero tra i componenti che risultano poco pratici per il collegamento in base a riferimenti a oggetti e tipi. Per altre informazioni, vedere Introduzione alla [comunicazione tra componenti](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)a regime di controllo libero.
 - Decidere come spostarsi tra le pagine, inclusa la modalità di richiamo dello spostamento e la posizione in cui deve risiedere la logica di navigazione. Per altre informazioni, vedere [Navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
@@ -45,7 +48,7 @@ Tuttavia, esistono molti problemi che devono essere risolti durante il partizion
 - Determinazione della modalità di accesso ai dati remoti dai servizi Web, incluso come recuperare in modo affidabile i dati e come memorizzare nella cache i dati. Per ulteriori informazioni, vedere [accesso ai dati remoti](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 - Decidere come testare l'app. Per ulteriori informazioni, vedere [unit testing](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
-Questa guida fornisce indicazioni su questi problemi e si concentra sui modelli e sull'architettura di base per la creazione di un'app aziendale multipiattaforma con Xamarin.Forms. Il materiale sussidiario mira a produrre codice adattabile, gestibile e testabile, risolvendo gli scenari comuni di sviluppo delle app Xamarin.Forms e scegliendo le problematiche relative alla presentazione, alla logica di presentazione e alle entità tramite il supporto del Modello MVC (Model-View-ViewModel).
+Questa guida fornisce indicazioni su questi problemi e si concentra sui modelli e sull'architettura di base per la creazione di un'app aziendale multipiattaforma con Xamarin.Forms . Il materiale sussidiario mira a produrre codice adattabile, gestibile e testabile, risolvendo scenari comuni di Xamarin.Forms sviluppo di app aziendali e separando le problematiche relative alla presentazione, alla logica di presentazione e alle entità tramite il supporto per il modello MVC (Model-View-ViewModel).
 
 ## <a name="sample-application"></a>Applicazione di esempio
 
@@ -70,7 +73,7 @@ L'applicazione di esempio viene fornita con tre app client:
 
 - Applicazione MVC sviluppata con ASP.NET Core.
 - Applicazione a pagina singola (SPA) sviluppata con angolari 2 e typescript. Questo approccio per le applicazioni Web consente di evitare l'esecuzione di un round trip al server con ciascuna operazione.
-- App per dispositivi mobili sviluppata con Xamarin.Forms, che supporta iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP).
+- App per dispositivi mobili sviluppata con Xamarin.Forms , che supporta iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP).
 
 Per informazioni sulle applicazioni Web, vedere [architettura e sviluppo di applicazioni Web moderne con ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook).
 
@@ -87,7 +90,7 @@ Per informazioni sull'implementazione dei servizi back-end, vedere [microservizi
 
 ### <a name="mobile-app"></a>App per dispositivi mobili
 
-Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con Xamarin.Forms e usa l'app per dispositivi mobili eShopOnContainers come esempio. La figura 1-2 Mostra le pagine dell'app per dispositivi mobili eShopOnContainers che forniscono la funzionalità descritta in precedenza.
+Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con Xamarin.Forms e usa come esempio l'app per dispositivi mobili eShopOnContainers. La figura 1-2 Mostra le pagine dell'app per dispositivi mobili eShopOnContainers che forniscono la funzionalità descritta in precedenza.
 
 [![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
@@ -95,23 +98,23 @@ Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con
 
 L'app per dispositivi mobili usa i servizi back-end forniti dall'applicazione di riferimento eShopOnContainers. Tuttavia, può essere configurato per utilizzare i dati di servizi fittizi per coloro che desiderano evitare di distribuire i servizi back-end.
 
-L'app per dispositivi mobili eShopOnContainers esercita la seguente funzionalità di Xamarin.Forms:
+L'app per dispositivi mobili eShopOnContainers esercita le Xamarin.Forms funzionalità seguenti:
 
 - XAML
 - Controlli
 - Associazioni
 - Convertitori
 - Stili
-- Animations
+- Animazioni
 - Comandi
-- comportamenti
-- trigger
+- Comportamenti
+- Trigger
 - Effetti
 - Renderer personalizzati
 - MessagingCenter
 - Controlli personalizzati
 
-Per altre informazioni su questa funzionalità, vedere la [documentazione di Xamarin.Forms](~/xamarin-forms/index.yml)e [creazione di app per dispositivi mobili con Xamarin.Forms](https://aka.ms/xamebook).
+Per ulteriori informazioni su questa funzionalità, vedere la [ Xamarin.Forms documentazione](~/xamarin-forms/index.yml)di e [creazione di app per Xamarin.Forms dispositivi mobili con ](https://aka.ms/xamebook).
 
 Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositivi mobili eShopOnContainers.
 
@@ -119,7 +122,7 @@ Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositi
 
 La soluzione app per dispositivi mobili eShopOnContainers organizza il codice sorgente e altre risorse nei progetti. Tutti i progetti utilizzano le cartelle per organizzare il codice sorgente e altre risorse in categorie. La tabella seguente descrive i progetti che compongono l'app per dispositivi mobili eShopOnContainers:
 
-|Progetto|Descrizione|
+|Project|Descrizione|
 |--- |--- |
 |eShopOnContainers. Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
 |eShopOnContainers. Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
@@ -130,7 +133,7 @@ La soluzione app per dispositivi mobili eShopOnContainers organizza il codice so
 |eShopOnContainers. TestRunner. Windows|Questo progetto è il piattaforma UWP (Universal Windows Platform) Test Runner per il progetto eShopOnContainers. UnitTests.|
 |eShopOnContainers. UnitTests|Questo progetto contiene unit test per il progetto eShopOnContainers. Core.|
 
-Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riutilizzate in qualsiasi app Xamarin.Forms con modifiche minime o nulle.
+Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riutilizzate in qualsiasi Xamarin.Forms app con modifiche minime o nulle.
 
 ##### <a name="eshoponcontainerscore-project"></a>Progetto eShopOnContainers. Core
 
@@ -138,21 +141,21 @@ Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 
 |Cartella|Descrizione|
 |--- |--- |
-|Animations|Contiene classi che consentono l'utilizzo delle animazioni in XAML.|
-|comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
+|Animazioni|Contiene classi che consentono l'utilizzo delle animazioni in XAML.|
+|Comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
 |Controlli|Contiene i controlli personalizzati usati dall'app.|
 |Convertitori|Contiene convertitori di valori che applicano la logica personalizzata a un'associazione.|
-|Effetti|Contiene la classe `EntryLineColorEffect` utilizzata per modificare il colore del bordo di controlli `Entry` specifici.|
-|Eccezioni|Contiene la `ServiceAuthenticationException` personalizzata.|
-|Estensioni|Contiene metodi di estensione per le classi `VisualElement` e `IEnumerable`.|
-|Aiutanti|Contiene le classi helper per l'app.|
+|Effetti|Contiene la `EntryLineColorEffect` classe, utilizzata per modificare il colore del bordo di controlli specifici `Entry` .|
+|Eccezioni|Contiene l'oggetto personalizzato `ServiceAuthenticationException` .|
+|Estensioni|Contiene metodi di estensione per `VisualElement` le `IEnumerable` classi e.|
+|Helper|Contiene le classi helper per l'app.|
 |Modelli|Contiene le classi del modello per l'app.|
-|Proprietà|Contiene `AssemblyInfo.cs`, un file di metadati dell'assembly .NET.|
+|Proprietà|Contiene `AssemblyInfo.cs` , un file di metadati dell'assembly .NET.|
 |Servizi|Contiene le interfacce e le classi che implementano i servizi forniti all'app.|
-|trigger|Contiene il trigger `BeginAnimation`, utilizzato per richiamare un'animazione in XAML.|
+|Trigger|Contiene il `BeginAnimation` trigger, utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi necessarie per la convalida dell'input dei dati.|
 |ViewModel|Contiene la logica dell'applicazione esposta alle pagine.|
-|Visualizzazioni|Contiene le pagine per l'app.|
+|Viste|Contiene le pagine per l'app.|
 
 ##### <a name="platform-projects"></a>Progetti della piattaforma
 
@@ -160,7 +163,7 @@ I progetti della piattaforma contengono implementazioni degli effetti, implement
 
 ## <a name="summary"></a>Riepilogo
 
-Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Xamarin offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
+Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Novell offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
 
 Gli sviluppatori di app aziendali affrontano diverse esigenze che possono alterare l'architettura dell'app durante lo sviluppo. È quindi importante compilare un'app in modo che possa essere modificata o estesa nel tempo. La progettazione di tale adattamento può essere difficile, ma in genere comporta il partizionamento di un'app in componenti discreti, a regime di controllo libero, che possono essere facilmente integrati in un'app.
 

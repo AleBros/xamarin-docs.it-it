@@ -1,42 +1,45 @@
 ---
-title: Shader SkiaSharp
-description: Usare gli shader per creare sfumature, bitmap riquadri e Perlin noise.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 90022ddd59f56e0d70e5b8efd57d97713df5e969
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8f4ef3a583a7f9078f62c899d3b2abfc0848cc79
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654907"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135434"
 ---
 # <a name="skiasharp-shaders"></a>Shader SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-È possibile impostare il [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) proprietà della `SKPaint` a un oggetto di tipo [ `SKShader` ](xref:SkiaSharp.SKShader) per creare diversi tipi di sfumature, un modello affiancato bitmap o Perlin noise.
+È possibile impostare la [`Shader`](xref:SkiaSharp.SKPaint.Shader) proprietà di `SKPaint` su un oggetto di tipo [`SKShader`](xref:SkiaSharp.SKShader) per creare diversi tipi di sfumature, un modello di bitmap affiancato o un rumore Perlin.
 
-## <a name="the-skiasharp-linear-gradientlinear-gradientmd"></a>[Sfumatura lineare SkiaSharp](linear-gradient.md)
+## <a name="the-skiasharp-linear-gradient"></a>[Sfumatura lineare SkiaSharp](linear-gradient.md)
 
-Informazioni su come tracciare le linee o aree di riempimento con sfumature è costituito da un graduale di due colori.
+Viene illustrato come tracciare le linee o riempire le aree con sfumature composte da una combinazione graduale di due colori.
 
-## <a name="skiasharp-circular-gradientscircular-gradientsmd"></a>[Sfumature circolare SkiaSharp](circular-gradients.md)
+## <a name="skiasharp-circular-gradients"></a>[Sfumature circolari SkiaSharp](circular-gradients.md)
 
-Scopri i diversi tipi di sfumature basate cerchi e usarli per le maschere o le evidenziazioni speculari.
+Informazioni sui diversi tipi di sfumature basate sui cerchi e su come usarli per le maschere o le evidenziazioni speculari.
 
-## <a name="skiasharp-bitmap-tilingbitmap-tilingmd"></a>[Affiancamento di bitmap di SkiaSharp](bitmap-tiling.md)
+## <a name="skiasharp-bitmap-tiling"></a>[Affiancamento bitmap SkiaSharp](bitmap-tiling.md)
 
-Affiancare un'area mediante bitmap ripetuta orizzontalmente e verticalmente.
+Affiancare un'area usando le bitmap ripetute orizzontalmente e verticalmente.
 
-## <a name="skiasharp-noise-and-composingnoisemd"></a>[SkiaSharp rumore e composizione](noise.md)
+## <a name="skiasharp-noise-and-composing"></a>[SkiaSharp rumore e composizione](noise.md)
 
-Generare gli shader di Perlin noise e combinare con altri shader.
+Genera shader di Perlin e combina con altri shader.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

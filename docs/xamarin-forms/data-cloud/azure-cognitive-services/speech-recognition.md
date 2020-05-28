@@ -1,22 +1,25 @@
 ---
-title: Riconoscimento vocale con l'API del servizio vocale
-description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un'applicazione Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 01/14/2020
-ms.openlocfilehash: c10b8feea5fbec21fc127262c3f1bfda50beba7f
-ms.sourcegitcommit: ba83c107c87b015dbcc9db13964fe111a0573dca
-ms.translationtype: HT
+title: ''
+description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un' Xamarin.Forms applicazione.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265152"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139321"
 ---
 # <a name="speech-recognition-using-azure-speech-service"></a>Riconoscimento vocale con il servizio riconoscimento vocale di Azure
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
 
 Il servizio riconoscimento vocale di Azure è un'API basata sul cloud che offre le funzionalità seguenti:
 
@@ -25,9 +28,9 @@ Il servizio riconoscimento vocale di Azure è un'API basata sul cloud che offre 
 - La **traduzione vocale** consente la traduzione in tempo reale e multilingue per sintesi vocale e sintesi vocale.
 - Gli **assistenti vocali** possono creare interfacce di conversazione simili a quelle umane per le applicazioni.
 
-Questo articolo illustra il modo in cui la sintesi vocale è implementata nell'applicazione Xamarin.Forms di esempio tramite il servizio di riconoscimento vocale di Azure. Gli screenshot seguenti illustrano l'applicazione di esempio in iOS e Android:
+Questo articolo illustra il modo in cui la sintesi vocale è implementata nell' Xamarin.Forms applicazione di esempio tramite il servizio di riconoscimento vocale di Azure. Gli screenshot seguenti illustrano l'applicazione di esempio in iOS e Android:
 
-[![screenshot dell'applicazione di esempio in iOS e Android](speech-recognition-images/speech-recognition-cropped.png)](speech-recognition-images/speech-recognition.png#lightbox "Screenshot dell'applicazione di esempio in iOS e Android")
+[![Screenshot dell'applicazione di esempio in iOS e Android](speech-recognition-images/speech-recognition-cropped.png)](speech-recognition-images/speech-recognition.png#lightbox "Screenshot dell'applicazione di esempio in iOS e Android")
 
 ## <a name="create-an-azure-speech-service-resource"></a>Creare una risorsa del servizio riconoscimento vocale di Azure
 
@@ -63,7 +66,7 @@ L'applicazione di esempio usa il pacchetto NuGet **Microsoft. CognitiveServices.
 
 ## <a name="create-an-imicrophoneservice-interface"></a>Creare un'interfaccia IMicrophoneService
 
-Ogni piattaforma richiede l'autorizzazione per l'accesso al microfono. Il progetto di esempio fornisce un'interfaccia `IMicrophoneService` nel progetto condiviso e usa il `DependencyService` Xamarin.Forms per ottenere le implementazioni della piattaforma dell'interfaccia.
+Ogni piattaforma richiede l'autorizzazione per l'accesso al microfono. Il progetto di esempio fornisce un' `IMicrophoneService` interfaccia nel progetto condiviso e utilizza Xamarin.Forms `DependencyService` per ottenere le implementazioni della piattaforma dell'interfaccia.
 
 ```csharp
 public interface IMicrophoneService
@@ -75,7 +78,7 @@ public interface IMicrophoneService
 
 ## <a name="create-the-page-layout"></a>Creare il layout di pagina
 
-Il progetto di esempio definisce un layout di pagina di base nel file **MainPage. XAML** . Gli elementi di layout della chiave sono un `Button` che avvia il processo di trascrizione, un `Label` per contenere il testo trascritto e un `ActivityIndicator` da visualizzare quando è in corso la trascrizione:
+Il progetto di esempio definisce un layout di pagina di base nel file **MainPage. XAML** . Gli elementi di layout della chiave sono un oggetto `Button` che avvia il processo di trascrizione, un oggetto `Label` per contenere il testo trascritto e un oggetto `ActivityIndicator` da mostrare quando è in corso la trascrizione:
 
 ```xaml
 <ContentPage ...>
@@ -101,7 +104,7 @@ Il progetto di esempio definisce un layout di pagina di base nel file **MainPage
 
 Il file code-behind **MainPage.XAML.cs** contiene tutta la logica per inviare audio e ricevere il testo trascritto dal servizio di riconoscimento vocale di Azure.
 
-Il costruttore `MainPage` ottiene un'istanza dell'interfaccia `IMicrophoneService` dal `DependencyService`:
+Il `MainPage` costruttore ottiene un'istanza dell' `IMicrophoneService` interfaccia da `DependencyService` :
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -121,7 +124,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Il metodo `TranscribeClicked` viene chiamato quando viene toccata l'istanza di `transcribeButton`:
+Il `TranscribeClicked` metodo viene chiamato quando `transcribeButton` viene toccata l'istanza:
 
 ```csharp
 async void TranscribeClicked(object sender, EventArgs e)
@@ -184,12 +187,12 @@ async void TranscribeClicked(object sender, EventArgs e)
 Il metodo `TranscribeClicked` esegue le operazioni seguenti:
 
 1. Verifica se l'applicazione ha accesso al microfono e si chiude in modo tempestivo in caso contrario.
-1. Crea un'istanza della classe `SpeechRecognizer` se non esiste già.
+1. Crea un'istanza della `SpeechRecognizer` classe se non esiste già.
 1. Arresta la trascrizione continua se è in corso.
 1. Inserisce un timestamp e avvia la trascrizione continua se non è in corso.
 1. Invia una notifica all'applicazione per aggiornarne l'aspetto in base al nuovo stato dell'applicazione.
 
-Il resto dei metodi della classe `MainPage` sono helper per la visualizzazione dello stato dell'applicazione:
+I restanti `MainPage` metodi della classe sono helper per la visualizzazione dello stato dell'applicazione:
 
 ```csharp
 void UpdateTranscription(string newText)
@@ -229,15 +232,15 @@ void UpdateDisplayState()
 }
 ```
 
-Il metodo `UpdateTranscription` scrive la `string` `newText` specificata nell'elemento `Label` denominato `transcribedText`. Forza l'esecuzione dell'aggiornamento sul thread dell'interfaccia utente, in modo che possa essere chiamato da qualsiasi contesto senza causare eccezioni. Il `InsertDateTimeRecord` scrive la data e l'ora correnti nell'istanza `transcribedText` per contrassegnare l'inizio di una nuova trascrizione. Infine, il metodo `UpdateDisplayState` aggiorna gli elementi `Button` e `ActivityIndicator` per indicare se la trascrizione è in corso o meno.
+Il `UpdateTranscription` metodo scrive l'oggetto fornito nell' `newText` `string` `Label` elemento denominato `transcribedText` . Forza l'esecuzione dell'aggiornamento sul thread dell'interfaccia utente, in modo che possa essere chiamato da qualsiasi contesto senza causare eccezioni. `InsertDateTimeRecord`Scrive la data e l'ora correnti nell' `transcribedText` istanza di per contrassegnare l'inizio di una nuova trascrizione. Infine, il `UpdateDisplayState` metodo aggiorna gli `Button` `ActivityIndicator` elementi e per indicare se la trascrizione è in corso o meno.
 
 ## <a name="create-platform-microphone-services"></a>Creazione di servizi di piattaforma microfono
 
-Per raccogliere dati vocali, l'applicazione deve disporre dell'accesso al microfono. L'interfaccia di `IMicrophoneService` deve essere implementata e registrata con il `DependencyService` su ogni piattaforma per il funzionamento dell'applicazione.
+Per raccogliere dati vocali, l'applicazione deve disporre dell'accesso al microfono. L' `IMicrophoneService` interfaccia deve essere implementata e registrata con `DependencyService` in ogni piattaforma per il funzionamento dell'applicazione.
 
 ### <a name="android"></a>Android
 
-Il progetto di esempio definisce un'implementazione di `IMicrophoneService` per Android denominata `AndroidMicrophoneService`:
+Il progetto di esempio definisce un' `IMicrophoneService` implementazione per Android denominata `AndroidMicrophoneService` :
 
 ```csharp
 [assembly: Dependency(typeof(AndroidMicrophoneService))]
@@ -301,14 +304,14 @@ namespace CognitiveSpeechService.Droid.Services
 }
 ```
 
-Il `AndroidMicrophoneService` presenta le funzionalità seguenti:
+`AndroidMicrophoneService`Dispone delle funzionalità seguenti:
 
-1. L'attributo `Dependency` registra la classe con l'`DependencyService`.
-1. Il metodo `GetPermissionAsync` controlla se le autorizzazioni sono necessarie in base alla versione Android SDK e chiama `RequestMicPermissions` se l'autorizzazione non è già stata concessa.
-1. Il metodo `RequestMicPermissions` usa la classe `Snackbar` per richiedere le autorizzazioni all'utente se è necessaria una logica; in caso contrario, richiede direttamente le autorizzazioni di registrazione audio.
-1. Il metodo `OnRequestPermissionResult` viene chiamato con un risultato `bool` dopo che l'utente ha risposto alla richiesta di autorizzazioni.
+1. L' `Dependency` attributo registra la classe con `DependencyService` .
+1. Il `GetPermissionAsync` metodo controlla se le autorizzazioni sono necessarie in base alla versione Android SDK e chiama `RequestMicPermissions` se l'autorizzazione non è già stata concessa.
+1. Il `RequestMicPermissions` metodo usa la `Snackbar` classe per richiedere le autorizzazioni all'utente se è necessaria una logica; in caso contrario, richiede direttamente le autorizzazioni di registrazione audio.
+1. Il `OnRequestPermissionResult` metodo viene chiamato con un `bool` risultato dopo che l'utente ha risposto alla richiesta di autorizzazioni.
 
-La classe `MainActivity` è personalizzata per aggiornare l'istanza di `AndroidMicrophoneService` al completamento delle richieste di autorizzazioni:
+La `MainActivity` classe è personalizzata per aggiornare l' `AndroidMicrophoneService` istanza quando sono state completate le richieste di autorizzazioni:
 
 ```csharp
 public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -342,7 +345,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 }
 ```
 
-La classe `MainActivity` definisce un riferimento statico denominato `Instance`, che è richiesto dall'oggetto `AndroidMicrophoneService` quando si richiedono le autorizzazioni. Esegue l'override del metodo `OnRequestPermissionsResult` per aggiornare l'oggetto `AndroidMicrophoneService` quando la richiesta di autorizzazioni viene approvata o rifiutata dall'utente.
+La `MainActivity` classe definisce un riferimento statico chiamato `Instance` , che è richiesto dall' `AndroidMicrophoneService` oggetto durante la richiesta di autorizzazioni. Esegue l'override del `OnRequestPermissionsResult` metodo per aggiornare l' `AndroidMicrophoneService` oggetto quando la richiesta di autorizzazioni viene approvata o rifiutata dall'utente.
 
 Infine, è necessario che l'applicazione Android includa l'autorizzazione per registrare l'audio nel file **file AndroidManifest. XML** :
 
@@ -355,7 +358,7 @@ Infine, è necessario che l'applicazione Android includa l'autorizzazione per re
 
 ### <a name="ios"></a>iOS
 
-Il progetto di esempio definisce un'implementazione di `IMicrophoneService` per iOS denominata `iOSMicrophoneService`:
+Il progetto di esempio definisce un' `IMicrophoneService` implementazione per iOS denominata `iOSMicrophoneService` :
 
 ```csharp
 [assembly: Dependency(typeof(iOSMicrophoneService))]
@@ -389,14 +392,14 @@ namespace CognitiveSpeechService.iOS.Services
 }
 ```
 
-Il `iOSMicrophoneService` presenta le funzionalità seguenti:
+`iOSMicrophoneService`Dispone delle funzionalità seguenti:
 
-1. L'attributo `Dependency` registra la classe con l'`DependencyService`.
-1. Il metodo `GetPermissionAsync` chiama `RequestMicPermissions` per richiedere le autorizzazioni dall'utente del dispositivo.
-1. Il metodo `RequestMicPermissions` usa l'istanza di `AVAudioSession` condivisa per richiedere le autorizzazioni di registrazione.
-1. Il metodo `OnRequestPermissionResult` aggiorna l'istanza `TaskCompletionSource` con il valore `bool` fornito.
+1. L' `Dependency` attributo registra la classe con `DependencyService` .
+1. Il `GetPermissionAsync` metodo chiama `RequestMicPermissions` per richiedere le autorizzazioni dall'utente del dispositivo.
+1. Il `RequestMicPermissions` metodo usa l' `AVAudioSession` istanza condivisa per richiedere le autorizzazioni di registrazione.
+1. Il `OnRequestPermissionResult` metodo aggiorna l' `TaskCompletionSource` istanza di con il `bool` valore fornito.
 
-Infine, il file **info. plist** dell'app iOS deve includere un messaggio che indica all'utente il motivo per cui l'app richiede l'accesso al microfono. Modificare il file INFO. plist in modo da includere i tag seguenti all'interno dell'elemento `<dict>`:
+Infine, il file **info. plist** dell'app iOS deve includere un messaggio che indica all'utente il motivo per cui l'app richiede l'accesso al microfono. Modificare il file INFO. plist per includere i seguenti tag all'interno dell' `<dict>` elemento:
 
 ```xml
 <plist>
@@ -408,9 +411,9 @@ Infine, il file **info. plist** dell'app iOS deve includere un messaggio che ind
 </plist>
 ```
 
-### <a name="uwp"></a>UWP
+### <a name="uwp"></a>Piattaforma UWP
 
-Il progetto di esempio definisce un'implementazione di `IMicrophoneService` per UWP denominata `UWPMicrophoneService`:
+Il progetto di esempio definisce un' `IMicrophoneService` implementazione per UWP denominata `UWPMicrophoneService` :
 
 ```csharp
 [assembly: Dependency(typeof(UWPMicrophoneService))]
@@ -449,19 +452,19 @@ namespace CognitiveSpeechService.UWP.Services
 }
 ```
 
-Il `UWPMicrophoneService` presenta le funzionalità seguenti:
+`UWPMicrophoneService`Dispone delle funzionalità seguenti:
 
-1. L'attributo `Dependency` registra la classe con l'`DependencyService`.
-1. Il metodo `GetPermissionAsync` tenta di inizializzare un'istanza di `MediaCapture`. Se l'operazione ha esito negativo, viene avviata una richiesta dell'utente per abilitare il microfono.
-1. Il metodo `OnRequestPermissionResult` esiste per soddisfare l'interfaccia ma non è necessario per l'implementazione di UWP.
+1. L' `Dependency` attributo registra la classe con `DependencyService` .
+1. Il `GetPermissionAsync` metodo tenta di inizializzare un' `MediaCapture` istanza di. Se l'operazione ha esito negativo, viene avviata una richiesta dell'utente per abilitare il microfono.
+1. Il `OnRequestPermissionResult` metodo esiste per soddisfare l'interfaccia ma non è necessario per l'implementazione di UWP.
 
 Infine, il **pacchetto UWP. appxmanifest** deve specificare che l'applicazione usa il microfono. Fare doppio clic sul file Package. appxmanifest e selezionare l'opzione **Microphone** nella scheda **funzionalità** di Visual Studio 2019:
 
-[![screenshot del manifesto in Visual Studio 2019](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Screenshot del manifesto in Visual Studio 2019")
+[![Screenshot del manifesto in Visual Studio 2019](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Screenshot del manifesto in Visual Studio 2019")
 
-## <a name="test-the-application"></a>Testare l'applicazione
+## <a name="test-the-application"></a>Test dell'applicazione
 
-Eseguire l'app e fare clic sul pulsante **transpresepe** . L'app deve richiedere l'accesso al microfono e iniziare il processo di trascrizione. Il `ActivityIndicator` verrà animato, mostrando che la trascrizione è attiva. Quando si parla, l'app esegue lo streaming dei dati audio alla risorsa servizi vocali di Azure, che risponderà con il testo trascritto. Il testo trascritto verrà visualizzato nell'elemento `Label` al momento della ricezione.
+Eseguire l'app e fare clic sul pulsante **transpresepe** . L'app deve richiedere l'accesso al microfono e iniziare il processo di trascrizione. Il `ActivityIndicator` viene animato, mostrando che la trascrizione è attiva. Quando si parla, l'app esegue lo streaming dei dati audio alla risorsa servizi vocali di Azure, che risponderà con il testo trascritto. Il testo trascritto verrà visualizzato nell' `Label` elemento mentre viene ricevuto.
 
 > [!NOTE]
 > Gli emulatori Android non riescono a caricare e inizializzare le librerie di servizi vocali. È consigliabile eseguire test su un dispositivo fisico per la piattaforma Android.
@@ -470,5 +473,5 @@ Eseguire l'app e fare clic sul pulsante **transpresepe** . L'app deve richiedere
 
 - [Esempio di servizio vocale di Azure](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
 - [Panoramica del servizio riconoscimento vocale di Azure](https://docs.microsoft.com/azure/cognitive-services/speech-service/overview)
-- [Creare una risorsa di servizi cognitivi](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)
-- [Guida introduttiva: riconoscere il riconoscimento vocale da un microfono](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)
+- [Creare una risorsa per Servizi cognitivi](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)
+- [Avvio rapido: Riconoscimento vocale da un microfono](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)

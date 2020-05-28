@@ -1,24 +1,27 @@
 ---
-title: Xamarin.Forms funzionalità del dispositivo dual-screen
-description: Questa guida illustra come usare la classe DualScreenInfo di Xamarin.Forms per ottimizzare l'esperienza delle app per dispositivi con doppio schermo, ad esempio Surface Duo e Surface Neo.
-ms.prod: xamarin
-ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 02/08/2020
-ms.openlocfilehash: 3393f8f4468b58289443af3d2eea558cca4588d2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Formsfunzionalità del dispositivo dual screen
+description: Questa guida illustra come usare Xamarin.Forms la classe DualScreenInfo per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 59575823a9ec29847a60209e846ba244e51ca0c0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80628263"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138931"
 ---
-# <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Forms funzionalità del dispositivo dual-screen
+# <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Formsfunzionalità del dispositivo dual screen
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 La classe `DualScreenInfo` consente di determinare il riquadro in cui si trova la visualizzazione, le dimensioni del riquadro, l'orientamento del dispositivo, l'angolo della cerniera e altro ancora.
 

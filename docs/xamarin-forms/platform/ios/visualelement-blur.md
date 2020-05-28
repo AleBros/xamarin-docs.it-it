@@ -1,24 +1,27 @@
 ---
-title: Sfocatura di visualElement in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che applica la sfocatura a un oggetto visivo.
-ms.prod: xamarin
-ms.assetid: 2DE3B65E-B96E-4ECD-92DF-AA42D5205C44
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 2536902a03618fd50fad5019f79cb834b0c748f0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ce28a9ef2d5cbf4bdf1c12a85ea64ac9bb8bee8b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642959"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137007"
 ---
 # <a name="visualelement-blur-on-ios"></a>Sfocatura di visualElement in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma iOS viene usato per sfocare il contenuto sovrapposto al di sotto di esso e può essere [`VisualElement`](xref:Xamarin.Forms.VisualElement)applicato a qualsiasi. Vengono utilizzati in XAML, impostando il [`VisualElement.BlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty) proprietà associata a un valore del [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumerazione:
+Questo specifico della piattaforma iOS viene usato per sfocare il contenuto sovrapposto al di sotto di esso e può essere applicato a qualsiasi [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Viene utilizzato in XAML impostando la [`VisualElement.BlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty) proprietà associata su un valore dell' [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -32,7 +35,7 @@ Questo specifico della piattaforma iOS viene usato per sfocare il contenuto sovr
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -42,14 +45,14 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 ```
 
-Il `BoxView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [`VisualElement.UseBlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.UseBlurEffect(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usato per applicare l'effetto di sfocatura, con la [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumerazione che fornisce quattro valori: [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None), [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight), [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light), e [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark).
+Il `BoxView.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. [ `VisualElement.UseBlurEffect` ] (Xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. UseBlurEffect ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Oggetti visivi}, Xamarin.Forms . Il metodo PlatformConfiguration. iOSSpecific. BlurEffectStyle), nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene usato per applicare l'effetto di sfocatura, con l' [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumerazione che fornisce quattro valori: [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None) , [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight) , [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light) e [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark) .
 
-Il risultato è che un oggetto specificato [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) viene applicato al [`BoxView`](xref:Xamarin.Forms.BoxView) dell'istanza, quali sfocature il [`Image`](xref:Xamarin.Forms.Image) a più livelli sottostanti:
+Il risultato è che [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) all'istanza viene applicato un oggetto [`BoxView`](xref:Xamarin.Forms.BoxView) , che sfoca il [`Image`](xref:Xamarin.Forms.Image) livello sottostante:
 
-![](applying-blur-images/blur-effect.png "Specifiche della piattaforma effetto di sfocatura")
+![](applying-blur-images/blur-effect.png "Blur Effect Platform-Specific")
 
 > [!NOTE]
-> Quando si aggiunge un effetto di sfocatura da un [`VisualElement`](xref:Xamarin.Forms.VisualElement), gli eventi di tocco verranno comunque ricevuti dal `VisualElement`.
+> Quando si aggiunge un effetto di sfocatura a un oggetto [`VisualElement`](xref:Xamarin.Forms.VisualElement) , gli eventi di tocco verranno comunque ricevuti da `VisualElement` .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

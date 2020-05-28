@@ -1,30 +1,33 @@
 ---
-title: Formattazione delle stringhe di Xamarin.Forms
-description: Questo articolo illustra come usare i data binding di Xamarin.Forms per formattare e visualizzare gli oggetti sotto forma di stringhe. Tale risultato si ottiene impostando StringFormat del data binding su una stringa di formattazione .NET standard con un segnaposto.
-ms.prod: xamarin
-ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsFormattazione di stringhe
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940386"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135759"
 ---
-# <a name="xamarinforms-string-formatting"></a>Formattazione delle stringhe di Xamarin.Forms
+# <a name="xamarinforms-string-formatting"></a>Xamarin.FormsFormattazione di stringhe
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In alcuni casi è utile usare i data binding per visualizzare la rappresentazione di un oggetto o di un valore sotto forma di stringa. Ad esempio, si può usare `Label` per visualizzare il valore corrente di un elemento `Slider`. In questo data binding, `Slider` rappresenta l'origine, mentre la destinazione è la proprietà `Text` di `Label`.
 
-Quando si visualizzano stringhe nel codice, [`String.Format`](xref:System.String.Format(System.String,System.Object)) lo strumento più potente è il metodo statico. La stringa di formattazione include codici di formattazione specifici per i vari tipi di oggetti e ai valori da formattare è possibile aggiungere altro testo. Per altre informazioni sulla formattazione delle stringhe, vedere [Formattazione di tipi in .NET](/dotnet/standard/base-types/formatting-types/).
+Quando si visualizzano stringhe nel codice, lo strumento più potente è il [`String.Format`](xref:System.String.Format(System.String,System.Object)) metodo statico. La stringa di formattazione include codici di formattazione specifici per i vari tipi di oggetti e ai valori da formattare è possibile aggiungere altro testo. Per altre informazioni sulla formattazione delle stringhe, vedere [Formattazione di tipi in .NET](/dotnet/standard/base-types/formatting-types/).
 
 ## <a name="the-stringformat-property"></a>La proprietà StringFormat
 
-Questa funzionalità viene incorporata nelle associazioni [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) dati: `Binding` la [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) proprietà (o la proprietà dell'estensione `Binding` di markup) viene impostata su una stringa di formattazione .NET standard con un segnaposto:
+Questa funzionalità viene trasferita in data bindings: la [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) proprietà di `Binding` (o la [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) proprietà dell' `Binding` estensione di markup) viene impostata su una stringa di formattazione .NET standard con un segnaposto:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -187,4 +190,4 @@ L'articolo seguente, tuttavia, illustra il [**Percorso di binding**](binding-pat
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
-- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capitolo di data binding da Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

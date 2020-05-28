@@ -1,48 +1,51 @@
 ---
-title: Affiancamento di bitmap di SkiaSharp
-description: Affiancare un'area mediante bitmap ripetuta orizzontalmente e verticalmente.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: f019b6e031774d7bcdf593015394d0c73c96949b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198655"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137424"
 ---
-# <a name="skiasharp-bitmap-tiling"></a>Affiancamento di bitmap di SkiaSharp
+# <a name="skiasharp-bitmap-tiling"></a>Affiancamento bitmap SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
-Come si è visto in due articoli precedenti, il [ `SKShader` ](xref:SkiaSharp.SKShader) classe può creare sfumature lineari o circolare. Questo articolo illustra il `SKShader` oggetto che usa un'immagine bitmap per affiancare un'area. La bitmap può essere ripetuta orizzontalmente e verticalmente, nell'orientamento originale o in alternativa capovolta orizzontalmente e verticalmente. Il capovolgimento evita discontinuità tra i riquadri:
+Come è stato illustrato nei due articoli precedenti, la [`SKShader`](xref:SkiaSharp.SKShader) classe può creare sfumature lineari o circolari. Questo articolo è incentrato sull' `SKShader` oggetto che usa una bitmap per affiancare un'area. La bitmap può essere ripetuta orizzontalmente e verticalmente, sia nell'orientamento originale che in alternativa invertita orizzontalmente e verticalmente. Il capovolgimento evita le discontinuità tra i riquadri:
 
-![Esempio di affiancamento bitmap](bitmap-tiling-images/BitmapTilingSample.png "esempio di affiancamento Bitmap")
+![Esempio di affiancamento di bitmap](bitmap-tiling-images/BitmapTilingSample.png "Esempio di affiancamento di bitmap")
 
-Il metodo statico [ `SKShader.CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) metodo che crea lo shader è un `SKBitmap` parametro e due membri del [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode) enumerazione:
+Il [`SKShader.CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) metodo statico che crea questo shader presenta un `SKBitmap` parametro e due membri dell' [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) enumerazione:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy)
 ```
 
-I due parametri indicano le modalità utilizzate per l'espansione orizzontale e verticale per l'affiancamento. Questo è lo stesso `SKShaderTileMode` enumerazione che viene usato anche con i metodi della sfumatura.
+I due parametri indicano le modalità usate per l'affiancamento orizzontale e l'affiancamento verticale. Si tratta della stessa `SKShaderTileMode` enumerazione utilizzata anche con i metodi di sfumatura.
 
-Oggetto [ `CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) overload include un `SKMatrix` argomento per eseguire una trasformazione sulle bitmap affiancate:
+Un [`CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) Overload include un `SKMatrix` argomento per eseguire una trasformazione sulle bitmap affiancate:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy, SKMatrix localMatrix)
 ```
 
-Questo articolo contiene alcuni esempi di uso di questa trasformazione di matrice con bitmap affiancate.
+Questo articolo contiene alcuni esempi di utilizzo di questa trasformazione matrice con bitmap affiancate.
 
-## <a name="exploring-the-tile-modes"></a>Esplorare la modalità di affiancamento
+## <a name="exploring-the-tile-modes"></a>Esplorazione delle modalità di affiancamento
 
-Il primo programma nel **Bitmap affiancamento** sezione del **shader e altri effetti** pagina del [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio vengono illustrati i risultati dei due `SKShaderTileMode` argomenti. Il **Capovolgi modalità di affiancamento Bitmap** crea un'istanza di file XAML un' `SKCanvasView` e due `Picker` viste che consentono di selezionare un `SKShaderTilerMode` valore per l'espansione orizzontale e verticale. Si noti che una matrice del `SKShaderTileMode` membri è definito nel `Resources` sezione:
+Il primo programma nella sezione di **affiancamento bitmap** della pagina **shaders and other Effects** dell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) illustra gli effetti dei due `SKShaderTileMode` argomenti. Il file XAML delle **modalità Flip del riquadro bitmap** crea un'istanza di `SKCanvasView` e due `Picker` visualizzazioni che consentono di selezionare un `SKShaderTilerMode` valore per l'affiancamento orizzontale e verticale. Si noti che `SKShaderTileMode` nella sezione è definita una matrice di membri `Resources` :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -85,7 +88,7 @@ Il primo programma nel **Bitmap affiancamento** sezione del **shader e altri eff
 </ContentPage>
 ```
 
-Il costruttore del file code-behind carica nella risorsa bitmap che mostra un meccanico che si trova. Innanzitutto Ritaglia l'immagine usando il [ `ExtractSubset` ](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) metodo `SKBitmap` in modo che head e feet stanno toccando i bordi della bitmap. Il costruttore utilizza quindi il [ `Resize` ](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) metodo per creare un'altra immagine bitmap della metà delle dimensioni. Queste modifiche rendono più adatto per l'espansione della bitmap:
+Il costruttore del file code-behind carica nella risorsa bitmap che mostra un Monkey sitting. Prima di tutto l'immagine viene ritagliata usando il [`ExtractSubset`](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) metodo di in `SKBitmap` modo che i bordi della bitmap tocchino i bordi. Il costruttore usa quindi il [`Resize`](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) metodo per creare un'altra bitmap della metà delle dimensioni. Queste modifiche rendono la bitmap leggermente più adatta per l'affiancamento:
 
 ```csharp
 public partial class BitmapTileFlipModesPage : ContentPage
@@ -141,21 +144,21 @@ public partial class BitmapTileFlipModesPage : ContentPage
 }
 ```
 
-Il `PaintSurface` gestore ottiene il `SKShaderTileMode` delle impostazioni dei due `Picker` visualizzazioni e crea un `SKShader` oggetto basato sulla bitmap e questi due valori. Questo shader viene usato per riempire l'area di disegno:
+Il `PaintSurface` gestore ottiene le `SKShaderTileMode` impostazioni dalle due `Picker` visualizzazioni e crea un `SKShader` oggetto in base alla bitmap e a questi due valori. Questo shader viene usato per riempire l'area di disegno:
 
-[![Bitmap di modalità di riquadro capovolto](bitmap-tiling-images/BitmapTileFlipModes.png "Bitmap modalità di riquadro capovolto")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
+[![Modalità Flip riquadro bitmap](bitmap-tiling-images/BitmapTileFlipModes.png "Modalità Flip riquadro bitmap")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
 
-La schermata iOS a sinistra mostra l'effetto dei valori predefiniti di `SKShaderTileMode.Clamp`. La mappa di bit si trova nell'angolo superiore sinistro. Sotto la mappa di bit, la riga inferiore dei pixel viene ripetuta verso il basso. A destra della bitmap, la colonna all'estrema destra di pixel viene ripetuta completamente. Il resto dell'area di disegno viene colorato in base pixel marrone scuro nell'angolo inferiore destro della mappa di bit. Dovrebbe essere evidente che il `Clamp` opzione non viene utilizzata quasi mai con affiancamento di bitmap.
+La schermata iOS a sinistra mostra l'effetto dei valori predefiniti di `SKShaderTileMode.Clamp` . La bitmap si trova nell'angolo superiore sinistro. Sotto la bitmap, la riga inferiore dei pixel viene ripetuta fino a questo punto. A destra della bitmap, la colonna più a destra di pixel viene ripetuta in tutti i modi. Il resto dell'area di disegno è colorato dal pixel marrone scuro nell'angolo inferiore destro della bitmap. Dovrebbe essere ovvio che l' `Clamp` opzione non è quasi mai utilizzata con la piastrellatura bitmap.
 
-La schermata Android al centro mostra il risultato di `SKShaderTileMode.Repeat` per entrambi gli argomenti. Il riquadro viene ripetuto orizzontalmente e verticalmente. Mostra la schermata (Universal Windows Platform) `SKShaderTileMode.Mirror`. I riquadri sono ripetuti ma alternativamente capovolta orizzontalmente e verticalmente. Il vantaggio di questa opzione è che non esistono Nessun discontinuità tra i riquadri.
+La schermata Android nel centro Mostra il risultato di `SKShaderTileMode.Repeat` per entrambi gli argomenti. Il riquadro viene ripetuto orizzontalmente e verticalmente. Viene visualizzata la schermata piattaforma UWP (Universal Windows Platform) `SKShaderTileMode.Mirror` . I riquadri vengono ripetuti ma in alternativa invertiti orizzontalmente e verticalmente. Il vantaggio di questa opzione è che non ci sono discontinuità tra i riquadri.
 
-Tenere presente che è possibile usare diverse opzioni per la ripetizione orizzontale e verticale. È possibile specificare `SKShaderTileMode.Mirror` come secondo argomento per `CreateBitmap` ma `SKShaderTileMode.Repeat` come terzo argomento. In ogni riga, esistono i programmatori alternare l'immagine normale e l'immagine speculare, ma nessuna delle esistono i programmatori devono capovolto.
+Tenere presente che è possibile utilizzare diverse opzioni per la ripetizione orizzontale e verticale. È possibile specificare `SKShaderTileMode.Mirror` come secondo argomento per `CreateBitmap` ma `SKShaderTileMode.Repeat` come terzo argomento. In ogni riga, le scimmie si alternano ancora tra l'immagine normale e l'immagine speculare, ma nessuna delle scimmie è capovolta.
 
-## <a name="patterned-backgrounds"></a>Sfondi con motivi
+## <a name="patterned-backgrounds"></a>Sfondi con pattern
 
-Affiancamento di bitmap viene comunemente utilizzato per creare uno sfondo con motivi da una bitmap relativamente ridotto. L'esempio classico è una parete brick.
+L'affiancamento bitmap viene comunemente utilizzato per creare uno sfondo basato su pattern da una bitmap relativamente piccola. L'esempio classico è un muro Brick.
 
-Il **Wall Brick algoritmico** pagina Crea una bitmap di ridotte dimensioni che è simile a un brick intero e due metà di un brick separati da tradizionale. Poiché questo brick viene usato nell'esempio successivo, viene creato da un costruttore statico e reso pubblico con una proprietà statica:
+La pagina del **muro del Brick algoritmico** crea una bitmap di piccole dimensioni simile a un intero Brick e due metà di un Brick separato da Malta. Poiché anche questo Brick viene usato nell'esempio successivo, viene creato da un costruttore statico e reso pubblico con una proprietà statica:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -206,11 +209,11 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-La bitmap risultante è 70 pixel di larghezza e altezza pari a 60:
+La bitmap risultante è 70 pixel di larghezza e 60 pixel di altezza:
 
-![Brick algoritmico parete Tile](bitmap-tiling-images/AlgorithmicBrickWallTile.png "Brick algoritmico parete riquadro")
+![Riquadro del muro del Brick algoritmico](bitmap-tiling-images/AlgorithmicBrickWallTile.png "Riquadro del muro del Brick algoritmico")
 
-Il resto del **Wall Brick algoritmico** pagina Crea un `SKShader` oggetto che si ripete l'immagine orizzontalmente e verticalmente:
+Il resto della pagina del **muro di Brick algoritmo** crea un `SKShader` oggetto che ripete l'immagine orizzontalmente e verticalmente:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -247,15 +250,15 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-Ecco il risultato:
+Il risultato è il seguente:
 
-[![Brick algoritmico Wall](bitmap-tiling-images/AlgorithmicBrickWall.png "parete algoritmico Brick")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
+[![Parete algoritmica Brick](bitmap-tiling-images/AlgorithmicBrickWall.png "Parete algoritmica Brick")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
 
-Si potrebbe preferire qualcosa di leggermente più realistico. In tal caso, è possibile richiedere una fotografia di una parete brick effettivo e quindi ritagliarla. Questa bitmap è 300 pixel in larghezza e 150 pixel di altezza:
+Potrebbe essere preferibile un po' più realistico. In tal caso, è possibile fotografare un muro di mattoni effettivo e quindi ritagliarlo. Questa bitmap è 300 pixel di larghezza e 150 pixel di altezza:
 
-![Brick parete Tile](bitmap-tiling-images/BrickWallTile.jpg "Brick parete riquadro")
+![Riquadro Brick Wall](bitmap-tiling-images/BrickWallTile.jpg "Riquadro Brick Wall")
 
-Questa bitmap viene utilizzata la **Photographic parete di Brick** pagina:
+Questa bitmap viene usata nella pagina **Wall Brick fotografica** :
 
 ```csharp
 public class PhotographicBrickWallPage : ContentPage
@@ -294,17 +297,17 @@ public class PhotographicBrickWallPage : ContentPage
 }
 ```
 
-Si noti che il `SKShaderTileMode` argomenti `CreateBitmap` sono entrambi `Mirror`. Questa opzione viene in genere necessaria quando si utilizzano i riquadri creati da immagini del mondo reale. Il mirroring di riquadri consente di evitare discontinuità:
+Si noti che gli `SKShaderTileMode` argomenti di `CreateBitmap` sono entrambi `Mirror` . Questa opzione è in genere necessaria quando si usano i riquadri creati da immagini reali. Il mirroring dei riquadri evita le discontinuità:
 
-[![Wall Brick Photographic](bitmap-tiling-images/PhotographicBrickWall.png "parete Photographic Brick")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
+[![Muro di Brick fotografico](bitmap-tiling-images/PhotographicBrickWall.png "Muro di Brick fotografico")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
 
-Sono necessarie alcune operazioni per ottenere una bitmap appropriata per il riquadro. Questo non funziona molto bene perché il brick più scuro è l'acronimo una quantità eccessiva. Viene visualizzata regolarmente nelle immagini ripetute, rivelare il fatto che la bacheca brick è stata costruita da una bitmap più piccola.
+Sono necessarie alcune operazioni per ottenere una bitmap adatta per il riquadro. Questo non funziona molto bene perché il Brick più scuro si presenta troppo spesso. Viene visualizzato regolarmente all'interno delle immagini ripetute, mostrando il fatto che questo muro Brick è stato costruito da una bitmap più piccola.
 
-Il **supporti** cartella della [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio include anche l'immagine di una roccia parete:
+La cartella **media** dell'esempio [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) include anche questa immagine di una parete di pietra:
 
-![Dovranno essere parete Tile](bitmap-tiling-images/StoneWallTile.jpg "Stone parete riquadro")
+![Riquadro della parete di pietra](bitmap-tiling-images/StoneWallTile.jpg "Riquadro della parete di pietra")
 
-Tuttavia, la bitmap originale è un po' troppo grande per un riquadro. Può essere ridimensionato, ma il `SKShader.CreateBitmap` metodo anche possibile ridimensionare il riquadro, applicare una trasformazione all'elemento. Questa opzione è illustrata nel **Wall Stone** pagina:
+Tuttavia, la bitmap originale è leggermente troppo grande per un riquadro. Potrebbe essere `SKShader.CreateBitmap` ridimensionato, ma anche il metodo può ridimensionare il riquadro applicando una trasformazione. Questa opzione è illustrata nella pagina della **parete di pietra** :
 
 ```csharp
 public class StoneWallPage : ContentPage
@@ -347,42 +350,42 @@ public class StoneWallPage : ContentPage
 }
 ```
 
-Un `SKMatrix` valore viene creato per ridimensionare l'immagine alla metà dimensione originale:
+`SKMatrix`Viene creato un valore per ridimensionare l'immagine a metà delle dimensioni originali:
 
-[![Pietra Wall](bitmap-tiling-images/StoneWall.png "pietra parete")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
+[![Muro di pietra](bitmap-tiling-images/StoneWall.png "Muro di pietra")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
 
-Il la trasformazione opera su una bitmap originale usato nel `CreateBitmap` metodo? Oppure Trasforma la matrice risultante dei riquadri? 
+La trasformazione opera sulla bitmap originale utilizzata nel `CreateBitmap` Metodo? O trasforma la matrice di riquadri risultante? 
 
-Un modo semplice per rispondere a questa domanda è includere una rotazione come parte della trasformazione:
+Un modo semplice per rispondere a questa domanda consiste nell'includere una rotazione come parte della trasformazione:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeScale(0.5f, 0.5f);
 SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 ```
 
-Se la trasformazione viene applicata al singolo riquadro, quindi deve essere ruotate ogni immagine ripetute del riquadro e il risultato contiene molti discontinuità. Ma è evidente da questa schermata che viene trasformata la matrice composta dei riquadri:
+Se la trasformazione viene applicata al singolo riquadro, ogni immagine ripetuta del riquadro dovrebbe essere ruotata e il risultato conterrebbe numerose discontinuità. Tuttavia è evidente da questo screenshot che la matrice composita di riquadri viene trasformata:
 
-[![Pietra parete ruotato](bitmap-tiling-images/StoneWallRotated.png "pietra parete ruotata")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
+[![Muro di pietra ruotato](bitmap-tiling-images/StoneWallRotated.png "Muro di pietra ruotato")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
 
-Nella sezione [ **riquadro allineamento**](#tile-alignment), si noterà un esempio di una trasformazione di traslazione applicato allo shader.
+Nell'allineamento dei [**riquadri**](#tile-alignment)della sezione verrà visualizzato un esempio di trasformazione translate applicato allo shader.
 
-La versione autonoma [ **Clock Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) esempio (non fa parte del **SkiaSharpFormsDemos**) simula uno sfondo wood granulare con affiancamento bitmap basato su questa mappa di bit 240 pixel quadrato:
+L'esempio di [**Clock Cat**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) autonomo, che non fa parte di **SkiaSharpFormsDemos**, simula uno sfondo con granularità del legno usando la piastrellatura bitmap basata su questa bitmap quadrata di 240 pixel:
 
-![Il livello di dettaglio di legno](bitmap-tiling-images/WoodGrain.png "legno-livello di dettaglio")
+![Granaggio](bitmap-tiling-images/WoodGrain.png "Granaggio")
 
-Ovvero una fotografia di un piano di legno. Il `SKShaderTileMode.Mirror` consente che venga visualizzato come un'area molto più grande di legno:
+Si tratta di una fotografia di un parquet. L' `SKShaderTileMode.Mirror` opzione consente di visualizzare come un'area di legno molto più ampia:
 
-[![Cat orologio](bitmap-tiling-images/CatClock.png "Cat orologio")](bitmap-tiling-images/CatClock-Large.png#lightbox)
+[![Orologio gatto](bitmap-tiling-images/CatClock.png "Orologio gatto")](bitmap-tiling-images/CatClock-Large.png#lightbox)
 
-## <a name="tile-alignment"></a>Allineamento riquadro
+## <a name="tile-alignment"></a>Allineamento del riquadro
 
-Tutti gli esempi illustrati finora è sono utilizzato lo shader creato da `SKShader.CreateBitmap` per coprire l'intera area di disegno. Nella maggior parte dei casi, si useranno in porzioni di bitmap per l'invio di aree più piccole o (più raramente) per il riempimento di righe spesse. Ecco il riquadro photographic brick-wall usato per un rettangolo più piccolo:
+Tutti gli esempi mostrati finora hanno usato lo shader creato da `SKShader.CreateBitmap` per coprire l'intera area di disegno. Nella maggior parte dei casi, si utilizzerà la piastrellatura bitmap per la creazione di aree più piccole o (più raramente) per riempire l'interno di linee spesse. Ecco il riquadro fotografico-muro di mattoni usato per un rettangolo più piccolo:
 
-[![Riquadro di allineamento](bitmap-tiling-images/TileAlignment.png "riquadro di allineamento")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
+[![Allineamento del riquadro](bitmap-tiling-images/TileAlignment.png "Allineamento del riquadro")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
 
-Questo potrebbe avere un aspetto corretto all'utente, o forse no. Si supponga di essere disturbati che la modalità di affiancamento non inizia con un brick completo nell'angolo superiore sinistro del rettangolo. Ciò avviene perché gli shader sono allineati con l'area di disegno e non all'oggetto grafico sono contenuti.
+Questa operazione potrebbe essere utile per l'utente o forse no. È possibile che il modello di affiancamento non inizi con un Brick completo nell'angolo superiore sinistro del rettangolo. Questo perché gli shader sono allineati con l'area di disegno e non con l'oggetto grafico che decorano.
 
-La correzione è semplice. Creare un `SKMatrix` valore basato su una trasformazione di traslazione. La trasformazione passa in modo efficace il modello affiancato al punto in cui si desidera che l'angolo superiore sinistro del riquadro allineato. Questo metodo viene dimostrato nel **allineamento riquadro** pagina, che ha creato l'immagine dei riquadri non allineati illustrato in precedenza:
+La correzione è semplice. Creare un `SKMatrix` valore basato su una trasformazione di conversione. La trasformazione sposta in modo efficace il modello affiancato al punto in cui si desidera che l'angolo superiore sinistro del riquadro venga allineato. Questo approccio è illustrato nella pagina di **allineamento** dei riquadri, che ha creato l'immagine dei riquadri non allineati mostrati in precedenza:
 
 ```csharp
 public class TileAlignmentPage : ContentPage
@@ -450,11 +453,11 @@ public class TileAlignmentPage : ContentPage
 }
 ```
 
-Il **allineamento Tile** pagina include un `TapGestureRecognizer`. Toccare o fare clic su schermo e i parametri del programma per la `SKShader.CreateBitmap` metodo con un `SKMatrix` argomento. Questa trasformazione passa il modello in modo che l'angolo superiore sinistro contenga un brick completo:
+Nella pagina **allineamento riquadro** è incluso un oggetto `TapGestureRecognizer` . Toccare o fare clic sulla schermata e il programma passa al `SKShader.CreateBitmap` metodo con un `SKMatrix` argomento. Questa trasformazione sposta il modello in modo che l'angolo superiore sinistro contenga un Brick completo:
 
-[![Riquadro di allineamento toccato](bitmap-tiling-images/TileAlignmentTapped.png "riquadro allineamento toccato")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
+[![Allineamento del riquadro toccato](bitmap-tiling-images/TileAlignmentTapped.png "Allineamento del riquadro toccato")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
 
-È anche possibile usare questa tecnica per garantire che il modello affiancato bitmap è centrato all'interno dell'area che il processo di generazione. Nel **riquadri centrato** pagina il `PaintSurface` gestore calcola prima di tutto le coordinate come se sta per visualizzare la bitmap singola al centro dell'area di disegno. Queste coordinate viene quindi utilizzato per creare una trasformazione di traslazione per `SKShader.CreateBitmap`. Questa trasformazione passa l'intero modello in modo che un riquadro è centrato:
+È anche possibile usare questa tecnica per garantire che il modello di bitmap affiancato sia centrato all'interno dell'area disegnata. Nella pagina **riquadri centrati** il `PaintSurface` gestore calcola innanzitutto le coordinate come se visualizzasse la singola bitmap al centro dell'area di disegno. USA quindi tali coordinate per creare una trasformazione di traduzione per `SKShader.CreateBitmap` . Questa trasformazione sposta l'intero modello in modo da centrare un riquadro:
 
 ```csharp
 public class CenteredTilesPage : ContentPage
@@ -502,35 +505,35 @@ public class CenteredTilesPage : ContentPage
 }
 ```
 
-Il `PaintSurface` gestore si conclude con disegno un cerchio nel centro dell'area di disegno. Naturalmente, uno dei riquadri è esattamente il centro del cerchio, e gli altri vengono disposte in un modello simmetrico:
+Il `PaintSurface` gestore si conclude disegnando un cerchio al centro dell'area di disegno. Certo, uno dei riquadri è esattamente al centro del cerchio, mentre gli altri sono disposti in un modello simmetrico:
 
-[![Centrato tessere](bitmap-tiling-images/CenteredTiles.png "centrato riquadri")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
+[![Riquadri centrati](bitmap-tiling-images/CenteredTiles.png "Riquadri centrati")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
 
-Un altro approccio centratura viene effettivamente un po' più semplice. Anziché costruire una trasformazione di traslazione che inserisce un riquadro al centro, è possibile centrare un angolo del modello affiancato. Nel `SKMatrix.MakeTranslation` chiamare, usare gli argomenti per il centro dell'area di disegno:
+Un altro approccio di centramento è in realtà leggermente più semplice. Anziché creare una trasformazione trasla che inserisce un riquadro al centro, è possibile centrare un angolo del modello affiancato. Nella `SKMatrix.MakeTranslation` chiamata usare gli argomenti per il centro dell'area di disegno:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeTranslation(info.Rect.MidX, info.Rect.MidY);
 ```
 
-Il modello è ancora centrato e simmetrico, ma nessun riquadro si trova al centro:
+Il modello è ancora centrato e simmetrico, ma nessun riquadro è al centro:
 
-[![Centrato Alternate di tessere](bitmap-tiling-images/CenteredTilesAlternate.png "centrato Alternate di tessere")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
+[![Riquadri centrati alternativi](bitmap-tiling-images/CenteredTilesAlternate.png "Riquadri centrati alternativi")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
 
-## <a name="simplification-through-rotation"></a>Semplificazione con rotazione
+## <a name="simplification-through-rotation"></a>Semplificazione tramite rotazione
 
-Talvolta l'utilizzo di una trasformazione rotativa nel `SKShader.CreateBitmap` metodo può semplificare la tessera mappa di bit. Ciò diventa evidente quando si tenta di definire un riquadro per un limite di collegamento a catena. Il **ChainLinkTile.cs** file crea il riquadro visualizzato di seguito (con uno sfondo di colore rosa per maggiore chiarezza):
+In alcuni casi l'uso di una trasformazione di rotazione nel `SKShader.CreateBitmap` metodo può semplificare il riquadro bitmap. Questa operazione risulta evidente quando si tenta di definire un riquadro per una recinzione di collegamento a catena. Il file **ChainLinkTile.cs** crea il riquadro visualizzato qui (con uno sfondo rosa per motivi di chiarezza):
 
-![Riquadro di collegamenti reali catena](bitmap-tiling-images/HardChainLinkTile.png "riquadro catena collegamenti reali")
+![Catena di collegamenti a catena rigido](bitmap-tiling-images/HardChainLinkTile.png "Catena di collegamenti a catena rigido")
 
-Il riquadro deve includere due collegamenti, in modo che il codice il riquadro viene suddivisa in quattro quadranti. I quadranti alto a sinistra e basso a destra sono gli stessi, ma non sono completi. I cavi sono cui poco che devono essere gestiti con alcuni altri disegno in alto a destra e in basso a sinistra quadranti. Il file che esegue tutte queste operazioni è lunga 174 righe.
+Il riquadro deve includere due collegamenti, in modo che il codice divida il riquadro in quattro quadranti. I quadranti superiore sinistro e inferiore destro sono uguali, ma non sono completi. I fili hanno piccoli intagli che devono essere gestiti con un disegno aggiuntivo nei quadranti in alto a destra e in basso a sinistra. Il file che esegue tutto questo lavoro è lungo 174 righe.
 
-Si passerà a essere molto più semplice creare questo riquadro:
+La creazione di questo riquadro risulta molto più semplice:
 
-![Semplice riquadro catena](bitmap-tiling-images/EasierChainLinkTile.png "semplice riquadro collegamento a catena")
+![Riquadro più semplice per il collegamento a catena](bitmap-tiling-images/EasierChainLinkTile.png "Riquadro più semplice per il collegamento a catena")
 
-Se lo shader bitmap-riquadro viene ruotata di 90 gradi, gli oggetti visivi sono quasi gli stessi.
+Se lo shader del riquadro bitmap è ruotato di 90 gradi, gli oggetti visivi sono quasi uguali.
 
-Il codice per creare il riquadro più facilmente di collegamento a catena fa parte il **catena riquadro** pagina. Il costruttore determina una dimensione in base al tipo di dispositivo su cui viene eseguita il programma e quindi chiama `CreateChainLinkTile`, che consente di disegnare sulla bitmap tramite linee, i percorsi e gli shader sfumatura:
+Il codice per creare il riquadro collegamento a catena più semplice fa parte della pagina del **riquadro catena-collegamento** . Il costruttore determina una dimensione del riquadro in base al tipo di dispositivo in cui è in esecuzione il programma e quindi chiama `CreateChainLinkTile` , che disegna sulla bitmap utilizzando linee, percorsi e shader sfumatura:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -618,7 +621,7 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Ad eccezione di cavi, il riquadro è trasparente, il che significa che è possibile visualizzarlo nella parte superiore di un altro elemento. Il programma carica in una delle risorse bitmap, consente di visualizzare in modo da riempire l'area di disegno e disegna lo shader in primo piano:
+Fatta eccezione per i fili, il riquadro è trasparente, il che significa che è possibile visualizzarlo sopra un altro elemento. Il programma viene caricato in una delle risorse bitmap, lo Visualizza per riempire l'area di disegno e quindi disegna lo shader in alto:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -650,17 +653,17 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Si noti che lo shader è ruotata di 45 gradi, pertanto è orientata ai servizi, ad esempio un limite di catena reale:
+Si noti che lo shader è ruotato di 45 gradi, quindi è orientato come un vero e proprio collegamento a catena:
 
-[![Limite di collegamento a catena](bitmap-tiling-images/ChainLinkFence.png "recinto a catena")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![Recinzione collegamenti a catena](bitmap-tiling-images/ChainLinkFence.png "Recinzione collegamenti a catena")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
-## <a name="animating-bitmap-tiles"></a>Animazione tessere mappa di bit
+## <a name="animating-bitmap-tiles"></a>Animazione di riquadri bitmap
 
-È possibile animare una serie intera bitmap-riquadro animando la trasformazione di matrice. Si supponga il motivo per spostare orizzontalmente o verticalmente o entrambi. È possibile farlo mediante la creazione di una trasformazione di conversione basata sulle coordinate mutevoli.
+È possibile aggiungere un'animazione a un intero modello di riquadro bitmap animando la trasformazione matrice. Forse si vuole che il modello venga spostato orizzontalmente o verticalmente o entrambi. A tale scopo, è possibile creare una trasformazione di traslazione in base alle coordinate di spostamento.
 
-È anche possibile disegnare su una bitmap di ridotte dimensioni, o per modificare i bit di pixel della bitmap alla tariffa di 60 volte al secondo. Tale bitmap può essere utilizzato quindi per l'espansione e l'intero modello affiancato può sembrare da animare. 
+È anche possibile creare una piccola bitmap o modificare i bit di pixel della bitmap alla frequenza di 60 volte al secondo. Tale bitmap può quindi essere utilizzata per l'affiancamento e l'intero modello affiancato può sembrare animato. 
 
-Il **riquadro animato di Bitmap** è illustrato questo approccio. Una bitmap viene creata un'istanza come campo da 64 pixel quadrati. Il costruttore chiama `DrawBitmap` per conferirgli un aspetto iniziale. Se il `angle` campo è zero (come avviene quando il metodo viene chiamato prima di tutto), la mappa di bit include due righe incrociate come una X. Le righe vengono apportate sufficientemente lungo per raggiungere sempre al bordo della bitmap indipendentemente il `angle` valore: 
+Questo approccio viene illustrato nella pagina del **riquadro bitmap animato** . Viene creata un'istanza di bitmap come campo da 64-pixels Square. Il costruttore chiama `DrawBitmap` per assegnargli un aspetto iniziale. Se il `angle` campo è zero (così com'è quando il metodo viene chiamato per la prima volta), la bitmap contiene due righe incrociate come una X. La lunghezza delle righe è sufficiente per raggiungere sempre il bordo della bitmap indipendentemente dal `angle` valore: 
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -705,7 +708,7 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-Si verifica l'overhead di animazione nel `OnAppearing` e `OnDisappearing` esegue l'override. Il `OnTimerTick` metodo anima la `angle` valore da 0 a 360 gradi ogni 10 secondi per ruotare la figura X della bitmap:
+Il sovraccarico dell'animazione si verifica `OnAppearing` nelle `OnDisappearing` sostituzioni e. Il `OnTimerTick` metodo aggiunge un'animazione al `angle` valore compreso tra 0 e 360 gradi ogni 10 secondi per ruotare la figura X all'interno della bitmap:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -746,9 +749,9 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-A causa la simmetria della figura X, questo è lo stesso come ruotare la `angle` valore compreso tra 0 gradi e 90 gradi ogni 2,5 secondi.
+A causa della simmetria della figura X, equivale a ruotare il `angle` valore da 0 gradi a 90 gradi ogni 2,5 secondi.
 
-Il `PaintSurface` gestore consente di creare uno shader dalla mappa di bit e Usa l'oggetto di disegno per l'intera area di disegno dei colori:
+Il `PaintSurface` gestore crea uno shader dalla bitmap e usa l'oggetto Paint per colorare l'intera area di disegno:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -773,12 +776,12 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-Il `SKShaderTileMode.Mirror` opzioni assicurano che i rami di X in ogni bitmap join con la X nella bitmap di adiacenti per creare un modello animato complessivo che risulta molto più complesso rispetto a suggerirei di animazione semplice:
+Le `SKShaderTileMode.Mirror` opzioni assicurano che le braccia della x in ogni bitmap si uniscono alla x nelle bitmap adiacenti per creare un modello animato generale che sembra molto più complesso di quanto venga suggerito dall'animazione semplice:
 
-[![Bitmap riquadro animato](bitmap-tiling-images/AnimatedBitmapTile.png "Bitmap riquadro animato")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
+[![Riquadro bitmap animata](bitmap-tiling-images/AnimatedBitmapTile.png "Riquadro bitmap animata")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [CatClock (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

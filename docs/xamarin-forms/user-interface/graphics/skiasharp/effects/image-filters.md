@@ -1,34 +1,37 @@
 ---
-title: Filtri immagini di SkiaSharp
-description: Informazioni su come usare il filtro di immagine per creare le sfumature e ombreggiature.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/27/2018
-ms.openlocfilehash: f93f0462d476daaaa551833391b1be1865795476
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770545"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136344"
 ---
-# <a name="skiasharp-image-filters"></a>Filtri immagini di SkiaSharp
+# <a name="skiasharp-image-filters"></a>Filtri immagine SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-I filtri di immagine sono gli effetti che operano su tutti i bit di colore del pixel che compongono un'immagine. Sono più versatile filtri mask, che funzionano solo sul canale alfa, come descritto nell'articolo [ **filtri maschera SkiaSharp**](mask-filters.md). Per usare un filtro di immagine, impostare il [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) proprietà della `SKPaint` a un oggetto di tipo [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) che è stato creato chiamando uno dei metodi statici della classe.
+I filtri immagine sono effetti che operano su tutti i bit di colore dei pixel che costituiscono un'immagine. Sono più versatili dei filtri maschera, che operano solo sul canale alfa, come descritto nell'articolo [**filtri SkiaSharp mask**](mask-filters.md). Per usare un filtro immagine, impostare la [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) proprietà di `SKPaint` su un oggetto di tipo [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) creato chiamando uno dei metodi statici della classe.
 
-Il modo migliore per acquisire familiarità con i filtri di mask è eseguendo più esperimenti con questi metodi statici. È possibile usare un filtro di un'intera bitmap di sfocatura:
+Il modo migliore per acquisire familiarità con i filtri maschera consiste nel provare questi metodi statici. È possibile usare un filtro maschera per sfocare un'intera bitmap:
 
-![Esempio Blur](image-filters-images/ImageFilterExample.png "Blur esempio")
+![Esempio di sfocatura](image-filters-images/ImageFilterExample.png "Esempio di sfocatura")
 
-Questo articolo illustra anche l'utilizzo di un filtro di immagini per creare un calo ombreggiatura e per rilievo e incisione effetti.
+Questo articolo illustra anche l'uso di un filtro immagine per creare un'ombreggiatura e per gli effetti di rilievo e incisione.
 
-## <a name="blurring-vector-graphics-and-bitmaps"></a>Grafica vettoriale e bitmap di sfocatura
+## <a name="blurring-vector-graphics-and-bitmaps"></a>Grafica vettoriale sfocata e bitmap
 
-L'effetto di sfocatura creato [`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) dal metodo statico presenta un vantaggio significativo rispetto ai metodi [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) Blur della classe: Il filtro immagine può offuscare un'intera bitmap. Il metodo ha la sintassi seguente:
+L'effetto di sfocatura creato dal [`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) metodo statico presenta un vantaggio significativo rispetto ai metodi Blur della [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) classe: il filtro immagine può offuscare un'intera bitmap. Il metodo presenta la sintassi seguente:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -36,9 +39,9 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
                                                   SKImageFilter.CropRect cropRect = null);
 ```
 
-Il metodo ha due valori sigma &mdash; la prima per l'estensione della sfocatura in direzione orizzontale e il secondo per la direzione verticale. Si possono propagare i filtri di immagine, specificando un altro filtro di immagine come terzo argomento facoltativo. È possibile specificare anche un rettangolo di ritaglio.
+Il metodo ha due valori Sigma &mdash; il primo per l'extent della sfocatura nella direzione orizzontale e il secondo per la direzione verticale. È possibile a CATENARE i filtri di immagine specificando un altro filtro immagine come terzo argomento facoltativo. È possibile specificare anche un rettangolo di ritaglio.
 
-Il **immagine Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) include due `Slider` viste che consentono di provare a impostare vari livelli di sfocatura:
+La pagina dell' **esperimento di sfocatura delle immagini** in [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) include due `Slider` visualizzazioni che consentono di provare a impostare diversi livelli di sfocatura:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +78,7 @@ Il **immagine Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](ht
 </ContentPage>
 ```
 
-Il file code-behind usa due `Slider` i valori per chiamare `SKImageFilter.CreateBlur` per il `SKPaint` oggetto utilizzato per visualizzare il testo e una mappa di bit:
+Il file code-behind usa i due `Slider` valori da chiamare `SKImageFilter.CreateBlur` per l' `SKPaint` oggetto usato per visualizzare sia il testo che una bitmap:
 
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage
@@ -135,15 +138,15 @@ public partial class ImageBlurExperimentPage : ContentPage
 }
 ```
 
-Le tre schermate illustrano varie impostazioni per il `sigmaX` e `sigmaY` impostazioni:
+Le tre schermate mostrano diverse impostazioni per le `sigmaX` `sigmaY` Impostazioni e:
 
-[![Immagine di esperimento di sfocatura](image-filters-images/ImageBlurExperiment.png "immagine sfocatura esperimento")](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
+[![Esperimento di sfocatura immagine](image-filters-images/ImageBlurExperiment.png "Esperimento di sfocatura immagine")](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
 
-Per mantenere la sfocatura coerenti tra le diverse dimensioni e risoluzioni, impostare `sigmaX` e `sigmaY` su valori proporzionali alla dimensione dell'immagine di sfocatura applicato al pixel viene eseguito il rendering.
+Per assicurare la coerenza della sfocatura tra dimensioni e risoluzioni di visualizzazione diverse, impostare `sigmaX` e `sigmaY` su valori proporzionali alla dimensione in pixel di cui è stato eseguito il rendering dell'immagine a cui viene applicata la sfocatura.
 
 ## <a name="drop-shadow"></a>Ombreggiatura
 
-Il [ `SKImageFilter.CreateDropShadow` ](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) metodo statico crea un' `SKImageFilter` oggetto per un'ombreggiatura:
+Il [`SKImageFilter.CreateDropShadow`](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) metodo statico crea un `SKImageFilter` oggetto per un'ombreggiatura:
 
 ```csharp
 public static SKImageFilter CreateDropShadow (float dx, float dy,
@@ -154,17 +157,17 @@ public static SKImageFilter CreateDropShadow (float dx, float dy,
                                               SKImageFilter.CropRect cropRect = null);
 ```
 
-Impostare questo oggetto il `ImageFilter` proprietà di un `SKPaint` oggetto e qualsiasi elemento disegnato con quell'oggetto avrà un'ombreggiatura dietro di essa.
+Impostare questo oggetto sulla `ImageFilter` proprietà di un `SKPaint` oggetto e qualsiasi elemento disegnato con tale oggetto avrà un'ombreggiatura sottostante.
 
-Il `dx` e `dy` parametri indicano gli offset orizzontali e verticali dell'ombreggiatura in pixel dell'oggetto grafico. La convenzione di grafica 2D è presupporre che una sorgente di luce provenienti dall'alto a sinistra, che implica che entrambi questi argomenti devono essere positivi per posizionare l'ombreggiatura sotto e a destra dell'oggetto grafico.
+I `dx` `dy` parametri e indicano gli offset orizzontali e verticali dell'ombreggiatura in pixel dall'oggetto grafico. La convenzione nella grafica 2D consiste nel presupporre una fonte di luce proveniente dalla parte superiore sinistra, che implica che entrambi gli argomenti devono essere positivi per posizionare l'ombreggiatura sotto e a destra dell'oggetto grafico.
 
-Il `sigmaX` e `sigmaY` parametri sono più netti fattori per l'ombreggiatura.
+I `sigmaX` `sigmaY` parametri e sono fattori di sfocatura per l'ombreggiatura.
 
-Il `color` parametro corrisponde al colore dell'ombreggiatura. Ciò `SKColor` valore può includere la trasparenza. Una possibilità è il valore del colore `SKColors.Black.WithAlpha(0x80)` viene resa più scura qualsiasi colore di sfondo.
+Il `color` parametro è il colore dell'ombreggiatura. Questo `SKColor` valore può includere la trasparenza. Una possibilità è il valore `SKColors.Black.WithAlpha(0x80)` di colore per scurire qualsiasi sfondo del colore.
 
 I due parametri finali sono facoltativi.
 
-Il **Drop Shadow sperimentare** programma consente di sperimentare i valori di `dx`, `dy`, `sigmaX`, e `sigmaY` per visualizzare una stringa di testo con un'ombreggiatura. Il file XAML crea un'istanza di quattro `Slider` viste per impostare questi valori:
+Il programma **Drop Shadow Experiment** consente di sperimentare i valori di `dx` , `dy` , `sigmaX` e `sigmaY` per visualizzare una stringa di testo con un'ombreggiatura. Il file XAML crea un'istanza `Slider` di quattro visualizzazioni per impostare i valori seguenti:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -224,7 +227,7 @@ Il **Drop Shadow sperimentare** programma consente di sperimentare i valori di `
 </ContentPage>
 ```
 
-Il file code-behind Usa tali valori per creare un'ombreggiatura rosso in una stringa di testo in blu:
+Il file code-behind utilizza tali valori per creare un'ombreggiatura rossa su una stringa di testo blu:
 
 ```csharp
 public partial class DropShadowExperimentPage : ContentPage
@@ -283,13 +286,13 @@ public partial class DropShadowExperimentPage : ContentPage
 
 Ecco il programma in esecuzione:
 
-[![Eliminare l'esperimento Shadow](image-filters-images/DropShadowExperiment.png "Drop Shadow esperimento")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
+[![Rilascia esperimento ombreggiatura](image-filters-images/DropShadowExperiment.png "Rilascia esperimento ombreggiatura")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
-I valori di offset negativi nella schermata (Universal Windows Platform) all'estrema destra causano l'ombreggiatura per vengano visualizzati sopra e a sinistra del testo. Ciò suggerisce una sorgente di luce in basso a destra, che non è la convenzione per infografica. Ma non sembra errato in alcun modo, probabilmente perché l'ombreggiatura viene anche eseguita molto sfocato e sembra più scopi ornamentale rispetto la maggior parte delle ombreggiature.
+I valori di offset negativi nella schermata piattaforma UWP (Universal Windows Platform) all'estrema destra fanno sì che l'ombreggiatura appaia sopra e a sinistra del testo. Questo suggerisce una sorgente di luce in basso a destra, che non è la convenzione per la grafica del computer. Ma non sembra male in alcun modo, forse perché l'ombreggiatura è anche molto sfocata e sembra più ornamentale della maggior parte delle ombreggiature.
 
-## <a name="lighting-effects"></a>Effetti di illuminazione
+## <a name="lighting-effects"></a>Effetti sull'illuminazione
 
-Il `SKImageFilter` classe definisce i sei metodi che hanno nomi e parametri, elencati in ordine crescente complessità simili:
+La `SKImageFilter` classe definisce sei metodi con nomi e parametri simili, elencati di seguito in ordine di complessità crescente:
 
 - [`CreateDistantLitDiffuse`](xref:SkiaSharp.SKImageFilter.CreateDistantLitDiffuse*)
 - [`CreateDistantLitSpecular`](xref:SkiaSharp.SKImageFilter.CreateDistantLitSpecular*)
@@ -298,13 +301,13 @@ Il `SKImageFilter` classe definisce i sei metodi che hanno nomi e parametri, ele
 - [`CreateSpotLitDiffuse`](xref:SkiaSharp.SKImageFilter.CreateSpotLitDiffuse*)
 - [`CreateSpotLitSpecular`](xref:SkiaSharp.SKImageFilter.CreateSpotLitSpecular*)
 
-Questi metodi creano i filtri di immagine che simulano l'effetto di tipi diversi di luce su superfici tridimensionale. Filtro dell'immagine risultante bidimensionali illumina gli oggetti presenti come se fosse presentato nello spazio 3D, che può causare questi oggetti vengano visualizzati con privilegi elevati o scollegato, o con l'illuminazione speculare.
+Questi metodi creano filtri immagine che simulano l'effetto di diversi tipi di luce su superfici tridimensionali. Il filtro immagine risultante illumina gli oggetti bidimensionali come se fossero presenti nello spazio 3D, che può comportare la visualizzazione di questi oggetti con privilegi elevati o di incasso oppure con evidenziazione speculare.
 
-Il `Distant` chiari metodi presuppongono che la luce proviene da una distanza decisamente. Ai fini di illuminanti oggetti, la luce presuppone in modo che punti in un'unica direzione coerente nello spazio 3D, in modo analogo il sole a una piccola superficie della terra. Il `Point` metodi chiari simulano una lampadina nello spazio 3D che emette luce in tutte le direzioni. Il `Spot` light dispone di una posizione e una direzione, molto simile a un torcia.
+I `Distant` metodi leggeri presuppongono che la luce provenga da un'estrema distanza. Ai fini dell'illuminazione degli oggetti, si presuppone che la luce punti in una direzione coerente nello spazio 3D, in modo analogo al sole in una piccola area della terra. I `Point` metodi leggeri simulano una lampadina posizionata nello spazio 3D che emette la luce in tutte le direzioni. La `Spot` luce ha una posizione e una direzione, molto simile a una torcia.
 
-Percorsi e le direzioni nello spazio 3D sono entrambi specificate con valori del [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) struttura, che è simile a `SKPoint` ma con tre proprietà denominate `X`, `Y`, e `Z`.
+I percorsi e le direzioni nello spazio 3D sono entrambi specificati con i valori della [`SKPoint3`](xref:SkiaSharp.SKPoint3) struttura, che è simile a `SKPoint` ma con tre proprietà denominate `X` , `Y` e `Z` .
 
-Il numero e la complessità dei parametri a questi metodi complicare la sperimentazione con essi. Per iniziare a usare, il **sperimentare luce lontano** pagina consente di sperimentare i parametri per il `CreateDistantLightDiffuse` metodo:
+Il numero e la complessità dei parametri di questi metodi rendono difficoltosa la sperimentazione. Per iniziare, la pagina dell' **esperimento di luce distante** consente di sperimentare i parametri del `CreateDistantLightDiffuse` Metodo:
 
 ```csharp
 public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
@@ -317,7 +320,7 @@ public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
 
 La pagina non usa gli ultimi due parametri facoltativi.
 
-Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordinate del `SKPoint3` valore, il `surfaceScale` parametro e il `kd` parametro, che viene definito nella documentazione dell'API come costante di illuminazione con riflessione diffusa"":
+Tre `Slider` visualizzazioni nel file XAML consentono di selezionare la `Z` coordinata del `SKPoint3` valore, il `surfaceScale` parametro e il `kd` parametro, definito nella documentazione dell'API come "costante illuminazione diffusa":
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -368,7 +371,7 @@ Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordi
 </ContentPage>
 ```
 
-Il file code-behind ottenuto questi tre valori e li utilizza per creare un filtro di immagini per visualizzare una stringa di testo:
+Il file code-behind ottiene questi tre valori e li usa per creare un filtro immagine per visualizzare una stringa di testo:
 
 ```csharp
 public partial class DistantLightExperimentPage : ContentPage
@@ -426,21 +429,21 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-Il primo argomento di `SKImageFilter.CreateDistantLitDiffuse` è la direzione della luce. Positivo X e Y coordinate indicano che la luce viene punta a destra e verso il basso. Punti di coordinate Z positivo nella schermata. Il file XAML consente di selezionare i valori Z negativi, ma è possibile vedere cosa accade: Dal punto di vista concettuale, le coordinate Z negative fanno sì che la luce punti all'esterno dello schermo. Per qualsiasi altro quindi piccoli valori negativi, l'effetto di illuminazione smette di funzionare.
+Il primo argomento di `SKImageFilter.CreateDistantLitDiffuse` è la direzione della luce. Le coordinate X e Y positive indicano che la luce è puntata a destra e in basso. Coordinate Z positive che puntano allo schermo. Il file XAML consente di selezionare i valori Z negativi, ma è possibile vedere cosa accade: concettualmente, le coordinate Z negative fanno sì che la luce punti all'esterno dello schermo. Per qualsiasi altro valore negativo, l'effetto di illuminazione smette di funzionare.
 
-Il `surfaceScale` argomenti sono compresi tra -1 e 1. (I valori superiori o inferiori non hanno alcun effetto). Questi sono valori relativi all'asse Z che indicano lo spostamento dell'oggetto grafico (in questo caso, la stringa di testo) dall'area di disegno. Usare i valori negativi per generare la stringa di testo sopra l'area dell'area di disegno e i valori positivi di deteriorare, nell'area di disegno.
+L' `surfaceScale` argomento può essere compreso tra-1 e 1. I valori di livello superiore o inferiore non hanno alcun effetto. Si tratta di valori relativi nell'asse Z che indicano lo spostamento dell'oggetto grafico, in questo caso la stringa di testo, dalla superficie dell'area di disegno. Utilizzare valori negativi per generare la stringa di testo sopra la superficie dell'area di disegno e i valori positivi da decomprimere nell'area di disegno.
 
-Il `lightConstant` valore deve essere positivo. (Il programma consente i valori negativi in modo che è possibile vedere che provocano l'effetto smetterebbe di funzionare). I valori più alti causano più intenso è chiaro.
+Il `lightConstant` valore deve essere positivo. (Il programma consente valori negativi, quindi è possibile vedere che l'effetto smette di funzionare). I valori più elevati provocano una luce più intensa.
 
-È possono bilanciare tali fattori per ottenere un effetto in rilievo effetto quando `surfaceScale` è negativo (come per iOS e Android schermate) e un incassati effetto quando `surfaceScale` è positivo, come con la schermata UWP a destra:
+Questi fattori possono essere bilanciati per ottenere un effetto in rilievo quando `surfaceScale` è negativo (come per gli screenshot iOS e Android) e un effetto inciso quando `surfaceScale` è positivo, come con lo screenshot UWP a destra:
 
-[![Esperimento di luce lontano](image-filters-images/DistantLightExperiment.png "distante esperimento chiaro")](image-filters-images/DistantLightExperiment-Large.png#lightbox)
+[![Esperimento distante Light](image-filters-images/DistantLightExperiment.png "Esperimento distante Light")](image-filters-images/DistantLightExperiment-Large.png#lightbox)
 
-Lo screenshot di Android ha un valore Z di 0, a indicare che la luce solo che punta verso il basso e a destra. Lo sfondo non viene acceso e non viene acceso area della stringa di testo di entrambi. Alla luce hanno effetto solo il bordo del testo per un effetto molto complesso.
+Lo screenshot Android ha un valore Z pari a 0, che indica che la luce è rivolta verso il basso e verso destra. Lo sfondo non è illuminato e la superficie della stringa di testo non è accesa. La luce ha effetto solo sul bordo del testo per un effetto molto sottile.
 
-Un approccio alternativo al testo in rilievo e inciso è stato illustrato nell'articolo [la trasformazione translate](../transforms/translate.md): La stringa di testo viene visualizzata due volte con colori diversi che vengono spostati leggermente l'uno dall'altro.
+Un approccio alternativo al testo in rilievo e inciso è stato illustrato nell'articolo [la trasformazione di conversione](../transforms/translate.md): la stringa di testo viene visualizzata due volte con colori diversi che vengono spostati leggermente tra loro.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [API SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

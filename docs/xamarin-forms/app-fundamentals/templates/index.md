@@ -1,25 +1,28 @@
 ---
-title: Modelli Xamarin.Forms
-description: Questa guida illustra come usare il supporto di creazione modelli offerto da Xamarin.Forms. Questo supporto include modelli di controllo, che definiscono la struttura visiva di controlli e pagine personalizzati, e modelli di dati, che definiscono la presentazione dei dati nei controlli supportati.
-ms.prod: xamarin
-ms.assetid: 4453C209-C068-47D5-A49B-0ECC95C0FB3B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/13/2020
-ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Formsmodelli
+description: Questa guida illustra come usare il supporto per i modelli fornito da Xamarin.Forms . Questo supporto include i modelli di controllo, che definiscono la struttura visiva di controlli e pagine personalizzati e i modelli di dati, che definiscono la presentazione dei dati nei controlli supportati.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 079c9079efdf224db1dee8a60f054439eeee8e8c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75955691"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135928"
 ---
-# <a name="xamarinforms-templates"></a>Modelli Xamarin.Forms
+# <a name="xamarinforms-templates"></a>Xamarin.Formsmodelli
 
 ## <a name="control-templates"></a>[Modelli di controllo](control-template.md)
 
-I modelli di controllo Xamarin.Forms definiscono la struttura visiva dei [`ContentView`](xref:Xamarin.Forms.ContentView) controlli personalizzati derivati e [`ContentPage`](xref:Xamarin.Forms.ContentPage) delle pagine derivate.
+Xamarin.Formsi modelli di controllo definiscono la struttura visiva dei [`ContentView`](xref:Xamarin.Forms.ContentView) controlli personalizzati derivati e delle [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagine derivate.
 
 ## <a name="data-templates"></a>[Modelli di dati](data-templates/index.md)
 
-I modelli di dati Xamarin.Forms definiscono la presentazione dei dati nei controlli supportati.
+Xamarin.Formsi modelli di dati definiscono la presentazione dei dati nei controlli supportati.

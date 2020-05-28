@@ -1,24 +1,27 @@
 ---
-title: Ombreggiatura di oggetti visivi in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che Abilita un'ombreggiatura su un oggetto visivo.
-ms.prod: xamarin
-ms.assetid: 2147FD66-058E-4BE5-840A-369842B26EC4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 9d58576e67e6e8129b15f4935986c494bb093538
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7410386e10f605fdeed452fe37755c1e48e6b9b9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649555"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136994"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>Ombreggiatura di oggetti visivi in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma iOS viene utilizzata per abilitare un'ombreggiatura in un [`VisualElement`](xref:Xamarin.Forms.VisualElement). Vengono utilizzati in XAML, impostando il [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) proprietà associata `true`, insieme a un numero di altri facoltativo proprietà che controllano l'ombreggiatura associate:
+Questa specifica della piattaforma iOS viene utilizzata per abilitare un'ombreggiatura in un [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Viene utilizzato in XAML impostando la [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) proprietà associata su `true` , insieme a un numero di proprietà associate facoltative aggiuntive che controllano l'ombreggiatura:
 
 ```xaml
 <ContentPage ...
@@ -43,7 +46,7 @@ Questa specifica della piattaforma iOS viene utilizzata per abilitare un'ombregg
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere utilizzato da C# utilizzando l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -59,19 +62,19 @@ boxView.On<iOS>()
        .SetShadowRadius(12);
 ```
 
-Il `VisualElement.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [`VisualElement.SetIsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se un'ombreggiatura è abilitata nel `VisualElement`. Inoltre, è possibile richiamare i metodi seguenti per controllare l'ombreggiatura:
+Il `VisualElement.On<iOS>` metodo specifica che questa specifica della piattaforma verrà eseguita solo in iOS. [ `VisualElement.SetIsShadowEnabled` ] (Xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. SetIsShadowEnabled ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Il metodo visualElement}, System. Boolean)), nello [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) spazio dei nomi, viene usato per controllare se un'ombreggiatura è abilitata in `VisualElement` . Inoltre, è possibile richiamare i metodi seguenti per controllare l'ombreggiatura:
 
-- [`SetShadowColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Color)) : imposta il colore dell'ombreggiatura. Il colore predefinito è [`Color.Default`](xref:Xamarin.Forms.Color.Default*).
-- [`SetShadowOffset`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Size)) : imposta l'offset dell'ombreggiatura. L'offset viene modificato la direzione dell'ombreggiatura viene eseguito il cast e viene specificato come un [`Size`](xref:Xamarin.Forms.Size) valore. Il `Size` struttura valori sono espressi in unità indipendenti dal dispositivo, con il primo valore in corso la distanza a sinistra (valore negativo) o a destra (valore positivo) e il secondo valore da precedente distanza (negativo) o di sotto (positivo) . Il valore predefinito di questa proprietà è (0,0, 0,0), che comporta l'ombreggiatura viene eseguito il cast intorno a ogni lato del `VisualElement`.
-- [`SetShadowOpacity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) : imposta l'opacità dell'ombreggiatura, con il cui valore è compreso nell'intervallo 0.0 (trasparente) a 1.0 (opaco). Il valore di opacità predefinita è 0,5.
-- [`SetShadowRadius`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) : imposta il raggio sfocatura utilizzato per il rendering dell'ombreggiatura. Il valore del raggio predefinito è 10,0.
+- [ `SetShadowColor` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. SetShadowColor ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Oggetti visivi}, Xamarin.Forms . Color)): imposta il colore dell'ombreggiatura. Il colore predefinito è [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
+- [ `SetShadowOffset` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. SetShadowOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Oggetti visivi}, Xamarin.Forms . Size): imposta l'offset dell'ombreggiatura. L'offset modifica la direzione in cui viene proiettata l'ombreggiatura e viene specificato come [`Size`](xref:Xamarin.Forms.Size) valore. I `Size` valori della struttura sono espressi in unità indipendenti dal dispositivo, il primo valore è la distanza verso sinistra (valore negativo) o destro (valore positivo) e il secondo valore è la distanza sopra (valore negativo) o sotto (valore positivo). Il valore predefinito di questa proprietà è (0,0, 0,0), che determina il cast dell'ombreggiatura intorno a ogni lato dell'oggetto `VisualElement` .
+- [ `SetShadowOpacity` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. SetShadowOpacity ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement}, System. Double): imposta l'opacità dell'ombreggiatura, con il valore compreso nell'intervallo 0,0 (trasparente) a 1,0 (opaco). Il valore di opacità predefinito è 0,5.
+- [ `SetShadowRadius` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. SetShadowRadius ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement}, System. Double): imposta il raggio di sfocatura usato per il rendering dell'ombreggiatura. Il valore RADIUS predefinito è 10,0.
 
 > [!NOTE]
-> Lo stato di un'ombreggiatura è possibile eseguire query chiamando il [`GetIsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowOffset`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), [`GetShadowOpacity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), e [`GetShadowRadius`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})) metodi.
+> È possibile eseguire una query sullo stato di un'ombreggiatura chiamando il [ `GetIsShadowEnabled` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. GetIsShadowEnabled ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement})), [ `GetShadowColor` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. GetShadowColor ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement})), [ `GetShadowOffset` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. GetShadowOffset ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement})), [ `GetShadowOpacity` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. GetShadowOpacity ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement})) e [ `GetShadowRadius` ] (xrif: Xamarin.Forms . PlatformConfiguration. iOSSpecific. visualElement. GetShadowRadius ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement})) (metodi).
 
-Il risultato è che può essere abilitata un'ombreggiatura in una [`VisualElement`](xref:Xamarin.Forms.VisualElement):
+Il risultato è che un'ombreggiatura può essere abilitata in un [`VisualElement`](xref:Xamarin.Forms.VisualElement) :
 
-![](drop-shadow-images/drop-shadow.png "Ombreggiatura abilitato")
+![](drop-shadow-images/drop-shadow.png "Drop shadow enabled")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

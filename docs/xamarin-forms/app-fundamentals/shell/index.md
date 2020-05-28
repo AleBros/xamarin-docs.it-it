@@ -1,30 +1,33 @@
 ---
-title: Xamarin.Forms Shell
-description: Questa guida illustra come usare la shell Xamarin.Forms, che riduce la complessità delle applicazioni Xamarin.Forms offrendo le principali funzionalità richieste dalla maggior parte delle applicazioni.
-ms.prod: xamarin
-ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 20ac6ad748e7056f7f8037a73a95de66b9eae3b6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsShell
+description: In questa guida viene illustrato come utilizzare la Xamarin.Forms Shell, che riduce la complessità delle Xamarin.Forms applicazioni fornendo le funzionalità di base richieste dalla maggior parte delle applicazioni.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0acf00d85c2bfb823ec1cfba099179bb6743117c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "69888911"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138749"
 ---
-# <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
+# <a name="xamarinforms-shell"></a>Xamarin.FormsShell
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)
 
-La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per dispositivi mobili offrendo le principali funzionalità richieste dalla maggior parte delle applicazioni per dispositivi mobili. Queste funzionalità includono un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato.
+Xamarin.FormsShell riduce la complessità dello sviluppo di applicazioni per dispositivi mobili fornendo le funzionalità fondamentali necessarie per la maggior parte delle applicazioni per dispositivi mobili. Queste funzionalità includono un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato.
 
-## <a name="create-a-xamarinforms-shell-application"></a>[Creare un'applicazione Xamarin.Forms Shell](create.md)
+## <a name="create-a-xamarinforms-shell-applicationcreatemd"></a>[Creare un' Xamarin.Forms applicazione shell](create.md)
 
-Il processo per la creazione di un'applicazione shell Xamarin.Forms prevede la creazione di un file XAML che definisce una sottoclasse della classe `Shell`, l'impostazione della proprietà `MainPage` della classe `App` dell'applicazione sull'oggetto `Shell` sottoclassato e quindi la descrizione della gerarchia visiva dell'applicazione nella classe `Shell` sottoclassata.
+Il processo per la creazione di un' Xamarin.Forms applicazione shell consiste nel creare un file XAML che sottoclassa la `Shell` classe, impostare la `MainPage` proprietà della classe dell'applicazione sull' `App` oggetto sottoclassato `Shell` e quindi descrivere la gerarchia visiva dell'applicazione nella classe sottoclassata `Shell` .
 
-## <a name="flyout"></a>[Riquadro a comparsa](flyout.md)
+## <a name="flyout"></a>[Flyout](flyout.md)
 
 Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative.
 
@@ -34,7 +37,7 @@ Dopo il riquadro a comparsa, il livello di navigazione successivo in un'applicaz
 
 ## <a name="page-configuration"></a>[Configurazione della pagina](configuration.md)
 
-La classe `Shell` definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle applicazioni shell Xamarin.Forms. Ciò include l'impostazione dei colori delle pagine, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle viste nella barra di spostamento.
+La `Shell` classe definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle Xamarin.Forms applicazioni della shell. Ciò include l'impostazione dei colori delle pagine, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle viste nella barra di spostamento.
 
 ## <a name="navigation"></a>[Navigazione](navigation.md)
 
@@ -46,7 +49,7 @@ Le applicazioni shell possono usare la funzionalità di ricerca integrata fornit
 
 ## <a name="lifecycle"></a>[Ciclo di vita](lifecycle.md)
 
-Le applicazioni shell rispettano il ciclo di vita di Xamarin.Forms. Quando una pagina sta per essere visualizzata sullo schermo, viene generato un evento `Appearing`. Quando invece una pagina sta per scomparire dallo schermo, viene generato un evento `Disappearing`.
+Le applicazioni shell rispettano il ciclo di vita Xamarin.Forms e un `Appearing` evento viene generato quando una pagina sta per essere visualizzata sullo schermo e `Disappearing` viene generato un evento quando una pagina sta per scomparire dalla schermata.
 
 ## <a name="custom-renderers"></a>[Renderer personalizzati](customrenderers.md)
 

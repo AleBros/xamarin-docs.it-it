@@ -1,38 +1,41 @@
 ---
-title: Generics in Novell. Forms XAML
-description: Novell. Forms XAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo.
-ms.prod: xamarin
-ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/28/2020
-ms.openlocfilehash: 9cda08a3bab0e25db2315c9795721e25d47d2429
-ms.sourcegitcommit: 154a3e7aec775327565bb54eda1a610976af1d6f
+title: Generics in Xamarin.Forms XAML
+description: Xamarin.FormsXAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 814e622a822e2eb1cf07f71bfb1da1d6eac5631f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624709"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138112"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>Generics in Novell. Forms XAML
+# <a name="generics-in-xamarinforms-xaml"></a>Generics in Xamarin.Forms XAML
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-Novell. Forms XAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo. Questo supporto viene fornito dalla `x:TypeArguments` direttiva, che passa gli argomenti di tipo vincolante di un oggetto generico al costruttore del tipo generico.
+Xamarin.FormsXAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo. Questo supporto viene fornito dalla `x:TypeArguments` direttiva, che passa gli argomenti di tipo vincolante di un oggetto generico al costruttore del tipo generico.
 
 > [!IMPORTANT]
-> La definizione di classi generiche nel codice XAML Novell. `x:TypeArguments` Forms, con la direttiva, non è supportata.
+> La definizione di classi generiche in Xamarin.Forms XAML, con la `x:TypeArguments` direttiva, non è supportata.
 
-Gli argomenti di tipo vengono specificati come stringa e sono in genere preceduti, ad `sys:String` esempio `sys:Int32`e. Il prefisso è necessario perché i tipi tipici di vincoli CLR generici provengono da librerie di cui non è stato eseguito il mapping allo spazio dei nomi Novell. Forms predefinito. Tuttavia, i tipi incorporati XAML 2009, ad esempio `x:String` e `x:Int32`, possono essere specificati anche come argomenti di tipo, `x` dove è lo spazio dei nomi del linguaggio XAML per XAML 2009. Per ulteriori informazioni sui tipi predefiniti XAML 2009, vedere [primitive del linguaggio xaml 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives).
+Gli argomenti di tipo vengono specificati come stringa e sono in genere preceduti, ad esempio `sys:String` e `sys:Int32` . Il prefisso è necessario perché i tipi tipici di vincoli CLR generici provengono da librerie di cui non è stato eseguito il mapping allo Xamarin.Forms spazio dei nomi predefinito. Tuttavia, i tipi incorporati XAML 2009, ad esempio `x:String` e `x:Int32` , possono essere specificati anche come argomenti di tipo, dove `x` è lo spazio dei nomi del linguaggio xaml per XAML 2009. Per ulteriori informazioni sui tipi predefiniti XAML 2009, vedere [primitive del linguaggio xaml 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives).
 
 È possibile specificare più argomenti di tipo utilizzando un delimitatore di virgola. Inoltre, se un vincolo generico usa tipi generici, gli argomenti del tipo di vincolo annidato devono essere racchiusi tra parentesi.
 
 > [!NOTE]
-> L' `x:Type` estensione di markup fornisce un riferimento a un tipo CLR per un tipo generico e ha una funzione simile `typeof` all'operatore in C#. Per altre informazioni, vedere [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+> L' `x:Type` estensione di markup fornisce un riferimento a un tipo CLR per un tipo generico e ha una funzione simile all' `typeof` operatore in C#. Per altre informazioni, vedere [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
 
 ## <a name="single-primitive-type-argument"></a>Singolo argomento di tipo primitivo
 
-È possibile specificare un singolo argomento di tipo primitivo come argomento di stringa con prefisso `x:TypeArguments` usando la direttiva:
+È possibile specificare un singolo argomento di tipo primitivo come argomento di stringa con prefisso usando la `x:TypeArguments` direttiva:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -55,9 +58,9 @@ Gli argomenti di tipo vengono specificati come stringa e sono in genere precedut
 </ContentPage>
 ```
 
-In questo esempio, `System.Collections.Generic` viene definito come spazio `scg` dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un `List<T>` oggetto di cui viene creata un' `string` istanza con un argomento di tipo, usando il `x:String` tipo incorporato XAML 2009. La `List<string>` raccolta viene inizializzata con `string` più elementi.
+In questo esempio, `System.Collections.Generic` viene definito come `scg` spazio dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un oggetto `List<T>` di cui viene creata un'istanza con un `string` argomento di tipo, usando il tipo incorporato XAML 2009 `x:String` . La `List<string>` raccolta viene inizializzata con più `string` elementi.
 
-In alternativa, è possibile creare un'istanza `List<T>` della raccolta con il tipo CLR `String` in modo analogo:
+In alternativa, `List<T>` è possibile creare un'istanza della raccolta con il tipo CLR in modo analogo `String` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -83,7 +86,7 @@ In alternativa, è possibile creare un'istanza `List<T>` della raccolta con il t
 
 ## <a name="single-object-type-argument"></a>Argomento di tipo oggetto singolo
 
-Un singolo argomento di tipo di oggetto può essere specificato come argomento di stringa con prefisso `x:TypeArguments` usando la direttiva:
+Un singolo argomento di tipo di oggetto può essere specificato come argomento di stringa con prefisso usando la `x:TypeArguments` direttiva:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,11 +139,11 @@ Un singolo argomento di tipo di oggetto può essere specificato come argomento d
 </ContentPage>
 ```
 
-In questo esempio, `GenericsDemo.Models` viene definito come spazio `models` dei nomi XAML e `System.Collections.Generic` viene definito come spazio `scg` dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un `List<T>` oggetto di cui viene creata un' `Monkey` istanza con un argomento di tipo. La `List<Monkey>` raccolta viene inizializzata con `Monkey` più elementi e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di `Monkey` ogni oggetto viene impostato come `ItemTemplate` di [`CollectionView`](xref:Xamarin.Forms.CollectionView).
+In questo esempio, `GenericsDemo.Models` viene definito come `models` spazio dei nomi XAML e `System.Collections.Generic` viene definito come `scg` spazio dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un oggetto `List<T>` di cui viene creata un'istanza con un `Monkey` argomento di tipo. La `List<Monkey>` raccolta viene inizializzata con più `Monkey` elementi e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di ogni `Monkey` oggetto viene impostato come `ItemTemplate` di [`CollectionView`](xref:Xamarin.Forms.CollectionView) .
 
 ## <a name="multiple-type-arguments"></a>Più argomenti di tipo
 
-È possibile specificare più argomenti di tipo come argomenti di stringa con prefisso, delimitati da una virgola `x:TypeArguments` , usando la direttiva. Quando un vincolo generico usa tipi generici, gli argomenti del tipo di vincolo annidato sono racchiusi tra parentesi:
+È possibile specificare più argomenti di tipo come argomenti di stringa con prefisso, delimitati da una virgola, usando la `x:TypeArguments` direttiva. Quando un vincolo generico usa tipi generici, gli argomenti del tipo di vincolo annidato sono racchiusi tra parentesi:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -205,9 +208,9 @@ In questo esempio, `GenericsDemo.Models` viene definito come spazio `models` dei
 </ContentPage    
 ```
 
-In questo esempio, `GenericsDemo.Models` viene definito come spazio `models` dei nomi XAML e `System.Collections.Generic` viene definito come spazio `scg` dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un `List<T>` oggetto di cui viene creata un' `KeyValuePair<TKey, TValue>` istanza con un vincolo, con gli argomenti `string` di `Monkey`tipo vincolo interno e. La `List<KeyValuePair<string,Monkey>>` raccolta viene inizializzata con `KeyValuePair` più elementi, usando il costruttore non `KeyValuePair` predefinito e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di ogni `Monkey` oggetto viene impostato come `ItemTemplate` di. [`CollectionView`](xref:Xamarin.Forms.CollectionView) Per informazioni sul passaggio di argomenti a un costruttore non predefinito, vedere [passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
+In questo esempio, `GenericsDemo.Models` viene definito come `models` spazio dei nomi XAML e `System.Collections.Generic` viene definito come `scg` spazio dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un oggetto `List<T>` di cui viene creata un'istanza con un `KeyValuePair<TKey, TValue>` vincolo, con gli argomenti di tipo vincolo interno `string` e `Monkey` . La `List<KeyValuePair<string,Monkey>>` raccolta viene inizializzata con più `KeyValuePair` elementi, usando il costruttore non predefinito `KeyValuePair` e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di ogni `Monkey` oggetto viene impostato come `ItemTemplate` di [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Per informazioni sul passaggio di argomenti a un costruttore non predefinito, vedere [passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
 
-## <a name="related-links"></a>Link correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [Generics in XAML (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [Primitive del linguaggio XAML 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)

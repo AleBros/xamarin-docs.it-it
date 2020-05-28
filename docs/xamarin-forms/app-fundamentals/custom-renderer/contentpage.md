@@ -1,44 +1,47 @@
 ---
-title: Personalizzazione di un elemento ContentPage
-description: ContentPage è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo. Questo articolo illustra come creare un renderer personalizzato per la pagina ContentPage che consente agli sviluppatori di eseguire l'override del rendering nativo predefinito usando una personalizzazione specifica della piattaforma.
-ms.prod: xamarin
-ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 50e28291d72550264e3806c0911f59a57c6d8bf0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70772017"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136331"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
 
-[![Scarica](~/media/shared/download.png) l'esempio Scarica l'esempioDownload Sample Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
-_Oggetto ContentPage è un elemento visivo che visualizza una singola visualizzazione e occupa la maggior parte dello schermo. In questo articolo viene illustrato come creare un renderer personalizzato per il ContentPage pagina, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con la propria personalizzazione specifica della piattaforma._
+_Un ContentPage è un elemento visivo che visualizza una singola visualizzazione e occupa la maggior parte dello schermo. Questo articolo illustra come creare un renderer personalizzato per la pagina ContentPage, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con una personalizzazione specifica della piattaforma._
 
-A ogni controllo di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando [`ContentPage`](xref:Xamarin.Forms.ContentPage) un viene eseguito il rendering da un'applicazione `PageRenderer` Xamarin.Forms, in iOS viene creata un'istanza della classe, che a sua volta crea un'istanza di un controllo nativo. `UIViewController` Nella piattaforma Android la classe `PageRenderer` crea un'istanza di un controllo `ViewGroup`. Nella piattaforma UWP (Universal Windows Platform) la classe `PageRenderer` crea un'istanza di un controllo `FrameworkElement`. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Ogni Xamarin.Forms controllo dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Quando un oggetto viene sottoposto a [`ContentPage`](xref:Xamarin.Forms.ContentPage) rendering da un' Xamarin.Forms applicazione, in iOS `PageRenderer` viene creata un'istanza della classe, che a sua volta crea un'istanza di un `UIViewController` controllo nativo. Nella piattaforma Android la classe `PageRenderer` crea un'istanza di un controllo `ViewGroup`. Nella piattaforma UWP (Universal Windows Platform) la classe `PageRenderer` crea un'istanza di un controllo `FrameworkElement`. Per ulteriori informazioni sul renderer e sulle classi di controlli native che Xamarin.Forms controllano la mappa a, vedere [classi base renderer e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-Nel diagramma seguente viene illustrata la relazione tra i [`ContentPage`](xref:Xamarin.Forms.ContentPage) controlli nativi e quelli corrispondenti che lo implementano:
+Il diagramma seguente illustra la relazione tra [`ContentPage`](xref:Xamarin.Forms.ContentPage) e i controlli nativi corrispondenti che lo implementano:
 
 ![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
 
-Il processo di rendering può essere sfruttato per implementare le personalizzazioni specifiche della piattaforma creando un renderer personalizzato per un [`ContentPage`](xref:Xamarin.Forms.ContentPage) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
+Per implementare personalizzazioni specifiche della piattaforma, è possibile sfruttare il processo di rendering creando un renderer personalizzato per un oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Xamarin.Forms_Page) una pagina Xamarin.Forms.
-1. [Utilizzare](#Consuming_the_Xamarin.Forms_Page) la pagina da Xamarin.Forms.
+1. [Creare](#Creating_the_Xamarin.Forms_Page) una Xamarin.Forms pagina.
+1. [Utilizzare](#Consuming_the_Xamarin.Forms_Page) la pagina da Xamarin.Forms .
 1. [Creare](#Creating_the_Page_Renderer_on_each_Platform) il renderer personalizzato per la pagina in ogni piattaforma.
 
 Verrà ora discusso un elemento alla volta per implementare un oggetto `CameraPage` che rende disponibile un feed di fotocamera live e la possibilità di scattare una foto.
 
 <a name="Creating_the_Xamarin.Forms_Page" />
 
-## <a name="creating-the-xamarinforms-page"></a>Creazione della pagina Xamarin.Forms
+## <a name="creating-the-xamarinforms-page"></a>Creazione della Xamarin.Forms pagina
 
-È possibile [`ContentPage`](xref:Xamarin.Forms.ContentPage) aggiungere un'alterazione non modificata al progetto Xamarin.Forms condiviso, come illustrato nell'esempio di codice XAML seguente:An unltered be added to the shared Xamarin.Forms project, as shown in the following XAML code example:
+Un oggetto non modificato [`ContentPage`](xref:Xamarin.Forms.ContentPage) può essere aggiunto al progetto condiviso Xamarin.Forms , come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -49,7 +52,7 @@ Verrà ora discusso un elemento alla volta per implementare un oggetto `CameraPa
 </ContentPage>
 ```
 
-Analogamente, anche il file [`ContentPage`](xref:Xamarin.Forms.ContentPage) code-behind per il deve rimanere inalterato, come illustrato nell'esempio di codice seguente:Similarly, the code-behind file for the should remain unltered, as shown in the following code example:
+Analogamente, il file code-behind per l'oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) deve rimanere inalterato, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public partial class CameraPage : ContentPage
@@ -77,9 +80,9 @@ Per visualizzare il feed di fotocamera live in ogni piattaforma verrà usata un'
 
 <a name="Consuming_the_Xamarin.Forms_Page" />
 
-## <a name="consuming-the-xamarinforms-page"></a>Utilizzo della pagina Xamarin.Forms
+## <a name="consuming-the-xamarinforms-page"></a>Utilizzo della Xamarin.Forms pagina
 
-L'applicazione Xamarin.Forms deve visualizzare l'oggetto `CameraPage` vuoto. Ciò accade quando si tocca un pulsante nell'istanza di `MainPage` che a sua volta esegue il metodo `OnTakePhotoButtonClicked`, come illustrato nell'esempio di codice seguente:
+Il vuoto `CameraPage` deve essere visualizzato dall' Xamarin.Forms applicazione. Ciò accade quando si tocca un pulsante nell'istanza di `MainPage` che a sua volta esegue il metodo `OnTakePhotoButtonClicked`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnTakePhotoButtonClicked (object sender, EventArgs e)
@@ -97,8 +100,8 @@ Questo codice passa semplicemente all'oggetto `CameraPage` nel quale i renderer 
 Il processo di creazione della classe di renderer personalizzato è il seguente:
 
 1. Creare una sottoclasse della classe `PageRenderer`.
-1. Eseguire l'override del metodo `OnElementChanged` che esegue il rendering della pagina nativa e scrivere la logica per personalizzare la pagina. Il metodo `OnElementChanged` viene chiamato quando viene creato il controllo Xamarin.Forms corrispondente.
-1. Aggiungere un attributo `ExportRenderer` alla classe di renderer della pagina per specificare che verrà usato per eseguire il rendering della pagina Xamarin.Forms. L'attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms.
+1. Eseguire l'override del metodo `OnElementChanged` che esegue il rendering della pagina nativa e scrivere la logica per personalizzare la pagina. Il `OnElementChanged` metodo viene chiamato quando Xamarin.Forms viene creato il controllo corrispondente.
+1. Aggiungere un `ExportRenderer` attributo alla classe renderer della pagina per specificare che verrà usato per il rendering della Xamarin.Forms pagina. Questo attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms .
 
 > [!NOTE]
 > La specifica di un renderer di pagina nel progetto di ogni piattaforma è facoltativa. Se non si registra un renderer personalizzato, verrà usato il renderer predefinito per la pagina.
@@ -111,11 +114,11 @@ Il rendering dell'istanza di `CameraPage` viene eseguito dalle classi `CameraPag
 
 ![](contentpage-images/screenshots.png "CameraPage on each Platform")
 
-La classe `PageRenderer` espone il metodo `OnElementChanged` che viene chiamato quando si crea la pagina Xamarin.Forms per eseguire il rendering del controllo nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento Xamarin.Forms a cui il renderer *era* collegato e l'elemento Xamarin.Forms a cui il renderer *è* collegato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `CameraPage`.
+La `PageRenderer` classe espone il `OnElementChanged` metodo, che viene chiamato quando Xamarin.Forms viene creata la pagina per eseguire il rendering del controllo nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano l' Xamarin.Forms elemento a cui è *stato* collegato il renderer e l' Xamarin.Forms elemento a cui *è* collegato rispettivamente il renderer. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `CameraPage`.
 
-La personalizzazione della pagina nativa deve essere eseguita in una versione sostituita del metodo `OnElementChanged` nella classe `CameraPageRenderer`. È possibile ottenere un riferimento all'istanza della pagina Xamarin.Forms di cui viene eseguito il rendering tramite la proprietà `Element`.
+La personalizzazione della pagina nativa deve essere eseguita in una versione sostituita del metodo `OnElementChanged` nella classe `CameraPageRenderer`. Un riferimento all' Xamarin.Forms istanza di pagina di cui viene eseguito il rendering può essere ottenuto tramite la `Element` Proprietà.
 
-Ogni classe del renderer personalizzato è decorata con un attributo `ExportRenderer` che registra il renderer in Xamarin.Forms. L'attributo accetta due parametri: il nome del tipo di pagina Xamarin.Forms di cui viene eseguito il rendering e il nome del tipo di renderer personalizzato. Il prefisso `assembly` dell'attributo specifica che l'attributo viene applicato all'intero assembly.
+Ogni classe renderer personalizzata è decorata con un `ExportRenderer` attributo che registra il renderer con Xamarin.Forms . L'attributo accetta due parametri: il nome del tipo della Xamarin.Forms pagina di cui viene eseguito il rendering e il nome del tipo del renderer personalizzato. Il prefisso `assembly` dell'attributo specifica che l'attributo viene applicato all'intero assembly.
 
 Le sezioni seguenti illustrano l'implementazione del renderer personalizzato `CameraPageRenderer` per ogni piattaforma.
 
@@ -153,7 +156,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `UIViewController` iOS. Il rendering dello streaming live della fotocamera viene eseguito solo a condizione che il renderer non sia già collegato a un elemento Xamarin.Forms esistente e che sia presente un'istanza della pagina di cui il renderer personalizzato stia eseguendo il rendering.
+La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `UIViewController` iOS. Viene eseguito il rendering del flusso della fotocamera in tempo reale purché il renderer non sia già collegato a un Xamarin.Forms elemento esistente e purché esista un'istanza di pagina di cui è in corso il rendering dal renderer personalizzato.
 
 La pagina viene quindi personalizzata da una serie di metodi che usano le API `AVCapture` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto.
 
@@ -197,7 +200,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `ViewGroup` Android, ovvero un gruppo di visualizzazioni. Il rendering dello streaming live della fotocamera viene eseguito solo a condizione che il renderer non sia già collegato a un elemento Xamarin.Forms esistente e che sia presente un'istanza della pagina di cui il renderer personalizzato stia eseguendo il rendering.
+La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `ViewGroup` Android, ovvero un gruppo di visualizzazioni. Viene eseguito il rendering del flusso della fotocamera in tempo reale purché il renderer non sia già collegato a un Xamarin.Forms elemento esistente e purché esista un'istanza di pagina di cui è in corso il rendering dal renderer personalizzato.
 
 La pagina viene quindi personalizzata richiamando una serie di metodi che usano l'API `Camera` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto prima che venga richiamato il metodo `AddView` per aggiungere l'interfaccia utente dello streaming live della fotocamera al controllo `ViewGroup`. Tenere presente che in Android è anche necessario eseguire l'override del metodo `OnLayout` per eseguire operazioni di misura e layout nella visualizzazione. Per altre informazioni, vedere l'[esempio di renderer ContentPage](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
@@ -243,7 +246,7 @@ namespace CustomRenderer.UWP
 
 ```
 
-La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `FrameworkElement` in cui viene eseguito il rendering della pagina. Il rendering dello streaming live della fotocamera viene eseguito solo a condizione che il renderer non sia già collegato a un elemento Xamarin.Forms esistente e che sia presente un'istanza della pagina di cui il renderer personalizzato stia eseguendo il rendering. La pagina viene quindi personalizzata richiamando una serie di metodi che usano l'API `MediaCapture` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto prima che la pagina personalizzata sia aggiunta alla raccolta `Children` per la visualizzazione.
+La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `FrameworkElement` in cui viene eseguito il rendering della pagina. Viene eseguito il rendering del flusso della fotocamera in tempo reale purché il renderer non sia già collegato a un Xamarin.Forms elemento esistente e purché esista un'istanza di pagina di cui è in corso il rendering dal renderer personalizzato. La pagina viene quindi personalizzata richiamando una serie di metodi che usano l'API `MediaCapture` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto prima che la pagina personalizzata sia aggiunta alla raccolta `Children` per la visualizzazione.
 
 Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in UWP, è consigliabile implementare anche il metodo `ArrangeOverride` per disporre i controlli della pagina perché il renderer di base non è in grado di eseguire questa operazione. In caso contrario, verrà restituita una pagina vuota. In questo esempio il metodo `ArrangeOverride` chiama pertanto il metodo `Arrange` sull'istanza `Page`.
 
@@ -252,7 +255,7 @@ Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha dimostrato come creare un [`ContentPage`](xref:Xamarin.Forms.ContentPage) renderer personalizzato per la pagina, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con la propria personalizzazione specifica della piattaforma. `ContentPage` è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo.
+Questo articolo ha illustrato come creare un renderer personalizzato per la [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagina, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con una personalizzazione specifica della piattaforma. `ContentPage` è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

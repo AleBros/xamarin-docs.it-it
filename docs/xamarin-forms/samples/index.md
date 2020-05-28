@@ -1,24 +1,27 @@
 ---
-title: Esempi di Xamarin.Forms
-description: App e demo di codice di esempio Xamarin.Forms per iniziare a comprendere i concetti di Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 12/27/2019
-ms.openlocfilehash: 3cd7979a3e244866b190c9534c472ea44b9f9c30
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsCampioni
+description: Xamarin.Formsapp di esempio e demo di codice che consentono di iniziare a comprendere i concetti di Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 896b5880b92cecc7bd9eb360306d902ff0f876c5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75502919"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135941"
 ---
-# <a name="xamarinforms-samples"></a>Esempi di Xamarin.Forms
+# <a name="xamarinforms-samples"></a>Xamarin.FormsCampioni
 
-App e demo di codice di esempio Xamarin.Forms per iniziare a comprendere i concetti di Xamarin.Forms.
+Xamarin.Formsapp di esempio e demo di codice che consentono di iniziare a comprendere i concetti di Xamarin.Forms .
 
-[Tutti gli esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+[Tutti gli Xamarin.Forms esempi](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 :::row:::
     :::column:::
@@ -57,17 +60,17 @@ Il programma simula un disco rotante su cui è possibile dipingere tramite tocco
 
 ### <a name="xaml-samples"></a>[Esempi XAML](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 
-XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice.
+XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire interfacce utente nelle Xamarin.Forms applicazioni usando markup anziché codice.
     :::column-end:::
         :::column:::
 [![Xuzzle](images/xuzzle.png)](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
 ### <a name="xuzzle"></a>[Xuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
-Questo gioco è una variante del classico puzzle 14-15 che è possibile risolvere facendo scorrere le piastrelle nell'ordine corretto.
+Questo gioco è una variante del rompicapo 14-15 classico che è possibile risolvere facendo scorrere i riquadri nell'ordine corretto.
     :::column-end:::
 :::row-end:::
 
 ## <a name="all-samples"></a>Tutti gli esempi
 
-Per il set completo di app e demo di codice Xamarin.Forms, consultate tutti gli esempi di [Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).
+Per il set completo di Xamarin.Forms app di esempio e demo di codice, vedere [tutti gli Xamarin.Forms esempi](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).

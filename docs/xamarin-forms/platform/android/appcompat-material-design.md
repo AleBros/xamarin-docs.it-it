@@ -1,37 +1,41 @@
 ---
-title: Aggiunta di AppCompat e della progettazione del materiale
-description: Questo articolo illustra come convertire le app Xamarin.Forms Android esistenti per usare AppCompat e la progettazione del materiale.
-ms.prod: xamarin
-ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/27/2017
-ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
-ms.translationtype: HT
+title: ''
+description: Questo articolo illustra come convertire Xamarin.Forms le app Android esistenti per usare AppCompat e la progettazione del materiale.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728330"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135707"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
-_Seguire questa procedura per convertire le app Xamarin.Forms Android esistenti in modo da usare AppCompat e progettazione materiale_
+_Seguire questa procedura per convertire le Xamarin.Forms app Android esistenti per usare AppCompat e la progettazione del materiale_
 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
-Queste istruzioni spiegano come aggiornare le applicazioni Xamarin.Forms Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle app Xamarin.Forms.
+Queste istruzioni spiegano come aggiornare le Xamarin.Forms applicazioni Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle Xamarin.Forms app.
 
-### <a name="1-update-xamarinforms"></a>1. aggiornare Xamarin.Forms
+### <a name="1-update-xamarinforms"></a>1. aggiornamentoXamarin.Forms
 
-Assicurarsi che la soluzione usi Xamarin.Forms 2,0 o versione successiva. Se necessario, aggiornare il pacchetto NuGet Xamarin.Forms a 2,0.
+Verificare che la soluzione usi Xamarin.Forms 2,0 o versione successiva. AggiornareXamarin.Forms
+  Pacchetto NuGet a 2,0, se necessario.
 
 ### <a name="2-check-android-version"></a>2. controllare la versione di Android
 
-Verificare che il Framework di destinazione del progetto Android sia Android 6,0 (marshmallow). Selezionare le **opzioni > progetto Android > compila > Impostazioni generali** per assicurarsi che sia selezionato corrent Framework:
+Verificare che il Framework di destinazione del progetto Android sia Android 6,0 (marshmallow). Selezionare le **opzioni > progetto Android > compila > impostazioni generali** per assicurarsi che sia selezionato corrent Framework:
 
  ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
 
@@ -39,7 +43,7 @@ Verificare che il Framework di destinazione del progetto Android sia Android 6,0
 
 Creare i tre file seguenti nel progetto Android e incollare il contenuto seguente. Google fornisce una [Guida di stile](https://www.google.com/design/spec/style/color.html#color-color-palette) e un [Generatore di tavolozze dei colori](https://www.materialpalette.com/) che consentono di scegliere una combinazione di colori alternativa a quella specificata.
 
-**Resources/values/colors.xml**
+**Risorse/valori/Colors. XML**
 
 ```xml
 <resources>
@@ -50,7 +54,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 </resources>
 ```
 
-**Resources/values/style.xml**
+**Resources/values/Style. XML**
 
 ```xml
 <resources>
@@ -68,7 +72,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 
 Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android e una versione più recente, è necessario includere nella cartella **values-V21** uno stile aggiuntivo.
 
-**Resources/values-v21/style.xml**
+**Resources/values-V21/Style. XML**
 
 ```xml
 <resources>
@@ -82,9 +86,9 @@ Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android 
 
 ### <a name="4-update-androidmanifestxml"></a>4. aggiornare file AndroidManifest. XML
 
-Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file **file AndroidManifest** aggiungendo `android:theme="@style/MyTheme"` (lasciare invariato il resto del codice XML).
+Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file **file AndroidManifest** aggiungendo `android:theme="@style/MyTheme"` (lasciare il resto del codice XML come è stato).
 
-**Properties/AndroidManifest.xml**
+**Proprietà/file AndroidManifest. XML**
 
 ```xml
 ...
@@ -97,7 +101,7 @@ Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare
 
 Creare i file **tabby. aXML** e **Toolbar. aXML** nella directory **Resources/layout** e incollare il contenuto seguente:
 
-**Resources/layout/Tabbar.axml**
+**Risorse/layout/tabby. aXML**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -113,7 +117,7 @@ Creare i file **tabby. aXML** e **Toolbar. aXML** nella directory **Resources/la
     app:tabMode="fixed" />
 ```
 
-Sono state impostate alcune proprietà per le schede, inclusa la gravità della scheda `fill` e la modalità di `fixed`.
+Sono state impostate alcune proprietà per le schede, tra cui la gravità della scheda `fill` e la modalità a `fixed` .
 Se si dispone di numerose schede, è possibile passare a questa opzione per eseguire lo scorrimento. per altre informazioni, vedere la documentazione di Android [TabLayout](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) .
 
 **Risorse/layout/barra degli strumenti. aXML**
@@ -135,9 +139,9 @@ Se si dispone di numerose schede, è possibile passare a questa opzione per eseg
 In questi file viene creato un tema specifico per la barra degli strumenti che può variare in base all'applicazione.
 Per altre informazioni, vedere il post di Blog della [barra degli strumenti Hello](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) .
 
-### <a name="6-update-the-mainactivity"></a>6. aggiornare il `MainActivity`
+### <a name="6-update-the-mainactivity"></a>6. aggiornare`MainActivity`
 
-Nelle app Xamarin.Forms esistenti la classe **MainActivity.cs** erediterà da `FormsApplicationActivity`. Questa operazione deve essere sostituita con `FormsAppCompatActivity` per abilitare la nuova funzionalità.
+Nelle Xamarin.Forms app esistenti la classe **MainActivity.cs** eredita da `FormsApplicationActivity` . Questa operazione deve essere sostituita con `FormsAppCompatActivity` per abilitare la nuova funzionalità.
 
 **MainActivity.cs**
 
@@ -145,7 +149,7 @@ Nelle app Xamarin.Forms esistenti la classe **MainActivity.cs** erediterà da `F
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-Infine, "collegare" i nuovi layout dal passaggio 5 nel metodo di `OnCreate`, come illustrato di seguito:
+Infine, "collegare" i nuovi layout dal passaggio 5 nel `OnCreate` metodo, come illustrato di seguito:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
