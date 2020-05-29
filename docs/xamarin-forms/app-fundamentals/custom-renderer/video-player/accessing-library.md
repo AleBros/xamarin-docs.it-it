@@ -1,9 +1,6 @@
 ---
-title: Description:' questo articolo illustra come accedere alla raccolta video del dispositivo in un'applicazione lettore video usando Xamarin.Forms .'
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "accesso alla libreria video del dispositivo" Descrizione: "in questo articolo viene illustrato come accedere alla raccolta video del dispositivo in un'applicazione lettore video, utilizzando Xamarin.Forms ".
+ms. prod: Novell MS. AssetID: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="accessing-the-devices-video-library"></a>Accesso alla raccolta video del dispositivo
@@ -65,7 +62,7 @@ namespace FormsVideoLibrary.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<string>();

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRenderer veloci
-description: In questo articolo vengono introdotti i renderer veloci, che riducono i costi di inflazione e di rendering di un Xamarin.Forms controllo in Android, rendendo flat la gerarchia dei controlli nativi risultante.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3f25f4c2da5b2a426673b49045b5d2d05b0c6ac4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139074"
+title: " Xamarin.Forms renderer veloci" Descrizione: "in questo articolo vengono introdotti i renderer veloci, che riducono i costi di inflazione e rendering di un Xamarin.Forms controllo in Android, rendendo flat la gerarchia dei controlli nativi risultante".
+ms. prod: Novell MS. AssetID: 097f87f2-d891-4f3c-BE02-fb7d195a481a ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRenderer veloci
 
 Tradizionalmente, la maggior parte dei renderer di controllo originali in Android è costituita da due visualizzazioni:
@@ -31,9 +17,10 @@ I renderer veloci riducono l'inflazione e i costi di rendering di un Xamarin.For
 I renderer veloci sono disponibili per i seguenti controlli in Xamarin.Forms in Android:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`Frame`](xref:Xamarin.Forms.Frame)
+- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Dal punto di vista funzionale, questi renderer veloci non sono diversi per i renderer legacy. Da Xamarin.Forms 4,0 in poi, per impostazione predefinita tutte le applicazioni destinate a useranno `FormsAppCompatActivity` questi renderer veloci. I renderer per tutti i nuovi controlli, tra cui [`ImageButton`](xref:Xamarin.Forms.ImageButton) e [`CollectionView`](xref:Xamarin.Forms.CollectionView) , usano l'approccio renderer rapido.
 

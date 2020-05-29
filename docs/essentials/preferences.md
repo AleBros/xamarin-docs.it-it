@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Preferences'
-description: Questo documento descrive la classe Preferences in Xamarin.Essentials, che consente di salvare le preferenze dell'applicazione in un archivio chiave/valore. Illustra come usare la classe e i tipi di dati che possono essere archiviati.
-ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/15/2019
-ms.custom: video
-ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79497043"
+title: " Xamarin.Essentials : Preferences" Description: "questo documento descrive la classe di preferenze in Xamarin.Essentials , che consente di salvare le preferenze dell'applicazione in un archivio chiave/valore. Viene illustrato come utilizzare la classe e i tipi di dati che è possibile archiviare.
+ms. AssetID: AA81BCBD-79BA-448F-942B-BA4415CA50FF Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/15/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferences
+
+# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferenze
 
 La classe **Preferences** consente di archiviare le preferenze dell'applicazione in un archivio chiave/valore.
 
@@ -41,7 +31,7 @@ Per recuperare un valore dalle preferenze o un'impostazione predefinita se non i
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-Per verificare se una determinata _chiave_ esiste nelle preferenze:
+Per verificare se una determinata _chiave_ esiste in Preferenze:
 
 ```csharp
 bool hasKey = Preferences.ContainsKey("my_key");
@@ -67,24 +57,24 @@ In **Preferences** sono supportati i tipi di dati seguenti:
 
 - **bool**
 - **double**
-- **Int**
-- **Galleggiante**
-- **Lungo**
+- **int**
+- **float**
+- **long**
 - **string**
-- **Datetime**
+- **DateTime**
 
 ## <a name="integrate-with-system-settings"></a>Integrazione con le impostazioni di sistema
 
-Le preferenze sono memorizzate in modo nativo, che consente di integrare le impostazioni nelle impostazioni di sistema nativo. Seguire la docutolazione della piattaforma e gli esempi per l'integrazione con la piattaforma:
+Le preferenze sono archiviate in modo nativo, che consentono di integrare le impostazioni nelle impostazioni di sistema native. Segui gli esempi e le documetnation della piattaforma per l'integrazione con la piattaforma:
 
-* Apple: Implementazione di un pacchetto di [impostazioni iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Esempio di preferenze di applicazione iOSIOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
-* [Impostazioni watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
-* Android: [Introduzione alle schermate Impostazioni](https://developer.android.com/guide/topics/ui/settings.html)
+* Apple: [implementazione di un bundle di impostazioni iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Esempio di preferenze Applicaton iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Impostazioni watchos](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Introduzione con le schermate delle impostazioni](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Dettagli dell'implementazione
 
-I `DateTime` valori di vengono archiviati in un formato binario a `DateTime` 64 [`ToBinary`](xref:System.DateTime.ToBinary) bit (long integer) `DateTime` utilizzando due [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) metodi definiti dalla classe: il metodo viene utilizzato per codificare il valore e il metodo decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
+I valori di `DateTime` vengono archiviati in un formato binario a 64 bit (Long Integer) usando due metodi definiti dalla `DateTime` classe: il [`ToBinary`](xref:System.DateTime.ToBinary) metodo viene usato per codificare il `DateTime` valore e il [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) metodo decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
@@ -98,9 +88,9 @@ Tutti i dati vengono archiviati nelle [preferenze condivise](https://developer.a
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`. 
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`.
 
-`LocalSettings`ha anche la seguente restrizione che il nome di ogni impostazione può essere 255 caratteri di lunghezza al massimo. Ogni impostazione può avere una dimensione massima di 8K byte e ogni impostazione composita può avere una dimensione massima di 64K byte.
+`LocalSettings`presenta inoltre la restrizione seguente che il nome di ogni impostazione può avere una lunghezza massima di 255 caratteri. Ogni impostazione può avere dimensioni fino a 8 KB e ogni impostazione composita può avere dimensioni massime di 64K byte.
 
 --------------
 

@@ -1,22 +1,9 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a9a25cff30b9dfbed44e60faeae2f577d07940fc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139217"
+title: "che cos'è Novell?"
+Descrizione: "questo articolo introduce la piattaforma Novell e le librerie correlate".
+ms. prod: Novell MS. AssetID: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6 ms. Custom: autore del video: profexorgeek ms. Author: jusjohns ms. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="what-is-xamarin"></a>Che cos'è Xamarin?
 
 [![Screenshot dell'applicazione Novell di esempio in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
@@ -43,7 +30,7 @@ Xamarin è destinato agli sviluppatori con gli obiettivi seguenti:
 
 Il diagramma illustra l'architettura generale di un'applicazione Xamarin multipiattaforma. Xamarin consente di creare un'interfaccia utente nativa in ogni piattaforma e di scrivere in C# la logica di business da condividere tra le piattaforme. Nella maggior parte dei casi, l'80% del codice dell'applicazione è condivisibile tramite Xamarin.
 
-Xamarin è stato progettato basandosi su **Mono**, una versione open source di .NET Framework basata sugli standard ECMA .NET. Mono esiste quasi da quanto .NET Framework e viene eseguito nella maggior parte delle piattaforme, tra cui Linux, Unix, FreeBSD e macOS. L'ambiente di esecuzione di Mono gestisce automaticamente attività come l'allocazione della memoria, la Garbage Collection e l'interoperabilità con le piattaforme sottostanti.
+Novell è basato su .NET, che gestisce automaticamente le attività, ad esempio l'allocazione della memoria, la Garbage Collection e l'interoperabilità con le piattaforme sottostanti.
 
 Per altre informazioni sull'architettura specifica di una piattaforma, vedere [Xamarin.Android](#xamarinandroid) e [Xamarin.iOS](#xamarinios).
 
@@ -89,7 +76,7 @@ Per altre informazioni, vedere [Xamarin.Essentials](~/essentials/index.md).
 
 ### Xamarin.Forms
 
-Xamarin.Formsè un Framework dell'interfaccia utente open source. Xamarin.Formsconsente agli sviluppatori di compilare applicazioni iOS, Android e Windows da una singola codebase condivisa. Xamarin.Formsconsente agli sviluppatori di creare interfacce utente in XAML con code-behind in C#. Queste interfacce utente vengono visualizzate come controlli nativi a prestazioni elevate in ogni piattaforma. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin.Forms :
+Xamarin.Formsè un Framework dell'interfaccia utente open source. Xamarin.Formsconsente agli sviluppatori di compilare applicazioni Novell. iOS, Novell. Android e Windows da una singola codebase condivisa. Xamarin.Formsconsente agli sviluppatori di creare interfacce utente in XAML con code-behind in C#. Queste interfacce utente vengono visualizzate come controlli nativi a prestazioni elevate in ogni piattaforma. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin.Forms :
 
 - Lingua dell'interfaccia utente XAML
 - Data binding

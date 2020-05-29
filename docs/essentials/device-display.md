@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Device Display Information'
-description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essentials, che fornisce le metriche dello schermo per il dispositivo cui viene eseguita l'applicazione.
-ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1d72458fa32db58d0c5da278dbb424aa2b1714d1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150114"
+title: " Xamarin.Essentials : informazioni di visualizzazione del dispositivo" Description: "questo documento descrive la classe DeviceDisplay in Xamarin.Essentials , che fornisce la metrica dello schermo per il dispositivo in cui è in esecuzione l'applicazione".
+ms. AssetID: 2821C908-C613-490D-8E8C-1BD3269FCEEA Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Device Display Information
+
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informazioni sulla visualizzazione del dispositivo
 
 La classe **DeviceDisplay** fornisce informazioni sulle metriche dello schermo del dispositivo in cui è in esecuzione l'applicazione e può richiedere di evitare la sospensione dello schermo quando l'applicazione è in esecuzione.
 

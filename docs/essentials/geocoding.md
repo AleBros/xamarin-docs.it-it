@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Geocoding'
-description: La classe Geocoding in Xamarin.Essentials fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
-ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: 157eb3116f09268790036f8983543114e7a58276
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66354104"
+title: " Xamarin.Essentials : Geocoding" Description: "la classe geocoding in Xamarin.Essentials fornisce le API per la geocodifica di un segnaposto per le coordinate posizionali e la geocodifica inversa di coordinate a un segnaposto".
+ms. AssetID: 3ADC440C-B000-4708-A2CC-296F5160AF90 Author: jamesmontemagno ms. Author: Jamont ms. Date: 05/28/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocoding
+
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
 
 La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 
@@ -119,7 +109,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi e definiscono i metodi per calcolare la distanza tra due posizioni. Per un esempio, vedere l'articolo [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance).
+Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classi e definiscono i metodi per calcolare la distanza tra due posizioni. Per un esempio, vedere l'articolo relativo alla [** Xamarin.Essentials georilevazione**](geolocation.md#calculate-distance) .
 
 ## <a name="api"></a>API
 

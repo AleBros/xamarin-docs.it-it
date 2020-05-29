@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Battery'
-description: Questo documento descrive la classe Battery in Xamarin.Essentials, che consente di controllare le informazioni sulla batteria del dispositivo e di monitorare eventuali modifiche.
-ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/22/2019
-ms.custom: video
-ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756927"
+title: " Xamarin.Essentials : Battery" Description: "questo documento descrive la classe Battery in Xamarin.Essentials , che consente di controllare le informazioni sulla batteria del dispositivo e di monitorare le modifiche".
+ms. AssetID: 47EB26D8-8C62-477B-A13C-6977F74E6E43 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/22/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Battery
+
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batteria
 
 La classe **Battery** consente di controllare le informazioni sulla batteria del dispositivo e monitorare eventuali modifiche e fornisce informazioni sullo stato di risparmio energia del dispositivo, che indica se il dispositivo è in esecuzione in modalità basso consumo. Le applicazioni dovrebbero evitare l'elaborazione in background se lo stato di risparmio energia del dispositivo è attivo.
 
@@ -35,7 +25,7 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **AndroidManifest.xml** nella cartella **Properties** e aggiungere quanto segue all'interno del nodo del **manifesto.**
+Aprire il file **file AndroidManifest. XML** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -170,7 +160,7 @@ Non esistono differenze per questa piattaforma.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-- Per testare le API, deve essere usato il dispositivo. 
+- Per testare le API, deve essere usato il dispositivo.
 - Verrà restituito solo `AC` o `Battery` per `PowerSource`.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)

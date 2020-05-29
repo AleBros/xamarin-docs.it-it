@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Connettività'
-description: La classe Connectivity in Xamarin.Essentials consente di monitorare le variazioni nelle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso.
-ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/08/2019
-ms.custom: video
-ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67855763"
+title: " Xamarin.Essentials : Connectivity" Description: "la classe Connectivity in Xamarin.Essentials consente di monitorare le modifiche apportate alle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso".
+ms. AssetID: E1B1F152-B1D5-4227-965E-C0AEBF528F49 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/08/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connettività
 
 La classe **Connectivity** consente di monitorare le variazioni nelle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso.
@@ -35,7 +25,7 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **AndroidManifest.xml** nella cartella **Properties** e aggiungere quanto segue all'interno del nodo del **manifesto.**
+Aprire il file **file AndroidManifest. XML** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

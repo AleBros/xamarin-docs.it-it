@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Utilità di avvio'
-description: La classe Launcher in Xamarin.Essentials consente a un'applicazione di aprire un URI dal sistema.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 08/20/2019
-ms.openlocfilehash: f84d3bf379562c8ddd96a32dfb9f15b03b0a6827
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149793"
+title: " Xamarin.Essentials Launcher" Description: "la classe Launcher in Xamarin.Essentials consente a un'applicazione di aprire un URI dal sistema".
+ms. AssetID: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
+
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Utilità di avvio
 
 La classe **Launcher** consente a un'applicazione di aprire un URI dal sistema. Questa funzionalità viene usata spesso per il deep linking negli schemi URI personalizzati di un'altra applicazione. Se lo scopo è aprire il browser su un sito Web specifico, vedere l'API **[Browser](open-browser.md)**.
 
@@ -81,7 +71,7 @@ Nessuna configurazione aggiuntiva.
 
 ## <a name="files"></a>File
 
-Questa funzionalità consente a un'app di richiedere l'apertura e la visualizzazione di un file ad altre app. Xamarin.Essentials rileverà automaticamente il tipo di file (MIME) e richiederà l'apertura del file.
+Questa funzionalità consente a un'app di richiedere l'apertura e la visualizzazione di un file ad altre app. Xamarin.Essentialsil tipo di file (MIME) verrà rilevato automaticamente e verrà richiesto di aprire il file.
 
 Di seguito è riportato un esempio di scrittura di testo su disco e richiesta di apertura:
 

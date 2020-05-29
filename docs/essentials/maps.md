@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Map'
-description: La classe Map in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/26/2020
-ms.custom: video
-ms.openlocfilehash: 16f4a69e2d9216bb2e03fbcb663403d198b42c98
-ms.sourcegitcommit: 6a6cbb62bcf149f9515ee8868679a8a07ce17956
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83862716"
+title: " Xamarin.Essentials map" Description: "la classe Map in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione map installata in un percorso o un segnaposto specifico".
+ms. AssetID: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 Author: jamesmontemagno ms. Author: Jamont ms. Date: 05/26/2020 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Map
+
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Mappa
 
 La classe **Map** consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
 
@@ -142,7 +132,7 @@ public class MapTest
 
 # <a name="android"></a>[Android](#tab/android)
 
-Android usa lo schema URI `geo:` per avviare l'applicazione per le mappe nel dispositivo. Ciò potrebbe richiedere all'utente di effettuare una selezione da un'app esistente che supporta questo schema URI.  Xamarin.Essentials è stato testato con Google Maps, che supporta questo schema.
+Android usa lo schema URI `geo:` per avviare l'applicazione per le mappe nel dispositivo. Ciò potrebbe richiedere all'utente di effettuare una selezione da un'app esistente che supporta questo schema URI.  Xamarin.Essentialsviene testato con Google Maps, che supporta questo schema.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 

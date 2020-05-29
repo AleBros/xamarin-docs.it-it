@@ -1,42 +1,31 @@
 ---
-title: WebView Novell. Forms
-description: Questo articolo illustra come usare la classe WebView Novell. Forms per presentare i documenti e il contenuto Web locale o di rete agli utenti.
-ms.prod: xamarin
-ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/06/2020
-ms.openlocfilehash: 31b705a51e405285cc5eaae391dd0794bfacfd9c
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852485"
+title: " Xamarin.Forms WebView" Description: "in questo articolo viene illustrato come usare la Xamarin.Forms classe WebView per presentare i documenti e il contenuto Web locale o di rete per gli utenti".
+ms. prod: Novell MS. AssetID: E44F5D0F-DB8E-46C7-8789-114F1652A6C5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinforms-webview"></a>WebView Novell. Forms
 
-[![Scaricare l'](~/media/shared/download.png) esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+# <a name="xamarinforms-webview"></a>Xamarin.FormsWebView
+
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView)è una visualizzazione per la visualizzazione del contenuto Web e HTML nell'app:
 
 ![Nel browser app](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Contenuto
+## <a name="content"></a>Content
 
 `WebView`supporta i tipi di contenuto seguenti:
 
-- HTML & CSS &ndash; WebView offre supporto completo per i siti Web scritti con HTML & CSS, incluso il supporto JavaScript.
+- HTML & CSS &ndash; WebView offre supporto completo per i siti Web scritti con html & CSS, incluso il supporto JavaScript.
 - Documenti &ndash; poiché WebView viene implementato usando componenti nativi in ogni piattaforma, WebView è in grado di visualizzare i documenti visualizzabili in ogni piattaforma. Ciò significa che i file PDF funzionano in iOS e Android.
-- Le stringhe &ndash; HTML WebView possono mostrare stringhe HTML dalla memoria.
-- I file &ndash; locali WebView possono presentare i tipi di contenuto sopra incorporati nell'app.
+- Le stringhe HTML &ndash; WebView possono mostrare stringhe HTML dalla memoria.
+- I file locali &ndash; WebView possono presentare i tipi di contenuto sopra incorporati nell'app.
 
 > [!NOTE]
 > `WebView`in Windows non supporta Silverlight, Flash o tutti i controlli ActiveX, anche se sono supportati da Internet Explorer su tale piattaforma.
 
 ### <a name="websites"></a>Siti Web
 
-Per visualizzare un sito Web da Internet, impostare la `WebView`proprietà [`Source`](xref:Xamarin.Forms.WebViewSource) di su un URL stringa:
+Per visualizzare un sito Web da Internet, impostare la `WebView` [`Source`](xref:Xamarin.Forms.WebViewSource) proprietà di su un URL stringa:
 
 ```csharp
 var browser = new WebView
@@ -50,10 +39,10 @@ var browser = new WebView
 
 #### <a name="ios-and-ats"></a>iOS e ATS
 
-Dalla versione 9, iOS consentirà all'applicazione di comunicare solo con i server che implementano la sicurezza delle procedure consigliate per impostazione predefinita. Per abilitare la comunicazione con `Info.plist` server non sicuri, è necessario impostare i valori in.
+Dalla versione 9, iOS consentirà all'applicazione di comunicare solo con i server che implementano la sicurezza delle procedure consigliate per impostazione predefinita. `Info.plist`Per abilitare la comunicazione con server non sicuri, è necessario impostare i valori in.
 
 > [!NOTE]
-> Se l'applicazione richiede una connessione a un sito Web non sicuro, è sempre necessario immettere il dominio come eccezione usando `NSExceptionDomains` invece di disattivare completamente ATS usando `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads`deve essere usato solo in situazioni di emergenza estreme.
+> Se l'applicazione richiede una connessione a un sito Web non sicuro, è sempre necessario immettere il dominio come eccezione usando `NSExceptionDomains` invece di disattivare completamente ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`deve essere usato solo in situazioni di emergenza estreme.
 
 Di seguito viene illustrato come abilitare un dominio specifico (in questo caso xamarin.com) per ignorare i requisiti di ATS:
 
@@ -93,7 +82,7 @@ Vedere [sicurezza del trasporto delle app](~/ios/app-fundamentals/ats.md) per al
 
 ### <a name="html-strings"></a>Stringhe HTML
 
-Se si desidera presentare una stringa di codice HTML definito in modo dinamico nel codice, è necessario creare un'istanza di [`HtmlWebViewSource`](xref:Xamarin.Forms.HtmlWebViewSource):
+Se si desidera presentare una stringa di codice HTML definito in modo dinamico nel codice, è necessario creare un'istanza di [`HtmlWebViewSource`](xref:Xamarin.Forms.HtmlWebViewSource) :
 
 ```csharp
 var browser = new WebView();
@@ -110,7 +99,7 @@ browser.Source = htmlSource;
 Nel codice precedente, `@` viene usato per contrassegnare il codice HTML come [valore letterale stringa Verbatim](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), il che significa che la maggior parte dei caratteri di escape viene ignorata.
 
 > [!NOTE]
-> Potrebbe essere `WidthRequest` necessario impostare le proprietà e `HeightRequest` del [`WebView`](xref:Xamarin.Forms.WebView) per visualizzare il contenuto HTML, a seconda del layout di cui `WebView` è figlio. Ad esempio, questa operazione è necessaria in [`StackLayout`](xref:Xamarin.Forms.StackLayout)un oggetto.
+> Potrebbe essere necessario impostare le `WidthRequest` `HeightRequest` proprietà e del [`WebView`](xref:Xamarin.Forms.WebView) per visualizzare il contenuto HTML, a seconda del layout `WebView` di cui è figlio. Ad esempio, questa operazione è necessaria in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
 ### <a name="local-html-content"></a>Contenuto HTML locale
 
@@ -143,25 +132,25 @@ body,p,h1 {
 
 Si noti che è necessario personalizzare i tipi di carattere specificati nel CSS precedente per ogni piattaforma, in quanto non tutte le piattaforme hanno gli stessi tipi di carattere.
 
-Per visualizzare il contenuto locale usando `WebView`un, è necessario aprire il file HTML come qualsiasi altro, quindi caricare il contenuto sotto forma di stringa nella `Html` proprietà di un oggetto `HtmlWebViewSource`. Per ulteriori informazioni sull'apertura di file, vedere [utilizzo dei file](~/xamarin-forms/data-cloud/data/files.md).
+Per visualizzare il contenuto locale usando un `WebView` , è necessario aprire il file HTML come qualsiasi altro, quindi caricare il contenuto sotto forma di stringa nella `Html` proprietà di un oggetto `HtmlWebViewSource` . Per ulteriori informazioni sull'apertura di file, vedere [utilizzo dei file](~/xamarin-forms/data-cloud/data/files.md).
 
 Gli screenshot seguenti mostrano il risultato della visualizzazione del contenuto locale in ogni piattaforma:
 
 ![Visualizzazione WebView del contenuto locale](webview-images/local-content.png)
 
-Anche se la prima pagina è stata caricata `WebView` , non ha alcuna conoscenza della provenienza del codice HTML. Si tratta di un problema quando si gestiscono pagine che fanno riferimento a risorse locali. Di seguito sono riportati alcuni esempi di casi in cui potrebbe verificarsi un collegamento tra le pagine locali, una pagina che usa un file JavaScript separato o una pagina con collegamenti a un foglio di stile CSS.  
+Anche se la prima pagina è stata caricata, `WebView` non ha alcuna conoscenza della provenienza del codice HTML. Si tratta di un problema quando si gestiscono pagine che fanno riferimento a risorse locali. Di seguito sono riportati alcuni esempi di casi in cui potrebbe verificarsi un collegamento tra le pagine locali, una pagina che usa un file JavaScript separato o una pagina con collegamenti a un foglio di stile CSS.  
 
-Per risolvere questo problema, è necessario indicare il `WebView` percorso in cui trovare i file nel file System. A tale scopo, impostare `BaseUrl` la proprietà sull' `HtmlWebViewSource` oggetto utilizzato dall' `WebView`oggetto.
+Per risolvere questo problema, è necessario indicare il percorso in `WebView` cui trovare i file nel file System. A tale scopo, impostare la `BaseUrl` proprietà sull'oggetto `HtmlWebViewSource` utilizzato dall'oggetto `WebView` .
 
-Poiché il file System in ogni sistema operativo è diverso, è necessario determinare tale URL in ogni piattaforma. Novell. Forms espone `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
+Poiché il file System in ogni sistema operativo è diverso, è necessario determinare tale URL in ogni piattaforma. Xamarin.Formsespone `DependencyService` per la risoluzione delle dipendenze in fase di esecuzione in ogni piattaforma.
 
-Per usare `DependencyService`, definire innanzitutto un'interfaccia che può essere implementata in ogni piattaforma:
+Per usare `DependencyService` , definire innanzitutto un'interfaccia che può essere implementata in ogni piattaforma:
 
 ```csharp
 public interface IBaseUrl { string Get(); }
 ```
 
-Si noti che finché l'interfaccia non viene implementata in ogni piattaforma, l'app non verrà eseguita. Nel progetto comune, verificare che sia stato impostato l' `BaseUrl` utilizzo di: `DependencyService`
+Si noti che finché l'interfaccia non viene implementata in ogni piattaforma, l'app non verrà eseguita. Nel progetto comune, verificare che sia stato impostato l' `BaseUrl` utilizzo di `DependencyService` :
 
 ```csharp
 var source = new HtmlWebViewSource();
@@ -214,7 +203,7 @@ In Android inserire HTML, CSS e immagini nella cartella assets con l'azione di c
 
 -----
 
-In Android, il `BaseUrl` deve essere impostato su `"file:///android_asset/"`:
+In Android, il `BaseUrl` deve essere impostato su `"file:///android_asset/"` :
 
 ```csharp
 [assembly: Dependency (typeof(BaseUrl_Android))]
@@ -244,7 +233,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 
 Nei progetti piattaforma UWP (Universal Windows Platform) (UWP) inserire HTML, CSS e immagini nella radice del progetto con l'azione di compilazione impostata su *contenuto*.
 
-Il `BaseUrl` deve essere impostato su `"ms-appx-web:///"`:
+Il `BaseUrl` deve essere impostato su `"ms-appx-web:///"` :
 
 ```csharp
 [assembly: Dependency(typeof(BaseUrl))]
@@ -260,18 +249,18 @@ namespace WorkingWithWebview.UWP
 }
 ```
 
-## <a name="navigation"></a>Spostamento
+## <a name="navigation"></a>Navigazione
 
 WebView supporta la navigazione attraverso diversi metodi e proprietà che rende disponibili:
 
-- **GoForward ()** &ndash; se `CanGoForward` è true, la `GoForward` chiamata a passa alla pagina visitata successiva.
-- **GoBack ()** &ndash; se `CanGoBack` è true, la `GoBack` chiamata a consente di passare all'ultima pagina visitata.
-- **CanGoBack** &ndash; CanGoBack `true` se sono presenti pagine a cui tornare, `false` se il browser si trova all'URL iniziale.
-- **CanGoForward** &ndash; CanGoForward `true` se l'utente ha esplorato le versioni precedenti e può andare avanti in una pagina già visitata.
+- **GoForward ()** &ndash; Se `CanGoForward` è true, `GoForward` la chiamata a passa alla pagina visitata successiva.
+- **GoBack ()** &ndash; Se `CanGoBack` è true, `GoBack` la chiamata a passerà all'ultima pagina visitata.
+- **CanGoBack** &ndash; `true`se ci sono pagine a cui tornare, `false` se il browser si trova all'URL iniziale.
+- **CanGoForward** &ndash; `true`se l'utente ha esplorato le versioni precedenti e può andare avanti in una pagina già visitata.
 
-All'interno di `WebView` pagine, non supporta i movimenti multitocco. È importante assicurarsi che il contenuto sia ottimizzato per dispositivi mobili e venga visualizzato senza dover eseguire lo zoom.
+All'interno di pagine, non `WebView` supporta i movimenti multitocco. È importante assicurarsi che il contenuto sia ottimizzato per dispositivi mobili e venga visualizzato senza dover eseguire lo zoom.
 
-È normale che le applicazioni mostrino un collegamento all'interno `WebView`di un, anziché il browser del dispositivo. In questi casi, è utile consentire la navigazione normale, ma quando l'utente si trova nel collegamento iniziale, l'app deve tornare alla visualizzazione normale dell'app.
+È normale che le applicazioni mostrino un collegamento all'interno di un `WebView` , anziché il browser del dispositivo. In questi casi, è utile consentire la navigazione normale, ma quando l'utente si trova nel collegamento iniziale, l'app deve tornare alla visualizzazione normale dell'app.
 
 Usare i metodi e le proprietà di navigazione predefiniti per abilitare questo scenario.
 
@@ -326,7 +315,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Ecco fatto!
+L'operazione è stata completata.
 
 ![Pulsanti di spostamento WebView](webview-images/in-app-browser.png)
 
@@ -338,21 +327,21 @@ WebView genera gli eventi seguenti che consentono di rispondere alle modifiche d
 - [`Navigated`](xref:Xamarin.Forms.WebView.Navigated): evento generato quando la pagina viene caricata e l'esplorazione è stata arrestata.
 - [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested): evento generato quando viene effettuata una richiesta per ricaricare il contenuto corrente.
 
-L' [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) oggetto che accompagna l' [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) evento è costituito da quattro proprietà:
+L' [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) oggetto che accompagna l'evento è costituito da [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) quattro proprietà:
 
 - `Cancel`: indica se annullare o meno la navigazione.
 - `NavigationEvent`: l'evento di navigazione che è stato generato.
 - `Source`: elemento che ha eseguito lo spostamento.
 - `Url`: destinazione di navigazione.
 
-L' [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) oggetto che accompagna l' [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) evento è costituito da quattro proprietà:
+L' [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) oggetto che accompagna l'evento è costituito da [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) quattro proprietà:
 
 - `NavigationEvent`: l'evento di navigazione che è stato generato.
 - `Result`: descrive il risultato della navigazione, usando un [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) membro di enumerazione. I valori validi sono `Cancel`, `Failure`, `Success` e `Timeout`.
 - `Source`: elemento che ha eseguito lo spostamento.
 - `Url`: destinazione di navigazione.
 
-Se si prevede di usare le pagine Web che impiegano molto tempo per il caricamento, provare [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) a [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) usare gli eventi e per implementare un indicatore di stato. Ad esempio:
+Se si prevede di usare le pagine Web che impiegano molto tempo per il caricamento, provare a usare gli [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) eventi e per implementare un indicatore di stato. Ad esempio:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -391,7 +380,7 @@ Caricamento completato:
 
 ## <a name="reloading-content"></a>Ricaricamento del contenuto
 
-[`WebView`](xref:Xamarin.Forms.WebView)dispone di `Reload` un metodo che può essere utilizzato per ricaricare il contenuto corrente:
+[`WebView`](xref:Xamarin.Forms.WebView)dispone `Reload` di un metodo che può essere utilizzato per ricaricare il contenuto corrente:
 
 ```csharp
 var webView = new WebView();
@@ -403,12 +392,12 @@ Quando viene `Reload` richiamato il metodo `ReloadRequested` , l'evento viene ge
 
 ## <a name="performance"></a>Prestazioni
 
-I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima di Novell. Forms 4,4, Novell. Forms `WebView` è stato implementato in iOS `UIWebView` dalla classe. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal momento che Novell. Forms 4,4, Novell `WebView` . Forms viene implementato in `WkWebView` iOS dalla classe, che supporta l'esplorazione più veloce.
+I Web browser più diffusi adottano tecnologie come il rendering con accelerazione hardware e la compilazione JavaScript. Prima Xamarin.Forms del 4,4, Xamarin.Forms `WebView` era implementato in iOS dalla `UIWebView` classe. Tuttavia, molte di queste tecnologie non erano disponibili in questa implementazione. Pertanto, dal Xamarin.Forms 4,4, Xamarin.Forms `WebView` viene implementato in iOS dalla `WkWebView` classe, che supporta l'esplorazione più veloce.
 
 > [!NOTE]
-> In iOS, ha `WkWebViewRenderer` un overload del costruttore che accetta un `WkWebViewConfiguration` argomento. In questo modo è possibile configurare il renderer durante la creazione.
+> In iOS, `WkWebViewRenderer` ha un overload del costruttore che accetta un `WkWebViewConfiguration` argomento. In questo modo è possibile configurare il renderer durante la creazione.
 
-Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementare Novell. Forms `WebView`, per motivi di compatibilità. Questa operazione può essere eseguita aggiungendo il codice seguente al file **AssemblyInfo.cs** nel progetto della piattaforma iOS per l'applicazione:
+Un'applicazione può tornare all'uso della `UIWebView` classe iOS per implementare Xamarin.Forms `WebView` , per motivi di compatibilità. Questa operazione può essere eseguita aggiungendo il codice seguente al file **AssemblyInfo.cs** nel progetto della piattaforma iOS per l'applicazione:
 
 ```csharp
 // Opt-in to using UIWebView instead of WkWebView.
@@ -421,7 +410,7 @@ Un'applicazione può tornare all'uso della classe `UIWebView` iOS per implementa
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Per consentire il `WebView` funzionamento di, è necessario assicurarsi che le autorizzazioni siano impostate per ogni piattaforma. Si noti che in alcune piattaforme `WebView` funzionerà in modalità di debug, ma non quando viene compilata per la versione. Questo perché alcune autorizzazioni, ad esempio quelle per l'accesso a Internet in Android, vengono impostate per impostazione predefinita da Visual Studio per Mac in modalità di debug.
+Per consentire `WebView` il funzionamento di, è necessario assicurarsi che le autorizzazioni siano impostate per ogni piattaforma. Si noti che in alcune piattaforme `WebView` funzionerà in modalità di debug, ma non quando viene compilata per la versione. Questo perché alcune autorizzazioni, ad esempio quelle per l'accesso a Internet in Android, vengono impostate per impostazione predefinita da Visual Studio per Mac in modalità di debug.
 
 - **UWP** &ndash; richiede la funzionalità Internet (client & Server) per la visualizzazione del contenuto di rete.
 - **Android** &ndash; richiede `INTERNET` solo quando viene visualizzato contenuto dalla rete. Il contenuto locale non richiede autorizzazioni speciali.
@@ -429,9 +418,9 @@ Per consentire il `WebView` funzionamento di, è necessario assicurarsi che le a
 
 ## <a name="layout"></a>Layout
 
-A differenza della maggior parte delle altre viste Novell `WebView` . Forms, richiede che `HeightRequest` e `WidthRequest` siano specificati quando sono contenuti in StackLayout o sul relativelayout. Se non si specificano tali proprietà, non `WebView` verrà eseguito il rendering di.
+A differenza della maggior parte delle altre Xamarin.Forms viste, `WebView` richiede che `HeightRequest` e `WidthRequest` siano specificati quando sono contenuti in StackLayout o sul relativelayout. Se non si specificano tali proprietà, `WebView` non verrà eseguito il rendering di.
 
-Negli esempi seguenti vengono illustrati i layout che comportano `WebView`il funzionamento, il rendering di:
+Negli esempi seguenti vengono illustrati i layout che comportano il funzionamento, il rendering di `WebView` :
 
 StackLayout con WidthRequest & HeightRequest:
 
@@ -487,7 +476,7 @@ Griglia *senza* WidthRequest & HeightRequest. Grid è uno dei pochi layout che n
 
 ## <a name="invoking-javascript"></a>Chiamata di JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView)include la possibilità di richiamare una funzione JavaScript da C# e di restituire qualsiasi risultato al codice C# chiamante. Questa operazione viene eseguita con [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) il metodo, illustrato nell'esempio seguente dall'esempio [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
+[`WebView`](xref:Xamarin.Forms.WebView)include la possibilità di richiamare una funzione JavaScript da C# e di restituire qualsiasi risultato al codice C# chiamante. Questa operazione viene eseguita con il [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) metodo, illustrato nell'esempio seguente dall'esempio [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -500,7 +489,7 @@ string result = await webView.EvaluateJavaScriptAsync($"factorial({number})");
 resultLabel.Text = $"Factorial of {number} is {result}.";
 ```
 
-Il [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) metodo valuta il codice JavaScript specificato come argomento e restituisce qualsiasi risultato come `string`. In questo esempio viene richiamata la `factorial` funzione JavaScript, che restituisce il fattoriale di `number` come risultato. Questa funzione JavaScript viene definita nel file HTML locale caricato dall'oggetto [`WebView`](xref:Xamarin.Forms.WebView) e viene illustrato nell'esempio seguente:
+Il [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) metodo valuta il codice JavaScript specificato come argomento e restituisce qualsiasi risultato come `string` . In questo esempio `factorial` viene richiamata la funzione JavaScript, che restituisce il fattoriale di `number` come risultato. Questa funzione JavaScript viene definita nel file HTML locale caricato dall'oggetto [`WebView`](xref:Xamarin.Forms.WebView) e viene illustrato nell'esempio seguente:
 
 ```html
 <html>
@@ -521,7 +510,7 @@ function factorial(num) {
 
 ## <a name="cookies"></a>Cookie
 
-I cookie possono essere impostati su [`WebView`](xref:Xamarin.Forms.WebView)un oggetto, che viene quindi inviato con la richiesta Web all'URL specificato. Questa operazione viene eseguita aggiungendo `Cookie` oggetti a un `CookieContainer`oggetto, che viene quindi impostato come valore della proprietà `WebView.Cookies` associabile. Il codice seguente illustra un esempio di questo:
+I cookie possono essere impostati su un oggetto [`WebView`](xref:Xamarin.Forms.WebView) , che viene quindi inviato con la richiesta Web all'URL specificato. Questa operazione viene eseguita aggiungendo `Cookie` oggetti a un oggetto `CookieContainer` , che viene quindi impostato come valore della `WebView.Cookies` proprietà associabile. Il codice seguente illustra un esempio di questo:
 
 ```csharp
 using System.Net;
@@ -544,32 +533,32 @@ webView.Cookies = cookieContainer;
 webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 ```
 
-In questo esempio viene aggiunto un `Cookie` singolo all' `CookieContainer` oggetto, che viene quindi impostato come valore della `WebView.Cookies` proprietà. Quando [`WebView`](xref:Xamarin.Forms.WebView) invia una richiesta Web all'URL specificato, il cookie viene inviato con la richiesta.
+In questo esempio `Cookie` viene aggiunto un singolo all' `CookieContainer` oggetto, che viene quindi impostato come valore della `WebView.Cookies` Proprietà. Quando [`WebView`](xref:Xamarin.Forms.WebView) Invia una richiesta Web all'URL specificato, il cookie viene inviato con la richiesta.
 
 ## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Deprecazione di UIWebView e rifiuto di App Store (ITMS-90809)
 
-A partire dall'aprile 2020, [Apple rifiuterà le app](https://developer.apple.com/news/?id=12232019b) che usano ancora l' `UIWebView` API deprecata. Mentre Novell. Forms è stato impostato `WKWebView` come predefinito, esiste ancora un riferimento all'SDK precedente nei file binari di Novell. Forms. Il comportamento corrente del [linker iOS](~/ios/deploy-test/linker.md) non rimuove questo e, di conseguenza, l' `UIWebView` API deprecata verrà comunque visualizzata come riferimento dall'app quando si invia all'App Store.
+A partire dall'aprile 2020, [Apple rifiuterà le app](https://developer.apple.com/news/?id=12232019b) che usano ancora l' `UIWebView` API deprecata. Mentre Xamarin.Forms è stato impostato `WKWebView` come predefinito, esiste ancora un riferimento all'SDK precedente nei Xamarin.Forms file binari. Il comportamento corrente del [linker iOS](~/ios/deploy-test/linker.md) non rimuove questo e, di conseguenza, l'API deprecata `UIWebView` verrà comunque visualizzata come riferimento dall'app quando si invia all'App Store.
 
-Per risolvere il problema, è disponibile una versione di anteprima del linker. Per abilitare l'anteprima, sarà necessario fornire un argomento `--optimize=experimental-xforms-product-type` aggiuntivo al linker.
+Per risolvere il problema, è disponibile una versione di anteprima del linker. Per abilitare l'anteprima, sarà necessario fornire un argomento aggiuntivo `--optimize=experimental-xforms-product-type` al linker.
 
 I prerequisiti per questo lavoro sono i seguenti:
 
-- **Novell. forms 4,5 o versione successiva**. Novell. Forms 4,6, o versione successiva, è obbligatorio se l'app usa oggetti visivi materiali.
+- ** Xamarin.Forms 4,5 o versione successiva**. Xamarin.Forms4,6, o versione successiva, è obbligatorio se l'app usa oggetti visivi materiali.
 - **Novell. iOS 13.10.0.17 o versione successiva**. Verificare la versione di Novell. iOS [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Questa versione di Novell. iOS è inclusa in Visual Studio per Mac 8.4.1 e Visual Studio 16.4.3.
-- **Rimuovere i riferimenti `UIWebView`a **. Il codice non deve contenere riferimenti a né `UIWebView` a classi che usano `UIWebView`.
+- **Rimuovere i riferimenti `UIWebView` a **. Il codice non deve contenere riferimenti a `UIWebView` né a classi che usano `UIWebView` .
 
-Per ulteriori informazioni sul rilevamento e la rimozione `UIWebView` dei riferimenti, vedere [deprecazione di UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
+Per ulteriori informazioni sul rilevamento e la rimozione dei `UIWebView` riferimenti, vedere [deprecazione di UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
 
 ### <a name="configure-the-linker"></a>Configurare il linker
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Per rimuovere `UIWebView` i riferimenti, attenersi alla procedura seguente:
+Per rimuovere i riferimenti, attenersi alla procedura seguente `UIWebView` :
 
-1. **Aprire le proprietà** &ndash; del progetto iOS facendo clic con il pulsante destro del mouse sul progetto iOS e scegliere **proprietà**.
-1. **Passare alla sezione** &ndash; compilazione iOS selezionare la sezione **compilazione iOS** .
-1. **Aggiornare gli argomenti** &ndash; mTouch aggiuntivi negli **argomenti mTouch aggiuntivi** aggiungere questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente). Nota: questo flag funziona in combinazione con il **comportamento del linker** impostato **solo su SDK** o collegamento a **tutti**. Se, per qualsiasi motivo, vengono visualizzati errori quando si imposta il comportamento del linker su tutti, probabilmente si tratta di un problema all'interno del codice dell'app o di una libreria di terze parti che non è protetta dal linker. Per altre informazioni sul linker, vedere [collegamento di app Novell. iOS](~/ios/deploy-test/linker.md).
-1. **Aggiornare tutte le configurazioni** &ndash; della build usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
+1. **Aprire le proprietà** &ndash; del progetto iOS Fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Proprietà**.
+1. **Passare alla sezione** &ndash; compilazione iOS Selezionare la sezione **compilazione iOS** .
+1. **Aggiornare gli argomenti** &ndash; aggiuntivi di mTouch Negli **argomenti aggiuntivi di mTouch** aggiungere questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente). Nota: questo flag funziona in combinazione con il **comportamento del linker** impostato **solo su SDK** o collegamento a **tutti**. Se, per qualsiasi motivo, vengono visualizzati errori quando si imposta il comportamento del linker su tutti, probabilmente si tratta di un problema all'interno del codice dell'app o di una libreria di terze parti che non è protetta dal linker. Per altre informazioni sul linker, vedere [collegamento di app Novell. iOS](~/ios/deploy-test/linker.md).
+1. **Aggiorna tutte le configurazioni** &ndash; di compilazione Usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
 
 È possibile visualizzare la finestra con il nuovo flag sul posto in questa schermata:
 
@@ -577,12 +566,12 @@ Per rimuovere `UIWebView` i riferimenti, attenersi alla procedura seguente:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Per rimuovere `UIWebView` i riferimenti, attenersi alla procedura seguente:
+Per rimuovere i riferimenti, attenersi alla procedura seguente `UIWebView` :
 
-1. **Aprire il progetto iOS opzioni** &ndash; fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Opzioni**.
-1. **Passare alla sezione** &ndash; compilazione iOS selezionare la sezione **compilazione iOS** .
-1. **Aggiornare gli argomenti _mtouch_ ** &ndash; mTouch aggiuntivi negli **argomenti _mTouch_ aggiuntivi** aggiungere questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente). Nota: questo flag funziona in combinazione con il **comportamento del linker** impostato **solo su SDK** o collegamento a **tutti**. Se, per qualsiasi motivo, vengono visualizzati errori quando si imposta il comportamento del linker su tutti, probabilmente si tratta di un problema all'interno del codice dell'app o di una libreria di terze parti che non è protetta dal linker. Per altre informazioni sul linker, vedere [collegamento di app Novell. iOS](~/ios/deploy-test/linker.md).
-1. **Aggiornare tutte le configurazioni** &ndash; della build usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
+1. **Apri le opzioni** &ndash; del progetto iOS Fare clic con il pulsante destro del mouse sul progetto iOS e scegliere **Opzioni**.
+1. **Passare alla sezione** &ndash; compilazione iOS Selezionare la sezione **compilazione iOS** .
+1. **Aggiornare gli argomenti _mTouch_ aggiuntivi** &ndash; negli **argomenti _mTouch_ aggiuntivi** aggiungere questo flag `--optimize=experimental-xforms-product-type` (oltre a qualsiasi valore che potrebbe essere già presente). Nota: questo flag funziona in combinazione con il **comportamento del linker** impostato **solo su SDK** o collegamento a **tutti**. Se, per qualsiasi motivo, vengono visualizzati errori quando si imposta il comportamento del linker su tutti, probabilmente si tratta di un problema all'interno del codice dell'app o di una libreria di terze parti che non è protetta dal linker. Per altre informazioni sul linker, vedere [collegamento di app Novell. iOS](~/ios/deploy-test/linker.md).
+1. **Aggiorna tutte le configurazioni** &ndash; di compilazione Usare gli elenchi **configurazione** e **piattaforma** nella parte superiore della finestra per aggiornare tutte le configurazioni della build. La configurazione più importante da aggiornare è la configurazione **release/iPhone** , perché in genere viene usata per creare compilazioni per l'invio di App Store.
 
 È possibile visualizzare la finestra con il nuovo flag sul posto in questa schermata:
 

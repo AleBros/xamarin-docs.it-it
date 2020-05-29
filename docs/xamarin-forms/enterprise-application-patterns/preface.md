@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo capitolo offre una prefazione ai modelli di applicazioni aziendali che usano Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b587bd8cacda9024103757a585c11fba2ed09fda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130832"
+title: "Introduzione allo sviluppo di app aziendali" Descrizione: "questo capitolo fornisce una prefazione ai modelli di applicazione aziendali con Xamarin.Forms ."
+ms. prod: Novell MS. AssetID: fbf32a44-1d33-4e16-A904-dc7ee5991e7c ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="preface-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
 Questo eBook fornisce informazioni aggiuntive sulla creazione di app aziendali multipiattaforma con Xamarin.Forms . Xamarin.Formsè un toolkit di interfaccia utente multipiattaforma che consente agli sviluppatori di creare facilmente layout di interfaccia utente nativi che possono essere condivisi tra piattaforme, tra cui iOS, Android e la piattaforma UWP (Universal Windows Platform) (UWP). Offre una soluzione completa per le app business to Employee (B2E), business to business (B2B) e business to consumer (B2C), offrendo la possibilità di condividere il codice tra tutte le piattaforme di destinazione e di ridurre il costo totale di proprietà (TCO).
@@ -27,7 +13,7 @@ La guida viene fornita con il codice sorgente per l' [app per dispositivi mobili
 
 ## <a name="whats-left-out-of-this-guides-scope"></a>Elementi lasciati dall'ambito di questa guida
 
-Questa guida è rivolta ai lettori che hanno già familiarità con Xamarin.Forms . Per un'introduzione dettagliata a Xamarin.Forms , vedere la [ Xamarin.Forms documentazione](~/xamarin-forms/index.yml)e [creazione di app per dispositivi Xamarin.Forms mobili con ](https://aka.ms/xamebook).
+Questa guida è rivolta ai lettori che hanno già familiarità con Xamarin.Forms . Per un'introduzione dettagliata a Xamarin.Forms , vedere la [ Xamarin.Forms documentazione](~/xamarin-forms/index.yml)e [creazione di app per dispositivi Xamarin.Forms mobili con ](https://aka.ms/xamformsebook).
 
 La guida è complementare ai [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook), che è incentrata sullo sviluppo e la distribuzione di microservizi in contenitori. Altre guide che vale la pena leggere includono l' [architettura e lo sviluppo di applicazioni Web moderne con ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook), il ciclo di vita [delle applicazioni Docker in contenitori con la piattaforma e gli strumenti Microsoft](https://aka.ms/dockerlifecycleebook)e [la piattaforma e gli strumenti Microsoft per lo sviluppo di app mobili](https://aka.ms/MobAppDev/StndPDF).
 

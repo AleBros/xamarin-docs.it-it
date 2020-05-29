@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9890ecdf286ee33d7af28fd20847788b063df8f5
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136890"
+Titolo: "Riepilogo del capitolo 4. Scorrimento dello stack "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 4. Scorrimento dello stack "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44 Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
@@ -121,5 +105,5 @@ Nell'esempio **BlackCat** viene inoltre illustrato come definire e accedere alle
 - [Esempi del capitolo 4](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 - [Esempi del capitolo 4 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)
-- [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [ScrollView](~/xamarin-forms/user-interface/layouts/scrollview.md)
 - [BoxView](~/xamarin-forms/user-interface/boxview.md)

@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: App Information'
-description: Questo documento descrive la classe AppInfo in Xamarin.Essentials, che fornisce informazioni sull'applicazione. Ad esempio, espone il nome e la versione dell'app.
-ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/29/2019
-ms.custom: video
-ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756986"
+title: " Xamarin.Essentials : informazioni sull'app" Descrizione: "questo documento descrive la classe appinfo in Xamarin.Essentials , che fornisce informazioni sull'applicazione. Ad esempio, espone il nome e la versione dell'app ".
+ms. AssetID: 15924FCB-19E0-45B2-944E-E94FD7AE12FA Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/29/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: App Information
+
+# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Informazioni sull'app
 
 La classe **AppInfo** fornisce informazioni sull'applicazione.
 
@@ -64,28 +54,28 @@ Questa pagina di impostazioni consente all'utente di modificare le autorizzazion
 
 Le informazioni sull'app vengono ottenute da `AndroidManifest.xml` per i campi seguenti:
 
-- **Compilazione:** nel nodoBuild – `android:versionCode` in `manifest` node
-- **Name** -  Nome`android:label` nel `application` nodo
-- **PackageName** `package` : `manifest` nel nodo
-- **VersionString** `android:versionName` – `application` nel nodo
+- **Compilazione** - `android:versionCode` nel `manifest` nodo
+- **Name**  -  Nome `android:label` nel `application` nodo
+- **PackageName**: `package` nel `manifest` nodo
+- **VersionString** : `android:versionName` nel `application` nodo
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
 Le informazioni sull'app vengono ottenute da `Info.plist` per i campi seguenti:
 
-- **Costruisci** –`CFBundleVersion`
-- **Assegna un nome**  -  `CFBundleDisplayName` se impostato, altrimenti`CFBundleName`
-- **NomePacchetto**:`CFBundleIdentifier`
-- **StringaVersione (VersionString** –)`CFBundleShortVersionString`
+- **Compilazione** :`CFBundleVersion`
+- **Name**  -  Nome `CFBundleDisplayName` Se impostato, else`CFBundleName`
+- **PackageName**:`CFBundleIdentifier`
+- **VersionString** -`CFBundleShortVersionString`
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
 Le informazioni sull'app vengono ottenute da `Package.appxmanifest` per i campi seguenti:
 
 - **Build**: usa `Build` di `Version` nel nodo `Identity`
-- **Name** -  Nome`DisplayName` sul `Properties` nodo
-- **PackageName** `Name` : `Identity` sul nodo
-- **VersionString** `Version` : `Identity` sul nodo
+- **Name**  -  Nome `DisplayName` nel `Properties` nodo
+- **PackageName**: `Name` nel `Identity` nodo
+- **VersionString** : `Version` nel `Identity` nodo
 
 --------------
 

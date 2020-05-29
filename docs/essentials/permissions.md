@@ -1,19 +1,9 @@
 ---
-title: 'Novell. Essentials: autorizzazioni'
-description: Questo documento descrive la classe di autorizzazioni in Novell. Essentials, che consente di controllare e richiedere le autorizzazioni di Runtime.
-ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
-author: jamesmontemagno
-ms.author: jamont
-ms.custom: video
-ms.date: 01/06/2020
-ms.openlocfilehash: fbce02300363c3ec68c35c11afb25342f06f4be1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150074"
+title: " Xamarin.Essentials : Permissions" Description: "questo documento descrive la classe Permissions in Xamarin.Essentials , che consente di controllare e richiedere le autorizzazioni di runtime".
+ms. AssetID: 34062D84-3E55-4AF7-A688-8551068B1E57 Author: jamesmontemagno ms. Author: Jamont ms. Custom: video ms. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-permissions"></a>Novell. Essentials: autorizzazioni
+
+# <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Autorizzazioni
 
 La classe **Permissions** consente di controllare e richiedere le autorizzazioni di Runtime.
 
@@ -67,7 +57,7 @@ Quando `CheckStatusAsync` si usa `RequestAsync` o `PermissionStatus` viene resti
 
 ## <a name="available-permissions"></a>Autorizzazioni disponibili
 
-Novell. Essentials tenta di astrarre il maggior numero possibile di autorizzazioni. Tuttavia, ogni sistema operativo ha un set di autorizzazioni di runtime diverso. Sono inoltre presenti differenze durante la fornitura di una singola API per alcune autorizzazioni. Ecco una guida per le autorizzazioni attualmente disponibili:
+Xamarin.Essentialstenta di astrarre il maggior numero possibile di autorizzazioni. Tuttavia, ogni sistema operativo ha un set di autorizzazioni di runtime diverso. Sono inoltre presenti differenze durante la fornitura di una singola API per alcune autorizzazioni. Ecco una guida per le autorizzazioni attualmente disponibili:
 
 Guida alle icone:
 
@@ -84,14 +74,14 @@ Guida alle icone:
 | Torcia elettrica | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS non supportato](~/media/shared/no.png "iOS non supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
 | LocationWhenInUse | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS supportato](~/media/shared/yes.png "tvOS supportato")  | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
 | LocationAlways | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
-| Contenuti multimediali | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
+| File multimediali | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Microfono | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
 | Telefono | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Foto | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS supportato](~/media/shared/yes.png "tvOS supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Reminders | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Sensori | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | SMS | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
-| Riconoscimento vocale | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
+| Voce | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | StorageRead | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS non supportato](~/media/shared/no.png "iOS non supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | StorageWrite | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS non supportato](~/media/shared/no.png "iOS non supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 
@@ -145,7 +135,7 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 
 ## <a name="extending-permissions"></a>Estensione delle autorizzazioni
 
-L'API delle autorizzazioni è stata creata per essere flessibile ed estendibile per le applicazioni che richiedono una convalida o autorizzazioni aggiuntive che non sono incluse in Novell. Essentials. Creare una nuova classe che eredita da `BasePermission` e implementare i metodi astratti richiesti. Risultato
+L'API delle autorizzazioni è stata creata per essere flessibile ed estendibile per le applicazioni che richiedono una convalida o autorizzazioni aggiuntive che non sono incluse in Xamarin.Essentials . Creare una nuova classe che eredita da `BasePermission` e implementare i metodi astratti richiesti. Operazione da eseguire
 
 ```csharp
 public class MyPermission : BasePermission

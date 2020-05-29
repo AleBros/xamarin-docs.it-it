@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Archiviazione sicura'
-description: Questo documento descrive la classe SecureStorage in Xamarin.Essentials, che consente di archiviare in modo sicuro semplici coppie chiave/valore. Illustra come usare la classe, le informazioni di implementazione specifiche della piattaforma e le limitazioni.
-ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
-ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550900"
+title: " Xamarin.Essentials : Secure Storage" Description: "questo documento descrive la classe SecureStorage in Xamarin.Essentials , che consente di archiviare in modo sicuro coppie chiave/valore semplici. Viene illustrato come utilizzare la classe, le specifiche di implementazione della piattaforma e le limitazioni ".
+ms. AssetID: 78856C0D-76BB-406E-A880-D5A3987B7D64 Author: jamesmontemagno ms. Author: Jamont ms. Date: 04/02/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione sicura
 
 La classe **SecureStorage** consente di archiviare in modo sicuro semplici coppie chiave/valore.
@@ -26,7 +16,7 @@ Per accedere alla funzionalità **SecureStorage**, è necessaria la configurazio
 # <a name="android"></a>[Android](#tab/android)
 
 > [!TIP]
-> Il [backup automatico per le app](https://developer.android.com/guide/topics/data/autobackup) è una funzionalità di Android 6.0 (livello API 23) e versioni successive per il backup dei dati delle app dell'utente (preferenze condivise, file nello spazio di archiviazione interno dell'app e altri file specifici). I dati vengono ripristinati quando un'app viene reinstallata o installata in un nuovo dispositivo. Ciò può influire su `SecureStorage` che usa preferenze condivise incluse nel backup e che non possono essere decrittografate quando viene eseguito il ripristino. Xamarin.Essentials gestisce automaticamente questo caso rimuovendo la chiave in modo che sia possibile reimpostarla, ma è possibile procedere oltre disabilitando il backup automatico.
+> Il [backup automatico per le app](https://developer.android.com/guide/topics/data/autobackup) è una funzionalità di Android 6.0 (livello API 23) e versioni successive per il backup dei dati delle app dell'utente (preferenze condivise, file nello spazio di archiviazione interno dell'app e altri file specifici). I dati vengono ripristinati quando un'app viene reinstallata o installata in un nuovo dispositivo. Ciò può influire su `SecureStorage` che usa preferenze condivise incluse nel backup e che non possono essere decrittografate quando viene eseguito il ripristino. Xamarin.Essentialsgestisce automaticamente questo caso rimuovendo la chiave in modo che possa essere reimpostata, ma è possibile eseguire un ulteriore passaggio disabilitando il backup automatico.
 
 ### <a name="enable-or-disable-backup"></a>Abilitare o disabilitare il backup
 È possibile scegliere di disabilitare il backup automatico per l'intera applicazione impostando `android:allowBackup` su false nel file `AndroidManifest.xml`. Questo approccio è consigliato solo se si prevede di ripristinare i dati in altro modo.
@@ -63,7 +53,7 @@ Il backup automatico può essere configurato per disabilitare contenuto specific
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Quando si sviluppa nel **simulatore iOS**, abilitare l'entitlement **Keychain** e aggiungere un gruppo di accesso keychain per l'identificatore del bundle dell'applicazione. 
+Quando si sviluppa nel **simulatore iOS**, abilitare l'entitlement **Keychain** e aggiungere un gruppo di accesso keychain per l'identificatore del bundle dell'applicazione.
 
 Aprire il file **Entitlements.plist** nel progetto iOS, trovare l'entitlement **Keychain** e quindi abilitarlo. L'identificatore dell'applicazione verrà aggiunto automaticamente come gruppo.
 
@@ -161,7 +151,7 @@ I valori crittografati sono archiviati in `ApplicationData.Current.LocalSettings
 
 ## <a name="limitations"></a>Limitazioni
 
-Questa API è progettata per l'archiviazione di piccole quantità di testo.  Le prestazioni potrebbero risultare lente se si tenta di usarla per archiviare grandi quantità di testo. 
+Questa API è progettata per l'archiviazione di piccole quantità di testo.  Le prestazioni potrebbero risultare lente se si tenta di usarla per archiviare grandi quantità di testo.
 
 ## <a name="api"></a>API
 

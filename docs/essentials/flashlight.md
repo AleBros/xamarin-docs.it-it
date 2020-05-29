@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Flashlight'
-description: Questo documento descrive la classe Flashlight in Xamarin.Essentials, che può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
-ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1a8601860afaf033c9bdb62c187fe228d2e83435
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149951"
+title: " Xamarin.Essentials : torcia" Description: "questo documento descrive la classe Flashlight in Xamarin.Essentials , che è in grado di attivare o disattivare la fotocamera flash del dispositivo per trasformarla in torcia".
+ms. AssetID: 06A03553-D212-43A2-9E6E-C2D2D93EB136 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Flashlight
+
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Torcia
 
 La classe **Flashlight** può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 
@@ -109,7 +99,7 @@ Nei livelli API più recenti verrà usata la [modalità torcia](https://develope
 
 #### <a name="api-level-22-and-lower"></a>API livello 22 e precedenti
 
-Viene creata una trama della superficie della fotocamera per attivare o disattivare l'elemento `FlashMode` dell'unità fotocamera. 
+Viene creata una trama della superficie della fotocamera per attivare o disattivare l'elemento `FlashMode` dell'unità fotocamera.
 
 ### <a name="ios"></a>[iOS](#tab/ios)
 

@@ -1,17 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Barometro'
-description: La classe Barometer in Xamarin.Essentials consente di monitorare il sensore barometro del dispositivo, che misura la pressione atmosferica.
-ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "69976430"
+title: " Xamarin.Essentials : barometro" Description: "la classe barometro in Xamarin.Essentials consente di monitorare il sensore barometro del dispositivo, che misura la pressione".
+ms. AssetID: DA4F968A-D988-41F5-8745-1BEE693660A1 Author: jamesmontemagno ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometro
 
 La classe **Barometer** consente di monitorare il sensore barometro del dispositivo, che misura la pressione atmosferica.

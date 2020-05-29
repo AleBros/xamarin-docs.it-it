@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Share'
-description: La classe Share in Xamarin.Essentials consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
-ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/06/2020
-ms.custom: video
-ms.openlocfilehash: f964967dce0dbb7e49d52a7f865b0fe8a9957bbe
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545207"
+title: " Xamarin.Essentials : Share" Description: "la classe share in Xamarin.Essentials consente a un'applicazione di condividere dati quali testo e collegamenti Web ad altre applicazioni nel dispositivo."
+ms. AssetID: B7B01D55-0129-4C87-B515-89F8F4E94665 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/06/2020 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Share
+
+# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Condivisione
 
 La classe **Share** consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 
@@ -57,11 +47,11 @@ public class ShareTest
 
 Interfaccia utente per la condivisione nell'applicazione esterna visualizzata quando viene effettuata la richiesta:
 
-![Condividi](images/share.png)
+![Condivisione](images/share.png)
 
 ## <a name="files"></a>File
 
-Questa funzionalità consente a un'app di condividere file con altre applicazioni nel dispositivo. Xamarin.Essentials rileva automaticamente il tipo di file (MIME) e richiede la condivisione. È possibile che ogni piattaforma supporti solo estensioni di file specifiche.
+Questa funzionalità consente a un'app di condividere file con altre applicazioni nel dispositivo. Xamarin.Essentialsil tipo di file (MIME) verrà rilevato automaticamente e verrà richiesta una condivisione. È possibile che ogni piattaforma supporti solo estensioni di file specifiche.
 
 Ecco un esempio di scrittura di testo su disco e condivisione con altre app:
 
@@ -79,7 +69,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="presentation-location"></a>Posizione presentazione
 
-Quando richiedi una condivisione su iPadOS hai la possibilità di presentare in un controllo pop over. È possibile specificare `PresentationSourceBounds` la posizione utilizzando la proprietà:
+Quando si richiede una condivisione in iPados, è possibile presentare il controllo di un pop over. È possibile specificare il percorso usando la `PresentationSourceBounds` proprietà:
 
 ```csharp
 await Share.RequestAsync(new ShareFileRequest

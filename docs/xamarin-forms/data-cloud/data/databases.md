@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDatabase locali
-description: Xamarin.Formssupporta applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive in che modo Xamarin.Forms le applicazioni possono leggere e scrivere dati in un database SQLite locale usando SQLite.NET.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 04d813baae5796da68ea27389df33738af5cde3e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131001"
+title: " Xamarin.Forms database locali" Description: " Xamarin.Forms supporta le applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive in che modo Xamarin.Forms le applicazioni possono leggere e scrivere dati in un database SQLite locale usando SQLite.NET ".
+ms. prod: Novell MS. AssetID: F687B24B-7DF0-4F8E-A21A-A9BB507480EB ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 12/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-local-databases"></a>Xamarin.FormsDatabase locali
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
@@ -39,7 +25,7 @@ Usare Gestione pacchetti NuGet per cercare **sqlite-net-PCL** e aggiungere la ve
 
 Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
 
-- **Creato da:** Frank A. Krueger
+- **Creato da:** Frank A. Krueger (praeclarum)
 - **ID:** sqlite-net-PCL
 - **Collegamento a NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 

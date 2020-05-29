@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Geolocation'
-description: Questo documento descrive la classe Geolocation in Xamarin.Essentials, che fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
-ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 99b439e70038d27ed8bffcf20b908c52a10ede82
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149750"
+title: " Xamarin.Essentials : Geolocation" Description: "questo documento descrive la classe Geolocation in Xamarin.Essentials , che fornisce le API per recuperare le coordinate geografiche correnti del dispositivo".
+ms. AssetID: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
+
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
 La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 
@@ -112,7 +102,7 @@ catch (Exception ex)
 }
 ```
 
-L'altitudine non è sempre disponibile. Se non è disponibile, la proprietà `Altitude` potrebbe essere `null` o il valore potrebbe essere pari a zero. Se l'altitudine è disponibile, il valore è espresso in metri sopra il livello del mare. 
+L'altitudine non è sempre disponibile. Se non è disponibile, la proprietà `Altitude` potrebbe essere `null` o il valore potrebbe essere pari a zero. Se l'altitudine è disponibile, il valore è espresso in metri sopra il livello del mare.
 
 Per eseguire una query delle coordinate [geografiche](xref:Xamarin.Essentials.Location) del dispositivo corrente, si può usare `GetLocationAsync`. È preferibile passare `GeolocationRequest` e `CancellationToken` completi perché l'acquisizione della posizione del dispositivo potrebbe richiedere tempo.
 

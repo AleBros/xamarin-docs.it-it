@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: File System Helpers'
-description: La classe FileSystem in Xamarin.Essentials contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
-ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: e42cb3764e993ecd6063aab6f38b1cdf5e870a58
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149994"
+title: " Xamarin.Essentials : helper del file System" Description: "la classe filesystem in Xamarin.Essentials contiene una serie di helper per trovare la cache e le directory dei dati dell'applicazione e aprire i file all'interno del pacchetto dell'applicazione."
+ms. AssetID: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: File System Helpers
+
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Helper del file System
 
 La classe **FileSystem** contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
 

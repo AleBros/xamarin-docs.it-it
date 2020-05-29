@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139357"
+title: "Introduzione allo sviluppo di app aziendali" Descrizione: "questo capitolo fornisce un'introduzione allo sviluppo di app aziendali e introduce l'app per dispositivi mobili eShopOnContainers".
+ms. prod: Novell MS. AssetID: cbce0659-fa03-447A-86ec-140438143230 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
 Indipendentemente dalla piattaforma, gli sviluppatori di app aziendali affrontano diverse esigenze:
@@ -102,19 +88,19 @@ L'app per dispositivi mobili eShopOnContainers esercita le Xamarin.Forms funzion
 
 - XAML
 - Controlli
-- Associazioni
+- Binding
 - Convertitori
 - Stili
 - Animazioni
 - Comandi
-- Comportamenti
+- comportamenti
 - Trigger
 - Effetti
 - Renderer personalizzati
 - MessagingCenter
 - Controlli personalizzati
 
-Per ulteriori informazioni su questa funzionalità, vedere la [ Xamarin.Forms documentazione](~/xamarin-forms/index.yml)di e [creazione di app per Xamarin.Forms dispositivi mobili con ](https://aka.ms/xamebook).
+Per ulteriori informazioni su questa funzionalità, vedere la [ Xamarin.Forms documentazione](~/xamarin-forms/index.yml)di e [creazione di app per Xamarin.Forms dispositivi mobili con ](https://aka.ms/xamformsebook).
 
 Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositivi mobili eShopOnContainers.
 
@@ -122,7 +108,7 @@ Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositi
 
 La soluzione app per dispositivi mobili eShopOnContainers organizza il codice sorgente e altre risorse nei progetti. Tutti i progetti utilizzano le cartelle per organizzare il codice sorgente e altre risorse in categorie. La tabella seguente descrive i progetti che compongono l'app per dispositivi mobili eShopOnContainers:
 
-|Project|Descrizione|
+|Progetto|Descrizione|
 |--- |--- |
 |eShopOnContainers. Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
 |eShopOnContainers. Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
@@ -142,7 +128,7 @@ Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 |Cartella|Descrizione|
 |--- |--- |
 |Animazioni|Contiene classi che consentono l'utilizzo delle animazioni in XAML.|
-|Comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
+|comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
 |Controlli|Contiene i controlli personalizzati usati dall'app.|
 |Convertitori|Contiene convertitori di valori che applicano la logica personalizzata a un'associazione.|
 |Effetti|Contiene la `EntryLineColorEffect` classe, utilizzata per modificare il colore del bordo di controlli specifici `Entry` .|
@@ -155,13 +141,13 @@ Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 |Trigger|Contiene il `BeginAnimation` trigger, utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi necessarie per la convalida dell'input dei dati.|
 |ViewModel|Contiene la logica dell'applicazione esposta alle pagine.|
-|Viste|Contiene le pagine per l'app.|
+|Visualizzazioni|Contiene le pagine per l'app.|
 
 ##### <a name="platform-projects"></a>Progetti della piattaforma
 
 I progetti della piattaforma contengono implementazioni degli effetti, implementazioni di renderer personalizzate e altre risorse specifiche della piattaforma.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Novell offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
 

@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Compass'
-description: Questo documento descrive la classe Compass in Xamarin.Essentials, che consente di monitorare la direzione del nord magnetico del dispositivo.
-ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 54ce725a319e0222179945ece558338c8a152653
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150120"
+title: " Xamarin.Essentials : Compass" Description: "questo documento descrive la classe Compass in Xamarin.Essentials , che consente di monitorare l'intestazione del nord magnetico del dispositivo".
+ms. AssetID: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
+
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Bussola
 
 La classe **Compass** consente di monitorare la direzione del nord magnetico del dispositivo.
 
