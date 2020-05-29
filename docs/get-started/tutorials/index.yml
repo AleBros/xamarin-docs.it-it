@@ -10,12 +10,15 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/23/2019
-  ms.openlocfilehash: fa5fb1d6747650520864371ceacf665a50dc0973
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  no-loc:
+  - Xamarin.Forms
+  - Xamarin.Essentials
+  ms.openlocfilehash: f96a1b923354fe5efee3413e30b18909d8428bfc
+  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "75718740"
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84138099"
 landingContent:
 - title: Layout
   linkLists:
@@ -23,15 +26,15 @@ landingContent:
     links:
     - text: StackLayout
       url: stacklayout/index.yml
-    - text: Griglia
+    - text: Grid
       url: grid/index.yml
 - title: Controlli
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Etichetta
+    - text: Label
       url: label/index.yml
-    - text: Pulsante
+    - text: Button
       url: button/index.yml
     - text: Voce
       url: entry/index.yml
@@ -47,9 +50,9 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Ciclo di vita delle app
+    - text: Ciclo di vita dell'app
       url: app-lifecycle/index.yml
     - text: Database locale
       url: local-database/index.yml
-    - text: SERVIZI WEB
+    - text: Servizi Web
       url: web-service/index.yml

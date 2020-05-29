@@ -9,12 +9,15 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 11/06/2019
-  ms.openlocfilehash: 929ed310d69de3f67426cc400e7175e2c6f58fe6
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  no-loc:
+  - Xamarin.Forms
+  - Xamarin.Essentials
+  ms.openlocfilehash: 05429940463d2ab309fe1ce0bc012f9290bfc73b
+  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77144630"
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84138697"
 highlightedContent:
   items:
   - title: Cos'è Xamarin.Forms?
@@ -63,7 +66,7 @@ productDirectory:
     - url: ~/get-started/quickstarts/multi-page.md
       text: Aggiungere le funzionalità di spostamento
     - url: ~/get-started/quickstarts/database.md
-      text: Aggiungi un database
+      text: Aggiungere un database
     - url: ~/get-started/quickstarts/styling.md
       text: Definire lo stile dell'app
   - title: Sfruttare le conoscenze esistenti
@@ -96,7 +99,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/app-fundamentals/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: Interfaccia utente
     links:
     - text: CollectionView
@@ -113,7 +116,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/user-interface/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: XAML Xamarin.Forms
     links:
     - text: Nozioni di base su XAML
@@ -130,7 +133,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/xaml/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: Funzionalità della piattaforma
     links:
     - text: Funzionalità specifiche della piattaforma Android
@@ -147,7 +150,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/platform/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: Xamarin.Essentials
     links:
     - text: Introduzione
@@ -156,7 +159,7 @@ conceptualContent:
     - text: Supporto per piattaforme
       url: ~/essentials/platform-feature-support.md
       itemType: get-started
-    - text: risoluzione dei problemi
+    - text: Risoluzione dei problemi
       url: ~/essentials/troubleshooting.md
       itemType: overview
     - text: Spazio dei nomi Xamarin.Essentials
@@ -164,7 +167,7 @@ conceptualContent:
       itemType: reference
     footerLink:
       url: ~/essentials/index.md?context=xamarin/xamarin-forms
-      text: Altre informazioni
+      text: Altro
   - title: Dati e Servizi cloud di Azure
     links:
     - text: Gestione di file
@@ -181,7 +184,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/data-cloud/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: Distribuzione e test
     links:
     - text: Automatizzare i test con Visual Studio App Center
@@ -198,7 +201,7 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/deploy-test/index.yml
-      text: Altre informazioni
+      text: Altro
   - title: Concetti avanzati e meccanismi interni
     links:
     - text: Gerarchia di classi dei controlli
@@ -215,10 +218,10 @@ conceptualContent:
       itemType: concept
     footerLink:
       url: ~/xamarin-forms/internals/index.md
-      text: Altre informazioni
+      text: Altro
 additionalContent:
   sections:
-  - title: Documentazione
+  - title: Libri
     items:
     - title: Creazione di app per dispositivi mobili
       summary: Questo ebook è una guida per apprendere come scrivere applicazioni Xamarin.Forms.
