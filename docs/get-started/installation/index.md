@@ -1,22 +1,6 @@
 ---
-title: ''
-description: ''
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.custom: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 928a8f9ca1792fa79f3c5995959e6407c23649f4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133055"
+title: "Installing Novell" Description: "questa sezione offre una panoramica delle procedure di installazione e configurazione che possono essere usate per configurare Novell in Visual Studio".
+zone_pivot_groups: Platform-dev16 ms. prod: Novell MS. AssetID: 0f813a14-2f0c-415D-8667-4563f3dc06e8 autore: conceptdev ms. Author: crdun ms. Custom: video ms. Date: 05/23/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="installing-xamarin"></a>Installazione di Xamarin
 
