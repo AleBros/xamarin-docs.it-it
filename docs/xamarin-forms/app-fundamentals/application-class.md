@@ -1,29 +1,14 @@
 ---
-title: Xamarin.FormsClasse App
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129688"
+title: " Xamarin.Forms App class" Description: "questo articolo illustra le funzionalità della classe app predefinita, che include una proprietà da impostare sulla pagina iniziale per l'app e un dizionario permanente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita."
+ms. prod: Novell MS. AssetID: 421F8294-1944-46A4-8459-D2BD5AAABC9D ms. Technology: Novell-Forms ms. Custom: autore del video: davidbritch ms. Author: dabritch ms. Date: 02/19/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-app-class"></a>Xamarin.FormsClasse App
 
 La classe di base `Application` offre le funzionalità seguenti, che vengono esposte nella sottoclasse predefinita `App` del progetto:
 
 * Una proprietà `MainPage`, dove deve essere impostata la pagina iniziale per l'app.
-* [ `Properties` Dizionario](#Properties_Dictionary) permanente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
+* [ `Properties` Dizionario](#properties-dictionary) permanente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
 * Una proprietà `Current` statica che contiene un riferimento all'oggetto applicazione corrente.
 
 Espone inoltre i [metodi del ciclo](~/xamarin-forms/app-fundamentals/app-lifecycle.md) di vita, ad esempio `OnStart` , e, nonché `OnSleep` `OnResume` gli eventi di navigazione modale.
@@ -76,8 +61,6 @@ public class App : Xamarin.Forms.Application
     }
 }
 ```
-
-<a name="Properties_Dictionary" />
 
 ## <a name="properties-dictionary"></a>Dizionario delle proprietà
 

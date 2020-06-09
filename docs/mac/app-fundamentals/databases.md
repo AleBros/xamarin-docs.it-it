@@ -1,5 +1,5 @@
 ---
-title: Database in Xamarin.Mac
+title: Database in Novell. Mac
 description: Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding tra i database SQLite e gli elementi dell'interfaccia utente nella Interface Builder di Xcode. Viene inoltre illustrata l'utilizzo di SQLite.NET ORM per fornire l'accesso ai dati SQLite.
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
@@ -7,39 +7,39 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: a22eca56dcec46e11a67633a8403b57580ed0546
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 034169b4e77dace365b36733442afe295b62fb80
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573998"
 ---
-# <a name="databases-in-xamarinmac"></a>Database in Xamarin.Mac
+# <a name="databases-in-xamarinmac"></a>Database in Novell. Mac
 
 _Questo articolo illustra l'uso della codifica chiave-valore e l'osservazione chiave-valore per consentire data binding tra i database SQLite e gli elementi dell'interfaccia utente nella Interface Builder di Xcode. Viene inoltre illustrata l'utilizzo di SQLite.NET ORM per fornire l'accesso ai dati SQLite._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, è possibile accedere agli stessi database SQLite a cui può accedere un'applicazione Xamarin.iOS o Xamarin.Android.
+Quando si lavora con C# e .NET in un'applicazione Novell. Mac, si ha accesso agli stessi database SQLite a cui può accedere un'applicazione Novell. iOS o Novell. Android.
 
 In questo articolo verranno illustrati due modi per accedere ai dati SQLite:
 
-1. **Accesso diretto** : accedendo direttamente a un database SQLite, è possibile usare i dati del database per la codifica chiave-valore e data binding con gli elementi dell'interfaccia utente creati nell'Interface Builder di Xcode. Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
+1. **Accesso diretto** : accedendo direttamente a un database SQLite, è possibile usare i dati del database per la codifica chiave-valore e data binding con gli elementi dell'interfaccia utente creati nell'Interface Builder di Xcode. Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 2. **SQLite.NET ORM** : usando il [SQLite.NET](https://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source (ORM), è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questi dati possono quindi essere utilizzati per popolare un elemento dell'interfaccia utente, ad esempio una visualizzazione tabella.
 
 [![Esempio di app in esecuzione](databases-images/intro01.png "Esempio di app in esecuzione")](databases-images/intro01-large.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding con i database SQLite in un'applicazione Xamarin.Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
+In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding con i database SQLite in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
 
 Poiché si utilizzeranno la codifica e il data binding chiave-valore, usare prima di tutto il [Data Binding e la codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , in quanto verranno analizzate le tecniche e i concetti di base che verranno usati in questa documentazione e nell'applicazione di esempio.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Xamarin.Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre classi/metodi c# in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiega gli `Register` `Export` attributi e usati per collegare le classi c# agli oggetti Objective-c e agli elementi dell'interfaccia utente.
 
 ## <a name="direct-sqlite-access"></a>Accesso diretto a SQLite
 
-Per i dati SQLite che verranno associati agli elementi dell'interfaccia utente nel Interface Builder di Xcode, è consigliabile accedere direttamente al database SQLite (invece di usare una tecnica come ORM), dal momento che si ha il controllo totale sul modo in cui i dati vengono scritti e letti.  dal database.
+Per i dati SQLite che verranno associati agli elementi dell'interfaccia utente nel Interface Builder di Xcode, è consigliabile accedere direttamente al database SQLite (invece di usare una tecnica come ORM), dal momento che si ha il controllo totale sul modo in cui i dati vengono scritti e letti dal database.
 
-Come abbiamo visto nella documentazione relativa al [Data Binding e alla codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , usando la codifica chiave-valore e le tecniche di data binding nell'applicazione Xamarin.Mac, è possibile ridurre significativamente la quantità di codice da scrivere e mantenere per popolare e usare gli elementi dell'interfaccia utente. In combinazione con l'accesso diretto a un database SQLite, può anche ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati in tale database.
+Come abbiamo visto nella documentazione relativa al [Data Binding e alla codifica chiave-valore](~/mac/app-fundamentals/databinding.md) , usando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e usare gli elementi dell'interfaccia utente. In combinazione con l'accesso diretto a un database SQLite, può anche ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati in tale database.
 
 In questo articolo verrà modificata l'app di esempio dal documento data binding e codice chiave-valore per usare un database SQLite come origine di supporto per l'associazione.
 
@@ -47,7 +47,7 @@ In questo articolo verrà modificata l'app di esempio dal documento data binding
 
 Prima di continuare, è necessario aggiungere il supporto per i database SQLite all'applicazione includendo riferimenti a un paio di. File dll.
 
-Procedere come descritto di seguito:
+Eseguire le operazioni seguenti:
 
 1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** e scegliere **modifica riferimenti**.
 2. Selezionare entrambi gli assembly **mono. Data. sqlite** e **System. Data** : 
@@ -476,7 +476,7 @@ public bool isManager {
 }
 ```
 
-Eventuali modifiche apportate alle proprietà **Name**, **occupate** o **Manager** verranno inviate al database se i dati sono stati salvati in precedenza, ad esempio se la variabile `_conn` non è `null`. Esaminiamo quindi i metodi aggiunti per **creare**, **aggiornare**, **caricare** ed **eliminare** persone dal database.
+Eventuali modifiche apportate alle proprietà **Name**, **occupate** o **Manager** verranno inviate al database se i dati sono stati salvati in precedenza (ad esempio, se la `_conn` variabile non è `null` ). Esaminiamo quindi i metodi aggiunti per **creare**, **aggiornare**, **caricare** ed **eliminare** persone dal database.
 
 #### <a name="create-a-new-record"></a>Crea un nuovo record
 
@@ -526,19 +526,19 @@ public void Create(SqliteConnection conn) {
 }
 ```
 
-Si sta usando un `SQLiteCommand` per creare il nuovo record nel database. Viene ottenuto un nuovo comando dal `SQLiteConnection` (conn) passato al metodo chiamando `CreateCommand`. Successivamente, l'istruzione SQL viene impostata in modo da scrivere effettivamente il nuovo record, fornendo i parametri per i valori effettivi:
+Si sta usando un `SQLiteCommand` per creare il nuovo record nel database. Viene ottenuto un nuovo comando da `SQLiteConnection` (conn) passato al metodo chiamando `CreateCommand` . Successivamente, l'istruzione SQL viene impostata in modo da scrivere effettivamente il nuovo record, fornendo i parametri per i valori effettivi:
 
 ```csharp
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
 ```
 
-Successivamente, si impostano i valori per i parametri usando il metodo `Parameters.AddWithValue` nel `SQLiteCommand`. Usando i parametri, si garantisce che i valori, ad esempio una virgoletta singola, vengano codificati correttamente prima di essere inviati a SQLite. Esempio:
+Successivamente, si impostano i valori per i parametri usando il `Parameters.AddWithValue` metodo su `SQLiteCommand` . Usando i parametri, si garantisce che i valori, ad esempio una virgoletta singola, vengano codificati correttamente prima di essere inviati a SQLite. Esempio:
 
 ```csharp
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-Infine, dal momento che una persona può essere un responsabile e avere una raccolta di dipendenti, viene chiamata in modo ricorsivo il metodo `Create` su tali utenti per salvarli anche nel database:
+Infine, poiché una persona può essere un responsabile e avere una raccolta di dipendenti, il metodo viene chiamato in modo ricorsivo `Create` su tali utenti per salvarli anche nel database:
 
 ```csharp
 // Save children to database as well
@@ -594,13 +594,13 @@ public void Update(SqliteConnection conn) {
 }
 ```
 
-**Analogamente a quanto** riportato in precedenza, si ottiene un `SQLiteCommand` dalla `SQLiteConnection` passata e si imposta SQL per aggiornare il record (fornendo parametri):
+Come per la **creazione** precedente, viene ottenuto un oggetto `SQLiteCommand` dal passato `SQLiteConnection` e si imposta SQL per aggiornare il record (fornendo parametri):
 
 ```csharp
 command.CommandText = "UPDATE [People] SET Name = @COL2, Occupation = @COL3, isManager = @COL4, ManagerID = @COL5 WHERE ID = @COL1";
 ```
 
-I valori dei parametri, ad esempio `command.Parameters.AddWithValue ("@COL1", ID);`, vengono compilati in modo ricorsivo e viene chiamato in modo ricorsivo l'aggiornamento su qualsiasi record figlio:
+I valori dei parametri vengono compilati (ad esempio `command.Parameters.AddWithValue ("@COL1", ID);` ,) e di nuovo, viene chiamata in modo ricorsivo Update su tutti i record figlio:
 
 ```csharp
 // Save children to database as well
@@ -711,7 +711,7 @@ command.CommandText = "SELECT ID FROM [People] WHERE ManagerID = @COL1";
 command.Parameters.AddWithValue ("@COL1", id);
 ```
 
-Infine, si usa un lettore di dati per eseguire la query e restituire i campi di record (copiati nell'istanza della classe `PersonModel`):
+Infine, si usa un lettore di dati per eseguire la query e restituire i campi di record (copiati nell'istanza della `PersonModel` classe):
 
 ```csharp
 using (var reader = command.ExecuteReader ()) {
@@ -726,7 +726,7 @@ using (var reader = command.ExecuteReader ()) {
 }
 ```
 
-Se questa persona è responsabile, è necessario caricare anche tutti i dipendenti (anche in questo caso richiamando il metodo `Load`):
+Se questa persona è un responsabile, è necessario caricare anche tutti i dipendenti (anche in questo caso, richiamando il metodo in modo ricorsivo `Load` ):
 
 ```csharp
 // Is this a manager?
@@ -798,7 +798,7 @@ command.CommandText = "DELETE FROM [People] WHERE (ID = @COL1 OR ManagerID = @CO
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-Dopo la rimozione del record, viene cancellata l'istanza corrente della classe `PersonModel`:
+Dopo la rimozione del record, viene eliminata l'istanza corrente della `PersonModel` classe:
 
 ```csharp
 // Empty class
@@ -904,7 +904,7 @@ foreach (var cmd in commands) {
 conn.Close ();
 ```
 
-Infine, si usa il modello di dati (`PersonModel`) per creare un set predefinito di record per il database la prima volta che si esegue l'applicazione o se il database non è presente:
+Infine, viene usato il modello di dati ( `PersonModel` ) per creare un set predefinito di record per il database la prima volta che si esegue l'applicazione o se il database è mancante:
 
 ```csharp
 // Build list of employees
@@ -969,13 +969,13 @@ _conn.Close ();
 
 ```
 
-Qui viene usato un overload del costruttore per la classe `PersonModel` per caricare la persona in memoria:
+Qui viene usato un overload del costruttore per la `PersonModel` classe per caricare la persona in memoria:
 
 ```csharp
 var person = new PersonModel (_conn, childID);
 ```
 
-Viene anche chiamata la classe associata ai dati per aggiungere la persona alla raccolta di persone `AddPerson (person)`, in modo da garantire che l'interfaccia utente riconosca la modifica e la visualizzi:
+Viene anche chiamata la classe associata ai dati per aggiungere la persona alla raccolta di persone, in modo da `AddPerson (person)` garantire che l'interfaccia utente riconosca la modifica e la visualizzi:
 
 ```csharp
 [Export("addObject:")]
@@ -1010,15 +1010,15 @@ using (var command = _conn.CreateCommand ()) {
 _conn.Close ();
 ```
 
-L'unica differenza reale nell'istruzione SQL (che carica solo i gestori `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"`) ma funziona allo stesso modo della sezione precedente.
+L'unica differenza reale nell'istruzione SQL (che carica solo i Manager `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"` ) ma funziona allo stesso modo della sezione precedente.
 
-<a name="Databases-and-ComboBoxes" />
+<a name="Databases-and-ComboBoxes"></a>
 
 ### <a name="databases-and-comboboxes"></a>Database e ComboBox
 
 I controlli menu disponibili per macOS, ad esempio la casella combinata, possono essere impostati per popolare l'elenco a discesa da un elenco interno, che può essere definito in Interface Builder o popolato tramite codice, oppure fornendo un'origine dati personalizzata esterna. Per altri dettagli, vedere [fornire i dati del controllo menu](~/mac/user-interface/standard-controls.md#Providing-Menu-Control-Data) .
 
-Modificare ad esempio l'esempio di binding semplice precedente in Interface Builder, aggiungere una casella combinata ed esporla usando un Outlet denominato `EmployeeSelector`:
+Modificare ad esempio l'esempio di binding semplice precedente in Interface Builder, aggiungere una casella combinata ed esporla usando un Outlet denominato `EmployeeSelector` :
 
 [![Esposizione di un'outlet della casella combinata](databases-images/combo01.png "Esposizione di un'outlet della casella combinata")](databases-images/combo01-large.png#lightbox)
 
@@ -1030,7 +1030,7 @@ Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
 
 #### <a name="providing-combobox-data"></a>Fornire dati ComboBox
 
-Successivamente, aggiungere una nuova classe al progetto denominato `ComboBoxDataSource` e renderla simile alla seguente:
+Successivamente, aggiungere una nuova classe al progetto denominata `ComboBoxDataSource` e renderla simile alla seguente:
 
 ```csharp
 using System;
@@ -1399,7 +1399,7 @@ namespace MacDatabase
 }
 ```
 
-In questo esempio viene creato un nuovo `NSComboBoxDataSource` che può presentare elementi della casella combinata da qualsiasi origine dati SQLite. In primo luogo, vengono definite le proprietà seguenti:
+In questo esempio viene creato un nuovo oggetto `NSComboBoxDataSource` che può presentare elementi della casella combinata da qualsiasi origine dati SQLite. In primo luogo, vengono definite le proprietà seguenti:
 
 - `Conn`: Ottiene o imposta una connessione al database SQLite.
 - `TableName`: Ottiene o imposta il nome della tabella.
@@ -1419,7 +1419,7 @@ public ComboBoxDataSource (SqliteConnection conn, string tableName, string displ
 }
 ```
 
-Il metodo `GetRecordCount` restituisce il numero di record nella tabella specificata:
+Il `GetRecordCount` metodo restituisce il numero di record nella tabella specificata:
 
 ```csharp
 private nint GetRecordCount ()
@@ -1461,9 +1461,9 @@ private nint GetRecordCount ()
 }
 ```
 
-Viene chiamato ogni volta che viene modificato il valore delle proprietà `TableName`, `IDField` o `DisplayField`.
+Viene chiamato ogni volta che `TableName` `IDField` `DisplayField` viene modificato il valore delle proprietà o.
 
-Il metodo `IDForIndex` restituisce l'ID univoco (`IDField`) per il record in corrispondenza dell'indice dell'elemento elenco a discesa specificato: 
+Il `IDForIndex` metodo restituisce l'ID univoco ( `IDField` ) per il record in corrispondenza dell'indice dell'elemento elenco a discesa specificato: 
 
 ```csharp
 public string IDForIndex (nint index)
@@ -1504,7 +1504,7 @@ public string IDForIndex (nint index)
 }
 ```
 
-Il metodo `ValueForIndex` restituisce il valore (`DisplayField`) per l'elemento in corrispondenza dell'indice elenco a discesa specificato:
+Il `ValueForIndex` metodo restituisce il valore ( `DisplayField` ) per l'elemento in corrispondenza dell'indice elenco a discesa specificato:
 
 ```csharp
 public string ValueForIndex (nint index)
@@ -1545,7 +1545,7 @@ public string ValueForIndex (nint index)
 }
 ```
 
-Il metodo `IDForValue` restituisce l'ID univoco (`IDField`) per il valore specificato (`DisplayField`):
+Il `IDForValue` metodo restituisce l'ID univoco ( `IDField` ) per il valore specificato ( `DisplayField` ):
 
 ```csharp
 public string IDForValue (string value)
@@ -1589,7 +1589,7 @@ public string IDForValue (string value)
 }
 ```
 
-Il `ItemCount` restituisce il numero pre-calcolato di elementi nell'elenco come calcolato quando vengono modificate le proprietà `TableName`, `IDField` o `DisplayField`:
+`ItemCount`Restituisce il numero pre-calcolato di elementi nell'elenco come calcolato quando `TableName` `IDField` `DisplayField` vengono modificate le proprietà, o:
 
 ```csharp
 public override nint ItemCount (NSComboBox comboBox)
@@ -1598,7 +1598,7 @@ public override nint ItemCount (NSComboBox comboBox)
 }
 ```
 
-Il metodo `ObjectValueForItem` fornisce il valore (`DisplayField`) per l'indice dell'elemento elenco a discesa specificato:
+Il `ObjectValueForItem` metodo fornisce il valore ( `DisplayField` ) per l'indice dell'elemento elenco a discesa specificato:
 
 ```csharp
 public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
@@ -1639,9 +1639,9 @@ public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
 }
 ```
 
-Si noti che vengono usate le istruzioni `LIMIT` e `OFFSET` nel comando SQLite per limitare il record a quello necessario.
+Si noti che vengono usate le `LIMIT` `OFFSET` istruzioni e nel comando SQLite per limitare il record che è necessario.
 
-Il metodo `IndexOfItem` restituisce l'indice dell'elemento a discesa del valore (`DisplayField`) specificato:
+Il `IndexOfItem` metodo restituisce l'indice dell'elemento a discesa del valore ( `DisplayField` ) dato:
 
 ```csharp
 public override nint IndexOfItem (NSComboBox comboBox, string value)
@@ -1691,9 +1691,9 @@ public override nint IndexOfItem (NSComboBox comboBox, string value)
 }
 ```
 
-Se il valore non viene trovato, il valore `NSRange.NotFound` viene restituito e tutti gli elementi vengono deselezionati nell'elenco a discesa.
+Se il valore non viene trovato, il `NSRange.NotFound` valore viene restituito e tutti gli elementi vengono deselezionati nell'elenco a discesa.
 
-Il metodo `CompletedString` restituisce il primo valore corrispondente (`DisplayField`) per una voce parzialmente tipizzata:
+Il `CompletedString` metodo restituisce il primo valore corrispondente ( `DisplayField` ) per una voce parzialmente tipizzata:
 
 ```csharp
 public override string CompletedString (NSComboBox comboBox, string uncompletedString)
@@ -1858,9 +1858,9 @@ namespace MacDatabase
 }
 ```
 
-La proprietà `DataSource` fornisce un collegamento al `ComboBoxDataSource` (creato sopra) collegato alla casella combinata.
+La `DataSource` proprietà fornisce un collegamento a `ComboBoxDataSource` (creato sopra) collegato alla casella combinata.
 
-Il metodo `LoadSelectedPerson` carica la persona dal database per l'ID univoco specificato:
+Il `LoadSelectedPerson` metodo carica la persona dal database per l'ID univoco specificato:
 
 ```csharp
 private void LoadSelectedPerson (string id)
@@ -1874,13 +1874,13 @@ private void LoadSelectedPerson (string id)
 }
 ```
 
-Nell'override del metodo `AwakeFromNib`, prima di tutto si aggiunge un'istanza dell'origine dati della casella combinata personalizzata:
+Nell' `AwakeFromNib` override del metodo, prima di tutto si aggiunge un'istanza dell'origine dati della casella combinata personalizzata:
 
 ```csharp
 EmployeeSelector.DataSource = new ComboBoxDataSource (Conn, "People", "Name");
 ```
 
-Si risponde quindi all'utente che modifica il valore di testo della casella combinata individuando l'ID univoco associato (`IDField`) dei dati che presentano e caricando la persona specificata, se presente:
+Si risponde quindi all'utente che modifica il valore di testo della casella combinata individuando l'ID univoco associato ( `IDField` ) dei dati che presentano e caricando la persona specificata, se presente:
 
 ```csharp
 EmployeeSelector.Changed += (sender, e) => {
@@ -1930,7 +1930,7 @@ Per aggiungere il pacchetto, effettuare le operazioni seguenti:
 
 ### <a name="creating-the-data-model"></a>Creazione del modello di dati
 
-Aggiungere una nuova classe al progetto e chiamare in `OccupationModel`. Modificare quindi il file **OccupationModel.cs** e apparirà come segue:
+Si aggiungerà una nuova classe al progetto e si chiamerà `OccupationModel` . Modificare quindi il file **OccupationModel.cs** e apparirà come segue:
 
 ```csharp
 using System;
@@ -1966,7 +1966,7 @@ namespace MacDatabase
 }
 ```
 
-In primo luogo, è necessario includere SQLite.NET (`using Sqlite`), quindi verranno esposte diverse proprietà, ognuna delle quali verrà scritta nel database quando questo record viene salvato. La prima proprietà viene fatta come chiave primaria e impostata su incremento automatico come segue:
+In primo luogo, è necessario includere SQLite.NET ( `using Sqlite` ), quindi verranno esposte diverse proprietà, ognuna delle quali verrà scritta nel database quando questo record viene salvato. La prima proprietà viene fatta come chiave primaria e impostata su incremento automatico come segue:
 
 ```csharp
 [PrimaryKey, AutoIncrement]
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 ### <a name="adding-a-table-view"></a>Aggiunta di una visualizzazione tabella
 
-Come esempio di utilizzo, verrà aggiunta una visualizzazione tabella all'interfaccia utente di Xcode Interface Builder. Questa visualizzazione tabella verrà esposta tramite un Outlet (`OccupationTable`), in modo che sia possibile accedervi tramite C# codice:
+Come esempio di utilizzo, verrà aggiunta una visualizzazione tabella all'interfaccia utente di Xcode Interface Builder. Questa visualizzazione tabella verrà esposta tramite un Outlet ( `OccupationTable` ) in modo che sia possibile accedervi tramite codice C#:
 
 [![Esposizione di un outlet di visualizzazione tabella](databases-images/table01.png "Esposizione di un outlet di visualizzazione tabella")](databases-images/table01-large.png#lightbox)
 
@@ -2125,7 +2125,7 @@ namespace MacDatabase
 }
 ```
 
-Quando si crea un'istanza di questa classe in un secondo momento, si passerà la connessione al database open SQLite.NET. Il metodo `LoadOccupations` esegue una query sul database e copia i record trovati in memoria (usando il modello di dati `OccupationModel`).
+Quando si crea un'istanza di questa classe in un secondo momento, si passerà la connessione al database open SQLite.NET. Il `LoadOccupations` metodo esegue una query sul database e copia i record trovati in memoria (usando il `OccupationModel` modello di dati).
 
 ### <a name="creating-the-table-delegate"></a>Creazione del delegato della tabella
 
@@ -2193,11 +2193,11 @@ namespace MacDatabase
 }
 ```
 
-Qui viene usata la raccolta di `Occupations` dell'origine dati, che è stata caricata dal database SQLite.NET, per inserire le colonne della tabella tramite l'override del metodo `GetViewForItem`.
+Qui viene usata la raccolta dell'origine dati `Occupations` (che è stata caricata dal database SQLite.NET) per compilare le colonne della tabella tramite l' `GetViewForItem` override del metodo.
 
 ### <a name="populating-the-table"></a>Popolamento della tabella
 
-Con tutte le parti sul posto, è necessario popolare la tabella quando viene ingrandita dal file con estensione XIB eseguendo l'override del metodo `AwakeFromNib` e rendendola simile alla seguente:
+Con tutti i componenti disponibili, è necessario popolare la tabella quando viene ingrandita dal file con estensione XIB eseguendo l'override del `AwakeFromNib` metodo e rendendola simile alla seguente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -2218,9 +2218,9 @@ public override void AwakeFromNib ()
 
 Prima di tutto, si ottiene l'accesso al database SQLite.NET, che viene creato e popolato se non esiste già. Si crea quindi una nuova istanza dell'origine dati della tabella personalizzata, si passa la connessione al database e la si collega alla tabella. Infine, si crea una nuova istanza del delegato della tabella personalizzata, si passa l'origine dati e la si collega alla tabella.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore con i database SQLite in un'applicazione Xamarin.Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Questo articolo illustra anche l'uso di dati SQLite tramite SQLite.NET ORM e la visualizzazione di tali dati in una vista tabella.
+Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore con i database SQLite in un'applicazione Novell. Mac. In primo luogo, è stata esaminata l'esposizione di una classe C# a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Questo articolo illustra anche l'uso di dati SQLite tramite SQLite.NET ORM e la visualizzazione di tali dati in una vista tabella.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

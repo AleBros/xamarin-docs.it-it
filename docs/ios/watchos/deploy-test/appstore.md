@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: f42c4a6dd2f4408d7b0ccf65e60851ebd29b76f6
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292008"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574542"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Distribuzione delle app watchos nell'App Store
 
@@ -21,7 +21,7 @@ ms.locfileid: "78292008"
 
 - Assicurarsi di disporre di:
   - [**Profili di provisioning di distribuzione**](#provisioning) creati per i progetti.
-  - La **destinazione di distribuzione** (`MinimumOSVersion`) per l'app padre iOS impostata su **8,2** o versioni precedenti (8,3 non è supportata).
+  - La **destinazione di distribuzione** ( `MinimumOSVersion` ) per l'app padre iOS impostata su **8,2** o versioni precedenti (8,3 non è supportata).
 
 - In [**iTunes Connect**](#iTunes_Connect):
 
@@ -43,7 +43,7 @@ ms.locfileid: "78292008"
 
 Leggere suggerimenti specifici correlati a questi elementi. Se si verificano problemi, vedere la sezione relativa alla [risoluzione dei](#troubleshooting) problemi.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="distribution-provisioning-profiles"></a>Profili di provisioning della distribuzione
 
@@ -63,7 +63,7 @@ L'elenco **profilo di provisioning** mostrerà tutti i profili corrispondenti. v
 
 ![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
-<a name="iTunes_Connect"/>
+<a name="iTunes_Connect"></a>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
@@ -82,7 +82,7 @@ Il file icona deve essere 1024x1024 pixel e una maschera circolare viene applica
 Devono essere 312x390 pixel e dimostrare l'app Watch in azione.
 È possibile usare il simulatore di controllo 42 millimetri per scattare screenshot a questa dimensione.
 
-<a name="xamarin_studio" />
+<a name="xamarin_studio"></a>
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
@@ -102,13 +102,13 @@ Devono essere 312x390 pixel e dimostrare l'app Watch in azione.
 
   ![](appstore-images/xs-archives-sml.png "The Archives view")
 
-<a name="xcode" />
+<a name="xcode"></a>
 
 ## <a name="xcode"></a>Xcode
 
 Xcode mostrerà automaticamente gli archivi creati in Visual Studio per Mac.
 
-1. Avviare Xcode e scegliere **finestra libreria >** :
+1. Avviare Xcode e scegliere **finestra libreria >**:
 
    ![](appstore-images/xc-organizer.png "The Window menu")
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Assicurarsi di disporre della versione più recente di Visual Studio per Mac e che **AppIcon. appiconset** contenga un set completo di immagini. Se questo errore viene ancora visualizzato, visualizzare l'origine del file **Contents. JSON** per confermare che contiene una voce per tutte le immagini obbligatorie. In alternativa, dopo aver verificato che si sta usando la versione più recente di Novell, eliminare e ricreare **AppIcon. appiconset**.
 
 > [!IMPORTANT]
-> È presente un bug noto nel supporto dell'icona del controllo Visual Studio per Mac: prevede un'immagine di pixel 88x88 per l'immagine **29x29@3x** (che deve essere 87x87 pixel).
+> È presente un bug noto nel supporto dell'icona del controllo Visual Studio per Mac: è prevista un'immagine 88x88 pixel per l' **29x29@3x** immagine (che deve essere 87x87 pixel).
 
 Questa operazione non può essere risolta in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** .
 

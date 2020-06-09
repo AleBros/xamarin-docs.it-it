@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 50e28291d72550264e3806c0911f59a57c6d8bf0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136331"
+Titolo: "personalizzazione di un ContentPage" Descrizione: "un ContentPage è un elemento visivo che visualizza una singola visualizzazione e occupa la maggior parte dello schermo. Questo articolo illustra come creare un renderer personalizzato per la pagina ContentPage, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con una personalizzazione specifica della piattaforma ".
+ms. prod: Novell MS. AssetID: A4E61D93-73D9-4668-8D1C-DB6FC2491822 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
@@ -31,13 +17,11 @@ Il diagramma seguente illustra la relazione tra [`ContentPage`](xref:Xamarin.For
 
 Per implementare personalizzazioni specifiche della piattaforma, è possibile sfruttare il processo di rendering creando un renderer personalizzato per un oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Xamarin.Forms_Page) una Xamarin.Forms pagina.
-1. [Utilizzare](#Consuming_the_Xamarin.Forms_Page) la pagina da Xamarin.Forms .
-1. [Creare](#Creating_the_Page_Renderer_on_each_Platform) il renderer personalizzato per la pagina in ogni piattaforma.
+1. [Creare](#creating-the-xamarinforms-page) una Xamarin.Forms pagina.
+1. [Utilizzare](#consuming-the-xamarinforms-page) la pagina da Xamarin.Forms .
+1. [Creare](#creating-the-page-renderer-on-each-platform) il renderer personalizzato per la pagina in ogni piattaforma.
 
 Verrà ora discusso un elemento alla volta per implementare un oggetto `CameraPage` che rende disponibile un feed di fotocamera live e la possibilità di scattare una foto.
-
-<a name="Creating_the_Xamarin.Forms_Page" />
 
 ## <a name="creating-the-xamarinforms-page"></a>Creazione della Xamarin.Forms pagina
 
@@ -78,8 +62,6 @@ public class CameraPageCS : ContentPage
 
 Per visualizzare il feed di fotocamera live in ogni piattaforma verrà usata un'istanza di `CameraPage`. La personalizzazione del controllo avviene nel renderer personalizzato. Non è pertanto necessaria alcuna implementazione aggiuntiva nella classe `CameraPage`.
 
-<a name="Consuming_the_Xamarin.Forms_Page" />
-
 ## <a name="consuming-the-xamarinforms-page"></a>Utilizzo della Xamarin.Forms pagina
 
 Il vuoto `CameraPage` deve essere visualizzato dall' Xamarin.Forms applicazione. Ciò accade quando si tocca un pulsante nell'istanza di `MainPage` che a sua volta esegue il metodo `OnTakePhotoButtonClicked`, come illustrato nell'esempio di codice seguente:
@@ -92,8 +74,6 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 ```
 
 Questo codice passa semplicemente all'oggetto `CameraPage` nel quale i renderer personalizzati personalizzeranno l'aspetto della pagina in ogni piattaforma.
-
-<a name="Creating_the_Page_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-page-renderer-on-each-platform"></a>Creazione del renderer di pagina in ogni piattaforma
 
@@ -253,7 +233,7 @@ Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in 
 > [!NOTE]
 > In un'applicazione UWP è importante arrestare ed eliminare gli oggetti che consentono l'accesso alla fotocamera. Questi possono infatti interferire con altre applicazioni che tentano di accedere alla fotocamera del dispositivo. Per altre informazioni, vedere [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) (Visualizzare l'anteprima della fotocamera).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare un renderer personalizzato per la [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagina, consentendo agli sviluppatori di eseguire l'override del rendering nativo predefinito con una personalizzazione specifica della piattaforma. `ContentPage` è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo.
 

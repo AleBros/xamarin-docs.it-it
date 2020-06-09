@@ -6,26 +6,26 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: cb4e524977b53f1a17552298c509d43ccf460f08
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: f9ea9c4f6f2c920d903bd6f136dd0b98ddc7bf57
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574327"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Uso di UrhoSharp per creare un gioco 3D
 
 Prima di scrivere il primo gioco, è opportuno acquisire familiarità con le nozioni di base: come configurare la scena, come caricare le risorse (che contiene la grafica) e come creare semplici interazioni per il gioco.
 
-<a name="scenenodescomponentsandcameras"/>
+<a name="scenenodescomponentsandcameras"></a>
 
 ## <a name="scenes-nodes-components-and-cameras"></a>Scene, nodi, componenti e fotocamere
 
-Il modello di scena può essere descritto come un grafico della scena basato su componenti. La scena è costituita da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche l'intera scena. Ogni `Node` dispone di una trasformazione 3D (posizione, rotazione e scala), un nome, un ID, più un numero arbitrario di componenti.  I componenti portano un nodo alla vita, possono aggiungere una rappresentazione visiva (`StaticModel`), possono emettere un suono (`SoundSource`), possono fornire un limite di collisione e così via.
+Il modello di scena può essere descritto come un grafico della scena basato su componenti. La scena è costituita da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche l'intera scena. Ogni `Node` ha una trasformazione 3D (posizione, rotazione e scala), un nome, un ID, più un numero arbitrario di componenti.  I componenti portano un nodo alla vita, possono aggiungere una rappresentazione visiva ( `StaticModel` ), possono emettere un suono ( `SoundSource` ), possono fornire un limite di collisione e così via.
 
-È possibile creare le scene e i nodi di configurazione usando l' [Editor Urho](#urhoeditor)oppure è possibile eseguire operazioni dal C# codice.  In questo documento verrà illustrata la configurazione dell'uso del codice, in quanto illustrano gli elementi necessari per visualizzare le informazioni sullo schermo.
+È possibile creare le scene e i nodi di configurazione usando l' [Editor Urho](#urhoeditor)oppure è possibile eseguire operazioni dal codice C#.  In questo documento verrà illustrata la configurazione dell'uso del codice, in quanto illustrano gli elementi necessari per visualizzare le informazioni sullo schermo.
 
-Oltre a configurare la scena, è necessario configurare una `Camera`, che determina cosa verrà visualizzato all'utente.
+Oltre a configurare la scena, è necessario configurare un elemento, che `Camera` determina cosa verrà visualizzato all'utente.
 
 ### <a name="setting-up-your-scene"></a>Impostazione della scena
 
@@ -53,7 +53,7 @@ planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 
 ### <a name="components"></a>Componenti
 
-Il rendering degli oggetti 3D, la riproduzione audio, la fisica e gli aggiornamenti della logica con script sono tutti abilitati creando componenti diversi nei nodi chiamando `CreateComponent<T>()`.  Ad esempio, configurare il nodo e il componente chiaro in questo modo:
+Il rendering degli oggetti 3D, la riproduzione audio, la fisica e gli aggiornamenti della logica con script sono tutti abilitati creando componenti diversi nei nodi chiamando `CreateComponent<T>()` .  Ad esempio, configurare il nodo e il componente chiaro in questo modo:
 
 ```csharp
 // Create a directional light to the world so that we can see something. The
@@ -65,20 +65,20 @@ var lightNode = scene.CreateChild("DirectionalLight");
 lightNode.SetDirection (new Vector3(0.6f, -1.0f, 0.8f));
 ```
 
-È stato creato sopra un nodo con il nome "`DirectionalLight`" e ne è stata impostata una direzione, ma nient'altro.  A questo punto, è possibile trasformare il nodo precedente in un nodo di emissione chiara, collegando un componente `Light` al nodo, con `CreateComponent`:
+È stato creato sopra un nodo denominato " `DirectionalLight` " e ne è stata impostata una direzione, ma nient'altro.  A questo punto, è possibile trasformare il nodo precedente in un nodo di emissione chiara, collegando un `Light` componente al nodo con `CreateComponent` :
 
 ```csharp
 var light = lightNode.CreateComponent<Light>();
 ```
 
-I componenti creati nel `Scene` hanno un ruolo speciale: per implementare la funzionalità a livello di scena. Devono essere creati prima di tutti gli altri componenti e includono quanto segue:
+I componenti creati in `Scene` hanno un ruolo speciale: per implementare la funzionalità a livello di scena. Devono essere creati prima di tutti gli altri componenti e includono quanto segue:
 
  `Octree`: implementa il partizionamento spaziale e le query di visibilità accelerata. Senza questo oggetto 3D non è possibile eseguire il rendering.
- `PhysicsWorld`: implementa la simulazione fisica. I componenti fisici, ad esempio `RigidBody` o `CollisionShape`, non possono funzionare correttamente senza questo.
+ `PhysicsWorld`: implementa la simulazione fisica. I componenti fisici, ad esempio `RigidBody` o, `CollisionShape` non possono funzionare correttamente senza questo.
  `DebugRenderer`: implementa il rendering della geometria di debug.
 
-Componenti comuni come `Light`, `Camera` o `StaticModel`
-non devono essere creati direttamente nel `Scene`, bensì nei nodi figlio.
+Componenti ordinari come `Light` , `Camera` o`StaticModel`
+non devono essere creati direttamente nel `Scene` , ma piuttosto nei nodi figlio.
 
 La libreria include una vasta gamma di componenti che è possibile associare ai nodi per renderli vita: elementi visibili all'utente (modelli), suoni, corpi rigidi, forme di collisione, fotocamere, sorgenti di luce, generatori di particelle e molto altro ancora.
 
@@ -96,7 +96,7 @@ camera = CameraNode.CreateComponent<Camera>();
 CameraNode.Position = new Vector3 (0, 5, 0);
 ```
 
-Con questa operazione, è stata creata una fotocamera e la fotocamera è stata inserita nel mondo 3D, il passaggio successivo consiste nell'informare il `Application` che si tratta della fotocamera che si vuole usare. questa operazione viene eseguita con il codice seguente:
+Con questa operazione, è stata creata una fotocamera e la fotocamera è stata inserita nel mondo 3D. il passaggio successivo consiste nell'informare che si tratta `Application` della fotocamera che si vuole usare. questa operazione viene eseguita con il codice seguente:
 
 ```csharp
 Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
@@ -106,39 +106,39 @@ A questo punto dovrebbe essere possibile visualizzare i risultati della creazion
 
 ### <a name="identification-and-scene-hierarchy"></a>Gerarchia di identificazione e di scena
 
-A differenza dei nodi, i componenti non hanno nomi; i componenti all'interno dello stesso nodo sono identificati solo dal tipo e dall'indice nell'elenco dei componenti del nodo, che viene compilato in base all'ordine di creazione, ad esempio, è possibile recuperare il componente `Light` dall'oggetto `lightNode` precedente, come indicato di seguito:
+A differenza dei nodi, i componenti non hanno nomi; i componenti all'interno dello stesso nodo sono identificati solo dal tipo e dall'indice nell'elenco dei componenti del nodo, che viene compilato in base all'ordine di creazione, ad esempio, è possibile recuperare il `Light` componente all'esterno dell' `lightNode` oggetto come segue:
 
 ```csharp
 var myLight = lightNode.GetComponent<Light>();
 ```
 
-È anche possibile ottenere un elenco di tutti i componenti recuperando la proprietà `Components` che restituisce un `IList<Component>` che è possibile usare.
+È anche possibile ottenere un elenco di tutti i componenti recuperando la `Components` proprietà che restituisce un oggetto `IList<Component>` che è possibile usare.
 
-Al momento della creazione, i nodi e i componenti ottengono gli ID di tipo Integer globali. È possibile eseguire query sulla scena usando le funzioni `GetNode(uint id)` e `GetComponent(uint id)`. Si tratta di un'operazione molto più rapida rispetto ad esempio alla query del nodo della scena basata sul nome ricorsiva.
+Al momento della creazione, i nodi e i componenti ottengono gli ID di tipo Integer globali. È possibile eseguire query sulla scena usando le funzioni `GetNode(uint id)` e `GetComponent(uint id)` . Si tratta di un'operazione molto più rapida rispetto ad esempio alla query del nodo della scena basata sul nome ricorsiva.
 
-Non esiste un concetto incorporato di un'entità o di un oggetto di gioco; piuttosto, spetta al programmatore decidere la gerarchia dei nodi e in quali nodi inserire qualsiasi logica con script. In genere, gli oggetti con trasferimento libero nel mondo 3D vengono creati come elementi figlio del nodo radice. I nodi possono essere creati con o senza un nome usando `CreateChild`. L'univocità dei nomi di nodo non viene applicata.
+Non esiste un concetto incorporato di un'entità o di un oggetto di gioco; piuttosto, spetta al programmatore decidere la gerarchia dei nodi e in quali nodi inserire qualsiasi logica con script. In genere, gli oggetti con trasferimento libero nel mondo 3D vengono creati come elementi figlio del nodo radice. I nodi possono essere creati con o senza un nome usando `CreateChild` . L'univocità dei nomi di nodo non viene applicata.
 
 Ogni volta che è presente una composizione gerarchica, è consigliabile (e in effetti necessario, perché i componenti non dispongono di trasformazioni 3D) per creare un nodo figlio.
 
-Se, ad esempio, un carattere teneva in mano un oggetto, l'oggetto deve avere il proprio nodo, che verrebbe associato all'osso della mano del carattere (anche un `Node`).  L'eccezione è rappresentata dalla `CollisionShape`fisica, che può essere offsetted e ruotata singolarmente in relazione al nodo.
+Se, ad esempio, un carattere teneva in mano un oggetto, l'oggetto deve avere il proprio nodo, che verrebbe associato all'osso della mano del carattere (anche a `Node` ).  L'eccezione è la fisica `CollisionShape` , che può essere offsetted e ruotata singolarmente in relazione al nodo.
 
-Si noti che la trasformazione di `Scene`viene intenzionalmente ignorata come ottimizzazione durante il calcolo delle trasformazioni derivate dal mondo dei nodi figlio, quindi la modifica non ha alcun effetto e deve essere lasciata invariata (posizione all'origine, nessuna rotazione, nessun ridimensionamento).
+Si noti che `Scene` la trasformazione personalizzata viene ignorata intenzionalmente come ottimizzazione durante il calcolo delle trasformazioni derivate dal mondo dei nodi figlio, quindi la modifica non ha alcun effetto e deve essere lasciata invariata (posizione all'origine, nessuna rotazione, nessun ridimensionamento).
 
-`Scene` nodi possono essere liberamente riassociati. I componenti a contrasto fanno sempre parte del nodo a cui sono collegati e non possono essere spostati tra i nodi. Sia i nodi che i componenti forniscono una funzione `Remove` per eseguire questa operazione senza dover passare attraverso l'elemento padre. Una volta rimosso il nodo, nessuna operazione sul nodo o sul componente in questione è sicura dopo la chiamata a tale funzione.
+`Scene`i nodi possono essere liberamente associati a un nuovo elemento padre. I componenti a contrasto fanno sempre parte del nodo a cui sono collegati e non possono essere spostati tra i nodi. Sia i nodi che i componenti forniscono una `Remove` funzione per eseguire questa operazione senza dover passare attraverso l'elemento padre. Una volta rimosso il nodo, nessuna operazione sul nodo o sul componente in questione è sicura dopo la chiamata a tale funzione.
 
-È anche possibile creare un `Node` che non appartiene a una scena. Questa operazione è utile ad esempio con una fotocamera che si muove in una scena che può essere caricata o salvata, perché la fotocamera non verrà salvata insieme alla scena effettiva e non verrà distrutta quando viene caricata la scena. Si noti, tuttavia, che la creazione di geometria, della fisica o dei componenti di script in un nodo non collegato e che quindi lo si trasferisce in una scena in seguito causerà il mancato funzionamento di tali componenti.
+È anche possibile creare un oggetto `Node` che non appartiene a una scena. Questa operazione è utile ad esempio con una fotocamera che si muove in una scena che può essere caricata o salvata, perché la fotocamera non verrà salvata insieme alla scena effettiva e non verrà distrutta quando viene caricata la scena. Si noti, tuttavia, che la creazione di geometria, della fisica o dei componenti di script in un nodo non collegato e che quindi lo si trasferisce in una scena in seguito causerà il mancato funzionamento di tali componenti.
 
 ### <a name="scene-updates"></a>Aggiornamenti della scena
 
-Una scena i cui aggiornamenti sono abilitati (impostazione predefinita) verrà aggiornata automaticamente in ogni iterazione del ciclo principale.  Viene richiamato il gestore dell'evento `SceneUpdate` dell'applicazione.
+Una scena i cui aggiornamenti sono abilitati (impostazione predefinita) verrà aggiornata automaticamente in ogni iterazione del ciclo principale.  `SceneUpdate`Viene richiamato il gestore eventi dell'applicazione.
 
-I nodi e i componenti possono essere esclusi dall'aggiornamento della scena tramite la relativa disabilitazione, vedere `Enabled`.  Il comportamento dipende dal componente specifico, ma, ad esempio, la disabilitazione di un componente disegnatore ne rende invisibile anche la disabilitazione di un componente di origine audio. Se un nodo è disabilitato, tutti i relativi componenti vengono considerati disabilitati indipendentemente dallo stato di abilitazione o disabilitazione.
+I nodi e i componenti possono essere esclusi dall'aggiornamento della scena disabilitando tali nodi, vedere `Enabled` .  Il comportamento dipende dal componente specifico, ma, ad esempio, la disabilitazione di un componente disegnatore ne rende invisibile anche la disabilitazione di un componente di origine audio. Se un nodo è disabilitato, tutti i relativi componenti vengono considerati disabilitati indipendentemente dallo stato di abilitazione o disabilitazione.
 
 ## <a name="adding-behavior-to-your-components"></a>Aggiunta del comportamento ai componenti
 
 Il modo migliore per strutturare il gioco consiste nel creare un componente personalizzato che incapsula un attore o un elemento nel gioco.  Ciò rende la funzionalità autonoma, dagli asset usati per visualizzarla, al suo comportamento.
 
-Il modo più semplice per aggiungere il comportamento a un componente consiste nell'usare le azioni, ovvero le istruzioni che è possibile accodare e C# combinare con la programmazione asincrona.  In questo modo il comportamento per il componente è molto elevato e rende più semplice comprendere cosa accade.
+Il modo più semplice per aggiungere il comportamento a un componente consiste nell'usare le azioni, che sono istruzioni che è possibile accodare e combinare con la programmazione asincrona in C#.  In questo modo il comportamento per il componente è molto elevato e rende più semplice comprendere cosa accade.
 
 In alternativa, è possibile controllare esattamente cosa accade al componente aggiornando le proprietà dei componenti in ogni frame (descritto nella sezione relativa al comportamento basato su frame).
 
@@ -180,25 +180,25 @@ Se si desidera che entrambe le azioni avvengano contemporaneamente, è possibile
 
 Nell'esempio precedente il cloud viene spostato e si dissolve nello stesso momento.
 
-Si noterà che questi utilizzino C#`await`, che consente di valutare in modo lineare il comportamento che si desidera ottenere.
+Si noterà che questi utilizzano C# `await` , che consente di valutare in modo lineare il comportamento che si desidera ottenere.
 
 ### <a name="basic-actions"></a>Azioni di base
 
 Queste sono le azioni supportate in UrhoSharp:
 
-- Nodi mobili: `MoveTo`, `MoveBy`, `Place`, `BezierTo`, `BezierBy`, `JumpTo`, `JumpBy`
-- Nodi rotanti: `RotateTo`, `RotateBy`
-- Ridimensionamento di nodi: `ScaleTo`, `ScaleBy`
-- Nodi di dissolvenza: `FadeIn`, `FadeTo`, `FadeOut`, `Hide``Blink`
-- Colorazione: `TintTo`, `TintBy`
-- Istanti: `Hide`, `Show`, `Place`, `RemoveSelf`, `ToggleVisibility`
-- Ciclo: `Repeat`, `RepeatForever`, `ReverseTime`
+- Trasferimento di nodi: `MoveTo` , `MoveBy` , `Place` , `BezierTo` , `BezierBy` , `JumpTo` ,`JumpBy`
+- Rotazione nodi: `RotateTo` ,`RotateBy`
+- Ridimensionamento di nodi: `ScaleTo` ,`ScaleBy`
+- Nodi fading: `FadeIn` , `FadeTo` , `FadeOut` , `Hide` ,`Blink`
+- Colorazione: `TintTo` ,`TintBy`
+- Istanti: `Hide` , `Show` , `Place` , `RemoveSelf` ,`ToggleVisibility`
+- Ciclo: `Repeat` , `RepeatForever` ,`ReverseTime`
 
-Altre funzionalità avanzate includono la combinazione delle azioni `Spawn` e `Sequence`.
+Altre funzionalità avanzate includono la combinazione delle `Spawn` azioni e `Sequence` .
 
 ### <a name="easing---controlling-the-speed-of-your-actions"></a>Interpolazione del controllo della velocità delle azioni
 
-L'interpolazione è un modo che indica il modo in cui l'animazione verrà rivelata e può rendere le animazioni molto più gradevoli.  Per impostazione predefinita, le azioni avranno un comportamento lineare, ad esempio un'azione `MoveTo` avrà un movimento molto robotico.  È possibile eseguire il wrapping delle azioni in un'azione di interpolazione per modificare il comportamento, ad esempio uno che avvia lentamente lo spostamento, accelera e raggiunge lentamente la fine (`EasyInOut`).
+L'interpolazione è un modo che indica il modo in cui l'animazione verrà rivelata e può rendere le animazioni molto più gradevoli.  Per impostazione predefinita, le azioni avranno un comportamento lineare, ad esempio un' `MoveTo` azione avrebbe uno spostamento molto robotico.  È possibile eseguire il wrapping delle azioni in un'azione di interpolazione per modificare il comportamento, ad esempio uno che avvia lentamente lo spostamento, accelera e raggiunge lentamente la fine ( `EasyInOut` ).
 
 A questo scopo, eseguire il wrapping di un'azione esistente in un'azione di interpolazione, ad esempio:
 
@@ -214,10 +214,10 @@ Sono disponibili diverse modalità di interpolazione, il grafico seguente mostra
 
 ### <a name="using-actions-and-async-code"></a>Uso di azioni e codice asincrono
 
-Nella sottoclasse `Component` è necessario introdurre un metodo asincrono che prepara il comportamento del componente e ne guida la funzionalità.
-Si richiama quindi questo metodo usando la C# parola chiave`await`da un'altra parte del programma, ovvero il metodo `Application.Start`o in risposta a un utente o a un punto della storia nell'applicazione.
+Nella `Component` sottoclasse è necessario introdurre un metodo asincrono che prepara il comportamento del componente e ne guida la funzionalità.
+Questo metodo viene quindi richiamato usando la `await` parola chiave C# da un'altra parte del programma, `Application.Start` ovvero il metodo o in risposta a un utente o a un punto della storia nell'applicazione.
 
-Esempio:
+Ad esempio:
 
 ```csharp
 class Robot : Component {
@@ -265,13 +265,13 @@ class Robot : Component {
 }
 ```
 
-Nel metodo `Launch` sono state avviate tre azioni: il robot passa alla scena, questa azione altererà la posizione del nodo in un periodo di 0,6 secondi.  Poiché si tratta di un'opzione asincrona, questo si verificherà simultaneamente come l'istruzione successiva che è la chiamata a `MoveRandomly`.  Questo metodo consente di modificare la posizione del robot in parallelo in una posizione casuale.  Questa operazione viene eseguita eseguendo due azioni composte, lo spostamento in una nuova posizione e tornando alla posizione originale e la ripetizione fino a quando il robot rimane attivo.  Per rendere le cose più interessanti, il robot continuerà a scattare simultaneamente.  Il tiro viene avviato solo ogni 0,1 secondi.
+Nel `Launch` metodo precedente vengono avviate tre azioni: il robot passa alla scena. questa azione modificherà la posizione del nodo in un periodo di 0,6 secondi.  Poiché si tratta di un'opzione asincrona, questo si verificherà simultaneamente come l'istruzione successiva che è la chiamata a `MoveRandomly` .  Questo metodo consente di modificare la posizione del robot in parallelo in una posizione casuale.  Questa operazione viene eseguita eseguendo due azioni composte, lo spostamento in una nuova posizione e tornando alla posizione originale e la ripetizione fino a quando il robot rimane attivo.  Per rendere le cose più interessanti, il robot continuerà a scattare simultaneamente.  Il tiro viene avviato solo ogni 0,1 secondi.
 
 ### <a name="frame-based-behavior-programming"></a>Programmazione di comportamenti basati su frame
 
-Se si vuole controllare il comportamento del componente in base a un frame, anziché usare le azioni, è necessario eseguire l'override del metodo `OnUpdate` della sottoclasse `Component`.  Questo metodo viene richiamato una volta per ogni frame e viene richiamato solo se si imposta la proprietà ReceiveSceneUpdates su true.
+Se si vuole controllare il comportamento del componente in base a un frame, anziché usare le azioni, è necessario eseguire l'override del `OnUpdate` metodo della `Component` sottoclasse.  Questo metodo viene richiamato una volta per ogni frame e viene richiamato solo se si imposta la proprietà ReceiveSceneUpdates su true.
 
-Di seguito viene illustrato come creare un componente `Rotator`, che viene quindi collegato a un nodo, causando la rotazione del nodo:
+Di seguito viene illustrato come creare un `Rotator` componente che viene quindi collegato a un nodo, determinando la rotazione del nodo:
 
 ```csharp
 class Rotator : Component {
@@ -303,7 +303,7 @@ boxNode.AddComponent (rotator);
 
 È possibile usare il modello basato su Async/Action per la programmazione di gran parte del comportamento, ideale per lo stile di programmazione Fire-and-Forget, ma è anche possibile ottimizzare il comportamento del componente per eseguire anche codice di aggiornamento in ogni frame.
 
-Ad esempio, nella demo di SamplyGame questo viene usato nella classe `Enemy` codifica il comportamento di base usa le azioni, ma garantisce anche che i componenti puntino verso l'utente impostando la direzione del nodo con `Node.LookAt`:
+Nella demo SamplyGame, ad esempio, questo viene usato nella `Enemy` classe che codifica il comportamento di base che usa le azioni, ma garantisce anche che i componenti puntino verso l'utente impostando la direzione del nodo con `Node.LookAt` :
 
 ```csharp
     protected override void OnUpdate(SceneUpdateEventArgs args)
@@ -318,11 +318,11 @@ Ad esempio, nella demo di SamplyGame questo viene usato nella classe `Enemy` cod
 
 ## <a name="loading-and-saving-scenes"></a>Caricamento e salvataggio di scene
 
-Le scene possono essere caricate e salvate in formato XML; vedere le funzioni `LoadXml` e `SaveXML`. Quando viene caricata una scena, viene rimosso per primo tutto il contenuto esistente (nodi e componenti figlio). I nodi e i componenti contrassegnati come temporanei con la proprietà `Temporary` non verranno salvati. Il serializzatore gestisce tutti i componenti e le proprietà predefiniti, ma non è sufficientemente intelligente da gestire le proprietà personalizzate e i campi definiti nelle sottoclassi dei componenti. Tuttavia, fornisce due metodi virtuali:
+Le scene possono essere caricate e salvate in formato XML; vedere le funzioni `LoadXml` e `SaveXML` . Quando viene caricata una scena, viene rimosso per primo tutto il contenuto esistente (nodi e componenti figlio). I nodi e i componenti contrassegnati come temporanei con la `Temporary` proprietà non verranno salvati. Il serializzatore gestisce tutti i componenti e le proprietà predefiniti, ma non è sufficientemente intelligente da gestire le proprietà personalizzate e i campi definiti nelle sottoclassi dei componenti. Tuttavia, fornisce due metodi virtuali:
 
- `OnSerialize` dove è possibile registrare gli stati personalizzati per la serializzazione
+ `OnSerialize`dove è possibile registrare gli stati personalizzati per la serializzazione
 
- `OnDeserialized` dove è possibile ottenere gli stati personalizzati salvati.
+ `OnDeserialized`dove è possibile ottenere gli stati personalizzati salvati.
 
 In genere, un componente personalizzato sarà simile al seguente:
 
@@ -357,13 +357,13 @@ class MyComponent : Component {
 
 ### <a name="object-prefabs"></a>Prefabbricati di oggetti
 
-Semplicemente il caricamento o il salvataggio di intere scene non è sufficientemente flessibile per i giochi in cui è necessario creare dinamicamente nuovi oggetti. D'altra parte, la creazione di oggetti complessi e l'impostazione delle relative proprietà nel codice saranno anche noiosi. Per questo motivo, è anche possibile salvare un nodo della scena che includerà i relativi nodi figlio, componenti e attributi. Questi possono essere caricati in un secondo momento in modo appropriato come gruppo.  Tale oggetto salvato viene spesso definito prefabbricato. A questo scopo, è possibile eseguire tre operazioni:
+Semplicemente il caricamento o il salvataggio di intere scene non è sufficientemente flessibile per i giochi in cui è necessario creare dinamicamente nuovi oggetti. D'altra parte, la creazione di oggetti complessi e l'impostazione delle relative proprietà nel codice saranno anche noiosi. Per questo motivo, è anche possibile salvare un nodo della scena che includerà i relativi nodi figlio, componenti e attributi. Questi possono essere caricati in un secondo momento in modo appropriato come gruppo.  Tale oggetto salvato viene spesso definito prefabbricato. Questa operazione può essere eseguita in tre modi:
 
-- Nel codice chiamando `Node.SaveXml` nel nodo
+- Nel codice chiamando `Node.SaveXml` sul nodo
 - Nell'editor, selezionando il nodo nella finestra gerarchia e scegliendo "Salva nodo con nome" dal menu "file".
-- Usando il comando "node" in `AssetImporter`, che salverà la gerarchia del nodo della scena e tutti i modelli contenuti nell'asset di input (ad esempio, un file Collada)
+- Usando il comando "node" in `AssetImporter` , che salverà la gerarchia del nodo della scena e tutti i modelli contenuti nell'asset di input (ad esempio, un file Collada)
 
-Per creare un'istanza del nodo salvato in una scena, chiamare `InstantiateXml`. Il nodo verrà creato come elemento figlio della scena, ma potrà essere riassociato liberamente. È necessario specificare la posizione e la rotazione per il posizionamento del nodo. Il codice seguente illustra come creare un'istanza di un `Ninja.xm` prefabbricato in una scena con la posizione e la rotazione desiderate:
+Per creare un'istanza del nodo salvato in una scena, chiamare `InstantiateXml` . Il nodo verrà creato come elemento figlio della scena, ma potrà essere riassociato liberamente. È necessario specificare la posizione e la rotazione per il posizionamento del nodo. Il codice seguente illustra come creare un'istanza di un prefabbricato `Ninja.xm` in una scena con la posizione e la rotazione desiderate:
 
 ```csharp
 var prefabPath = Path.Combine (FileSystem.ProgramDir,"Data/Objects/Ninja.xml");
@@ -374,9 +374,9 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 }
 ```
 
-## <a name="events"></a>eventi
+## <a name="events"></a>Eventi
 
-UrhoObjects generano una serie di eventi, che vengono esposti come C# eventi sulle varie classi che li generano.  Oltre al modello di C#eventi basato su, è anche possibile usare un`SubscribeToXXX`metodi che consentiranno di sottoscrivere e tenere un token di sottoscrizione che potrà essere usato in un secondo momento per annullare la sottoscrizione.  La differenza risiede nel fatto che il primo consentirà a molti chiamanti di sottoscrivere, mentre il secondo ne consente l'uso, ma consente di usare l'approccio più gradevole in stile lambda e, ancora, di rimuovere facilmente la sottoscrizione.  Si escludono a vicenda.
+UrhoObjects generano un certo numero di eventi, che vengono esposti come eventi C# sulle varie classi che le generano.  Oltre al modello di eventi basato su C#, è anche possibile usare un `SubscribeToXXX` metodo che consenta di sottoscrivere un token di sottoscrizione che potrà essere usato in un secondo momento per annullare la sottoscrizione.  La differenza risiede nel fatto che il primo consentirà a molti chiamanti di sottoscrivere, mentre il secondo ne consente l'uso, ma consente di usare l'approccio più gradevole in stile lambda e, ancora, di rimuovere facilmente la sottoscrizione.  Si escludono a vicenda.
 
 Quando si sottoscrive un evento, è necessario fornire un metodo che accetti un argomento con gli argomenti dell'evento appropriati.
 
@@ -405,7 +405,7 @@ public void override Start ()
 }
 ```
 
-A volte si desidera interrompere la ricezione delle notifiche per l'evento, in questi casi, salvare il valore restituito dalla chiamata al metodo `SubscribeTo` e richiamare il metodo di annullamento della sottoscrizione:
+A volte si desidera interrompere la ricezione delle notifiche per l'evento, in questi casi, salvare il valore restituito dalla chiamata al `SubscribeTo` metodo e richiamare il metodo di annullamento della sottoscrizione:
 
 ```csharp
 Subscription mouseSub;
@@ -463,26 +463,26 @@ protected override void OnUpdate(float timeStep)
 
 Le risorse includono la maggior parte degli elementi in UrhoSharp caricati dall'archiviazione di massa durante l'inizializzazione o il runtime:
 
-- `Animation`: usato per animazioni scheletriche
-- `Image`: rappresenta le immagini archiviate in un'ampia gamma di formati grafici
-- Modelli di `Model` 3D
-- `Material` materiali utilizzati per eseguire il rendering dei modelli.
+- `Animation`-usato per animazioni scheletriche
+- `Image`-rappresenta le immagini archiviate in un'ampia gamma di formati grafici
+- `Model`-Modelli 3D
+- `Material`-materiali usati per eseguire il rendering dei modelli.
 - `ParticleEffect`- [descrive](https://urho3d.github.io/documentation/1.4/_particles.html) il funzionamento di un emettitore di particelle, vedere "[Particles](#particles)" di seguito.
-- shader `Shader` personalizzati
-- `Sound`-suoni da riprodurre, vedere "[Sound](#sound)" di seguito.
-- tecniche di rendering del materiale `Technique`
-- trama `Texture2D`-2D
-- trama `Texture3D`-3D
-- trama `TextureCube`-Cube
+- `Shader`-shader personalizzati
+- `Sound`-suoni per la riproduzione. vedere "[Sound](#sound)" di seguito.
+- `Technique`-tecniche di rendering del materiale
+- `Texture2D`-trama 2D
+- `Texture3D`-trama 3D
+- `TextureCube`-Trama cubo
 - `XmlFile`
 
-Sono gestite e caricate dal sottosistema `ResourceCache` (disponibile come `Application.ResourceCache`).
+Sono gestite e caricate dal `ResourceCache` sottosistema (disponibile come `Application.ResourceCache` ).
 
-Le risorse stesse sono identificate dai rispettivi percorsi di file, in relazione alle directory di risorse registrate o ai file del pacchetto. Per impostazione predefinita, il motore registra le directory delle risorse `Data` e `CoreData`, oppure i pacchetti `Data.pak` e `CoreData.pak` se esistono.
+Le risorse stesse sono identificate dai rispettivi percorsi di file, in relazione alle directory di risorse registrate o ai file del pacchetto. Per impostazione predefinita, il motore registra le directory delle risorse `Data` e `CoreData` , o i pacchetti `Data.pak` e `CoreData.pak` se esistono.
 
 Se il caricamento di una risorsa ha esito negativo, viene registrato un errore e viene restituito un riferimento null.
 
-Nell'esempio seguente viene illustrato un modo tipico per recuperare una risorsa dalla cache delle risorse.  In questo caso, una trama per un elemento dell'interfaccia utente, usa la proprietà `ResourceCache` dalla classe `Application`.
+Nell'esempio seguente viene illustrato un modo tipico per recuperare una risorsa dalla cache delle risorse.  In questo caso, una trama per un elemento dell'interfaccia utente, usa la `ResourceCache` proprietà della `Application` classe.
 
 ```csharp
 healthBar.SetTexture(ResourceCache.GetTexture2D("Textures/HealthBarBorder.png"));
@@ -496,24 +496,24 @@ Le risorse possono anche essere create manualmente e archiviate nella cache dell
 
 Urho3D tenta di utilizzare i formati di file esistenti laddove possibile e definire formati di file personalizzati solo quando sono assolutamente necessari, ad esempio per i modelli (. mdl) e per le animazioni (. ani). Per questi tipi di asset, Urho fornisce un convertitore- [AssetImporter](https://urho3d.github.io/documentation/1.4/_tools.html) che può utilizzare molti formati 3D diffusi, ad esempio FBX, DAE, 3DS e obj e così via.
 
-È inoltre disponibile un comodo componente aggiuntivo per Blender [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) in grado di esportare le risorse di Blender nel formato appropriato per Urho3D.
+Per Blender è inoltre disponibile un comodo componente aggiuntivo [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) che consente di esportare le risorse di Blender nel formato appropriato per Urho3D.
 
 ### <a name="background-loading-of-resources"></a>Caricamento in background delle risorse
 
-In genere, quando si richiedono risorse usando uno dei `Get` metodo di `ResourceCache`, vengono caricati immediatamente nel thread principale, operazione che può richiedere diversi millisecondi per tutti i passaggi necessari (caricare il file dal disco, analizzare i dati, caricare nella GPU se necessario) e può di conseguenza, le gocce di framerate.
+In genere, quando si richiedono risorse usando uno dei `ResourceCache` `Get` metodi di, questi vengono caricati immediatamente nel thread principale, operazione che può richiedere diversi millisecondi per tutti i passaggi necessari (caricare il file dal disco, analizzare i dati, caricare nella GPU, se necessario) e quindi generare le gocce di framerate.
 
-Se si conoscono in anticipo le risorse necessarie, è possibile richiederne il caricamento in un thread in background chiamando `BackgroundLoadResource`. Per sottoscrivere l'evento di caricamento in background delle risorse, è possibile usare il metodo `SubscribeToResourceBackgroundLoaded`. indica se il caricamento è stato effettivamente un esito positivo o negativo. A seconda della risorsa, solo una parte del processo di caricamento può essere spostata in un thread in background. ad esempio, il passaggio di caricamento della GPU finale deve sempre verificarsi nel thread principale. Si noti che se si chiama uno dei metodi di caricamento delle risorse per una risorsa in coda per il caricamento in background, il thread principale si blocca fino al completamento del caricamento.
+Se si conoscono in anticipo le risorse necessarie, è possibile richiederne il caricamento in un thread in background chiamando `BackgroundLoadResource` . È possibile sottoscrivere l'evento di caricamento in background delle risorse usando il `SubscribeToResourceBackgroundLoaded` metodo. indica se il caricamento è stato effettivamente un esito positivo o negativo. A seconda della risorsa, solo una parte del processo di caricamento può essere spostata in un thread in background. ad esempio, il passaggio di caricamento della GPU finale deve sempre verificarsi nel thread principale. Si noti che se si chiama uno dei metodi di caricamento delle risorse per una risorsa in coda per il caricamento in background, il thread principale si blocca fino al completamento del caricamento.
 
-La funzionalità asincrona di caricamento della scena `LoadAsync` e `LoadAsyncXML` ha l'opzione di caricare in background le risorse prima di continuare a caricare il contenuto della scena. Può anche essere usato per caricare solo le risorse senza modificare la scena, specificando il `LoadMode.ResourcesOnly`. In questo modo, è possibile preparare un file prefabbricato della scena o dell'oggetto per creare un'istanza rapida.
+La scena asincrona che carica la funzionalità `LoadAsync` e `LoadAsyncXML` ha l'opzione di caricare in background le risorse prima di procedere con il caricamento del contenuto della scena. Può anche essere usato per caricare solo le risorse senza modificare la scena, specificando `LoadMode.ResourcesOnly` . In questo modo, è possibile preparare un file prefabbricato della scena o dell'oggetto per creare un'istanza rapida.
 
-Infine, il tempo massimo (in millisecondi) impiegato per ogni fotogramma al completamento delle risorse caricate in background può essere configurato impostando la proprietà `FinishBackgroundResourcesMs` nel `ResourceCache`.
+Infine, il tempo massimo (in millisecondi) impiegato per ogni fotogramma al completamento delle risorse caricate in background può essere configurato impostando la `FinishBackgroundResourcesMs` Proprietà in `ResourceCache` .
 
-<a name="sound"/>
+<a name="sound"></a>
 
-## <a name="sound"></a>Suono
+## <a name="sound"></a>Audio
 
-Il suono è una parte importante della riproduzione del gioco e il Framework di UrhoSharp offre un modo per riprodurre suoni nel gioco.  Per riprodurre suoni, è necessario aggiungere un `SoundSource`
-componente per un `Node` e quindi riprodurre un file denominato dalle risorse.
+Il suono è una parte importante della riproduzione del gioco e il Framework di UrhoSharp offre un modo per riprodurre suoni nel gioco.  Per riprodurre suoni, è necessario alleghi`SoundSource`
+componente in un oggetto `Node` e quindi riprodurre un file denominato dalle risorse.
 
 Questo è il modo in cui viene eseguito:
 
@@ -525,13 +525,13 @@ soundSource.Gain = 0.5f;
 soundSource.AutoRemove = true;
 ```
 
-<a name="particles"/>
+<a name="particles"></a>
 
 ## <a name="particles"></a>Particelle
 
-Le particelle rappresentano un modo semplice per aggiungere all'applicazione alcuni effetti semplici e convenienti.  È possibile utilizzare le particelle archiviate in formato PEX utilizzando strumenti come [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/).
+Le particelle rappresentano un modo semplice per aggiungere all'applicazione alcuni effetti semplici e convenienti.  È possibile utilizzare le particelle archiviate in formato PEX utilizzando strumenti come [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/) .
 
-Le particelle sono componenti che possono essere aggiunti a un nodo.  È necessario chiamare il metodo `CreateComponent<ParticleEmitter2D>` del nodo per creare la particella e quindi configurare la particella impostando la proprietà Effect su un effetto 2D caricato dalla cache delle risorse.
+Le particelle sono componenti che possono essere aggiunti a un nodo.  È necessario chiamare il metodo del nodo `CreateComponent<ParticleEmitter2D>` per creare la particella e quindi configurare la particella impostando la proprietà Effect su un effetto 2D caricato dalla cache delle risorse.
 
 Ad esempio, è possibile richiamare questo metodo sul componente per visualizzare alcune particelle di cui viene eseguito il rendering come esplosione quando si verifica:
 
@@ -566,7 +566,7 @@ Si tratta di un aspetto che viene visualizzato se si usa una trama a blocchi:
 
 UrhoSharp è una libreria a thread singolo.  Ciò significa che non si deve tentare di richiamare i metodi in UrhoSharp da un thread in background o si rischia di danneggiare lo stato dell'applicazione e probabilmente si è verificato un arresto anomalo dell'applicazione.
 
-Se si vuole eseguire codice in background e quindi aggiornare i componenti di Urho nell'interfaccia utente principale, è possibile usare il `Application.InvokeOnMain(Action)`
+Se si vuole eseguire codice in background e quindi aggiornare i componenti di Urho nell'interfaccia utente principale, è possibile usare il`Application.InvokeOnMain(Action)`
 ProcessOnStatus.  Inoltre, è possibile usare C# await e le API delle attività .NET per garantire che il codice venga eseguito sul thread appropriato.
 
 ## <a name="urhoeditor"></a>UrhoEditor
@@ -575,5 +575,4 @@ ProcessOnStatus.  Inoltre, è possibile usare C# await e le API delle attività 
 
 ## <a name="copyrights"></a>Copyright
 
-Questa documentazione contiene contenuti originali di Xamarin
- Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.
+Questa documentazione contiene contenuti originali di Novell Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.

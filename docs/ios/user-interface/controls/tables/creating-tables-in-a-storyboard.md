@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 7eff434c21b5e2330d320f2eb85174dc6fe65b34
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 57347336bb91757c9c54f7279f386f15e07c9cd7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573635"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo delle tabelle in iOS Designer
 
@@ -20,37 +20,37 @@ Gli storyboard sono un modo WYSIWYG per creare applicazioni iOS e sono supportat
 
 Quando si configurano le proprietà di una vista tabella in iOS designer, è possibile scegliere tra due tipi di contenuto di celle: contenuto **dinamico** o del prototipo **statico** .
 
-<a name="Prototype_Content" />
+<a name="Prototype_Content"></a>
 
 ## <a name="dynamic-prototype-content"></a>Contenuto dinamico del prototipo
 
-Un `UITableView` con contenuto del prototipo viene in genere progettato per visualizzare un elenco di dati in cui la cella del prototipo (o le celle, che è possibile definire più di uno) vengono riutilizzate per ogni elemento nell'elenco. Non è necessario creare un'istanza delle celle, che vengono ottenute nel metodo `GetView` chiamando il metodo `DequeueReusableCell` della relativa `UITableViewSource`.
+Un oggetto `UITableView` con contenuto del prototipo viene in genere progettato per visualizzare un elenco di dati in cui la cella del prototipo (o le celle, che è possibile definire più di una) vengono riutilizzate per ogni elemento nell'elenco. Non è necessario creare un'istanza delle celle, che vengono ottenute nel `GetView` metodo chiamando il `DequeueReusableCell` metodo del relativo oggetto `UITableViewSource` .
 
- <a name="Static_Content" />
+ <a name="Static_Content"></a>
 
 ## <a name="static-content"></a>Contenuto statico
 
-`UITableView`s con contenuto statico consentono di progettare le tabelle direttamente nell'area di progettazione. È possibile trascinare le celle nella tabella e personalizzarle modificando le proprietà e aggiungendo i controlli.
+`UITableView`i con contenuto statico consentono di progettare le tabelle direttamente nell'area di progettazione. È possibile trascinare le celle nella tabella e personalizzarle modificando le proprietà e aggiungendo i controlli.
 
- <a name="Creating_a_Storyboard-driven_app" />
+ <a name="Creating_a_Storyboard-driven_app"></a>
 
 ## <a name="creating-a-storyboard-driven-app"></a>Creazione di un'app basata su storyboard
 
 L'esempio StoryboardTable contiene una semplice app Master-Detail che usa entrambi i tipi di UITableView in uno storyboard. Nella parte restante di questa sezione viene descritto come creare un piccolo esempio di elenco attività che sarà simile al seguente:
 
- [schermate di esempio![](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
+ [![Schermate di esempio](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 L'interfaccia utente verrà compilata con uno storyboard ed entrambe le schermate utilizzeranno un UITableView. Nella schermata principale viene utilizzato il *contenuto del prototipo* per il layout della riga e nella schermata dei dettagli viene utilizzato il *contenuto statico* per creare un form di immissione dati utilizzando layout di celle personalizzati.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Crea una nuova soluzione in Visual Studio usando **(Crea) nuovo progetto... > App visualizzazione singola (C#)** e denominarla _StoryboardTables_.
+Creare una nuova soluzione in Visual Studio usando **(Crea) nuovo progetto... > app visualizzazione singola (C#)** e denominarla _StoryboardTables_.
 
- [![creare una finestra di dialogo nuovo progetto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
+ [![Finestra di dialogo Crea nuovo progetto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
-La soluzione si aprirà con C# alcuni file e un file di`Main.storyboard`già creato. Fare doppio clic sul file `Main.storyboard` per aprirlo in iOS designer.
+La soluzione si aprirà con alcuni file C# e un `Main.storyboard` file già creato. Fare doppio clic sul `Main.storyboard` file per aprirlo in iOS designer.
 
-<a name="Modifying_the_Storyboard" />
+<a name="Modifying_the_Storyboard"></a>
 
 ## <a name="modifying-the-storyboard"></a>Modifica dello storyboard
 
@@ -62,35 +62,35 @@ Lo storyboard verrà modificato in tre passaggi:
 
 Una volta completato lo storyboard, è possibile aggiungere il codice per eseguire tutto il lavoro.
 
-<a name="Layout_The_View_Controllers" />
+<a name="Layout_The_View_Controllers"></a>
 
 ### <a name="layout-the-view-controllers"></a>Layout dei controller di visualizzazione
 
-La prima modifica allo storyboard è l'eliminazione della visualizzazione dei dettagli esistente e la relativa sostituzione con un UITableViewController. Attenersi ai passaggi riportati di seguito.
+La prima modifica allo storyboard è l'eliminazione della visualizzazione dei dettagli esistente e la relativa sostituzione con un UITableViewController. A tale scopo, seguire questa procedura:
 
 1. Selezionare la barra nella parte inferiore del controller di visualizzazione ed eliminarla.
 2. Trascinare un **controller di spostamento** e un **controller di visualizzazione tabella** nello storyboard dalla casella degli strumenti. 
 3. Creare un segue dal controller di visualizzazione radice al secondo controller di visualizzazione tabella appena aggiunto. Per creare segue, controllare e trascinare *dalla cella detail* al UITableViewController appena aggiunto. Scegliere l'opzione **Mostra** in **selezione segue**. 
-4. Selezionare il nuovo segue creato e assegnargli un identificatore per fare riferimento a questo segue nel codice. Fare clic su segue e immettere `TaskSegue` per l' **identificatore** nel **riquadro delle proprietà**, come segue:    
-  [![denominazione segue nel pannello Proprietà](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
+4. Selezionare il nuovo segue creato e assegnargli un identificatore per fare riferimento a questo segue nel codice. Fare clic su segue e immettere `TaskSegue` per l' **identificatore** nella **riquadro delle proprietà**, come indicato di seguito:    
+  [![Denominazione di segue nel pannello Proprietà](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Configurare quindi le due viste tabella selezionandola e usando il riquadro delle proprietà. Assicurarsi di selezionare Visualizza e non Visualizza controller: è possibile usare la struttura del documento per facilitare la selezione.
 
 6. Modificare il controller visualizzazione radice in modo che sia **contenuto: prototipi dinamici** (la visualizzazione del area di progettazione verrà etichettata **contenuto del prototipo** ):
 
-    [![impostazione della proprietà Content su prototipi dinamici](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
+    [![Impostazione della proprietà Content su prototipi dinamici](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7. Modificare il nuovo **UITableViewController** in modo che sia **contenuto: celle statiche**. 
 
-8. Il nuovo UITableViewController deve avere il nome della classe e l'identificatore impostati. Selezionare il controller di visualizzazione e digitare _TaskDetailViewController_ per la **classe** nel **riquadro delle proprietà** : verrà creato un nuovo file di `TaskDetailViewController.cs` nel riquadro della soluzione. Immettere il **StoryboardID** come _dettaglio_, come illustrato nell'esempio riportato di seguito. Verrà usato in un secondo momento per caricare questa visualizzazione C# nel codice:  
+8. Il nuovo UITableViewController deve avere il nome della classe e l'identificatore impostati. Selezionare il controller di visualizzazione e digitare _TaskDetailViewController_ per la **classe** nel **riquadro delle proprietà** : verrà creato un nuovo `TaskDetailViewController.cs` file nel riquadro della soluzione. Immettere il **StoryboardID** come _dettaglio_, come illustrato nell'esempio riportato di seguito. Questo verrà usato in un secondo momento per caricare questa visualizzazione nel codice C#:  
 
-    [![l'impostazione dell'ID storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
+    [![Impostazione dell'ID storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. L'area di progettazione dello storyboard dovrebbe ora essere simile alla seguente (il titolo dell'elemento di navigazione del controller visualizzazione radice è stato modificato in "lavagna di lavoro"):
 
-    [![area di progettazione](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
+    [![Area di progettazione](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
-<a name="Create_the_UI" />
+<a name="Create_the_UI"></a>
 
 ### <a name="create-the-ui"></a>Creare l'interfaccia utente
 
@@ -100,13 +100,13 @@ Ora che le visualizzazioni e gli elementi segue sono configurati, è necessario 
 
 Per prima cosa, selezionare la cella Prototype nel controller di visualizzazione master e impostare l' **identificatore** come _taskcell_, come illustrato di seguito. Questa operazione verrà utilizzata in un secondo momento nel codice per recuperare un'istanza di questo UITableViewCell:
 
- [![l'impostazione dell'identificatore di cella](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
+ [![impostazione dell'identificatore di cella](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 Successivamente, sarà necessario creare un pulsante che aggiungerà nuove attività, come illustrato di seguito:
 
-[elemento del pulsante della barra![nella barra di spostamento](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
+[![elemento pulsante barra nella barra di spostamento](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
-Procedere come descritto di seguito: 
+Eseguire le operazioni seguenti: 
 
 - Trascinare un **elemento pulsante della barra** dalla casella degli strumenti sul _lato destro della barra di spostamento_.
 - Nel **riquadro delle proprietà**, in **elemento pulsante della barra** selezionare **identificatore: Aggiungi** (per impostarlo come *+* pulsante più). 
@@ -116,7 +116,7 @@ Procedere come descritto di seguito:
 
 La visualizzazione dettagli richiede molto altro lavoro. Le celle di visualizzazione tabella devono essere trascinate nella vista e quindi compilate con etichette, visualizzazioni di testo e pulsanti. La schermata seguente mostra l'interfaccia utente finita con due sezioni. Una sezione ha tre celle, tre etichette, due campi di testo e un'opzione, mentre la seconda sezione ha una cella con due pulsanti:
 
- [layout visualizzazione dettagli![](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
+ [![layout visualizzazione dettagli](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 I passaggi per compilare il layout completo sono:
 
@@ -129,7 +129,7 @@ Selezionare la visualizzazione tabella e aprire il **riquadro delle proprietà**
 
 Selezionare la sezione superiore e nella **sezione proprietà > tabella vista** modificare le **righe** in _3_, come illustrato di seguito:
 
- [![l'impostazione della sezione superiore su tre righe](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
+ [![impostazione della sezione superiore su tre righe](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Per ogni cella aprire il **riquadro delle proprietà** e impostare:
 
@@ -157,15 +157,15 @@ Ci sono alcuni passaggi finali della creazione dello storyboard. Per prima cosa 
 - **Eliminare UIButton** : _DeleteButton_
 - **Salva UIButton** : _pulsanteSalva_
 
-<a name="Adding_Code" />
+<a name="Adding_Code"></a>
 
 ## <a name="adding-code"></a>Aggiunta di codice
 
 Il resto del lavoro verrà eseguito in Visual Studio in Mac o Windows con C#. Si noti che i nomi di proprietà usati nel codice riflettono quelli impostati nella procedura dettagliata precedente.
 
-Per prima cosa si vuole creare una classe `Chores`, che consente di ottenere e impostare il valore di ID, nome, note e il valore booleano done, in modo che sia possibile usare tali valori nell'intera applicazione.
+Per prima cosa si vuole creare una `Chores` classe, che consente di ottenere e impostare il valore di ID, nome, note e il valore booleano done, in modo che sia possibile usare tali valori in tutta l'applicazione.
 
-Nella classe `Chores` aggiungere il codice seguente:
+Nella `Chores` classe aggiungere il codice seguente:
 
 ```csharp
 public class Chores {
@@ -176,11 +176,11 @@ public class Chores {
   }
 ```
 
-Successivamente, creare una classe `RootTableSource` che erediti da `UITableViewSource`. 
+Successivamente, creare una `RootTableSource` classe che erediti da `UITableViewSource` . 
 
-La differenza tra questa e una vista della tabella non Storyboard è che il metodo di `GetView` non deve creare un'istanza delle celle: `theDequeueReusableCell` metodo restituirà sempre un'istanza della cella del prototipo (con identificatore corrispondente).
+La differenza tra questa e una vista della tabella non Storyboard è che il `GetView` metodo non deve creare un'istanza delle celle. il `theDequeueReusableCell` metodo restituirà sempre un'istanza della cella del prototipo (con identificatore corrispondente).
 
-Il codice riportato di seguito è del file `RootTableSource.cs`:
+Il codice riportato di seguito è del `RootTableSource.cs` file:
 
 ```csharp
 public class RootTableSource : UITableViewSource
@@ -217,7 +217,7 @@ public Chores GetItem(int id)
 }
 ```
 
-Per usare la classe `RootTableSource`, creare una nuova raccolta nel costruttore del `ItemViewController`:
+Per usare la `RootTableSource` classe, creare una nuova raccolta nel `ItemViewController` costruttore di:
 
 ```csharp
 chores = new List<Chore> {
@@ -239,7 +239,7 @@ public override void ViewWillAppear(bool animated)
 
 Se si esegue l'app ora, la schermata principale viene caricata e viene visualizzato un elenco di due attività. Quando un'attività viene toccata, il valore di segue definito dallo storyboard comporterà la visualizzazione della schermata dei dettagli, ma al momento non verranno visualizzati dati.
 
-Per inviare un parametro in un segue, eseguire l'override del metodo `PrepareForSegue` e impostare le proprietà nell'`DestinationViewController` (il `TaskDetailViewController` in questo esempio). È stata creata un'istanza della classe del controller di visualizzazione di destinazione, che tuttavia non è ancora visualizzata all'utente. Ciò significa che è possibile impostare le proprietà della classe, ma non modificare i controlli dell'interfaccia utente:
+Per inviare un parametro in un segue, eseguire l'override del `PrepareForSegue` metodo e impostare le proprietà nell'oggetto `DestinationViewController` ( `TaskDetailViewController` in questo esempio). È stata creata un'istanza della classe del controller di visualizzazione di destinazione, che tuttavia non è ancora visualizzata all'utente. Ciò significa che è possibile impostare le proprietà della classe, ma non modificare i controlli dell'interfaccia utente:
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
@@ -256,7 +256,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
     }
 ```
 
-In `TaskDetailViewController` il metodo `SetTask` assegna i parametri alle proprietà in modo che sia possibile farvi riferimento in ViewWillAppear. Impossibile modificare le proprietà del controllo in `SetTask` perché potrebbe non esistere quando viene chiamato `PrepareForSegue`:
+Nel `TaskDetailViewController` `SetTask` metodo assegna i parametri alle proprietà in modo che sia possibile farvi riferimento in ViewWillAppear. Impossibile modificare le proprietà del controllo `SetTask` perché potrebbe non esistere quando `PrepareForSegue` viene chiamato il metodo:
 
 ```csharp
 Chore currentTask {get;set;}
@@ -294,7 +294,7 @@ public void DeleteTask(Chores chore)
 }
 ```
 
-Successivamente, è necessario aggiungere il gestore dell'evento `TouchUpInside` del pulsante al metodo `ViewDidLoad` di **TaskDetailViewController.cs**. Il riferimento `Delegate` proprietà al `ItemViewController` è stato creato in modo specifico per poter chiamare `SaveTask` e `DeleteTask`, che chiude la visualizzazione come parte dell'operazione:
+Successivamente, è necessario aggiungere il gestore eventi del pulsante `TouchUpInside` al `ViewDidLoad` metodo di **TaskDetailViewController.cs**. Il `Delegate` riferimento alla proprietà a `ItemViewController` è stato creato in modo specifico per poter chiamare `SaveTask` e `DeleteTask` , che chiude questa visualizzazione come parte dell'operazione:
 
 ```csharp
 SaveButton.TouchUpInside += (sender, e) => {
@@ -307,7 +307,7 @@ SaveButton.TouchUpInside += (sender, e) => {
 DeleteButton.TouchUpInside += (sender, e) => Delegate.DeleteTask(currentTask);
 ```
 
-L'ultima parte rimanente delle funzionalità da compilare è la creazione di nuove attività. In **ItemViewController.cs** aggiungere un metodo che crei nuove attività e apra la visualizzazione dettagli. Per creare un'istanza di una vista da uno storyboard, usare il metodo `InstantiateViewController` con il `Identifier` per tale visualizzazione, in questo esempio che sarà' Detail ':
+L'ultima parte rimanente delle funzionalità da compilare è la creazione di nuove attività. In **ItemViewController.cs** aggiungere un metodo che crei nuove attività e apra la visualizzazione dettagli. Per creare un'istanza di una vista da uno storyboard `InstantiateViewController` , utilizzare il metodo con l'oggetto `Identifier` per tale visualizzazione. in questo esempio sarà' Detail ':
 
 ```csharp
 public void CreateTask () 
@@ -324,7 +324,7 @@ public void CreateTask ()
     }
 ```
 
-Infine, collegare il pulsante della barra di spostamento nel metodo `ViewDidLoad` di **ItemViewController.cs**per chiamarlo:
+Infine, collegare il pulsante della barra di spostamento nel metodo **ItemViewController.cs**di ItemViewController.cs `ViewDidLoad` per chiamarlo:
 
 ```csharp
 AddButton.Clicked += (sender, e) => CreateTask ();
@@ -332,14 +332,14 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Questa operazione completa l'esempio Storyboard. l'app completata avrà un aspetto simile al seguente:
 
-[app![completata](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
+[![App completata](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 Nell'esempio viene illustrato quanto segue:
 
 - Creazione di una tabella con contenuto del prototipo in cui le celle vengono definite per riutilizzare per visualizzare elenchi di dati. 
 - Creazione di una tabella con contenuto statico per compilare un modulo di input. Inclusa la modifica dello stile della tabella e l'aggiunta di sezioni, celle e controlli dell'interfaccia utente. 
-- Come creare una segue ed eseguire l'override del metodo `PrepareForSegue` per notificare la visualizzazione di destinazione di tutti i parametri richiesti. 
-- Caricamento delle visualizzazioni Storyboard direttamente con il metodo `Storyboard.InstantiateViewController`.
+- Come creare un segue ed eseguire l'override del `PrepareForSegue` metodo per inviare una notifica alla visualizzazione di destinazione di tutti i parametri richiesti. 
+- Caricamento delle visualizzazioni Storyboard direttamente con il `Storyboard.InstantiateViewController` metodo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
