@@ -1,37 +1,37 @@
 ---
-title: Uso delle barre di spostamento di tvOS in Xamarin
-description: Questo documento descrive come usare le barre di navigazione in un'app tvOS compilata con Xamarin. Viene illustrata la configurazione delle barre di spostamento in uno storyboard e la risposta agli eventi da questi pulsanti.
+title: Uso delle barre di spostamento di tvOS in Novell
+description: Questo documento descrive come usare le barre di navigazione in un'app tvOS compilata con Novell. Viene illustrata la configurazione delle barre di spostamento in uno storyboard e la risposta agli eventi da questi pulsanti.
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030473"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572377"
 ---
-# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Xamarin
+# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Novell
 
 È possibile aggiungere barre di spostamento nella parte superiore delle visualizzazioni per visualizzare un titolo e i pulsanti della barra di navigazione facoltativa. Vengono in genere usati quando l'utente si è spostato da una pagina principale, ad esempio una visualizzazione tabella, una raccolta o un menu a una vista secondario che mostra i dettagli dell'elemento selezionato.
 
 [![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
 
-Oltre al titolo (visualizzato al centro), le barre di navigazione possono contenere uno o più pulsanti della barra di spostamento (`UIBarButtonItem`) sui lati sinistro e destro della barra.
+Oltre al titolo (visualizzato al centro), le barre di navigazione possono contenere uno o più pulsanti della barra di spostamento ( `UIBarButtonItem` ) sui lati sinistro e destro della barra.
 
 > [!IMPORTANT]
 > Per impostazione predefinita, le barre di navigazione sono completamente trasparenti. È necessario prestare attenzione per garantire che il contenuto della barra di spostamento rimanga leggibile sul contenuto sottostante. Ad esempio, quando il contenuto in una vista tabella o in una raccolta scorre sotto di esso.
 
-<a name="Navigation-Bars-and-Storyboards" />
+<a name="Navigation-Bars-and-Storyboards"></a>
 
 ## <a name="navigation-bars-and-storyboards"></a>Barre di spostamento e storyboard
 
-Il modo più semplice per usare le barre di navigazione in un'app Xamarin.tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
+Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
@@ -48,7 +48,7 @@ Il modo più semplice per usare le barre di navigazione in un'app Xamarin.tvOS c
     [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. Salvare le modifiche.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Nella **Esplora soluzioni**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
@@ -68,9 +68,9 @@ Il modo più semplice per usare le barre di navigazione in un'app Xamarin.tvOS c
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta gli eventi di tocco. È consigliabile usare sempre l'evento `Primary Action` durante la creazione di gestori eventi per gli elementi dell'interfaccia utente tvOS.
+> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, questo non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta eventi di tocco. È consigliabile usare sempre l' `Primary Action` evento quando si creano gestori eventi per gli elementi dell'interfaccia utente tvOS.
 
-Il codice seguente fornisce un esempio di gestori di eventi in tre diversi BarButtonItems: `ShowFirstHotel`, `ShowSecondHotel`e `ShowThirdHotel`. Quando si fa clic su ogni elemento, l'immagine di sfondo `HotelImage` viene modificata. Questa operazione viene modificata nel file view controller (esempio `ViewController.cs`):
+Il codice seguente fornisce un esempio di gestori di eventi in tre BarButtonItems diversi: `ShowFirstHotel` , `ShowSecondHotel` e `ShowThirdHotel` . Quando si fa clic su ogni elemento, l'immagine di sfondo `HotelImage` viene modificata. Questa operazione viene modificata nel file view controller (esempio `ViewController.cs` ):
 
 ```csharp
 using System;
@@ -121,15 +121,15 @@ namespace MySingleView
 }
 ```
 
-Fino a quando la proprietà `Enabled` di un pulsante è `true` e non è coperta da un altro controllo o visualizzazione, è possibile impostarla utilizzando Siri remote.
+Fino a quando la proprietà di un pulsante `Enabled` è `true` e non è coperta da un altro controllo o visualizzazione, è possibile fare in modo che l'elemento attivo usi Siri remote.
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-Questo articolo ha spiegato come progettare e usare le barre di navigazione all'interno di un'app Xamarin.tvOS.
+Questo articolo ha spiegato come progettare e usare le barre di navigazione all'interno di un'app Novell. tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

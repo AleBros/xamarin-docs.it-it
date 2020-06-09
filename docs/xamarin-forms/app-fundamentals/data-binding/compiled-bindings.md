@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBinding compilati
-description: Questo articolo illustra come usare le associazioni compilate per migliorare le prestazioni di data binding nelle Xamarin.Forms applicazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139751"
+title: " Xamarin.Forms Binding compilati" Descrizione: "in questo articolo viene illustrato come utilizzare i binding compilati per migliorare le prestazioni di data binding nelle Xamarin.Forms applicazioni".
+ms. prod: Novell MS. AssetID: ABE6B7F7-875E-4402-A1D2-845CE374402B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/18/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsBinding compilati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -73,7 +59,7 @@ La pagina del **selettore colori compilati** illustra l'uso di associazioni comp
 </ContentPage>
 ```
 
-La radice [`StackLayout`](xref:Xamarin.Forms.StackLayout) Crea un'istanza di `HslColorViewModel` e inizializza la `Color` proprietà nei tag dell'elemento Property per la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) Proprietà. Questa radice `StackLayout` definisce anche l' `x:DataType` attributo come tipo ViewModel, a indicare che verranno compilate tutte le espressioni di associazione nella `StackLayout` gerarchia della visualizzazione radice. Questa operazione può essere verificata modificando una delle espressioni di associazione da associare a una proprietà ViewModel inesistente, causando un errore di compilazione. Questo esempio imposta l' `x:DataType` attributo su un valore letterale stringa, ma può anche essere impostato su un tipo con l' `x:Type` estensione di markup. Per ulteriori informazioni sull' `x:Type` estensione di markup, vedere [X:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+La radice [`StackLayout`](xref:Xamarin.Forms.StackLayout) Crea un'istanza di `HslColorViewModel` e inizializza la `Color` proprietà nei tag dell'elemento Property per la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) Proprietà. Questa radice `StackLayout` definisce anche l' `x:DataType` attributo come tipo ViewModel, a indicare che verranno compilate tutte le espressioni di associazione nella `StackLayout` gerarchia della visualizzazione radice. Questa operazione può essere verificata modificando una delle espressioni di associazione da associare a una proprietà ViewModel inesistente, causando un errore di compilazione. Questo esempio imposta l' `x:DataType` attributo su un valore letterale stringa, ma può anche essere impostato su un tipo con l' `x:Type` estensione di markup. Per ulteriori informazioni sull' `x:Type` estensione di markup, vedere [X:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension).
 
 > [!IMPORTANT]
 > L'attributo `x:DataType` può essere ridefinito in qualsiasi posizione di una gerarchia di visualizzazione.
@@ -127,7 +113,7 @@ La pagina **Compiled Color List** (Elenco colori compilato) visualizza come usar
 
 La [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) proprietà viene impostata sulla proprietà statica `NamedColor.All` . La `NamedColor` classe usa la reflection .NET per enumerare tutti i campi pubblici statici nella [`Color`](xref:Xamarin.Forms.Color) struttura e per archiviarli con i relativi nomi in una raccolta accessibile dalla `All` proprietà statica. Di conseguenza l'elemento `ListView` viene riempito con tutte le istanze `NamedColor`. Per ogni elemento in `ListView` il contesto di binding per l'elemento è impostato su un oggetto `NamedColor`. Gli [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementi e in [`ViewCell`](xref:Xamarin.Forms.ViewCell) sono associati alle `NamedColor` Proprietà.
 
-Si noti che [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definisce l' `x:DataType` attributo come `NamedColor` tipo, a indicare che tutte le espressioni di associazione nella `DataTemplate` gerarchia di visualizzazione verranno compilate. È possibile verificare questa impostazione modificando le espressioni di binding per impostare il binding a una proprietà `NamedColor` inesistente, che produrrà un errore di compilazione.  Questo esempio imposta l' `x:DataType` attributo su un valore letterale stringa, ma può anche essere impostato su un tipo con l' `x:Type` estensione di markup. Per ulteriori informazioni sull' `x:Type` estensione di markup, vedere [X:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+Si noti che [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definisce l' `x:DataType` attributo come `NamedColor` tipo, a indicare che tutte le espressioni di associazione nella `DataTemplate` gerarchia di visualizzazione verranno compilate. È possibile verificare questa impostazione modificando le espressioni di binding per impostare il binding a una proprietà `NamedColor` inesistente, che produrrà un errore di compilazione.  Questo esempio imposta l' `x:DataType` attributo su un valore letterale stringa, ma può anche essere impostato su un tipo con l' `x:Type` estensione di markup. Per ulteriori informazioni sull' `x:Type` estensione di markup, vedere [X:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension).
 
 Quando l'applicazione viene eseguita per la prima volta, [`ListView`](xref:Xamarin.Forms.ListView) viene popolata con le `NamedColor` istanze di. Quando si seleziona un elemento in `ListView` , la [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) proprietà viene impostata sul colore dell'elemento selezionato in `ListView` :
 
@@ -163,7 +149,7 @@ Un'attenta strutturazione degli attributi `x:DataType` può dare origine a una p
 
 La radice [`StackLayout`](xref:Xamarin.Forms.StackLayout) imposta l' `x:DataType` attributo come `HslColorViewModel` tipo, a indicare che qualsiasi espressione di associazione nella gerarchia della `StackLayout` visualizzazione radice verrà compilata. Tuttavia l'elemento `StackLayout` interno ridefinisce l'attributo `x:DataType` come `null` con l'espressione di markup `x:Null`. Di conseguenza le espressioni di binding nell'elemento `StackLayout` interno usano i binding classici. Solo all' [`BoxView`](xref:Xamarin.Forms.BoxView) interno della gerarchia di `StackLayout` visualizzazione radice utilizza associazioni compilate.
 
-Per altre informazioni sull'espressione di markup `x:Null`, vedere [Estensione di markup x:Null](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
+Per altre informazioni sull'espressione di markup `x:Null`, vedere [Estensione di markup x:Null](~/xamarin-forms/xaml/markup-extensions/consuming.md#xnull-markup-extension).
 
 ## <a name="performance"></a>Prestazioni
 

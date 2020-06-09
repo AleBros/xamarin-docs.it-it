@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 2d56af364d63ff78bafbdd7d8043ae4d75d97959
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: ae08d7d2d8d9de700570311f2294df737240b73f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304653"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572156"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Novell. iOS in background
 
@@ -31,11 +31,11 @@ iOS fornisce due API in grado di riconoscere la posizione con funzionalità in b
 1. Il *monitoraggio dell'area* è il processo di configurazione delle aree con limiti e la riattivazione del dispositivo quando l'utente immette o esce da un'area. Le aree sono circolari e possono avere dimensioni variabili. Quando l'utente supera il limite di un'area, il dispositivo viene riattivato per gestire l'evento, in genere inviando una notifica o avviando un'attività. Il monitoraggio dell'area richiede il GPS e aumenta la batteria e l'utilizzo dei dati.
 1. Il *servizio di modifica della posizione significativa* è un'opzione più semplice e di risparmio energia disponibile per i dispositivi con radiotelefonia. Un'applicazione in ascolto di modifiche di posizione significative riceverà una notifica quando il dispositivo passa alla cella. Questo servizio può essere utilizzato per riattivare un'applicazione sospesa o terminata e offre l'opportunità di verificare la presenza di nuovi contenuti in background. L'attività in background è limitata a circa 10 secondi, a meno che non sia associata a un' [attività in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
 
-Per un'applicazione non è necessario il percorso `UIBackgroundMode` usare queste API in grado di riconoscere la posizione. Poiché iOS non tiene traccia dei tipi di attività che è possibile eseguire quando il dispositivo viene riattivato dalle modifiche nella posizione dell'utente, queste API forniscono una soluzione per l'aggiornamento del contenuto in background in iOS 6. *Tenere presente che l'attivazione degli aggiornamenti in background con le API basate sulla posizione trarrà sulle risorse del dispositivo e può confondere gli utenti che non sono in grado di comprendere il motivo per cui un'applicazione richiede l'accesso alla propria posizione*. Usare la discrezione durante l'implementazione del monitoraggio dell'area o modifiche significative per l'elaborazione in background nelle applicazioni che non usano già le API location.
+Per un'applicazione non è necessaria la posizione `UIBackgroundMode` per usare queste API in grado di riconoscere la posizione. Poiché iOS non tiene traccia dei tipi di attività che è possibile eseguire quando il dispositivo viene riattivato dalle modifiche nella posizione dell'utente, queste API forniscono una soluzione per l'aggiornamento del contenuto in background in iOS 6. *Tenere presente che l'attivazione degli aggiornamenti in background con le API basate sulla posizione trarrà sulle risorse del dispositivo e può confondere gli utenti che non sono in grado di comprendere il motivo per cui un'applicazione richiede l'accesso alla propria posizione*. Usare la discrezione durante l'implementazione del monitoraggio dell'area o modifiche significative per l'elaborazione in background nelle applicazioni che non usano già le API location.
 
 Le app che usano il monitoraggio della posizione per l'elaborazione in background espongono un difetto in iOS 6: se le esigenze di un'applicazione non rientrano in una categoria di background necessaria, sono disponibili opzioni di background limitate. Con l'introduzione di due nuove API, il *recupero in background* e le *notifiche remote*, iOS 7 (e versioni successive) offre opportunità in background per più applicazioni. Nelle due sezioni successive vengono introdotte queste nuove API.
 
-<a name="background_fetch" />
+<a name="background_fetch"></a>
 
 ## <a name="background-fetch-ios-7-and-greater"></a>Recupero in background (iOS 7 e versioni successive)
 
@@ -45,7 +45,7 @@ Per implementare il recupero in background, modificare *info. plist* e seleziona
 
  [![](updating-an-application-in-the-background-images/fetch.png "Edit the Info.plist and check the Enable Background Modes and Background Fetch check boxes")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
-Quindi, nel `AppDelegate`, eseguire l'override del metodo `FinishedLaunching` per impostare l'intervallo di recupero minimo. In questo esempio si consente al sistema operativo di decidere con quale frequenza recuperare nuovo contenuto:
+Successivamente, in `AppDelegate` eseguire l'override del `FinishedLaunching` metodo per impostare l'intervallo di recupero minimo. In questo esempio si consente al sistema operativo di decidere con quale frequenza recuperare nuovo contenuto:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -55,7 +55,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Infine, eseguire il recupero eseguendo l'override del metodo `PerformFetch` nel `AppDelegate`e passando un *gestore di completamento*. Il gestore di completamento è un delegato che accetta un `UIBackgroundFetchResult`:
+Infine, eseguire il recupero eseguendo l'override del `PerformFetch` metodo in `AppDelegate` e passando un *gestore di completamento*. Il gestore di completamento è un delegato che accetta `UIBackgroundFetchResult` :
 
 ```csharp
 public override void PerformFetch (UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
@@ -70,32 +70,32 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 
 Al termine dell'aggiornamento del contenuto, il sistema operativo viene chiamato chiamando il gestore di completamento con lo stato appropriato. iOS offre tre opzioni per lo stato del gestore di completamento:
 
-1. `UIBackgroundFetchResult.NewData`: viene chiamato quando viene recuperato nuovo contenuto e l'applicazione è stata aggiornata.
-1. `UIBackgroundFetchResult.NoData`: viene chiamato quando l'operazione di recupero per il nuovo contenuto è stata eseguita, ma non è disponibile alcun contenuto.
-1. `UIBackgroundFetchResult.Failed`: utile per la gestione degli errori, questo metodo viene chiamato quando il recupero non è stato in grado di passare.
+1. `UIBackgroundFetchResult.NewData`: Viene chiamato quando viene recuperato nuovo contenuto e l'applicazione è stata aggiornata.
+1. `UIBackgroundFetchResult.NoData`: Viene chiamato quando l'operazione di recupero per il nuovo contenuto è stata eseguita, ma non è disponibile alcun contenuto.
+1. `UIBackgroundFetchResult.Failed`-Utile per la gestione degli errori, questo metodo viene chiamato quando il recupero non è riuscito a passare attraverso.
 
 Le applicazioni che usano il recupero in background possono effettuare chiamate per aggiornare l'interfaccia utente in background. Quando l'utente apre l'app, l'interfaccia utente sarà aggiornata e visualizzerà il nuovo contenuto. Questa operazione aggiornerà anche lo snapshot dello strumento di selezione delle app dell'applicazione, in modo che l'utente possa vedere quando l'applicazione ha nuovo contenuto.
 
 > [!IMPORTANT]
-> Una volta chiamato `PerformFetch`, l'applicazione ha circa 30 secondi per avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento. Se questa operazione richiede troppo tempo, l'app verrà terminata. Si consiglia di utilizzare il recupero in background con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di
+> Una volta `PerformFetch` chiamato, l'applicazione ha circa 30 secondi per avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento. Se questa operazione richiede troppo tempo, l'app verrà terminata. Si consiglia di utilizzare il recupero in background con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
 
-Nel codice di esempio precedente si consente al sistema operativo di decidere con quale frequenza recuperare nuovo contenuto impostando l'intervallo di recupero minimo su `BackgroundFetchIntervalMinimum`. iOS offre tre opzioni per l'intervallo di recupero:
+Nel codice di esempio precedente si consente al sistema operativo di decidere con quale frequenza recuperare il nuovo contenuto impostando l'intervallo di recupero minimo su `BackgroundFetchIntervalMinimum` . iOS offre tre opzioni per l'intervallo di recupero:
 
-1. `BackgroundFetchIntervalNever`: indicare al sistema di non recuperare mai nuovi contenuti. Usare questa opzione per disattivare il recupero in determinate situazioni, ad esempio quando l'utente non è connesso. Si tratta del valore predefinito per l'intervallo di recupero. 
-1. `BackgroundFetchIntervalMinimum`: consentire al sistema di decidere la frequenza di recupero in base ai modelli utente, alla durata della batteria, all'utilizzo dei dati e alle esigenze di altre applicazioni.
-1. `BackgroundFetchIntervalCustom`: se si conosce la frequenza con cui viene aggiornato il contenuto di un'applicazione, è possibile specificare un intervallo di "sospensione" dopo ogni operazione di recupero, durante la quale all'applicazione verrà impedito di recuperare nuovo contenuto. Una volta che l'intervallo è attivo, il sistema determinerà quando recuperare il contenuto.
+1. `BackgroundFetchIntervalNever`-Indicare al sistema di non recuperare mai nuovi contenuti. Usare questa opzione per disattivare il recupero in determinate situazioni, ad esempio quando l'utente non è connesso. Si tratta del valore predefinito per l'intervallo di recupero. 
+1. `BackgroundFetchIntervalMinimum`-Consentire al sistema di decidere la frequenza di recupero in base ai modelli utente, alla durata della batteria, all'utilizzo dei dati e alle esigenze di altre applicazioni.
+1. `BackgroundFetchIntervalCustom`-Se si conosce la frequenza con cui viene aggiornato il contenuto di un'applicazione, è possibile specificare un intervallo di "sospensione" dopo ogni operazione di recupero, durante la quale all'applicazione verrà impedito di recuperare nuovo contenuto. Una volta che l'intervallo è attivo, il sistema determinerà quando recuperare il contenuto.
 
 Sia `BackgroundFetchIntervalMinimum` che `BackgroundFetchIntervalCustom` si basano sul sistema per pianificare i recuperi. Questo intervallo è dinamico, adattando le esigenze del dispositivo e le abitudini dei singoli utenti. Se, ad esempio, un utente controlla un'applicazione ogni mattina e un altro controllo ogni ora, iOS garantisce che il contenuto sia aggiornato per entrambi gli utenti ogni volta che aprono l'applicazione.
 
 Il recupero in background deve essere usato per le applicazioni che vengono aggiornate di frequente con contenuto non critico. Per le applicazioni con aggiornamenti critici, è necessario usare le notifiche remote. Le notifiche remote sono basate sul recupero in background e condividono lo stesso gestore di completamento. Verranno illustrate le notifiche remote successive.
 
- <a name="remote_notifications" />
+ <a name="remote_notifications"></a>
 
 ## <a name="remote-notifications-ios-7-and-greater"></a>Notifiche remote (iOS 7 e versioni successive)
 
-Le notifiche push sono messaggi JSON inviati da un provider a un dispositivo tramite il *servizio di notifica push di Apple (APNS)* .
+Le notifiche push sono messaggi JSON inviati da un provider a un dispositivo tramite il *servizio di notifica push di Apple (APNS)*.
 
 In iOS 6 le notifiche push in ingresso indicano al sistema di avvisare l'utente che si è verificato un evento interessante in un'applicazione. Facendo clic sulla notifica si estrae l'applicazione dallo stato sospeso o terminato e l'app inizierà ad aggiornare il contenuto. iOS 7 (e versioni successive) estende le notifiche push ordinarie consentendo alle applicazioni di aggiornare il contenuto in background *prima* di inviare una notifica all'utente, in modo che l'utente possa aprire l'applicazione e presentare immediatamente il nuovo contenuto.
 
@@ -103,7 +103,7 @@ Per implementare le notifiche remote, modificare *info. plist* e selezionare le 
 
  [![](updating-an-application-in-the-background-images/remote.png "Background Mode set to Enable Background Modes and Remote notifications")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
-Impostare quindi il flag di `content-available` sulla notifica push stessa su 1. Ciò consente all'applicazione di recuperare nuovo contenuto prima di visualizzare l'avviso:
+Impostare quindi il `content-available` flag sulla notifica push stessa su 1. Ciò consente all'applicazione di recuperare nuovo contenuto prima di visualizzare l'avviso:
 
 ```csharp
 'aps' {
@@ -112,7 +112,7 @@ Impostare quindi il flag di `content-available` sulla notifica push stessa su 1.
 }
 ```
 
-In *AppDelegate*eseguire l'override del metodo `DidReceiveRemoteNotification` per verificare il contenuto disponibile nel payload delle notifiche e chiamare il blocco del gestore di completamento appropriato:
+In *AppDelegate*eseguire l'override del `DidReceiveRemoteNotification` metodo per verificare il contenuto disponibile nel payload delle notifiche e chiamare il blocco del gestore di completamento appropriato:
 
 ```csharp
 public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)

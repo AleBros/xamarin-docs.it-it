@@ -1,34 +1,18 @@
 ---
-title: ''
-description: Questo articolo illustra come impostare un aspetto specifico di iOS senza usare un Xamarin.Forms renderer personalizzato.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eb44b7d756fee4fa4f452b79292effb45ab98154
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138515"
+title: "aggiunta della formattazione specifica di iOS" Descrizione: "in questo articolo viene illustrato come impostare un aspetto specifico di iOS senza utilizzare un Xamarin.Forms renderer personalizzato".
+ms. prod: Novell MS. AssetID: CE50E207-D092-4D88-8439-1B51F178E7ED ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/29/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-ios-specific-formatting"></a>Aggiunta della formattazione specifica di iOS
 
 Un modo per impostare la formattazione specifica di iOS consiste nel creare un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) per un controllo e impostare stili e colori specifici della piattaforma per ogni piattaforma.
 
 Altre opzioni per controllare il modo in cui l' Xamarin.Forms aspetto dell'app iOS includono:
 
-- Configurazione delle opzioni di visualizzazione in [ **info. plist**](#info-plist)
-- Impostazione degli stili dei controlli tramite l' [ `UIAppearance` API](#uiappearance)
+- Configurazione delle opzioni di visualizzazione in [ **info. plist**](#customizing-infoplist)
+- Impostazione degli stili dei controlli tramite l' [ `UIAppearance` API](#uiappearance-api)
 
 Queste alternative sono illustrate di seguito.
-
-<a name="info-plist"/>
 
 ## <a name="customizing-infoplist"></a>Personalizzazione di info. plist
 
@@ -62,8 +46,6 @@ in alternativa, modificare direttamente il file **info. plist** corrispondente i
 Ora, quando si esegue l'app, la barra di spostamento è verde e il testo è bianco (a causa della Xamarin.Forms formattazione) *e* anche il testo della barra di stato è bianco grazie alla configurazione specifica di iOS:
 
 ![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
 
 ## <a name="uiappearance-api"></a>API UIAppearance
 

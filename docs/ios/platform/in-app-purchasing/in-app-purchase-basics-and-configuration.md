@@ -1,20 +1,20 @@
 ---
-title: Nozioni di base e configurazione di acquisto in-app in Xamarin.iOS
-description: Questo documento descrive gli acquisti in-app in Xamarin.iOS, illustrando le informazioni rilevanti su regole, configurazione e iTunes Connect.
+title: Nozioni di base e configurazione di acquisto in-app in Novell. iOS
+description: Questo documento descrive gli acquisti in-app in Novell. iOS, illustrando le informazioni rilevanti su regole, configurazione e iTunes Connect.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 786afa6967731fb1bd508fa3c835b980639eb282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 45b7c1081571b52bb8760b4207e3a05a4ffa77ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032375"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572312"
 ---
-# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Xamarin.iOS
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Novell. iOS
 
 Per implementare gli acquisti in-app, è necessario che l'applicazione utilizzi l'API StoreKit sul dispositivo. StoreKit gestisce tutte le comunicazioni con i server iTunes di Apple per ottenere informazioni sui prodotti ed eseguire transazioni. Il profilo di provisioning deve essere configurato per l'acquisto in-app e le informazioni sul prodotto devono essere immesse in iTunes Connect.
 
@@ -79,10 +79,10 @@ Immettere un valore appropriato per la *Descrizione*, in modo da poter identific
 
 #### <a name="bundle-identifierapp-id-suffix-format"></a>Formato identificatore bundle/suffisso ID app
 
-È possibile usare qualsiasi stringa per l'identificatore del **bundle** (purché sia univoco nell'account). Tuttavia, Apple consiglia di seguire il formato DNS inverso anziché usare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo usa com. Xamarin.storekit. testing per l'identificatore del bundle, ma sarebbe ugualmente valido usare un identificatore come my_store_example (anche se Apple non lo consiglia).
+È possibile usare qualsiasi stringa per l'identificatore del **bundle** (purché sia univoco nell'account). Tuttavia, Apple consiglia di seguire il formato DNS inverso anziché usare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo usa com. Novell. storekit. testing per l'identificatore del bundle, ma sarebbe ugualmente valido usare un identificatore come my_store_example (anche se Apple non lo consiglia).
 
 > [!IMPORTANT]
-> Apple consente inoltre di aggiungere un asterisco jolly alla fine di un **identificatore del bundle** , in modo da poter usare un singolo ID app per più applicazioni, ma _non è possibile usare gli ID app con caratteri jolly per AppPurchase_. Un esempio di identificatore di bundle con carta jolly potrebbe essere com. Xamarin.*
+> Apple consente inoltre di aggiungere un asterisco jolly alla fine di un **identificatore del bundle** , in modo da poter usare un singolo ID app per più applicazioni, ma _non è possibile usare gli ID app con caratteri jolly per AppPurchase_. Un esempio di identificatore di bundle con carta jolly potrebbe essere com. Novell. *
 
 #### <a name="enabling-app-services"></a>Abilitazione dei servizi app
 
@@ -130,7 +130,7 @@ com.xamarin.storekit.testing.sepia
 com.xamarin.storekit.testing.greyscale
 ```
 
-Questa convenzione di denominazione non viene applicata, semplicemente una raccomandazione che consente di gestire i prodotti. Inoltre, nonostante la stessa convenzione DNS inversa, gli identificatori di prodotto *non sono correlati* all'identificatore del bundle e non devono iniziare con la stessa stringa. Sarebbe comunque valido usare gli identificatori come photo_product_greyscale (anche se Apple non lo consiglia).
+Questa convenzione di denominazione non viene applicata, semplicemente una raccomandazione che consente di gestire i prodotti. Inoltre, nonostante la stessa convenzione DNS inversa, gli identificatori di prodotto *non sono correlati* all'identificatore del bundle e non devono iniziare con la stessa stringa. Sarà comunque possibile usare gli identificatori come photo_product_greyscale (anche se Apple non lo consiglia).
 
 L'ID prodotto non viene visualizzato agli utenti, ma viene usato per fare riferimento al prodotto nel codice dell'applicazione.
 
@@ -146,7 +146,7 @@ Sono disponibili cinque tipi di prodotto di acquisto in-app che è possibile off
 
  *Questo documento include attualmente solo i primi due tipi di prodotto (utilizzabili e non utilizzabili).*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### <a name="price-tiers"></a>Piani tariffari
 
@@ -156,7 +156,7 @@ Apple fornisce una tabella dei prezzi che consente di selezionare il livello cor
 
  [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-Al momento della stesura (giugno 2013) sono presenti 87 livelli da 0,99 a USD 999,99. La matrice dei prezzi Mostra il prezzo che i clienti pagheranno e anche la quantità ricevuta da Apple. si tratta di un costo inferiore al 30% e di eventuali imposte locali che devono essere raccolti (si noti che nell'esempio i venditori statunitensi e canadesi ricevono 70C per un 99C p) Product, mentre i venditori australiani ricevono solo 63C a causa delle imposte di "merci &amp; servizi" addebitate al prezzo di vendita).
+Al momento della stesura (giugno 2013) sono presenti 87 livelli da 0,99 a USD 999,99. La matrice dei prezzi Mostra il prezzo che i clienti pagheranno e anche la quantità ricevuta da Apple. si tratta di un costo inferiore al 30% e di eventuali imposte locali che devono essere raccolti (si noti nell'esempio che i venditori statunitensi e canadesi ricevono 70C per un prodotto 99c, mentre i venditori australiani ricevono solo 63C a causa delle imposte &amp; sui servizi di vendita).
 
 I prezzi del prodotto possono essere aggiornati in qualsiasi momento, incluse le modifiche dei prezzi pianificate che hanno effetto su una data futura. Questo screenshot mostra come viene aggiunta una modifica del prezzo con data successiva: il prezzo viene temporaneamente modificato dal livello 1 al livello 3 solo per il mese di settembre:
 

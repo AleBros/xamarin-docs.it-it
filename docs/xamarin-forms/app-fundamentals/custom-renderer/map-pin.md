@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 30fcc8304d32d8ebdef38df8550bcd8c26514701
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135330"
+title: "personalizzazione di un PIN della mappa" Descrizione: "in questo articolo viene illustrato come creare un renderer personalizzato per il controllo mappa, che visualizza una mappa nativa con un PIN personalizzato e una visualizzazione personalizzata dei dati del PIN in ogni piattaforma".
+ms. prod: Novell MS. AssetID: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un segnaposto per la mappa
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
@@ -31,16 +17,14 @@ Il diagramma seguente illustra la relazione tra [`Map`](xref:Xamarin.Forms.Maps.
 
 Il processo di rendering può essere utilizzato per implementare personalizzazioni specifiche della piattaforma creando un renderer personalizzato per un [`Map`](xref:Xamarin.Forms.Maps.Map) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Custom_Map) una Xamarin.Forms mappa personalizzata.
-1. [Utilizzare](#Consuming_the_Custom_Map) la mappa personalizzata da Xamarin.Forms .
-1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per la mappa in ogni piattaforma.
+1. [Creare](#creating-the-custom-map) una Xamarin.Forms mappa personalizzata.
+1. [Utilizzare](#consuming-the-custom-map) la mappa personalizzata da Xamarin.Forms .
+1. [Creare](#creating-the-custom-renderer-on-each-platform) il renderer personalizzato per la mappa in ogni piattaforma.
 
 Verrà descritto ogni elemento per implementare un renderer `CustomMap` che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)deve essere inizializzata e configurata prima dell'utilizzo. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
-
-<a name="Creating_the_Custom_Map" />
 
 ## <a name="creating-the-custom-map"></a>Creazione della mappa personalizzata
 
@@ -64,8 +48,6 @@ public class CustomPin : Pin
 ```
 
 Questa classe definisce un oggetto `CustomPin` come che eredita le proprietà della [`Pin`](xref:Xamarin.Forms.Maps.Pin) classe e aggiunge le `Name` `Url` proprietà e.
-
-<a name="Consuming_the_Custom_Map" />
 
 ## <a name="consuming-the-custom-map"></a>Utilizzo della mappa personalizzata
 
@@ -125,8 +107,6 @@ public MapPage()
 Questa inizializzazione aggiunge un PIN personalizzato e posiziona la visualizzazione della mappa con il [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) metodo, che modifica la posizione e il livello di zoom della mappa creando un oggetto [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) da un oggetto [`Position`](xref:Xamarin.Forms.Maps.Position) e un oggetto [`Distance`](xref:Xamarin.Forms.Maps.Distance) .
 
 Un renderer personalizzato può essere ora aggiunto a ogni progetto di applicazione per personalizzare i controlli mappa nativa.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creazione del renderer personalizzato in ogni piattaforma
 
@@ -231,10 +211,8 @@ namespace CustomRenderer.iOS
 
 Il `OnElementChanged` metodo esegue la configurazione seguente dell' [`MKMapView`](xref:MapKit.MKMapView) istanza di, purché il renderer personalizzato sia collegato a un nuovo Xamarin.Forms elemento:
 
-- La [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) proprietà è impostata sul `GetViewForAnnotation` metodo. Questo metodo viene chiamato quando la [posizione dell'annotazione diventa visibile nella mappa](#Displaying_the_Annotation) e viene usato per personalizzare l'annotazione prima della visualizzazione.
-- I gestori per gli eventi `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` e `DidDeselectAnnotationView` sono registrati. Questi eventi vengono attivati quando l'utente [tocca l'accessorio destro nel callout](#Tapping_on_the_Right_Callout_Accessory_View) e quando l'utente [seleziona](#Selecting_the_Annotation) e [deseleziona](#Deselecting_the_Annotation) l'annotazione. Gli eventi sono annullati solo quando viene modificato l'elemento a cui il renderer è associato.
-
-<a name="Displaying_the_Annotation" />
+- La [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) proprietà è impostata sul `GetViewForAnnotation` metodo. Questo metodo viene chiamato quando la [posizione dell'annotazione diventa visibile nella mappa](#displaying-the-annotation) e viene usato per personalizzare l'annotazione prima della visualizzazione.
+- I gestori per gli eventi `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` e `DidDeselectAnnotationView` sono registrati. Questi eventi vengono attivati quando l'utente [tocca l'accessorio destro nel callout](#tapping-on-the-right-callout-accessory-view) e quando l'utente [seleziona](#selecting-the-annotation) e [deseleziona](#deselecting-the-annotation) l'annotazione. Gli eventi sono annullati solo quando viene modificato l'elemento a cui il renderer è associato.
 
 #### <a name="displaying-the-annotation"></a>Visualizzazione dell'annotazione
 
@@ -285,12 +263,10 @@ Questo metodo assicura che l'annotazione venga visualizzata come immagine person
     - La proprietà `CustomMKAnnotationView.CalloutOffset` è impostata su `CGPoint` che specifica che il callout verrà centrato sopra l'annotazione.
     - La proprietà `CustomMKAnnotationView.LeftCalloutAccessoryView` è impostata su un'immagine di una chiave inglese che verrà visualizzata a sinistra del titolo dell'annotazione e dell'indirizzo.
     - La proprietà `CustomMKAnnotationView.RightCalloutAccessoryView` è impostata su un pulsante *Informazioni* che verrà visualizzato a destra del titolo dell'annotazione e dell'indirizzo.
-    - La proprietà `CustomMKAnnotationView.Name` è impostata sulla proprietà `CustomPin.Name` restituita dal metodo `GetCustomPin`. Ciò consente l'identificazione dell'annotazione in modo che sia possibile [personalizzare ulteriormente il relativo callout](#Selecting_the_Annotation), se necessario.
-    - La proprietà `CustomMKAnnotationView.Url` è impostata sulla proprietà `CustomPin.Url` restituita dal metodo `GetCustomPin`. L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione accessorio callout destra](#Tapping_on_the_Right_Callout_Accessory_View).
+    - La proprietà `CustomMKAnnotationView.Name` è impostata sulla proprietà `CustomPin.Name` restituita dal metodo `GetCustomPin`. Ciò consente l'identificazione dell'annotazione in modo che sia possibile [personalizzare ulteriormente il relativo callout](#selecting-the-annotation), se necessario.
+    - La proprietà `CustomMKAnnotationView.Url` è impostata sulla proprietà `CustomPin.Url` restituita dal metodo `GetCustomPin`. L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione accessorio callout destra](#tapping-on-the-right-callout-accessory-view).
 1. La [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) proprietà è impostata su in `true` modo che il callout venga visualizzato quando viene toccata l'annotazione.
 1. L'annotazione viene restituita per la visualizzazione nella mappa.
-
-<a name="Selecting_the_Annotation" />
 
 #### <a name="selecting-the-annotation"></a>Selezione dell'annotazione
 
@@ -316,8 +292,6 @@ void OnDidSelectAnnotationView(object sender, MKAnnotationViewEventArgs e)
 
 Questo metodo estende il callout esistente (contenente le visualizzazioni accessorio destra e sinistra) aggiungendo un'istanza `UIView` che contiene un'immagine del logo Xamarin, a condizione che la proprietà `Name` dell'annotazione selezionata sia impostata su `Xamarin`. Ciò rende possibili scenari in cui vengono visualizzati callout diversi per le diverse annotazioni. L'istanza `UIView` verrà visualizzata al centro sopra il callout esistente.
 
-<a name="Tapping_on_the_Right_Callout_Accessory_View" />
-
 #### <a name="tapping-on-the-right-callout-accessory-view"></a>Tocco sulla visualizzazione accessorio callout destra
 
 Quando l'utente tocca il pulsante *Informazioni* nella visualizzazione accessorio callout destra, viene attivato l'evento `CalloutAccessoryControlTapped` che a sua volta esegue il metodo `OnCalloutAccessoryControlTapped`:
@@ -334,8 +308,6 @@ void OnCalloutAccessoryControlTapped(object sender, MKMapViewAccessoryTappedEven
 ```
 
 Questo metodo apre un Web browser e passa all'indirizzo memorizzato nella proprietà `CustomMKAnnotationView.Url`. Si noti che l'indirizzo è stato definito durante la creazione della raccolta `CustomPin` nel progetto della libreria .NET Standard.
-
-<a name="Deselecting_the_Annotation" />
 
 #### <a name="deselecting-the-annotation"></a>Deselezione dell'annotazione
 
@@ -407,9 +379,9 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Se il renderer personalizzato è associato a un nuovo Xamarin.Forms elemento, il `OnElementChanged` metodo recupera l'elenco dei pin personalizzati dal controllo. Quando l'istanza `GoogleMap` è disponibile, viene richiamato l'override `OnMapReady`. Questo metodo registra un gestore per l'evento `InfoWindowClick` che viene attivato quando [viene fatto clic sulla finestra informazioni](#Clicking_on_the_Info_Window) e viene annullato solo quando viene modificato l'elemento a cui è associato il renderer. L'override `OnMapReady` chiama anche il metodo `SetInfoWindowAdapter` per specificare che l'istanza della classe `CustomMapRenderer` offrirà i metodi per personalizzare la finestra informazioni.
+Se il renderer personalizzato è associato a un nuovo Xamarin.Forms elemento, il `OnElementChanged` metodo recupera l'elenco dei pin personalizzati dal controllo. Quando l'istanza `GoogleMap` è disponibile, viene richiamato l'override `OnMapReady`. Questo metodo registra un gestore per l'evento `InfoWindowClick` che viene attivato quando [viene fatto clic sulla finestra informazioni](#clicking-on-the-info-window) e viene annullato solo quando viene modificato l'elemento a cui è associato il renderer. L'override `OnMapReady` chiama anche il metodo `SetInfoWindowAdapter` per specificare che l'istanza della classe `CustomMapRenderer` offrirà i metodi per personalizzare la finestra informazioni.
 
-La classe `CustomMapRenderer` implementa l'interfaccia `GoogleMap.IInfoWindowAdapter` per [personalizzare la finestra informazioni](#Customizing_the_Info_Window). Questa interfaccia consente di specificare l'implementazione dei metodi seguenti:
+La classe `CustomMapRenderer` implementa l'interfaccia `GoogleMap.IInfoWindowAdapter` per [personalizzare la finestra informazioni](#customizing-the-info-window). Questa interfaccia consente di specificare l'implementazione dei metodi seguenti:
 
 - `public Android.Views.View GetInfoWindow(Marker marker)`: questo metodo viene chiamato per restituire una finestra informazioni personalizzata per un indicatore. Se restituisce `null`, verrà usato il rendering della finestra predefinito. Se restituisce `View`, `View` verrà inserito all'interno della finestra informazioni.
 - `public Android.Views.View GetInfoContents(Marker marker)`: questo metodo viene chiamato per restituire `View` con il contenuto della finestra informazioni e viene chiamato solo se il metodo `GetInfoWindow` restituisce `null`. Se restituisce `null`, verrà usato il rendering predefinito del contenuto della finestra informazioni.
@@ -436,8 +408,6 @@ Questo metodo crea una nuova istanza `MarkerOption` per ogni istanza `Pin`. Dopo
 
 > [!NOTE]
 > Se necessario, il metodo `GetMarkerForPin` può essere richiamato nel renderer della mappa per recuperare `Marker` da `Pin`.
-
-<a name="Customizing_the_Info_Window" />
 
 #### <a name="customizing-the-info-window"></a>Personalizzazione della finestra informazioni
 
@@ -494,8 +464,6 @@ Questo metodo restituisce `View` con il contenuto della finestra informazioni. Q
 
 > [!NOTE]
 > Una finestra informazioni non è una `View` attiva. Al contrario, Android convertirà la `View` in una bitmap statica e la visualizzerà come immagine. Ciò significa che sebbene possa rispondere a un evento clic, la finestra informazioni non può rispondere agli eventi tocco, mentre i singoli controlli della finestra informazioni non possono rispondere ai relativi eventi clic.
-
-<a name="Clicking_on_the_Info_Window" />
 
 #### <a name="clicking-on-the-info-window"></a>Clic nella finestra informazioni
 

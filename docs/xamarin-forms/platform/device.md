@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsClasse Device
-description: Questo articolo illustra come usare la Xamarin.Forms Classe Device per un controllo con granularità fine sulle funzionalità e i layout per ogni singola piattaforma.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7ee7b2f1bb9d34b0c0e8bdc4ae606d98423c64a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138593"
+title: " Xamarin.Forms Device Class" Description: "questo articolo spiega come usare la Xamarin.Forms Classe Device per un controllo con granularità fine sulle funzionalità e sui layout per ogni piattaforma".
+ms. prod: Novell MS. AssetID: 2F304AEC-8612-4833-81E5-B2F3F469B2DF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-device-class"></a>Xamarin.FormsClasse Device
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
@@ -68,7 +54,7 @@ La [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generica
 > [!IMPORTANT]
 > Se `Platform` non si specifica un valore di attributo errato nella `On` classe, non verrà generato alcun errore. Al contrario, il codice verrà eseguito senza che venga applicato il valore specifico della piattaforma.
 
-In alternativa, `OnPlatform` è possibile usare l'estensione di markup in XAML per personalizzare l'aspetto dell'interfaccia utente in base alla piattaforma. Per altre informazioni, vedere [estensione di markup onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+In alternativa, `OnPlatform` è possibile usare l'estensione di markup in XAML per personalizzare l'aspetto dell'interfaccia utente in base alla piattaforma. Per altre informazioni, vedere [estensione di markup onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 ## <a name="deviceidiom"></a>Device. Idiom
 
@@ -110,7 +96,7 @@ La [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) classe fornisce la stessa funzional
 
 La [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generica di cui è necessario creare un'istanza con un `x:TypeArguments` attributo che corrisponda al tipo di destinazione.
 
-In alternativa, `OnIdiom` è possibile usare l'estensione di markup in XAML per personalizzare l'aspetto dell'interfaccia utente in base all'idioma del dispositivo in cui è in esecuzione l'applicazione. Per altre informazioni, vedere [estensione di markup onidiom](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
+In alternativa, `OnIdiom` è possibile usare l'estensione di markup in XAML per personalizzare l'aspetto dell'interfaccia utente in base all'idioma del dispositivo in cui è in esecuzione l'applicazione. Per altre informazioni, vedere [estensione di markup onidiom](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom-markup-extension).
 
 ## <a name="deviceflowdirection"></a>Device. FlowDirection
 

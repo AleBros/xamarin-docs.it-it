@@ -1,23 +1,23 @@
 ---
-title: Accessibilità nelle app Xamarin
+title: Accessibilità nelle app Novell
 description: Questo documento fornisce diversi suggerimenti per la creazione di app accessibili. Sono inclusi, ad esempio, consigli su tipi di carattere di grandi dimensioni, contrasto elevato, interfacce autodescrittive e altro ancora.
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 23ef499005994c33586e1918ac3b2a9d28640d04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: df042521d4e9852d6e23c2bbdf24484f9068250d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030284"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571259"
 ---
-# <a name="accessibility-in-xamarin-apps"></a>Accessibilità nelle app Xamarin
+# <a name="accessibility-in-xamarin-apps"></a>Accessibilità nelle app Novell
 
 _Verificare che le app siano utilizzabili dal più ampio pubblico possibile_
 
-L'accessibilità si riferisce al concetto di progettazione di interfacce utente di app che funzionano correttamente con funzionalità di visualizzazione e di input del sistema operativo, ad esempio tipi di grandi dimensioni, contrasto elevato, zoom avanti, lettura dello schermo (sintesi vocale), suggerimenti per commenti visivi o tattili e metodi di input alternativi.
+L'accessibilità si riferisce al concetto di progettazione di interfacce utente di app che funzionano correttamente con funzionalità di visualizzazione e di input del sistema operativo quali tipi di grandi dimensioni, contrasto elevato, zoom avanti, lettura dello schermo (sintesi vocale), suggerimenti feedback visivi o tattili e metodi di input alternativi.
 
 Le piattaforme desktop e per dispositivi mobili, ad esempio iOS, Android e Windows, offrono API incorporate che consentono agli sviluppatori di creare app accessibili, ad esempio [Google](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) discussione e [VoiceOver di Apple](https://www.apple.com/accessibility/ios/voiceover/).
 
@@ -30,7 +30,7 @@ Per implementare le linee guida in questo documento, usare le API fornite da ogn
 - [**Accessibilità OS X**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
-<a name="checklist" />
+<a name="checklist"></a>
 
 ## <a name="accessibility-checklist"></a>Elenco di controllo di accessibilità
 

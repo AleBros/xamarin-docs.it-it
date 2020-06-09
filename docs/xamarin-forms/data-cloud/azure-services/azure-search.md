@@ -1,22 +1,8 @@
 ---
-title: Cerca i dati con ricerca di Azure eXamarin.Forms
-description: Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 69962bbb51a493ba2bcaed5d3c9407c5aafe471c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133289"
+title: "Cerca dati con ricerca di Azure e Xamarin.Forms " Descrizione: "in questo articolo viene illustrato come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione."
+ms. prod: Novell MS. AssetID: A4AEF233-3672-4174-9DBA-15BEE3030C0B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/05/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Cerca i dati con ricerca di Azure eXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
@@ -39,7 +25,7 @@ La richiesta più comune a ricerca di Azure consiste nell'eseguire una query. Es
 
 Le query di ricerca e di filtro possono essere usate separatamente o insieme. Quando vengono utilizzate insieme, la query del filtro viene applicata prima all'intero indice, quindi la query di ricerca viene eseguita sui risultati della query del filtro.
 
-Ricerca di Azure supporta anche il recupero di suggerimenti basati sull'input di ricerca. Per altre informazioni, vedere [query di suggerimento](#suggestions).
+Ricerca di Azure supporta anche il recupero di suggerimenti basati sull'input di ricerca. Per altre informazioni, vedere [query di suggerimento](#suggestion-queries).
 
 > [!NOTE]
 > Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
@@ -226,8 +212,6 @@ Il `SearchAsync` metodo restituisce un `DocumentSearchResult` oggetto che contie
 
 Per altre informazioni sulla ricerca e sul filtro, vedere [eseguire query nell'indice di ricerca di Azure con .NET SDK](/azure/search/search-query-dotnet/).
 
-<a name="suggestions" />
-
 ### <a name="suggestion-queries"></a>Query sui suggerimenti
 
 Ricerca di Azure consente di richiedere suggerimenti in base a una query di ricerca, chiamando il `Documents.SuggestAsync` metodo sull' `SearchIndexClient` istanza. Questa operazione è illustrata nell'esempio di codice seguente:
@@ -278,7 +262,7 @@ Il `SuggestAsync` metodo restituisce un `DocumentSuggestResult` oggetto che cont
 
 Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiamato solo quando l'utente completa l'inserimento di un termine di ricerca. Tuttavia, può anche essere usato per supportare le query di ricerca con completamento automatico eseguendo a ogni pressione del tasto.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un' Xamarin.Forms applicazione. Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione.
 

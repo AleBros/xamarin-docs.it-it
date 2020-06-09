@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 429b15b8e0f2b66b8a0edcdf386ef7778cf4a9ca
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574119"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilità di iOS 9
 
@@ -44,9 +44,9 @@ Si consiglia di verificare in modo esplicito che Visual Studio sia aggiornato al
 **Non** è necessario attendere le nuove versioni di componenti o NuGet utilizzati per risolvere i due problemi menzionati in precedenza.
 Questi problemi sono corretti semplicemente ricompilando l'app con la versione stabile più recente di Novell. iOS.
 
-Analogamente, i fornitori di componenti e gli autori NuGet **non** devono inviare nuove compilazioni solo per correggere i due problemi menzionati in precedenza. Tuttavia, se un componente o NuGet USA `UICollectionView` o carica viste da file **XIB** , *potrebbe* essere necessario un aggiornamento per risolvere i problemi di compatibilità con iOS 9 indicati di seguito.
+Analogamente, i fornitori di componenti e gli autori NuGet **non** devono inviare nuove compilazioni solo per correggere i due problemi menzionati in precedenza. Tuttavia, se un componente o NuGet USA `UICollectionView` o carica visualizzazioni da file **XIB** , *potrebbe* essere necessario un aggiornamento per risolvere i problemi di compatibilità con iOS 9 indicati di seguito.
 
-<a name="compat" />
+<a name="compat"></a>
 
 ## <a name="improving-compatibility-in-your-code"></a>Miglioramento della compatibilità nel codice
 
@@ -54,9 +54,9 @@ Ci sono alcuni casi di modelli di codice *usati* per lavorare nelle versioni pre
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell. ContentView è null nei costruttori
 
-**Motivo:** In iOS 9 è ora necessario il costruttore `initWithFrame:`, a causa di modifiche del comportamento in iOS 9 come [Stati della documentazione UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se è stata registrata una classe per l'identificatore specificato ed è necessario creare una nuova cella, la cella viene ora inizializzata chiamando il relativo metodo `initWithFrame:`.
+**Motivo:** In iOS 9 il `initWithFrame:` costruttore è ora necessario, a causa delle modifiche del comportamento in iOS 9 come [Stati della documentazione UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se è stata registrata una classe per l'identificatore specificato ed è necessario creare una nuova cella, la cella viene ora inizializzata chiamando il relativo `initWithFrame:` metodo.
 
-**Correzione:** Aggiungere il costruttore `initWithFrame:` come segue:
+**Correzione:** Aggiungere il `initWithFrame:` costruttore come segue:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -70,9 +70,9 @@ Esempi correlati: [MotionGraph](https://github.com/xamarin/monotouch-samples/com
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView non riesce a inizializzare con coder durante il caricamento di una visualizzazione da un XIB/pennino
 
-**Motivo:** Il costruttore `initWithCoder:` è quello chiamato durante il caricamento di una visualizzazione da un file di Interface Builder XIB. Se questo costruttore non viene esportato, il codice non gestito non può chiamare la versione gestita. In precedenza (ad esempio in iOS 8) il costruttore `IntPtr` è stato richiamato per inizializzare la visualizzazione.
+**Motivo:** Il `initWithCoder:` costruttore è quello chiamato durante il caricamento di una visualizzazione da un file di Interface Builder XIB. Se questo costruttore non viene esportato, il codice non gestito non può chiamare la versione gestita. In precedenza (ad esempio in iOS 8) il `IntPtr` costruttore è stato richiamato per inizializzare la visualizzazione.
 
-**Correzione:** Creare ed esportare il costruttore `initWithCoder:` in questo modo:
+**Correzione:** Creare ed esportare il `initWithCoder:` costruttore come segue:
 
 ```csharp
 [Export ("initWithCoder:")]

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 17ccc67b2976b93fbb290a1d2425168cab50228e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568789"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -27,25 +27,25 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per i pro
 
 - [Avvio di WatchApp dalla riga di comando](#command_line).
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ## <a name="known-issues"></a>Problemi noti
 
 ### <a name="general"></a>Generale
 
-<a name="deploy" />
+<a name="deploy"></a>
 
 - Le versioni precedenti di Visual Studio per Mac visualizzano erroneamente una delle icone **AppleCompanionSettings** come 88x88 pixel; Se si tenta di inviare all'App Store, viene restituito un **errore di icona mancante** .
-    Questa icona deve essere 87x87 pixel (29 unità per **@3x** schermate retina). Questa operazione non può essere risolta in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** .
+    Questa icona deve essere 87x87 pixel (29 unità per le **@3x** schermate retina). Questa operazione non può essere risolta in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** .
 
-- Se il file **info. plist > ID bundle WKApp** del progetto di estensione Watch non è [impostato correttamente](~/ios/watchos/get-started/project-references.md) in modo da corrispondere all' **ID bundle**dell'app Watch, il debugger non riuscirà a connettersi e Visual Studio per Mac aspetterà il messaggio *"in attesa della connessione del debugger"* .
+- Se il file **info. plist > ID bundle WKApp** del progetto di estensione Watch non è [impostato correttamente](~/ios/watchos/get-started/project-references.md) in modo da corrispondere all' **ID bundle**dell'app Watch, il debugger non riuscirà a connettersi e Visual Studio per Mac aspetterà il messaggio *"in attesa della connessione del debugger"*.
 
-- Il debug è supportato nella modalità di **notifica** , ma può essere inaffidabile. Il nuovo tentativo può a volte funzionare. Verificare che il `WKCompanionAppBundleIdentifier` **info. plist** dell'app Watch sia impostato in modo che corrisponda all'identificatore del bundle dell'app padre/contenitore iOS, ovvero quella che viene eseguita nell'iPhone.
+- Il debug è supportato nella modalità di **notifica** , ma può essere inaffidabile. Il nuovo tentativo può a volte funzionare. Verificare che il file **info. plist** dell'app Watch `WKCompanionAppBundleIdentifier` sia impostato in modo che corrisponda all'identificatore del bundle dell'app padre/contenitore iOS, ovvero quello che viene eseguito nell'iPhone.
 
 - iOS designer non Mostra le frecce EntryPoint per l'occhiata o i controller di interfaccia di notifica.
 
 - Non è possibile aggiungere due `WKNotificationControllers` a uno storyboard.
-    Soluzione temporanea: l'elemento `notificationCategory` nel codice XML dello storyboard viene sempre inserito con lo stesso `id`. Per ovviare a questo problema, è possibile aggiungere due o più controller di notifica, aprire il file storyboard in un editor di testo e modificare manualmente l'elemento `id` in modo che sia univoco.
+    Soluzione temporanea: l' `notificationCategory` elemento nel codice XML dello storyboard viene sempre inserito con lo stesso oggetto `id` . Per ovviare a questo problema, è possibile aggiungere due o più controller di notifica, aprire il file storyboard in un editor di testo e quindi modificare manualmente l' `id` elemento in modo che sia univoco.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
@@ -56,7 +56,7 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per i pro
 
 Il supporto di iOS designer per Watch Kit *richiede* la configurazione corretta della soluzione. Se i riferimenti al progetto non sono impostati (vedere [How to set References](~/ios/watchos/get-started/project-references.md)), l'area di progettazione non funzionerà correttamente.
 
-<a name="noalpha" />
+<a name="noalpha"></a>
 
 ## <a name="removing-the-alpha-channel-from-icon-images"></a>Rimozione del canale alfa dalle immagini icona
 
@@ -80,20 +80,20 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. L'immagine dell'icona dovrebbe ora passare i controlli di convalida di Apple.
 
-<a name="add" />
+<a name="add"></a>
 
 ## <a name="manually-adding-interface-controller-files"></a>Aggiunta manuale di file del controller di interfaccia
 
 > [!IMPORTANT]
-> Il supporto WatchKit di Novell include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
+> Il supporto WatchKit di Novell include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà Visual Studio per Mac e i file di codice C# verranno creati automaticamente.
 
-*Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni C#siano disponibili in:
+*Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni siano disponibili in C#:
 
 1. Aprire l'app Watch ' s **Interface. Storyboard** in **Xcode Interface Builder**.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
 
-2. Trascinare un nuovo `InterfaceController` nello storyboard:
+2. Trascinare un nuovo nello `InterfaceController` storyboard:
 
     ![](troubleshooting-images/add-1.png "A InterfaceController")
 
@@ -101,7 +101,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-2.png "A button in the layout")
 
-4. Chiudere lo storyboard e tornare a Visual Studio per Mac. Creare un nuovo C# file **MyInterfaceController.cs** (o il nome desiderato) nel progetto di **estensione Watch app** (non l'app Watch in cui si trova lo storyboard). Aggiungere il codice seguente (aggiornamento dello spazio dei nomi, NomeClasse e nome del costruttore):
+4. Chiudere lo storyboard e tornare a Visual Studio per Mac. Creare un nuovo file C# **MyInterfaceController.cs** (o il nome desiderato) nel progetto di **estensione Watch app** (non l'app Watch in cui si trova lo storyboard). Aggiungere il codice seguente (aggiornamento dello spazio dei nomi, NomeClasse e nome del costruttore):
 
     ```csharp
     using System;
@@ -137,7 +137,7 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-5. Creare un altro C# nuovo file **MyInterfaceController.designer.cs** nel progetto di **estensione Watch app** e aggiungere il codice seguente. Assicurarsi di aggiornare lo spazio dei nomi, il ClassName e l'attributo `Register`:
+5. Creare un altro nuovo file C# **MyInterfaceController.designer.cs** nel progetto di **estensione Watch app** e aggiungere il codice seguente. Assicurarsi di aggiornare lo spazio dei nomi, la classname e l' `Register` attributo:
 
     ```csharp
     using Foundation;
@@ -156,11 +156,11 @@ with an alpha channel. Icons should not have an alpha channel.
     ```
 
     > [!TIP]
-    > È possibile (facoltativamente) rendere questo file un nodo figlio del primo file trascinandolo sull'altro C# file nel riquadro della soluzione di Visual Studio per Mac. Verrà visualizzato come segue:
+    > È possibile (facoltativamente) rendere questo file un nodo figlio del primo file trascinandolo sull'altro file C# nel riquadro della soluzione Visual Studio per Mac. Verrà visualizzato come segue:
 
     ![](troubleshooting-images/add-5.png "The Solution pad")
 
-6. Selezionare **compila > compila tutto** in modo che la sincronizzazione Xcode riconosca la nuova classe (tramite l'attributo `Register`) usata.
+6. Selezionare **compila > compila tutto** in modo che la sincronizzazione Xcode riconosca la nuova classe (tramite l' `Register` attributo) usata.
 
 7. Riaprire lo storyboard facendo clic con il pulsante destro del mouse sul file dello storyboard dell'app Watch e selezionando **Apri con > Xcode Interface Builder**:
 
@@ -206,9 +206,9 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-È ora possibile fare riferimento al controllo (o implementare l'azione) C#in.
+È ora possibile fare riferimento al controllo (o implementare l'azione) in C#.
 
-<a name="command_line" />
+<a name="command_line"></a>
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Avvio dell'app Watch dalla riga di comando
 
@@ -224,7 +224,7 @@ Di seguito è riportato un esempio completo (eseguito come una singola riga nel 
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-Il parametro che è necessario aggiornare per riflettere l'app è `launchsimwatch`:
+Il parametro che è necessario aggiornare per riflettere l'app è `launchsimwatch` :
 
 ### <a name="--launchsimwatch"></a>--launchsimwatch
 
@@ -241,7 +241,7 @@ Esempio:
 
 ## <a name="notification-mode"></a>Modalità di notifica
 
-Per testare la modalità di [ **notifica** ](~/ios/watchos/platform/notifications.md)dell'app, impostare il parametro `watchlaunchmode` su `Notification` e specificare un percorso di un file JSON contenente un payload di notifica di prova.
+Per testare la modalità di [ **notifica** ](~/ios/watchos/platform/notifications.md)dell'app, impostare il `watchlaunchmode` parametro su `Notification` e fornire un percorso a un file JSON contenente un payload di notifica di prova.
 
 Il parametro payload è *obbligatorio* per la modalità di notifica.
 
@@ -257,7 +257,7 @@ Gli argomenti rimanenti sono illustrati di seguito:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obbligatoria. Specifica il percorso di Xcode (6,2 o versione successiva).
+Obbligatorio. Specifica il percorso di Xcode (6,2 o versione successiva).
 
 Esempio:
 

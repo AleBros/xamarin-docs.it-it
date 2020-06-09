@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 63365ebc12089ced7de621b3a510996fa66119ce
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571961"
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
-_Ci sono molte tecniche per aumentare le prestazioni delle applicazioni create con Xamarin.Android. Collettivamente queste tecniche possono ridurre notevolmente la quantità di lavoro eseguito da una CPU e la quantità di memoria utilizzata da un'applicazione. In questo articolo vengono descritte e illustrate queste tecniche._
+_Sono disponibili diverse tecniche per migliorare le prestazioni delle applicazioni compilate con Novell. Android. Collettivamente queste tecniche possono ridurre notevolmente la quantità di lavoro eseguita da una CPU e la quantità di memoria utilizzata da un'applicazione. Questo articolo descrive e illustra queste tecniche._
 
 ## <a name="performance-overview"></a>Panoramica sulle prestazioni
 
@@ -38,13 +38,13 @@ Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percep
 > [!NOTE]
 >  Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
 
-<a name="optimizelayout" />
+<a name="optimizelayout"></a>
 
 ## <a name="optimize-layout-hierarchies"></a>Ottimizzare le gerarchie di layout
 
-Ogni layout aggiunto a un'applicazione richiede inizializzazione, layout e disegno. Il passaggio di layout [`LinearLayout`](xref:Android.Widget.LinearLayout) può essere `weight` costoso quando si annidano istanze che usano il parametro, perché ogni elemento figlio verrà misurato due volte. L'utilizzo `LinearLayout` di istanze annidate di può portare a una gerarchia di visualizzazione completa, che [`ListView`](xref:Android.Widget.ListView)può comportare una riduzione delle prestazioni per i layout che vengono gonfiati più volte, ad esempio in un oggetto . È pertanto importante ottimizzare questi layout, perché i vantaggi a livello di prestazioni risulteranno moltiplicati.
+Ogni layout aggiunto a un'applicazione richiede inizializzazione, layout e disegno. Il passaggio di layout può essere costoso quando si annidano [`LinearLayout`](xref:Android.Widget.LinearLayout) istanze che usano il `weight` parametro, perché ogni elemento figlio verrà misurato due volte. L'utilizzo di istanze annidate di `LinearLayout` può condurre a una gerarchia di visualizzazione approfondita, che può comportare una riduzione delle prestazioni per i layout che sono inflat più volte, ad esempio in un [`ListView`](xref:Android.Widget.ListView) . È pertanto importante ottimizzare questi layout, perché i vantaggi a livello di prestazioni risulteranno moltiplicati.
 
-Si consideri, [`LinearLayout`](xref:Android.Widget.LinearLayout) ad esempio, la riga per una riga della visualizzazione elenco con un'icona, un titolo e una descrizione. Il `LinearLayout` conterrà [`ImageView`](xref:Android.Widget.ImageView) un `LinearLayout` e un [`TextView`](xref:Android.Widget.TextView) verticale che contiene due istanze:
+Si consideri ad esempio [`LinearLayout`](xref:Android.Widget.LinearLayout) per una riga di visualizzazione elenco con un'icona, un titolo e una descrizione. Conterrà `LinearLayout` un oggetto [`ImageView`](xref:Android.Widget.ImageView) e un oggetto verticale `LinearLayout` che contiene [`TextView`](xref:Android.Widget.TextView) due istanze:
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -79,7 +79,7 @@ Si consideri, [`LinearLayout`](xref:Android.Widget.LinearLayout) ad esempio, la 
 </LinearLayout>
 ```
 
-Questo layout è profondo 3 livelli ed è dispendioso quando gonfiato per ogni [`ListView`](xref:Android.Widget.ListView) riga. Può tuttavia essere migliorato appiattendolo, come illustrato nell'esempio di codice seguente:
+Questo layout ha una profondità di 3 livelli ed è inutile quando è inflat per ogni [`ListView`](xref:Android.Widget.ListView) riga. Può tuttavia essere migliorato appiattendolo, come illustrato nell'esempio di codice seguente:
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -117,26 +117,26 @@ Questo layout è profondo 3 livelli ed è dispendioso quando gonfiato per ogni [
 </RelativeLayout>
 ```
 
-La gerarchia a 3 livelli precedente è stata ridotta [`RelativeLayout`](xref:Android.Widget.RelativeLayout) a una [`LinearLayout`](xref:Android.Widget.LinearLayout) gerarchia a 2 livelli e una singola istanza è stata sostituita da due istanze. Un significativo aumento delle prestazioni sarà guadagnato [`ListView`](xref:Android.Widget.ListView) quando si gonfia il layout per ogni riga.
+La gerarchia di 3 livelli precedente è stata ridotta a una gerarchia a 2 livelli e un singolo [`RelativeLayout`](xref:Android.Widget.RelativeLayout) ha sostituito due [`LinearLayout`](xref:Android.Widget.LinearLayout) istanze. Quando si gonfia il layout per ogni riga, si ottiene un aumento significativo delle prestazioni [`ListView`](xref:Android.Widget.ListView) .
 
-<a name="optimizelistviews" />
+<a name="optimizelistviews"></a>
 
 ## <a name="optimize-list-views"></a>Ottimizzare le visualizzazioni elenco
 
-Gli utenti si aspettano tempi [`ListView`](xref:Android.Widget.ListView) di scorrimento e caricamento rapidi per le istanze. Le prestazioni di scorrimento possono tuttavia peggiorare quando ogni riga della visualizzazione elenco contiene gerarchie di visualizzazione con molti livelli di annidamento o quando le righe contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `ListView`:
+Gli utenti prevedono tempi di scorrimento e tempi di caricamento rapidi per le [`ListView`](xref:Android.Widget.ListView) istanze. Le prestazioni di scorrimento possono tuttavia peggiorare quando ogni riga della visualizzazione elenco contiene gerarchie di visualizzazione con molti livelli di annidamento o quando le righe contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `ListView`:
 
 - Riutilizzare le visualizzazioni delle righe. Per altre informazioni, vedere [Riutilizzare le visualizzazioni delle righe](#reuserowviews).
 - Appiattire i layout, laddove possibile.
 - Memorizzare nella cache il contenuto delle righe recuperato da un servizio Web.
 - Evitare il ridimensionamento delle immagini.
 
-Collettivamente queste tecniche possono [`ListView`](xref:Android.Widget.ListView) aiutare a mantenere le istanze di scorrimento senza intoppi.
+Collettivamente queste tecniche consentono di evitare lo [`ListView`](xref:Android.Widget.ListView) scorrimento graduale delle istanze.
 
-<a name="reuserowviews" />
+<a name="reuserowviews"></a>
 
 ### <a name="reuse-row-views"></a>Riutilizzare le visualizzazioni delle righe
 
-Quando si visualizzano centinaia di righe in un [`ListView`](xref:Android.Widget.ListView)oggetto [`View`](xref:Android.Views.View) , sarebbe uno spreco di memoria per creare centinaia di oggetti quando solo un piccolo numero di essi vengono visualizzati sullo schermo in una sola volta. Solo gli oggetti `View` visibili nelle righe sullo schermo possono essere invece caricati in memoria e il **contenuto** viene caricato in questi oggetti riutilizzati. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
+Quando si visualizzano centinaia di righe in [`ListView`](xref:Android.Widget.ListView) , sarebbe uno spreco di memoria per creare centinaia di [`View`](xref:Android.Views.View) oggetti quando solo un numero ridotto viene visualizzato sullo schermo contemporaneamente. Solo gli oggetti `View` visibili nelle righe sullo schermo possono essere invece caricati in memoria e il **contenuto** viene caricato in questi oggetti riutilizzati. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
 
 Quando una riga viene rimossa dallo schermo, quindi, la visualizzazione può essere inserita in una coda per essere riutilizzata in seguito, come illustrato nell'esempio di codice seguente:
 
@@ -153,11 +153,11 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 }
 ```
 
-Mentre l'utente scorre, [`ListView`](xref:Android.Widget.ListView) `GetView` la sostituzione chiama per richiedere la visualizzazione di nuove `convertView` viste, se disponibile passa una vista inutilizzata nel parametro. Se questo `null` valore è quindi [`View`](xref:Android.Views.View) il codice `convertView` crea una nuova istanza, altrimenti le proprietà possono essere reimpostate e riutilizzate.
+Mentre l'utente scorre, [`ListView`](xref:Android.Widget.ListView) chiama l' `GetView` override per richiedere nuove visualizzazioni da visualizzare, se disponibile, passa una visualizzazione inutilizzata nel `convertView` parametro. Se questo valore è `null` , il codice crea una nuova [`View`](xref:Android.Views.View) istanza. in caso contrario, le `convertView` proprietà possono essere reimpostate e riutilizzate.
 
 Per altre informazioni, vedere [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) (Riutilizzo della visualizzazione delle righe) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md) (Popolamento dei dati in ListView).
 
-<a name="removeeventhandlers" />
+<a name="removeeventhandlers"></a>
 
 ## <a name="remove-event-handlers-in-activities"></a>Rimuovere i gestori eventi nelle attività
 
@@ -186,7 +186,7 @@ Quando l'attività esce dallo stato di esecuzione, viene chiamato l'evento `OnPa
 App.Current.Service1.Updated -= service1UpdateHandler;
 ```
 
-<a name="limitservices" />
+<a name="limitservices"></a>
 
 ## <a name="limit-the-lifespan-of-services"></a>Limitare il ciclo di vita dei servizi
 
@@ -194,33 +194,33 @@ Quando un servizio viene avviato, Android mantiene il processo del servizio in e
 
 Il ciclo di vita di un servizio può essere limitato tramite `IntentService`, che termina dopo aver gestito l'intent che l'ha avviato.
 
-<a name="releaseresources" />
+<a name="releaseresources"></a>
 
 ## <a name="release-resources-when-notified"></a>Rilasciare le risorse in seguito a una notifica
 
-Durante il ciclo [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) di vita dell'applicazione, il callback fornisce una notifica quando la memoria del dispositivo è insufficiente. Questo callback deve essere implementato per l'ascolto delle notifiche relative al livello di memoria seguenti:
+Durante il ciclo di vita dell'applicazione, il [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) callback fornisce una notifica quando la memoria del dispositivo è insufficiente. Questo callback deve essere implementato per l'ascolto delle notifiche relative al livello di memoria seguenti:
 
-- [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate)– l'applicazione *potrebbe* voler rilasciare alcune risorse non necessarie.
+- [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate): l'applicazione *potrebbe* voler rilasciare alcune risorse non necessarie.
 - [`TrimMemoryRunningLow`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningLow): l'applicazione *deve* rilasciare le risorse non necessarie.
-- [`TrimMemoryRunningCritical`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical)– l'applicazione *deve* rilasciare il maggior numero possibile di processi non critici.
+- [`TrimMemoryRunningCritical`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical): l'applicazione *deve* rilasciare il numero di processi non critici così come possibile.
 
-Inoltre, quando il processo dell'applicazione viene memorizzato nella [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) cache, le seguenti notifiche a livello di memoria possono essere ricevute dal callback:
+Inoltre, quando il processo dell'applicazione viene memorizzato nella cache, le notifiche a livello di memoria seguenti possono essere ricevute dal [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) callback:
 
-- [`TrimMemoryBackground`](xref:Android.Content.ComponentCallbacks2.TrimMemoryBackground)rilasciare risorse che possono essere ricompilate in modo rapido ed efficiente se l'utente torna all'app.
-- [`TrimMemoryModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryModerate)– il rilascio di risorse può aiutare il sistema a mantenere altri processi memorizzati nella cache per migliorare le prestazioni complessive.
-- [`TrimMemoryComplete`](xref:Android.Content.ComponentCallbacks2.TrimMemoryComplete)– il processo di applicazione sarà presto terminato se più memoria non viene recuperata presto.
+- [`TrimMemoryBackground`](xref:Android.Content.ComponentCallbacks2.TrimMemoryBackground): rilascia risorse che possono essere ricompilate in modo rapido ed efficiente se l'utente torna all'app.
+- [`TrimMemoryModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryModerate): il rilascio delle risorse può consentire al sistema di memorizzare nella cache altri processi per migliorare le prestazioni complessive.
+- [`TrimMemoryComplete`](xref:Android.Content.ComponentCallbacks2.TrimMemoryComplete): il processo dell'applicazione verrà terminato a breve se non viene presto ripristinata una quantità maggiore di memoria.
 
 Occorre rispondere alle notifiche rilasciando le risorse in base al livello ricevuto.
 
-<a name="releaseresourcesuihidden" />
+<a name="releaseresourcesuihidden"></a>
 
 ## <a name="release-resources-when-the-user-interface-is-hidden"></a>Rilasciare le risorse quando l'interfaccia utente è nascosta
 
 Rilasciare le eventuali risorse usate dall'interfaccia utente dell'app quando l'utente passa a un'altra app, perché ciò può aumentare notevolmente la capacità di Android per i processi memorizzati nella cache, con conseguenti effetti potenziali sulla qualità dell'esperienza utente.
 
-Per ricevere una notifica quando l'utente [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) esce `Activity` dall'interfaccia utente, implementare il callback nelle classi e attendere il [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden) livello, che indica che l'interfaccia utente è nascosta dalla visualizzazione. Questa notifica viene ricevuta solo quando *tutti* i componenti dell'interfaccia utente dell'applicazione sono nascosti all'utente. Il rilascio delle risorse dell'interfaccia utente quando si riceve questa notifica garantisce che le risorse dell'interfaccia utente siano ancora disponibili per riprendere l'attività se l'utente torna all'interfaccia utente da un'altra attività nell'app.
+Per ricevere una notifica quando l'utente esce dall'interfaccia utente, implementare il [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) callback nelle `Activity` classi e ascoltare il [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden) livello, che indica che l'interfaccia utente è nascosta dalla visualizzazione. Questa notifica viene ricevuta solo quando *tutti* i componenti dell'interfaccia utente dell'applicazione sono nascosti all'utente. Il rilascio delle risorse dell'interfaccia utente quando si riceve questa notifica garantisce che le risorse dell'interfaccia utente siano ancora disponibili per riprendere l'attività se l'utente torna all'interfaccia utente da un'altra attività nell'app.
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>Ottimizzare le risorse immagine
 
@@ -228,7 +228,7 @@ Le immagini sono tra le risorse più dispendiose usate dalle applicazioni e spes
 
 Per altre informazioni, vedere [Ottimizzare le risorse immagine](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) nella guida [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-<a name="disposeimages" />
+<a name="disposeimages"></a>
 
 ## <a name="dispose-of-unused-image-resources"></a>Eliminare le risorse immagine inutilizzate
 
@@ -245,7 +245,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 Per altre informazioni sul rilascio delle risorse eliminabili, vedere [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Rilasciare risorse IDisposable).  
 
-<a name="avoidfloats" />
+<a name="avoidfloats"></a>
 
 ## <a name="avoid-floating-point-arithmetic"></a>Evitare calcoli aritmetici a virgola mobile
 
@@ -254,13 +254,13 @@ Nei dispositivi Android i calcoli aritmetici a virgola mobile sono circa due vol
 > [!NOTE]
 > Anche per i calcoli di interi, alcune CPU non supportano funzionalità di divisione hardware. Le divisioni di interi e le operazioni di modulo vengono pertanto spesso eseguite nel software.
 
-<a name="dismissdialogs" />
+<a name="dismissdialogs"></a>
 
 ## <a name="dismiss-dialogs"></a>Chiudere le finestre di dialogo
 
-Quando si [`ProgressDialog`](xref:Android.App.ProgressDialog) utilizza la classe (o qualsiasi [`Hide`](xref:Android.App.Dialog.Hide*) finestra di dialogo o avviso), [`Dismiss`](xref:Android.App.Dialog.Dismiss*) anziché chiamare il metodo al termine dello scopo della finestra di dialogo, chiamare il metodo . In caso contrario, la finestra di dialogo rimane attiva causando perdite di risorse a causa del riferimento in essere all'attività.
+Quando si usa la [`ProgressDialog`](xref:Android.App.ProgressDialog) classe (o qualsiasi finestra di dialogo o avviso), anziché chiamare il [`Hide`](xref:Android.App.Dialog.Hide*) metodo al termine dello scopo della finestra di dialogo, chiamare il [`Dismiss`](xref:Android.App.Dialog.Dismiss*) metodo. In caso contrario, la finestra di dialogo rimane attiva causando perdite di risorse a causa del riferimento in essere all'attività.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 

@@ -1,26 +1,26 @@
 ---
-title: Uso dei controller di visualizzazione Split tvOS in Xamarin
-description: Questo documento descrive come usare le viste Split tvOS in un'app compilata con Xamarin. Viene fornita una panoramica di alto livello dei controller di visualizzazione suddivisi, come utilizzarli con gli storyboard, accedere alle visualizzazioni master e dettagli e visualizzare e nascondere la visualizzazione master.
+title: Uso dei controller di visualizzazione Split tvOS in Novell
+description: Questo documento descrive come usare le viste Split tvOS in un'app compilata con Novell. Viene fornita una panoramica di alto livello dei controller di visualizzazione suddivisi, come utilizzarli con gli storyboard, accedere alle visualizzazioni master e dettagli e visualizzare e nascondere la visualizzazione master.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 98cedb1cf02f9688581946fa21a2cb40379f606f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022204"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566175"
 ---
-# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Uso dei controller di visualizzazione Split tvOS in Xamarin
+# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Uso dei controller di visualizzazione Split tvOS in Novell
 
 Un controller di visualizzazione suddiviso presenta e gestisce contemporaneamente un controller di visualizzazione master e dettagli affiancato sullo schermo. I controller di visualizzazione divisa vengono usati per presentare contenuti persistenti e attivabili nella visualizzazione Master (la sezione più piccola a sinistra) e i dettagli correlati nella visualizzazione dettagli (la sezione più grande a destra).
 
 [![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
-<a name="About-Split-View-Controllers" />
+<a name="About-Split-View-Controllers"></a>
 
 ## <a name="about-split-view-controllers"></a>Informazioni sui controller di visualizzazione divisa
 
@@ -40,15 +40,15 @@ Apple presenta i suggerimenti seguenti per lavorare con i controller di visualiz
 - **Mantieni la selezione principale** : mentre il contenuto nella visualizzazione dettagli può cambiare è la risposta alla selezione di un utente nella visualizzazione master, il contenuto della visualizzazione master deve essere corretto. Inoltre, è necessario visualizzare chiaramente l'elemento attualmente selezionato nella visualizzazione master.
 - **Usare un singolo titolo unificato** . in genere, è consigliabile usare un singolo titolo centrato nella visualizzazione dettagli, anziché un titolo sia nei dettagli che nella visualizzazione master.
 
-<a name="Split-View-Controllers-and-Storyboards" />
+<a name="Split-View-Controllers-and-Storyboards"></a>
 
 ## <a name="split-view-controllers-and-storyboards"></a>Suddividere i controller di visualizzazione e gli storyboard
 
-Il modo più semplice per lavorare con i controller Split View in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando iOS designer.
+Il modo più semplice per lavorare con i controller Split View in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando iOS designer.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nella **riquadro della soluzione**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **controller di visualizzazione divisa** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
     [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
@@ -63,12 +63,12 @@ Il modo più semplice per lavorare con i controller Split View in un'app Xamarin
 1. Progettare il contenuto delle visualizzazioni master e dettagli: 
 
     [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
-1. Assegnare i **nomi** nella **scheda Widget** del **riquadro delle proprietà** per lavorare con i controlli dell'interfaccia utente C# nel codice.
+1. Assegnare i **nomi** nella **scheda Widget** del **riquadro delle proprietà** per lavorare con i controlli dell'interfaccia utente nel codice C#.
 1. Salvare le modifiche e tornare a Visual Studio per Mac.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **controller di visualizzazione divisa** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
     [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
@@ -83,24 +83,24 @@ Il modo più semplice per lavorare con i controller Split View in un'app Xamarin
 1. Progettare il contenuto delle visualizzazioni master e dettagli: 
 
     [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
-1. Assegnare i **nomi** nella **scheda Widget** di **Esplora proprietà** per usare i controlli dell'interfaccia utente nel C# codice.
+1. Assegnare i **nomi** nella **scheda Widget** di **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente nel codice C#.
 1. Salvare le modifiche.
 
 -----
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Working-with-Split-View-Controllers" />
+<a name="Working-with-Split-View-Controllers"></a>
 
 ## <a name="working-with-split-view-controllers"></a>Utilizzo di controller di visualizzazione divisi
 
 Come indicato in precedenza, un controller di visualizzazione suddiviso viene spesso usato nelle situazioni in cui viene visualizzato un contenuto filtrato per l'utente. Le categorie principali vengono visualizzate a sinistra nella visualizzazione master e i risultati filtrati a destra nella visualizzazione dettagli in base alla selezione dell'utente.
 
-<a name="Accessing-Master-and-Detail" />
+<a name="Accessing-Master-and-Detail"></a>
 
 ### <a name="accessing-master-and-detail"></a>Accesso al master e ai dettagli
 
-Se è necessario accedere ai controller di visualizzazione master e dettagli a livello di codice, utilizzare la proprietà `ViewControllers` del controller di visualizzazione divisa. Esempio:
+Se è necessario accedere ai controller di visualizzazione master e dettagli a livello di codice, utilizzare la `ViewControllers` proprietà del controller di visualizzazione divisa. Ad esempio:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -110,7 +110,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 
 Viene presentato come una matrice, dove il primo elemento (0) nel controller di visualizzazione master e il secondo elemento (1) sono i dettagli.
 
-<a name="Accessing-Detail-from-Master" />
+<a name="Accessing-Detail-from-Master"></a>
 
 ### <a name="accessing-detail-from-master"></a>Accesso ai dettagli dal master
 
@@ -122,7 +122,7 @@ Il modo più semplice per eseguire questa operazione consiste nell'esporre una p
 public DetailViewController DetailController { get; set;}
 ```
 
-Nel controller di visualizzazione divisa eseguire l'override del metodo `ViewDidLoad` e unire le due visualizzazioni. Esempio:
+Nel controller di visualizzazione divisa eseguire l'override del `ViewDidLoad` metodo e unire le due visualizzazioni. Ad esempio:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -142,11 +142,11 @@ public override void ViewDidLoad ()
 
 È possibile esporre le proprietà e i metodi sul controller di visualizzazione dettagli che il master può usare per presentare i nuovi dati come richiesto.
 
-<a name="Showing-and-Hiding-Master" />
+<a name="Showing-and-Hiding-Master"></a>
 
 ### <a name="showing-and-hiding-master"></a>Visualizzazione e occultamento del Master
 
-Facoltativamente, è possibile mostrare e nascondere il controller di visualizzazione master utilizzando la proprietà `PreferredDisplayMode` del controller di visualizzazione divisa. Esempio:
+Facoltativamente, è possibile mostrare e nascondere il controller di visualizzazione master utilizzando la `PreferredDisplayMode` proprietà del controller di visualizzazione divisa. Ad esempio:
 
 ```csharp
 // Show hide split view
@@ -157,20 +157,20 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-L'enumerazione `UISplitViewControllerDisplayMode` definisce il modo in cui il controller di visualizzazione master verrà presentato come uno degli elementi seguenti:
+L' `UISplitViewControllerDisplayMode` enumerazione definisce il modo in cui il controller di visualizzazione master verrà presentato come uno degli elementi seguenti:
 
 - **Automatic** -tvOS controllerà la presentazione delle visualizzazioni master e dettagli.
 - **PrimaryHidden** : nasconde il controller di visualizzazione master.
 - **AllVisible** : Visualizza i controller di visualizzazione master e dettagli affiancati. Si tratta della normale presentazione predefinita.
 - **PrimaryOverlay** : il controller di visualizzazione dettagli si estende in ed è coperto dal master.
 
-Per ottenere lo stato di presentazione corrente, usare la proprietà `DisplayMode` del controller di visualizzazione divisa.
+Per ottenere lo stato di presentazione corrente, usare la `DisplayMode` proprietà del controller di visualizzazione divisa.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-In questo articolo è stata illustrata la progettazione e l'utilizzo di controller di visualizzazione divisi all'interno di un'app Xamarin.tvOS.
+In questo articolo è stata illustrata la progettazione e l'utilizzo di controller di visualizzazione divisi all'interno di un'app Novell. tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

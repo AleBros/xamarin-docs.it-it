@@ -8,16 +8,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ff68666d9f0385b159b9ac9908ff997f53715308
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304051"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571935"
 ---
 # <a name="android-emulator-troubleshooting"></a>Risoluzione dei problemi dell'emulatore Android
 
-_In questo articolo vengono descritti i messaggi di avviso più comuni e i problemi che si verificano durante la configurazione e l'esecuzione dell'emulatore Android.This article describes the most common warning messages and issues that occur while configuring and running the Android Emulator. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori e vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
+_Questo articolo descrive i messaggi di avviso e i problemi più comuni che si verificano durante la configurazione e l'esecuzione del emulatore Android. Vengono inoltre descritte le soluzioni per la risoluzione di questi errori, oltre a vari suggerimenti per la risoluzione dei problemi che consentono di diagnosticare i problemi dell'emulatore._
 
 ::: zone pivot="windows"
 
@@ -31,7 +31,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 1. Avviare l'emulatore da **Android Device Manager**, selezionando il dispositivo virtuale e facendo clic su **Start** (Avvia).
 
-2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb.** Se Android SDK è installato nel percorso predefinito, **adb** si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
+2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **ADB** . Se Android SDK è installato nel percorso predefinito, **adb** si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
 
 3. Digitare il comando seguente:
 
@@ -52,7 +52,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 Se viene visualizzato il messaggio **An MMIO access error has occurred** (Si è verificato un errore di accesso MMIO), riavviare l'emulatore.
 
-<a name="gps-win" />
+<a name="gps-win"></a>
 
 ## <a name="missing-google-play-services"></a>Google Play Services mancante
 
@@ -63,12 +63,12 @@ Se nel dispositivo virtuale in esecuzione nell'emulatore non è installato Googl
 
 Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google Play Store:
 
-[![Esempio di AVD con Google Play Services e Google Play Store abilitato](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
+[![AVD di esempio con Google Play Services e Google Play Store abilitati](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
 > Le immagini Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
-<a name="perf-win" />
+<a name="perf-win"></a>
 
 ## <a name="performance-issues"></a>Problemi di prestazioni
 
@@ -90,11 +90,11 @@ Se viene visualizzato questo messaggio di errore, vedere [Problemi di accelerazi
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>L'accelerazione è abilitata ma l'esecuzione dell'emulatore è troppo lenta 
 
-Una causa comune all'origine di questo problema è il mancato utilizzo di un'immagine basata su x86 nel dispositivo virtuale (AVD). Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Gestione dispositivi Android](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine di sistema basata su x86:
+Una causa comune all'origine di questo problema è il mancato utilizzo di un'immagine basata su x86 nel dispositivo virtuale (AVD). Quando si crea un dispositivo virtuale (vedere [gestione di dispositivi virtuali con la Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine di sistema basata su x86:
 
 [![Selezione di un'immagine di sistema x86 per un dispositivo virtuale](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
-<a name="accel-issues-win" />
+<a name="accel-issues-win"></a>
 
 ## <a name="hardware-acceleration-issues"></a>Problemi di accelerazione hardware
 
@@ -224,7 +224,7 @@ SERVICE_NAME: intelhaxm
 
 Se `STATE` non è impostato su `RUNNING`, per risolvere il problema vedere [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) (Come usare Intel Hardware Accelerated Execution Manager).
 
-<a name="virt-conflicts" />
+<a name="virt-conflicts"></a>
 
 #### <a name="haxm-virtualization-conflicts"></a>Conflitti di virtualizzazione HAXM
 
@@ -244,7 +244,7 @@ Se si usa HAXM in un PC Windows, HAXM non funzionerà a meno che la tecnologia d
 
 Per risolvere questo errore, avviare il computer nel BIOS, abilitare sia VT-x che SLAT (Second Level Address Translation) e quindi riavviare il computer in Windows.
 
-<a name="disable-hyperv" />
+<a name="disable-hyperv"></a>
 
 #### <a name="disabling-hyper-v"></a>Disabilitazione di Hyper-V
 
@@ -268,7 +268,7 @@ Intel HAXM e Microsoft Hyper-V non possono essere attivi contemporaneamente. Pur
 
 In alcuni casi, non è possibile disabilitare Hyper-V tramite la procedura precedente se sono abilitati Device Guard e Credential Guard. Se non è possibile disabilitare Hyper-V (o se risulta disabilitato ma l'installazione di HAXM ha comunque esito negativo), usare la procedura descritta nella sezione successiva per disabilitare Device Guard e Credential Guard.
 
-<a name="disable-devguard" />
+<a name="disable-devguard"></a>
 
 #### <a name="disabling-device-guard"></a>Disabilitazione di Device Guard
 
@@ -288,7 +288,7 @@ Se Device Guard è abilitato, usare la procedura seguente per disabilitarlo:
 
 3. Nell'**Editor Criteri di gruppo locali** passare a **Configurazione computer > Modelli amministrativi > Sistema > Device Guard**:
 
-   [![Gestione dispositivi nell'Editor Criteri di gruppo locali](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
+   [![Device Guard in Editor Criteri di gruppo locali](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Modificare **Attiva sicurezza basata su virtualizzazione** in **Disabilitato** (come illustrato in precedenza) e chiudere l'**Editor Criteri di gruppo locali**.
 
@@ -367,7 +367,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 1. Avviare l'emulatore da **Android Device Manager**, selezionando il dispositivo virtuale e facendo clic su **Start** (Avvia).
 
-2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **adb.** Se Android SDK è installato nel percorso predefinito, **adb** si trova in **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
+2. Aprire un prompt dei comandi e passare alla cartella in cui è installato **ADB** . Se Android SDK è installato nel percorso predefinito, **adb** si trova in **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer.
 
 3. Digitare il comando seguente:
 
@@ -388,7 +388,7 @@ Se viene visualizzato un errore per segnalare l'esito negativo dell'installazion
 
 Se viene visualizzato il messaggio **An MMIO access error has occurred** (Si è verificato un errore di accesso MMIO), riavviare l'emulatore.
 
-<a name="gps-mac" />
+<a name="gps-mac"></a>
 
 ## <a name="missing-google-play-services"></a>Google Play Services mancante
 
@@ -399,12 +399,12 @@ Se nel dispositivo virtuale in esecuzione nell'emulatore non è installato Googl
 
 Ad esempio, questo dispositivo virtuale includerà Google Play Services e Google Play Store:
 
-[![Esempio di AVD con Google Play Services e Google Play Store abilitato](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+[![AVD di esempio con Google Play Services e Google Play Store abilitati](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
 > Le immagini Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
-<a name="perf-mac" />
+<a name="perf-mac"></a>
 
 ## <a name="performance-issues"></a>Problemi di prestazioni
 
@@ -426,13 +426,13 @@ Una causa comune all'origine di questo problema è il mancato utilizzo di un'imm
 
 [![Selezione di un'immagine di sistema x86 per un dispositivo virtuale](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
-<a name="accel-issues-mac" />
+<a name="accel-issues-mac"></a>
 
 ## <a name="hardware-acceleration-issues"></a>Problemi di accelerazione hardware
 
 Se si usa il framework Hypervisor o HAXM per l'accelerazione hardware dell'emulatore, potrebbero verificarsi problemi causati da errori di installazione o una versione obsoleta di macOS. Le sezioni seguenti consentono di risolvere il problema.
 
-<a name="hypervisor-issues" />
+<a name="hypervisor-issues"></a>
 
 ### <a name="hypervisor-framework-issues"></a>Problemi del framework Hypervisor
 

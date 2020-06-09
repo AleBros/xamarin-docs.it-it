@@ -1,22 +1,22 @@
 ---
-title: System. Data in Xamarin.iOS
-description: Questo documento descrive come usare System. Data e mono. Data. sqlite. dll per accedere ai dati SQLite in un'applicazione Xamarin.iOS.
+title: System. Data in Novell. iOS
+description: Questo documento descrive come usare System. Data e mono. Data. sqlite. dll per accedere ai dati SQLite in un'applicazione Novell. iOS.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 4f5f6adf99306754fa7b2aa49855fe228e740d7e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 736d70aebcf861b5557d5f076a42ff0a3dcfc043
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569953"
 ---
-# <a name="systemdata-in-xamarinios"></a>System. Data in Xamarin.iOS
+# <a name="systemdata-in-xamarinios"></a>System. Data in Novell. iOS
 
-Xamarin.iOS 8,10 aggiunge il supporto per [System. Data](xref:System.Data), incluso il provider di `Mono.Data.Sqlite.dll` ADO.NET. Il supporto include l'aggiunta degli [assembly](~/cross-platform/internals/available-assemblies.md)seguenti:
+Novell. iOS 8,10 aggiunge il supporto per [System. Data](xref:System.Data), incluso il `Mono.Data.Sqlite.dll` provider ADO.NET. Il supporto include l'aggiunta degli [assembly](~/cross-platform/internals/available-assemblies.md)seguenti:
 
 - `System.Data.dll`
 - `System.Data.Service.Client.dll`
@@ -24,15 +24,15 @@ Xamarin.iOS 8,10 aggiunge il supporto per [System. Data](xref:System.Data), incl
 - `Mono.Data.Tds.dll`
 - `Mono.Data.Sqlite.dll`
 
-<a name="Example" />
+<a name="Example"></a>
 
 ## <a name="example"></a>Esempio
 
-Il seguente programma crea un database in `Documents/mydb.db3`e, se il database non esiste in precedenza, viene popolato con dati di esempio. Viene quindi eseguita una query sul database, con l'output scritto nel `stderr`.
+Il seguente programma crea un database in `Documents/mydb.db3` e, se il database non esiste in precedenza, viene popolato con dati di esempio. Viene quindi eseguita una query sul database con l'output scritto in `stderr` .
 
-### <a name="add-references"></a>Aggiungi riferimenti
+### <a name="add-references"></a>Aggiunta di riferimenti
 
-In primo luogo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** e scegliere **modifica riferimenti** , quindi selezionare `System.Data` e `Mono.Data.Sqlite`:
+In primo luogo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** e scegliere **modifica riferimenti** , quindi selezionare `System.Data` e `Mono.Data.Sqlite` :
 
 [![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png#lightbox)
 
@@ -129,13 +129,13 @@ using (var addCmd = conn.CreateCommand ()) {
 }
 ```
 
-<a name="Missing_Functionality" />
+<a name="Missing_Functionality"></a>
 
 ## <a name="missing-functionality"></a>Funzionalità mancanti
 
 In **System. Data** e **mono. Data. sqlite** mancano alcune funzionalità.
 
-<a name="System.Data" />
+<a name="System.Data"></a>
 
 ### <a name="systemdata"></a>System.Data
 
@@ -144,15 +144,15 @@ La funzionalità mancante da **System. Data. dll** è costituita da:
 - Qualsiasi elemento che richiede [System. CodeDom](xref:System.CodeDom) , ad esempio  [System. Data. TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
 - Supporto file di configurazione XML (ad esempio  [System. Data. Common. DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
 - [System. Data. Common. DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (dipende dal supporto per i file di configurazione XML)
-- [System. Data. OleDb](xref:System.Data.OleDb)
-- [System. Data. ODBC](xref:System.Data.Odbc)
-- La dipendenza `System.EnterpriseServices.dll` è stata *rimossa* da `System.Data.dll`, causando la rimozione del metodo [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
+- [System.Data.OleDb](xref:System.Data.OleDb)
+- [System.Data.Odbc](xref:System.Data.Odbc)
+- La `System.EnterpriseServices.dll` dipendenza è stata *rimossa* da `System.Data.dll` , causando la rimozione del metodo [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
 
-<a name="Mono.Data.Sqlite" />
+<a name="Mono.Data.Sqlite"></a>
 
 ### <a name="monodatasqlite"></a>Mono. Data. sqlite
 
-Nel frattempo, **mono. Data. sqlite. dll** non ha avuto alcuna modifica al codice sorgente, ma potrebbe essere host a una serie di problemi di *Runtime* poiché `Mono.Data.Sqlite.dll` associa SQLite 3,5. iOS 8, nel frattempo, viene fornito con SQLite 3.8.5. Basti dire che alcune delle due versioni sono state modificate.
+Nel frattempo, **mono. Data. sqlite. dll** non ha avuto alcuna modifica al codice sorgente, ma potrebbe essere host a una serie di problemi di *Runtime* perché esegue l' `Mono.Data.Sqlite.dll` associazione di SQLite 3,5. iOS 8, nel frattempo, viene fornito con SQLite 3.8.5. Basti dire che alcune delle due versioni sono state modificate.
 
 Versione precedente di iOS Ship con le versioni seguenti di SQLite:
 
@@ -161,9 +161,9 @@ Versione precedente di iOS Ship con le versioni seguenti di SQLite:
 - **iOS 5** -versione 3.7.7.
 - **iOS 4** versione 3.6.22.
 
-I problemi più comuni sembrano essere correlati all'esecuzione di query sullo schema del database, ad esempio determinare in fase di esecuzione le colonne presenti in una determinata tabella, ad esempio `Mono.Data.Sqlite.SqliteConnection.GetSchema` (override di [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (override [ DbDataReader. GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). In breve, sembra che tutto ciò che usa [DataTable](xref:System.Data.DataTable) sia improbabile.
+I problemi più comuni sembrano essere correlati all'esecuzione di query sullo schema del database, ad esempio determinare in fase di esecuzione le colonne presenti in una determinata tabella, ad esempio `Mono.Data.Sqlite.SqliteConnection.GetSchema` (override di [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (override di [DbDataReader. GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). In breve, sembra che tutto ciò che usa [DataTable](xref:System.Data.DataTable) sia improbabile.
 
-<a name="Data_Binding" />
+<a name="Data_Binding"></a>
 
 ## <a name="data-binding"></a>Data binding
 

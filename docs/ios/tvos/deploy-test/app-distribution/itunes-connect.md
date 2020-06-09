@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 68c0fb9e034f432c619bc188553996bd7bacdee8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573690"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurare l'app tvOS in iTunes Connect
 
 _Questo articolo fornisce una Guida aggiuntiva a iOS configurare l'app in iTunes Connect per le configurazioni specifiche di tvOS._
 
-Oltre alle configurazioni e alle impostazioni che è necessario eseguire seguendo la Guida [configurare l'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) per iOS, questo documento illustra le configurazioni specifiche che saranno necessarie per rilasciare un'app Xamarin.TvOS nell'app Apple TV Negozio.
+Oltre alle configurazioni e alle impostazioni che è necessario eseguire seguendo la Guida [configurare l'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) per iOS, questo documento illustra le configurazioni specifiche che saranno necessarie per rilasciare un'app Novell. TvOS nell'App Store di Apple TV.
 
-<a name="Adding-a-tvOS-Release-Version" />
+<a name="Adding-a-tvOS-Release-Version"></a>
 
 ## <a name="adding-a-tvos-release-version"></a>Aggiunta di una versione di rilascio di tvOS
 
@@ -33,7 +33,7 @@ Se si crea una nuova app da rilasciare nell'App Store di Apple TV o si aggiunge 
 
 Facoltativamente, potrebbe essere necessario anche:
 
-- [Gestione delle informazioni in Game Center](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
+- [Gestione delle informazioni di Game Center](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
 - [Gestione delle informazioni sull'acquisto in-app](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
 
 Con tutti i passaggi precedenti completati, aprire il record iTunes Connect dell'app e selezionare per aggiungere il supporto tvOS usando la barra laterale a sinistra:
@@ -44,7 +44,7 @@ Le schermate di informazioni specifiche di tvOS saranno quindi disponibili per i
 
 [![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
-<a name="tvOS-Version-Information" />
+<a name="tvOS-Version-Information"></a>
 
 ## <a name="tvos-version-information"></a>Informazioni sulla versione di tvOS
 
@@ -64,17 +64,17 @@ Dopo aver immesso le informazioni necessarie, fare clic sul pulsante **Salva** n
 
 [![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
-<a name="Submitting-for-Review" />
+<a name="Submitting-for-Review"></a>
 
 ## <a name="preparing-to-submit-for-review"></a>Preparazione dell'invio per la revisione
 
-Quando si è pronti per inviare l'app Xamarin.tvOS all'App Store di Apple TV per la revisione, tornare al record iTunes Connect dell'app e fare clic sul pulsante **Invia per la revisione** nell'angolo superiore destro della schermata:
+Quando si è pronti per inviare l'app Novell. tvOS all'App Store di Apple TV per la revisione, tornare al record iTunes Connect dell'app e fare clic sul pulsante **Invia per la revisione** nell'angolo superiore destro della schermata:
 
 [![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha fornito una panoramica dell'impostazione specifica tvOS necessaria in iTunes Connect per rilasciare un'app tvOS all'App Store di Apple TV.
 

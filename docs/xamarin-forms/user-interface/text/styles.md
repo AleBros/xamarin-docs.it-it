@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsStili di testo
-description: Questo articolo illustra come applicare stili di testo nelle Xamarin.Forms applicazioni. Gli stili possono essere definiti una volta e usati da molte visualizzazioni, ma uno stile può essere usato solo con visualizzazioni di un solo tipo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136149"
+title: " Xamarin.Forms Text Styles" Description: "in questo articolo viene illustrato come applicare stili di testo nelle Xamarin.Forms applicazioni. Gli stili possono essere definiti una volta e usati da molte visualizzazioni, ma uno stile può essere usato solo con visualizzazioni di un solo tipo. "
+ms. prod: Novell MS. AssetID: 57C0CFD6-A568-46B8-ADA1-BF25681893CF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/22/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-text-styles"></a>Xamarin.FormsStili di testo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -25,8 +11,6 @@ _Stile del testo in Novell. Forms_
 
 Gli stili possono essere utilizzati per regolare l'aspetto di etichette, voci ed editor. Gli stili possono essere definiti una volta e usati da molte visualizzazioni, ma uno stile può essere usato solo con visualizzazioni di un solo tipo.
 Gli stili possono essere specificati `Key` e applicati in modo selettivo utilizzando la proprietà di un controllo specifico `Style` .
-
-<a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Stili predefiniti
 
@@ -52,8 +36,6 @@ label.Style = Device.Styles.TitleStyle;
 ```
 
 ![Esempio di stili del dispositivo](styles-images/builtinstyles.png)
-
-<a name="Custom_Styles" />
 
 ## <a name="custom-styles"></a>Stili personalizzati
 
@@ -94,8 +76,6 @@ In XAML:
 Si noti che le risorse (inclusi tutti gli stili) vengono definite all'interno `ContentPage.Resources` di, che è un elemento di pari livello dell'elemento più familiare `ContentPage.Content` .
 
 ![Esempio di stili personalizzati](styles-images/customstyle.png)
-
-<a name="Applying_Styles" />
 
 ## <a name="applying-styles"></a>Applicazione di stili
 
@@ -153,4 +133,4 @@ Per garantire l'accessibilità, assicurarsi che gli stili predefiniti vengano us
 - [Creazione di app per dispositivi mobili con Xamarin.Forms , capitolo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Stili](~/xamarin-forms/user-interface/styles/index.md)
 - [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)

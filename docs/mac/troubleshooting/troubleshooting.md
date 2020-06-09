@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 683915d238f6c8aee10957285ad4438316e1e037
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567127"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Novell. Mac
 
@@ -35,7 +35,7 @@ Con una qualsiasi di queste risorse, è possibile eseguire alcune operazioni di 
 
 ### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>Cosa fare quando l'app si arresta in modo anomalo senza output
 
-Nella maggior parte dei casi, il debugger in Visual Studio per Mac catturerà eccezioni e arresti anomali dell'applicazione e consentirà di individuare la causa principale. Tuttavia, esistono alcuni casi in cui l'applicazione verrà rimbalzata sul Dock e verrà chiusa con un output minimo o nullo. Questi possono includere:
+Nella maggior parte dei casi, il debugger in Visual Studio per Mac catturerà eccezioni e arresti anomali dell'applicazione e consentirà di individuare la causa principale. Tuttavia, esistono alcuni casi in cui l'applicazione verrà rimbalzata sul Dock e verrà chiusa con un output minimo o nullo. ad esempio quelle riportate di seguito:
 
 - Problemi di firma del codice.
 - Alcuni arresti anomali del runtime di mono.
@@ -47,20 +47,20 @@ Nella maggior parte dei casi, il debugger in Visual Studio per Mac catturerà ec
 Il debug di questi programmi può essere frustrante, in quanto la ricerca delle informazioni necessarie può essere difficile. Ecco alcuni approcci che possono essere utili:
 
 - Verificare che la versione macOS elencata nel file **info. plist** sia la stessa della versione di MacOS attualmente installata nel computer.
-- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare** -> **rilievi** -> **output dell'applicazione**) per le analisi dello stack o l'output in rosso da Cocoa che può descrivere l'output.
+- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare**l'  ->  output dell'applicazione dei**rilievi**  ->  **Application Output**) per le tracce dello stack o l'output in rosso da Cocoa che può descrivere l'output.
 - Eseguire l'applicazione dalla riga di comando ed esaminare l'output (nell'app **Terminal** ) usando:
 
-  `MyApp.app/Contents/MacOS/MyApp` (dove `MyApp` è il nome dell'applicazione)
+  `MyApp.app/Contents/MacOS/MyApp`(dove `MyApp` è il nome dell'applicazione)
 - È possibile aumentare l'output aggiungendo "MONO_LOG_LEVEL" al comando nella riga di comando, ad esempio:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- È possibile alleghi un debugger nativo (`lldb`) al processo per verificare se sono disponibili altre informazioni, ovvero è necessaria una licenza a pagamento. Ad esempio, effettuare le operazioni seguenti:
+- È possibile alleghi al processo un debugger nativo ( `lldb` ) per verificare se sono disponibili altre informazioni, ovvero è necessaria una licenza a pagamento. Ad esempio, effettuare le operazioni seguenti:
 
   1. Immettere `lldb MyApp.app/Contents/MacOS/MyApp` nel terminale.
   2. Immettere `run` nel terminale.
   3. Immettere `c` nel terminale.
   4. Termina al termine del debug.
-- Come ultima risorsa, prima di chiamare `NSApplication.Init` nel metodo di `Main` (o in altre posizioni come richiesto), è possibile scrivere testo in un file in una posizione nota per individuare il passaggio del lancio in cui si verificano problemi.
+- Come ultima risorsa, prima di chiamare `NSApplication.Init` il `Main` Metodo (o in altre posizioni come richiesto), è possibile scrivere il testo in un file in una posizione nota per individuare il passaggio del lancio in cui si verificano problemi.
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -68,17 +68,17 @@ Le sezioni seguenti riguardano i problemi noti e le relative soluzioni.
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>Non è possibile connettersi al debugger nelle app in modalità sandbox
 
-Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
+Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"*.
 
 [![Modifica dei diritti](troubleshooting-images/debug01.png "Modifica dei diritti")](troubleshooting-images/debug01-large.png#lightbox)
 
-L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la destinazione `CompileEntitlements` per `msbuild` per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
+L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la `CompileEntitlements` destinazione per `msbuild` per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: non sono disponibili dati per la codifica 437
 
-Quando si includono librerie di terze parti nell'app Novell. Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
+Quando si includono librerie di terze parti nell'app Novell. Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile` , possono generare questa eccezione durante l'operazione.
 
-Questo problema può essere risolto aprendo le opzioni per il progetto Novell. Mac, passando a **Mac Build** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** :
+Questo problema può essere risolto aprendo le opzioni per il progetto Novell. Mac, passando a **Mac Build**  >  **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** :
 
 [![Modifica delle opzioni di compilazione](troubleshooting-images/issue01.png "Modifica delle opzioni di compilazione")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -102,11 +102,11 @@ Se si fa doppio clic sul file **titles. plist** , verrà visualizzato l'editor d
 
 [![Modifica dei diritti](troubleshooting-images/entitlements02.png "Modifica dei diritti")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-Per i progetti Novell. Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliendo **Aggiungi** > **nuovo file.** Selezionare quindi **Novell. Mac** > **elenco di proprietà vuoto**:
+Per i progetti Novell. Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e selezionando **Aggiungi**  >  **nuovo file.** Selezionare quindi **Novell. Mac**  >  **Empty Property List**:
 
 ![Aggiunta di un nuovo elenco di proprietà](troubleshooting-images/entitlements03.png "Aggiunta di un nuovo elenco di proprietà")
 
-Immettere `Entitlements` per il nome e fare clic sul pulsante **nuovo** . Se il progetto includeva in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto anziché creare un nuovo file:
+Immettere `Entitlements` come nome e fare clic sul pulsante **nuovo** . Se il progetto includeva in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto anziché creare un nuovo file:
 
 [![Verifica della sovrascrittura di un file](troubleshooting-images/entitlements04.png "Verifica della sovrascrittura di un file")](troubleshooting-images/entitlements04-large.png#lightbox)
 
@@ -114,11 +114,11 @@ Immettere `Entitlements` per il nome e fare clic sul pulsante **nuovo** . Se il 
 
 La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Novell. Mac](https://forums.xamarin.com/categories/xamarin-mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
 
-<a name="filing-a-bug"/>
+<a name="filing-a-bug"></a>
 
 ## <a name="filing-a-bug"></a>Archiviazione di un bug
 
-I commenti e i suggerimenti dei clienti sono importanti per Microsoft. Se si riscontrano problemi con Novell. Mac:
+I commenti degli utenti sono importanti. Se si riscontrano problemi con Novell. Mac:
 
 - Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues)
 - Prima di passare ai problemi di GitHub, si è tenuta traccia dei problemi di Xamarin in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi), dove è possibile cercare i problemi corrispondenti.

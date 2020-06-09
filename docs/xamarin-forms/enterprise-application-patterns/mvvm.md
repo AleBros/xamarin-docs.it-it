@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d2e335535b508a6cd5e2f497e2c681152a7e5cda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130949"
+title: "il modello Model-View-ViewModel" Description: "questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers usa il modello MVVM per separare chiaramente la logica aziendale e di presentazione dell'app dalla relativa interfaccia utente."
+ms. prod: Novell MS. AssetID: dd8c1813-df44-4947-BCEE-1a1ff2334b87 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-model-view-viewmodel-pattern"></a>Modello Model-View-ViewModel
 
 L' Xamarin.Forms esperienza dello sviluppatore comporta in genere la creazione di un'interfaccia utente in XAML e quindi l'aggiunta del code-behind che opera sull'interfaccia utente. Quando le app vengono modificate e aumentano le dimensioni e l'ambito, possono verificarsi problemi di manutenzione complessi. Questi problemi includono il stretto accoppiamento tra i controlli dell'interfaccia utente e la logica di business, che aumenta il costo di apportare modifiche all'interfaccia utente e la difficoltà di eseguire unit test di tale codice.
@@ -124,8 +110,6 @@ La costruzione e l'assegnazione a livello di codice del modello di visualizzazio
 ### <a name="creating-a-view-defined-as-a-data-template"></a>Creazione di una vista definita come modello di dati
 
 Una vista può essere definita come modello di dati e associata a un tipo di modello di visualizzazione. I modelli di dati possono essere definiti come risorse oppure possono essere definiti inline all'interno del controllo che visualizzerà il modello di visualizzazione. Il contenuto del controllo è l'istanza del modello di visualizzazione e il modello di dati viene usato per rappresentarlo visivamente. Questa tecnica è un esempio di situazione in cui viene creata prima un'istanza del modello di visualizzazione, seguita dalla creazione della vista.
-
-<a name="automatically_creating_a_view_model_with_a_view_model_locator" />
 
 ### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>Creazione automatica di un modello di visualizzazione con un localizzatore di modelli di visualizzazione
 
@@ -279,13 +263,11 @@ Nell'esempio di codice seguente viene illustrato il modo [`Grid`](xref:Xamarin.F
 
 È anche possibile definire facoltativamente un parametro di comando utilizzando la [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) Proprietà. Il tipo dell'argomento previsto è specificato nei metodi di `Execute` `CanExecute` destinazione e. [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)Richiama automaticamente il comando di destinazione quando l'utente interagisce con il controllo associato. Il parametro del comando, se specificato, viene passato come argomento al delegato del comando `Execute` .
 
-<a name="implementing_behaviors" />
-
 ### <a name="implementing-behaviors"></a>Implementazione dei comportamenti
 
 I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. La funzionalità viene invece implementata in una classe di comportamento e associata al controllo come se fosse parte del controllo stesso. I comportamenti consentono di implementare il codice che sarebbe normalmente necessario scrivere come code-behind, perché interagisce direttamente con l'API del controllo, in modo che possa essere collegato in modo conciso al controllo e incluso in un pacchetto per il riutilizzo in più di una vista o un'app. Nel contesto di MVVM, i comportamenti sono un approccio utile per connettere i controlli ai comandi.
 
-Un comportamento associato a un controllo tramite le proprietà associate è noto come *comportamento associato*. Il comportamento può quindi usare l'API esposta dell'elemento a cui è collegata per aggiungere funzionalità a tale controllo, o altri controlli, nella struttura ad albero visuale della visualizzazione. L'app per dispositivi mobili eShopOnContainers contiene la `LineColorBehavior` classe, che è un comportamento associato. Per ulteriori informazioni su questo comportamento, vedere [visualizzazione degli errori di convalida](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
+Un comportamento associato a un controllo tramite le proprietà associate è noto come *comportamento associato*. Il comportamento può quindi usare l'API esposta dell'elemento a cui è collegata per aggiungere funzionalità a tale controllo, o altri controlli, nella struttura ad albero visuale della visualizzazione. L'app per dispositivi mobili eShopOnContainers contiene la `LineColorBehavior` classe, che è un comportamento associato. Per ulteriori informazioni su questo comportamento, vedere [visualizzazione degli errori di convalida](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors).
 
 Un Xamarin.Forms comportamento è una classe che deriva dalla [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe o, dove `T` è il tipo del controllo a cui deve essere applicato il comportamento. Queste classi forniscono `OnAttachedTo` `OnDetachingFrom` i metodi e, che devono essere sottoposti a override per fornire la logica che verrà eseguita quando il comportamento viene collegato e scollegato dai controlli.
 
@@ -361,7 +343,7 @@ In fase di esecuzione, `EventToCommandBehavior` risponderà all'interazione con 
 
 Per ulteriori informazioni sui comportamenti, vedere [comportamenti](~/xamarin-forms/app-fundamentals/behaviors/index.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Il modello MVC (Model-View-ViewModel) consente di separare nettamente la logica di business e di presentazione di un'applicazione dalla relativa interfaccia utente (UI). Il mantenimento di una netta separazione tra la logica dell'applicazione e l'interfaccia utente consente di risolvere numerosi problemi di sviluppo e può semplificare la verifica, la manutenzione e l'evoluzione di un'applicazione. Può anche migliorare significativamente le opportunità di riutilizzo del codice e consente agli sviluppatori e ai progettisti di interfaccia utente di collaborare più facilmente durante lo sviluppo delle rispettive parti di un'app.
 

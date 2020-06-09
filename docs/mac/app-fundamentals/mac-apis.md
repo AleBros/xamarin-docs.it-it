@@ -7,22 +7,22 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: cd427d13bb79fd31e1e814726aaaf61788ae10ec
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: c8fd877c6addac7dd865d8464e24a455b2f1aa88
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573937"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>API macOS per sviluppatori Novell. Mac
 
 ## <a name="overview"></a>Panoramica
 
-Per la maggior parte del tempo di sviluppo con Novell. Mac, è possibile pensare, leggere e scrivere C# senza preoccuparsi delle API Objective-C sottostanti. Tuttavia, a volte è necessario leggere la documentazione dell'API da Apple, tradurre una risposta da Stack Overflow a una soluzione per il problema oppure confrontarla con un esempio esistente.
+Per la maggior parte del tempo di sviluppo con Novell. Mac, è possibile pensare, leggere e scrivere in C# senza preoccuparsi delle API Objective-C sottostanti. Tuttavia, a volte è necessario leggere la documentazione dell'API da Apple, tradurre una risposta da Stack Overflow a una soluzione per il problema oppure confrontarla con un esempio esistente.
 
 ## <a name="reading-enough-objective-c-to-be-dangerous"></a>Lettura di un numero sufficiente di Objective-C come pericoloso
 
-In alcuni casi sarà necessario leggere una definizione Objective-C o una chiamata al metodo e tradurla nel metodo C# equivalente. Diamo un'occhiata a una definizione di funzione Objective-C e suddivido le parti. Questo metodo (un *selettore* in Objective-C) è reperibile in `NSTableView`:
+In alcuni casi sarà necessario leggere una definizione Objective-C o una chiamata al metodo e tradurla nel metodo C# equivalente. Diamo un'occhiata a una definizione di funzione Objective-C e suddivido le parti. Questo metodo (un *selettore* in Objective-C) si trova in `NSTableView` :
 
 ```objc
 - (BOOL)canDragRowsWithIndexes:(NSIndexSet *)rowIndexes atPoint:(NSPoint)mouseDownPoint
@@ -30,13 +30,13 @@ In alcuni casi sarà necessario leggere una definizione Objective-C o una chiama
 
 La dichiarazione può essere letta da sinistra a destra:
 
-- Il prefisso `-` significa che si tratta di un metodo di istanza (non statico). + indica che si tratta di un metodo di classe (statico)
-- `(BOOL)` è il tipo restituito (bool in C#)
-- `canDragRowsWithIndexes` è la prima parte del nome.
-- `(NSIndexSet *)rowIndexes` è il primo parametro e con il tipo. Il primo parametro è nel formato: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` è il secondo parametro e il relativo tipo. Ogni parametro dopo il primo è il formato: `selectorPart:(Type) pararmName`
-- Il nome completo di questo selettore di messaggi è: `canDragRowsWithIndexes:atPoint:`. Si noti la `:` alla fine. è importante.
-- Il binding Novell. Mac C# effettivo è: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- Il `-` prefisso indica che si tratta di un metodo di istanza (non statico). + indica che si tratta di un metodo di classe (statico)
+- `(BOOL)`tipo restituito (bool in C#)
+- `canDragRowsWithIndexes`è la prima parte del nome.
+- `(NSIndexSet *)rowIndexes`è il primo parametro e con il tipo. Il primo parametro è nel formato:`(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint`è il secondo parametro e il relativo tipo. Ogni parametro dopo il primo è il formato:`selectorPart:(Type) pararmName`
+- Il nome completo di questo selettore di messaggi è: `canDragRowsWithIndexes:atPoint:` . Si noti `:` che alla fine è importante.
+- L'associazione effettiva di Novell. Mac C# è la seguente:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 Questa chiamata al selettore può essere letta nello stesso modo:
 
@@ -44,26 +44,26 @@ Questa chiamata al selettore può essere letta nello stesso modo:
 [v canDragRowsWithIndexes:set atPoint:point];
 ```
 
-- Il selettore di `canDragRowsWithIndexes:atPoint` dell'istanza `v` viene chiamato con due parametri, `set` e `point`, passati.
-- In C#la chiamata al metodo ha un aspetto simile al seguente: `x.CanDragRows (set, point);`
+- Il `v` `canDragRowsWithIndexes:atPoint` selettore dell'istanza viene chiamato con due parametri, `set` e `point` , passati.
+- In C# la chiamata al metodo ha un aspetto simile al seguente:`x.CanDragRows (set, point);`
 
-<a name="finding_selector" />
+<a name="finding_selector"></a>
 
-## <a name="finding-the-c-member-for-a-given-selector"></a>Ricerca del C# membro per un selettore specificato
+## <a name="finding-the-c-member-for-a-given-selector"></a>Ricerca del membro C# per un selettore specificato
 
-Ora che è stato trovato il selettore Objective-C che è necessario richiamare, il passaggio successivo consiste nel mapping al C# membro equivalente. Sono disponibili quattro approcci che è possibile provare (continuando con l'esempio `NSTableView CanDragRows`):
+Ora che è stato trovato il selettore Objective-C che è necessario richiamare, il passaggio successivo consiste nel mapping al membro C# equivalente. Sono disponibili quattro approcci che è possibile provare (continuando con l' `NSTableView CanDragRows` esempio):
 
-1. Usare l'elenco di completamento automatico per analizzare rapidamente un elemento con lo stesso nome. Poiché è noto che si tratta di un'istanza di `NSTableView` è possibile digitare:
-
-    - `NSTableView x;`
-    - `x.` [CTRL + barra spaziatrice se l'elenco non viene visualizzato).
-    - `CanDrag` [Invio]
-    - Fare clic con il pulsante destro del mouse sul metodo, scegliere Dichiarazione per aprire il browser assembly in cui è possibile confrontare l'attributo `Export` al selettore in questione.
-
-2. Eseguire una ricerca nell'intera associazione di classe. Poiché è noto che si tratta di un'istanza di `NSTableView` è possibile digitare:
+1. Usare l'elenco di completamento automatico per analizzare rapidamente un elemento con lo stesso nome. Poiché è noto che si tratta di un'istanza di, è `NSTableView` possibile digitare:
 
     - `NSTableView x;`
-    - Fare clic con il pulsante destro del mouse su `NSTableView`, passare a dichiarazione in assembly browser
+    - `x.`[CTRL + barra spaziatrice se l'elenco non viene visualizzato).
+    - `CanDrag`entrare
+    - Fare clic con il pulsante destro del mouse sul metodo, scegliere Dichiarazione per aprire il browser assembly in cui è possibile confrontare l' `Export` attributo con il selettore in questione.
+
+2. Eseguire una ricerca nell'intera associazione di classe. Poiché è noto che si tratta di un'istanza di, è `NSTableView` possibile digitare:
+
+    - `NSTableView x;`
+    - Fare clic con il pulsante destro del mouse `NSTableView` , scegliere dichiarazione in assembly browser
     - Cerca il selettore in questione
 
 3. È possibile usare la [documentazione online dell'API Novell. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .

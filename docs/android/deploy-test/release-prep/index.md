@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
-ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
+ms.openlocfilehash: 2676565a62b4b9d4414e9a69737b287bcc992c0b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572013"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -35,7 +35,7 @@ Usare la procedura seguente per compilare l'app per il rilascio:
 
 Ognuno di questi passaggi è descritto in dettaglio di seguito.
 
-<a name="Specify_the_Application_Icon" />
+<a name="Specify_the_Application_Icon"></a>
 
 ## <a name="specify-the-application-icon"></a>Specificare l'icona dell'applicazione
 
@@ -65,7 +65,7 @@ In questi esempi, `@drawable/icon` fa riferimento a un file di icona disponibile
 
 In genere, `using Android.App` viene dichiarato all'inizio di **AssemblyInfo.cs** (lo spazio dei nomi dell'attributo `Application` è `Android.App`). Tuttavia, potrebbe essere necessario aggiungere l'istruzione `using` se non è già presente.
 
-<a name="Versioning" />
+<a name="Versioning"></a>
 
 ## <a name="version-the-application"></a>Specificare la versione dell'applicazione
 
@@ -89,7 +89,7 @@ Questi valori possono essere impostati usando la sezione **Compila > Applicazion
 
 -----
 
-<a name="shrink_apk" />
+<a name="shrink_apk"></a>
 
 ## <a name="shrink-the-apk"></a>Compattare il file APK
 
@@ -130,7 +130,7 @@ Di seguito sono riportate le opzioni di controllo del linker:
 
 - **Collega solo assembly SDK** &ndash; Verranno collegati solo gli assembly [richiesti da Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Gli altri assembly non verranno collegati.
 
-- **Collega tutti gli assembly** &ndash; verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
+- **Collega tutti gli assembly** &ndash; Verranno collegati tutti gli assembly richiesti dall'applicazione e non solo quelli richiesti da Novell. Android.
 
 -----
 
@@ -158,11 +158,11 @@ ProGuard è disabilitato per impostazione predefinita. L'opzione **Abilita ProGu
 
 Per informazioni più dettagliate sull'uso dello strumento ProGuard, vedere [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
-<a name="protect_app" />
+<a name="protect_app"></a>
 
 ## <a name="protect-the-application"></a>Proteggere l'applicazione
 
-<a name="Disable_Debugging" />
+<a name="Disable_Debugging"></a>
 
 ### <a name="disable-debugging"></a>Disabilitare il debug
 
@@ -183,7 +183,7 @@ Il Manifesto Android contiene l'attributo `android:debuggable`, che controlla se
 
 Si noti che le compilazioni di debug impostano automaticamente alcune autorizzazioni per semplificare l'esecuzione del debug, ad esempio **Internet** e **ReadExternalStorage**. Le compilazioni di rilascio, tuttavia, usano solo le autorizzazioni configurate in modo esplicito. Se si ritiene che il passaggio a una compilazione di rilascio comporti la perdita nell'app di un'autorizzazione che era disponibile nella compilazione di debug, verificare che tale autorizzazione sia stata attivata in modo esplicito nell'elenco **Autorizzazioni necessarie** come descritto in [Permissions](~/android/app-fundamentals/permissions.md) (Autorizzazioni). 
 
-<a name="dotfuscator" id="dotfuscator" />
+<a name="dotfuscator" id="dotfuscator"></a>
 
 ### <a name="application-protection-with-dotfuscator"></a>Protezione dell'applicazione con Dotfuscator
 
@@ -208,7 +208,7 @@ Dopo la configurazione, Dotfuscator CE proteggerà automaticamente ogni build cr
 
 -----
 
-<a name="bundle" />
+<a name="bundle"></a>
 
 ### <a name="bundle-assemblies-into-native-code"></a>Crea un bundle di assembly nel codice nativo
 
@@ -218,7 +218,7 @@ Questa opzione richiede una licenza Enterprise ed è disponibile solo quando l'o
 
 Si noti che l'opzione **Crea un bundle di assembly nel codice nativo***non* significa che gli assembly vengono compilati in codice nativo. Non è possibile utilizzare la [**compilazione AOT**](#aot) per compilare gli assembly in codice nativo.
 
-<a name="aot" />
+<a name="aot"></a>
 
 ### <a name="aot-compilation"></a>Compilazione AOT
 
@@ -233,7 +233,7 @@ Il _Compilatore ottimizzatore LLVM _ crea codice compilato più rapido e di dime
 > [!NOTE]
 > L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Enterprise.  
 
-<a name="Set_Packaging_Properties" />
+<a name="Set_Packaging_Properties"></a>
 
 ## <a name="set-packaging-properties"></a>Impostare le proprietà per la creazione di pacchetti
 
@@ -263,7 +263,7 @@ Quando questa opzione è abilitata, viene creato un APK per ogni ABI supportato,
 
 ### <a name="multi-dex"></a>Multidex
 
-Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite del metodo 65K si basa sul numero di metodi Java a cui un'app _fa riferimento_ (inclusi quelli presenti in tutte le librerie da cui dipende &ndash; l'app) e non si basa sul numero di metodi _scritti nel codice sorgente_. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
+Quando l'opzione **Abilita multidex** è abilitata, vengono usati gli strumenti Android SDK per ignorare il limite dei 65.000 metodi presente nel formato di file **DEX**. Il limite del metodo 65K si basa sul numero di metodi Java a cui un'app _fa riferimento_ (inclusi quelli presenti in tutte le librerie da cui dipende l'app) &ndash; e non si basa sul numero di metodi _scritti nel codice sorgente_. Se un'applicazione definisce solo pochi metodi ma ne usa molti, o usa raccolte di grandi dimensioni, è possibile che il limite di 65.000 venga superato.
 
 È possibile che un'app non usi tutti i metodi in tutte le raccolte cui fa riferimento, quindi è possibile che uno strumento come ProGuard (vedere sopra) possa rimuovere i metodi non usati dal codice. La procedura consigliata consiste nell'abilitare **Abilita multidex** solo se assolutamente necessario, ovvero se l'app fa riferimento a più di 65.000 metodi Java anche dopo l'uso di ProGuard.
 
@@ -273,13 +273,13 @@ Per altre informazioni su multidex, vedere [Configurare le app con più di 64.00
 
 I bundle di app sono diversi da apk perché non possono essere distribuiti direttamente in un dispositivo. Piuttosto, si tratta di un formato destinato a essere caricato con tutte le risorse e il codice compilato. Al termine del caricamento del bundle dell'app firmata, Google Play avrà tutti gli elementi necessari per compilare e firmare i apk dell'applicazione e per fornirli agli utenti usando il recapito dinamico.
 
-Per abilitare il supporto per bundle di app Android, è necessario acconsentire esplicitamente al `bundle` valore della proprietà **formato pacchetto Android** nelle opzioni del progetto Android. Prima di eseguire questa operazione, assicurarsi di modificare il progetto in `Release` una configurazione perché i bundle di app sono destinati solo ai pacchetti di versione.
+Per abilitare il supporto per bundle di app Android, è necessario acconsentire esplicitamente al `bundle` valore della proprietà **formato pacchetto Android** nelle opzioni del progetto Android. Prima di eseguire questa operazione, assicurarsi di modificare il progetto in una `Release` configurazione perché i bundle di app sono destinati solo ai pacchetti di versione.
 
 È ora possibile generare un bundle dell'app seguendo il [flusso di archiviazione](#archive). Verrà generato un bundle dell'app per l'applicazione.
 
 Per altre informazioni sui bundle di app Android, vedere [bundle di app Android](https://developer.android.com/guide/app-bundle/).
 
-<a name="Compile" />
+<a name="Compile"></a>
 
 ## <a name="compile"></a>Compilazione
 
@@ -295,7 +295,7 @@ Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionand
 
 -----
 
-<a name="archive" />
+<a name="archive"></a>
 
 ## <a name="archive-for-publishing"></a>Archiviare per la pubblicazione
 

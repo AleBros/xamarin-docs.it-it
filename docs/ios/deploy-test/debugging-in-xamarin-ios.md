@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 141d268e7a5670f9ba8002ae9edda828538a01a4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724696"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571792"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -174,7 +174,7 @@ Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice
 
 Se si verifica un errore di configurazione del debugger, è possibile abilitare la diagnostica dettagliata aggiungendo "-v -v -v" agli altri argomenti di mtouch nelle opzioni del progetto. In questo modo le informazioni dettagliate sull'errore verranno visualizzate nella console del dispositivo.
 
- <a name="WiFi_Debugging" />
+ <a name="WiFi_Debugging"></a>
 
 ## <a name="wireless-debugging"></a>Debug wireless
 
@@ -182,7 +182,7 @@ L'impostazione predefinita in Xamarin.iOS prevede il debug dell'applicazione sui
 
 Per altre informazioni sulla distribuzione e sul debug wireless, vedere la guida [Distribuzione wireless](~/ios/deploy-test/wireless-deployment.md).
 
-<a name="Technical_Details" />
+<a name="Technical_Details"></a>
 
 ## <a name="technical-details"></a>Dettagli tecnici
 
@@ -192,7 +192,7 @@ All'avvio, un'applicazione di cui deve essere eseguito il debug contatta il debu
 
 Questo debugger soft richiede uno schema di debug cooperativo quando è in esecuzione sul dispositivo. Il file binario viene quindi compilato quando il debug è di dimensioni maggiori perché il codice è instrumentato per poter contenere codice aggiuntivo in ogni punto della sequenza per supportare il debug.
 
-<a name="Accessing_the_Console" />
+<a name="Accessing_the_Console"></a>
 
 ## <a name="accessing-the-console"></a>Accesso alla console
 
@@ -204,7 +204,7 @@ Per gli utenti di Visual Studio, sono disponibili alcuni log nella finestra Outp
 
 -----
 
-<a name="Debugging_Mono's_Class_Libraries" />
+<a name="Debugging_Mono's_Class_Libraries"></a>
 
 ## <a name="debugging-monos-class-libraries"></a>Debug di librerie di classi di Mono
 
@@ -232,6 +232,6 @@ Dopo avere eseguito questa operazione, è possibile avviare l'applicazione ed es
 
 - [Debug con Xamarin](/visualstudio/mac/debugging/)
 - [Visualizzazioni dei dati](/visualstudio/mac/data-visualizations/)
-- [Impostare un punto di interruzioneSet A Breakpoint](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Imposta un punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
 - [Esecuzione del codice un'istruzione alla volta](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
 - [Visualizzare le informazioni nella finestra del log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)

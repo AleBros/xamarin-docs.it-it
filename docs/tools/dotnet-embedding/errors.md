@@ -6,12 +6,12 @@ ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
-ms.openlocfilehash: 12db92d8522e9ec1ceddd9a41361f3b600991eeb
-ms.sourcegitcommit: 7a55f096c17a20cfaa17c64d87490b63bbb6816e
+ms.openlocfilehash: 9d3dff0de912455a49e9f7a66aae2640a99db746
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82630516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573911"
 ---
 # <a name="net-embedding-errors"></a>Errori di incorporamento .NET
 
@@ -21,7 +21,7 @@ ad esempio parametri, ambiente
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
 
-<a name="EM0000" />
+<a name="EM0000"></a>
 
 ### <a name="em0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcommonoembeddinator-4000issues"></a>EM0000: errore imprevisto. compilare un report sui bug inhttps://github.com/mono/Embeddinator-4000/issues
 
@@ -33,61 +33,61 @@ Si è verificata una condizione di errore imprevista. Inviare [un problema](http
 
 Il modo più semplice per ottenere le informazioni esatte sulla versione consiste nell'usare il menu **Xamarin Studio** , **informazioni su Xamarin Studio** elemento, visualizzare il pulsante **Dettagli** e quindi copiare e incollare le informazioni sulla versione. è possibile usare il pulsante **copia informazioni** .
 
-<a name="EM0001" />
+<a name="EM0001"></a>
 
 ### <a name="em0001-could-not-create-output-directory-x"></a>EM0001: non è stato possibile creare la directory di output`X`
 
-Il nome di directory specificato `-o=DIR` da non esiste e non è stato possibile crearlo. Potrebbe trattarsi di un nome non valido per la file system.
+Il nome di directory specificato da non `-o=DIR` esiste e non è stato possibile crearlo. Potrebbe trattarsi di un nome non valido per la file system.
 
-<a name="EM0002" />
+<a name="EM0002"></a>
 
-### <a name="em0002-option-x-is-not-supported"></a>EM0002: l' `X` opzione non è supportata
+### <a name="em0002-option-x-is-not-supported"></a>EM0002: l'opzione `X` non è supportata
 
-Lo strumento non supporta l'opzione `X`. È possibile che un'altra versione dello strumento lo supporti o che l' `X` opzione non sia applicabile in questo ambiente.
+Lo strumento non supporta l'opzione `X` . È possibile che un'altra versione dello strumento lo supporti o che l' `X` opzione non sia applicabile in questo ambiente.
 
-<a name="EM0003" />
+<a name="EM0003"></a>
 
 ### <a name="em0003-the-platform-x-is-not-valid"></a>EM0003: la piattaforma `X` non è valida.
 
-Lo strumento non supporta la piattaforma `X`. È possibile che un'altra versione dello strumento lo supporti o che la `X` piattaforma non sia applicabile in questo ambiente.
+Lo strumento non supporta la piattaforma `X` . È possibile che un'altra versione dello strumento lo supporti o che la `X` piattaforma non sia applicabile in questo ambiente.
 
-<a name="EM0004" />
+<a name="EM0004"></a>
 
 ### <a name="em0004-the-target-x-is-not-valid"></a>EM0004: la destinazione `X` non è valida.
 
-Lo strumento non supporta la destinazione `X`. È possibile che un'altra versione dello strumento lo supporti o che la `X` destinazione non sia applicabile in questo ambiente.
+Lo strumento non supporta la destinazione `X` . È possibile che un'altra versione dello strumento lo supporti o che la `X` destinazione non sia applicabile in questo ambiente.
 
-<a name="EM0005" />
+<a name="EM0005"></a>
 
-### <a name="em0005-the-compilation-target-x-is-not-valid"></a>EM0005: la destinazione `X` di compilazione non è valida.
+### <a name="em0005-the-compilation-target-x-is-not-valid"></a>EM0005: la destinazione di compilazione `X` non è valida.
 
-Lo strumento non supporta la destinazione `X`di compilazione. È possibile che un'altra versione dello strumento lo supporti o che la `X` destinazione della compilazione non sia applicabile in questo ambiente.
+Lo strumento non supporta la destinazione di compilazione `X` . È possibile che un'altra versione dello strumento lo supporti o che la `X` destinazione della compilazione non sia applicabile in questo ambiente.
 
-<a name="EM0006" />
+<a name="EM0006"></a>
 
 ### <a name="em0006-could-not-find-the-xcode-location"></a>EM0006: non è stato possibile trovare il percorso di Xcode.
 
-Lo strumento non è riuscito a trovare il percorso di Xcode attualmente `xcode-select -p` selezionato tramite il comando. Verificare che sia possibile eseguire correttamente il comando e restituisce il percorso di Xcode corretto.
+Lo strumento non è riuscito a trovare il percorso di Xcode attualmente selezionato tramite il `xcode-select -p` comando. Verificare che sia possibile eseguire correttamente il comando e restituisce il percorso di Xcode corretto.
 
-<a name="EM0007" />
+<a name="EM0007"></a>
 
 ### <a name="em0007-could-not-get-the-sdk-version-for-sdk"></a>EM0007: non è stato possibile ottenere la versione dell'SDK per ' {SDK}'.
 
-Lo strumento non è riuscito a ottenere la versione dell' `xcrun --show-sdk-version --sdk {sdk}` SDK utilizzando il comando. Verificare che sia possibile eseguire correttamente il comando e che venga restituita la versione dell'SDK.
+Lo strumento non è riuscito a ottenere la versione dell'SDK utilizzando il `xcrun --show-sdk-version --sdk {sdk}` comando. Verificare che sia possibile eseguire correttamente il comando e che venga restituita la versione dell'SDK.
 
-<a name="EM0008" />
+<a name="EM0008"></a>
 
 ### <a name="em0008-the-architecture-arch-is-not-valid-for-platform-valid-architectures-for-platform-are-architectures"></a>EM0008: l'architettura ' {Arch}' non è valida per ' {Platform}'. Le architetture valide per ' {Platform}' sono:' {Architectures}'.
 
 L'architettura del messaggio di errore non è valida per la piattaforma di destinazione. Verificare che sia stata passata un'architettura valida per l' `--abi` opzione.
 
-<a name="EM0009" />
+<a name="EM0009"></a>
 
 ### <a name="em0009-the-feature-x-is-not-currently-implemented-by-the-generator"></a>EM0009: la funzionalità `X` non è attualmente implementata dal generatore
 
 Si tratta di un problema noto che si intende correggere in una versione futura del generatore. I contributi sono benvenuti.
 
-<a name="EM0010" />
+<a name="EM0010"></a>
 
 ### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010: non è possibile unire i Framework ' {simulatorFramework}' è {deviceFramework}' perché il file ' {file}' esiste in entrambi.
 
@@ -95,53 +95,53 @@ Lo strumento non è stato in grado di unire i Framework indicati nel messaggio d
 
 Questo potrebbe indicare un bug nell'incorporamento di .NET; inviare un report sui bug in [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) con un test case.
 
-<a name="EM0011" />
+<a name="EM0011"></a>
 
-### <a name="em0011-the-assembly-x-does-not-exist"></a>EM0011: l'assembly `X` non esiste.
+### <a name="em0011-the-assembly-x-does-not-exist"></a>EM0011: l'assembly non `X` esiste.
 
-Lo strumento non è stato in grado `X` di trovare l'assembly specificato negli argomenti.
+Lo strumento non è stato in grado di trovare l'assembly `X` specificato negli argomenti.
 
-<a name="EM0012" />
+<a name="EM0012"></a>
 
-### <a name="em0012-the-assembly-name-x-is-not-unique"></a>EM0012: il nome `X` dell'assembly non è univoco
+### <a name="em0012-the-assembly-name-x-is-not-unique"></a>EM0012: il nome dell'assembly `X` non è univoco
 
 Più di un assembly fornito ha lo stesso nome interno e non sarebbe possibile distinguerli in fase di esecuzione.
 
 La causa più probabile è che un assembly venga specificato più di una volta negli argomenti della riga di comando. Tuttavia, un assembly rinominato mantiene il nome originale e più copie non possono coesistere.
 
-<a name="EM0013" />
+<a name="EM0013"></a>
 
 ### <a name="em0013-cant-find-the-assembly-x-referenced-by-y"></a>EM0013: Impossibile trovare l'assembly ' X ', a cui fa riferimento "Y".
 
 Lo strumento non è stato in grado di trovare l'assembly ' X ' a cui fa riferimento l'assembly ' Y '. Assicurarsi che tutti gli assembly a cui si fa riferimento si trovino nella stessa directory dell'assembly da associare.
 
-<a name="EM0014" />
+<a name="EM0014"></a>
 
 ### <a name="em0014-could-not-find-product-product-min_version-is-required"></a>EM0014: non è stato possibile trovare {Product} ({Product} {min_version} è obbligatorio).
 
 Impossibile trovare nel sistema la dipendenza indicata nel messaggio di errore.
 
-<a name="EM0015" />
+<a name="EM0015"></a>
 
 ### <a name="em0015-could-not-find-a-valid-version-of-product-found-version-but-at-least-min_version-is-required"></a>EM0015: non è stato possibile trovare una versione valida di {Product} (trovata {Version}, ma è necessario almeno {min_version}).
 
 La dipendenza indicata nel messaggio di errore è stata rilevata nel sistema ma è troppo vecchia. Eseguire l'aggiornamento a una versione più recente.
 
-<a name="EM0016" />
+<a name="EM0016"></a>
 
 ### <a name="em0016-could-not-create-symlink-file---target-error-number"></a>EM0016: non è stato possibile creare il collegamento simbolico ' {file}'->' {target}': errore {Number}
 
 Non è stato possibile creare il collegamento simbolico indicato nel messaggio di errore.
 
-<a name="EM0026" />
+<a name="EM0026"></a>
 
 ### <a name="em0026-could-not-parse-the-command-line-argument-a-"></a>EM0026 non è riuscito ad analizzare l'argomento della riga di comando ' A ': *
 
-La sintassi specificata per l'opzione `A` della riga di comando non può essere analizzata dallo strumento. Per la sintassi corretta, consultare la documentazione.
+La sintassi specificata per l'opzione della riga `A` di comando non può essere analizzata dallo strumento. Per la sintassi corretta, consultare la documentazione.
 
-<a name="EM0099" />
+<a name="EM0099"></a>
 
-### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: errore interno *. Inviare un report sui bug con un test case (https://github.com/mono/Embeddinator-4000/issues).
+### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: errore interno *. Inviare un report sui bug con un test case ( https://github.com/mono/Embeddinator-4000/issues) .
 
 Questo messaggio di errore viene segnalato quando un controllo di coerenza interno nell'incorporamento di .NET ha esito negativo.
 
@@ -151,37 +151,37 @@ Indica un bug nell'incorporamento di .NET; inviare un report sui bug in [https:/
 
 ## <a name="em1xxx-code-processing"></a>EM1xxx: elaborazione del codice
 
-<a name="EM1010" />
+<a name="EM1010"></a>
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: il `T` tipo non è generato `X` perché non è supportato.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: il tipo `T` non è generato perché `X` non è supportato.
 
-Si tratta di un **avviso** che indica `T` che il tipo verrà ignorato (ovvero non verrà generato nulla) perché usa `X`, una funzionalità non supportata.
+Si tratta di un **avviso** che indica che il tipo `T` verrà ignorato (ovvero non verrà generato nulla) perché usa `X` , una funzionalità non supportata.
 
 Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
 
-<a name="EM1011" />
+<a name="EM1011"></a>
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: il `T` tipo non viene generato perché manca il marshalling del codice con una controparte nativa.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: `T` il tipo non viene generato perché manca il marshalling del codice con una controparte nativa.
 
-Si tratta di un **avviso** che indica `T` che il tipo verrà ignorato (ovvero non verrà generato nulla) perché espone qualcosa da .NET Framework che richiede il marshalling aggiuntivo.
+Si tratta di un **avviso** che indica che il tipo `T` verrà ignorato (ovvero non verrà generato nulla) perché espone qualcosa da .NET Framework che richiede il marshalling aggiuntivo.
 
 Nota: si tratta di un elemento che potrebbe essere supportato, con alcune limitazioni, in una versione futura dello strumento.
 
-<a name="EM1020" />
+<a name="EM1020"></a>
 
-### <a name="em1020-constructor-c-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1020: il `C` costruttore non è generato perché il tipo `T` di parametro non è supportato.
+### <a name="em1020-constructor-c-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1020: il costruttore `C` non è generato perché il tipo di parametro `T` non è supportato.
 
-Si tratta di un **avviso** che indica `C` che il costruttore verrà ignorato, ovvero non verrà generato nulla, perché un parametro di `T` tipo non è supportato.
+Si tratta di un **avviso** che indica che il costruttore `C` verrà ignorato, ovvero non verrà generato nulla, perché un parametro di tipo `T` non è supportato.
 
-Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il `T` tipo non è supportato.
+Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il tipo `T` non è supportato.
 
 Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
 
-<a name="EM1021" />
+<a name="EM1021"></a>
 
-### <a name="em1021-constructor-c-has-default-values-for-which-no-wrapper-is-generated"></a>EM1021: il `C` costruttore dispone di valori predefiniti per i quali non viene generato alcun wrapper.
+### <a name="em1021-constructor-c-has-default-values-for-which-no-wrapper-is-generated"></a>EM1021: il costruttore `C` dispone di valori predefiniti per i quali non viene generato alcun wrapper.
 
-Si tratta di un **avviso** che indica che i parametri `C` predefiniti del costruttore non generano codice aggiuntivo. La ragione più comune è che un metodo esistente ha già la stessa firma. Ad esempio, in .NET è possibile avere:
+Si tratta di un **avviso** che indica che i parametri predefiniti del costruttore `C` non generano codice aggiuntivo. La ragione più comune è che un metodo esistente ha già la stessa firma. Ad esempio, in .NET è possibile avere:
 
 ```csharp
 public class MyType {
@@ -190,33 +190,33 @@ public class MyType {
 }
 ```
 
-In questi casi verranno creati solo `init` due selettori generati, che eseguono entrambe le chiamate in mono, ma non esiste alcun wrapper per quest'ultimo.
+In questi casi verranno creati solo due `init` selettori generati, che eseguono entrambe le chiamate in mono, ma non esiste alcun wrapper per quest'ultimo.
 
-<a name="EM1030" />
+<a name="EM1030"></a>
 
-### <a name="em1030-method-m-is-not-generated-because-return-type-t-is-not-supported"></a>EM1030: il `M` metodo non viene generato perché il `T` tipo restituito non è supportato.
+### <a name="em1030-method-m-is-not-generated-because-return-type-t-is-not-supported"></a>EM1030: il metodo `M` non viene generato perché il tipo restituito `T` non è supportato.
 
-Si tratta di un **avviso** che indica `M` che il metodo verrà ignorato, ovvero non verrà generato alcun elemento, perché il `T` tipo restituito non è supportato.
+Si tratta di un **avviso** che indica che il metodo `M` verrà ignorato, ovvero non verrà generato alcun elemento, perché il tipo restituito `T` non è supportato.
 
-Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il `T` tipo non è supportato.
-
-Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
-
-<a name="EM1031" />
-
-### <a name="em1031-method-m-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1031: il `M` metodo non è generato perché il tipo `T` di parametro non è supportato.
-
-Si tratta di un **avviso** che indica `M` che il metodo verrà ignorato, ovvero che non verrà generato alcun elemento, perché un `T` parametro di tipo non è supportato.
-
-Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il `T` tipo non è supportato.
+Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il tipo `T` non è supportato.
 
 Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
 
-<a name="EM1032" />
+<a name="EM1031"></a>
 
-### <a name="em1032-method-m-has-default-values-for-which-no-wrapper-is-generated"></a>EM1032: il `M` metodo ha valori predefiniti per i quali non viene generato alcun wrapper.
+### <a name="em1031-method-m-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1031: il metodo `M` non è generato perché il tipo di parametro `T` non è supportato.
 
-Si tratta di un **avviso** che indica che i parametri `M` predefiniti del metodo non generano codice aggiuntivo. La ragione più comune è che un metodo esistente ha già la stessa firma. Ad esempio, in .NET è possibile avere:
+Si tratta di un **avviso** che indica che il metodo `M` verrà ignorato, ovvero che non verrà generato alcun elemento, perché un parametro di tipo `T` non è supportato.
+
+Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il tipo `T` non è supportato.
+
+Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
+
+<a name="EM1032"></a>
+
+### <a name="em1032-method-m-has-default-values-for-which-no-wrapper-is-generated"></a>EM1032: il metodo `M` ha valori predefiniti per i quali non viene generato alcun wrapper.
+
+Si tratta di un **avviso** che indica che i parametri predefiniti del metodo `M` non generano codice aggiuntivo. La ragione più comune è che un metodo esistente ha già la stessa firma. Ad esempio, in .NET è possibile avere:
 
 ```csharp
 public class MyType {
@@ -225,71 +225,71 @@ public class MyType {
 }
 ```
 
-In questi casi verranno creati solo `Increment` due selettori generati, che eseguono entrambe le chiamate in mono, ma non esiste alcun wrapper per quest'ultimo.
+In questi casi verranno creati solo due `Increment` selettori generati, che eseguono entrambe le chiamate in mono, ma non esiste alcun wrapper per quest'ultimo.
 
-<a name="EM1033" />
+<a name="EM1033"></a>
 
-### <a name="em1033-method-m-is-not-generated-because-another-method-exposes-the-operator-with-a-friendly-name"></a>EM1033: il `M` metodo non viene generato perché un altro metodo espone l'operatore con un nome descrittivo.
+### <a name="em1033-method-m-is-not-generated-because-another-method-exposes-the-operator-with-a-friendly-name"></a>EM1033: `M` il metodo non viene generato perché un altro metodo espone l'operatore con un nome descrittivo.
 
-Si tratta di un **avviso** che indica `M` che il metodo non viene generato perché un altro metodo espone l'operatore con un nome descrittivo. (https://msdn.microsoft.com/library/ms229032(v=vs.110).aspx)
+Si tratta di un **avviso** che indica che il metodo `M` non viene generato perché un altro metodo espone l'operatore con un nome descrittivo. (https://msdn.microsoft.com/library/ms229032(v=vs.110).aspx)
 
-<a name="EM1034" />
+<a name="EM1034"></a>
 
-### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: il metodo `M` di estensione non viene generato all'interno di una categoria perché non è possibile `T`crearlo in un tipo primitivo. È stato generato un metodo statico normale.
+### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: il metodo `M` di estensione non viene generato all'interno di una categoria perché non è possibile crearlo in un tipo primitivo `T` . È stato generato un metodo statico normale.
 
-Si tratta di un **avviso** che indica che è stato trovato un metodo di estensione `System.Int32`su un tipo primivite (ad esempio). In Objective-C non è possibile creare categorie in un tipo primitivo. Il generatore produrrà invece un metodo statico normale.
+Si tratta di un **avviso** che indica che è stato trovato un metodo di estensione su un tipo primivite (ad esempio `System.Int32` ). In Objective-C non è possibile creare categorie in un tipo primitivo. Il generatore produrrà invece un metodo statico normale.
 
-<a name="EM1040" />
+<a name="EM1040"></a>
 
-### <a name="em1040-property-p-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1040: la `P` proprietà non è generata perché il tipo `T` di parametro non è supportato.
+### <a name="em1040-property-p-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1040: la proprietà `P` non è generata perché il tipo di parametro `T` non è supportato.
 
-Si tratta di un **avviso** che indica `P` che la proprietà verrà ignorata, ovvero che non verrà generato nulla, perché `T` il tipo esposto non è supportato.
+Si tratta di un **avviso** che indica che la proprietà `P` verrà ignorata, ovvero che non verrà generato nulla, perché il tipo esposto `T` non è supportato.
 
-Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il `T` tipo non è supportato.
-
-Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
-
-<a name="EM1041" />
-
-### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041: le proprietà indicizzate `T` in non vengono generate perché non sono supportate più proprietà indicizzate.
-
-Si tratta di un **avviso** che indica che le proprietà `T` indicizzate in verranno ignorate, ovvero che non verranno generati elementi, perché non sono supportate più proprietà indicizzate.
-
-<a name="EM1050" />
-
-### <a name="em1050-field-f-is-not-generated-because-of-field-type-t-is-not-supported"></a>EM1050: il `F` campo non è generato perché il tipo `T` di campo non è supportato.
-
-Si tratta di un **avviso** che indica `F` che il campo verrà ignorato, ovvero non verrà generato alcun elemento, perché il `T` tipo esposto non è supportato.
-
-Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il `T` tipo non è supportato.
+Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il tipo `T` non è supportato.
 
 Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
 
-<a name="EM1051" />
+<a name="EM1041"></a>
 
-### <a name="em1051-element-e-is-generated-instead-as-f-because-its-name-conflicts-with-an-important-objective-c-selector"></a>EM1051: l' `E` elemento viene generato come `F` perché il nome è in conflitto con un selettore Objective-c importante.
+### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041: le proprietà indicizzate in `T` non vengono generate perché non sono supportate più proprietà indicizzate.
 
-Si tratta di un **avviso** che indica `E` che l'elemento verrà `F` generato come poiché il nome è in conflitto con un selettore Objective-c importante.
+Si tratta di un **avviso** che indica che le proprietà indicizzate in `T` verranno ignorate, ovvero che non verranno generati elementi, perché non sono supportate più proprietà indicizzate.
+
+<a name="EM1050"></a>
+
+### <a name="em1050-field-f-is-not-generated-because-of-field-type-t-is-not-supported"></a>EM1050: il campo `F` non è generato perché il tipo di campo `T` non è supportato.
+
+Si tratta di un **avviso** che indica che il campo `F` verrà ignorato, ovvero non verrà generato alcun elemento, perché il tipo esposto `T` non è supportato.
+
+Dovrebbe esserci un avviso precedente che fornisce altre informazioni perché il tipo `T` non è supportato.
+
+Nota: le funzionalità supportate si evolveranno con le nuove versioni dello strumento.
+
+<a name="EM1051"></a>
+
+### <a name="em1051-element-e-is-generated-instead-as-f-because-its-name-conflicts-with-an-important-objective-c-selector"></a>EM1051: `E` l'elemento viene generato come `F` perché il nome è in conflitto con un selettore Objective-c importante.
+
+Si tratta di un **avviso** che indica che l'elemento `E` verrà generato come poiché il nome è in `F` conflitto con un selettore Objective-c importante.
 
 I selettori in [NSObjectProtocol](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc) hanno un significato importante in Objective-c e devono essere sottoposti a override con cautela.
 
 Nota: l'elenco dei selettori riservati verrà sviluppato con le nuove versioni dello strumento.
 
-<a name="EM1052" />
+<a name="EM1052"></a>
 
-### <a name="em1052-element-e-is-not-generated-its-name-conflicts-with-other-elements-on-the-same-class"></a>EM1052: l' `E` elemento non viene generato perché il nome è in conflitto con altri elementi nella stessa classe.
+### <a name="em1052-element-e-is-not-generated-its-name-conflicts-with-other-elements-on-the-same-class"></a>EM1052: `E` l'elemento non viene generato perché il nome è in conflitto con altri elementi nella stessa classe.
 
-Si tratta di un **avviso** che `E` indica che l'elemento non viene generato perché il nome è in conflitto con altri elementi nella stessa classe.
+Si tratta di un **avviso** che indica che l'elemento `E` non viene generato perché il nome è in conflitto con altri elementi nella stessa classe.
 
-<a name="EM1053" />
+<a name="EM1053"></a>
 
-### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053: la `E` destinazione non è supportata per Novell. iOS e Novell. Mac. Solo l' `framework` opzione è considerata supportata e deve essere usata.
+### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053: `E` la destinazione non è supportata per Novell. iOS e Novell. Mac. Solo l' `framework` opzione è considerata supportata e deve essere usata.
 
-Si tratta di un **avviso** che `E` indica che la destinazione è considerata non supportata per i casi d'uso Novell. iOS e Novell. Mac. 
+Si tratta di un **avviso** che indica che la destinazione `E` è considerata non supportata per i casi d'uso Novell. iOS e Novell. Mac. 
 
 Il consumo di librerie di incorporamento .NET statiche o dinamiche può richiedere passaggi aggiuntivi o modifiche di lavoro e deve essere evitato nella maggior parte dei casi d'uso.
 
-Provare a rimuovere `--target` il parametro o `--target=framework` passare.
+Provare a rimuovere il `--target` parametro o passare `--target=framework` .
 
 <!-- 2xxx: code generation -->
 

@@ -1,24 +1,10 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 39cf115ad80dd8cdd3ddb298ce87c065663d6cb2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132678"
+title: "installazione di Novell in Visual Studio 2019" Description: "questo documento descrive come installare Novell in Visual Studio 2019. Vengono illustrati i requisiti, il processo di installazione e la verifica dell'installazione. "
+ms. prod: Novell MS. AssetID: E20D4463-368E-4B60-A059-F50DB8C5552D autore: conceptdev ms. Author: crdun ms. Date: 08/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Installazione di Xamarin in Visual Studio 2019
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 Verificare i [requisiti di sistema](~/cross-platform/get-started/requirements.md) prima di iniziare.
 

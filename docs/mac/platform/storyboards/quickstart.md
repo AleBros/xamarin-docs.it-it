@@ -1,26 +1,26 @@
 ---
-title: Storyboard in Xamarin.Mac-Avvio rapido
-description: Questo documento fornisce un'introduzione introduttiva alla creazione di interfacce utente macOS con storyboard in Xamarin.Mac. Viene descritto come creare un segue e creare una finestra delle preferenze.
+title: Storyboard in Novell. Mac-Avvio rapido
+description: Questo documento fornisce un'introduzione introduttiva alla creazione di interfacce utente macOS con storyboard in Novell. Mac. Viene descritto come creare un segue e creare una finestra delle preferenze.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2b8fede37354fd8a899a14c0710bf46e5a82b86a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 007d835b71c16a51cf5f6aca3c9fe1edd5be0034
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572390"
 ---
-# <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboard in Xamarin.Mac-Avvio rapido
+# <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboard in Novell. Mac-Avvio rapido
 
-Come introduzione rapida all'uso degli storyboard per definire l'interfaccia utente di un'app Xamarin.Mac, iniziamo un nuovo progetto Xamarin.Mac. Selezionare **Mac** > **App** > **App Cocoa** e fare clic sul pulsante **Avanti**:
+Come introduzione rapida all'uso degli storyboard per definire l'interfaccia utente di un'app Novell. Mac, iniziamo un nuovo progetto Novell. Mac. Selezionare app **Mac**  >  **app**  >  **Cocoa** e fare clic sul pulsante **Avanti** :
 
 [![](quickstart-images/qs01.png "Adding a new Cocoa App")](quickstart-images/qs01.png#lightbox)
 
-Usare il **nome dell'App** `MacStoryboard` e fare clic sul pulsante **Avanti** :
+Usare il **nome** dell'app `MacStoryboard` e fare clic sul pulsante **Avanti** :
 
 [![](quickstart-images/qs02.png "Setting the App Name")](quickstart-images/qs02.png#lightbox)
 
@@ -28,7 +28,7 @@ Usare il nome del **progetto** e il **nome della soluzione** predefiniti e fare 
 
 [![](quickstart-images/qs03.png "The project and solution names")](quickstart-images/qs03.png#lightbox)
 
-Nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard` per aprirlo per la modifica nella Interface Builder di Xcode:
+Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica nella Interface Builder di Xcode:
 
 [![](quickstart-images/qs04.png "Editing the storyboard in Xcode")](quickstart-images/qs04.png#lightbox)
 
@@ -38,7 +38,7 @@ A tale scopo, è necessario prima rimuovere il controller di visualizzazione e l
 
 [![](quickstart-images/qs05.png "Removing the default view controller")](quickstart-images/qs05.png#lightbox)
 
-Digitare quindi `split` nell'area **filtro** , selezionare il controller di visualizzazione Split verticale e trascinarlo nel _area di progettazione_:
+Digitare quindi `split` nell'area **filtro** , selezionare il controller di visualizzazione Split verticale e trascinarlo nella _area di progettazione_:
 
 [![](quickstart-images/qs06.png "Searching for the split view controller")](quickstart-images/qs06.png#lightbox)
 
@@ -60,7 +60,7 @@ Se si torna a Visual Studio per Mac ed eseguire il progetto, si noterà che la v
 
 [![](quickstart-images/qs10.png "An example of the app running")](quickstart-images/qs10.png#lightbox)
 
-Poiché si utilizzerà il lato destro della visualizzazione divisa come area di controllo, si vuole che abbia una dimensione inferiore e ne consenta la compressione. Tornare a Xcode e modificare la visualizzazione per il lato destro selezionandolo nel Area di progettazione e facendo clic sul **controllo dimensioni**. Da qui immettere una **larghezza** di `250`:
+Poiché si utilizzerà il lato destro della visualizzazione divisa come area di controllo, si vuole che abbia una dimensione inferiore e ne consenta la compressione. Tornare a Xcode e modificare la visualizzazione per il lato destro selezionandolo nel Area di progettazione e facendo clic sul **controllo dimensioni**. Da qui immettere una **larghezza** `250` :
 
 [![](quickstart-images/qs11.png "Setting the width")](quickstart-images/qs11.png#lightbox)
 
@@ -72,7 +72,7 @@ Se si torna a Visual Studio per Mac e si esegue il progetto ora, si noti che il 
 
 [![](quickstart-images/qs13.png "An example of the app running")](quickstart-images/qs13.png#lightbox)
 
-<a name="Defining-a-Presentation-Segue" />
+<a name="Defining-a-Presentation-Segue"></a>
 
 ## <a name="defining-a-presentation-segue"></a>Definizione di una presentazione segue
 
@@ -94,7 +94,7 @@ Se si torna alla Visual Studio per Mac, eseguire l'app e fare clic sul pulsante 
 
 [![](quickstart-images/qs17.png "An example of the segue running")](quickstart-images/qs17.png#lightbox)
 
-<a name="Creating-App-Preferences" />
+<a name="Creating-App-Preferences"></a>
 
 ## <a name="creating-app-preferences"></a>Creazione di preferenze per le app
 
@@ -120,7 +120,7 @@ Se si salvano le modifiche, tornare alla Visual Studio per Mac, eseguire l'app e
 
 [![](quickstart-images/qs22.png "An example of the segue running")](quickstart-images/qs22.png#lightbox)
 
-Si potrebbe notare che questa non è simile a una finestra di dialogo preferenza app macOS standard. Per risolvere questo problema, includere due file di immagine nella cartella `Resources` dell'app Xamarin.Mac nella **Esplora soluzioni** e tornare al Interface Builder di Xcode.
+Si potrebbe notare che questa non è simile a una finestra di dialogo preferenza app macOS standard. Per risolvere questo problema, includere due file di immagine nella cartella dell'app Novell. Mac `Resources` nella **Esplora soluzioni** e tornare al Interface Builder di Xcode.
 
 Selezionare il controller di visualizzazione a schede e cambiare **lo stile** sulla **barra degli strumenti**: 
 

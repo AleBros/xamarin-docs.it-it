@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f314f3145b3573184cb8cdf7370394c975c66859
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127075"
+title: "passaggio di argomenti in XAML" Description: "in questo articolo viene illustrato l'utilizzo degli attributi XAML che possono essere utilizzati per passare argomenti a costruttori non predefiniti, per chiamare metodi factory e per specificare il tipo di un argomento generico".
+ms. prod: Novell MS. AssetID: 8F3B267F-499E-4D79-9193-FCA99F199519 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
@@ -27,12 +13,10 @@ _Questo articolo illustra l'uso degli attributi XAML che possono essere usati pe
 
 Spesso è necessario creare un'istanza di oggetti con costruttori che richiedono argomenti oppure chiamando un metodo di creazione statica. Questa operazione può essere eseguita in XAML usando gli `x:Arguments` `x:FactoryMethod` attributi e:
 
-- L' `x:Arguments` attributo viene usato per specificare gli argomenti del costruttore per un costruttore non predefinito o per una dichiarazione di oggetto del metodo factory. Per ulteriori informazioni, vedere [passaggio di argomenti del costruttore](#constructor_arguments).
-- L' `x:FactoryMethod` attributo viene utilizzato per specificare un metodo factory che può essere utilizzato per inizializzare un oggetto. Per ulteriori informazioni, vedere [chiamata dei metodi factory](#factory_methods).
+- L' `x:Arguments` attributo viene usato per specificare gli argomenti del costruttore per un costruttore non predefinito o per una dichiarazione di oggetto del metodo factory. Per ulteriori informazioni, vedere [passaggio di argomenti del costruttore](#passing-constructor-arguments).
+- L' `x:FactoryMethod` attributo viene utilizzato per specificare un metodo factory che può essere utilizzato per inizializzare un oggetto. Per ulteriori informazioni, vedere [chiamata dei metodi factory](#calling-factory-methods).
 
-Inoltre, l' `x:TypeArguments` attributo può essere utilizzato per specificare gli argomenti di tipo generico per il costruttore di un tipo generico. Per ulteriori informazioni, vedere [specifica di un argomento di tipo generico](#generic_type_arguments).
-
-<a name="constructor_arguments" />
+Inoltre, l' `x:TypeArguments` attributo può essere utilizzato per specificare gli argomenti di tipo generico per il costruttore di un tipo generico. Per ulteriori informazioni, vedere [specifica di un argomento di tipo generico](#specifying-a-generic-type-argument).
 
 ## <a name="passing-constructor-arguments"></a>Passaggio di argomenti del costruttore
 
@@ -96,8 +80,6 @@ Gli screenshot seguenti mostrano il risultato della chiamata a ogni [`Color`](xr
 
 ![BoxView. Color specificato con x:Arguments](passing-arguments-images/passing-arguments.png)
 
-<a name="factory_methods" />
-
 ## <a name="calling-factory-methods"></a>Chiamata di metodi factory
 
 I metodi factory possono essere chiamati in XAML specificando il nome del metodo usando l' `x:FactoryMethod` attributo e i relativi argomenti usando l' `x:Arguments` attributo. Un metodo factory è un `public static` metodo che restituisce oggetti o valori dello stesso tipo della classe o della struttura che definisce i metodi.
@@ -145,8 +127,6 @@ Il numero di elementi all'interno del `x:Arguments` tag e i tipi di questi eleme
 Gli screenshot seguenti mostrano il risultato della chiamata a ogni [`Color`](xref:Xamarin.Forms.Color) Metodo Factory con i valori di argomento specificati:
 
 ![BoxView. Color specificato con x:FactoryMethod e x:Arguments](passing-arguments-images/factory-methods.png)
-
-<a name="generic_type_arguments" />
 
 ## <a name="specifying-a-generic-type-argument"></a>Specifica di un argomento di tipo generico
 

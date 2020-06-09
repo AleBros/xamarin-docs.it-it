@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPagine modali
-description: Xamarin.Formsfornisce supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata. Questo articolo illustra come spostarsi tra pagine modali.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137826"
+title: " Xamarin.Forms pagine modali" Descrizione: " Xamarin.Forms fornisce supporto per le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata. Questo articolo illustra come passare alle pagine modali ".
+ms. prod: Novell MS. AssetID: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-modal-pages"></a>Xamarin.FormsPagine modali
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
@@ -25,8 +11,8 @@ _Novell. Forms fornisce il supporto per le pagine modali. Una pagina modale cons
 
 Questo articolo tratta gli argomenti seguenti:
 
-- [Eseguire spostamenti](#Performing_Navigation) - Push delle pagine nello stack modale, prelievo delle pagine dallo stack modale, disabilitazione del pulsante Indietro e animazione delle transizioni di pagina.
-- [Passaggio di dati durante gli spostamenti](#Passing_Data_when_Navigating) - Passaggio di dati tramite un costruttore di pagina e un `BindingContext`.
+- [Eseguire spostamenti](#performing-navigation) - Push delle pagine nello stack modale, prelievo delle pagine dallo stack modale, disabilitazione del pulsante Indietro e animazione delle transizioni di pagina.
+- [Passaggio di dati durante gli spostamenti](#passing-data-when-navigating) - Passaggio di dati tramite un costruttore di pagina e un `BindingContext`.
 
 ## <a name="overview"></a>Panoramica
 
@@ -38,18 +24,14 @@ Per tornare alla pagina precedente, l'applicazione preleverà la pagina corrente
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
-<a name="Performing_Navigation" />
-
 ## <a name="performing-navigation"></a>Esecuzione degli spostamenti
 
-I metodi di navigazione modale sono esposti dalla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà su tutti i [`Page`](xref:Xamarin.Forms.Page) tipi derivati. Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#Pushing_Pages_to_the_Modal_Stack) nello stack modale e di [prelevare le pagine modali](#Popping_Pages_from_the_Modal_Stack) dallo stack modale.
+I metodi di navigazione modale sono esposti dalla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà su tutti i [`Page`](xref:Xamarin.Forms.Page) tipi derivati. Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#pushing-pages-to-the-modal-stack) nello stack modale e di [prelevare le pagine modali](#popping-pages-from-the-modal-stack) dallo stack modale.
 
 La [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà espone anche una [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) proprietà dalla quale è possibile ottenere le pagine modali nello stack modale. Tuttavia non esiste nessun concetto di gestione modale dello stack o di prelievo e attivazione della pagina radice nella navigazione modale. Queste operazioni non sono supportate in tutti i casi sulle piattaforme sottostanti.
 
 > [!NOTE]
 > Un' [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) istanza non è necessaria per eseguire la navigazione modale della pagina.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Push delle pagine nello stack modale
 
@@ -80,8 +62,6 @@ Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dall
 
 > [!NOTE]
 > Le chiamate a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) e le [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sostituzioni non possono essere considerate come indicazioni garantite della navigazione tra le pagine. Ad esempio, in iOS l'override di `OnDisappearing` viene chiamato per la pagina attiva quando l'applicazione viene terminata.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### <a name="popping-pages-from-the-modal-stack"></a>Prelievo delle pagine dallo stack modale
 
@@ -127,8 +107,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 L'impostazione del parametro `boolean` su `false` disabilita l'animazione per la transizione di pagina, mentre l'impostazione del parametro su `true` abilita l'animazione per la transizione di pagina, a condizione che sia supportata dalla piattaforma sottostante. Tuttavia, i metodi di push e prelievo senza questo parametro abilitano l'animazione per impostazione predefinita.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## <a name="passing-data-when-navigating"></a>Passaggio di dati durante gli spostamenti
 
@@ -257,7 +235,7 @@ I dati vengono quindi visualizzati nella pagina da una serie di [`Label`](xref:X
 
 Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/index.md) (Nozioni di base sul data binding).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo è stato illustrato come spostarsi tra pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 72c10d10e65194171479d66845d597e313281cdf
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573781"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
 
@@ -26,9 +26,9 @@ La creazione di icone e immagini accattivanti è una parte essenziale dello svil
 - [Impostazione delle immagini del progetto Novell. tvOS](#Setting-Xamarin.tvOS-Project-Images) : vengono illustrati i passaggi necessari per impostare l'immagine di avvio e l'icona dell'app per l'app Novell. tvOS.
 
 > [!IMPORTANT]
-> Tutte le immagini in Apple TV hanno una risoluzione di 1 (`@1x`) ed è consigliabile usare _solo_ immagini di questa dimensione. Anche la grafica più grande e a risoluzione superiore non solo può richiedere tempo per il download e l'uso di più memoria e archiviazione, ma deve essere ridimensionata dinamicamente in fase di esecuzione e influisce negativamente sulle prestazioni del disegno.
+> Tutte le immagini in Apple TV sono con risoluzione 1x ( `@1x` ) ed è consigliabile usare _solo_ immagini di queste dimensioni. Anche la grafica più grande e a risoluzione superiore non solo può richiedere tempo per il download e l'uso di più memoria e archiviazione, ma deve essere ridimensionata dinamicamente in fase di esecuzione e influisce negativamente sulle prestazioni del disegno.
 
-<a name="Launch-Image" />
+<a name="Launch-Image"></a>
 
 ## <a name="launch-image"></a>Immagine di avvio
 
@@ -49,24 +49,24 @@ Apple apporta i suggerimenti seguenti per progettare l'immagine di avvio dell'ap
 - Sottolineare **Launch** : poiché gli utenti di Apple TV passano spesso alle app, non è necessario attirare l'attenzione sul processo di avvio dell'app.
 - **Nessun annuncio o personalizzazione** : l'immagine di avvio non deve essere usata come schermata informazioni o includere una personalizzazione, a meno che non si tratti di una parte statica della prima schermata dell'app. Gli annunci sono rigorosamente proibiti.
 
-<a name="Setting-the-Launch-Image" />
+<a name="Setting-the-Launch-Image"></a>
 
 ### <a name="setting-the-launch-image"></a>Impostazione dell'immagine di avvio
 
 Per impostare l'immagine di avvio per il progetto tvOS, eseguire le operazioni seguenti:
 
-1. Nella **Esplora soluzioni**fare doppio clic su `Assets.xcassets` per aprirlo per la modifica: 
+1. Nella **Esplora soluzioni**fare doppio clic `Assets.xcassets` per aprirlo per la modifica: 
 
     [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. Nell' **Editor asset**fare clic sull'asset `LaunchImages`: 
+2. Nell' **Editor asset**fare clic sull' `LaunchImages` asset: 
 
     [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
 3. Fare clic sulla voce **1x Apple TV** e selezionare l'immagine di avvio oppure trascinare una nuova immagine dal file System: 
 
     [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
-4. Fare clic su Salva per salvare le modifiche.
+4. Salvare le modifiche.
 
-<a name="Layered-Images" />
+<a name="Layered-Images"></a>
 
 ## <a name="layered-images"></a>Immagini sovrapposte
 
@@ -88,9 +88,9 @@ Apple apporta i suggerimenti seguenti per progettare le immagini a più livelli:
 - **Includere un'area sicura** : poiché i livelli superiori possono essere ritagliati durante un effetto di parallasse, è necessario creare un bordo della zona sicura in ogni livello. Se si ottiene il contenuto troppo vicino al bordo dei livelli, è possibile che venga ritagliato. I livelli superiori comportano una maggiore scalabilità e ritaglio rispetto ai livelli inferiori. Vedere la sezione [ridimensionamento dei livelli immagine](#Sizing-Image-Layers) di seguito.
 - L' **Anteprima spesso** le immagini a livelli devono essere visualizzate in anteprima spesso per garantire che si verifichi l'effetto 3D desiderato e che nessuno dei contenuti sui singoli livelli venga ritagliato. È necessario visualizzare in anteprima le immagini sovrapposte su hardware Apple TV reale per assicurarsi che vengano visualizzate come previsto.
 
-Quando possibile, è consigliabile usare sempre i controlli `UIKit` predefiniti per visualizzare le immagini sovrapposte, in quanto otterranno automaticamente l'effetto di parallasse quando entrano nello stato attivo.
+Quando possibile, è consigliabile usare sempre i `UIKit` controlli predefiniti per visualizzare le immagini sovrapposte, in quanto otterranno automaticamente l'effetto di parallasse quando entrano nello stato attivo.
 
-<a name="Sizing-Image-Layers" />
+<a name="Sizing-Image-Layers"></a>
 
 ### <a name="sizing-image-layers"></a>Ridimensionamento di livelli di immagine
 
@@ -98,7 +98,7 @@ Quando possibile, è consigliabile usare sempre i controlli `UIKit` predefiniti 
 
 [![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
 
-<a name="Creating-Layered-Images" />
+<a name="Creating-Layered-Images"></a>
 
 ### <a name="creating-layered-images"></a>Creazione di immagini sovrapposte
 
@@ -106,10 +106,10 @@ tvOS funziona con le immagini sovrapposte nei formati seguenti:
 
 - **File auto** : formato di catalogo asset proprietario creato da Apple. Non è possibile creare direttamente i file dell'auto, che vengono creati in fase di compilazione da qualsiasi file LSR e inclusi nel bundle dell'app.
 - **LSR** images: formato di immagine proprietario creato da Apple. Usare il plug-in di [Parallax Exporter Adobe Photoshop](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) o il Visualizzatore anteprima di [parallasse](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) per creare e visualizzare in anteprima le immagini a livelli nel formato LSR.
-- **Assets. xcassets** : da due (2) a cinque (5) standard `.png` immagini formattate incluse in un catalogo asset che verranno compilate in un'immagine in formato auto o LSR in fase di compilazione.
-- **File LCR** : formato di file proprietario creato da Apple. I file LCR sono progettati per essere utilizzati come contenuti aggiuntivi scaricati da uno dei server di contenuti. Il file LCR non deve mai essere incluso nel bundle dell'app. I file LCR vengono generati da file LSR o Photoshop usando lo strumento da riga di comando `layerutil` incluso in Xcode.
+- **Assets. xcassets** : da due (2) a cinque (5) `.png` Immagini formattate standard incluse in un catalogo asset che verranno compilate in un'immagine in formato auto o LSR in fase di compilazione.
+- **File LCR** : formato di file proprietario creato da Apple. I file LCR sono progettati per essere utilizzati come contenuti aggiuntivi scaricati da uno dei server di contenuti. Il file LCR non deve mai essere incluso nel bundle dell'app. I file LCR vengono generati da file LSR o Photoshop usando lo `layerutil` strumento da riga di comando incluso in Xcode.
 
-<a name="The-Parallax-Previewer" />
+<a name="The-Parallax-Previewer"></a>
 
 ### <a name="the-parallax-previewer"></a>Visualizzatore anteprima di parallasse
 
@@ -117,13 +117,13 @@ Apple ha creato il Visualizzatore anteprima di [parallasse](https://itunespartne
 
 [![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
-Quando si visualizza in anteprima un'immagine sovrapposta, è possibile usare il mouse per ruotare l'immagine e visualizzare in anteprima l'effetto di parallasse. Usare i pulsanti **+** (Plus) e **-** (meno) per aggiungere e rimuovere i livelli.
+Quando si visualizza in anteprima un'immagine sovrapposta, è possibile usare il mouse per ruotare l'immagine e visualizzare in anteprima l'effetto di parallasse. Usare i **+** pulsanti (più) e **-** (meno) per aggiungere e rimuovere i livelli.
 
 Quando si crea una nuova immagine sovrapposta, può essere esportata nel formato LSR e inclusa nel bundle dell'app.
 
 Per altre informazioni sulla creazione e l'anteprima delle immagini sovrapposte, vedere la sezione relativa alla [creazione di Parallax artwork](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/CreatingParallaxArtwork.html#//apple_ref/doc/uid/TP40015241-CH19-SW1) nella [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/).
 
-<a name="App-Icons" />
+<a name="App-Icons"></a>
 
 ## <a name="app-icons"></a>Icone dell'app
 
@@ -154,30 +154,30 @@ Apple fornisce i suggerimenti seguenti per la creazione delle icone dell'app:
 - **Utilizzare attentamente le sfumature e le ombreggiature** : le sfumature e le ombreggiature possono contrastare con l'effetto di parallasse, in modo da poterle utilizzare con cautela. Gli stili di sfumatura semplice dall'alto in basso funzionano meglio. Le ombreggiature funzionano normalmente come tinte affilate e a taglio rigido.
 - **Variazione della trasparenza** dei livelli: usare diversi livelli di trasparenza nei livelli superiori dell'icona dell'app per aumentare l'effetto 3D. Il livello di sfondo deve essere opaco o verrà generato un errore.
 
-<a name="Setting-the-App-Icons" />
+<a name="Setting-the-App-Icons"></a>
 
 ### <a name="setting-the-app-icons"></a>Impostazione delle icone dell'app
 
 Per impostare le icone dell'app necessarie per il progetto tvOS, eseguire le operazioni seguenti:
 
-1. Nella **Esplora soluzioni**fare doppio clic su `Assets.xcassets` per aprirlo per la modifica: 
+1. Nella **Esplora soluzioni**fare doppio clic `Assets.xcassets` per aprirlo per la modifica: 
 
     [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
-2. Nell' **Editor asset**espandere il `App Icon & Top Shelf Image` asset: 
+2. Nell' **Editor asset**espandere l' `App Icon & Top Shelf Image` asset: 
 
     [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. Espandere quindi il `App Icon - Small` asset: 
+3. Espandere quindi l' `App Icon - Small` asset: 
 
     [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
-4. Espandere quindi l'asset `Back` e fare clic sulla voce `Contents`: 
+4. Espandere quindi l' `Back` asset e fare clic sulla `Contents` voce: 
 
     [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. Fare clic sulla **voce 1x Apple TV** e selezionare un file di immagine.
-6. Ripetere i passaggi precedenti per gli asset `Front` e `Middle`.
-7. Ripetere quindi gli stessi passaggi per definire il `App Icon - Large` asset.
-8. Fare clic su Salva per salvare le modifiche.
+6. Ripetere i passaggi precedenti per gli `Front` `Middle` asset e.
+7. Ripetere quindi gli stessi passaggi per definire l' `App Icon - Large` asset.
+8. Salvare le modifiche.
 
-<a name="Top-Shelf-Image" />
+<a name="Top-Shelf-Image"></a>
 
 ## <a name="top-shelf-image"></a>Immagine in primo piano
 
@@ -185,7 +185,7 @@ Se l'utente ha inserito l'app Novell. tvOS nella parte superiore della schermata
 
 [![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
 
-L'immagine in primo piano può essere fornita come un singolo `.png` statico o un file di `.lsr` (vedere [creazione di immagini sovrapposte](#Creating-Layered-Images)) o può essere creato dinamicamente in fase di esecuzione come una singola riga di elementi attivabili (vedere il [contenuto dinamico Top Shelf](#Dynamic-Top-Shelf-Content) più avanti).
+L'immagine in primo piano può essere fornita come un singolo `.png` file statico o `.lsr` (vedere [creazione di immagini](#Creating-Layered-Images)a più livelli) oppure può essere creata dinamicamente in fase di esecuzione come una singola riga di elementi attivabili (vedere il [contenuto dinamico Top Shelf](#Dynamic-Top-Shelf-Content) più avanti).
 
 |Dimensioni immagine in primo piano|Note|
 |---|---|
@@ -203,25 +203,25 @@ Apple fornisce i suggerimenti seguenti per la creazione di immagini Top Shelf:
 
 Per impostare l'immagine in primo piano necessaria per il progetto tvOS, eseguire le operazioni seguenti:
 
-1. Nella **Esplora soluzioni**fare doppio clic su `Assets.xcassets` per aprirlo per la modifica: 
+1. Nella **Esplora soluzioni**fare doppio clic `Assets.xcassets` per aprirlo per la modifica: 
 
     [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. Nell' **Editor asset**espandere il `App Icon & Top Shelf Image` asset: 
+2. Nell' **Editor asset**espandere l' `App Icon & Top Shelf Image` asset: 
 
     [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. Fare clic sull'asset `Top Shelf Image`: 
+3. Fare clic sull' `Top Shelf Image` asset: 
 
     [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
 4. Fare clic sulla **voce 1x Apple TV** e selezionare un file di immagine.
-5. Fare clic su Salva per salvare le modifiche.
+5. Salvare le modifiche.
 
-<a name="Dynamic-Top-Shelf-Content" />
+<a name="Dynamic-Top-Shelf-Content"></a>
 
 ### <a name="dynamic-top-shelf-content"></a>Contenuto dinamico top shelf
 
 Invece di visualizzare un'immagine in primo piano statica, il primo scaffale può contenere una riga dinamica di [elementi attivabili](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) o un set dinamico di banner di scorrimento. Entrambi questi stili dinamici consentono di evidenziare il contenuto fornito dall'app o di passare alle funzionalità più usate.
 
-<a name="Sectioned-Content-Row" />
+<a name="Sectioned-Content-Row"></a>
 
 #### <a name="sectioned-content-row"></a>Riga di contenuto sezionata
 
@@ -243,7 +243,7 @@ Apple fornisce i suggerimenti seguenti per la riga di contenuto sezionata:
 - **Completare la riga** : è necessario fornire un contenuto sufficiente per estendere la larghezza dello schermo.
 - **Ridimensionamento di immagini miste** : la riga di contenuto sezionata è stata progettata per mantenere una combinazione di dimensioni delle immagini (dall'elenco fornito sopra). Se si combinano dimensioni delle immagini, tuttavia, tenere presente che verrà applicata la scalabilità aggiuntiva per normalizzare la visualizzazione del contenuto.
 
-<a name="Scrolling-Inset-Banners" />
+<a name="Scrolling-Inset-Banners"></a>
 
 #### <a name="scrolling-inset-banners"></a>Scorrimento di banner di inserimento
 
@@ -260,7 +260,7 @@ Oltre allo scorrimento automatico, l'utente può assumere il controllo dei banne
 |Dimensioni con stato non attivo|1740x560px|
 |Dimensioni con stato attivo|1740x620px|
 
-Lo scorrimento di banner di inserimento può essere fornito come un `.png` statico o un file di `.lsr` a più livelli.
+Lo scorrimento di banner di inserimento può essere fornito come file statico o a più `.png` livelli `.lsr` .
 
 Apple fornisce i suggerimenti seguenti per i banner degli incasso a scorrimento:
 
@@ -269,7 +269,7 @@ Apple fornisce i suggerimenti seguenti per i banner degli incasso a scorrimento:
 
 Per altre informazioni sull'aggiunta di un'estensione dello scaffale principale all'app, vedere la Guida di [riferimento a TVServices Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) di Apple per fornire contenuti dinamici in primo piano.
 
-<a name="Game-Center-Images" />
+<a name="Game-Center-Images"></a>
 
 ## <a name="game-center-images"></a>Immagini Game Center
 
@@ -277,7 +277,7 @@ Se l'app Novell. tvOS è un gioco e hai incluso Game Center supporto, saranno ne
 
 - **Icone di Achievement** : è necessaria un'immagine opaca per ogni risultato che verrà ritagliato automaticamente in un cerchio. Gli obiettivi sono elementi non attivabili.
 - **Artwork del dashboard** : è possibile specificare un'immagine facoltativa che verrà visualizzata nella parte superiore del dashboard dell'app all'interno Game Center. Queste immagini non sono focalizzabili.
-- **Artwork della classifica** : è necessario specificare tra una (1) e tre (3) 16:9 di immagini con proporzioni per ogni Leaderboard supportata dall'app. Possono essere file statici `.png` o `.lsr` a più livelli. L'illustrazione della classifica è attivabile.
+- **Artwork della classifica** : è necessario specificare tra una (1) e tre (3) 16:9 di immagini con proporzioni per ogni Leaderboard supportata dall'app. Possono essere `.png` file statici o a livelli `.lsr` . L'illustrazione della classifica è attivabile.
 
 ||Icone di Achievement|Illustrazioni del dashboard|Grafica Leaderboard|
 |---|---|---|---|
@@ -289,32 +289,32 @@ Se l'app Novell. tvOS è un gioco e hai incluso Game Center supporto, saranno ne
 
 Per ulteriori informazioni sull'utilizzo di Game Center, vedere la guida alla [programmazione Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)di Apple.
 
-<a name="Working-with-Images" />
+<a name="Working-with-Images"></a>
 
 ## <a name="working-with-images"></a>Uso delle immagini
 
 Poiché tvOS 9 è un subset di iOS 9, le stesse tecniche usate per includere e visualizzare immagini in un'app Novell. iOS funzionano anche per un'app Novell. tvOS. Per ulteriori informazioni, vedere la documentazione di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
-<a name="Setting-Xamarin.tvOS-Project-Images" />
+<a name="Setting-Xamarin.tvOS-Project-Images"></a>
 
 ## <a name="setting-xamarintvos-project-images"></a>Impostazione delle immagini del progetto Novell. tvOS
 
 Come indicato in precedenza, tutte le app tvOS richiedono un' [immagine di avvio](#Launch-Image)e un' [icona dell'app](#App-Icons). Questa sezione illustra come selezionare l'immagine di avvio e l'icona dell'app per il progetto di app Novell. tvOS dopo che sono state impostate in un catalogo asset.
 
-eseguire le operazioni descritte di seguito.
+Eseguire le operazioni seguenti:
 
-1. Nella **Esplora soluzioni**fare doppio clic sul `Info.plist` per aprirlo per la modifica: 
+1. Nella **Esplora soluzioni**fare doppio clic su `Info.plist` per aprirlo per la modifica: 
 
     [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
 2. Nell' **Editor info. plist**selezionare il catalogo assets (configurato in precedenza nella sezione [impostazione delle icone dell'app](#Setting-the-App-Icons) ) per le **Icone dell'app**: 
 
     [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Selezionare quindi il catalogo assets (configurato in precedenza nella sezione [Setting the launch image](#Setting-the-Launch-Image) ) per le **Immagini di avvio**.
-4. Fare clic su Salva per salvare le modifiche.
+4. Salvare le modifiche.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha trattato tutti i tipi di immagine e le dimensioni usati in un'app Novell. tvOS. In primo luogo, sono state analizzate immagini di avvio, immagini sovrapposte, icone dell'app, immagini di scaffale e immagini Game Center. Quindi è stato analizzato l'uso delle immagini nell'app Novell. tvOS.
 

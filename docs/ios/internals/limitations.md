@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 003ea31c765bd2610e93e0f85fe995606d55022f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567398"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di Novell. iOS
 
@@ -20,7 +20,7 @@ Poiché le applicazioni che usano Novell. iOS vengono compilate in codice static
 
 Queste sono le limitazioni di Novell. iOS rispetto al desktop mono:
 
- <a name="Limited_Generics_Support" />
+ <a name="Limited_Generics_Support"></a>
 
 ## <a name="limited-generics-support"></a>Supporto per generics limitato
 
@@ -30,7 +30,7 @@ La tecnologia [AOT completa](https://www.mono-project.com/docs/advanced/aot/#ful
 
 Di seguito sono riportati alcuni dei problemi comuni eseguiti dagli sviluppatori:
 
- <a name="Generic_Subclasses_of_NSObjects_are_limited" />
+ <a name="Generic_Subclasses_of_NSObjects_are_limited"></a>
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Le sottoclassi generiche di NSObjects sono limitate
 
@@ -45,18 +45,18 @@ class Foo<T> : UIView {
 > [!NOTE]
 > Sebbene le sottoclassi generiche di NSObjects siano possibili, esistono alcune limitazioni. Per ulteriori informazioni, leggere le [sottoclassi generiche del documento NSObject](~/ios/internals/api-design/nsobject-generics.md)
 
- <a name="No_Dynamic_Code_Generation" />
+ <a name="No_Dynamic_Code_Generation"></a>
 
 ## <a name="no-dynamic-code-generation"></a>Nessuna generazione di codice dinamico
 
-Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Novell. iOS non supporta alcuna forma di generazione del codice dinamico. incluse le seguenti:
+Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Novell. iOS non supporta alcuna forma di generazione del codice dinamico. Sono inclusi:
 
 - System. Reflection. Emit non è disponibile.
 - Nessun supporto per System. Runtime. Remoting.
 - Nessun supporto per la creazione dinamica dei tipi (nessun tipo. GetType ("MyType" 1 ")), sebbene la ricerca dei tipi esistenti (Type. GetType (" System. String "), ad esempio, funzioni correttamente.
 - I callback inversi devono essere registrati con il runtime in fase di compilazione.
 
- <a name="System.Reflection.Emit" />
+ <a name="System.Reflection.Emit"></a>
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -73,7 +73,7 @@ Tuttavia, l'intera API di reflection, incluso Type. GetType ("someClass"), elenc
 
 ### <a name="using-delegates-to-call-native-functions"></a>Uso di delegati per chiamare funzioni native
 
-Per chiamare una funzione nativa tramite un C# delegato, la dichiarazione del delegato deve essere decorata con uno degli attributi seguenti:
+Per chiamare una funzione nativa tramite un delegato C#, la dichiarazione del delegato deve essere decorata con uno degli attributi seguenti:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (scelta consigliata, poiché è multipiattaforma e compatibile con .NET standard 1.1 +)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
@@ -84,24 +84,24 @@ Se non si specifica uno di questi attributi, verrà generato un errore di runtim
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
 
- <a name="Reverse_Callbacks" />
+ <a name="Reverse_Callbacks"></a>
 
 ### <a name="reverse-callbacks"></a>Callback inversi
 
-In mono standard è possibile passare C# le istanze delegate al codice non gestito invece di un puntatore a funzione. Il runtime trasforma in genere i puntatori a funzione in un piccolo thunk che consente al codice non gestito di richiamare il codice gestito.
+In mono standard è possibile passare le istanze delegate C# al codice non gestito invece di un puntatore a funzione. Il runtime trasforma in genere i puntatori a funzione in un piccolo thunk che consente al codice non gestito di richiamare il codice gestito.
 
 In mono questi Bridge vengono implementati dal compilatore just-in-time. Quando si usa il compilatore ahead of time richiesto dall'iPhone, a questo punto sono presenti due importanti limitazioni:
 
 - È necessario contrassegnare tutti i metodi di callback con [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
 - I metodi devono essere metodi statici e non è disponibile alcun supporto per i metodi di istanza.
 
-<a name="No_Remoting" />
+<a name="No_Remoting"></a>
 
 ## <a name="no-remoting"></a>Nessuna comunicazione remota
 
 Lo stack di comunicazione remota non è disponibile in Novell. iOS.
 
- <a name="Runtime_Disabled_Features" />
+ <a name="Runtime_Disabled_Features"></a>
 
 ## <a name="runtime-disabled-features"></a>Funzionalità disabilitate in fase di esecuzione
 
@@ -114,7 +114,7 @@ Le funzionalità seguenti sono state disabilitate nel runtime iOS di mono:
 - Motore JIT
 - Verifier dei metadati (poiché non esiste alcun JIT)
 
- <a name=".NET_API_Limitations" />
+ <a name=".NET_API_Limitations"></a>
 
 ## <a name="net-api-limitations"></a>Limitazioni dell'API .NET
 

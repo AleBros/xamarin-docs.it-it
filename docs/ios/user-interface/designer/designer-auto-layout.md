@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 5aa3baa6aba76483866911d905687be6c3a5ae4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304695"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569829"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con il Xamarin Designer per iOS
 
@@ -30,7 +30,7 @@ Questa guida presuppone la conoscenza dei componenti della finestra di progettaz
 
 Un vincolo è una rappresentazione matematica della relazione tra due elementi sullo schermo. La rappresentazione della posizione di un elemento dell'interfaccia utente come relazione matematica risolve diversi problemi associati alla posizione di un elemento dell'interfaccia utente a livello di codice. Ad esempio, se si dovesse inserire un pulsante 20px dalla parte inferiore dello schermo in modalità verticale, la posizione del pulsante sarebbe fuori dallo schermo in modalità orizzontale. Per evitare questo problema, è possibile impostare un vincolo che posiziona il bordo inferiore del pulsante 20px dalla parte inferiore della visualizzazione. La posizione del bordo del pulsante verrebbe quindi calcolata come *Button. Bottom = View. Bottom-20px*, che consente di posizionare il pulsante 20px dalla parte inferiore della visualizzazione in modalità verticale e orizzontale. La possibilità di calcolare la selezione host in base a una relazione matematica è ciò che rende tali vincoli utili nella progettazione dell'interfaccia utente.
 
-Quando si imposta un vincolo, viene creato un oggetto `NSLayoutConstraint` che accetta come argomenti gli oggetti da vincolare e le proprietà, o *gli attributi*, sui quali agirà il vincolo. Nella finestra di progettazione di iOS gli attributi includono bordi quali *Left*, *right*, *Top*e *Bottom* di un elemento. Includono anche attributi di dimensione, ad esempio *altezza* e *larghezza*, e posizione del punto centrale, *CenterX* e *centrato*. Ad esempio, quando si aggiunge un vincolo sulla posizione del limite sinistro di due pulsanti, la finestra di progettazione genera il codice seguente dietro le quinte:
+Quando si imposta un vincolo, viene creato un `NSLayoutConstraint` oggetto che accetta come argomenti gli oggetti da vincolare e le proprietà, o *gli attributi*, sui quali agirà il vincolo. Nella finestra di progettazione di iOS gli attributi includono bordi quali *Left*, *right*, *Top*e *Bottom* di un elemento. Includono anche attributi di dimensione, ad esempio *altezza* e *larghezza*, e posizione del punto centrale, *CenterX* e *centrato*. Ad esempio, quando si aggiunge un vincolo sulla posizione del limite sinistro di due pulsanti, la finestra di progettazione genera il codice seguente dietro le quinte:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -67,7 +67,7 @@ La barra degli strumenti vincoli è stata aggiornata e ora è costituita da due 
 
 La finestra popup Editor vincoli consente di aggiungere e aggiornare contemporaneamente più vincoli per una visualizzazione Select. È possibile creare più vincoli di spaziatura, proporzioni e allineamento, ad esempio allineare una visualizzazione ai bordi sinistro di due visualizzazioni.
 
-Per modificare i vincoli nella visualizzazione selezionata, fare clic sui puntini di sospensione per visualizzare i vincoli popopov: ![modifica di popopov](designer-auto-layout-images/constraints-popup.png)
+Per la modifica dei vincoli sulla visualizzazione selezionata, fare clic sui puntini di sospensione per visualizzare il popopov di ![ modifica dei vincoli.](designer-auto-layout-images/constraints-popup.png)
 
 Quando si apre il programma Constraints, vengono visualizzati tutti i vincoli preimpostati nella vista. È possibile impostare tutti i vincoli di spaziatura selezionando **tutti i lati** della casella combinata nell'angolo superiore destro e selezionare **Cancella tutto** per rimuoverli.
 
@@ -170,7 +170,7 @@ Per risolvere gli errori di errore di posizionamento dei frame, selezionare il p
 
 Questo regola automaticamente il frame dell'elemento in modo che corrisponda alle posizioni definite dai controlli.
 
-<a name="modifying-in-code" />
+<a name="modifying-in-code"></a>
 
 ## <a name="modifying-constraints-in-code"></a>Modifica di vincoli nel codice
 
@@ -185,7 +185,7 @@ Per accedere a un vincolo nel codice, è necessario prima esporlo in iOS designe
 3. Assegnare quindi un **nome** al vincolo nella scheda **widget** di **Esplora proprietà**:
 
     [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
-4. Fare clic su Salva per salvare le modifiche.
+4. Salvare le modifiche.
 
 Con le modifiche sopra riportate, è possibile accedere al vincolo nel codice e modificarne le proprietà. Ad esempio, è possibile usare il comando seguente per impostare l'altezza della visualizzazione collegata su zero:
 
@@ -201,16 +201,16 @@ Data la seguente impostazione per il vincolo in iOS designer:
 
 Anziché aggiornare immediatamente la visualizzazione collegata in risposta alle modifiche dei vincoli, il motore di layout automatico pianifica un _passaggio di layout posticipato_ per il prossimo futuro. Durante questo passaggio posticipato, non solo il vincolo della visualizzazione specificata viene aggiornato, i vincoli per ogni visualizzazione nella gerarchia vengono ricalcolati e aggiornati per adattarsi al nuovo layout.
 
-In qualsiasi momento, è possibile pianificare il passaggio di layout posticipato chiamando il metodo `SetNeedsLayout` o `SetNeedsUpdateConstraints` della visualizzazione padre.
+In qualsiasi momento, è possibile pianificare il passaggio di layout posticipato chiamando il `SetNeedsLayout` `SetNeedsUpdateConstraints` metodo o della visualizzazione padre.
 
 Il passaggio di layout posticipato è costituito da due passaggi univoci attraverso la gerarchia di visualizzazione:
 
-- **Il passaggio di aggiornamento** in questo passaggio, il motore di layout automatico attraversa la gerarchia di visualizzazione e richiama il metodo `UpdateViewConstraints` su tutti i controller di visualizzazione e il metodo `UpdateConstraints` su tutte le visualizzazioni.
-- **Il layout viene passato** nuovamente, il motore di layout automatico attraversa la gerarchia di visualizzazione, ma questa volta richiama il metodo `ViewWillLayoutSubviews` su tutti i controller di visualizzazione e il metodo `LayoutSubviews` su tutte le visualizzazioni. Il metodo `LayoutSubviews` aggiorna la proprietà `Frame` di ogni Sottovisualizzazione con il rettangolo calcolato dal motore di layout automatico.
+- **Il passaggio di aggiornamento** in questo passaggio, il motore di layout automatico attraversa la gerarchia di visualizzazione e richiama il `UpdateViewConstraints` metodo su tutti i controller di visualizzazione e il `UpdateConstraints` metodo su tutte le visualizzazioni.
+- **Il layout viene passato** nuovamente, il motore di layout automatico attraversa la gerarchia di visualizzazione, ma questa volta richiama il `ViewWillLayoutSubviews` metodo su tutti i controller di visualizzazione e il `LayoutSubviews` metodo su tutte le visualizzazioni. Il `LayoutSubviews` metodo aggiorna la `Frame` proprietà di ogni Sottovisualizzazione con il rettangolo calcolato dal motore di layout automatico.
 
 ### <a name="animating-constraint-changes"></a>Animazione delle modifiche ai vincoli
 
-Oltre a modificare le proprietà dei vincoli, è possibile usare l'animazione di base per aggiungere un'animazione alle modifiche ai vincoli di una vista. Ad esempio,
+Oltre a modificare le proprietà dei vincoli, è possibile usare l'animazione di base per aggiungere un'animazione alle modifiche ai vincoli di una vista. Ad esempio:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -222,9 +222,9 @@ View.LayoutIfNeeded();
 UIView.CommitAnimations();
 ```
 
-La chiave richiama il metodo `LayoutIfNeeded` della visualizzazione padre all'interno del blocco Animation. Indica alla visualizzazione di creare ogni "frame" della posizione animata o della modifica delle dimensioni. Senza questa riga, la vista potrebbe semplicemente bloccarsi alla versione finale senza l'animazione.
+La chiave qui chiama il `LayoutIfNeeded` metodo della visualizzazione padre all'interno del blocco Animation. Indica alla visualizzazione di creare ogni "frame" della posizione animata o della modifica delle dimensioni. Senza questa riga, la vista potrebbe semplicemente bloccarsi alla versione finale senza l'animazione.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa guida è stato introdotto il layout di iOS auto (o "Adaptive") e il concetto di vincoli come rappresentazioni matematiche delle relazioni tra gli elementi nell'area di progettazione. Viene descritto come abilitare il layout automatico in iOS designer, utilizzare la **barra degli strumenti vincoli**e modificare i vincoli singolarmente nell'area di progettazione. Successivamente, è stato illustrato come risolvere tre problemi comuni relativi ai vincoli. Infine, ha illustrato come modificare i vincoli nel codice.
 

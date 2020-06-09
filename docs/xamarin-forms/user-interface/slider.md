@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCursore
-description: Il Xamarin.Forms dispositivo di scorrimento è una barra orizzontale che può essere modificata dall'utente per selezionare un valore Double da un intervallo continuo. Questo articolo illustra come usare la classe Slider per selezionare un valore da un intervallo di valori continui.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1cde999e6781f019b6abceee82caf259e1e5a710
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140153"
+title: " Xamarin.Forms Slider" Description: "il Xamarin.Forms dispositivo di scorrimento è una barra orizzontale che può essere modificata dall'utente per selezionare un valore Double da un intervallo continuo. Questo articolo illustra come usare la classe Slider per selezionare un valore da un intervallo di valori continui ".
+ms. prod: Novell MS. AssetID: 36B1C645-26E0-4874-B6B6-BDBF77662878 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-slider"></a>Xamarin.FormsCursore
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
@@ -116,7 +102,7 @@ Ecco il programma in esecuzione su dispositivi iOS e Android:
 
 [![Codice Slider di base](slider-images/BasicSliderCode.png "Codice Slider di base")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-Il secondo `Label` Visualizza il testo "(non inizializzato)" fino a quando l'oggetto non `Slider` viene modificato, causando la generazione del primo `ValueChanged` evento. Si noti che il numero di posizioni decimali visualizzate è diverso per ogni piattaforma. Queste differenze sono correlate alle implementazioni della piattaforma di `Slider` e vengono illustrate più avanti in questo articolo nella sezione [differenze di implementazione della piattaforma](#implementations).
+Il secondo `Label` Visualizza il testo "(non inizializzato)" fino a quando l'oggetto non `Slider` viene modificato, causando la generazione del primo `ValueChanged` evento. Si noti che il numero di posizioni decimali visualizzate è diverso per ogni piattaforma. Queste differenze sono correlate alle implementazioni della piattaforma di `Slider` e vengono illustrate più avanti in questo articolo nella sezione [differenze di implementazione della piattaforma](#platform-implementation-differences).
 
 ### <a name="creating-a-slider-in-xaml"></a>Creazione di un dispositivo di scorrimento in XAML
 
@@ -210,8 +196,6 @@ La pagina delle **associazioni di base del dispositivo di scorrimento** Mostra c
 
 La `Rotation` proprietà del primo oggetto `Label` è associata alla `Value` proprietà dell'oggetto `Slider` , così come la `Text` proprietà del secondo oggetto `Label` con una `StringFormat` specifica. La pagina delle **associazioni di scorrimento di base** funziona in modo leggermente diverso dalle due pagine precedenti: quando viene visualizzata la pagina per la prima volta, il secondo `Label` Visualizza la stringa di testo con il valore. Si tratta di un vantaggio dell'utilizzo di data binding. Per visualizzare il testo senza data binding, è necessario inizializzare in modo specifico la `Text` proprietà di `Label` o simulare un'attivazione dell' `ValueChanged` evento chiamando il gestore eventi dal costruttore della classe.
 
-<a name="precautions" />
-
 ## <a name="precautions"></a>Precauzioni
 
 Il valore della `Minimum` proprietà deve essere sempre minore del valore della `Maximum` Proprietà. Il frammento di codice seguente causa la `Slider` generazione di un'eccezione da parte di.
@@ -283,8 +267,6 @@ Se un `ValueChanged` gestore eventi è stato associato nel momento in cui la `Va
 ```
 
 Quando `Minimum` è impostato su 10, `Value` viene impostato anche su 10 e `ValueChanged` viene generato l'evento. Questo problema può verificarsi prima che il resto della pagina sia stato costruito e il gestore potrebbe tentare di fare riferimento ad altri elementi della pagina che non sono stati ancora creati. È possibile aggiungere codice al gestore per verificare la presenza di `ValueChanged` `null` valori di altri elementi nella pagina. In alternativa, è possibile impostare il `ValueChanged` gestore eventi dopo che i `Slider` valori sono stati inizializzati.
-
-<a name="implementations" />
 
 ## <a name="platform-implementation-differences"></a>Differenze di implementazione della piattaforma
 
@@ -508,7 +490,7 @@ Quando gli `Slider` elementi vengono modificati, gli `BoxView` elementi e `Label
 
 [![Dispositivi di scorrimento colore HSL](slider-images/HslColorSliders.png "Dispositivi di scorrimento colore HSL")](slider-images/HslColorSliders-Large.png#lightbox)
 
-Il `StringFormat` componente dell' `Binding` estensione di markup è impostato per un formato "F2" per visualizzare due posizioni decimali. (La formattazione delle stringhe nei data binding è illustrata nell'articolo [formattazione delle stringhe](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)). Tuttavia, la versione UWP del programma è limitata ai valori 0, 0,1, 0,2,... 0,9 e 1,0. Si tratta di un risultato diretto dell'implementazione di UWP `Slider` , come descritto in precedenza nella sezione [differenze di implementazione della piattaforma](#implementations).
+Il `StringFormat` componente dell' `Binding` estensione di markup è impostato per un formato "F2" per visualizzare due posizioni decimali. (La formattazione delle stringhe nei data binding è illustrata nell'articolo [formattazione delle stringhe](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)). Tuttavia, la versione UWP del programma è limitata ai valori 0, 0,1, 0,2,... 0,9 e 1,0. Si tratta di un risultato diretto dell'implementazione di UWP `Slider` , come descritto in precedenza nella sezione [differenze di implementazione della piattaforma](#platform-implementation-differences).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,9 +1,6 @@
 ---
-title: Description:' A Xamarin.Forms ViewCell è una cella che può essere aggiunta a un controllo ListView o Tableview, che contiene una visualizzazione definita dallo sviluppatore. Questo articolo illustra come creare un renderer personalizzato per un ViewCell ospitato all'interno di un Xamarin.Forms controllo ListView.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Titolo: "personalizzazione di un ViewCell" Descrizione: "un Xamarin.Forms ViewCell è una cella che può essere aggiunta a un controllo ListView o Tableview, che contiene una visualizzazione definita dallo sviluppatore. Questo articolo illustra come creare un renderer personalizzato per un ViewCell ospitato all'interno di un Xamarin.Forms controllo ListView.
+ms. prod: Novell MS. AssetID: 61F378C9-6DEF-436B-ACC3-2324B25D404E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/07/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un elemento ViewCell
@@ -20,13 +17,11 @@ Il diagramma seguente illustra la relazione tra [`ViewCell`](xref:Xamarin.Forms.
 
 Per implementare personalizzazioni specifiche della piattaforma, è possibile sfruttare il processo di rendering creando un renderer personalizzato per un oggetto [`ViewCell`](xref:Xamarin.Forms.ViewCell) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Custom_Cell) una Xamarin.Forms cella personalizzata.
-1. [Utilizzare](#Consuming_the_Custom_Cell) la cella personalizzata da Xamarin.Forms .
-1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per la cella in ogni piattaforma.
+1. [Creare](#creating-the-custom-cell) una Xamarin.Forms cella personalizzata.
+1. [Utilizzare](#consuming-the-custom-cell) la cella personalizzata da Xamarin.Forms .
+1. [Creare](#creating-the-custom-renderer-on-each-platform) il renderer personalizzato per la cella in ogni piattaforma.
 
 Ogni elemento verrà ora discusso a sua volta per implementare un `NativeCell` renderer che sfrutta un layout specifico della piattaforma per ogni cella ospitata all'interno di un Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) controllo. Questa operazione interrompe la Xamarin.Forms chiamata ripetuta dei calcoli di layout durante lo `ListView` scorrimento.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>Creazione della cella personalizzata
 
@@ -62,8 +57,6 @@ public class NativeCell : ViewCell
 ```
 
 La classe `NativeCell` viene creata nel progetto di libreria .NET Standard e definisce l'API per la cella personalizzata. La cella personalizzata espone le proprietà `Name`, `Category` e `ImageFilename` che possono essere visualizzate usando il data binding. Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Nozioni di base sul data binding).
-
-<a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Uso della cella personalizzata
 
@@ -143,8 +136,6 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) Viene usato un controllo
 Ogni riga dell'elenco contiene tre elementi di dati: un nome, una categoria e un nome di file di immagine. Il layout di ogni riga nell'elenco viene definito dall'oggetto a `DataTemplate` cui si fa riferimento tramite la [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) proprietà associabile. `DataTemplate` stabilisce che ogni riga di dati dell'elenco sia un elemento `NativeCell` che visualizza le relative proprietà `Name`, `Category` e `ImageFilename` usando il data binding. Per altre informazioni sul controllo `ListView`, vedere [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 Un renderer personalizzato può essere ora aggiunto a ogni progetto di applicazione per personalizzare il layout specifico della piattaforma per ogni cella.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creazione del renderer personalizzato in ogni piattaforma
 
@@ -562,7 +553,7 @@ Il metodo `GetTemplate` viene chiamato per restituire la cella da sottoporre a r
 
 `DataTemplate` specifica i controlli usati per visualizzare il contenuto della cella, nonché il layout e l'aspetto. Due controlli `TextBlock` e un controllo `Image` vengono usati per visualizzare il contenuto della cella usando il data binding. Inoltre, viene usata un'istanza di `ConcatImageExtensionConverter` per concatenare l'estensione file `.jpg` a ogni nome di file di immagine. Ciò garantisce che il controllo `Image` sia in grado di caricare l'immagine ed eseguirne il rendering quando è impostata la relativa proprietà `Source`.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare un renderer personalizzato per un oggetto [`ViewCell`](xref:Xamarin.Forms.ViewCell) ospitato all'interno di un Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) controllo. Questa operazione interrompe la Xamarin.Forms chiamata ripetuta dei calcoli di layout durante lo `ListView` scorrimento.
 

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPagina master-dettagli
-description: Xamarin.FormsMasterDetailPage è una pagina che gestisce due pagine di informazioni correlate, ovvero una pagina master che presenta elementi, e una pagina di dettaglio che presenta informazioni dettagliate sugli elementi della pagina master. Questo articolo illustra come usare una classe MasterDetailPage e come spostarsi tra le pagine di informazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 89b1dedcb6219a32332641550018405abd4b6870
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137813"
+title: " Xamarin.Forms pagina master-details" Description: " Xamarin.Forms MasterDetailPage è una pagina che gestisce due pagine correlate di informazioni, ovvero una pagina master che presenta elementi, e una pagina di dettaglio che presenta informazioni dettagliate sugli elementi della pagina master. Questo articolo illustra come usare un MasterDetailPage e spostarsi tra le pagine di informazioni ".
+ms. prod: Novell MS. AssetID: 119945E3-58B8-4630-A3D2-8B561529D53B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.FormsPagina master-dettagli
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
@@ -51,11 +37,11 @@ Il comportamento dell'esperienza di navigazione tra le pagine master e di dettag
 
 - In iOS la pagina di dettaglio *scorre* verso destra mentre la pagina master scorre verso sinistra e la parte sinistra della pagina di dettaglio è ancora visibile.
 - In Android le pagine di dettaglio e master vengono *sovrapposte* le une alle altre.
-- In UWP la pagina master scorre dalla parte sinistra della pagina dei dettagli, a condizione che la [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) proprietà sia impostata su `Popover` . Per altre informazioni, vedere [Controllo del comportamento di visualizzazione della pagina di dettaglio](#Controlling_the_Detail_Page_Display_Behavior).
+- In UWP la pagina master scorre dalla parte sinistra della pagina dei dettagli, a condizione che la [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) proprietà sia impostata su `Popover` . Per altre informazioni, vedere [Controllo del comportamento di visualizzazione della pagina di dettaglio](#controlling-the-detail-page-display-behavior).
 
 Un comportamento simile si osserverà in modalità orizzontale, ad eccezione del fatto che la pagina master in iOS e Android ha una larghezza simile alla pagina master in modalità verticale, quindi sarà visibile una parte maggiore della pagina di dettaglio.
 
-Per informazioni su come controllare il comportamento di navigazione, vedere [Controllo del comportamento di visualizzazione della pagina di dettaglio](#Controlling_the_Detail_Page_Display_Behavior).
+Per informazioni su come controllare il comportamento di navigazione, vedere [Controllo del comportamento di visualizzazione della pagina di dettaglio](#controlling-the-detail-page-display-behavior).
 
 ## <a name="creating-a-masterdetailpage"></a>Creazione di una classe MasterDetailPage
 
@@ -250,8 +236,6 @@ Gli screenshot seguenti illustrano la pagina di dettaglio `ContactPage` che vien
 
 ![](master-detail-page-images/detailpage.png "Detail Page Example")
 
-<a name="Controlling_the_Detail_Page_Display_Behavior" />
-
 ### <a name="controlling-the-detail-page-display-behavior"></a>Controllo del comportamento di visualizzazione della pagina di dettaglio
 
 Il modo in cui [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) gestisce le pagine master e di dettaglio varia a seconda che l'applicazione sia in esecuzione su un telefono o un tablet, l'orientamento del dispositivo e il valore della [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) Proprietà. Questa proprietà determina il modo in cui verrà visualizzata la pagina di dettaglio. I valori possibili sono:
@@ -291,7 +275,7 @@ public class MainPageCS : MasterDetailPage
 
 Tuttavia, il valore della [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) proprietà influiscono solo sulle applicazioni in esecuzione su tablet o sul desktop. Per le applicazioni in esecuzione sui telefoni è sempre impostato il comportamento *Popover*.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come usare un oggetto [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e spostarsi tra le pagine di informazioni. Xamarin.Forms `MasterDetailPage` È una pagina che gestisce due pagine di informazioni correlate, ovvero una pagina master che presenta elementi, e una pagina di dettaglio che presenta informazioni dettagliate sugli elementi della pagina master.
 

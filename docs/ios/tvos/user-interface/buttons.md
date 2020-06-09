@@ -1,28 +1,28 @@
 ---
-title: Uso dei pulsanti tvOS in Xamarin
-description: Questo documento descrive come usare i pulsanti in un'app tvOS compilata con Xamarin. Viene illustrato come utilizzare i pulsanti nel codice e negli storyboard ed esamina come applicare uno stile a un pulsante.
+title: Uso dei pulsanti tvOS in Novell
+description: Questo documento descrive come usare i pulsanti in un'app tvOS compilata con Novell. Viene illustrato come utilizzare i pulsanti nel codice e negli storyboard ed esamina come applicare uno stile a un pulsante.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 559944e5ae168fd3b45c4d25a86705c5032b2e04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 63aa344ec94730ebe448aba090e2d91af9da64b5
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030482"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574041"
 ---
-# <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Xamarin
+# <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Novell
 
-Utilizzare un'istanza della classe `UIButton` per creare un pulsante selezionabile attivabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione all'oggetto di destinazione Consenti all'app Xamarin.tvOS di rispondere all'input dell'utente.
+Utilizzare un'istanza della `UIButton` classe per creare un pulsante selezionabile attivabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione all'oggetto di destinazione Consenti all'app Novell. tvOS di rispondere all'input dell'utente.
 
 [![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo dello stato attivo e sulla navigazione con Siri remote, vedere la documentazione relativa all' [utilizzo di spostamento e messa a fuoco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [Siri remote e Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
-<a name="About-Buttons" />
+<a name="About-Buttons"></a>
 
 ## <a name="about-buttons"></a>Informazioni sui pulsanti
 
@@ -38,13 +38,13 @@ Apple presenta i suggerimenti seguenti per l'utilizzo dei pulsanti:
 
 Per ulteriori informazioni sull'utilizzo dello stato attivo e della navigazione, vedere la documentazione relativa all' [utilizzo di navigazione e messa a fuoco](~/ios/tvos/app-fundamentals/navigation-focus.md) .
 
-<a name="Button-Icons" />
+<a name="Button-Icons"></a>
 
 ### <a name="button-icons"></a>Icone pulsante
 
 Apple suggerisce di usare immagini semplici e altamente riconoscibili per le icone dei pulsanti. Le icone eccessivamente complesse sono difficili da riconoscere su uno schermo TV in una stanza su un divano, quindi provare a usare la rappresentazione più semplice possibile per ottenere l'idea. Quando possibile, usare immagini standard e note per le icone, ad esempio una lente di ingrandimento per la ricerca.
 
-<a name="Button-Titles" />
+<a name="Button-Titles"></a>
 
 ### <a name="button-titles"></a>Titoli dei pulsanti
 
@@ -55,25 +55,25 @@ Apple presenta i suggerimenti seguenti durante la creazione dei titoli per i pul
 - **Usare l'uso di maiuscole in stile titolo** : ad eccezione di articoli, congiunti o preposizioni (quattro lettere o meno), ogni parola del titolo del pulsante deve essere in maiuscolo.
 - **Usare un breve titolo al punto** : usare la verbosità più breve possibile per descrivere l'azione del pulsante.
 
-<a name="Buttons-and-Storyboards" />
+<a name="Buttons-and-Storyboards"></a>
 
 ## <a name="buttons-and-storyboards"></a>Pulsanti e storyboard
 
-Il modo più semplice per usare i pulsanti in un'app Xamarin.tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando il Xamarin Designer per iOS.
+Il modo più semplice per usare i pulsanti in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app usando il Xamarin Designer per iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **pulsante** dalla **libreria** e rilasciarlo nella visualizzazione: 
 
     [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. In **Esplora proprietà**è possibile modificare diverse proprietà del pulsante, ad esempio il **titolo** e il **colore del testo**: 
 
     [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
-1. Passare quindi alla **scheda eventi** e collegare un **evento** dal **pulsante** e chiamarlo `ButtonPressed`: 
+1. Passare quindi alla **scheda eventi** e collegare un **evento** dal **pulsante** e chiamarlo `ButtonPressed` : 
 
     [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
-1. Si passerà automaticamente alla visualizzazione `ViewController.cs` in cui è possibile inserire la nuova azione nel codice usando i tasti freccia **su** e **giù** : 
+1. Si passerà automaticamente alla `ViewController.cs` visualizzazione in cui è possibile inserire la nuova azione nel codice usando i tasti freccia **su** e **giù** : 
 
     [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. Premere **invio** per selezionare il percorso: 
@@ -81,21 +81,21 @@ Il modo più semplice per usare i pulsanti in un'app Xamarin.tvOS consiste nell'
     [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Salvare le modifiche apportate a tutti i file.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **pulsante** dalla **libreria** e rilasciarlo nella visualizzazione: 
 
     [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. In **Esplora proprietà**è possibile modificare diverse proprietà del pulsante, ad esempio il **titolo** e il **colore del testo**: 
 
     [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
-1. Passare quindi alla **scheda eventi** e collegare un **evento** dal **pulsante** e chiamarlo `ButtonPressed`: 
+1. Passare quindi alla **scheda eventi** e collegare un **evento** dal **pulsante** e chiamarlo `ButtonPressed` : 
 
     [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Salvare le modifiche apportate a tutti i file.
 
-Modificare il file del controller di visualizzazione (esempio `ViewController.cs`) e aggiungere il codice seguente per gestire il pulsante selezionato:
+Modificare il file del controller di visualizzazione (esempio `ViewController.cs` ) e aggiungere il codice seguente per gestire il pulsante selezionato:
 
 ```
 
@@ -119,18 +119,18 @@ namespace tvRemote
 
 -----
 
-Fino a quando la proprietà `Enabled` di un pulsante è `true` e non è coperta da un altro controllo o visualizzazione, è possibile impostarla utilizzando Siri remote. Se l'utente seleziona il pulsante e fa clic sull'area di tocco, viene eseguita l'azione `ButtonPressed` definita sopra.
+Fino a quando la proprietà di un pulsante `Enabled` è `true` e non è coperta da un altro controllo o visualizzazione, è possibile fare in modo che l'elemento attivo usi Siri remote. Se l'utente seleziona il pulsante e fa clic sull'area di tocco, `ButtonPressed` viene eseguita l'azione definita sopra.
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton` nella finestra di progettazione di iOS durante la creazione di un **gestore eventi**, non verrà mai chiamato perché Apple TV non ha un touch screen o supporta gli eventi di tocco. Quando si creano **azioni** per gli elementi dell'interfaccia utente di tvOS, è consigliabile usare sempre il **tipo di azione** predefinito.
+> Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton` in iOS designer durante la creazione di un **gestore eventi**, non verrà mai chiamato perché Apple TV non dispone di un touch screen o supporta gli eventi di tocco. Quando si creano **azioni** per gli elementi dell'interfaccia utente di tvOS, è consigliabile usare sempre il **tipo di azione** predefinito.
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Buttons-and-Code" />
+<a name="Buttons-and-Code"></a>
 
 ## <a name="buttons-and-code"></a>Pulsanti e codice
 
-Facoltativamente, è possibile creare un `UIButton` nel C# codice e aggiungerlo alla vista dell'app tvOS. Esempio:
+Facoltativamente, `UIButton` è possibile creare un oggetto nel codice C# e aggiungerlo alla vista dell'app tvOS. Ad esempio:
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -143,7 +143,7 @@ button.AllEvents += (sender, e) => {
 View.AddSubview (button);
 ```
 
-Quando si crea un nuovo `UIButton` nel codice, è necessario specificarne il `UIButtonType` come uno dei seguenti:
+Quando si crea un nuovo oggetto `UIButton` nel codice, è necessario specificarne `UIButtonType` uno dei seguenti elementi:
 
 - **System** -questo è il tipo standard di Button presentato da tvOS ed è il tipo che verrà usato più di frequente.
 - **DetailDisclosure** : presenta un tipo di pulsante "turn down" usato per nascondere o visualizzare informazioni dettagliate.
@@ -158,13 +158,13 @@ Definire quindi le dimensioni e il percorso sullo schermo del pulsante. Esempio:
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Quindi, impostare il titolo per il pulsante. `UIButtons` sono diversi dalla maggior parte dei controlli `UIKit` perché hanno uno stato, quindi non è possibile semplicemente modificare il titolo, è necessario modificarlo per una determinata `UIControlState`. Esempio:
+Quindi, impostare il titolo per il pulsante. `UIButtons`sono diversi dalla maggior parte dei `UIKit` controlli in quanto hanno uno stato, quindi non è possibile semplicemente modificare il titolo, è necessario modificarlo per un dato `UIControlState` . Ad esempio:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Usare quindi l'evento `AllEvents` per vedere quando l'utente ha fatto clic sul pulsante. Esempio:
+Quindi, usare l' `AllEvents` evento per vedere quando l'utente ha fatto clic sul pulsante. Esempio:
 
 ```csharp
 button.AllEvents += (sender, e) => {
@@ -180,31 +180,31 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton`, non verrà mai chiamato perché Apple TV non ha un touchscreen o non supporta gli eventi di tocco. È consigliabile usare sempre eventi come **AllEvents** o **PrimaryActionTriggered**.
+> Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton` , non verrà mai chiamato perché Apple TV non ha un touch screen o supporta gli eventi di tocco. È consigliabile usare sempre eventi come **AllEvents** o **PrimaryActionTriggered**.
 
-<a name="Styling-a-Button" />
+<a name="Styling-a-Button"></a>
 
 ## <a name="styling-a-button"></a>Applicare uno stile a un pulsante
 
-tvOS fornisce diverse proprietà di un `UIButton` che possono essere usate per fornire il titolo e lo stile con elementi come il colore di sfondo e le immagini.
+tvOS fornisce diverse proprietà di un oggetto `UIButton` che può essere usato per fornire il titolo e lo stile con elementi come il colore di sfondo e le immagini.
 
-<a name="Button-Titles" />
+<a name="Button-Titles"></a>
 
 ### <a name="button-titles"></a>Titoli dei pulsanti
 
-Come illustrato in precedenza, `UIButtons` sono diversi rispetto alla maggior parte dei controlli `UIKit` perché hanno uno stato, quindi non è possibile semplicemente modificare il titolo, è necessario modificarlo per una determinata `UIControlState`. Esempio:
+Come illustrato in precedenza, `UIButtons` sono diversi dalla maggior parte dei `UIKit` controlli in quanto hanno uno stato, quindi non è possibile semplicemente modificare il titolo, è necessario modificarlo per un dato `UIControlState` . Ad esempio:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-È possibile impostare il colore del titolo per il pulsante usando il metodo `SetTitleColor`. Esempio:
+È possibile impostare il colore del titolo per il pulsante usando il `SetTitleColor` metodo. Ad esempio:
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-È possibile modificare l'ombreggiatura del titolo usando il `SetTitleShadowColor`. Esempio:
+È possibile modificare l'ombreggiatura del titolo usando `SetTitleShadowColor` . Ad esempio:
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -216,7 +216,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-Inoltre, è possibile utilizzare il testo con attributi come titolo del pulsante. Esempio:
+Inoltre, è possibile utilizzare il testo con attributi come titolo del pulsante. Ad esempio:
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -228,15 +228,15 @@ myButton.SetAttributedTitle (highlightedAttributedTitle, UIControlState.Highligh
 
 ### <a name="button-images"></a>Immagini di pulsanti
 
-A un `UIButton` può essere associata un'immagine e può utilizzare un'immagine come sfondo.
+A `UIButton` può essere collegata un'immagine e può utilizzare un'immagine come sfondo.
 
-Per impostare l'immagine di sfondo di un pulsante per un `UIControlState`specificato, usare il codice seguente:
+Per impostare l'immagine di sfondo di un pulsante per un determinato oggetto `UIControlState` , usare il codice seguente:
 
 ```csharp
 button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-Impostare la proprietà `AdjustsImageWhenHiglighted` su `true` per creare l'immagine più chiara quando il pulsante è evidenziato (impostazione predefinita). Impostare la proprietà `AdjustsImageWhenDisabled` su `true` per creare l'immagine più scura quando il pulsante è disabilitato (anche in questo caso, si tratta dell'impostazione predefinita).
+Impostare la `AdjustsImageWhenHiglighted` proprietà su `true` per creare l'immagine più chiara quando il pulsante è evidenziato (impostazione predefinita). Impostare la `AdjustsImageWhenDisabled` proprietà su `true` per creare l'immagine più scura quando il pulsante è disabilitato (anche in questo caso è l'impostazione predefinita).
 
 Per impostare l'immagine visualizzata sul pulsante, usare il codice seguente:
 
@@ -244,13 +244,13 @@ Per impostare l'immagine visualizzata sul pulsante, usare il codice seguente:
 button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-Utilizzare la proprietà `TintColor` per impostare una tinta del colore applicata sia al titolo sia all'immagine del pulsante. Per i pulsanti del tipo di `Custom`, questa proprietà non ha alcun effetto, quindi è necessario implementare autonomamente il comportamento del `TintColor`.
+Utilizzare la `TintColor` proprietà per impostare una tinta del colore applicata sia al titolo sia all'immagine del pulsante. Per i pulsanti del `Custom` tipo, questa proprietà non ha alcun effetto, quindi è necessario implementare `TintColor` manualmente il comportamento.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-Questo articolo ha trattato la progettazione e l'uso di pulsanti all'interno di un'app Xamarin.tvOS. È stato illustrato come usare i pulsanti in iOS designer e come creare i pulsanti nel C# codice. Infine, ha illustrato come modificare il titolo di un pulsante e modificarne lo stile e l'aspetto.
+Questo articolo ha trattato la progettazione e l'uso di pulsanti all'interno di un'app Novell. tvOS. È stato illustrato come usare i pulsanti in iOS designer e come creare i pulsanti nel codice C#. Infine, ha illustrato come modificare il titolo di un pulsante e modificarne lo stile e l'aspetto.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

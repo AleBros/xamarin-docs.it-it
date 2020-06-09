@@ -1,20 +1,20 @@
 ---
-title: Uso delle viste di raccolta tvOS in Xamarin
-description: Questo documento descrive come usare le visualizzazioni di raccolta in un'app tvOS compilata con Xamarin. Vengono illustrati i layout della visualizzazione raccolta, la creazione di celle e visualizzazioni supplementari, la risposta agli eventi utente e altro ancora.
+title: Uso delle viste di raccolta tvOS in Novell
+description: Questo documento descrive come usare le visualizzazioni di raccolta in un'app tvOS compilata con Novell. Vengono illustrati i layout della visualizzazione raccolta, la creazione di celle e visualizzazioni supplementari, la risposta agli eventi utente e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: be0208accfdc287f93cf635a22c6409cd03483e9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: aa03ab7a3663fa5e0704a605116b19147f14a10b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030498"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572585"
 ---
-# <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Xamarin
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Novell
 
 Le visualizzazioni di raccolta consentono di visualizzare un gruppo di contenuti usando layout arbitrari. Grazie al supporto incorporato, consentono di creare layout semplici, ad esempio griglia o lineare, supportando al tempo stesso layout personalizzati.
 
@@ -22,25 +22,25 @@ Le visualizzazioni di raccolta consentono di visualizzare un gruppo di contenuti
 
 La visualizzazione raccolta gestisce una raccolta di elementi che usano sia un delegato che un'origine dati per fornire l'interazione dell'utente e il contenuto della raccolta. Poiché la visualizzazione raccolta si basa su un sottosistema di layout indipendente dalla visualizzazione stessa, fornire un layout diverso può facilmente modificare la presentazione dei dati della visualizzazione raccolta in tempo reale.
 
-<a name="About-Collection-Views" />
+<a name="About-Collection-Views"></a>
 
 ## <a name="about-collection-views"></a>Informazioni sulle visualizzazioni di raccolta
 
-Come indicato in precedenza, una visualizzazione raccolta (`UICollectionView`) gestisce una raccolta ordinata di elementi e presenta tali elementi con layout personalizzabili. Le visualizzazioni di raccolta funzionano in modo simile alle visualizzazioni di tabella (`UITableView`), ad eccezione del fatto che possono usare i layout per presentare elementi in più di una sola colonna.
+Come indicato in precedenza, una visualizzazione raccolta ( `UICollectionView` ) gestisce una raccolta ordinata di elementi e presenta tali elementi con layout personalizzabili. Le visualizzazioni di raccolta funzionano in modo simile alle visualizzazioni di tabella ( `UITableView` ), ad eccezione del fatto che possono usare i layout per presentare elementi in più di una sola colonna.
 
-Quando si usa una visualizzazione di raccolta in tvOS, l'app è responsabile di fornire i dati associati alla raccolta usando un'origine dati (`UICollectionViewDataSource`). I dati della visualizzazione raccolta possono essere organizzati e presentati in gruppi diversi (sezioni).
+Quando si usa una visualizzazione di raccolta in tvOS, l'app è responsabile di fornire i dati associati alla raccolta usando un'origine dati ( `UICollectionViewDataSource` ). I dati della visualizzazione raccolta possono essere organizzati e presentati in gruppi diversi (sezioni).
 
-La visualizzazione raccolta Visualizza i singoli elementi sullo schermo usando una cella (`UICollectionViewCell`) che fornisce la presentazione di una determinata parte di informazioni dalla raccolta (ad esempio un'immagine e il relativo titolo).
+La visualizzazione raccolta presenta i singoli elementi sullo schermo usando una cella ( `UICollectionViewCell` ) che fornisce la presentazione di una determinata parte di informazioni dalla raccolta (ad esempio un'immagine e il relativo titolo).
 
 Facoltativamente, è possibile aggiungere visualizzazioni supplementari alla presentazione della visualizzazione raccolta in modo che fungano da intestazione e piè di pagina per le sezioni e le celle. Il layout della visualizzazione raccolta è responsabile della definizione del posizionamento di queste viste insieme alle singole celle.
 
-La visualizzazione raccolta può rispondere all'interazione dell'utente usando un delegato (`UICollectionViewDelegate`). Questo delegato è inoltre responsabile di determinare se una determinata cella può ottenere lo stato attivo, se una cella è stata evidenziata o se ne è stata selezionata una. In alcuni casi, il delegato determina la dimensione delle singole celle.
+La visualizzazione raccolta può rispondere all'interazione dell'utente usando un delegato ( `UICollectionViewDelegate` ). Questo delegato è inoltre responsabile di determinare se una determinata cella può ottenere lo stato attivo, se una cella è stata evidenziata o se ne è stata selezionata una. In alcuni casi, il delegato determina la dimensione delle singole celle.
 
-<a name="Collection-View-Layouts" />
+<a name="Collection-View-Layouts"></a>
 
 ## <a name="collection-view-layouts"></a>Layout della visualizzazione raccolta
 
-Una funzionalità chiave di una visualizzazione di raccolta è la separazione tra i dati che presenta e il relativo layout. Un layout di visualizzazione raccolta (`UICollectionViewLayout`) è responsabile di fornire l'organizzazione e il percorso delle celle (e di eventuali visualizzazioni aggiuntive) con nella presentazione sullo schermo della visualizzazione raccolta.
+Una funzionalità chiave di una visualizzazione di raccolta è la separazione tra i dati che presenta e il relativo layout. Un layout di visualizzazione raccolta ( `UICollectionViewLayout` ) è responsabile di fornire l'organizzazione e la posizione delle celle (e di eventuali visualizzazioni aggiuntive) con nella presentazione sullo schermo della visualizzazione raccolta.
 
 Le singole celle vengono create dalla visualizzazione di raccolta dalla relativa origine dati associata e vengono quindi disposte e visualizzate dal layout di visualizzazione raccolta specificato.
 
@@ -48,7 +48,7 @@ Il layout della visualizzazione raccolta viene in genere specificato quando vien
 
 Il layout della visualizzazione raccolta fornisce diversi metodi che possono essere usati per aggiungere un'animazione alla transizione tra due layout diversi (per impostazione predefinita, non viene eseguita alcuna animazione). Inoltre, i layout di visualizzazione raccolta possono funzionare con i riconoscitori di movimento per aggiungere un'ulteriore animazione all'interazione dell'utente che comporta una modifica del layout.
 
-<a name="Creating-Cells-and-Supplementary-Views" />
+<a name="Creating-Cells-and-Supplementary-Views"></a>
 
 ## <a name="creating-cells-and-supplementary-views"></a>Creazione di celle e visualizzazioni supplementari
 
@@ -56,10 +56,10 @@ L'origine dati di una visualizzazione di raccolta non è responsabile solo di fo
 
 Poiché le visualizzazioni di raccolta sono state progettate per gestire grandi raccolte di elementi, le singole celle possono essere rilasciate dalla coda e riutilizzate per evitare la sovraesecuzione delle limitazioni di memoria. Sono disponibili due metodi diversi per la rimozione dalla coda delle visualizzazioni:
 
-- `DequeueReusableCell`: crea o restituisce una cella del tipo specificato (come specificato nello storyboard dell'app).
-- `DequeueReusableSupplementaryView`: crea o restituisce una visualizzazione supplementare del tipo specificato (come specificato nello storyboard dell'app).
+- `DequeueReusableCell`: Crea o restituisce una cella del tipo specificato (come specificato nello storyboard dell'app).
+- `DequeueReusableSupplementaryView`: Crea o restituisce una visualizzazione supplementare del tipo specificato (come specificato nello storyboard dell'app).
 
-Prima di chiamare uno di questi metodi, è necessario registrare la classe, lo storyboard o il file di `.xib` utilizzato per creare la visualizzazione della cella con la visualizzazione della raccolta. Esempio:
+Prima di chiamare uno di questi metodi, è necessario registrare la classe, lo storyboard o il `.xib` file utilizzato per creare la visualizzazione della cella con la visualizzazione della raccolta. Ad esempio:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -70,38 +70,38 @@ public CityCollectionView (IntPtr handle) : base (handle)
 }
 ```
 
-Dove `typeof(CityCollectionViewCell)` fornisce la classe che supporta la visualizzazione e `CityViewDatasource.CardCellId` fornisce l'ID utilizzato quando la cella (o la vista) viene rimessa in coda.
+Dove `typeof(CityCollectionViewCell)` fornisce la classe che supporta la visualizzazione e `CityViewDatasource.CardCellId` fornisce l'ID utilizzato quando la cella (o vista) viene rimessa in coda.
 
 Dopo la rimozione dalla coda della cella, è necessario configurarla con i dati per l'elemento che rappresenta e tornare alla visualizzazione della raccolta per la visualizzazione.
 
-<a name="About-Collection-View-Controllers" />
+<a name="About-Collection-View-Controllers"></a>
 
 ## <a name="about-collection-view-controllers"></a>Informazioni sui controller di visualizzazione raccolta
 
-Un controller di visualizzazione raccolta (`UICollectionViewController`) è un controller di visualizzazione specializzato (`UIViewController`) che fornisce il comportamento seguente:
+Un controller di visualizzazione della raccolta ( `UICollectionViewController` ) è un controller di visualizzazione specializzato ( `UIViewController` ) che fornisce il comportamento seguente:
 
-- È responsabile del caricamento della visualizzazione raccolta dal relativo storyboard o `.xib` file e creazione di un'istanza della vista. Se viene creato nel codice, viene creata automaticamente una nuova visualizzazione di raccolta non configurata.
-- Una volta caricata la visualizzazione raccolta, il controller tenta di caricare l'origine dati e il delegato dal file storyboard o `.xib`. Se non ne è disponibile alcuno, viene impostato come origine di entrambi.
+- È responsabile del caricamento della visualizzazione raccolta dallo storyboard o dal `.xib` file e dall'istanza della vista. Se viene creato nel codice, viene creata automaticamente una nuova visualizzazione di raccolta non configurata.
+- Una volta caricata la visualizzazione raccolta, il controller tenta di caricare l'origine dati e il delegato dallo storyboard o dal `.xib` file. Se non ne è disponibile alcuno, viene impostato come origine di entrambi.
 - Garantisce che i dati vengano caricati prima che la visualizzazione raccolta venga popolata per la prima volta e ricarichi e cancelli l'operazione SELECT in ogni visualizzazione successiva.
 
-Inoltre, il controller di visualizzazione della raccolta fornisce metodi sottoponibili a override che possono essere utilizzati per gestire il ciclo di vita della visualizzazione della raccolta, ad esempio `AwakeFromNib` e `ViewWillDisplay`.
+Il controller di visualizzazione della raccolta fornisce inoltre metodi sottoponibili a override che possono essere utilizzati per gestire il ciclo di vita della visualizzazione della raccolta, ad esempio `AwakeFromNib` e `ViewWillDisplay` .
 
-<a name="Collection-Views-and-Storyboards" />
+<a name="Collection-Views-and-Storyboards"></a>
 
 ## <a name="collection-views-and-storyboards"></a>Viste e storyboard della raccolta
 
-Il modo più semplice per usare una visualizzazione di raccolta nell'app Xamarin.tvOS consiste nell'aggiungerne uno allo storyboard. Come esempio rapido, verrà creata un'app di esempio che presenta un'immagine, un titolo e un pulsante di selezione. Se l'utente fa clic sul pulsante Seleziona, viene visualizzata una visualizzazione raccolta che consente all'utente di scegliere una nuova immagine. Quando si sceglie un'immagine, la visualizzazione della raccolta viene chiusa e verrà visualizzata la nuova immagine e il titolo.
+Il modo più semplice per usare una visualizzazione di raccolta nell'app Novell. tvOS consiste nell'aggiungerne uno allo storyboard. Come esempio rapido, verrà creata un'app di esempio che presenta un'immagine, un titolo e un pulsante di selezione. Se l'utente fa clic sul pulsante Seleziona, viene visualizzata una visualizzazione raccolta che consente all'utente di scegliere una nuova immagine. Quando si sceglie un'immagine, la visualizzazione della raccolta viene chiusa e verrà visualizzata la nuova immagine e il titolo.
 
 Eseguire le operazioni seguenti:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Avviare una nuova **app tvOS di visualizzazione singola** in Visual Studio per Mac.
-1. Nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard` e aprirlo in iOS designer.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo in iOS designer.
 1. Aggiungere una visualizzazione immagine, un'etichetta e un pulsante alla visualizzazione esistente e configurarli in modo che abbiano un aspetto simile al seguente: 
 
     [![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
-1. Assegnare un **nome** alla visualizzazione immagine e l'etichetta nella **scheda Widget** di **Esplora proprietà**. Esempio: 
+1. Assegnare un **nome** alla visualizzazione immagine e l'etichetta nella **scheda Widget** di **Esplora proprietà**. Ad esempio: 
 
     [![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
 1. Trascinare quindi un controller di visualizzazione raccolta nello storyboard: 
@@ -127,19 +127,19 @@ Eseguire le operazioni seguenti:
 1. Nella **scheda Widget** verificare che il **layout** sia `Flow` e che la **direzione di scorrimento** sia `Vertical` per la visualizzazione raccolta: 
 
     [![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
-1. Selezionare la cella di visualizzazione raccolta e impostarne l' **identità** su `CityCell` nella **scheda Widget**: 
+1. Selezionare la cella di visualizzazione raccolta e impostare la relativa **identità** su `CityCell` nella **scheda Widget**: 
 
     [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Salvare le modifiche.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Avviare una nuova **app tvOS di visualizzazione singola** in Visual Studio.
-1. Nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard` e aprirlo in iOS designer.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo in iOS designer.
 1. Aggiungere una visualizzazione immagine, un'etichetta e un pulsante alla visualizzazione esistente e configurarli in modo che abbiano un aspetto simile al seguente: 
 
     [![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
-1. Assegnare un **nome** alla visualizzazione immagine e l'etichetta nella **scheda Widget** di **Esplora proprietà**. Esempio: 
+1. Assegnare un **nome** alla visualizzazione immagine e l'etichetta nella **scheda Widget** di **Esplora proprietà**. Ad esempio: 
 
     [![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
 1. Trascinare quindi un controller di visualizzazione raccolta nello storyboard: 
@@ -163,30 +163,30 @@ Eseguire le operazioni seguenti:
 1. Nella **scheda Widget** verificare che il **layout** sia `Flow` e che la **direzione di scorrimento** sia `Vertical` per la visualizzazione raccolta: 
 
     [![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
-1. Selezionare la cella di visualizzazione raccolta e impostarne l' **identità** su `CityCell` nella **scheda Widget**: 
+1. Selezionare la cella di visualizzazione raccolta e impostare la relativa **identità** su `CityCell` nella **scheda Widget**: 
 
     [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Salvare le modifiche.
 
 -----
 
-Se avessimo scelto `Custom` per il **layout**della visualizzazione raccolta, avremmo potuto specificare un layout personalizzato. Apple fornisce un `UICollectionViewFlowLayout` incorporato e `UICollectionViewDelegateFlowLayout` che possono presentare facilmente i dati in un layout basato su griglia (questi vengono usati dallo stile di layout `flow`). 
+Se avessimo scelto `Custom` il **layout**della visualizzazione della raccolta, avremmo potuto specificare un layout personalizzato. Apple fornisce un incorporato `UICollectionViewFlowLayout` e `UICollectionViewDelegateFlowLayout` che può facilmente presentare i dati in un layout basato su griglia (questi vengono usati dallo stile di `flow` Layout). 
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Providing-Data-for-the-Collection-View" />
+<a name="Providing-Data-for-the-Collection-View"></a>
 
 ## <a name="providing-data-for-the-collection-view"></a>Fornire dati per la visualizzazione raccolta
 
 Ora che è stata aggiunta la visualizzazione raccolta (e il controller di visualizzazione raccolta) allo storyboard, è necessario fornire i dati per la raccolta. 
 
-<a name="The-Data-Model" />
+<a name="The-Data-Model"></a>
 
 ### <a name="the-data-model"></a>Modello di dati
 
 In primo luogo, verrà creato un modello per i dati che contengono il nome file per l'immagine da visualizzare, il titolo e un flag per consentire la selezione della città.
 
-Creare una classe `CityInfo` e renderla simile alla seguente:
+Creare una `CityInfo` classe e renderla simile alla seguente:
 
 ```csharp
 using System;
@@ -216,7 +216,7 @@ namespace tvCollection
 
 ### <a name="the-collection-view-cell"></a>Cella di visualizzazione raccolta
 
-A questo punto è necessario definire come verranno presentati i dati per ogni cella. Modificare il file di `CityCollectionViewCell.cs` (creato automaticamente dal file Storyboard) e renderlo simile al seguente:
+A questo punto è necessario definire come verranno presentati i dati per ogni cella. Modificare il `CityCollectionViewCell.cs` file (creato automaticamente dal file Storyboard) e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -283,13 +283,13 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 
 Per ulteriori informazioni sull'esplorazione e lo stato attivo, vedere la documentazione relativa all' [utilizzo dello spostamento e dello stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) e di [Siri remote e Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
-<a name="The-Collection-View-Data-Provider" />
+<a name="The-Collection-View-Data-Provider"></a>
 
 ### <a name="the-collection-view-data-provider"></a>Visualizzazione raccolta provider di dati
 
 Con il modello di dati creato e il layout di cella definito, creiamo un'origine dati per la visualizzazione di raccolta. L'origine dati sarà responsabile non solo di fornire i dati di supporto, ma anche di rimuovere dalla coda le celle per visualizzare le singole celle sullo schermo.
 
-Creare una classe `CityViewDatasource` e renderla simile alla seguente:
+Creare una `CityViewDatasource` classe e renderla simile alla seguente:
 
 ```csharp
 using System;
@@ -382,7 +382,7 @@ namespace tvCollection
 }
 ```
 
-Esaminiamo questa classe in modo dettagliato. In primo luogo, si eredita da `UICollectionViewDataSource` e si fornisce un collegamento all'ID celle (assegnato in iOS designer):
+Esaminiamo questa classe in modo dettagliato. In primo luogo, viene ereditato da `UICollectionViewDataSource` e viene fornito un collegamento all'ID celle (assegnato in iOS designer):
 
 ```csharp
 public static NSString CardCellId = new NSString ("CityCell");
@@ -406,7 +406,7 @@ public void PopulateCities() {
 }
 ```
 
-Viene quindi eseguito l'override del metodo `NumberOfSections` e viene restituito il numero di sezioni (gruppi di elementi) presenti nella vista di raccolta. In questo caso, è presente un solo:
+Viene quindi eseguito l'override del `NumberOfSections` metodo e viene restituito il numero di sezioni (gruppi di elementi) presenti nella visualizzazione di raccolta. In questo caso, è presente un solo:
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -439,19 +439,19 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-Dopo aver ottenuto una cella di visualizzazione raccolta del tipo di `CityCollectionViewCell`, viene popolata con l'elemento specificato.
+Dopo aver ottenuto una cella di visualizzazione raccolta del `CityCollectionViewCell` tipo, viene popolata con l'elemento specificato.
 
-<a name="Responding-to-User-Events" />
+<a name="Responding-to-User-Events"></a>
 
 ## <a name="responding-to-user-events"></a>Risposta agli eventi utente
 
 Poiché si desidera che l'utente sia in grado di selezionare un elemento dalla raccolta, è necessario fornire un delegato di visualizzazione raccolta per gestire questa interazione. Ed è necessario fornire un modo per consentire alla visualizzazione chiamante di conoscere l'elemento selezionato dall'utente.
 
-<a name="The-App-Delegate" />
+<a name="The-App-Delegate"></a>
 
 ### <a name="the-app-delegate"></a>Delegato dell'app
 
-È necessario un modo per correlare l'elemento attualmente selezionato dalla visualizzazione della raccolta alla visualizzazione chiamante. Nel `AppDelegate`verrà usata una proprietà personalizzata. Modificare il file di `AppDelegate.cs` e aggiungere il codice seguente:
+È necessario un modo per correlare l'elemento attualmente selezionato dalla visualizzazione della raccolta alla visualizzazione chiamante. Verrà usata una proprietà personalizzata in `AppDelegate` . Modificare il `AppDelegate.cs` file e aggiungere il codice seguente:
 
 ```csharp
 public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning Circle", true);
@@ -459,11 +459,11 @@ public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning 
 
 Definisce la proprietà e imposta la città predefinita che verrà visualizzata inizialmente. In seguito verrà utilizzata questa proprietà per visualizzare la selezione dell'utente e consentire la modifica di Select.
 
-<a name="The-Collection-View-Delegate" />
+<a name="The-Collection-View-Delegate"></a>
 
 ### <a name="the-collection-view-delegate"></a>Delegato della visualizzazione raccolta
 
-Successivamente, aggiungere una nuova classe `CityViewDelegate` al progetto e renderla simile alla seguente:
+Successivamente, aggiungere una nuova `CityViewDelegate` classe al progetto e renderla simile alla seguente:
 
 ```csharp
 using System;
@@ -517,7 +517,7 @@ namespace tvCollection
 }
 ```
 
-Esaminiamo in dettaglio questa classe. Prima di tutto, viene ereditato da `UICollectionViewDelegateFlowLayout`. Il motivo per cui viene ereditata da questa classe e non da `UICollectionViewDelegate` è che si sta usando il `UICollectionViewFlowLayout` predefinito per presentare gli elementi e non un tipo di layout personalizzato.
+Esaminiamo in dettaglio questa classe. In primo luogo, viene ereditato da `UICollectionViewDelegateFlowLayout` . Il motivo per cui viene ereditata da questa classe e non `UICollectionViewDelegate` è che si sta utilizzando l'oggetto incorporato `UICollectionViewFlowLayout` per presentare gli elementi e non un tipo di layout personalizzato.
 
 Si restituiranno quindi le dimensioni per i singoli elementi usando il codice seguente:
 
@@ -542,7 +542,7 @@ public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Si verifica se un determinato elemento di dati di supporto ha il flag di `CanSelect` impostato su `true` e restituisce tale valore. Per ulteriori informazioni sull'esplorazione e lo stato attivo, vedere la documentazione relativa all' [utilizzo dello spostamento e dello stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) e di [Siri remote e Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
+Viene verificato se il flag di un determinato elemento di dati di supporto è `CanSelect` impostato su `true` e viene restituito tale valore. Per ulteriori informazioni sull'esplorazione e lo stato attivo, vedere la documentazione relativa all' [utilizzo dello spostamento e dello stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) e di [Siri remote e Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
 Infine, si risponde all'utente selezionando un elemento con il codice seguente:
 
@@ -557,13 +557,13 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Qui si imposta la proprietà `SelectedCity` della `AppDelegate` sull'elemento selezionato dall'utente e si chiude il controller di visualizzazione raccolta, tornando alla visualizzazione che ha chiamato. Non è stata ancora definita la proprietà `ParentController` della visualizzazione raccolta. questa operazione verrà eseguita successivamente.
+Qui si imposta la `SelectedCity` proprietà di sull' `AppDelegate` elemento selezionato dall'utente e si chiude il controller di visualizzazione della raccolta, tornando alla visualizzazione che ha chiamato. La `ParentController` proprietà della visualizzazione raccolta non è ancora stata definita. questa operazione verrà eseguita successivamente.
 
-<a name="Configuring-the-Collection-View" />
+<a name="Configuring-the-Collection-View"></a>
 
 ## <a name="configuring-the-collection-view"></a>Configurazione della visualizzazione raccolta
 
-A questo punto è necessario modificare la visualizzazione della raccolta e assegnare l'origine dati e il delegato. Modificare il file di `CityCollectionView.cs` (creato automaticamente dallo storyboard) e renderlo simile al seguente:
+A questo punto è necessario modificare la visualizzazione della raccolta e assegnare l'origine dati e il delegato. Modificare il `CityCollectionView.cs` file (creato automaticamente dallo storyboard) e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -625,7 +625,7 @@ namespace tvCollection
 }
 ```
 
-Per prima cosa, viene fornito un collegamento per accedere ai `AppDelegate`: 
+Per prima cosa, viene fornito un collegamento per accedere al nostro `AppDelegate` : 
 
 ```csharp
 public static AppDelegate App {
@@ -682,7 +682,7 @@ Si imposta la trasparenza dell'elemento precedente che perde lo stato attivo a z
 
 A questo punto è necessario eseguire la configurazione finale nella visualizzazione raccolta e consentire al controller di impostare la proprietà definita in modo che la visualizzazione raccolta possa essere chiusa dopo che l'utente effettua una selezione.
 
-Modificare il file di `CityCollectionViewController.cs` (creato automaticamente dallo storyboard) e renderlo simile al seguente:
+Modificare il `CityCollectionViewController.cs` file (creato automaticamente dallo storyboard) e renderlo simile al seguente:
 
 ```csharp
 // This file has been autogenerated from a class added in the UI designer.
@@ -726,7 +726,7 @@ namespace tvCollection
 
 Ora che tutte le parti sono state unite per popolare e controllare la visualizzazione della raccolta, è necessario apportare le modifiche finali alla visualizzazione principale per riunire tutti gli elementi.
 
-Modificare il file di `ViewController.cs` (creato automaticamente dallo storyboard) e renderlo simile al seguente:
+Modificare il `ViewController.cs` file (creato automaticamente dallo storyboard) e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -777,7 +777,7 @@ namespace MySingleView
 }
 ```
 
-Il codice seguente visualizza inizialmente l'elemento selezionato dalla proprietà `SelectedCity` della `AppDelegate` e lo visualizza nuovamente quando l'utente ha effettuato una selezione dalla visualizzazione della raccolta:
+Il codice seguente visualizza inizialmente l'elemento selezionato dalla `SelectedCity` proprietà di e lo Visualizza `AppDelegate` nuovamente quando l'utente ha effettuato una selezione dalla visualizzazione della raccolta:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -791,7 +791,7 @@ public override void ViewWillAppear (bool animated)
 }
 ```
 
-<a name="Testing-the-app" />
+<a name="Testing-the-app"></a>
 
 ## <a name="testing-the-app"></a>Test dell'app
 
@@ -803,13 +803,13 @@ Se l'utente fa clic sul pulsante **Seleziona visualizzazione** , verrà visualiz
 
 [![](collection-views-images/run02.png "The collection view")](collection-views-images/run02.png#lightbox)
 
-Qualsiasi città la cui proprietà `CanSelect` impostata su `false` verrà visualizzata in grigio e l'utente non sarà in grado di impostare lo stato attivo. Quando l'utente evidenzia un elemento (impostarlo come attivo), il titolo viene visualizzato e può usare l'effetto di parallasse per inclinare l'immagine in 3D.
+Qualsiasi città la cui `CanSelect` proprietà è impostata su `false` verrà visualizzata in grigio e l'utente non sarà in grado di impostare lo stato attivo su di essa. Quando l'utente evidenzia un elemento (impostarlo come attivo), il titolo viene visualizzato e può usare l'effetto di parallasse per inclinare l'immagine in 3D.
 
 Quando l'utente fa clic su un'immagine di selezione, la visualizzazione della raccolta viene chiusa e la visualizzazione principale viene visualizzata nuovamente con la nuova immagine:
 
 [![](collection-views-images/run03.png "A new image on the home screen")](collection-views-images/run03.png#lightbox)
 
-<a name="Creating-Custom-Layout-and-Reordering-Items" />
+<a name="Creating-Custom-Layout-and-Reordering-Items"></a>
 
 ## <a name="creating-custom-layout-and-reordering-items"></a>Creazione del layout personalizzato e riordinamento degli elementi
 
@@ -817,11 +817,11 @@ Una delle funzionalità principali dell'utilizzo di una visualizzazione di racco
 
 Aggiunto di recente alle visualizzazioni di raccolta per iOS 9 è stata la possibilità di consentire facilmente il riordinamento degli elementi nella raccolta. Anche in questo caso, poiché tvOS 9 è un subset di iOS 9, questa operazione viene eseguita nello stesso modo. Per altri dettagli, vedere il documento relativo alle [modifiche della visualizzazione raccolta](~/ios/user-interface/controls/uicollectionview.md) .
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-In questo articolo è stata illustrata la progettazione e l'uso delle visualizzazioni di raccolta all'interno di un'app Xamarin.tvOS. In primo luogo, sono stati discussi tutti gli elementi che costituiscono la visualizzazione di raccolta. Successivamente, è stato illustrato come progettare e implementare una visualizzazione di raccolta utilizzando uno storyboard. Infine, vengono forniti collegamenti alle informazioni sulla creazione di layout personalizzati e sul riordinamento degli elementi.
+In questo articolo è stata illustrata la progettazione e l'uso delle visualizzazioni di raccolta all'interno di un'app Novell. tvOS. In primo luogo, sono stati discussi tutti gli elementi che costituiscono la visualizzazione di raccolta. Successivamente, è stato illustrato come progettare e implementare una visualizzazione di raccolta utilizzando uno storyboard. Infine, vengono forniti collegamenti alle informazioni sulla creazione di layout personalizzati e sul riordinamento degli elementi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

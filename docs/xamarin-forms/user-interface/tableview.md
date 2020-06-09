@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsTableView
-description: Questo articolo illustra come usare la Xamarin.Forms classe Tableview per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8f3fd8d84906844b578e71cb0774932561e0d507
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136227"
+title: " Xamarin.Forms TableView" Description: "questo articolo spiega come usare la Xamarin.Forms classe Tableview per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni".
+ms. prod: Novell MS. AssetID: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-tableview"></a>Xamarin.FormsTableView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
@@ -24,8 +10,6 @@ ms.locfileid: "84136227"
 [`TableView`](xref:Xamarin.Forms.TableView)visualizzazione per la visualizzazione di elenchi scorrevoli di dati o opzioni in cui sono presenti righe che non condividono lo stesso modello. A differenza di [ListView](~/xamarin-forms/user-interface/listview/index.md), non `TableView` ha il concetto di `ItemsSource` , pertanto gli elementi devono essere aggiunti manualmente come elementi figlio.
 
 ![Esempio di TableView](tableview-images/tableview-all-sml.png)
-
-<a name="Use_Cases" />
 
 ## <a name="use-cases"></a>Casi d'uso
 
@@ -36,8 +20,6 @@ ms.locfileid: "84136227"
 - Visualizzazione dei dati presentati in modo diverso da riga a riga (ad esempio numeri, percentuali e immagini).
 
 [`TableView`](xref:Xamarin.Forms.TableView)gestisce lo scorrimento e il layout delle righe nelle sezioni attraenti, una necessità comune per gli scenari precedenti. Il `TableView` controllo Usa la visualizzazione equivalente sottostante di ogni piattaforma, se disponibile, creando un aspetto nativo per ogni piattaforma.
-
-<a name="TableView_Structure" />
 
 ## <a name="structure"></a>Struttura
 
@@ -72,8 +54,6 @@ Content = new TableView
 };
 ```
 
-<a name="TableView_Appearance" />
-
 ## <a name="appearance"></a>Aspetto
 
 [`TableView`](xref:Xamarin.Forms.TableView)espone la [`Intent`](xref:Xamarin.Forms.TableView.Intent) proprietà, che può essere impostata su uno dei [`TableIntent`](xref:Xamarin.Forms.TableIntent) membri dell'enumerazione:
@@ -87,15 +67,11 @@ Il [`TableIntent`](xref:Xamarin.Forms.TableIntent) valore scelto può influisca 
 
 Inoltre, il colore del testo visualizzato per ogni oggetto [`TableSection`](xref:Xamarin.Forms.TableSection) può essere modificato impostando la `TextColor` proprietà su un oggetto [`Color`](xref:Xamarin.Forms.Color) .
 
-<a name="Built-In_Cells" />
-
 ## <a name="built-in-cells"></a>Celle predefinite
 
 Xamarin.Formsviene fornita con celle predefinite per la raccolta e la visualizzazione di informazioni. Sebbene [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView) possano utilizzare tutte le stesse celle, [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) e [`EntryCell`](xref:Xamarin.Forms.EntryCell) sono le più rilevanti per uno `TableView` scenario.
 
 Per una descrizione dettagliata di [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) e [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell), vedere [aspetto della cella ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) .
-
-<a name="switchcell" />
 
 ### <a name="switchcell"></a>SwitchCell
 
@@ -110,8 +86,6 @@ Tutte queste proprietà sono associabili.
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell)espone anche l' `OnChanged` evento, consentendo di rispondere alle modifiche nello stato della cella.
 
 ![Esempio di SwitchCell](tableview-images/switch-cell.png)
-
-<a name="entrycell" />
 
 ### <a name="entrycell"></a>EntryCell
 
@@ -128,8 +102,6 @@ Tutte queste proprietà sono associabili.
 [`EntryCell`](xref:Xamarin.Forms.EntryCell)espone anche l' `Completed` evento, che viene generato quando l'utente preme il pulsante "fine" sulla tastiera durante la modifica del testo.
 
 ![Esempio di EntryCell](tableview-images/entry-cell.png)
-
-<a name="Custom_Cells" />
 
 ## <a name="custom-cells"></a>Celle personalizzate
 

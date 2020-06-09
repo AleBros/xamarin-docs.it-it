@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 788df5f27066d0d8d1f672d82e94a06ddf5e0916
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139815"
+Titolo: "parte 2. Sintassi XAML essenziale "Description:" in questo articolo vengono illustrate le funzionalità di sintassi XAML essenziali degli elementi proprietà e delle proprietà associate.
+ms. prod: Novell MS. AssetID: 4022F1DC-3802-4635-A553-688ABD3F0D5A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -526,9 +512,9 @@ Questo è il modo standard per impostare una proprietà dipendente dalla piattaf
 ```
 
 > [!NOTE]
-> L' `OnPlatform` estensione di markup può essere usata anche in XAML per personalizzare l'aspetto dell'interfaccia utente in base alla piattaforma. Fornisce le stesse funzionalità delle `OnPlatform` `On` classi e, ma con una rappresentazione più concisa. Per altre informazioni, vedere [estensione di markup onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+> L' `OnPlatform` estensione di markup può essere usata anche in XAML per personalizzare l'aspetto dell'interfaccia utente in base alla piattaforma. Fornisce le stesse funzionalità delle `OnPlatform` `On` classi e, ma con una rappresentazione più concisa. Per altre informazioni, vedere [estensione di markup onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Con gli elementi proprietà e le proprietà associate, è stata stabilita gran parte della sintassi XAML di base. Tuttavia, a volte è necessario impostare le proprietà sugli oggetti in modo indiretto, ad esempio da un dizionario risorse. Questo approccio è trattato nella parte successiva, parte [3. Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
 

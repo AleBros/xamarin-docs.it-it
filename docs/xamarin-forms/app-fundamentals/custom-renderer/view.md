@@ -1,21 +1,6 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e565a2bcddf292d37bc3dd07a8edbbabec709d8a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133562"
+title: "implementazione di una vista" Descrizione: "questo articolo spiega come creare un renderer personalizzato per un Xamarin.Forms controllo personalizzato usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo".
+ms. prod: Novell MS. AssetID: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 
@@ -31,13 +16,11 @@ Il diagramma seguente illustra la relazione tra [`View`](xref:Xamarin.Forms.View
 
 Il processo di rendering può essere utilizzato per implementare personalizzazioni specifiche della piattaforma creando un renderer personalizzato per un [`View`](xref:Xamarin.Forms.View) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Custom_Control) un Xamarin.Forms controllo personalizzato.
-1. [Utilizzare](#Consuming_the_Custom_Control) il controllo personalizzato da Xamarin.Forms .
-1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per il controllo in ogni piattaforma.
+1. [Creare](#creating-the-custom-control) un Xamarin.Forms controllo personalizzato.
+1. [Utilizzare](#consuming-the-custom-control) il controllo personalizzato da Xamarin.Forms .
+1. [Creare](#creating-the-custom-renderer-on-each-platform) il renderer personalizzato per il controllo in ogni piattaforma.
 
 Ogni elemento verrà trattato separatamente, per implementare un renderer `CameraPreview` che consente di visualizzare un'anteprima del flusso video dalla fotocamera del dispositivo. Toccare il flusso video per arrestarlo e avviarlo.
-
-<a name="Creating_the_Custom_Control" />
 
 ## <a name="creating-the-custom-control"></a>Creazione del controllo personalizzato
 
@@ -60,8 +43,6 @@ public class CameraPreview : View
 ```
 
 Il controllo personalizzato `CameraPreview` viene creato nel progetto di libreria .NET Standard e definisce l'API per il controllo. Il controllo personalizzato espone una proprietà `Camera` che viene usata per stabilire se il flusso video deve essere visualizzato dalla fotocamera anteriore o posteriore del dispositivo. Se non viene specificato un valore per la proprietà `Camera` quando viene creato il controllo, per impostazione predefinita viene specificata la fotocamera posteriore.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Uso del controllo personalizzato
 
@@ -108,8 +89,6 @@ public class MainPageCS : ContentPage
 Un'istanza del controllo personalizzato `CameraPreview` verrà usata per visualizzare il flusso video di anteprima dalla fotocamera del dispositivo. Oltre a specificare, se necessario, un valore per la proprietà `Camera`, la personalizzazione del controllo verrà eseguita nel renderer personalizzato.
 
 Un renderer personalizzato può ora essere aggiunto a ogni progetto di applicazione per creare controlli di anteprima della fotocamera specifici della piattaforma.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creazione del renderer personalizzato in ogni piattaforma
 
@@ -331,7 +310,7 @@ A condizione che la proprietà `Control` sia `null`, viene creata un'istanza di 
 > [!NOTE]
 > In un'applicazione UWP è importante arrestare ed eliminare gli oggetti che consentono l'accesso alla fotocamera. Questi possono infatti interferire con altre applicazioni che tentano di accedere alla fotocamera del dispositivo. Per altre informazioni, vedere [Display the camera preview](/windows/uwp/audio-video-camera/simple-camera-preview-access/) (Visualizzare l'anteprima della fotocamera).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare un renderer personalizzato per un Xamarin.Forms controllo personalizzato usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo. Xamarin.Formsi controlli dell'interfaccia utente personalizzati devono derivare dalla [`View`](xref:Xamarin.Forms.View) classe, utilizzata per posizionare i layout e i controlli sullo schermo.
 

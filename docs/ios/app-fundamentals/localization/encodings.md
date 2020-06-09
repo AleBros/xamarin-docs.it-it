@@ -1,24 +1,24 @@
 ---
-title: Codifiche di internazionalizzazione in Xamarin.iOS
-description: Questo documento descrive le codifiche di internazionalizzazione in Xamarin.iOS, illustrando le codifiche disponibili e come aggiungerle a un'app.
+title: Codifiche di internazionalizzazione in Novell. iOS
+description: Questo documento descrive le codifiche di internazionalizzazione in Novell. iOS, illustrando le codifiche disponibili e come aggiungerle a un'app.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: 2d204aeac18fc08bf6eb2221b6f64ecbbded8121
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 78c048d793fd792576e2482491ebf11460d5b511
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571805"
 ---
-# <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in Xamarin.iOS
+# <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in Novell. iOS
 
-Per impostazione predefinita, non tutte le codifiche sono incluse nella libreria di classi Xamarin.iOS.
+Per impostazione predefinita, non tutte le codifiche sono incluse nella libreria di classi Novell. iOS.
 
-Per ridurre le dimensioni dell'applicazione, Xamarin.iOS non include alcuna codifica specifica ed è necessario indicare a mTouch di includere gli assembly che contengono il supporto per la codifica necessaria.
+Per ridurre le dimensioni dell'applicazione, Novell. iOS non include alcuna codifica specifica ed è necessario indicare a mTouch di includere gli assembly che contengono il supporto per la codifica necessaria.
 
 Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquadro compilazione/avanzata iOS in Visual Studio per Mac o Visual Studio:
 
@@ -33,9 +33,9 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquad
 - altro: cirillico, Baltico, vietnamita, ucraino e tailandese
 - rare: codifiche EBCDIC e altre tabelle codici rare
 - ovest: lingue latine, Pasqua ed Europa occidentale
-- tutti
+- all
 
- <a name="cjk" />
+ <a name="cjk"></a>
 
 ## <a name="cjk"></a>CJK
 
@@ -46,7 +46,7 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquad
 - CP950
 - CP54936
 
- <a name="mideast" />
+ <a name="mideast"></a>
 
 ## <a name="mideast"></a>mo
 
@@ -58,7 +58,7 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquad
 - CP28599
 - CP38598
 
- <a name="other" />
+ <a name="other"></a>
 
 ## <a name="other"></a>altro
 
@@ -72,7 +72,7 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquad
 - CP57002
 - CP874
 
- <a name="rare" />
+ <a name="rare"></a>
 
 ## <a name="rare"></a>rari
 
@@ -114,9 +114,9 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive dal riquad
 - CP870
 - CP875
 
- <a name="west" />
+ <a name="west"></a>
 
-## <a name="west"></a>occidentale
+## <a name="west"></a>west
 
 - CP10000
 - CP10079

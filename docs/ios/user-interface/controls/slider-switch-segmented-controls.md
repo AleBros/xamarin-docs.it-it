@@ -1,24 +1,24 @@
 ---
-title: Dispositivi di scorrimento, commutatori e controlli segmentati in Xamarin.iOS
-description: Questo documento illustra le diapositive, i commutatori e i controlli segmentati in Xamarin.iOS, che descrivono come utilizzarli sia a livello di codice che in iOS designer.
+title: Dispositivi di scorrimento, commutatori e controlli segmentati in Novell. iOS
+description: Questo documento illustra le diapositive, i commutatori e i controlli segmentati in Novell. iOS, che descrivono come utilizzarli sia a livello di codice che in iOS designer.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 763165f1e09f847745b820987f8dbbae8f834fd7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: f7b27c9f1010be313810b4b0f289ef792efd47a3
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568646"
 ---
-# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Dispositivi di scorrimento, commutatori e controlli segmentati in Xamarin.iOS
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Dispositivi di scorrimento, commutatori e controlli segmentati in Novell. iOS
 
-<a name="Sliders" />
+<a name="Sliders"></a>
 
-## <a name="sliders"></a>Scorrimento
+## <a name="sliders"></a>Dispositivi di scorrimento
 
 Il dispositivo di scorrimento consente di selezionare in modo semplice un valore numerico all'interno di un intervallo. Per impostazione predefinita, il controllo è un valore compreso tra 0 e 1, ma è possibile personalizzare questi limiti.
 
@@ -28,7 +28,7 @@ Lo screenshot seguente mostra le proprietà modificabili nella finestra di proge
 
  [![](slider-switch-segmented-controls-images/image26a.png "Slider Properties")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
-È possibile impostare questi valori nel codice come illustrato di seguito, incluso il collegamento di un gestore per visualizzare il valore attualmente selezionato in un controllo `UILabel`:
+È possibile impostare questi valori nel codice come illustrato di seguito, incluso il collegamento di un gestore per visualizzare il valore attualmente selezionato in un `UILabel` controllo:
 
 ```csharp
 slider1.MinValue = -1;
@@ -50,17 +50,17 @@ Il dispositivo di scorrimento personalizzato ha un aspetto simile al seguente:
  [![](slider-switch-segmented-controls-images/image27a.png "Custom Slider")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Attualmente si verifica un [bug](https://stackoverflow.com/a/19496179) che causa il rendering del `ThumbTint` in fase di esecuzione, come previsto. È possibile aggiungere la seguente riga di codice **prima** del codice precedente come soluzione alternativa. [[Origine](https://stackoverflow.com/a/21396794)]:
+> Attualmente si verifica un [bug](https://stackoverflow.com/a/19496179) che impedisce il `ThumbTint` rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima** del codice precedente come soluzione alternativa. [[Origine](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
 > È possibile usare qualsiasi immagine, in quanto verrà sottoposta a override, ma assicurarsi che venga inserito _nella_ directory Resources e venga chiamato nel codice.
 
-<a name="Switch" />
+<a name="Switch"></a>
 
 ## <a name="switch"></a>Opzione
 
-iOS usa il `UISwitch` come input booleano che può essere rappresentato da un pulsante di opzione su altre piattaforme. L'utente può modificare il controllo spostando il *cursore* tra le posizioni **on/off** .
+iOS USA `UISwitch` come input booleano che può essere rappresentato da un pulsante di opzione su altre piattaforme. L'utente può modificare il controllo spostando il *cursore* tra le posizioni **on/off** .
 
  [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
@@ -68,13 +68,13 @@ L'aspetto dell'opzione può essere personalizzato nella **riquadro delle proprie
 
  [![](slider-switch-segmented-controls-images/image29a.png "Switch Properties")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
-Le proprietà dell'opzione possono essere impostate anche nel codice. ad esempio, il codice seguente visualizzerà un'opzione con il valore predefinito `On`:
+Le proprietà dell'opzione possono essere impostate anche nel codice. ad esempio, il codice seguente visualizzerà un'opzione con il valore predefinito `On` :
 
 ```csharp
 switch1.On = true;
 ```
 
- <a name="Segmented_Controls" />
+ <a name="Segmented_Controls"></a>
 
 ## <a name="segmented-controls"></a>Controlli segmentati
 

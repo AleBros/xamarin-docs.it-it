@@ -1,22 +1,22 @@
 ---
 title: Introduzione a iOS 9
-description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 9 per gli sviluppatori Xamarin.iOS.
+description: Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 9 per gli sviluppatori Novell. iOS.
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574132"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
-_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 9 per gli sviluppatori Xamarin.iOS._
+_Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 9 per gli sviluppatori Novell. iOS._
 
 ![](images/ios9-sml.png "The iOS 9 logo")
 
@@ -42,11 +42,11 @@ Poiché ATS è abilitato per impostazione predefinita nelle app compilate per iO
 
 Per ulteriori informazioni su ATS, vedere la guida alla [sicurezza del trasporto delle app](~/ios/app-fundamentals/ats.md) .
 
-<a name="multitasking" />
+<a name="multitasking"></a>
 
 ## <a name="multitasking-for-ipad"></a>Multitasking per iPad
 
-Con iOS 9, Apple ha aggiunto il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Di conseguenza, le app Xamarin.iOS non possono più presumere che siano l'unica app in esecuzione in un determinato momento o che abbiano accesso allo schermo intero o alle risorse del dispositivo.
+Con iOS 9, Apple ha aggiunto il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Di conseguenza, le app Novell. iOS non possono più presumere che siano l'unica app in esecuzione in un determinato momento o che abbiano accesso allo schermo intero o alle risorse del dispositivo.
 
 Il multitasking per iPad è supportato tramite le funzionalità seguenti:
 
@@ -62,14 +62,14 @@ Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, [contatti]
 
 Questi nuovi Framework orientati a oggetti forniscono gli elementi seguenti:
 
-- **Contatti** : fornisce l'accesso a Xamarin.iOS alle informazioni di contatto dell'utente. Poiché la maggior parte delle app richiede solo l'accesso in sola lettura, questo Framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
-- **ContactsUI** : fornisce gli elementi dell'interfaccia utente di Xamarin.iOS per visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
+- **Contatti** : fornisce l'accesso a Novell. iOS alle informazioni di contatto dell'utente. Poiché la maggior parte delle app richiede solo l'accesso in sola lettura, questo Framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
+- **ContactsUI** : fornisce gli elementi dell'interfaccia utente di Novell. iOS per visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
 
 Per ulteriori informazioni, vedere la documentazione [dell'interfaccia utente contatti e contatti](~/ios/platform/contacts.md) .
 
 ## <a name="new-search-apis"></a>Nuove API di ricerca
 
-La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni all'interno dell'app Xamarin.iOS. Usando le nuove API di ricerca, è possibile eseguire ricerche nel contenuto dell'app tramite i risultati della ricerca di Spotlight e Safari, i promemoria e i suggerimenti per la consegna e la Siri. Questo consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
+La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni all'interno dell'app Novell. iOS. Usando le nuove API di ricerca, è possibile eseguire ricerche nel contenuto dell'app tramite i risultati della ricerca di Spotlight e Safari, i promemoria e i suggerimenti per la consegna e la Siri. Questo consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
 
 Inoltre, le nuove API di ricerca facilitano l'integrazione della ricerca nell'app senza l'esperienza di implementazione della ricerca precedente. Per questo motivo, Apple dichiara che richiede in genere alcune ore per rendere il contenuto di un'app iOS 9 universalmente ricercabile usando la ricerca di app.
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni sulle modifiche apportate alla visualizzazione della 
 
 ## <a name="game-enhancements"></a>Miglioramenti del gioco
 
-Con iOS 9, Apple ha apportato diversi miglioramenti tecnologici alle API per i giochi che semplificano l'implementazione di grafica e audio dei giochi nell'app Xamarin.iOS. Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche con miglioramenti di basso livello.
+Con iOS 9, Apple ha apportato diversi miglioramenti tecnologici alle API per i giochi che semplificano l'implementazione di grafica e audio dei giochi nell'app Novell. iOS. Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche con miglioramenti di basso livello.
 
 Sono inclusi GameplayKit, ReplayKit, Model I/O, MetalKit e Metal Performance shader insieme alle nuove funzionalità migliorate di Metal, SceneKit e SpriteKit.
 
@@ -101,7 +101,7 @@ Per ulteriori informazioni, vedere la documentazione relativa ai miglioramenti a
 
 ## <a name="homekit-framework-changes"></a>Modifiche al Framework di HomeKit
 
-Il Framework [HomeKit](xref:HomeKit) , introdotto in iOS 8, offre la possibilità di configurare e controllare vari accessori abilitati per HomeKit (ad esempio, luci automatiche, blocchi di porte e Open Door garage) da un'app Xamarin.iOS. Oltre a semplificare l'installazione e la configurazione, è possibile controllare gli accessori di HomeKit tramite comandi vocali Siri.
+Il Framework [HomeKit](xref:HomeKit) , introdotto in iOS 8, offre la possibilità di configurare e controllare vari accessori abilitati per HomeKit (ad esempio, luci automatiche, blocchi di porte e Open Door garage) da un'app Novell. iOS. Oltre a semplificare l'installazione e la configurazione, è possibile controllare gli accessori di HomeKit tramite comandi vocali Siri.
 
 In iOS 9, Apple ha semplificato la configurazione, ha ampliato i tipi di accessori supportati e ha fornito più interazioni accessorie, ad esempio il controllo di un accessorio in modalità remota tramite iCloud.
 
@@ -109,7 +109,7 @@ Per altre informazioni, vedere l' [Introduzione all'app di esempio HomeKit](~/io
 
 ## <a name="handoff-framework-changes"></a>Modifiche del Framework uniforme
 
-La consegna, nota anche come continuità, è stata introdotta da Apple in iOS 8 e OS X Yosemite (10,10) come metodo per l'avvio di un'attività su uno dei dispositivi (iOS o Mac) e continuare la stessa attività in un altro dispositivo (come identificato dal iClou dell'utente Account d).
+La consegna (anche nota come continuità) è stata introdotta da Apple in iOS 8 e OS X Yosemite (10,10) come modo per l'utente di avviare un'attività su uno dei dispositivi (iOS o Mac) e continuare la stessa attività in un altro dispositivo (come identificato dall'account iCloud dell'utente).
 
 La consegna è stata espansa in iOS 9 per supportare anche nuove funzionalità di ricerca migliorate. Per ulteriori informazioni, vedere la documentazione relativa ai miglioramenti per la [ricerca](~/ios/platform/search/index.md) . Per altre informazioni sull'uso della consegna, vedere l' [Introduzione alla](~/ios/platform/handoff.md) documentazione.
 
@@ -137,11 +137,11 @@ In iOS 9, Apple ha migliorato il keychain per fornire un nuovo tipo di chiave di
 
 - Nuovo vincolo Touch ID che invalida gli elementi Keychain quando viene modificato il database delle impronte digitali.
 - Nuovi vincoli che consentono la creazione di voci dell'elenco di controllo di accesso con ID tocco o solo codice.
-- Nuovo contesto di autenticazione che consente di richiamare l'autenticazione separata dalle chiamate `SecItem`.
+- Nuovo contesto di autenticazione che consente di richiamare l'autenticazione separatamente dalle `SecItem` chiamate.
 - Entropia dell'elenco di controllo di accesso (usando l'opzione password applicazione) per la crittografia dell'elemento Keychain fornita dall'app.
-- Supporto per la generazione e l'uso di chiavi all'interno dell'enclave protetta (tramite l'attributo `kSecAttrTokenIDSecureEnclave`).
+- Supporto per la generazione e l'uso di chiavi all'interno dell'enclave protetta (tramite l' `kSecAttrTokenIDSecureEnclave` attributo).
 
-Per altre informazioni, vedere [ID tocco e ID viso in Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
+Per altre informazioni, vedere [ID tocco e ID viso in Novell. iOS](~/ios/platform/touch-id-face-id.md).
 
 ## <a name="right-to-left-language-support"></a>Supporto per le lingue da destra a sinistra
 
@@ -177,8 +177,8 @@ Per ulteriori informazioni, vedere la documentazione [aggiuntiva per le modifich
 Apple ha deprecato le API e le funzioni seguenti in iOS 9:
 
 - Rubrica **& interfaccia utente** di Rubrica: queste API sono state sostituite dai framework di contatto e contatto dell'interfaccia utente. Per ulteriori informazioni, vedere la documentazione [dell'interfaccia utente contatti e contatti](~/ios/platform/contacts.md) .
-- **CBCentralManager** : i metodi `RetrievePeripherals` e `RetrieveConnectedPeripherals` della classe `CBCentralManager` sono stati rimossi in iOS 9. La chiamata di questi metodi provocherà l'arresto anomalo di un'app durante l'associazione di un accessorio o l'avvio dell'app.
-- **FetchAllChanges** : la `FetchAllChanges` della classe `CKFetchRecordChangesOperation` è stata ammortizzata e verrà rimossa in iOS 9.
+- **CBCentralManager** : i `RetrievePeripherals` `RetrieveConnectedPeripherals` metodi e della `CBCentralManager` classe sono stati rimossi in iOS 9. La chiamata di questi metodi provocherà l'arresto anomalo di un'app durante l'associazione di un accessorio o l'avvio dell'app.
+- **FetchAllChanges** -la `FetchAllChanges` della `CKFetchRecordChangesOperation` classe è stata ammortizzata e verrà rimossa in iOS 9.
 - **Media Player** : il Framework Media Player è stato deprecato in iOS 9. Usare invece le API AVKit o AV Foundation.
 
 Per un elenco completo di deprecazioni API specifiche, vedere la documentazione relativa alle [differenze dell'API iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) di Apple.
@@ -191,7 +191,7 @@ Per iniziare, sono disponibili alcuni [esempi specifici di iOS 9](https://docs.m
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
 - [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [Stato di avanzamento](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
 - [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
@@ -218,4 +218,4 @@ Vedere anche le parti di questi esempi per iOS (le versioni Mac OS X complementa
 - [Risoluzione dei problemi](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
 - [Novità di iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Aggiornamento delle app Xamarin.iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)
+- [Aggiornamento delle app Novell. iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

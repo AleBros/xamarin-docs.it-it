@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: e6be5d5d42abf7d99c5bd305d6e303ef770e5a04
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304534"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567719"
 ---
 # <a name="debug-on-a-wear-device"></a>Eseguire il debug in un dispositivo Wear
 
@@ -86,7 +86,7 @@ Usare la procedura seguente per connettere il dispositivo Wear al telefono:
     Target: connected
     ```
 
-6. Dopo aver completato i passaggi precedenti, l'esecuzione di `adb devices` Mostra lo stato del dispositivo Phone e Android Wear:
+6. Dopo aver completato i passaggi precedenti, l'esecuzione `adb devices` Mostra lo stato del telefono e del dispositivo Android Wear:
 
     ```
     List of devices attached
@@ -96,7 +96,7 @@ Usare la procedura seguente per connettere il dispositivo Wear al telefono:
 
 A questo punto, è possibile distribuire l'app nel dispositivo Wear.
 
-<a name="screenshots" />
+<a name="screenshots"></a>
 
 ### <a name="taking-screenshots"></a>Acquisizione di schermate
 
@@ -126,7 +126,7 @@ adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 adb -s 127.0.0.1:4444 uninstall <package name>
 ```
 
-Ad esempio, per rimuovere l'app con il nome del pacchetto `com.xamarin.weartest`, immettere il comando seguente:
+Ad esempio, per rimuovere l'app con il nome del pacchetto `com.xamarin.weartest` , immettere il comando seguente:
 
 ```shell
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
@@ -148,6 +148,6 @@ Per eseguire il debug dell'app Wear con un'app complementare:
 
 4. Eseguire ed eseguire il debug dell'app Wear sul dispositivo.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come configurare un dispositivo Android Wear per l'uso del debug da Visual Studio tramite Bluetooth e come eseguire il debug di un'app Wear con un'app per telefono complementare. Sono stati inoltre forniti suggerimenti comuni per il debug di un'app Wear tramite Bluetooth.

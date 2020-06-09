@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 4e2ff46174d9dbb9171a470c389ffe301f6d0d60
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569647"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Novell
 
@@ -36,7 +36,7 @@ Se si esegue la distribuzione in un test o si carica nell'App Store, è necessar
   - [Eseguire la distribuzione in un Apple Watch per il testing](~/ios/watchos/deploy-test/device.md)o
   - [Caricare nell'App Store](~/ios/watchos/deploy-test/appstore.md).
 
-<a name="App_IDs"/>
+<a name="App_IDs"></a>
 
 ## <a name="app-ids"></a>ID app
 
@@ -60,13 +60,13 @@ Sarà necessario creare un profilo di provisioning di distribuzione per ogni ID 
 
 ### <a name="wildcard-app-id"></a>ID app con caratteri jolly
 
-In alternativa, è possibile creare un **ID app** con caratteri jolly che corrisponde a tutti e tre i progetti, ad esempio `com.xamarin.*`.
+In alternativa, è possibile creare un **ID app** con caratteri jolly che corrisponde a tutti e tre i progetti, ad esempio `com.xamarin.*` .
 
 Si noti che alcune funzionalità non possono essere usate con un ID app con caratteri jolly, ad esempio le notifiche push. Se l'app richiede queste funzionalità, è necessario creare ID app espliciti.
 
 Per la distribuzione, è necessario creare solo un profilo di provisioning di distribuzione per l'ID app con caratteri jolly.
 
-<a name="App_Groups" />
+<a name="App_Groups"></a>
 
 ## <a name="app-groups"></a>Gruppi di app
 
@@ -78,7 +78,7 @@ Per la distribuzione, è necessario creare solo un profilo di provisioning di di
 
 ### <a name="certificates-identifiers--profiles"></a>Certificati, identificatori & profili
 
-Per usare un gruppo di app, creare una voce nella schermata **gruppi di app** . Nell'esempio seguente il gruppo viene denominato con lo stesso stile DNS inverso, comunemente usato per gli ID app, ma con il prefisso `group.` (che è obbligatorio):
+Per usare un gruppo di app, creare una voce nella schermata **gruppi di app** . Nell'esempio seguente il gruppo viene denominato con lo stesso stile DNS inverso, comunemente usato per gli ID app, ma con il `group.` prefisso (obbligatorio):
 
 ![Identificatore](images/appgroups-new-sml.png)
 

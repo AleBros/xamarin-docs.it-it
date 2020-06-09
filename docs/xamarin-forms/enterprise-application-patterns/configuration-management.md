@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 943148a642a1dec7e84f74ae96983c21f30319ab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139269"
+title: "Configuration Management" Description: "questo capitolo illustra il modo in cui l'app eShopOnContainers mobile implementa la gestione della configurazione per fornire le impostazioni dell'app e le impostazioni utente".
+ms. prod: Novell MS. AssetID: 50d6e780-E768-47F8-9361-3af11e56b87b ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="configuration-management"></a>Gestione della configurazione
 
 Le impostazioni consentono la separazione dei dati che configura il comportamento di un'app dal codice, consentendo la modifica del comportamento senza ricompilare l'app. Esistono due tipi di impostazioni: le impostazioni dell'app e le impostazioni utente.
@@ -25,7 +11,7 @@ Le impostazioni dell'app sono dati che un'app crea e gestisce. Può includere da
 
 Le impostazioni utente sono le impostazioni personalizzabili di un'app che influiscono sul comportamento dell'app e non richiedono una riregolazione frequente. Ad esempio, un'app potrebbe consentire all'utente di specificare la posizione da cui recuperare i dati e come visualizzarla sullo schermo.
 
-Xamarin.Formsinclude un dizionario permanente che può essere usato per archiviare i dati delle impostazioni. È possibile accedere a questo dizionario usando la [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) proprietà e tutti i dati inseriti vengono salvati quando l'app entra in uno stato di sospensione e viene ripristinata quando l'app viene ripresa o riavviata. Inoltre, la [`Application`](xref:Xamarin.Forms.Application) classe dispone anche di un [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) metodo che consente di salvare le impostazioni di un'app quando richiesto. Per ulteriori informazioni su questo dizionario, vedere [dizionario delle proprietà](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary).
+Xamarin.Formsinclude un dizionario permanente che può essere usato per archiviare i dati delle impostazioni. È possibile accedere a questo dizionario usando la [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) proprietà e tutti i dati inseriti vengono salvati quando l'app entra in uno stato di sospensione e viene ripristinata quando l'app viene ripresa o riavviata. Inoltre, la [`Application`](xref:Xamarin.Forms.Application) classe dispone anche di un [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) metodo che consente di salvare le impostazioni di un'app quando richiesto. Per ulteriori informazioni su questo dizionario, vedere [dizionario delle proprietà](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary).
 
 Un aspetto negativo dell'archiviazione dei dati tramite il Xamarin.Forms dizionario persistente è che non è facile da associare ai dati. L'app per dispositivi mobili eShopOnContainers usa quindi la libreria xam. plugins. Settings, disponibile in [NuGet](https://www.nuget.org/packages/Xam.Plugins.Settings/). Questa libreria offre un approccio coerente, indipendente dai tipi e multipiattaforma per la persistenza e il recupero delle impostazioni dell'applicazione e dell'utente, usando la gestione delle impostazioni native fornita da ogni piattaforma. Inoltre, è facile utilizzare data binding per accedere ai dati delle impostazioni esposti dalla libreria.
 
@@ -128,7 +114,7 @@ Nell'app per dispositivi mobili eShopOnContainers, `SettingsView` espone due imp
 
 **Figura 7-1**: impostazioni utente esposte dall'app per dispositivi mobili eShopOnContainers
 
-Il Data Binding può essere usato per recuperare e impostare le impostazioni esposte dalla `Settings` classe. Questa operazione viene eseguita dai controlli sull'associazione di visualizzazione per visualizzare le proprietà del modello che a loro volta accedono alle proprietà nella `Settings` classe e generano una notifica di modifica della proprietà se il valore delle impostazioni è stato modificato. Per informazioni sul modo in cui l'app per dispositivi mobili eShopOnContainers costruisce i modelli di visualizzazione e li associa alle visualizzazioni, vedere [creazione automatica di un modello di visualizzazione con un localizzatore di modelli di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+Il Data Binding può essere usato per recuperare e impostare le impostazioni esposte dalla `Settings` classe. Questa operazione viene eseguita dai controlli sull'associazione di visualizzazione per visualizzare le proprietà del modello che a loro volta accedono alle proprietà nella `Settings` classe e generano una notifica di modifica della proprietà se il valore delle impostazioni è stato modificato. Per informazioni sul modo in cui l'app per dispositivi mobili eShopOnContainers costruisce i modelli di visualizzazione e li associa alle visualizzazioni, vedere [creazione automatica di un modello di visualizzazione con un localizzatore di modelli di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 Nell'esempio di codice seguente viene illustrato il [`Entry`](xref:Xamarin.Forms.Entry) controllo di `SettingsView` che consente all'utente di immettere un URL dell'endpoint di base per i microservizi in contenitori:
 
@@ -178,11 +164,11 @@ public override Task InitializeAsync(object navigationData)
 }
 ```
 
-Il metodo imposta la `Endpoint` proprietà sul valore della `UrlBase` proprietà nella `Settings` classe. L'accesso alla `UrlBase` proprietà comporta la libreria xam. plugins. Settings per recuperare il valore delle impostazioni dall'archiviazione specifica della piattaforma. Per informazioni sul modo in cui `InitializeAsync` viene richiamato il metodo, vedere [passaggio di parametri durante la navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
+Il metodo imposta la `Endpoint` proprietà sul valore della `UrlBase` proprietà nella `Settings` classe. L'accesso alla `UrlBase` proprietà comporta la libreria xam. plugins. Settings per recuperare il valore delle impostazioni dall'archiviazione specifica della piattaforma. Per informazioni sul modo in cui `InitializeAsync` viene richiamato il metodo, vedere [passaggio di parametri durante la navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing-parameters-during-navigation).
 
 Questo meccanismo garantisce che ogni volta che un utente passa a SettingsView, le impostazioni utente vengono recuperate dall'archiviazione specifica della piattaforma e presentate tramite data binding. Quindi, se l'utente modifica i valori delle impostazioni, data binding garantisce che vengano immediatamente salvati in modo permanente nell'archiviazione specifica della piattaforma.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Le impostazioni consentono la separazione dei dati che configura il comportamento di un'app dal codice, consentendo la modifica del comportamento senza ricompilare l'app. Le impostazioni dell'app sono dati che un'app crea e gestisce e le impostazioni utente sono le impostazioni personalizzabili di un'app che influiscono sul comportamento dell'app e non richiedono una riregolazione frequente.
 

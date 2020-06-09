@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 69886a0da53d419a0c40bdf34f91d301c9efe504
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304723"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573716"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
@@ -24,9 +24,9 @@ Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e 
 
 Si esaminerà ora il modo in cui lo stato attivo può essere usato con [Parallax](#Focus-and-Parallax) e *immagini sovrapposte* per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente.
 
-Infine, si esamineranno [gli aggiornamenti](#Working-with-Focus), [gli aggiornamenti](#Working-with-Focus-Updates), [le guide di messa a fuoco](#Working-with-Focus-Guides), [le raccolte](#Working-with-Focus-in-Collections) e l'[abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Novell. tvOS.
+Infine, si esamineranno [gli aggiornamenti, gli aggiornamenti](#Working-with-Focus-Updates), le [guide](#Working-with-Focus-Guides)di messa [a](#Working-with-Focus-in-Collections) fuoco, le raccolte e l' [Abilitazione di parallasse](#enabling-parallax) sulle visualizzazioni di immagini nelle app Novell. tvOS. [Focus](#Working-with-Focus)
 
-<a name="Navigation" />
+<a name="Navigation"></a>
 
 ## <a name="navigation"></a>Navigazione
 
@@ -48,10 +48,10 @@ Quando si progetta la navigazione per l'app tvOS, Apple suggerisce di tenere pre
 - **Fornire la navigazione all'indietro tramite il pulsante di menu** : per creare un'esperienza semplice e familiare, consentire agli utenti di spostarsi all'indietro usando il pulsante di **menu** di Siri remote. Premere il pulsante di **menu** per tornare sempre alla schermata precedente oppure tornare al menu principale dell'app. Al livello principale dell'app, premere il pulsante di **menu** per tornare alla schermata iniziale di Apple TV.
 - **In genere è consigliabile evitare di visualizzare un pulsante indietro** , perché premendo il pulsante di **menu** nella finestra di Siri remote si sposta indietro sullo stack dello schermo, evitando di visualizzare un controllo aggiuntivo che Duplica questo comportamento. Un'eccezione a questa regola è per l'acquisto di schermate o schermate con azioni distruttive, ad esempio l'eliminazione di contenuto, in cui deve essere visualizzato un pulsante **Annulla** .
 - **Visualizzazione di raccolte di grandi dimensioni in un'unica schermata, anziché molti** -il Siri Remote è stato progettato per semplificare e velocizzare l'uso di un ampio insieme di contenuti. Se l'app funziona con una raccolta di grandi dimensioni di elementi attivabili, è consigliabile tenerli in un'unica schermata anziché suddividerli in molte schermate che richiedono una maggiore navigazione sulla parte dell'utente.
-- **Usare i controlli standard per la navigazione** , per creare un'esperienza utente semplice e familiare, laddove possibile, usare controlli `UIKit` predefiniti, ad esempio controlli pagina, barre delle schede, controlli segmentati, viste tabella, visualizzazioni raccolta e visualizzazioni suddivise per la navigazione dell'app. Poiché l'utente ha già familiarità con questi elementi, sarà intuitivamente in grado di spostarsi nell'app.
+- **Usare i controlli standard per la navigazione** , per creare un'esperienza utente semplice e intuitiva, laddove possibile, usare controlli incorporati, `UIKit` ad esempio controlli pagina, barre delle schede, controlli segmentati, viste tabella, visualizzazioni raccolta e visualizzazioni suddivise per la navigazione dell'app. Poiché l'utente ha già familiarità con questi elementi, sarà intuitivamente in grado di spostarsi nell'app.
 - **Favorisce la navigazione orizzontale del contenuto** : a causa della natura della TV Apple, l'scorrimento verso sinistra verso destra sul lato Siri remoto è più naturale che in alto o in basso. Prendere in considerazione questa opzione quando si progettano i layout del contenuto per l'app.
 
-<a name="Focus-and-Selection" />
+<a name="Focus-and-Selection"></a>
 
 ## <a name="focus-and-selection"></a>Messa a fuoco e selezione
 
@@ -67,20 +67,20 @@ Quando si modifica lo stato attivo, vengono usate animazioni e effetti delicati,
 
 Apple presenta i suggerimenti seguenti per lavorare con lo stato attivo e la selezione:
 
-- **Usare i controlli dell'interfaccia utente incorporati per gli effetti di movimento** : usando `UIKit` e l'API messa a fuoco nell'interfaccia utente, il modello di messa a fuoco applica automaticamente gli effetti di movimento e visualizzazione predefiniti agli elementi dell'interfaccia utente. In questo modo l'app si rende nativa e familiare agli utenti della piattaforma Apple TV e consente un movimento fluido e intuitivo tra gli elementi attivabili.
+- **Usare i controlli dell'interfaccia utente incorporati per gli effetti di movimento** : usando `UIKit` e l'API messa a fuoco nell'interfaccia utente, il modello di messa a fuoco applica automaticamente gli effetti visivi e di movimento predefiniti agli elementi dell'interfaccia utente. In questo modo l'app si rende nativa e familiare agli utenti della piattaforma Apple TV e consente un movimento fluido e intuitivo tra gli elementi attivabili.
 - **Spostare lo stato attivo nelle direzioni previste** : su Apple TV, quasi ogni elemento usa la manipolazione indiretta. Ad esempio, l'utente usa Siri Remote per spostare lo stato attivo e il sistema scorre automaticamente l'interfaccia per rendere visibile l'elemento attualmente attivo. Se l'app implementa questo tipo di interazione, assicurarsi che lo stato attivo si sposti nella direzione del movimento dell'utente. Quindi, se l'utente scorre a destra sullo stato attivo Siri, si sposta a destra (che potrebbe far scorrere lo schermo a sinistra). L'unica eccezione a questa regola è costituita dagli elementi a schermo intero che usano la manipolazione diretta, in cui lo scorrimento verso l'alto sposta l'elemento verso l'alto.
-- **Verificare che l'elemento con lo stato attivo sia ovvio** , perché gli utenti interagiscono con gli elementi dell'interfaccia utente da Afar, è fondamentale che l'elemento attualmente attivo si trovi. Questa operazione viene in genere gestita automaticamente dagli elementi `UIKit` predefiniti. Per i controlli personalizzati, usare funzionalità come la dimensione dell'elemento o l'ombreggiatura per mostrare lo stato attivo.
-- **Usare Parallax per fare in modo che gli elementi mirati rispondano** a piccoli movimenti circolari su Siri Remote result in un movimento leggero e in tempo reale dell'elemento con lo stato attivo. Questo [effetto di parallasse](#Focus-and-Parallax) è integrato in `UIKit` _immagini sovrapposte_ per fornire all'utente un senso di connessione all'elemento con lo stato attivo.
+- **Verificare che l'elemento con lo stato attivo sia ovvio** , perché gli utenti interagiscono con gli elementi dell'interfaccia utente da Afar, è fondamentale che l'elemento attualmente attivo si trovi. Questa operazione viene in genere gestita automaticamente da elementi predefiniti `UIKit` . Per i controlli personalizzati, usare funzionalità come la dimensione dell'elemento o l'ombreggiatura per mostrare lo stato attivo.
+- **Usare Parallax per fare in modo che gli elementi mirati rispondano** a piccoli movimenti circolari su Siri Remote result in un movimento leggero e in tempo reale dell'elemento con lo stato attivo. Questo [effetto di parallasse](#Focus-and-Parallax) è incorporato in `UIKit` _immagini sovrapposte_ per fornire all'utente un senso di connessione all'elemento con lo stato attivo.
 - **Crea elementi attivabili delle dimensioni appropriate** : gli elementi di grandi dimensioni con spaziatura ampia sono più semplici da selezionare e spostarsi rispetto a elementi più piccoli.
 - **Progettare l'elemento dell'interfaccia utente in modo che risulti valido o con lo stato attivo** , in genere Apple TV rappresenta l'elemento con lo stato attivo aumentando le dimensioni. Assicurarsi che gli elementi dell'interfaccia utente dell'app risultino ottimali in qualsiasi dimensione di presentazione e, se necessario, forniscano risorse per gli elementi di dimensioni maggiori.
 - **Rappresenta le modifiche** dello stato attivo: usare l'animazione per eseguire una dissolvenza uniforme **tra gli elementi con stato attivo e** non **attivo** per evitare che le transizioni siano stonate.
 - **Non visualizzare un cursore** : gli utenti si aspettano di spostarsi nell'interfaccia utente dell'app usando lo stato attivo e non spostando un cursore sullo schermo. L'interfaccia utente deve sempre usare il modello di messa a fuoco per presentare un'esperienza utente coerente.
 
-<a name="Working-with-Focus" />
+<a name="Working-with-Focus"></a>
 
 ### <a name="working-with-focus"></a>Utilizzo dello stato attivo
 
-In alcuni casi potrebbe essere necessario creare un controllo personalizzato che può diventare un elemento attivabile. In caso affermativo, eseguire l'override della proprietà `CanBecomeFocused` e restituire `true`, in caso contrario restituire `false`. Ad esempio:
+In alcuni casi potrebbe essere necessario creare un controllo personalizzato che può diventare un elemento attivabile. In tal caso, eseguire l'override della `CanBecomeFocused` proprietà e restituire `true` , altrimenti restituisce `false` . Ad esempio:
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-In qualsiasi momento è possibile utilizzare la proprietà `Focused` di un controllo `UIKit` per verificare se si tratta di un elemento corrente. Se `true` l'elemento dell'interfaccia utente ha attualmente lo stato attivo, in caso contrario. Ad esempio:
+In qualsiasi momento è possibile utilizzare la `Focused` proprietà di un `UIKit` controllo per verificare se è l'elemento corrente. Se `true` l'elemento dell'interfaccia utente ha attualmente lo stato attivo, in caso contrario. Ad esempio:
 
 ```csharp
 // Is my view in focus?
@@ -101,30 +101,30 @@ if (myView.Focused) {
 }
 ```
 
-Sebbene non sia possibile spostare direttamente lo stato attivo su un altro elemento dell'interfaccia utente tramite codice, è possibile specificare quale elemento dell'interfaccia utente ottiene lo stato attivo per primo quando viene caricata una schermata impostando la relativa proprietà `PreferredFocusedView` su `true`. Ad esempio:
+Sebbene non sia possibile spostare direttamente lo stato attivo su un altro elemento dell'interfaccia utente tramite codice, è possibile specificare quale elemento dell'interfaccia utente ottiene lo stato attivo per primo quando viene caricata una schermata impostando la relativa `PreferredFocusedView` proprietà su `true` . Ad esempio:
 
 ```csharp
 // Make the play button the starting focus item
 playButton.PreferredFocusedView = true;
 ```
 
-<a name="Working-with-Focus-Updates" />
+<a name="Working-with-Focus-Updates"></a>
 
 ### <a name="working-with-focus-updates"></a>Utilizzo degli aggiornamenti dello stato attivo 
 
 Quando l'utente fa in modo che lo stato attivo venga spostato da un elemento dell'interfaccia utente a un altro (ad esempio, in risposta a un movimento sul Siri remoto), un _evento di aggiornamento dello stato attivo_ verrà inviato all'elemento che perde lo stato attivo e l'elemento ottiene lo stato attivo.
 
-Per gli elementi personalizzati che ereditano da `UIView` o `UIViewController`, è possibile eseguire l'override di diversi metodi per lavorare con l'evento di aggiornamento dello stato attivo:
+Per gli elementi personalizzati che ereditano da `UIView` o `UIViewController` , è possibile eseguire l'override di diversi metodi per lavorare con l'evento di aggiornamento dello stato attivo:
 
 - **DidUpdateFocus** -questo metodo verrà chiamato ogni volta che la visualizzazione Ottiene o perde lo stato attivo.
 - **ShouldUpdateFocus** : usare questo metodo per definire il punto in cui lo stato attivo può essere spostato.
 
-Per richiedere che lo stato attivo venga spostato di nuovo sull'elemento dell'interfaccia utente di `PreferredFocusedView`, chiamare il metodo `SetNeedsUpdateFocus` del controller di visualizzazione.
+Per richiedere che lo stato attivo venga spostato di nuovo sull' `PreferredFocusedView` elemento dell'interfaccia utente, chiamare il `SetNeedsUpdateFocus` metodo del controller di visualizzazione.
 
 > [!IMPORTANT]
-> La chiamata di `SetNeedsUpdateFocus` ha effetto solo se il controller di visualizzazione in cui viene chiamato contiene la visualizzazione che attualmente ha lo stato attivo.
+> La chiamata a `SetNeedsUpdateFocus` ha effetto solo se il controller di visualizzazione in cui viene chiamato contiene la vista che attualmente ha lo stato attivo.
 
-<a name="Working-with-Focus-Guides" />
+<a name="Working-with-Focus-Guides"></a>
 
 ### <a name="working-with-focus-guides"></a>Utilizzo delle guide per lo stato attivo
 
@@ -138,7 +138,7 @@ Per un esempio, adottare il layout dell'interfaccia utente seguente:
 
 Poiché il pulsante **altre informazioni** non rientra in una griglia orizzontale e verticale con il pulsante **Acquista** , l'utente non sarà accessibile. Tuttavia, questa operazione può essere facilmente corretta utilizzando una _guida messa a fuoco_ per fornire suggerimenti di spostamento al motore di messa a fuoco. 
 
-Una guida messa a fuoco (`UIFocusGuide`) espone un'area non visibile della vista come attivabile per il motore attivo, consentendo così il reindirizzamento dello stato attivo a un'altra visualizzazione.
+Una guida messa a fuoco ( `UIFocusGuide` ) espone un'area non visibile della visualizzazione come attivabile per il motore attivo, consentendo così il reindirizzamento dello stato attivo a un'altra visualizzazione.
 
 Quindi, per risolvere l'esempio precedente, è possibile aggiungere al controller di visualizzazione il codice seguente per creare una guida per lo stato attivo tra le **altre informazioni** e i pulsanti di **acquisto** :
 
@@ -162,19 +162,19 @@ public override void ViewDidLoad ()
 }
 ```
 
-Per prima cosa, viene creato un nuovo `UIFocusGuide` che viene aggiunto alla raccolta di guide di layout della visualizzazione usando il metodo `AddLayoutGuide`.
+Per prima cosa, viene creato un nuovo oggetto che `UIFocusGuide` viene aggiunto alla raccolta di guide di layout della visualizzazione usando il `AddLayoutGuide` metodo.
 
 Successivamente, gli ancoraggi superiore, sinistro, larghezza e altezza della Guida di messa a fuoco vengono regolati in relazione alle **altre informazioni** e ai pulsanti **Acquista** per posizionarli tra di essi. Vedere:
 
 [![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
 
-È anche importante notare che i nuovi vincoli vengono attivati Man mano che vengono creati impostando la relativa proprietà `Active` su `true`:
+È anche importante notare che i nuovi vincoli vengono attivati Man mano che vengono creati impostando la relativa `Active` proprietà su `true` :
 
 ```csharp
 FocusGuide.LeftAnchor.ConstraintEqualTo (...).Active = true;
 ```
 
-Con la nuova guida messa a fuoco stabilita e aggiunta alla vista, è possibile eseguire l'override del metodo `DidUpdateFocus` del controller di visualizzazione e aggiungere il codice seguente per spostarsi tra i pulsanti **ulteriori informazioni** e **Acquista** :
+Con la nuova guida messa a fuoco stabilita e aggiunta alla vista, è possibile eseguire l'override del metodo del controller di visualizzazione `DidUpdateFocus` e aggiungere il codice seguente per spostarsi tra i pulsanti **ulteriori informazioni** e **Acquista** :
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -202,27 +202,27 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-In primo luogo, il codice ottiene il `NextFocusedView` dal `UIFocusUpdateContext` che è stato passato (`context`). Se questa visualizzazione è `null`, non è necessaria alcuna elaborazione e il metodo è terminato.
+In primo luogo, questo codice ottiene `NextFocusedView` da `UIFocusUpdateContext` che è stato passato ( `context` ). Se questa vista è `null` , non è necessaria alcuna elaborazione e il metodo è terminato.
 
-Il `nextFocusableItem` viene quindi valutato. Se corrisponde ai pulsanti **ulteriori informazioni** o **Acquista** , lo stato attivo viene inviato al pulsante opposto usando la proprietà `PreferredFocusedView` della guida messa a fuoco. Ad esempio:
+`nextFocusableItem`Viene quindi valutato. Se corrisponde ai pulsanti **ulteriori informazioni** o **Acquista** , lo stato attivo viene inviato al pulsante opposto usando la proprietà della guida messa a fuoco `PreferredFocusedView` . Ad esempio:
 
 ```csharp
 // Move from the More Info to Buy button
 FocusGuide.PreferredFocusedView = BuyButton;
 ```
 
-Nel caso in cui nessuno dei due pulsanti sia l'origine dello spostamento dello stato attivo, la proprietà `PreferredFocusedView` viene deselezionata:
+Nel caso in cui nessuno dei due pulsanti sia l'origine dello spostamento dello stato attivo, la `PreferredFocusedView` proprietà viene deselezionata:
 
 ```csharp
 // No valid move
 FocusGuide.PreferredFocusedView = null;
 ```
 
-<a name="Working-with-Focus-in-Collections" />
+<a name="Working-with-Focus-in-Collections"></a>
 
 ### <a name="working-with-focus-in-collections"></a>Utilizzo dello stato attivo nelle raccolte
 
-Quando si decide se un singolo elemento può essere attivo in un `UICollectionView` o in un `UITableView`, è necessario eseguire l'override rispettivamente dei metodi del `UICollectionViewDelegate` o `UITableViewDelegate`. Ad esempio:
+Quando si decide se un singolo elemento può essere attivo in un o in `UICollectionView` `UITableView` , si eseguirà l'override rispettivamente dei metodi di `UICollectionViewDelegate` o `UITableViewDelegate` . Ad esempio:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -240,11 +240,11 @@ public class CardHandDelegate : UICollectionViewDelegateFlowLayout
 }
 ```
 
-Il metodo `CanFocusItem` restituisce `true` se l'elemento corrente può trovarsi nello stato attivo; in caso contrario, restituisce `false`.
+Il `CanFocusItem` metodo restituisce `true` se l'elemento corrente può trovarsi nello stato attivo; in caso contrario, restituisce `false` .
 
-Se si desidera che un `UICollectionView` o un `UITableView` per ricordare e ripristinare lo stato attivo sull'ultimo elemento quando perde e recupera lo stato attivo, impostare la proprietà `RemembersLastFocusedIndexPath` su `true`.
+Se si desidera che un oggetto `UICollectionView` o un oggetto `UITableView` memorizzi e ripristini lo stato attivo sull'ultimo elemento quando perde e recupera lo stato attivo, impostare la `RemembersLastFocusedIndexPath` proprietà su `true` .
 
-<a name="Focus-and-Parallax" />
+<a name="Focus-and-Parallax"></a>
 
 ## <a name="focus-and-parallax"></a>Stato attivo e parallasse
 
@@ -260,17 +260,17 @@ Le immagini sovrapposte sono necessarie per l'icona dell'app tvOS ed è supporta
 
 ### <a name="enabling-parallax"></a>Abilitazione di parallasse
 
-Il controllo `UIImageView` (o qualsiasi controllo che eredita da `UIImageView`) supporta automaticamente l'effetto parallasse. Per impostazione predefinita, questo supporto è disabilitato, per abilitarlo, usare il codice seguente:
+Il `UIImageView` controllo (o qualsiasi controllo che eredita da `UIImageView` ) supporta automaticamente l'effetto parallasse. Per impostazione predefinita, questo supporto è disabilitato, per abilitarlo, usare il codice seguente:
 
 ```csharp
 myImageView.AdjustsImageWhenAncestorFocused = true;
 ```
 
-Se questa proprietà è impostata su `true`, la visualizzazione immagine otterrà automaticamente l'effetto di parallasse quando viene selezionato dall'utente e nello stato attivo.
+Se questa proprietà è impostata su `true` , la visualizzazione immagine otterrà automaticamente l'effetto di parallasse quando viene selezionato dall'utente e nello stato attivo.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Novell. tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
 

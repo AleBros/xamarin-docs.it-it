@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137870"
+title: "Descrizione" di navigazione gerarchica: "in questo articolo viene illustrato come utilizzare la classe NavigationPage per eseguire la navigazione in una pila di pagine LIFO (Last-in, First-out)."
+ms. prod: Novell MS. AssetID: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
@@ -32,8 +18,6 @@ Per tornare alla pagina precedente, l'applicazione preleva la pagina corrente da
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
 I metodi di navigazione sono esposti dalla [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) proprietà su tutti i [`Page`](xref:Xamarin.Forms.Page) tipi derivati. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
-
-<a name="Performing_Navigation" />
 
 ## <a name="performing-navigation"></a>Esecuzione degli spostamenti
 
@@ -154,8 +138,6 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 L'impostazione del parametro `boolean` su `false` disabilita l'animazione per la transizione di pagina, mentre l'impostazione del parametro su `true` abilita l'animazione per la transizione di pagina, a condizione che sia supportata dalla piattaforma sottostante. Tuttavia, i metodi di push e prelievo senza questo parametro abilitano l'animazione per impostazione predefinita.
 
-<a name="Passing_Data_when_Navigating" />
-
 ## <a name="passing-data-when-navigating"></a>Passaggio di dati durante gli spostamenti
 
 In alcuni casi, una pagina deve passare dati a un'altra pagina durante gli spostamenti. Due tecniche per eseguire questa operazione comportano il passaggio dei dati tramite un costruttore di pagina e l'impostazione della nuova pagina sui [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) dati. Di seguito verranno descritti entrambi.
@@ -274,8 +256,6 @@ I dati vengono quindi visualizzati nella pagina da una serie di [`Label`](xref:X
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Nozioni di base sul data binding).
-
-<a name="Manipulating_the_Navigation_Stack" />
 
 ## <a name="manipulating-the-navigation-stack"></a>Modifica dello stack di navigazione
 

@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: d2c00410581a35e67807f512b5b6fb6d5349ad0f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571051"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulla piattaforma a 32/64 bit
 
@@ -21,11 +21,11 @@ A partire da iOS 11, le app a 32 bit non vengono più avviate e [tutti gli invii
 
 A partire dal 2018 gennaio, [le nuove app inviate a Mac App Store devono supportare 64 bit e le](https://developer.apple.com/news/?id=06282017a)app esistenti devono essere aggiornate entro il 2018 giugno.
 
-Il API classica di Novell (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Novell. iOS e Novell. Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
+API classica di Novell ( `XamMac.dll` e `monotouch.dll` ) supportano solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Novell. iOS e Novell. Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) ( `Xamarin.iOS` e `Xamarin.Mac` ) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
 
 ## <a name="ios"></a>iOS
 
-<a name="enable-64" />
+<a name="enable-64"></a>
 
 ### <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione di Build a 64 bit di app Novell. iOS
 
@@ -40,9 +40,9 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **riquadro della soluzione**fare doppio clic sul progetto dell'app per aprire la finestra **Opzioni progetto** .
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86\_64** o **I386 + x86\_64**:
+3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86 \_ 64** o **I386 + x86 \_ 64**:
 
-   [![Impostazione delle architetture supportate su x86\_64 o I386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Impostazione delle architetture supportate su x86 \_ 64 o I386 + x86 \_ 64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
 
@@ -55,15 +55,15 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto dell'app e selezionare **Proprietà**.
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86\_64** o **I386 + x86\_64**: 
+3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86 \_ 64** o **I386 + x86 \_ 64**: 
 
-   [![Impostazione delle architetture supportate su x86_64 o I386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Impostazione delle architetture supportate su x86_64 o I386 + x86 \_ 64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
     
    [![Impostazione delle architetture supportate su una delle combinazioni ARM64](Images/VS01.png "Impostazione delle architetture supportate su una delle combinazioni ARM64")](Images/VS01-large.png#lightbox)
 
-5. Fare clic su Salva per salvare le modifiche.
+5. Salvare le modifiche.
 6. Eseguire una compilazione pulita.
 
 -----
@@ -90,7 +90,7 @@ La definizione delle architetture a 32 bit e a 64 bit aumenterà significativame
 
 La maggior parte dei moderni computer Mac supporta sia applicazioni a 32 bit che a 64 bit.   MacOS 10,6 (Snow Leopard) è stato l'ultimo sistema operativo per l'esecuzione su sistemi a 32 bit.   La maggior parte dei computer Mac rilasciati da 2010 supporta entrambi i sistemi.
 
-A differenza di iOS, molti dei nuovi Framework introdotti nelle versioni recenti di macOS sono supportati solo in modalità a 64 bit (CloudKit, EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, social, e MapKit, tra gli altri.
+A differenza di iOS, molti dei nuovi Framework introdotti nelle versioni recenti di macOS sono supportati solo in modalità a 64 bit (CloudKit, EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, social e MapKit, tra gli altri).
 
 Il API unificata consente agli sviluppatori di scegliere il tipo di applicazioni che si desidera produrre: 32 bit o 64 bit.
 

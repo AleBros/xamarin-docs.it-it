@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: 04cb1b9303e571b2a10cdfa621dcd312162e2893
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9333750432395d008a5454e293648f4e594ae112
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571688"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisioning manuale per Xamarin.iOS
 
-_Una volta che Xamarin.iOS è stato installato con successo, il passo successivo nello sviluppo di iOS è quello di eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso del provisioning manuale per configurare i certificati e i profili di sviluppo._
+_Dopo aver installato correttamente Novell. iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso del provisioning manuale per configurare i profili e i certificati di sviluppo._
 
 > [!NOTE]
 > Le istruzioni in questa pagina sono utili per gli sviluppatori che hanno l'accesso a pagamento al programma Apple Developer. Se si ha un account gratuito, vedere la guida [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) per altre informazioni sui test dei dispositivi.
 
 ## <a name="create-a-development-certificate"></a>Creare un certificato di sviluppo
 
-Il primo passaggio nella configurazione di un dispositivo di sviluppo consiste nel creare un certificato di firma. Un certificato di firma è costituito da due elementi:A signing certificate consists of two things:
+Il primo passaggio per la configurazione di un dispositivo di sviluppo consiste nel creare un certificato di firma. Un certificato di firma è costituito da due elementi:
 
 - Un certificato di sviluppo
 - Una chiave privata
@@ -35,105 +35,105 @@ I team di sviluppo, i certificati e i profili possono essere gestiti mediante l'
 > [!IMPORTANT]
 > È importante notare che possono essere presenti solo due certificati di sviluppo iOS per volta. Se è necessario crearne altri, occorre revocarne uno esistente. Un computer con un certificato revocato non sarà in grado di firmare le app.
 
-Prima di avviare il processo di provisioning manuale, devi assicurarti di avere aggiunto un account sviluppatore Apple in Visual Studio, come descritto nella guida [Gestione account Apple.](~/cross-platform/macios/apple-account-management.md) Dopo aver aggiunto il tuo account sviluppatore Apple, esegui le operazioni seguenti per generare un certificato di firma:
+Prima di avviare il processo di provisioning manuale, è necessario assicurarsi di avere aggiunto un account per sviluppatore Apple in Visual Studio, come descritto nella Guida alla [gestione degli account Apple](~/cross-platform/macios/apple-account-management.md) . Dopo aver aggiunto l'account per sviluppatore Apple, eseguire le operazioni seguenti per generare un certificato di firma:
 
-1. Vai alla finestra Account per sviluppatori Apple in Visual Studio.
-    1. Mac: **Preferenze di Visual Studio > > account sviluppatore Apple**
-    2. Windows: **Opzioni di > degli strumenti > account Xamarin > Apple**
+1. Passare alla finestra Apple Developer Accounts in Visual Studio.
+    1. Mac: **Preferenze di Visual Studio > > account per sviluppatore Apple**
+    2. Windows: **strumenti > opzioni > novell > account Apple**
 
 2. Selezionare un team e fare clic su **Visualizza dettagli...**
-3. Fare clic su **Crea certificato** e selezionare **Sviluppo Apple** o **Sviluppo iOS**. Se si dispone delle autorizzazioni corrette, verrà visualizzata una nuova identità di firma dopo alcuni secondi.
+3. Fare clic su **Crea certificato** e selezionare **sviluppo Apple** o **sviluppo iOS**. Se si dispone delle autorizzazioni corrette, dopo alcuni secondi verrà visualizzata una nuova identità di firma.
 
 ### <a name="understanding-certificate-key-pairs"></a>Coppie di chiavi del certificato
 
 Il profilo sviluppatore contiene i certificati, le relative chiavi e i profili di provisioning associati all'account. Esistono effettivamente due versioni di un profilo sviluppatore, una sul portale per sviluppatori e l'altra su un computer Mac locale. La differenza tra i due è il tipo di chiavi contenute: _il profilo nel portale contiene tutte le chiavi pubbliche associate ai certificati, mentre la copia nel computer Mac locale contiene tutte le chiavi private_. Affinché il certificato sia valido, le coppie di chiavi devono corrispondere.
 
 > [!WARNING]
-> La perdita del certificato e delle chiavi associate può essere incredibilmente dirompente, in quanto richiede la revoca dei certificati esistenti e il nuovo provisioning di tutti i dispositivi associati, inclusi quelli registrati per la distribuzione ad hoc. Dopo aver impostato correttamente i certificati di sviluppo, esportare una copia di backup e archiviarla in un luogo sicuro. Per altre informazioni su come eseguire questa operazione, vedere la sezione Exporting and Importing Certificates and Profiles (Esportazione e importazione di certificati e profili) della guida [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Manutenzione dei certificati) nella documentazione di Apple.
+> La perdita del certificato e delle chiavi associate può essere estremamente problematica, poiché richiede la revoca dei certificati esistenti e il nuovo provisioning di tutti i dispositivi associati, inclusi quelli registrati per la distribuzione ad hoc. Dopo aver impostato correttamente i certificati di sviluppo, esportare una copia di backup e archiviarla in un luogo sicuro. Per altre informazioni su come eseguire questa operazione, vedere la sezione Exporting and Importing Certificates and Profiles (Esportazione e importazione di certificati e profili) della guida [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Manutenzione dei certificati) nella documentazione di Apple.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
-## <a name="provision-an-ios-device-for-development"></a>Effettuare il provisioning di un dispositivo iOS per lo sviluppoProvision an iOS device for development
+## <a name="provision-an-ios-device-for-development"></a>Effettuare il provisioning di un dispositivo iOS per lo sviluppo
 
-Ora che hai stabilito la tua identità con Apple e hai un certificato di sviluppo, devi configurare un profilo di provisioning e le entità necessarie in modo che sia possibile distribuire un'app in un dispositivo Apple. Nel dispositivo deve essere in esecuzione una versione di iOS supportata da Xcode; potrebbe essere necessario aggiornare il dispositivo, Xcode o entrambi.
+Ora che è stata stabilita l'identità con Apple e si dispone di un certificato di sviluppo, è necessario configurare un profilo di provisioning e le entità necessarie in modo che sia possibile distribuire un'app in un dispositivo Apple. Nel dispositivo deve essere in esecuzione una versione di iOS supportata da Xcode; potrebbe essere necessario aggiornare il dispositivo, Xcode o entrambi.
 
-<a name="adddevice" />
+<a name="adddevice"></a>
 
 ## <a name="add-a-device"></a>Aggiungere un dispositivo
 
 Quando si crea un profilo di provisioning per lo sviluppo, è necessario indicare quali dispositivi possono eseguire l'applicazione. A tale scopo, è possibile aggiungere fino a 100 dispositivi per anno di calendario al proprio portale per sviluppatori e da qui è possibile selezionare i dispositivi da aggiungere a un determinato profilo di provisioning. Completare i passaggi seguenti nel Mac per aggiungere un dispositivo al portale per sviluppatori
 
 1. Connettere il dispositivo per il quale eseguire il provisioning al compuer Mac con il cavo USB in dotazione.
-2. Aprire Xcode e passare a **Finestra > dispositivi e simulatori**.
-3. Nella scheda **Dispositivi,** selezionare il dispositivo dal menu a sinistra.
+2. Aprire Xcode e passare a **finestra > dispositivi e simulatori**.
+3. Nella scheda **dispositivi** selezionare il dispositivo dal menu a sinistra.
 4. Evidenziare la stringa **Identifier** (Identificatore) e copiarla negli appunti:
 
-   ![Dispositivi Xcode e finestra simulatore con la posizione della stringa identificatore iOS evidenziata.](manual-provisioning-images/xcode-devices.png)
+   ![Dispositivi Xcode e finestra del simulatore con il percorso della stringa dell'identificatore iOS evidenziato.](manual-provisioning-images/xcode-devices.png)
 
-5. In un Web browser passare alla [sezione Dispositivi nel portale per sviluppatori](https://developer.apple.com/account/resources/devices/list) e fare clic sul **+** pulsante:
+5. In un Web browser passare alla [sezione dispositivi nel portale per sviluppatori](https://developer.apple.com/account/resources/devices/list) e fare clic sul **+** pulsante:
 
-   ![Screenshot della pagina dei dispositivi nel sito apple Developer con il pulsante Aggiungi evidenziato.](manual-provisioning-images/developer-portal-devices.png)
+   ![Screenshot della pagina dispositivi sul sito Apple Developer con il pulsante Aggiungi evidenziato.](manual-provisioning-images/developer-portal-devices.png)
 
-6. Impostare la **piattaforma** corretta e fornire un nome per il nuovo dispositivo. Incollare l'identificatore copiato in precedenza nel campo **ID dispositivo:**
+6. Impostare la **piattaforma** corretta e specificare un nome per il nuovo dispositivo. Incollare l'identificatore copiato in precedenza nel campo **ID dispositivo** :
 
-    ![Screenshot della pagina di registrazione del nuovo dispositivo con i campi popolati correttamente.](manual-provisioning-images/new-device-info.png)
+    ![Screenshot della pagina di registrazione del nuovo dispositivo con i campi inseriti correttamente.](manual-provisioning-images/new-device-info.png)
 
 7. Fare clic su **Continua**.
-8. Esaminare le informazioni, quindi fare clic su **Registra**.
+8. Esaminare le informazioni e quindi fare clic su **registra**.
 
 Ripetere i passaggi precedenti per tutti i dispositivi iOS che verranno usati per testare o eseguire il debug di un'applicazione Xamarin.iOS.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
-## <a name="create-a-development-provisioning-profile"></a>Creare un profilo di provisioning di sviluppoCreate a development provisioning profile
+## <a name="create-a-development-provisioning-profile"></a>Creare un profilo di provisioning di sviluppo
 
 Dopo aver aggiunto il dispositivo al portale per sviluppatori, è necessario creare un profilo di provisioning e aggiungervi il dispositivo. 
 
 Prima di creare un profilo di provisioning, è necessario creare un *App ID* (ID app). Un ID app è una stringa di tipo DNS inverso che identifica in modo univoco un'applicazione. Nella procedura seguente viene illustrato come creare un **Wildcard App ID** (ID app con caratteri jolly), che consente di compilare e installare la maggior parte delle applicazioni. Gli **Explicit App IDs** (ID app espliciti) consentono di installare solo un'applicazione (con l'ID del bundle corrispondente) e vengono in genere usati per determinate funzionalità di iOS, ad esempio Apple Pay e HealthKit. Per informazioni sulla creazione di ID app espliciti, vedere la guida [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Uso delle funzionalità).
 
-### <a name="new-wildcard-app-id"></a>Nuovo ID applicazione con caratteri jolly
+### <a name="new-wildcard-app-id"></a>Nuovo ID app con caratteri jolly
 
-1. Passare alla [sezione Identificatori nel portale per sviluppatori](https://developer.apple.com/account/resources/identifiers/list) e fare clic sul **+** pulsante.
-2. Selezionare **ID app** e fare clic su **Continua**.
-3. Specificare una **descrizione**. Quindi impostare **Bundle ID** su **Wildcard** `com.[DomainName].*`e immettere un ID nel formato :
+1. Passare alla [sezione Identifiers (identificatori) nel portale per sviluppatori](https://developer.apple.com/account/resources/identifiers/list) e fare clic sul **+** pulsante.
+2. Selezionare **ID app** e fare clic su **continua**.
+3. Fornire una **Descrizione**. Impostare quindi **ID bundle** su **carattere jolly** e immettere un ID nel formato `com.[DomainName].*` :
 
-   ![Screenshot della nuova pagina di registrazione dell'ID app con i campi obbligatori popolati.](manual-provisioning-images/new-app-id.png)
+   ![Screenshot della pagina di registrazione dell'ID app con i campi obbligatori popolati.](manual-provisioning-images/new-app-id.png)
 
 4. Fare clic su **Continua**.
-5. Esaminare le informazioni, quindi fare clic su **Registra**.
+5. Esaminare le informazioni e quindi fare clic su **registra**.
 
 ### <a name="new-provisioning-profile"></a>Nuovo profilo di provisioning
 
-Dopo aver creato l'ID app, è possibile creare il profilo di provisioning. Questo profilo di *what* provisioning contiene informazioni sull'app (o le app, se si tratta di un ID app con caratteri jolly) a cui si riferisce questo profilo, *a chi* può usare il profilo (a seconda dei certificati per sviluppatori aggiunti) e a *quali* dispositivi possono installare l'app.
+Una volta creato l'ID app, è possibile creare il profilo di provisioning. Questo profilo di provisioning contiene informazioni sull'app ( *o app,* se si tratta di un ID app con caratteri jolly) a cui si riferisce il profilo, *che* può usare il profilo (a seconda dei certificati per sviluppatori aggiunti) e sui dispositivi *che* possono installare l'app.
 
-Per creare manualmente un profilo di provisioning per lo sviluppo, eseguire le operazioni seguenti:To manually create a provisioning profile for development, do the following:
+Per creare manualmente un profilo di provisioning per lo sviluppo, procedere come segue:
 
-1. Passare alla [sezione Profili nel portale per sviluppatori](https://developer.apple.com/account/resources/profiles/list) e fare clic sul **+** pulsante.
+1. Passare alla [sezione profili nel portale per sviluppatori](https://developer.apple.com/account/resources/profiles/list) e fare clic sul **+** pulsante.
 
-2. In **Sviluppo**selezionare **Sviluppo app iOS** e fare clic su **Continua**.
+2. In **sviluppo**selezionare **sviluppo app iOS** e fare clic su **continua**.
 
-3. Selezionare l'ID app da utilizzare dal menu a discesa, quindi fare clic su **Continua**.
+3. Selezionare l'ID app da usare nel menu a discesa e quindi fare clic su **continua**.
 
-4. Selezionare i certificati da includere nel profilo di provisioning, quindi fare clic su **Continua**.
+4. Selezionare i certificati da includere nel profilo di provisioning e quindi fare clic su **continua**.
 
-5. Selezionare tutti i dispositivi su cui verrà installata l'app, quindi fare clic su **Continua**.
+5. Selezionare tutti i dispositivi in cui verrà installata l'app, quindi fare clic su **continua**.
 
-6. Specificare il nome del profilo di **provisioning,** quindi fare clic su **Genera**.
+6. Specificare **il nome del profilo di provisioning** e quindi fare clic su **generate**.
 
-7. Se lo si desidera, puoi fare clic su **Scarica** nella pagina successiva per scaricare il profilo di provisioning sul Mac.
+7. Facoltativamente, è possibile fare clic su **download** nella pagina successiva per scaricare il profilo di provisioning nel Mac.
 
-<a name="download" />
+<a name="download"></a>
 
-## <a name="download-provisioning-profiles-in-visual-studio"></a>Scaricare i profili di provisioning in Visual StudioDownload provisioning profiles in Visual Studio
+## <a name="download-provisioning-profiles-in-visual-studio"></a>Scaricare i profili di provisioning in Visual Studio
 
-Dopo aver creato un nuovo profilo di provisioning nel portale per sviluppatori Apple, usa Visual Studio per scaricarlo in modo che sia disponibile per l'accesso del bundle nella tua app.
+Dopo aver creato un nuovo profilo di provisioning nel portale Apple Developer, usare Visual Studio per scaricarlo in modo che sia disponibile per la firma del bundle nell'app.
 
-1. Vai alla finestra Account per sviluppatori Apple in Visual Studio.
-    1. Mac: **Preferenze di Visual Studio > > account sviluppatore Apple**
-    2. Windows: **Opzioni di > degli strumenti > account Xamarin > Apple**
+1. Passare alla finestra Apple Developer Accounts in Visual Studio.
+    1. Mac: **Preferenze di Visual Studio > > account per sviluppatore Apple**
+    2. Windows: **strumenti > opzioni > novell > account Apple**
 
 2. Selezionare il team e fare clic su **Visualizza dettagli...**
-3. Verificare che il nuovo profilo venga visualizzato nell'elenco **Profili di provisioning.** Potrebbe essere necessario riavviare Visual Studio per aggiornare l'elenco. 
+3. Verificare che il nuovo profilo sia visualizzato nell'elenco **profili di provisioning** . Per aggiornare l'elenco, potrebbe essere necessario riavviare Visual Studio. 
 4. Fare clic su **Scarica tutti i profili**.
 
 Il nuovo profilo di provisioning sarà ora disponibile in Visual Studio e pronto per l'uso.
@@ -144,33 +144,33 @@ A questo punto il provisioning è completo e l'applicazione è pronta per essere
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Collegare il dispositivo al Mac.
-2. Apri **Info.plist** e assicurati che **l'identificatore** del bundle corrisponda all'ID app creato in precedenza (a meno che l'ID app non sia un carattere jolly).
-3. Nella sezione **Firma** selezionare **Provisioning manuale** come **Schema:**
+1. Connettere il dispositivo al Mac.
+2. Aprire **info. plist** e verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza, a meno che l'ID app non sia un carattere jolly.
+3. Nella sezione **firma** selezionare **provisioning manuale** come **schema**:
 
-    ![Screenshot di Info.plist in Visual Studio per Mac con il provisioning manuale selezionato](manual-provisioning-images/vsm-info-plist.png)
+    ![Screenshot di info. plist in Visual Studio per Mac con provisioning manuale selezionato](manual-provisioning-images/vsm-info-plist.png)
 
 4. Fare clic su **Opzioni di firma bundle...**
-5. Assicurarsi che la configurazione di compilazione sia impostata su **Debug , iPhone**. Aprire entrambi i menu a discesa **Identità** di firma e **Profilo di provisioning** per verificare che siano elencati i certificati e i profili di provisioning corretti: 
+5. Assicurarsi che la configurazione di compilazione sia impostata su **debug | iPhone**. Aprire i menu a discesa **identità di firma** e **profilo di provisioning** per verificare che siano elencati i certificati corretti e i profili di provisioning: 
 
-   ![La pagina delle proprietà di firma del bundle iOS con il menu a discesa del profilo di provisioning apre che elenca tutti i profili di provisioning disponibili per l'app.](manual-provisioning-images/vsm-bundle-signing.png)
+   ![pagina delle proprietà di firma del bundle iOS con il menu a discesa del profilo di provisioning aperto che elenca tutti i profili di provisioning disponibili per l'app.](manual-provisioning-images/vsm-bundle-signing.png)
 
-6. Selezionare un'identità e un profilo specifici da utilizzare oppure lasciarli **come Automatico**. Se impostato su **Automatico**, Visual Studio per Mac selezionerà l'identità e il profilo in base **all'identificatore** del pacchetto in **Info.plist**. 
+6. Selezionare un'identità e un profilo specifici da usare oppure lasciarlo come **automatico**. Se impostato su **automatico**, Visual Studio per Mac selezionerà l'identità e il profilo in base all' **identificatore del bundle** in **info. plist**. 
 7. Fare clic su **OK**.
 8. Fare clic su **Esegui** per distribuire l'app nel dispositivo.
 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Collegare il dispositivo all'host di compilazione Mac.
-2. Apri **Info.plist** e assicurati che **l'identificatore** del bundle corrisponda all'ID app creato in precedenza (a meno che l'ID app non sia un carattere jolly).
-3. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto iOS, selezionare Proprietà e passare alla scheda **Firma bundle iOS .In** the Solution Explorer , right-click the iOS project name, select **Properties** and navigate to the iOS Bundle Signing tab.
-4. Assicurarsi che la configurazione di compilazione sia impostata su **Debug , iPhone**. In **Firma pacchetto**selezionare Provisioning **manuale** come **Schema**:
+1. Connettere il dispositivo all'host di compilazione Mac.
+2. Aprire **info. plist** e verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza, a meno che l'ID app non sia un carattere jolly.
+3. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto iOS, scegliere **Proprietà** e passare alla scheda **firma bundle iOS** .
+4. Assicurarsi che la configurazione di compilazione sia impostata su **debug | iPhone**. In **bundle Signing (firma bundle**) selezionare **provisioning manuale** come **schema**:
 
-    ![Screenshot di Info.plist in Visual Studio per Mac con il provisioning manuale selezionato](manual-provisioning-images/vs-bundle-signing.png)
+    ![Screenshot di info. plist in Visual Studio per Mac con provisioning manuale selezionato](manual-provisioning-images/vs-bundle-signing.png)
 
-5. Aprire entrambi i menu a discesa **Identità** di firma e **Profilo di provisioning** per verificare che siano elencati i certificati e i profili di provisioning corretti.
-6. Selezionare un'identità e un profilo specifici da utilizzare oppure lasciarli **come Automatico**. Se impostato su **Automatico**, Visual Studio selezionerà l'identità e il profilo in base **all'identificatore** del pacchetto in **Info.plist**. 
+5. Aprire i menu a discesa **identità di firma** e **profilo di provisioning** per verificare che siano elencati i certificati e i profili di provisioning corretti.
+6. Selezionare un'identità e un profilo specifici da usare oppure lasciarlo come **automatico**. Se impostato su **automatico**, Visual Studio selezionerà l'identità e il profilo in base all' **identificatore del bundle** in **info. plist**. 
 7. Fare clic su **Esegui** per distribuire l'app nel dispositivo.
 
 -----
@@ -186,6 +186,6 @@ Apple offre una selezione di servizi speciali per le applicazioni, denominati an
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [Distribuzione app](~/ios/deploy-test/app-distribution/index.md)
+- [App Distribution (Distribuzione dell'app)](~/ios/deploy-test/app-distribution/index.md)
 - [Risoluzione dei problemi](~/ios/deploy-test/troubleshooting.md)
 - [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) (Apple - Guida alla distribuzione dell'app)

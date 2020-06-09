@@ -1,23 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come usare l'indicizzazione e la deep linking delle applicazioni per rendere Xamarin.Forms ricercabile il contenuto dell'applicazione nei dispositivi iOS e Android.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d93f9bbcfafc3cb71d6b71159f6d3368f50c08be
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135733"
+title: "Descrizione dell'applicazione e collegamento profondo": "questo articolo spiega come usare l'indicizzazione e la deep linking delle applicazioni per rendere disponibili i Xamarin.Forms contenuti dell'applicazione in dispositivi iOS e Android".
+ms. prod: Novell MS. AssetID: 410C5D19-AA3C-4E0D-B799-E288C5803226 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 11/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
@@ -156,8 +141,6 @@ In questo modo l' [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) istanza vien
 > [!NOTE]
 > In Android non è possibile rimuovere contenuto indicizzato dai risultati della ricerca.
 
-<a name="responding" />
-
 ## <a name="responding-to-a-deep-link"></a>Risposta a un collegamento diretto
 
 Quando il contenuto indicizzato viene visualizzato nei risultati della ricerca e viene selezionato da un utente, la classe `App` per l'applicazione riceverà una richiesta per gestire l'`Uri` contenuto nel contenuto indicizzato. Questa richiesta può essere elaborata nell' [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) override, come illustrato nell'esempio di codice seguente:
@@ -247,7 +230,7 @@ I valori archiviati nella [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValu
 
 Per altre informazioni su Handoff, vedere [Introduction to Handoff](~/ios/platform/handoff.md) (Introduzione a Handoff).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come usare l'indicizzazione e la deep linking delle applicazioni per rendere le applicazioni disponibili per la Xamarin.Forms ricerca nei dispositivi iOS e Android. L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi.
 

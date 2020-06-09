@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ee8ff58566732c6a86a339d3080c7243be4b4a4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304233"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572195"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -23,14 +23,14 @@ Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cic
 > Le app devono anche supportare iPhone Xs e le dimensioni dello schermo 12,9" di iPad Pro.
 
 > [!IMPORTANT]
-> Se si cercano risorse relative `UIWebView` all'avviso di deprecazione (ITMS-90809) durante l'utilizzo di Xamarin.Forms, fare riferimento alla documentazione di [Xamarin.Forms WebView.](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809)
+> Per informazioni sulle risorse relative all' `UIWebView` avviso di deprecazione (itms-90809) durante l'uso di Novell. Forms, vedere la documentazione relativa a [Novell. Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
 
 > [!IMPORTANT]
 > Per usare iTunes Connect e quindi per pubblicare un'app nell'App Store, è **necessario** fare parte di un programma Apple Developer per singoli utenti o per organizzazioni. Non sarà possibile eseguire i passaggi di questa pagina se si è membri di un programma Apple Developer **Enterprise**.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="provisioning-an-app-for-app-store-distribution"></a>Provisioning di un'app per la distribuzione nell'App Store
 
@@ -44,47 +44,47 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 > [!NOTE]
 > Solo gli agenti e gli amministratori del team possono creare i certificati di distribuzione e i profili di provisioning.
 
-<a name="creatingcertificate" />
+<a name="creatingcertificate"></a>
 
 ## <a name="creating-a-distribution-certificate"></a>Creazione di un certificato di distribuzione
 
 1. Passare alla sezione *Certificates, Identifiers & Profiles* (Certificati, identificatori e profili) di Apple Developer Member Center.
 2. In *Certificates* (Certificati) selezionare **Production** (Produzione).
-3. Fare **+** clic sul pulsante per creare un nuovo certificato.
+3. **+** Per creare un nuovo certificato, fare clic sul pulsante.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (App Store e ad hoc):
 
     [![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
-5. Fare clic su **Continua**e seguire le istruzioni per creare una richiesta di firma del certificato tramite Accesso Portachiavi:
+5. Fare clic su **continue (continua**) e seguire le istruzioni per creare una richiesta di firma del certificato tramite l'accesso Keychain:
 
     [![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
-6. Una volta creata la CSR come indicato, fare clic su **Continua**e caricare la CSR nel Centro membri:
+6. Una volta creato il CSR come indicato, fare clic su **continue (continua**) e caricare la CSR nel centro per i membri:
 
     [![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
 
 7. Fare clic su **Generate** (Genera) per creare il certificato.
-8. Infine, **scaricare** il certificato completato e fare doppio clic sul file per installarlo.
+8. **Scaricare** infine il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario [aggiornare i profili](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)per assicurarsi che siano visibili in Xcode.
 
 In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A questo scopo, eseguire la procedura seguente.
 
 1. Selezionare il team e fare clic su **Gestisci certificati...**:[![](images/selectteam.png "Selezionare il team e View Details (Visualizza dettagli)")](images/selectteam.png#lightbox)
 
-2. Successivamente, fare clic sul pulsante **Crea** accanto a **Certificato di distribuzione iOS**:[![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
+2. Fare quindi clic sul pulsante **Crea** accanto a **certificato di distribuzione iOS**:[![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
 
-3. A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato di seguito, oppure potrebbe essere necessario attendere che un agente del team o un amministratore la approvi:[![](images/generated.png "L'identità di firma verrà generata e verrà visualizzata una finestra di dialogo")](images/generated.png#lightbox)
+3. A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato di seguito, oppure potrebbe essere necessario attendere che un agente o un amministratore del team lo approvi:[![](images/generated.png "L'identità di firma verrà generata e verrà visualizzata una finestra di dialogo")](images/generated.png#lightbox)
 
-<a name="creatingprofile" />
+<a name="creatingprofile"></a>
 
 ## <a name="creating-a-distribution-profile"></a>Creazione di un profilo di distribuzione
 
-<a name="creatingappid" />
+<a name="creatingappid"></a>
 
 ### <a name="creating-an-app-id"></a>Creazione di un ID app
 
 Come per qualsiasi altro profilo di provisioning creato, è necessario un ID app per identificare l'app che viene distribuita nel dispositivo dell'utente. Se non è già stato creato, seguire questa procedura per crearne uno:
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
-2. Fare **+** clic sul pulsante e fornire un **Nome** che lo identificherà nel portale.
+2. Fare clic sul **+** pulsante e specificare un **nome** che lo identificherà nel portale.
 3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio:
     - **Esplicito**: com.[NomeDominio].[NomeApp]
     - **Con caratteri jolly**:com.[NomeDominio].*
@@ -95,11 +95,11 @@ Come per qualsiasi altro profilo di provisioning creato, è necessario un ID app
 
 Quando i componenti necessari per la creazione di un profilo di distribuzione sono disponibili, seguire questi passaggi per crearne uno:
 
-1. Torna al portale di provisioning Apple e seleziona**Distribuzione** **provisioning** > :
+1. Tornare al portale di provisioning Apple e selezionare distribuzione di **provisioning**  >  **Distribution**:
 
     [![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
 
-2. Fai **+** clic sul pulsante e seleziona il tipo di profilo di distribuzione che desideri creare come **App Store:**
+2. Fare clic sul **+** pulsante e selezionare il tipo di profilo di distribuzione che si vuole creare come **App Store**:
 
     [![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
 
@@ -127,11 +127,11 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- Potrebbe essere necessario chiudere Visual Studio e fare in modo che Xcode (nel Mac dell'host di compilazione) aggiorni l'elenco delle identità di firma e dei profili di provisioning disponibili (seguendo le istruzioni nella sezione Richiesta di identità di [firma)](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio.
+ Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio, potrebbe essere necessario uscire da Visual Studio e fare in modo che Xcode (nel Mac dell'host di compilazione) aggiorni l'elenco di identità di firma e di profili di provisioning disponibili (seguendo le istruzioni riportate nella sezione [richiesta di identità di firma](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) ).
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Selezione di un profilo di distribuzione in un progetto Xamarin.iOS
 
@@ -171,7 +171,7 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 
 -----
 
-<a name="itunesconnect" />
+<a name="itunesconnect"></a>
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>Configurazione dell'applicazione in iTunes Connect
 
@@ -181,7 +181,7 @@ Dopo il corretto provisioning dell'applicazione, il passaggio successivo prevede
 
 Per altri dettagli, vedere la documentazione [Configuring an App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) (Configurazione di un'app in iTunes Connect).
 
-<a name="submitting" />
+<a name="submitting"></a>
 
 ## <a name="submitting-an-app-to-itunes-connect"></a>Invio di un'app a iTunes Connect
 
@@ -189,13 +189,13 @@ Dopo la firma dell'applicazione con il profilo di provisioning di distribuzione 
 
 Per altre informazioni sulla pubblicazione di applicazioni nell'App Store, vedere [Pubblicazione in App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md).
 
-<a name="windows" />
+<a name="windows"></a>
 
 ## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle delle app nuovamente in Windows
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato i componenti chiave della preparazione di un'applicazione Xamarin.iOS per la distribuzione nell'App Store.
 
@@ -205,5 +205,5 @@ Questo articolo ha illustrato i componenti chiave della preparazione di un'appli
 - [Pubblicazione nell'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Distribuzione interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuzione ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [Il file iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
+- [Il file iTunesMetadata. plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Supporto IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

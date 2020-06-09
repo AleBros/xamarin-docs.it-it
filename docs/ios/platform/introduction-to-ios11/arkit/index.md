@@ -1,5 +1,5 @@
 ---
-title: Introduzione a ARKit in Xamarin.iOS
+title: Introduzione a ARKit in Novell. iOS
 description: Questo documento descrive la realtà aumentata in iOS 11 con ARKit. Viene illustrato come aggiungere un modello 3D a un'app, configurare la visualizzazione, implementare un delegato della sessione, posizionare il modello 3D nel mondo e sospendere la sessione di realtà aumentata.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 0094a496ce99addb08648431d993bd4afddca2f4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 51b28ec05af91dea21b1291956de30c549b1868e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571675"
 ---
-# <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in Xamarin.iOS
+# <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in Novell. iOS
 
 _Realtà aumentata per iOS 11_
 
-ARKit consente un'ampia gamma di applicazioni e giochi di realtà aumentata. In questa sezione vengono trattati i seguenti argomenti:
+ARKit consente un'ampia gamma di applicazioni e giochi di realtà aumentata. Questa sezione contiene gli argomenti seguenti:
 
 - [Introduzione con ARKit](#gettingstarted)
 - [Uso di ARKit con UrhoSharp](urhosharp.md)
 
-<a name="gettingstarted" />
+<a name="gettingstarted"></a>
 
 ## <a name="getting-started-with-arkit"></a>Introduzione con ARKit
 
@@ -39,7 +39,7 @@ Gli asset devono essere aggiunti al progetto con l'azione di compilazione **Scen
 
 ### <a name="2-configure-the-view"></a>2. configurare la visualizzazione
 
-Nel metodo `ViewDidLoad` del controller di visualizzazione caricare l'asset della scena e impostare la proprietà `Scene` nella vista:
+Nel metodo del controller di visualizzazione `ViewDidLoad` caricare l'asset della scena e impostare la `Scene` proprietà nella vista:
 
 ```csharp
 ARSCNView SceneView = (View as ARSCNView);
@@ -66,7 +66,7 @@ public class SessionDelegate : ARSessionDelegate
 }
 ```
 
-Assegnare il delegato nel metodo `ViewDidLoad`:
+Assegnare il delegato in nel `ViewDidLoad` Metodo:
 
 ```csharp
 // Track changes to the session
@@ -75,7 +75,7 @@ SceneView.Session.Delegate = new SessionDelegate();
 
 ### <a name="4-position-the-3d-model-in-the-world"></a>4. Posizionare il modello 3D nel mondo
 
-In `ViewWillAppear`, il codice seguente stabilisce una sessione ARKit e imposta la posizione del modello 3D nello spazio relativo alla fotocamera del dispositivo:
+In `ViewWillAppear` il codice seguente stabilisce una sessione ARKit e imposta la posizione del modello 3D nello spazio relativo alla fotocamera del dispositivo:
 
 ```csharp
 // Create a session configuration
@@ -97,15 +97,15 @@ Ogni volta che l'applicazione viene eseguita o ripresa, il modello 3D verrà pos
 
 ### <a name="5-pause-the-augmented-reality-session"></a>5. sospendere la sessione di realtà aumentata
 
-È consigliabile sospendere la sessione ARKit quando il controller di visualizzazione non è visibile (nel metodo `ViewWillDisappear`:
+È consigliabile sospendere la sessione ARKit quando il controller di visualizzazione non è visibile (nel `ViewWillDisappear` Metodo:
 
 ```csharp
 SceneView.Session.Pause();
 ```
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-Il codice precedente genera una semplice applicazione ARKit. Esempi più complessi si aspettano che il controller di visualizzazione che ospita la sessione di realtà aumentata implementi `IARSCNViewDelegate`e che vengano implementati altri metodi.
+Il codice precedente genera una semplice applicazione ARKit. Esempi più complessi si aspettano che il controller di visualizzazione che ospita la sessione di realtà aumentata implementi `IARSCNViewDelegate` e che vengano implementati altri metodi.
 
 ARKit offre numerose funzionalità più sofisticate, ad esempio il rilevamento della superficie e l'interazione dell'utente. Vedere la [demo UrhoSharp](urhosharp.md) per un esempio di combinazione del rilevamento ARKit con UrhoSharp.
 

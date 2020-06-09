@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573859"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
 
@@ -22,7 +22,7 @@ Prima di iOS 8, per creare una schermata di avvio per un'app per iOS, è necessa
 
 In questa breve procedura dettagliata viene descritto come creare una schermata di avvio con uno storyboard fornito per impostazione predefinita in un nuovo progetto o con uno storyboard aggiunto manualmente a un progetto esistente. Viene quindi illustrato come usare la finestra di progettazione iOS per aggiungere una visualizzazione immagine e un'etichetta allo storyboard, per impostare vincoli su tali viste e per verificare che lo storyboard appaia corretto per diversi dispositivi e orientamenti.
 
-<a name="storyboard" />
+<a name="storyboard"></a>
 
 ## <a name="managing-launch-screens-with-storyboards"></a>Gestione delle schermate di avvio con gli storyboard
 
@@ -97,7 +97,7 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Novell)** :
+1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Novell)**:
 
     ![La finestra nuovo progetto con app iOS (Novell) selezionata](launch-screens-images/launch01.w157.png)
 
@@ -189,24 +189,24 @@ Per ulteriori informazioni sulla creazione di una schermata di avvio con uno sto
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di avvio, fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file.** Selezionare **iOS** > **schermata di avvio** e fare clic sul pulsante **nuovo** :
+Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di avvio, fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e scegliere **Aggiungi**  >  **nuovo file**. Selezionare **iOS**  >  **schermata di avvio** iOS e fare clic sul pulsante **nuovo** :
 
 ![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
 
-Fare quindi doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica. In **schermata di avvio**selezionare il nuovo file storyboard creato in precedenza.
+Fare quindi doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica. In **schermata di avvio**selezionare il nuovo file storyboard creato in precedenza.
 
 ![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
 
 Per usare il nuovo storyboard come schermata di avvio, seguire questa procedura:
 
-1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
+1. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
 2. Scorrere fino alla sezione **Immagini di avvio universale** dell'editor, aprire l'elenco a discesa **Avvia schermata** e selezionare il nome dello storyboard creato in precedenza: 
 
     ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file...** : 
+1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi**  >  **nuovo file...**: 
 
     ![](launch-screens-images/image012.png "Add new file")
 2. Immettere un nome per la schermata di avvio e fare clic sul pulsante **Aggiungi** : 
@@ -216,7 +216,7 @@ Per usare il nuovo storyboard come schermata di avvio, seguire questa procedura:
 4. Verificare che la **classe Size** sia impostata su **any: any** e la **vista come** **generica**: 
 
     ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
-5. Assemblare la schermata di avvio da classi di dimensioni, elementi dell'interfaccia utente semplici (ad esempio `UIImageView`) e immagini incluse nel bundle dell'applicazione: 
+5. Assemblare la schermata di avvio dalle classi di dimensioni, elementi dell'interfaccia utente semplici (ad esempio `UIImageView` ) e immagini incluse nel bundle dell'applicazione: 
 
     ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
 6. Salvare le modifiche apportate allo storyboard.

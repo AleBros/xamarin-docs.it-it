@@ -1,23 +1,8 @@
 ---
-title: Xamarin.FormsGestione stato di visualizzazione
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 13dd0a3f5d665e2232e7e6e12edac7cf117dd0ca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127283"
+title: " Xamarin.Forms Visual State Manager" Description: "usare Visual State Manager per apportare modifiche agli elementi XAML in base agli Stati di visualizzazione impostati dal codice".
+ms. prod: Novell MS. AssetID: 17296F14-640D-484B-A24C-A4E9B7013E4F ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 02/21/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-visual-state-manager"></a>Xamarin.FormsGestione stato di visualizzazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
@@ -409,41 +394,13 @@ Ora tutte le `Entry` visualizzazioni in questa pagina rispondono allo stesso mod
 Nella tabella seguente sono elencati gli Stati di visualizzazione definiti in Xamarin.Forms :
 
 | Classe | Stati | Altre informazioni |
-| ----- | ---
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
---- | Titolo---: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: Author: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: " Xamarin.Forms Visual State Manager" Description: ms. prod: ms. AssetID: ms. Technology: ms. Custom: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--------- | | `Button` | `Pressed` |  [Stati di visualizzazione pulsante](~/xamarin-forms/user-interface/button.md#button-visual-states) | | `CheckBox` | `IsChecked` |  [Stati di visualizzazione casella](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) di controllo | | `CarouselView`  |  `DefaultItem` `CurrentItem` `PreviousItem` `NextItem`  |  [Stati visivi](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) ,,, CarouselView | `ImageButton`  |  | `Pressed`  |  [Stati di visualizzazione ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) | | `RadioButton` | `IsChecked` |  [Stati di visualizzazione RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) | | `VisualElement`  |  `Normal` , `Disabled` , `Focused` , `Selected`  |  [Stati comuni](#common-states) |
+| ----- | ------ | ---------------- |
+| `Button` | `Pressed` | [Stati di visualizzazione pulsante](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CheckBox` | `IsChecked` | [Stati di visualizzazione casella di controllo](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |
+| `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Stati di visualizzazione CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
+| `ImageButton` | `Pressed` | [Stati di visualizzazione ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
+| `RadioButton` | `IsChecked` | [Stati di visualizzazione RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Stati comuni](#common-states) |
 
 È possibile accedere a ognuno di questi stati tramite il gruppo di Stati di visualizzazione denominato `CommonStates` .
 
@@ -635,8 +592,6 @@ Quando si usano i trigger di stato per controllare gli Stati di visualizzazione,
 Se più trigger sono contemporaneamente attivi, ad esempio due trigger personalizzati, il primo trigger dichiarato nel markup avrà la precedenza.
 
 Per ulteriori informazioni sui trigger di stato, vedere [trigger di stato](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
-
-<a name="adaptive-layout" />
 
 ## <a name="use-the-visual-state-manager-for-adaptive-layout"></a>Utilizzare Visual State Manager per il layout adattivo
 

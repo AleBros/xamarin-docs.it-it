@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCelle
-description: Xamarin.Formsè possibile aggiungere celle a ListViews e TableViews. Questo articolo elenca le celle incluse in Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bd1a2398787fe39c0b4cbd08ccd5c5793775d5cf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137280"
+title: " Xamarin.Forms Cells" Description: " Xamarin.Forms Cells" può essere aggiunto a listviews e TableViews. Questo articolo elenca le celle incluse in Xamarin.Forms . "
+ms. prod: Novell MS. AssetID: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/12/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-cells"></a>Xamarin.FormsCelle
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -31,8 +17,6 @@ Una *cella* è un elemento specializzato usato per gli elementi di una tabella e
 
 Xamarin.Formssupporta i tipi di cella seguenti:
 
-<a name="textCell" />
-
 ### <a name="textcell"></a>TextCell
 
 |     |     |
@@ -44,7 +28,7 @@ Xamarin.Formssupporta i tipi di cella seguenti:
 
 |     |     |
 | --- | --- |
-| [`ImageCell`](xref:Xamarin.Forms.ImageCell)Visualizza le stesse informazioni di, [`TextCell`](#textCell) ma include una bitmap impostata con la [`Source`](xref:Xamarin.Forms.Image.Source) Proprietà.<br /><br />[Documentazione API](xref:Xamarin.Forms.ImageCell)  /  [Guida](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) di | [![Esempio di ImageCell](cells-images/ImageCell.png "Esempio di ImageCell")](cells-images/ImageCell-Large.png#lightbox "Esempio di ImageCell")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+| [`ImageCell`](xref:Xamarin.Forms.ImageCell)Visualizza le stesse informazioni di, [`TextCell`](#textcell) ma include una bitmap impostata con la [`Source`](xref:Xamarin.Forms.Image.Source) Proprietà.<br /><br />[Documentazione API](xref:Xamarin.Forms.ImageCell)  /  [Guida](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) di | [![Esempio di ImageCell](cells-images/ImageCell.png "Esempio di ImageCell")](cells-images/ImageCell-Large.png#lightbox "Esempio di ImageCell")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="switchcell"></a>SwitchCell

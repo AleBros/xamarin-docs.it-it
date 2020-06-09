@@ -7,28 +7,28 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: bd5217173e00de7d09e4ec14a5acf4d6a8389b10
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292089"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574444"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introduzione a OpenTK in Novell. Mac
 
-OpenTK (The Open Toolkit) è una libreria avanzata di basso livello C# che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo. Questo articolo fornisce una breve introduzione all'uso di OpenTK in un'app Novell. Mac.
+OpenTK (The Open Toolkit) è una libreria C# avanzata di basso livello che consente di usare OpenGL, OpenCL e OpenAL più semplice. OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo. Questo articolo fornisce una breve introduzione all'uso di OpenTK in un'app Novell. Mac.
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
 In questo articolo verranno illustrate le nozioni di base di OpenTK in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi `Register` e `Export` usati per collegare le C# classi agli oggetti Objective-c e agli elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre classi/metodi c# in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i `Register` `Export` comandi e usati per collegare le classi c# agli oggetti Objective-c e agli elementi dell'interfaccia utente.
 
-<a name="About_OpenTK" />
+<a name="About_OpenTK"></a>
 
 ## <a name="about-opentk"></a>Informazioni su OpenTK
 
-Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria avanzata di basso C# livello che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. L'uso di OpenTK in un'app Novell. Mac offre le funzionalità seguenti:
+Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria C# avanzata di basso livello che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. L'uso di OpenTK in un'app Novell. Mac offre le funzionalità seguenti:
 
 - **Sviluppo rapido** : OpenTK fornisce tipi di dati avanzati e documentazione inline per migliorare il flusso di lavoro di codifica e rilevare gli errori in modo più semplice e rapido.
 - **Facile integrazione** : OpenTK è stato progettato per integrarsi facilmente con le applicazioni .NET.
@@ -36,23 +36,23 @@ Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria avanzata 
 - **Binding indipendenti dai tipi avanzati** : OpenTK supporta le versioni più recenti di OpenGL, OpenGL | ES, OpenAL e OpenCL con il caricamento automatico delle estensioni, il controllo degli errori e la documentazione inline.
 - **Opzioni GUI flessibili** : OpenTK fornisce la finestra di gioco nativa a prestazioni elevate progettata specificamente per i giochi e Novell. Mac.
 - **Codice completamente gestito e conforme a CLS** : OpenTK supporta le versioni a 32 bit e a 64 bit di MacOS senza librerie non gestite.
-- **Toolkit per Math 3D** OpenTK fornisce struct `Vector`, `Matrix`, `Quaternion` e `Bezier` tramite il suo 3D Math Toolkit.
+- **Toolkit per Math 3D** OpenTK fornisce `Vector` gli `Matrix` `Quaternion` struct, e `Bezier` tramite il suo 3D Math Toolkit.
 
 OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo.
 
 Per ulteriori informazioni, vedere il sito Web [del Toolkit di apertura](https://opentk.net) .
 
-<a name="OpenTK_Quickstart" />
+<a name="OpenTK_Quickstart"></a>
 
 ## <a name="opentk-quickstart"></a>Guida introduttiva a OpenTK
 
 Come introduzione rapida all'uso di OpenTK in un'app Novell. Mac, verrà creata una semplice applicazione che apre una visualizzazione del gioco, esegue il rendering di un triangolo semplice in tale visualizzazione e connette la visualizzazione del gioco alla finestra principale dell'app Mac per visualizzare il triangolo all'utente.
 
-<a name="Starting_a_New_Project" />
+<a name="Starting_a_New_Project"></a>
 
 ### <a name="starting-a-new-project"></a>Avvio di un nuovo progetto
 
-Avviare Visual Studio per Mac e creare una nuova soluzione Novell. Mac. Selezionare **Mac** > **app** > **generale** > **app Cocoa**:
+Avviare Visual Studio per Mac e creare una nuova soluzione Novell. Mac. Selezionare app **Mac**app  >  **App**  >  **General**  >  **Cocoa**generale:
 
 [![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
 
@@ -62,7 +62,7 @@ Immettere `MacOpenTK` per il **nome del progetto**:
 
 Fare clic sul pulsante **Crea** per compilare il nuovo progetto.
 
-<a name="Including_OpenTK" />
+<a name="Including_OpenTK"></a>
 
 ### <a name="including-opentk"></a>Inclusione di OpenTK
 
@@ -72,11 +72,11 @@ Inserire un segno di spunta per `OpenTK` e fare clic sul pulsante **OK** :
 
 [![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
 
-<a name="Using_OpenTK" />
+<a name="Using_OpenTK"></a>
 
 ### <a name="using-opentk"></a>Uso di OpenTK
 
-Dopo aver creato il nuovo progetto, fare doppio clic sul file `MainWindow.cs` nel **Esplora soluzioni** per aprirlo per la modifica. Rendere la classe `MainWindow` simile alla seguente:
+Dopo aver creato il nuovo progetto, fare doppio clic sul `MainWindow.cs` file nella **Esplora soluzioni** per aprirlo per la modifica. Rendere la `MainWindow` classe simile alla seguente:
 
 ```csharp
 using System;
@@ -164,11 +164,11 @@ namespace MacOpenTK
 
 Di seguito viene illustrato in dettaglio il codice.
 
-<a name="Required_APIs" />
+<a name="Required_APIs"></a>
 
 ### <a name="required-apis"></a>API richieste
 
-Per usare OpenTK in una classe Novell. Mac sono necessari diversi riferimenti. All'inizio della definizione sono state incluse le istruzioni `using` seguenti:
+Per usare OpenTK in una classe Novell. Mac sono necessari diversi riferimenti. All'inizio della definizione sono state incluse le `using` istruzioni seguenti:
 
 ```csharp
 using System;
@@ -183,7 +183,7 @@ using CoreGraphics;
 
 Questo set minimo sarà necessario per qualsiasi classe che usa OpenTK.
 
-<a name="Adding_the_Game_View" />
+<a name="Adding_the_Game_View"></a>
 
 ### <a name="adding-the-game-view"></a>Aggiunta della visualizzazione del gioco
 
@@ -198,19 +198,19 @@ Game = new MonoMacGameView(ContentView.Frame);
 ContentView = Game;
 ```
 
-Qui abbiamo fatto in modo che la visualizzazione del gioco abbia le stesse dimensioni della finestra principale del Mac e che la visualizzazione contenuto della finestra sia stata sostituita con la nuova `MonoMacGameView`. Poiché il contenuto della finestra esistente è stato sostituito, la visualizzazione assegnata verrà ridimensionata automaticamente quando le finestre principali verranno ridimensionate.
+Qui abbiamo fatto in modo che la visualizzazione del gioco sia uguale a quella della finestra principale del Mac e che la visualizzazione contenuto della finestra sia stata sostituita con la nuova `MonoMacGameView` . Poiché il contenuto della finestra esistente è stato sostituito, la visualizzazione assegnata verrà ridimensionata automaticamente quando le finestre principali verranno ridimensionate.
 
-<a name="Responding_to_Events" />
+<a name="Responding_to_Events"></a>
 
 ### <a name="responding-to-events"></a>Risposta agli eventi
 
 Sono presenti diversi eventi predefiniti a cui ogni visualizzazione del gioco deve rispondere. In questa sezione vengono descritti gli eventi principali necessari.
 
-<a name="The_Load_Event" />
+<a name="The_Load_Event"></a>
 
 ### <a name="the-load-event"></a>Evento Load
 
-L'evento `Load` è la posizione in cui caricare le risorse dal disco, ad esempio immagini, trame o musica. Per la nostra semplice app di test, non utilizziamo l'evento `Load`, ma lo abbiamo incluso come riferimento:
+L' `Load` evento è la posizione in cui caricare le risorse dal disco, ad esempio immagini, trame o musica. Per la nostra semplice app di test, l'evento non viene usato `Load` , ma è stato incluso come riferimento:
 
 ```csharp
 Game.Load += (sender, e) =>
@@ -219,11 +219,11 @@ Game.Load += (sender, e) =>
 };
 ```
 
-<a name="The_Resize_Event" />
+<a name="The_Resize_Event"></a>
 
 ### <a name="the-resize-event"></a>Evento di ridimensionamento
 
-L'evento `Resize` deve essere chiamato ogni volta che la visualizzazione del gioco viene ridimensionata. Per l'app di esempio, il viewport GL viene reso della stessa dimensione della visualizzazione del gioco, che viene ridimensionato automaticamente dalla finestra principale Mac, con il codice seguente:
+L' `Resize` evento deve essere chiamato ogni volta che la visualizzazione del gioco viene ridimensionata. Per l'app di esempio, il viewport GL viene reso della stessa dimensione della visualizzazione del gioco, che viene ridimensionato automaticamente dalla finestra principale Mac, con il codice seguente:
 
 ```csharp
 Game.Resize += (sender, e) =>
@@ -233,11 +233,11 @@ Game.Resize += (sender, e) =>
 };
 ```
 
-<a name="The_UpdateFrame_Event" />
+<a name="The_UpdateFrame_Event"></a>
 
 ### <a name="the-updateframe-event"></a>Evento UpdateFrame
 
-L'evento `UpdateFrame` viene usato per gestire l'input dell'utente, aggiornare le posizioni degli oggetti, eseguire calcoli di fisica o intelligenza artificiale. Per la nostra semplice app di test, non utilizziamo l'evento `UpdateFrame`, ma lo abbiamo incluso come riferimento:
+L' `UpdateFrame` evento viene usato per gestire l'input dell'utente, aggiornare le posizioni degli oggetti, eseguire calcoli di fisica o intelligenza artificiale. Per la nostra semplice app di test, l'evento non viene usato `UpdateFrame` , ma è stato incluso come riferimento:
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -247,13 +247,13 @@ Game.UpdateFrame += (sender, e) =>
 ```
 
 > [!IMPORTANT]
-> L'implementazione di Novell. Mac di OpenTK non include il `Input API`, quindi è necessario usare le API fornite da Apple per aggiungere il supporto della tastiera e del mouse. Facoltativamente, è possibile creare un'istanza personalizzata della `MonoMacGameView` ed eseguire l'override dei metodi `KeyDown` e `KeyUp`.
+> L'implementazione di Novell. Mac di OpenTK non include il `Input API` , pertanto sarà necessario usare le API fornite da Apple per aggiungere il supporto della tastiera e del mouse. Facoltativamente, è possibile creare un'istanza personalizzata di `MonoMacGameView` ed eseguire l'override dei `KeyDown` `KeyUp` metodi e.
 
-<a name="The_RenderFrame_Event" />
+<a name="The_RenderFrame_Event"></a>
 
 ### <a name="the-renderframe-event"></a>Evento RenderFrame
 
-L'evento `RenderFrame` contiene il codice usato per eseguire il rendering (disegnare) della grafica. Per l'app di esempio, la visualizzazione del gioco viene compilata con un semplice triangolo:
+L' `RenderFrame` evento contiene il codice usato per eseguire il rendering (disegnare) della grafica. Per l'app di esempio, la visualizzazione del gioco viene compilata con un semplice triangolo:
 
 ```csharp
 Game.RenderFrame += (sender, e) =>
@@ -280,9 +280,9 @@ Game.RenderFrame += (sender, e) =>
 Il codice di rendering viene in genere eseguito con una chiamata a `GL.Clear` per rimuovere tutti gli elementi esistenti prima di disegnare i nuovi elementi.
 
 > [!IMPORTANT]
-> Per la versione Novell. Mac di OpenTK **non** chiamare il metodo `SwapBuffers` dell'istanza di `MonoMacGameView` alla fine del codice di rendering. In questo modo la visualizzazione del gioco si attiverà rapidamente anziché visualizzare la visualizzazione sottoposta a rendering.
+> Per la versione Novell. Mac di OpenTK **non** chiamare il `SwapBuffers` metodo dell' `MonoMacGameView` istanza alla fine del codice di rendering. In questo modo la visualizzazione del gioco si attiverà rapidamente anziché visualizzare la visualizzazione sottoposta a rendering.
 
-<a name="Running_the_Game_View" />
+<a name="Running_the_Game_View"></a>
 
 ### <a name="running-the-game-view"></a>Esecuzione della visualizzazione del gioco
 
@@ -293,7 +293,7 @@ Con tutti gli eventi richiesti definiti e la visualizzazione del gioco collegata
 Game.Run(60.0);
 ```
 
-Si passa alla frequenza dei fotogrammi desiderata a cui si vuole aggiornare la visualizzazione del gioco, per questo esempio si è scelto `60` frame al secondo (la stessa frequenza di aggiornamento della normale TV).
+Si passa alla frequenza dei fotogrammi desiderata a cui si vuole aggiornare la visualizzazione del gioco, per questo esempio sono stati scelti `60` frame al secondo (la stessa frequenza di aggiornamento della normale TV).
 
 Eseguire l'app e visualizzare l'output:
 
@@ -301,25 +301,25 @@ Eseguire l'app e visualizzare l'output:
 
 Se si ridimensiona la finestra, anche la visualizzazione del gioco verrà ripartita e il triangolo verrà ridimensionato e aggiornato in tempo reale.
 
-<a name="Where_to_Next" />
+<a name="Where_to_Next"></a>
 
 ### <a name="where-to-next"></a>Posizione successiva
 
 Con le nozioni di base sull'uso di OpenTk in un'applicazione Novell. Mac, di seguito sono riportati alcuni suggerimenti su come provare a eseguire le operazioni seguenti:
 
-- Provare a modificare il colore del triangolo e il colore di sfondo della visualizzazione del gioco negli eventi `Load` e `RenderFrame`.
-- Modificare il colore del triangolo quando l'utente preme un tasto nel `UpdateFrame` e `RenderFrame` eventi oppure creare una propria classe di `MonoMacGameView` personalizzata ed eseguire l'override dei metodi `KeyUp` e `KeyDown`.
-- Fare in modo che il triangolo si sposti sullo schermo usando le chiavi in grado di riconoscere nell'evento `UpdateFrame`. Hint: usare il metodo `Matrix4.CreateTranslation` per creare una matrice di traslazione e chiamare il metodo `GL.LoadMatrix` per caricarla nell'evento `RenderFrame`.
-- Usare un ciclo `for` per eseguire il rendering di diversi triangoli nell'evento `RenderFrame`.
-- Ruotare la fotocamera per fornire una visualizzazione diversa del triangolo nello spazio 3D. Hint: usare il metodo `Matrix4.CreateTranslation` per creare una matrice di traslazione e chiamare il metodo `GL.LoadMatrix` per caricarla. È anche possibile usare le classi `Vector2`, `Vector3`, `Vector4` e `Matrix4` per le manipolazioni della fotocamera.
+- Provare a modificare il colore del triangolo e il colore di sfondo della visualizzazione del gioco negli `Load` `RenderFrame` eventi e.
+- Modificare il colore del triangolo quando l'utente preme un tasto negli `UpdateFrame` eventi e `RenderFrame` o creare una `MonoMacGameView` classe personalizzata ed eseguire l'override dei `KeyUp` metodi e `KeyDown` .
+- Fare in modo che il triangolo si sposti sullo schermo usando le chiavi in grado di riconoscere nell' `UpdateFrame` evento. Hint: usare il `Matrix4.CreateTranslation` metodo per creare una matrice di traslazione e chiamare il `GL.LoadMatrix` metodo per caricarla nell' `RenderFrame` evento.
+- Usare un `for` ciclo per eseguire il rendering di diversi triangoli nell' `RenderFrame` evento.
+- Ruotare la fotocamera per fornire una visualizzazione diversa del triangolo nello spazio 3D. Hint: usare il `Matrix4.CreateTranslation` metodo per creare una matrice di traslazione e chiamare il `GL.LoadMatrix` metodo per caricarla. È anche possibile usare le `Vector2` `Vector3` classi, `Vector4` e `Matrix4` per le manipolazioni della fotocamera.
 
 Per altri esempi, vedere il repository [GitHub di OpenTK Samples](https://github.com/opentk/opentk/tree/master/Source/Examples) . Contiene un elenco ufficiale di esempi di uso di OpenTK. È necessario adattare questi esempi per l'uso di con la versione Novell. Mac di OpenTK.
 
 Per un esempio Novell. Mac più complesso di un'implementazione di OpenTK, vedere l'esempio [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) .
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha esaminato rapidamente l'uso di OpenTK in un'applicazione Novell. Mac. È stato illustrato come creare una finestra del gioco, come allinearla a una finestra Mac e come eseguire il rendering di una forma semplice nella finestra del gioco.
 

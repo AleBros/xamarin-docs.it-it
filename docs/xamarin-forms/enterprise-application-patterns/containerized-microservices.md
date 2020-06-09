@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139256"
+title: "microservizi in contenitori" Descrizione: "questo capitolo illustra come usare i microservizi e i contenitori per creare applicazioni cloud moderne agile, scalabili e affidabili".
+ms. prod: Novell MS. AssetID: 5872ad92-04e0-4f1a-9691-79d5602f5683 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="containerized-microservices"></a>Microservizi in contenitori
 
 Lo sviluppo di applicazioni client-server ha determinato la creazione di applicazioni a più livelli che usano tecnologie specifiche in ogni livello. Tali applicazioni sono spesso denominate applicazioni *monolitiche* e vengono assemblate in un pacchetto hardware pre-ridimensionato per i picchi di carico. Gli svantaggi principali di questo approccio di sviluppo sono l'accoppiamento stretto tra i componenti all'interno di ogni livello, che i singoli componenti non possono essere facilmente ridimensionati e il costo dei test. Un semplice aggiornamento può avere effetti imprevisti sul resto del livello e pertanto una modifica a un componente dell'applicazione richiede che l'intero livello venga ritestato e ridistribuito.
@@ -93,11 +79,9 @@ L'applicazione di riferimento eShopOnContainers USA Docker per ospitare quattro 
 
 L'architettura dei servizi back-end nell'applicazione di riferimento è scomposta in più sottosistemi autonomi sotto forma di collaborazione tra microservizi e contenitori. Ogni microservizio fornisce un'unica area di funzionalità: un servizio di identità, un servizio di catalogo, un servizio di ordinamento e un servizio basket.
 
-Ogni microservizio dispone di un proprio database, in modo che sia completamente separato dagli altri microservizi. Laddove necessario, la coerenza tra i database di diversi microservizi viene eseguita usando gli eventi a livello di applicazione. Per altre informazioni, vedere [comunicazione tra microservizi](#communication_between_microservices).
+Ogni microservizio dispone di un proprio database, in modo che sia completamente separato dagli altri microservizi. Laddove necessario, la coerenza tra i database di diversi microservizi viene eseguita usando gli eventi a livello di applicazione. Per altre informazioni, vedere [comunicazione tra microservizi](#communication-between-microservices).
 
 Per altre informazioni sull'applicazione di riferimento, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
-
-<a name="communication_between_client_and_microservices" />
 
 ## <a name="communication-between-client-and-microservices"></a>Comunicazione tra client e microservizi
 
@@ -111,8 +95,6 @@ Con la comunicazione da client a microservizio diretta, l'app per dispositivi mo
 
 > [!TIP]
 > Si consiglia di usare la comunicazione del gateway API. La comunicazione da client a microservizio diretta può presentare svantaggi quando si compila un'applicazione basata su microservizi di grandi dimensioni e complesse, ma è più che adeguata per una piccola applicazione. Quando si progetta un'applicazione basata su microservizi di grandi dimensioni con decine di microservizi, è consigliabile usare la comunicazione del gateway API. Per altre informazioni, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
-
-<a name="communication_between_microservices" />
 
 ## <a name="communication-between-microservices"></a>Comunicazione tra microservizi
 
@@ -147,7 +129,7 @@ Questo approccio di comunicazione uno-a-molti usa gli eventi per implementare tr
 
 Per informazioni sull'implementazione del bus di eventi, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 I microservizi offrono un approccio per lo sviluppo e la distribuzione di applicazioni, adatti ai requisiti di agilità, scalabilità e affidabilità delle applicazioni cloud moderne. Uno dei vantaggi principali dei microservizi è che è possibile scalare orizzontalmente in modo indipendente, il che significa che è possibile ridimensionare un'area funzionale specifica che richiede una maggiore potenza di elaborazione o larghezza di banda di rete per supportare la richiesta, senza inutilmente ridimensionare le aree dell'applicazione che non riscontrano una maggiore richiesta.
 

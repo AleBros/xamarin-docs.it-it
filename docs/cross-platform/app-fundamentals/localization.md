@@ -6,22 +6,22 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571071"
 ---
 # <a name="localization"></a>Localizzazione
 
-Questa guida presenta i concetti alla base dell' *internazionalizzazione* e della *localizzazione* e fornisce collegamenti alle istruzioni su come produrre applicazioni per dispositivi mobili Xamarin usando questi concetti.
+Questa guida presenta i concetti alla base dell' *internazionalizzazione* e della *localizzazione* e fornisce collegamenti alle istruzioni su come produrre applicazioni per dispositivi mobili Novell usando questi concetti.
 
-Se si vuole passare direttamente ai dettagli tecnici sulla localizzazione delle app Xamarin, iniziare con uno di questi articoli sulle procedure specifiche della piattaforma:
+Se si vuole passare direttamente ai dettagli tecnici sulla localizzazione delle app Novell, iniziare con uno di questi articoli sulle procedure specifiche della piattaforma:
 
-- Localizzazione multipiattaforma [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
-- Localizzazione della piattaforma nativa [**Xamarin.iOS**](~/ios/app-fundamentals/localization/index.md) .
-- Localizzazione della piattaforma nativa [**Xamarin.Android**](~/android/app-fundamentals/localization.md) .
+- Localizzazione multipiattaforma [**Novell. Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
+- Localizzazione della piattaforma nativa [**Novell. iOS**](~/ios/app-fundamentals/localization/index.md) .
+- Localizzazione della piattaforma nativa [**Novell. Android**](~/android/app-fundamentals/localization.md) .
 
 ## <a name="i18n-and-l10n"></a>i18n e l10n
 
@@ -45,9 +45,9 @@ Quando si progetta e si compila un'applicazione, è possibile che in precedenza 
 
 Indipendentemente dalle piattaforme mobili per cui l'app è destinata a questi suggerimenti, sarà possibile creare un'app localizzata di alta qualità.
 
-## <a name="design-considerations"></a>Considerazioni di progettazione
+## <a name="design-considerations"></a>Considerazioni sulla progettazione
 
-L'architettura di un'applicazione in modo che sia possibile localizzare il contenuto è detta internazionalizzazione. Una corretta internazionalizzazione è più che consentire il caricamento di stringhe di lingua diverse in fase di esecuzione. un'app ben progettata dovrebbe consentire la modifica di tutte le risorse in base alla lingua e alle impostazioni locali (incluse immagini, suoni e video) e può adattarsi formattazione e layout per gestire stringhe di dimensioni diverse.
+L'architettura di un'applicazione in modo che sia possibile localizzare il contenuto è detta internazionalizzazione. Una corretta internazionalizzazione è più che consentire il caricamento di stringhe di lingua diverse in fase di esecuzione. un'app ben progettata deve consentire la modifica di tutte le risorse in base alla lingua e alle impostazioni locali (incluse immagini, suoni e video) e può adattare la formattazione e il layout per gestire stringhe di dimensioni diverse.
 
 In questa sezione vengono illustrate alcune considerazioni di progettazione da tenere in considerazione quando si compila un'applicazione internazionalizzata.
 
@@ -110,7 +110,7 @@ double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 
 Per ulteriori informazioni, vedere gli articoli relativi all' [analisi di stringhe numeriche](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e di analisi di stringhe di [data e ora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) MSDN.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### <a name="right-to-left-rtl-languages"></a>Lingue da destra a sinistra (RTL)
 
@@ -122,7 +122,7 @@ Le applicazioni che supportano questi linguaggi devono usare le progettazioni de
 - La posizione predefinita del pulsante è in genere invertita.
 - La navigazione gerarchica e l'animazione (e altre metafore di navigazione e animazioni) che usano la direzione per il contesto dovrebbero anche essere invertite.
 
-IOS e Android supportano layout da destra a sinistra e rendering dei tipi di carattere, con funzionalità predefinite che consentono di apportare le regolazioni precedenti. Xamarin.Forms attualmente non supporta automaticamente il rendering RTL.
+IOS e Android supportano layout da destra a sinistra e rendering dei tipi di carattere, con funzionalità predefinite che consentono di apportare le regolazioni precedenti. Novell. Forms attualmente non supporta automaticamente il rendering RTL.
 
 ### <a name="sorting"></a>Ordinamento
 
@@ -141,7 +141,7 @@ Assicurarsi di scrivere e testare l'algoritmo di ricerca tenendo presenti più l
 - Stemming: se la ricerca è stata compilata per la ricerca di parole simili, radici di parole e altre ottimizzazioni di ricerca, queste ottimizzazioni sono compilate per tutti i linguaggi supportati?
 - Ordinamento: assicurarsi che i risultati siano ordinati correttamente (vedere sopra).
 
-### <a name="data-from-external-sources"></a>Dati da origini esterne
+### <a name="data-from-external-sources"></a>Dati da origini dati esterne
 
 Molte applicazioni scaricano i dati da origini esterne, da Twitter e feed RSS a Meteo, notizie o prezzi azionari. Quando viene visualizzato a un utente, è necessario considerare la possibilità che venga visualizzata una schermata di informazioni irrilevanti o illeggibili.
 
@@ -151,11 +151,11 @@ Esistono alcune strategie che è possibile usare per provare a verificare che l'
 - Visualizzazione localizzata: se si visualizza un feed Twitter o Photo, è necessario visualizzare i metadati (ad esempio il tempo impiegato) nella propria lingua, anche se il contenuto rimane nella lingua originale.
 - Traduzione: è possibile creare un'opzione di conversione nell'app per eseguire una traduzione automatica dei dati in arrivo. Questo potrebbe essere automatico o a discrezione dell'utente. è sufficiente assicurarsi di inviare una notifica all'utente in caso di avvenuta esecuzione, perché le traduzioni dei computer non sono mai perfette.
 
-Questo può anche influire sui collegamenti esterni a tracce audio o video: quando si progetta l'applicazione, assicurarsi di pianificare in anticipo il contenuto tradotto per l'approvvigionamento o garantire che gli utenti siano informati adeguatamente dall'interfaccia utente quando il contenuto non verrà presentato nei linguaggio.
+Questo può anche influire sui collegamenti esterni alle tracce audio o ai video: quando si progetta l'applicazione, assicurarsi di pianificare in anticipo il contenuto tradotto per l'approvvigionamento o garantire che gli utenti siano adeguatamente informati dall'interfaccia utente quando il contenuto non verrà presentato nella propria lingua.
 
 ### <a name="dont-over-translate"></a>Non superare la traduzione
 
-È possibile che alcune stringhe nell'app non debbano essere trascinate o che debbano almeno richiedere particolare attenzione da parte del traduttore. Gli esempi possono includere:
+È possibile che alcune stringhe nell'app non debbano essere trascinate o che debbano almeno richiedere particolare attenzione da parte del traduttore. Ecco alcuni esempi:
 
 - URL: se si elenca un URL, è possibile che non sia necessario modificarlo in base alla lingua. Ad esempio, facebook.com non richiede la traduzione automatica rileva la lingua nel sito principale. Altri siti hanno contenuto specifico delle impostazioni locali ed è consigliabile offrire un URL diverso, ad esempio yahoo.com rispetto a yahoo.fr o yahoo.it.
 - Numeri di telefono, soprattutto quelli con codici paese o numeri diversi per i chiamanti che parlano una determinata lingua.
@@ -166,7 +166,7 @@ Infine, assicurarsi di includere istruzioni dettagliate per il traduttore se det
 
 ### <a name="formatted-text"></a>Testo formattato
 
-In genere non è un problema con le app per dispositivi mobili perché le stringhe non sono in genere formattate. Tuttavia, se nell'app è necessario un testo RTF, ad esempio la formattazione in grassetto o in corsivo, assicurarsi che il traduttore sappia come inserire la formattazione, i file di stringhe lo archivino correttamente e formattati correttamente prima di essere visualizzati all'utente (ad esempio, non consentire accidentalmente i codici di formattazione vengono presentati all'utente.
+In genere non è un problema con le app per dispositivi mobili perché le stringhe non sono in genere formattate. Tuttavia, se nell'app è necessario un testo RTF, ad esempio in grassetto o in corsivo, assicurarsi che il traduttore sappia come inserire la formattazione, i file di stringhe lo archivino correttamente e formattati correttamente prima di essere visualizzati all'utente (ad esempio, non lasciare inavvertitamente i codici di formattazione che vengono presentati all'utente).
 
 ## <a name="translation-tips"></a>Suggerimenti per la traduzione
 
@@ -235,7 +235,7 @@ Sarà necessario scrivere il codice nell'app per valutare il numero visualizzato
 
 Le lingue basate su Latin a volte usano parole diverse a seconda del sesso dell'oggetto. Se l'app è a conoscenza del sesso, è necessario consentire alle stringhe tradotte di riflettere questo problema.
 
-Esiste anche il caso più ovvio anche in inglese, in cui le stringhe si riferiscono a una persona o a un utente specifico dell'app. Alcuni siti, ad esempio, visualizzano messaggi come `"Bob commented on his post"` pertanto è necessario disporre di stringhe sia per sesso maschile, femminile che non binario o sconosciuto:
+Esiste anche il caso più ovvio anche in inglese, in cui le stringhe si riferiscono a una persona o a un utente specifico dell'app. Alcuni siti, ad esempio, visualizzano messaggi come, `"Bob commented on his post"` pertanto è necessario disporre di stringhe sia per sesso maschio, femminile che non binario o sconosciuto:
 
 **Valido**:
 
@@ -281,17 +281,17 @@ Ci sono anche servizi di traduzione professionale che porteranno le tue stringhe
 
 Uno dei servizi più noti è [Lionbridge](https://www.lionbridge.com/). La maggior parte dei servizi professionali supporta tutti i tipi di file comuni, tra cui stringhe, XML, RESX e POT/PO.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo sono stati introdotti alcuni dei concetti che è necessario conoscere prima di internazionalizzazione l'app e quindi la localizzazione delle risorse e viene anche illustrato come modificare le preferenze della lingua per ogni piattaforma.
 
-Questi concetti possono essere applicati alle varie tecniche di internazionalizzazione specifiche della piattaforma e tra piattaforme possibili con Xamarin.
+Questi concetti possono essere applicati alle varie tecniche di internazionalizzazione specifiche della piattaforma e tra piattaforme possibili con Novell.
 
 Continua a leggere i dettagli tecnici per la piattaforma a cui sei interessato:
 
-- Localizzazione multipiattaforma [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
-- Localizzazione della piattaforma nativa [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) .
-- Localizzazione della piattaforma nativa [Xamarin.Android](~/android/app-fundamentals/localization.md) .
+- Localizzazione multipiattaforma [Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
+- Localizzazione della piattaforma nativa [Novell. iOS](~/ios/app-fundamentals/localization/index.md) .
+- Localizzazione della piattaforma nativa [Novell. Android](~/android/app-fundamentals/localization.md) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

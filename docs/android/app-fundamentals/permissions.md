@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3204180ed28e98e52c4f0772ecb37a5353736acb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292364"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570333"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Novell. Android
 
 ## <a name="overview"></a>Panoramica
 
-Le applicazioni Android vengono eseguite nella propria sandbox e, per motivi di sicurezza, non hanno accesso a determinate risorse di sistema o hardware nel dispositivo. L'utente deve concedere in modo esplicito l'autorizzazione all'app prima di poter usare queste risorse. Ad esempio, un'applicazione non può accedere al GPS su un dispositivo senza autorizzazione esplicita da parte dell'utente. Android genererà un `Java.Lang.SecurityException` se un'app tenta di accedere a una risorsa protetta senza autorizzazione.
+Le applicazioni Android vengono eseguite nella propria sandbox e, per motivi di sicurezza, non hanno accesso a determinate risorse di sistema o hardware nel dispositivo. L'utente deve concedere in modo esplicito l'autorizzazione all'app prima di poter usare queste risorse. Ad esempio, un'applicazione non può accedere al GPS su un dispositivo senza autorizzazione esplicita da parte dell'utente. Android genererà un'operazione `Java.Lang.SecurityException` se un'app tenta di accedere a una risorsa protetta senza autorizzazione.
 
 Le autorizzazioni vengono dichiarate in **file AndroidManifest. XML** dallo sviluppatore dell'applicazione quando l'app viene sviluppata. Android dispone di due flussi di lavoro diversi per ottenere il consenso dell'utente per le autorizzazioni seguenti:
 
@@ -28,19 +28,19 @@ Le autorizzazioni vengono dichiarate in **file AndroidManifest. XML** dallo svil
 
 Le app Android devono verificare in fase di esecuzione per verificare se sono autorizzati ad accedere a una risorsa protetta. Se l'app non dispone delle autorizzazioni necessarie, deve effettuare richieste usando le nuove API fornite dal Android SDK per consentire all'utente di concedere le autorizzazioni. Le autorizzazioni sono divise in due categorie:
 
-- Le **normali autorizzazioni** &ndash; si tratta di autorizzazioni che comportano un rischio di sicurezza limitato per la sicurezza o la privacy dell'utente. Android 6,0 concederà automaticamente le autorizzazioni normali al momento dell'installazione. Per un [elenco completo delle autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html), vedere la documentazione di Android.
-- Le autorizzazioni **pericolose** &ndash; diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere concesse in modo esplicito dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
+- **Normali autorizzazioni** &ndash; Si tratta di autorizzazioni che comportano un minor rischio di sicurezza per la sicurezza o la privacy dell'utente. Android 6,0 concederà automaticamente le autorizzazioni normali al momento dell'installazione. Per un [elenco completo delle autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html), vedere la documentazione di Android.
+- **Autorizzazioni pericolose** &ndash; Diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere concesse in modo esplicito dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
 
 > [!IMPORTANT]
 > La categoria a cui appartiene un'autorizzazione può cambiare nel tempo.  È possibile che un'autorizzazione che è stata categorizzata come "normale" possa essere elevata nei livelli API futuri in un'autorizzazione pericolosa.
 
-Le autorizzazioni pericolose sono ulteriormente suddivise in [_gruppi di autorizzazioni_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups). Un gruppo di autorizzazioni conterrà le autorizzazioni correlate logicamente. Quando l'utente concede l'autorizzazione a un membro di un gruppo di autorizzazioni, Android concede automaticamente l'autorizzazione a tutti i membri di tale gruppo. Il gruppo di autorizzazioni [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) , ad esempio, include le autorizzazioni `WRITE_EXTERNAL_STORAGE` e `READ_EXTERNAL_STORAGE`. Se l'utente concede l'autorizzazione per la `READ_EXTERNAL_STORAGE`, l'autorizzazione `WRITE_EXTERNAL_STORAGE` viene concessa automaticamente nello stesso momento.
+Le autorizzazioni pericolose sono ulteriormente suddivise in [_gruppi di autorizzazioni_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups). Un gruppo di autorizzazioni conterrà le autorizzazioni correlate logicamente. Quando l'utente concede l'autorizzazione a un membro di un gruppo di autorizzazioni, Android concede automaticamente l'autorizzazione a tutti i membri di tale gruppo. Il gruppo di autorizzazioni, ad esempio, [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) include entrambe le `WRITE_EXTERNAL_STORAGE` `READ_EXTERNAL_STORAGE` autorizzazioni e. Se l'utente concede l'autorizzazione a `READ_EXTERNAL_STORAGE` , l' `WRITE_EXTERNAL_STORAGE` autorizzazione viene concessa automaticamente nello stesso momento.
 
 Prima di richiedere una o più autorizzazioni, è consigliabile fornire una spiegazione razionale del motivo per cui l'applicazione richiede l'autorizzazione prima di richiedere l'autorizzazione. Quando l'utente riconosce la logica, l'app può richiedere l'autorizzazione all'utente. Comprendendo la logica, l'utente può prendere una decisione consapevole se desidera concedere l'autorizzazione e comprendere le ripercussioni in caso contrario. 
 
 L'intero flusso di lavoro per la verifica e la richiesta delle autorizzazioni è noto come controllo _delle autorizzazioni di run-time_ e può essere riepilogato nel diagramma seguente: 
 
-[grafico del flusso di controllo delle autorizzazioni di runtime ![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
+[![Grafico del flusso di controllo delle autorizzazioni in fase di esecuzione](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 La libreria di supporto Android consente di eseguire il backporting di alcune delle nuove API per le autorizzazioni per le versioni precedenti di Android. Queste API sottoportate controlleranno automaticamente la versione di Android nel dispositivo, pertanto non è necessario eseguire ogni volta un controllo a livello di API.  
 
@@ -49,7 +49,7 @@ Questo documento illustra come aggiungere autorizzazioni a un'applicazione Novel
 > [!NOTE]
 > È possibile che le autorizzazioni per l'hardware possano influenzare il modo in cui l'app viene filtrata in base Google Play. Ad esempio, se l'app richiede l'autorizzazione per la fotocamera, Google Play non visualizzerà l'app nella Google Play Store su un dispositivo in cui non è installata una fotocamera.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## <a name="requirements"></a>Requisiti
 
@@ -66,7 +66,7 @@ Le app destinate a Android 6,0 o versione successiva non possono presupporre che
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Dichiarazione delle autorizzazioni nel manifesto
 
-Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'elemento `uses-permission`. Se, ad esempio, un'applicazione è in grado di individuare la posizione del dispositivo, sono necessarie le autorizzazioni per percorsi accurati e dei corsi. Al manifesto vengono aggiunti i due elementi seguenti: 
+Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l' `uses-permission` elemento. Se, ad esempio, un'applicazione è in grado di individuare la posizione del dispositivo, sono necessarie le autorizzazioni per percorsi accurati e dei corsi. Al manifesto vengono aggiunti i due elementi seguenti: 
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -81,44 +81,44 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l'element
 
 1. Fare doppio clic su **Proprietà** nel **Esplora soluzioni** e selezionare la scheda **manifesto Android** nel finestra Proprietà:
 
-    [![le autorizzazioni necessarie nella scheda Manifesto Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
+    [![Autorizzazioni necessarie nella scheda Manifesto Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. Se l'applicazione non dispone già di un file file AndroidManifest. XML, fare clic su non è stato **trovato alcun file AndroidManifest. XML. Fare clic per aggiungere uno** come illustrato di seguito:
 
-    [![nessun messaggio file AndroidManifest. XML](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
+    [![Nessun messaggio file AndroidManifest. XML](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Selezionare le autorizzazioni necessarie per l'applicazione dall'elenco di **autorizzazioni necessarie** e salvare:
 
-    [![le autorizzazioni della fotocamera di esempio selezionate](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
+    [![Autorizzazioni della fotocamera di esempio selezionate](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 È possibile dichiarare le autorizzazioni utilizzando il supporto dello strumento incorporato in Visual Studio per Mac:
 
-1. Fare doppio clic sul progetto nel **riquadro della soluzione** e selezionare **opzioni > Compila > applicazione Android**:
+1. Fare doppio clic sul progetto nel **riquadro della soluzione** e selezionare **opzioni > compila > applicazione Android**:
 
-    [![sezione autorizzazioni necessarie visualizzata](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
+    [![Sezione autorizzazioni necessarie visualizzata](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Fare clic sul pulsante **Aggiungi manifesto Android** se il progetto non dispone già di un **file AndroidManifest. XML**:
 
-    [![manca il manifesto Android del progetto](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
+    [![Il manifesto Android del progetto è mancante](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Selezionare le autorizzazioni necessarie per l'applicazione dall'elenco **delle autorizzazioni necessarie** e fare clic su **OK**:
 
-    [![le autorizzazioni della fotocamera di esempio selezionate](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
+    [![Autorizzazioni della fotocamera di esempio selezionate](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
-Novell. Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, vengono `INTERNET` e `READ_EXTERNAL_STORAGE`due autorizzazioni rilevanti. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
+Novell. Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, due autorizzazioni rilevanti sono `INTERNET` e `READ_EXTERNAL_STORAGE` . Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
 
 Per le app destinate a Android 5.1 (livello API 22) o inferiore, non è necessario eseguire altre operazioni. Le app che verranno eseguite in Android 6,0 (API 23 Level 23) o versioni successive dovrebbero passare alla sezione successiva su come eseguire i controlli delle autorizzazioni in fase di esecuzione. 
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Controlli delle autorizzazioni di runtime in Android 6,0
 
-Il metodo `ContextCompat.CheckSelfPermission` (disponibile con la libreria di supporto Android) viene usato per verificare se è stata concessa un'autorizzazione specifica. Questo metodo restituirà un [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum con uno dei due valori seguenti:
+Il `ContextCompat.CheckSelfPermission` metodo, disponibile con la libreria di supporto Android, viene usato per verificare se è stata concessa un'autorizzazione specifica. Questo metodo restituirà un' [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enumerazione con uno dei due valori seguenti:
 
-- **`Permission.Granted`** &ndash; è stata concessa l'autorizzazione specificata.
-- **`Permission.Denied`** &ndash; non è stata concessa l'autorizzazione specificata.
+- **`Permission.Granted`**&ndash;È stata concessa l'autorizzazione specificata.
+- **`Permission.Denied`**&ndash;L'autorizzazione specificata non è stata concessa.
 
 Questo frammento di codice è un esempio di come verificare l'autorizzazione della fotocamera in un'attività: 
 
@@ -135,15 +135,15 @@ else
 
 È consigliabile informare l'utente del motivo per cui un'autorizzazione è necessaria per un'applicazione in modo da poter prendere una decisione informata per concedere l'autorizzazione. Un esempio è costituito da un'app che prende le foto e i tag geografici. È chiaro per l'utente che l'autorizzazione della fotocamera è necessaria, ma potrebbe non essere chiaro perché l'app necessita anche del percorso del dispositivo. La logica dovrebbe visualizzare un messaggio per consentire all'utente di comprendere il motivo per cui l'autorizzazione per la posizione è auspicabile e che l'autorizzazione della fotocamera sia obbligatoria.
 
-Il metodo `ActivityCompat.ShouldShowRequestPermissionRationale` viene usato per determinare se la logica deve essere visualizzata all'utente. Questo metodo restituirà `true` se deve essere visualizzata la logica per una data autorizzazione. Questo screenshot mostra un esempio di snackbar visualizzato da un'applicazione che spiega perché l'app deve conoscerne il percorso:
+Il `ActivityCompat.ShouldShowRequestPermissionRationale` metodo viene utilizzato per determinare se l'oggetto razionale deve essere visualizzato all'utente. Questo metodo restituirà `true` se deve essere visualizzata la logica per un'autorizzazione specificata. Questo screenshot mostra un esempio di snackbar visualizzato da un'applicazione che spiega perché l'app deve conoscerne il percorso:
 
 ![Spiegazione razionale per la posizione](permissions-images/07-rationale-snackbar.png) 
 
-Se l'utente concede l'autorizzazione, è necessario chiamare il metodo `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)`. Questo metodo richiede i parametri seguenti:
+Se l'utente concede l'autorizzazione, `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` è necessario chiamare il metodo. Questo metodo richiede i parametri seguenti:
 
-- **attività** &ndash; questa è l'attività che richiede le autorizzazioni e deve essere aggiornata da Android dei risultati.
-- **autorizzazioni** &ndash; un elenco delle autorizzazioni richieste.
-- **requestCode** &ndash; un valore integer utilizzato per trovare la corrispondenza con i risultati della richiesta di autorizzazione a una chiamata di `RequestPermissions`. Questo valore deve essere maggiore di zero.
+- **attività** &ndash; di Si tratta dell'attività che richiede le autorizzazioni e deve essere aggiornata da Android dei risultati.
+- **autorizzazioni** &ndash; Elenco delle autorizzazioni richieste.
+- **requestCode** &ndash; Valore intero utilizzato per associare i risultati della richiesta di autorizzazione a una `RequestPermissions` chiamata. Questo valore deve essere maggiore di zero.
 
 Questo frammento di codice è un esempio dei due metodi illustrati. In primo luogo, viene eseguito un controllo per determinare se deve essere visualizzata la logica di autorizzazione. Se la logica deve essere mostrata, viene visualizzata una snackbar con la logica. Se l'utente fa clic su **OK** nel snackbar, l'app richiederà le autorizzazioni. Se l'utente non accetta la logica, l'app non deve continuare a richiedere le autorizzazioni. Se la logica non viene visualizzata, l'attività richiederà l'autorizzazione:
 
@@ -172,11 +172,11 @@ else
 }
 ```
 
-`RequestPermission` può essere chiamato anche se l'utente ha già concesso l'autorizzazione. Le chiamate successive non sono necessarie, ma forniscono all'utente la possibilità di confermare o revocare l'autorizzazione. Quando viene chiamato `RequestPermission`, il controllo viene passato al sistema operativo, che visualizzerà un'interfaccia utente per l'accettazione delle autorizzazioni:  
+`RequestPermission`può essere chiamato anche se l'utente ha già concesso l'autorizzazione. Le chiamate successive non sono necessarie, ma forniscono all'utente la possibilità di confermare o revocare l'autorizzazione. Quando `RequestPermission` viene chiamato, il controllo viene passato al sistema operativo, che visualizzerà un'interfaccia utente per l'accettazione delle autorizzazioni:  
 
 ![Finestra di dialogo permssion](permissions-images/08-location-permission-dialog.png)
 
-Al termine dell'utente, Android restituirà i risultati all'attività tramite un metodo di callback `OnRequestPermissionResult`. Questo metodo fa parte dell'interfaccia `ActivityCompat.IOnRequestPermissionsResultCallback` che deve essere implementata dall'attività. Questa interfaccia ha un solo metodo, `OnRequestPermissionsResult`, che verrà richiamato da Android per informare l'attività delle scelte dell'utente. Se l'utente ha concesso l'autorizzazione, l'app può continuare a usare la risorsa protetta. Di seguito è riportato un esempio di come implementare `OnRequestPermissionResult`: 
+Al termine dell'utente, Android restituirà i risultati all'attività tramite un metodo di callback `OnRequestPermissionResult` . Questo metodo è una parte dell'interfaccia `ActivityCompat.IOnRequestPermissionsResultCallback` che deve essere implementata dall'attività. Questa interfaccia ha un singolo metodo, `OnRequestPermissionsResult` , che verrà richiamato da Android per informare l'attività delle scelte dell'utente. Se l'utente ha concesso l'autorizzazione, l'app può continuare a usare la risorsa protetta. Un esempio di come implementare `OnRequestPermissionResult` è illustrato di seguito: 
 
 ```csharp
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
@@ -205,7 +205,7 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questa guida ha illustrato come aggiungere e verificare le autorizzazioni in un dispositivo Android. Le differenze nella modalità di funzionamento delle autorizzazioni tra le app Android precedenti (livello API < 23) e le nuove app Android (livello API > 22). È stato illustrato come eseguire i controlli delle autorizzazioni di run-time in Android 6,0.
 

@@ -1,18 +1,18 @@
 ---
 title: Test sui dispositivi Apple Watch
-description: Questo documento descrive come distribuire un'app watchos compilata con Xamarin per il testing in un Apple Watch effettivo. Vengono illustrati i dispositivi, i profili di provisioning, i test e vengono forniti alcuni suggerimenti per la risoluzione dei problemi.
+description: Questo documento descrive come distribuire un'app watchos compilata con Novell per il testing in un Apple Watch effettivo. Vengono illustrati i dispositivi, i profili di provisioning, i test e vengono forniti alcuni suggerimenti per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: cbbf8194505e9caa09587471020026d495f9f99b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028358"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569700"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Test sui dispositivi Apple Watch
 
@@ -22,7 +22,7 @@ Dopo aver seguito la [procedura di distribuzione](~/ios/watchos/deploy-test/inde
 - [Creare i profili di provisioning di sviluppo](#profiles), quindi
 - [Distribuire e testare](#testing) in un Apple Watch.
 
-<a name="devices" />
+<a name="devices"></a>
 
 ## <a name="devices"></a>Dispositivi
 
@@ -44,7 +44,7 @@ Quando il dispositivo di controllo è stato aggiunto, assicurarsi che sia selezi
 
 Non dimenticare se si modifica un profilo di provisioning esistente per scaricare e reinstallare.
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## <a name="development-provisioning-profiles"></a>Profili di provisioning di sviluppo
 
@@ -64,7 +64,7 @@ L'elenco **profilo di provisioning** mostrerà tutti i profili corrispondenti. v
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-on-a-watch-device"></a>Test su un dispositivo di controllo
 
@@ -87,7 +87,7 @@ Dopo aver configurato il dispositivo, gli ID app e i profili di provisioning, si
 
 8. Se l'app Watch viene installata correttamente, l'icona rimarrà visualizzata nella schermata di controllo per iniziare a testare l'app.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Se si verifica un errore durante la distribuzione, usare la **vista > i rilievi > log del dispositivo** per visualizzare altre informazioni sull'errore. Di seguito sono elencati alcuni errori e le relative cause:
 
@@ -95,7 +95,7 @@ Se si verifica un errore durante la distribuzione, usare la **vista > i rilievi 
 
 Questo problema può verificarsi durante la compilazione in modalità di DEBUG per la distribuzione in un dispositivo Apple Watch.
 
-Per risolvere *temporaneamente* questo problema, disabilitare le **compilazioni incrementali** nelle opzioni del progetto dell'estensione Watch **> Compila > finestra di compilazione watchos** :
+Per risolvere *temporaneamente* questo problema, disabilitare le **compilazioni incrementali** nelle opzioni del progetto dell'estensione Watch **> compila > finestra di compilazione watchos** :
 
 [![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
 
@@ -120,7 +120,7 @@ Se questi messaggi vengono visualizzati *nella schermata di controllo* dopo che 
 
 - I profili di provisioning di sviluppo usati per i test non hanno incluso il dispositivo Watch; in alternativa, dopo che l'espressione di controllo è stata aggiunta ai profili di provisioning, non è stato nuovamente scaricato e reinstallato. Seguire le istruzioni per [configurare correttamente i profili di provisioning](#profiles).
 
-- Se il **log del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3`, il valore **MinimumOSVersion** dell'app Watch **. plist** non è corretto.
+- Se il **log del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , il valore **MinimumOSVersion** dell'app Watch **. plist** non è corretto.
   Dovrebbe essere **8,2** : se è stato installato Xcode 6,3, potrebbe essere necessario modificare manualmente il codice sorgente per inserirlo in 8,2.
 
 - Il titolo dell'app Watch **. plist** non dispone correttamente di un diritto abilitato, ad esempio gruppi di app, che non deve avere.

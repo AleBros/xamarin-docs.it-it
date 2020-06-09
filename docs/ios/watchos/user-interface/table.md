@@ -1,22 +1,22 @@
 ---
-title: Controlli tabella watchos in Xamarin
-description: Questo documento descrive come usare i controlli tabella watchos in Xamarin. Viene illustrata l'aggiunta di una tabella, l'aggiunta di un controller di riga, la creazione e il popolamento di righe, la risposta ai tocchi e altro ancora.
+title: Controlli tabella watchos in Novell
+description: Questo documento descrive come usare i controlli tabella watchos in Novell. Viene illustrata l'aggiunta di una tabella, l'aggiunta di un controller di riga, la creazione e il popolamento di righe, la risposta ai tocchi e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032671"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572261"
 ---
-# <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Xamarin
+# <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Novell
 
-Il controllo `WKInterfaceTable` watchos è molto più semplice rispetto alla controparte iOS, ma esegue un ruolo simile. Viene creato un elenco scorrevole di righe che possono avere layout personalizzati e che rispondono agli eventi di tocco.
+Il controllo watchos `WKInterfaceTable` è molto più semplice rispetto alla relativa controparte iOS, ma esegue un ruolo simile. Viene creato un elenco scorrevole di righe che possono avere layout personalizzati e che rispondono agli eventi di tocco.
 
 ![](table-images/table-list-sml.png "Elenco tabella espressioni di controllo") ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
@@ -37,11 +37,11 @@ Per impostare la **classe** per il controller di riga, selezionare la riga nella
 
 [![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
 
-Una volta impostata la classe per il controller della riga, l'IDE creerà un file corrispondente C# nel progetto. Trascinare i controlli (ad esempio le etichette) nella riga e assegnare loro i nomi in modo che possano essere definiti nel codice.
+Una volta impostata la classe per il controller della riga, l'IDE creerà un file C# corrispondente nel progetto. Trascinare i controlli (ad esempio le etichette) nella riga e assegnare loro i nomi in modo che possano essere definiti nel codice.
 
 ## <a name="create-and-populate-rows"></a>Creazione e popolamento di righe
 
-`SetNumberOfRows` crea le classi del controller di riga per ogni riga, usando il `Identifier` per selezionare quella corretta. Se il controller di riga è stato assegnato a un `Identifier` personalizzato, modificare il **valore predefinito** nel frammento di codice riportato di seguito nell'identificatore utilizzato. Il `RowController` *per ogni riga* viene creato quando viene chiamato `SetNumberOfRows` e la tabella viene visualizzata.
+`SetNumberOfRows`Crea le classi del controller di riga per ogni riga, utilizzando `Identifier` per selezionare quella corretta. Se è stato assegnato il controller di riga a un oggetto personalizzato `Identifier` , modificare il **valore predefinito** nel frammento di codice riportato di seguito nell'identificatore usato. `RowController` *Per ogni riga* viene creato quando `SetNumberOfRows` viene chiamato il metodo e la tabella viene visualizzata.
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -51,7 +51,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 > [!IMPORTANT]
 > Le righe della tabella non sono virtualizzate come sono in iOS. Provare a limitare il numero di righe (Apple consiglia meno di 20).
 
-Una volta create le righe, è necessario popolare ogni cella, ad esempio `GetCell` in iOS. Questo frammento di codice dell' [esempio WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) aggiorna l'etichetta in ogni riga
+Una volta create le righe, è necessario popolare ogni cella (ad esempio, `GetCell` in iOS). Questo frammento di codice dell' [esempio WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) aggiorna l'etichetta in ogni riga
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -61,18 +61,18 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> Se si utilizza `SetNumberOfRows` e quindi si esegue il ciclo utilizzando `GetRowController`, l'intera tabella verrà inviata all'espressione di controllo. Nelle visualizzazioni successive della tabella, se è necessario aggiungere o rimuovere righe specifiche, utilizzare `InsertRowsAt` e `RemoveRowsAt` per ottenere prestazioni migliori.
+> Se si usa `SetNumberOfRows` e quindi si esegue il ciclo usando, `GetRowController` l'intera tabella viene inviata all'espressione di controllo. Nelle visualizzazioni successive della tabella, se è necessario aggiungere o rimuovere righe specifiche, utilizzare `InsertRowsAt` e `RemoveRowsAt` per ottenere prestazioni migliori.
 
 ## <a name="respond-to-taps"></a>Rispondi ai rubinetti
 
 È possibile rispondere alla selezione delle righe in due modi diversi:
 
-- implementare il metodo `DidSelectRow` sul controller di interfaccia oppure
+- implementare il `DidSelectRow` metodo sul controller di interfaccia oppure
 - creare un segue nello storyboard e implementare `GetContextForSegue` se si desidera che la selezione delle righe apra un'altra scena.
 
 ### <a name="didselectrow"></a>DidSelectRow
 
-Per gestire la selezione delle righe a livello di codice, implementare il metodo `DidSelectRow`. Per aprire una nuova scena, usare `PushController` e passare l'identificatore della scena e il contesto dei dati da usare:
+Per gestire la selezione delle righe a livello di codice, implementare il `DidSelectRow` metodo. Per aprire una nuova scena, usare `PushController` e passare l'identificatore della scena e il contesto dei dati da usare:
 
 ```csharp
 public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
@@ -89,7 +89,7 @@ public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 Trascinare un segue nello storyboard dalla riga della tabella in un'altra scena (tenendo premuto il tasto **CTRL** durante il trascinamento).
 Assicurarsi di selezionare il segue e assegnargli un identificatore nel riquadro delle **Proprietà** , ad esempio `secondLevel` nell'esempio riportato di seguito.
 
-Nel controller di interfaccia implementare il metodo `GetContextForSegue` e restituire il contesto dei dati che deve essere fornito alla scena presentata da segue.
+Nel controller di interfaccia implementare il `GetContextForSegue` metodo e restituire il contesto dei dati che deve essere fornito alla scena presentata da segue.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier, WKInterfaceTable table, nint rowIndex)
@@ -101,7 +101,7 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 }
 ```
 
-Questi dati vengono passati alla scena dello storyboard di destinazione nel metodo `Awake`.
+Questi dati vengono passati alla scena dello storyboard di destinazione nel relativo `Awake` metodo.
 
 ## <a name="multiple-row-types"></a>Tipi di riga multipli
 
@@ -113,7 +113,7 @@ Se si imposta la proprietà **Rows** su **3** , vengono creati segnaposto di rig
 
 ![](table-images/prototype-rows2.png "The prototype rows in the designer")
 
-Per popolare una tabella con tipi di riga diversi, utilizzare il metodo `SetRowTypes` per specificare il tipo di controller di riga da utilizzare per ogni riga della tabella. Usare gli identificatori della riga per specificare il controller di riga da usare per ogni riga.
+Per popolare una tabella con tipi di riga diversi, utilizzare il `SetRowTypes` metodo per specificare il tipo di controller di riga da utilizzare per ogni riga della tabella. Usare gli identificatori della riga per specificare il controller di riga da usare per ogni riga.
 
 Il numero di elementi in questa matrice deve corrispondere al numero di righe che si prevede siano nella tabella:
 
@@ -147,13 +147,13 @@ watchos 3 ha introdotto una nuova funzionalità per le tabelle: la possibilità 
 > [!IMPORTANT]
 > Questa funzionalità è attualmente disponibile solo modificando lo storyboard in Xcode Interface Builder.
 
-Per abilitare questa funzionalità, selezionare il `WKInterfaceTable` nell'area di progettazione e selezionare l'opzione di **paging verticale dei dettagli** :
+Per abilitare questa funzionalità, selezionarla nell' `WKInterfaceTable` area di progettazione e selezionare l'opzione di **paging verticale dei dettagli** :
 
 ![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
 
-Come [spiegato da Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) , l'esplorazione della tabella deve usare gli elementi segue per il funzionamento della funzionalità di paging. Riscrivere il codice esistente che usa `PushController` per usare invece gli elementi segue.
+Come [spiegato da Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) , l'esplorazione della tabella deve usare gli elementi segue per il funzionamento della funzionalità di paging. Riscrivere il codice esistente che usa `PushController` per usare gli elementi segue.
 
-<a name="add_row_controller" />
+<a name="add_row_controller"></a>
 
 ## <a name="appendix-row-controller-code-example"></a>Appendice: esempio di codice di un controller di riga
 
@@ -176,7 +176,7 @@ namespace WatchTablesExtension
 }
 ```
 
-L'altro file con **estensione designer.cs** è una definizione di classe parziale che contiene gli Outlet e le azioni creati nell'area di progettazione, ad esempio questo esempio con un controllo `WKInterfaceLabel`:
+L'altro file con **estensione designer.cs** è una definizione di classe parziale che contiene gli Outlet e le azioni creati nell'area di progettazione, ad esempio questo esempio con un `WKInterfaceLabel` controllo:
 
 ```csharp
 using Foundation;

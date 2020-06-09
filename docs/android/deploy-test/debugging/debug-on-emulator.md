@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 36538435066bc94a81f6449774718afe9a5ce7d7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75556522"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571987"
 ---
-# <a name="debug-on-the-android-emulator"></a>Debug on the Android Emulator
+# <a name="debug-on-the-android-emulator"></a>Eseguire il debug nel emulatore Android
 
 _Questa guida contiene informazioni su come avviare un dispositivo virtuale nell'emulatore Android per eseguire il debug e il test dell'app._
 
@@ -40,7 +40,7 @@ In genere, per le attività di test e debug di un'app per il telefono si selezio
 
 Se il progetto Xamarin.Android usa un livello di framework di destinazione non compatibile con i dispositivi virtuali disponibili, nel menu a discesa vengono elencati i dispositivi virtuali inutilizzabili in **Dispositivi non supportati**. Ad esempio, per il progetto seguente è impostato il framework di destinazione **Android 7.1 Nougat (API 25)**, non compatibile con i dispositivi virtuali **Android 6.0** elencati in questo esempio:
 
-[![Dispositivo virtuale incompatibile](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
+[![Dispositivo virtuale non compatibile](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
 
 È possibile fare clic su **Cambia destinazione minima di Android** per modificare la versione minima di Android del progetto in modo che corrisponda al livello API dei dispositivi virtuali disponibili. In alternativa, è possibile usare [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) per creare nuovi dispositivi virtuali che supportano il livello API di destinazione.
 Prima di poter configurare i dispositivi virtuali per un nuovo livello API, è necessario installare le immagini di sistema corrispondenti per tale livello API (vedere [Configurazione di Android SDK per Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
@@ -63,7 +63,7 @@ Per le attività di test e debug di un'app per telefono, viene in genere selezio
 
 Per modificare i dispositivi virtuali (o crearne di nuovi), occorre usare [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-<a name="launching" />
+<a name="launching"></a>
 
 ## <a name="launching-the-emulator"></a>Avvio dell'emulatore
 
@@ -71,11 +71,11 @@ Nella parte superiore di Visual Studio è disponibile un menu a discesa che cons
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Modalità debug e di rilascio, pulsante Riproduci](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
+[![Modalità di debug e rilascio, pulsante Riproduci](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Modalità debug e di rilascio, pulsante Riproduci](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
+[![Modalità di debug e rilascio, pulsante Riproduci](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 
@@ -85,7 +85,7 @@ Dopo l'avvio dell'emulatore, Xamarin.Android distribuirà l'app nell'emulatore. 
 
 L'emulatore può essere lasciato in esecuzione: non è necessario arrestarlo e attenderne il riavvio ogni volta che si avvia l'app. Alla prima esecuzione di un'app Xamarin.Android nell'emulatore, viene installato il runtime condiviso di Xamarin.Android per il livello API di destinazione, seguito dall'applicazione. L'installazione del runtime può richiedere un po' di tempo. L'installazione del runtime viene eseguita solo in occasione della distribuzione della prima app Xamarin.Android nell'emulatore. Le distribuzioni successive sono più veloci perché nell'emulatore viene copiata solo l'app.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## <a name="quick-boot"></a>Avvio rapido
 
@@ -113,7 +113,7 @@ Gli avvii successivi del dispositivo virtuale sono molto più veloci perché l'e
 
 Per suggerimenti e soluzioni alternative per i problemi comuni dell'emulatore, vedere [Risoluzione dei problemi di configurazione dell'emulatore](~/android/get-started/installation/android-emulator/troubleshooting.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa guida è stato descritto il processo di configurazione dell'emulatore Android per eseguire e testare le app Xamarin.Android. Sono state illustrate le procedure per avviare l'emulatore usando dispositivi virtuali preconfigurati e per distribuire un'applicazione nell'emulatore da Visual Studio. 
 

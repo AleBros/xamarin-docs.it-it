@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 1fae83f60f819da9767e14612a7f778dc49ddf52
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564630"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -50,7 +50,7 @@ Il diagramma seguente illustra la gerarchia di base della configurazione degli a
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-Per iniziare a usare HomeKit, gli sviluppatori dovranno assicurarsi che il profilo di provisioning abbia il servizio HomeKit selezionato. Apple ha anche fornito agli sviluppatori un componente aggiuntivo del simulatore HomeKit per Xcode. Questa operazione si trova nel [centro per sviluppatori Apple](https://developer.apple.com/downloads/index.action), in `Hardware IO Tools for Xcode`. 
+Per iniziare a usare HomeKit, gli sviluppatori dovranno assicurarsi che il profilo di provisioning abbia il servizio HomeKit selezionato. Apple ha anche fornito agli sviluppatori un componente aggiuntivo del simulatore HomeKit per Xcode. Si trova nel [centro per sviluppatori Apple](https://developer.apple.com/downloads/index.action), in `Hardware IO Tools for Xcode` . 
 
 Per altre informazioni, vedere la Guida di [HomeKit](~/ios/platform/homekit.md) .
 
@@ -68,7 +68,7 @@ Le estensioni delle app, per semplificare la comunicazione, consentono alle app 
 
 Il primo passaggio per la creazione di un'estensione di app consiste nel definire il punto di estensione corretto, che è importante per garantire il comportamento e la disponibilità delle API corrette. Per creare un'estensione di app in Visual Studio per Mac, aggiungerla a un'applicazione esistente aggiungendo un nuovo progetto alla soluzione.
 
-Nella finestra di dialogo **nuovo progetto** passare **C#** a > **iOS** > **API unificata** > **Extensions**, come illustrato nella schermata seguente:
+Nella finestra di dialogo **nuovo progetto** passare a **C#**  >  **iOS**  >  **API unificata**  >  **Extensions**, come illustrato nella schermata seguente:
 
 ![](introduction-to-ios8-images/image2.png "Creating a new extension")
 
@@ -91,7 +91,7 @@ Sono ora disponibili due modi per usare Touch ID come meccanismo di autenticazio
 
 In primo luogo, consente ai servizi Keychain esistenti di usare nuovi elenchi di controllo di accesso (ACL) keychain. I dati Keychain possono essere sbloccati con l'autenticazione corretta di un'impronta digitale degli utenti.
 
-In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare l'ID tocco, quindi `EvaluatePolicy` per avviare l'operazione di autenticazione.
+In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare l'ID tocco e quindi `EvaluatePolicy` avviare l'operazione di autenticazione.
 
 Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Novell. iOS, vedere l'articolo relativo a [Touch ID e Face ID nelle guide di Novell. iOS](~/ios/platform/touch-id-face-id.md) .
 
@@ -112,7 +112,7 @@ Per altre informazioni, [vedere la guida](~/ios/platform/handoff.md) alla conseg
 ## <a name="unified-storyboards"></a>Storyboard unificati
 iOS 8 include un nuovo meccanismo più semplice da usare per la creazione dell'interfaccia utente, lo storyboard unificato. Con un singolo storyboard per coprire tutte le diverse dimensioni dello schermo hardware, è possibile creare visualizzazioni rapide e reattive in un vero e proprio tipo di "progettazione, utilizzo di molti".
 
-Prima di iOS 8, gli sviluppatori usavano `UIInterfaceOrientation` per distinguere le modalità verticale e orizzontale e `UIInterfaceIdiom` per distinguere i dispositivi iOS. In iOS 8 non è più necessario creare storyboard distinti per i dispositivi iPhone e iPad: l'orientamento e il dispositivo vengono determinati tramite *le classi di dimensioni*.
+Prima di iOS 8, gli sviluppatori usavano `UIInterfaceOrientation` per distinguere le modalità verticale e orizzontale e `UIInterfaceIdiom` per distinguere tra i dispositivi iOS. In iOS 8 non è più necessario creare storyboard distinti per i dispositivi iPhone e iPad: l'orientamento e il dispositivo vengono determinati tramite *le classi di dimensioni*.
 
 Ogni dispositivo è definito da una classe di dimensioni, sia nell'asse verticale che orizzontale, ed esistono due tipi di classi di dimensioni in iOS 8:
 
@@ -132,7 +132,7 @@ Per altre informazioni, vedere la Guida di [PhotoKit](~/ios/platform/photokit.md
 
 ## <a name="games"></a>Giochi
 
-<a name="scenekit" />
+<a name="scenekit"></a>
 
 ### <a name="scene-kit"></a>Kit scene
 
@@ -140,7 +140,7 @@ Scene kit è un'API Graph della scena 3D che semplifica l'uso della grafica 3D. 
 
 Per ulteriori informazioni, consultare la documentazione di [SceneKit](~/ios/platform/gaming/scenekit.md) .
 
-<a name="spritekit" />
+<a name="spritekit"></a>
 
 ### <a name="sprite-kit"></a>Kit sprite
 
@@ -161,7 +161,7 @@ Con tutti i miglioramenti apportati in iOS 8, diverse API sono state deprecate. 
 
 - **[UISearchDisplayController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UISearchDisplayController_Class/index.html#//apple_ref/occ/cl/UISearchDisplayController)** : questa operazione è stata sostituita da UISearchController in iOS 8.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 In questo articolo sono state esaminate alcune delle nuove funzionalità introdotte da Apple in iOS 8.
 
 ## <a name="related-links"></a>Collegamenti correlati

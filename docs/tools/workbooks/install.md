@@ -6,16 +6,16 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: a044169f86b46abff4158011e99320c528180ffc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305045"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573885"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Installazione e requisiti per le cartelle di lavoro
 
-<a name="install" />
+<a name="install"></a>
 
 ## <a name="download-and-install"></a>Scaricare e installare
 
@@ -48,7 +48,7 @@ ms.locfileid: "79305045"
 |--- |--- |--- |
 |Mac|Supportato solo in Mac|
 |iOS|Supportato in Mac e Windows|È necessario installare Novell. iOS 11,0 e Xcode 9,0 o versione successiva in Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutti i precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
-|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Novell con un dispositivo virtuale > = 5,0|
+|Android|Supportato in Mac e Windows|È necessario usare l'emulatore Android di Google, Visual Studio o Novell con un dispositivo virtuale >= 5,0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
 |Console (.NET Core)|Supportato in Mac e Windows|
@@ -90,10 +90,10 @@ Visual Studio per Mac
 
 Visual Studio
 
-- **> Della guida su Visual Studio > informazioni sulla copia**
+- **> della guida su Visual Studio > informazioni sulla copia**
 - Indicare la versione del sistema operativo e se si eseguono Windows a 32 bit o a 64 bit.
 
-### <a name="samples"></a>Samples
+### <a name="samples"></a>Esempi
 
 Se è possibile collegare o creare un collegamento al file con **estensione Workbooks** in cui si verificano problemi, questo potrebbe contribuire a risolvere il bug più rapidamente.
 
@@ -112,9 +112,9 @@ Se si verificano problemi durante la connessione della cartella di lavoro di iOS
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Disinstallare
+## <a name="uninstall"></a>Disinstalla
 
-### <a name="windows"></a>WINDOWS
+### <a name="windows"></a>Windows
 
 A seconda del modo in cui sono state acquisite le cartelle di lavoro, potrebbe essere necessario eseguire due procedure di disinstallazione. Controllare entrambi per disinstallare completamente il software.
 
@@ -126,13 +126,13 @@ Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visu
 
 Se le cartelle di lavoro sono state installate manualmente con un programma di installazione scaricato, sarà necessario disinstallarle tramite la pagina **app & funzionalità** impostazioni di sistema in Windows 10 o **installazione** applicazioni nel pannello di controllo nelle versioni precedenti di Windows.
 
-> **Avviare > Impostazioni > le app di > di sistema & funzionalità**
+> **Avviare > impostazioni > le app di > di sistema & funzionalità**
 
 ![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
 
 **È comunque necessario seguire la procedura per la Programma di installazione di Visual Studio per assicurarsi che le cartelle di lavoro non vengano reinstallate senza alcuna conoscenza.**
 
-<a name="uninstall-macos" />
+<a name="uninstall-macos"></a>
 
 ### <a name="macos"></a>macOS
 
@@ -144,7 +144,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Il disinstallatore definirà in dettaglio i file e le directory che verrà rimosso e chiederà conferma prima di procedere.
 
-Passare l'argomento `-help` allo script `uninstall` per scenari più avanzati.
+Passare l' `-help` argomento allo `uninstall` script per scenari più avanzati.
 
 Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
@@ -162,4 +162,4 @@ A causa di un bug nei programmi di installazione precedenti, non è possibile ef
 Per eseguire il downgrade da 1,4 o più recente a 1.3.2 o versioni precedenti:
 
 1. [Disinstalla manualmente le cartelle di lavoro & Inspector](#uninstall-macos)
-2. Eseguire il programma di installazione di `.pkg` 1.3.2 o versioni precedenti
+2. Eseguire il programma di installazione 1.3.2 o precedente `.pkg`

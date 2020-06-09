@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32beda28cb4db961abcbe74c26d38c70c8188a45
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139230"
+title: "inserimento delle dipendenze": "questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers usa l'inserimento delle dipendenze per separare i tipi concreti dal codice che dipende da questi tipi".
+ms. prod: Novell MS. AssetID: a150f2d1-06F8-4aed-ab4e-7a847d69f103 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
 In genere, viene richiamato un costruttore di classe quando si crea un'istanza di un oggetto e tutti i valori necessari per l'oggetto vengono passati come argomenti al costruttore. Questo è un esempio di inserimento di dipendenze e, in particolare, è noto come *inserimento del costruttore*. Le dipendenze necessarie per l'oggetto vengono inserite nel costruttore.
@@ -24,8 +10,6 @@ In genere, viene richiamato un costruttore di classe quando si crea un'istanza d
 Specificando le dipendenze come tipi di interfaccia, l'inserimento delle dipendenze consente di separare i tipi concreti dal codice che dipende da questi tipi. USA in genere un contenitore che include un elenco di registrazioni e mapping tra interfacce e tipi astratti e i tipi concreti che implementano o estendono questi tipi.
 
 Esistono anche altri tipi di inserimento delle dipendenze, ad esempio l'inserimento di *Setter di proprietà*e l'inserimento di *chiamate al metodo*, ma sono meno comuni. Pertanto, questo capitolo si concentra esclusivamente sull'esecuzione dell'inserimento di un costruttore con un contenitore di inserimento delle dipendenze.
-
-<a name="introduction_to_dependency_injection" />
 
 ## <a name="introduction-to-dependency-injection"></a>Introduzione all'inserimento delle dipendenze
 
@@ -118,9 +102,7 @@ _container.Register<ProfileViewModel>();
 
 Per impostazione predefinita, ogni registrazione di classe concreta è configurata come istanza a più istanze in modo che ogni oggetto dipendente riceva una nuova istanza. Pertanto, quando `ProfileViewModel` viene risolto, viene creata una nuova istanza e il contenitore inserisce le relative dipendenze necessarie.
 
-<a name="resolution" />
-
-## <a name="resolution"></a>Soluzione
+## <a name="resolution"></a>Risoluzione
 
 Una volta registrato, un tipo può essere risolto o inserito come dipendenza. Quando un tipo viene risolto e il contenitore deve creare una nuova istanza, inserisce tutte le dipendenze nell'istanza.
 
@@ -136,7 +118,7 @@ Nell'esempio di codice seguente viene illustrato come è `RequestProvider` possi
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-In questo esempio, a TinyIoC viene richiesto di risolvere il tipo concreto per il `IRequestProvider` tipo, insieme alle dipendenze. In genere, il `Resolve` metodo viene chiamato quando è richiesta un'istanza di un tipo specifico. Per informazioni sul controllo della durata degli oggetti risolti, vedere [gestione della durata degli oggetti risolti](#managing_the_lifetime_of_resolved_objects).
+In questo esempio, a TinyIoC viene richiesto di risolvere il tipo concreto per il `IRequestProvider` tipo, insieme alle dipendenze. In genere, il `Resolve` metodo viene chiamato quando è richiesta un'istanza di un tipo specifico. Per informazioni sul controllo della durata degli oggetti risolti, vedere [gestione della durata degli oggetti risolti](#managing-the-lifetime-of-resolved-objects).
 
 L'esempio di codice seguente mostra come l'app per dispositivi mobili eShopOnContainers crea un'istanza dei tipi di modello di visualizzazione e delle relative dipendenze:
 
@@ -144,12 +126,10 @@ L'esempio di codice seguente mostra come l'app per dispositivi mobili eShopOnCon
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-In questo esempio, TinyIoC viene richiesto di risolvere il tipo di modello di visualizzazione per un modello di visualizzazione richiesto e il contenitore risolverà anche eventuali dipendenze. Quando si risolve il `ProfileViewModel` tipo, le dipendenze da risolvere sono un `ISettingsService` oggetto e un `IOrderService` oggetto. Poiché le registrazioni dell'interfaccia sono state utilizzate durante la registrazione delle `SettingsService` `OrderService` classi e, TinyIoC restituisce le istanze singleton per le `SettingsService` `OrderService` classi e e quindi le passa al costruttore della `ProfileViewModel` classe. Per altre informazioni sul modo in cui l'app per dispositivi mobili eShopOnContainers costruisce i modelli di visualizzazione e li associa alle visualizzazioni, vedere [creazione automatica di un modello di visualizzazione con un localizzatore di modello di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+In questo esempio, TinyIoC viene richiesto di risolvere il tipo di modello di visualizzazione per un modello di visualizzazione richiesto e il contenitore risolverà anche eventuali dipendenze. Quando si risolve il `ProfileViewModel` tipo, le dipendenze da risolvere sono un `ISettingsService` oggetto e un `IOrderService` oggetto. Poiché le registrazioni dell'interfaccia sono state utilizzate durante la registrazione delle `SettingsService` `OrderService` classi e, TinyIoC restituisce le istanze singleton per le `SettingsService` `OrderService` classi e e quindi le passa al costruttore della `ProfileViewModel` classe. Per altre informazioni sul modo in cui l'app per dispositivi mobili eShopOnContainers costruisce i modelli di visualizzazione e li associa alle visualizzazioni, vedere [creazione automatica di un modello di visualizzazione con un localizzatore di modello di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 > [!NOTE]
 > La registrazione e la risoluzione dei tipi con un contenitore comportano un costo in termini di prestazioni perché il contenitore usa la reflection per la creazione di ogni tipo, soprattutto se le dipendenze vengono ricostruite per la navigazione di ogni pagina nell'app. Se le dipendenze presenti sono numerose o complete, il costo della creazione può aumentare in modo significativo.
-
-<a name="managing_the_lifetime_of_resolved_objects" />
 
 ## <a name="managing-the-lifetime-of-resolved-objects"></a>Gestione della durata degli oggetti risolti
 
@@ -166,7 +146,7 @@ La prima volta `LoginViewModel` che il tipo viene risolto, il contenitore crea u
 > [!NOTE]
 > I tipi registrati come Singleton vengono eliminati quando il contenitore viene eliminato.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 L'inserimento di dipendenze consente di separare i tipi concreti dal codice che dipende da questi tipi. USA in genere un contenitore che include un elenco di registrazioni e mapping tra interfacce e tipi astratti e i tipi concreti che implementano o estendono questi tipi.
 

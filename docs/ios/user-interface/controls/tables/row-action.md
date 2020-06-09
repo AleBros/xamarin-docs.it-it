@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: cc83fa65fd040b30d71a30fb703da866c5d0824c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570817"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Novell. iOS
 
@@ -20,28 +20,28 @@ _Questa guida illustra come creare azioni di scorrimento personalizzate per le r
 
 ![Dimostrazione di azioni di scorrimento sulle righe](row-action-images/action02.png)
 
-iOS offre due modi per eseguire azioni su una tabella: `UISwipeActionsConfiguration` e `UITableViewRowAction`.
+iOS offre due modi per eseguire azioni su una tabella: `UISwipeActionsConfiguration` e `UITableViewRowAction` .
 
-`UISwipeActionsConfiguration` è stato introdotto in iOS 11 e viene usato per definire un set di azioni che devono essere eseguite quando l'utente scorre _in una delle due direzioni_ su una riga in una visualizzazione tabella. Questo comportamento è simile a quello di Native mail. app
+`UISwipeActionsConfiguration`è stato introdotto in iOS 11 e viene usato per definire un set di azioni che devono essere eseguite quando l'utente scorre _in una delle due direzioni_ in una riga di una vista tabella. Questo comportamento è simile a quello di Native mail. app
 
-La classe `UITableViewRowAction` viene utilizzata per definire un'azione che verrà eseguita quando l'utente scorre orizzontalmente su una riga in una visualizzazione tabella.
-Quando, ad esempio, si modifica una tabella, per impostazione predefinita viene visualizzato un pulsante **Elimina** per scorrere a sinistra di una riga. Se si allineano più istanze della classe `UITableViewRowAction` a una `UITableView`, è possibile definire più azioni personalizzate, ciascuna con testo, formattazione e comportamento.
+La `UITableViewRowAction` classe viene utilizzata per definire un'azione che verrà eseguita quando l'utente scorre orizzontalmente su una riga in una visualizzazione tabella.
+Quando, ad esempio, si modifica una tabella, per impostazione predefinita viene visualizzato un pulsante **Elimina** per scorrere a sinistra di una riga. Connettendo più istanze della `UITableViewRowAction` classe a un oggetto `UITableView` , è possibile definire più azioni personalizzate, ciascuna con testo, formattazione e comportamento propri.
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
-Per implementare le azioni di scorrimento rapido con `UISwipeActionsConfiguration`sono necessari tre passaggi:
+Per implementare le azioni di scorrimento rapido con sono necessari tre passaggi `UISwipeActionsConfiguration` :
 
-1. Eseguire l'override di metodi `GetLeadingSwipeActionsConfiguration` e/o `GetTrailingSwipeActionsConfiguration`. Questi metodi restituiscono un `UISwipeActionsConfiguration`.
-2. Creare un'istanza della `UISwipeActionsConfiguration` da restituire. Questa classe accetta una matrice di `UIContextualAction`.
-3. Creare un `UIContextualAction`.
+1. Eseguire l'override `GetLeadingSwipeActionsConfiguration` di metodi e/o `GetTrailingSwipeActionsConfiguration` . Questi metodi restituiscono un oggetto `UISwipeActionsConfiguration` .
+2. Creare un'istanza dell'oggetto `UISwipeActionsConfiguration` da restituire. Questa classe accetta una matrice di `UIContextualAction` .
+3. Creare un oggetto `UIContextualAction`.
 
 Queste informazioni sono descritte più dettagliatamente nelle sezioni seguenti.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. implementazione dei metodi SwipeActionsConfigurations
 
-`UITableViewController` (e anche `UITableViewSource` e `UITableViewDelegate`) contengono due metodi: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration`, usati per implementare un set di azioni di scorrimento in una riga di visualizzazione tabella. L'azione di scorrimento iniziali fa riferimento a un swipe dal lato sinistro dello schermo in una lingua da sinistra a destra e dal lato destro dello schermo in una lingua da destra a sinistra.
+`UITableViewController`(e anche `UITableViewSource` e `UITableViewDelegate` ) contengono due metodi: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration` , usati per implementare un set di azioni di scorrimento in una riga di visualizzazione tabella. L'azione di scorrimento iniziali fa riferimento a un swipe dal lato sinistro dello schermo in una lingua da sinistra a destra e dal lato destro dello schermo in una lingua da destra a sinistra.
 
-Nell'esempio seguente, dall'esempio [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) , viene illustrata l'implementazione della configurazione swipe principale. Vengono create due azioni dalle azioni contestuali, descritte di [seguito](#create-uicontextualaction). Queste azioni vengono quindi passate a un [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)appena inizializzato, che viene usato come valore restituito.
+Nell'esempio seguente, dall'esempio [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) , viene illustrata l'implementazione della configurazione swipe principale. Vengono create due azioni dalle azioni contestuali, descritte di [seguito](#create-uicontextualaction). Queste azioni vengono quindi passate a un oggetto appena inizializzato [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) , che viene usato come valore restituito.
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -59,11 +59,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 }
 ```
 
-<a name="create-uiswipeactionsconfigurations" />
+<a name="create-uiswipeactionsconfigurations"></a>
 
-### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. creare un'istanza di un `UISwipeActionsConfiguration`
+### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. creare un'istanza di`UISwipeActionsConfiguration`
 
-Creare un'istanza di un `UISwipeActionsConfiguration` usando il metodo `FromActions` per aggiungere una nuova matrice di `UIContextualAction`s, come illustrato nel frammento di codice seguente:
+Creare un'istanza `UISwipeActionsConfiguration` di usando il `FromActions` metodo per aggiungere una nuova matrice di `UIContextualAction` s, come illustrato nel frammento di codice seguente:
 
 ```csharp
 var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction })
@@ -79,15 +79,15 @@ Per gli scorrimenti finali, le azioni verranno visualizzate come illustrato nell
 
 ![Azioni di scorrimento finale visualizzate in una riga di tabella](row-action-images/action04.png)
 
-Questo frammento di codice usa anche la nuova proprietà `PerformsFirstActionWithFullSwipe`. Per impostazione predefinita, questa proprietà è impostata su true, ovvero la prima azione nella matrice viene eseguita quando un utente scorre completamente in una riga. Se si dispone di un'azione che non è distruttiva (ad esempio "Delete", questo potrebbe non essere un comportamento ideale ed è quindi necessario impostarlo su `false`.
+Questo frammento di codice usa anche la nuova `PerformsFirstActionWithFullSwipe` Proprietà. Per impostazione predefinita, questa proprietà è impostata su true, ovvero la prima azione nella matrice viene eseguita quando un utente scorre completamente in una riga. Se si dispone di un'azione che non è distruttiva (ad esempio "Delete", questo potrebbe non essere un comportamento ideale ed è quindi necessario impostarlo su `false` .
 
-<a name="create-uicontextualaction" />
+<a name="create-uicontextualaction"></a>
 
 ### <a name="create-a-uicontextualaction"></a>Creare un `UIContextualAction`
 
 L'azione contestuale è la posizione in cui si crea effettivamente l'azione che verrà visualizzata quando l'utente scorre una riga della tabella.
 
-Per inizializzare un'azione è necessario fornire una `UIContextualActionStyle`, un titolo e una `UIContextualActionHandler`. Il `UIContextualActionHandler` accetta tre parametri: un'azione, la visualizzazione in cui l'azione è stata visualizzata e un gestore di completamento:
+Per inizializzare un'azione è necessario fornire un oggetto `UIContextualActionStyle` , un titolo e un oggetto `UIContextualActionHandler` . `UIContextualActionHandler`Accetta tre parametri: un'azione, la visualizzazione in cui l'azione è stata visualizzata e un gestore di completamento:
 
 ```csharp
 public UIContextualAction ContextualFlagAction(int row)
@@ -113,11 +113,11 @@ public UIContextualAction ContextualFlagAction(int row)
 
 È possibile modificare varie proprietà visive, ad esempio il colore di sfondo o l'immagine dell'azione. Il frammento di codice precedente illustra l'aggiunta di un'immagine all'azione e l'impostazione del colore di sfondo su blu.
 
-Una volta create le azioni contestuali, è possibile usare per inizializzare il `UISwipeActionsConfiguration` nel metodo `GetLeadingSwipeActionsConfiguration`.
+Una volta create le azioni contestuali, possono usare per inizializzare `UISwipeActionsConfiguration` nel `GetLeadingSwipeActionsConfiguration` metodo.
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-Per definire una o più azioni di riga personalizzate per un `UITableView`, sarà necessario creare un'istanza della classe `UITableViewDelegate` ed eseguire l'override del metodo `EditActionsForRow`. Ad esempio,
+Per definire una o più azioni riga personalizzate per un `UITableView` , è necessario creare un'istanza della `UITableViewDelegate` classe ed eseguire l'override del `EditActionsForRow` metodo. Ad esempio:
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-Il metodo statico `UITableViewRowAction.Create` viene usato per creare un nuovo `UITableViewRowAction` che visualizzerà un **pulsante di** uscita rapido quando l'utente scorre orizzontalmente in una riga della tabella. Successivamente, una nuova istanza del `TableDelegate` viene creata e collegata al `UITableView`. Ad esempio,
+Il `UITableViewRowAction.Create` metodo statico viene usato per creare un nuovo oggetto che visualizzerà `UITableViewRowAction` un pulsante **Hi** quando l'utente scorre orizzontalmente verso una riga della tabella. Successivamente, una nuova istanza di `TableDelegate` viene creata e collegata a `UITableView` . Ad esempio:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -177,7 +177,7 @@ Quando viene eseguito il codice precedente e l'utente scorre a sinistra in una r
 
 [![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
 
-Se l'utente tocca il pulsante **Hi** , `Hello World!` verrà scritto nella console di Visual Studio per Mac o Visual Studio quando l'applicazione viene eseguita in modalità di debug.
+Se l'utente tocca il pulsante **Hi** , viene `Hello World!` scritto nella console di Visual Studio per Mac o Visual Studio quando l'applicazione viene eseguita in modalità di debug.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

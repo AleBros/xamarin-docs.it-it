@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come iniziare a creare una semplice pagina basata sui dati usando le Xamarin.Forms pagine di dati.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 17cc67c7fcc89454ff8dcac9926617b4ed1f4b77
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134394"
+title: "Introduzione con le pagine di dati" Descrizione: "in questo articolo viene illustrato come iniziare a creare una semplice pagina basata sui dati utilizzando le pagine di dati Xamarin.Forms ".
+ms. prod: Novell MS. AssetID: 6416E5FA-6384-4298-BAA1-A89381E47210 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="getting-started-with-datapages"></a>Introduzione con le pagine Web
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
@@ -54,7 +40,7 @@ Nel file **app. XAML** aggiungere un oggetto personalizzato `xmlns:mytheme` per 
 ```
 
 > [!IMPORTANT]
-> È anche necessario seguire i passaggi per [caricare gli assembly del tema (di seguito)](#loadtheme) aggiungendo codice standard a iOS `AppDelegate` e Android `MainActivity` . Questa funzionalità verrà migliorata in una versione di anteprima futura.
+> È anche necessario seguire i passaggi per [caricare gli assembly del tema (di seguito)](#troubleshooting) aggiungendo codice standard a iOS `AppDelegate` e Android `MainActivity` . Questa funzionalità verrà migliorata in una versione di anteprima futura.
 
 ## <a name="3-add-a-xaml-page"></a>3. aggiungere una pagina XAML
 
@@ -180,8 +166,6 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 La creazione di temi da zero è un po' più semplice, ma le future versioni di anteprima faciliteranno questa operazione.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
-
-<a name="loadtheme" />
 
 ## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>Non è stato possibile caricare il file o l'assembly ' Xamarin.Forms . Theme. Light ' o una delle relative dipendenze
 

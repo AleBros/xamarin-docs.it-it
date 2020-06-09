@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571740"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione di provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità._
 
 Apple offre agli sviluppatori alcune _capacità_, spesso chiamate _servizi app_, che consentono di estendere le funzionalità e di ampliare le potenzialità dell'uso delle app iOS. Le funzionalità consentono agli sviluppatori di aggiungere all'applicazione una maggiore integrazione delle funzioni della piattaforma, ad esempio: la possibilità di avviare transazioni monetarie dall'app, servizi del dispositivo aggiuntivi, come Siri, e altro ancora.
 Queste funzionalità possono essere usate con i progetti Xamarin.iOS. L'elenco completo dei servizi è il seguente:
@@ -24,7 +24,7 @@ Queste funzionalità possono essere usate con i progetti Xamarin.iOS. L'elenco c
 - Gruppi di app
 - Domini associati
 - Protezione dei dati
-- Game Center
+- Area giochi
 - HealthKit
 - HomeKit
 - Configurazione accessori wireless
@@ -80,7 +80,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Opzione Automatically manage signing (Gestisci automaticamente la firma)](images/manage-signing.png)
 
-2. Aprire il file **Entitlements.plist** e selezionare la funzionalità che si desidera aggiungere:
+2. Aprire il file **titles. plist** e selezionare la funzionalità che si desidera aggiungere:
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image17.png)
 
@@ -113,7 +113,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzi
 
 -----
 
-<a name="devcenter" />
+<a name="devcenter"></a>
 
 ## <a name="using-the-developer-center"></a>Uso del centro sviluppatori
 
@@ -130,7 +130,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
     ![Sezione degli ID app nel centro sviluppatori](images/image6.png)
 
-4. Premi **+** il pulsante nell'angolo in alto a destra per creare un nuovo ID app.
+4. Premere il **+** pulsante nell'angolo in alto a destra per creare un nuovo ID app.
 5. Immettere una descrizione dell'ID app e immettere un ID bundle nel formato `com.domain.appname`. Questo ID bundle deve corrispondere all'ID bundle nel progetto:
 
     ![Aggiunta dei dettagli dell'ID app](images/image7.png)
@@ -146,17 +146,17 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 9. Fare clic su **Register** (Registra) e quindi su **Done** (Fine). Il nuovo ID app creato verrà visualizzato nell'elenco di ID app iOS.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ### <a name="creating-a-provisioning-profile"></a>Creazione di un profilo di provisioning
 
-Creare ora un profilo di provisioning contenente tale ID app. Attenersi alla procedura seguente:
+Creare ora un profilo di provisioning contenente tale ID app. Seguire la procedura descritta di seguito:
 
 1. Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
 
     ![Sezione dei profili di provisioning](images/image10.png)
 
-2. Premi **+** il pulsante nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
+2. Premere il **+** pulsante nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
 3. Selezionare il tipo di profilo di provisioning necessario e fare clic su **Continue** (Continua):
 
     ![Selezione del profilo di provisioning](images/image11.png)
@@ -188,7 +188,7 @@ Creare ora un profilo di provisioning contenente tale ID app. Attenersi alla pro
 > [!IMPORTANT]
 > Potrebbe anche essere necessario impostare le chiavi per gli entitlement nel file Entitlements.plist e le chiavi per la privacy nel file Info.plist. Per altre informazioni su questi entitlement, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
 
-<a name="nextsteps" />
+<a name="nextsteps"></a>
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -197,7 +197,7 @@ Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie a
 - Usare lo spazio dei nomi del framework nell'app.
 - Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
 
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## <a name="troubleshooting-capabilities"></a>Risoluzione dei problemi relativi alle funzionalità
 
@@ -210,8 +210,8 @@ Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che poss
 - Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
 - In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
-<a name="summary" />
+<a name="summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questa guida ha illustrato le funzionalità, ovvero i _servizi app_, e ha descritto come possono essere abilitate in Visual Studio e nel centro sviluppatori Apple. Ha anche spiegato in dettaglio come configurare servizi più complessi, ad esempio Wallet, iCloud, Apple Pay e Gruppi di app. Ha infine illustrato i passaggi successivi per ottenere le opzioni per la configurazione e la risoluzione di problemi semplici.

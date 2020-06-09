@@ -179,7 +179,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | iOS | ~0 |
 | Piattaforma UWP | <= 10 |
 
-<a name="calculate-distance" />
+<a name="calculate-distance"></a>
 
 ## <a name="detecting-mock-locations"></a>Rilevamento di località fittizie
 Alcuni dispositivi possono restituire una località fittizia proposta dal provider o da un'applicazione che fornisce località fittizie. È possibile rilevarlo utilizzando `IsFromMockProvider` in qualsiasi [`Location`](xref:Xamarin.Essentials.Location) .

@@ -6,18 +6,18 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: b8be06b9da4561ffc0d628b53f8daf639b5e3179
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016689"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571097"
 ---
 # <a name="shared-projects-code-sharing"></a>Condivisione del codice di progetti condivisi
 
 _I progetti condivisi consentono di scrivere codice comune a cui fa riferimento una serie di progetti di applicazioni diversi. Il codice viene compilato come parte di ogni progetto di riferimento e può includere direttive del compilatore che consentono di incorporare funzionalità specifiche della piattaforma nella codebase condivisa._
 
-I progetti condivisi, detti anche progetti di asset condivisi, consentono di scrivere codice condiviso tra più progetti di destinazione, incluse le applicazioni Xamarin.
+I progetti condivisi, detti anche progetti di asset condivisi, consentono di scrivere codice condiviso tra più progetti di destinazione, incluse le applicazioni Novell.
 
 Supportano le direttive del compilatore in modo che sia possibile includere in modo condizionale il codice specifico della piattaforma da compilare in un subset dei progetti che fanno riferimento al progetto condiviso. È inoltre disponibile il supporto dell'IDE per semplificare la gestione delle direttive del compilatore e visualizzare il modo in cui il codice verrà visualizzato in ogni applicazione.
 
@@ -35,7 +35,7 @@ Un progetto condiviso non viene compilato autonomamente, ma esiste esclusivament
 
 Si noti che i progetti di applicazioni Android non possono fare riferimento ad altri progetti di applicazioni Android. ad esempio, un progetto Android unit test non può fare riferimento a un progetto di applicazione Android. Per ulteriori informazioni su questa limitazione, vedere questa [discussione sul forum](https://forums.xamarin.com/discussion/comment/98092/).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Procedura dettagliata per Visual Studio per Mac
 
@@ -43,7 +43,7 @@ Questa sezione illustra come creare e usare un progetto condiviso usando Visual 
 
 ## <a name="creating-a-shared-project"></a>Creazione di un progetto condiviso
 
-Per creare un nuovo progetto condiviso, passare a **File > nuova soluzione** oppure fare clic con il pulsante destro del mouse su una soluzione esistente e scegliere **Aggiungi > Aggiungi nuovo progetto...** ):
+Per creare un nuovo progetto condiviso, passare a **File > nuova soluzione** oppure fare clic con il pulsante destro del mouse su una soluzione esistente e scegliere **Aggiungi > Aggiungi nuovo progetto...**):
 
 [![Nuovo progetto condiviso](shared-projects-images/xs-newsolution-sml.png "Nuova soluzione")](shared-projects-images/xs-newsolution.png#lightbox)
 
@@ -55,7 +55,7 @@ Di seguito è riportato un nuovo progetto condiviso. si noti che non sono presen
 
 Affinché un progetto condiviso possa essere utile, è necessario fare riferimento a esso da almeno un progetto di compilazione (ad esempio, un'applicazione o una libreria iOS o Android o un progetto PCL). Un progetto condiviso non viene compilato quando non vi è alcun riferimento, quindi gli errori di sintassi (o qualsiasi altro) non verranno evidenziati fino a quando non vi viene fatto riferimento da altri elementi.
 
-L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Xamarin.iOS che fa riferimento a un progetto condiviso.
+L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
 
 ![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
 
@@ -69,7 +69,7 @@ La schermata **Opzioni** è mostrata di seguito: il **nome** del progetto e lo *
 
 ![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-walkthrough"></a>Procedura dettagliata in Visual Studio
 
@@ -77,7 +77,7 @@ Questa sezione illustra come creare e usare un progetto condiviso con Visual Stu
 
 ### <a name="creating-a-shared-project"></a>Creazione di un progetto condiviso
 
-Per creare un nuovo progetto condiviso, passare a **File**  > **nuovo**  > **progetto**.
+Per creare un nuovo progetto condiviso, passare a **file**  >  **nuovo**  >  **progetto**.
 
 In Visual Studio 2019 immettere **Shared** nella casella di ricerca della pagina **creare un nuovo progetto** . Selezionare il modello di **progetto condiviso** e quindi fare clic su **Avanti**. Immettere un nome per il progetto e quindi selezionare **Crea**.
 
@@ -91,7 +91,7 @@ In Visual Studio 2017 selezionare il modello di **progetto condiviso** , quindi 
 
 Affinché un progetto condiviso possa essere utile, è necessario fare riferimento a esso da almeno un progetto di compilazione (ad esempio, un'applicazione o una libreria iOS o Android o un progetto PCL). Un progetto condiviso non viene compilato quando non vi è alcun riferimento, quindi gli errori di sintassi (o qualsiasi altro) non verranno evidenziati fino a quando non vi viene fatto riferimento da altri elementi.
 
-L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Xamarin.iOS che fa riferimento a un progetto condiviso.
+L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
 
 ![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
 
@@ -107,19 +107,19 @@ Il pannello **Proprietà** è illustrato di seguito. lo **spazio dei nomi radice
 
 -----
 
-<a name="Shared_Project_Example"/>
+<a name="Shared_Project_Example"></a>
 
 ## <a name="shared-project-example"></a>Esempio di progetto condiviso
 
-L'esempio di [attività](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa un progetto condiviso per contenere il codice comune usato dalle applicazioni iOS, Android e Windows Phone. Entrambi i file di codice sorgente `SQLite.cs` e `TaskRepository.cs` utilizzano le direttive del compilatore, ad esempio `#if __ANDROID__`) per produrre output diverso per ognuna delle applicazioni che vi fanno riferimento.
+L'esempio di [attività](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa un progetto condiviso per contenere il codice comune usato dalle applicazioni iOS, Android e Windows Phone. Entrambi i `SQLite.cs` `TaskRepository.cs` file di codice sorgente e utilizzano le direttive del compilatore, ad esempio `#if __ANDROID__`) per produrre output diverso per ognuna delle applicazioni che vi fanno riferimento.
 
 La struttura completa della soluzione è illustrata di seguito (rispettivamente in Visual Studio per Mac e Visual Studio):
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
 ![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
 
@@ -131,7 +131,7 @@ Le applicazioni in esecuzione sono illustrate di seguito:
 
 ![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo documento è stato descritto il funzionamento di progetti condivisi, il modo in cui possono essere creati e utilizzati sia in Visual Studio per Mac che in Visual Studio e viene introdotta una semplice applicazione di esempio che illustra un progetto condiviso in azione.
 

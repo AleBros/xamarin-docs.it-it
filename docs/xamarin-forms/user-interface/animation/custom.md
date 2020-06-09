@@ -1,29 +1,15 @@
 ---
-title: Animazioni personalizzate inXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4fb9c94c39823e4ce6d60be6b9dbef1294321a63
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137228"
+title: "animazioni personalizzate in Xamarin.Forms " Description: "in questo articolo viene illustrato come utilizzare la classe di animazione Novell. Forms per creare e annullare animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animano proprietà che non sono animate dai metodi di animazione esistenti.
+ms. prod: Novell MS. AssetID: 03B2E3FC-E720-4D45-B9A0-711081FC1907 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _La classe Animation è il blocco predefinito di tutte le Xamarin.Forms animazioni, con i metodi di estensione nella classe ViewExtensions che creano uno o più oggetti animazione. Questo articolo illustra come usare la classe Animation per creare e annullare animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animano le proprietà che non sono animate dai metodi di animazione esistenti._
 
-È necessario specificare un numero di parametri quando si crea un `Animation` oggetto, inclusi i valori iniziale e finale della proprietà a cui si sta aggiungendo un'animazione e un callback che modifica il valore della proprietà. Un `Animation` oggetto può anche gestire una raccolta di animazioni figlio che possono essere eseguite e sincronizzate. Per altre informazioni, vedere [animazioni figlio](#child).
+È necessario specificare un numero di parametri quando si crea un `Animation` oggetto, inclusi i valori iniziale e finale della proprietà a cui si sta aggiungendo un'animazione e un callback che modifica il valore della proprietà. Un `Animation` oggetto può anche gestire una raccolta di animazioni figlio che possono essere eseguite e sincronizzate. Per altre informazioni, vedere [animazioni figlio](#child-animations).
 
 L'esecuzione di un'animazione creata con la [`Animation`](xref:Xamarin.Forms.Animation) classe, che può includere o meno animazioni figlio, viene eseguita chiamando [ `Commit` ] (xrif: Xamarin.Forms . Animation. Commit ( Xamarin.Forms . IAnimatable, System. String, System. UInt32, System. UInt32, Xamarin.Forms . Metodo di interpolazione, System. Action {System. Double, System. Boolean}, System. Func {System. Boolean}). Questo metodo specifica la durata dell'animazione e, tra gli altri elementi, un callback che controlla se ripetere l'animazione.
 
@@ -61,8 +47,6 @@ L'effetto complessivo consiste nel creare un'animazione che aumenta la [`Scale`]
 
 > [!NOTE]
 > Le animazioni simultanee, che vengono eseguite in modo indipendente l'una dall'altra, possono essere costruite creando un `Animation` oggetto per ogni animazione, quindi chiamando il `Commit` metodo su ogni animazione.
-
-<a name="child" />
 
 ### <a name="child-animations"></a>Animazioni figlio
 

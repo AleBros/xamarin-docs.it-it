@@ -1,22 +1,8 @@
 ---
-title: Creare un layout personalizzato inXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2beb00e0587a0e47a29d6f5628a5d6623514eade
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137332"
+title: "creare un layout personalizzato in Xamarin.Forms " Description: "in questo articolo viene illustrato come scrivere una classe layout personalizzata e viene illustrata una classe WrapLayout sensibile all'orientamento che dispone gli elementi figlio orizzontalmente nella pagina e quindi esegue il wrapping della visualizzazione dei figli successivi a righe aggiuntive.
+ms. prod: Novell MS. AssetID: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
@@ -66,29 +52,27 @@ Tuttavia, la `Layout` classe tenta di limitare l'effetto di una modifica nelle d
 
 La [`Layout`](xref:Xamarin.Forms.Layout) classe definisce anche un [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) metodo con uno scopo simile al [`InvalidateMeasure`](xref:Xamarin.Forms.VisualElement.InvalidateMeasure) metodo. Il `InvalidateLayout` metodo deve essere richiamato ogni volta che viene apportata una modifica che influiscono sul modo in cui le posizioni di layout e i relativi elementi figlio Ad esempio, la `Layout` classe richiama il `InvalidateLayout` Metodo ogni volta che un elemento figlio viene aggiunto o rimosso da un layout.
 
-[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)È possibile eseguire l'override di per implementare una cache per ridurre al minimo le chiamate ripetitive di [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) dei metodi degli elementi figlio del layout. L'override del `InvalidateLayout` metodo fornirà una notifica quando gli elementi figlio vengono aggiunti o rimossi dal layout. Analogamente, [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) è possibile eseguire l'override del metodo per fornire una notifica in caso di modifica delle dimensioni di uno degli elementi figlio del layout. Per entrambi gli override del metodo, un layout personalizzato deve rispondere cancellando la cache. Per ulteriori informazioni, vedere [calcolo e memorizzazione nella cache dei dati](#caching).
+[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)È possibile eseguire l'override di per implementare una cache per ridurre al minimo le chiamate ripetitive di [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) dei metodi degli elementi figlio del layout. L'override del `InvalidateLayout` metodo fornirà una notifica quando gli elementi figlio vengono aggiunti o rimossi dal layout. Analogamente, [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) è possibile eseguire l'override del metodo per fornire una notifica in caso di modifica delle dimensioni di uno degli elementi figlio del layout. Per entrambi gli override del metodo, un layout personalizzato deve rispondere cancellando la cache. Per altre informazioni, vedere [calcolare e memorizzare nella cache i dati di layout](#calculate-and-cache-layout-data).
 
 ## <a name="create-a-custom-layout"></a>Creazione di un layout personalizzato
 
 Il processo per la creazione di un layout personalizzato è il seguente:
 
-1. Creare una classe che derivi dalla classe `Layout<View>`. Per ulteriori informazioni, vedere [creazione di un WrapLayout](#creating).
-1. [*facoltativo*] Aggiungere proprietà, supportate da proprietà associabili, per tutti i parametri che devono essere impostati nella classe layout. Per ulteriori informazioni, vedere [aggiunta di proprietà supportate da proprietà associabili](#adding_properties).
-1. Eseguire l'override del [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) metodo per richiamare [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) su tutti gli elementi figlio del layout e restituiscono una dimensione richiesta per il layout. Per ulteriori informazioni, vedere [override del metodo onmeasure](#onmeasure).
-1. Eseguire l'override del [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) metodo per richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)) su tutti gli elementi figlio del layout. Impossibile richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)) il metodo su ogni elemento figlio in un layout non riceverà mai una dimensione o una posizione corretta e pertanto l'elemento figlio non diventerà visibile nella pagina. Per ulteriori informazioni, vedere [override del metodo LayoutChildren](#layoutchildren).
+1. Creare una classe che derivi dalla classe `Layout<View>`. Per altre informazioni, vedere [creare un WrapLayout](#create-a-wraplayout).
+1. [*facoltativo*] Aggiungere proprietà, supportate da proprietà associabili, per tutti i parametri che devono essere impostati nella classe layout. Per altre informazioni, vedere [aggiungere proprietà supportate da proprietà associabili](#add-properties-backed-by-bindable-properties).
+1. Eseguire l'override del [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) metodo per richiamare [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) su tutti gli elementi figlio del layout e restituiscono una dimensione richiesta per il layout. Per ulteriori informazioni, vedere [eseguire l'override del metodo onmeasure](#override-the-onmeasure-method).
+1. Eseguire l'override del [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) metodo per richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)) su tutti gli elementi figlio del layout. Impossibile richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)) il metodo su ogni elemento figlio in un layout non riceverà mai una dimensione o una posizione corretta e pertanto l'elemento figlio non diventerà visibile nella pagina. Per ulteriori informazioni, vedere [eseguire l'override del metodo LayoutChildren](#override-the-layoutchildren-method).
 
     > [!NOTE]
     > Quando si enumerano gli elementi figlio nelle [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) sostituzioni e, ignorare qualsiasi elemento figlio la cui [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) proprietà è impostata su `false` . In questo modo, il layout personalizzato non lascerà spazio per gli elementi figlio invisibili.
 
-1. [*facoltativo*] Eseguire l'override del [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) metodo per ricevere una notifica quando gli elementi figlio vengono aggiunti o rimossi dal layout. Per ulteriori informazioni, vedere [override del metodo InvalidateLayout](#invalidatelayout).
-1. [*facoltativo*] Eseguire l'override del [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) metodo per ricevere una notifica quando una delle dimensioni degli elementi figlio del layout viene modificata. Per ulteriori informazioni, vedere [override del metodo OnChildMeasureInvalidated](#onchildmeasureinvalidated).
+1. [*facoltativo*] Eseguire l'override del [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) metodo per ricevere una notifica quando gli elementi figlio vengono aggiunti o rimossi dal layout. Per ulteriori informazioni, vedere [eseguire l'override del metodo InvalidateLayout](#override-the-invalidatelayout-method).
+1. [*facoltativo*] Eseguire l'override del [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) metodo per ricevere una notifica quando una delle dimensioni degli elementi figlio del layout viene modificata. Per ulteriori informazioni, vedere [eseguire l'override del metodo OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 > [!NOTE]
-> Si noti che la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) sostituzione non verrà richiamata se le dimensioni del layout sono regolate dall'elemento padre anziché dai relativi elementi figlio. Tuttavia, l'override verrà richiamato se uno o entrambi i vincoli sono infiniti o se la classe layout ha [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valori di proprietà o non predefiniti [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . Per questo motivo, l' [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) override non può basarsi sulle dimensioni figlio ottenute durante la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) chiamata al metodo. È invece `LayoutChildren` necessario richiamare [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) sugli elementi figlio del layout, prima di richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)). In alternativa, le dimensioni degli elementi figlio ottenuti nell' `OnMeasure` override possono essere memorizzate nella cache per evitare `Measure` chiamate successive nell' `LayoutChildren` override, ma la classe layout deve essere in grado di stabilire quando è necessario ottenere di nuovo le dimensioni. Per ulteriori informazioni, vedere [calcolo e memorizzazione nella cache dei dati di layout](#caching).
+> Si noti che la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) sostituzione non verrà richiamata se le dimensioni del layout sono regolate dall'elemento padre anziché dai relativi elementi figlio. Tuttavia, l'override verrà richiamato se uno o entrambi i vincoli sono infiniti o se la classe layout ha [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valori di proprietà o non predefiniti [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . Per questo motivo, l' [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) override non può basarsi sulle dimensioni figlio ottenute durante la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) chiamata al metodo. È invece `LayoutChildren` necessario richiamare [ `Measure` ] (xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) sugli elementi figlio del layout, prima di richiamare [ `Layout` ] (xrif: Xamarin.Forms . VisualElement. layout ( Xamarin.Forms . Rectangle)). In alternativa, le dimensioni degli elementi figlio ottenuti nell' `OnMeasure` override possono essere memorizzate nella cache per evitare `Measure` chiamate successive nell' `LayoutChildren` override, ma la classe layout deve essere in grado di stabilire quando è necessario ottenere di nuovo le dimensioni. Per altre informazioni, vedere [calcolare e memorizzare nella cache i dati di layout](#calculate-and-cache-layout-data).
 
-La classe layout può quindi essere utilizzata aggiungendola a un oggetto [`Page`](xref:Xamarin.Forms.Page) e aggiungendo elementi figlio al layout. Per ulteriori informazioni, vedere [utilizzo di WrapLayout](#consuming).
-
-<a name="creating" />
+La classe layout può quindi essere utilizzata aggiungendola a un oggetto [`Page`](xref:Xamarin.Forms.Page) e aggiungendo elementi figlio al layout. Per ulteriori informazioni, vedere [la pagina relativa all'utilizzo di WrapLayout](#consume-the-wraplayout).
 
 ### <a name="create-a-wraplayout"></a>Creare un WrapLayout
 
@@ -105,8 +89,6 @@ public class WrapLayout : Layout<View>
   ...
 }
 ```
-
-<a name="caching" />
 
 #### <a name="calculate-and-cache-layout-data"></a>Calcolare e memorizzare nella cache i dati di layout
 
@@ -199,8 +181,6 @@ Il `GetLayoutData` metodo esegue le operazioni seguenti:
 - A condizione che sia presente almeno un elemento figlio visibile, calcola il numero di righe e colonne necessarie, quindi calcola le dimensioni della cella per gli elementi figlio in base alle dimensioni dell'oggetto `WrapLayout` . Si noti che le dimensioni della cella sono in genere leggermente più larghe delle dimensioni massime figlio, ma che potrebbero anche essere più piccole se `WrapLayout` non sono sufficientemente larghe per l'elemento figlio più ampio o sufficientemente alta per il figlio più alto.
 - Archivia il nuovo `LayoutData` valore nella cache.
 
-<a name="adding_properties" />
-
 #### <a name="add-properties-backed-by-bindable-properties"></a>Aggiungere proprietà supportate da proprietà associabili
 
 La `WrapLayout` classe definisce `ColumnSpacing` le `RowSpacing` proprietà e, i cui valori vengono utilizzati per separare le righe e le colonne nel layout e supportate da proprietà associabili. Le proprietà associabili sono illustrate nell'esempio di codice seguente:
@@ -227,9 +207,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
   });
 ```
 
-Il gestore modificato da proprietà di ogni proprietà associabile richiama l' `InvalidateLayout` override del metodo per attivare un nuovo passaggio di layout in `WrapLayout` . Per ulteriori informazioni, vedere [override del metodo InvalidateLayout](#invalidatelayout) ed [override del metodo OnChildMeasureInvalidated](#onchildmeasureinvalidated).
-
-<a name="onmeasure" />
+Il gestore modificato da proprietà di ogni proprietà associabile richiama l' `InvalidateLayout` override del metodo per attivare un nuovo passaggio di layout in `WrapLayout` . Per altre informazioni, vedere [eseguire l'override del metodo InvalidateLayout](#override-the-invalidatelayout-method) ed [eseguire l'override del metodo OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 #### <a name="override-the-onmeasure-method"></a>Eseguire l'override del metodo onmeasure
 
@@ -250,12 +228,10 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 }
 ```
 
-L'override richiama il `GetLayoutData` metodo e costruisce un `SizeRequest` oggetto dai dati restituiti, prendendo in considerazione anche i `RowSpacing` valori delle proprietà e `ColumnSpacing` . Per ulteriori informazioni sul `GetLayoutData` metodo, vedere [calcolo e memorizzazione nella cache dei dati](#caching).
+L'override richiama il `GetLayoutData` metodo e costruisce un `SizeRequest` oggetto dai dati restituiti, prendendo in considerazione anche i `RowSpacing` valori delle proprietà e `ColumnSpacing` . Per ulteriori informazioni sul `GetLayoutData` metodo, vedere [calcolare e memorizzare nella cache i dati di layout](#calculate-and-cache-layout-data).
 
 > [!IMPORTANT]
 > [ `Measure` ] (Xrif: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) e i [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) metodi non devono mai richiedere una dimensione infinita restituendo un [`SizeRequest`](xref:Xamarin.Forms.SizeRequest) valore con una proprietà impostata su `Double.PositiveInfinity` . Tuttavia, almeno uno degli argomenti del vincolo a `OnMeasure` può essere `Double.PositiveInfinity` .
-
-<a name="layoutchildren" />
 
 #### <a name="override-the-layoutchildren-method"></a>Eseguire l'override del metodo LayoutChildren
 
@@ -304,11 +280,9 @@ L'override inizia con una chiamata al `GetLayoutData` metodo, quindi enumera tut
 > [!NOTE]
 > Si noti che il rettangolo passato al `LayoutChildIntoBoundingRegion` metodo include l'intera area in cui può risiedere l'elemento figlio.
 
-Per ulteriori informazioni sul `GetLayoutData` metodo, vedere [calcolo e memorizzazione nella cache dei dati](#caching).
+Per ulteriori informazioni sul `GetLayoutData` metodo, vedere [calcolare e memorizzare nella cache i dati di layout](#calculate-and-cache-layout-data).
 
-<a name="invalidatelayout" />
-
-#### <a name="overridethe-invalidatelayout-method"></a>Metodo Overridethe InvalidateLayout
+#### <a name="override-the-invalidatelayout-method"></a>Eseguire l'override del metodo InvalidateLayout
 
 L' [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) override viene richiamato quando gli elementi figlio vengono aggiunti o rimossi dal layout o quando una delle `WrapLayout` proprietà modifica il valore, come illustrato nell'esempio di codice seguente:
 
@@ -325,8 +299,6 @@ L'override invalida il layout e ignora tutte le informazioni di layout memorizza
 > [!NOTE]
 > Per arrestare la [`Layout`](xref:Xamarin.Forms.Layout) classe che richiama il [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) Metodo ogni volta che un elemento figlio viene aggiunto o rimosso da un layout, eseguire l'override di [ `ShouldInvalidateOnChildAdded` ] (xrif: Xamarin.Forms . Layout. ShouldInvalidateOnChildAdded ( Xamarin.Forms . View)) e [ `ShouldInvalidateOnChildRemoved` ] (xrif: Xamarin.Forms . Layout. ShouldInvalidateOnChildRemoved ( Xamarin.Forms . ), E restituiscono `false` . La classe layout può quindi implementare un processo personalizzato quando vengono aggiunti o rimossi elementi figlio.
 
-<a name="onchildmeasureinvalidated" />
-
 #### <a name="override-the-onchildmeasureinvalidated-method"></a>Eseguire l'override del metodo OnChildMeasureInvalidated
 
 L' [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) override viene richiamato quando uno degli elementi figlio del layout cambia e viene visualizzato nell'esempio di codice seguente:
@@ -340,8 +312,6 @@ protected override void OnChildMeasureInvalidated()
 ```
 
 L'override invalida il layout figlio e ignora tutte le informazioni di layout memorizzate nella cache.
-
-<a name="consuming" />
 
 ### <a name="consume-the-wraplayout"></a>Utilizzare WrapLayout
 

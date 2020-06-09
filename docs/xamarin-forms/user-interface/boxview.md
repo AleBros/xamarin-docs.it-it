@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBoxView
-description: Questo articolo illustra come usare un rettangolo colorato per la decorazione, la grafica e l'interazione in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5f915955bff969ef38cdb7a89bf9cecf05401131
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136357"
+title: " Xamarin.Forms BoxView" Description: "in questo articolo viene illustrato come utilizzare un rettangolo colorato per la decorazione, la grafica e l'interazione in un' Xamarin.Forms applicazione".
+ms. prod: Novell MS. AssetID: 4CBF703D-84A0-4CDF-A433-5926B587782A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
@@ -26,17 +12,6 @@ ms.locfileid: "84136357"
 Poiché non Xamarin.Forms dispone di un sistema di grafica vettoriale incorporato, `BoxView` consente di compensare. Alcuni dei programmi di esempio descritti in questo articolo usano `BoxView` per il rendering della grafica. Il valore `BoxView` di può essere ridimensionato in modo da essere simile a una riga di larghezza e spessore specifici e quindi ruotato da qualsiasi angolo utilizzando la `Rotation` Proprietà.
 
 Sebbene sia `BoxView` in grado di simulare immagini semplici, potrebbe essere necessario esaminare l' [uso di SkiaSharp in Xamarin.Forms ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) per requisiti grafici più sofisticati.
-
-Questo articolo tratta gli argomenti seguenti:
-
-- **[Impostazione del colore e delle dimensioni](#colorandsize)** &ndash; di BoxView impostare le `BoxView` Proprietà.
-- **[Rendering di decorazioni](#textdecorations)** &ndash; di testo usare un oggetto `BoxView` per le linee di rendering.
-- **[Elenco di colori con BoxView](#listingcolors)** &ndash; Visualizza tutti i colori di sistema in un `ListView` .
-- **[Riproduzione del gioco della vita mediante la sottoclasse BoxView](#subclassing)** &ndash; implementare una nota automazione cellulare.
-- **[Creazione di un orologio digitale](#digitalclock)** &ndash; simulare una visualizzazione a matrice di punti.
-- **[Creazione di un orologio analogico](#analogclock)** &ndash; trasforma e anima `BoxView` gli elementi.
-
-<a name="colorandsize" />
 
 ## <a name="setting-boxview-color-and-size"></a>Impostazione del colore e delle dimensioni di BoxView
 
@@ -84,8 +59,6 @@ Se le `VerticalOptions` `HorizontalOptions` proprietà e vengono rimosse dal `Bo
 Un oggetto `BoxView` può anche essere un elemento figlio di un oggetto `AbsoluteLayout` . In tal caso, la posizione e le dimensioni di `BoxView` vengono impostate utilizzando la `LayoutBounds` proprietà associabile associata. Il `AbsoluteLayout` viene illustrato nell'articolo [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md).
 
 Verranno visualizzati esempi di tutti questi casi nei programmi di esempio seguenti.
-
-<a name="textdecorations" />
 
 ## <a name="rendering-text-decorations"></a>Rendering di decorazioni di testo
 
@@ -171,8 +144,6 @@ Infine, è possibile creare una linea verticale su un lato di un paragrafo di te
     </Label>
 </StackLayout>
 ```
-
-<a name="listingcolors" />
 
 ## <a name="listing-colors-with-boxview"></a>Elenco di colori con BoxView
 
@@ -305,8 +276,6 @@ Gli oggetti visivi del programma sono descritti nel file XAML. La `ItemsSource` 
 
 Gli `NamedColor` oggetti vengono formattati in base all' `ViewCell` oggetto impostato come modello di dati di `ListView` . Questo modello include un `BoxView` oggetto la cui `Color` proprietà è associata alla `Color` proprietà dell' `NamedColor` oggetto.
 
-<a name="subclassing" />
-
 ## <a name="playing-the-game-of-life-by-subclassing-boxview"></a>Riproduzione del gioco della vita mediante la sottoclasse BoxView
 
 Il gioco di vita è un automa cellulare inventato dal matematico John Conway e divulgato nelle pagine di *Scientific American* negli anni '70. Un'introduzione corretta viene fornita dall'articolo di Wikipedia [Conway ' s Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
@@ -361,8 +330,6 @@ class LifeCell : BoxView
 Il programma **GameOfLife** include anche una `LifeGrid` classe che incapsula gran parte della logica del gioco e una `MainPage` classe che gestisce gli oggetti visivi del programma. Sono incluse una sovrapposizione che descrive le regole del gioco. Ecco il programma in azione che mostra un centinaio di `LifeCell` oggetti nella pagina:
 
 [![Gioco di vita](boxview-images/gameoflife-small.png "Gioco di vita")](boxview-images/gameoflife-large.png#lightbox "Gioco di vita")
-
-<a name="digitalclock" />
 
 ## <a name="creating-a-digital-clock"></a>Creazione di un orologio digitale
 
@@ -599,8 +566,6 @@ public partial class MainPage : ContentPage
 }
 ```
 
-<a name="analogclock" />
-
 ## <a name="creating-an-analog-clock"></a>Creazione di un orologio analogico
 
 Un orologio a matrice di punti potrebbe sembrare un'applicazione ovvia di `BoxView` , ma `BoxView` gli elementi sono anche in grado di realizzare un orologio analogico:
@@ -782,10 +747,6 @@ public partial class MainPage : ContentPage
 ```
 
 La seconda mano viene trattata in modo leggermente diverso: viene applicata una funzione di interpolazione dell'animazione per far sembrare che lo spostamento risulti meccanico anziché smussato. A ogni ciclo, la seconda parte esegue il pull di un po' e quindi ne supera la destinazione. Questo piccolo frammento di codice aggiunge molto al realismo del movimento.
-
-## <a name="conclusion"></a>Conclusioni
-
-Il `BoxView` primo potrebbe sembrare semplice, ma come è stato visto, può essere piuttosto versatile e può riprodurre oggetti visivi normalmente possibili solo con la grafica vettoriale. Per la grafica più sofisticata, vedere [uso Xamarin.Forms di SkiaSharp in ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

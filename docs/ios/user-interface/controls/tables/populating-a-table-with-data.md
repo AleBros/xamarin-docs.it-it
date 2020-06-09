@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: d03cb6ec6bc364aa63578cd6e2fbb78dbc7fedda
-ms.sourcegitcommit: 05ba8ffb8b34ec881b89e442323f3edd8de18f2e
+ms.openlocfilehash: 9acdde897a3a700d0138cb67db6735a8cce07120
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570830"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Novell. iOS
 
@@ -25,7 +25,7 @@ Questa guida illustra:
 - Aggiunta di un indice
 - Aggiunta di intestazioni e piè di pagina
 
-<a name="Subclassing_UITableViewSource" />
+<a name="Subclassing_UITableViewSource"></a>
 
 ## <a name="subclassing-uitableviewsource"></a>Sottoclasse UITableViewSource
 
@@ -214,7 +214,7 @@ public class MyCell : UITableViewCell
 
 È possibile vedere gli esempi degli argomenti illustrati in precedenza nell'esempio **BasicTable** collegato a questo articolo.
 
-<a name="Adding_an_Index" />
+<a name="Adding_an_Index"></a>
 
 ## <a name="adding-an-index"></a>Aggiunta di un indice
 
@@ -261,7 +261,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Gli indici vengono in genere utilizzati solo con lo stile di tabella normale.
 
-<a name="Adding_Headers_and_Footers" />
+<a name="Adding_Headers_and_Footers"></a>
 
 ## <a name="adding-headers-and-footers"></a>Aggiunta di intestazioni e piè di pagina
 

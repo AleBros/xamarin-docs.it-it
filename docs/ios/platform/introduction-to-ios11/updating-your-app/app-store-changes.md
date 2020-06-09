@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 356509fb6f588b96a2a1224879675bbad36f8524
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 2aee2a8dc37d6a1a73569322a97cdd0aebfbfa1c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574210"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Modifiche all'App Store in iOS 11
 
@@ -50,7 +50,7 @@ Per rendere disponibili gli acquisti in-app per alzare di livello, aprire l'app 
 
 ![Sezione Promozione App Store in iTune Connect](app-store-changes-images/image4.png)
 
-È anche necessario aggiungere il metodo `ShouldAddStorePayment` al protocollo di `SKPaymentTransactionObserver` nell'app.
+È anche necessario aggiungere il `ShouldAddStorePayment` metodo al `SKPaymentTransactionObserver` protocollo nell'app.
 
 Per altre informazioni sulle promozioni di acquisto in-app, vedere la pagina relativa alla promozione della pagina [acquisti in-app](https://developer.apple.com/app-store/promoting-in-app-purchases/) di Apple.
 
@@ -84,7 +84,7 @@ Ci sono alcuni aspetti da tenere presenti quando si risponde agli utenti:
 
 Per altre informazioni, vedere la pagina relativa [alle revisioni](https://developer.apple.com/app-store/responding-to-reviews/) di Apple.
 
-<a name="Phased_Release"/>
+<a name="Phased_Release"></a>
 
 ## <a name="phased-release"></a>Versione graduale
 

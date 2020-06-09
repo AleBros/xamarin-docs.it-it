@@ -1,22 +1,8 @@
 ---
-title: Generics in Xamarin.Forms XAML
-description: Xamarin.FormsXAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 814e622a822e2eb1cf07f71bfb1da1d6eac5631f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138112"
+title: "generics in Xamarin.Forms XAML" Description: " Xamarin.Forms XAML fornisce supporto per l'utilizzo di tipi CLR generici specificando i vincoli generici come argomenti di tipo".
+ms. prod: Novell MS. AssetID: 97B73048-4F90-41AD-AB48-8EB804C4998B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="generics-in-xamarinforms-xaml"></a>Generics in Xamarin.Forms XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
@@ -31,7 +17,7 @@ Gli argomenti di tipo vengono specificati come stringa e sono in genere precedut
 È possibile specificare più argomenti di tipo utilizzando un delimitatore di virgola. Inoltre, se un vincolo generico usa tipi generici, gli argomenti del tipo di vincolo annidato devono essere racchiusi tra parentesi.
 
 > [!NOTE]
-> L' `x:Type` estensione di markup fornisce un riferimento a un tipo CLR per un tipo generico e ha una funzione simile all' `typeof` operatore in C#. Per altre informazioni, vedere [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+> L' `x:Type` estensione di markup fornisce un riferimento a un tipo CLR per un tipo generico e ha una funzione simile all' `typeof` operatore in C#. Per altre informazioni, vedere [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension).
 
 ## <a name="single-primitive-type-argument"></a>Singolo argomento di tipo primitivo
 
@@ -208,11 +194,11 @@ In questo esempio, `GenericsDemo.Models` viene definito come `models` spazio dei
 </ContentPage    
 ```
 
-In questo esempio, `GenericsDemo.Models` viene definito come `models` spazio dei nomi XAML e `System.Collections.Generic` viene definito come `scg` spazio dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un oggetto `List<T>` di cui viene creata un'istanza con un `KeyValuePair<TKey, TValue>` vincolo, con gli argomenti di tipo vincolo interno `string` e `Monkey` . La `List<KeyValuePair<string,Monkey>>` raccolta viene inizializzata con più `KeyValuePair` elementi, usando il costruttore non predefinito `KeyValuePair` e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di ogni `Monkey` oggetto viene impostato come `ItemTemplate` di [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Per informazioni sul passaggio di argomenti a un costruttore non predefinito, vedere [passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
+In questo esempio, `GenericsDemo.Models` viene definito come `models` spazio dei nomi XAML e `System.Collections.Generic` viene definito come `scg` spazio dei nomi XAML. La `CollectionView.ItemsSource` proprietà è impostata su un oggetto `List<T>` di cui viene creata un'istanza con un `KeyValuePair<TKey, TValue>` vincolo, con gli argomenti di tipo vincolo interno `string` e `Monkey` . La `List<KeyValuePair<string,Monkey>>` raccolta viene inizializzata con più `KeyValuePair` elementi, usando il costruttore non predefinito `KeyValuePair` e un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto che definisce l'aspetto di ogni `Monkey` oggetto viene impostato come `ItemTemplate` di [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Per informazioni sul passaggio di argomenti a un costruttore non predefinito, vedere [passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Generics in XAML (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [Primitive del linguaggio XAML 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
-- [estensione di markup x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)
-- [Passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)
+- [estensione di markup x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
+- [Passaggio di argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

@@ -6,12 +6,12 @@ ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: davidortinau
 ms.author: daortin
 ms.date: 08/06/2018
-ms.openlocfilehash: 78b849434a087cf7951fe36345688251885ea00b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 5edfd8216892eb28a2b1ad14d3ccee1668b21a43
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571220"
 ---
 # <a name="sharing-code-overview"></a>Panoramica della condivisione del codice
 
@@ -19,9 +19,9 @@ _Questo documento mette a confronto i diversi metodi di condivisione del codice 
 
 Sono disponibili tre metodi per la condivisione di codice tra applicazioni multipiattaforma:
 
-- [**Librerie di .NET standard**](#Net_Standard) : i progetti .NET standard possono implementare codice da condividere tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). .NET Standard 1,0-1,6 implementano set di API progressivamente più grandi, mentre .NET Standard 2,0 offre la migliore copertura della libreria di classi portabile .NET (incluse le API .NET disponibili nelle app Xamarin).
-- [**Progetti condivisi**](#Shared_Projects) : usare il tipo di progetto di asset condiviso per organizzare il codice sorgente e usare `#if` direttive del compilatore come richiesto per gestire i requisiti specifici della piattaforma.
-- [**Librerie di classi**](#Portable_Class_Libraries) portabili (deprecate): le librerie di classi portabili (classi portabili) possono avere come destinazione più piattaforme con una superficie API comune e usare le interfacce per fornire funzionalità specifiche della piattaforma. Classi portabili sono deprecati nelle versioni più recenti di Visual Studio &ndash; usare .NET Standard.
+- [**Librerie di .NET standard**](#Net_Standard) : i progetti .NET standard possono implementare codice da condividere tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). .NET Standard 1,0-1,6 implementano set di API progressivamente più grandi, mentre .NET Standard 2,0 offre la migliore copertura della libreria di classi portabile .NET (incluse le API .NET disponibili nelle app Novell).
+- [**Progetti condivisi**](#Shared_Projects) : usare il tipo di progetto di asset condiviso per organizzare il codice sorgente e usare le `#if` direttive del compilatore come richiesto per gestire i requisiti specifici della piattaforma.
+- [**Librerie di classi**](#Portable_Class_Libraries) portabili (deprecate): le librerie di classi portabili (classi portabili) possono avere come destinazione più piattaforme con una superficie API comune e usare le interfacce per fornire funzionalità specifiche della piattaforma. Classi portabili sono deprecati nelle versioni più recenti di Visual Studio &ndash; usare invece .NET standard.
 
 L'obiettivo di una strategia di condivisione del codice è supportare l'architettura illustrata in questo diagramma, in cui una singola codebase può essere utilizzata da più piattaforme.
 
@@ -29,11 +29,11 @@ L'obiettivo di una strategia di condivisione del codice è supportare l'architet
 
 In questo articolo vengono confrontati i metodi disponibili per scegliere il tipo di progetto appropriato per le applicazioni.
 
-<a name="Net_Standard" />
+<a name="Net_Standard"></a>
 
 ## <a name="net-standard-libraries"></a>Librerie di .NET Standard
 
-[.NET standard](~/cross-platform/app-fundamentals/net-standard.md) librerie forniscono un set ben definito di librerie di classi di base a cui è possibile fare riferimento in diversi tipi di progetto, inclusi progetti multipiattaforma come Xamarin.Android e Xamarin.iOS. È consigliabile .NET Standard 2,0 per la massima compatibilità con il codice .NET Framework esistente.
+[.NET standard](~/cross-platform/app-fundamentals/net-standard.md) librerie forniscono un set ben definito di librerie di classi di base a cui è possibile fare riferimento in diversi tipi di progetto, inclusi progetti multipiattaforma come Novell. Android e Novell. iOS. È consigliabile .NET Standard 2,0 per la massima compatibilità con il codice .NET Framework esistente.
 
 ![Diagramma .NET Standard](code-sharing-images/netstandard.png "Diagramma .NET Standard")
 
@@ -45,19 +45,19 @@ In questo articolo vengono confrontati i metodi disponibili per scegliere il tip
 
 ### <a name="disadvantages"></a>Svantaggi
 
-- Non è possibile usare direttive del compilatore come `#if __IOS__`.
+- Non è possibile usare direttive del compilatore come `#if __IOS__` .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 .NET Standard è [simile a PCL](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries), ma con un modello più semplice per il supporto della piattaforma e un numero maggiore di classi da BCL.
 
-<a name="Shared_Projects" />
+<a name="Shared_Projects"></a>
 
 ## <a name="shared-projects"></a>Progetti condivisi
 
 I [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) contengono file di codice e asset inclusi in tutti i progetti che vi fanno riferimento. I progetti di condivisione non producono un output compilato autonomamente.
 
-Questa schermata mostra un file di soluzione contenente tre progetti di applicazione (per Android, iOS e Windows) con un progetto **condiviso** che contiene file C# di codice sorgente comuni:
+Questa schermata mostra un file di soluzione contenente tre progetti di applicazione (per Android, iOS e Windows) con un progetto **condiviso** che contiene file di codice sorgente C# comuni:
 
 ![Soluzione progetto condiviso](code-sharing-images/sharedsolution.png "Soluzione progetto condiviso")
 
@@ -72,30 +72,30 @@ Un'applicazione multipiattaforma che supporta iOS, Android e Windows richiedereb
 Una soluzione di esempio contiene le cartelle e i progetti seguenti (i nomi di progetto sono stati scelti per l'espressività, i progetti non devono seguire queste linee guida per la denominazione):
 
 - **Shared** : progetto condiviso contenente il codice comune a tutti i progetti.
-- Progetto di applicazione **AppAndroid** – Xamarin.Android.
-- **AppiOS** : progetto di applicazione Xamarin.iOS.
+- Progetto di applicazione **AppAndroid** – Novell. Android.
+- **AppiOS** : progetto di applicazione Novell. iOS.
 - **AppWindows** : progetto di applicazione Windows.
 
-In questo modo i tre progetti di applicazione condividono lo stesso codice sorgente, ovvero C# i file in condivisione. Tutte le modifiche apportate al codice condiviso verranno condivise tra tutti e tre i progetti.
+In questo modo i tre progetti di applicazione condividono lo stesso codice sorgente, ovvero i file C# in Shared. Tutte le modifiche apportate al codice condiviso verranno condivise tra tutti e tre i progetti.
 
 ### <a name="benefits"></a>Vantaggi
 
 - Consente di condividere il codice tra più progetti.
-- Il codice condiviso può essere sottoposto a branching in base alla piattaforma usando le direttive del compilatore, ad esempio utilizzando `#if __ANDROID__`, come illustrato nel documento [compilazione di applicazioni multipiattaforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) ).
-- I progetti di applicazioni possono includere riferimenti specifici della piattaforma che possono essere utilizzati dal codice condiviso (ad esempio, utilizzando `Community.CsharpSqlite.WP7` nell'esempio di attività per Windows Phone).
+- Il codice condiviso può essere sottoposto a branching in base alla piattaforma usando le direttive del compilatore, ad esempio utilizzando `#if __ANDROID__` , come illustrato nel documento [compilazione di applicazioni multipiattaforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) ).
+- I progetti di applicazioni possono includere riferimenti specifici della piattaforma che possono essere utilizzati dal codice condiviso (ad esempio, `Community.CsharpSqlite.WP7` nell'esempio di attività per Windows Phone).
 
 ### <a name="disadvantages"></a>Svantaggi
 
 - I refactoring che interessano il codice all'interno delle direttive del compilatore ' inactive ' non aggiorneranno il codice all'interno di tali direttive.
 - A differenza della maggior parte degli altri tipi di progetto, un progetto condiviso non ha un assembly ' output '. Durante la compilazione, i file vengono trattati come parte del progetto di riferimento e compilati in tale assembly. Se si vuole condividere il codice come assembly, .NET Standard o le librerie di classi portabili sono una soluzione migliore.
 
-<a name="Shared_Remarks" />
+<a name="Shared_Remarks"></a>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Una soluzione efficace per gli sviluppatori di applicazioni che scrivono codice destinato solo alla condivisione nella propria app (e non alla distribuzione ad altri sviluppatori).
 
-<a name="Portable_Class_Libraries" />
+<a name="Portable_Class_Libraries"></a>
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
 
@@ -117,11 +117,11 @@ Le librerie di classi portabili sono [descritte in dettaglio qui](~/cross-platfo
 - Non è possibile usare le direttive del compilatore.
 - È possibile utilizzare solo un subset di .NET Framework, determinato dal profilo selezionato. per altre informazioni, vedere [Introduzione a PCL](~/cross-platform/app-fundamentals/pcl.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il modello PCL viene considerato deprecato nelle versioni più recenti di Visual Studio.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 La strategia di condivisione del codice scelta sarà determinata dalle piattaforme di destinazione. Scegliere un metodo che funzioni meglio per il progetto.
 

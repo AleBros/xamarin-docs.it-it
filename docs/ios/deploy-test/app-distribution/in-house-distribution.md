@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 854fecd7945c1090b475b3571678388b8e1cf127
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026542"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573235"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
 
@@ -31,13 +31,13 @@ Dopo che l'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cicl
 
 È tuttavia necessario che tutte le app siano firmate da Apple.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-your-application"></a>Test dell'applicazione
 
 Il test dell'applicazione viene eseguito con la distribuzione ad hoc. Per altre informazioni sul test, seguire la procedura illustrata nella guida [Distribuzione ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Tenere presente che è possibile testare solo un massimo di 100 dispositivi.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## <a name="getting-set-up-for-distribution"></a>Configurazione per la distribuzione
 
@@ -47,13 +47,13 @@ I certificati del programma Apple Developer Enterprise saranno validi per tre an
 
 È importante tenere presente che i certificati scaduti non possono essere rinnovati, ma sarà necessario sostituire il certificato scaduto con uno nuovo, come illustrato in dettaglio [sotto](#certificate).
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## <a name="creating-a-distribution-certificate"></a>Creazione di un certificato di distribuzione
 
 1. Passare alla sezione *Certificates, Identifiers & Profiles* (Certificati, identificatori e profili) di Apple Developer Member Center.
 2. In *Certificates* (Certificati) selezionare **Production** (Produzione).
-3. Fare **+** clic sul pulsante per creare un nuovo certificato.
+3. **+** Per creare un nuovo certificato, fare clic sul pulsante.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (Interna e ad hoc):
 
    [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
@@ -84,29 +84,29 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 
    [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
-<a name="profile" />
+<a name="profile"></a>
 
 ## <a name="creating-a-distribution-provisioning-profile"></a>Creazione di un profilo di provisioning di distribuzione
 
-<a name="appid" />
+<a name="appid"></a>
 
 ### <a name="creating-an-app-id"></a>Creazione di un ID app
 
 Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID app per identificare l'app che si distribuirà nel dispositivo dell'utente. Se non è già stato creato, seguire questa procedura per crearne uno:
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
-2. Fare **+** clic sul pulsante e fornire un **Nome** che lo identificherà nel portale.
+2. Fare clic sul **+** pulsante e specificare un **nome** che lo identificherà nel portale.
 3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **Con caratteri jolly**: com.[NomeDominio].*
 4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) richiesto dall'app.
 5. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
 Quando i componenti necessari per la creazione di un profilo di distribuzione sono disponibili, seguire questi passaggi per crearne uno:
 
-1. Torna al portale di provisioning Apple e seleziona**Distribuzione** **provisioning** > :
+1. Tornare al portale di provisioning Apple e selezionare distribuzione di **provisioning**  >  **Distribution**:
 
    [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
-2. Fare **+** clic sul pulsante e selezionare il tipo di profilo di distribuzione che si desidera creare come **In-House**:
+2. Fare clic sul **+** pulsante e selezionare il tipo di profilo di distribuzione che si desidera creare come **internamente**:
 
    [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
@@ -134,7 +134,7 @@ Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio, po
 
 -----
 
-<a name="inhouse" />
+<a name="inhouse"></a>
 
 ## <a name="distributing-your-app-in-house"></a>Distribuzione interna dell'app
 
@@ -145,7 +145,7 @@ Nel programma Apple Developer Enterprise, il licenziatario è la persona respons
 - Localmente tramite iTunes
 - Server MDM
 - Un server Web sicuro interno
-- Email
+- Posta elettronica
 
 Per distribuire l'app in uno di questi modi, è prima necessario creare un file IPA, come illustrato nella sezione successiva.
 
@@ -155,13 +155,13 @@ Dopo il provisioning, le applicazioni possono essere compresse in un file noto c
 
 Per altre informazioni sulla creazione di un file IPA, vedere [Supporto IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha offerto una breve panoramica della distribuzione di applicazioni Xamarin.iOS interna.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Distribuzione dell'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Distribuzione di App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Distribuzione ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [Il file iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
+- [Il file iTunesMetadata. plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Supporto IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

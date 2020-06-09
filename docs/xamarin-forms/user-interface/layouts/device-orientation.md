@@ -9,8 +9,6 @@ ms. prod: Novell MS. AssetID: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2 ms. Technolog
 
 È importante considerare la modalità di utilizzo dell'applicazione e il modo in cui è possibile incorporare l'orientamento orizzontale per migliorare l'esperienza utente. I singoli layout possono essere progettati per supportare più orientamenti e utilizzare al meglio lo spazio disponibile. A livello di applicazione, la rotazione può essere disabilitata o abilitata.
 
-<a name="Controlling_Orientation" />
-
 ## <a name="controlling-orientation"></a>Controllo dell'orientamento
 
 Quando Xamarin.Forms si usa, il metodo supportato per il controllo dell'orientamento del dispositivo consiste nell'usare le impostazioni per ogni singolo progetto.
@@ -74,8 +72,6 @@ Si noti che le API Android Native forniscono una grande quantità di controllo s
 
 Nel piattaforma UWP (Universal Windows Platform) (UWP), gli orientamenti supportati vengono impostati nel file **Package. appxmanifest** . Aprendo il manifesto verrà rivelato un pannello di configurazione in cui è possibile selezionare gli orientamenti supportati.
 
-<a name="Reacting_to_Changes_in_Orientation" />
-
 ## <a name="reacting-to-changes-in-orientation"></a>Reazione alle modifiche nell'orientamento
 
 Xamarin.Formsnon offre eventi nativi per notificare all'app le modifiche dell'orientamento nel codice condiviso. Contiene tuttavia [Xamarin.Essentials](~/essentials/index.md) una classe [ `DeviceDisplay` ] che fornisce le notifiche relative alle modifiche dell'orientamento.
@@ -120,8 +116,6 @@ e Landscape:
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Si noti che le app sfruttano lo spazio disponibile aggiungendo più funzionalità in orizzontale.
-
-<a name="Responsive_Layout" />
 
 ## <a name="responsive-layout"></a>Layout reattivo
 

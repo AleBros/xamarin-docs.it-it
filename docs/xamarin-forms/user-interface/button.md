@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPulsante
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f7309794768c01d4978aa369cd1950d4986938db
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137462"
+title: " Xamarin.Forms Button" Description: "il pulsante risponde a un tocco o a un clic che indirizza un'applicazione per eseguire un'attività specifica".
+ms. prod: Novell MS. AssetID: 62CAEB63-0800-44F4-9B8C-EE632138C2F5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-button"></a>Xamarin.FormsPulsante
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
@@ -414,8 +400,6 @@ Il risultato è che l'oggetto `Label` ruota solo quando un dito è in contatto c
 
 Questo tipo di comportamento ha applicazioni per i giochi: un dito su un `Button` oggetto potrebbe far spostare un oggetto sullo schermo in una direzione specifica.
 
-<a name="button-appearance" />
-
 ## <a name="button-appearance"></a>Aspetto del pulsante
 
 `Button`Eredita o definisce diverse proprietà che influiscono sull'aspetto:
@@ -433,7 +417,7 @@ Questo tipo di comportamento ha applicazioni per i giochi: un dito su un `Button
 > [!NOTE]
 > La `Button` classe dispone inoltre [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) di proprietà e che controllano il comportamento del layout di `Button` . Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-Gli effetti di sei di queste proprietà (ad eccezione di `FontFamily` e `FontAttributes` ) sono illustrati nella pagina relativa all' **aspetto del pulsante** . Un'altra proprietà, [`Image`](xref:Xamarin.Forms.Button.ImageSource) , viene illustrata nella sezione [**utilizzo di bitmap con Button**](#image-button).
+Gli effetti di sei di queste proprietà (ad eccezione di `FontFamily` e `FontAttributes` ) sono illustrati nella pagina relativa all' **aspetto del pulsante** . Un'altra proprietà, [`Image`](xref:Xamarin.Forms.Button.ImageSource) , viene illustrata nella sezione [**utilizzo di bitmap con Button**](#using-bitmaps-with-buttons).
 
 Tutte le visualizzazioni e le associazioni dati nella pagina **aspetto pulsante** sono definite nel file XAML:
 
@@ -747,8 +731,6 @@ public partial class ToggleButtonDemoPage : ContentPage
 Ecco il programma in esecuzione in iOS, Android e UWP:
 
 [![Demo interruttore](button-images/ToggleButtonDemo.png "Demo interruttore")](button-images/ToggleButtonDemo-Large.png#lightbox)
-
-<a name="image-button" />
 
 ## <a name="using-bitmaps-with-buttons"></a>Uso di bitmap con pulsanti
 

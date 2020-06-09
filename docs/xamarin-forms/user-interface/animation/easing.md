@@ -1,9 +1,6 @@
 ---
 title: "funzioni di interpolazione in Xamarin.Forms " Description: " Xamarin.Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione. In questo articolo viene illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+ms. prod: Novell MS. AssetID: E6F124C7-A161-4C1F-AF40-52F0935E54DE ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/14/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="easing-functions-in-xamarinforms"></a>Funzioni di interpolazioneXamarin.Forms
@@ -28,7 +25,7 @@ La [`Easing`](xref:Xamarin.Forms.Easing) classe definisce numerose funzioni di i
 
 I `In` `Out` suffissi e indicano se l'effetto fornito dalla funzione di interpolazione è evidente all'inizio dell'animazione, alla fine o a entrambi.
 
-Inoltre, è possibile creare funzioni di interpolazione personalizzate. Per altre informazioni, vedere [funzioni di interpolazione personalizzate](#customeasing).
+Inoltre, è possibile creare funzioni di interpolazione personalizzate. Per altre informazioni, vedere [funzioni di interpolazione personalizzate](#custom-easing-functions).
 
 ## <a name="consuming-an-easing-function"></a>Utilizzo di una funzione di interpolazione
 
@@ -45,8 +42,6 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 Specificando una funzione di interpolazione per un'animazione, la velocità dell'animazione diventa non lineare e produce l'effetto fornito dalla funzione di interpolazione. Se si omette una funzione di interpolazione quando si crea un'animazione, l'animazione utilizzerà la [`Linear`](xref:Xamarin.Forms.Easing.Linear) funzione di interpolazione predefinita, che produce una velocità lineare.
 
 Per ulteriori informazioni sull'utilizzo dei metodi di estensione dell'animazione nella [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe, vedere [animazioni semplici](~/xamarin-forms/user-interface/animation/simple.md). Le funzioni di interpolazione possono essere utilizzate anche dalla [`Animation`](xref:Xamarin.Forms.Animation) classe. Per altre informazioni, vedere [animazioni personalizzate](~/xamarin-forms/user-interface/animation/custom.md).
-
-<a name="customeasing" />
 
 ## <a name="custom-easing-functions"></a>Funzioni di interpolazione personalizzate
 
@@ -94,7 +89,7 @@ await image.TranslateTo (0, 200, 2000, new Easing (t => 1 - Math.Cos (10 * Math.
 
 La funzione di interpolazione personalizzata viene specificata come argomento della funzione lambda per il [`Easing`](xref:Xamarin.Forms.Easing) costruttore e usa il `Math.Cos` metodo per creare un effetto di rilascio lento che è smorzato dal `Math.Exp` metodo. Pertanto, l' [`Image`](xref:Xamarin.Forms.Image) istanza viene convertita in modo che sembri rilasciarla nel punto di riposo finale.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo è stato illustrato come utilizzare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate. Xamarin.Formsinclude una [`Easing`](xref:Xamarin.Forms.Easing) classe che consente di specificare una funzione di trasferimento che controlla il modo in cui le animazioni accelerano o rallentano durante l'esecuzione.
 

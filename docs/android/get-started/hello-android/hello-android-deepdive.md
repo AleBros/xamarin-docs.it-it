@@ -9,16 +9,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2f8c6a80b00a4a91c40c70af05ac0ebe18daaed3
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571441"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
 
-_In questa guida in due parti, si creerà la prima applicazione Xamarin.Android e sviluppare una comprensione dei fondamenti dello sviluppo di applicazioni Android con Xamarin. Lungo la strada, si verrà introdotti gli strumenti, concetti e passaggi necessari per compilare e distribuire un'applicazione Xamarin.Android._
+_In questa guida in due parti si creerà la prima applicazione Novell. Android e si svilupperanno le nozioni di base dello sviluppo di applicazioni Android con Novell. Verranno introdotti gli strumenti, i concetti e i passaggi necessari per compilare e distribuire un'applicazione Novell. Android._
 
 In [Hello, Android: guida introduttiva](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) è stata compilata ed eseguita la prima applicazione Xamarin.Android. È ora il momento di acquisire una conoscenza più approfondita del funzionamento delle applicazioni Android, per poter creare programmi più complessi. Questa guida riprende i passaggi eseguiti nella procedura dettagliata relativa a Hello, Android, per consentire la comprensione delle operazioni effettuate e la conoscenza delle funzioni fondamentali dello sviluppo di applicazioni Android.
 
@@ -30,13 +30,13 @@ Questa guida tratta gli argomenti seguenti:
 
 - **Anatomia di un'applicazione Xamarin.Android**: panoramica delle parti essenziali di un'applicazione Xamarin.Android.
 
-- **Concetti fondamentali sulle app e nozioni di base sull'architettura** &ndash; Introduzione alle attività e al manifesto Android e caratteristiche generali dello sviluppo di app Android.
+- **Nozioni fondamentali sulle app e nozioni** &ndash; fondamentali sull'architettura Introduzione alle attività, al manifesto Android e alla versione generale dello sviluppo per Android.
 
 - **Interfaccia utente** &ndash; Creazione di interfacce utente con Android Designer.
 
-- Attività e ciclo di &ndash; **vita dell'attività** Un'introduzione al ciclo di vita dell'attività e il cablaggio dell'interfaccia utente nel codice.
+- **Attività e ciclo** &ndash; di vita delle attività Introduzione al ciclo di vita delle attività e collegamento dell'interfaccia utente nel codice.
 
-- **Test, distribuzione e tocco di finitura** &ndash; Completa l'applicazione con consigli su test, distribuzione, generazione di grafica e altro ancora.
+- **Test, distribuzione e ritocchi finali** &ndash; Completa l'applicazione con suggerimenti su test, distribuzione, generazione di immagini e altro ancora.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -76,7 +76,7 @@ Visual Studio per Mac segue la prassi di Visual Studio di organizzare il codice 
 
 ::: zone-end
 
-<a name="anatomy" />
+<a name="anatomy"></a>
 
 ## <a name="anatomy-of-a-xamarinandroid-application"></a>Anatomia di un'applicazione Xamarin.Android
 
@@ -91,7 +91,7 @@ La schermata seguente elenca il contenuto della soluzione. Si tratta di Esplora 
 
 La schermata seguente elenca il contenuto della soluzione. Si tratta del riquadro della soluzione, che contiene la struttura di directory e tutti i file associati alla soluzione:
 
-[![Cuscinetto della soluzione](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
+[![riquadro della soluzione](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 ::: zone-end
 
@@ -146,7 +146,7 @@ Quando si apre l'applicazione **Phoneword** per la prima volta in un emulatore o
 
 Poiché non esiste una progressione lineare attraverso le applicazioni Android (che infatti possono essere avviate da diversi punti), Android tiene traccia in modo molto particolare delle classi e dei file che costituiscono un'applicazione. Nell'esempio **Phoneword**, tutte le parti che costituiscono l'applicazione vengono registrate con un file XML speciale, detto **manifesto Android**. Il ruolo del **manifesto Android** consiste nel tenere traccia del contenuto, delle proprietà e delle autorizzazioni di un'applicazione e di comunicarli al sistema operativo Android. È possibile considerare l'applicazione **Phoneword** come un'unica attività (schermata) e come una raccolta di file di risorse e di helper collegati dal file manifesto Android, come illustrato nel diagramma riportato di seguito:
 
-[![Helper per le risorse](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
+[![Helper di risorse](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 Le prossime sezioni analizzano le relazioni tra le diverse parti dell'applicazione **Phoneword**, consentendo una maggiore comprensione del diagramma qui sopra. L'analisi inizia con l'interfaccia utente e illustra i file di progettazione e layout di Android.
 
@@ -161,7 +161,7 @@ Le prossime sezioni analizzano le relazioni tra le diverse parti dell'applicazio
 
 **activity_main.axml** è il file di layout dell'interfaccia utente per la prima schermata nell'applicazione. L'estensione axml indica che si tratta di un file di progettazione Android (AXML è l'acronimo di *Android XML*). Il nome *Main* è arbitrario dal punto di vista di Android &ndash; il file di layout avrebbe potuto avere un nome diverso. Quando si apre **activity_main.axml** nell'IDE, viene visualizzato l'editor visivo per i file di layout Android, *Android Designer*:
 
-[![Finestra di progettazione Android](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 Nell'app **Phoneword** l'ID di **TranslateButton**è impostato su `@+id/TranslateButton`:
 
@@ -172,11 +172,11 @@ Nell'app **Phoneword** l'ID di **TranslateButton**è impostato su `@+id/Translat
 
 **Main.axml** è il file di layout dell'interfaccia utente per la prima schermata nell'applicazione. L'estensione axml indica che si tratta di un file di progettazione Android (AXML è l'acronimo di *Android XML*). Il nome *Main* è arbitrario dal punto di vista di Android &ndash; il file di layout avrebbe potuto avere un nome diverso. Quando si apre **Main.axml** nell'IDE, viene visualizzato l'editor visivo per i file di layout Android, *Android Designer*:
 
-[![Finestra di progettazione Android](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 Nell'app **Phoneword** l'ID di **TranslateButton**è impostato su `@+id/TranslateButton`:
 
-[![Impostazione dell'ID TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
+[![Impostazione ID TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 
@@ -193,11 +193,11 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 ::: zone-end
 ::: zone pivot="macos"
 
-[![Visualizzazione origine della finestra di progettazione](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
+[![Visualizzazione Origine della finestra di progettazione](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 ::: zone-end
 
-Questo codice sorgente XML deve contenere quattro elementi di controllo: due **TextView**s, un **EditText** e un **Button** elemento. Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
+Questo codice sorgente XML deve contenere quattro elementi di controllo: due **TextView**s, uno **EDITTEXT** e un elemento **Button** . Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
 
 La trattazione degli strumenti e dei concetti alla base della parte visiva dell'interfaccia utente è completata. È il momento di passare al codice che consente il funzionamento dell'interfaccia utente, con l'analisi delle attività e del loro ciclo di vita.
 
@@ -231,7 +231,7 @@ Ora che le nozioni di base su `MainActivity` sono state illustrate, è il moment
 
 In Android, il ciclo di vita delle attività prevede fasi diverse a seconda delle interazioni con l'utente. Le attività possono essere create, avviate e messe in pausa, riprese, eliminate definitivamente e così via. La classe `Activity` contiene metodi che vengono chiamati dal sistema in punti specifici del ciclo di vita della schermata. Il diagramma seguente illustra il ciclo di vita tipico di un'attività e alcuni dei metodi corrispondenti a determinate fasi:
 
-[![Ciclo di vita dell'attività](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
+[![Ciclo di vita delle attività](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 Eseguendo l'override dei metodi del ciclo di vita di `Activity`, è possibile controllare la modalità di caricamento dell'attività, il modo in cui reagisce all'interazione dell'utente e persino che cosa accade dopo che l'attività è scomparsa dallo schermo del dispositivo. È ad esempio possibile eseguire l'override dei metodi del ciclo di vita illustrati nel diagramma precedente per eseguire alcune operazioni importanti:
 
@@ -345,13 +345,13 @@ Dopo aver configurato il dispositivo, per usarlo come destinazione della distrib
 
 L'applicazione verrà avviata nel dispositivo:
 
-[![Inserisci la parola da telefono](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
+[![Immettere Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
 ### <a name="set-icons-for-different-screen-densities"></a>Impostare icone per densità dello schermo diverse
 
 Gli schermi dei dispositivi Android possono avere schermi con dimensioni e risoluzioni diverse e non tutte le immagini vengono visualizzate in modo ottimale in tutti gli schermi. Ecco, ad esempio, lo screenshot di un'icona a bassa densità in un Nexus 5 ad alta densità. Si noti com'è sfocato rispetto alle icone circostanti:
 
-[![Icona Sfocatura](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
+[![Icona sfocatura](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 Per evitare questo problema, è buona norma inserire nella cartella **Risorse** icone di risoluzioni diverse. Android mette a disposizione versioni diverse della cartella **mipmap** per consentire la gestione di icone di avvio di densità diverse: *mdpi* per schermi a densità media, *hdpi* per schermi a densità alta e * xhdpi*, *xxhdpi* e *xxxhdpi* per schermi a densità molto alta. Icone di dimensioni diverse vengono archiviate nelle cartelle **mipmap -** appropriate:
 
@@ -362,7 +362,7 @@ Per evitare questo problema, è buona norma inserire nella cartella **Risorse** 
 ::: zone-end
 ::: zone pivot="windows"
 
-[![Cartelle Mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
+[![Cartelle mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 ::: zone-end
 
@@ -372,7 +372,7 @@ Android selezionerà l'icona con la densità appropriata:
 
 ### <a name="generate-custom-icons"></a>Generare icone personalizzate
 
-Non tutti hanno una finestra di progettazione disponibile per creare le icone personalizzate e avviare le immagini che un'app deve distinguersi. Ecco diversi approcci alternativi per generare grafica dell'app personalizzata:
+Non tutti hanno a disposizione una finestra di progettazione per creare le icone personalizzate e le immagini di avvio che devono essere rilevate da un'app. Ecco alcuni approcci alternativi per la generazione di immagini personalizzate per le app:
 
 ::: zone pivot="windows"
 
@@ -404,11 +404,11 @@ In precedenza, le associazioni a tutte le librerie Google Play Services venivano
 
 Per aggiungere una o più librerie Google Play Services, fare doppio clic sul nodo **Pacchetti** nell'albero del progetto e fare clic su **Aggiungi Google Play Services... **:
 
-[![Aggiungi google Play Service](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
+[![Aggiungi servizio Google Play](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 Quando viene visualizzata la finestra di dialogo **Aggiungi Google Play Services**, selezionare i pacchetti (NuGet) che si vogliono aggiungere al progetto:
 
-[![Selezionare i pacchetti](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
+[![Seleziona pacchetti](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 Quando si seleziona un servizio e si fa clic su **Aggiungi pacchetto**, Visual Studio per Mac scarica e installa il pacchetto selezionato e tutti i pacchetti Google Play Services dipendenti richiesti. In alcuni casi, può essere visualizzata la finestra di dialogo **Accettazione della licenza**, in cui è necessario fare clic su **Accetta** per poter installare i pacchetti:
 
@@ -416,7 +416,7 @@ Quando si seleziona un servizio e si fa clic su **Aggiungi pacchetto**, Visual S
 
 ::: zone-end
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Congratulazioni! A questo punto si dovrebbe avere una solida conoscenza dei componenti delle applicazioni Xamarin.Android e degli strumenti necessari per creare tali applicazioni.
 

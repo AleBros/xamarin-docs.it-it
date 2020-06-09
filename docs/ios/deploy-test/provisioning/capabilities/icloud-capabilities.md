@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: c8c1a5d284e5faaffae33a724c461b6fd74cf39b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1932bc8bf5362a284ed62aa241170264826baa9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567554"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Funzionalità iCloud in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione di provisioning. Questa guida spiega la configurazione necessaria per le funzionalità iCloud._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità iCloud._
 
 iCloud offre agli utenti iOS un modo semplice e pratico per archiviare contenuti e condividerli tra i dispositivi. Gli sviluppatori possono usare iCloud in quattro modi per offrire ai propri utenti un mezzo di archiviazione: archiviazione chiave-valore, archiviazione UIDocument, CoreData e uso diretto di CloudKit per l'archiviazione di singoli file e directory. Per altre informazioni su questi argomenti, vedere la guida [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) (Introduzione a iCloud).
 
@@ -25,7 +25,7 @@ L'aggiunta della funzionalità iCloud a un'applicazione è leggermente più comp
 > [!IMPORTANT]
 > Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
 
-<a name="icloud-developer-center" />
+<a name="icloud-developer-center"></a>
 
 ## <a name="developer-center"></a>Centro per sviluppatori
 
@@ -59,11 +59,11 @@ Per creare un nuovo ID app e aggiungervi un contenitore, seguire questa procedur
     
     ![Sezione dell'identificatore nel centro sviluppatori](icloud-capabilities-images/image26.png)
 
-2. Seleziona **+** il pulsante per aggiungere un nuovo ID app: 
+2. Selezionare il **+** pulsante per aggiungere un nuovo ID app: 
     
     ![Pulsante per aggiungere un nuovo ID app](icloud-capabilities-images/image27.png)
 
-3. Immettere un **Nome** per l'ID app e assegnargli un **ID app esplicito:**
+3. Immettere un **nome** per l'ID app e assegnargli un **ID app esplicito**:
     
     ![Immettere i dettagli del nuovo ID app](icloud-capabilities-images/image28.png)
 
@@ -93,7 +93,7 @@ Per creare un nuovo ID app e aggiungervi un contenitore, seguire questa procedur
 
 10. Verificare le assegnazioni del contenitore e premere **Assign** (Assegna).
 
-Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo di provisioning, come descritto nella guida [Utilizzo delle funzionalità.](~/ios/deploy-test/provisioning/capabilities/index.md) 
+Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo di provisioning, come descritto nella Guida [uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md) . 
 
 Per altre informazioni sull'uso di iCloud, vedere le guide seguenti:
 
@@ -107,6 +107,6 @@ Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero esse
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**.Questa _non_ è l'impostazione predefinita per le compilazioni di Debug e iOS Simulator.This is not the default setting for Debug and iOS Simulator builds.
+* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**.Questa _non_è   l'impostazione predefinita per le compilazioni di debug e del simulatore iOS.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

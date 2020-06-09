@@ -6,18 +6,18 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
-ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
+ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82738800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571038"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
 Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## <a name="use-the-profiler"></a>Usare il Profiler
 
@@ -31,7 +31,7 @@ Per la profilatura di un'app è opportuno seguire le procedure consigliate ripor
 - In linea di principio, la profilatura deve essere eseguita in un'ampia gamma di dispositivi. La misurazione delle prestazioni in un dispositivo, infatti, non è necessariamente indicativa delle caratteristiche delle prestazioni di altri dispositivi. La profilatura, comunque, deve essere eseguita almeno in un dispositivo con le specifiche previste più basse.
 - Chiudere tutte le altre applicazioni per assicurarsi di misurare completamente l'impatto della sola applicazione profilata, senza l'impatto di altre applicazioni.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## <a name="release-idisposable-resources"></a>Rilasciare le risorse IDisposable
 
@@ -89,7 +89,7 @@ La classe `StreamReader` implementa `IDisposable` e il blocco `finally` chiama i
 
 Per altre informazioni, vedere [Interfaccia IDisposable](xref:System.IDisposable).
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="unsubscribe-from-events"></a>Annullare le sottoscrizioni agli eventi
 
@@ -160,14 +160,14 @@ public class Subscriber : IDisposable
 
 Il campo `handler` mantiene il riferimento al metodo anonimo e viene usato per la sottoscrizione di eventi e per l'annullamento di tali sottoscrizioni.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>Evitare l'immortalità degli oggetti usando riferimenti deboli
 
 > [!NOTE]
 > Gli sviluppatori iOS devono esaminare la documentazione su come [evitare riferimenti circolari in iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) per garantire un uso efficiente della memoria da parte delle app.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## <a name="delay-the-cost-of-creating-objects"></a>Ritardare il costo della creazione di oggetti
 
@@ -209,7 +209,7 @@ L'inizializzazione differita viene eseguita la prima volta che si accede alla pr
 
 Per altre informazioni sull'inizializzazione differita, vedere [Inizializzazione differita](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="implement-asynchronous-operations"></a>Implementare operazioni asincrone
 
@@ -248,7 +248,7 @@ Le operazioni a esecuzione prolungata devono anche supportare l'annullamento. La
 
 Per altre informazioni, vedere [Panoramica del supporto asincrono](~/cross-platform/platform/async.md).
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## <a name="use-the-sgen-garbage-collector"></a>Usare il Garbage Collector SGen
 
@@ -282,7 +282,7 @@ Per ridurre la pressione sul Garbage Collector, attenersi alle indicazioni segue
 - Rilasciare in modo esplicito risorse quali flussi, connessioni di rete, grandi blocchi di memoria e file quando non sono più necessari. Per altre informazioni, vedere [Rilasciare le risorse IDisposable](#idisposable).
 - Per consentire la raccolta degli oggetti, annullare la registrazione dei gestori degli eventi quando non sono più necessari. Per altre informazioni, vedere [Annullare le sottoscrizioni agli eventi](#events).
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## <a name="reduce-the-size-of-the-application"></a>Ridurre le dimensioni dell'applicazione
 
@@ -335,7 +335,7 @@ I dispositivi mobili sono azionati da CPU basate su un'ampia gamma di architettu
 Le app Android possono anche essere divise in file APK separati per ogni interfaccia ABI ("architettura").
 Altre informazioni in questo post di blog: [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/) (Come mantenere ridotte le dimensioni delle app Android).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>Ottimizzare le risorse immagine
 
@@ -343,7 +343,7 @@ Le immagini sono tra le risorse più dispendiose usate dalle applicazioni e spes
 
 Indipendentemente dalla risoluzione delle immagini, la visualizzazione di queste può aumentare notevolmente il footprint di memoria dell'app. Di conseguenza, tali risorse devono essere create solo se necessario e rilasciate non appena l'applicazione non le richiede più.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## <a name="reduce-the-application-activation-period"></a>Ridurre il periodo di attivazione dell'applicazione
 
@@ -353,7 +353,7 @@ Prima della comparsa dell'interfaccia utente dell'applicazione, è consigliabile
 
 Durante il periodo di attivazione, viene eseguita la logica di attivazione, che spesso include il caricamento e l'elaborazione delle risorse. È possibile ridurre il periodo di attivazione verificando che le risorse necessarie siano presenti all'interno del pacchetto dell'app e che non sia quindi necessario recuperarle in remoto. In alcuni casi, ad esempio, durante il periodo di attivazione può risultare appropriato caricare i dati segnaposto archiviati localmente. Quindi, dopo la visualizzazione dell'interfaccia utente iniziale e quando l'utente è in grado di interagire con l'app, i dati segnaposto possono essere man mano sostituiti da dati scaricati da un'origine remota. La logica di attivazione dell'app, poi, deve eseguire solo le operazioni necessarie per consentire all'utente di iniziare a usare l'applicazione. Può essere utile ritardare il caricamento di assembly aggiuntivi, dato che gli assembly vengono caricati la prima volta che vengono usati.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## <a name="reduce-web-service-communication"></a>Ridurre la comunicazione con i servizi Web
 
