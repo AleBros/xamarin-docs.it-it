@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4a9af91e2d48ba7ef7fdcdb4f8472e0aaafb7854
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138710"
+title: "convalida nelle app aziendali" Descrizione: "questo capitolo illustra come l'app per dispositivi mobili eShopOnContainers esegue la convalida dell'input dell'utente. Ciò include la specifica delle regole di convalida, l'attivazione della convalida e la visualizzazione degli errori di convalida. "
+ms. prod: Novell MS. AssetID: 56e4f0fc-48D9-4033-91EC-173bb46a5e4d ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle app aziendali
 
 Tutte le app che accettano input dagli utenti devono assicurarsi che l'input sia valido. Un'app può, ad esempio, verificare la presenza di input che contiene solo caratteri in un intervallo specifico, ha una certa lunghezza o corrisponde a un particolare formato. Senza convalida, un utente può fornire dati che causano l'esito negativo dell'app. La convalida impone regole business e impedisce a un utente malintenzionato di inserire dati dannosi.
@@ -209,9 +195,7 @@ La convalida può anche essere attivata ogni volta che una proprietà associata 
 
 Il [`Entry`](xref:Xamarin.Forms.Entry) controllo viene associato alla `UserName.Value` proprietà dell' `ValidatableObject<T>` istanza e alla raccolta del controllo `Behaviors` è stata `EventToCommandBehavior` aggiunta un'istanza. Questo comportamento esegue l'oggetto `ValidateUserNameCommand` in risposta alla generazione dell' `TextChanged` evento [] sull'oggetto `Entry` , che viene generato quando il testo in viene `Entry` modificato. Il delegato esegue a sua volta `ValidateUserNameCommand` il `ValidateUserName` metodo, che esegue il `Validate` metodo sull' `ValidatableObject<T>` istanza. Pertanto, ogni volta che l'utente immette un carattere nel `Entry` controllo per il nome utente, viene eseguita la convalida dei dati immessi.
 
-Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
-
-<a name="displaying_validation_errors" />
+Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 ## <a name="displaying-validation-errors"></a>Visualizzazione degli errori di convalida
 
@@ -286,7 +270,7 @@ public static class LineColorBehavior
 }
 ```
 
-I parametri per questo metodo forniscono l'istanza del controllo a cui è collegato il comportamento e i valori precedenti e nuovi della `ApplyLineColor` proprietà associata. La `EntryLineColorEffect` classe viene aggiunta alla raccolta del controllo [`Effects`](xref:Xamarin.Forms.Element.Effects) se la `ApplyLineColor` proprietà associata è `true` , in caso contrario viene rimossa dalla raccolta del controllo `Effects` . Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+I parametri per questo metodo forniscono l'istanza del controllo a cui è collegato il comportamento e i valori precedenti e nuovi della `ApplyLineColor` proprietà associata. La `EntryLineColorEffect` classe viene aggiunta alla raccolta del controllo [`Effects`](xref:Xamarin.Forms.Element.Effects) se la `ApplyLineColor` proprietà associata è `true` , in caso contrario viene rimossa dalla raccolta del controllo `Effects` . Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 Le `EntryLineColorEffect` sottoclassi della [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) classe e vengono mostrate nell'esempio di codice seguente:
 
@@ -423,7 +407,7 @@ L'interfaccia utente Visualizza i messaggi di errore di convalida nei controlli 
 
 Ogni [`Label`](xref:Xamarin.Forms.Label) viene associato alla `Errors` proprietà dell'oggetto modello di visualizzazione da convalidare. La `Errors` proprietà viene fornita dalla `ValidatableObject<T>` classe ed è di tipo `List<string>` . Poiché la `Errors` proprietà può contenere più errori di convalida, l' `FirstValidationErrorConverter` istanza viene utilizzata per recuperare il primo errore dalla raccolta per la visualizzazione.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 L'app per dispositivi mobili eShopOnContainers esegue la convalida sincrona sul lato client delle proprietà del modello di visualizzazione e notifica all'utente gli eventuali errori di convalida evidenziando il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente del motivo per cui i dati non sono validi.
 

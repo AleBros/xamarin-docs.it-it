@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 41272e25570d9346751d7130ee8b52c6056f7f35
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304261"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565226"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Novell. iOS
 
@@ -22,7 +22,7 @@ Gli argomenti seguenti vengono descritti nel dettaglio:
 - [Gestione delle icone con cataloghi di asset](#managing) -gestione delle icone delle applicazioni con i cataloghi di asset.
 - [artwork di iTunes](#itunes) : fornire la grafica di iTunes necessaria per il metodo ad hoc per la distribuzione dell'applicazione.
 
-<a name="icon-types" />
+<a name="icon-types"></a>
 
 ## <a name="application-spotlight-and-settings-icons"></a>Icone di applicazione, Spotlight e impostazioni
 
@@ -101,27 +101,27 @@ Per supportare tutti i tipi di icona richiesti da un'app Novell. iOS destinata a
 
  Per altre informazioni sulle icone, vedere la documentazione relativa alle [dimensioni delle immagini e](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) delle icone di Apple.
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## <a name="managing-icons-with-asset-catalogs"></a>Gestione delle icone con i cataloghi asset
 
-Per le icone, è possibile aggiungere un set di immagini di `AppIcon` speciale al file di `Assets.xcassets` nel progetto dell'app. Tutte le versioni dell'immagine necessarie per supportare tutte le risoluzioni sono incluse in _xcasset_ e raggruppate insieme. Un editor speciale in Visual Studio per Mac consente allo sviluppatore di includere e configurare graficamente tali immagini.
+Per le icone, `AppIcon` è possibile aggiungere un set di immagini speciale al `Assets.xcassets` file nel progetto dell'app. Tutte le versioni dell'immagine necessarie per supportare tutte le risoluzioni sono incluse in _xcasset_ e raggruppate insieme. Un editor speciale in Visual Studio per Mac consente allo sviluppatore di includere e configurare graficamente tali immagini.
 
 Per usare un catalogo asset, seguire questa procedura:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
+1. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
 2. Scorrere verso il basso fino alla sezione **icone iPhone** .
 3. Fare clic sul pulsante **migrate to Asset Catalog** :
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
 
-4. Dal **Esplora soluzioni**fare doppio clic sul file `Assets.xcassets` per aprirlo per la modifica: 
+4. Dal **Esplora soluzioni**fare doppio clic sul `Assets.xcassets` file per aprirlo per la modifica: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
 
-5. Selezionare `AppIcon` dall'elenco degli asset per visualizzare i `Icon Editor`:
+5. Selezionare `AppIcon` dall'elenco degli asset per visualizzare `Icon Editor` :
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
 
@@ -131,7 +131,7 @@ Per usare un catalogo asset, seguire questa procedura:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic su * * info.  \* * file nella **Esplora soluzioni**:
+1. Fare doppio clic su * * info.  * * file nella **Esplora soluzioni**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
 
@@ -158,7 +158,7 @@ Per usare un catalogo asset, seguire questa procedura:
 
 Questo è il metodo preferito per l'inclusione e la gestione di asset di immagini che verranno usati per fornire icone di applicazione, Spotlight e impostazioni per un'app.
 
-<a name="itunes" />
+<a name="itunes"></a>
 
 ## <a name="itunes-artwork"></a>Illustrazione di iTunes
 
@@ -168,7 +168,7 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
+1. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
 2. Scorrere fino alla sezione **iTunes artwork** dell'Editor: 
 
     ![](app-icons-images/itunes01.png "Scroll to the iTunes Artwork section of the editor")
@@ -177,7 +177,7 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica.
+1. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
 
 2. Fare clic sulla scheda **Asset visivi** ed espandere la **grafica iTunes**: 
 

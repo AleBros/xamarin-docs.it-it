@@ -1,22 +1,22 @@
 ---
-title: Utilizzo di watchOS padre Application in Xamarin
-description: Questo documento descrive come usare un'applicazione padre watchOS in Xamarin. Illustra le estensioni delle app watchos, le app per iOS, l'archiviazione condivisa e altro ancora.
+title: Utilizzo dell'applicazione padre watchos in Novell
+description: Questo documento descrive come usare un'applicazione padre watchos in Novell. Illustra le estensioni delle app watchos, le app per iOS, l'archiviazione condivisa e altro ancora.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 49f2bdf63c286464073308cd1f17239692aa2395
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567333"
 ---
-# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo dell'applicazione padre watchos in Novell
 
-Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene abbinato a:
+Esistono diversi modi per comunicare tra l'app Watch e l'app per iOS con cui viene fornito:
 
 - Le app Watch possono [eseguire codice](#run-code) sull'app padre nell'iPhone.
 
@@ -24,11 +24,11 @@ Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene a
 
 - Usare la consegna per passare i dati da una notifica all'app Watch, inviando l'utente a uno specifico controller di interfaccia nell'app.
 
-L'App padre viene talvolta anche detto l'App contenitore.
+L'app padre viene a volte definita anche app contenitore.
 
-## <a name="run-code"></a>Eseguire il codice
+## <a name="run-code"></a>Esegui codice
 
-Questi due esempi illustrano come usare `WCSession` per eseguire codice e inviare messaggi tra un'app Watch e l'iPhone associato:
+Questi due esempi illustrano come usare `WCSession` per eseguire il codice e inviare messaggi tra un'app Watch e l'iPhone associato:
 
 - [Controlla connettività](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
 - [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
@@ -39,7 +39,7 @@ Se si configura un [gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md)
 
 ### <a name="nsuserdefaults"></a>NSUserDefaults
 
-Il codice seguente può essere scritto sia nell'estensione dell'app Watch che nell'app per iPhone padre, in modo che possano fare riferimento a un set comune di `NSUserDefaults`:
+Il codice seguente può essere scritto sia nell'estensione dell'app Watch che nell'app per iPhone padre, in modo che possano fare riferimento a un set comune di `NSUserDefaults` :
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -55,11 +55,11 @@ shared.Synchronize ();
 var count = shared.IntForKey ("count");
 ```
 
-<a name="files" />
+<a name="files"></a>
 
-### <a name="files"></a>Files
+### <a name="files"></a>File
 
-L'estensione di app e guardare iOS è anche possibile condividere i file usando un percorso di file comuni.
+L'app iOS e l'estensione Watch possono inoltre condividere file usando un percorso di file comune.
 
 ```csharp
 var FileManager = new NSFileManager ();
@@ -70,7 +70,7 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Nota: se il percorso è `null`, controllare la [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per assicurarsi che i profili di provisioning siano stati configurati correttamente e che siano stati scaricati o installati nel computer di sviluppo.
+Nota: se il percorso è `null` quindi controlla la [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per assicurarsi che i profili di provisioning siano stati configurati correttamente e che siano stati scaricati o installati nel computer di sviluppo.
 
 Per ulteriori informazioni, vedere la documentazione relativa alle [funzionalità del gruppo di app](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 

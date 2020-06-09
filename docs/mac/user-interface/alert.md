@@ -1,32 +1,32 @@
 ---
-title: Avvisi in Xamarin.Mac
-description: Questo articolo illustra l'uso degli avvisi in un'applicazione Xamarin.Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente.
+title: Avvisi in Novell. Mac
+description: Questo articolo illustra l'uso degli avvisi in un'applicazione Novell. Mac. Viene descritto come creare e visualizzare avvisi dal codice C# e rispondere alle interazioni dell'utente.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2ef8e81390b5d64971aa3883a05da9fb8795a416
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 044792f37fbba13699a5ab31d815b4f2c5dafe17
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565486"
 ---
-# <a name="alerts-in-xamarinmac"></a>Avvisi in Xamarin.Mac
+# <a name="alerts-in-xamarinmac"></a>Avvisi in Novell. Mac
 
-_Questo articolo illustra l'uso degli avvisi in un'applicazione Xamarin.Mac. Viene descritto come creare e visualizzare avvisi C# dal codice e rispondere alle interazioni dell'utente._
+_Questo articolo illustra l'uso degli avvisi in un'applicazione Novell. Mac. Viene descritto come creare e visualizzare avvisi dal codice C# e rispondere alle interazioni dell'utente._
 
-Quando si lavora C# con e .NET in un'applicazione Xamarin.Mac, si ha accesso agli stessi avvisi che uno sviluppatore lavora in *Objective-C* e *Xcode* . 
+Quando si lavora con C# e .NET in un'applicazione Novell. Mac, si ha accesso agli stessi avvisi che uno sviluppatore lavora in *Objective-C* e *Xcode* . 
 
 Un avviso è un tipo speciale di finestra di dialogo che viene visualizzato quando si verifica un problema grave, ad esempio un errore, o come un avviso, ad esempio la preparazione dell'eliminazione di un file. Poiché un avviso è una finestra di dialogo, richiede anche una risposta utente prima che possa essere chiusa.
 
 [![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
 
-In questo articolo verranno illustrate le nozioni di base sull'uso degli avvisi in un'applicazione Xamarin.Mac. 
+In questo articolo verranno illustrate le nozioni di base sull'uso degli avvisi in un'applicazione Novell. Mac. 
 
-<a name="Introduction_to_Alerts" />
+<a name="Introduction_to_Alerts"></a>
 
 ## <a name="introduction-to-alerts"></a>Introduzione agli avvisi
 
@@ -43,11 +43,11 @@ Apple suggerisce le linee guida seguenti:
 
 Per altre informazioni, vedere la sezione [avvisi](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) delle [linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) di Apple
 
-<a name="Anatomy_of_an_Alert" />
+<a name="Anatomy_of_an_Alert"></a>
 
 ## <a name="anatomy-of-an-alert"></a>Anatomia di un avviso
 
-Come indicato in precedenza, gli avvisi devono essere visualizzati all'utente dell'applicazione quando si verifica un problema grave o come avviso alla potenziale perdita di dati, ad esempio la chiusura di un file non salvato. In Xamarin.Mac viene creato un avviso nel C# codice, ad esempio:
+Come indicato in precedenza, gli avvisi devono essere visualizzati all'utente dell'applicazione quando si verifica un problema grave o come avviso alla potenziale perdita di dati, ad esempio la chiusura di un file non salvato. In Novell. Mac viene creato un avviso nel codice C#, ad esempio:
 
 ```csharp
 var alert = new NSAlert () {
@@ -65,18 +65,18 @@ Il codice precedente Visualizza un avviso con l'icona delle applicazioni sovrapp
 Apple fornisce diverse proprietà che possono essere usate per personalizzare un avviso:
 
 - **AlertStyle** definisce il tipo di un avviso come uno dei seguenti:
-  - **Avviso** : usato per avvisare l'utente di un evento corrente o imminente che non è critico. Questo è lo stile predefinito.
+  - **Avviso** : usato per avvisare l'utente di un evento corrente o imminente che non è critico. È l'impostazione predefinita.
   - **Informational** : usato per avvisare l'utente di un evento corrente o imminente. Attualmente, non esiste alcuna differenza visibile tra un **avviso** e un messaggio **informativo**
   - **Critico** : usato per avvertire l'utente di conseguenze gravi di un evento imminente, ad esempio l'eliminazione di un file. Questo tipo di avviso deve essere usato con moderazione.
 - **MessageText** : si tratta del messaggio principale o del titolo dell'avviso e dovrebbe definire rapidamente la situazione all'utente.
 - **InformativeText** : questo è il corpo dell'avviso in cui è necessario definire la situazione in modo chiaro e presentare opzioni utilizzabili all'utente.
 - **Icona** : consente di visualizzare un'icona personalizzata per l'utente.
-- **HelpAnchor** & **ShowsHelp** -consente di associare l'avviso all'applicazione HelpBook e visualizzare la guida per l'avviso.
+- **HelpAnchor**  &  **ShowsHelp** : consente all'avviso di essere associato all'applicazione HelpBook e visualizzare la guida per l'avviso.
 - **Buttons** : per impostazione predefinita, un avviso ha solo il pulsante **OK** , ma la raccolta **Buttons** consente di aggiungere altre opzioni in base alle esigenze.
-- **ShowsSuppressionButton** -se `true` Visualizza una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato.
-- **AccessoryView** : consente di aggiungere un'altra visualizzazione secondaria all'avviso per fornire informazioni aggiuntive, ad esempio l'aggiunta di un **campo di testo** per l'immissione di dati. Se si imposta un nuovo **AccessoryView** o se ne modifica uno esistente, è necessario chiamare il metodo `Layout()` per modificare il layout visibile dell'avviso.
+- **ShowsSuppressionButton** -se `true` Visualizza una casella di controllo che può essere utilizzata dall'utente per disattivare l'avviso per le occorrenze successive dell'evento che lo ha attivato.
+- **AccessoryView** : consente di aggiungere un'altra visualizzazione secondaria all'avviso per fornire informazioni aggiuntive, ad esempio l'aggiunta di un **campo di testo** per l'immissione di dati. Se si imposta un nuovo **AccessoryView** o se ne modifica uno esistente, è necessario chiamare il `Layout()` metodo per modificare il layout visibile dell'avviso.
 
-<a name="Displaying_an_Alert" />
+<a name="Displaying_an_Alert"></a>
 
 ## <a name="displaying-an-alert"></a>Visualizzazione di un avviso
 
@@ -110,7 +110,7 @@ Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
 [![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
 
-<a name="Working_with_Alert_Buttons" />
+<a name="Working_with_Alert_Buttons"></a>
 
 ## <a name="working-with-alert-buttons"></a>Uso dei pulsanti di avviso
 
@@ -161,11 +161,11 @@ Se questo codice viene eseguito, verrà visualizzato quanto segue:
 > [!IMPORTANT]
 > Non aggiungere mai più di tre pulsanti a un avviso.
 
-<a name="Showing_the_Suppress_Button" />
+<a name="Showing_the_Suppress_Button"></a>
 
 ## <a name="showing-the-suppress-button"></a>Visualizzazione del pulsante di eliminazione
 
-Se la proprietà `ShowSuppressButton` dell'avviso è `true`, nell'avviso viene visualizzata una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato. Il codice seguente visualizza un avviso mobile libero con un pulsante di eliminazione:
+Se la proprietà dell'avviso `ShowSuppressButton` è `true` , l'avviso Visualizza una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato. Il codice seguente visualizza un avviso mobile libero con un pulsante di eliminazione:
 
 ```csharp
 var alert = new NSAlert () {
@@ -181,7 +181,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Se il valore della `alert.SuppressionButton.State` è `NSCellStateValue.On`, l'utente ha selezionato la casella di controllo non visualizzare, altrimenti non lo è.
+Se il valore di `alert.SuppressionButton.State` è `NSCellStateValue.On` , l'utente ha selezionato la casella di controllo non visualizzare, in caso contrario.
 
 Se il codice viene eseguito, verrà visualizzato quanto segue:
 
@@ -208,11 +208,11 @@ Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
 [![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
 
-<a name="Adding_a_Custom_SubView" />
+<a name="Adding_a_Custom_SubView"></a>
 
 ## <a name="adding-a-custom-subview"></a>Aggiunta di una visualizzazione personalizzata
 
-Gli avvisi hanno una proprietà `AccessoryView` che può essere usata per personalizzare ulteriormente l'avviso e aggiungere elementi come un **campo di testo** per l'input dell'utente. Il codice seguente crea un avviso mobile libero con un campo di input di testo aggiunto:
+Gli avvisi hanno una `AccessoryView` proprietà che può essere usata per personalizzare ulteriormente l'avviso e aggiungere elementi come un **campo di testo** per l'input dell'utente. Il codice seguente crea un avviso mobile libero con un campo di input di testo aggiunto:
 
 ```csharp
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
@@ -232,7 +232,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Le linee chiave sono `var input = new NSTextField (new CGRect (0, 0, 300, 20));` che consente di creare un nuovo **campo di testo** che verrà aggiunto all'avviso. `alert.AccessoryView = input;` che connette il **campo di testo** all'avviso e la chiamata al metodo `Layout()`, necessario per ridimensionare l'avviso per adattarlo alla nuova visualizzazione.
+Di seguito sono riportate le linee chiave che consentono di `var input = new NSTextField (new CGRect (0, 0, 300, 20));` creare un nuovo **campo di testo** che verrà aggiunto all'avviso. `alert.AccessoryView = input;`che connette il **campo di testo** all'avviso e la chiamata al `Layout()` metodo, che è necessario per ridimensionare l'avviso per adattarlo alla nuova visualizzazione.
 
 Se si esegue il codice, verrà visualizzato quanto segue:
 
@@ -263,11 +263,11 @@ Se si esegue questo codice, verranno visualizzati gli elementi seguenti:
 
 [![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-Questo articolo ha esaminato in dettaglio l'uso degli avvisi in un'applicazione Xamarin.Mac. Abbiamo visto i diversi tipi e usi degli avvisi, come creare e personalizzare gli avvisi e come usare gli avvisi nel C# codice.
+Questo articolo ha esaminato in dettaglio l'uso degli avvisi in un'applicazione Novell. Mac. Abbiamo visto i diversi tipi e usi degli avvisi, come creare e personalizzare gli avvisi e come usare gli avvisi nel codice C#.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

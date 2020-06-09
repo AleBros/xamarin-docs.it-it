@@ -1,22 +1,8 @@
 ---
-title: Archiviare e accedere ai dati in archiviazione di Azure daXamarin.Forms
-description: Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere usata per archiviare dati non strutturati e strutturati. Questo articolo illustra come usare Xamarin.Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4df14ef4d3eb72b92e4201e57103780801ca2d2f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131027"
+title: "archiviare e accedere ai dati in archiviazione di Azure da Xamarin.Forms " Descrizione: "archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere usata per archiviare dati non strutturati e strutturati. Questo articolo illustra come usare Xamarin.Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati ".
+ms. prod: Novell MS. AssetID: 5B10D37B-839B-4CD0-9C65-91014A93F3EB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Archiviare e accedere ai dati in archiviazione di Azure daXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
@@ -71,10 +57,8 @@ Il processo per l'integrazione di un account di archiviazione di Azure in un' Xa
 
 1. Creare un account di archiviazione. Per altre informazioni, vedere [creare un account di archiviazione](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
 1. Aggiungere la [libreria client di archiviazione di Azure](https://www.nuget.org/packages/WindowsAzure.Storage/) all' Xamarin.Forms applicazione.
-1. Configurare la stringa di connessione di archiviazione. Per altre informazioni, vedere [connessione ad archiviazione di Azure](#connecting).
+1. Configurare la stringa di connessione di archiviazione. Per altre informazioni, vedere [connessione ad archiviazione di Azure](#connecting-to-azure-storage).
 1. Aggiungere `using` direttive per gli `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` spazi dei nomi e alle classi che accedono ad archiviazione di Azure.
-
-<a name="connecting" />
 
 ## <a name="connecting-to-azure-storage"></a>Connessione ad Archiviazione di Azure
 

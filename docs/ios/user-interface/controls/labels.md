@@ -1,26 +1,26 @@
 ---
-title: Etichette in Xamarin.iOS
-description: Questo documento illustra come usare le etichette in Xamarin.iOS. Viene descritto come creare etichette a livello di codice e con iOS designer.
+title: Etichette in Novell. iOS
+description: Questo documento illustra come usare le etichette in Novell. iOS. Viene descritto come creare etichette a livello di codice e con iOS designer.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: 0957220ace9facee590a76953de6dd52be438582
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570843"
 ---
-# <a name="labels-in-xamarinios"></a>Etichette in Xamarin.iOS
+# <a name="labels-in-xamarinios"></a>Etichette in Novell. iOS
 
-Il controllo `UILabel` viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
+Il `UILabel` controllo viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
 
 ## <a name="implementing-a-label"></a>Implementazione di un'etichetta
 
-Viene creata una nuova etichetta creando un'istanza di un [`UILabel`](xref:UIKit.UILabel):
+Viene creata una nuova etichetta creando un'istanza di [`UILabel`](xref:UIKit.UILabel) :
 
 ```csharp
 UILabel label = new UILabel();
@@ -50,7 +50,7 @@ Nel riquadro delle proprietà è possibile modificare le proprietà seguenti:
 
 Per informazioni sull'uso delle interruzioni di riga in iOS, vedere la ricetta di [troncamento e wrapping del testo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## <a name="formatting-text-and-label"></a>Formattazione di testo e etichetta
 
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Per ulteriori informazioni sullo stile del testo utilizzando `NSAttributedString` fare riferimento alla ricetta del [testo di stile](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Per ulteriori informazioni sull'applicazione di stili al testo `NSAttributedString` , vedere la ricetta di [testo di stile](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Per impostazione predefinita, le etichette hanno il `Enabled` impostato su true, ma è possibile impostarlo su Disabled per fornire all'utente un suggerimento che un determinato controllo è disabilitato:
+Per impostazione predefinita, le etichette hanno il valore `Enabled` impostato su true, ma è possibile impostarlo su disabilitato per dare all'utente un suggerimento che un determinato controllo è disabilitato:
 
 ```csharp
 label.Enabled = false;

@@ -1,20 +1,20 @@
 ---
-title: NFC di base in Xamarin.iOS
-description: Questo documento descrive come leggere i tag Near Field Communication in Xamarin.iOS usando le API introdotte in iOS 11.
+title: NFC di base in Novell. iOS
+description: Questo documento descrive come leggere i tag Near Field Communication in Novell. iOS usando le API introdotte in iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
-ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
-ms.translationtype: HT
+ms.openlocfilehash: 556ea205e9894a2553224da0dc71c00d9bb55a9b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75753023"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564739"
 ---
-# <a name="core-nfc-in-xamarinios"></a>NFC di base in Xamarin.iOS
+# <a name="core-nfc-in-xamarinios"></a>NFC di base in Novell. iOS
 
 _Lettura di tag NFC (Near Field Communication) con iOS 11_
 
@@ -31,7 +31,7 @@ Il lettore di tag NFC nei dispositivi iOS supporta tutti i tipi di tag NFC da 1 
 
 Questa pagina descrive la configurazione necessaria per usare CoreNFC e Mostra come usare l'API usando il [codice di esempio "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Configurazione di
+## <a name="configuration"></a>Configurazione
 
 Per abilitare CoreNFC, è necessario configurare tre elementi nel progetto:
 
@@ -63,7 +63,7 @@ L'app deve richiedere la funzionalità di **lettura dei tag Near Field Communica
 
 Creare un nuovo **ID app** e verificare che il servizio di **lettura tag NFC** sia selezionato:
 
-[pagina nuovo ID app del portale per sviluppatori ![con la lettura dei tag NFC selezionata](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![Pagina nuovo ID app del portale per sviluppatori con la lettura dei tag NFC selezionata](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 È quindi necessario creare un nuovo profilo di provisioning per questo ID app, quindi scaricarlo e installarlo nel computer di sviluppo.
 
@@ -71,12 +71,12 @@ Creare un nuovo **ID app** e verificare che il servizio di **lettura tag NFC** s
 
 Una volta configurato il progetto, aggiungere `using CoreNFC;` all'inizio del file e seguire questi tre passaggi per implementare la funzionalità di lettura dei tag NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementare `INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementare`INFCNdefReaderSessionDelegate`
 
 L'interfaccia dispone di due metodi da implementare:
 
-- `DidDetect`: viene chiamato quando un tag viene letto correttamente.
-- `DidInvalidate`: viene chiamato quando si verifica un errore o viene raggiunto il timeout di 60 secondi.
+- `DidDetect`: Viene chiamato quando un tag viene letto correttamente.
+- `DidInvalidate`: Viene chiamato quando si verifica un errore o viene raggiunto il timeout di 60 secondi.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Questo metodo può essere chiamato più volte (ed è possibile che venga passata una matrice di messaggi) se la sessione consente la lettura di più tag. Viene impostato utilizzando il terzo parametro del metodo `Start` (descritto nel [passaggio 2](#step2)).
+Questo metodo può essere chiamato più volte (ed è possibile che venga passata una matrice di messaggi) se la sessione consente la lettura di più tag. Viene impostato utilizzando il terzo parametro del `Start` Metodo (illustrato nel [passaggio 2](#step2)).
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -123,9 +123,9 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 Dopo che una sessione è stata invalidata, è necessario creare un nuovo oggetto sessione per eseguire nuovamente l'analisi.
 
-<a name="step2" />
+<a name="step2"></a>
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. avviare un `NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. avviare un`NFCNdefReaderSession`
 
 L'analisi dovrebbe iniziare con una richiesta dell'utente, ad esempio la pressione di un pulsante.
 Il codice seguente crea e avvia una sessione di analisi:
@@ -135,11 +135,11 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-I parametri per il costruttore `NFCNdefReaderSession` sono i seguenti:
+I parametri per il `NFCNdefReaderSession` costruttore sono i seguenti:
 
-- `delegate`: implementazione di `INFCNdefReaderSessionDelegate`. Nel codice di esempio, il delegato viene implementato nel controller di visualizzazione tabella, pertanto `this` viene utilizzato come parametro del delegato.
-- `queue`: la coda in cui vengono gestiti i callback. Può essere `null`. in tal caso, assicurarsi di usare l'`DispatchQueue.MainQueue` quando si aggiornano i controlli dell'interfaccia utente, come illustrato nell'esempio.
-- `invalidateAfterFirstRead`: quando `true`, l'analisi si interrompe dopo la prima analisi riuscita; Quando `false` l'analisi continuerà e verranno restituiti più risultati fino a quando l'analisi non viene annullata o viene raggiunto il timeout di 60 secondi.
+- `delegate`: Implementazione di `INFCNdefReaderSessionDelegate` . Nel codice di esempio, il delegato viene implementato nel controller di visualizzazione tabella, pertanto `this` viene utilizzato come parametro del delegato.
+- `queue`: Coda su cui vengono gestiti i callback. Può essere `null` , nel qual caso assicurarsi di usare `DispatchQueue.MainQueue` quando si aggiornano i controlli dell'interfaccia utente, come illustrato nell'esempio.
+- `invalidateAfterFirstRead`: Quando `true` , l'analisi viene arrestata dopo la prima analisi riuscita `false` . quando l'analisi continua e vengono restituiti più risultati fino a quando l'analisi non viene annullata o viene raggiunto il timeout di 60 secondi.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. annullare la sessione di analisi
 
@@ -147,15 +147,15 @@ L'utente può annullare la sessione di analisi tramite un pulsante fornito dal s
 
 ![Pulsante Annulla durante l'analisi](corenfc-images/scan-cancel-sml.png)
 
-L'app può annullare l'analisi a livello di codice chiamando il metodo `InvalidateSession`:
+L'app può annullare l'analisi a livello di codice chiamando il `InvalidateSession` Metodo:
 
 ```csharp
 Session.InvalidateSession();
 ```
 
-In entrambi i casi, verrà chiamato il metodo `DidInvalidate` del delegato.
+In entrambi i casi, `DidInvalidate` verrà chiamato il metodo del delegato.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 CoreNFC consente all'app di leggere i dati dai tag NFC. Supporta la lettura di un'ampia gamma di formati di tag (tipi NDEF da 1 a 5), ma non supporta la scrittura o la formattazione.
 

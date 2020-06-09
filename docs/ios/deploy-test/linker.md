@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567775"
 ---
 # <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
 
@@ -22,7 +22,7 @@ Il linker usa l'analisi statica per determinare i diversi percorsi del codice ch
 
 Poiché il linker è uno strumento statico, non può contrassegnare per l'inclusione i tipi e i metodi chiamati tramite reflection o di cui viene creata un'istanza in modo dinamico. Sono disponibili diverse opzioni come soluzioni alternative a questa limitazione.
 
-<a name="Linker_Behavior" />
+<a name="Linker_Behavior"></a>
 
 ## <a name="linker-behavior"></a>Comportamento del linker
 
@@ -56,7 +56,7 @@ La disabilitazione del collegamento fa sì che non venga modificato alcun assemb
 
 Questa impostazione corrisponde all'opzione *-nolink* quando si usa lo strumento da riga di comando mtouch.
 
-<a name="Link_SDK_assemblies_only" />
+<a name="Link_SDK_assemblies_only"></a>
 
 ### <a name="link-sdk-assemblies-only"></a>Collega solo assembly SDK
 
@@ -66,7 +66,7 @@ Si tratta dell'opzione più semplice, perché non richiede alcuna modifica nel c
 
 Questa impostazione corrisponde all'opzione *-linksdk* quando si usa lo strumento da riga di comando mtouch.
 
-<a name="Link_all_assemblies" />
+<a name="Link_all_assemblies"></a>
 
 ### <a name="link-all-assemblies"></a>Collega tutti gli assembly
 
@@ -74,13 +74,13 @@ Quando si collegano tutti gli assembly, il linker può usare l'intero set delle 
 
 Questa impostazione corrisponde all'opzione *-linkall* quando si usa lo strumento da riga di comando **mtouch**.
 
-<a name="Controlling_the_Linker" />
+<a name="Controlling_the_Linker"></a>
 
 ## <a name="controlling-the-linker"></a>Controllo del linker
 
 Quando viene usato, il linker rimuove talvolta codice che può essere stato chiamato in modo dinamico, anche indirettamente. Per gestire questi casi, il linker offre alcune funzionalità e opzioni per assicurare un controllo maggiore sulle sue azioni.
 
-<a name="Preserving_Code" />
+<a name="Preserving_Code"></a>
 
 ### <a name="preserving-code"></a>Mantenimento del codice
 
@@ -108,7 +108,7 @@ public sealed class PreserveAttribute : System.Attribute {
 
 Lo spazio dei nomi in cui è definita la classe non è troppo importante, perché il linker cerca questo attributo in base al nome.
 
- <a name="Skipping_Assemblies" />
+ <a name="Skipping_Assemblies"></a>
 
 ### <a name="skipping-assemblies"></a>Esclusione di assembly
 
@@ -130,7 +130,7 @@ Se si vuole che il linker ignori più assembly, includere più argomenti `linksk
 
 Non è disponibile alcuna interfaccia utente per usare questa opzione, che invece può essere specificata nella finestra di dialogo Opzioni progetto di Visual Studio per Mac o nel riquadro Proprietà progetto di Visual Studio, all'interno del campo di testo **Argomenti aggiuntivi di mtouch**. Ad esempio, *--linkskip=mscorlib* non collega mscorlib.dll, ma collega altri assembly nella soluzione.
 
-<a name="Disabling_Link_Away" />
+<a name="Disabling_Link_Away"></a>
 
 ### <a name="disabling-link-away"></a>Disabilitazione della rimozione del codice
 
@@ -146,7 +146,7 @@ Gli utenti possono scegliere di collegare solo gli assembly SDK, senza eseguire 
 
 Questo avviene in genere quando non si vuole aggiungere manualmente attributi `[Preserve]` al codice.  L'effetto collaterale di questa scelta è che le librerie di terze parti non vengono collegate, che corrisponde in genere a un'impostazione predefinita corretta, in quanto non è possibile determinare se una libreria di terze parti supporti o meno il linker.
 
-Se nel progetto è presente una libreria o se si è uno sviluppatore di librerie riutilizzabili e si desidera che [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute)l'assembly consideri l'assembly collegabile, è necessario aggiungere l'attributo a livello di assembly, in questo modo:
+Se nel progetto è presente una libreria o si è uno sviluppatore di librerie riutilizzabili e si vuole che il linker gestisca l'assembly come collegabile, è sufficiente aggiungere l'attributo a livello di assembly, come indicato di seguito [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute) :
 
 ```csharp
 [assembly:LinkerSafe]
@@ -167,6 +167,6 @@ Seguire le [istruzioni per la creazione di un file di configurazione del linker]
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Configurazione del linker personalizzata](~/cross-platform/deploy-test/linker.md)
+- [Configurazione personalizzata del linker](~/cross-platform/deploy-test/linker.md)
 - [Collegamento in Mac](~/mac/deploy-test/linker.md)
 - [Collegamento in Android](~/android/deploy-test/linker.md)

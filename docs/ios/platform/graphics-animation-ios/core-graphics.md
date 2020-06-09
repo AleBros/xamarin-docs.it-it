@@ -1,5 +1,5 @@
 ---
-title: Grafica principale in Xamarin.iOS
+title: Grafica principale in Novell. iOS
 description: Questo articolo illustra i Framework iOS di base della grafica. Viene illustrato come utilizzare la grafica di base per creare geometria, immagini e PDF.
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 76901a5c48caef666d18f5cc7e2bfd8b28096184
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.openlocfilehash: ac746c8489dae600bc2d8c6d1752d8fb10d4e016
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564719"
 ---
-# <a name="core-graphics-in-xamarinios"></a>Grafica principale in Xamarin.iOS
+# <a name="core-graphics-in-xamarinios"></a>Grafica principale in Novell. iOS
 
 _Questo articolo illustra i Framework iOS di base della grafica. Viene illustrato come utilizzare la grafica di base per creare geometria, immagini e PDF._
 
@@ -24,7 +24,7 @@ La grafica principale è un Framework di grafica 2D di basso livello che consent
 
 La grafica principale supporta il disegno in diversi scenari, tra cui:
 
-- [Disegno sullo schermo tramite un `UIView`](#Drawing_in_a_UIView_Subclass) .
+- [Disegno sullo schermo tramite un `UIView` ](#Drawing_in_a_UIView_Subclass) .
 - [Disegno di immagini in memoria o sullo schermo](#Drawing_Images_and_Text).
 - Creazione e disegno in un file PDF.
 - Lettura e creazione di un file PDF esistente.
@@ -39,11 +39,11 @@ Questo approccio presenta alcuni vantaggi:
 - Ridurre la necessità di immagini statiche nel bundle dell'applicazione può ridurre le dimensioni dell'applicazione.
 - I grafici diventano più resilienti alle modifiche di risoluzione nei dispositivi.
 
-<a name="Drawing_in_a_UIView_Subclass"/>
+<a name="Drawing_in_a_UIView_Subclass"></a>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>Disegno in una sottoclasse UIView
 
-Ogni `UIView` dispone di un metodo di `Draw` chiamato dal sistema quando è necessario disegnarlo. Per aggiungere il codice di disegno a una vista, sottoclasse `UIView` ed eseguire l'override `Draw`:
+Ogni `UIView` oggetto dispone `Draw` di un metodo chiamato dal sistema quando è necessario disegnarlo. Per aggiungere il codice di disegno a una vista, una sottoclasse `UIView` ed eseguire l'override `Draw` :
 
 ```csharp
 public class TriangleView : UIView
@@ -55,11 +55,11 @@ public class TriangleView : UIView
 }
 ```
 
-Il metodo di richiamo non deve mai essere chiamato direttamente. Viene chiamato dal sistema durante l'elaborazione del ciclo di esecuzione. La prima volta che si esegue il ciclo di esecuzione dopo aver aggiunto una vista alla gerarchia di visualizzazione, viene chiamato il metodo `Draw`. Le chiamate successive a `Draw` si verificano quando la vista è contrassegnata per la necessità di essere disegnata chiamando `SetNeedsDisplay` o `SetNeedsDisplayInRect` nella vista.
+Il metodo di richiamo non deve mai essere chiamato direttamente. Viene chiamato dal sistema durante l'elaborazione del ciclo di esecuzione. La prima volta che si esegue il ciclo di esecuzione dopo aver aggiunto una vista alla gerarchia di visualizzazione, `Draw` viene chiamato il metodo. Le chiamate successive a `Draw` vengono eseguite quando la vista è contrassegnata per la necessità di essere disegnata chiamando `SetNeedsDisplay` o `SetNeedsDisplayInRect` nella vista.
 
 ### <a name="pattern-for-graphics-code"></a>Modello per il codice grafico
 
-Il codice nell'implementazione di `Draw` deve descrivere l'elemento che desidera disegnare. Il codice di disegno segue un modello in cui imposta uno stato di disegno e chiama un metodo per richiedere che venga disegnato. Questo modello può essere generalizzato come indicato di seguito:
+Il codice nell' `Draw` implementazione dovrebbe descrivere il tipo di disegno. Il codice di disegno segue un modello in cui imposta uno stato di disegno e chiama un metodo per richiedere che venga disegnato. Questo modello può essere generalizzato come indicato di seguito:
 
 1. Ottenere un contesto grafico.
 
@@ -71,7 +71,7 @@ Il codice nell'implementazione di `Draw` deve descrivere l'elemento che desidera
 
 ### <a name="basic-drawing-example"></a>Esempio di disegno di base
 
-Si consideri, ad esempio, il frammento di codice seguente:
+Si consideri il frammento di codice di esempio seguente:
 
 ```csharp
 //get graphics context
@@ -116,7 +116,7 @@ UIColor.Red.SetStroke ();
 
 Dopo aver ricevuto un contesto grafico, il codice imposta alcuni attributi da usare durante il disegno, illustrato in precedenza. In questo caso vengono impostati i colori di lunghezza riga, tratto e riempimento. Tutti i disegni successivi utilizzeranno quindi questi attributi perché vengono mantenuti nello stato del contesto grafico.
 
-Per creare la geometria, il codice usa un `CGPath`, che consente di descrivere un percorso grafico da linee e curve. In questo caso, il percorso aggiunge linee che connettono una matrice di punti per creare un triangolo. Come visualizzato sotto la grafica principale, viene usato un sistema di coordinate per il disegno della vista, dove l'origine si trova in alto a sinistra, con un segno x positivo a destra e la direzione positiva-y verso il basso:
+Per creare la geometria, il codice usa un oggetto `CGPath` , che consente di descrivere un percorso grafico da linee e curve. In questo caso, il percorso aggiunge linee che connettono una matrice di punti per creare un triangolo. Come visualizzato sotto la grafica principale, viene usato un sistema di coordinate per il disegno della vista, dove l'origine si trova in alto a sinistra, con un segno x positivo a destra e la direzione positiva-y verso il basso:
 
 ```csharp
 var path = new CGPath ();
@@ -129,7 +129,7 @@ new CGPoint (220, 200)});
 path.CloseSubpath ();
 ```
 
-Una volta creato, il percorso viene aggiunto al contesto grafico, in modo che sia possibile tracciare la chiamata `AddPath` e `DrawPath` rispettivamente.
+Una volta creato il percorso, questo viene aggiunto al contesto grafico, in modo che la chiamata a `AddPath` e `DrawPath` rispettivamente possa essere tracciata da.
 
 La visualizzazione risultante è illustrata di seguito:
 
@@ -182,13 +182,13 @@ L'aggiunta di questo codice prima di qualsiasi operazione di disegno produce tra
 
  ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
 
-Si noti che quando si usa il API unificata in Xamarin.iOS, il tipo di matrice deve essere un `nfloat`ed è inoltre necessario eseguire il cast esplicito a Math. PI.
+Si noti che quando si usa il API unificata in Novell. iOS, il tipo di matrice deve essere un `nfloat` ed è necessario eseguire il cast esplicito a Math. pi.
 
-<a name="Drawing_Images_and_Text"/>
+<a name="Drawing_Images_and_Text"></a>
 
 ## <a name="drawing-images-and-text"></a>Disegno di immagini e testo
 
-Oltre a disegnare i percorsi nel contesto grafico di una visualizzazione, i componenti grafici principali supportano anche il disegno di immagini e testo. Per creare un'immagine, è sufficiente creare una `CGImage` e passarla a una chiamata `DrawImage`:
+Oltre a disegnare i percorsi nel contesto grafico di una visualizzazione, i componenti grafici principali supportano anche il disegno di immagini e testo. Per creare un'immagine, è sufficiente creare un oggetto `CGImage` e passarlo a una `DrawImage` chiamata:
 
 ```csharp
 public override void Draw (CGRect rect)
@@ -205,9 +205,9 @@ Tuttavia, in questo modo viene creata un'immagine capovolta, come illustrato di 
 
  ![](core-graphics-images/03-upside-down-monkey.png "An image drawn upside down")
 
-Il motivo è che l'origine grafica principale per il disegno di immagini è in basso a sinistra, mentre la vista ha l'origine in alto a sinistra. Pertanto, per visualizzare correttamente l'immagine, è necessario modificare l'origine, che può essere eseguita modificando la *matrice di trasformazione corrente* *(CTM)* . Il CTM definisce la posizione dei punti Live, nota anche come *spazio utente*. Invertire il CTM nella direzione y e spostarlo in base all'altezza dei limiti nella direzione y negativa può capovolgere l'immagine.
+Il motivo è che l'origine grafica principale per il disegno di immagini è in basso a sinistra, mentre la vista ha l'origine in alto a sinistra. Pertanto, per visualizzare correttamente l'immagine, è necessario modificare l'origine, che può essere eseguita modificando la *matrice di trasformazione corrente* *(CTM)*. Il CTM definisce la posizione dei punti Live, nota anche come *spazio utente*. Invertire il CTM nella direzione y e spostarlo in base all'altezza dei limiti nella direzione y negativa può capovolgere l'immagine.
 
-Il contesto grafico include metodi helper per trasformare il CTM. In questo caso, `ScaleCTM` "capovolge" il disegno e `TranslateCTM` lo sposta in alto a sinistra, come mostrato di seguito:
+Il contesto grafico include metodi helper per trasformare il CTM. In questo caso, `ScaleCTM` "capovolge" il disegno e lo `TranslateCTM` Sposta in alto a sinistra, come mostrato di seguito:
 
 ```csharp
 public override void Draw (CGRect rect)
@@ -232,7 +232,7 @@ L'immagine risultante viene quindi visualizzata verticalmente:
 
 ### <a name="adding-text-to-the-image"></a>Aggiunta di testo all'immagine
 
-Come per i percorsi e le immagini, il disegno di testo con la grafica principale prevede lo stesso modello di base per l'impostazione di uno stato di grafica e la chiamata di un metodo da disegnare. Nel caso del testo, il metodo per visualizzare il testo è `ShowText`. Quando viene aggiunto all'esempio di disegno dell'immagine, il codice seguente disegna un testo usando la grafica principale:
+Come per i percorsi e le immagini, il disegno di testo con la grafica principale prevede lo stesso modello di base per l'impostazione di uno stato di grafica e la chiamata di un metodo da disegnare. Nel caso del testo, il metodo per visualizzare il testo è `ShowText` . Quando viene aggiunto all'esempio di disegno dell'immagine, il codice seguente disegna un testo usando la grafica principale:
 
 ```csharp
 public override void Draw (RectangleF rect)
@@ -275,15 +275,15 @@ Oltre a creare il contesto grafico di una visualizzazione, la grafica principale
 - Recupero dell'immagine dal contesto
 - Rimozione del contesto
 
-A differenza del metodo `Draw`, in cui il contesto viene fornito dalla vista, in questo caso il contesto viene creato in uno dei due modi seguenti:
+A differenza del `Draw` metodo, in cui il contesto viene fornito dalla vista, in questo caso il contesto viene creato in uno dei due modi seguenti:
 
-1. Chiamando `UIGraphics.BeginImageContext` (o `BeginImageContextWithOptions`)
+1. Chiamando `UIGraphics.BeginImageContext` (o `BeginImageContextWithOptions` )
 
-2. Creando un nuovo `CGBitmapContextInstance`
+2. Creazione di un nuovo`CGBitmapContextInstance`
 
- `CGBitmapContextInstance` è utile quando si lavora direttamente con i bit dell'immagine, ad esempio nei casi in cui si usa un algoritmo di manipolazione delle immagini personalizzato. In tutti gli altri casi, è consigliabile usare `BeginImageContext` o `BeginImageContextWithOptions`.
+ `CGBitmapContextInstance`è utile quando si lavora direttamente con i bit dell'immagine, ad esempio nei casi in cui si usa un algoritmo di manipolazione delle immagini personalizzato. In tutti gli altri casi, è necessario utilizzare `BeginImageContext` o `BeginImageContextWithOptions` .
 
-Quando si dispone di un contesto immagine, l'aggiunta del codice di disegno è analoga a quella in una sottoclasse `UIView`. Ad esempio, l'esempio di codice usato in precedenza per creare un triangolo può essere usato per creare un'immagine in memoria anziché in un `UIView`, come illustrato di seguito:
+Quando si dispone di un contesto immagine, l'aggiunta del codice di disegno è analoga a quella in una `UIView` sottoclasse. Ad esempio, l'esempio di codice usato in precedenza per creare un triangolo può essere usato per creare un'immagine in memoria anziché in un `UIView` , come illustrato di seguito:
 
 ```csharp
 UIImage DrawTriangle ()
@@ -323,7 +323,7 @@ UIImage DrawTriangle ()
 }
 ```
 
-Un uso comune del disegno in una bitmap supportata dalla memoria consiste nell'acquisire un'immagine da qualsiasi `UIView`. Il codice seguente, ad esempio, esegue il rendering del livello di una visualizzazione in un contesto bitmap e crea un `UIImage`:
+Un uso comune del disegno in una bitmap supportata dalla memoria consiste nell'acquisire un'immagine da qualsiasi `UIView` . Il codice seguente, ad esempio, esegue il rendering del livello di una visualizzazione in un contesto bitmap e ne crea una `UIImage` da:
 
 ```csharp
 UIGraphics.BeginImageContext (cellView.Frame.Size);
@@ -338,13 +338,13 @@ UIGraphics.EndImageContext ();
 
 ## <a name="drawing-pdfs"></a>Disegno di PDF
 
-Oltre alle immagini, la grafica principale supporta il disegno PDF. Analogamente alle immagini, è possibile eseguire il rendering di un file PDF in memoria e leggere un file PDF per il rendering in un `UIView`.
+Oltre alle immagini, la grafica principale supporta il disegno PDF. Analogamente alle immagini, è possibile eseguire il rendering di un file PDF in memoria e leggere un file PDF per il rendering in un `UIView` .
 
 ### <a name="pdf-in-a-uiview"></a>PDF in una UIView
 
-La grafica principale supporta anche la lettura di un file PDF da un file e il relativo rendering in una visualizzazione usando la classe `CGPDFDocument`. La classe `CGPDFDocument` rappresenta un file PDF nel codice e può essere utilizzata per leggere e creare pagine.
+La grafica principale supporta anche la lettura di un file PDF da un file e il relativo rendering in una visualizzazione usando la `CGPDFDocument` classe. La `CGPDFDocument` classe rappresenta un file PDF nel codice e può essere utilizzata per leggere e creare pagine.
 
-Ad esempio, il codice seguente in una sottoclasse `UIView` legge un file PDF da un file in un `CGPDFDocument`:
+Ad esempio, il codice seguente in una `UIView` sottoclasse legge un file PDF da un file in un `CGPDFDocument` :
 
 ```csharp
 public class PDFView : UIView
@@ -364,7 +364,7 @@ public class PDFView : UIView
 }
 ```
 
-Il metodo `Draw` può quindi usare il `CGPDFDocument` per leggere una pagina in `CGPDFPage` ed eseguirne il rendering chiamando `DrawPDFPage`, come illustrato di seguito:
+Il `Draw` metodo può quindi usare `CGPDFDocument` per leggere una pagina in `CGPDFPage` ed eseguirne il rendering chiamando `DrawPDFPage` , come illustrato di seguito:
 
 ```csharp
 public override void Draw (CGRect rect)
@@ -394,7 +394,7 @@ public override void Draw (CGRect rect)
 
 ### <a name="memory-backed-pdf"></a>PDF con supporto di memoria
 
-Per un file PDF in memoria, è necessario creare un contesto PDF chiamando `BeginPDFContext`. Il disegno in formato PDF è granulare in pagine. Ogni pagina viene avviata chiamando `BeginPDFPage` e completata chiamando `EndPDFContent`con il codice grafico compreso tra. Inoltre, come per il disegno di immagini, il disegno PDF supportato dalla memoria usa un'origine in basso a sinistra, che può essere considerato modificando il CTM esattamente come con le immagini.
+Per un file PDF in memoria, è necessario creare un contesto PDF chiamando `BeginPDFContext` . Il disegno in formato PDF è granulare in pagine. Ogni pagina viene avviata chiamando `BeginPDFPage` e completata chiamando `EndPDFContent` , con il codice grafico compreso tra. Inoltre, come per il disegno di immagini, il disegno PDF supportato dalla memoria usa un'origine in basso a sinistra, che può essere considerato modificando il CTM esattamente come con le immagini.
 
 Il codice seguente illustra come creare un testo in un file PDF:
 
@@ -419,11 +419,11 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 UIGraphics.EndPDFContent ();
 ```
 
-Il testo risultante viene disegnato nel formato PDF, che è quindi contenuto in un `NSData` che può essere salvato, caricato, inviato tramite posta elettronica e così via.
+Il testo risultante viene disegnato in formato PDF, che è quindi contenuto in un oggetto `NSData` che può essere salvato, caricato, inviato tramite posta elettronica e così via.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-In questo articolo sono state esaminate le funzionalità grafiche fornite tramite il Framework di *grafica principale* . È stato illustrato come usare la grafica di base per creare la geometria, le immagini e i file PDF all'interno del contesto di un `UIView,` e dei contesti grafici con supporto per la memoria.
+In questo articolo sono state esaminate le funzionalità grafiche fornite tramite il Framework di *grafica principale* . È stato illustrato come usare la grafica di base per creare la geometria, le immagini e i file PDF all'interno del contesto di un e `UIView,` di contesti grafici con supporto di memoria.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

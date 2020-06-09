@@ -1,18 +1,18 @@
 ---
 title: Generazione del codice XIB in Novell. iOS
-description: Questo documento descrive il modo in cui Novell. iOS genera il codice per eseguire C#il mapping dei file XIB a, rendendo accessibili i controlli visivi a livello di programmazione.
+description: Questo documento descrive in che modo Novell. iOS genera il codice per eseguire il mapping dei file con estensione XIB a C#, rendendo accessibili i controlli visivi a livello di programmazione.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f6218977e9ad0d4c396ef127c3c3ca53dc56d7d3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 21085e534cee4010e79b76e39b11e03e6fb2580b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565031"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generazione del codice XIB in Novell. iOS
 
@@ -27,13 +27,13 @@ L'uso di file con **estensione XIB** non è attualmente supportato in Novell. iO
 
 ## <a name="xib-files-and-custom-classes"></a>File con estensione XIB e classi personalizzate
 
-Oltre a usare i tipi esistenti da Cocoa Touch, è possibile definire tipi personalizzati nei file con **estensione XIB** . È anche possibile usare i tipi definiti in altri file con **estensione XIB** o definiti esclusivamente nel C# codice. Attualmente, Interface Builder non è in grado di riconoscere i dettagli dei tipi definiti all'esterno del file con **estensione XIB** corrente, quindi non li elenca né visualizzano le azioni e gli outlet personalizzati. La rimozione di questa limitazione è prevista per qualche tempo in futuro.
+Oltre a usare i tipi esistenti da Cocoa Touch, è possibile definire tipi personalizzati nei file con **estensione XIB** . È anche possibile usare i tipi definiti in altri file con **estensione XIB** o definiti esclusivamente nel codice C#. Attualmente, Interface Builder non è in grado di riconoscere i dettagli dei tipi definiti all'esterno del file con **estensione XIB** corrente, quindi non li elenca né visualizzano le azioni e gli outlet personalizzati. La rimozione di questa limitazione è prevista per qualche tempo in futuro.
 
 È possibile definire classi personalizzate in un file con **estensione XIB** usando il comando "Aggiungi sottoclasse" nella scheda "classi" della Interface Builder. Si fa riferimento a queste classi come classi "codebehind". Se il file con **estensione XIB** include un file di controparte ". xib.designer.cs" nel progetto, Visual Studio per Mac compilerà automaticamente le definizioni delle classi parziali per tutte le classi personalizzate in **. xib**. Si fa riferimento a queste classi parziali come "classi della finestra di progettazione".
 
 ## <a name="generating-code"></a>Generazione di codice
 
-Per qualsiasi **{0}file con estensione XIB** con un'azione di compilazione della *pagina*, se nel progetto esiste anche un file **{0}. xib.designer.cs** , Visual Studio per Mac genererà le classi parziali nel file di progettazione per tutte le classi utente che può trovare nel file con **estensione XIB** , con le proprietà per gli Outlet e i metodi parziali per tutte le azioni. La generazione del codice è abilitata semplicemente dalla presenza del file.
+Per qualsiasi file con ** {0} estensione XIB** con un'azione di compilazione della *pagina*, se nel progetto esiste anche un file con ** {0} estensione XIB.designer.cs** , Visual Studio per Mac genererà le classi parziali nel file di progettazione per tutte le classi utente che può trovare nel file con **estensione XIB** , con le proprietà per gli Outlet e i metodi parziali per tutte le azioni. La generazione del codice è abilitata semplicemente dalla presenza del file.
 
 Il file di progettazione viene aggiornato automaticamente quando il file con **estensione XIB** cambia e Visual Studio per Mac riacquisisce lo stato attivo. Il file di progettazione non deve essere modificato manualmente, in quanto le modifiche verranno sovrascritte la volta successiva Visual Studio per Mac aggiornerà il file.
 
@@ -41,7 +41,7 @@ Il file di progettazione viene aggiornato automaticamente quando il file con **e
 
 Visual Studio per Mac genera le classi della finestra di progettazione utilizzando lo spazio dei nomi predefinito del progetto per il percorso del file della finestra di progettazione, in modo che sia coerente con il normale progetto .NET namespacing. Lo spazio dei nomi dei file di progettazione è determinato dallo spazio dei nomi predefinito del progetto e dalle impostazioni relative ai criteri di denominazione .NET. Si tenga presente che se lo spazio dei nomi predefinito del progetto viene modificato, MD rigenererà le classi nel nuovo spazio dei nomi, in modo che le classi parziali non corrispondano più.
 
-Per rendere individuabile la classe dal runtime di Objective-C, Visual Studio per Mac applica un attributo `[Register (name)]` alla classe. Sebbene Novell. iOS registri automaticamente le classi derivate da `NSObject`, USA i nomi .NET completi. L'attributo applicato da Visual Studio per Mac esegue l'override di questo per assicurarsi che ogni classe venga registrata con il nome usato nel file **. xib** . Se si usano classi personalizzate in IB senza usare Visual Studio per Mac per generare file di progettazione, potrebbe essere necessario applicare questa operazione manualmente per fare in modo che le classi gestite corrispondano ai nomi previsti della classe Objective-C.
+Per rendere individuabile la classe dal runtime di Objective-C, Visual Studio per Mac applica un `[Register (name)]` attributo alla classe. Sebbene Novell. iOS registri automaticamente le `NSObject` classi derivate da, USA i nomi .NET completi. L'attributo applicato da Visual Studio per Mac esegue l'override di questo per assicurarsi che ogni classe venga registrata con il nome usato nel file **. xib** . Se si usano classi personalizzate in IB senza usare Visual Studio per Mac per generare file di progettazione, potrebbe essere necessario applicare questa operazione manualmente per fare in modo che le classi gestite corrispondano ai nomi previsti della classe Objective-C.
 
 Le classi non possono essere definite in più di un **. xib**o saranno in conflitto.
 
@@ -51,9 +51,9 @@ Le classi parziali della finestra di progettazione non sono progettate per esser
 
 Il motivo è la necessità di flessibilità. Ad esempio, più classi codebehind potrebbero sottoclassare una classe astratta gestita comune, che sottoclassa la classe per essere sottoclassata da IB.
 
-È possibile inserirli in un file **{0}. xib.cs** accanto al file **{0}. xib.designer.cs** designer.
+È normale inserirli in un file con ** {0} estensione XIB.cs** accanto al file con ** {0} estensione XIB.designer.cs** designer.
 
-<a name="generated" />
+<a name="generated"></a>
 
 ## <a name="generated-actions-and-outlets"></a>Azioni e Outlet generati
 
@@ -63,21 +63,21 @@ Nelle classi della finestra di progettazione parziale, Visual Studio per Mac gen
 
 Le classi della finestra di progettazione contengono proprietà corrispondenti a tutti gli outlet definiti nella classe personalizzata. Il fatto che si tratta di proprietà è un dettaglio di implementazione di Novell. iOS al Bridge Objective C per abilitare l'associazione lazy. È necessario considerarle equivalenti ai campi privati, destinate a essere usate solo dalla classe codebehind. Se si desidera renderli pubblici, aggiungere le proprietà della funzione di accesso alla parte della classe non della finestra di progettazione, come per qualsiasi altro campo privato.
 
-Se le proprietà di uscita sono definite in modo da avere un tipo di `id` (equivalente a `NSObject`), il generatore di codice della finestra di progettazione determina attualmente il tipo più sicuro in base agli oggetti connessi a tale Outlet, per praticità.
+Se le proprietà di uscita sono definite in modo da avere un tipo `id` equivalente a `NSObject` , il generatore di codice della finestra di progettazione determina attualmente il tipo più sicuro in base agli oggetti connessi a tale Outlet, per praticità.
 Tuttavia, questo potrebbe non essere supportato nelle versioni future, quindi è consigliabile tipizzare in modo esplicito gli outlet quando si definisce la classe personalizzata.
 
 ### <a name="action-properties"></a>Proprietà azione
 
 Le classi della finestra di progettazione contengono metodi parziali corrispondenti a tutte le azioni definite nella classe personalizzata. Si tratta di metodi senza un'implementazione. Lo scopo dei metodi parziali è duplice:
 
-1. Se si digita `partial` nel corpo della classe della parte della classe non della finestra di progettazione, Visual Studio per Mac offrirà il completamento automatico delle firme di tutti i metodi parziali non implementati.
+1. Se si digita `partial` il corpo della classe della parte della classe non della finestra di progettazione, Visual Studio per Mac offrirà il completamento automatico delle firme di tutti i metodi parziali non implementati.
 2. Alle firme dei metodi parziali è applicato un attributo che li espone all'ambiente Objective-C, in modo che possano essere gestiti come azione corrispondente.
 
 Se si desidera, è possibile ignorare il metodo parziale e implementare l'azione applicando l'attributo a un metodo diverso oppure lasciarlo passare a una classe di base.
 
-Se le azioni sono definite in modo da avere un tipo di mittente `id` (equivalente a `NSObject`), il generatore di codice della finestra di progettazione determina attualmente il tipo più sicuro in base agli oggetti connessi a tale azione. Tuttavia, questo potrebbe non essere supportato nelle versioni future, quindi è consigliabile specificare in modo esplicito le azioni quando si definisce la classe personalizzata.
+Se le azioni sono definite per avere un tipo di mittente `id` (equivalente a `NSObject` ), il generatore di codice della finestra di progettazione determina attualmente il tipo più sicuro in base agli oggetti connessi a tale azione. Tuttavia, questo potrebbe non essere supportato nelle versioni future, quindi è consigliabile specificare in modo esplicito le azioni quando si definisce la classe personalizzata.
 
-Si noti che questi metodi parziali vengono creati C#solo per, perché CodeDom non supporta i metodi parziali, pertanto non vengono generati per altri linguaggi.
+Si noti che questi metodi parziali vengono creati solo per C#, perché CodeDOM non supporta i metodi parziali, pertanto non vengono generati per altri linguaggi.
 
 ## <a name="cross-xib-class-usage"></a>Utilizzo della classe tra XIB
 
