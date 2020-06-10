@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 4012b648bd451907bdb91221aba13df5ed3d34e3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571025"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655094"
 ---
 # <a name="introduction-to-web-services"></a>Introduzione ai servizi Web
 
@@ -437,8 +437,6 @@ basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialT
 client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
-
-Nell'esempio precedente, se si riceve il messaggio "esaurito i trampolini di tipo 0", è possibile aumentare il numero di elastici di tipo 0 aggiungendo l' `–aot “trampolines={number of trampolines}”` argomento alla compilazione. Per altre informazioni, vedere [Risoluzione dei problemi](~/ios/troubleshooting/troubleshooting.md#trampolines).
 
 Per ulteriori informazioni sull'autenticazione di base HTTP, anche se nel contesto di un servizio Web REST, vedere [autenticazione di un servizio Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md).
 

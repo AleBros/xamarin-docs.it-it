@@ -7,13 +7,13 @@ ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 05/22/2018
-ms.openlocfilehash: 6368c3a4b128c06687b23b965b308ad6a788188b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.date: 06/10/2020
+ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574487"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655092"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS
 
@@ -166,7 +166,7 @@ Le famose utilità Mac di QuickSilver, Google Toolbar e LaunchBar includono funz
 
 ## <a name="visual-studio-for-mac-complains-about-mono-24-required"></a>Visual Studio per Mac si lamenta per la necessità di mono 2,4
 
-Se è stato aggiornato Visual Studio per Mac a causa di un aggiornamento recente e quando si prova ad avviarlo nuovamente, si verifica un errore di mono 2,4 che non è presente, è sufficiente [aggiornare l'installazione di mono 2,4](http://www.go-mono.com/mono-downloads/download.html).  
+Se è stato aggiornato Visual Studio per Mac a causa di un aggiornamento recente e quando si prova ad avviarlo nuovamente, si verifica un errore di mono 2,4 che non è presente, è sufficiente [aggiornare l'installazione di mono 2,4](http://www.go-mono.com/mono-downloads/download.html).
 
 Mono 2.4.2.3 _6 corregge alcuni importanti problemi che impediscono l'esecuzione di Visual Studio per Mac in modo affidabile, a volte bloccate Visual Studio per Mac all'avvio o impediscono la generazione del database di completamento del codice.
 
@@ -217,7 +217,7 @@ Alleghi i log XS, **~/Library/Logs/XamarinStudio-{Version}/IDE-{timestamp}.log**
 
 Per supportare il debug, le compilazioni di debug contengono codice aggiuntivo. I progetti compilati in modalità versione sono una frazione delle dimensioni.
 
-A partire da Novell. iOS 1,3, le build di debug includono il supporto del debug per ogni singolo componente di mono (ogni metodo in ogni classe dei Framework).  
+A partire da Novell. iOS 1,3, le build di debug includono il supporto del debug per ogni singolo componente di mono (ogni metodo in ogni classe dei Framework).
 
 Con Novell. iOS 1,4 verrà introdotto un metodo con granularità fine per il debug, il valore predefinito sarà fornire solo la strumentazione di debug per il codice e le librerie e non eseguire questa operazione per tutti gli [assembly mono](~/cross-platform/internals/available-assemblies.md) (questo sarà ancora possibile, ma sarà necessario acconsentire esplicitamente al debug degli assembly).
 
@@ -226,33 +226,6 @@ Con Novell. iOS 1,4 verrà introdotto un metodo con granularità fine per il deb
 I programmi di installazione mono e Novell. iOS si bloccano se è in esecuzione il simulatore iPhone. Questo problema non è limitato a mono o Novell. iOS. si tratta di un problema coerente tra tutti i software che tentano di installare software in MacOS Snow Leopard se il simulatore di iPhone è in esecuzione al momento dell'installazione.
 
 Assicurarsi di uscire dal simulatore iPhone e riprovare l'installazione.
-
-<a name="trampolines"></a>
-
-## <a name="ran-out-of-trampolines-of-type-0"></a>Sono stati esauriti i trampoli di tipo 0
-
-Se si riceve questo messaggio durante l'esecuzione del dispositivo, è possibile creare più tipi 0 di elastici (specifici del tipo) modificando la sezione delle opzioni del progetto "Build iPhone".  Si desidera aggiungere argomenti aggiuntivi per le destinazioni di compilazione del dispositivo:
-
- `-aot "ntrampolines=2048"`
-
-Il numero predefinito di tappeti elastici è 1024. Provare ad aumentare questo numero fino a quando non è sufficiente per l'applicazione.
-
-## <a name="ran-out-of-trampolines-of-type-1"></a>Sono stati esauriti i trampoli di tipo 1
-
-Se si usa in modo intensivo i generics ricorsivi, è possibile che venga generato questo messaggio sul dispositivo.  È possibile creare altri trampolini di tipo 1 (digitare RGCTX) modificando la sezione Opzioni progetto "compilazione iPhone".  Si desidera aggiungere argomenti aggiuntivi per le destinazioni di compilazione del dispositivo:
-
- `-aot "nrgctx-trampolines=2048"`
-
-Il numero predefinito di tappeti elastici è 1024. Provare ad aumentare questo numero fino a quando non è sufficiente per l'utilizzo di generics.
-
-## <a name="ran-out-of-trampolines-of-type-2"></a>Sono stati esauriti i trampoli di tipo 2
-
-Se si utilizzano interfacce con utilizzo intensivo, è possibile che venga ricevuto questo messaggio sul dispositivo.
-È possibile creare altri trampolini di tipo 2 (digitare i thunk di IMT) modificando la sezione delle opzioni del progetto "Build iPhone".  Si desidera aggiungere argomenti aggiuntivi per le destinazioni di compilazione del dispositivo:
-
- `-aot "nimt-trampolines=512"`
-
-Il numero predefinito di i tappeti elastici del thunk di IMT è 128. Provare ad aumentare questo numero fino a quando non è sufficiente per l'utilizzo delle interfacce.
 
 ## <a name="debugger-is-unable-to-connect-with-the-device"></a>Il debugger non è in grado di connettersi al dispositivo
 
@@ -384,7 +357,7 @@ Se si ottiene un arresto anomalo del runtime (SIGSEGV) all'interno del simulator
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
 
-... probabilmente si avrà un assembly non aggiornato nella directory dell'applicazione del simulatore. Tali assembly possono esistere perché il simulatore iOS di Apple aggiunge e aggiorna i file, ma non li elimina. In questo caso, la soluzione più semplice consiste nel selezionare "Reimposta e contenuto e impostazioni". dal menu simulatore.   
+... probabilmente si avrà un assembly non aggiornato nella directory dell'applicazione del simulatore. Tali assembly possono esistere perché il simulatore iOS di Apple aggiunge e aggiorna i file, ma non li elimina. In questo caso, la soluzione più semplice consiste nel selezionare "Reimposta e contenuto e impostazioni". dal menu simulatore.
 
 > [!WARNING]
 > Tutti i file, le applicazioni e i dati vengono rimossi dal simulatore.   Alla successiva esecuzione dell'applicazione, Visual Studio per Mac la distribuirà nel simulatore e non sarà presente un assembly obsoleto obsoleto per causare l'arresto anomalo.
@@ -413,3 +386,18 @@ Per controllare l'azione di compilazione, fare clic con il pulsante destro del m
 Quando si includono librerie di terze parti nell'app Novell. iOS, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile` , possono generare questa eccezione durante l'operazione.
 
 Questo problema può essere risolto aprendo le opzioni per il progetto Novell. iOS, passando a **iOS compila**  >  **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** .
+
+## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Non è stato possibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch. exe '
+
+In alcuni casi, il software antivirus può contrassegnare erroneamente Novell. iOS SDK come malware e rimuovere i file necessari, danneggiando l'SDK. Questo genererà errori come "Impossibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch. exe '".
+
+Se si è interessati, escludere mlaunch. exe dallo scanner antivirus per evitare la ricorrenza. Per ulteriori informazioni, vedere [come creare un'eccezione dell'applicazione nel Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) per Symantec ed [escludere file e cartelle da Norton Auto-Protect, Sonar e scaricare analisi di intelligence](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) per Norton. Inoltre, è consigliabile segnalare un falso positivo a [Symantec](https://symsubmit.symantec.com) o [Norton](https://submit.norton.com/?type=FP).
+
+Una volta aggiunta un'esclusione per mlaunch. exe, sarà necessaria una riinstallazione per ripristinare i file mancanti. L'approccio più semplice a tale scopo consiste nell'alternare i canali nell'aggiornamento:
+
+- Menu di **Visual Studio** > **verificare la disponibilità di aggiornamenti**.
+- Selezionare un canale di aggiornamento diverso nell'elenco a discesa e premere il pulsante **Cambia canale** .
+- Attendere il download degli aggiornamenti.
+- Tornare al canale originale e installare gli aggiornamenti.
+
+Se queste istruzioni non consentono di risolvere il problema, aggiungere un commento al problema di GitHub seguente: [8736](https://github.com/xamarin/xamarin-macios/issues/8736).
