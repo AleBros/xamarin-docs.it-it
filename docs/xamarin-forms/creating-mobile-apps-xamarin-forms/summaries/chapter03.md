@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136903"
+Titolo: "Riepilogo del capitolo 3. Approfondimento sul testo "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 3. Approfondimento sul testo "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734 autore: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Riepilogo del capitolo 3. Dettagli della gestione del testo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
@@ -113,7 +97,7 @@ Il `Color.Accent` valore genera un colore specifico per la piattaforma (e talvol
 
 Le varie piattaforme hanno una combinazione di colori predefinita, come illustrato nell'elenco precedente.
 
-Quando si fa riferimento a Android, è possibile passare a uno schema scuro specificando un tema chiaro nel file Android. manifest. XML o [aggiungendo AppCompat e progettazione materiale](~/xamarin-forms/platform/android/appcompat-material-design.md).
+Quando si fa riferimento a Android, è possibile passare a uno schema scuro specificando un tema chiaro nel file Android.Manifest.xml o [aggiungendo AppCompat e progettazione materiale](~/xamarin-forms/platform/android/appcompat-material-design.md).
 
 Per le piattaforme Windows, il tema colori viene in genere selezionato dall'utente, ma è possibile aggiungere un `RequestedTheme` attributo impostato su `Light` o `Dark` nel file app. XAML della piattaforma. Per impostazione predefinita, il file app. XAML nel progetto UWP contiene un `RequestedTheme` attributo impostato su `Light` .
 

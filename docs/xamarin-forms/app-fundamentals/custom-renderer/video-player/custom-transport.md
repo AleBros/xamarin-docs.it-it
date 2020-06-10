@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come implementare controlli di trasporto personalizzati in un'applicazione lettore video usando Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c72f68f327b6c0df6959d37ed4bf390e3bd7f31d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135005"
+title: "controlli del trasporto video personalizzati" Descrizione: "questo articolo illustra come implementare controlli di trasporto personalizzati in un'applicazione lettore video usando Xamarin.Forms ."
+ms. prod: Novell MS. AssetID: CE9E955D-A9AC-4019-A5D7-6390D80DECA1 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

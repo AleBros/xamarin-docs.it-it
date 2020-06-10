@@ -1,23 +1,8 @@
 ---
-title: Localizzazione di stringhe e immagini inXamarin.Forms
-description: Xamarin.Formsle app possono essere localizzate usando i file di risorse .NET.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137605"
+title: "localizzazione di stringhe e immagini in Xamarin.Forms " Description ":" le Xamarin.Forms app possono essere localizzate usando i file di risorse .NET ".
+zone_pivot_groups: "Platform" ms. prod: Novell MS. AssetID: 852B4ED3-2D2D-48A5-A759-A6591F6A1509 ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 11/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-string-and-image-localization"></a>Xamarin.FormsLocalizzazione di stringhe e immagini
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)

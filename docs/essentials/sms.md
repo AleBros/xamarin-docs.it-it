@@ -1,9 +1,6 @@
 ---
-title:'' Xamarin.Essentials : SMS '' Description:' la classe SMS in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione SMS predefinita con un messaggio specificato da inviare a un destinatario .'
-ms. AssetID: autore: ms. Custom: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : SMS" Description: "la classe SMS in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione SMS predefinita con un messaggio specificato da inviare a un destinatario."
+ms. AssetID: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS

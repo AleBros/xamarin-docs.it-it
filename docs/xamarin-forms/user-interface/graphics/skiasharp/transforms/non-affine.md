@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131755"
+title: "trasformazioni non affini" Descrizione: "in questo articolo viene illustrato come creare effetti della prospettiva e della rastremazione con la terza colonna della matrice di trasformazione e come illustrato nel codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 785F4D13-7430-492E-B24E-3B45C560E9F1 autore: davidbritch ms. Author: dabritch ms. Date: 04/14/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="non-affine-transforms"></a>Trasformazioni non affini
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

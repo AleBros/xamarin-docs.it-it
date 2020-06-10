@@ -1,22 +1,8 @@
 ---
-title: ''
-description: In questo articolo viene illustrato come utilizzare SkiaSharp per tracciare linee con diversi limiti di tratto nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137206"
+title: "Lines and Stroke Caps" Description: "in questo articolo viene illustrato come utilizzare SkiaSharp per tracciare linee con diversi tappi di tratto nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio".
+ms. prod: Novell MS. AssetID: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

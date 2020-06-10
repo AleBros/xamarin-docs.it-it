@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come usare le dita per disegnare l'area di disegno SkiaSharp in un' Xamarin.Forms applicazione e ne illustra il codice di esempio.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 61ae651a2402204f69f642235d74d8d641b47988
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139022"
+title: "illustrazione del dito in SkiaSharp" Descrizione: "in questo articolo viene illustrato come usare le dita per disegnare nell'area di disegno SkiaSharp in un' Xamarin.Forms applicazione e come illustrato nel codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B autore: davidbritch ms. Author: dabritch ms. Date: 04/05/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="finger-painting-in-skiasharp"></a>Disegno Finger in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

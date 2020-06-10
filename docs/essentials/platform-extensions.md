@@ -1,20 +1,8 @@
 ---
-title: Xamarin.EssentialsEstensioni della piattaforma
-description: Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3266d3870dc0d1ddef747168b2ac6b4d397a7c33
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135356"
+title: " Xamarin.Essentials estensioni della piattaforma" Descrizione: " Xamarin.Essentials fornisce diversi metodi di estensione della piattaforma quando è necessario utilizzare tipi di piattaforma come Rect, dimensioni e punto".
+ms. AssetID: AB4D198A-4FD7-479E-8627-01F887A6D056 Author: jamesmontemagno ms. Author: Jamont ms. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Estensioni della piattaforma
 
 Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici.

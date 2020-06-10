@@ -1,22 +1,8 @@
 ---
-title: Scegliere un Xamarin.Forms layout
-description: Xamarin.Formsle classi di layout consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138502"
+title: "Choose a Xamarin.Forms Layout" Description: " Xamarin.Forms le classi di layout consentono di disporre e raggruppare i controlli dell'interfaccia utente nell'applicazione."
+ms. prod: Novell MS. AssetID: 05A39752-A174-447E-A30D-3CC9EF98CB96 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="choose-a-xamarinforms-layout"></a>Scegliere un Xamarin.Forms layout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -78,7 +64,7 @@ L'operazione risulta dispendiosa poiché vengono eseguiti calcoli di layout non 
 
 Per ulteriori informazioni, vedere [ Xamarin.Forms StackLayout](stacklayout.md).
 
-## <a name="grid"></a>Pannello Grid
+## <a name="grid"></a>Grid
 
 Un oggetto [`Grid`](xref:Xamarin.Forms.Grid) viene utilizzato per la visualizzazione di elementi in righe e colonne, che possono avere dimensioni proporzionali o assolute. Le righe e le colonne di una griglia vengono specificate con le [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) proprietà e.
 

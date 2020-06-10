@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130572"
+title: "autenticare gli utenti con Azure Active Directory B2C" Description: "Azure Active Directory B2C offre la gestione delle identità cloud per le applicazioni Web e per dispositivi mobili rivolte agli utenti. Questo articolo illustra come usare Azure Active Directory B2C per integrare la gestione delle identità in un'applicazione per dispositivi mobili con Microsoft Authentication Library. "
+ms. prod: Novell MS. AssetID: B0A5DB65-0585-4A00-B908-22CCC286E6B6 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticare gli utenti con Azure Active Directory B2C
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
@@ -70,7 +56,7 @@ Microsoft Authentication Library prevede che l' **URL di reindirizzamento** dell
 
 ![URI di reindirizzamento personalizzato nella visualizzazione delle proprietà dell'applicazione Azure](azure-ad-b2c-images/azure-redirect-uri.png)
 
-L'URL verrà usato in un secondo momento sia in Android **ApplicationManifest. XML** che in iOS **info. plist**.
+L'URL verrà usato in un secondo momento sia in Android **ApplicationManifest.xml** che in iOS **info. plist**.
 
 Nel progetto di esempio, modificare il file **Constants.cs** per impostare il `clientId` campo sull' **ID applicazione**. Il codice seguente illustra come impostare questo valore se l'ID applicazione è `1234abcd` :
 
@@ -286,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-In Android è necessario che lo schema URL personalizzato registrato con Azure Active Directory B2C sia registrato in **file AndroidManifest. XML**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Nell'esempio seguente viene illustrato lo schema URL personalizzato in **file AndroidManifest. XML**.
+In Android è necessario che lo schema URL personalizzato registrato con Azure Active Directory B2C sia registrato nel **AndroidManifest.xml**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Nell'esempio seguente viene illustrato lo schema URL personalizzato nel **AndroidManifest.xml**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -307,7 +293,7 @@ In Android è necessario che lo schema URL personalizzato registrato con Azure A
 </manifest>
 ```
 
-La `MainActivity` classe deve essere modificata per fornire l' `UIParent` oggetto all'applicazione durante la `OnCreate` chiamata. Quando Azure Active Directory B2C completa la richiesta di autorizzazione, reindirizza allo schema URL registrato da **file AndroidManifest. XML**. Lo schema URI registrato genera Android chiamando il `OnActivityResult` metodo con l'URL come parametro Launch, dove viene elaborato dal `SetAuthenticationContinuationEventArgs` metodo.
+La `MainActivity` classe deve essere modificata per fornire l' `UIParent` oggetto all'applicazione durante la `OnCreate` chiamata. Quando Azure Active Directory B2C completa la richiesta di autorizzazione, reindirizza allo schema URL registrato dalla **AndroidManifest.xml**. Lo schema URI registrato genera Android chiamando il `OnActivityResult` metodo con l'URL come parametro Launch, dove viene elaborato dal `SetAuthenticationContinuationEventArgs` metodo.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity

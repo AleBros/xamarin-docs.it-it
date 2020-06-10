@@ -1,23 +1,8 @@
 ---
-title: Xamarin.FormsNozioni di base su XAML
-description: Questa guida illustra come iniziare a usare XAML multipiattaforma per dispositivi mobili. XAML consente agli sviluppatori di definire interfacce utente nelle Xamarin.Forms applicazioni utilizzando markup anziché codice.
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138619"
+title: "informazioni Xamarin.Forms di base su XAML": "questa guida illustra come iniziare a usare XAML multipiattaforma per dispositivi mobili. XAML consente agli sviluppatori di definire interfacce utente nelle Xamarin.Forms applicazioni utilizzando il markup anziché il codice ".
+ms. prod: Novell MS. Custom: video ms. AssetID: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsNozioni di base su XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

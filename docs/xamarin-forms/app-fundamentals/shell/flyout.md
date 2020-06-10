@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRiquadro a comparsa Shell
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b336a594fa7525000e119333b56284368a23cc03
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134953"
+title: " Xamarin.Forms Shell riquadro a comparsa": "il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile tramite un'icona o scorrendo il dito dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative.
+ms. prod: Novell MS. AssetID: FEDE51EB-577E-4B3E-9890-B7C1A5E52516 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.FormsRiquadro a comparsa Shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsProprietà associabili
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138177"
+title: " Xamarin.Forms proprietà associabili" Descrizione: "in questo articolo viene fornita un'introduzione alle proprietà associabili e viene illustrato come crearle e utilizzarle".
+ms. prod: Novell MS. AssetID: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsProprietà associabili
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)

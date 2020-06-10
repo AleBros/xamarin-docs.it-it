@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135321"
+title: "Introduzione ai renderer personalizzati" Descrizione: "in questo articolo viene fornita un'introduzione ai renderer personalizzati e viene descritto il processo di creazione di un renderer personalizzato".
+ms. prod: Novell MS. AssetID: 264314BE-1C5C-4727-A14E-F6F98151CDBD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/19/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-custom-renderers"></a>Introduzione ai renderer personalizzati
 
 _I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei Xamarin.Forms controlli. Possono essere usati per le modifiche di stile piccolo o per una personalizzazione sofisticata del layout e del comportamento specifici della piattaforma. Questo articolo fornisce un'introduzione ai renderer personalizzati e descrive il processo di creazione di un renderer personalizzato._
@@ -92,7 +78,7 @@ In tal modo il compilatore viene forzato al riconoscimento del tipo `ClassInPCL`
 
 Ciò consente di creare un riferimento al tipo `ClassInPCL`, che indica che è necessario in fase di esecuzione. Per altre informazioni, vedere [Mantenimento del codice](~/ios/deploy-test/linker.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha offerto un'introduzione ai renderer personalizzati e illustrato la procedura di creazione di un renderer personalizzato. I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei Xamarin.Forms controlli. Possono essere usati per apportare piccole modifiche allo stile o per la personalizzazione di layout e comportamenti sofisticati specifici di una piattaforma.
 

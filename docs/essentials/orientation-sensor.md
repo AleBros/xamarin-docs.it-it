@@ -1,8 +1,6 @@
 ---
-Titolo:'' Xamarin.Essentials : OrientationSensor '' Descrizione: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : OrientationSensor" Description: "la classe OrientationSensor consente di monitorare l'orientamento di un dispositivo nello spazio tridimensionale".
+ms. AssetID: F3091D93-E779-41BA-8696-23D296F2F6F5 Author: jamesmontemagno ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 

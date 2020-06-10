@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPoligoni mappa, polilinee e cerchi
-description: Questo articolo illustra come creare poligoni, polilinee e cerchi in un' Xamarin.Forms istanza della mappa.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ca813f9f0f75aeaf4a2502faa7cb96d1fbead471
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138411"
+title: " Xamarin.Forms mappa poligoni, polilinee e cerchi" Descrizione: "in questo articolo viene illustrato come creare poligoni, polilinee e cerchi su un' Xamarin.Forms istanza della mappa".
+ms. prod: Novell MS. AssetID: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.FormsPoligoni e polilinee della mappa
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

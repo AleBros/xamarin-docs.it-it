@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 23. Triggers and behaviors''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136656"
+title: "Riepilogo del capitolo 23. Trigger e comportamenti "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 23. Trigger e comportamenti "ms. prod: Novell MS. Technology: Novell-Forms ms. asassetidd: 19E84B5D-46B4-4B6D-A255-87BEFB011261 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. Trigger e comportamenti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
@@ -129,7 +113,7 @@ L'esempio [**OrConditions**](https://github.com/xamarin/xamarin-forms-book-sampl
 
 La combinazione della logica and e OR non è così semplice e richiede in genere elementi invisibili `Switch` per i risultati intermedi. Nell'esempio [**XorConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/XorConditions) viene illustrato come `Button` abilitare un oggetto se uno dei due `Entry` elementi presenta un testo digitato in, ma non se è presente un testo digitato in.
 
-## <a name="behaviors"></a>Comportamenti
+## <a name="behaviors"></a>comportamenti
 
 Qualsiasi operazione che è possibile eseguire con un trigger può essere eseguita anche con un comportamento, ma i comportamenti richiedono sempre una classe che derivi da [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) e esegua l'override dei due metodi seguenti:
 

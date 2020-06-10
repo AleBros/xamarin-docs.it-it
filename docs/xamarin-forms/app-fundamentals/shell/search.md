@@ -1,9 +1,6 @@
 ---
-title: " Xamarin.Forms Shell Search" Description: " Xamarin.Forms le applicazioni shell possono usare la funzionalità di ricerca integrata fornita da una casella di ricerca che è possibile aggiungere all'inizio di ogni pagina".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Forms ricerca Shell" Descrizione: " Xamarin.Forms le applicazioni shell possono usare la funzionalità di ricerca integrata fornita da una casella di ricerca che è possibile aggiungere all'inizio di ogni pagina".
+ms. prod: Novell MS. AssetID: F8F9471D-6771-4D23-96C0-2B79473A06D4 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/18/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-shell-search"></a>Xamarin.FormsRicerca Shell

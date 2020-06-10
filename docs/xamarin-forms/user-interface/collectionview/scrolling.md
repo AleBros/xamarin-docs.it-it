@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsScorrimento di CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 04d190971fa5ef16e08091600558f7f016bc8605
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134513"
+title: " Xamarin.Forms scorrimento di CollectionView" Descrizione: "quando un utente scorre per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Inoltre, CollectionView definisce due metodi ScrollTo, che a livello di codice scorrono gli elementi nella visualizzazione ".
+ms. prod: Novell MS. AssetID: 2ED719AF-33D2-434D-949A-B70B479C9BA5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/17/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.FormsScorrimento di CollectionView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -137,7 +123,7 @@ Questo codice di esempio genera lo scorrimento minimo necessario per scorrere l'
 > [!NOTE]
 > Il [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro viene usato per impostazione predefinita, se l' `position` argomento non viene specificato quando si chiama il `ScrollTo` metodo.
 
-### <a name="start"></a>Avvio
+### <a name="start"></a>Avvia
 
 Il [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) membro indica che l'elemento deve essere spostato all'inizio della visualizzazione:
 
@@ -237,7 +223,7 @@ L' [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumerazione 
 > [!IMPORTANT]
 > Il valore della [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) proprietà viene rispettato solo quando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) proprietà è impostata su `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Avvio
+#### <a name="start"></a>Avvia
 
 Il `SnapPointsAlignment.Start` membro indica che i punti di allineamento sono allineati al bordo di elementi iniziali.
 

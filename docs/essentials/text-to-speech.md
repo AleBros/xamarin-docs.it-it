@@ -1,9 +1,6 @@
 ---
-title:'' Xamarin.Essentials : testo da sintesi vocale '' Descrizione:' la classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale incorporati per riprodurre testo dal dispositivo e anche per eseguire query sulle lingue disponibili che il motore è in grado di supportare.
-ms. AssetID: autore: ms. Custom: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : sintesi vocale" Descrizione: "la classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale incorporati per riprodurre il testo dal dispositivo e anche per eseguire query sulle lingue disponibili che il motore è in grado di supportare".
+ms. AssetID: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Sintesi vocale

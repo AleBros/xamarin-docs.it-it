@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsconcetti avanzati & elementi interni
-description: Informazioni sui concetti avanzati e sugli elementi interni di Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139035"
+title: " Xamarin.Forms concetti avanzati & elementi interni" Descrizione: "informazioni sui concetti avanzati e gli elementi interni di" Xamarin.Forms .
+ms. prod: Novell MS. AssetID: 2273a31c-4022-42BA-BEFE-0d23ce2ff3b5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/20/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Formsconcetti avanzati & elementi interni
 
 _Informazioni sui concetti avanzati e sugli elementi interni di Xamarin.Forms ._

@@ -1,9 +1,6 @@
 ---
-title:'' Xamarin.Essentials : appunti '' Description:' questo documento descrive la classe degli Appunti in Xamarin.Essentials , che consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni .'
-ms. AssetID: autore: ms. Author: ms. Date: ms. Custom: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : Clipboard" Description: "questo documento descrive la classe degli Appunti in Xamarin.Essentials , che consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni".
+ms. AssetID: C52AE99A-0FB3-425D-9106-3DA5777FEFA0 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/06/2020 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Appunti

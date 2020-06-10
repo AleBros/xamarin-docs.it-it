@@ -1,8 +1,5 @@
 ---
-title:'' Xamarin.Essentials : Phone Dialer '' Description:' la classe PhoneDialer in Xamarin.Essentials consente a un'applicazione di aprire un numero di telefono nel dialer ' ms. AssetID: Author: ms. Custom: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : Dialer telefonico" Description: "la classe PhoneDialer in Xamarin.Essentials consente a un'applicazione di aprire un numero di telefono nel dialer" ms. AssetID: E7457942-4D7B-4195-A2FF-417919B9537F Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. date: 07/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Telefono telefonico

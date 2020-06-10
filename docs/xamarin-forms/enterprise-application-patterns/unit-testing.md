@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134654"
+Titolo: "unit test di app aziendali" Descrizione: "questo capitolo illustra come eseguire unit test nell'app per dispositivi mobili eShopOnContainers".
+ms. prod: Novell MS. AssetID: 4af82e52-f99b-4cad-b278-1745f190c240 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="unit-testing-enterprise-apps"></a>Unit test di app aziendali
 
 Le app per dispositivi mobili presentano problemi specifici che le applicazioni desktop e basate sul Web non devono preoccuparsi. Gli utenti mobili si differenziano per i dispositivi usati, dalla connettività di rete, dalla disponibilità dei servizi e da una serie di altri fattori. Pertanto, le app per dispositivi mobili devono essere testate perché verranno usate nel mondo reale per migliorare la qualità, l'affidabilità e le prestazioni. Sono disponibili molti tipi di test da eseguire in un'app, inclusi testing unità, test di integrazione e test dell'interfaccia utente, con testing unità la forma più comune di test.
@@ -221,7 +207,7 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 
 Questo unit test verifica che la convalida abbia esito negativo quando la `Surname` proprietà di `MockViewModel` non contiene dati e `Value` la `IsValid` proprietà, e `Errors` di ogni `ValidatableObject<T>` istanza sono impostate correttamente.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Una unit test accetta una piccola unità dell'app, in genere un metodo, la isola dalla parte rimanente del codice e verifica che si comportano come previsto. Il suo obiettivo consiste nel verificare che ogni unità di funzionalità venga eseguita come previsto, in modo che gli errori non si propaghino nell'intera app.
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131339"
+Titolo: "parte 3. XAML Markup Extensions "Description:" le estensioni di markup XAML costituiscono una funzionalità importante di XAML che consente di impostare le proprietà su oggetti o valori a cui viene fatto riferimento indirettamente da altre origini.
+ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: F4A37564-B18B-42FF-B841-9A1949895AB6 Author: davidbritch ms. Author: dabritch ms. Date: 03/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di markup XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -557,7 +543,7 @@ Ecco il programma che esegue:
 
 [![Layout relativo con vincoli](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Le estensioni di markup XAML illustrate di seguito forniscono un importante supporto per i file XAML. Ma forse l'estensione di markup XAML più preziosa è `Binding` , che verrà trattata nella parte successiva della serie, [parte 4. Nozioni fondamentali sull'associazione dati](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 

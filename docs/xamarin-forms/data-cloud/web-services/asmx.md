@@ -1,22 +1,8 @@
 ---
-title: ''
-description: In questo articolo viene illustrato come utilizzare un servizio SOAP ASMX da un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1f7a0d04d1e7b6abc9931c05c0e46ef49f8ba09c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138463"
+title: "utilizzare un servizio Web ASP.NET (ASMX)" Descrizione: "in questo articolo viene illustrato come utilizzare un servizio SOAP ASMX da un' Xamarin.Forms applicazione".
+ms. prod: Novell MS. AssetID: D5533964-5528-4D35-9C2B-FAFB632472AC ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-an-aspnet-web-service-asmx"></a>Utilizzare un servizio Web ASP.NET (ASMX)
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)

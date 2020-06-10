@@ -1,9 +1,6 @@
 ---
 title: "risoluzione delle dipendenze in Xamarin.Forms " Descrizione: "in questo articolo viene illustrato come inserire un metodo di risoluzione delle dipendenze in in Xamarin.Forms modo che il contenitore di inserimento delle dipendenze di un'applicazione abbia il controllo sulla creazione e sulla durata di renderer, effetti e implementazioni di DependencyService personalizzati".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+ms. prod: Novell MS. AssetID: 491B87DC-14CB-4ADC-AC6C-40A7627B2524 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="dependency-resolution-in-xamarinforms"></a>Risoluzione delle dipendenze inXamarin.Forms
@@ -294,7 +291,7 @@ Quando [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Res
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Risoluzione delle dipendenze con i contenitori (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
-- [Inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
+- [Inserimento di dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementazione di un lettore video](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Selezione di una foto dalla raccolta immagini](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsGriglia
-description: La Xamarin.Forms griglia è un layout che organizza gli elementi figlio in righe e colonne di celle.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138073"
+title: " Xamarin.Forms Grid" Description: "la Xamarin.Forms griglia è un layout che organizza gli elementi figlio in righe e colonne di celle".
+ms. prod: Novell MS. AssetID: 762B1802-D185-494C-B643-74EED55882FE ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-grid"></a>Xamarin.FormsGriglia
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)

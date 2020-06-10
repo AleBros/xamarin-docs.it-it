@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsStepper
-description: Il Xamarin.Forms stepper consente a un utente di selezionare un valore numerico da un intervallo di valori. È costituito da due pulsanti contrassegnati con segno meno e segno più. Se si modificano i due pulsanti, il valore selezionato viene modificato in modo incrementale.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130546"
+title: " Xamarin.Forms stepper" Description: "The Xamarin.Forms stepper consente a un utente di selezionare un valore numerico da un intervallo di valori. È costituito da due pulsanti contrassegnati con segno meno e segno più. Se si modificano i due pulsanti, il valore selezionato viene modificato in modo incrementale ".
+ms. prod: Novell MS. AssetID: 62571B3E-D84B-4F52-9FC7-C105D6733B16 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-stepper"></a>Xamarin.FormsStepper
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)

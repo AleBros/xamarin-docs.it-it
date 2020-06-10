@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135581"
+title: "accesso a bits pixel bitmap SkiaSharp" Descrizione: "individuare le varie tecniche per l'accesso e la modifica dei bit di pixel delle bitmap SkiaSharp".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: DBB58522-F816-4A8C-96A5-E0236F16A5C6 autore: davidbritch ms. Author: dabritch ms. Date: 07/11/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Accesso a bit di pixel bitmap SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -490,30 +476,15 @@ Per consentire al compilatore di ottimizzare il codice, questa pagina è stata e
 Ecco una tabella che consolida i tempi di esecuzione in millisecondi:
 
 | API       | Tipo di dati | iOS  | Android | Piattaforma UWP  |
-| ---
-Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | Titolo---: Descrizione: ms. prod: ms. Technology: ms. AssetID: Author: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ----:|---title: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-----:| ----:| | Sepixel |           | 3,17 |   10,77 | 3,49 | | Pixel |           | 0,32 |    1,23 | 0,07 | | GetPixel | byte | 0,09 |    0,24 | 0,10 | |           | uint | 0,06 |    0,26 | 0,05 | |           | SKColor | 0,29 |    0,99 | 0,07 | | Sepixel | byte | 1,33 |    6,78 | 0,11 | |           | uint | 0,14 |    0,69 | 0,06 | |           | SKColor | 0,35 |    1,93 | 0,10 |
+| --------- | --------- | ----:| -------:| ----:|
+| SetPixel  |           | 3,17 |   10,77 | 3.49 |
+| Pixel    |           | 0,32 |    1.23 | 0,07 |
+| GetPixels | byte      | 0,09 |    0.24 | 0,10 |
+|           | uint      | 0.06 |    0,26 | 0.05 |
+|           | SKColor   | 0,29 |    0,99 | 0,07 |
+| SetPixels | byte      | 1.33 |    6,78 | 0,11 |
+|           | uint      | 0.14 |    0,69 | 0.06 |
+|           | SKColor   | 0,35 |    1,93 | 0,10 |
 
 Come previsto, la chiamata di `SetPixel` 65.536 volte è il modo meno effeicient per impostare i pixel di una bitmap. Il riempimento di una `SKColor` matrice e l'impostazione della `Pixels` proprietà sono molto migliori e persino il confronto con alcune delle `GetPixels` tecniche e `SetPixels` . L'utilizzo di `uint` valori pixel è in genere più veloce rispetto all'impostazione di `byte` componenti distinti e la conversione del `SKColor` valore in una Unsigned Integer aggiunge un sovraccarico al processo.
 

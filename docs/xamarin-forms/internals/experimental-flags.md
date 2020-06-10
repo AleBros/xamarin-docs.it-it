@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsflag sperimentali
-description: Xamarin.Formsi flag sperimentali consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b548323330ccdce6fb01e83c7e8ab7c2d5307125
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139061"
+title: " Xamarin.Forms flag sperimentali" Descrizione: " Xamarin.Forms i flag sperimentali consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile".
+ms. prod: Novell MS. AssetID: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Formsflag sperimentali
 
 Quando Xamarin.Forms viene implementata una nuova funzionalità, a volte viene applicato un flag sperimentale. Questo consente al team di progettazione di fornire nuove funzionalità in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile. Il flag sperimentale viene quindi rimosso quando la funzionalità viene spostata in una versione stabile.

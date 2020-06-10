@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131898"
+title: "paths and text in SkiaSharp" Description: "in questo articolo viene illustrata l'intersezione tra i percorsi e il testo di SkiaSharp e viene illustrato questo problema con il codice di esempio".
+ms. prod: Novell MS. AssetID: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 08/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="paths-and-text-in-skiasharp"></a>Percorsi e testo in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

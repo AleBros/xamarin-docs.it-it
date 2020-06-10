@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137989"
+title: "margin e Padding" Description: "le proprietà Margin e Padding controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarle ".
+ms. prod: Novell MS. AssetID: BEB096BB-51DF-410F-B0F1-D235287B0F4A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="margin-and-padding"></a>Margine e spaziatura interna
 
 _Le proprietà Margin e Padding controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarle._
@@ -68,7 +54,7 @@ var stackLayout = new StackLayout {
 > [!NOTE]
 > `Thickness`i valori possono essere negativi, che in genere ritagliano o sovratraggono il contenuto.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo è stata illustrata la differenza tra le [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Layout.Padding) proprietà e e come impostarle. Le proprietà controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
 

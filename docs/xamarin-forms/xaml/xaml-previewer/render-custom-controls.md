@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f20a0586aee998c10372c60c96577321e697aad
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137267"
+title: "eseguire il rendering dei controlli personalizzati nella descrizione dell'anteprima XAML" Description: "in questo articolo viene descritto come visualizzare i controlli personalizzati nel Visualizzatore anteprima XAML".
+ms. prod: Novell MS. AssetID: 4D795372-CB8F-48F4-B63D-845E44B261F7 ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Eseguire il rendering di controlli personalizzati nel Visualizzatore anteprima XAML
 
 _I controlli personalizzati a volte non funzionano come previsto nel Visualizzatore anteprima XAML. Usare le indicazioni fornite in questo articolo per comprendere le limitazioni dell'anteprima dei controlli personalizzati._

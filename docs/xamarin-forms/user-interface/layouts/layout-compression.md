@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138025"
+title: "compressione del layout" Descrizione: "la compressione del layout rimuove i layout specificati dalla struttura ad albero visuale nel tentativo di migliorare le prestazioni di rendering della pagina. Questo articolo illustra come abilitare la compressione del layout e i vantaggi che può offrire. "
+ms. prod: Novell MS. AssetID: da9e1b26-9d31-4762-94c3-4039f306b7f2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-compression"></a>Compressione del layout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
@@ -117,7 +103,7 @@ Rispetto alla gerarchia di visualizzazione nidificata originale di 17 Visualizza
 
 L'applicazione di esempio contiene una pagina estratta da un'applicazione reale. Senza compressione del layout e renderer veloci, la pagina produce una gerarchia di visualizzazione nidificata di 130 visualizzazioni in Android. L'abilitazione di renderer veloci e la compressione del layout in classi di layout appropriate riduce la gerarchia di visualizzazione nidificata a 70 visualizzazioni, una riduzione del 46%.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 La compressione del layout rimuove i layout specificati dalla struttura ad albero visuale nel tentativo di migliorare le prestazioni di rendering della pagina. Il miglioramento delle prestazioni offerto varia in base alla complessità di una pagina, alla versione del sistema operativo in uso e al dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
 

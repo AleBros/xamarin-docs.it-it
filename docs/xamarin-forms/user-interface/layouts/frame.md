@@ -1,21 +1,6 @@
 ---
-title: Xamarin.FormsFrame
-description: La Xamarin.Forms classe frame è un layout utilizzato per eseguire il wrapping di una visualizzazione o di un layout con un bordo che può essere configurato con colore, ombreggiatura e altre opzioni.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137189"
+title: " Xamarin.Forms frame" Description: "la Xamarin.Forms classe frame è un layout usato per eseguire il wrapping di una visualizzazione o di un layout con un bordo che può essere configurato con colore, ombreggiatura e altre opzioni".
+ms. prod: Novell MS. assetId: 4E074714-0928-41C8-A468-B60E23236A8C ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.FormsFrame
 
@@ -189,7 +174,7 @@ Frame circleImageFrame = new Frame
 };
 ```
 
-È necessario aggiungere l'immagine **outdoor. jpg** a ogni progetto di piattaforma e il modo in cui questa operazione viene eseguita varia in base alla piattaforma. Per ulteriori informazioni, vedere [Immagini in Xamarin.Forms ](~/xamarin-forms/user-interface/images.md).
+È necessario aggiungere l'immagine **outdoors.jpg** a ogni progetto di piattaforma e il modo in cui questa operazione viene eseguita varia in base alla piattaforma. Per ulteriori informazioni, vedere [Immagini in Xamarin.Forms ](~/xamarin-forms/user-interface/images.md).
 
 > [!NOTE]
 > Gli angoli arrotondati hanno un comportamento leggermente diverso nelle diverse piattaforme. Il valore dell' `Image` oggetto `Margin` dovrebbe essere la metà della differenza tra la larghezza dell'immagine e la larghezza del frame padre e deve essere negativo per centrare uniformemente l'immagine all'interno dell' `Frame` oggetto. Tuttavia, la larghezza e l'altezza richieste non sono garantite, pertanto `Margin` `HeightRequest` `WidthRequest` potrebbe essere necessario modificare le proprietà e in base alla dimensione dell'immagine e ad altre opzioni di layout.

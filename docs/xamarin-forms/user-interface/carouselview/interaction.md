@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsInterazione CarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137410"
+title: " Xamarin.Forms interazione CarouselView" Descrizione: "è possibile accedere all'elemento attualmente visualizzato in un CarouselView tramite le proprietà CurrentItem e position".
+ms. prod: Novell MS. AssetID: 854D97E5-D119-4BE2-AE7C-BD428792C992 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/11/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsInterazione CarouselView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
@@ -52,7 +38,7 @@ Quando l'elemento attualmente visualizzato viene modificato, la `CurrentItem` pr
 > [!IMPORTANT]
 > La `Position` proprietà viene modificata quando la `CurrentItem` proprietà viene modificata. Questo comporterà l' `PositionChangedCommand` esecuzione di e la `PositionChanged` generazione dell'evento.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>Event
 
 Nell'esempio di codice XAML riportato di seguito viene illustrato un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) che utilizza un gestore eventi per rispondere alla modifica dell'elemento corrente:
 
@@ -125,7 +111,7 @@ Quando l'elemento attualmente visualizzato viene modificato, la `Position` propr
 > [!NOTE]
 > Se si imposta la `Position` proprietà su 0, il primo elemento della raccolta sottostante verrà visualizzato.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>Event
 
 Nell'esempio di codice XAML riportato di seguito viene illustrato un oggetto [`CarouselView`](xref:Xamarin.Forms.CarouselView) che utilizza un gestore eventi per rispondere alla `Position` modifica della proprietà:
 

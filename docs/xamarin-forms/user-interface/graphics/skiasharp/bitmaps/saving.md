@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138658"
+title: "salvataggio di bitmap SkiaSharp nei file" Descrizione: "esplorazione dei diversi formati di file supportati da SkiaSharp per il salvataggio di bitmap nella raccolta foto dell'utente".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C autore: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvataggio di bitmap SkiaSharp nei file
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -176,7 +162,7 @@ public class PhotoLibrary : IPhotoLibrary
 
 La chiamata a `MediaScannerConnection.ScanFile` non è strettamente necessaria, ma se si sta testando il programma controllando immediatamente la raccolta foto, è molto utile aggiornare la visualizzazione raccolta libreria.
 
-Il file **file AndroidManifest. XML** richiede il seguente tag di autorizzazione:
+Il file di **AndroidManifest.xml** richiede il seguente tag di autorizzazione:
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -457,16 +443,14 @@ Per tutti gli altri formati, il `Encode` metodo non scrive nulla nel flusso e la
 La bitmap che la pagina **Salva formati file** salva è 600 pixel. Con 4 byte per pixel, questo è un totale di 1.440.000 byte in memoria. Nella tabella seguente vengono illustrate le dimensioni del file per diverse combinazioni di formato e qualità del file:
 
 |Formato|Qualità|Dimensione|
-|---
-Titolo: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---title: Descrizione: ms. prod: ms. Technology: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----:|---:| | PNG | N/A | 492K | | JPEG | 0 | 2.95 k | |      | 50 | 22.1 k | |      | 100 | 206K | | WebP | 0 | 2.71 k | |      | 50 | 11,9 k | |      | 100 | 101K |
+|------|------:|---:|
+| PNG | N/D | 492K |
+| JPEG | 0 | 2.95 k |
+|      | 50 | 22.1 k |
+|      | 100 | 206K |
+| WebP | 0 | 2.71 k |
+|      | 50 | 11,9 k |
+|      | 100 | 101K |
 
 È possibile sperimentare diverse impostazioni di qualità ed esaminare i risultati.
 

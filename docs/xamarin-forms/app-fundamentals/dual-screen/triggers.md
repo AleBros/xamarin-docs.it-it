@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formstrigger a doppio schermo
-description: Questo articolo illustra come usare i Xamarin.Forms trigger a doppio schermo per rispondere alle modifiche dell'interfaccia utente con XAML.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131196"
+title: " Xamarin.Forms trigger a schermo doppio" Descrizione: "questo articolo spiega come usare i Xamarin.Forms trigger a doppio schermo per rispondere alle modifiche dell'interfaccia utente con XAML".
+ms. prod: Novell MS. AssetID: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Formstrigger a doppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

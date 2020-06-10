@@ -1,22 +1,8 @@
 ---
-title: Ereditarietà dello stile inXamarin.Forms
-description: Gli stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Questo articolo illustra come eseguire l'ereditarietà dello stile in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80cc419ae098f4a0cbbd782785c0ec5ba03fa703
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138957"
+title: "ereditarietà dello stile in Xamarin.Forms " Description ": gli stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Questo articolo illustra come eseguire l'ereditarietà dello stile in un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: 67A3A39C-8CC0-446D-8162-FFA73582D3B8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/17/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="style-inheritance-in-xamarinforms"></a>Ereditarietà dello stile inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
@@ -164,5 +150,5 @@ Le `baseStyle` istanze di destinazione [`View`](xref:Xamarin.Forms.View) e impos
 - [Stili di base (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [Utilizzo degli stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

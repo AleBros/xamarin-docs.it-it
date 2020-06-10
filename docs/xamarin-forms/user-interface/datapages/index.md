@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDataPages
-description: Questo articolo presenta Xamarin.Forms le pagine di dati, che forniscono un'API per associare in modo rapido e semplice un'origine dati alle visualizzazioni predefinite.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134316"
+title: " Xamarin.Forms DataPages" Description: "questo articolo introduce Xamarin.Forms le pagine di dati, che forniscono un'API per associare in modo rapido e semplice un'origine dati alle visualizzazioni predefinite".
+ms. prod: Novell MS. AssetID: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsDataPages
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -38,7 +24,7 @@ Le origini dati e le pagine di dati associate consentono agli sviluppatori di ut
 
 Le pagine Web vengono aggiunte a un' Xamarin.Forms applicazione includendo ** Xamarin.Forms . **Pacchetto NuGet di pagine.
 
-### <a name="data-sources"></a>Data Sources
+### <a name="data-sources"></a>Origini dati
 
 L'anteprima include alcune origini dati predefinite disponibili per l'uso:
 

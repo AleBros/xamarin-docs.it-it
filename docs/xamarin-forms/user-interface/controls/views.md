@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsVisualizzazioni
-description: Xamarin.Formsle visualizzazioni sono i blocchi predefiniti delle interfacce utente per dispositivi mobili multipiattaforma. Questo articolo elenca le visualizzazioni incluse in Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132379"
+title: " Xamarin.Forms views" Description: " Xamarin.Forms views sono i blocchi predefiniti delle interfacce utente per dispositivi mobili multipiattaforma. Questo articolo elenca le visualizzazioni incluse in Xamarin.Forms . "
+ms. prod: Novell MS. AssetID: AC070686-A423-4A98-8BB6-0B9F94C062CC ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-views"></a>Xamarin.FormsVisualizzazioni
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -41,7 +27,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 | `Expander`fornisce un contenitore espandibile per ospitare qualsiasi contenuto ed è costituito da un'intestazione e da un contenuto. Impostare la `Header` proprietà su un oggetto [`View`](xref:Xamarin.Forms.View) che verrà visualizzato come intestazione e la `Content` proprietà su un oggetto [`View`](xref:Xamarin.Forms.View) che verrà visualizzato quando l'intestazione viene espansa con un tocco.<br /><br />[Guida](~/xamarin-forms/user-interface/expander.md)  /  di [Esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) di | [![Esempio di espansore](views-images/Expander.png "Esempio di espansore")](views-images/Expander-Large.png#lightbox "Esempio di espansore")<br /> [Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
 |     |     |
 
-### <a name="label"></a>Etichetta
+### <a name="label"></a>Label
 
 |     |     |
 | --- | --- |
@@ -73,7 +59,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)Visualizza la grafica OpenGL nei progetti iOS e Android. Il piattaforma UWP (Universal Windows Platform) non è supportato. Per i progetti iOS e Android è necessario un riferimento all'assembly **OpenTK-1,0** o **OpenTK** versione 1.0.0.0. `OpenGLView`è più facile da usare in un progetto condiviso. Se usato in una libreria di .NET Standard, sarà necessario anche un servizio di dipendenza (come illustrato nel codice di esempio).<br /><br />Si tratta dell'unica funzionalità grafica incorporata in Xamarin.Forms , ma un' Xamarin.Forms applicazione può anche eseguire il rendering della grafica usando [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Esempio di OpenGLView](views-images/OpenGLView.png "Esempio di OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Esempio di OpenGLView")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)Visualizza la grafica OpenGL nei progetti iOS e Android. Il piattaforma UWP (Universal Windows Platform) non è supportato. Per i progetti iOS e Android è necessario un riferimento all'assembly **OpenTK-1,0** o **OpenTK** versione 1.0.0.0. `OpenGLView`è più facile da usare in un progetto condiviso. Se usato in una libreria di .NET Standard, sarà necessario anche un servizio di dipendenza (come illustrato nel codice di esempio).<br /><br />Si tratta dell'unica funzionalità grafica incorporata in Xamarin.Forms , ma un' Xamarin.Forms applicazione può anche eseguire il rendering della grafica usando [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[Documentazione API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Esempio di OpenGLView](views-images/OpenGLView.png "Esempio di OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Esempio di OpenGLView")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="webview"></a>WebView
@@ -136,7 +122,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 | `CheckBox`consente all'utente di selezionare un valore booleano usando un tipo di pulsante che può essere selezionato o vuoto. La `IsChecked` proprietà è lo stato di `CheckBox` e l' `CheckedChanged` evento viene generato quando lo stato cambia.<br /><br />Documentazione dell'API [Guide](~/xamarin-forms/user-interface/checkbox.md)/  /  [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) di guida | [![Esempio di casella di controllo](views-images/CheckBox.png "Esempio di casella di controllo")](views-images/CheckBox-Large.png#lightbox "Esempio di casella di controllo")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  [Pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
-### <a name="slider"></a>Dispositivo di scorrimento
+### <a name="slider"></a>Slider
 
 |     |     |
 | --- | --- |

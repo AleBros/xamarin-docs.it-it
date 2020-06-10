@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMediaElement
-description: Questo articolo illustra come usare MediaElement per riprodurre video e audio in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1dfa51177bba3ebf1e3e29208cc926c77567a048
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134238"
+title: " Xamarin.Forms MediaElement" Description: "questo articolo spiega come usare MediaElement per riprodurre video e audio in un' Xamarin.Forms applicazione".
+ms. prod: Novell MS. AssetID: e65f1e56-A80D-46C7-9ff4-7ae6650a3165 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/18/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

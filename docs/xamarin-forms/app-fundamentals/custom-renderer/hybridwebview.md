@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Una visualizzazione Xamarin.Forms Web è una vista che Visualizza il contenuto Web e HTML nell'app. In questo articolo viene illustrato come creare un renderer personalizzato che estende la visualizzazione WebView per consentire che il codice C# venga richiamato da JavaScript.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138970"
+Titolo: "personalizzazione di una WebView" Descrizione: "una visualizzazione Xamarin.Forms Web è una vista che Visualizza il contenuto Web e HTML nell'app. In questo articolo viene illustrato come creare un renderer personalizzato che estende la visualizzazione WebView per consentire che il codice C# venga richiamato da JavaScript. "
+ms. prod: Novell MS. AssetID: 58DFFA52-4057-49A8-8682-50A58C7E842C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/31/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="customizing-a-webview"></a>Personalizzazione di un elemento WebView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)

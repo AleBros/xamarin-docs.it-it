@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsConfigurazione della pagina della shell
-description: La classe shell definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle Xamarin.Forms applicazioni della shell. Ciò include l'impostazione dei colori delle pagine, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle viste nella barra di spostamento.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 102070fc478b42e9fbc0c7d0006197c81a49c9b8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137501"
+title: " Xamarin.Forms configurazione della pagina della shell" Descrizione: "la classe shell definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle Xamarin.Forms applicazioni della shell. Ciò include l'impostazione dei colori della pagina, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle visualizzazioni nella barra di spostamento.
+ms. prod: Novell MS. AssetID: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/29/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.FormsConfigurazione della pagina della shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
