@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4b2030461025c1cd647595a1ecc22c5589e99fef
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137046"
+title: "SwipeView scorrere la modalità di transizione su iOS" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla la transizione usata per l'apertura di un SwipeView ".
+ms. prod: Novell MS. AssetID: C667F24C-BAD8-47E0-9285-D3546BEF703B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/11/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="swipeview-swipe-transition-mode-on-ios"></a>Modalità di transizione SwipeView scorrere in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

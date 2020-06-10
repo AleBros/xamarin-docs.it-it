@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138879"
+title: "passaggio di parametri effetto come proprietà associate" Description: "è possibile usare le proprietà associate per definire i parametri degli effetti che rispondono alle modifiche delle proprietà di Runtime. Questo articolo illustra l'uso delle proprietà associate per passare parametri a un effetto e la modifica di un parametro in fase di esecuzione. "
+ms. prod: Novell MS. AssetID: DFCDCB9F-17DD-4117-BD53-B4FB206BB387 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/05/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passare parametri a un effetto come proprietà associate
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
@@ -432,7 +418,7 @@ public class LabelShadowEffect : PlatformEffect
 
 Il metodo `OnElementPropertyChanged` aggiorna il colore o l'offset dell'ombreggiatura, a condizione che valore della proprietà associata `ShadowEffect` appropriata sia stato modificato. Deve sempre essere eseguito un controllo della proprietà modificata, dal momento che l'override può essere chiamato più volte.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha spiegato come usare le proprietà associate per passare i parametri a un effetto e come modificare un parametro in fase di esecuzione. Le proprietà associate possono essere usate per definire i parametri di effetto che rispondono a modifiche delle proprietà in fase di esecuzione.
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a891ec70f6f83984ed463fe914442758bdf57a2e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139308"
+title: "Introduction to Effects" Description: "Effects consente di personalizzare i controlli nativi in ogni piattaforma e vengono in genere usati per le piccole modifiche dello stile. Questo articolo fornisce un'introduzione agli effetti, delinea il confine tra gli effetti e i renderer personalizzati e descrive la classe PlatformEffect ".
+ms. prod: Novell MS. AssetID: 30CB8615-8F39-4762-BDB7-333D2B57D112 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/08/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-effects"></a>Introduzione agli effetti
 
 _Gli effetti consentono la personalizzazione dei controlli nativi in ogni piattaforma e vengono in genere utilizzati per piccole modifiche dello stile. Questo articolo fornisce un'introduzione agli effetti, delinea il confine tra gli effetti e i renderer personalizzati e descrive la classe PlatformEffect._

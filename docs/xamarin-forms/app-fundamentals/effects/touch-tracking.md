@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136981"
+title: "richiamo degli eventi dagli effetti" Descrizione: "un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del dito multitocco di basso livello e come generare eventi che segnalano l'attività di tocco ".
+ms. prod: Novell MS. AssetID: 6A724681-55EB-45B8-9EED-7E412AB19DD2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/14/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
@@ -803,7 +789,7 @@ I vari elementi `WhiteKey` e `BlackKey` sono disposti nel [file XAML](https://gi
 
 Se si scorre rapidamente il dito sui tasti, si può vedere dal lieve cambiamento di colore che gli eventi di tocco vengono trasferiti da un tasto all'altro.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come chiamare eventi in un effetto e come scrivere e usare un effetto che implementi l'elaborazione multitouch di basso livello.
 

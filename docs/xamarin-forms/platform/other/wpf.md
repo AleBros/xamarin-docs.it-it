@@ -1,23 +1,7 @@
 ---
-title: ''
-description: Xamarin.Formsdispone ora del supporto in anteprima per la piattaforma WPF
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bbb9ea950c9f1daa1b5ee4762527d689f3cdd483
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139529"
+title: "configurazione della piattaforma WPF" Descrizione: " Xamarin.Forms ora dispone del supporto per l'anteprima della piattaforma WPF" ms. prod: Novell MS. AssetID: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="wpf-platform-setup"></a>Configurazione della piattaforma WPF
 
 ![Anteprima](~/media/shared/preview.png)
@@ -151,7 +135,7 @@ In XAML è possibile usare il `OnPlatform` tag per selezionare un valore della p
 Title="BoxViewClock" Height="450" Width="800"
 ```
 
-## <a name="issues"></a>Issues
+## <a name="issues"></a>Problemi
 
 Si tratta di un'anteprima, quindi è necessario aspettarsi che non tutti gli elementi siano pronti per la produzione. Non tutti i pacchetti NuGet per Xamarin.Forms sono pronti per WPF e alcune funzionalità potrebbero non funzionare in modo completo.
 

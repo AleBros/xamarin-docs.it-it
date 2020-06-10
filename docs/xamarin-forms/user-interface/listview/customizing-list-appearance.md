@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come personalizzare i ListView nelle Xamarin.Forms applicazioni usando le intestazioni, i piè di pagina, i gruppi e le celle a altezza variabile.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139919"
+title: "aspetto ListView" Descrizione: "in questo articolo viene illustrato come personalizzare i ListView nelle Xamarin.Forms applicazioni utilizzando intestazioni, piè di pagina, gruppi e celle a altezza variabile".
+ms. prod: Novell MS. AssetID: DC8009B0-4371-4D60-885A-5362FC7EE3E5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-appearance"></a>Aspetto ListView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
