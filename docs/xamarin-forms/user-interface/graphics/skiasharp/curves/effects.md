@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84128050"
+title: "effetti percorso in SkiaSharp" Descrizione: "in questo articolo vengono illustrati i vari effetti del percorso SkiaSharp che consentono di utilizzare i percorsi per la tracciatura e il riempimento e ne viene illustrato il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 95167D1F-A718-405A-AFCC-90E596D422F3 autore: davidbritch ms. Author: dabritch ms. Date: 07/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="path-effects-in-skiasharp"></a>Effetti percorso in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

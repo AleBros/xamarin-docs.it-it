@@ -1,23 +1,6 @@
 ---
-title: Crea la tua prima Xamarin.Forms app
-description: Guida video che illustra come creare la prima Xamarin.Forms applicazione in Visual Studio.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133482"
+title: "compilare la prima Xamarin.Forms app" Descrizione: "Guida video che illustra come creare la prima Xamarin.Forms applicazione in Visual Studio".
+zone_pivot_groups: Platform-dev16 ms. prod: Novell MS. AssetID: 72B6AF82-4D98-47E5-AB54-0A35B3253468 ms. Technology: Novell-Forms ms. Custom: autore video: conceptdev ms. Author: crdun ms. Date: 05/23/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Crea la tua prima Xamarin.Forms app
 

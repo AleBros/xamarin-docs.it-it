@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsInterfaccia del comando
-description: Questo articolo illustra come implementare la proprietà Command con i Xamarin.Forms Data Binding. L'interfaccia di esecuzione dei comandi consente un approccio alternativo all'implementazione di comandi decisamente più adatto all'architettura MVVM.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139724"
+title: "The Xamarin.Forms Command Interface" Description: "in questo articolo viene illustrato come implementare la proprietà Command con i Xamarin.Forms Data Binding. L'interfaccia di comando offre un approccio alternativo all'implementazione di comandi più adatti per l'architettura MVVM ".
+ms. prod: Novell MS. AssetID: 69922284-F398-45C3-B4CC-B8E29BB4C533 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.FormsInterfaccia del comando
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

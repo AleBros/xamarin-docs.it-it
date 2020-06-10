@@ -1,23 +1,8 @@
 ---
-title: Stili dinamici inXamarin.Forms
-description: Questo articolo illustra in che modo un' Xamarin.Forms applicazione può rispondere dinamicamente alle modifiche di stile in fase di esecuzione usando risorse dinamiche.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.custom: ''
-ms.openlocfilehash: d40ca3423cca68757cf458faf5cca1138aec5461
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140088"
+title: "stili dinamici in Xamarin.Forms " Description: "questo articolo spiega in che modo un' Xamarin.Forms applicazione può rispondere in modo dinamico alle modifiche di stile in fase di esecuzione usando risorse dinamiche".
+ms. prod: Novell MS. AssetID: 13D4FA4B-DF10-42BF-B001-2C49367FC216 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. Custom: video
 ---
+
 # <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
@@ -217,7 +202,7 @@ L'oggetto `tealSearchBarStyle` viene assegnato direttamente alla [`Style`](xref:
 - [Stili dinamici (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 - [Utilizzo degli stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)
 
 ## <a name="related-video"></a>Video correlato

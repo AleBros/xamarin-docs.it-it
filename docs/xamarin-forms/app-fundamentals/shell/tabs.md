@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsLayout della shell
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139958"
+title: " Xamarin.Forms layout della shell" Descrizione: "dopo un riquadro a comparsa, il livello di navigazione successivo in un'applicazione shell è la barra della scheda in basso. In alternativa, il modello di spostamento per un'applicazione può iniziare con le schede nella parte inferiore e non usare un riquadro a comparsa. In entrambi i casi, quando una scheda in basso contiene più di una pagina, le pagine saranno navigabili dalle prime schede ".
+ms. prod: Novell MS. AssetID: 318D81DB-E456-4E44-B083-36A27DBD9523 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.FormsSchede della shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

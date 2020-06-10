@@ -47,7 +47,7 @@ public class ShareTest
 
 Interfaccia utente per la condivisione nell'applicazione esterna visualizzata quando viene effettuata la richiesta:
 
-![Condivisione](images/share.png)
+![Condividi](images/share.png)
 
 ## <a name="files"></a>File
 

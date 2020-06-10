@@ -1,22 +1,8 @@
 ---
-title: Stili del dispositivo inXamarin.Forms
-description: Xamarin.Formsinclude sei stili dinamici, noti come stili di dispositivo, nella classe Device. Styles. Questo articolo illustra come utilizzare gli stili del dispositivo in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b835847fea39e1c2f968e7b81fb9d22f68ea461c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140101"
+title: "lo stile del dispositivo in Xamarin.Forms " Description: " Xamarin.Forms include sei stili dinamici, noti come stili di dispositivo, nella classe Device. Styles. In questo articolo viene illustrato come utilizzare gli stili del dispositivo in un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: 7FF19ED1-0822-4238-9435-AD970317A2F8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/17/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="device-styles-in-xamarinforms"></a>Stili del dispositivo inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
@@ -134,5 +120,5 @@ Gli screenshot seguenti illustrano gli stili del dispositivo in ogni piattaforma
 - [Utilizzo degli stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device. Styles](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

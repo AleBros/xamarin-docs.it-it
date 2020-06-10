@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsSelezione
-description: Il Xamarin.Forms selettore Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe Picker per selezionare un elemento di testo da un elenco di dati.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 50f605f4ad9839521fd4169531ad46d197f20dbf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139660"
+title: " Xamarin.Forms Picker" Description: "la Xamarin.Forms selezione Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe Picker per selezionare un elemento di testo da un elenco di dati. "
+ms. prod: Novell MS. AssetID: D4815A4B-104B-4294-951B-BD8F2EC33C86 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-picker"></a>Xamarin.FormsSelezione
 
 _La visualizzazione selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._

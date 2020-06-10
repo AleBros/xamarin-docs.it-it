@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Controllo ortografico Bing esegue il controllo ortografico contestuale del testo, fornendo suggerimenti inline per le parole errate. Questo articolo illustra come usare l'API REST di Controllo ortografico Bing per correggere gli errori di ortografia in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139295"
+title: "controllo ortografico con l'API Controllo ortografico Bing" Description: "Controllo ortografico Bing esegue il controllo ortografico contestuale del testo, fornendo suggerimenti inline per le parole errate. Questo articolo illustra come usare l'API REST di Controllo ortografico Bing per correggere gli errori di ortografia in un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Controllo ortografico con l'API Controllo ortografico Bing
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
@@ -164,7 +150,7 @@ Questo codice esegue l'iterazione della `FlaggedTokens` raccolta e sostituisce l
 > [!NOTE]
 > Nell'esempio precedente viene usato `Replace` per semplicità, ma in una grande quantità di testo potrebbe sostituire il token errato. L'API fornisce il `offset` valore che deve essere usato nelle app di produzione per identificare la posizione corretta nel testo di origine per eseguire un aggiornamento.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come usare l'API REST di Controllo ortografico Bing per correggere gli errori di ortografia in un' Xamarin.Forms applicazione. Controllo ortografico Bing esegue il controllo ortografico contestuale del testo, fornendo suggerimenti inline per le parole errate.
 
@@ -173,4 +159,4 @@ Questo articolo ha illustrato come usare l'API REST di Controllo ortografico Bin
 - [Documentazione di Controllo ortografico Bing](/azure/cognitive-services/bing-spell-check/)
 - [Utilizzare un servizio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Servizi cognitivi todo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
-- [Informazioni di riferimento sull'API Controllo ortografico Bing V7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)
+- [Informazioni di riferimento per l'API Controllo ortografico Bing v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

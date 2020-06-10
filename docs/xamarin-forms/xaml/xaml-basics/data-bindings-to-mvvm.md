@@ -1,23 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127530"
+Titolo: "parte 5. Da data binding a MVVM "Description:" il modello MVVM impone una separazione tra tre livelli software, ovvero l'interfaccia utente XAML, denominata vista; i dati sottostanti, detti modello; e un intermediario tra la vista e il modello, denominato ViewModel ".
+ms. prod: Novell MS. Custom: video ms. AssetID: 48B37D44-4FB1-41B2-9A5E-6D383B041F81 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Da data binding a MVVM
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -708,7 +693,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 **Novell evolve 2016: MVVM semplificato con Xamarin.Forms e Prism**
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 XAML è uno strumento potente per la definizione di interfacce utente nelle Xamarin.Forms applicazioni, in particolare quando si utilizzano Data Binding e MVVM. Il risultato è una rappresentazione pulita, elegante e potenzialmente toolable di un'interfaccia utente con tutto il supporto in background nel codice.
 

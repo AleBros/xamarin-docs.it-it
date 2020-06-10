@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come riprodurre video Web in un'applicazione lettore video usando Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133679"
+title: "Descrizione di un video web": "questo articolo spiega come riprodurre video Web in un'applicazione lettore video usando Xamarin.Forms ."
+ms. prod: Novell MS. AssetID: 75781A10-865D-4BA8-8D6B-E3DA012922BC ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

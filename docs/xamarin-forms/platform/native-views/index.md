@@ -1,22 +1,8 @@
 ---
-title: Viste native inXamarin.Forms
-description: È possibile fare riferimento direttamente alle viste native di iOS, Android e del piattaforma UWP (Universal Windows Platform) (UWP) da Xamarin.Forms e possono interagire con le Xamarin.Forms visualizzazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b622d19675694f4d4c7816a81f969b93cdfb5828
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139568"
+title: "viste native in Xamarin.Forms " Description ": è possibile fare riferimento direttamente alle viste native di iOS, Android e alla piattaforma UWP (Universal Windows Platform) (UWP) da Xamarin.Forms e possono interagire con le Xamarin.Forms visualizzazioni".
+ms. prod: Novell MS. AssetID: 2294a023-D763-41DE-A9DA-c2bfc239a132 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/24/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="native-views-in-xamarinforms"></a>Viste native inXamarin.Forms
 
 _È possibile fare riferimento direttamente alle viste native di iOS, Android e del piattaforma UWP (Universal Windows Platform) (UWP) Xamarin.Forms . Le proprietà e i gestori di eventi possono essere impostati sulle visualizzazioni native e possono interagire con le Xamarin.Forms visualizzazioni._

@@ -1,22 +1,8 @@
 ---
-title: Stili espliciti inXamarin.Forms
-description: Uno stile esplicito è un oggetto che viene applicato selettivamente ai controlli impostando le relative proprietà di stile. In questo articolo viene illustrato come utilizzare stili espliciti in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 62b84a5028c17c28a69a887a832028c2064fa78d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136266"
+title: "stili espliciti in Xamarin.Forms " Description: "uno stile esplicito viene applicato selettivamente ai controlli impostando le relative proprietà di stile. In questo articolo viene illustrato come utilizzare stili espliciti in un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: C0DF9F8F-B431-4374-A574-325BC3C41A3B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/17/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="explicit-styles-in-xamarinforms"></a>Stili espliciti inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
@@ -190,5 +176,5 @@ Il costruttore definisce tre stili *espliciti* che vengono applicati alle istanz
 - [Stili di base (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [Utilizzo degli stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

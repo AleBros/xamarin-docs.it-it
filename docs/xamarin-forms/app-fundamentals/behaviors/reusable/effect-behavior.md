@@ -1,22 +1,8 @@
 ---
-title: ''
-description: I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo e la rimozione del codice boilerplate di gestione degli effetti dai file code-behind. Questo articolo illustra la creazione e l'utilizzo di un Xamarin.Forms comportamento per aggiungere un effetto a un controllo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0a105548f869eb448a990a1cc12e6feff4197d48
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135785"
+title: "EffectBehavior riutilizzabile" Descrizione: "i comportamenti sono un approccio utile per aggiungere un effetto a un controllo, rimuovendo il codice di gestione degli effetti della piastra calda dai file code-behind. Questo articolo illustra la creazione e l'utilizzo di un Xamarin.Forms comportamento per aggiungere un effetto a un controllo ".
+ms. prod: Novell MS. AssetID: A909B24D-960A-4023-AFF6-4B9256C55ADD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="reusable-effectbehavior"></a>EffectBehavior riusabili
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
@@ -164,7 +150,7 @@ In fase di esecuzione, quando il comportamento è associato al [`Label`](xref:Xa
 
 Il vantaggio dell'uso di questo comportamento per aggiungere e rimuovere effetti per i controlli è che il codice boilerplate di gestione degli effetti può essere rimosso dai file code-behind.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questo articolo è stato illustrato l'uso di un comportamento per aggiungere un effetto a un controllo. La `EffectBehavior` classe è un comportamento personalizzato riutilizzabile Xamarin.Forms che aggiunge un' [`Effect`](xref:Xamarin.Forms.Effect) istanza a un controllo quando il comportamento è associato al controllo e rimuove l' `Effect` istanza quando il comportamento viene scollegato dal controllo.
 

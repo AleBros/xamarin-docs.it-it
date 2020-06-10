@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a2c9fd9e6e48192bc2237d6b451b533fcee6e6ed
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136448"
+title: " Xamarin.Forms CollectionView" Description: "CollectionView è una visualizzazione flessibile ed efficiente per la presentazione di elenchi di dati con specifiche di layout diverse".
+ms. prod: Novell MS. AssetID: 2BC9B223-2D5C-4B09-849C-B9D578954557 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/24/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview"></a>Xamarin.FormsCollectionView
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)

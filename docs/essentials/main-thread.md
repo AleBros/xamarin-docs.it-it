@@ -1,8 +1,6 @@
 ---
-Titolo:'' Xamarin.Essentials : MainThread '' Descrizione: ms. AssetID: autore: ms. Custom: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : MainThread" Description: "la classe MainThread consente alle applicazioni di eseguire il codice sul thread di esecuzione principale".
+ms. AssetID: CD6D51E7-D933-4FE7-A7F7-392EF27812E1 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
@@ -92,7 +90,7 @@ _Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaf
 
 La classe `MainThread` include i metodi `static` aggiuntivi seguenti che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
 
-| Metodo | Argomenti | Restituisce | Scopo |
+| Metodo | Argomenti | Valori di codice restituiti | Scopo |
 |---|---|---|---|
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Richiama un oggetto `Func<T>` sul thread principale e ne attende il completamento. |
 | `InvokeOnMainThreadAsync` | `Action` | `Task` | Richiama un oggetto `Action` sul thread principale e ne attende il completamento. |

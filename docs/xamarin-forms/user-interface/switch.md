@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCommutatore
-description: L' Xamarin.Forms opzione è un tipo di pulsante che può essere modificato dall'utente per passare da uno stato all'altro e viceversa. Questo articolo illustra come usare la classe Switch per visualizzare un elemento dell'interfaccia utente di attivazione/disattivazione.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a5c2583b7632acdfa7d8439dc96b3964fa3cfcab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136240"
+title: " Xamarin.Forms Switch" Description: "l' Xamarin.Forms opzione è un tipo di pulsante che può essere modificato dall'utente per passare da uno stato all'altro. Questo articolo illustra come usare la classe Switch per visualizzare un elemento dell'interfaccia utente di attivazione/disattivazione.
+ms. prod: Novell MS. assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9 ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 07/18/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-switch"></a>Xamarin.FormsCommutatore
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)

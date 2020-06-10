@@ -1,9 +1,6 @@
 ---
-title:'' Xamarin.Essentials : rileva l'agitazione '' Descrizione:' la classe accelerometra in Xamarin.Essentials consente di rilevare un movimento di agitazione del dispositivo '.
-ms. AssetID: autore: ms. Author: ms. Date: ms. Custom: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : rileva Shake" Descrizione: "la classe accelerometra in Xamarin.Essentials consente di rilevare un movimento di agitazione del dispositivo".
+ms. AssetID: 07513D32-120F-4F12-8757-A47802A8027B Author: jamesmontemagno ms. Author: Jamont ms. Date: 05/28/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rileva Shake

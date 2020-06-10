@@ -1,22 +1,8 @@
 ---
-title: Creare un Xamarin.Forms renderer visivo
-description: Creare Xamarin.Forms oggetti visivi da applicare in modo selettivo agli oggetti visivi, senza dover sottoclassare le Xamarin.Forms visualizzazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127141"
+title: "creare un Xamarin.Forms renderer visuale" Description: "creare Xamarin.Forms oggetti visivi da applicare in modo selettivo agli oggetti visualElement senza dover sottoclassare le Xamarin.Forms visualizzazioni".
+ms. prod: Novell MS. AssetID: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/12/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-xamarinforms-visual-renderer"></a>Creare un Xamarin.Forms renderer visivo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)

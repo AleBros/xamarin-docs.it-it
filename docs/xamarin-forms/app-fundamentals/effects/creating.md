@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139386"
+title: "creazione di un effetto" Descrizione: "effetti semplificano la personalizzazione di un controllo. In questo articolo viene illustrato come creare un effetto che modifica il colore di sfondo del controllo entry quando il controllo ottiene lo stato attivo.
+ms. prod: Novell MS. AssetID: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
@@ -265,7 +251,7 @@ public HomePageCS ()
 
 [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String))Restituisce un oggetto [`Effect`](xref:Xamarin.Forms.Effect) per il nome specificato, ovvero una concatenazione del nome del gruppo di risoluzione (specificato utilizzando l' [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attributo sulla classe Effect) e l'ID univoco specificato utilizzando l' [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) attributo nella classe Effect. Se una piattaforma non fornisce l'effetto, il metodo `Effect.Resolve` restituirà un valore non `null`.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare un effetto che modifica il colore di sfondo del [`Entry`](xref:Xamarin.Forms.Entry) controllo quando il controllo ottiene lo stato attivo.
 

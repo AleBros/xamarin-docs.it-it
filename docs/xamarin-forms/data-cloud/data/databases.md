@@ -26,7 +26,7 @@ Usare Gestione pacchetti NuGet per cercare **sqlite-net-PCL** e aggiungere la ve
 Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
 
 - **Creato da:** Frank A. Krueger (praeclarum)
-- **ID:** sqlite-net-PCL
+- **ID:** sqlite-net-pcl
 - **Collegamento a NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]

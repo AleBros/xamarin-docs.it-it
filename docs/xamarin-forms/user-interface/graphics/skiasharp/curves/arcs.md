@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140016"
+title: "tre modi per creare un arco" Description: "in questo articolo viene illustrato come utilizzare SkiaSharp per definire gli archi in tre modi diversi e viene illustrato con il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: F1DA55E4-0182-4388-863C-5C340213BF3C autore: davidbritch ms. Author: dabritch ms. Date: 05/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="three-ways-to-draw-an-arc"></a>Tre modi per disegnare un arco
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,25 +1,8 @@
 ---
-title: Xamarin.FormsApprofondimento sulla Guida introduttiva
-description: Questo articolo esamina le nozioni di base dello sviluppo di applicazioni con Xamarin.Forms . Gli argomenti trattati includono l'anatomia di un' Xamarin.Forms applicazione, l'architettura e le nozioni fondamentali dell'applicazione e l'interfaccia utente.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132522"
+title: " Xamarin.Forms descrizione approfondita dell'avvio rapido": "questo articolo esamina le nozioni di base dello sviluppo di applicazioni con Xamarin.Forms . Gli argomenti trattati includono l'anatomia di un' Xamarin.Forms applicazione, l'architettura e le nozioni fondamentali dell'applicazione e l'interfaccia utente ".
+zone_pivot_groups: ms. topic della piattaforma: Guida introduttiva ms. prod: Novell MS. Custom: video ms. AssetID: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.FormsApprofondimento sulla Guida introduttiva
 
 Nella [ Xamarin.Forms Guida introduttiva](~/get-started/index.yml)è stata compilata l'applicazione Note. Questo articolo esamina gli elementi che sono stati compilati per comprendere le nozioni di base del Xamarin.Forms funzionamento delle applicazioni.
@@ -382,7 +365,7 @@ await Navigation.PopAsync();
 
 Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-## <a name="data-binding"></a>Data binding
+## <a name="data-binding"></a>Associazione dati
 
 Il data binding viene usato per semplificare la Xamarin.Forms visualizzazione e l'interazione di un'applicazione con i relativi dati. Stabilisce una connessione tra l'interfaccia utente e l'applicazione sottostante. La [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe contiene gran parte dell'infrastruttura per supportare Data Binding.
 
@@ -536,7 +519,7 @@ In alternativa, è possibile [_creare app per dispositivi mobili con Novell. For
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml)
+- [Extensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Riferimento per i controlli](~/xamarin-forms/user-interface/controls/index.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

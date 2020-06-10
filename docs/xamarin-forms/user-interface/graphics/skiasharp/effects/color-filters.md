@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136383"
+title: "filtri colori SkiaSharp" Descrizione: "usare i filtri colori per convertire i colori con le trasformazioni o le tabelle".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63 autore: davidbritch ms. Author: dabritch ms. Date: 08/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-color-filters"></a>Filtri colori SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

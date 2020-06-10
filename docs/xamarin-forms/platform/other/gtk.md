@@ -52,7 +52,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
     ![Fare riferimento al progetto condiviso](gtk-images/win/reference-shared-project.png "Fare riferimento al progetto condiviso")
 
-8. Nella finestra di dialogo **Gestione riferimenti** premere il pulsante **Sfoglia** e passare alla cartella **c:\Programmi (x86) \GtkSharp\2.12\lib** e selezionare i file **ATK-Sharp. dll**, **gdk-sharp. dll**, **Glade-Sharp. dll**, **GLib-Sharp. dll**, **gtk-dotnet. dll**, **GTK-Sharp. dll** .
+8. Nella finestra di dialogo **Gestione riferimenti** premere il pulsante **Sfoglia** e passare alla cartella **c:\Programmi (x86) \GtkSharp\2.12\lib** e selezionare i file **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll**gtk-sharp.dll **.**
 
     ![Riferimenti alle librerie GTK #](gtk-images/win/reference-gtk-libraries.png "Riferimenti alle librerie GTK #")
 
@@ -211,6 +211,6 @@ vbox.PackEnd(settingsView, true, true, 0);
 
 Per ulteriori informazioni sui moduli nativi, vedere [form nativi](~/xamarin-forms/platform/native-forms.md).
 
-## <a name="issues"></a>Issues
+## <a name="issues"></a>Problemi
 
 Si tratta di un'anteprima, quindi è necessario aspettarsi che non tutti gli elementi siano pronti per la produzione. Per lo stato di implementazione corrente, vedere [stato](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Status.md)e per i problemi noti correnti, vedere [in sospeso & problemi noti](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Issues-Pending.md).

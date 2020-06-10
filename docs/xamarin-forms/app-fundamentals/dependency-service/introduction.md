@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIntroduzione a DependencyService
-description: Questo articolo illustra come usare la Xamarin.Forms classe DependencyService per richiamare la funzionalità della piattaforma nativa.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f4d43a0c9c4878733d65b170c27e744b397aa4d0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138359"
+title: " Xamarin.Forms DependencyService Introduction" Description: "questo articolo spiega come usare la Xamarin.Forms classe DependencyService per richiamare la funzionalità della piattaforma nativa".
+ms. prod: Novell MS. AssetID: 5d019604-4f6f-4932-9b26-1fce3b4d88f8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/12/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dependencyservice-introduction"></a>Xamarin.FormsIntroduzione a DependencyService
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)

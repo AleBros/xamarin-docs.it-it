@@ -1,22 +1,8 @@
 ---
-title: ''
-description: È possibile fare riferimento direttamente alle visualizzazioni native di iOS, Android e UWP dalle Xamarin.Forms pagine create con C#. Questo articolo illustra come aggiungere viste native a un Xamarin.Forms layout creato con C# e come eseguire l'override del layout delle visualizzazioni personalizzate per correggere l'utilizzo dell'API di misurazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139594"
+title: "viste native in C#" Description: "è possibile fare riferimento direttamente alle visualizzazioni native da iOS, Android e UWP dalle Xamarin.Forms pagine create con c#. Questo articolo illustra come aggiungere viste native a un Xamarin.Forms layout creato con C# e come eseguire l'override del layout delle visualizzazioni personalizzate per correggere l'utilizzo dell'API di misurazione ".
+ms. prod: Novell MS. AssetID: 230F937C-F914-4B21-8EA1-1A2A9E644769 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="native-views-in-c"></a>Viste native in C\#
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
@@ -319,7 +305,7 @@ Questo metodo usa la larghezza fornita dal `CustomControl.ArrangeOverride` metod
 
 ![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come aggiungere viste native a un Xamarin.Forms layout creato con C# e come eseguire l'override del layout delle visualizzazioni personalizzate per correggere l'utilizzo dell'API di misurazione.
 

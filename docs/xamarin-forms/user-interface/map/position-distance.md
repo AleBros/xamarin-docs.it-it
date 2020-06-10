@@ -1,9 +1,6 @@
 ---
-title: " Xamarin.Forms Map position and Distance" Description: " Xamarin.Forms . Lo spazio dei nomi Maps contiene uno struct di posizione usato in genere quando si posiziona una mappa e i relativi pin e uno struct di distanza che può essere utilizzato facoltativamente durante il posizionamento di una mappa.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Forms Mappa posizione e distanza" Descrizione: " Xamarin.Forms . Lo spazio dei nomi Maps contiene uno struct di posizione usato in genere quando si posiziona una mappa e i relativi pin e uno struct di distanza che può essere utilizzato facoltativamente durante il posizionamento di una mappa.
+ms. prod: Novell MS. AssetID: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-map-position-and-distance"></a>Xamarin.FormsPosizione e distanza della mappa

@@ -1,9 +1,6 @@
 ---
-title: Description: le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la Xamarin.Forms modalità di colore legacy.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "la modalità colore legacy di visualElement in Android" Description: "specifici della piattaforma consente di utilizzare funzionalità disponibili solo in una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la Xamarin.Forms modalità di colore legacy. "
+ms. prod: Novell MS. AssetID: 37D95A2D-74AC-488A-B903-2BDD799EAA5C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="visualelement-legacy-color-mode-on-android"></a>Modalità colore legacy di visualElement in Android

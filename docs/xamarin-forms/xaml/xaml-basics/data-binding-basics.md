@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 08be571d3ba69891a56c08efd556a999e51431c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139854"
+Titolo: "parte 4. Nozioni fondamentali sul data binding "Description:" i data binding consentono di collegare le proprietà di due oggetti in modo che una modifica in uno di essi provochi una modifica nell'altra ".
+ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 342288C3-BB4C-4924-B178-72E112D777BA Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni di base sul data binding
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -405,7 +391,7 @@ Ecco il risultato:
 
 Se le proprietà degli elementi cambiano in fase di esecuzione, gli elementi della raccolta devono implementare l' `INotifyPropertyChanged` interfaccia e segnalare le modifiche ai valori delle proprietà usando l' `PropertyChanged` evento. Questa operazione viene illustrata nella parte successiva della serie, la [parte 5. Dal data binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Le associazioni dati forniscono un meccanismo potente per il collegamento delle proprietà tra due oggetti all'interno di una pagina o tra oggetti visivi e dati sottostanti. Tuttavia, quando l'applicazione inizia a lavorare con le origini dati, un modello di architettura dell'applicazione comune inizia a emergere come un paradigma utile. Questa operazione è prevista nella [parte 5. Da data binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 

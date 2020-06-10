@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come caricare le bitmap in SkiaSharp da diverse origini e visualizzarle nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137736"
+title: "Nozioni di base sulla bitmap in SkiaSharp" Description: "questo articolo illustra come caricare bitmap in SkiaSharp da diverse origini e visualizzarle nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 32C95DFF-9065-42D7-966C-D3DBD16906B3 autore: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="bitmap-basics-in-skiasharp"></a>Nozioni fondamentali sulla bitmap in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -104,9 +90,9 @@ Il `SKBitmap.Decode` metodo statico è responsabile della decodifica dei file bi
 
 ## <a name="loading-a-bitmap-resource"></a>Caricamento di una risorsa bitmap
 
-In termini di codice, l'approccio più semplice per il caricamento di bitmap è l'inclusione di una risorsa bitmap direttamente nell'applicazione. Il programma **SkiaSharpFormsDemos** include una cartella denominata **media** contenente diversi file bitmap, incluso un nome **Monkey. png**. Per le bitmap archiviate come risorse del programma, è necessario usare la finestra di dialogo **Proprietà** per assegnare al file un' **azione di compilazione** della **risorsa incorporata**.
+In termini di codice, l'approccio più semplice per il caricamento di bitmap è l'inclusione di una risorsa bitmap direttamente nell'applicazione. Il programma **SkiaSharpFormsDemos** include una cartella denominata **media** contenente diversi file bitmap, incluso uno denominato **monkey.png**. Per le bitmap archiviate come risorse del programma, è necessario usare la finestra di dialogo **Proprietà** per assegnare al file un' **azione di compilazione** della **risorsa incorporata**.
 
-Ogni risorsa incorporata dispone di un *ID di risorsa* costituito dal nome del progetto, dalla cartella e dal nome del file, tutti connessi da punti: **SkiaSharpFormsDemos. Media. Monkey. png**. È possibile ottenere l'accesso a questa risorsa specificando l'ID risorsa come argomento [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) del metodo della [`Assembly`](xref:System.Reflection.Assembly) classe:
+Ogni risorsa incorporata dispone di un *ID di risorsa* costituito dal nome del progetto, dalla cartella e dal nome del file, tutti connessi da punti: **SkiaSharpFormsDemos.Media.monkey.png**. È possibile ottenere l'accesso a questa risorsa specificando l'ID risorsa come argomento [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) del metodo della [`Assembly`](xref:System.Reflection.Assembly) classe:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsLocalizzazione
-description: Il Framework di localizzazione .NET incorporato può essere usato per creare applicazioni multilingue multipiattaforma con Xamarin.Forms . Il testo e le immagini possono essere localizzati e le applicazioni possono supportare la direzione del flusso da destra a sinistra.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: dddb80e8fb683547d2bf6ba0b74e870fe240695c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137566"
+title: " Xamarin.Forms localizzazione" Descrizione: "il Framework di localizzazione .NET incorporato può essere usato per creare applicazioni multilingue multipiattaforma con Xamarin.Forms . È possibile localizzare testo e immagini e le applicazioni possono supportare una direzione di flusso da destra a sinistra.
+ms. prod: Novell MS. AssetID: 97BF843B-BDAA-4CEA-8189-6DB54B291D7F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-localization"></a>Xamarin.FormsLocalizzazione
 
 _Il Framework di localizzazione .NET incorporato può essere usato per creare applicazioni multilingue multipiattaforma con Xamarin.Forms ._

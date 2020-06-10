@@ -1,9 +1,6 @@
 ---
 title: "Animation in Xamarin.Forms " Description: " Xamarin.Forms include un'infrastruttura di animazione semplice per la creazione di animazioni semplici, pur essendo sufficientemente versatile da creare animazioni complesse".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+ms. prod: Novell MS. AssetID: AC0B4127-ECA3-44DA-8A24-A2B10A275083 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/14/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="animation-in-xamarinforms"></a>Animazione inXamarin.Forms

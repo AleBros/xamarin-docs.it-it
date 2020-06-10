@@ -1,22 +1,6 @@
 ---
-title: Applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)
-description: Xamarin.Formssupporta gli elementi visivi di stile utilizzando Cascading Style Sheets (CSS).
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3e333fcdca12a6bd2f71a1ecbeeb1fd3d5f5be13
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140140"
+title: "applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)" Description: " Xamarin.Forms supporta gli elementi visivi di stile utilizzando CASCADING Style Sheets (CSS)."
+ms. prod: Novell MS. AssetID: C89D57A6-DAB9-4C42-963F-26D67627DDC2 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)
 
@@ -365,7 +349,7 @@ Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nella colonna **val
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|_colore_ \|`initial` |`background-color: springgreen;`|
-|`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
+|`background-image`|`Page`|_stringa_ \| di`initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`, `ImageButton`|_colore_ \|`initial`|`border-color: #9acd32;`|
 |`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_valore Double_ \|`initial` |`border-radius: 10;`|
 |`border-width`|`Button`, `ImageButton`|_valore Double_ \|`initial` |`border-width: .5;`|
@@ -377,7 +361,7 @@ Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nella colonna **val
 |`flex-grow`|`VisualElement`|_float_ \|`initial`|`flex-grow: 1.5;`|
 |`flex-shrink`|`VisualElement`|_float_ \|`initial`|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
-|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_string_ \| `initial` |`font-family: Consolas;`|
+|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_stringa_ \| di`initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_valore Double_ \| _namedsize_ \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 250;`|
@@ -389,11 +373,11 @@ Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nella colonna **val
 |`margin-top`|`View`|_spessore_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_spessore_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_spessore_ \|`initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_INT_ \| `initial`|`max-lines: 2;`|
+|`max-lines`|`Label`|_int_ \|`initial`|`max-lines: 2;`|
 |`min-height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 50;`|
 |`min-width`|`VisualElement`|_valore Double_ \|`initial` |`min-width: 112;`|
 |`opacity`|`VisualElement`|_valore Double_ \|`initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_INT_ \| `initial`|`order: -1;`|
+|`order`|`VisualElement`|_int_ \|`initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_spessore_ \|`initial` |`padding: 6 12 12;`|
 |`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_valore Double_ \|`initial`|`padding-left: 3;`|
 |`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-top: 4;`|
@@ -431,7 +415,7 @@ Xamarin.FormsSono supportate anche le seguenti proprietà CSS specifiche, nella 
 |`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-background-color: teal;`|
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_INT_ \| `initial` |`-xf-max-length: 20;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \|`initial` |`-xf-max-length: 20;`|
 |`-xf-max-track-color`|`Slider`|_colore_ \|`initial` |`-xf-max-track-color: red;`|
 |`-xf-min-track-color`|`Slider`|_colore_ \|`initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both`è supportato solo in un oggetto `ScrollView` . |`-xf-orientation: horizontal;`|
@@ -441,7 +425,7 @@ Xamarin.FormsSono supportate anche le seguenti proprietà CSS specifiche, nella 
 |`-xf-thumb-color`|`Slider`, `Switch`|_colore_ \|`initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
-|`-xf-visual`|`VisualElement`|_string_ \| `initial` |`-xf-visual: material;`|
+|`-xf-visual`|`VisualElement`|_stringa_ \| di`initial` |`-xf-visual: material;`|
 
 ### <a name="xamarinforms-shell-specific-properties"></a>Xamarin.FormsProprietà specifiche della shell
 

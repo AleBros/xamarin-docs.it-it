@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsnei progetti nativi Novell
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132275"
+title: " Xamarin.Forms in Novell native Projects" Description: "in questo articolo viene illustrato come utilizzare le pagine derivate da ContentPage che vengono aggiunte direttamente ai progetti nativi Novell e come spostarsi tra loro."
+ms. prod: Novell MS. AssetID: f343fc21-dfb1-4364-A332-9da6705d36bc ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/19/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Formsnei progetti nativi Novell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)

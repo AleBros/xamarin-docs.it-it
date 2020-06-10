@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e1590d0a4f9716541f18bc4f50a2c480c5e4478a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129779"
+title: "Descrizione di accessibilità tastiera": "invece di usare la sequenza di tabulazione predefinita, a volte è necessario ottimizzare l'accessibilità dell'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop".
+ms. prod: Novell MS. AssetID: 8be8f498-558A-4894-A01F-91a0d3ef927e ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/09/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accessibilità tastiera inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

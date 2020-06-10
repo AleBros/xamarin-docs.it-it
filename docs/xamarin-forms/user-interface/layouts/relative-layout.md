@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsSul relativelayout
-description: Questo articolo illustra come usare la Xamarin.Forms classe sul relativelayout per creare interfacce utente che vengono ridimensionate in base alle dimensioni dello schermo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127192"
+title: " Xamarin.Forms sul relativelayout" Description: "questo articolo spiega come usare la Xamarin.Forms classe sul relativelayout per creare interfacce utente che vengono ridimensionate in base alle dimensioni dello schermo".
+ms. prod: Novell MS. AssetID: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/25/2015 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsSul relativelayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -31,7 +17,7 @@ ms.locfileid: "84127192"
 
 ![](relative-layout-images/flag.png "RelativeLayout Exploration")
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Uso
 
 ### <a name="understanding-constraints"></a>Informazioni sui vincoli
 

@@ -1,22 +1,8 @@
 ---
-title: Applicazione di stili Xamarin.Forms
-description: In questa guida viene illustrato come applicare uno stile alle Xamarin.Forms applicazioni utilizzando gli stili XAML e utilizzando Cascading Style Sheets.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8775793c2d9ae1ba6e1eba38fe48647b43056bf8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140114"
+title: "applicazione di stili Xamarin.Forms " Descrizione: "questa guida illustra come applicare lo stile alle Xamarin.Forms applicazioni usando gli stili XAML e usando Cascading Style Sheets".
+ms. prod: Novell MS. AssetID: EABF5072-B89B-4356-B7B3-1C6B40358926 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="styling-xamarinforms-apps"></a>Applicazione di stili Xamarin.Forms
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Xamarin.FormsApplicazione di stili alle app usando gli stili XAML](xaml/index.md)

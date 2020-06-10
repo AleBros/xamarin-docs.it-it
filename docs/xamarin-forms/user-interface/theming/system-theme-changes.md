@@ -1,22 +1,8 @@
 ---
-title: Rispondere alle modifiche del tema di sistema nelle Xamarin.Forms applicazioni
-description: Xamarin.Formsle applicazioni possono rispondere alle modifiche del tema del sistema operativo usando il tipo OnAppTheme e l'estensione di markup DynamicResource.
-ms.assetid: ''
-ms.prod: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2bb83f4ad5c30adccfc961938df64dda9cef1f6b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140062"
+title: "rispondere alle modifiche apportate al tema del sistema nelle Xamarin.Forms applicazioni" Descrizione: " Xamarin.Forms le applicazioni possono rispondere alle modifiche del tema del sistema operativo usando il tipo OnAppTheme e l'estensione di markup DynamicResource".
+ms. AssetID: D10506DD-BAA0-437F-A4AD-882D16E7B60D ms. prod: Novell MS. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Rispondere alle modifiche del tema di sistema nelle Xamarin.Forms applicazioni
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)

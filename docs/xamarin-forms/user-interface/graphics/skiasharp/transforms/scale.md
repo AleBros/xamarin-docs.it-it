@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140179"
+title: "the scale Transform" Description: "Thhis article Esplora la trasformazione di ridimensionamento SkiaSharp per ridimensionare gli oggetti a diverse dimensioni e ne illustra il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B autore: davidbritch ms. Author: dabritch ms. Date: 03/23/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-scale-transform"></a>Trasformazione di ridimensionamento
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

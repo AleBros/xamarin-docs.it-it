@@ -1,22 +1,8 @@
 ---
-title: Integrazione conXamarin.Forms
-description: Questo articolo illustra come creare grafica SkiaSharp che rispondono al tocco e agli Xamarin.Forms elementi e ne illustra il codice di esempio.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137696"
+title: "integrazione con Xamarin.Forms " Descrizione: "in questo articolo viene illustrato come creare grafica SkiaSharp che rispondono al tocco e agli Xamarin.Forms elementi e ne viene illustrato il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 288224F1-7AEE-4148-A88D-A70C03F83D7A autore: davidbritch ms. Author: dabritch ms. Date: 02/09/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="integrating-with-xamarinforms"></a>Integrazione conXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

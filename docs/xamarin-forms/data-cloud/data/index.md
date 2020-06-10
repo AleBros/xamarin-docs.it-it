@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsarchiviazione dati locale
-description: Informazioni su come eseguire la gestione dei file dal Xamarin.Forms codice condiviso e su come leggere e scrivere dati in un database SQLite locale usando SQLite.NET.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 997a659dd01e410f791af28d1b657055296081c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127114"
+title: " Xamarin.Forms archivio dati locale" Descrizione: "informazioni su come eseguire la gestione dei file dal Xamarin.Forms codice condiviso e su come leggere e scrivere dati in un database SQLite locale usando SQLite.NET".
+ms. prod: Novell MS. AssetID: A324C247-7DA8-4B14-A813-25F85525E32B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-local-data-storage"></a>Xamarin.Formsarchiviazione dati locale
 
 ## <a name="files"></a>[File](files.md)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139321"
+title: "riconoscimento vocale con l'API del servizio vocale" Descrizione: "questo articolo spiega come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale in un' Xamarin.Forms applicazione".
+ms. prod: Novell MS. AssetID: B435FF6B-8785-48D9-B2D9-1893F5A87EA1 ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 01/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="speech-recognition-using-azure-speech-service"></a>Riconoscimento vocale con il servizio riconoscimento vocale di Azure
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
@@ -347,7 +333,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 
 La `MainActivity` classe definisce un riferimento statico chiamato `Instance` , che è richiesto dall' `AndroidMicrophoneService` oggetto durante la richiesta di autorizzazioni. Esegue l'override del `OnRequestPermissionsResult` metodo per aggiornare l' `AndroidMicrophoneService` oggetto quando la richiesta di autorizzazioni viene approvata o rifiutata dall'utente.
 
-Infine, è necessario che l'applicazione Android includa l'autorizzazione per registrare l'audio nel file **file AndroidManifest. XML** :
+Infine, è necessario che l'applicazione Android includa l'autorizzazione per registrare l'audio nel file **AndroidManifest.xml** :
 
 ```xml
 <manifest ...>

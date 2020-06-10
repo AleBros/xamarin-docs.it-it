@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDati CarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1081bfafae8e4d7a7a522414e9b45cde48037f1d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136552"
+title: " Xamarin.Forms CarouselView data" Description: "un CarouselView viene popolato con i dati impostando la relativa proprietà ItemsSource su qualsiasi raccolta che implementi IEnumerable".
+ms. prod: Novell MS. AssetID: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/29/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.FormsDati CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -83,7 +69,7 @@ Per impostazione predefinita, [`CarouselView`](xref:Xamarin.Forms.CarouselView) 
 
 Per informazioni su come modificare l' [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientamento, vedere [ Xamarin.Forms CarouselView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento in `CarouselView` , vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
-### <a name="data-binding"></a>Data binding
+### <a name="data-binding"></a>Associazione dati
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)può essere popolato con i dati usando data binding per associare la relativa [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà a una `IEnumerable` raccolta. In XAML, questa operazione viene eseguita con l' `Binding` estensione di markup:
 

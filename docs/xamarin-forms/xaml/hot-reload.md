@@ -1,9 +1,6 @@
 ---
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "ricaricamento a caldo di XAML per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
+ms. prod: Novell MS. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Ricaricamento attivo XAML perXamarin.Forms
@@ -18,54 +15,10 @@ Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per au
 ## <a name="system-requirements"></a>Requisiti di sistema
 
 | IDE/Framework | Versione obbligatoria |
-|---
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---title:' ricaricamento a caldo di XAML per Xamarin.Forms ' Description ':' ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML '.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-title: "ricaricamento di XAML Hot per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----------| | Visual Studio 2019 | 16,4 o versione successiva di Visual Studio 2019 per Mac | 8,4 o versione successiva Xamarin.Forms | 4,1 o versione successiva
+|------|------------------|
+|Visual Studio 2019 | 16,4 o versione successiva
+Visual Studio 2019 per Mac | 8,4 o versione successiva
+Xamarin.Forms | 4,1 o versione successiva
 
 ## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Abilita ricaricamento attivo XAML perXamarin.Forms
 

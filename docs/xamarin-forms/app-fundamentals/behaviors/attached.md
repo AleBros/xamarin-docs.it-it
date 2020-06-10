@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139425"
+title: "comportamenti collegati" Descrizione: "i comportamenti collegati sono classi statiche con una o più proprietà associate. In questo articolo viene illustrato come creare e utilizzare comportamenti collegati ".
+ms. prod: Novell MS. AssetID: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="attached-behaviors"></a>Comportamenti associati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
@@ -128,7 +114,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, false);
 
 In fase di esecuzione, il metodo `OnAttachBehaviorChanged` sarà eseguito quando il valore della proprietà associata `AttachBehavior` è impostato su `false`. Il `OnAttachBehaviorChanged` metodo annulla la registrazione del gestore eventi per l' [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) evento, assicurando che il comportamento non venga eseguito quando l'utente interagisce con il controllo.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare e usare i comportamenti associati. I comportamenti associati sono classi `static` con una o più proprietà associate.
 

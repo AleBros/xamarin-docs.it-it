@@ -1,24 +1,8 @@
 ---
-title: Applicare uno stile a un' Xamarin.Forms applicazione multipiattaforma
-description: Questo articolo illustra come applicare uno stile a un'applicazione multipiattaforma Xamarin.Forms con stili XAML.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2d458bafc5bb1c8dcffc7858fd15734187f7612b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134069"
+title: "stile di un'applicazione multipiattaforma Xamarin.Forms " Descrizione: "questo articolo spiega come applicare uno stile a un'applicazione multipiattaforma Xamarin.Forms con stili XAML".
+zone_pivot_groups: piattaforma MS. Topic: avvio rapido ms. prod: Novell MS. AssetID: CCCF8E57-D021-4542-8709-5808570FC26A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/07/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Applicare uno stile a un' Xamarin.Forms applicazione multipiattaforma
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)

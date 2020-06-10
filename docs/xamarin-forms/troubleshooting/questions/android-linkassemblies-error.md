@@ -1,22 +1,7 @@
 ---
-title: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9c0403203345ed78fae9f30c623c3e501f24ea0e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135902"
+title: "errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto" ms. Topic: risoluzione dei problemi di MS. prod: Novell MS. AssetID: EB3BE685-CB72-48E3-89D7-C845E76B9FA2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/07/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto
 
 È possibile che venga visualizzato un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando si compila un progetto Novell. Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. (Altre informazioni: [ Xamarin.Forms piattaforme supportate](~/get-started/supported-platforms.md#android-platform-support))

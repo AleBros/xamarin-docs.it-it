@@ -1,23 +1,8 @@
 ---
-title: Xamarin.Forms Accessibilità
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.custom: ''
-ms.openlocfilehash: 7ac8b305ae09e005013aea9f83fb4a3e4740f2b2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129807"
+title: " Xamarin.Forms accessibilità" Descrizione: "la compilazione di un'applicazione accessibile garantisce che l'applicazione sia utilizzabile dagli utenti che si avvicinano all'interfaccia utente con una vasta gamma di esigenze ed esperienze".
+ms. prod: Novell MS. AssetID: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. Custom: video
 ---
+
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms Accessibilità
 
 _La creazione di un'applicazione accessibile garantisce che l'applicazione possa essere usata da persone che si avvicinano all'interfaccia utente con una gamma di esigenze ed esperienze diverse._
@@ -44,7 +29,7 @@ Xamarin.Formsle applicazioni sono in genere destinate a più piattaforme, il che
 
 - [Accessibilità multipiattaforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)
-- [Accessibilità tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
+- [Accessibilità tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
 
 ## <a name="related-video"></a>Video correlato
 

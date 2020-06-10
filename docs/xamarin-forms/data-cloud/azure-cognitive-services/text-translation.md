@@ -1,22 +1,8 @@
 ---
-title: ''
-description: L'API di Microsoft Translator può essere usata per tradurre la voce e il testo tramite un'API REST. Questo articolo illustra come usare Microsoft API Traduzione testuale per tradurre il testo da una lingua a un'altra in un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139282"
+title: "traduzione testuale con l'API Translator" Description: "l'API di Microsoft Translator può essere usata per tradurre la voce e il testo tramite un'API REST. Questo articolo illustra come usare Microsoft API Traduzione testuale per tradurre il testo da una lingua a un'altra in un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: 68330242-92C5-46F1-B1E3-2395D8823B0C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="text-translation-using-the-translator-api"></a>Traduzione testuale con l'API Translator
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
@@ -145,7 +131,7 @@ Nell'applicazione di esempio, la risposta XML viene analizzata in un' `XDocument
 
 ![](text-translation-images/text-translation.png "Text Translation to German")
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come usare Microsoft API Traduzione testuale per tradurre il testo da una lingua a un'altra in un altro linguaggio in un' Xamarin.Forms applicazione. Oltre a tradurre il testo, l'API di Microsoft Translator può anche trascrivere il riconoscimento vocale da un linguaggio a un altro linguaggio.
 

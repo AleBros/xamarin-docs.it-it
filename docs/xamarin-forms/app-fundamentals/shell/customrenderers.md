@@ -1,9 +1,6 @@
 ---
-title:' Xamarin.Forms Shell Custom renderers ' Description:' Xamarin.Forms le applicazioni shell sono altamente personalizzabili tramite le proprietà e i metodi esposti dalle varie classi della shell. Tuttavia, è anche possibile creare un renderer personalizzato della shell quando sono necessarie personalizzazioni più sofisticate specifiche della piattaforma.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Forms renderer personalizzati della shell" Descrizione: " Xamarin.Forms le applicazioni shell sono altamente personalizzabili tramite le proprietà e i metodi esposti dalle varie classi della shell. Tuttavia, è anche possibile creare un renderer personalizzato della shell quando sono necessarie personalizzazioni più sofisticate specifiche della piattaforma.
+ms. prod: Novell MS. AssetID: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderer personalizzati della shell

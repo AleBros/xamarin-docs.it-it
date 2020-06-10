@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formse servizi Web
-description: Questa guida illustra come comunicare con servizi Web diversi per fornire funzionalità di creazione, lettura, aggiornamento ed eliminazione (CRUD) a un' Xamarin.Forms applicazione. Gli argomenti trattati includono la comunicazione con i servizi ASMX, i servizi WCF e i servizi REST.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5b2613b94d2c347d9bc6a94086f869b07ab8a55b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131885"
+title: " Xamarin.Forms and Web Services" Description: "questa guida illustra come comunicare con servizi Web diversi per fornire funzionalità di creazione, lettura, aggiornamento ed eliminazione (CRUD) a un' Xamarin.Forms applicazione. Gli argomenti trattati includono la comunicazione con servizi ASMX, servizi WCF, servizi REST ".
+ms. prod: Novell MS. AssetID: 8B360BDA-E4E3-4A3F-9004-0E35362F49F8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-and-web-services"></a>Xamarin.Formse servizi Web
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)

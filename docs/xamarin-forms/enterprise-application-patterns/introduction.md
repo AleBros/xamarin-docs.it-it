@@ -23,7 +23,7 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 - Promuove il riutilizzo e una netta separazione dei problemi tra le funzionalità orizzontali dell'app, ad esempio l'autenticazione e l'accesso ai dati, e le funzionalità verticali, ad esempio funzionalità aziendali specifiche dell'app. Ciò consente di gestire più facilmente le dipendenze e le interazioni tra i componenti dell'app.
 - Consente di mantenere la separazione dei ruoli consentendo a singoli utenti, o team, di concentrarsi su un'attività specifica o una parte delle funzionalità in base alle proprie competenze. In particolare, fornisce una separazione più pulita tra l'interfaccia utente e la logica di business dell'app.
 
-Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Tra queste sono incluse:
+Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Sono inclusi:
 
 - Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un' Xamarin.Forms app aziendale è la possibilità di inserire la logica di business nei file code-behind o di creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere l'app più gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -141,7 +141,7 @@ Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 |Trigger|Contiene il `BeginAnimation` trigger, utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi necessarie per la convalida dell'input dei dati.|
 |ViewModel|Contiene la logica dell'applicazione esposta alle pagine.|
-|Visualizzazioni|Contiene le pagine per l'app.|
+|Viste|Contiene le pagine per l'app.|
 
 ##### <a name="platform-projects"></a>Progetti della piattaforma
 

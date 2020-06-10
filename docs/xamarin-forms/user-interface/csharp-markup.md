@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMarkup C#
-description: Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di creazione di interfacce utente dichiarative Xamarin.Forms in c#.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137748"
+title: " Xamarin.Forms markup c#" Descrizione: "markup c# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di compilazione di interfacce utente dichiarative Xamarin.Forms in C#".
+ms. prod: Novell MS. AssetID: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarkup C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -90,7 +76,7 @@ Questo esempio è identico all'esempio precedente, ma l'API di markup Fluent C# 
 > [!NOTE]
 > Il markup C# include metodi di estensione che impostano proprietà di visualizzazione specifiche. Questi metodi di estensione non hanno lo scopo di sostituire tutti i setter di proprietà. Sono invece progettate per migliorare la leggibilità del codice e possono essere usate in combinazione con i setter di proprietà. È consigliabile usare sempre un metodo di estensione quando ne esiste uno per una proprietà, ma è possibile scegliere il saldo preferito.
 
-## <a name="data-binding"></a>Data binding
+## <a name="data-binding"></a>Associazione dati
 
 Il markup C# include un `Bind` metodo di estensione, insieme agli overload, che crea un data binding tra una proprietà View associable e una proprietà specificata. Il `Bind` Metodo conosce la proprietà associabile predefinita per la maggior parte dei controlli inclusi in Xamarin.Forms . Pertanto, in genere non è necessario specificare la proprietà di destinazione quando si usa questo metodo. Tuttavia, è anche possibile registrare la proprietà associabile predefinita per altri controlli:
 
@@ -235,7 +221,7 @@ Poiché un riconoscitore di movimento è un `BindableObject` , è possibile usar
 
 Il markup C# include una serie di metodi di estensione del layout che supportano le visualizzazioni di posizionamento nei layout e il contenuto delle visualizzazioni:
 
-| Tipo | Metodi di estensione |
+| Type | Metodi di estensione |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +239,7 @@ Per rendere disponibile il set corretto di metodi di estensione Left e Right e n
 
 Per il markup C# progettato per supportare la direzione del flusso da sinistra a destra e da destra a sinistra, è consigliabile usare i metodi di estensione nella tabella seguente anziché uno degli spazi dei nomi precedenti:
 
-| Tipo | Metodi di estensione |
+| Type | Metodi di estensione |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |

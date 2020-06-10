@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsShell
-description: In questa guida viene illustrato come utilizzare la Xamarin.Forms Shell, che riduce la complessità delle Xamarin.Forms applicazioni fornendo le funzionalità di base richieste dalla maggior parte delle applicazioni.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0acf00d85c2bfb823ec1cfba099179bb6743117c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138749"
+title: " Xamarin.Forms Shell" Description: "questa guida illustra come usare Xamarin.Forms Shell, che riduce la complessità delle Xamarin.Forms applicazioni fornendo le funzionalità di base richieste dalla maggior parte delle applicazioni".
+ms. prod: Novell MS. AssetID: 85B322AA-808F-41B6-953A-5877264AE643 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell"></a>Xamarin.FormsShell
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)

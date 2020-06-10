@@ -1,24 +1,8 @@
 ---
-title: ''
-description: ''
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2864c7edabde18faec06c2c42042168d3e6c9671
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139802"
+title: "archiviare i dati in un database SQLite.NET locale" Descrizione: "questo articolo spiega come archiviare i dati in un database SQLite.NET locale".
+zone_pivot_groups: piattaforma MS. Topic: avvio rapido ms. prod: Novell MS. AssetID: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Archiviare i dati in un database SQLite.NET locale
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)

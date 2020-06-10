@@ -1,22 +1,8 @@
 ---
-title: Modelli di applicazioni aziendali con Xamarin.Forms eBook
-description: Questo eBook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139399"
+title: "modelli di applicazioni aziendali con Xamarin.Forms ebook" Description: "questo ebook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili" Xamarin.Forms .
+ms. prod: Novell MS. AssetID: 28cfed6c-6175-4223-a8cc-798d40bf0832 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Modelli di applicazioni aziendali con Xamarin.Forms eBook
 
 _Linee guida per l'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili Xamarin.Forms_

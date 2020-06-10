@@ -1,22 +1,7 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140049"
+title: "comunicazione tra componenti a regime di controllo libero" Descrizione: "questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra i componenti che non sono pratici per il collegamento da parte di oggetti e riferimenti di tipo" ms. prod: Novell MS. AssetID: 1194af33-8a91-48d2-88b5-b84d77f2ce69 ms. technology: Novell-Forms Author: davidbritch ms. Author: dabritch MS 08/07/2017 Xamarin.Forms Xamarin.Essentials
 ---
+
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicazioni tra componenti ad accoppiamento debole
 
 Il modello di pubblicazione-sottoscrizione è un modello di messaggistica in cui i server di pubblicazione inviano messaggi senza conoscere i ricevitori, noti come sottoscrittori. In modo analogo, i sottoscrittori sono in ascolto di messaggi specifici, senza conoscere i server di pubblicazione.
@@ -123,7 +108,7 @@ MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys
 
 In questo esempio, la [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sintassi del metodo riflette gli argomenti di tipo specificati quando si sottoscrive la ricezione del `AddProduct` messaggio.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 La Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra i componenti che non sono pratici per il collegamento in base a riferimenti a oggetti e tipi. Questo meccanismo consente agli editori e ai sottoscrittori di comunicare senza avere un riferimento reciproco, contribuendo a ridurre le dipendenze tra i componenti, consentendo allo stesso tempo di sviluppare e testare i componenti in modo indipendente.
 

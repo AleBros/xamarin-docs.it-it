@@ -1,23 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-robots: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134212"
+title: "ricaricamento in tempo reale di Novell (anteprima)" Descrizione: "vedere le modifiche apportate al codice XAML riflesse in tempo reale, senza richiedere un'altra compilazione e distribuzione".
+ms. prod: Novell MS. AssetID: 4917273d-32f9-401A-A52C-5cfb53a2170d ms. Technology: Novell-Forms Author: pierceboggan ms. Author: piboggan robots: noindex ms. Date: 10/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarin-live-reload-preview"></a>Ricaricamento in tempo reale di Novell (anteprima)
 
 > [!NOTE]

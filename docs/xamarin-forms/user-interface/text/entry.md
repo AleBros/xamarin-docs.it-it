@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsVoce
-description: Questo articolo illustra come usare la Xamarin.Forms classe entry per accettare l'input di testo o password a riga singola in un'applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136201"
+title: " Xamarin.Forms entry" Description: "questo articolo spiega come usare la Xamarin.Forms classe entry per accettare l'input di testo o password a riga singola in un'applicazione".
+ms. prod: Novell MS. AssetID: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-entry"></a>Xamarin.FormsVoce
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

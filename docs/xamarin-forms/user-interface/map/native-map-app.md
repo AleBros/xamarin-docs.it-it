@@ -1,22 +1,8 @@
 ---
-title: Avviare l'app mappa nativa daXamarin.Forms
-description: L'app native Maps in ogni piattaforma può essere avviata da un' Xamarin.Forms applicazione dalla Xamarin.Essentials classe Launcher.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129338"
+title: "avviare l'app map nativa da Xamarin.Forms " Description: "l'app native Maps in ogni piattaforma può essere avviata da un' Xamarin.Forms applicazione dalla Xamarin.Essentials classe Launcher".
+ms. prod: Novell MS. AssetID: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/30/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="launch-the-native-map-app-from-xamarinforms"></a>Avviare l'app mappa nativa daXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

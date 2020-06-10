@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come usare Xamarin.Forms le estensioni di markup XAML per estendere la potenza e la flessibilità di XAML consentendo l'impostazione degli attributi degli elementi da origini diverse dalle stringhe di testo letterali.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130390"
+title: "XAML Markup Extensions" Description: "l'articolo spiega come usare le Xamarin.Forms estensioni di markup XAML per estendere la potenza e la flessibilità di XAML consentendo l'impostazione degli attributi degli elementi da origini diverse dalle stringhe di testo letterali."
+ms. prod: Novell MS. AssetID: EB06C8B7-3FD5-47B7-A09C-A13063BD110F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-markup-extensions"></a>Estensioni di markup XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)

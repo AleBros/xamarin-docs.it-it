@@ -1,9 +1,6 @@
 ---
-title: " Xamarin.Forms inizializzazione mappa e configurazione" Descrizione: " Xamarin.Forms . Maps il pacchetto NuGet è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione per l'applicazione.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Forms inizializzazione mappa e configurazione" Descrizione: " Xamarin.Forms . Maps il pacchetto NuGet è necessario per usare la funzionalità Maps in un'applicazione. Inoltre, l'accesso alla posizione dell'utente richiede l'autorizzazione per la posizione all'applicazione. "
+ms. prod: Novell MS. AssetID: 59CD1344-8248-406C-9144-0C8A67141E5B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/07/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.FormsInizializzazione e configurazione della mappa
@@ -87,13 +84,13 @@ Il processo di configurazione per la visualizzazione e l'interazione con una map
 1. opzionale Specificare le autorizzazioni per il percorso nel manifesto.
 1. opzionale Richiedere le autorizzazioni per il percorso di runtime nella `MainActivity` classe.
 
-Per un esempio di file manifesto configurato correttamente, vedere [file AndroidManifest. XML](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps.Android/Properties/AndroidManifest.xml) dall'applicazione di esempio.
+Per un esempio di file manifesto configurato correttamente, vedere [AndroidManifest.xml](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps.Android/Properties/AndroidManifest.xml) dall'applicazione di esempio.
 
 #### <a name="get-a-google-maps-api-key"></a>Ottenere una chiave API di Google Maps
 
 Per usare l' [API Google Maps](https://developers.google.com/maps/documentation/android/) in Android, è necessario generare una chiave API. A tale scopo, seguire le istruzioni riportate in [ottenere una chiave API di Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
-Una volta ottenuta una chiave API, è necessario aggiungerla all'interno dell' `<application>` elemento del file **Properties/file AndroidManifest. XML** :
+Una volta ottenuta una chiave API, è necessario aggiungerla all'interno dell' `<application>` elemento del file **Properties/AndroidManifest.xml** :
 
 ```xml
 <application ...>
@@ -110,7 +107,7 @@ Per fare in modo che l'APK acceda a Google Maps, è necessario includere le impr
 
 #### <a name="specify-the-google-play-services-version-number"></a>Specificare il numero di versione dei servizi Google Play
 
-Aggiungere la dichiarazione seguente nell' `<application>` elemento di **file AndroidManifest. XML**:
+Aggiungere la dichiarazione seguente nell' `<application>` elemento di **AndroidManifest.xml**:
 
 ```xml
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -120,7 +117,7 @@ Questa operazione incorpora la versione di Google Play servizi con cui l'applica
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Specificare il requisito per la libreria legacy Apache HTTP
 
-Se l' Xamarin.Forms applicazione è destinata all'API 28 o successiva, è necessario aggiungere la dichiarazione seguente nell' `<application>` elemento di **file AndroidManifest. XML**:
+Se l' Xamarin.Forms applicazione è destinata all'API 28 o successiva, è necessario aggiungere la dichiarazione seguente nell' `<application>` elemento di **AndroidManifest.xml**:
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    

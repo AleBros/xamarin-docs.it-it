@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCampioni
-description: Xamarin.Formsapp di esempio e demo di codice che consentono di iniziare a comprendere i concetti di Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 896b5880b92cecc7bd9eb360306d902ff0f876c5
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135941"
+title: " Xamarin.Forms Samples" Description: " Xamarin.Forms app di esempio e demo di codice per iniziare e comprendere i concetti in" Xamarin.Forms .
+ms. prod: Novell MS. AssetID: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 12/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-samples"></a>Xamarin.FormsCampioni
 
 Xamarin.Formsapp di esempio e demo di codice che consentono di iniziare a comprendere i concetti di Xamarin.Forms .

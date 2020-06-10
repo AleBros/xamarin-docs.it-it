@@ -1,9 +1,6 @@
 ---
-title:' perché la finestra di progettazione XAML di Visual Studio non funziona per Xamarin.Forms i file XAML?'
-ms. Topic: ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "perché la finestra di progettazione XAML di Visual Studio non funziona per Xamarin.Forms i file XAML?"
+ms. Topic: risoluzione dei problemi di MS. prod: Novell MS. AssetID: cab2eefb-c52f-4d81-866e-8f1feabbdd64 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Perché la finestra di progettazione XAML di Visual Studio non funziona per Xamarin.Forms i file XAML?

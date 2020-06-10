@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRegistrazione e risoluzione DependencyService
-description: Questo articolo illustra come usare la Xamarin.Forms classe DependencyService per richiamare la funzionalità della piattaforma nativa.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 50d77e9ba41767aa1f676bf21994431844fc4530
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138775"
+title: " Xamarin.Forms registrazione e risoluzione DependencyService" Descrizione: "questo articolo spiega come usare la Xamarin.Forms classe DependencyService per richiamare la funzionalità della piattaforma nativa".
+ms. prod: Novell MS. AssetID: 5d019604-4f6f-4932-9b26-1fce3b4d88f8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.FormsRegistrazione e risoluzione DependencyService
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)

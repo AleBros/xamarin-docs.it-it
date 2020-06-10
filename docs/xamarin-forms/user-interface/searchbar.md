@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsSearchBar
-description: Xamarin.FormsSearchbar è un controllo di input utente usato per avviare una ricerca. Il controllo SearchBar supporta il testo segnaposto, l'input della query, l'esecuzione e l'annullamento. Questo articolo illustra come usare un oggetto SearchBar in XAML e nel codice.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127543"
+title: " Xamarin.Forms Searchbar" Description: " Xamarin.Forms Searchbar è un controllo di input utente usato per avviare una ricerca. Il controllo SearchBar supporta il testo segnaposto, l'input della query, l'esecuzione e l'annullamento. Questo articolo illustra come usare un oggetto SearchBar in XAML e nel codice ".
+ms. prod: Novell MS. assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 11/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-searchbar"></a>Xamarin.FormsSearchBar
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)

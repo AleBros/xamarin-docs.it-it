@@ -1,22 +1,8 @@
 ---
-title: Crea Xamarin.Forms comportamenti
-description: Xamarin.Formsi comportamenti vengono creati tramite la derivazione dal comportamento o dalla classe del comportamento <T> . Questo articolo illustra come creare e utilizzare i Xamarin.Forms comportamenti.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135824"
+title: "crea Xamarin.Forms comportamenti" Descrizione: "i Xamarin.Forms comportamenti vengono creati derivando dal comportamento o dalla classe di comportamento <T> . In questo articolo viene illustrato come creare e utilizzare i Xamarin.Forms comportamenti ".
+ms. prod: Novell MS. AssetID: 300C16FE-A7E0-445B-9099-8E93ABB6F73D ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-xamarinforms-behaviors"></a>Crea Xamarin.Forms comportamenti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
@@ -207,7 +193,7 @@ entry.Behaviors.Clear();
 
 Si noti inoltre che i comportamenti non vengono implicitamente rimossi dai controlli quando si estraggono le pagine dallo stack di navigazione. Devono pertanto essere rimossi esplicitamente prima che le pagine diventino esterne all'ambito.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato come creare e utilizzare i Xamarin.Forms comportamenti. Xamarin.Formsi comportamenti vengono creati mediante derivazione dalla [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe o.
 

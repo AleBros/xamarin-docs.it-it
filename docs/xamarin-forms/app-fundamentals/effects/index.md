@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsEffetti
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a6206d2c561df74a01b7d7408e8d542f1e2189d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139334"
+title: " Xamarin.Forms Effects" Description: "Effects consente di personalizzare i controlli nativi in ogni piattaforma senza dover ricorrere a un'implementazione di renderer personalizzata."
+ms. prod: Novell MS. AssetID: 8AF168A7-4CD9-4603-B961-15B8B1543784 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-effects"></a>Xamarin.FormsEffetti
 
 _Le interfacce utente Novell. Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle Xamarin.Forms applicazioni di mantenere l'aspetto appropriato per ogni piattaforma. Gli effetti consentono di personalizzare i controlli nativi in ogni piattaforma senza dover ricorrere a un'implementazione di renderer personalizzata._

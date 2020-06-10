@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come caricare video archiviati come risorse dell'applicazione in un'applicazione lettore video usando Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133763"
+Titolo: "caricamento dei video sulle risorse dell'applicazione" Descrizione: "in questo articolo viene illustrato come caricare i video archiviati come risorse dell'applicazione in un'applicazione lettore video, utilizzando Xamarin.Forms ".
+ms. prod: Novell MS. AssetID: F75BD540-9354-4C17-A119-57F3DEC66D54 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="loading-application-resource-videos"></a>Caricamento delle risorse dell'applicazione video
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

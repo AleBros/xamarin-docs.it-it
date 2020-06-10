@@ -1,22 +1,8 @@
 ---
-title: Applicazione di un tema a un' Xamarin.Forms applicazione
-description: Xamarin.Formsle applicazioni supportano la creazione di un oggetto ResourceDictionary per ogni tema e quindi il caricamento delle risorse con l'estensione di markup DynamicResource.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80660ae7d3af0fe5948a5ae4ffdb35d2f9c2a40f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136136"
+title: "tema Xamarin.Forms dell'applicazione" Descrizione: " Xamarin.Forms le applicazioni supportano i temi creando un oggetto ResourceDictionary per ogni tema e quindi caricando le risorse con l'estensione di markup DynamicResource".
+ms. prod: Novell MS. assetId: BF92AEDD-EF23-4D08-A972-B089066E75F9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="theming-a-xamarinforms-application"></a>Applicazione di un tema a un' Xamarin.Forms applicazione
 
 ## <a name="theme-an-application"></a>[Tema di un'applicazione](theming.md)

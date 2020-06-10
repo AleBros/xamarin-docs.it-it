@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a668a6272a7158de3594f6001cc552ff294cf1a3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135746"
+title: "comportamenti riutilizzabili" Descrizione: "i comportamenti sono riutilizzabili in più di un'applicazione. Questi articoli illustrano come creare comportamenti utili per eseguire le funzionalità di uso comune ".
+ms. prod: Novell MS. AssetID: DC9AA512-3624-4EE6-AB5E-628EBA55D2DF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="reusable-behaviors"></a>Comportamenti riutilizzabili
 
 _I comportamenti sono riutilizzabili in più di un'applicazione. Questi articoli illustrano come creare comportamenti utili per eseguire le funzionalità di uso comune._

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra le nozioni di base del disegno SkiaSharp, incluse le Canvas e gli oggetti Paint, nelle Xamarin.Forms applicazioni e ne illustra il codice di esempio.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137722"
+title: "creazione di un cerchio semplice in SkiaSharp" Description: "in questo articolo vengono illustrate le nozioni di base del disegno SkiaSharp, incluse le Canvas e gli oggetti Paint, nelle Xamarin.Forms applicazioni e ne viene illustrato il codice di esempio."
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: E3A4E373-F65D-45C8-8E77-577A804AC3F8 autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegno di un cerchio semplice in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,23 +1,8 @@
 ---
-title: ''
-description: È possibile fare riferimento a tutte le viste definite in Xamarin.Forms da file XAML.
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 445ef85f661d945bda25203f35dea787e64dc9b0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138424"
+title: "controlli XAML" Descrizione: "è possibile fare riferimento a tutte le viste definite in Xamarin.Forms da file XAML".
+ms. Topic: articolo ms. prod: Novell MS. AssetID: 639BD392-1496-41BB-BB09-7652273AC9D8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-controls"></a>Controlli XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -33,7 +18,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 | <h3>BoxView</h3>Visualizza un rettangolo di un colore specifico.<p align="center">![Screenshot di un BoxView](xaml-controls-images/BoxView.png "BoxView")</p>[API](xref:Xamarin.Forms.BoxView)  /  di [Guida](~/xamarin-forms/user-interface/boxview.md) di | <pre valign="center">&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>Expander</h3>Fornisce un contenitore espandibile per ospitare qualsiasi contenuto.<p align="center">![Screenshot di un espansore](xaml-controls-images/Expander.png "Expander")</p>[Guida](~/xamarin-forms/user-interface/expander.md) | <pre>&lt;Expander&gt;<br />    &lt;Expander.Header&gt;<br />        &lt;Label Text=&quot;Baboon&quot; /&gt;<br />    &lt;/Expander.Header&gt;<br />    &lt;Image Source=&quot;Baboon.png&quot;<br />           Aspect=&quot;AspectFill&quot; /&gt;<br />&lt;/Expander&gt;</pre></p> |
 | <h3>Immagine</h3>Visualizza una bitmap.<p align="center">![Screenshot di un'immagine](xaml-controls-images/Image.png "Image")</p>[API](xref:Xamarin.Forms.Image)  /  di [Guida](~/xamarin-forms/user-interface/images.md) di | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
-| <h3>Etichetta</h3>Consente di visualizzare una o più righe di testo.<p align="center">![Screenshot di un'etichetta](xaml-controls-images/Label.png "Label")</p>[API](xref:Xamarin.Forms.Label)  /  di [Guida](~/xamarin-forms/user-interface/text/label.md) di | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
+| <h3>Label</h3>Consente di visualizzare una o più righe di testo.<p align="center">![Screenshot di un'etichetta](xaml-controls-images/Label.png "Label")</p>[API](xref:Xamarin.Forms.Label)  /  di [Guida](~/xamarin-forms/user-interface/text/label.md) di | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
 | <h3>Mappa</h3>Visualizza una mappa.<p align="center">![Screenshot di una mappa](xaml-controls-images/Map.png "Mappa")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  di [Guida](~/xamarin-forms/user-interface/map/index.md) di | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>MediaElement</h3>Riproduzione di video o audio.<p align="center">![Screenshot di un MediaElement](xaml-controls-images/MediaElement.png "MediaELement")</p>[API](xref:Xamarin.Forms.MediaElement)  /  di [Guida](~/xamarin-forms/user-interface/mediaelement.md) di | <p valign="center"><pre>&lt;MediaElement Source="https://sec.ch9.ms/ch9/XamarinShow_mid.mp4"<br />              AutoPlay="True"<br />              ShowsPlaybackControls="True" /&gt;</pre></p> |
 | <h3>WebView</h3>Visualizza le pagine Web o il contenuto HTML.<p align="center">![Screenshot di una WebView](xaml-controls-images/WebView.png "WebView")</p>[API](xref:Xamarin.Forms.WebView)  /  di [Guida](~/xamarin-forms/user-interface/webview.md) di | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
@@ -56,7 +41,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 |     |     |
 | --- | --- |
 | <h3>CheckBox</h3>Consente la selezione di un `boolean` valore.<p align="center">![Screenshot di una casella di controllo](xaml-controls-images/CheckBox.png "CheckBox")</p> [Guida](~/xamarin-forms/user-interface/checkbox.md) | <p valign="center"><pre>&lt;CheckBox IsChecked="true"<br />          HorizontalOptions="Center"<br />          VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Dispositivo di scorrimento</h3>Consente la selezione di un `double` valore da un intervallo continuo.<p align="center">![Screenshot di un dispositivo di scorrimento](xaml-controls-images/Slider.png "Slider")</p>[API](xref:Xamarin.Forms.Slider)  /  di [Guida](~/xamarin-forms/user-interface/slider.md) di | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>Slider</h3>Consente la selezione di un `double` valore da un intervallo continuo.<p align="center">![Screenshot di un dispositivo di scorrimento](xaml-controls-images/Slider.png "Slider")</p>[API](xref:Xamarin.Forms.Slider)  /  di [Guida](~/xamarin-forms/user-interface/slider.md) di | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Gestore di istruzioni</h3>Consente la selezione di un `double` valore da un intervallo incrementale.<p align="center">![Screenshot di un Stepper](xaml-controls-images/Stepper.png "Gestore di istruzioni")</p>[API](xref:Xamarin.Forms.Stepper)  /  di [Guida](~/xamarin-forms/user-interface/stepper.md) di | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Opzione</h3>Consente la selezione di un `boolean` valore.<p align="center">![Screenshot di un'opzione](xaml-controls-images/Switch.png "Opzione")</p>[API](xref:Xamarin.Forms.Switch)  /  di [Guida](~/xamarin-forms/user-interface/switch.md) di| <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>DatePicker</h3>Consente la selezione di una data.<p align="center">![Screenshot di un DatePicker](xaml-controls-images/DatePicker.png "DatePicker")</p>[API](xref:Xamarin.Forms.DatePicker)  /  di [Guida](~/xamarin-forms/user-interface/datepicker.md) di | <p valign="center"><pre>&lt;DatePicker Format="D"<br/>            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
@@ -68,7 +53,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 |     |     |
 | --- | --- |
 | <h3>Voce</h3>Consente l'immissione e la modifica di una singola riga di testo.<p align="center">![Screenshot di una voce](xaml-controls-images/Entry.png "Voce")</p>[API](xref:Xamarin.Forms.Entry)  /  di [Guida](~/xamarin-forms/user-interface/text/entry.md) di | <p valign="center"><pre>&lt;Entry Keyboard="Email"<br />       Placeholder="Enter email address"<br />       VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Editor</h3>Consente l'immissione e la modifica di più righe di testo.<p align="center">![Screenshot di un editor](xaml-controls-images/Editor.png "Etichetta")</p>[API](xref:Xamarin.Forms.Editor)  /  di [Guida](~/xamarin-forms/user-interface/text/editor.md) di | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
+| <h3>Editor</h3>Consente l'immissione e la modifica di più righe di testo.<p align="center">![Screenshot di un editor](xaml-controls-images/Editor.png "Label")</p>[API](xref:Xamarin.Forms.Editor)  /  di [Guida](~/xamarin-forms/user-interface/text/editor.md) di | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-to-indicate-activity"></a>Visualizzazioni per indicare l'attività

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIntroduzione ai servizi cognitivi di Azure
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129714"
+title: " Xamarin.Forms e introduzione ai servizi cognitivi di Azure" Description: "questo articolo fornisce un'introduzione a un'applicazione di esempio che illustra come richiamare alcune API del servizio cognitivo Microsoft".
+ms. prod: Novell MS. AssetID: 74121ADB-1322-4C1E-A103-F37257BC7CB0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.FormsIntroduzione ai servizi cognitivi di Azure
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

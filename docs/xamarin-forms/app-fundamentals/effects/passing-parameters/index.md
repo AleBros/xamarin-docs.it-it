@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 42d3943b00fc2ae5385343f946d9d96743e955cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138840"
+title: "passaggio di parametri a un effetto" Descrizione: "i parametri effetti possono essere definiti dalle proprietà, consentendo di riutilizzare l'effetto. I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto ".
+ms. prod: Novell MS. AssetID: F6429859-6EF7-48BE-A0CB-8F42B8A75215 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="passing-parameters-to-an-effect"></a>Passaggio dei parametri a un effetto
 
 _I parametri degli effetti possono essere definiti dalle proprietà, consentendo l'effetto da riutilizzare. I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto._

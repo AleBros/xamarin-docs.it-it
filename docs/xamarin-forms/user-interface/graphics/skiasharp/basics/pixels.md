@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra le differenze tra le coordinate e le Xamarin.Forms coordinate di SkiaSharp e ne illustra il codice di esempio.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6d01018f4393ac5562220fa1f9524bc0d9872c67
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137670"
+title: "pixel e unità indipendenti dal dispositivo" Descrizione: "in questo articolo vengono esaminate le differenze tra le coordinate e le coordinate di SkiaSharp e Xamarin.Forms viene illustrato questo problema con il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 26C25BB8-FBE8-4B77-B01D-16A163A16890 autore: davidbritch ms. Author: dabritch ms. Date: 02/09/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità di misura indipendenti dal dispositivo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

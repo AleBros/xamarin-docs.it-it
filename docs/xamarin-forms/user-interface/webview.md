@@ -11,7 +11,7 @@ ms. prod: Novell MS. AssetID: E44F5D0F-DB8E-46C7-8789-114F1652A6C5 ms. Technolog
 
 ![Nel browser app](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Content
+## <a name="content"></a>Contenuto
 
 `WebView`supporta i tipi di contenuto seguenti:
 

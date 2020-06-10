@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come convertire Xamarin.Forms le app Android esistenti per usare AppCompat e la progettazione del materiale.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135707"
+title: "aggiunta di AppCompat e progettazione materiale" Descrizione: "questo articolo illustra come convertire Xamarin.Forms le app Android esistenti per l'uso di AppCompat e progettazione materiale".
+ms. prod: Novell MS. AssetID: 045FBCDF-4D45-48BB-9911-BD3938C87D58 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
 _Seguire questa procedura per convertire le Xamarin.Forms app Android esistenti per usare AppCompat e la progettazione del materiale_
@@ -43,7 +29,7 @@ Verificare che il Framework di destinazione del progetto Android sia Android 6,0
 
 Creare i tre file seguenti nel progetto Android e incollare il contenuto seguente. Google fornisce una [Guida di stile](https://www.google.com/design/spec/style/color.html#color-color-palette) e un [Generatore di tavolozze dei colori](https://www.materialpalette.com/) che consentono di scegliere una combinazione di colori alternativa a quella specificata.
 
-**Risorse/valori/Colors. XML**
+**Risorse/valori/colors.xml**
 
 ```xml
 <resources>
@@ -54,7 +40,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 </resources>
 ```
 
-**Resources/values/Style. XML**
+**Risorse/valori/style.xml**
 
 ```xml
 <resources>
@@ -72,7 +58,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 
 Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android e una versione più recente, è necessario includere nella cartella **values-V21** uno stile aggiuntivo.
 
-**Resources/values-V21/Style. XML**
+**Risorse/valori-V21/style.xml**
 
 ```xml
 <resources>
@@ -84,11 +70,11 @@ Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. aggiornare file AndroidManifest. XML
+### <a name="4-update-androidmanifestxml"></a>4. aggiornamento AndroidManifest.xml
 
 Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file **file AndroidManifest** aggiungendo `android:theme="@style/MyTheme"` (lasciare il resto del codice XML come è stato).
 
-**Proprietà/file AndroidManifest. XML**
+**Proprietà/AndroidManifest.xml**
 
 ```xml
 ...

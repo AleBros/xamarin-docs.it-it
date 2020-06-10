@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d62e533d127294c77c0779c20fd9c78ef2231200
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135720"
+title: "autenticare un servizio Web RESTful" Descrizione: "autenticazione di base consente di accedere alle risorse solo ai client con le credenziali corrette. Questo articolo illustra come usare l'autenticazione di base per proteggere l'accesso alle risorse del servizio Web RESTful ".
+ms. prod: Novell MS. AssetID: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/22/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="authenticate-a-restful-web-service"></a>Autenticare un servizio Web RESTful
 
 _HTTP supporta l'utilizzo di diversi meccanismi di autenticazione per controllare l'accesso alle risorse. L'autenticazione di base consente di accedere alle risorse solo ai client con le credenziali corrette. Questo articolo illustra come usare l'autenticazione di base per proteggere l'accesso alle risorse del servizio Web RESTful._
@@ -80,7 +66,7 @@ Quindi, quando viene effettuata una richiesta a un'operazione del servizio Web, 
 
 ## <a name="processing-the-authorization-header-server-side"></a>Elaborazione del lato server dell'intestazione Authorization
 
-Il servizio REST deve decorare ogni azione con l' `[BasicAuthentication]` attributo. Questo attributo viene usato per analizzare l' `Authorization` intestazione e determinare se le credenziali con codifica Base64 sono valide confrontandolo con i valori archiviati nel *file Web. config*. Sebbene questo approccio sia appropriato per un servizio di esempio, è necessario estendere per un servizio Web pubblico.
+Il servizio REST deve decorare ogni azione con l' `[BasicAuthentication]` attributo. Questo attributo viene usato per analizzare l' `Authorization` intestazione e determinare se le credenziali con codifica Base64 sono valide confrontandolo con i valori archiviati in *Web.config*. Sebbene questo approccio sia appropriato per un servizio di esempio, è necessario estendere per un servizio Web pubblico.
 
 Nel modulo di autenticazione di base usato da IIS, gli utenti vengono autenticati con le credenziali di Windows. È pertanto necessario che gli utenti dispongano di account nel dominio del server. Tuttavia, il modello di autenticazione di base può essere configurato in modo da consentire l'autenticazione personalizzata, in cui gli account utente vengono autenticati su un'origine esterna, ad esempio un database. Per altre informazioni, vedere [autenticazione di base in API Web ASP.NET](https://www.asp.net/web-api/overview/security/basic-authentication) nel sito Web ASP.NET.
 

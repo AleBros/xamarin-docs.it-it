@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 763f44c26d653aa32429b2aa764989e18e8b8078
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139971"
+title: "animazione delle bitmap SkiaSharp" Descrizione: "informazioni su come eseguire animazioni bitmap visualizzando in sequenza una serie di bitmap e il rendering dei file GIF animati".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD autore: davidbritch ms. Author: dabritch ms. Date: 07/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="animating-skiasharp-bitmaps"></a>Animazione di bitmap SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -472,7 +458,7 @@ Ecco il programma in esecuzione:
 
 La specifica Graphics Interchange Format (GIF) include una funzionalità che consente a un singolo file GIF di contenere più frame sequenziali di una scena che possono essere visualizzati in successione, spesso in un ciclo. Questi file sono noti come _gif animate_. I Web browser possono riprodurre gif animate e SkiaSharp consente a un'applicazione di estrarre i frame da un file GIF animato e visualizzarli in sequenza.
 
-L'esempio [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) include una risorsa gif animata denominata **Newtons_cradle_animation_book_2. gif** creata da DemonDeLuxe e scaricata dalla pagina della [culla di Newton](https://en.wikipedia.org/wiki/Newton%27s_cradle) in Wikipedia. La pagina **gif animata** include un file XAML che fornisce le informazioni e crea un'istanza di `SKCanvasView` :
+L'esempio [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) include una risorsa gif animata denominata **Newtons_cradle_animation_book_2.gif** creata da DemonDeLuxe e scaricata dalla pagina della [culla di Newton](https://en.wikipedia.org/wiki/Newton%27s_cradle) in Wikipedia. La pagina **gif animata** include un file XAML che fornisce le informazioni e crea un'istanza di `SKCanvasView` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

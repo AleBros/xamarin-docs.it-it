@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRaggruppamento di CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136461"
+title: " Xamarin.Forms raggruppamento di CollectionView" Descrizione: "CollectionView può visualizzare i dati raggruppati correttamente impostando la relativa proprietà Grouping su true".
+ms. prod: Novell MS. AssetID: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/17/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsRaggruppamento di CollectionView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

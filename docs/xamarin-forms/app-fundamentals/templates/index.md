@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsmodelli
-description: Questa guida illustra come usare il supporto per i modelli fornito da Xamarin.Forms . Questo supporto include i modelli di controllo, che definiscono la struttura visiva di controlli e pagine personalizzati e i modelli di dati, che definiscono la presentazione dei dati nei controlli supportati.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 079c9079efdf224db1dee8a60f054439eeee8e8c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135928"
+title: " Xamarin.Forms templates" Description: "questa guida illustra come usare il supporto per i modelli forniti da Xamarin.Forms . Questo supporto include i modelli di controllo, che definiscono la struttura visiva di controlli e pagine personalizzati e i modelli di dati, che definiscono la presentazione dei dati nei controlli supportati. "
+ms. prod: Novell MS. AssetID: 4453C209-C068-47D5-A49B-0ECC95C0FB3B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/13/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-templates"></a>Xamarin.Formsmodelli
 
 ## <a name="control-templates"></a>[Modelli di controllo](control-template.md)

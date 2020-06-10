@@ -1,8 +1,6 @@
 ---
-Titolo:'' Xamarin.Essentials : magnetometro '' Descrizione: ms. AssetID: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : magnetometro" Description: "la classe magnetometro in Xamarin.Essentials consente di monitorare il sensore magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della terra."
+ms. AssetID: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B Author: jamesmontemagno ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetometro

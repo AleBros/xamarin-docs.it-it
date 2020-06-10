@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsmodelli di controllo
-description: Xamarin.Formsi modelli di controllo definiscono la struttura visiva dei controlli personalizzati derivati da ContentView e le pagine derivate di ContentPage.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 44eebed2a49fbdda5504f9a09873f93466d0326c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132548"
+title: " Xamarin.Forms modelli di controllo" Descrizione: " Xamarin.Forms i modelli di controllo definiscono la struttura visiva dei controlli personalizzati derivati da contentView e le pagine derivate di ContentPage".
+ms. prod: Novell MS. AssetID: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/13/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-control-templates"></a>Xamarin.Formsmodelli di controllo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)

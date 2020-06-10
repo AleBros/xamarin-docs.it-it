@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsfunzionalità del dispositivo dual screen
-description: Questa guida illustra come usare Xamarin.Forms la classe DualScreenInfo per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 59575823a9ec29847a60209e846ba244e51ca0c0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138931"
+title: " Xamarin.Forms funzionalità del dispositivo a schermo doppio" Descrizione: "questa guida illustra come usare Xamarin.Forms la classe DualScreenInfo per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo".
+ms. prod: Novell MS. AssetID: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Formsfunzionalità del dispositivo dual screen
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

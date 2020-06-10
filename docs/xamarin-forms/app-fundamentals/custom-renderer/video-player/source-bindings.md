@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come associare le origini video al lettore video usando Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133731"
+title: "binding di origini video al lettore" Descrizione: "questo articolo spiega come associare le origini video al lettore video usando Xamarin.Forms ."
+ms. prod: Novell MS. AssetID: 504E0C7E-051A-4AF2-B654-BAB4D0957928 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="binding-video-sources-to-the-player"></a>Associazione di origini video al lettore
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

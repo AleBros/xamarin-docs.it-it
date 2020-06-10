@@ -1,22 +1,8 @@
 ---
-title: Introduzione agli Xamarin.Forms stili
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5766af7da3a0cf550a2ccb3a926dad25fd7962eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138821"
+title: "Introduzione agli Xamarin.Forms stili" Descrizione: "gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili per quel tipo. "
+ms. prod: Novell MS. AssetID: 3FF899C0-6CFB-4C1D-837D-9E9E10181967 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli Xamarin.Forms stili
 
 _Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo._
@@ -141,5 +127,5 @@ Gli articoli di questa sezione illustrano come creare e applicare stili *esplici
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Stile](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

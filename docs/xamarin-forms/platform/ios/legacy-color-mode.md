@@ -1,9 +1,6 @@
 ---
-title: Description: le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che disabilita la Xamarin.Forms modalità di colore legacy.
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "la modalità colore legacy di visualElement in iOS Descrizione:" specifiche della piattaforma consente di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che disabilita la Xamarin.Forms modalità di colore legacy. "
+ms. prod: Novell MS. AssetID: 60FFBA67-6E06-439B-A5EB-8C808285E2CD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="visualelement-legacy-color-mode-on-ios"></a>Modalità colore legacy di visualElement in iOS

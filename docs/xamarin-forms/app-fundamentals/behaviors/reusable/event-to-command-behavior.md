@@ -1,22 +1,8 @@
 ---
-title: ''
-description: I comportamenti possono essere usati per associare comandi a controlli che non sono stati progettati per interagire con i comandi. Questo articolo illustra la creazione e l'utilizzo Xamarin.Forms di un comportamento per richiamare un comando quando viene generato un evento.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135798"
+title: "EventToCommandBehavior riutilizzabile" Descrizione: "i comportamenti possono essere usati per associare i comandi ai controlli che non sono stati progettati per interagire con i comandi. Questo articolo illustra la creazione e l'utilizzo Xamarin.Forms di un comportamento per richiamare un comando quando viene generato un evento.
+ms. prod: Novell MS. AssetID: EC7F6556-9776-40B8-9424-A8094482A2F3 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/09/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior riutilizzabile
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
@@ -205,7 +191,7 @@ In fase di runtime, il comportamento risponderà all'interazione con il controll
 
 Il vantaggio dell'uso di questo comportamento per eseguire un comando quando viene generato un evento è che i comandi possono essere associati a controlli non progettati per interagire con i comandi. In questo modo, poi, il codice di gestione degli eventi boilerplate viene rimosso dai file code-behind.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha illustrato l'uso Xamarin.Forms di un comportamento per richiamare un comando quando viene generato un evento. I comportamenti possono essere usati per associare comandi a controlli che non sono stati progettati per interagire con i comandi.
 

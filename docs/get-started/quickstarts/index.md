@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsQuickStarts
-description: Guide introduttive sullo sviluppo di Xamarin.Forms applicazioni con Visual Studio e Visual Studio per Mac.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 03d20114fb84bf17be40d9166e32c3d631786069
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132509"
+title: " Xamarin.Forms guide introduttive" Descrizione: "guide introduttive sullo sviluppo di Xamarin.Forms applicazioni con Visual Studio e Visual Studio per Mac".
+ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 3318B8F8-3B24-489E-8E7B-28FA948796F8 Author: davidbritch ms. Author: dabritch ms. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-quickstarts"></a>Xamarin.FormsQuickStarts
 
 _Informazioni su come creare applicazioni per dispositivi mobili con Xamarin.Forms ._
@@ -29,7 +15,7 @@ Informazioni su come creare un'applicazione multipiattaforma a pagina singola Xa
 
 Informazioni su come trasformare l'applicazione a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note.
 
-## <a name="store-data-in-a-local-sqlitenet-database"></a>[Archiviare i dati in un database SQLite.NET locale](database.md)
+## <a name="store-data-in-a-local-sqlitenet-database"></a>[Archiviare i dati in un database locale di SQLite.NET](database.md)
 
 Informazioni su come archiviare i dati in un database di SQLite.NET locale.
 
@@ -37,6 +23,6 @@ Informazioni su come archiviare i dati in un database di SQLite.NET locale.
 
 Informazioni su come applicare uno stile a un' Xamarin.Forms applicazione multipiattaforma con stili XAML.
 
-## <a name="quickstart-deep-dive"></a>[Approfondimenti per la guida di avvio rapido](deepdive.md)
+## <a name="quickstart-deep-dive"></a>[Approfondimenti per le guide di avvio rapido](deepdive.md)
 
 Informazioni sulle nozioni di base dello sviluppo di applicazioni con Xamarin.Forms , con particolare attenzione all'applicazione sviluppata in tutte le guide introduttive.

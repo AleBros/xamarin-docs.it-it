@@ -1,23 +1,8 @@
 ---
-title: ''
-description: Questo articolo illustra come aggiungere un progetto Mac a un Xamarin.Forms progetto, che produrrà un'app in grado di funzionare in MacOS Sierra e MacOS El Capitan.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 11897d2d3b8b7ba0a62956f1dbe4d8b873352e7a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139555"
+title: "installazione della piattaforma Mac" Descrizione: "questo articolo spiega come aggiungere un progetto Mac a un Xamarin.Forms progetto, che produrrà un'app in grado di funzionare in MacOS Sierra e MacOS El Capitan".
+ms. prod: Novell MS. AssetID: EEC549E0-F182-4F9C-B2BA-B31D19569AA5 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 05/03/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="mac-platform-setup"></a>Installazione della piattaforma Mac
 
 ![Anteprima](~/media/shared/preview.png)
@@ -147,4 +132,4 @@ Xamarin.FormsIn questa versione di anteprima non sono state completate tutte le 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Novell. Mac](~/mac/index.yml)
+- [Xamarin.Mac](~/mac/index.yml)

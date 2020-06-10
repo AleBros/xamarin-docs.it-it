@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Descrizione di tutti gli elementi dell'interfaccia utente utilizzati per la costruzione di un' Xamarin.Forms applicazione. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136396"
+title: "Controls Reference" Description: "Descrizione di tutti gli elementi dell'interfaccia utente utilizzati per la costruzione di un' Xamarin.Forms applicazione. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="controls-reference"></a>Riferimento per i controlli
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -25,7 +11,7 @@ L'interfaccia utente di un' Xamarin.Forms applicazione è costituita da oggetti 
 
 I quattro gruppi di controllo principali utilizzati per creare l'interfaccia utente di un' Xamarin.Forms applicazione sono i seguenti:
 
-- [**Pagine**](pages.md)
+- [**.NET**](pages.md)
 - [**Layout**](layouts.md)
 - [**Viste**](views.md)
 - [**Celle**](cells.md)
@@ -43,4 +29,4 @@ Oltre ai controlli forniti con, i Xamarin.Forms controlli di terze parti sono di
 
 - [Xamarin.FormsEsempio FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.FormsGerarchia di classi di controlli](~/xamarin-forms/internals/class-hierarchy.md)
-- [Documentazione dell'API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentazione API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

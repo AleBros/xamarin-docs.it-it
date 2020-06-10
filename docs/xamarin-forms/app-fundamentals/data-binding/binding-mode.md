@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsModalità di associazione
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139776"
+title: " Xamarin.Forms modalità di associazione" Description: "questo articolo illustra come controllare il flusso di informazioni tra l'origine e la destinazione usando una modalità di associazione, specificata con un membro dell'enumerazione BindingMode. Ogni proprietà associabile ha una modalità di associazione predefinita, che indica la modalità attiva quando tale proprietà è una destinazione di associazione dati.
+ms. prod: Novell MS. AssetID: D087C389-2E9E-47B9-A341-5B14AC732C45 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/01/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-binding-mode"></a>Xamarin.FormsModalità di associazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139503"
+title: "descrizione specifica della piattaforma": "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come utilizzare e creare specifiche della piattaforma ".
+ms. prod: Novell MS. AssetID: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/01/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
@@ -282,8 +268,8 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 - [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [ShadowPlatformSpecific (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
-- [Specifiche della piattaforma iOS](~/xamarin-forms/platform/ios/index.md)
-- [Specifiche della piattaforma Android](~/xamarin-forms/platform/android/index.md)
+- [Funzionalità specifiche della piattaforma iOS](~/xamarin-forms/platform/ios/index.md)
+- [Funzionalità specifiche della piattaforma Android](~/xamarin-forms/platform/android/index.md)
 - [Specifiche della piattaforma Windows](~/xamarin-forms/platform/windows/index.md)
 - [Personalizzazione dei controlli con effetti](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Proprietà associate](~/xamarin-forms/xaml/attached-properties.md)

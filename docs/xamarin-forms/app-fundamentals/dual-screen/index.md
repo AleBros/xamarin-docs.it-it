@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDoppio schermo
-description: Questa guida illustra come creare Xamarin.Forms app per dispositivi a doppio schermo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138905"
+title: " Xamarin.Forms doppia schermata" Descrizione: "questa guida illustra come creare Xamarin.Forms app per dispositivi a schermo doppio".
+ms. prod: Novell MS. AssetID: f9906e83-F8AE-48f9-997b-e1540b96ee8e ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Formsdoppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -27,7 +13,7 @@ Surface Duo (Android) e Surface Neo (Windows 10X) introducono nuovi modelli per 
 
 Quando si valuta come usare al meglio più schermi in un dispositivo con doppio schermo, fare riferimento a queste linee guida per i modelli per trovare la soluzione migliore per l'interfaccia dell'applicazione.
 
-## <a name="dual-screen-layout"></a>[Layout a doppio schermo](twopaneview.md)
+## <a name="dual-screen-layout"></a>[Layout per doppio schermo](twopaneview.md)
 
 La Xamarin.Forms `TwoPaneView` classe, ispirata dal controllo UWP con lo stesso nome, è un layout multipiattaforma ottimizzato per i dispositivi a doppio schermo.
 

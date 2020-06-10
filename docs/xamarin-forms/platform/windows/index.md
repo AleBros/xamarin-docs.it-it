@@ -1,9 +1,6 @@
 ---
-title: Description:' questo articolo illustra il supporto della piattaforma Windows disponibile in Xamarin.Forms .'
-ms. prod: ms. AssetID: ms. Technology: autore: ms. Author: ms. Date: No-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "funzionalità della piattaforma Windows" Descrizione: "questo articolo illustra il supporto della piattaforma Windows disponibile in Xamarin.Forms ".
+ms. prod: Novell MS. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="windows-platform-features"></a>Funzionalità della piattaforma Windows

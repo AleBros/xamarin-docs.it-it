@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a4bb6c30ada13691146d00d2094df8f13ca453b9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140257"
+title: "ritaglio con percorsi e aree" Descrizione: "questo articolo spiega come usare i percorsi SkiaSharp per ritagliare i grafici in aree specifiche e per creare aree e illustrarlo con il codice di esempio".
+ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F autore: davidbritch ms. Author: dabritch ms. Date: 06/16/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio con tracciati e aree
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formshelper della piattaforma dual screen
-description: Questa guida illustra come usare Xamarin.Forms la classe DualScreenHelper per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d9daf5a24c0dcfd07d529955c411259f4c1359df
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138944"
+title: " Xamarin.Forms helper della piattaforma dual screen" Descrizione: "questa guida illustra come usare Xamarin.Forms la classe DualScreenHelper per ottimizzare l'esperienza di app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo".
+ms. prod: Novell MS. AssetID: 5aa184c2-5611-427d-85c7-1c56486c3e1b ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen-platform-helpers"></a>Xamarin.Formshelper della piattaforma dual screen
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

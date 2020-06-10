@@ -1,20 +1,8 @@
 ---
-title: Xamarin.Essentials
-description: Questo documento contiene collegamenti a diverse guide che descrivono Xamarin.Essentials , che fornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139464"
+title: " Xamarin.Essentials " Description: "questo documento è collegato a diverse guide che descrivono Xamarin.Essentials , che fornisce agli sviluppatori le API multipiattaforma per le proprie applicazioni per dispositivi mobili."
+ms. AssetID: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A Author: jamesmontemagno ms. Author: Jamont ms. Date: 02/26/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # Xamarin.Essentials
 
 Xamarin.Essentialsfornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
@@ -74,6 +62,6 @@ Informazioni utili se si verificano problemi.
 
 Trovare le note sulla versione completa per ogni versione di Xamarin.Essentials .
 
-## <a name="api-documentation"></a>[Documentazione dell'API](xref:Xamarin.Essentials)
+## <a name="api-documentation"></a>[Documentazione API](xref:Xamarin.Essentials)
 
 Consultare la documentazione dell'API per tutte le funzionalità di Xamarin.Essentials .

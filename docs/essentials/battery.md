@@ -25,7 +25,7 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 OPPURE aggiornare il manifesto di Android:
 
-Aprire il file **file AndroidManifest. XML** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifesto** .
+Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />

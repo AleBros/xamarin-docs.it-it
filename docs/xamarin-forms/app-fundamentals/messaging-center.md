@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMessagingCenter
-description: La Xamarin.Forms classe MessagingCenter implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra i componenti che non sono pratici per il collegamento per riferimento a oggetti e tipi.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d1407c3c948afe764854cbd99f5c29332f7041aa
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137540"
+title: " Xamarin.Forms MessagingCenter" Description: "la Xamarin.Forms classe MessagingCenter implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra i componenti che non sono pratici per il collegamento in base ai riferimenti a oggetti e tipi".
+ms. prod: Novell MS. AssetID: EDFE7B19-C5FD-40D5-816C-FAE56532E885 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.FormsMessagingCenter
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

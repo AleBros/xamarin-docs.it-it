@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Il API Viso accetta un'espressione facciale in un'immagine come input e restituisce dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare la API Viso per riconoscere le emozioni, per valutare un' Xamarin.Forms applicazione.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136058"
+title: "rilevamento emozioni percepito usando il API Viso" Description: "il API Viso prende un'espressione facciale in un'immagine come input e restituisce dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare la API Viso per riconoscere le emozioni, per valutare un' Xamarin.Forms applicazione ".
+ms. prod: Novell MS. AssetID: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Riconoscimento delle emozioni percepito usando il API Viso
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
