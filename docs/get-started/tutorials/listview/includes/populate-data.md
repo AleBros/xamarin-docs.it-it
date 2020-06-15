@@ -30,7 +30,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
     Questo codice definisce un oggetto `Monkey` che archivia un nome, una posizione e un URL di un'immagine che rappresenta la scimmia. Inoltre la classe esegue l'override del metodo `ToString` per restituire la proprietà `Name`.
 
-1. In **Esplora soluzioni**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. In **Esplora soluzioni**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;
@@ -211,7 +211,7 @@ In questo esercizio si modificherà il progetto **ListViewTutorial** per popolar
 
     Questo codice definisce un oggetto `Monkey` che archivia un nome, una posizione e un URL di un'immagine che rappresenta la scimmia. Inoltre la classe esegue l'override del metodo `ToString` per restituire la proprietà `Name`.
 
-1. Nel **riquadro della soluzione**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere quindi tutto il codice del modello e sostituirlo con il codice seguente:
+1. Nel **riquadro della soluzione**, nel progetto **ListViewTutorial**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Collections.Generic;
