@@ -10,13 +10,13 @@ Prima di provare questa esercitazione è necessario avere completato correttamen
 
 - Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
 
-In questa esercitazione verranno illustrate le procedure per:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 >
 > - Creare un elemento [`Grid`](xref:Xamarin.Forms.Grid) di Xamarin.Forms in XAML.
 > - Specificare le colonne e le righe per l'elemento `Grid`.
-> - Estendere il contenuto su più colonne o righe in `Grid`.
+> - Estendere il contenuto su più colonne o righe nell'elemento `Grid`.
 
 Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come creare il layout dei controlli in un oggetto [`Grid`](xref:Xamarin.Forms.Grid). Gli screenshot seguenti illustrano l'applicazione finale:
 
