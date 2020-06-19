@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials " Description: "questo documento è collegato a diverse guide che descrivono Xamarin.Essentials , che fornisce agli sviluppatori le API multipiattaforma per le proprie applicazioni per dispositivi mobili."
-ms. AssetID: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A Author: jamesmontemagno ms. Author: Jamont ms. Date: 02/26/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Essentials
+description: Questo documento contiene collegamenti a diverse guide che descrivono Xamarin.Essentials , che fornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 02/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139464"
 ---
-
 # Xamarin.Essentials
 
 Xamarin.Essentialsfornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.

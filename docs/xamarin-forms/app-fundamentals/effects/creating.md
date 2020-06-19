@@ -1,8 +1,22 @@
 ---
-title: "creazione di un effetto" Descrizione: "effetti semplificano la personalizzazione di un controllo. In questo articolo viene illustrato come creare un effetto che modifica il colore di sfondo del controllo entry quando il controllo ottiene lo stato attivo.
-ms. prod: Novell MS. AssetID: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Creazione di un effetto
+description: Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo.
+ms.prod: xamarin
+ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139386"
 ---
-
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

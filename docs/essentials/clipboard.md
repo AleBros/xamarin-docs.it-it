@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Clipboard" Description: "questo documento descrive la classe degli Appunti in Xamarin.Essentials , che consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni".
-ms. AssetID: C52AE99A-0FB3-425D-9106-3DA5777FEFA0 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/06/2020 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Appunti'
+description: In questo documento viene descritta la classe degli Appunti in Xamarin.Essentials , che consente di copiare e incollare testo negli Appunti di sistema tra le applicazioni.
+ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d0a984f0f3bf27447e250c12e38fd9adcfb0029f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802448"
 ---
-
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Appunti
 
 La classe **Clipboard** consente di copiare e incollare testo negli Appunti del sistema tra un'applicazione e l'altra.
@@ -60,7 +73,7 @@ public class ClipboardTest
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Clipboard](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
+- [Codice sorgente di Clipboard](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Clipboard)
 - [Documentazione dell'API Clipboard](xref:Xamarin.Essentials.Clipboard)
 
 ## <a name="related-video"></a>Video correlato

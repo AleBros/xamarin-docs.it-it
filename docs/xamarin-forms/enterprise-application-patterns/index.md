@@ -1,8 +1,22 @@
 ---
-title: "modelli di applicazioni aziendali con Xamarin.Forms ebook" Description: "questo ebook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili" Xamarin.Forms .
-ms. prod: Novell MS. AssetID: 28cfed6c-6175-4223-a8cc-798d40bf0832 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modelli di applicazioni aziendali con Xamarin.Forms eBook
+description: Questo eBook fornisce indicazioni sull'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139399"
 ---
-
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Modelli di applicazioni aziendali con Xamarin.Forms eBook
 
 _Linee guida per l'architettura per lo sviluppo di applicazioni aziendali adattabili, gestibili e testabili Xamarin.Forms_
@@ -39,7 +53,7 @@ Xamarin.Formsinclude il supporto per la navigazione tra le pagine, che in genere
 
 In questo capitolo viene presentata una `NavigationService` classe, che viene utilizzata per eseguire l'esplorazione del primo modello di visualizzazione dai modelli di visualizzazione. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite test automatizzati. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business.
 
-## <a name="validation"></a>[Validation](validation.md)
+## <a name="validation"></a>[Convalida](validation.md)
 
 Tutte le app che accettano input dagli utenti devono assicurarsi che l'input sia valido. Senza convalida, un utente può fornire dati che causano l'esito negativo dell'app. La convalida impone regole business e impedisce a un utente malintenzionato di inserire dati dannosi.
 

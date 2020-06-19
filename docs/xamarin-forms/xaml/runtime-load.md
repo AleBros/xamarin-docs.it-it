@@ -1,8 +1,22 @@
 ---
-title: "caricamento di XAML in fase di esecuzione in Xamarin.Forms " Description: "XAML può essere caricato e analizzato in fase di esecuzione con i metodi di estensione LoadFromXaml".
-ms. prod: Novell MS. AssetID: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Caricamento di XAML in fase di esecuzione inXamarin.Forms
+description: XAML può essere caricato e analizzato in fase di esecuzione con i metodi di estensione LoadFromXaml.
+ms.prod: xamarin
+ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139373"
 ---
-
 # <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Caricamento di XAML in fase di esecuzione inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

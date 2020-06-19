@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : rileva Shake" Descrizione: "la classe accelerometra in Xamarin.Essentials consente di rilevare un movimento di agitazione del dispositivo".
-ms. AssetID: 07513D32-120F-4F12-8757-A47802A8027B Author: jamesmontemagno ms. Author: Jamont ms. Date: 05/28/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Rileva Shake'
+description: La classe accelerometro in Xamarin.Essentials consente di rilevare un movimento di agitazione del dispositivo.
+ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4fd4c7d0e3ffe04ebbb936cff0992272a9085649
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802432"
 ---
-
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rileva Shake
 
 La classe **[accelerometro](accelerometer.md)** consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale. Inoltre, consente di registrare gli eventi quando l'utente scuote il dispositivo.
@@ -68,7 +81,7 @@ L'API di rilevamento scuotimento calcola l'accelerazione usando letture non elab
 
 ## <a name="api"></a>API
 
-- [Codice sorgente dell'accelerometro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Codice sorgente dell'accelerometro](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [Documentazione dell'API Accelerometer](xref:Xamarin.Essentials.Accelerometer)
 
 ## <a name="related-video"></a>Video correlato

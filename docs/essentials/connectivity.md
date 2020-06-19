@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Connectivity" Description: "la classe Connectivity in Xamarin.Essentials consente di monitorare le modifiche apportate alle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso".
-ms. AssetID: E1B1F152-B1D5-4227-965E-C0AEBF528F49 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/08/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Connettività'
+description: La classe connettività in Xamarin.Essentials consente di monitorare le modifiche apportate alle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso.
+ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/08/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 056992b06e012845755aa02b2076a1bb80c6f176
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802414"
 ---
-
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connettività
 
 La classe **Connectivity** consente di monitorare le variazioni nelle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso.
@@ -105,7 +118,7 @@ public class ConnectivityTest
 
 ## <a name="api"></a>API
 
-* [Codice sorgente di Connectivity](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Codice sorgente di Connectivity](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Connectivity)
 * [Documentazione dell'API Connectivity](xref:Xamarin.Essentials.Connectivity)
 
 ## <a name="related-video"></a>Video correlato

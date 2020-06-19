@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : torcia" Description: "questo documento descrive la classe Flashlight in Xamarin.Essentials , che è in grado di attivare o disattivare la fotocamera flash del dispositivo per trasformarla in torcia".
-ms. AssetID: 06A03553-D212-43A2-9E6E-C2D2D93EB136 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Torcia'
+description: In questo documento viene descritta la classe Flashlight in Xamarin.Essentials , che consente di attivare o disattivare la fotocamera flash del dispositivo per trasformarla in una torcia.
+ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7a8a90674b395c90f698a4a0854dc0dc3fc5fe15
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802354"
 ---
-
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Torcia
 
 La classe **Flashlight** può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
@@ -113,7 +126,7 @@ Viene usata la classe [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Flashlight](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Codice sorgente di Flashlight](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Flashlight)
 - [Documentazione dell'API Flashlight](xref:Xamarin.Essentials.Flashlight)
 
 ## <a name="related-video"></a>Video correlato

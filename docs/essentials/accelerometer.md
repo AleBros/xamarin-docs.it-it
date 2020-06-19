@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : accelerometro" Description: "la classe accelerometra in Xamarin.Essentials consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale".
-ms. AssetID: 97883573-F0D9-4854-AC7C-A654814401C5 Author: jamesmontemagno ms. Author: Jamont ms. Date: 04/02/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Accelerometro'
+description: La classe accelerometro in Xamarin.Essentials consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale.
+ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3d7b313039e66294a0095fd34a2caa6689cef2e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802528"
 ---
-
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Accelerometro
 
 La classe **Accelerometer** consente di monitorare il sensore dell'accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale.
@@ -80,7 +93,7 @@ Esempi:
 
 ## <a name="api"></a>API
 
-- [Codice sorgente dell'accelerometro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Codice sorgente dell'accelerometro](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [Documentazione dell'API Accelerometer](xref:Xamarin.Essentials.Accelerometer)
 
 ## <a name="related-video"></a>Video correlato

@@ -1,8 +1,22 @@
 ---
-title: "controllo ortografico con l'API Controllo ortografico Bing" Description: "Controllo ortografico Bing esegue il controllo ortografico contestuale del testo, fornendo suggerimenti inline per le parole errate. Questo articolo illustra come usare l'API REST di Controllo ortografico Bing per correggere gli errori di ortografia in un' Xamarin.Forms applicazione ".
-ms. prod: Novell MS. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Controllo ortografico con l'API Controllo ortografico Bing
+description: Controllo ortografico Bing esegue il controllo ortografico contestuale del testo, fornendo suggerimenti inline per le parole errate. Questo articolo illustra come usare l'API REST di Controllo ortografico Bing per correggere gli errori di ortografia in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139295"
 ---
-
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Controllo ortografico con l'API Controllo ortografico Bing
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

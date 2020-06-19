@@ -1,8 +1,22 @@
 ---
-title: "traduzione testuale con l'API Translator" Description: "l'API di Microsoft Translator può essere usata per tradurre la voce e il testo tramite un'API REST. Questo articolo illustra come usare Microsoft API Traduzione testuale per tradurre il testo da una lingua a un'altra in un' Xamarin.Forms applicazione ".
-ms. prod: Novell MS. AssetID: 68330242-92C5-46F1-B1E3-2395D8823B0C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Traduzione testuale con l'API Translator
+description: L'API di Microsoft Translator può essere usata per tradurre la voce e il testo tramite un'API REST. Questo articolo illustra come usare Microsoft API Traduzione testuale per tradurre il testo da una lingua a un'altra in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139282"
 ---
-
 # <a name="text-translation-using-the-translator-api"></a>Traduzione testuale con l'API Translator
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

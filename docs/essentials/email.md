@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : email" Description: "la classe email in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, tra cui subject, body e Recipients (to, CC, Ccn)."
-ms. AssetID: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Posta elettronica'
+description: La classe email in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, tra cui subject, body e Recipients (to, CC, Ccn).
+ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802377"
 ---
-
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Posta elettronica
 
 La classe **Email** consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, inclusi oggetto, corpo e destinatari (A, Cc, Ccn).
@@ -95,7 +108,7 @@ Non tutti i client di posta elettronica supportano l'invio di allegati. Per altr
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Codice sorgente di Email](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Email)
 - [Documentazione dell'API Email](xref:Xamarin.Essentials.Email)
 
 ## <a name="related-video"></a>Video correlato

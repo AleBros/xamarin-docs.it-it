@@ -1,8 +1,22 @@
 ---
-title: "riconoscimento vocale con l'API del servizio vocale" Descrizione: "questo articolo spiega come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale in un' Xamarin.Forms applicazione".
-ms. prod: Novell MS. AssetID: B435FF6B-8785-48D9-B2D9-1893F5A87EA1 ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 01/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riconoscimento vocale con l'API del servizio vocale
+description: Questo articolo illustra come usare l'API del servizio riconoscimento vocale di Azure per trascrivere il riconoscimento vocale nel testo di un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 01/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139321"
 ---
-
 # <a name="speech-recognition-using-azure-speech-service"></a>Riconoscimento vocale con il servizio riconoscimento vocale di Azure
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
@@ -397,7 +411,7 @@ Infine, il file **info. plist** dell'app iOS deve includere un messaggio che ind
 </plist>
 ```
 
-### <a name="uwp"></a>Piattaforma UWP
+### <a name="uwp"></a>UWP
 
 Il progetto di esempio definisce un' `IMicrophoneService` implementazione per UWP denominata `UWPMicrophoneService` :
 

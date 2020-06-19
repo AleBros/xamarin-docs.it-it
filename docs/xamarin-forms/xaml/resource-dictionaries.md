@@ -1,8 +1,23 @@
 ---
-title: " Xamarin.Forms dizionari risorse" Descrizione: " Xamarin.Forms le risorse XAML sono oggetti che possono essere condivisi e riutilizzati in un' Xamarin.Forms applicazione."
-ms. prod: Novell MS. AssetID: DF103686-4A92-40FA-9CF1-A9376293B13C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. Custom: video
+title: Xamarin.Formsdizionari risorse
+description: Xamarin.FormsLe risorse XAML sono oggetti che possono essere condivisi e riutilizzati in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: video
+ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139412"
 ---
-
 # <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Formsdizionari risorse
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)

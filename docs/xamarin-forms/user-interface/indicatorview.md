@@ -1,23 +1,29 @@
 ---
-title: " Xamarin.Forms IndicatorView" Description: "IndicatorView è un controllo che visualizza indicatori che rappresentano il numero di elementi e la posizione corrente in un CarouselView".
-ms. prod: Novell MS. assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsIndicatorView
+description: IndicatorView è un controllo che visualizza indicatori che rappresentano il numero di elementi e la posizione corrente in un CarouselView.
+ms.prod: xamarin
+ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0e6d223fd10e7b792f2d145a7cdd417865a095bb
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101429"
 ---
-
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
-
-![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
 `IndicatorView`È un controllo che visualizza indicatori che rappresentano il numero di elementi e la posizione corrente in un `CarouselView` :
 
 [![Screenshot di CarouselView e IndicatorView, su iOS e Android](indicatorview-images/circles.png "Cerchi IndicatorView")](indicatorview-images/circles-large.png#lightbox "Cerchi IndicatorView")
-
-`IndicatorView`è disponibile in Xamarin.Forms 4,4 nelle piattaforme iOS e Android e in 4,5 nel piattaforma UWP (Universal Windows Platform). Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la seguente riga di codice alla `AppDelegate` classe in iOS o alla `MainActivity` classe in Android, prima di chiamare `Forms.Init` :
-
-```csharp
-Forms.SetFlags("IndicatorView_Experimental");
-```
 
 `IndicatorView` definisce le proprietà seguenti:
 

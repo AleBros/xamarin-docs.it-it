@@ -1,8 +1,22 @@
 ---
-title: "migliorare Xamarin.Forms le prestazioni dell'app": "sono disponibili molte tecniche per aumentare le prestazioni delle Xamarin.Forms applicazioni. Complessivamente, queste tecniche possono ridurre notevolmente la quantità di lavoro eseguita da una CPU e la quantità di memoria utilizzata da un'applicazione.
-ms. prod: Novell MS. AssetID: 0be84c56-6698-448d-BE5A-b4205f1caa9f ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Migliorare le Xamarin.Forms prestazioni dell'app
+description: Sono disponibili molte tecniche per migliorare le prestazioni delle Xamarin.Forms applicazioni. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+ms.prod: xamarin
+ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 96b5939fd1f8448d45d1398fd56770f9032de083
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139113"
 ---
-
 # <a name="improve-xamarinforms-app-performance"></a>Migliorare le Xamarin.Forms prestazioni dell'app
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
@@ -151,7 +165,7 @@ Per ottenere le migliori prestazioni possibili del layout, attenersi alle seguen
 
 La velocità di risposta complessiva dell'applicazione può essere migliorata e i colli di bottiglia delle prestazioni spesso evitati, usando la programmazione asincrona. In .NET, il [modello asincrono basato su attività (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) è il modello di progettazione consigliato per le operazioni asincrone. Tuttavia, l'uso errato del rubinetto può comportare l'esecuzione di applicazioni non efficienti. Pertanto, quando si usa il tocco è necessario seguire le linee guida seguenti.
 
-### <a name="fundamentals"></a>Concetti fondamentali
+### <a name="fundamentals"></a>Nozioni fondamentali
 
 - Comprendere il ciclo di vita delle attività, rappresentato dall' `TaskStatus` enumerazione. Per ulteriori informazioni, vedere [il significato di TaskStatus](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) e [dello stato dell'attività](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status).
 - Usare il `Task.WhenAll` metodo per attendere il completamento di più operazioni asincrone, anziché `await` una serie di operazioni asincrone. Per ulteriori informazioni, vedere [Task. WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).

@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Compass" Description: "questo documento descrive la classe Compass in Xamarin.Essentials , che consente di monitorare l'intestazione del nord magnetico del dispositivo".
-ms. AssetID: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Bussola'
+description: Questo documento descrive la classe Compass in Xamarin.Essentials , che consente di monitorare l'intestazione del nord magnetico del dispositivo.
+ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f85c6c1d262606ce75131e6ba39f326526bb8eb7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802472"
 ---
-
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Bussola
 
 La classe **Compass** consente di monitorare la direzione del nord magnetico del dispositivo.
@@ -19,7 +32,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Compass opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi della bussola. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Ecco un esempio:
+La funzionalità Compass opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi della bussola. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Esempio:
 
 ```csharp
 public class CompassTest
@@ -87,7 +100,7 @@ Il parametro viene applicato solo alla piattaforma Android e ignorato nei sistem
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Compass](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Codice sorgente di Compass](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [Documentazione dell'API Compass](xref:Xamarin.Essentials.Compass)
 
 ## <a name="related-video"></a>Video correlato

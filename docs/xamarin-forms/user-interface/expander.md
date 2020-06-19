@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Expander" Description: "il Xamarin.Forms controllo Expander fornisce un contenitore espandibile per ospitare qualsiasi contenuto. Per visualizzare o nascondere il contenuto, toccare l'intestazione dell'espansore ".
-ms. prod: Novell MS. AssetID: 381DCB55-522D-4414-B45B-E8DD70AA9985 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsExpander
+description: Il Xamarin.Forms controllo Expander fornisce un contenitore espandibile per ospitare qualsiasi contenuto. Per visualizzare o nascondere il contenuto, toccare l'intestazione di espansione.
+ms.prod: xamarin
+ms.assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 33659dd52452c575c403d0a25b24f17daf9e3f17
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84988222"
 ---
-
 # <a name="xamarinforms-expander"></a>Xamarin.FormsExpander
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
@@ -31,7 +45,6 @@ Il `Expander` controllo definisce le proprietà seguenti:
 - `ForceUpdateSizeCommand`, di tipo `ICommand` , che definisce il comando che viene eseguito quando viene forzata l'aggiornamento della dimensione di `Expander` . Questa proprietà utilizza la `OneWayToSource` modalità di associazione.
 - `Header`, di tipo [`View`](xref:Xamarin.Forms.View) , che definisce il contenuto dell'intestazione.
 - `IsExpanded`, di tipo `bool` , che determina se l'oggetto `Expander` è espanso. Questa proprietà utilizza la `TwoWay` modalità di associazione e il valore predefinito è `false` .
-- `Spacing`, di tipo `double` , che rappresenta lo spazio tra l'intestazione e il relativo contenuto. Il valore predefinito di questa proprietà è 0.
 - `State`, di tipo `ExpanderState` , che rappresenta lo stato dell'oggetto `Expander` . Questa proprietà utilizza la `OneWayToSource` modalità di associazione.
 
 Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
@@ -210,51 +223,18 @@ La `IsExpanded` proprietà diventa `true` quando `Expander` viene toccata l'inte
 
 Per ulteriori informazioni sui trigger, vedere [ Xamarin.Forms trigger](~/xamarin-forms/app-fundamentals/triggers.md).
 
-## <a name="define-the-space-between-header-and-content"></a>Definire lo spazio tra intestazione e contenuto
-
-Per impostazione predefinita, il contenuto di un oggetto `Expander` viene visualizzato direttamente sotto l'intestazione. Tuttavia, questo comportamento può essere modificato impostando la `Spacing` proprietà su un `double` valore che rappresenta lo spazio vuoto tra il contenuto e la relativa intestazione:
-
-```xaml
-<Expander Spacing="50"
-          IsExpanded="true">
-    <Expander.Header>
-        <Label Text="Baboon"
-               FontAttributes="Bold"
-               FontSize="Medium" />
-    </Expander.Header>
-    <Grid Padding="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
-               Aspect="AspectFill"
-               HeightRequest="120"
-               WidthRequest="120" />
-        <Label Grid.Column="1"
-               Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
-               FontAttributes="Italic" />
-    </Grid>
-</Expander>
-```
-
-In questo esempio, il `Expander` contenuto viene visualizzato 50 unità indipendenti dal dispositivo sotto la relativa intestazione:
-
-![Screenshot di un Expander con set di spaziatura, in iOS e Android](expander-images/expander-spacing.png "Expander con spaziatura impostata su iOS e Android")
-
 ## <a name="embed-an-expander-in-an-expander"></a>Incorporare un espansore in un espansore
 
 Il contenuto di un oggetto `Expander` può essere impostato su un altro `Expander` controllo per abilitare più livelli di espansione. Il codice XAML seguente mostra un `Expander` oggetto il cui contenuto è un altro `Expander` oggetto:
 
 ```xaml
-<Expander Spacing="10">
+<Expander>
     <Expander.Header>
         <Label Text="{Binding Name}"
                FontAttributes="Bold"
                FontSize="Medium" />
     </Expander.Header>
-    <Expander Padding="10"
-              Spacing="10">
+    <Expander Padding="10">
         <Expander.Header>
             <Label Text="{Binding Location}"
                    FontSize="Medium" />

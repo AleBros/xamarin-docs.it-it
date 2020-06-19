@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : helper del file System" Description: "la classe filesystem in Xamarin.Essentials contiene una serie di helper per trovare la cache e le directory dei dati dell'applicazione e aprire i file all'interno del pacchetto dell'applicazione."
-ms. AssetID: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Helper del file System'
+description: La classe FileSystem in Xamarin.Essentials contiene una serie di helper per trovare la cache dell'applicazione e le directory dei dati e aprire i file all'interno del pacchetto dell'app.
+ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802357"
 ---
-
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Helper del file System
 
 La classe **FileSystem** contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
@@ -70,7 +83,7 @@ Aggiungere i file nella radice del progetto UWP e contrassegnare l'azione di com
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di File System Helpers](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
+- [Codice sorgente di File System Helpers](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FileSystem)
 - [Documentazione dell'API File System](xref:Xamarin.Essentials.FileSystem)
 
 ## <a name="related-video"></a>Video correlato

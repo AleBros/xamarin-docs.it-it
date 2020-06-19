@@ -1,7 +1,21 @@
 ---
-title: " Xamarin.Essentials : Dialer telefonico" Description: "la classe PhoneDialer in Xamarin.Essentials consente a un'applicazione di aprire un numero di telefono nel dialer" ms. AssetID: E7457942-4D7B-4195-A2FF-417919B9537F Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. date: 07/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Telefono telefonico'
+description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione di aprire un numero di telefono nel dialer
+ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 07/02/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d642005e9aed663570c251e955c6a3af4704ed5c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802209"
 ---
-
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Telefono telefonico
 
 La classe **PhoneDialer** consente a un'applicazione di aprire un numero di telefono dal dialer.
@@ -47,7 +61,7 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Phone Dialer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Codice sorgente di Phone Dialer](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/PhoneDialer)
 - [Documentazione dell'API Phone Dialer](xref:Xamarin.Essentials.PhoneDialer)
 
 ## <a name="related-video"></a>Video correlato

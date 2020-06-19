@@ -1,8 +1,22 @@
 ---
-title: "comportamenti collegati" Descrizione: "i comportamenti collegati sono classi statiche con una o più proprietà associate. In questo articolo viene illustrato come creare e utilizzare comportamenti collegati ".
-ms. prod: Novell MS. AssetID: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Comportamenti associati
+description: I comportamenti associati sono classi statiche con una o più proprietà associate. Questo articolo illustra come creare e usare i comportamenti associati.
+ms.prod: xamarin
+ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139425"
 ---
-
 # <a name="attached-behaviors"></a>Comportamenti associati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
