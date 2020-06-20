@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms TabbedPage" Description: " Xamarin.Forms TabbedPage è costituito da un elenco di schede e da un'area di dettaglio più ampia, in cui ogni scheda carica contenuto nell'area dei dettagli. Questo articolo illustra come usare un TabbedPage per spostarsi in una raccolta di pagine. "
-ms. prod: Novell MS. AssetID: C946057F-C77C-412D-82A0-DAF475A24EF5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsTabbedPage
+description: Il Xamarin.Forms TabbedPage è costituito da un elenco di schede e da un'area di dettaglio più ampia, in cui ogni scheda carica contenuto nell'area dei dettagli. Questo articolo illustra come usare una classe TabbedPage per spostarsi in una raccolta di pagine.
+ms.prod: xamarin
+ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137514"
 ---
-
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.FormsTabbedPage
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)

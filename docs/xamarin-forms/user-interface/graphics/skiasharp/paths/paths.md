@@ -1,8 +1,22 @@
 ---
-title: "Nozioni di base sui percorsi in SkiaSharp" Description: "questo articolo illustra l'oggetto SKPath di SkiaSharp per combinare linee e curve connesse e ne illustra il codice di esempio".
-ms. prod: Novell MS. AssetID: A7EDA6C2-3921-4021-89F3-211551E430F1 ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Nozioni di base sui percorsi in SkiaSharp
+description: Questo articolo illustra l'oggetto SkiaSharp SKPath per combinare linee e curve connesse e ne illustra il codice di esempio.
+ms.prod: xamarin
+ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140244"
 ---
-
 # <a name="path-basics-in-skiasharp"></a>Nozioni di base sui percorsi in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 17. Master della griglia "Description:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 17. Mastering the Grid "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 17. Il controllo della griglia
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 17. Il controllo della griglia'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136721"
 ---
-
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Riepilogo del capitolo 17. Il controllo della griglia
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)

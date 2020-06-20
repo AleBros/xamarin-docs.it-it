@@ -1,8 +1,22 @@
 ---
-title: "la barra di spostamento di MasterDetailPage in Windows" Description: "specifici della piattaforma consente di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma specifica di Windows che comprime la barra di navigazione in un MasterDetailPage ".
-ms. prod: Novell MS. AssetID: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Barra di spostamento di MasterDetailPage in Windows
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma specifica di Windows che comprime la barra di navigazione in un MasterDetailPage.
+ms.prod: xamarin
+ms.assetid: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d3ae71685c7aaebdceacb5f8b7cd5f3dd308407c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137248"
 ---
-
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Barra di spostamento di MasterDetailPage in Windows
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

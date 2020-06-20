@@ -1,8 +1,22 @@
 ---
-title: "proprietà di automazione" Descrizione: "questo articolo spiega come usare la classe AutomationProperties in un' Xamarin.Forms applicazione, in modo che un'utilità per la lettura dello schermo possa parlare degli elementi nella pagina".
-ms. prod: Novell MS. AssetID: c0bb6893-fd26-47e7-88e5-3c333c9f786c ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Proprietà di automazione
+description: Questo articolo illustra come usare la classe AutomationProperties in un' Xamarin.Forms applicazione, in modo che un'utilità per la lettura dello schermo possa pronunciare gli elementi nella pagina.
+ms.prod: xamarin
+ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 341e1454c37d1fd20423204c95337e580eba7ecb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573404"
 ---
-
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -1,8 +1,22 @@
 ---
-title: "descrizione specifica della piattaforma": "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come utilizzare e creare specifiche della piattaforma ".
-ms. prod: Novell MS. AssetID: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/01/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Funzionalità specifiche della piattaforma
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come utilizzare e creare specifiche della piattaforma.
+ms.prod: xamarin
+ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/01/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139503"
 ---
-
 # <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

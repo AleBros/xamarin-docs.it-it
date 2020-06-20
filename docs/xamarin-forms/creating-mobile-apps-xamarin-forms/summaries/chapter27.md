@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 27. Renderer personalizzati "Description:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 27. Renderer personalizzati "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 49961953-9336-4FD4-A42F-6D9B05FF52E7 Author: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 27. Renderer personalizzati
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 27. Renderer personalizzati'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b0a3e14126dc8c92a1d1b60db7dbb2afd8e8c12
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136591"
 ---
-
 # <a name="summary-of-chapter-27-custom-renderers"></a>Riepilogo del capitolo 27. Renderer personalizzati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)

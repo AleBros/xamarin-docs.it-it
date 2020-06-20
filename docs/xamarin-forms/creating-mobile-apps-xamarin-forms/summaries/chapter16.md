@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 16. Data Binding "Description:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 16. Data Binding "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: ED997DB0-C229-4868-A5FB-928703B377D6 Author: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 16. Associazione dati
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 16. Associazione dati'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136734"
 ---
-
 # <a name="summary-of-chapter-16-data-binding"></a>Riepilogo del capitolo 16. Associazione dati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)

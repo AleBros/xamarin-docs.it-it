@@ -1,8 +1,22 @@
 ---
-title: "layout associabili in Xamarin.Forms " Descrizione: "i layout associabili consentono alle classi di layout di generare il contenuto mediante associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un oggetto DataTemplate".
-ms. prod: Novell MS. AssetID: 824C3319-20A0-42D0-8632-CDECD98349C3 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Layout associabili inXamarin.Forms
+description: I layout associabili consentono alle classi di layout di generare il contenuto mediante associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un oggetto DataTemplate.
+ms.prod: xamarin
+ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/09/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138242"
 ---
-
 # <a name="bindable-layouts-in-xamarinforms"></a>Layout associabili inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)

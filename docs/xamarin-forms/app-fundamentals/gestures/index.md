@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms gestures" Description: "questa guida illustra come Xamarin.Forms possono essere usati i riconoscitori di movimento per rilevare l'interazione dell'utente con le visualizzazioni in un' Xamarin.Forms applicazione".
-ms. prod: Novell MS. AssetID: 0E197A51-2304-4C09-A710-C7FF24A89F15 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/25/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsgesti
+description: Questa guida illustra come Xamarin.Forms possono essere usati i riconoscitori dei movimenti per rilevare l'interazione dell'utente con le visualizzazioni in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/25/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e1e93f74ab8ef6d63213a8fbdc7ec45a794cf55
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137877"
 ---
-
 # <a name="xamarinforms-gestures"></a>Xamarin.Formsgesti
 
 _I riconoscitori dei movimenti possono essere utilizzati per rilevare l'interazione dell'utente con le visualizzazioni in un' Xamarin.Forms applicazione._

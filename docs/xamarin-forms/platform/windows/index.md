@@ -1,8 +1,22 @@
 ---
-title: "funzionalità della piattaforma Windows" Descrizione: "questo articolo illustra il supporto della piattaforma Windows disponibile in Xamarin.Forms ".
-ms. prod: Novell MS. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Funzionalità della piattaforma Windows
+description: Questo articolo illustra il supporto della piattaforma Windows disponibile in Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137774"
 ---
-
 # <a name="windows-platform-features"></a>Funzionalità della piattaforma Windows
 
 Per lo sviluppo Xamarin.Forms di applicazioni per piattaforme Windows è necessario Visual Studio. La [pagina piattaforme supportate](~/get-started/supported-platforms.md) contiene altre informazioni sui prerequisiti.

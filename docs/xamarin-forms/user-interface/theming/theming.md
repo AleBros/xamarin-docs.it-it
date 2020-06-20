@@ -1,8 +1,22 @@
 ---
-title: "tema di un' Xamarin.Forms applicazione" Descrizione: "i temi possono essere implementati nelle Xamarin.Forms applicazioni creando un ResourceDictionary per ogni tema e quindi caricando le risorse con l'estensione di markup DynamicResource".
-ms. prod: Novell MS. assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Applicare un tema a un' Xamarin.Forms applicazione
+description: Il tema può essere implementato nelle Xamarin.Forms applicazioni creando un oggetto ResourceDictionary per ogni tema e quindi caricando le risorse con l'estensione di markup DynamicResource.
+ms.prod: xamarin
+ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138203"
 ---
-
 # <a name="theme-a-xamarinforms-application"></a>Applicare un tema a un' Xamarin.Forms applicazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)

@@ -1,8 +1,22 @@
 ---
-title: "richiamo degli eventi dagli effetti" Descrizione: "un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del dito multitocco di basso livello e come generare eventi che segnalano l'attività di tocco ".
-ms. prod: Novell MS. AssetID: 6A724681-55EB-45B8-9EED-7E412AB19DD2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/14/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Richiamo di eventi da effetti
+description: Un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del tocco nel multitouch di basso livello e come generare eventi che segnalino attività tocco.
+ms.prod: xamarin
+ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136981"
 ---
-
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Shell Lifecycle" Descrizione: "le applicazioni shell rispettano il ciclo di vita Xamarin.Forms e viene generato un evento di visualizzazione quando una pagina sta per essere visualizzata sullo schermo e viene generato un evento di scomparsa quando una pagina sta per scomparire dalla schermata".
-ms. prod: Novell MS. AssetID: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCiclo di vita della shell
+description: Le applicazioni shell rispettano il ciclo di vita Xamarin.Forms e viene generato un evento di visualizzazione quando una pagina sta per essere visualizzata sullo schermo e viene generato un evento di scomparsa quando una pagina sta per scomparire dalla schermata.
+ms.prod: xamarin
+ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3a7a46187d861098b61f638a3fb460d890b081dd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138723"
 ---
-
 # <a name="xamarinforms-shell-lifecycle"></a>Xamarin.FormsCiclo di vita della shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

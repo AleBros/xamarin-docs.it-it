@@ -1,8 +1,22 @@
 ---
-title: "Controls Reference" Description: "Descrizione di tutti gli elementi dell'interfaccia utente utilizzati per la costruzione di un' Xamarin.Forms applicazione. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un' Xamarin.Forms applicazione ".
-ms. prod: Novell MS. AssetID: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riferimento per i controlli
+description: Descrizione di tutti gli elementi dell'interfaccia utente utilizzati per la costruzione di un' Xamarin.Forms applicazione. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136396"
 ---
-
 # <a name="controls-reference"></a>Riferimento per i controlli
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -11,7 +25,7 @@ L'interfaccia utente di un' Xamarin.Forms applicazione è costituita da oggetti 
 
 I quattro gruppi di controllo principali utilizzati per creare l'interfaccia utente di un' Xamarin.Forms applicazione sono i seguenti:
 
-- [**.NET**](pages.md)
+- [**Pagine**](pages.md)
 - [**Layout**](layouts.md)
 - [**Viste**](views.md)
 - [**Celle**](cells.md)

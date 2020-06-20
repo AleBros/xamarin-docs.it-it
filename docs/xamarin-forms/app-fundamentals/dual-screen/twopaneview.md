@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms layout a doppio schermo": "questa guida illustra come usare Xamarin.Forms TwoPaneView per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo".
-ms. prod: Novell MS. AssetID: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3 ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formslayout a doppio schermo
+description: Questa guida illustra come usare Xamarin.Forms TwoPaneView per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo.
+ms.prod: xamarin
+ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 28d4b3da44cc1a022b70c0de0720be747e047f9f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138892"
 ---
-
 # <a name="xamarinforms-dual-screen-layout"></a>Xamarin.Formslayout a doppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

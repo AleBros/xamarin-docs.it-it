@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms CarouselView layout" Description: "per impostazione predefinita, un CarouselView Visualizza i relativi elementi orizzontalmente. Tuttavia, è possibile anche un orientamento verticale ".
-ms. prod: Novell MS. AssetID: fede0382-c972-4023-A4EA-fe5cadec91a6 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsLayout di CarouselView
+description: Per impostazione predefinita, un CarouselView Visualizza i relativi elementi orizzontalmente. Tuttavia, è anche possibile un orientamento verticale.
+ms.prod: xamarin
+ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 44df710df0272afe3c6f6911381af1a88c8cf923
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140283"
 ---
-
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsLayout di CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

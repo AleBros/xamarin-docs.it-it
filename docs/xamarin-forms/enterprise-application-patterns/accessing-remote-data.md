@@ -1,8 +1,22 @@
 ---
-title: "accesso ai dati remoti" Descrizione: "questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers accede ai dati dai microservizi in contenitori".
-ms. prod: Novell MS. AssetID: 42eba6f5-9784-4E1A-9943-5c1fbeea7452 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Accesso ai dati remoti
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers accede ai dati dai microservizi in contenitori.
+ms.prod: xamarin
+ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cef3c2369bb4aee81a52ddd27d6ad732d7544dfa
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573846"
 ---
-
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
 
 Molte soluzioni moderne basate sul Web utilizzano i servizi Web, ospitati da server Web, per fornire funzionalità per le applicazioni client Remote. Le operazioni esposte da un servizio Web costituiscono un'API Web.

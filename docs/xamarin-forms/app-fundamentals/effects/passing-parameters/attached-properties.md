@@ -1,8 +1,22 @@
 ---
-title: "passaggio di parametri effetto come proprietà associate" Description: "è possibile usare le proprietà associate per definire i parametri degli effetti che rispondono alle modifiche delle proprietà di Runtime. Questo articolo illustra l'uso delle proprietà associate per passare parametri a un effetto e la modifica di un parametro in fase di esecuzione. "
-ms. prod: Novell MS. AssetID: DFCDCB9F-17DD-4117-BD53-B4FB206BB387 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/05/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Passare parametri a un effetto come proprietà associate
+description: Le proprietà associate possono essere usate per definire i parametri di effetto che rispondono a modifiche delle proprietà in fase di esecuzione. Questo articolo spiega come usare le proprietà associate per passare i parametri a un effetto e come modificare un parametro in fase di esecuzione.
+ms.prod: xamarin
+ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/05/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138879"
 ---
-
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passare parametri a un effetto come proprietà associate
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

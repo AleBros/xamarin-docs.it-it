@@ -1,8 +1,22 @@
 ---
-title: "usare l'accesso con Apple per Xamarin.Forms " Descrizione: "informazioni su come implementare l'accesso con Apple nelle Xamarin.Forms applicazioni per dispositivi mobili."
-ms. prod: Novell MS. AssetID: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usare accedi con Apple perXamarin.Forms
+description: Informazioni su come implementare l'accesso con Apple nelle Xamarin.Forms applicazioni per dispositivi mobili.
+ms.prod: xamarin
+ms.assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 09/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139490"
 ---
-
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usare l'accesso con Apple inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)

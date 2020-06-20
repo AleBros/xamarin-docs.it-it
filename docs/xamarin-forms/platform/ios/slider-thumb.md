@@ -1,8 +1,22 @@
 ---
-title: "dispositivo di scorrimento tocco su iOS" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che consente di impostare la proprietà Slider. Value toccando sulla barra del dispositivo di scorrimento ".
-ms. prod: Novell MS. AssetID: D0915D37-9A59-4728-BB6A-FE094A661275 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Dispositivo di scorrimento tocco in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che consente di impostare la proprietà Slider. Value toccando sulla barra del dispositivo di scorrimento.
+ms.prod: xamarin
+ms.assetid: D0915D37-9A59-4728-BB6A-FE094A661275
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 93b4dba3e8543bd2cc2a4f2187f617aae5daff77
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137072"
 ---
-
 # <a name="slider-thumb-tap-on-ios"></a>Dispositivo di scorrimento tocco in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

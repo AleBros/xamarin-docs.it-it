@@ -1,8 +1,22 @@
 ---
-title: "polilinee e equazioni parametriche" Descrizione: "questo articolo spiega come usare SkiaSharp per eseguire il rendering di qualsiasi riga che è possibile definire con equazioni parametriche e illustra questa operazione con il codice di esempio".
-ms. prod: Novell MS. AssetID: 85AEBB33-E954-4364-A6E1-808FAB197BEE ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Polilinee ed equazioni parametriche
+description: Questo articolo illustra come usare SkiaSharp per eseguire il rendering di qualsiasi riga che è possibile definire con equazioni parametriche e illustra questa operazione con il codice di esempio.
+ms.prod: xamarin
+ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140218"
 ---
-
 # <a name="polylines-and-parametric-equations"></a>Polilinee ed equazioni parametriche
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

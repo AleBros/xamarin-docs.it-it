@@ -1,8 +1,22 @@
 ---
-title: "la trasformazione translate" Description: "questo articolo esamina come usare la trasformazione translate per spostare la grafica SkiaSharp nelle Xamarin.Forms applicazioni e illustra questa operazione con il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: BD28ADA1-49F9-44E2-A548-46024A29882F autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazione di traslazione
+description: Questo articolo esamina come usare la trasformazione translate per spostare la grafica SkiaSharp nelle Xamarin.Forms applicazioni e illustra questa operazione con il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138255"
 ---
-
 # <a name="the-translate-transform"></a>Trasformazione di traslazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

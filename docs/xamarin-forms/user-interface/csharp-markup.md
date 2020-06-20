@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms markup c#" Descrizione: "markup c# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di compilazione di interfacce utente dichiarative Xamarin.Forms in C#".
-ms. prod: Novell MS. AssetID: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsMarkup C#
+description: Il markup C# è un set esplicito di metodi e classi helper Fluent per semplificare il processo di creazione di interfacce utente dichiarative Xamarin.Forms in c#.
+ms.prod: xamarin
+ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137748"
 ---
-
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarkup C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

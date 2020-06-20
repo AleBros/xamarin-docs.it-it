@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 11. L'infrastruttura associabile "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 11. Infrastruttura associabile "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 34671C48-0ED4-4B76-A33D-D6505390DC5B Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 11. Infrastruttura associabile
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 11. Infrastruttura associabile'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136799"
 ---
-
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Riepilogo del capitolo 11. Infrastruttura associabile
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)

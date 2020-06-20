@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Shell Introduction" Description: " Xamarin.Forms Shell fornisce le funzionalità di base richieste dalla maggior parte delle applicazioni, tra cui un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato".
-ms. prod: Novell MS. AssetID: 4604DCB5-83DA-458A-8B02-6508A740BE0E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsIntroduzione alla shell
+description: Xamarin.FormsShell fornisce le funzionalità di base richieste dalla maggior parte delle applicazioni, tra cui un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato.
+ms.prod: xamarin
+ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138736"
 ---
-
 # <a name="xamarinforms-shell-introduction"></a>Xamarin.FormsIntroduzione alla shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

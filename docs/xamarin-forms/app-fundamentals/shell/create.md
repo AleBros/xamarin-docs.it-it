@@ -1,8 +1,22 @@
 ---
-title: "creare un' Xamarin.Forms applicazione shell" Descrizione: "il processo per la creazione di un' Xamarin.Forms applicazione shell consiste nel creare un file XAML che sottoclassa la classe shell, impostare la proprietà MainPage della classe App dell'applicazione sull'oggetto Shell sottoclassato e quindi descrivere la gerarchia visiva dell'applicazione nella classe della shell sottoclassata".
-ms. prod: Novell MS. AssetID: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/24/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Creare un' Xamarin.Forms applicazione shell
+description: Il processo per la creazione di un' Xamarin.Forms applicazione shell consiste nel creare un file XAML che sottoclassi la classe shell, impostare la proprietà MainPage della classe App dell'applicazione sull'oggetto Shell sottoclassato e quindi descrivere la gerarchia visiva dell'applicazione nella classe della shell sottoclassata.
+ms.prod: xamarin
+ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 62c323dd73f656d5b4f4e06c672fd952845efb22
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137800"
 ---
-
 # <a name="create-a-xamarinforms-shell-application"></a>Creare un' Xamarin.Forms applicazione shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

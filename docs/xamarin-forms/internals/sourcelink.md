@@ -1,8 +1,23 @@
 ---
-title: "collegamento all'origine con Xamarin.Forms " Description: "in questo articolo viene illustrato come utilizzare il collegamento di origine per eseguire il debug in Xamarin.Forms ".
-zone_pivot_groups: "Platform" ms. prod: Novell MS. assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 09/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Collegamento all'origine conXamarin.Forms
+description: Questo articolo illustra come usare il collegamento di origine per eseguire il debug in Xamarin.Forms .
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 09/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57db314538c42ef9d58691ba16ab68371ff092b7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138309"
 ---
-
 # <a name="source-link-with-xamarinforms"></a>Collegamento all'origine conXamarin.Forms
 
 Xamarin.FormsI pacchetti NuGet includono i mapping dei collegamenti di origine. Il collegamento all'origine esegue il mapping delle librerie compilate, contenute in un pacchetto NuGet, a un repository di codice sorgente. Visual Studio scaricherà i file del codice sorgente durante il debug e consentirà agli sviluppatori di eseguire il codice istruzione per istruzione, abilitando il debug dei pacchetti senza compilazione dall'origine.

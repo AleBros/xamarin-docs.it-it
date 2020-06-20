@@ -1,8 +1,22 @@
 ---
-title: "selezione elemento DatePicker in iOS" Descrizione: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla quando la selezione degli elementi si verifica in un DatePicker. "
-ms. prod: Novell MS. AssetID: 847E69D1-6AE0-4E82-B9C8-919E009C2014 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Selezione elemento DatePicker in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla quando la selezione degli elementi si verifica in un controllo DatePicker.
+ms.prod: xamarin
+ms.assetid: 847E69D1-6AE0-4E82-B9C8-919E009C2014
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c65cac4c777150185524b291adc6e9d1e79958d3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138554"
 ---
-
 # <a name="datepicker-item-selection-on-ios"></a>Selezione elemento DatePicker in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

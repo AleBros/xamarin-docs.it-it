@@ -1,8 +1,22 @@
 ---
-title: "ListView performance" Description: "Sebbene ListView sia una vista potente per la visualizzazione dei dati, presenta alcune limitazioni. Questo articolo illustra come garantire prestazioni ottimali con Xamarin.Forms ListView in un'applicazione ".
-ms. prod: Novell MS. AssetID: 1B085639-652C-4862-86EB-5D55D32B9395 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/11/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Prestazioni di ListView
+description: Sebbene ListView sia una vista potente per la visualizzazione dei dati, presenta alcune limitazioni. Questo articolo illustra come garantire prestazioni ottimali con Xamarin.Forms ListView in un'applicazione.
+ms.prod: xamarin
+ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2b8e057d9687cd0a472451fc73cc578f9358277
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139887"
 ---
-
 # <a name="listview-performance"></a>Prestazioni di ListView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)

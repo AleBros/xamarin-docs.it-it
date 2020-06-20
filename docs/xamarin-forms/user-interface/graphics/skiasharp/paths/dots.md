@@ -1,8 +1,22 @@
 ---
-title: "punti e trattini in SkiaSharp" Description: "in questo articolo viene illustrato come gestire le complessità del disegno di linee tratteggiate e tratteggiate in SkiaSharp e ne viene illustrato il codice di esempio".
-ms. prod: Novell MS. AssetID: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078 ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Punti e trattini in SkiaSharp
+description: Questo articolo illustra come gestire le complessità del disegno di linee tratteggiate e tratteggiate in SkiaSharp e ne illustra il codice di esempio.
+ms.prod: xamarin
+ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138450"
 ---
-
 # <a name="dots-and-dashes-in-skiasharp"></a>Punti e trattini in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

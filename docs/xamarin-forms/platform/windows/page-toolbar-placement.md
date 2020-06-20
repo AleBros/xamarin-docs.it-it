@@ -1,8 +1,22 @@
 ---
-title: "posizione della barra degli strumenti della pagina in Windows" Description: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Windows specifica che consente di modificare la posizione di una barra degli strumenti in una pagina ".
-ms. prod: Novell MS. AssetID: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Posizionamento della barra degli strumenti della pagina in Windows
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare l'oggetto specifico della piattaforma Windows per modificare la posizione di una barra degli strumenti in una pagina.
+ms.prod: xamarin
+ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76b4633e6b224e234f9d5f693f4e01ed7a35d6db
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138047"
 ---
-
 # <a name="page-toolbar-placement-on-windows"></a>Posizionamento della barra degli strumenti della pagina in Windows
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

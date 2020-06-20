@@ -1,8 +1,22 @@
 ---
-title: "stile Xamarin.Forms delle app con stili XAML" Descrizione: "questa guida illustra come personalizzare l'aspetto di un' Xamarin.Forms applicazione usando gli stili XAML".
-ms. prod: Novell MS. AssetID: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/30/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsApplicazione di stili alle app usando gli stili XAML
+description: In questa guida viene illustrato come personalizzare l'aspetto di un' Xamarin.Forms applicazione utilizzando gli stili XAML.
+ms.prod: xamarin
+ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 72effe15d3456b5a48cbf5d09e889600134ac686
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84903090"
 ---
-
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Xamarin.FormsApplicazione di stili alle app usando gli stili XAML
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)

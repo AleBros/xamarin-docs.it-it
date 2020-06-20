@@ -1,8 +1,22 @@
 ---
-title: "modifica del tocco" Descrizione: "questo articolo spiega come usare le trasformazioni di matrice per implementare il trascinamento del tocco, il pizzicamento e la rotazione e lo dimostra con il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: A0B8DD2D-7392-4EC5-BFB0-6209407AD650 autore: davidbritch ms. Author: dabritch ms. Date: 09/14/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Manipolazioni tramite tocco
+description: Questo articolo illustra come usare le trasformazioni di matrice per implementare il trascinamento del tocco, il pizzicamento e la rotazione e ne viene illustrato il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140166"
 ---
-
 # <a name="touch-manipulations"></a>Manipolazioni tramite tocco
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

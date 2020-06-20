@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 23. Trigger e comportamenti "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 23. Trigger e comportamenti "ms. prod: Novell MS. Technology: Novell-Forms ms. asassetidd: 19E84B5D-46B4-4B6D-A255-87BEFB011261 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 23. Trigger e comportamenti
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 23. Trigger e comportamenti'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136656"
 ---
-
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. Trigger e comportamenti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)

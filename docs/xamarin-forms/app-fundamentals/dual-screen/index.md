@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms doppia schermata" Descrizione: "questa guida illustra come creare Xamarin.Forms app per dispositivi a schermo doppio".
-ms. prod: Novell MS. AssetID: f9906e83-F8AE-48f9-997b-e1540b96ee8e ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsDoppio schermo
+description: Questa guida illustra come creare Xamarin.Forms app per dispositivi a doppio schermo.
+ms.prod: xamarin
+ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138905"
 ---
-
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Formsdoppio schermo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

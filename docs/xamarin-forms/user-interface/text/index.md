@@ -1,8 +1,22 @@
 ---
-title: "testo in Xamarin.Forms " Descrizione: " Xamarin.Forms dispone di tre visualizzazioni principali per l'utilizzo del testo e in questo articolo viene illustrato come utilizzarle per inserire e visualizzare il testo nelle Xamarin.Forms applicazioni".
-ms. prod: Novell MS. AssetID: 4DBA7689-E5C8-4583-8FB4-02AB208B4416 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Testo inXamarin.Forms
+description: Xamarin.Formsdispone di tre visualizzazioni principali per l'utilizzo del testo e in questo articolo viene illustrato come utilizzarle per inserire e visualizzare il testo nelle Xamarin.Forms applicazioni.
+ms.prod: xamarin
+ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b44a0b3e3542638874ee366a86967d73c0d53652
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573794"
 ---
-
 # <a name="text-in-xamarinforms"></a>Testo inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -17,7 +31,7 @@ Xamarin.Formsdispone di tre visualizzazioni principali per l'utilizzo del testo:
 
 L'aspetto del testo può essere modificato usando [stili](#styles) predefiniti o personalizzati e alcuni controlli supportano i [tipi di carattere](#fonts)personalizzati.
 
-## <a name="label"></a>[Label](label.md)
+## <a name="label"></a>[Etichetta](label.md)
 
 La visualizzazione `Label` viene utilizzata per visualizzare il testo. Può visualizzare più righe di testo o una singola riga di testo. `Label`può presentare testo con più opzioni di formattazione usate in inline. La visualizzazione etichetta può eseguire il wrapping o troncare il testo quando non può essere inserito in una sola riga.
 

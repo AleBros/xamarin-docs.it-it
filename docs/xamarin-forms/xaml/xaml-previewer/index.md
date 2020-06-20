@@ -1,8 +1,23 @@
 ---
-title: "Visualizzatore anteprima XAML per Xamarin.Forms " Description: "in questo articolo viene illustrato come utilizzare il Visualizzatore anteprima XAML per visualizzare i Xamarin.Forms layout visualizzati durante la digitazione. Il Visualizzatore anteprima XAML è disponibile in Visual Studio 2019 e Visual Studio 2019 per Mac. "
-zone_pivot_groups: piattaforma MS. prod: Novell MS. AssetID: 84769ff1-72fd-4C44-8251-dd6d5bf8c7b2 ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visualizzatore anteprima XAML perXamarin.Forms
+description: Questo articolo illustra come usare il Visualizzatore anteprima XAML per visualizzare i Xamarin.Forms layout visualizzati durante la digitazione. Il Visualizzatore anteprima XAML è disponibile in Visual Studio 2019 e Visual Studio 2019 per Mac.
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6916d5fde688c5b1162f12db0d36bc3ca27156d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137319"
 ---
-
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML perXamarin.Forms
 
 _Visualizza i Xamarin.Forms layout visualizzati durante la digitazione_

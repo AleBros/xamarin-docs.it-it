@@ -1,8 +1,22 @@
 ---
-title: le opzioni dell'editor del metodo di input per l'immissione in Android "Description:" specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che imposta le opzioni di Input Method Editor per la tastiera soft per una voce ".
-ms. prod: Novell MS. AssetID: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Opzioni dell'editor del metodo di input voce in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma Android che imposta le opzioni di Input Method Editor per la tastiera soft per una voce.
+ms.prod: xamarin
+ms.assetid: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bb77e9fafe39bf76a7d4290dba0bc658cd15094f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140036"
 ---
-
 # <a name="entry-input-method-editor-options-on-android"></a>Opzioni dell'editor del metodo di input voce in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

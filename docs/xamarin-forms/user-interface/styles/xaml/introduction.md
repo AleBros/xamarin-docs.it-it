@@ -1,8 +1,22 @@
 ---
-title: "Introduzione agli Xamarin.Forms stili" Descrizione: "gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili per quel tipo. "
-ms. prod: Novell MS. AssetID: 3FF899C0-6CFB-4C1D-837D-9E9E10181967 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione agli Xamarin.Forms stili
+description: Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo.
+ms.prod: xamarin
+ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5766af7da3a0cf550a2ccb3a926dad25fd7962eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138821"
 ---
-
 # <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli Xamarin.Forms stili
 
 _Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo._

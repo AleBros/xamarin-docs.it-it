@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials : risoluzione dei problemi" Descrizione: "questo documento descrive come risolvere i problemi riscontrati durante lo sviluppo con la Xamarin.Essentials libreria".
-ms. AssetID: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361 Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Risoluzione dei problemi'
+description: In questo documento viene descritto come risolvere i problemi riscontrati durante lo sviluppo con la Xamarin.Essentials libreria.
+ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 67a060667cef5f96fa864aa2db3356ac5b9b2dfb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137124"
 ---
-
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: Risoluzione dei problemi
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>Errore: Conflitto di versioni rilevato per Xamarin.Android.Support.Compat

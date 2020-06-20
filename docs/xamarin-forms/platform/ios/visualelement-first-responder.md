@@ -1,8 +1,22 @@
 ---
-title: "la prima risposta di visualElement in iOS" Description: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che consente a un oggetto visivo di diventare il primo risponditore per gli eventi di tocco ".
-ms. prod: Novell MS. AssetID: 3A77BA02-B87A-44EC-AC51-9D3130EF314C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Primo risponditore di visualElement in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che consente a un oggetto visivo di diventare il primo risponditore per il tocco degli eventi.
+ms.prod: xamarin
+ms.assetid: 3A77BA02-B87A-44EC-AC51-9D3130EF314C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d8bd539c2bb0e8963afae3392b6f8e99d79af9af
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136969"
 ---
-
 # <a name="visualelement-first-responder-on-ios"></a>Primo risponditore di visualElement in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

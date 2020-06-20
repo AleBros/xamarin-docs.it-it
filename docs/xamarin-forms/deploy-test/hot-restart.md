@@ -1,8 +1,22 @@
 ---
-title: "Novell Hot restart" Description: "questo documento descrive come configurare e usare Novell Hot restart per eseguire il debug di un'app iOS."
-ms. prod: Novell MS. AssetID: 6BC62A88-9368-41BB-8494-760F2A4805DB ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riavvio rapido Xamarin
+description: Questo documento descrive come configurare e usare il riavvio rapido Xamarin per eseguire il debug di un'app iOS.
+ms.prod: xamarin
+ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139139"
 ---
-
 # <a name="xamarin-hot-restart-preview"></a>Riavvio rapido Xamarin (anteprima)
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)

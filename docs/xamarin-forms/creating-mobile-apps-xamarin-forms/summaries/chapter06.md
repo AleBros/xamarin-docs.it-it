@@ -1,7 +1,22 @@
 ---
-Titolo: "Riepilogo del capitolo 6. Button click "Description:" Create Mobile Apps with Xamarin.Forms : riepilogo del capitolo 6. Button click "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: D4F9C429-A6CF-40FA-AC68-3F149307A5F9 Author: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 6. Clic sui pulsanti
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 6. Clic sui pulsanti'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136838"
 ---
-
 # <a name="summary-of-chapter-6-button-clicks"></a>Riepilogo del capitolo 6. Clic sui pulsanti
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)

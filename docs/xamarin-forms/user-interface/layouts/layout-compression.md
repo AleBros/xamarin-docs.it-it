@@ -1,8 +1,22 @@
 ---
-title: "compressione del layout" Descrizione: "la compressione del layout rimuove i layout specificati dalla struttura ad albero visuale nel tentativo di migliorare le prestazioni di rendering della pagina. Questo articolo illustra come abilitare la compressione del layout e i vantaggi che può offrire. "
-ms. prod: Novell MS. AssetID: da9e1b26-9d31-4762-94c3-4039f306b7f2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Compressione del layout
+description: La compressione del layout rimuove i layout specificati dalla struttura ad albero visuale nel tentativo di migliorare le prestazioni di rendering della pagina. Questo articolo illustra come abilitare la compressione del layout e i vantaggi che può offrire.
+ms.prod: xamarin
+ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/13/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138025"
 ---
-
 # <a name="layout-compression"></a>Compressione del layout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

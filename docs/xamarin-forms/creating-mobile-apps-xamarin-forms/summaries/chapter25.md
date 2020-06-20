@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 25. Varietà di pagine "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 25. Varietà di pagine "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 25. Tipi di pagina
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 25. Tipi di pagina'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e66fb50b8d537ee0267457d5b0ab0f417813e676
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136617"
 ---
-
 # <a name="summary-of-chapter-25-page-varieties"></a>Riepilogo del capitolo 25. Tipi di pagina
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
@@ -50,7 +65,7 @@ Il file XAML imposta anche la [`IsPresented`](xref:Xamarin.Forms.MasterDetailPag
 
 ### <a name="your-own-user-interface"></a>Interfaccia utente personalizzata
 
-Sebbene Xamarin.Forms fornisca un'interfaccia utente per lo spostamento tra le visualizzazioni master e dettagli, è possibile fornire i propri. A tale scopo, procedere nel seguente modo:
+Sebbene Xamarin.Forms fornisca un'interfaccia utente per lo spostamento tra le visualizzazioni master e dettagli, è possibile fornire i propri. A tale scopo, procedere come indicato di seguito:
 
 - Impostare la [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) proprietà su `false` per disabilitare il scorrimento
 - Eseguire l'override del [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) metodo e restituire `false` per nascondere i pulsanti della barra degli strumenti in Windows 8.1 e Windows Phone 8,1.

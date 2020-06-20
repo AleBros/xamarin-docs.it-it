@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 9. Chiamate API specifiche della piattaforma "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 9. Chiamate di API specifiche della piattaforma
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 9. Chiamate di API specifiche della piattaforma'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136857"
 ---
-
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Riepilogo del capitolo 9. Chiamate di API specifiche della piattaforma
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)

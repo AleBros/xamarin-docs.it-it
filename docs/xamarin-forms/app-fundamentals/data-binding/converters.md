@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms convertitori di valori di binding" Descrizione: "in questo articolo viene illustrato come eseguire il cast o la conversione dei valori all'interno Xamarin.Forms di un data binding implementando un convertitore di valori (noto anche come convertitore di binding o convertitore di valori di associazione)."
-ms. prod: Novell MS. AssetID: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsConvertitori di valori di binding
+description: Questo articolo illustra come eseguire il cast o la conversione dei valori all'interno Xamarin.Forms di un data binding implementando un convertitore di valori (noto anche come convertitore di binding o convertitore di valori di associazione).
+ms.prod: xamarin
+ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139763"
 ---
-
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.FormsConvertitori di valori di binding
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

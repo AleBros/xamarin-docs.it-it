@@ -1,8 +1,23 @@
 ---
-title: "Riepilogo del capitolo 24. Navigazione pagina "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 24. Navigazione tra le pagine "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: DDCDB49C-6008-4F72-B095-463EE21D7C23 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 24. Struttura di navigazione pagine
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 24. Struttura di navigazione pagine'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136643"
 ---
-
-# <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
+# <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Struttura di navigazione pagine
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 

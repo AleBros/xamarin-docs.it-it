@@ -1,8 +1,22 @@
 ---
-title: "trasformazioni di SkiaSharp" Descrizione: "questo articolo illustra le trasformazioni per la visualizzazione di immagini SkiaSharp nelle Xamarin.Forms applicazioni e ne illustra il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: E9BE322E-ECB3-4395-AFE4-4474A0F25551 autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazioni di SkiaSharp
+description: In questo articolo vengono esaminate le trasformazioni per la visualizzazione della grafica SkiaSharp nelle Xamarin.Forms applicazioni e viene illustrato il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e20ea5d1d3f813b04a927601fbe1180ff39ed176
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140192"
 ---
-
 # <a name="skiasharp-transforms"></a>Trasformazioni di SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

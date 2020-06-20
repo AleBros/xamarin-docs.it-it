@@ -1,8 +1,22 @@
 ---
-title: "schemi dello spazio dei nomi personalizzati XAML in Xamarin.Forms " Description: "uno schema dello spazio dei nomi personalizzato XAML può essere definito con la classe XmlnsDefinitionAttribute, che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Lo schema dello spazio dei nomi personalizzato può quindi essere utilizzato nelle dichiarazioni dello spazio dei nomi XAML ".
-ms. prod: Novell MS. AssetID: FDF201A1-8C35-4569-A728-F9B0A0C5B31A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Schemi dello spazio dei nomi personalizzati XAML inXamarin.Forms
+description: Uno schema dello spazio dei nomi personalizzato XAML può essere definito con la classe XmlnsDefinitionAttribute, che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Lo schema dello spazio dei nomi personalizzato può quindi essere utilizzato nelle dichiarazioni dello spazio dei nomi XAML.
+ms.prod: xamarin
+ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138164"
 ---
-
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Schemi dello spazio dei nomi personalizzati XAML inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)

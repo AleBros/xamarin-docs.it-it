@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials supporto della funzionalità & di piattaforma" Descrizione: " Xamarin.Essentials fornisce una singola API multipiattaforma che funziona con qualsiasi applicazione iOS, Android o UWP a cui è possibile accedere dal codice condiviso indipendentemente dalla modalità di creazione dell'interfaccia utente."
-ms. AssetID: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4 Author: jamesmontemagno ms. Author: Jamont ms. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsSupporto della funzionalità & piattaforma
+description: Xamarin.Essentialsfornisce una singola API multipiattaforma che funziona con qualsiasi applicazione iOS, Android o UWP a cui è possibile accedere dal codice condiviso indipendentemente dal modo in cui viene creata l'interfaccia utente.
+ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b052e03f3ca57229988a29b7d3f38f5fa7bb6f97
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137176"
 ---
-
 # <a name="platform-support"></a>Supporto per piattaforme
 
 Xamarin.Essentialssupporta le piattaforme e i sistemi operativi seguenti:
@@ -14,7 +26,7 @@ Xamarin.Essentialssupporta le piattaforme e i sistemi operativi seguenti:
 | Tizen | 4.0 o versione successiva |
 | tvOS | 10.0 o versione successiva |
 | watchOS | 4.0 o versione successiva |
-| Piattaforma UWP | 10.0.16299.0 o versione successiva |
+| UWP | 10.0.16299.0 o versione successiva |
 
 > [!NOTE]
 >
@@ -31,7 +43,7 @@ Guida alle icone:
 * ![Supporto limitato](~/media/shared/warn.png "Supporto limitato") -supporto limitato
 * ![Non supportato](~/media/shared/no.png "Non supportate") : non supportato
 
-| Funzionalità | Android | iOS | Piattaforma UWP | watchOS | tvOS | Tizen |
+| Funzionalità | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
 | [Informazioni sull'app](app-information.md?context=xamarin/xamarin-forms) | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS supportato](~/media/shared/yes.png "tvOS supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |

@@ -1,8 +1,22 @@
 ---
-title: "Nozioni di base sulla bitmap in SkiaSharp" Description: "questo articolo illustra come caricare bitmap in SkiaSharp da diverse origini e visualizzarle nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 32C95DFF-9065-42D7-966C-D3DBD16906B3 autore: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Nozioni fondamentali sulla bitmap in SkiaSharp
+description: Questo articolo illustra come caricare le bitmap in SkiaSharp da diverse origini e visualizzarle nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137736"
 ---
-
 # <a name="bitmap-basics-in-skiasharp"></a>Nozioni fondamentali sulla bitmap in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

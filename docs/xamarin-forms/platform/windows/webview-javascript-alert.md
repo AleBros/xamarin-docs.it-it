@@ -1,8 +1,22 @@
 ---
-title: "visualizzazione di avvisi JavaScript su Windows" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Windows specifica che consente a una visualizzazione WebView di visualizzare gli avvisi JavaScript in una finestra di dialogo di messaggio UWP ".
-ms. prod: Novell MS. AssetID: 95A153A1-72A0-4C0B-A452-ACE966BB12CB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Avvisi JavaScript WebView per Windows
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Windows specifica che consente a una visualizzazione WebView di visualizzare gli avvisi JavaScript in una finestra di dialogo di messaggio UWP.
+ms.prod: xamarin
+ms.assetid: 95A153A1-72A0-4C0B-A452-ACE966BB12CB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b7d039d26895b50f937392941e42a92a6e51f322
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137488"
 ---
-
 # <a name="webview-javascript-alerts-on-windows"></a>Avvisi JavaScript WebView per Windows
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

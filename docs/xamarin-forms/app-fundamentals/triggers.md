@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Triggers" Description: "questo articolo spiega come usare i Xamarin.Forms trigger per rispondere alle modifiche dell'interfaccia utente con XAML. I trigger consentono di esprimere in modo dichiarativo le azioni in XAML che modificano l'aspetto dei controlli in base a eventi o modifiche di proprietà.
-ms. prod: Novell MS. AssetID: 60460F57-63C6-4916-BBB5-A870F1DF53D7 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsTrigger
+description: Questo articolo illustra come usare i Xamarin.Forms trigger per rispondere alle modifiche dell'interfaccia utente con XAML. I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
+ms.prod: xamarin
+ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136955"
 ---
-
 # <a name="xamarinforms-triggers"></a>Xamarin.FormsTrigger
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)

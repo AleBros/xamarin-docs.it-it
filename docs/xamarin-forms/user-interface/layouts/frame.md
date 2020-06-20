@@ -1,6 +1,21 @@
 ---
-title: " Xamarin.Forms frame" Description: "la Xamarin.Forms classe frame è un layout usato per eseguire il wrapping di una visualizzazione o di un layout con un bordo che può essere configurato con colore, ombreggiatura e altre opzioni".
-ms. prod: Novell MS. assetId: 4E074714-0928-41C8-A468-B60E23236A8C ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsFrame
+description: La Xamarin.Forms classe frame è un layout utilizzato per eseguire il wrapping di una visualizzazione o di un layout con un bordo che può essere configurato con colore, ombreggiatura e altre opzioni.
+ms.prod: xamarin
+ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137189"
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.FormsFrame
 

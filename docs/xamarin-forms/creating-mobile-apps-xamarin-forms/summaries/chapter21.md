@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 21. Trasforma "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 21. Trasforma "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 3642F112-C7FA-4A74-9000-F9087BA89AD9 autore: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 21. Trasformazioni
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 21. Trasformazioni'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136669"
 ---
-
 # <a name="summary-of-chapter-21-transforms"></a>Riepilogo del capitolo 21. Trasformazioni
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)

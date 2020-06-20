@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 18. MVVM "Description:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 18. MVVM "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 6A774510-7709-4F60-8EF5-29D478176F8F Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 18. MVVM
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 18. MVVM'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f180173a42654c54c5686e423ba20d9586271ea
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136708"
 ---
-
 # <a name="summary-of-chapter-18-mvvm"></a>Riepilogo del capitolo 18. MVVM
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)

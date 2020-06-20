@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms BoxView" Description: "in questo articolo viene illustrato come utilizzare un rettangolo colorato per la decorazione, la grafica e l'interazione in un' Xamarin.Forms applicazione".
-ms. prod: Novell MS. AssetID: 4CBF703D-84A0-4CDF-A433-5926B587782A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsBoxView
+description: Questo articolo illustra come usare un rettangolo colorato per la decorazione, la grafica e l'interazione in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 06f1813bafb34a9c32603490e66f8caa6c6a6a22
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573820"
 ---
-
 # <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)

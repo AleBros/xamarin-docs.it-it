@@ -1,8 +1,22 @@
 ---
-title: "filtri maschera SkiaSharp" Descrizione: "informazioni su come usare il filtro maschera per creare sfocature e altri effetti alfa".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 940422A1-8BC0-4039-8AD7-26C61320F858 autore: davidbritch ms. Author: dabritch ms. Date: 08/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Filtri maschera SkiaSharp
+description: Informazioni su come usare il filtro maschera per creare sfocature e altri effetti alfa.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136409"
 ---
-
 # <a name="skiasharp-mask-filters"></a>Filtri maschera SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

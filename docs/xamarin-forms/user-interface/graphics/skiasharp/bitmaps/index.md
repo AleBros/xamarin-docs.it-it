@@ -1,8 +1,22 @@
 ---
-title: "bitmap di SkiaSharp" Descrizione: "informazioni su come caricare, salvare, visualizzare, creare, creare, aggiungere, animare e accedere ai bit di bitmap SkiaSharp".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 70C19370-157A-4B1B-9532-F77E32AC21BC autore: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Bitmap SkiaSharp
+description: Informazioni su come caricare, salvare, visualizzare, creare, elaborare, animare e accedere ai bit di bitmap SkiaSharp.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1d21fc199dd67471440ca0e3eeaf9a140e7a1967
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140231"
 ---
-
 # <a name="skiasharp-bitmaps"></a>Bitmap SkiaSharp
 
 Una bitmap è una matrice rettangolare di dati corrispondente ai pixel di un dispositivo di visualizzazione. L'area della programmazione grafica associata a bitmap è talvolta denominata _grafica raster_ (denominata dopo le linee di analisi dei primi video visualizzati), a differenza della _grafica vettoriale_ delle linee e delle curve. 

@@ -1,8 +1,22 @@
 ---
-title: "aggiunta di un riconoscitore di movimento di pizzico" Descrizione: "questo articolo spiega come usare il gesto di pizzico per eseguire lo zoom interattivo di un'immagine nella posizione del pizzico".
-ms. prod: Novell MS. AssetID: 832F7810-F0CF-441A-B04A-3975F3FB8B29 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
+description: Questo articolo illustra come usare il movimento di avvicinamento delle dita per eseguire lo zoom interattivo di un'immagine in corrispondenza della posizione di avvicinamento delle dita.
+ms.prod: xamarin
+ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: da4a8bc66a7986efd3683de6dce1f6af618b85cc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137852"
 ---
-
 # <a name="adding-a-pinch-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)

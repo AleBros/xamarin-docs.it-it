@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 2. Anatomia di un'app "Description:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 2. Anatomia di un'app "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 2. Anatomia di un'app
+description: "Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 2. Anatomia di un'app"
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 78da3ed91acea0c056074d712d368de70b251392
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136916"
 ---
-
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Riepilogo del capitolo 2. Anatomia di un'app
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)

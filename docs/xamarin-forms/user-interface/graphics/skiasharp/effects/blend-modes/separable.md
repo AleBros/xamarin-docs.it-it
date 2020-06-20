@@ -1,8 +1,22 @@
 ---
-title: "modalità di Blend separabile" Descrizione: "utilizzare le modalità di Blend separabili per modificare i colori rosso, verde e blu".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 66D1A537-A247-484E-B5B9-FBCB7838FBE9 autore: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità di Blend separabili
+description: Utilizzare le modalità di Blend separabili per modificare i colori rosso, verde e blu.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139685"
 ---
-
 # <a name="the-separable-blend-modes"></a>Modalità di Blend separabili
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

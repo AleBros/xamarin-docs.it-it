@@ -1,8 +1,23 @@
 ---
-title: "localizzazione da destra a sinistra" Descrizione: "la localizzazione da destra a sinistra aggiunge il supporto per la direzione del flusso da destra a sinistra alle Xamarin.Forms applicazioni".
-ms. prod: Novell MS. AssetID: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 05/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Localizzazione da destra a sinistra
+description: La localizzazione da destra a sinistra aggiunge il supporto per la direzione del flusso da destra a sinistra alle Xamarin.Forms applicazioni.
+ms.prod: xamarin
+ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137553"
 ---
-
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
@@ -128,7 +143,7 @@ Xamarin.Formsla localizzazione da destra a sinistra presenta attualmente una ser
 - [`SearchBar`](xref:Xamarin.Forms.SearchBar)l'orientamento è controllato dalle impostazioni locali del dispositivo anziché dalla [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) Proprietà.
 - [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)la selezione host viene controllata dalle impostazioni locali del dispositivo anziché dalla [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) Proprietà.
 
-### <a name="uwp"></a>Piattaforma UWP
+### <a name="uwp"></a>UWP
 
 - [`Editor`](xref:Xamarin.Forms.Editor)l'allineamento del testo è controllato dalle impostazioni locali del dispositivo anziché dalla [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) Proprietà.
 - [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)la proprietà non viene ereditata dagli [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) elementi figlio.

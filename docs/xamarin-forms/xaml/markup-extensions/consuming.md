@@ -1,8 +1,22 @@
 ---
-title: "utilizzo delle estensioni di markup XAML" Descrizione: "in questo articolo viene illustrato come utilizzare Xamarin.Forms le estensioni di markup XAML per migliorare la potenza e la flessibilità di XAML consentendo l'impostazione degli attributi degli elementi da diverse origini."
-ms. prod: Novell MS. AssetID: CE686893-609C-4EC3-9225-6C68D2A9F79C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/21/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Utilizzo di estensioni di markup XAML
+description: Questo articolo illustra come usare Xamarin.Forms le estensioni di markup XAML per migliorare la potenza e la flessibilità di XAML consentendo l'impostazione degli attributi degli elementi da diverse origini.
+ms.prod: xamarin
+ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84903109"
 ---
-
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di markup XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -18,7 +32,7 @@ Le estensioni di markup XAML consentono di migliorare la potenza e la flessibili
 - [`OnIdiom`](#onidiom-markup-extension): personalizzare l'aspetto dell'interfaccia utente in base all'idioma del dispositivo in cui è in esecuzione l'applicazione.
 - [`DataTemplate`](#datatemplate-markup-extension): converte un tipo in un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 - [`FontImage`](#fontimage-markup-extension): Visualizza un'icona del tipo di carattere in qualsiasi visualizzazione in cui è possibile visualizzare un oggetto `ImageSource` .
-- [`OnAppTheme`](#onapptheme-markup-extension): usa una risorsa basata sul tema corrente del sistema.
+- [`AppThemeBinding`](#appthemebinding-markup-extension): usa una risorsa basata sul tema corrente del sistema.
 
 Le estensioni di markup XAML aggiuntive sono state supportate in passato da altre implementazioni XAML e sono supportate anche da Xamarin.Forms . Queste informazioni sono descritte in modo più completo negli altri articoli:
 
@@ -566,60 +580,55 @@ Ecco il programma in esecuzione:
 
 Per informazioni sulla visualizzazione delle icone dei tipi di carattere specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto, vedere [visualizzare le icone del carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## <a name="onapptheme-markup-extension"></a>Estensione di markup OnAppTheme
+## <a name="appthemebinding-markup-extension"></a>Estensione di markup AppThemeBinding
 
-L' `OnAppTheme` estensione di markup consente di specificare una risorsa da utilizzare, ad esempio un'immagine o un colore, in base al tema corrente del sistema. Fornisce la stessa funzionalità della `OnAppTheme<T>` classe, ma con una rappresentazione più concisa.
+L' `AppThemeBinding` estensione di markup consente di specificare una risorsa da utilizzare, ad esempio un'immagine o un colore, in base al tema corrente del sistema.
 
 > [!IMPORTANT]
-> L' `OnAppTheme` estensione di markup presenta requisiti minimi per il sistema operativo. Per altre informazioni, vedere [rispondere alle modifiche del tema di sistema nelle Xamarin.Forms applicazioni](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
+> L' `AppThemeBinding` estensione di markup presenta requisiti minimi per il sistema operativo. Per altre informazioni, vedere [rispondere alle modifiche del tema di sistema nelle Xamarin.Forms applicazioni](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
 
-L' `OnAppTheme` estensione di markup è supportata dalla `OnAppThemeExtension` classe, che definisce le proprietà seguenti:
+L' `AppThemeBinding` estensione di markup è supportata dalla `AppThemeBindingExtension` classe, che definisce le proprietà seguenti:
 
 - `Default`, di tipo `object` , impostato sulla risorsa da utilizzare per impostazione predefinita.
 - `Light`, di tipo `object` , impostato sulla risorsa da usare quando il dispositivo usa il tema chiaro.
 - `Dark`, di tipo `object` , impostato sulla risorsa da usare quando il dispositivo usa il tema scuro.
 - `Value`, di tipo `object` , che restituisce la risorsa attualmente utilizzata dall'estensione di markup.
-- `Converter`di tipo `IValueConverter` , che può essere impostato su un' `IValueConverter` implementazione di.
-- `ConverterParameter`di tipo `object` , che può essere impostato su un valore da passare all' `IValueConverter` implementazione.
 
 > [!NOTE]
-> Il parser XAML consente `OnAppThemeExtension` di abbreviare la classe come `OnAppTheme` .
+> Il parser XAML consente `AppThemeBindingExtension` di abbreviare la classe come `AppBindingTheme` .
 
-La `Default` proprietà è la proprietà di contenuto di `OnAppThemeExtension` . Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare la `Default=` parte dell'espressione purché sia il primo argomento.
+La `Default` proprietà è la proprietà di contenuto di `AppThemeBindingExtension` . Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare la `Default=` parte dell'espressione purché sia il primo argomento.
 
-La pagina **demo di OnAppTheme** illustra come usare l' `OnAppTheme` estensione di markup:
+La pagina **demo di AppThemeBinding** illustra come usare l' `AppThemeBinding` estensione di markup:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarkupExtensions.OnAppThemeDemoPage"
-             Title="OnAppTheme Demo">
+             x:Class="MarkupExtensions.AppThemeBindingDemoPage"
+             Title="AppThemeBinding Demo">
     <ContentPage.Resources>
 
         <Style x:Key="labelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{OnAppTheme Black, Light=Blue, Dark=Teal}" />
+                    Value="{AppThemeBinding Black, Light=Blue, Dark=Teal}" />
         </Style>
 
     </ContentPage.Resources>
     <StackLayout Margin="20">
         <Label Text="This text is green in light mode, and red in dark mode."
-               TextColor="{OnAppTheme Light=Green, Dark=Red}" />
+               TextColor="{AppThemeBinding Light=Green, Dark=Red}" />
         <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
-               Style="{DynamicResource labelStyle}" />
+               Style="{StaticResource labelStyle}" />
     </StackLayout>
 </ContentPage>
 ```
 
 In questo esempio, il colore del testo del primo [`Label`](xref:Xamarin.Forms.Label) viene impostato su verde quando il dispositivo usa il tema chiaro e viene impostato su rosso quando il dispositivo usa il tema scuro. Il secondo `Label` ha la [`TextColor`](xref:Xamarin.Forms.Label.TextColor) proprietà impostata tramite [`Style`](xref:Xamarin.Forms.Style) . In questo modo `Style` , il colore del testo di `Label` viene impostato su nero per impostazione predefinita, su blu quando il dispositivo usa il tema chiaro e su verde acqua quando il dispositivo usa il tema scuro.
 
-> [!NOTE]
-> Un oggetto [`Style`](xref:Xamarin.Forms.Style) che utilizza l' `OnAppTheme` estensione di markup deve essere applicato a un controllo con l' `DynamicResource` estensione di markup, in modo che l'interfaccia utente dell'applicazione venga aggiornata quando il tema del sistema viene modificato.
-
 Ecco il programma in esecuzione:
 
-![Demo di OnAppTheme](consuming-images/onappthemedemo.png "Demo di OnAppTheme")
+![Demo di AppThemeBinding](consuming-images/appthemebindingdemo.png "Demo di AppThemeBinding")
 
 ## <a name="define-markup-extensions"></a>Definire le estensioni di markup
 

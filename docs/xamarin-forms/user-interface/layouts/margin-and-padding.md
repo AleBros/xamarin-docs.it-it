@@ -1,8 +1,22 @@
 ---
-title: "margin e Padding" Description: "le proprietà Margin e Padding controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarle ".
-ms. prod: Novell MS. AssetID: BEB096BB-51DF-410F-B0F1-D235287B0F4A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Margine e spaziatura interna
+description: Le proprietà Margin e Padding controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarle.
+ms.prod: xamarin
+ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137989"
 ---
-
 # <a name="margin-and-padding"></a>Margine e spaziatura interna
 
 _Le proprietà Margin e Padding controllano il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarle._

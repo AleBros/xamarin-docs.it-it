@@ -1,9 +1,22 @@
 ---
-Titolo: "Riepilogo del capitolo 1. Come si Xamarin.Forms adatta? "
-Descrizione: "creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 1. Come si Xamarin.Forms adatta? "
-ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: F3F864FF-EE70-49D0-90D1-388889037625 Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 1. Come si Xamarin.Forms adatta?
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 1. Come si Xamarin.Forms adatta?'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136929"
 ---
-
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. Come si Xamarin.Forms adatta?
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)

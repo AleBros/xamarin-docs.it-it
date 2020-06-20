@@ -1,8 +1,22 @@
 ---
-title: "aggiunta di un riconoscitore di movimento Pan" Description: "in questo articolo viene illustrato come utilizzare un movimento Pan per eseguire il panning orizzontale e verticale di un'immagine, in modo che tutto il contenuto dell'immagine possa essere visualizzato quando viene visualizzato in un viewport più piccolo delle dimensioni dell'immagine".
-ms. prod: Novell MS. AssetID: 42CBD2CF-432D-4F19-A05E-D569BB7F8713 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aggiunta di un sistema di riconoscimento del movimento di panoramica
+description: Questo articolo illustra come usare un movimento di panoramica per eseguire una panoramica in orizzontale e in verticale di un'immagine, in modo da poter vedere tutto il contenuto dell'immagine quando è visualizzata in un viewport più piccolo rispetto alle dimensioni dell'immagine.
+ms.prod: xamarin
+ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137631"
 ---
-
 # <a name="adding-a-pan-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di panoramica
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)

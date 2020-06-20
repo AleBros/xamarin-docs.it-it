@@ -1,8 +1,22 @@
 ---
-title: "dati del percorso SVG in SkiaSharp" Description: "questo articolo spiega come definire i percorsi di SkiaSharp usando stringhe di testo nel formato di grafica vettoriale scalabile e lo dimostra con il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 1D53067B-3502-4D74-B89D-7EC496901AE2 autore: davidbritch ms. Author: dabritch ms. Date: 05/24/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Dati del percorso SVG in SkiaSharp
+description: Questo articolo illustra come definire i percorsi SkiaSharp usando stringhe di testo nel formato di grafica vettoriale scalabile e lo dimostra con il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/24/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 680c924280f8f3a6080b2fcc1968ecaf308f33a0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138060"
 ---
-
 # <a name="svg-path-data-in-skiasharp"></a>Dati del percorso SVG in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

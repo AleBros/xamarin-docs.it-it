@@ -1,8 +1,22 @@
 ---
-title: "passaggio di parametri effetto come proprietà di Common Language Runtime" Descrizione: è possibile usare le proprietà CLR (Common Language Runtime) per definire i parametri degli effetti che non rispondono alle modifiche delle proprietà di Runtime. Questo articolo illustra l'uso delle proprietà CLR per passare parametri a un effetto ".
-ms. prod: Novell MS. AssetID: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/05/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Passaggio dei parametri di un effetto come proprietà Common Language Runtime
+description: Le proprietà CLR (Common Language Runtime) possono essere usate per definire parametri per gli effetti che non rispondono alle modifiche delle proprietà in fase di esecuzione. Questo articolo illustra l'uso delle proprietà CLR per il passaggio di parametri a un effetto.
+ms.prod: xamarin
+ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/05/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 37d870509e034f4c23afba60fa055965ed9df4de
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138866"
 ---
-
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio dei parametri di un effetto come proprietà Common Language Runtime
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

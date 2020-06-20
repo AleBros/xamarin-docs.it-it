@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Navigation" Description: "questa guida illustra come eseguire la navigazione nelle Xamarin.Forms app. Xamarin.Formsin sono disponibili diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina utilizzato ".
-ms. prod: Novell MS. AssetID: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsNavigazione
+description: Questa guida illustra come eseguire la navigazione nelle Xamarin.Forms app. Xamarin.Formsin sono disponibili diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina utilizzato.
+ms.prod: xamarin
+ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137839"
 ---
-
 # <a name="xamarinforms-navigation"></a>Xamarin.FormsNavigazione
 
 _Novell. Forms fornisce una serie di diverse esperienze di navigazione tra le pagine, a seconda del tipo di pagina usato._

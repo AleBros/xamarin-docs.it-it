@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Data Binding" Description: "data binding è la tecnica di collegamento delle proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano riflesse automaticamente nell'altra proprietà. Il data binding è parte integrante dell'architettura delle applicazioni MVC (Model-View-ViewModel).
-ms. prod: Novell MS. AssetID: 938E85C8-521D-43B9-92CB-D591A06D98A6 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsData Binding
+description: Il data binding è la tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Il data binding è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM).
+ms.prod: xamarin
+ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9abbe60865cbf5fb9082b5f4882c27fe095b36ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946455"
 ---
-
 # <a name="xamarinforms-data-binding"></a>Xamarin.FormsData Binding
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -55,6 +69,10 @@ Utilizzare le associazioni relative per impostare l'origine dell'associazione in
 ## <a name="binding-fallbacks"></a>[Fallback di binding](binding-fallbacks.md)
 
 Per rendere più solidi i data binding, definire i valori di fallback da usare se il processo di binding ha esito negativo.
+
+## <a name="multi-bindings"></a>[Associazioni multifunzione](multibinding.md)
+
+Associare una raccolta di [`Binding`](xref:Xamarin.Forms.Binding) oggetti a una singola proprietà di destinazione del binding.
 
 ## <a name="the-command-interface"></a>[Interfaccia di comando](commanding.md)
 

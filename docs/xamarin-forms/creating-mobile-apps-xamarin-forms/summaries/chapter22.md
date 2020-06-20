@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 22. Animazione "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 22. Animazione "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 47C2B9AB-E688-4412-8AF5-9F633B3DA695 Author: davidbritch ms. Author: dabritch ms. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 22. Animazione
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 22. Animazione'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a8a089c210a3fe2f48dbe32bf8cda6179af2a78
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136630"
 ---
-
 # <a name="summary-of-chapter-22-animation"></a>Riepilogo del capitolo 22. Animazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)

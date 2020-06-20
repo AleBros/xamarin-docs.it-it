@@ -1,7 +1,22 @@
 ---
-Titolo: "Riepilogo del capitolo 3. Approfondimento sul testo "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 3. Approfondimento sul testo "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734 autore: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 3. Dettagli della gestione del testo
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 3. Dettagli della gestione del testo'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136903"
 ---
-
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Riepilogo del capitolo 3. Dettagli della gestione del testo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)

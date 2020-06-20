@@ -1,8 +1,22 @@
 ---
-title: "SkiaSharp Lines and paths" Description: "in questo articolo viene illustrato come utilizzare SkiaSharp per tracciare linee e percorsi grafici nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio".
-ms. prod: Novell MS. AssetID: 316A15FE-383D-4D06-8641-BAC7EE7474CA ms. Technology: Novell-skiasharp autore: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Linee e tracciati in SkiaSharp
+description: In questo articolo viene illustrato come utilizzare SkiaSharp per tracciare linee e percorsi grafici nelle Xamarin.Forms applicazioni e come illustrato nel codice di esempio.
+ms.prod: xamarin
+ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138996"
 ---
-
 # <a name="skiasharp-lines-and-paths"></a>Linee e tracciati in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

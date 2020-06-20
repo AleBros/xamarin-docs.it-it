@@ -1,7 +1,22 @@
 ---
-Titolo: "Riepilogo del capitolo 20. Async and file I/O "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 20. I/O asincrono e file "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: D595862D-64FD-4C0D-B0AD-C1F440564247 Author: davidbritch ms. Author: dabritch ms. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 20. I/O asincrono e su file
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 20. I/O asincrono e su file'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136682"
 ---
-
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. I/O asincrono e su file
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)

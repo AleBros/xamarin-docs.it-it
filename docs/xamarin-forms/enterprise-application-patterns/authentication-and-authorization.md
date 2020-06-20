@@ -1,8 +1,22 @@
 ---
-Titolo: "autenticazione e autorizzazione" Descrizione: "questo capitolo illustra come l'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione per i microservizi in contenitori".
-ms. prod: Novell MS. AssetID: e3f27b4c-f7f5-4839-a48c-30bcb919c59e ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticazione e autorizzazione
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione per i microservizi in contenitori.
+ms.prod: xamarin
+ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573833"
 ---
-
 # <a name="authentication-and-authorization"></a>Autenticazione e autorizzazione
 
 L'autenticazione è il processo di recupero delle credenziali di identificazione, ad esempio il nome e la password, da un utente e la convalida delle credenziali rispetto a un'autorità. Se le credenziali sono valide, l'entità che ha inviato le credenziali viene considerata un'identità autenticata. Una volta autenticata un'identità, un processo di autorizzazione determina se tale identità ha accesso a una determinata risorsa.
