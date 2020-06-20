@@ -1,8 +1,22 @@
 ---
-title: "Introduzione allo sviluppo di app aziendali" Descrizione: "questo capitolo fornisce una prefazione ai modelli di applicazione aziendali con Xamarin.Forms ."
-ms. prod: Novell MS. AssetID: fbf32a44-1d33-4e16-A904-dc7ee5991e7c ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione allo sviluppo di app aziendali
+description: Questo capitolo offre una prefazione ai modelli di applicazioni aziendali che usano Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198092"
 ---
-
 # <a name="preface-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
 Questo eBook fornisce informazioni aggiuntive sulla creazione di app aziendali multipiattaforma con Xamarin.Forms . Xamarin.Formsè un toolkit di interfaccia utente multipiattaforma che consente agli sviluppatori di creare facilmente layout di interfaccia utente nativi che possono essere condivisi tra piattaforme, tra cui iOS, Android e la piattaforma UWP (Universal Windows Platform) (UWP). Offre una soluzione completa per le app business to Employee (B2E), business to business (B2B) e business to consumer (B2C), offrendo la possibilità di condividere il codice tra tutte le piattaforme di destinazione e di ridurre il costo totale di proprietà (TCO).

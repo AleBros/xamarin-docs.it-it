@@ -1,8 +1,24 @@
 ---
-title: "eseguire lo spostamento in un'applicazione a più pagine Xamarin.Forms " Descrizione: "in questo articolo viene illustrato come trasformare l'applicazione a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note".
-zone_pivot_groups: piattaforma MS. Topic: avvio rapido ms. prod: Novell MS. AssetID: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Eseguire lo spostamento in un'applicazione a più pagine Xamarin.Forms
+description: Questo articolo illustra come trasformare l'applicazione a singola pagina, in grado di archiviare una singola nota, in un'applicazione multipagina, in grado di archiviare più note.
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b3616d0cf4804dfb37d4fe65034796c672dec828
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127881"
 ---
-
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Eseguire lo spostamento in un'applicazione a più pagine Xamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)

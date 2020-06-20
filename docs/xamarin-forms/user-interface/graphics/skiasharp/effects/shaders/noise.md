@@ -1,8 +1,22 @@
 ---
-title: "SkiaSharp noise and composement" Description: "generate Perlin noise shaders and combine with other Shaders".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 90C2D00A-2876-43EA-A836-538C3318CF93 autore: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp rumore e composizione
+description: Genera shader di Perlin e combina con altri shader.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127764"
 ---
-
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp rumore e composizione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

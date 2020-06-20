@@ -1,8 +1,22 @@
 ---
-title: "eventi del ciclo di vita della pagina in Android" Descrizione: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita gli eventi della pagina di scomparsa e di visualizzazione nella sospensione e riattivazione dell'applicazione, rispettivamente.
-ms. prod: Novell MS. AssetID: F6E3759C-D347-407A-91A2-CF9B3B7D4CBD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Eventi del ciclo di vita della pagina in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita gli eventi della pagina di scomparsa e di visualizzazione per la sospensione e la ripresa dell'applicazione, rispettivamente.
+ms.prod: xamarin
+ms.assetid: F6E3759C-D347-407A-91A2-CF9B3B7D4CBD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76724ff17613fcebe35cb68518a1c932eee8aad7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128726"
 ---
-
 # <a name="page-lifecycle-events-on-android"></a>Eventi del ciclo di vita della pagina in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

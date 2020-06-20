@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms AbsoluteLayout" Description: "questo articolo spiega come usare la Xamarin.Forms classe AbsoluteLayout per creare interfacce utente perfette per i pixel. Questa classe consente di posizionare e ridimensionare elementi figlio proporzionali alla propria dimensione e posizione o ai valori assoluti ".
-ms. prod: Novell MS. AssetID: 01A5CCE0-AD45-4806-84FD-72C007005B38 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/25/2015 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAbsoluteLayout
+description: Questo articolo illustra come usare la Xamarin.Forms classe AbsoluteLayout per creare interfacce utente perfette per i pixel. Questa classe posiziona e ridimensiona gli elementi figlio proporzionali alle dimensioni e alla posizione o ai valori assoluti.
+ms.prod: xamarin
+ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/25/2015
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570531"
 ---
-
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

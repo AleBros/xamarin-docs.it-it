@@ -1,8 +1,22 @@
 ---
-title: "accesso a bits pixel bitmap SkiaSharp" Descrizione: "individuare le varie tecniche per l'accesso e la modifica dei bit di pixel delle bitmap SkiaSharp".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: DBB58522-F816-4A8C-96A5-E0236F16A5C6 autore: davidbritch ms. Author: dabritch ms. Date: 07/11/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Accesso a bit di pixel bitmap SkiaSharp
+description: Scopri le varie tecniche per l'accesso e la modifica dei bit di pixel delle bitmap SkiaSharp.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/11/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135581"
 ---
-
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Accesso a bit di pixel bitmap SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -475,7 +489,7 @@ Per consentire al compilatore di ottimizzare il codice, questa pagina è stata e
 
 Ecco una tabella che consolida i tempi di esecuzione in millisecondi:
 
-| API       | Tipo di dati | iOS  | Android | Piattaforma UWP  |
+| API       | Tipo di dati | iOS  | Android | UWP  |
 | --------- | --------- | ----:| -------:| ----:|
 | SetPixel  |           | 3,17 |   10,77 | 3.49 |
 | Pixel    |           | 0,32 |    1.23 | 0,07 |

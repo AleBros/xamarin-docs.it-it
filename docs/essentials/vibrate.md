@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Vibration" Description: "questo documento descrive la classe Vibration in Xamarin.Essentials , che consente di avviare e arrestare la funzionalità di vibrazione per una quantità di tempo desiderata".
-ms. AssetID: 7E8B24C4-2625-4DAE-A129-383542D34F1E Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Vibrazione'
+description: In questo documento viene descritta la classe Vibration in Xamarin.Essentials , che consente di avviare e arrestare la funzionalità di vibrazione per un periodo di tempo desiderato.
+ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2ed2dfdca6b6811089d4dbb5d6e90e794c79591
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801803"
 ---
-
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibrazione
 
 La classe **Vibration** consente di avviare e arrestare la funzionalità di vibrazione per un periodo di tempo desiderato.
@@ -110,7 +123,7 @@ Non esistono differenze per questa piattaforma.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Vibration](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
+- [Codice sorgente di Vibration](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Vibration)
 - [Documentazione dell'API Vibration](xref:Xamarin.Essentials.Vibration)
 
 ## <a name="related-video"></a>Video correlato

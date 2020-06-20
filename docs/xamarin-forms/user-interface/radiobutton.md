@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms RadioButton" Description: " Xamarin.Forms RadioButton è un tipo di pulsante che consente agli utenti di selezionare un'opzione da un set. Ogni opzione è rappresentata da un solo pulsante di opzione ed è possibile selezionare un solo pulsante di opzione in un gruppo ".
-ms. prod: Novell MS. AssetID: E2AA40E0-69A5-41DF-BFC4-C151CA657451 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/13/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsRadioButton
+description: Xamarin.FormsRadioButton è un tipo di pulsante che consente agli utenti di selezionare un'opzione da un set. Ogni opzione è rappresentata da un solo pulsante di opzione ed è possibile selezionare un solo pulsante di opzione in un gruppo.
+ms.prod: xamarin
+ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/13/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127623"
 ---
-
 # <a name="xamarinforms-radiobutton"></a>Xamarin.FormsRadioButton
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)

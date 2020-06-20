@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Permissions" Description: "questo documento descrive la classe Permissions in Xamarin.Essentials , che consente di controllare e richiedere le autorizzazioni di runtime".
-ms. AssetID: 34062D84-3E55-4AF7-A688-8551068B1E57 Author: jamesmontemagno ms. Author: Jamont ms. Custom: video ms. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Autorizzazioni'
+description: In questo documento viene descritta la classe delle autorizzazioni in Xamarin.Essentials , che consente di controllare e richiedere le autorizzazioni di Runtime.
+ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
+author: jamesmontemagno
+ms.author: jamont
+ms.custom: video
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5de10511d73614570d6308b6f4deb7b4ca55549a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802235"
 ---
-
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Autorizzazioni
 
 La classe **Permissions** consente di controllare e richiedere le autorizzazioni di Runtime.
@@ -64,7 +77,7 @@ Guida alle icone:
 * ![Supporto completo](~/media/shared/yes.png "supporto completo") : supportato
 * ![Non supportato](~/media/shared/no.png "Non supportato o obbligatorio") : non supportato/obbligatorio
 
-| Autorizzazione | Android | iOS | Piattaforma UWP | watchOS | tvOS | Tizen |
+| Autorizzazione | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 | CalendarRead   | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | CalendarWrite | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
@@ -76,7 +89,7 @@ Guida alle icone:
 | LocationAlways | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
 | Contenuti multimediali | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Microfono | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen supportato](~/media/shared/yes.png "Tizen supportato") |
-| Layout | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
+| Telefono | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Foto | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos non supportati](~/media/shared/no.png "watchos non supportati") | ![tvOS supportato](~/media/shared/yes.png "tvOS supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Reminders | ![Android non supportato](~/media/shared/no.png "Android non supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP non supportato](~/media/shared/no.png "UWP non supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
 | Sensori | ![Android supportato](~/media/shared/yes.png "Android supportato") | ![iOS supportato](~/media/shared/yes.png "iOS supportato") | ![UWP supportato](~/media/shared/yes.png "UWP supportato") | ![watchos supportati](~/media/shared/yes.png "watchos supportati") | ![tvOS non supportato](~/media/shared/no.png "tvOS non supportato") | ![Tizen non supportato](~/media/shared/no.png "Tizen non supportato") |
@@ -135,7 +148,7 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 
 ## <a name="extending-permissions"></a>Estensione delle autorizzazioni
 
-L'API delle autorizzazioni è stata creata per essere flessibile ed estendibile per le applicazioni che richiedono una convalida o autorizzazioni aggiuntive che non sono incluse in Xamarin.Essentials . Creare una nuova classe che eredita da `BasePermission` e implementare i metodi astratti richiesti. Operazione da eseguire
+L'API delle autorizzazioni è stata creata per essere flessibile ed estendibile per le applicazioni che richiedono una convalida o autorizzazioni aggiuntive che non sono incluse in Xamarin.Essentials . Creare una nuova classe che eredita da `BasePermission` e implementare i metodi astratti richiesti. Risultato
 
 ```csharp
 public class MyPermission : BasePermission
@@ -214,7 +227,7 @@ Per altre informazioni, vedere la documentazione relativa alla [dichiarazione de
 
 ## <a name="api"></a>API
 
-- [Codice sorgente delle autorizzazioni](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Permissions)
+- [Codice sorgente delle autorizzazioni](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Permissions)
 - [Documentazione dell'API delle autorizzazioni](xref:Xamarin.Essentials.Permissions)
 
 

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms label" Description: "in questo articolo viene illustrato come utilizzare la Xamarin.Forms classe Label per visualizzare il testo a più righe e a più righe nelle applicazioni".
-ms. prod: Novell MS. AssetID: 02E6C553-5670-49A0-8EE9-5153ED21EA91 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsEtichetta
+description: Questo articolo illustra come usare la Xamarin.Forms classe Label per visualizzare il testo a più righe e a più righe nelle applicazioni.
+ms.prod: xamarin
+ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/09/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8bf6517e3624ad80c2fd4d209e5a77472460be76
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570518"
 ---
-
 # <a name="xamarinforms-label"></a>Xamarin.FormsEtichetta
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

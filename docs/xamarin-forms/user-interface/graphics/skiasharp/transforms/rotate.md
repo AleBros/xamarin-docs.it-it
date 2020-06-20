@@ -1,8 +1,22 @@
 ---
-title: "la trasformazione ruota" Description: "in questo articolo vengono esaminati gli effetti e le animazioni possibili con SkiaSharp rotate transform e viene illustrato il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: CBB3CD72-4377-4EA3-A768-0C4228229FC2 autore: davidbritch ms. Author: dabritch ms. Date: 03/23/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazione di rotazione
+description: In questo articolo vengono esaminati gli effetti e le animazioni possibili con la trasformazione SkiaSharp rotate e viene illustrato il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 520c4c3b61049bf17c2c964523714db196da6839
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132184"
 ---
-
 # <a name="the-rotate-transform"></a>Trasformazione di rotazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

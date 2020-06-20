@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Editor" Description: "questo articolo spiega come usare il Xamarin.Forms controllo editor per accettare l'input di testo su più righe in un'applicazione".
-ms. prod: Novell MS. AssetID: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms Editor
+description: Questo articolo illustra come usare il Xamarin.Forms controllo editor per accettare l'input di testo su più righe in un'applicazione.
+ms.prod: xamarin
+ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 02749c9f8f55427bb1742e78464bbc003f1f7358
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136175"
 ---
-
 # <a name="xamarinforms-editor"></a>Xamarin.Forms Editor
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -271,7 +285,7 @@ Assicurarsi che i colori di sfondo e testo scelti siano utilizzabili in ogni pia
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe, da cui [`Entry`](xref:Xamarin.Forms.Entry) eredita, include anche [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) gli eventi e.
 
-### <a name="completed"></a>Completato
+### <a name="completed"></a>Completi
 
 L' `Completed` evento viene utilizzato per rispondere al completamento di un'interazione con un oggetto `Editor` . `Completed`viene generato quando l'utente termina l'input con un campo immettendo il tasto di ritorno sulla tastiera (o premendo il tasto TAB in UWP). Il gestore per l'evento è un gestore eventi generico che accetta il mittente e `EventArgs` :
 

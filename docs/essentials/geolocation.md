@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Geolocation" Description: "questo documento descrive la classe Geolocation in Xamarin.Essentials , che fornisce le API per recuperare le coordinate geografiche correnti del dispositivo".
-ms. AssetID: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Georilevazione'
+description: Questo documento descrive la classe Geolocation in Xamarin.Essentials , che fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
+ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f54c31afef691d316cbc3108792ab3158359c47c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802319"
 ---
-
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
 La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
@@ -145,7 +158,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| Piattaforma UWP | 1000 - 5000 |
+| UWP | 1000 - 5000 |
 
 ### <a name="low"></a>Basso
 
@@ -153,7 +166,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
-| Piattaforma UWP | 300 - 3000 |
+| UWP | 300 - 3000 |
 
 ### <a name="medium-default"></a>Media (impostazione predefinita)
 
@@ -161,15 +174,15 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 100 - 500 |
 | iOS | 100 |
-| Piattaforma UWP | 30 - 500 |
+| UWP | 30 - 500 |
 
-### <a name="high"></a>Alta
+### <a name="high"></a>Alto
 
 | Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | 10 |
-| Piattaforma UWP | <= 10 |
+| UWP | <= 10 |
 
 ### <a name="best"></a>Ottimale
 
@@ -177,7 +190,7 @@ La tabella seguente indica l'accuratezza per ogni piattaforma:
 | --- | --- |
 | Android | 0 - 100 |
 | iOS | ~0 |
-| Piattaforma UWP | <= 10 |
+| UWP | <= 10 |
 
 <a name="calculate-distance"></a>
 
@@ -231,7 +244,7 @@ In UWP, l'altitudine viene restituita in metri. Per ulteriori informazioni, vede
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Geolocation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
+- [Codice sorgente di Geolocation](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geolocation)
 - [Documentazione dell'API Geolocation](xref:Xamarin.Essentials.Geolocation)
 
 ## <a name="related-video"></a>Video correlato

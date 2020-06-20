@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : sintesi vocale" Descrizione: "la classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale incorporati per riprodurre il testo dal dispositivo e anche per eseguire query sulle lingue disponibili che il motore è in grado di supportare".
-ms. AssetID: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Sintesi vocale'
+description: La classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale incorporati per riprodurre testo dal dispositivo e anche per eseguire query sulle lingue disponibili che il motore è in grado di supportare.
+ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 452a54637c270f80c2e1add4d6cadedbb4b27077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801829"
 ---
-
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Sintesi vocale
 
 La classe **TextToSpeech** consente a un'applicazione di usare i motori di sintesi vocale predefiniti pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
@@ -139,7 +152,7 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
+- [Codice sorgente di TextToSpeech](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/TextToSpeech)
 - [Documentazione dell'API TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
 
 ## <a name="related-video"></a>Video correlato

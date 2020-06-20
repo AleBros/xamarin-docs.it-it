@@ -1,8 +1,21 @@
 ---
-title: "Novell Firewall Configuration instructions" Description: "questo documento fornisce un elenco di host che devono essere consentiti nel firewall per consentire il funzionamento di Novell in un ambiente aziendale."
-ms. prod: Novell MS. AssetID: 658f699b-8CCA-48f7-ae54-fa956384b6d6 autore: conceptdev ms. Author: crdun ms. Date: 07/17/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Istruzioni di configurazione del firewall di Xamarin
+description: Questo documento fornisce un elenco di host da consentire nel firewall per il corretto funzionamento di Xamarin in un ambiente aziendale.
+ms.prod: xamarin
+ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
+author: conceptdev
+ms.author: crdun
+ms.date: 07/17/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 71b2754d19d00b7bf4860acd96bfb7ad8dec4ce5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132991"
 ---
-
 # <a name="xamarin-firewall-configuration-instructions"></a>Istruzioni di configurazione del firewall di Xamarin
 
 _Un elenco di host da consentire nel firewall per il corretto funzionamento della piattaforma Xamarin nella propria azienda._

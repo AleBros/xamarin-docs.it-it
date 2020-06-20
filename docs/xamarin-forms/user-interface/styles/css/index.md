@@ -1,6 +1,22 @@
 ---
-title: "applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)" Description: " Xamarin.Forms supporta gli elementi visivi di stile utilizzando CASCADING Style Sheets (CSS)."
-ms. prod: Novell MS. AssetID: C89D57A6-DAB9-4C42-963F-26D67627DDC2 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)
+description: Xamarin.Formssupporta gli elementi visivi di stile utilizzando Cascading Style Sheets (CSS).
+ms.prod: xamarin
+ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9375c4078c75d8e4788cb31a3d6a6a3a10100f49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946225"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Applicazione di stili Xamarin.Forms con Cascading Style Sheets (CSS)
 
@@ -145,6 +161,12 @@ L'argomento del `StyleSheet.FromReader` metodo è l'oggetto `TextReader` che ha 
 CSS usa i selettori per determinare gli elementi di destinazione. Gli stili con selettori corrispondenti vengono applicati consecutivamente nell'ordine delle definizioni. Gli stili definiti per un elemento specifico vengono sempre applicati per ultimi. Per altre informazioni sui [selettori supportati, vedere riferimento al selettore](#selector-reference).
 
 CSS utilizza le proprietà per applicare uno stile a un elemento selezionato. Ogni proprietà dispone di un set di valori possibili e alcune proprietà possono influenzare qualsiasi tipo di elemento, mentre altre si applicano a gruppi di elementi. Per ulteriori informazioni sulle proprietà supportate, vedere [riferimento alle proprietà](#property-reference).
+
+I fogli di stile figlio eseguono sempre l'override dei fogli di stile padre se impostano le stesse proprietà. Pertanto, quando si applicano stili che impostano le stesse proprietà sono seguite le seguenti regole di precedenza:
+
+- Uno stile definito nelle risorse dell'applicazione verrà sovrascritto da uno stile definito nelle risorse della pagina, se le stesse proprietà vengono impostate.
+- Uno stile definito nelle risorse della pagina verrà sovrascritto da uno stile definito nelle risorse del controllo, se le stesse proprietà vengono impostate.
+- Uno stile definito nelle risorse dell'applicazione verrà sovrascritto da uno stile definito nelle risorse del controllo, se le stesse proprietà vengono impostate.
 
 > [!IMPORTANT]
 > Le variabili CSS non sono supportate.
@@ -351,10 +373,10 @@ Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nella colonna **val
 |`background-color`|`VisualElement`|_colore_ \|`initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_stringa_ \| di`initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`, `ImageButton`|_colore_ \|`initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_valore Double_ \|`initial` |`border-radius: 10;`|
-|`border-width`|`Button`, `ImageButton`|_valore Double_ \|`initial` |`border-width: .5;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_double_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_colore_ \|`initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`column-gap`|`Grid`|_valore Double_ \|`initial`|`column-gap: 9;`|
+|`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
 |`flex-basis`|`VisualElement`|_float_ \| `auto` \| `initial`. Inoltre, è possibile specificare una percentuale nell'intervallo compreso tra 0% e 100% e il `%` segno.|`flex-basis: 25%;`|
@@ -364,34 +386,34 @@ Le proprietà CSS seguenti sono supportate da Xamarin.Forms (nella colonna **val
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_stringa_ \| di`initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_valore Double_ \| _namedsize_ \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
-|`height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 250;`|
+|`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
-|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_valore Double_ \|`initial`|`letter-spacing: 2.5;`|
-|`line-height`|`Label`, `Span`|_valore Double_ \|`initial` |`line-height: 1.8;`|
+|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \| `initial`|`letter-spacing: 2.5;`|
+|`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_spessore_ \|`initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_spessore_ \|`initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_spessore_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_spessore_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_spessore_ \|`initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_int_ \|`initial`|`max-lines: 2;`|
-|`min-height`|`VisualElement`|_valore Double_ \|`initial` |`min-height: 50;`|
-|`min-width`|`VisualElement`|_valore Double_ \|`initial` |`min-width: 112;`|
-|`opacity`|`VisualElement`|_valore Double_ \|`initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_int_ \|`initial`|`order: -1;`|
+|`max-lines`|`Label`|_INT_ \| `initial`|`max-lines: 2;`|
+|`min-height`|`VisualElement`|_double_ \| `initial` |`min-height: 50;`|
+|`min-width`|`VisualElement`|_double_ \| `initial` |`min-width: 112;`|
+|`opacity`|`VisualElement`|_double_ \| `initial` |`opacity: .3;`|
+|`order`|`VisualElement`|_INT_ \| `initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_spessore_ \|`initial` |`padding: 6 12 12;`|
-|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_valore Double_ \|`initial`|`padding-left: 3;`|
-|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-top: 4;`|
-|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-right: 2;`|
-|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _valore Double_ \|`initial` |`padding-bottom: 6;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_double_ \| `initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
-|`row-gap`|`Grid`| _valore Double_ \|`initial`|`row-gap: 12;`|
+|`row-gap`|`Grid`| _double_ \| `initial`|`row-gap: 12;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left`e `right` devono essere evitati negli ambienti da destra a sinistra.| `text-align: right;`|
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
 |`transform-origin`|`VisualElement`| _Double_, _Double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
-|`width`|`VisualElement`|_valore Double_ \|`initial`|`min-width: 320;`|
+|`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]
 > `initial`è un valore valido per tutte le proprietà. Cancella il valore (Reimposta impostazione predefinita) impostato da un altro stile.
@@ -415,13 +437,13 @@ Xamarin.FormsSono supportate anche le seguenti proprietà CSS specifiche, nella 
 |`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-background-color: teal;`|
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_colore_ \|`initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \|`initial` |`-xf-max-length: 20;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_INT_ \| `initial` |`-xf-max-length: 20;`|
 |`-xf-max-track-color`|`Slider`|_colore_ \|`initial` |`-xf-max-track-color: red;`|
 |`-xf-min-track-color`|`Slider`|_colore_ \|`initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both`è supportato solo in un oggetto `ScrollView` . |`-xf-orientation: horizontal;`|
 |`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|testo racchiuso _tra virgolette_ \|`initial` |`-xf-placeholder: Enter name;`|
 |`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_colore_ \|`initial` |`-xf-placeholder-color: green;`|
-|`-xf-spacing`|`StackLayout`|_valore Double_ \|`initial` |`-xf-spacing: 8;`|
+|`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
 |`-xf-thumb-color`|`Slider`, `Switch`|_colore_ \|`initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|

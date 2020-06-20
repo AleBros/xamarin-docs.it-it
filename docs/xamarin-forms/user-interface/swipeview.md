@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms SwipeView" Description: " Xamarin.Forms SwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida rivelate da un movimento di scorrimento rapido".
-ms. prod: Novell MS. assetId: 602456B5-701B-4948-B454-B1F31283F1CF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/26/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsSwipeView
+description: Xamarin.FormsSwipeView è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida che vengono rivelate da un gesto di scorrimento.
+ms.prod: xamarin
+ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136253"
 ---
-
 # <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

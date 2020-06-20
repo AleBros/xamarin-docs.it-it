@@ -1,8 +1,22 @@
 ---
-title: "microservizi in contenitori" Descrizione: "questo capitolo illustra come usare i microservizi e i contenitori per creare applicazioni cloud moderne agile, scalabili e affidabili".
-ms. prod: Novell MS. AssetID: 5872ad92-04e0-4f1a-9691-79d5602f5683 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Microservizi in contenitori
+description: Questo capitolo illustra come usare i microservizi e i contenitori per creare applicazioni cloud moderne agili, scalabili e affidabili.
+ms.prod: xamarin
+ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3ebd3940cbd61342977bde60addc773460a08854
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569569"
 ---
-
 # <a name="containerized-microservices"></a>Microservizi in contenitori
 
 Lo sviluppo di applicazioni client-server ha determinato la creazione di applicazioni a più livelli che usano tecnologie specifiche in ogni livello. Tali applicazioni sono spesso denominate applicazioni *monolitiche* e vengono assemblate in un pacchetto hardware pre-ridimensionato per i picchi di carico. Gli svantaggi principali di questo approccio di sviluppo sono l'accoppiamento stretto tra i componenti all'interno di ogni livello, che i singoli componenti non possono essere facilmente ridimensionati e il costo dei test. Un semplice aggiornamento può avere effetti imprevisti sul resto del livello e pertanto una modifica a un componente dell'applicazione richiede che l'intero livello venga ritestato e ridistribuito.

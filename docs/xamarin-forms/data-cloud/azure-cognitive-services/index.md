@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms e servizi cognitivi di Azure" Descrizione: "aggiungere informazioni alle Xamarin.Forms applicazioni con servizi cognitivi di Azure, tra cui riconoscimento vocale, controllo ortografico, traduzione testuale e riconoscimento emozioni".
-ms. prod: Novell MS. AssetID: 64386A65-FD31-4A1B-A769-91495E57345A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formse servizi cognitivi di Azure
+description: Aggiungi funzionalità di intelligence alle Xamarin.Forms applicazioni con servizi cognitivi di Azure, tra cui il riconoscimento vocale, il controllo ortografico, la traduzione testuale e il riconoscimento delle emozioni.
+ms.prod: xamarin
+ms.assetid: 64386A65-FD31-4A1B-A769-91495E57345A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 64f5dce9337444a1e910a11a69426964a09ac05a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136019"
 ---
-
 # <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.Formse servizi cognitivi di Azure
 
 ## <a name="introduction"></a>[Introduzione](introduction.md)

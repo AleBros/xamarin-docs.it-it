@@ -1,8 +1,22 @@
 ---
-title: "trasformazioni non affini" Descrizione: "in questo articolo viene illustrato come creare effetti della prospettiva e della rastremazione con la terza colonna della matrice di trasformazione e come illustrato nel codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 785F4D13-7430-492E-B24E-3B45C560E9F1 autore: davidbritch ms. Author: dabritch ms. Date: 04/14/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazioni non affini
+description: In questo articolo viene illustrato come creare effetti della prospettiva e della rastremazione con la terza colonna della matrice di trasformazione e come illustrato nel codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/14/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131755"
 ---
-
 # <a name="non-affine-transforms"></a>Trasformazioni non affini
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -381,7 +395,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ecco alcuni esempi:
+Di seguito sono riportati alcuni esempi:
 
 [![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 

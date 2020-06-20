@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms TableView" Description: "questo articolo spiega come usare la Xamarin.Forms classe Tableview per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni".
-ms. prod: Novell MS. AssetID: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsTableView
+description: Questo articolo illustra come usare la Xamarin.Forms classe Tableview per presentare i menu di scorrimento, le impostazioni e i moduli di input nelle applicazioni.
+ms.prod: xamarin
+ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bf09856efddbd1887ee93b34014ef0f573058f4d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565291"
 ---
-
 # <a name="xamarinforms-tableview"></a>Xamarin.FormsTableView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)

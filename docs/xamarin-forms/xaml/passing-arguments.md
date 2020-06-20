@@ -1,8 +1,22 @@
 ---
-title: "passaggio di argomenti in XAML" Description: "in questo articolo viene illustrato l'utilizzo degli attributi XAML che possono essere utilizzati per passare argomenti a costruttori non predefiniti, per chiamare metodi factory e per specificare il tipo di un argomento generico".
-ms. prod: Novell MS. AssetID: 8F3B267F-499E-4D79-9193-FCA99F199519 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Passaggio di argomenti in XAML
+description: Questo articolo illustra l'uso degli attributi XAML che possono essere usati per passare argomenti a costruttori non predefiniti, per chiamare metodi factory e per specificare il tipo di un argomento generico.
+ms.prod: xamarin
+ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 84d8901b7f8dee8ffd6c3ba22d30c76b456555f0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571506"
 ---
-
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)

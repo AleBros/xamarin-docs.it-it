@@ -1,8 +1,25 @@
 ---
-title: " Xamarin.Forms descrizione approfondita dell'avvio rapido": "questo articolo esamina le nozioni di base dello sviluppo di applicazioni con Xamarin.Forms . Gli argomenti trattati includono l'anatomia di un' Xamarin.Forms applicazione, l'architettura e le nozioni fondamentali dell'applicazione e l'interfaccia utente ".
-zone_pivot_groups: ms. topic della piattaforma: Guida introduttiva ms. prod: Novell MS. Custom: video ms. AssetID: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsApprofondimento sulla Guida introduttiva
+description: Questo articolo esamina le nozioni di base dello sviluppo di applicazioni con Xamarin.Forms . Gli argomenti trattati includono l'anatomia di un' Xamarin.Forms applicazione, l'architettura e le nozioni fondamentali dell'applicazione e l'interfaccia utente.
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132522"
 ---
-
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.FormsApprofondimento sulla Guida introduttiva
 
 Nella [ Xamarin.Forms Guida introduttiva](~/get-started/index.yml)è stata compilata l'applicazione Note. Questo articolo esamina gli elementi che sono stati compilati per comprendere le nozioni di base del Xamarin.Forms funzionamento delle applicazioni.

@@ -1,8 +1,22 @@
 ---
-title: "ricaricamento a caldo di XAML per Xamarin.Forms " Description: "ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML".
-ms. prod: Novell MS. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Ricaricamento attivo XAML perXamarin.Forms
+description: Ricarica immediatamente le modifiche apportate al file XAML nell'applicazione in esecuzione, in modo da non dover compilare il Xamarin.Forms progetto dopo ogni modifica del codice XAML.
+ms.prod: xamarin
+ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127452"
 ---
-
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Ricaricamento attivo XAML perXamarin.Forms
 
 Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per aumentare la produttività e risparmiare tempo. Senza il ricaricamento a caldo di XAML, è necessario compilare e distribuire l'app ogni volta che si desidera visualizzare una modifica XAML. Con il ricaricamento a caldo, quando si salva il file XAML le modifiche vengono riflesse in tempo reale nell'app in esecuzione. Inoltre, lo stato e i dati di navigazione verranno conservati, consentendo di eseguire rapidamente l'iterazione sull'interfaccia utente senza perdere il posto nell'app. Pertanto, con il ricaricamento a caldo di XAML, dedicare meno tempo alla ricompilazione e alla distribuzione delle app per convalidare le modifiche dell'interfaccia utente.

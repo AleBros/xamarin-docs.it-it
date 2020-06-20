@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/10/2020
-ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: c3b0749fae9a035c234961880a4a7059ccba2349
+ms.sourcegitcommit: 8f558dba59bfb95da0ee9154c94d7121b6a59037
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655092"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767345"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS
 
@@ -48,7 +48,7 @@ Il membro è stato probabilmente rimosso dal linker e pertanto non esiste nell'a
 - Aggiungere l' [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) attributo al membro.  Ciò impedirà al linker di rimuoverlo.
 - Quando si richiama [**mTouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), usare le opzioni **-nolink** o **-linksdkonly** :
   - **-nolink** Disabilita tutti i collegamenti.
-  - **-linksdkonly** collegherà solo gli assembly forniti da Novell. iOS, ad esempio **Novell. iOS. dll**, mantenendo tutti i tipi negli assembly creati dall'utente (ad esempio, i progetti di app).
+  - **-linksdkonly** collegherà solo gli assembly forniti da Novell. iOS, ad esempio **xamarin.ios.dll**, conservando tutti i tipi negli assembly creati dall'utente (ad esempio, i progetti di app).
 
 Si noti che gli assembly sono collegati in modo che l'eseguibile risultante sia minore. Pertanto, la disabilitazione del collegamento può comportare un eseguibile di dimensioni maggiori rispetto a quello auspicabile.
 
@@ -130,7 +130,7 @@ Le azioni per i file di Interface Builder sono connesse ai widget tramite reflec
 
 È possibile utilizzare "#pragma avviso Disable 0169" "#pragma avviso Enable 0169" per le azioni se si desidera eliminare questo avviso solo per questi metodi o aggiungere 0169 al campo "Ignora avvisi" nelle opzioni del compilatore se si desidera disabilitarlo per l'intero progetto (scelta non consigliata).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mTouch non riuscito con il messaggio seguente: Impossibile aprire l'assembly '/path/to/YOURPROJECT.exe '
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mTouch non riuscito con il messaggio seguente: Impossibile aprire l'assembly '/path/to/yourproject.exe'
 
 Se viene visualizzato questo messaggio di errore, in genere il problema è il percorso assoluto del progetto che contiene uno spazio. Questo problema verrà risolto in una versione futura di Novell. iOS, ma è possibile aggirare il problema spostando il progetto in una cartella senza spazi.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Significa che si sta collegando una libreria statica compilata con codice Thumb nel progetto. A partire dalla versione 3,1 di iPhone SDK (o versione successiva al momento della stesura di questo articolo) Apple ha introdotto un bug nel linker durante il collegamento di codice non Thumb (Novell. iOS) con codice Thumb (la libreria statica). Per attenuare questo problema, è necessario eseguire il collegamento con una versione non Thumb della libreria statica.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System. ExecutionEngineException: tentativo di compilare il metodo JIT (gestito da wrapper) foo []: System. Collections. Generic. ICollection ' 1. get_Count ()
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System.ExecutionEngineException: tentativo di compilare il metodo JIT (gestito da wrapper) foo []: System. Collections. Generic. ICollection ' 1. get_Count ()
 
 Il suffisso [] indica che l'utente o la libreria di classi chiama un metodo su una matrice tramite una raccolta generica, ad esempio IEnumerable<>, ICollection<> o IList<>. Come soluzione alternativa, è possibile forzare in modo esplicito il compilatore AOT ad includere tale metodo chiamando il metodo autonomamente e assicurandosi che il codice venga eseguito prima della chiamata che ha generato l'eccezione. In questo caso, è possibile scrivere:
 
@@ -387,13 +387,16 @@ Quando si includono librerie di terze parti nell'app Novell. iOS, è possibile c
 
 Questo problema può essere risolto aprendo le opzioni per il progetto Novell. iOS, passando a **iOS compila**  >  **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** .
 
-## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Non è stato possibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch. exe '
+## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Non è stato possibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch.exe'
 
-In alcuni casi, il software antivirus può contrassegnare erroneamente Novell. iOS SDK come malware e rimuovere i file necessari, danneggiando l'SDK. Questo genererà errori come "Impossibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch. exe '".
+In alcuni casi, il software antivirus può contrassegnare erroneamente Novell. iOS SDK come malware e rimuovere i file necessari, danneggiando l'SDK. Questo genererà errori come "Impossibile avviare Novell. Launcher. Impossibile trovare il file eseguibile ' mlaunch.exe'".
 
-Se si è interessati, escludere mlaunch. exe dallo scanner antivirus per evitare la ricorrenza. Per ulteriori informazioni, vedere [come creare un'eccezione dell'applicazione nel Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) per Symantec ed [escludere file e cartelle da Norton Auto-Protect, Sonar e scaricare analisi di intelligence](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) per Norton. Inoltre, è consigliabile segnalare un falso positivo a [Symantec](https://symsubmit.symantec.com) o [Norton](https://submit.norton.com/?type=FP).
+Se si è interessati, escludere mlaunch.exe dallo scanner antivirus per evitare la ricorrenza. Per ulteriori informazioni, vedere [come creare un'eccezione dell'applicazione nel Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) per Symantec ed [escludere file e cartelle da Norton Auto-Protect, Sonar e scaricare analisi di intelligence](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) per Norton. Inoltre, è consigliabile segnalare un falso positivo a [Symantec](https://symsubmit.symantec.com) o [Norton](https://submit.norton.com/?type=FP).
 
-Una volta aggiunta un'esclusione per mlaunch. exe, sarà necessaria una riinstallazione per ripristinare i file mancanti. L'approccio più semplice a tale scopo consiste nell'alternare i canali nell'aggiornamento:
+> [!IMPORTANT]
+> Per gli utenti di Norton, i membri della community hanno anche segnalato che potrebbe essere necessario disabilitare l'analisi inattiva come descritto qui: [Windows](https://community.norton.com/en/comment/5179683#comment-5179683), [Mac](https://github.com/xamarin/xamarin-macios/issues/8736#issuecomment-642874505).
+
+Una volta aggiunta un'esclusione per mlaunch.exe, sarà necessario eseguire una nuova installazione per ripristinare i file mancanti. L'approccio più semplice a tale scopo consiste nell'alternare i canali nell'aggiornamento:
 
 - Menu di **Visual Studio** > **verificare la disponibilità di aggiornamenti**.
 - Selezionare un canale di aggiornamento diverso nell'elenco a discesa e premere il pulsante **Cambia canale** .

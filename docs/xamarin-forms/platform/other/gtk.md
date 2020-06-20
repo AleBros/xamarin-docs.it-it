@@ -1,7 +1,22 @@
 ---
-title: "configurazione della piattaforma GTK #" Descrizione: " Xamarin.Forms ora dispone del supporto per l'anteprima della piattaforma GTK #" ms. prod: Novell MS. AssetID: 3417FB95-3E4B-47DA-85D0-F34832747236 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Installazione della piattaforma GTK #'
+description: 'Xamarin.Formsdispone ora del supporto in anteprima per la piattaforma GTK #'
+ms.prod: xamarin
+ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a5635da9f7c083609ce1e0f120d0613fff9bd77b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198099"
 ---
-
 # <a name="gtk-platform-setup"></a>Installazione della piattaforma GTK #
 
 ![Anteprima](~/media/shared/preview.png)

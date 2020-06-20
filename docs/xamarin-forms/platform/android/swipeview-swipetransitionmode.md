@@ -1,8 +1,22 @@
 ---
-title: "SwipeView scorrere la modalità di transizione su Android" Description: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Android specifica che controlla la transizione utilizzata per l'apertura di un SwipeView ".
-ms. prod: Novell MS. AssetID: 6B1F8213-9D62-4C40-9F04-881F1371B5AA ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/11/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità di transizione SwipeView scorrere in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Android specifica che controlla la transizione utilizzata durante l'apertura di un SwipeView.
+ms.prod: xamarin
+ms.assetid: 6B1F8213-9D62-4C40-9F04-881F1371B5AA
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/11/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c420fe65b020067169230dd06dbcd5ce65c036ab
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128622"
 ---
-
 # <a name="swipeview-swipe-transition-mode-on-android"></a>Modalità di transizione SwipeView scorrere in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

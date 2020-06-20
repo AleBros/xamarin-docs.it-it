@@ -1,8 +1,22 @@
 ---
-title: "trasformazioni matrice in SkiaSharp" Descrizione: "questo articolo approfondisce le trasformazioni di SkiaSharp con la matrice di trasformazione versatile e ne illustra il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4 autore: davidbritch ms. Author: dabritch ms. Date: 04/12/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazioni matrice in SkiaSharp
+description: Questo articolo approfondisce le trasformazioni di SkiaSharp con la matrice di trasformazione versatile e ne illustra il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/12/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133302"
 ---
-
 # <a name="matrix-transforms-in-skiasharp"></a>Trasformazioni matrice in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

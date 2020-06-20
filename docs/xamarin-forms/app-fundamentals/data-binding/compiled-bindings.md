@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Binding compilati" Descrizione: "in questo articolo viene illustrato come utilizzare i binding compilati per migliorare le prestazioni di data binding nelle Xamarin.Forms applicazioni".
-ms. prod: Novell MS. AssetID: ABE6B7F7-875E-4402-A1D2-845CE374402B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/18/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsBinding compilati
+description: Questo articolo illustra come usare le associazioni compilate per migliorare le prestazioni di data binding nelle Xamarin.Forms applicazioni.
+ms.prod: xamarin
+ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/18/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571558"
 ---
-
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsBinding compilati
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

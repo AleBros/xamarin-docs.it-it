@@ -1,8 +1,22 @@
 ---
-title: "Introduzione con le pagine di dati" Descrizione: "in questo articolo viene illustrato come iniziare a creare una semplice pagina basata sui dati utilizzando le pagine di dati Xamarin.Forms ".
-ms. prod: Novell MS. AssetID: 6416E5FA-6384-4298-BAA1-A89381E47210 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione con le pagine Web
+description: Questo articolo illustra come iniziare a creare una semplice pagina basata sui dati usando le Xamarin.Forms pagine di dati.
+ms.prod: xamarin
+ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bb08d359048d53639a700cc5ff526f26d6b077b6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571467"
 ---
-
 # <a name="getting-started-with-datapages"></a>Introduzione con le pagine Web
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)

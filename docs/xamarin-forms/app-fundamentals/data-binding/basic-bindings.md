@@ -1,8 +1,23 @@
 ---
-title: " Xamarin.Forms binding di base" Descrizione: "in questo articolo viene illustrato come utilizzare Xamarin.Forms Data Binding, che collega una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto dell'interfaccia utente. Questi due oggetti vengono chiamati destinazione e origine ".
-ms. prod: Novell MS. AssetID: 96553DF7-12EA-4FB2-AE85-3D1D59382B40 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/22/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. Custom: video
+title: Xamarin.FormsAssociazioni di base
+description: Questo articolo illustra come usare Xamarin.Forms Data Binding, che collega una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto dell'interfaccia utente. Questi due oggetti vengono chiamati origine e destinazione.
+ms.prod: xamarin
+ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: video
+ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133536"
 ---
-
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.FormsAssociazioni di base
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

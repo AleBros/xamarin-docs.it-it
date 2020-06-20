@@ -1,8 +1,22 @@
 ---
-Titolo: "parte 3. XAML Markup Extensions "Description:" le estensioni di markup XAML costituiscono una funzionalità importante di XAML che consente di impostare le proprietà su oggetti o valori a cui viene fatto riferimento indirettamente da altre origini.
-ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: F4A37564-B18B-42FF-B841-9A1949895AB6 Author: davidbritch ms. Author: dabritch ms. Date: 03/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 3. Estensioni di markup XAML
+description: Le estensioni di markup XAML costituiscono una funzionalità importante di XAML che consente di impostare le proprietà su oggetti o valori a cui viene fatto riferimento indirettamente da altre origini.
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131339"
 ---
-
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di markup XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

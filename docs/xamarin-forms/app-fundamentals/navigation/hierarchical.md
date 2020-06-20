@@ -1,8 +1,22 @@
 ---
-title: "Descrizione" di navigazione gerarchica: "in questo articolo viene illustrato come utilizzare la classe NavigationPage per eseguire la navigazione in una pila di pagine LIFO (Last-in, First-out)."
-ms. prod: Novell MS. AssetID: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Navigazione gerarchica
+description: Questo articolo illustra come usare la classe NavigationPage per eseguire la navigazione in uno stack di pagine LIFO (Last-In, First-Out).
+ms.prod: xamarin
+ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571493"
 ---
-
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)

@@ -1,8 +1,22 @@
 ---
-title: "ViewCell context actions on Android" Description: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che Abilita la modalità legacy di ViewCell context Actions.
-ms. prod: Novell MS. AssetID: 8BD71B10-5037-443F-9975-B941CE393E5A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/24/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Azioni di contesto ViewCell in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma Android che Abilita le azioni del contesto ViewCell in modalità legacy.
+ms.prod: xamarin
+ms.assetid: 8BD71B10-5037-443F-9975-B941CE393E5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 053697921f1adacc102e9e9bee9dd17f8d44526b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128557"
 ---
-
 # <a name="viewcell-context-actions-on-android"></a>Azioni di contesto ViewCell in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

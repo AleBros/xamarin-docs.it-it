@@ -1,8 +1,22 @@
 ---
-title: "utilizzare un servizio Web RESTful" Descrizione: "l'integrazione di un servizio Web in un'applicazione è uno scenario comune. Questo articolo illustra come utilizzare un servizio Web RESTful da un' Xamarin.Forms applicazione ".
-ms. prod: Novell MS. AssetID: B540910C-9C51-416A-AAB9-057BF76489C3 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Utilizzare un servizio Web RESTful
+description: L'integrazione di un servizio Web in un'applicazione è uno scenario comune. Questo articolo illustra come utilizzare un servizio Web RESTful da un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8d7ae5eb16b8a94f16b6eca013b4ec7a93f427bd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198134"
 ---
-
 # <a name="consume-a-restful-web-service"></a>Utilizzare un servizio Web RESTful
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

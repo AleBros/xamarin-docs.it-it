@@ -1,8 +1,22 @@
 ---
-Titolo: "selezione di una foto dalla raccolta immagini" Descrizione: "in questo articolo viene illustrato come utilizzare la Xamarin.Forms classe DependencyService per selezionare una foto dalla libreria immagini del telefono".
-ms. prod: Novell MS. AssetID: 4F51B0E7-6A63-403C-B488-500CCBCE75DD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/06/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Selezione di una foto dalla Raccolta immagini
+description: Questo articolo illustra come usare la Xamarin.Forms classe DependencyService per selezionare una foto dalla raccolta immagini del telefono.
+ms.prod: xamarin
+ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/06/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f999d56fbf178be160e91756643c127d574b090
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197562"
 ---
-
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla Raccolta immagini
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)

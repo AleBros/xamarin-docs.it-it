@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Preferences" Description: "questo documento descrive la classe di preferenze in Xamarin.Essentials , che consente di salvare le preferenze dell'applicazione in un archivio chiave/valore. Viene illustrato come utilizzare la classe e i tipi di dati che è possibile archiviare.
-ms. AssetID: AA81BCBD-79BA-448F-942B-BA4415CA50FF Author: jamesmontemagno ms. Author: Jamont ms. Date: 01/15/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Preferenze'
+description: Questo documento descrive la classe di preferenze in Xamarin.Essentials , che consente di salvare le preferenze dell'applicazione in un archivio chiave/valore. Illustra come usare la classe e i tipi di dati che possono essere archiviati.
+ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/15/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801816"
 ---
-
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferenze
 
 La classe **Preferences** consente di archiviare le preferenze dell'applicazione in un archivio chiave/valore.
@@ -59,7 +72,7 @@ In **Preferences** sono supportati i tipi di dati seguenti:
 - **double**
 - **int**
 - **float**
-- **long**
+- **lungo**
 - **string**
 - **DateTime**
 
@@ -104,7 +117,7 @@ Quando si archivia una stringa, questa API è progettata per l'archiviazione di 
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Preferences](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [Codice sorgente di Preferences](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Preferences)
 - [Documentazione dell'API Preferences](xref:Xamarin.Essentials.Preferences)
 
 ## <a name="related-video"></a>Video correlato

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms funzionalità del dispositivo a schermo doppio" Descrizione: "questa guida illustra come usare Xamarin.Forms la classe DualScreenInfo per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo".
-ms. prod: Novell MS. AssetID: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsfunzionalità del dispositivo dual screen
+description: Questa guida illustra come usare Xamarin.Forms la classe DualScreenInfo per ottimizzare l'esperienza delle app per dispositivi a doppio schermo, ad esempio Surface Duo e Surface neo.
+ms.prod: xamarin
+ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946351"
 ---
-
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Formsfunzionalità del dispositivo dual screen
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -18,15 +32,15 @@ La classe `DualScreenInfo` consente di determinare il riquadro in cui si trova l
 - `IsLandscape`: indica se il dispositivo è in modalità orizzontale. Questa informazione è utile perché le API di orientamento native non segnalano correttamente l'orientamento quando un'applicazione è estesa.
 - `SpanMode`: indica se il layout è in modalità Tall, Wide o SinglePane.
 
-Viene inoltre generato un evento `PropertyChanged` in presenza di modifiche delle proprietà.
+Inoltre, l' `PropertyChanged` evento viene generato quando vengono modificate le proprietà e l' `HingeAngleChanged` evento viene generato quando l'angolo della cerniera viene modificato.
 
-## <a name="poll-hinge-angle-on-android"></a>Recuperare l'angolo della cerniera in Android
+## <a name="poll-hinge-angle-on-android-and-uwp"></a>Angolo cerniera polling in Android e UWP
 
-La proprietà seguente è disponibile solo quando si accede a `DualScreenInfo` dal progetto della piattaforma Android:
+Il metodo seguente è disponibile quando si accede `DualScreenInfo` a da progetti di piattaforma Android e UWP:
 
 - `GetHingeAngleAsync`: recupera l'angolo corrente della cerniera del dispositivo. Quando si usa il simulatore, è possibile impostare HingeAngle modificando il sensore di pressione.
 
-Questa proprietà può essere usata da un renderer personalizzato Android:
+Questo metodo può essere richiamato dai renderer personalizzati in Android e UWP. Il codice seguente illustra un esempio di renderer personalizzato Android:
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer

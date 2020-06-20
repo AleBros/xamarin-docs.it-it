@@ -1,8 +1,22 @@
 ---
-title: "aggiunta della formattazione specifica di iOS" Descrizione: "in questo articolo viene illustrato come impostare un aspetto specifico di iOS senza utilizzare un Xamarin.Forms renderer personalizzato".
-ms. prod: Novell MS. AssetID: CE50E207-D092-4D88-8439-1B51F178E7ED ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/29/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aggiunta della formattazione specifica di iOS
+description: Questo articolo illustra come impostare un aspetto specifico di iOS senza usare un Xamarin.Forms renderer personalizzato.
+ms.prod: xamarin
+ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/29/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 062dd77f1dc7b82f16bfbc6d46e44d4adeb73350
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564706"
 ---
-
 # <a name="adding-ios-specific-formatting"></a>Aggiunta della formattazione specifica di iOS
 
 Un modo per impostare la formattazione specifica di iOS consiste nel creare un [renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) per un controllo e impostare stili e colori specifici della piattaforma per ogni piattaforma.

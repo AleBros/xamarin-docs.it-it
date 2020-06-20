@@ -1,8 +1,22 @@
 ---
-title: "creazione di estensioni di markup XAML" Descrizione: "questo articolo spiega come definire estensioni di Xamarin.Forms markup XAML personalizzate. Un'estensione di markup XAML è una classe che implementa l'interfaccia IMarkupExtension o IMarkupExtension <T> ".
-ms. prod: Novell MS. AssetID: 797C1EF9-1C8E-4208-8610-9B79CCF17D46 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Creazione di estensioni di markup XAML
+description: Questo articolo illustra come definire Xamarin.Forms estensioni di markup XAML personalizzate. Un'estensione di markup XAML è una classe che implementa l'interfaccia IMarkupExtension o IMarkupExtension <T> .
+ms.prod: xamarin
+ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130533"
 ---
-
 # <a name="creating-xaml-markup-extensions"></a>Creazione di estensioni di markup XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -186,7 +200,7 @@ L' `IProvideValueTarget` interfaccia definisce due proprietà, `TargetObject` e 
 
 La `GetService` chiamata con un argomento di `typeof(IProvideValueTarget)` restituisce effettivamente un oggetto di tipo `SimpleValueTargetProvider` , definito nello `Xamarin.Forms.Xaml.Internals` spazio dei nomi. Se si esegue il cast del valore restituito di `GetService` a quel tipo, è anche possibile accedere a una `ParentObjects` proprietà, che è una matrice che contiene l' `Image` elemento, l'elemento `Grid` padre e l'elemento `ImageResourceDemoPage` padre di `Grid` .
 
-## <a name="conclusion"></a>Conclusione
+## <a name="conclusion"></a>Conclusioni
 
 Le estensioni di markup XAML svolgono un ruolo fondamentale in XAML estendendo la possibilità di impostare attributi da un'ampia gamma di origini. Inoltre, se le estensioni di markup XAML esistenti non forniscono esattamente ciò che è necessario, è anche possibile scriverne di personalizzate.
 

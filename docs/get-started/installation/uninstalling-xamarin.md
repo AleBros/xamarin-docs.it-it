@@ -1,8 +1,21 @@
 ---
-title: "Uninstall Novell" Description: "questo documento descrive come disinstallare Novell da Visual Studio in Windows".
-ms. prod: Novell MS. AssetID: b83a85ec-842A-444C-8f82-c2464eda099b autore: conceptdev ms. Author: crdun ms. Date: 01/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Disinstallare Xamarin
+description: Questo documento descrive come disinstallare Xamarin da Visual Studio in Windows.
+ms.prod: xamarin
+ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
+author: conceptdev
+ms.author: crdun
+ms.date: 01/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b4d644591ab85f185709e7bd53353580a6578d77
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570110"
 ---
-
 # <a name="uninstall-xamarin-from-visual-studio"></a>Disinstallare Xamarin da Visual Studio
 
 Questa guida descrive come rimuovere Xamarin da Visual Studio in Windows.

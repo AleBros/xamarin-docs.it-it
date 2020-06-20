@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms controllo mappa" Descrizione: "il controllo mappa è una visualizzazione multipiattaforma per la visualizzazione e l'annotazione delle mappe. Usa il controllo mappa nativo per ogni piattaforma, offrendo un'esperienza di mapping rapida e familiare per gli utenti ".
-ms. prod: Novell MS. AssetID: 22C99029-0B16-43A6-BF58-26B48C4AED38 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/29/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formscontrollo mappa
+description: Il controllo mappa è una visualizzazione multipiattaforma per la visualizzazione e l'annotazione delle mappe. Usa il controllo mappa nativo per ogni piattaforma, offrendo un'esperienza di mapping rapida e familiare per gli utenti.
+ms.prod: xamarin
+ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1aee81b6988e1f3a7099c2722b6f336f071ad8c0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946364"
 ---
-
 # <a name="xamarinforms-map-control"></a>Xamarin.Formscontrollo mappa
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
@@ -23,6 +37,7 @@ La [`Map`](xref:Xamarin.Forms.Maps.Map) classe definisce le proprietà seguenti 
 - [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), di tipo [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) , indica lo stile di visualizzazione della mappa.
 - `MoveToLastRegionOnLayoutChange`, di tipo `bool` , controlla se l'area della mappa visualizzata viene spostata dall'area corrente all'area impostata in precedenza quando si verifica una modifica del layout.
 - [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins), di tipo `IList<Pin>` , rappresenta l'elenco di pin sulla mappa.
+- `TrafficEnabled`, di tipo `bool` , indica se i dati del traffico sono sovrapposti sulla mappa.
 - [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion), di tipo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) , restituisce l'area attualmente visualizzata della mappa.
 
 Queste proprietà, ad eccezione delle `MapElements` `Pins` proprietà, e `VisibleRegion` , sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di associazioni dati.
@@ -196,6 +211,23 @@ Il comportamento di un oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) può essere 
 
 > [!NOTE]
 > Per ottenere una personalizzazione aggiuntiva del comportamento della mappa, è possibile creare un renderer personalizzato della mappa. Per ulteriori informazioni, vedere [personalizzazione di una Xamarin.Forms mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
+
+### <a name="show-traffic-data"></a>Visualizzare i dati sul traffico
+
+La [`Map`](xref:Xamarin.Forms.Maps.Map) classe definisce una `TrafficEnabled` proprietà di tipo `bool` . Per impostazione predefinita, questa proprietà è `false` , che indica che i dati del traffico non verranno sovrapposti sulla mappa. Quando questa proprietà è impostata su `true` , i dati del traffico vengono sovrapposti sulla mappa. Nell'esempio seguente viene illustrata l'impostazione di questa proprietà:
+
+```xaml
+<maps:Map TrafficEnabled="true" />
+```
+
+Il codice C# equivalente è il seguente:
+
+```csharp
+Map map = new Map
+{
+    TrafficEnabled = true
+};
+```
 
 ### <a name="disable-scroll"></a>Disabilita scorrimento
 

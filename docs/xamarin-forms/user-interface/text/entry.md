@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms entry" Description: "questo articolo spiega come usare la Xamarin.Forms classe entry per accettare l'input di testo o password a riga singola in un'applicazione".
-ms. prod: Novell MS. AssetID: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsVoce
+description: Questo articolo illustra come usare la Xamarin.Forms classe entry per accettare l'input di testo o password a riga singola in un'applicazione.
+ms.prod: xamarin
+ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136201"
 ---
-
 # <a name="xamarinforms-entry"></a>Xamarin.FormsVoce
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -358,7 +372,7 @@ La voce espone due eventi:
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe, da cui [`Entry`](xref:Xamarin.Forms.Entry) eredita, include anche [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) gli eventi e.
 
-### <a name="completed"></a>Completato
+### <a name="completed"></a>Completi
 
 L' `Completed` evento viene utilizzato per rispondere al completamento di un'interazione con una voce. `Completed`viene generato quando l'utente termina l'input con un campo premendo il tasto INVIO sulla tastiera oppure premendo il tasto TAB in UWP. Il gestore per l'evento è un gestore eventi generico che accetta il mittente e `EventArgs` :
 

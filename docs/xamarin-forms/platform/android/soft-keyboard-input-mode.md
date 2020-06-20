@@ -1,8 +1,22 @@
 ---
-title: "modalità di input della tastiera soft su Android" Description: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma Android che imposta la modalità operativa per un'area di input della tastiera soft ".
-ms. prod: Novell MS. AssetID: AFCDC92F-F61E-42F6-904B-50B5C4949970 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità di input tastiera soft in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma Android che imposta la modalità operativa per un'area di input della tastiera soft.
+ms.prod: xamarin
+ms.assetid: AFCDC92F-F61E-42F6-904B-50B5C4949970
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c62d09c7d7848d9f62c018caa1698bb53a2a39a8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128713"
 ---
-
 # <a name="soft-keyboard-input-mode-on-android"></a>Modalità di input tastiera soft in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

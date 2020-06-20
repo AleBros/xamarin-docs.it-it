@@ -1,8 +1,23 @@
 ---
-Titolo: "parte 5. Da data binding a MVVM "Description:" il modello MVVM impone una separazione tra tre livelli software, ovvero l'interfaccia utente XAML, denominata vista; i dati sottostanti, detti modello; e un intermediario tra la vista e il modello, denominato ViewModel ".
-ms. prod: Novell MS. Custom: video ms. AssetID: 48B37D44-4FB1-41B2-9A5E-6D383B041F81 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 5. Da data binding a MVVM
+description: Il modello MVVM impone una separazione tra tre livelli software, ovvero l'interfaccia utente XAML, denominata vista; i dati sottostanti, detti modello; e un intermediario tra la vista e il modello, denominato ViewModel.
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127530"
 ---
-
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Da data binding a MVVM
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

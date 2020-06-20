@@ -1,8 +1,22 @@
 ---
-title: "ListView Data Sources" Description: "questo articolo spiega come popolare Xamarin.Forms ListView con i dati e come usare Data Binding con ListView".
-ms. prod: Novell MS. AssetID: B5571660-1E82-4379-95C3-0725288CF5D9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Origini dati ListView
+description: Questo articolo illustra come popolare Xamarin.Forms ListView con i dati e come usare Data Binding con un controllo ListView.
+ms.prod: xamarin
+ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131508"
 ---
-
 # <a name="listview-data-sources"></a>Origini dati ListView
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

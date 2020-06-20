@@ -1,8 +1,22 @@
 ---
-title: "Configuration Management" Description: "questo capitolo illustra il modo in cui l'app eShopOnContainers mobile implementa la gestione della configurazione per fornire le impostazioni dell'app e le impostazioni utente".
-ms. prod: Novell MS. AssetID: 50d6e780-E768-47F8-9361-3af11e56b87b ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Gestione della configurazione
+description: Questo capitolo illustra il modo in cui l'app eShopOnContainers mobile implementa la gestione della configurazione per fornire le impostazioni dell'app e le impostazioni utente.
+ms.prod: xamarin
+ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571480"
 ---
-
 # <a name="configuration-management"></a>Gestione della configurazione
 
 Le impostazioni consentono la separazione dei dati che configura il comportamento di un'app dal codice, consentendo la modifica del comportamento senza ricompilare l'app. Esistono due tipi di impostazioni: le impostazioni dell'app e le impostazioni utente.

@@ -1,8 +1,22 @@
 ---
-title: "Introduzione ai renderer personalizzati" Descrizione: "in questo articolo viene fornita un'introduzione ai renderer personalizzati e viene descritto il processo di creazione di un renderer personalizzato".
-ms. prod: Novell MS. AssetID: 264314BE-1C5C-4727-A14E-F6F98151CDBD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/19/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione ai renderer personalizzati
+description: Questo articolo offre un'introduzione ai renderer personalizzati e illustra la procedura di creazione di un renderer personalizzato.
+ms.prod: xamarin
+ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/19/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135321"
 ---
-
 # <a name="introduction-to-custom-renderers"></a>Introduzione ai renderer personalizzati
 
 _I renderer personalizzati offrono un approccio efficace per personalizzare l'aspetto e il comportamento dei Xamarin.Forms controlli. Possono essere usati per le modifiche di stile piccolo o per una personalizzazione sofisticata del layout e del comportamento specifici della piattaforma. Questo articolo fornisce un'introduzione ai renderer personalizzati e descrive il processo di creazione di un renderer personalizzato._

@@ -1,8 +1,22 @@
 ---
-title: "Introduzione ai comportamenti" Descrizione: "i comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. La funzionalità viene invece implementata in una classe di comportamento e associata al controllo come se fosse parte del controllo stesso. Questo articolo fornisce un'introduzione ai comportamenti ".
-ms. prod: Novell MS. AssetID: 0DF1EF8C-A212-4142-A3C6-DF760A82A757 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione ai comportamenti
+description: I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza sottoclassarli. La funzionalità viene invece implementata in una classe di comportamento e associata al controllo come se fosse parte del controllo stesso. Questo articolo offre un'introduzione ai comportamenti.
+ms.prod: xamarin
+ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135772"
 ---
-
 # <a name="introduction-to-behaviors"></a>Introduzione ai comportamenti
 
 _I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. Al contrario, la funzionalità viene implementata in una classe di comportamento e collegata al controllo come se facesse parte del controllo stesso. Questo articolo fornisce un'introduzione ai comportamenti._

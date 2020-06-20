@@ -1,8 +1,22 @@
 ---
-title: "modalità di Blend di Porter-Duff" Descrizione: "usare le modalità di Blend di Porter-Duff per comporre scene basate su immagini di origine e destinazione".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 57F172F8-BA03-43EC-A215-ED6B78696BB5 autore: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità di Blend di Porter-Duff
+description: Usare le modalità di Blend di Porter-Duff per comporre scene basate su immagini di origine e di destinazione.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131053"
 ---
-
 # <a name="porter-duff-blend-modes"></a>Modalità di Blend di Porter-Duff
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -57,7 +71,7 @@ Skia aggiunge una modalità 14 denominata `Modulate` che è molto simile a `Plus
 
 Di seguito sono riportate le 14 modalità di portineria-Duff definite in SkiaSharp. La tabella mostra il colore di ognuna delle tre aree non vuote nel diagramma precedente:
 
-| Modalità       | Destination | Intersezione | Source (Sorgente) |
+| Mode       | Destination | Intersezione | Source (Sorgente) |
 | ---------- |:-----------:|:------------:|:------:|
 | `Clear`    |             |              |        |
 | `Src`      |             | Source (Sorgente)       | X      |
@@ -498,7 +512,7 @@ I colori RGB sono pre-moltiplicati per il valore alfa. Se, ad esempio, **SC** ra
 
 Il risultato viene visualizzato tra parentesi quadre con il canale alfa e il colore RGB separati da una virgola: **[alpha, color]**. Per il colore, il calcolo viene eseguito separatamente per i componenti rosso, verde e blu:
 
-| Modalità       | Operazione |
+| Mode       | Operazione |
 | ---------- | --------- |
 | `Clear`    | [0, 0]    |
 | `Src`      | [SA, SC]  |

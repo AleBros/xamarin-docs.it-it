@@ -1,8 +1,22 @@
 ---
-title: "convalida nelle app aziendali" Descrizione: "questo capitolo illustra come l'app per dispositivi mobili eShopOnContainers esegue la convalida dell'input dell'utente. Ciò include la specifica delle regole di convalida, l'attivazione della convalida e la visualizzazione degli errori di convalida. "
-ms. prod: Novell MS. AssetID: 56e4f0fc-48D9-4033-91EC-173bb46a5e4d ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Convalida nelle app aziendali
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers esegue la convalida dell'input dell'utente. Ciò include la specifica delle regole di convalida, l'attivazione della convalida e la visualizzazione degli errori di convalida.
+ms.prod: xamarin
+ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a4b82552956ab0e75d0a76a14ce7c919c744e09a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565330"
 ---
-
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle app aziendali
 
 Tutte le app che accettano input dagli utenti devono assicurarsi che l'input sia valido. Un'app può, ad esempio, verificare la presenza di input che contiene solo caratteri in un intervallo specifico, ha una certa lunghezza o corrisponde a un particolare formato. Senza convalida, un utente può fornire dati che causano l'esito negativo dell'app. La convalida impone regole business e impedisce a un utente malintenzionato di inserire dati dannosi.

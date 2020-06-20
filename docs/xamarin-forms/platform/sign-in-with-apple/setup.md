@@ -1,8 +1,22 @@
 ---
-title: "procedura di installazione-accesso con Apple per Xamarin.Forms " Descrizione: "l'accesso con l'installazione di Apple è diverso a seconda delle diverse piattaforme di destinazione dell'applicazione per dispositivi mobili."
-ms. prod: Novell MS. AssetID: 8F712802-395B-469B-B5BE-C927AD1A8391 ms. Technology: Novell-Forms Author: davidortinau ms. Author: daortin ms. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Procedura di installazione-accedere con Apple perXamarin.Forms
+description: L'accesso con l'installazione di Apple è diverso a seconda delle diverse piattaforme di destinazione dell'applicazione mobile.
+ms.prod: xamarin
+ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 09/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 95fc2547dd2f17f7aa2b2e8ca4c70915c6542318
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198039"
 ---
-
 # <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Configurare l'accesso con Apple perXamarin.Forms
 
 Questa guida illustra la serie di passaggi necessari per configurare le applicazioni multipiattaforma in modo da richiedere l'accesso avanzato con Apple. Mentre l'installazione di Apple è diretta nel portale per sviluppatori di Apple, sono necessari passaggi aggiuntivi per creare una relazione sicura tra Android e Apple. 
@@ -91,19 +105,11 @@ Prendere nota anche dell' **ID chiave** in questo passaggio. Che verrà usato `K
 Il file di chiave sarà stato scaricato `.p8` .  È possibile aprire questo file in blocco note o VSCode per visualizzare il contenuto del testo.  Dovrebbero avere un aspetto simile al seguente:
 
 ```
----
-title: "Setup Steps - Sign In with Apple for Xamarin.Forms"
-description: Sign In with Apple setup differs depending on the different platforms your mobile application targets.
-ms.prod: xamarin
-ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 09/10/2019
-no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+-----BEGIN PRIVATE KEY-----
+MIGTAgEAMBMGBasGSM49AgGFCCqGSM49AwEHBHkwdwIBAQQg3MX8n6VnQ2WzgEy0
+Skoz9uOvatLMKTUIPyPCAejzzUCgCgYIKoZIzj0DAQehRANCAARZ0DoM6QPqpJxP
+JKSlWz0AohFhYre10EXPkjrih4jTm+b0AeG2BGuoIWd18i8FimGDgK6IzHHPsEqj
+DHF5Svq0
 -----END PRIVATE KEY-----
 ```
 

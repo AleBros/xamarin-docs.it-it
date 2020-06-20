@@ -1,8 +1,22 @@
 ---
-title: "la modalità colore legacy di visualElement in Android" Description: "specifici della piattaforma consente di utilizzare funzionalità disponibili solo in una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la Xamarin.Forms modalità di colore legacy. "
-ms. prod: Novell MS. AssetID: 37D95A2D-74AC-488A-B903-2BDD799EAA5C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità colore legacy di visualElement in Android
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma Android specifica che disabilita la Xamarin.Forms modalità di colore legacy.
+ms.prod: xamarin
+ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fe0d751b1aa1cb609100e43c0f0015fd804327a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128856"
 ---
-
 # <a name="visualelement-legacy-color-mode-on-android"></a>Modalità colore legacy di visualElement in Android
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

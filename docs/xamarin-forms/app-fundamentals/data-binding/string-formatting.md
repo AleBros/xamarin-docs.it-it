@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms stringa Formatting" Description: "questo articolo spiega come usare i data binding Novell. Forms per formattare e visualizzare gli oggetti come stringhe. Questa operazione viene eseguita impostando l'oggetto StringFormat dell'associazione su una stringa di formattazione .NET standard con un segnaposto ".
-ms. prod: Novell MS. AssetID: 978C85B7-CB58-4483-A131-21B381A865E0 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsFormattazione di stringhe
+description: Questo articolo illustra come usare i data binding di Xamarin.Forms per formattare e visualizzare gli oggetti sotto forma di stringhe. Tale risultato si ottiene impostando StringFormat del data binding su una stringa di formattazione .NET standard con un segnaposto.
+ms.prod: xamarin
+ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135759"
 ---
-
 # <a name="xamarinforms-string-formatting"></a>Xamarin.FormsFormattazione di stringhe
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

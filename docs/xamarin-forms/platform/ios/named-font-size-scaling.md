@@ -1,8 +1,22 @@
 ---
-title: "scalabilità accessibilità per le dimensioni dei tipi di carattere denominate in iOS" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che disabilita la scalabilità dell'accessibilità per le dimensioni dei tipi di carattere denominate ".
-ms. prod: Novell MS. AssetID: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Ridimensionamento dell'accessibilità per le dimensioni dei tipi di carattere
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che disabilita la scalabilità dell'accessibilità per le dimensioni dei tipi di carattere denominati.
+ms.prod: xamarin
+ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9aa29ba4d8e6bda9126ec211af1b4febebd5bab9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128271"
 ---
-
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Ridimensionamento dell'accessibilità per le dimensioni dei tipi di carattere
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms behaviors" Description: "Behaviors consente di aggiungere funzionalità ai controlli dell'interfaccia utente senza che sia necessario sottometterle in sottoclasse. I comportamenti vengono scritti nel codice e aggiunti ai controlli in XAML o nel codice ".
-ms. prod: Novell MS. AssetID: 42E32AD7-8E3B-48B3-B402-E75B758DA913 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsComportamenti
+description: I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza sottoclassarli. I comportamenti vengono scritti in codice e aggiunti ai controlli in XAML o nel codice.
+ms.prod: xamarin
+ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 83952982bd163725fb931c860cac3e267726315c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135811"
 ---
-
 # <a name="xamarinforms-behaviors"></a>Xamarin.FormsComportamenti
 
 _I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. I comportamenti vengono scritti nel codice e aggiunti ai controlli in XAML o nel codice._

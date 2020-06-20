@@ -1,6 +1,21 @@
 ---
-title: "implementazione di una vista" Descrizione: "questo articolo spiega come creare un renderer personalizzato per un Xamarin.Forms controllo personalizzato usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo".
-ms. prod: Novell MS. AssetID: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Implementazione di una vista
+description: Questo articolo illustra come creare un renderer personalizzato per un Xamarin.Forms controllo personalizzato usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo.
+ms.prod: xamarin
+ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c239955a093120c3a16ea3236946eb645ea9a4b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570804"
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 

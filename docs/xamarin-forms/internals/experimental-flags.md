@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms flag sperimentali" Descrizione: " Xamarin.Forms i flag sperimentali consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile".
-ms. prod: Novell MS. AssetID: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsflag sperimentali
+description: Xamarin.Formsi flag sperimentali consentono al team di progettazione di fornire nuove funzionalità agli utenti in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile.
+ms.prod: xamarin
+ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 17fcc996b4dc8013a23a598ece8e240caba3f775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946117"
 ---
-
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Formsflag sperimentali
 
 Quando Xamarin.Forms viene implementata una nuova funzionalità, a volte viene applicato un flag sperimentale. Questo consente al team di progettazione di fornire nuove funzionalità in modo più rapido, pur continuando a modificare le API delle funzionalità prima di passare a una versione stabile. Il flag sperimentale viene quindi rimosso quando la funzionalità viene spostata in una versione stabile.
@@ -12,10 +26,10 @@ Xamarin.Formsinclude i flag sperimentali seguenti:
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
 - `Expander_Experimental`
-- `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
 - `RadioButton_Experimental`
+- `Shapes_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -44,7 +58,7 @@ Il `SetFlags` metodo deve essere richiamato nella `AppDelegate` classe in iOS, n
 Il `Xamarin.Forms.Forms.SetFlags` metodo accetta un `string` argomento di matrice, che rende possibile l'abilitazione di più flag sperimentali in una singola chiamata al metodo:
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
+Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]

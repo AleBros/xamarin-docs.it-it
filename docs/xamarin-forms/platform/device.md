@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Device Class" Description: "questo articolo spiega come usare la Xamarin.Forms Classe Device per un controllo con granularità fine sulle funzionalità e sui layout per ogni piattaforma".
-ms. prod: Novell MS. AssetID: 2F304AEC-8612-4833-81E5-B2F3F469B2DF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsClasse Device
+description: Questo articolo illustra come usare la Xamarin.Forms Classe Device per un controllo con granularità fine sulle funzionalità e i layout per ogni singola piattaforma.
+ms.prod: xamarin
+ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ba4e93b8f364d6887439b05017a9cd373dce5985
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572325"
 ---
-
 # <a name="xamarinforms-device-class"></a>Xamarin.FormsClasse Device
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
@@ -162,7 +176,7 @@ Color color = Device.GetNamedColor(NamedPlatformColor.HoloBlueBright);
 
 La `NamedPlatformColor` classe contiene le costanti che definiscono i colori denominati per Android, iOS e UWP:
 
-| Android | iOS | Piattaforma UWP |
+| Android | iOS | UWP |
 | --- | --- | --- |
 | `BackgroundDark` | `Label` | `SystemAltHighColor` |
 | `BackgroundLight` | `Link` | `SystemAltLowColor` |

@@ -1,8 +1,22 @@
 ---
-title: "layout per app tablet e desktop" Descrizione: "questo articolo spiega come ottimizzare Xamarin.Forms i layout delle applicazioni per tablet, anziché telefoni".
-ms. prod: Novell MS. AssetID: D62F472B-4345-4983-8403-659A538B591F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/01/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Layout per le app tablet e desktop
+description: Questo articolo illustra come ottimizzare Xamarin.Forms i layout delle applicazioni per tablet, anziché telefoni.
+ms.prod: xamarin
+ms.assetid: D62F472B-4345-4983-8403-659A538B591F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/01/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573248"
 ---
-
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le app tablet e desktop
 
 Xamarin.Formssupporta tutti i tipi di dispositivi disponibili sulle piattaforme supportate, quindi, oltre ai telefoni, le app possono essere eseguite anche in:

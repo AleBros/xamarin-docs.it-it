@@ -1,15 +1,29 @@
 ---
-title: " Xamarin.Forms proprietà, metodi ed eventi comuni del controllo" Descrizione: "in questo articolo vengono descritte le proprietà, i metodi e gli eventi comuni definiti nella classe visualElement, comunemente utilizzati per la derivazione delle classi".
-ms. prod: Novell MS. assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/21/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsProprietà, metodi ed eventi comuni del controllo
+description: Questo articolo descrive le proprietà, i metodi e gli eventi comuni definiti nella classe visualElement, comunemente utilizzati nelle classi derivate.
+ms.prod: xamarin
+ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 06/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104326"
 ---
-
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsProprietà, metodi ed eventi comuni del controllo
 
 La Xamarin.Forms `VisualElement` classe è la classe base per la maggior parte dei controlli utilizzati in un' Xamarin.Forms applicazione. La `VisualElement` classe definisce numerose [Proprietà](#properties), [Metodi](#methods)ed [eventi](#events) utilizzati nelle classi derivate.
 
 ## <a name="properties"></a>Proprietà
 
-Le proprietà seguenti sono disponibili nelle `VisualElement` istanze di. Per un elenco completo, vedere le [proprietà dell'API di visualElement](xref:Xamarin.Forms.VisualElement#properties).
+Per gli oggetti sono disponibili le proprietà seguenti [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 
 ### [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 
@@ -30,6 +44,10 @@ La `Behaviors` proprietà è un oggetto `List` di `Behavior` oggetti. I comporta
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
 La `Bounds` proprietà è un `Rectangle` oggetto di sola lettura che rappresenta lo spazio occupato dal controllo. Il `Bounds` valore della proprietà viene assegnato durante il ciclo di layout. `Rectangle` `struct` Contiene proprietà e metodi utili per il test dell'intersezione e del contenimento dei rettangoli. Per ulteriori informazioni, vedere l' [ Xamarin.Forms API Rectangle](xref:Xamarin.Forms.Rectangle).
+
+### `Clip`
+
+La `Clip` proprietà è un `Geometry` oggetto che definisce la struttura del contenuto di un elemento. Per definire una clip, usare un `Geometry` oggetto come `EllipseGeometry` per impostare la proprietà dell'elemento `Clip` . Sarà visibile solo l'area che si trova all'interno dell'area geometrica. Per altre informazioni, vedere [ritagliare le geometrie](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
@@ -254,4 +272,4 @@ Il comportamento non è definito quando il valore minimo è maggiore del valore 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Documentazione dell'API di visualElement](xref:Xamarin.Forms.VisualElement)
+- [API di visualElement](xref:Xamarin.Forms.VisualElement)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms piattaforme supportate" Descrizione: "requisiti per piattaforma e sistema di sviluppo per Xamarin.Forms ".
-ms. prod: Novell MS. AssetID: eecaf6a5-567c-49b2-AC83-2a195596c5bf ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formspiattaforme supportate
+description: Requisiti del sistema di piattaforma e di sviluppo per Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f93af19587cf962ac0c852599157261a087dadbc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197548"
 ---
-
 # <a name="xamarinforms-supported-platforms"></a>Xamarin.Formspiattaforme supportate
 
 Xamarin.Formsle applicazioni possono essere scritte per i sistemi operativi seguenti:

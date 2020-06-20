@@ -1,8 +1,22 @@
 ---
-title: "Guida per il layout dell'area sicura in iOS" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma iOS specifica che garantisce che il contenuto della pagina sia posizionato in un'area della schermata sicura per tutti i dispositivi che usano iOS 11 e versioni successive.
-ms. prod: Novell MS. AssetID: 2B6789C1-39B4-4C16-ADE1-3ED3378EAC63 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Guida per il layout dell'area sicura in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la piattaforma iOS specifica che garantisce che il contenuto della pagina sia posizionato in un'area dello schermo sicura per tutti i dispositivi che usano iOS 11 e versioni successive.
+ms.prod: xamarin
+ms.assetid: 2B6789C1-39B4-4C16-ADE1-3ED3378EAC63
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5ca30481fbc0e5631ff75000c688dd805793e670
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128063"
 ---
-
 # <a name="safe-area-layout-guide-on-ios"></a>Guida per il layout dell'area sicura in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

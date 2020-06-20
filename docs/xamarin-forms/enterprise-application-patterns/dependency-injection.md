@@ -1,8 +1,22 @@
 ---
-title: "inserimento delle dipendenze": "questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers usa l'inserimento delle dipendenze per separare i tipi concreti dal codice che dipende da questi tipi".
-ms. prod: Novell MS. AssetID: a150f2d1-06F8-4aed-ab4e-7a847d69f103 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Inserimento di dipendenze
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers usa l'inserimento delle dipendenze per separare i tipi concreti dal codice che dipende da questi tipi.
+ms.prod: xamarin
+ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572351"
 ---
-
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
 In genere, viene richiamato un costruttore di classe quando si crea un'istanza di un oggetto e tutti i valori necessari per l'oggetto vengono passati come argomenti al costruttore. Questo è un esempio di inserimento di dipendenze e, in particolare, è noto come *inserimento del costruttore*. Le dipendenze necessarie per l'oggetto vengono inserite nel costruttore.

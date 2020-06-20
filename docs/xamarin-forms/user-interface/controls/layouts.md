@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Layouts" Description: " Xamarin.Forms i layout vengono usati per comporre i controlli dell'interfaccia utente in strutture visive. Questo articolo elenca i layout inclusi in Xamarin.Forms ".
-ms. prod: Novell MS. AssetID: F4180997-BA21-453A-9958-D1E2940DF050 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsLayout
+description: Xamarin.FormsI layout vengono usati per comporre controlli dell'interfaccia utente in strutture visive. Questo articolo elenca i layout inclusi in Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 751a004e0051fcbfd0592654b0e73f26874b15d3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84567086"
 ---
-
 # <a name="xamarinforms-layouts"></a>Xamarin.FormsLayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

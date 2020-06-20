@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Geocoding" Description: "la classe geocoding in Xamarin.Essentials fornisce le API per la geocodifica di un segnaposto per le coordinate posizionali e la geocodifica inversa di coordinate a un segnaposto".
-ms. AssetID: 3ADC440C-B000-4708-A2CC-296F5160AF90 Author: jamesmontemagno ms. Author: Jamont ms. Date: 05/28/2019 ms. Custom: video No-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Geocodifica'
+description: La classe di geocodifica in Xamarin.Essentials fornisce le API per la geocodifica di un segnaposto per le coordinate posizionali e la geocodifica inversa di un segnaposto.
+ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 66383e441435b5f4bdb48224c9ab602f28072b3d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802331"
 ---
-
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
 
 La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
@@ -113,7 +126,7 @@ Le [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xa
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Geocoding](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
+- [Codice sorgente di Geocoding](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geocoding)
 - [Documentazione dell'API Geocoding](xref:Xamarin.Essentials.Geocoding)
 
 ## <a name="related-video"></a>Video correlato

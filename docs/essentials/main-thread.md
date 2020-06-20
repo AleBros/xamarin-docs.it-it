@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : MainThread" Description: "la classe MainThread consente alle applicazioni di eseguire il codice sul thread di esecuzione principale".
-ms. AssetID: CD6D51E7-D933-4FE7-A7F7-392EF27812E1 Author: jamesmontemagno ms. Custom: video ms. Author: Jamont ms. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: MainThread'
+description: La classe MainThread consente alle applicazioni di eseguire il codice sul thread principale di esecuzione.
+ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 82c54a72d0e0bc991644295f05136f89fd280d7f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802276"
 ---
-
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 La classe **MainThread** consente alle applicazioni di eseguire il codice sul thread principale di esecuzione e di determinare se un particolare blocco di codice è attualmente in esecuzione sul thread principale.
@@ -90,7 +103,7 @@ _Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaf
 
 La classe `MainThread` include i metodi `static` aggiuntivi seguenti che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
 
-| Metodo | Argomenti | Valori di codice restituiti | Scopo |
+| Metodo | Argomenti | Restituisce | Scopo |
 |---|---|---|---|
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Richiama un oggetto `Func<T>` sul thread principale e ne attende il completamento. |
 | `InvokeOnMainThreadAsync` | `Action` | `Task` | Richiama un oggetto `Action` sul thread principale e ne attende il completamento. |
@@ -100,7 +113,7 @@ La classe `MainThread` include i metodi `static` aggiuntivi seguenti che possono
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di MainThread](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
+- [Codice sorgente di MainThread](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/MainThread)
 - [Documentazione dell'API MainThread](xref:Xamarin.Essentials.MainThread)
 
 ## <a name="related-video"></a>Video correlato

@@ -1,9 +1,22 @@
 ---
-title: "che cos'è Novell?"
-Descrizione: "questo articolo introduce la piattaforma Novell e le librerie correlate".
-ms. prod: Novell MS. AssetID: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6 ms. Custom: autore del video: profexorgeek ms. Author: jusjohns ms. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Che cos'è Xamarin?
+description: Questo articolo presenta la piattaforma Novell e le librerie correlate.
+ms.prod: xamarin
+ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
+ms.custom: video
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 708a310ea015f9e678d534898fde18abc3848120
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198324"
 ---
-
 # <a name="what-is-xamarin"></a>Che cos'è Xamarin?
 
 [![Screenshot dell'applicazione Novell di esempio in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)

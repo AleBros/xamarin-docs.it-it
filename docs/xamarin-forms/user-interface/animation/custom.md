@@ -1,8 +1,22 @@
 ---
-title: "animazioni personalizzate in Xamarin.Forms " Description: "in questo articolo viene illustrato come utilizzare la classe di animazione Novell. Forms per creare e annullare animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animano proprietà che non sono animate dai metodi di animazione esistenti.
-ms. prod: Novell MS. AssetID: 03B2E3FC-E720-4D45-B9A0-711081FC1907 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Animazioni personalizzate inXamarin.Forms
+description: Questo articolo illustra come usare la classe di animazione Novell. Forms per creare e annullare animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animano proprietà che non sono animate dai metodi di animazione esistenti.
+ms.prod: xamarin
+ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946104"
 ---
-
 # <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
@@ -37,7 +51,7 @@ Nel metodo vengono specificati gli argomenti seguenti `Commit` :
 
 - Il primo argomento (*proprietario*) identifica il proprietario dell'animazione. Può trattarsi dell'elemento visivo a cui è applicata l'animazione o di un altro elemento visivo, ad esempio la pagina.
 - Il secondo argomento (*Name*) identifica l'animazione con un nome. Il nome viene combinato con il proprietario per identificare in modo univoco l'animazione. Questa identificazione univoca può quindi essere utilizzata per determinare se l'animazione è in esecuzione ([ `AnimationIsRunning` ] (xrif: Xamarin.Forms . AnimationExtensions. AnimationIsRunning ( Xamarin.Forms . IAnimatable, System. String)) o per annullarlo ([ `AbortAnimation` ] (xrif: Xamarin.Forms . AnimationExtensions. AbortAnimation ( Xamarin.Forms . IAnimatable, System. String))).
-- Il terzo argomento (*frequenza*) indica il numero di millisecondi tra ciascuna chiamata al metodo di callback definito nel [`Animation`](xref:Xamarin.Forms.Animation) Costruttore
+- Il terzo argomento (*rate*) indica il numero di millisecondi tra ciascuna chiamata al metodo di callback definito nel [`Animation`](xref:Xamarin.Forms.Animation) costruttore.
 - Il quarto argomento (*length*) indica la durata dell'animazione, in millisecondi.
 - Il quinto argomento (*interpolazione*) definisce la funzione di interpolazione da utilizzare nell'animazione. In alternativa, la funzione di interpolazione può essere specificata come argomento per il [`Animation`](xref:Xamarin.Forms.Animation) costruttore. Per ulteriori informazioni sulle funzioni di interpolazione, vedere [funzioni di interpolazione](~/xamarin-forms/user-interface/animation/easing.md).
 - Il sesto argomento (*terminato*) è un callback che verrà eseguito al termine dell'animazione. Questo callback accetta due argomenti, con il primo argomento che indica un valore finale e il secondo argomento è `bool` impostato su `true` se l'animazione è stata annullata. In alternativa, è possibile specificare il callback *completato* come argomento del [`Animation`](xref:Xamarin.Forms.Animation) costruttore. Tuttavia, con un'unica animazione, se i callback *finiti* vengono specificati sia nel `Animation` costruttore che nel `Commit` metodo, verrà eseguito solo il callback specificato nel `Commit` metodo.

@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials estensioni della piattaforma" Descrizione: " Xamarin.Essentials fornisce diversi metodi di estensione della piattaforma quando è necessario utilizzare tipi di piattaforma come Rect, dimensioni e punto".
-ms. AssetID: AB4D198A-4FD7-479E-8627-01F887A6D056 Author: jamesmontemagno ms. Author: Jamont ms. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsEstensioni della piattaforma
+description: Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point.
+ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 56cb9619a4132f6568cee8fbf590965934024639
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801923"
 ---
-
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Estensioni della piattaforma
 
 Xamarin.Essentialsin sono disponibili diversi metodi di estensione della piattaforma quando è necessario utilizzare i tipi di piattaforma, ad esempio Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici.
@@ -135,7 +147,7 @@ var system2 = platform.ToSystemRectangle();
 
 ## <a name="api"></a>API
 
-- [Codice sorgente dei convertitori](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/PlatformExtensions)
+- [Codice sorgente dei convertitori](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/PlatformExtensions)
 - [Documentazione delle API dei convertitori Point](xref:Xamarin.Essentials.PointExtensions)
 - [Documentazione delle API dei convertitori Rectangle](xref:Xamarin.Essentials.RectangleExtensions)
 - [Documentazione delle API dei convertitori Size](xref:Xamarin.Essentials.SizeExtensions)

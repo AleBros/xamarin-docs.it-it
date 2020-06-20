@@ -1,8 +1,22 @@
 ---
-title: "classi base renderer e controlli nativi" Description: "ogni Xamarin.Forms controllo dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Questo articolo elenca le classi del renderer e del controllo nativo che implementano ogni Xamarin.Forms pagina, layout, visualizzazione e cella. "
-ms. prod: Novell MS. AssetID: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Classi di base e controlli nativi del renderer
+description: Ogni Xamarin.Forms controllo dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Questo articolo elenca le classi del renderer e del controllo nativo che implementano ogni Xamarin.Forms pagina, layout, visualizzazione e cella.
+ms.prod: xamarin
+ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f6eff831f3eb653e281dd9ee750bae7f7dfda06
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198394"
 ---
-
 # <a name="renderer-base-classes-and-native-controls"></a>Classi di base e controlli nativi del renderer
 
 _Ogni Xamarin.Forms controllo dispone di un renderer associato per ogni piattaforma che crea un'istanza di un controllo nativo. Questo articolo elenca le classi del renderer e del controllo nativo che implementano ogni Xamarin.Forms pagina, layout, visualizzazione e cella._
@@ -26,11 +40,11 @@ La classe `MapRenderer` è disponibile negli spazi dei nomi seguenti:
 > [!NOTE]
 > Per informazioni sulla creazione di renderer personalizzati per le applicazioni shell, vedere [ Xamarin.Forms renderer personalizzati](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)della shell.
 
-## <a name="pages"></a>.NET
+## <a name="pages"></a>Pagine
 
 Nella tabella seguente sono elencate le classi del renderer e del controllo nativo che implementano ogni tipo di Xamarin.Forms [pagina](~/xamarin-forms/user-interface/controls/pages.md) :
 
-|Pagina|Renderer|iOS|Android|Android (AppCompat)|Piattaforma UWP|
+|Pagina|Renderer|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ContentPage`](xref:Xamarin.Forms.ContentPage)|[PageRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/contentpage.md)|UIViewController|ViewGroup||FrameworkElement|
 |[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)|PhoneMasterDetailRenderer (iOS - Phone), TabletMasterDetailPageRenderer (iOS - Tablet), MasterDetailRenderer (Android), MasterDetailPageRenderer (Android AppCompat), MasterDetailPageRenderer (UWP)|UIViewController (Phone), UISplitViewController (Tablet)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (controllo personalizzato)|
@@ -43,7 +57,7 @@ Nella tabella seguente sono elencate le classi del renderer e del controllo nati
 
 Nella tabella seguente sono elencate le classi del renderer e del controllo nativo che implementano ogni tipo di Xamarin.Forms [layout](~/xamarin-forms/user-interface/controls/layouts.md) :
 
-|Layout|Renderer|iOS|Android|Android (AppCompat)|Piattaforma UWP|
+|Layout|Renderer|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |
 |[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Visualizzazione|Visualizzazione|FrameworkElement|
 |[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Visualizzazione|Visualizzazione|FrameworkElement|
@@ -60,7 +74,7 @@ Nella tabella seguente sono elencate le classi del renderer e del controllo nati
 
 Nella tabella seguente sono elencate le classi del renderer e del controllo nativo che implementano ogni tipo di Xamarin.Forms [visualizzazione](~/xamarin-forms/user-interface/controls/views.md) :
 
-|Viste|Renderer|iOS|Android|Android (AppCompat)|Piattaforma UWP|
+|Viste|Renderer|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
 |[`BoxView`](xref:Xamarin.Forms.BoxView)|BoxRenderer (iOS e Android), BoxViewRenderer (UWP)|UIView|ViewGroup||Rectangle|
@@ -98,7 +112,7 @@ Nella tabella seguente sono elencate le classi del renderer e del controllo nati
 
 Nella tabella seguente sono elencate le classi del renderer e del controllo nativo che implementano ogni tipo di Xamarin.Forms [cella](~/xamarin-forms/user-interface/controls/cells.md) :
 
-|Celle|Renderer|iOS|Android|Piattaforma UWP|
+|Celle|Renderer|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
 |[`EntryCell`](xref:Xamarin.Forms.EntryCell)|EntryCellRenderer|UITableViewCell con UITextField|LinearLayout con TextView ed EditText|DataTemplate con TextBox|
 |[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UITableViewCell con UISwitch|Opzione|DataTemplate con un controllo Grid contenente un controllo TextBlock e ToggleSwitch|

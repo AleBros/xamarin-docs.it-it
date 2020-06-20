@@ -1,13 +1,27 @@
 ---
-title: " Xamarin.Forms Binding fallback" Descrizione: "in questo articolo viene illustrato come rendere le associazioni più affidabili definendo i valori di fallback che verranno utilizzati in caso di errore dell'associazione".
-ms. prod: Novell MS. AssetID: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/16/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsFallback di binding
+description: Questo articolo illustra come rendere più affidabili i binding mediante la definizione di valori di fallback, che vengono usati se il binding non riesce.
+ms.prod: xamarin
+ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/16/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946208"
 ---
-
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.FormsFallback di binding
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-In alcuni casi i data binding non riescono perché l'origine del binding non può essere risolta o perché il binding ha esito positivo ma restituisce un valore `null`. Anche se questi scenari possono essere gestiti con convertitori di valori o altro codice aggiuntivo, i data binding possono essere resi più solidi mediante la definizione di valori di fallback da usare se il processo di binding ha esito negativo. Questa operazione può essere eseguita definendo le [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà e in un'espressione di associazione. Poiché queste proprietà si trovano nella [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, possono essere utilizzate con binding, associazioni compilate e con l' `Binding` estensione di markup.
+In alcuni casi i data binding non riescono perché l'origine del binding non può essere risolta o perché il binding ha esito positivo ma restituisce un valore `null`. Anche se questi scenari possono essere gestiti con convertitori di valori o altro codice aggiuntivo, i data binding possono essere resi più solidi mediante la definizione di valori di fallback da usare se il processo di binding ha esito negativo. Questa operazione può essere eseguita definendo le [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà e in un'espressione di associazione. Poiché queste proprietà si trovano nella [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, possono essere usate con binding, MultiBinding, associazioni compilate e con l' `Binding` estensione di markup.
 
 > [!NOTE]
 > L'utilizzo delle [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà e in un'espressione di associazione è facoltativo.

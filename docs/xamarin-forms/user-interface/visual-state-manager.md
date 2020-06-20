@@ -1,8 +1,23 @@
 ---
-title: " Xamarin.Forms Visual State Manager" Description: "usare Visual State Manager per apportare modifiche agli elementi XAML in base agli Stati di visualizzazione impostati dal codice".
-ms. prod: Novell MS. AssetID: 17296F14-640D-484B-A24C-A4E9B7013E4F ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 02/21/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsGestione stato di visualizzazione
+description: Utilizzare Visual State Manager per apportare modifiche agli elementi XAML in base agli Stati di visualizzazione impostati dal codice.
+ms.prod: xamarin
+ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3dda730446ec2b4268f42ee5af853400b33565d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946229"
 ---
-
 # <a name="xamarinforms-visual-state-manager"></a>Xamarin.FormsGestione stato di visualizzazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
@@ -400,6 +415,7 @@ Nella tabella seguente sono elencati gli Stati di visualizzazione definiti in Xa
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Stati di visualizzazione CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `ImageButton` | `Pressed` | [Stati di visualizzazione ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `RadioButton` | `IsChecked` | [Stati di visualizzazione RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `Switch` | `On`, `Off` | [Cambia stati di visualizzazione](~/xamarin-forms/user-interface/switch.md#switch-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Stati comuni](#common-states) |
 
 È possibile accedere a ognuno di questi stati tramite il gruppo di Stati di visualizzazione denominato `CommonStates` .

@@ -1,8 +1,22 @@
 ---
-title: "Visualizza popup" Description: " Xamarin.Forms fornisce tre elementi di interfaccia utente di tipo popup, ovvero un avviso, un foglio di azione e una richiesta. Questo articolo illustra l'uso dell'avviso, della finestra delle azioni e delle API di prompt per visualizzare le finestre di dialogo che consentono agli utenti di inviare semplici domande, guidare gli utenti attraverso le attività e visualizzare i prompt. "
-ms. prod: Novell MS. AssetID: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visualizza popup
+description: Xamarin.Formsin sono disponibili tre elementi dell'interfaccia utente di tipo popup, ovvero un avviso, un foglio di azione e una richiesta. Questo articolo illustra l'uso dell'avviso, della finestra delle azioni e delle API di prompt per visualizzare le finestre di dialogo che consentono agli utenti di inviare semplici domande, guidare gli utenti attraverso le attività e visualizzare i prompt.
+ms.prod: xamarin
+ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136318"
 ---
-
 # <a name="display-pop-ups"></a>Visualizza popup
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

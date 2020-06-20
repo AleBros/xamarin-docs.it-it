@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms controlli di terze parti" Descrizione: "i controlli aggiuntivi per Xamarin.Forms lo sviluppo sono disponibili da società come Telerik, Syncfusion, DevExpress, Infragistics, ComponentOne e Steema".
-ms. prod: Novell MS. AssetID: C33A4848-3FC8-4A20-8275-387039F541AD ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsControlli di terze parti
+description: I controlli aggiuntivi per Xamarin.Forms lo sviluppo sono disponibili per le aziende, ad esempio Telerik, Syncfusion, DevExpress, Infragistics, ComponentOne e Steema.
+ms.prod: xamarin
+ms.assetid: C33A4848-3FC8-4A20-8275-387039F541AD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e0881296664ec20eeefe02c9db57a2fd76cd999b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132418"
 ---
-
 # <a name="xamarinforms-third-party-controls"></a>Xamarin.FormsControlli di terze parti
 
 Oltre ai controlli forniti con Xamarin.Forms , i controlli di terze parti sono disponibili nelle società seguenti:

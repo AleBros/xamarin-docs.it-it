@@ -1,8 +1,21 @@
 ---
-title: "installazione di Novell Preview in Windows" Description: "questo documento descrive come installare una versione di anteprima di Novell in Visual Studio 2019 usando il canale della versione di anteprima".
-ms. prod: Novell MS. AssetID: 9F730444-06E8-4B3F-8A19-CA95CD484FFA autore: conceptdev ms. Author: crdun ms. Date: 03/20/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Installazione di Xamarin Preview in Windows
+description: Questo documento descrive come installare una versione di anteprima di Xamarin in Visual Studio 2019 usando il canale della versione di anteprima.
+ms.prod: xamarin
+ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
+author: conceptdev
+ms.author: crdun
+ms.date: 03/20/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5ccd5a610ad41c0160a6778a63a367376bd200b3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134017"
 ---
-
 # <a name="installing-xamarin-preview-on-windows"></a>Installazione di Xamarin Preview in Windows
 
 Visual Studio 2019 e Visual Studio 2017 non supportano canali alfa, beta e stabili nello stesso modo delle versioni precedenti. Sono invece disponibili solo due opzioni:

@@ -1,8 +1,22 @@
 ---
-title: "aggiunta di un riconoscitore di movimento Tap" Description: "in questo articolo viene illustrato come utilizzare il gesto Tap per il rilevamento del tocco in un' Xamarin.Forms applicazione. Il rilevamento tap viene implementato con la classe TapGestureRecognizer ".
-ms. prod: Novell MS. AssetID: 1D150BAF-4157-49BC-90A0-153323B8EBCF ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aggiunta di un sistema di riconoscimento del gesto tocco
+description: Questo articolo illustra come usare il gesto Tap per il rilevamento tap in un' Xamarin.Forms applicazione. Il rilevamento del tocco viene implementato con la classe TapGestureRecognizer.
+ms.prod: xamarin
+ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f5b476ac83f801b4ccded3e18bb601c06e0d0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570609"
 ---
-
 # <a name="adding-a-tap-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del gesto tocco
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)

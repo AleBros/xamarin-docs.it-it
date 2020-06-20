@@ -1,7 +1,22 @@
 ---
-title: "Riepilogo del capitolo 28. Località e mappe "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 28. Location and Maps "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: F6E20077-687C-45C4-A375-31D4F49BBFA4 Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 28. Posizione e mappe
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 28. Posizione e mappe'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133406"
 ---
-
 # <a name="summary-of-chapter-28-location-and-maps"></a>Riepilogo del capitolo 28. Posizione e mappe
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)

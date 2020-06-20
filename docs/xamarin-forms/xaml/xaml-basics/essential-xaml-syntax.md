@@ -1,8 +1,22 @@
 ---
-Titolo: "parte 2. Sintassi XAML essenziale "Description:" in questo articolo vengono illustrate le funzionalità di sintassi XAML essenziali degli elementi proprietà e delle proprietà associate.
-ms. prod: Novell MS. AssetID: 4022F1DC-3802-4635-A553-688ABD3F0D5A ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 2. Sintassi XAML essenziale
+description: Questo articolo illustra le funzionalità di sintassi XAML essenziali degli elementi proprietà e delle proprietà associate.
+ms.prod: xamarin
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c400bb342568a0399e2a582496f85ead273b6994
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572182"
 ---
-
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

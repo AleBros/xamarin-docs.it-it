@@ -1,7 +1,22 @@
 ---
-Titolo: "Riepilogo del capitolo 4. Scorrimento dello stack "Descrizione:" creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 4. Scorrimento dello stack "ms. prod: Novell MS. Technology: Novell-Forms ms. AssetID: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44 Author: davidbritch ms. Author: dabritch ms. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Riepilogo del capitolo 4. Scorrimento dello stack
+description: 'Creazione di app per dispositivi mobili con Xamarin.Forms : riepilogo del capitolo 4. Scorrimento dello stack'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6b86bfe1e343cd50f4a133726d16364b3efb8bee
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198265"
 ---
-
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)

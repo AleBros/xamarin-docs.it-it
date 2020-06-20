@@ -1,8 +1,22 @@
 ---
-title: "visualizzazione di bitmap SkiaSharp" Descrizione: "informazioni su come visualizzare bitmap SkiaSharp in dimensioni in pixel ed espanse per riempire rettangoli mantenendo le proporzioni".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9 autore: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visualizzazione di bitmap SkiaSharp
+description: Informazioni su come visualizzare le bitmap SkiaSharp in dimensioni in pixel ed espanderle per riempire rettangoli mantenendo le proporzioni.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134758"
 ---
-
 # <a name="displaying-skiasharp-bitmaps"></a>Visualizzazione di bitmap SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

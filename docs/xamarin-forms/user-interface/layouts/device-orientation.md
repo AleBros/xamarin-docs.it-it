@@ -1,8 +1,22 @@
 ---
-title: "Descrizione dell'orientamento del dispositivo": "in questo articolo viene illustrato come eseguire il layout Xamarin.Forms delle applicazioni che hanno un aspetto straordinario negli orientamenti orizzontale e verticale".
-ms. prod: Novell MS. AssetID: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/24/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Orientamento del dispositivo
+description: Questo articolo illustra come eseguire il layout Xamarin.Forms delle applicazioni che hanno un aspetto straordinario negli orientamenti verticale e orizzontale.
+ms.prod: xamarin
+ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/24/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0b1a47d4dcc92fca4d280708a2cbbe9374c17da8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573295"
 ---
-
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)

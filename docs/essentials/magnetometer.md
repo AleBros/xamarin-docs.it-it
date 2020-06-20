@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials : magnetometro" Description: "la classe magnetometro in Xamarin.Essentials consente di monitorare il sensore magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della terra."
-ms. AssetID: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B Author: jamesmontemagno ms. Author: Jamont ms. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Magnetometro'
+description: La classe magnetometro in Xamarin.Essentials consente di monitorare il sensore magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della terra.
+ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b01bc1fd9c65186952635c5f472b1ac6beb0c9bd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802281"
 ---
-
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetometro
 
 La classe **Magnetometer** consente di monitorare il magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della Terra.
@@ -68,5 +80,5 @@ Tutti i dati vengono restituiti in μT (microtesla).
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Magnetometer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [Codice sorgente di Magnetometer](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Magnetometer)
 - [Documentazione dell'API Magnetometer](xref:Xamarin.Essentials.Magnetometer)

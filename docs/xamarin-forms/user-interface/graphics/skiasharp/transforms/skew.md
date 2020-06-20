@@ -1,8 +1,22 @@
 ---
-title: "la trasformazione asimmetria" Description: "questo articolo spiega in che modo la trasformazione asimmetria può creare oggetti grafici inclinati in SkiaSharp e la illustra con il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616 autore: davidbritch ms. Author: dabritch ms. Date: 03/20/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Trasformazione di inclinazione
+description: Questo articolo illustra in che modo la trasformazione asimmetria può creare oggetti grafici inclinati in SkiaSharp e ne illustra il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/20/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 207b16f062a5c2137ac5fc3c21775d2486fda57d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135863"
 ---
-
 # <a name="the-skew-transform"></a>Trasformazione di inclinazione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

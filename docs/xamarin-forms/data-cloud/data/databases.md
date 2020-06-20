@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms database locali" Description: " Xamarin.Forms supporta le applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive in che modo Xamarin.Forms le applicazioni possono leggere e scrivere dati in un database SQLite locale usando SQLite.NET ".
-ms. prod: Novell MS. AssetID: F687B24B-7DF0-4F8E-A21A-A9BB507480EB ms. Technology: Novell-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 12/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsDatabase locali
+description: Xamarin.Formssupporta applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive in che modo Xamarin.Forms le applicazioni possono leggere e scrivere dati in un database SQLite locale usando SQLite.NET.
+ms.prod: xamarin
+ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 12/05/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f7cef5fd39d82cf0a4b55337835c0fe1d57b8bf9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197601"
 ---
-
 # <a name="xamarinforms-local-databases"></a>Xamarin.FormsDatabase locali
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms pages" Description: "le Xamarin.Forms pagine rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma. Questo articolo elenca le pagine incluse in Xamarin.Forms . "
-ms. prod: Novell MS. AssetID: 9C8C710F-E312-420B-9324-A7A20CEDB7EC ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/12/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPagine
+description: Xamarin.FormsLe pagine rappresentano le schermate delle applicazioni per dispositivi mobili multipiattaforma. Questo articolo elenca le pagine incluse in Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/12/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b72564ebbb057c8154140c9845961d4c42e93db3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573313"
 ---
-
 # <a name="xamarinforms-pages"></a>Xamarin.FormsPagine
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -13,7 +27,7 @@ Tutti i tipi di pagina descritti di seguito derivano dalla Xamarin.Forms [`Page`
 
 [![](pages-images/pages-sml.png "Xamarin.Forms Page Types")](pages-images/pages.png#lightbox "Xamarin.Forms Page Types")
 
-## <a name="pages"></a>.NET
+## <a name="pages"></a>Pagine
 
 Xamarin.Formssupporta i tipi di pagina seguenti:
 

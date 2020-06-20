@@ -1,8 +1,22 @@
 ---
-title: "stile intestazione gruppo ListView su iOS" Descrizione: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se le celle dell'intestazione ListView sono fluttuate durante lo scorrimento. "
-ms. prod: Novell MS. AssetID: 099B2C7F-727F-4BCF-903B-87E728108C24 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Stile intestazione gruppo ListView in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se le celle delle intestazioni ListView sono fluttuanti durante lo scorrimento.
+ms.prod: xamarin
+ms.assetid: 099B2C7F-727F-4BCF-903B-87E728108C24
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46e8dec3d5644defdeb8a2265a73815adfde92d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136034"
 ---
-
 # <a name="listview-group-header-style-on-ios"></a>Stile intestazione gruppo ListView in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

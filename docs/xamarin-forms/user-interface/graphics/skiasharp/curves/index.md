@@ -1,8 +1,22 @@
 ---
-title: "SkiaSharp Curves and paths" Description: "in questo articolo viene illustrato come utilizzare SkiaSharp per creare curve e utilizzare le funzionalità del percorso nelle Xamarin.Forms applicazioni e viene illustrato questo con il codice di esempio".
-ms. prod: Novell MS. Technology: Novell-skiasharp ms. AssetID: 781937AA-AA1C-469C-AA92-D42D08B58635 autore: davidbritch ms. Author: dabritch ms. Date: 05/24/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Curve e tracciati in SkiaSharp
+description: In questo articolo viene illustrato come utilizzare SkiaSharp per creare curve e utilizzare le funzionalità del percorso nelle Xamarin.Forms applicazioni e viene illustrato il codice di esempio.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/24/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127803"
 ---
-
 # <a name="skiasharp-curves-and-paths"></a>Curve e tracciati in SkiaSharp
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

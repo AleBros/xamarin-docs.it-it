@@ -1,8 +1,23 @@
 ---
-title: "Descrizione dell'applicazione e collegamento profondo": "questo articolo spiega come usare l'indicizzazione e la deep linking delle applicazioni per rendere disponibili i Xamarin.Forms contenuti dell'applicazione in dispositivi iOS e Android".
-ms. prod: Novell MS. AssetID: 410C5D19-AA3C-4E0D-B799-E288C5803226 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 11/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Indicizzazione e deep linking delle applicazioni
+description: Questo articolo illustra come usare l'indicizzazione e la deep linking delle applicazioni per rendere Xamarin.Forms ricercabile il contenuto dell'applicazione nei dispositivi iOS e Android.
+ms.prod: xamarin
+ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570635"
 ---
-
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)

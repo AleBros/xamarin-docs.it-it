@@ -1,8 +1,22 @@
 ---
-title: "directory immagini predefinite in Windows" Descrizione: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare l'oggetto specifico della piattaforma Windows che definisce la directory nel progetto da cui verranno caricati gli asset di immagine.
-ms. prod: Novell MS. AssetID: 537A032B-74DD-4D43-864E-7D7113286D0D ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Directory immagine predefinita in Windows
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare l'oggetto specifico della piattaforma Windows che definisce la directory nel progetto da cui verranno caricati gli asset di immagine.
+ms.prod: xamarin
+ms.assetid: 537A032B-74DD-4D43-864E-7D7113286D0D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d5c5e6db8ddcf3cef32bde5c387adc378afd0058
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135612"
 ---
-
 # <a name="default-image-directory-on-windows"></a>Directory immagine predefinita in Windows
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-title: "accesso alla libreria video del dispositivo" Descrizione: "in questo articolo viene illustrato come accedere alla raccolta video del dispositivo in un'applicazione lettore video, utilizzando Xamarin.Forms ".
-ms. prod: Novell MS. AssetID: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Accesso alla raccolta video del dispositivo
+description: Questo articolo illustra come accedere alla raccolta video del dispositivo in un'applicazione lettore video usando Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 00f1434a55fb815710bff26ac090a90bce5f41ee
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197528"
 ---
-
 # <a name="accessing-the-devices-video-library"></a>Accesso alla raccolta video del dispositivo
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

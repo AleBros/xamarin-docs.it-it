@@ -1,6 +1,21 @@
 ---
-title: "modifica Xamarin.Forms XAML con la casella degli strumenti" Descrizione: "la casella degli strumenti XAML contiene tutti i layout e i controlli incorporati, che possono essere trascinati direttamente in un file XAML aperto".
-ms. prod: Novell MS. AssetID: 513D1247-8AD0-4611-8660-1D277CD369E1 ms. Technology: Novell-Forms Author: conceptdev ms. Author: crdun ms. Date: 08/29/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modificare Xamarin.Forms XAML con la casella degli strumenti
+description: La casella degli strumenti XAML contiene tutti i layout e i controlli predefiniti, che possono essere trascinati direttamente in un file XAML aperto.
+ms.prod: xamarin
+ms.assetid: 513D1247-8AD0-4611-8660-1D277CD369E1
+ms.technology: xamarin-forms
+author: conceptdev
+ms.author: crdun
+ms.date: 08/29/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76d6a6f39692445f208f250ca7f6141a1e1ad450
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197992"
 ---
 # <a name="xamarinforms-xaml-toolbox"></a>Xamarin.FormsCasella degli strumenti XAML
 

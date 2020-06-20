@@ -1,8 +1,22 @@
 ---
-title: "utilizzare i dati della fase di progettazione con il Visualizzatore anteprima XAML" Descrizione: "in questo articolo viene illustrato come utilizzare i dati della fase di progettazione per visualizzare layout intensivi dei dati nel Visualizzatore anteprima XAML senza eseguire l'app."
-ms. prod: Novell MS. AssetID: 0F608019-5951-4BE6-80E0-9EEE1733D642 ms. Technology: Novell-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
+description: Questo articolo illustra come usare i dati in fase di progettazione per visualizzare layout intensivi dei dati nel Visualizzatore anteprima XAML senza eseguire l'app.
+ms.prod: xamarin
+ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127363"
 ---
-
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
 
 _Alcuni layout sono difficili da visualizzare senza dati. Usare questi suggerimenti per sfruttare al meglio l'anteprima delle pagine con dati intensivi nel Visualizzatore anteprime XAML._

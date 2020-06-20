@@ -1,8 +1,22 @@
 ---
-title: "stile separatore ListView su iOS" Descrizione: "le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se il separatore tra le celle in un controllo ListView usa l'intera larghezza del controllo ListView ".
-ms. prod: Novell MS. AssetID: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Stile separatore ListView in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se il separatore tra le celle in un controllo ListView usa l'intera larghezza del controllo ListView.
+ms.prod: xamarin
+ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c8d660896684283ba9b40cde168adbfe30ca0c51
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135993"
 ---
-
 # <a name="listview-separator-style-on-ios"></a>Stile separatore ListView in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

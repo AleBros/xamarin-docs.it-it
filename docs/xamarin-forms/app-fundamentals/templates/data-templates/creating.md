@@ -1,8 +1,22 @@
 ---
-title: "creazione di un Xamarin.Forms DataTemplate" Description: "i modelli di dati possono essere creati inline, in un oggetto ResourceDictionary o da un tipo personalizzato o da un Xamarin.Forms tipo di cella appropriato. In questo articolo vengono esaminate le singole tecniche ".
-ms. prod: Novell MS. AssetID: CFF4AB5E-9069-461C-84D8-F9F6C38510AB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/11/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Creazione di un oggetto Xamarin.Forms DataTemplate
+description: I modelli di dati possono essere creati inline, in un oggetto ResourceDictionary o da un tipo personalizzato o da un Xamarin.Forms tipo di cella appropriato. Questo articolo esamina ogni tecnica.
+ms.prod: xamarin
+ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3054180a9deb1357357c90db7b7fbdd8058b6773
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565499"
 ---
-
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creazione di un oggetto Xamarin.Forms DataTemplate
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

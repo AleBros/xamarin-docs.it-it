@@ -1,8 +1,22 @@
 ---
-title: "esplorazione di app aziendali": "questo capitolo illustra come l'app per dispositivi mobili eShopOnContainers esegue la navigazione del primo modello di visualizzazione dai modelli di visualizzazione".
-ms. prod: Novell MS. AssetID: 4cad57b5-7fe4-4527-a988-d9b60c9620b4 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Esplorazione di app aziendali
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers esegue la navigazione del primo modello di visualizzazione dai modelli di visualizzazione.
+ms.prod: xamarin
+ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ca562120a819d4d9fe09b2ee5891a78f1010b1a5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572026"
 ---
-
 # <a name="enterprise-app-navigation"></a>Esplorazione di app aziendali
 
 Xamarin.Formsinclude il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa in seguito a modifiche dello stato basato su logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVC (Model-View-ViewModel), in quanto devono essere soddisfatte le seguenti difficoltà:

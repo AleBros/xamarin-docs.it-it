@@ -1,8 +1,22 @@
 ---
-title: "viste native in XAML" Description: "è possibile fare riferimento direttamente alle visualizzazioni native da iOS, Android e ai piattaforma UWP (Universal Windows Platform) da Xamarin.Forms file XAML. Le proprietà e i gestori di eventi possono essere impostati sulle visualizzazioni native e possono interagire con le Xamarin.Forms visualizzazioni. In questo articolo viene illustrato come utilizzare le visualizzazioni native dei Xamarin.Forms file XAML ".
-ms. prod: Novell MS. AssetID: 7A856D31-B300-409E-9AEB-F8A4DB99B37E ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visualizzazioni native in XAML
+description: È possibile fare riferimento direttamente alle viste native di iOS, Android e piattaforma UWP (Universal Windows Platform) da Xamarin.Forms file XAML. Le proprietà e i gestori di eventi possono essere impostati sulle visualizzazioni native e possono interagire con le Xamarin.Forms visualizzazioni. In questo articolo viene illustrato come utilizzare viste native da Xamarin.Forms file XAML.
+ms.prod: xamarin
+ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564641"
 ---
-
 # <a name="native-views-in-xaml"></a>Visualizzazioni native in XAML
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)

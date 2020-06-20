@@ -1,8 +1,22 @@
 ---
-title: "i titoli di pagine di grandi dimensioni in iOS" Descrizione: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che Visualizza il titolo della pagina come titolo grande nella barra di navigazione di un NavigationPage ".
-ms. prod: Novell MS. AssetID: 45FD9145-8319-452C-9AE6-624431A4D43C ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Titoli di pagine di grandi dimensioni in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che Visualizza il titolo della pagina come titolo grande nella barra di spostamento di un NavigationPage.
+ms.prod: xamarin
+ms.assetid: 45FD9145-8319-452C-9AE6-624431A4D43C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0db20620870340386ccd0cedf7f98cb2975527ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128043"
 ---
-
 # <a name="large-page-titles-on-ios"></a>Titoli di pagine di grandi dimensioni in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

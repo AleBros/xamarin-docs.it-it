@@ -1,8 +1,22 @@
 ---
-title: "autenticare gli utenti con un Azure Cosmos DB database di documenti e Xamarin.Forms " Descrizione: "in questo articolo viene illustrato come combinare il controllo di accesso con Azure Cosmos DB raccolte partizionate, in modo che un utente possa accedere solo ai propri documenti in un' Xamarin.Forms applicazione."
-ms. prod: Novell MS. AssetID: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/16/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticare gli utenti con un database di documenti Azure Cosmos DB eXamarin.Forms
+description: Questo articolo illustra come combinare il controllo di accesso con Azure Cosmos DB raccolte partizionate, in modo che un utente possa accedere solo ai propri documenti in un' Xamarin.Forms applicazione.
+ms.prod: xamarin
+ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/16/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7e1fb6342db4c97ea6946db366d356267c8c1b90
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570557"
 ---
-
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticare gli utenti con un database di documenti Azure Cosmos DB eXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)

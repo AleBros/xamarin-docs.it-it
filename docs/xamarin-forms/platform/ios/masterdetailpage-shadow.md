@@ -1,8 +1,22 @@
 ---
-title: "MasterDetailPage Shadow in iOS" Description: "specifici della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se alla pagina dei dettagli di un MasterDetailPage è applicata un'ombreggiatura, quando viene rivelata la pagina master ".
-ms. prod: Novell MS. AssetID: FB907EA2-C00A-43A5-84B1-A43584C867A5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/05/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: MasterDetailPage Shadow in iOS
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se alla pagina dei dettagli di un MasterDetailPage è applicata un'ombreggiatura, quando viene rivelata la pagina master.
+ms.prod: xamarin
+ms.assetid: FB907EA2-C00A-43A5-84B1-A43584C867A5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/05/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aaf94536d41da47aec10fc655f9d053b753da5a2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135967"
 ---
-
 # <a name="masterdetailpage-shadow-on-ios"></a>MasterDetailPage Shadow in iOS
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

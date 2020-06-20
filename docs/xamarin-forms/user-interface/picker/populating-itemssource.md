@@ -1,8 +1,22 @@
 ---
-title: "impostazione della proprietà ItemsSource della selezione" Description: "la visualizzazione selezione è un controllo per la selezione di un elemento di testo da un elenco di dati. Questo articolo illustra come popolare una selezione con i dati impostando la proprietà ItemsSource e come rispondere alla selezione dell'elemento da parte dell'utente.
-ms. prod: Novell MS. AssetID: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Impostazione della proprietà ItemsSource per una selezione
+description: La visualizzazione selezione è un controllo per la selezione di un elemento di testo da un elenco di dati. Questo articolo illustra come popolare una selezione con i dati impostando la proprietà ItemsSource e come rispondere alla selezione dell'elemento da parte dell'utente.
+ms.prod: xamarin
+ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136292"
 ---
-
 # <a name="setting-a-pickers-itemssource-property"></a>Impostazione della proprietà ItemsSource per una selezione
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms ciclo di vita dell'app" Descrizione: "questo articolo spiega come rispondere al ciclo di vita dell'applicazione, inclusi i metodi del ciclo di vita, gli eventi di notifica della pagina e gli eventi di navigazione modale".
-ms. prod: Novell MS. AssetID: 69B416CF-B243-4790-AB29-F030B32465BE ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/31/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCiclo di vita dell'app
+description: Questo articolo illustra come rispondere al ciclo di vita dell'applicazione, inclusi i metodi del ciclo di vita, gli eventi di notifica per le pagine e gli eventi di spostamento modale.
+ms.prod: xamarin
+ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/31/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a67d0c3adb54332bf30879a5b6f1d086581f0ec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573339"
 ---
-
 # <a name="xamarinforms-app-lifecycle"></a>Xamarin.FormsCiclo di vita dell'app
 
 La [`Application`](xref:Xamarin.Forms.Application) classe base fornisce le funzionalità seguenti:

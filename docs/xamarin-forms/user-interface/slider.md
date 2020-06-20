@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Slider" Description: "il Xamarin.Forms dispositivo di scorrimento è una barra orizzontale che può essere modificata dall'utente per selezionare un valore Double da un intervallo continuo. Questo articolo illustra come usare la classe Slider per selezionare un valore da un intervallo di valori continui ".
-ms. prod: Novell MS. AssetID: 36B1C645-26E0-4874-B6B6-BDBF77662878 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCursore
+description: Il Xamarin.Forms dispositivo di scorrimento è una barra orizzontale che può essere modificata dall'utente per selezionare un valore Double da un intervallo continuo. Questo articolo illustra come usare la classe Slider per selezionare un valore da un intervallo di valori continui.
+ms.prod: xamarin
+ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fc61dcac588f49fc1df7ee96792cf55bdfa46c5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572039"
 ---
-
 # <a name="xamarinforms-slider"></a>Xamarin.FormsCursore
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)

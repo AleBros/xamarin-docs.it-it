@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Descrizione della shell": " Xamarin.Forms le applicazioni shell possono usare un'esperienza di navigazione basata su URI che consente la navigazione a qualsiasi pagina dell'applicazione, senza dover seguire una gerarchia di navigazione impostata".
-ms. prod: Novell MS. AssetID: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/02/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsNavigazione della shell
+description: Xamarin.FormsLe applicazioni shell possono usare un'esperienza di navigazione basata su URI che consente la navigazione a qualsiasi pagina dell'applicazione, senza dover seguire una gerarchia di navigazione impostata.
+ms.prod: xamarin
+ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/02/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132392"
 ---
-
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.FormsNavigazione della shell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
@@ -197,7 +211,7 @@ In questo esempio, l'effetto complessivo è quello di spostarsi due volte indiet
 
 I formati di route seguenti non sono validi:
 
-| Formato | Spiegazione |
+| Format | Spiegazione |
 | --- | --- |
 | *route* o /*route* | Non è possibile eseguire il push delle route nella gerarchia visiva nello stack di navigazione. |
 | //*page* o ///*page* | Le route globali attualmente non possono essere l'unica pagina nello stack di navigazione. Il routing assoluto per le route globali non è quindi supportato. |

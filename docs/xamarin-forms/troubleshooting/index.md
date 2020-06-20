@@ -1,7 +1,23 @@
 ---
-title: "risoluzione dei problemi" Descrizione: "condizioni di errore comuni e come risolverle" ms. Topic: risoluzione dei problemi di MS. prod: Novell MS. AssetID: 63291951-7375-4CBF-BCC3-2E4AD157A2C8 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Risoluzione dei problemi
+description: Condizioni di errore comuni e come risolverle
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135915"
 ---
-
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
 _Condizioni di errore comuni e come risolverle_

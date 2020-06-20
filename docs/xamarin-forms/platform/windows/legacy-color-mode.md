@@ -1,8 +1,22 @@
 ---
-title: "la modalità colore legacy di visualElement in Windows" Description: "specifici della piattaforma consente di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Windows specifica che disabilita la modalità di Xamarin.Forms colore legacy. "
-ms. prod: Novell MS. AssetID: B8759309-07C7-4DCA-A18A-C1A198A7951B ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modalità colore legacy di visualElement in Windows
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. In questo articolo viene illustrato come utilizzare la piattaforma Windows specifica che disabilita la modalità di Xamarin.Forms colore legacy.
+ms.prod: xamarin
+ms.assetid: B8759309-07C7-4DCA-A18A-C1A198A7951B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3bcbee04edbeebf3949673a53edde4200856f5c6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132111"
 ---
-
 # <a name="visualelement-legacy-color-mode-on-windows"></a>Modalità colore legacy di visualElement in Windows
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

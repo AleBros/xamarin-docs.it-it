@@ -1,8 +1,22 @@
 ---
-title: "aggiunta di AppCompat e progettazione materiale" Descrizione: "questo articolo illustra come convertire Xamarin.Forms le app Android esistenti per l'uso di AppCompat e progettazione materiale".
-ms. prod: Novell MS. AssetID: 045FBCDF-4D45-48BB-9911-BD3938C87D58 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aggiunta di AppCompat e della progettazione del materiale
+description: Questo articolo illustra come convertire Xamarin.Forms le app Android esistenti per usare AppCompat e la progettazione del materiale.
+ms.prod: xamarin
+ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135707"
 ---
-
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
 _Seguire questa procedura per convertire le Xamarin.Forms app Android esistenti per usare AppCompat e la progettazione del materiale_

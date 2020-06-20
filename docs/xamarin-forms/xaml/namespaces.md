@@ -1,8 +1,22 @@
 ---
-title: "spazi dei nomi XAML in Xamarin.Forms " Description: "XAML usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. In questo articolo viene introdotta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per accedere a un tipo ".
-ms. prod: Novell MS. AssetID: C03B5553-B199-4A19-9F0F-E5BCE1DB268F ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Spazi dei nomi XAML inXamarin.Forms
+description: XAML usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. In questo articolo viene introdotta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per accedere a un tipo.
+ms.prod: xamarin
+ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130377"
 ---
-
 # <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML inXamarin.Forms
 
 _XAML usa l'attributo XML xmlns per le dichiarazioni dello spazio dei nomi. In questo articolo viene introdotta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per accedere a un tipo._

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms in Novell native Projects" Description: "in questo articolo viene illustrato come utilizzare le pagine derivate da ContentPage che vengono aggiunte direttamente ai progetti nativi Novell e come spostarsi tra loro."
-ms. prod: Novell MS. AssetID: f343fc21-dfb1-4364-A332-9da6705d36bc ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/19/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsnei progetti nativi Novell
+description: Questo articolo illustra come utilizzare le pagine derivate da ContentPage che vengono aggiunte direttamente ai progetti nativi Novell e come spostarsi tra di essi.
+ms.prod: xamarin
+ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/19/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132275"
 ---
-
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Formsnei progetti nativi Novell
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
@@ -262,7 +276,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 }
 ```
 
-## <a name="uwp"></a>Piattaforma UWP
+## <a name="uwp"></a>UWP
 
 In UWP la classe nativa `App` è in genere la posizione in cui eseguire le attività correlate all'avvio dell'applicazione. Xamarin.Formsviene in genere inizializzato, in Xamarin.Forms applicazioni UWP, nell' `OnLaunched` override della `App` classe nativa, per passare l' `LaunchActivatedEventArgs` argomento al `Forms.Init` metodo. Per questo motivo, le applicazioni UWP native che utilizzano una Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) pagina derivata da possono chiamare più facilmente il `Forms.Init` metodo dal `App.OnLaunched` metodo.
 

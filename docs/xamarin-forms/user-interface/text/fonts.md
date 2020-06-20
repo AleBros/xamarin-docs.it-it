@@ -1,8 +1,22 @@
 ---
-title: "Fonts in Xamarin.Forms " Description: "in questo articolo viene illustrato come specificare informazioni sui tipi di carattere sui controlli che visualizzano il testo nelle Xamarin.Forms applicazioni".
-ms. prod: Novell MS. AssetID: 49DD2249-C575-41AE-AE06-08F890FD6031 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Tipi di carattere inXamarin.Forms
+description: Questo articolo illustra come specificare informazioni sui tipi di carattere sui controlli che visualizzano testo nelle Xamarin.Forms applicazioni.
+ms.prod: xamarin
+ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a657915edb41573f9637128b4c88233d58a5909a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572208"
 ---
-
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere inXamarin.Forms
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
@@ -102,7 +116,7 @@ La [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#provide-platfor
 
 Xamarin.Formsdefinisce i campi nell' [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumerazione che rappresentano dimensioni specifiche dei tipi di carattere. La tabella seguente illustra i `NamedSize` membri e le relative dimensioni predefinite in iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP):
 
-| Membro | iOS | Android | Piattaforma UWP |
+| Membro | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15,667 |

@@ -1,8 +1,23 @@
 ---
-title: "The Xamarin.Forms FlexLayout" Description: "use FlexLayout per stacking o wrapping di una raccolta di visualizzazioni figlio".
-ms. prod: Novell MS. AssetID: 6A91EA70-268C-462C-AAAF-F8DA011403F8 ms. Technology: Novell-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 05/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsFlexLayout
+description: Usare FlexLayout per lo stack o il wrapping di una raccolta di visualizzazioni figlio.
+ms.prod: xamarin
+ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 518bf97be3dd9d906d574b15434b0bfa67612516
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570687"
 ---
-
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.FormsFlexLayout
 
 [![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)

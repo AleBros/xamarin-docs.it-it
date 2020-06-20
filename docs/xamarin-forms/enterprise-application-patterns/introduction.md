@@ -1,8 +1,22 @@
 ---
-title: "Introduzione allo sviluppo di app aziendali" Descrizione: "questo capitolo fornisce un'introduzione allo sviluppo di app aziendali e introduce l'app per dispositivi mobili eShopOnContainers".
-ms. prod: Novell MS. AssetID: cbce0659-fa03-447A-86ec-140438143230 ms. Technology: Novell-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introduzione allo sviluppo di app aziendali
+description: Questo capitolo fornisce un'introduzione allo sviluppo di app aziendali e introduce l'app per dispositivi mobili eShopOnContainers.
+ms.prod: xamarin
+ms.assetid: cbce0659-fa03-447a-86ec-140438143230
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198111"
 ---
-
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
 Indipendentemente dalla piattaforma, gli sviluppatori di app aziendali affrontano diverse esigenze:
@@ -23,7 +37,7 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 - Promuove il riutilizzo e una netta separazione dei problemi tra le funzionalità orizzontali dell'app, ad esempio l'autenticazione e l'accesso ai dati, e le funzionalità verticali, ad esempio funzionalità aziendali specifiche dell'app. Ciò consente di gestire più facilmente le dipendenze e le interazioni tra i componenti dell'app.
 - Consente di mantenere la separazione dei ruoli consentendo a singoli utenti, o team, di concentrarsi su un'attività specifica o una parte delle funzionalità in base alle proprie competenze. In particolare, fornisce una separazione più pulita tra l'interfaccia utente e la logica di business dell'app.
 
-Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Sono inclusi:
+Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. incluse le seguenti:
 
 - Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un' Xamarin.Forms app aziendale è la possibilità di inserire la logica di business nei file code-behind o di creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere l'app più gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -32,7 +46,7 @@ Tuttavia, esistono molti problemi che devono essere risolti durante il partizion
 - Determinazione della modalità di convalida dell'input dell'utente per la correttezza. La decisione deve includere come convalidare l'input dell'utente e come inviare una notifica all'utente sugli errori di convalida. Per ulteriori informazioni, vedere [convalida](~/xamarin-forms/enterprise-application-patterns/validation.md).
 - Decidere come eseguire l'autenticazione e come proteggere le risorse con l'autorizzazione. Per ulteriori informazioni, vedere [autenticazione e autorizzazione](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md).
 - Determinazione della modalità di accesso ai dati remoti dai servizi Web, incluso come recuperare in modo affidabile i dati e come memorizzare nella cache i dati. Per ulteriori informazioni, vedere [accesso ai dati remoti](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
-- Decidere come testare l'app. Per ulteriori informazioni, vedere [unit testing](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
+- Decidere come testare l'app. Per altre informazioni, vedere [Testing unità](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
 Questa guida fornisce indicazioni su questi problemi e si concentra sui modelli e sull'architettura di base per la creazione di un'app aziendale multipiattaforma con Xamarin.Forms . Il materiale sussidiario mira a produrre codice adattabile, gestibile e testabile, risolvendo scenari comuni di Xamarin.Forms sviluppo di app aziendali e separando le problematiche relative alla presentazione, alla logica di presentazione e alle entità tramite il supporto per il modello MVC (Model-View-ViewModel).
 
@@ -88,7 +102,7 @@ L'app per dispositivi mobili eShopOnContainers esercita le Xamarin.Forms funzion
 
 - XAML
 - Controlli
-- Binding
+- Associazioni
 - Convertitori
 - Stili
 - Animazioni
@@ -108,7 +122,7 @@ Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositi
 
 La soluzione app per dispositivi mobili eShopOnContainers organizza il codice sorgente e altre risorse nei progetti. Tutti i progetti utilizzano le cartelle per organizzare il codice sorgente e altre risorse in categorie. La tabella seguente descrive i progetti che compongono l'app per dispositivi mobili eShopOnContainers:
 
-|Progetto|Descrizione|
+|Project|Descrizione|
 |--- |--- |
 |eShopOnContainers. Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
 |eShopOnContainers. Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
