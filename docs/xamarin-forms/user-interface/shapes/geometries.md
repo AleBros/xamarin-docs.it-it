@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05fcd1ada62bffa4829ad422ee5eda36d9d75ae3
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: c3b869d10d454453172065b30eb7ce32da81c8ce
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104248"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133035"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.FormsForme: geometrie
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Geometry` classe e le classi che derivano da esso consentono di descrivere la geometria di una forma 2D. `Geometry`gli oggetti possono essere semplici, ad esempio rettangoli e cerchi, o composti, creati da due o più oggetti Geometry. È possibile creare geometrie più complesse usando la `PathGeometry` classe, che consente di descrivere archi e curve.
 
@@ -224,5 +224,5 @@ La `GeometryHelper` classe fornisce i metodi helper seguenti:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ShapeDemos (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsForme](index.md)

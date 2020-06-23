@@ -1,5 +1,5 @@
 ---
-title: Più finestre per iPad in Xamarin.iOS
+title: Più finestre per iPad in Novell. iOS
 description: Aggiunta del supporto per più finestre alle applicazioni iPad.
 ms.prod: xamarin
 ms.assetid: 524b6f2e-dbdf-11e9-8a34-2a2ae2dbcce4
@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019
-ms.openlocfilehash: b3f96f342679d8be6d2f8fbc0ad5962ca675d2a5
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
-ms.translationtype: HT
+ms.openlocfilehash: ce7df59d41efdd2d151fd2ea73cf26b40ee7fa10
+ms.sourcegitcommit: 834466c9d9cf35e9659e467ce0123e5f5ade6138
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213793"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85129909"
 ---
 # <a name="multiple-windows-for-ipad"></a>Più finestre per iPad
 
@@ -20,7 +20,7 @@ iOS 13 supporta ora Windows affiancato per la stessa app in iPad. In questo modo
 
 ## <a name="project-configuration"></a>Configurazione progetto
 
-Per configurare il progetto per più finestre, modificare il `info.plist` per dichiarare `NSUserActivityTypes` la dichiarazione di iOS l'app gestirà le attività di questo `UIApplicationSceneManifest` tipo e `UIApplicationSupportsMultipleScenes` per abilitare per più `UISceneConfigurations` finestre e per associare il scena con uno storyboard.
+Per configurare il progetto per più finestre, modificare il `info.plist` per dichiarare la dichiarazione di `NSUserActivityTypes` iOS l'app gestirà le attività di questo tipo e `UIApplicationSceneManifest` per abilitare `UIApplicationSupportsMultipleScenes` per più finestre e `UISceneConfigurations` per associare la scena a uno storyboard.
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -58,9 +58,9 @@ Con l'app aperta e in esecuzione su un iPad, esistono diversi modi per aprire pi
 
 All'interno dell'applicazione sono disponibili interazioni aggiuntive per l'immissione di una modalità a più finestre.
 
-**Trascinare dall'app** : usare un'interazione di trascinamento all'interno dell'app `NSUserActivity` per avviare un nuovo proprio come il trascinamento dell'icona dell'app negli esempi precedenti.
+**Trascinare dall'app** : usare un'interazione di trascinamento all'interno dell'app per avviare un nuovo `NSUserActivity` proprio come il trascinamento dell'icona dell'app negli esempi precedenti.
 
-Quando si usa un' [interazione con trascinamento della selezione][0], si `NSUserActivity` crea un oggetto e si associano i dati da passare alla nuova finestra richiesta da iOS per l'apertura.
+Quando si usa un' [interazione con trascinamento della selezione][0], si crea un oggetto e si `NSUserActivity` associano i dati da passare alla nuova finestra richiesta da iOS per l'apertura.
 
 ```csharp
 public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectionView, IUIDragSession session, NSIndexPath indexPath)
@@ -79,14 +79,14 @@ public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectio
 }
 ```
 
-Nel codice precedente, l' `selectedPhoto` oggetto modello dispone di un metodo per restituire un `NSUserActivity` oggetto denominato. `OpenDetailUserActivity()` Quando il gesto di trascinamento è `UIDragItem` completo, l' `userActivity` oggetto con `NSItemProvider`il presente l'oggetto tramite l'oggetto.
+Nel codice precedente, l' `selectedPhoto` oggetto modello dispone di un metodo per restituire un oggetto `NSUserActivity` denominato `OpenDetailUserActivity()` . Quando il gesto di trascinamento è completo, l'oggetto `UIDragItem` con il presente l'oggetto `userActivity` tramite l'oggetto `NSItemProvider` .
 
 **Azioni esplicite** : i movimenti utente sui pulsanti o sui collegamenti offrono la possibilità di aprire una nuova finestra.
 
-Dalla è possibile avviare un nuovo `UISceneSession` `RequestSceneSessionActivation`chiamando. `UIApplication` Se esiste già una scena esistente, è consigliabile usarla. Per impostazione predefinita, viene creata una nuova scena.
+Dalla `UIApplication` è possibile avviare un nuovo chiamando `UISceneSession` `RequestSceneSessionActivation` . Se esiste già una scena esistente, è consigliabile usarla. Per impostazione predefinita, viene creata una nuova scena.
 
 ```csharp
-pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+public void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 {
     var userActivity = selectedPhoto.OpenDetailUserActivity ();
 
@@ -99,10 +99,10 @@ pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 }
 ```
 
-In `userActivity` questo esempio, è l'unico valore passato `RequestSceneSessionActivation` al metodo per aprire una nuova finestra dell'applicazione in base a un'azione utente esplicita, in questo caso un `ItemSelected` gestore di un oggetto `UICollectionView`.
+In questo esempio, `userActivity` è l'unico valore passato al metodo per `RequestSceneSessionActivation` aprire una nuova finestra dell'applicazione in base a un'azione utente esplicita, in questo caso un `ItemSelected` gestore di un oggetto `UICollectionView` .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Trascinamento della selezione in Xamarin.iOS][0]
+- [Trascinamento della selezione in Novell. iOS][0]
 
 [0]: ~/ios/platform/introduction-to-ios11/drag-and-drop.md

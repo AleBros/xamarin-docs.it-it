@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c0abf7b30192ac9183c28e89d7917ea8d08dfc4f
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 8df87f0ee3be78749d70dfc535b5d4d50874f194
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101335"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133022"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.FormsForme: trasformazioni del percorso
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Un `Transform` oggetto definisce la modalità di trasformazione di un `Path` oggetto da uno spazio delle coordinate a un altro spazio delle coordinate. Questo mapping è descritto da una trasformazione `Matrix` , ovvero una raccolta di tre righe con tre colonne di `double` valori.
 
@@ -352,5 +352,5 @@ In questo esempio, la `Matrix` proprietà viene specificata come stringa delimit
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ShapeDemos (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsForme](index.md)

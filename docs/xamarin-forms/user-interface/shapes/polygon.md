@@ -10,42 +10,97 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2d67a6a4bbea6a4be27f0c0440d9c28ffd5a188f
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 1c3164fbd1d7fb3bc3de15558cdd41f4791515eb
+ms.sourcegitcommit: 22aca3e7e24038d6f83d68dbfc7435080223b1ee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101307"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133772"
 ---
 # <a name="xamarinforms-shapes-polygon"></a>Xamarin.FormsForme: poligono
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Polygon` classe deriva dalla `Shape` classe e può essere usata per creare poligoni, che sono serie connesse di linee che formano forme chiuse. Per informazioni sulle proprietà `Polygon` ereditate dalla classe dalla classe `Shape` , vedere [ Xamarin.Forms forme](index.md).
 
 `Polygon` definisce le proprietà seguenti:
 
-- `Points`, di tipo `PointCollection` , che è una raccolta di `Point` strutture che descrivono i punti vertice del poligono.
+- `Points`, di tipo `PointCollection` , che è una raccolta di [`Point`](xref:Xamarin.Forms.Point) strutture che descrivono i punti vertice del poligono.
 - `FillRule`, di tipo `FillRule` , che specifica il modo in cui viene determinato il riempimento interno della forma. Il valore predefinito di questa proprietà è `FillRule.EvenOdd`.
 
 Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
 
+Il `PointsCollection` tipo è un oggetto `ObservableCollection` di [`Point`](xref:Xamarin.Forms.Point) oggetti. La `Point` struttura definisce `X` le `Y` proprietà e, di tipo `double` , che rappresentano una coppia di coordinate x e y nello spazio 2D. Pertanto, la `Points` proprietà deve essere impostata su un elenco di coppie di coordinate x e y che descrivono i punti vertice del poligono, delimitati da una singola virgola e/o uno o più spazi. Ad esempio, "40, 10 70, 80" e "40 10, 70 80" sono entrambi validi.
+
+L'enumerazione `FillRule` definisce i membri seguenti:
+
+- `EvenOdd`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e conta il numero di segmenti di percorso all'interno della forma intersecata dal raggio. Se questo numero è dispari, il punto si trova all'interno. Se questo numero è pari, il punto è all'esterno.
+- `Nonzero`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e quindi esamina i punti in cui un segmento della forma incrocia il raggio. Partendo da zero, aggiungere uno ogni volta che un segmento interseca il raggio da sinistra a destra e sottrarre uno ogni volta che un segmento interseca il raggio da destra a sinistra. Contare le intersezioni. Se il risultato è zero, il punto è all'esterno del percorso. In caso contrario, è all'interno.
+
 ## <a name="create-a-polygon"></a>Creare un poligono
 
-Nell'esempio di codice XAML riportato di seguito viene illustrato come creare un poligono:
+Per disegnare un poligono, creare un `Polygon` oggetto e impostare la relativa `Points` proprietà sui vertici di una forma. Viene disegnata automaticamente una linea che connette il primo e l'ultimo punto. Per disegnare l'interno del poligono, impostarne la `Fill` proprietà su un oggetto [`Color`](xref:Xamarin.Forms.Color) . Per assegnare un contorno al poligono, impostarne la `Stroke` proprietà su un oggetto [`Color`](xref:Xamarin.Forms.Color) . La `StrokeThickness` proprietà specifica lo spessore del contorno poligono.
+
+Nell'esempio di codice XAML riportato di seguito viene illustrato come creare un poligono pieno:
+
+```xaml
+<Polygon Points="40,10 70,80 10,50"
+         Fill="AliceBlue"
+         Stroke="Green"
+         StrokeThickness="5" />
+```
+
+In questo esempio viene disegnato un poligono pieno che rappresenta un triangolo:
+
+![Poligono pieno](polygon-images/filled.png "Poligono pieno")
+
+Nell'esempio di codice XAML riportato di seguito viene illustrato come creare un poligono tratteggiato:
 
 ```xaml
 <Polygon Points="40,10 70,80 10,50"
          Fill="AliceBlue"
          Stroke="Green"
          StrokeThickness="5"
-         HeightRequest="100"
-         WidthRequest="200" />
+         StrokeDashArray="1,1"
+         StrokeDashOffset="6" />
 ```
+
+In questo esempio, il contorno poligono è tratteggiato:
+
+![Poligono tratteggiato](polygon-images/dashed.png "Poligono tratteggiato")
+
+Per altre informazioni su come disegnare un poligono tratteggiato, vedere [forme tratteggiate](index.md#dashed-shapes).
+
+Nell'esempio di codice XAML seguente viene illustrato un poligono che usa la regola di riempimento predefinita:
+
+```xaml
+<Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+         Fill="Blue"
+         Stroke="Red"
+         StrokeThickness="3" />
+```
+
+In questo esempio, il comportamento di riempimento di ogni poligono viene determinato mediante la `EvenOdd` regola Fill.
+
+![Poligono EvenOdd](polygon-images/evenodd.png "Poligono EvenOdd")
+
+Nell'esempio di codice XAML riportato di seguito viene illustrato un poligono che utilizza la `Nonzero` regola di riempimento:
+
+```xaml
+<Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+         Fill="Black"
+         FillRule="Nonzero"
+         Stroke="Yellow"
+         StrokeThickness="3" />
+```
+
+![Poligono diverso da zero](polygon-images/nonzero.png "Poligono diverso da zero")
+
+In questo esempio, il comportamento di riempimento di ogni poligono viene determinato mediante la `Nonzero` regola Fill.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ShapeDemos (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsForme](index.md)

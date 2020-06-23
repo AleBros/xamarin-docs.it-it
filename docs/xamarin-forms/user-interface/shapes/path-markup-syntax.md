@@ -10,18 +10,18 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 263b77371e6fc991704fd86f2616d567584c832a
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104343"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132889"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsForme: sintassi di markup del percorso
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Formsla sintassi di markup del percorso consente di specificare in modo compatto le geometrie del percorso in XAML. La sintassi viene specificata come valore stringa per la `Path.Data` proprietà:
 
@@ -170,5 +170,5 @@ Inoltre, è anche possibile usare la notazione scientifica senza distinzione tra
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ShapeDemos (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsGeometrie](geometries.md)
