@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1c3164fbd1d7fb3bc3de15558cdd41f4791515eb
-ms.sourcegitcommit: 22aca3e7e24038d6f83d68dbfc7435080223b1ee
+ms.openlocfilehash: e6f8ad3afdcdb9137869dc57078ac94895f4183c
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133772"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243810"
 ---
 # <a name="xamarinforms-shapes-polygon"></a>Xamarin.FormsForme: poligono
 
@@ -36,8 +36,8 @@ Il `PointsCollection` tipo è un oggetto `ObservableCollection` di [`Point`](xre
 
 L'enumerazione `FillRule` definisce i membri seguenti:
 
-- `EvenOdd`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e conta il numero di segmenti di percorso all'interno della forma intersecata dal raggio. Se questo numero è dispari, il punto si trova all'interno. Se questo numero è pari, il punto è all'esterno.
-- `Nonzero`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e quindi esamina i punti in cui un segmento della forma incrocia il raggio. Partendo da zero, aggiungere uno ogni volta che un segmento interseca il raggio da sinistra a destra e sottrarre uno ogni volta che un segmento interseca il raggio da destra a sinistra. Contare le intersezioni. Se il risultato è zero, il punto è all'esterno del percorso. In caso contrario, è all'interno.
+- `EvenOdd`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e conta il numero di segmenti all'interno della forma intersecata dal raggio. Se questo numero è dispari, il punto si trova all'interno. Se questo numero è pari, il punto è all'esterno.
+- `Nonzero`rappresenta una regola che determina se un punto si trova nell'area di riempimento del poligono. Disegna un raggio dal punto all'infinito in qualsiasi direzione e quindi esamina i punti in cui un segmento della forma incrocia il raggio. Iniziando con un conteggio pari a zero, il conteggio viene incrementato ogni volta che un segmento interseca il raggio da sinistra a destra e diminuisce ogni volta che un segmento interseca il raggio da destra a sinistra. Dopo aver conteggiato le incrociate, se il risultato è zero, il punto è all'esterno del poligono. In caso contrario, è all'interno.
 
 ## <a name="create-a-polygon"></a>Creare un poligono
 
@@ -71,7 +71,7 @@ In questo esempio, il contorno poligono è tratteggiato:
 
 ![Poligono tratteggiato](polygon-images/dashed.png "Poligono tratteggiato")
 
-Per altre informazioni su come disegnare un poligono tratteggiato, vedere [forme tratteggiate](index.md#dashed-shapes).
+Per altre informazioni su come disegnare un poligono tratteggiato, vedere [disegnare forme tratteggiate](index.md#draw-dashed-shapes).
 
 Nell'esempio di codice XAML seguente viene illustrato un poligono che usa la regola di riempimento predefinita:
 

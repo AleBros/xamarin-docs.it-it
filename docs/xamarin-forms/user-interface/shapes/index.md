@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c01aac4b415e9b6620f0faa059bf99d42b688b40
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: fdab7d422040aee5a00b16bb1e301f917b0c4883
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132920"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243763"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.FormsForme
 
@@ -97,7 +97,7 @@ In questo esempio un `Path` oggetto disegna un cuore. Le `Path` `WidthRequest` p
 
 ![Forme estesi](images/aspect.png "Forme estesi")
 
-## <a name="dashed-shapes"></a>Forme tratteggiate
+## <a name="draw-dashed-shapes"></a>Estrai forme tratteggiate
 
 `Shape`gli oggetti hanno una `StrokeDashArray` proprietà di tipo `DoubleCollection` . Questa proprietà rappresenta una raccolta di `double` valori che indicano il modello di trattini e spazi vuoti utilizzati per delineare una forma. Un oggetto `DoubleCollection` è un oggetto `ObservableCollection` di `double` valori. Ogni `double` nella raccolta specifica la lunghezza di un trattino o di un gap. Il primo elemento della raccolta, che si trova in corrispondenza dell'indice 0, specifica la lunghezza di un trattino. Il secondo elemento della raccolta, che si trova in corrispondenza dell'indice 1, specifica la lunghezza di un gap. Gli oggetti con un valore di indice even specificano quindi trattini, mentre gli oggetti con un valore di indice dispari specificano gap.
 
@@ -122,7 +122,7 @@ In questo esempio viene disegnato un rettangolo pieno con un tratto tratteggiato
 
 ![Rettangolo tratteggiato](images/dashed-rectangle.png "Linea tratteggiata")
 
-## <a name="line-ends"></a>Terminazioni riga
+## <a name="control-line-ends"></a>Estremità della riga di controllo
 
 Una riga è costituita da tre parti: Cap iniziale, corpo della linea e estremità finale. I tappi di inizio e di fine descrivono la forma all'inizio e alla fine di una linea o di un segmento.
 
@@ -151,7 +151,7 @@ In questo esempio, la linea rossa viene arrotondata all'inizio e alla fine della
 
 ![Estremità di riga](images/linecap.png "Estremità di riga")
 
-## <a name="line-joins"></a>Join di riga
+## <a name="control-line-joins"></a>Join di riga di controllo
 
 `Shape`gli oggetti hanno una `StrokeLineJoin` proprietà, di tipo `PenLineJoin` , che specifica il tipo di join usato ai vertici della forma. L'enumerazione `PenLineJoin` definisce i membri seguenti:
 

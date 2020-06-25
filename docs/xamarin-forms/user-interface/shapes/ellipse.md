@@ -10,12 +10,12 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aed8d902291272a6bcbdc1ec542b5edacb7668e2
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 725f892a667b4e89d55266abcf69e5394b09b6a5
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133048"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243819"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.FormsForme: ellisse
 
@@ -60,7 +60,7 @@ In questo esempio viene disegnato un cerchio rosso con dimensioni 150x150 (unit√
 
 ![Cerchio](ellipse-images/circle.png "Circle")
 
-Per informazioni sul disegno di un'ellisse tratteggiata, vedere [forme tratteggiate](index.md#dashed-shapes).
+Per informazioni sul disegno di un'ellisse tratteggiata, vedere [disegnare forme tratteggiate](index.md#draw-dashed-shapes).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

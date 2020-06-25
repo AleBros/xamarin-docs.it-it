@@ -10,12 +10,12 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c33c6408a901a1726e37ddda5e24a4c82f671738
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: f97e6930f543f47383e2b8da09b36573bd3192d0
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132886"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243750"
 ---
 # <a name="xamarinforms-shapes-line"></a>Xamarin.FormsForme: linea
 
@@ -34,7 +34,7 @@ La `Line` classe deriva dalla `Shape` classe e può essere usata per creare line
 
 Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che possono essere destinazioni di data binding e con stile.
 
-Per informazioni sul controllo del modo in cui vengono disegnate le terminazioni della riga, vedere [end di riga](index.md#line-ends).
+Per informazioni sul controllo del modo in cui vengono disegnate le terminazioni della riga, vedere [controllo della riga](index.md#control-line-ends).
 
 ## <a name="create-a-line"></a>Crea una riga
 
@@ -82,7 +82,7 @@ In questo esempio viene disegnata una linea diagonale tratteggiata blu scuro da 
 
 ![Linea tratteggiata](line-images/dashed-line.png "Linea tratteggiata")
 
-Per altre informazioni su come disegnare una linea tratteggiata, vedere [forme tratteggiate](index.md#dashed-shapes).
+Per altre informazioni su come disegnare una linea tratteggiata, vedere [disegnare forme tratteggiate](index.md#draw-dashed-shapes).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
