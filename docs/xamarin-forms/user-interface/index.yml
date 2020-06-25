@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: e07215723a6c54e9d5ce3eb22103cb5eba7929d2
-  ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+  ms.openlocfilehash: a0acc942c84f085c2cff4a70b5863ae4f4644bc6
+  ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 06/19/2020
-  ms.locfileid: "85104279"
+  ms.lasthandoff: 06/24/2020
+  ms.locfileid: "85326111"
 landingContent:
 - title: Informazioni di riferimento sui controlli
   linkLists:
@@ -26,11 +26,11 @@ landingContent:
     links:
     - text: Panoramica
       url: controls/index.md
-    - text: Pagine
+    - text: Pages
       url: controls/pages.md
     - text: Layout
       url: controls/layouts.md
-    - text: Viste
+    - text: Visualizzazioni
       url: controls/views.md
     - text: Celle
       url: controls/cells.md
@@ -46,9 +46,9 @@ landingContent:
       url: boxview.md
     - text: Expander
       url: expander.md
-    - text: Immagine
+    - text: Image
       url: images.md
-    - text: Etichetta
+    - text: Label
       url: text/label.md
     - text: Mappa
       url: map/index.md
@@ -60,7 +60,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Pulsante
+    - text: Button
       url: button.md
     - text: ImageButton
       url: imagebutton.md
@@ -80,7 +80,7 @@ landingContent:
       url: checkbox.md
     - text: DatePicker
       url: datepicker.md
-    - text: Dispositivo di scorrimento
+    - text: Slider
       url: slider.md
     - text: Gestore di istruzioni
       url: stepper.md
@@ -160,21 +160,19 @@ landingContent:
       url: shapes/index.md
     - text: Ellisse
       url: shapes/ellipse.md
+    - text: Regole di riempimento
+      url: shapes/fillrules.md
     - text: Geometrie
       url: shapes/geometries.md
-    - text: Grafico a linee
+    - text: Linea
       url: shapes/line.md
     - text: Path
       url: shapes/path.md
-    - text: Sintassi di markup del percorso
-      url: shapes/path-markup-syntax.md
-    - text: Trasformazioni del percorso
-      url: shapes/path-transforms.md
-    - text: Polygon
+    - text: Poligono
       url: shapes/polygon.md
     - text: Polilinea
       url: shapes/polyline.md
-    - text: Rectangle
+    - text: Rettangolo
       url: shapes/rectangle.md
 - title: Layout
   linkLists:
@@ -190,7 +188,7 @@ landingContent:
       url: layouts/flex-layout.md
     - text: Frame
       url: layouts/frame.md
-    - text: Griglia
+    - text: Grid
       url: layouts/grid.md
     - text: RelativeLayout
       url: layouts/relative-layout.md

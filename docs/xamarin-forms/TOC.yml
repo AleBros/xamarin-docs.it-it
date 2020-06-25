@@ -29,7 +29,7 @@
           href: ~/get-started/supported-platforms.md
         - name: Prima app
           href: ~/get-started/first-app/index.md
-        - name: Avvi rapidi
+        - name: Guide rapide introduttive
           href: ~/get-started/quickstarts/index.md
           items:
             - name: Nuova app
@@ -47,9 +47,9 @@
           items:
             - name: Layout pila
               href: ~/get-started/tutorials/stacklayout/index.yml
-            - name: Etichetta
+            - name: Label
               href: ~/get-started/tutorials/label/index.yml
-            - name: Pulsante
+            - name: Button
               href: ~/get-started/tutorials/button/index.yml
             - name: Voce di testo
               href: ~/get-started/tutorials/entry/index.yml
@@ -63,11 +63,11 @@
               href: ~/get-started/tutorials/listview/index.yml
             - name: Popup
               href: ~/get-started/tutorials/pop-ups/index.yml
-            - name: Ciclo di vita delle app
+            - name: Ciclo di vita dell'app
               href: ~/get-started/tutorials/app-lifecycle/index.yml
             - name: Database locale
               href: ~/get-started/tutorials/local-database/index.yml
-            - name: SERVIZI WEB
+            - name: Servizi Web
               href: ~/get-started/tutorials/web-service/index.yml
         - name: Informazioni su Xamarin
           items:
@@ -163,7 +163,7 @@
           href: app-fundamentals/app-lifecycle.md
         - name: Indicizzazione e deep linking delle applicazioni
           href: app-fundamentals/deep-linking.md
-        - name: Comportamenti
+        - name: comportamenti
           href: app-fundamentals/behaviors/index.md
           items:
             - name: Introduzione
@@ -287,7 +287,7 @@
               href: app-fundamentals/gestures/tap.md
             - name: Avvicinamento delle dita
               href: app-fundamentals/gestures/pinch.md
-            - name: Trancio
+            - name: Dettaglio
               href: app-fundamentals/gestures/pan.md
             - name: Scorrimento rapido
               href: app-fundamentals/gestures/swipe.md
@@ -322,15 +322,15 @@
               href: app-fundamentals/shell/introduction.md
             - name: Creare un'applicazione shell
               href: app-fundamentals/shell/create.md
-            - name: Riquadro a comparsa
+            - name: Flyout
               href: app-fundamentals/shell/flyout.md
-            - name: Tabulazioni
+            - name: Schede
               href: app-fundamentals/shell/tabs.md
             - name: Configurazione della pagina
               href: app-fundamentals/shell/configuration.md
             - name: Navigazione
               href: app-fundamentals/shell/navigation.md
-            - name: Ricerca
+            - name: Cerca
               href: app-fundamentals/shell/search.md
             - name: Ciclo di vita
               href: app-fundamentals/shell/lifecycle.md
@@ -363,11 +363,11 @@
           items:
             - name: Panoramica
               href: user-interface/controls/index.md
-            - name: Pagine
+            - name: Pages
               href: user-interface/controls/pages.md
             - name: Layout
               href: user-interface/controls/layouts.md
-            - name: Viste
+            - name: Visualizzazioni
               href: user-interface/controls/views.md
             - name: Celle
               href: user-interface/controls/cells.md
@@ -381,9 +381,9 @@
               href: user-interface/boxview.md
             - name: Expander
               href: user-interface/expander.md
-            - name: Immagine
+            - name: Image
               href: user-interface/images.md
-            - name: Etichetta
+            - name: Label
               href: user-interface/text/label.md
             - name: Mappa
               items:
@@ -409,7 +409,7 @@
               href: user-interface/webview.md
         - name: Avviare i comandi
           items:
-            - name: Pulsante
+            - name: Button
               href: user-interface/button.md
             - name: ImageButton
               href: user-interface/imagebutton.md
@@ -427,7 +427,7 @@
               href: user-interface/checkbox.md
             - name: DatePicker
               href: user-interface/datepicker.md
-            - name: Dispositivo di scorrimento
+            - name: Slider
               href: user-interface/slider.md
             - name: Gestore di istruzioni
               href: user-interface/stepper.md
@@ -454,7 +454,7 @@
               items:
                 - name: Introduzione
                   href: user-interface/carouselview/introduction.md
-                - name: Data
+                - name: Dati
                   href: user-interface/carouselview/populate-data.md
                 - name: Layout
                   href: user-interface/carouselview/layout.md
@@ -469,11 +469,11 @@
               items:
                 - name: Introduzione
                   href: user-interface/collectionview/introduction.md
-                - name: Data
+                - name: Dati
                   href: user-interface/collectionview/populate-data.md
                 - name: Layout
                   href: user-interface/collectionview/layout.md
-                - name: Selezione
+                - name: Selection
                   href: user-interface/collectionview/selection.md
                 - name: EmptyView
                   href: user-interface/collectionview/emptyview.md
@@ -486,7 +486,7 @@
             - name: ListView
               href: user-interface/listview/index.md
               items:
-                - name: Origini dati
+                - name: Data Sources
                   href: user-interface/listview/data-and-databinding.md
                 - name: Aspetto delle celle
                   href: user-interface/listview/customizing-cell-appearance.md
@@ -543,9 +543,11 @@
                   href: user-interface/shapes/index.md
                 - name: Ellisse
                   href: user-interface/shapes/ellipse.md
+                - name: Regole di riempimento
+                  href: user-interface/shapes/fillrules.md
                 - name: Geometrie
                   href: user-interface/shapes/geometries.md
-                - name: Grafico a linee
+                - name: Linea
                   href: user-interface/shapes/line.md
                 - name: Percorsi
                   items:
@@ -555,11 +557,11 @@
                       href: user-interface/shapes/path-markup-syntax.md
                     - name: Trasformazioni del percorso
                       href: user-interface/shapes/path-transforms.md
-                - name: Polygon
+                - name: Poligono
                   href: user-interface/shapes/polygon.md
                 - name: Polilinea
                   href: user-interface/shapes/polyline.md
-                - name: Rectangle
+                - name: Rettangolo
                   href: user-interface/shapes/rectangle.md
             - name: Schermata iniziale
               href: user-interface/splashscreen.md
@@ -615,7 +617,7 @@
                   href: user-interface/layouts/absolute-layout.md
                 - name: FlexLayout
                   href: user-interface/layouts/flex-layout.md
-                - name: Griglia
+                - name: Grid
                   href: user-interface/layouts/grid.md
                 - name: RelativeLayout
                   href: user-interface/layouts/relative-layout.md
@@ -755,7 +757,7 @@
               href: platform/ios/legacy-color-mode.md
             - name: Primo risponditore per VisualElement
               href: platform/ios/visualelement-first-responder.md
-        - name: Windows
+        - name: WINDOWS
           items:
             - name: Panoramica
               href: platform/windows/index.md
@@ -883,7 +885,7 @@
           href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
         - name: Condividi
           href: ~/essentials/share.md?context=xamarin/xamarin-forms
-        - name: sms
+        - name: SMS
           href: ~/essentials/sms.md?context=xamarin/xamarin-forms
         - name: Sintesi vocale
           href: ~/essentials/text-to-speech.md?context=xamarin/xamarin-forms
@@ -911,7 +913,7 @@
               href: data-cloud/data/files.md
             - name: Database locali
               href: data-cloud/data/databases.md
-        - name: Servizi di Azure.
+        - name: Servizi di Azure
           items:
             - name: Panoramica dei servizi di Azure
               href: data-cloud/azure-services/index.md
@@ -937,7 +939,7 @@
               href: data-cloud/azure-cognitive-services/speech-recognition.md
             - name: Controllo ortografico
               href: data-cloud/azure-cognitive-services/spell-check.md
-            - name: Traduzione testuale
+            - name: Traduzione di testi
               href: data-cloud/azure-cognitive-services/text-translation.md
             - name: Riconoscimento delle emozioni percepite
               href: data-cloud/azure-cognitive-services/emotion-recognition.md
@@ -967,7 +969,7 @@
       items:
         - name: Panoramica
           href: deploy-test/index.yml
-        - name: Migliorare le prestazioni
+        - name: Miglioramento delle prestazioni
           href: deploy-test/performance.md
         - name: Riavvio a caldo
           href: deploy-test/hot-restart.md
