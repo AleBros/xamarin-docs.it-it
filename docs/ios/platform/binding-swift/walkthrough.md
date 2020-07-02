@@ -7,16 +7,19 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: b650f86a1bba62d5db7463875de3398db9c33842
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "78292592"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853148"
 ---
 # <a name="walkthrough-bind-an-ios-swift-library"></a>Procedura dettagliata: associare una libreria Swift di iOS
 
-Novell consente agli sviluppatori di dispositivi mobili di creare esperienze per dispositivi mobili native multipiattaforma C#usando Visual Studio e. È possibile usare i componenti di iOS Platform SDK predefiniti. In molti casi, tuttavia, si vogliono usare anche gli SDK di terze parti sviluppati per la piattaforma, che Novell consente di eseguire tramite binding. Per incorporare un Framework Objective-C di terze parti nell'applicazione Novell. iOS, è necessario creare un'associazione Novell. iOS per poterla usare nelle applicazioni.
+> [!IMPORTANT]
+> Stiamo attualmente analizzando l'utilizzo dell'associazione personalizzata nella piattaforma Novell. Segui [**questo sondaggio**](https://www.surveymonkey.com/r/KKBHNLT) per informare le attività di sviluppo future.
+
+Novell consente agli sviluppatori di dispositivi mobili di creare esperienze per dispositivi mobili native multipiattaforma usando Visual Studio e C#. È possibile usare i componenti di iOS Platform SDK predefiniti. In molti casi, tuttavia, si vogliono usare anche gli SDK di terze parti sviluppati per la piattaforma, che Novell consente di eseguire tramite binding. Per incorporare un Framework Objective-C di terze parti nell'applicazione Novell. iOS, è necessario creare un'associazione Novell. iOS per poterla usare nelle applicazioni.
 
 La piattaforma iOS, oltre ai linguaggi e agli strumenti nativi, è in continua evoluzione e Swift è una delle aree più dinamiche del mondo di sviluppo iOS. Sono disponibili diversi SDK di terze parti, che sono già stati migrati da Objective-C a Swift e presentano nuove problemi. Anche se il processo di associazione Swift è simile a Objective-C, richiede passaggi aggiuntivi e impostazioni di configurazione per compilare ed eseguire correttamente un'applicazione Novell. iOS accettabile per AppStore.
 
@@ -37,11 +40,11 @@ Per completare questa procedura dettagliata, è necessario:
 
 ## <a name="build-a-native-library"></a>Creare una libreria nativa
 
-Il primo passaggio consiste nel creare un Framework Swift nativo con l'intestazione Objective-C abilitata. Il Framework viene in genere fornito da uno sviluppatore di terze parti e include l'intestazione incorporata nel pacchetto nella directory seguente: **\<frameworkname >. Framework/Headers/\<frameworkname >-Swift. h**.
+Il primo passaggio consiste nel creare un Framework Swift nativo con l'intestazione Objective-C abilitata. Il Framework viene in genere fornito da uno sviluppatore di terze parti e l'intestazione è incorporata nel pacchetto nella seguente directory: ** \<FrameworkName> . Framework/Headers/ \<FrameworkName> -Swift. h**.
 
-Questa intestazione espone le interfacce pubbliche, che verranno usate per creare i metadati di binding Novell. iOS e C# generare classi che espongono i membri Swift Framework. Se l'intestazione non esiste o presenta un'interfaccia pubblica incompleta (ad esempio, non sono visibili classi/membri) sono disponibili due opzioni:
+Questa intestazione espone le interfacce pubbliche, che verranno usate per creare i metadati di binding Novell. iOS e generare classi C# che espongono i membri Swift Framework. Se l'intestazione non esiste o presenta un'interfaccia pubblica incompleta (ad esempio, non sono visibili classi/membri) sono disponibili due opzioni:
 
-- Aggiornare il codice sorgente Swift per generare l'intestazione e contrassegnare i membri obbligatori con `@objc` attributo
+- Aggiornare il codice sorgente Swift per generare l'intestazione e contrassegnare i membri obbligatori con l' `@objc` attributo
 - Creazione di un Framework proxy in cui è possibile controllare l'interfaccia pubblica e il proxy di tutte le chiamate al Framework sottostante
 
 In questa esercitazione, il secondo approccio viene descritto in quanto dispone di un numero minore di dipendenze dal codice sorgente di terze parti, che non è sempre disponibile. Un altro motivo per evitare il primo approccio è il lavoro aggiuntivo necessario per supportare le modifiche future del Framework. Quando si inizia ad aggiungere modifiche al codice sorgente di terze parti, si è responsabili del supporto di tali modifiche e potenzialmente di Unione con tutti gli aggiornamenti futuri.
@@ -66,15 +69,15 @@ Ad esempio, in questa esercitazione viene creata un'associazione per [Gigya Swif
 
 1. Verificare che l'opzione **non incorporare** sia selezionata, che verrà controllata in seguito manualmente:
 
-    [opzione ![Xcode donotembed](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
+    [![opzione Xcode donotembed](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
 
 1. Assicurarsi che l'opzione impostazioni di compilazione **includa sempre le librerie standard SWIFT**, che include le librerie Swift con il Framework è impostato su No. In seguito verrà controllata manualmente, che Swift dylib sono incluse nel pacchetto finale:
 
-    [opzione ![Xcode always Embed](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
+    [![opzione di incorporamento Always false](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
 
 1. Verificare che l'opzione **Abilita bitcode** sia impostata su **No**. Al momento, Novell. iOS non include bitcode mentre Apple richiede che tutte le librerie supportino le stesse architetture:
 
-    [opzione ![Xcode Enable bitcode false](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
+    [![Xcode Enable bitcode-opzione false](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
 
     È possibile verificare che l'opzione bitcode del Framework risultante sia disabilitata eseguendo il comando del terminale seguente sul Framework:
 
@@ -84,11 +87,11 @@ Ad esempio, in questa esercitazione viene creata un'associazione per [Gigya Swif
 
     L'output deve essere vuoto. in caso contrario, si vuole rivedere le impostazioni del progetto per la configurazione specifica.
 
-1. Verificare che l'opzione **nome intestazione dell'interfaccia generata da Objective-C** sia abilitata e specifichi un nome di intestazione. Il nome predefinito è **\<frameworkname >-Swift. h**:
+1. Verificare che l'opzione **nome intestazione dell'interfaccia generata da Objective-C** sia abilitata e specifichi un nome di intestazione. Il nome predefinito è ** \<FrameworkName> -Swift. h**:
 
-    [opzione ![Xcode objectice-c Enabled](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
+    [![opzione abilitata per l'intestazione objectice-c di Xcode](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
-1. Esporre i metodi desiderati e contrassegnarli con `@objc` attributo e applicare regole aggiuntive definite di seguito. Se si compila il Framework senza questo passaggio, l'intestazione Objective-C generata sarà vuota e Novell. iOS non sarà in grado di accedere ai membri Swift Framework. Esporre la logica di inizializzazione per Gigya Swift SDK sottostante creando un nuovo file Swift **SwiftFrameworkProxy. Swift** e definendo il codice seguente:
+1. Esporre i metodi desiderati e contrassegnarli con l' `@objc` attributo e applicare le regole aggiuntive definite di seguito. Se si compila il Framework senza questo passaggio, l'intestazione Objective-C generata sarà vuota e Novell. iOS non sarà in grado di accedere ai membri Swift Framework. Esporre la logica di inizializzazione per Gigya Swift SDK sottostante creando un nuovo file Swift **SwiftFrameworkProxy. Swift** e definendo il codice seguente:
 
     ```swift
     import Foundation
@@ -111,9 +114,9 @@ Ad esempio, in questa esercitazione viene creata un'associazione per [Gigya Swif
     Di seguito sono riportate alcune note importanti sul codice riportato sopra:
 
     - Importare il modulo Gigya da Gigya SDK di terze parti originale e ora può accedere a qualsiasi membro del Framework.
-    - Contrassegnare la classe SwiftFrameworkProxy con l'attributo `@objc` che specifica un nome; in caso contrario, verrà generato un nome univoco illeggibile, ad esempio `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. Il nome del tipo deve essere definito chiaramente perché verrà usato in seguito in base al nome.
-    - Ereditare la classe proxy da `NSObject`; in caso contrario, non verrà generata nel file di intestazione Objective-C.
-    - Contrassegnare tutti i membri da esporre come `public`.
+    - Contrassegnare la classe SwiftFrameworkProxy con l' `@objc` attributo che specifica un nome; in caso contrario, verrà generato un nome univoco illeggibile, ad esempio `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy` . Il nome del tipo deve essere definito chiaramente perché verrà usato in seguito in base al nome.
+    - Eredita la classe proxy da `NSObject` . in caso contrario, non verrà generata nel file di intestazione Objective-C.
+    - Contrassegnare tutti i membri da esporre come `public` .
 
 1. Modificare la configurazione della build dello schema da **debug** a **Release**. A tale scopo, aprire la finestra di dialogo **Xcode > Target > Edit Scheme** , quindi impostare l'opzione di **configurazione Build** su **Release**:
 
@@ -200,7 +203,7 @@ Ad esempio, in questa esercitazione viene creata un'associazione per [Gigya Swif
 
 ## <a name="prepare-metadata"></a>Preparare i metadati
 
-A questo punto, è necessario che il Framework con l'intestazione dell'interfaccia generata da Objective-C sia pronto per essere utilizzato da un'associazione Novell. iOS.  Il passaggio successivo consiste nel preparare le interfacce di definizione API, che vengono usate da un progetto di associazione C# per generare classi. Queste definizioni possono essere create manualmente o automaticamente dallo strumento [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) e dal file di intestazione generato. Usare Sharpie per generare i metadati:
+A questo punto, è necessario che il Framework con l'intestazione dell'interfaccia generata da Objective-C sia pronto per essere utilizzato da un'associazione Novell. iOS.  Il passaggio successivo consiste nel preparare le interfacce di definizione API, che vengono usate da un progetto di associazione per generare classi C#. Queste definizioni possono essere create manualmente o automaticamente dallo strumento [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) e dal file di intestazione generato. Usare Sharpie per generare i metadati:
 
 1. Scaricare lo strumento più recente dell' [obiettivo Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) dal sito Web di download ufficiale e installarlo seguendo la procedura guidata. Al termine dell'installazione, è possibile verificarlo eseguendo il comando Sharpie:
 
@@ -223,7 +226,7 @@ A questo punto, è necessario che il Framework con l'intestazione dell'interfacc
         [write] StructsAndEnums.cs
     ```
 
-    Lo strumento genererà C# i metadati per ogni membro Objective-C esposto, che sarà simile al codice seguente. Come si può notare, potrebbe essere definito manualmente perché presenta un formato leggibile e un mapping semplice dei membri:
+    Lo strumento genererà i metadati C# per ogni membro Objective-C esposto, che sarà simile al codice seguente. Come si può notare, potrebbe essere definito manualmente perché presenta un formato leggibile e un mapping semplice dei membri:
 
     ```csharp
     [Export ("initForApiKey:")]
@@ -249,7 +252,7 @@ Il passaggio successivo consiste nel creare un progetto di binding Novell. iOS u
 
     ![metadati della struttura del progetto di Visual Studio](walkthrough-images/visualstudio-project-structure-metadata.png)
 
-    I metadati stessi descrivono ogni classe Objective-C esposta e membro C# usando il linguaggio. È possibile visualizzare la definizione di intestazione Objective-C originale insieme alla C# dichiarazione:
+    I metadati stessi descrivono ogni classe Objective-C esposta e membro usando il linguaggio C#. È possibile visualizzare la definizione di intestazione Objective-C originale insieme alla dichiarazione C#:
 
     ```csharp
     // @interface SwiftFrameworkProxy : NSObject
@@ -262,7 +265,7 @@ Il passaggio successivo consiste nel creare un progetto di binding Novell. iOS u
     }
     ```
 
-    Anche se si tratta di un C# codice valido, non viene usato così com'è, ma viene usato dagli strumenti Novell. iOS per C# generare classi basate su questa definizione di metadati. Di conseguenza, anziché l'interfaccia SwiftFrameworkProxy si ottiene una C# classe con lo stesso nome, di cui è possibile creare un'istanza tramite il codice Novell. iOS. Questa classe ottiene metodi, proprietà e altri membri definiti dai metadati, che vengono chiamati in C# modo.
+    Anche se si tratta di un codice C# valido, non viene usato così com'è, ma viene usato dagli strumenti Novell. iOS per generare classi C# basate su questa definizione di metadati. Di conseguenza, anziché l'interfaccia SwiftFrameworkProxy si ottiene una classe C# con lo stesso nome, di cui è possibile creare un'istanza tramite il codice Novell. iOS. Questa classe ottiene metodi, proprietà e altri membri definiti dai metadati, che vengono chiamati in modo C#.
 
 1. Aggiungere il riferimento nativo al Framework FAT precedente generato e ogni dipendenza di tale Framework. In questo caso, aggiungere i riferimenti nativi SwiftFrameworkProxy e Gigya Framework al progetto di associazione:
 
@@ -294,9 +297,9 @@ Il passaggio successivo consiste nel creare un progetto di binding Novell. iOS u
         L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -Wl,-rpath -Wl,@executable_path/Frameworks
         ```
 
-        Le prime due opzioni (le `-L ...` ) indicano al compilatore nativo dove trovare le librerie Swift. Il compilatore nativo ignorerà le librerie che non hanno l'architettura corretta, il che significa che è possibile passare il percorso sia per le librerie di simulatore che per le librerie di dispositivi allo stesso tempo, in modo che funzioni sia per le compilazioni di simulatore che di dispositivi ( i percorsi sono corretti solo per iOS; per tvOS e watchos, è necessario aggiornarli. Uno svantaggio è che questo approccio richiede che Xcode sia corretto in/Application/Xcode.app, se il consumer della libreria di binding dispone di Xcode in una posizione diversa, non funzionerà. La soluzione alternativa consiste nell'aggiungere queste opzioni negli argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto eseguibile (`--gcc_flags -L... -L...`). La terza opzione fa in modo che il linker nativo memorizzi il percorso delle librerie Swift nell'eseguibile, in modo che il sistema operativo possa trovarle.
+        Le prime due opzioni (  `-L ...`   quelle) indicano al compilatore nativo dove trovare le librerie Swift. Il compilatore nativo ignorerà le librerie che non hanno l'architettura corretta, il che significa che è possibile passare il percorso sia per le librerie di simulatore che per le librerie di dispositivi allo stesso tempo, in modo che funzioni sia per le compilazioni di simulatore che di dispositivi (questi percorsi sono corretti solo per iOS; per tvOS e watchos devono essere aggiornati). Uno svantaggio è che questo approccio richiede che Xcode sia corretto in/Application/Xcode.app, se il consumer della libreria di binding dispone di Xcode in una posizione diversa, non funzionerà. La soluzione alternativa consiste nell'aggiungere queste opzioni negli argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto eseguibile ( `--gcc_flags -L... -L...` ). La terza opzione fa in modo che il linker nativo memorizzi il percorso delle librerie Swift nell'eseguibile, in modo che il sistema operativo possa trovarle.
 
-1. L'azione finale consiste nel compilare la libreria e verificare che non siano presenti errori di compilazione. Spesso si noterà che i metadati delle associazioni prodotti da Objective Sharpie verranno annotati con l'attributo `[Verify]` . Questi attributi indicano che è necessario verificare che Objective Sharpie abbia fatto la corretta operazione confrontando l'associazione con la dichiarazione Objective-C originale (che verrà fornita in un commento sopra la dichiarazione associata). Per ulteriori informazioni sui membri contrassegnati con l'attributo, vedere [il collegamento seguente](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Una volta compilato, il progetto può essere utilizzato da un'applicazione Novell. iOS.
+1. L'azione finale consiste nel compilare la libreria e verificare che non siano presenti errori di compilazione. Spesso si noterà che i metadati delle associazioni prodotti da Objective Sharpie verranno annotati con l'  `[Verify]`   attributo. Questi attributi indicano che è necessario verificare che Objective Sharpie abbia fatto la corretta operazione confrontando l'associazione con la dichiarazione Objective-C originale (che verrà fornita in un commento sopra la dichiarazione associata). Per ulteriori informazioni sui membri contrassegnati con l'attributo, vedere [il collegamento seguente](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Una volta compilato, il progetto può essere utilizzato da un'applicazione Novell. iOS.
 
 ## <a name="consume-the-binding-library"></a>Utilizzare la libreria di associazione
 
@@ -334,11 +337,11 @@ Il passaggio finale consiste nell'utilizzare la libreria di binding Novell. iOS 
     }
     ```
 
-1. Eseguire l'app nell'output di debug dovrebbe essere visualizzata la riga seguente: `Gigya initialized with domain: us1.gigya.com`. Fare clic sul pulsante per attivare il flusso di autenticazione:
+1. Eseguire l'app nell'output di debug dovrebbe essere visualizzata la riga seguente: `Gigya initialized with domain: us1.gigya.com` . Fare clic sul pulsante per attivare il flusso di autenticazione:
 
-    [risultato del proxy ![Swift](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
+    [![risultato del proxy Swift](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
-Congratulazioni! È stata creata un'app Novell. iOS e una libreria di binding, che usa un Framework Swift. L'applicazione precedente verrà eseguita correttamente in iOS 12.2 + perché a partire da questa versione di iOS [Apple ha introdotto la stabilità ABI](https://swift.org/blog/swift-5-1-released/) e ogni iOS che inizia 12.2 + include le librerie di runtime Swift, che possono essere usate per eseguire l'applicazione compilata con Swift 5.1 +. Se è necessario aggiungere il supporto per le versioni precedenti di iOS, è necessario eseguire alcuni altri passaggi:
+A questo punto, È stata creata un'app Novell. iOS e una libreria di binding, che usa un Framework Swift. L'applicazione precedente verrà eseguita correttamente in iOS 12.2 + perché a partire da questa versione di iOS [Apple ha introdotto la stabilità ABI](https://swift.org/blog/swift-5-1-released/) e ogni iOS che inizia 12.2 + include le librerie di runtime Swift, che possono essere usate per eseguire l'applicazione compilata con Swift 5.1 +. Se è necessario aggiungere il supporto per le versioni precedenti di iOS, è necessario eseguire alcuni altri passaggi:
 
 1. Per aggiungere il supporto per iOS 12,1 e versioni precedenti, è necessario distribuire dylib Swift specifici usati per compilare il Framework. Usare il pacchetto NuGet [Novell. iOS. SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) per elaborare e copiare le librerie necessarie con l'IPA. Aggiungere il riferimento NuGet al progetto di destinazione e ricompilare l'applicazione. Non sono necessari altri passaggi, il pacchetto NuGet installerà attività specifiche, che vengono eseguite con il processo di compilazione, identificano i dylib Swift necessari e li impacchettano con l'IPA finale.
 

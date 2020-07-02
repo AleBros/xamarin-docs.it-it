@@ -10,16 +10,16 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136955"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853139"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.FormsTrigger
 
-[![Scaricare ](~/media/shared/download.png) l'esempio scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Scarica esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà. Inoltre, i trigger di stato, che sono un gruppo specializzato di trigger, definiscono quando [`VisualState`](xref:Xamarin.Forms.VisualState) deve essere applicato.
 
@@ -319,11 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>Trigger di stato
 
-I trigger di stato sono stati introdotti in Xamarin.Forms 4,5 e sono un gruppo specializzato di trigger che definiscono le condizioni in base alle quali [`VisualState`](xref:Xamarin.Forms.VisualState) deve essere applicato. Tuttavia, sono attualmente sperimentali e possono essere usati solo aggiungendo la riga di codice seguente al file *app.XAML.cs* :
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
+I trigger di stato sono un gruppo specializzato di trigger che definiscono le condizioni in base alle quali [`VisualState`](xref:Xamarin.Forms.VisualState) deve essere applicato. 
 
 I trigger di stato vengono aggiunti alla [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) raccolta di un oggetto [`VisualState`](xref:Xamarin.Forms.VisualState) . Questa raccolta può contenere un solo trigger di stato o più trigger di stato. Un [`VisualState`](xref:Xamarin.Forms.VisualState) verrà applicato quando sono attivi tutti i trigger di stato nella raccolta.
 

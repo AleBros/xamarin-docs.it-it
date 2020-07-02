@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 328633bc58f17216c071a2b2cd779704da2bbf74
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c36159984f314ecbf90f98df6472eee2149eee92
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853160"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: associazione di una libreria Objective-C di iOS
+
+> [!IMPORTANT]
+> Stiamo attualmente analizzando l'utilizzo dell'associazione personalizzata nella piattaforma Novell. Segui [**questo sondaggio**](https://www.surveymonkey.com/r/KKBHNLT) per informare le attività di sviluppo future.
 
 _Questo articolo fornisce una procedura dettagliata per la creazione di un'associazione Novell. iOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, l'associazione e l'uso dell'associazione in un'applicazione Novell. iOS._
 
@@ -670,7 +673,7 @@ Si ottiene innanzitutto un'istanza di `InfColorPickerController` tramite un meto
 
 [![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
 
-Congratulazioni! A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Novell. iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
+A questo punto, A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Novell. iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
 
 ### <a name="implementing-a-weak-delegate"></a>Implementazione di un delegato vulnerabile
 
