@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795034"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsProprietà, metodi ed eventi comuni del controllo
 
@@ -47,7 +47,7 @@ La `Bounds` proprietà è un `Rectangle` oggetto di sola lettura che rappresenta
 
 ### `Clip`
 
-La `Clip` proprietà è un `Geometry` oggetto che definisce la struttura del contenuto di un elemento. Per definire una clip, usare un `Geometry` oggetto come `EllipseGeometry` per impostare la proprietà dell'elemento `Clip` . Sarà visibile solo l'area che si trova all'interno dell'area geometrica. Per altre informazioni, vedere [ritagliare le geometrie](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
+La `Clip` proprietà è un `Geometry` oggetto che definisce la struttura del contenuto di un elemento. Per definire una clip, usare un `Geometry` oggetto come `EllipseGeometry` per impostare la proprietà dell'elemento `Clip` . Sarà visibile solo l'area che si trova all'interno dell'area geometrica. Per altre informazioni, vedere [clip con una geometria](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
@@ -217,7 +217,7 @@ public void Unfocus ()
 
 Per il corretto funzionamento di questo metodo, l'elemento deve avere già lo stato attivo.
 
-## <a name="events"></a>Eventi
+## <a name="events"></a>Events
 
 Nella classe sono disponibili gli eventi seguenti `VisualElement` . Per un elenco completo, vedere [ Xamarin.Forms eventi di visualElement](xref:Xamarin.Forms.VisualElement#events).
 
