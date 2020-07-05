@@ -101,11 +101,11 @@ Per creare un tema personalizzato per l'attività della schermata iniziale, modi
 </resources>
 ```
 
-My **. Splash** è molto spartano &ndash; dichiara lo sfondo della finestra, rimuove in modo esplicito la barra del titolo dalla finestra e dichiara che è a schermo intero. Se si vuole creare una schermata iniziale che emula l'interfaccia utente dell'app prima che l'attività ingrandisca il primo layout, è possibile usare `windowContentOverlay` anziché `windowBackground` nella definizione dello stile. In tal caso, è necessario modificare anche l'oggetto **splash_screen. XML** disegnatore, in modo che venga visualizzata un'emulazione dell'interfaccia utente.
+**My.Splash** è molto spartano &ndash; dichiara lo sfondo della finestra, rimuove in modo esplicito la barra del titolo dalla finestra e dichiara che è a schermo intero. Se si vuole creare una schermata iniziale che emula l'interfaccia utente dell'app prima che l'attività ingrandisca il primo layout, è possibile usare `windowContentOverlay` anziché `windowBackground` nella definizione dello stile. In tal caso, è necessario modificare anche l'oggetto **splash_screen. XML** disegnatore, in modo che venga visualizzata un'emulazione dell'interfaccia utente.
 
 ### <a name="create-a-splash-activity"></a>Creare un'attività Splash
 
-A questo punto è necessaria una nuova attività per Android per avviare che include l'immagine iniziale ed esegue tutte le attività di avvio. Il codice seguente è un esempio di implementazione di una schermata iniziale completa:
+A questo punto è necessaria una nuova attività per Android da avviare che include l'immagine iniziale ed esegue tutte le attività di avvio. Il codice seguente è un esempio di implementazione di una schermata iniziale completa:
 
 ```csharp
 [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
@@ -138,10 +138,10 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity` USA in modo esplicito il tema creato nella sezione precedente, eseguendo l'override del tema predefinito dell'applicazione.
+`SplashActivity` usa in modo esplicito il tema creato nella sezione precedente, eseguendo l'override del tema predefinito dell'applicazione.
 Non è necessario caricare un layout in `OnCreate` perché il tema dichiara un oggetto disegnatore come sfondo.
 
-It is important to set the `NoHistory=true` attribute so that the Activity is removed from the back stack. To prevent the back button from canceling the startup process, you can also override `OnBackPressed` and have it do nothing:
+è importante impostare l'attributo `NoHistory=true` così l'Activity è rimossa dallo stack "indietro" (back stack). Per evitare che il pulsante indietro annulli il processo di avvio, puoi eseguire l'override del metodo `OnBackPressed` indicando di non fare nulla:
 
 ```csharp
 public override void OnBackPressed() { }
